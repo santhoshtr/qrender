@@ -7,4 +7,19 @@ Render Wikidata information in various formats:
 * HTML
 * Wikitext
 
-  
+## Usage
+
+```
+Wikidata Renderer
+
+Usage: qrender [OPTIONS]
+
+Options:
+  -q, --qid <QID>            The QID of the Wikidata item to render [default: Q405]
+  -l, --language <LANGUAGE>  The language to use [default: en]
+  -f, --format <FORMAT>      Render format (text or html) [default: text] [possible values: text, html, markdown, wikitext]
+  -i, --ignore-ids           Ignore IDs in the output
+  -h, --help                 Print help
+  -V, --version              Print version                                                                                                                                                                                             /0.5s
+```
+
