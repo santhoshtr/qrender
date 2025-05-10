@@ -1,0 +1,12 @@
+<div>
+    <h1>{{group_name}}</h1>
+    <ul>
+    {{#each properties}}
+        <li>{{this.wd_label}}: 
+        {{#each this.statements}}
+            {{this.value}}{{#if this.qualifiers}} ({{#each this.qualifiers}}{{this.label}}: {{this.value}}{{#unless @last}}, {{/unless}}{{/each}}){{/if}}
+        {{/each}}</li>
+    {{/each}}
+    </ul>
+</div>
+

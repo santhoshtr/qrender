@@ -1,0 +1,12 @@
+{{#each properties}}
+
+- **{{this.wd_label}}**: 
+  {{#each this.statements}}
+    - {{#if this.qid}}[{{this.value}}](https://www.wikidata.org/wiki/{{this.qid}}){{else}}{{#if (eq this.statement_type "uri")}}[{{this.value}}]({{this.value}}){{else}}{{this.value}}{{/if}}{{/if}}{{#if this.qualifiers}} ({{#each this.qualifiers}}{{this.label}}: {{#if (eq this._type "uri")}}[{{this.value}}]({{this.value}}){{else}}{{this.value}}{{/if}}{{#unless @last}}, {{/unless}}{{/each}}){{/if}}
+
+    {{#if this.image_url}}
+      ![{{this.value}}]({{this.image_url}})
+    {{/if}}
+  {{/each}}
+{{/each}}
+
