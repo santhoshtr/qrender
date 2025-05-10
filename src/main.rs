@@ -26,12 +26,7 @@ struct Args {
 async fn main() -> Result<(), Box<dyn Error>> {
     let args = Args::parse();
 
-    let render_config = RenderConfig::new(
-        args.format,
-        args.ignore_ids,
-        qrender::grouping::load_grouping_config().unwrap(),
-        args.language.as_str(),
-    );
+    let render_config = RenderConfig::new(args.format, args.ignore_ids, args.language.as_str());
 
     let rendered_text = render(args.qid.as_str(), &render_config).await?;
 
