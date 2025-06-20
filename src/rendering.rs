@@ -7,22 +7,22 @@ pub trait Renderer {
     fn render_text(
         &self,
         group_name: &str,
-        properties: &Vec<Property>,
+        properties: &[Property],
     ) -> Result<String, Box<dyn std::error::Error>>;
     fn render_markdown(
         &self,
         group_name: &str,
-        properties: &Vec<Property>,
+        properties: &[Property],
     ) -> Result<String, Box<dyn std::error::Error>>;
     fn render_wikitext(
         &self,
         group_name: &str,
-        properties: &Vec<Property>,
+        properties: &[Property],
     ) -> Result<String, Box<dyn std::error::Error>>;
     fn render_html(
         &self,
         group_name: &str,
-        properties: &Vec<Property>,
+        properties: &[Property],
     ) -> Result<String, Box<dyn std::error::Error>>;
 }
 
@@ -33,7 +33,7 @@ impl Renderer for DefaultRenderer {
     fn render_text(
         &self,
         group_name: &str,
-        properties: &Vec<Property>,
+        properties: &[Property],
     ) -> Result<String, Box<dyn std::error::Error>> {
         let mut handlebars = Handlebars::new();
         handlebars
@@ -49,7 +49,7 @@ impl Renderer for DefaultRenderer {
     fn render_markdown(
         &self,
         group_name: &str,
-        properties: &Vec<Property>,
+        properties: &[Property],
     ) -> Result<String, Box<dyn std::error::Error>> {
         let mut handlebars = Handlebars::new();
         handlebars
@@ -68,7 +68,7 @@ impl Renderer for DefaultRenderer {
     fn render_wikitext(
         &self,
         group_name: &str,
-        properties: &Vec<Property>,
+        properties: &[Property],
     ) -> Result<String, Box<dyn std::error::Error>> {
         let mut handlebars = Handlebars::new();
         handlebars
@@ -88,7 +88,7 @@ impl Renderer for DefaultRenderer {
     fn render_html(
         &self,
         group_name: &str,
-        properties: &Vec<Property>,
+        properties: &[Property],
     ) -> Result<String, Box<dyn std::error::Error>> {
         let mut handlebars = Handlebars::new();
         handlebars
