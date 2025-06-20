@@ -12,6 +12,18 @@ The text and makrdown formats are designed to be human-readable, while the HTML 
 
 The human-readable formats are useful when integrating wikidata information to a tool calling LLMs. For an example LLM based chat bot that uses this format internally, see https://wq42.toolforge.org/
 
+## Installation
+
+To install QRender, you need to have Rust and Cargo installed on your system. Once you have them, you can build and install QRender using the following commands:
+
+```bash
+git clone https://github.com/your-repo/qrender.git
+cd qrender
+cargo install --path .
+```
+
+This will compile the project and install the `qrender` binary to your Cargo bin directory (usually `~/.cargo/bin`).
+
 ## Usage
 
 ```
