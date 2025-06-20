@@ -1,3 +1,8 @@
+# Group Wikidata properties in semantic groups suitable for human and LLM consumption.
+#
+# Refer https://www.wikidata.org/wiki/MediaWiki:Wikibase-SortedProperties for a less granular sorted properties
+# For the ease of reading and maintanance, provide PID label as comment.
+#
 [groups.names]
 pids = [
   "P735",  # given name
