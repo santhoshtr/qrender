@@ -5,6 +5,7 @@ use serde::Serialize;
 
 use crate::grouping::GroupingConfig;
 
+pub mod cards;
 mod custom;
 pub mod data_loading;
 pub mod error;

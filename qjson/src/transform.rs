@@ -262,13 +262,15 @@ pub fn transform(qid: &str, bindings: &[Binding]) -> WikidataItem {
         };
         let statement = &mut property_entry.statements[statement_pos];
 
-        // Value-node extras may arrive on any row of this statement
+        // Value-node extras may arrive on any row of this statement.
+        // Q199 ("1") marks a dimensionless quantity - not a unit worth showing.
         if let Some(unit) = binding.get("unitOfMeasure")
             && let Value::Quantity {
                 unit_qid,
                 unit_label,
                 ..
             } = &mut statement.value
+            && entity_id(&unit.value) != Some("Q199")
         {
             *unit_qid = entity_id(&unit.value).map(str::to_string);
             if unit_label.is_none() {
