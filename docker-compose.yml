@@ -8,7 +8,8 @@ services:
       REDIS_URL: redis://redis:6379
     depends_on:
       - redis
-
+    ports:
+      - "4243:4243"
   redis:
     image: redis:7-alpine
     restart: unless-stopped
