@@ -1315,6 +1315,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "qjson"
+version = "0.1.0"
+dependencies = [
+ "percent-encoding",
+ "reqwest",
+ "serde",
+ "serde_json",
+ "thiserror",
+]
+
+[[package]]
 name = "qrender"
 version = "0.1.0"
 dependencies = [
