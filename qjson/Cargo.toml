@@ -1,8 +1,8 @@
 [package]
 name = "qjson"
-version = "0.1.0"
-authors = ["Santhosh Thottingal <santhosh.thottingal@gmail.com>"]
-edition = "2024"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
 
 [dependencies]
 percent-encoding = "2"
