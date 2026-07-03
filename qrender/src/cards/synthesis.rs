@@ -8,7 +8,8 @@ use std::collections::HashSet;
 
 use super::format::{display_value, format_time};
 use super::{
-    Card, CardKind, FactoidPage, GalleryImage, ItemChip, KeyValueEntry, LinkEntry, SeriesPoint,
+    Card, CardKind, FactoidPage, GalleryImage, ItemChip, KeyValueEntry, LinkEntry, MediaKind,
+    SeriesPoint,
 };
 use crate::grouping::GroupingConfig;
 
@@ -91,14 +92,10 @@ fn cards_for_group(title: &str, properties: &[&Property]) -> Vec<Card> {
 
         for statement in &property.statements {
             match &statement.value {
-                Value::CommonsMedia { file_name, url } => {
+                Value::CommonsMedia { file_name, .. } => {
                     images.push((
                         property.pid.clone(),
-                        GalleryImage {
-                            file_name: file_name.clone(),
-                            url: url.clone(),
-                            caption: property.label.clone(),
-                        },
+                        gallery_image(file_name, &property.label),
                     ));
                 }
                 Value::Coordinate { lat, lon, .. } => {
@@ -183,11 +180,7 @@ fn cards_for_group(title: &str, properties: &[&Property]) -> Vec<Card> {
             cards.push(Card {
                 title: image.caption.clone(),
                 source_pids: vec![pid],
-                kind: CardKind::Image {
-                    file_name: image.file_name,
-                    url: image.url,
-                    caption: image.caption,
-                },
+                kind: CardKind::Image { image },
             });
         }
         _ => {
@@ -245,6 +238,43 @@ fn cards_for_group(title: &str, properties: &[&Property]) -> Vec<Card> {
 fn dedup_pids(pids: impl Iterator<Item = String>) -> Vec<String> {
     let mut seen = HashSet::new();
     pids.filter(|pid| seen.insert(pid.clone())).collect()
+}
+
+const THUMB_WIDTH: u32 = 640;
+
+/// Path segment encoding for Commons file page URLs
+const FILE_SEGMENT: &percent_encoding::AsciiSet = &percent_encoding::CONTROLS
+    .add(b' ')
+    .add(b'"')
+    .add(b'#')
+    .add(b'?')
+    .add(b'%');
+
+fn media_kind(file_name: &str) -> MediaKind {
+    let extension = file_name
+        .rsplit('.')
+        .next()
+        .map(str::to_ascii_lowercase)
+        .unwrap_or_default();
+    match extension.as_str() {
+        "ogg" | "oga" | "opus" | "mp3" | "flac" | "wav" | "mid" => MediaKind::Audio,
+        "webm" | "ogv" | "mpg" | "mpeg" => MediaKind::Video,
+        _ => MediaKind::Image,
+    }
+}
+
+fn gallery_image(file_name: &str, caption: &str) -> GalleryImage {
+    let encoded = percent_encoding::utf8_percent_encode(file_name, FILE_SEGMENT);
+    GalleryImage {
+        file_name: file_name.to_string(),
+        thumb_url: format!(
+            "https://commons.wikimedia.org/wiki/Special:FilePath/{encoded}?width={THUMB_WIDTH}"
+        ),
+        file_url: format!("https://commons.wikimedia.org/wiki/Special:FilePath/{encoded}"),
+        page_url: format!("https://commons.wikimedia.org/wiki/File:{encoded}"),
+        caption: caption.to_string(),
+        media: media_kind(file_name),
+    }
 }
 
 /// Quantity statements with point-in-time qualifiers form a series card:

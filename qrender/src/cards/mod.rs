@@ -31,9 +31,7 @@ pub struct Card {
 #[serde(tag = "kind", rename_all = "kebab-case")]
 pub enum CardKind {
     Image {
-        file_name: String,
-        url: String,
-        caption: String,
+        image: GalleryImage,
     },
     Gallery {
         images: Vec<GalleryImage>,
@@ -66,8 +64,22 @@ pub enum CardKind {
 #[derive(Debug, Serialize)]
 pub struct GalleryImage {
     pub file_name: String,
-    pub url: String,
+    /// Commons thumbnail (Special:FilePath with a width)
+    pub thumb_url: String,
+    /// Direct file URL (Special:FilePath), for audio/video sources
+    pub file_url: String,
+    /// Commons file description page, for attribution
+    pub page_url: String,
     pub caption: String,
+    pub media: MediaKind,
+}
+
+#[derive(Debug, Serialize, Clone, Copy, PartialEq, Eq)]
+#[serde(rename_all = "lowercase")]
+pub enum MediaKind {
+    Image,
+    Audio,
+    Video,
 }
 
 #[derive(Debug, Serialize)]

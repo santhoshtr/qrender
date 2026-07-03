@@ -1,0 +1,113 @@
+{% macro media_element(image) %}
+{% match image.media %}
+{% when MediaKind::Audio %}
+<audio controls preload="none" src="{{ image.file_url }}"></audio>
+{% when MediaKind::Video %}
+<video controls preload="none" src="{{ image.file_url }}" poster="{{ image.thumb_url }}"></video>
+{% when MediaKind::Image %}
+<a href="{{ image.page_url }}"><img src="{{ image.thumb_url }}" alt="{{ image.caption }}" loading="lazy"></a>
+{% endmatch %}
+{% endmacro %}
+<!DOCTYPE html>
+<html lang="{{ page.language }}" dir="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.label.as_deref().unwrap_or(page.qid.as_str()) }}</title>
+<style>{{ tokens_light|safe }}</style>
+<style media="(prefers-color-scheme: dark)">{{ tokens_dark|safe }}</style>
+<style>{{ stylesheet|safe }}</style>
+</head>
+<body>
+<div class="page">
+  <header class="page-header">
+    <h1>{{ page.label.as_deref().unwrap_or(page.qid.as_str()) }}</h1>
+    {% if let Some(description) = page.description %}
+    <p class="page-header__description">{{ description }}</p>
+    {% endif %}
+  </header>
+
+  <main class="cards">
+    {% for card in page.cards %}
+    <section class="card">
+      <h2 class="card__title">{{ card.title }}</h2>
+      {% match card.kind %}
+
+      {% when CardKind::Image with { image } %}
+      <figure class="media">
+        {% call media_element(image) %}{% endcall %}
+      </figure>
+
+      {% when CardKind::Gallery with { images } %}
+      <div class="gallery">
+        {% for image in images %}
+        <figure class="media">
+          {% call media_element(image) %}{% endcall %}
+          <figcaption>{{ image.caption }}</figcaption>
+        </figure>
+        {% endfor %}
+      </div>
+
+      {% when CardKind::Stat with { value, note } %}
+      <p class="stat">
+        <span class="stat__value">{{ value }}</span>
+        {% if let Some(note) = note %}<span class="stat__note">{{ note }}</span>{% endif %}
+      </p>
+
+      {% when CardKind::StatSeries with { current, note, series } %}
+      <p class="stat">
+        <span class="stat__value">{{ current }}</span>
+        {% if let Some(note) = note %}<span class="stat__note">{{ note }}</span>{% endif %}
+      </p>
+      <div class="series">
+        {% for point in series %}
+        <div class="series__row">
+          <span class="series__label">{{ point.label }}</span>
+          <span class="series__track"><span class="series__bar" style="inline-size: {{ self.bar_percent(point.value, series) }}%"></span></span>
+          <span class="series__number">{{ point.display }}</span>
+        </div>
+        {% endfor %}
+      </div>
+
+      {% when CardKind::Map with { lat, lon, label } %}
+      <figure class="media map">
+        <img src="https://maps.wikimedia.org/img/osm-intl,10,{{ lat }},{{ lon }},600x300.png" alt="{{ label }}" loading="lazy">
+        <figcaption>{{ lat }}, {{ lon }}</figcaption>
+      </figure>
+
+      {% when CardKind::KeyValues with { entries } %}
+      <dl class="kv">
+        {% for entry in entries %}
+        <dt>{{ entry.key }}</dt>
+        <dd>
+          {% for value in entry.values %}<span class="kv__value">{{ value }}</span>{% endfor %}
+        </dd>
+        {% endfor %}
+      </dl>
+
+      {% when CardKind::Links with { entries } %}
+      <ul class="links">
+        {% for entry in entries %}
+        <li><a href="{{ entry.url }}" rel="nofollow">{{ entry.label }}</a><br><span class="links__url">{{ entry.url }}</span></li>
+        {% endfor %}
+      </ul>
+
+      {% when CardKind::ItemChips with { items } %}
+      <ul class="chips">
+        {% for item in items %}
+        <li class="chip"><a href="https://www.wikidata.org/wiki/{{ item.qid }}">{{ item.label }}</a></li>
+        {% endfor %}
+      </ul>
+
+      {% endmatch %}
+    </section>
+    {% endfor %}
+  </main>
+
+  <footer class="page-footer">
+    <p>Data: <a href="https://www.wikidata.org/wiki/{{ page.qid }}">Wikidata {{ page.qid }}</a> (CC0) ·
+    Images: <a href="https://commons.wikimedia.org">Wikimedia Commons</a></p>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,217 @@
+/* Factoid page — plain block layout (v1). Uses Codex design tokens. */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-system-sans);
+  background-color: var(--background-color-neutral-subtle);
+  color: var(--color-base);
+  line-height: var(--line-height-medium);
+}
+
+a {
+  color: var(--color-progressive);
+
+  &:visited {
+    color: var(--color-visited);
+  }
+}
+
+.page {
+  max-inline-size: 60rem;
+  margin-inline: auto;
+  padding: var(--spacing-150);
+}
+
+.page-header {
+  h1 {
+    margin: 0;
+    font-size: var(--font-size-xxx-large);
+    line-height: var(--line-height-xxx-large);
+    color: var(--color-emphasized);
+  }
+
+  .page-header__description {
+    margin: var(--spacing-25) 0 0;
+    font-size: var(--font-size-large);
+    color: var(--color-subtle);
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+  margin-block-start: var(--spacing-150);
+}
+
+.card {
+  background-color: var(--background-color-base);
+  border: var(--border-subtle);
+  border-radius: var(--border-radius-base);
+  padding: var(--spacing-100);
+
+  .card__title {
+    margin: 0 0 var(--spacing-50);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-subtle);
+  }
+}
+
+/* Stat */
+.stat {
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-50);
+  flex-wrap: wrap;
+
+  .stat__value {
+    font-size: var(--font-size-xx-large);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-emphasized);
+  }
+
+  .stat__note {
+    color: var(--color-subtle);
+  }
+}
+
+/* Series bars */
+.series {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-25);
+  margin-block-start: var(--spacing-75);
+
+  .series__row {
+    display: grid;
+    grid-template-columns: 4rem 1fr auto;
+    align-items: center;
+    gap: var(--spacing-50);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .series__label,
+  .series__number {
+    color: var(--color-subtle);
+    font-size: var(--font-size-small);
+  }
+
+  .series__track {
+    display: block;
+  }
+
+  .series__bar {
+    display: block;
+    block-size: var(--size-75);
+    min-inline-size: 2px;
+    background-color: var(--background-color-progressive);
+    border-radius: var(--border-radius-base);
+  }
+}
+
+/* Media */
+.media {
+  margin: 0;
+
+  img,
+  video {
+    max-inline-size: 100%;
+    block-size: auto;
+    border-radius: var(--border-radius-base);
+    display: block;
+  }
+
+  figcaption {
+    margin-block-start: var(--spacing-25);
+    font-size: var(--font-size-x-small);
+    color: var(--color-subtle);
+  }
+}
+
+/* Gallery: horizontal scroll with snap, no JS */
+.gallery {
+  display: flex;
+  gap: var(--spacing-75);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-block-end: var(--spacing-25);
+
+  .media {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  img {
+    block-size: 12rem;
+    inline-size: auto;
+  }
+}
+
+/* Key-values */
+.kv {
+  margin: 0;
+  display: grid;
+  grid-template-columns: minmax(8rem, 16rem) 1fr;
+  gap: var(--spacing-25) var(--spacing-100);
+
+  dt {
+    color: var(--color-subtle);
+  }
+
+  dd {
+    margin: 0;
+  }
+
+  .kv__value {
+    display: block;
+  }
+}
+
+/* Links */
+.links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-50);
+
+  .links__url {
+    font-size: var(--font-size-x-small);
+    color: var(--color-subtle);
+    word-break: break-all;
+  }
+}
+
+/* Item chips */
+.chips {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-50);
+
+  .chip {
+    background-color: var(--background-color-interactive-subtle);
+    border: var(--border-subtle);
+    border-radius: var(--border-radius-pill);
+    padding: var(--spacing-25) var(--spacing-75);
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.page-footer {
+  margin-block-start: var(--spacing-200);
+  font-size: var(--font-size-small);
+  color: var(--color-subtle);
+}

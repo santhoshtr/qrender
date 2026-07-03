@@ -12,6 +12,10 @@ pub enum QRenderError {
     Template(#[from] Box<handlebars::TemplateError>),
     #[error("render error: {0}")]
     Render(#[from] handlebars::RenderError),
+    #[error("factoid template error: {0}")]
+    Factoid(#[from] askama::Error),
     #[error("unknown renderer: {0}")]
     UnknownRenderer(String),
+    #[error("format not supported by this render path: {0}")]
+    UnsupportedFormat(String),
 }

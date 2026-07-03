@@ -9,6 +9,7 @@ pub mod cards;
 mod custom;
 pub mod data_loading;
 pub mod error;
+pub mod factoid;
 pub mod grouping;
 pub mod model;
 mod registry;
@@ -23,6 +24,7 @@ pub enum RenderFormatOptions {
     HTML,
     Markdown,
     Wikitext,
+    Factoid,
 }
 
 pub struct RenderConfig {
@@ -57,6 +59,16 @@ impl RenderConfig {
 }
 
 pub async fn render(qid: &str, render_config: &RenderConfig) -> Result<String, QRenderError> {
+    if let RenderFormatOptions::Factoid = render_config.format {
+        let item = data_loading::fetch_typed(qid, render_config.language.as_str()).await?;
+        let page = cards::synthesize(
+            &item,
+            &render_config.language,
+            &render_config.grouping_config,
+            render_config.ignore_ids,
+        );
+        return factoid::render_page(&page);
+    }
     let wikidata_item = fetch_wikidata_item(qid, render_config.language.as_str()).await?;
     render_item(&wikidata_item, render_config)
 }
@@ -104,6 +116,10 @@ pub fn render_item(
             }
             RenderFormatOptions::Wikitext => {
                 output.push_str(&renderer.render_wikitext(&group_name, &properties)?);
+            }
+            RenderFormatOptions::Factoid => {
+                // Factoid needs the typed item; render() routes it before here
+                return Err(QRenderError::UnsupportedFormat("factoid".to_string()));
             }
         }
     }
