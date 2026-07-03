@@ -6,13 +6,14 @@ edition.workspace = true
 
 [dependencies]
 handlebars = "6.3.2"
-reqwest = { version = "0.13", features = ["json", "form", "gzip", "deflate", "brotli", "cookies"] }
 serde = { version = "1.0.219", features = ["derive"] }
 serde_json = { version = "1.0.140" }
 tokio = { version = "1.44.2", features = ["full"] }
 clap = { version = "4.5.1", features = ["derive"] }
 thiserror = "2"
 toml = "1.1"
+qjson = { version = "0.1.0", path = "../qjson" }
 
 [dev-dependencies]
 insta = "1"
+qjson = { path = "../qjson" }

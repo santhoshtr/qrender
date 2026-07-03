@@ -3,7 +3,7 @@ use thiserror::Error;
 #[derive(Error, Debug)]
 pub enum QRenderError {
     #[error("failed to fetch Wikidata item: {0}")]
-    Fetch(#[from] reqwest::Error),
+    Fetch(#[from] qjson::QjsonError),
     #[error("failed to parse response JSON: {0}")]
     Parse(#[from] serde_json::Error),
     #[error("invalid grouping config: {0}")]
