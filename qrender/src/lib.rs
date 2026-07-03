@@ -10,7 +10,7 @@ mod custom;
 pub mod data_loading;
 pub mod error;
 pub mod grouping;
-mod model;
+pub mod model;
 mod registry;
 mod rendering;
 
@@ -57,9 +57,17 @@ impl RenderConfig {
 }
 
 pub async fn render(qid: &str, render_config: &RenderConfig) -> Result<String, QRenderError> {
-    let mut output = String::new();
     let wikidata_item = fetch_wikidata_item(qid, render_config.language.as_str()).await?;
-    let grouped_properties = group_properties(&wikidata_item, &render_config.grouping_config);
+    render_item(&wikidata_item, render_config)
+}
+
+/// Render an already-fetched item. Pure: no network, deterministic output.
+pub fn render_item(
+    wikidata_item: &model::WikidataItem,
+    render_config: &RenderConfig,
+) -> Result<String, QRenderError> {
+    let mut output = String::new();
+    let grouped_properties = group_properties(wikidata_item, &render_config.grouping_config);
 
     for (group_name, properties) in grouped_properties {
         if properties.is_empty() {
