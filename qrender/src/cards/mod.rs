@@ -107,4 +107,6 @@ pub struct ItemChip {
     pub qid: String,
     pub label: String,
     pub image_url: Option<String>,
+    /// Qualifier summary, e.g. "start time: 1963"
+    pub note: Option<String>,
 }

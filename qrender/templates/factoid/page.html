@@ -95,7 +95,7 @@
       {% when CardKind::ItemChips with { items } %}
       <ul class="chips">
         {% for item in items %}
-        <li class="chip"><a href="https://www.wikidata.org/wiki/{{ item.qid }}">{{ item.label }}</a></li>
+        <li class="chip"><a href="https://www.wikidata.org/wiki/{{ item.qid }}">{{ item.label }}</a>{% if let Some(note) = item.note %} <small class="chip__note">{{ note }}</small>{% endif %}</li>
         {% endfor %}
       </ul>
 

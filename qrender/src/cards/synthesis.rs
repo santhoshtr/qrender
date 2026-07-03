@@ -135,6 +135,7 @@ fn cards_for_group(title: &str, properties: &[&Property]) -> Vec<Card> {
                     qid: qid.clone(),
                     label: label.clone(),
                     image_url: image_url.clone(),
+                    note: qualifier_note(s),
                 }),
                 _ => None,
             })
@@ -160,7 +161,10 @@ fn cards_for_group(title: &str, properties: &[&Property]) -> Vec<Card> {
                         | Value::ItemRef { .. }
                 )
             })
-            .map(|s| display_value(&s.value))
+            .map(|s| match qualifier_note(s) {
+                Some(note) => format!("{} ({note})", display_value(&s.value)),
+                None => display_value(&s.value),
+            })
             .collect();
         if !values.is_empty() {
             key_values.push((
@@ -238,6 +242,23 @@ fn cards_for_group(title: &str, properties: &[&Property]) -> Vec<Card> {
 fn dedup_pids(pids: impl Iterator<Item = String>) -> Vec<String> {
     let mut seen = HashSet::new();
     pids.filter(|pid| seen.insert(pid.clone())).collect()
+}
+
+/// "label: value, label: value" summary of a statement's qualifiers.
+/// Qualifiers often carry essential context (dates of office, ordinals),
+/// so every backend gets them, not just the visual one.
+fn qualifier_note(statement: &qjson::Statement) -> Option<String> {
+    if statement.qualifiers.is_empty() {
+        return None;
+    }
+    Some(
+        statement
+            .qualifiers
+            .iter()
+            .map(|q| format!("{}: {}", q.label, display_value(&q.value)))
+            .collect::<Vec<_>>()
+            .join(", "),
+    )
 }
 
 const THUMB_WIDTH: u32 = 640;

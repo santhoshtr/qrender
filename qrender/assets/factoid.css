@@ -207,6 +207,11 @@ a {
     a {
       text-decoration: none;
     }
+
+    .chip__note {
+      color: var(--color-subtle);
+      font-size: var(--font-size-x-small);
+    }
   }
 }
 
