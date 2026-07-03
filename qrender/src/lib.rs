@@ -10,6 +10,7 @@ mod custom;
 pub mod data_loading;
 pub mod error;
 pub mod factoid;
+pub mod textual;
 pub mod grouping;
 pub mod model;
 mod registry;
