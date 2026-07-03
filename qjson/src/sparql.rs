@@ -59,7 +59,10 @@ pub fn validate_language(language: &str) -> Result<(), QjsonError> {
 }
 
 /// One query fetches every statement of the item with labels resolved by
-/// the label service. Ported from the Go tool, additionally selecting:
+/// the label service. The fallback chain includes "mul": Wikidata is
+/// migrating language-independent labels to the mul language code, and
+/// items like Q42 no longer have an en rdfs:label at all.
+/// Ported from the Go tool, additionally selecting:
 /// - ?statement       statement node URI, the grouping key
 /// - ?propertyType    wikibase datatype, drives typed value parsing
 /// - ?timePrecision   Wikidata time precision from the value node
@@ -124,7 +127,7 @@ pub fn build_query(qid: &str, language: &str) -> String {
         }}
 
         SERVICE wikibase:label {{
-            bd:serviceParam wikibase:language "{language}, en" .
+            bd:serviceParam wikibase:language "{language}, mul, en" .
             ?item rdfs:label ?itemLabel .
             ?item schema:description ?itemDescription .
             ?property rdfs:label ?propertyLabel .
