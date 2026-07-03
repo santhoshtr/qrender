@@ -1,16 +1,17 @@
 use crate::{
     custom::dimension::DimensionsRenderer,
+    error::QRenderError,
     rendering::{DefaultRenderer, Renderer},
 };
 
 pub struct RendererRegistry {}
 
 impl RendererRegistry {
-    pub fn get_renderer(name: &str) -> Box<dyn Renderer> {
+    pub fn get_renderer(name: &str) -> Result<Box<dyn Renderer>, QRenderError> {
         match name {
-            "default" => Box::new(DefaultRenderer),
-            "dimensions" => Box::new(DimensionsRenderer),
-            _ => panic!("Renderer not found"),
+            "default" => Ok(Box::new(DefaultRenderer)),
+            "dimensions" => Ok(Box::new(DimensionsRenderer)),
+            _ => Err(QRenderError::UnknownRenderer(name.to_string())),
         }
     }
 }

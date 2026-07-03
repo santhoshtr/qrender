@@ -1,0 +1,17 @@
+use thiserror::Error;
+
+#[derive(Error, Debug)]
+pub enum QRenderError {
+    #[error("failed to fetch Wikidata item: {0}")]
+    Fetch(#[from] reqwest::Error),
+    #[error("failed to parse response JSON: {0}")]
+    Parse(#[from] serde_json::Error),
+    #[error("invalid grouping config: {0}")]
+    Config(#[from] toml::de::Error),
+    #[error("template error: {0}")]
+    Template(#[from] Box<handlebars::TemplateError>),
+    #[error("render error: {0}")]
+    Render(#[from] handlebars::RenderError),
+    #[error("unknown renderer: {0}")]
+    UnknownRenderer(String),
+}

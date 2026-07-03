@@ -1,3 +1,4 @@
+use crate::error::QRenderError;
 use crate::model::{Property, WikidataItem};
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
@@ -24,7 +25,7 @@ impl GroupingConfig {
     }
 }
 
-pub fn load_grouping_config() -> Result<GroupingConfig, Box<dyn std::error::Error>> {
+pub fn load_grouping_config() -> Result<GroupingConfig, QRenderError> {
     // Read the TOML file content
     let toml_content = include_str!("../groups.toml");
     // Parse the TOML string into our Config struct

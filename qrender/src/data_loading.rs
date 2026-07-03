@@ -1,9 +1,9 @@
-use crate::{config::USER_AGENT, model::WikidataItem};
+use crate::{config::USER_AGENT, error::QRenderError, model::WikidataItem};
 
 pub async fn fetch_wikidata_item(
     qid: &str,
     language: &str,
-) -> Result<WikidataItem, Box<dyn std::error::Error>> {
+) -> Result<WikidataItem, QRenderError> {
     // Construct the URL for the qjson lookup. API Example: https://qjson.toolforge.org/Q405.json
     let api_url = format!("https://qjson.toolforge.org/{}.json?lang={}", qid, language);
     // Make a GET request to the API

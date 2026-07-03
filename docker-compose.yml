@@ -1,0 +1,14 @@
+services:
+  app:
+    image: rust:alpine
+    command: sleep infinity
+    volumes:
+      - .:/workspaces/qrender:cached
+    environment:
+      REDIS_URL: redis://redis:6379
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped

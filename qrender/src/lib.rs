@@ -8,10 +8,13 @@ use crate::grouping::GroupingConfig;
 pub mod config;
 mod custom;
 pub mod data_loading;
+pub mod error;
 pub mod grouping;
 mod model;
 mod registry;
 mod rendering;
+
+pub use error::QRenderError;
 #[derive(clap::ValueEnum, Clone, Default, Debug, Serialize)]
 #[serde(rename_all = "kebab-case")]
 pub enum RenderFormatOptions {
@@ -30,41 +33,30 @@ pub struct RenderConfig {
 }
 
 impl RenderConfig {
-    pub fn new(format: RenderFormatOptions, ignore_ids: bool, language: &str) -> Self {
-        let grouping_config = load_grouping_config().unwrap();
-        RenderConfig {
+    pub fn new(
+        format: RenderFormatOptions,
+        ignore_ids: bool,
+        language: &str,
+    ) -> Result<Self, QRenderError> {
+        let grouping_config = load_grouping_config()?;
+        Ok(RenderConfig {
             format,
             ignore_ids,
             grouping_config,
             language: language.to_owned(),
-        }
+        })
     }
 
-    pub fn new_text_renderer(language: &str) -> Self {
-        let grouping_config = load_grouping_config().unwrap();
-        RenderConfig {
-            format: RenderFormatOptions::Text,
-            ignore_ids: true,
-            grouping_config,
-            language: language.to_string(),
-        }
+    pub fn new_text_renderer(language: &str) -> Result<Self, QRenderError> {
+        Self::new(RenderFormatOptions::Text, true, language)
     }
 
-    pub fn new_markdow_renderer(language: &str) -> Self {
-        let grouping_config = load_grouping_config().unwrap();
-        RenderConfig {
-            format: RenderFormatOptions::Markdown,
-            ignore_ids: true,
-            grouping_config,
-            language: language.to_string(),
-        }
+    pub fn new_markdow_renderer(language: &str) -> Result<Self, QRenderError> {
+        Self::new(RenderFormatOptions::Markdown, true, language)
     }
 }
 
-pub async fn render(
-    qid: &str,
-    render_config: &RenderConfig,
-) -> Result<String, Box<dyn std::error::Error>> {
+pub async fn render(qid: &str, render_config: &RenderConfig) -> Result<String, QRenderError> {
     let mut output = String::new();
     let wikidata_item = fetch_wikidata_item(qid, render_config.language.as_str()).await?;
     let grouped_properties = group_properties(&wikidata_item, &render_config.grouping_config);
@@ -89,7 +81,7 @@ pub async fn render(
         };
         let renderer_name = group_config.renderer.as_deref().unwrap_or("default"); // Use "default" if None
 
-        let renderer = RendererRegistry::get_renderer(renderer_name);
+        let renderer = RendererRegistry::get_renderer(renderer_name)?;
 
         match render_config.format {
             RenderFormatOptions::HTML => {
