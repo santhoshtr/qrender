@@ -21,9 +21,16 @@ pub struct GroupConfig {
 pub struct PropertyConfig {
     /// Symbol name from assets/icons/; overrides the group icon
     pub icon: Option<String>,
+    /// Never render this property (structural/meta properties like P31)
+    #[serde(default)]
+    pub ignore: bool,
 }
 
 impl GroupingConfig {
+    pub fn is_ignored(&self, pid: &str) -> bool {
+        self.properties.get(pid).is_some_and(|p| p.ignore)
+    }
+
     pub fn sorted_groups(&self) -> Vec<(&String, &GroupConfig)> {
         let mut groups_vec: Vec<(&String, &GroupConfig)> = self.groups.iter().collect();
         // Groups with an explicit order come first (ascending); the rest

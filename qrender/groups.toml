@@ -9940,3 +9940,26 @@ icon = "sell"
 icon = "event"
 [properties.P11810]
 icon = "communities"
+
+# Structural/meta properties that never make good cards, ported from
+# the wx prototype's ignore list.
+[properties.P31]     # instance of
+ignore = true
+[properties.P279]    # subclass of
+ignore = true
+[properties.P459]    # determination method
+ignore = true
+[properties.P527]    # has part(s)
+ignore = true
+[properties.P805]    # statement is subject of
+ignore = true
+[properties.P1013]   # criterion used
+ignore = true
+[properties.P2888]   # exact match
+ignore = true
+[properties.P6592]   # OpenStreetMap zoom level
+ignore = true
+[properties.P7452]   # reason for preferred rank
+ignore = true
+[properties.P8017]   # generational suffix
+ignore = true

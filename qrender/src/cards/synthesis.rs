@@ -32,7 +32,7 @@ pub fn synthesize(
         let properties: Vec<&Property> = group_config
             .pids
             .iter()
-            .filter(|pid| seen.insert(pid.as_str()))
+            .filter(|pid| seen.insert(pid.as_str()) && !config.is_ignored(pid))
             .filter_map(|pid| item.properties.get(pid))
             .collect();
         let mut group_cards = cards_for_group(&humanize(group_name), false, &properties);
@@ -48,7 +48,7 @@ pub fn synthesize(
     let mut leftover: Vec<&Property> = item
         .properties
         .values()
-        .filter(|p| !grouped_pids.contains(&p.pid))
+        .filter(|p| !grouped_pids.contains(&p.pid) && !config.is_ignored(&p.pid))
         .collect();
     leftover.sort_by_key(|p| p.pid.strip_prefix('P').and_then(|n| n.parse::<u32>().ok()));
     for property in leftover {
