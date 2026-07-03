@@ -5,12 +5,22 @@ use std::collections::HashMap;
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct GroupingConfig {
     pub groups: HashMap<String, GroupConfig>, // Group Name -> Group Config
+    #[serde(default)]
+    pub properties: HashMap<String, PropertyConfig>, // PID -> Property Config
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct GroupConfig {
     pub pids: Vec<String>,
     pub order: Option<i32>,
+    /// Symbol name from assets/icons/, shown on cards from this group
+    pub icon: Option<String>,
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone, Default)]
+pub struct PropertyConfig {
+    /// Symbol name from assets/icons/; overrides the group icon
+    pub icon: Option<String>,
 }
 
 impl GroupingConfig {
@@ -31,4 +41,22 @@ pub fn load_grouping_config() -> Result<GroupingConfig, QRenderError> {
     // Parse the TOML string into our Config struct
     let config: GroupingConfig = toml::from_str(toml_content)?;
     Ok(config)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn configured_icons_exist() {
+        let config = load_grouping_config().unwrap();
+        let group_icons = config.groups.values().filter_map(|g| g.icon.as_deref());
+        let property_icons = config.properties.values().filter_map(|p| p.icon.as_deref());
+        for icon in group_icons.chain(property_icons) {
+            assert!(
+                crate::icons::lookup(icon).is_some(),
+                "unknown icon in groups.toml: {icon}"
+            );
+        }
+    }
 }

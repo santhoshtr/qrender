@@ -4,6 +4,7 @@
 # For the ease of reading and maintanance, provide PID label as comment.
 #
 [groups.names]
+icon = "article"
 pids = [
   "P735",  # given name
   "P734",  # family name
@@ -21,6 +22,7 @@ pids = [
 order = 1
 
 [groups.life]
+icon = "event"
 pids = [
   "P569", # date of birth
   "P570", # date of death
@@ -28,12 +30,14 @@ pids = [
 ]
 
 [groups.located_in]
+icon = "location_on"
 pids = [
   "P17",  # Country
   "P131", # Located In The Administrative Territorial Entity
 ]
 
 [groups.location]
+icon = "map"
 pids = [
   "P625",  # coordinates
   "P242",  # locator map image
@@ -43,6 +47,7 @@ pids = [
 ]
 
 [groups.personal]
+icon = "group"
 pids = [
   "mother",
   "father",
@@ -52,18 +57,21 @@ pids = [
 ]
 
 [groups.spouse]
+icon = "group"
 pids = [
   "P26",  # spouse
   "P451", # unmarried partner
 ]
 
 [groups.children]
+icon = "group"
 pids = [
   "P40",   # children
   "P1971", # number of children
 ]
 
 [groups.life_places]
+icon = "location_on"
 pids = [
   "P19",  # place of birth
   "P20",  # place of death
@@ -71,24 +79,28 @@ pids = [
 ]
 
 [groups.death_cause]
+icon = "stethoscope"
 pids = [
   "P509",  # cause of death
   "P1196", # manner of death
 ]
 
 [groups.employer]
+icon = "person"
 pids = [
   "employer",
   "P108",     # employer
 ]
 
 [groups.languages]
+icon = "language"
 pids = [
   "P103",  # native language
   "P1412", # languages spoken written or signed
 ]
 
 [groups.political]
+icon = "how_to_vote"
 pids = [
   "P102",  # member of political party
   "P1028", # political ideology
@@ -96,6 +108,7 @@ pids = [
 ]
 
 [groups.electoral]
+icon = "how_to_vote"
 pids = [
   "P3602", # candidacy in election
   "P768",  # electoral district
@@ -108,6 +121,7 @@ pids = [
 ]
 
 [groups.physical]
+icon = "straighten"
 pids = [
   "P2067", # mass
   "P2048", # height
@@ -118,6 +132,7 @@ pids = [
 ]
 
 [groups.web]
+icon = "captive_portal"
 pids = [
   "P856",  # official website
   "P2572", # Hashtag
@@ -125,6 +140,7 @@ pids = [
 ]
 
 [groups.categories]
+icon = "sell"
 pids = [
   "P373",   # Commons category
   "P7084",
@@ -140,6 +156,7 @@ pids = [
 ]
 
 [groups.events]
+icon = "event"
 pids = [
   "P793",  # significant event
   "P2257", # event interval
@@ -147,46 +164,56 @@ pids = [
 ]
 
 [groups.waterbody]
+icon = "map"
 pids = [
   "P206", # located on terrain feature
   "P200", # lake inflows
 ]
 
 [groups.watercourse]
+icon = "map"
 pids = [
   "P201", # lake outflows
   "P885", # origin of the watercourse
 ]
 
 [groups.watershed]
+icon = "map"
 pids = [
   "P2053", # watershed area
 ]
 
 [groups.residence_time_of_water]
+icon = "pace"
 pids = [
   "P3020", # residence time of water
 ]
 
 [groups.basin]
+icon = "map"
 pids = [
   "P4614", # drainage basin
   "P205",  # basin country
 ]
 
 [groups.sister_city]
+icon = "communities"
 pids = ["sister city", "P190"]
 
 [groups.head_of_state]
+icon = "person"
 pids = ["P1906", "P35"]
 
 [groups.government_headed_by]
+icon = "person"
 pids = ["P1313", "P6"]
 
 [groups.executive_body]
+icon = "groups"
 pids = ["P208", "P194"]
 
 [groups.high_and_low_points]
+icon = "altitude"
 pids = [
   "P610",
   "P609",  # lowest point
@@ -194,6 +221,7 @@ pids = [
 ]
 
 [groups.population]
+icon = "groups"
 pids = [
   "P1082", # population
   "P1539",
@@ -203,6 +231,7 @@ pids = [
 ]
 
 [groups.literacy_rate]
+icon = "local_library"
 pids = [
   "literacy rate",
   "P6897",         # literacy rate
@@ -211,6 +240,7 @@ pids = [
 ]
 
 [groups.radius_diameter]
+icon = "straighten"
 pids = [
   "radius",
   "diameter",
@@ -229,6 +259,7 @@ pids = [
 ]
 
 [groups.topics]
+icon = "article"
 pids = ["P2184", "P2633", "P8744", "P9241"]
 
 [groups.electricity]
@@ -245,6 +276,7 @@ pids = [
 ]
 
 [groups.legal_ages]
+icon = "calendar_month"
 pids = [
   "P2997",
   "P3000",
@@ -257,9 +289,11 @@ pids = [
 ]
 
 [groups.traffic_side_driving]
+icon = "directions_car"
 pids = ["P1622", "P5658", "P395"]
 
 [groups.phone]
+icon = "call"
 pids = [
   "P474",  # country calling code
   "P3238", # trunk prefix
@@ -267,6 +301,7 @@ pids = [
 ]
 
 [groups.motto_anthem]
+icon = "volume_up"
 pids = [
   "P1546", # motto
   "P1451", # motto text
@@ -274,36 +309,43 @@ pids = [
 ]
 
 [groups.human_development_index]
+icon = "pace"
 pids = [
   "P1081",  # Human Development
   "P11593", # Inequality-adjusted Human Development Index
 ]
 
 [groups.follow_replaces]
+icon = "compare_arrows"
 pids = [
   "P155",  # follows
   "P1365", # replaces
 ]
 
 [groups.pronunciation]
+icon = "volume_up"
 pids = [
   "P898", # pronunciation ipa
   "P443", # pronunciation audio
 ]
 
 [groups.temperature]
+icon = "thermometer"
 pids = [
   "P6591", # maximum temperature
   "P7422", # minimum temperature
 ]
 
 [groups.corner_coordinates]
+icon = "location_on"
 pids = ["P1332", "P1333", "P1334", "P1335"]
 
 [groups.geography]
+icon = "globe"
 pids = ["P2044", "P2043", "P2046", "P2049"]
 
 [groups.orbit]
+icon = "3d_rotation"
 pids = [
   "P522",  # type of orbit
   "P1096", # orbital eccentricity
@@ -313,12 +355,14 @@ pids = [
 ]
 
 [groups.apoapsis_periapsis]
+icon = "3d_rotation"
 pids = [
   "P2243", # apoapsis
   "P2244", # periapsis
 ]
 
 [groups.mass]
+icon = "weight"
 pids = [
   "P2067", # mass
   "P2054", # density
@@ -326,6 +370,7 @@ pids = [
 ]
 
 [groups.melting_boiling_points]
+icon = "thermometer"
 pids = [
   "P2101", # melting point
   "P2102", # boiling point
@@ -339,6 +384,7 @@ pids = [
 ]
 
 [groups.discovery]
+icon = "visibility"
 pids = [
   "P575", # time of discovery
   "P61",  # discoverer or inventor
@@ -351,6 +397,7 @@ pids = ["P8476", "P8477"]
 pids = ["P105", "P225", "P171"]
 
 [groups.pregnancy]
+icon = "calendar_month"
 pids = [
   "P7862",
   "P3063",
@@ -358,6 +405,7 @@ pids = [
 ]
 
 [groups.articleimage]
+icon = "photo_library"
 pids = [
   "P1944",
   "P948",
@@ -379,12 +427,14 @@ pids = [
 ]
 
 [groups.start_end_times]
+icon = "event"
 pids = [
   "P580", # start time
   "P582", # end time
 ]
 
 [groups.identifiers]
+icon = "tag"
 pids = [
   "P244",       # Library of Congress authority ID
   "P305",       # IETF language tag
@@ -9731,3 +9781,162 @@ pids = [
   "P12811",     # FC Metz player ID
   "P12784",     # Locomotive Yaroslavl HC player ID
 ]
+
+# Per-property configuration. icon: symbol name from assets/icons/,
+# overrides the group icon. Ported from the wx prototype config.
+[properties.P6]
+icon = "person"
+[properties.P19]
+icon = "location_on"
+[properties.P35]
+icon = "person"
+[properties.P51]
+icon = "volume_up"
+[properties.P53]
+icon = "group"
+[properties.P69]
+icon = "school"
+[properties.P78]
+icon = "globe"
+[properties.P166]
+icon = "trophy"
+[properties.P373]
+icon = "sell"
+[properties.P443]
+icon = "volume_up"
+[properties.P460]
+icon = "equal"
+[properties.P485]
+icon = "archive"
+[properties.P551]
+icon = "home"
+[properties.P552]
+icon = "hand"
+[properties.P569]
+icon = "event"
+[properties.P570]
+icon = "event"
+[properties.P571]
+icon = "event"
+[properties.P575]
+icon = "event"
+[properties.P610]
+icon = "mountain_flag"
+[properties.P625]
+icon = "location_on"
+[properties.P737]
+icon = "person"
+[properties.P856]
+icon = "captive_portal"
+[properties.P910]
+icon = "sell"
+[properties.P989]
+icon = "volume_up"
+[properties.P1050]
+icon = "stethoscope"
+[properties.P1082]
+icon = "groups"
+[properties.P1249]
+icon = "event"
+[properties.P1340]
+icon = "visibility"
+[properties.P1344]
+icon = "event"
+[properties.P1464]
+icon = "sell"
+[properties.P1465]
+icon = "sell"
+[properties.P1539]
+icon = "woman"
+[properties.P1540]
+icon = "man"
+[properties.P1622]
+icon = "directions_car"
+[properties.P1740]
+icon = "sell"
+[properties.P1791]
+icon = "sell"
+[properties.P1792]
+icon = "sell"
+[properties.P1853]
+icon = "bloodtype"
+[properties.P1889]
+icon = "compare_arrows"
+[properties.P2031]
+icon = "event"
+[properties.P2043]
+icon = "straighten"
+[properties.P2044]
+icon = "altitude"
+[properties.P2046]
+icon = "aspect_ratio"
+[properties.P2048]
+icon = "height"
+[properties.P2049]
+icon = "fit_width"
+[properties.P2067]
+icon = "weight"
+[properties.P2076]
+icon = "thermometer"
+[properties.P2184]
+icon = "article"
+[properties.P2572]
+icon = "tag"
+[properties.P2579]
+icon = "school"
+[properties.P2583]
+icon = "distance"
+[properties.P2633]
+icon = "article"
+[properties.P2852]
+icon = "call"
+[properties.P3020]
+icon = "pace"
+[properties.P3063]
+icon = "calendar_month"
+[properties.P3373]
+icon = "person"
+[properties.P3602]
+icon = "how_to_vote"
+[properties.P4290]
+icon = "open_in_phone"
+[properties.P4511]
+icon = "height"
+[properties.P4896]
+icon = "3d_rotation"
+[properties.P5658]
+icon = "train"
+[properties.P6591]
+icon = "thermostat_arrow_up"
+[properties.P7015]
+icon = "arrow_cool_down"
+[properties.P7084]
+icon = "sell"
+[properties.P7101]
+icon = "policy"
+[properties.P7422]
+icon = "thermostat_arrow_down"
+[properties.P7862]
+icon = "calendar_month"
+[properties.P7867]
+icon = "sell"
+[properties.P8402]
+icon = "captive_portal"
+[properties.P8687]
+icon = "communities"
+[properties.P8744]
+icon = "article"
+[properties.P8989]
+icon = "sell"
+[properties.P9241]
+icon = "article"
+[properties.P9493]
+icon = "local_library"
+[properties.P9601]
+icon = "map"
+[properties.P10280]
+icon = "sell"
+[properties.P10786]
+icon = "event"
+[properties.P11810]
+icon = "communities"
