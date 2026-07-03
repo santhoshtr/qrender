@@ -35,6 +35,14 @@ pub fn render_text(page: &FactoidPage) -> String {
                     let _ = writeln!(out, "{value}");
                 }
             },
+            CardKind::Meter { display, note, .. } => match note {
+                Some(note) => {
+                    let _ = writeln!(out, "{display} ({note})");
+                }
+                None => {
+                    let _ = writeln!(out, "{display}");
+                }
+            },
             CardKind::StatSeries {
                 current,
                 note,
@@ -99,6 +107,14 @@ pub fn render_markdown(page: &FactoidPage) -> String {
                 }
                 None => {
                     let _ = writeln!(out, "**{value}**");
+                }
+            },
+            CardKind::Meter { display, note, .. } => match note {
+                Some(note) => {
+                    let _ = writeln!(out, "**{display}** ({note})");
+                }
+                None => {
+                    let _ = writeln!(out, "**{display}**");
                 }
             },
             CardKind::StatSeries {
@@ -168,6 +184,14 @@ pub fn render_wikitext(page: &FactoidPage) -> String {
                 }
                 None => {
                     let _ = writeln!(out, ":* {value}");
+                }
+            },
+            CardKind::Meter { display, note, .. } => match note {
+                Some(note) => {
+                    let _ = writeln!(out, ":* {display} ({note})");
+                }
+                None => {
+                    let _ = writeln!(out, ":* {display}");
                 }
             },
             CardKind::StatSeries {
@@ -253,6 +277,24 @@ pub fn render_html(page: &FactoidPage) -> String {
                     .map(|n| format!(" ({})", escape(n)))
                     .unwrap_or_default();
                 let _ = writeln!(out, "<p><strong>{}</strong>{note}</p>", escape(value));
+            }
+            CardKind::Meter {
+                value,
+                display,
+                note,
+                min,
+                max,
+                ..
+            } => {
+                let note = note
+                    .as_ref()
+                    .map(|n| format!(" ({})", escape(n)))
+                    .unwrap_or_default();
+                let _ = writeln!(
+                    out,
+                    "<p><strong>{}</strong>{note}</p>\n<meter min=\"{min}\" max=\"{max}\" value=\"{value}\"></meter>",
+                    escape(display)
+                );
             }
             CardKind::StatSeries {
                 current,

@@ -78,6 +78,16 @@
         {% endfor %}
       </div>
 
+      {% when CardKind::Meter with { value, display, note, min, max, low, high, optimum } %}
+      <p class="stat">
+        <span class="stat__value">{{ display }}</span>
+        {% if let Some(note) = note %}<span class="stat__note">{{ note }}</span>{% endif %}
+      </p>
+      <meter class="gauge" min="{{ min }}" max="{{ max }}" value="{{ value }}"
+        {%- if let Some(low) = low %} low="{{ low }}"{% endif -%}
+        {%- if let Some(high) = high %} high="{{ high }}"{% endif -%}
+        {%- if let Some(optimum) = optimum %} optimum="{{ optimum }}"{% endif %}>{{ display }}</meter>
+
       {% when CardKind::Map with { lat, lon, label } %}
       <figure class="media map">
         <img src="https://maps.wikimedia.org/img/osm-intl,10,{{ lat }},{{ lon }},600x300.png" alt="{{ label }}" loading="lazy">

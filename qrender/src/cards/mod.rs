@@ -88,6 +88,17 @@ pub enum CardKind {
     ItemChips {
         items: Vec<ItemChip>,
     },
+    /// A quantity on a known scale, e.g. HDI - rendered as a gauge
+    Meter {
+        value: f64,
+        display: String,
+        note: Option<String>,
+        min: f64,
+        max: f64,
+        low: Option<f64>,
+        high: Option<f64>,
+        optimum: Option<f64>,
+    },
 }
 
 #[derive(Debug, Serialize)]

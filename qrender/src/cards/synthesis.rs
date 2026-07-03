@@ -52,7 +52,7 @@ pub fn synthesize(
             .filter(|pid| !(hero_consumes_p18 && *pid == "P18"))
             .filter_map(|pid| item.properties.get(pid))
             .collect();
-        let mut group_cards = cards_for_group(&humanize(group_name), false, &properties);
+        let mut group_cards = cards_for_group(&humanize(group_name), false, &properties, config);
         for card in &mut group_cards {
             card.icon = resolve_icon(card, group_config.icon.as_deref(), config);
             card.layout = resolve_layout(card, Some(group_config), config);
@@ -79,7 +79,7 @@ pub fn synthesize(
         {
             continue;
         }
-        let mut property_cards = cards_for_group(&property.label, true, &[property]);
+        let mut property_cards = cards_for_group(&property.label, true, &[property], config);
         for card in &mut property_cards {
             card.icon = resolve_icon(card, None, config);
             card.layout = resolve_layout(card, None, config);
@@ -136,7 +136,7 @@ fn resolve_icon(card: &Card, group_icon: Option<&str>, config: &GroupingConfig) 
 /// and how much it holds suggest its visual weight.
 fn kind_layout(kind: &CardKind) -> (u8, u8) {
     match kind {
-        CardKind::Stat { .. } => (2, 1),
+        CardKind::Stat { value, .. } => (2, if value.len() > 16 { 2 } else { 1 }),
         CardKind::StatSeries { series, .. } => (2, if series.len() > 6 { 3 } else { 2 }),
         CardKind::Image { .. } => (2, 2),
         CardKind::Gallery { images } => (if images.len() >= 4 { 6 } else { 4 }, 2),
@@ -147,6 +147,7 @@ fn kind_layout(kind: &CardKind) -> (u8, u8) {
         }
         CardKind::ItemChips { items } => (if items.len() >= 4 { 4 } else { 2 }, 1),
         CardKind::Links { .. } => (2, 1),
+        CardKind::Meter { .. } => (2, 1),
     }
 }
 
@@ -179,13 +180,25 @@ fn resolve_layout(
     layout
 }
 
-fn cards_for_group(title: &str, title_is_localized: bool, properties: &[&Property]) -> Vec<Card> {
+fn cards_for_group(
+    title: &str,
+    title_is_localized: bool,
+    properties: &[&Property],
+    config: &GroupingConfig,
+) -> Vec<Card> {
     let mut cards = Vec::new();
     let mut images: Vec<(String, GalleryImage)> = Vec::new(); // (pid, image)
     let mut links: Vec<(String, LinkEntry)> = Vec::new();
     let mut key_values: Vec<(String, KeyValueEntry)> = Vec::new();
 
     for property in properties {
+        // Config-declared gauges (HDI etc.) win over series detection
+        if let Some(meter_config) = config.properties.get(&property.pid).and_then(|p| p.meter)
+            && let Some(card) = as_meter(property, &meter_config)
+        {
+            cards.push(card);
+            continue;
+        }
         // A quantity property whose statements carry point-in-time
         // qualifiers is a time series (population, HDI, ...)
         if let Some(card) = as_stat_series(property) {
@@ -431,6 +444,58 @@ fn gallery_image(file_name: &str, caption: &str) -> GalleryImage {
     }
 }
 
+/// Pick the statement holding the "current" quantity: preferred rank
+/// first, else the latest by point-in-time qualifier, else the first.
+fn current_quantity(property: &Property) -> Option<(&qjson::Statement, Option<String>)> {
+    let statement = property
+        .statements
+        .iter()
+        .find(|s| s.rank == Rank::Preferred)
+        .or_else(|| {
+            property
+                .statements
+                .iter()
+                .max_by_key(|s| statement_time(s).map(|(iso, _)| iso))
+        })
+        .or_else(|| property.statements.first())?;
+    let note = statement_time(statement).map(|(iso, _)| format_time(&iso, Some(9)));
+    Some((statement, note))
+}
+
+fn statement_time(statement: &qjson::Statement) -> Option<(String, Option<u8>)> {
+    statement.qualifiers.iter().find_map(|q| match &q.value {
+        Value::Time { iso, precision } if q.pid == POINT_IN_TIME => {
+            Some((iso.clone(), *precision))
+        }
+        _ => None,
+    })
+}
+
+/// A quantity on a config-declared scale becomes a gauge card.
+fn as_meter(property: &Property, meter: &crate::grouping::MeterConfig) -> Option<Card> {
+    let (statement, note) = current_quantity(property)?;
+    let Value::Quantity { amount, .. } = &statement.value else {
+        return None;
+    };
+    Some(Card {
+        title: property.label.clone(),
+        layout: Layout::default(),
+        localized_title: true,
+        icon: None,
+        source_pids: vec![property.pid.clone()],
+        kind: CardKind::Meter {
+            value: *amount,
+            display: display_value(&statement.value),
+            note,
+            min: meter.min,
+            max: meter.max,
+            low: meter.low,
+            high: meter.high,
+            optimum: meter.optimum,
+        },
+    })
+}
+
 /// Quantity statements with point-in-time qualifiers form a series card:
 /// the preferred (or latest) value shown big, history as chart points.
 fn as_stat_series(property: &Property) -> Option<Card> {
@@ -588,6 +653,51 @@ mod tests {
                 .any(|p| p == "P646" || p == "P8093"))
             .is_none()
         );
+    }
+
+    #[test]
+    fn configured_scale_becomes_a_meter() {
+        // Synthetic HDI property: P1081 has meter config in groups.toml
+        let item = qjson::WikidataItem {
+            qid: "Q1".to_string(),
+            label: Some("Testland".to_string()),
+            description: None,
+            properties: std::collections::HashMap::from([(
+                "P1081".to_string(),
+                qjson::Property {
+                    pid: "P1081".to_string(),
+                    label: "Human Development Index".to_string(),
+                    statements: vec![qjson::Statement {
+                        value: qjson::Value::Quantity {
+                            amount: 0.601,
+                            raw: "0.601".to_string(),
+                            unit_qid: None,
+                            unit_label: None,
+                        },
+                        rank: qjson::Rank::Preferred,
+                        qualifiers: vec![qjson::Qualifier {
+                            pid: "P585".to_string(),
+                            label: "point in time".to_string(),
+                            value: qjson::Value::Time {
+                                iso: "2021-01-01T00:00:00Z".to_string(),
+                                precision: Some(9),
+                            },
+                        }],
+                    }],
+                },
+            )]),
+        };
+        let page = synthesize(&item, "en", &load_grouping_config().unwrap(), true);
+        let card = find(&page, |c| c.source_pids == ["P1081"]).expect("meter card");
+        let CardKind::Meter {
+            value, note, max, ..
+        } = &card.kind
+        else {
+            panic!("HDI must be a Meter, got {:?}", card.kind);
+        };
+        assert_eq!(*value, 0.601);
+        assert_eq!(*max, 1.0);
+        assert_eq!(note.as_deref(), Some("2021"));
     }
 
     #[test]

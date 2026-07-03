@@ -9970,3 +9970,11 @@ ignore = true
 ignore = true
 [properties.P8017]   # generational suffix
 ignore = true
+
+# Quantities on a known scale render as gauges (wx prototype meters)
+[properties.P1081]   # Human Development Index
+meter = { min = 0.0, max = 1.0, low = 0.5, high = 0.8, optimum = 0.95 }
+[properties.P11593]  # Inequality-adjusted HDI
+meter = { min = 0.0, max = 1.0, low = 0.5, high = 0.8, optimum = 0.95 }
+[properties.P11547]  # Democracy Index
+meter = { min = 0.0, max = 100.0, low = 40.0, high = 80.0, optimum = 95.0 }

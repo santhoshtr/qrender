@@ -154,6 +154,7 @@ a {
     font-size: clamp(1.25rem, 11cqi, 2.25rem);
     font-weight: var(--font-weight-bold);
     color: var(--color-emphasized);
+    overflow-wrap: anywhere;
   }
 
   .stat__note {
@@ -193,6 +194,13 @@ a {
     background-color: var(--background-color-progressive);
     border-radius: var(--border-radius-base);
   }
+}
+
+/* Gauge (meter cards) */
+.gauge {
+  inline-size: 100%;
+  block-size: 0.75rem;
+  margin-block-start: var(--spacing-50);
 }
 
 /* Media */

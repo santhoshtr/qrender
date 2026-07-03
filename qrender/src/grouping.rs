@@ -32,6 +32,18 @@ pub struct PropertyConfig {
     pub cols: Option<u8>,
     pub rows: Option<u8>,
     pub sort: Option<i32>,
+    /// Render this quantity as a gauge (HTML meter element). Not
+    /// derivable from data: config declares the scale and what is good.
+    pub meter: Option<MeterConfig>,
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone, Copy)]
+pub struct MeterConfig {
+    pub min: f64,
+    pub max: f64,
+    pub low: Option<f64>,
+    pub high: Option<f64>,
+    pub optimum: Option<f64>,
 }
 
 impl GroupingConfig {
