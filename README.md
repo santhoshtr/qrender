@@ -55,7 +55,7 @@ Options:
 `qrender-server` serves factoid pages over HTTP:
 
 ```bash
-qrender-server            # listens on PORT (default 8000)
+qrender-server            # listens on PORT (default 4243)
 ```
 
 Example URL paths:

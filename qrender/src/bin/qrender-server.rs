@@ -4,7 +4,7 @@
 //! - GET /api/{lang}/{qid}   card IR as JSON (".json" suffix accepted)
 //! - GET /healthz            liveness probe
 //!
-//! Environment: PORT (default 8000), REDIS_URL (optional cache), read
+//! Environment: PORT (default 4243), REDIS_URL (optional cache), read
 //! from the environment or a .env file, matching the Go qjson tool.
 
 use axum::{
@@ -45,7 +45,7 @@ async fn main() {
         .with_state(state);
 
     let port: u16 = std::env::var("PORT")
-        .unwrap_or_else(|_| "8000".to_string())
+        .unwrap_or_else(|_| "4243".to_string())
         .parse()
         .expect("PORT must be a number");
     let listener = tokio::net::TcpListener::bind(("0.0.0.0", port))
@@ -65,11 +65,7 @@ async fn factoid_page(
     };
     let page = synthesize(&item, &language, &state.grouping, true);
     match render_page(&page) {
-        Ok(html) => (
-            [(header::CACHE_CONTROL, CACHE_CONTROL)],
-            Html(html),
-        )
-            .into_response(),
+        Ok(html) => ([(header::CACHE_CONTROL, CACHE_CONTROL)], Html(html)).into_response(),
         Err(error) => (StatusCode::INTERNAL_SERVER_ERROR, error.to_string()).into_response(),
     }
 }
