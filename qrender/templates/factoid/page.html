@@ -19,6 +19,7 @@
 <style>{{ stylesheet|safe }}</style>
 </head>
 <body>
+{% if !sprite.is_empty() %}<svg hidden aria-hidden="true"><defs>{{ sprite|safe }}</defs></svg>{% endif %}
 <div class="page">
   <header class="page-header">
     <h1>{{ page.label.as_deref().unwrap_or(page.qid.as_str()) }}</h1>
@@ -30,7 +31,10 @@
   <main class="cards">
     {% for card in page.cards %}
     <section class="card">
-      <h2 class="card__title">{{ card.title }}</h2>
+      <h2 class="card__title">
+        {%- if let Some(icon) = card.icon %}<svg class="icon" aria-hidden="true"><use href="#i-{{ icon }}"/></svg>{% endif -%}
+        {%- if card.localized_title || card.icon.is_none() %}<span>{{ card.title }}</span>{% else %}<span class="visually-hidden">{{ card.title }}</span>{% endif -%}
+      </h2>
       {% match card.kind %}
 
       {% when CardKind::Image with { image } %}

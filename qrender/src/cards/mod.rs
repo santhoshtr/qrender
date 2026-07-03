@@ -21,6 +21,12 @@ pub struct FactoidPage {
 #[derive(Debug, Serialize)]
 pub struct Card {
     pub title: String,
+    /// True when the title is a label-service-localized property label.
+    /// False for machine group names, which the factoid page hides
+    /// visually when an icon carries the meaning instead.
+    pub localized_title: bool,
+    /// Symbol name from assets/icons/ (see icons::lookup)
+    pub icon: Option<String>,
     /// PIDs this card was built from, for provenance links back to Wikidata
     pub source_pids: Vec<String>,
     #[serde(flatten)]
