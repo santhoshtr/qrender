@@ -12,8 +12,7 @@ pub async fn fetch_wikidata_item(
         .get(&api_url)
         .header(reqwest::header::USER_AGENT, USER_AGENT)
         .send()
-        .await
-        .unwrap();
+        .await?;
 
     let json_text = response.text().await?;
     let wikidata_properties = serde_json::from_str(&json_text)?;
