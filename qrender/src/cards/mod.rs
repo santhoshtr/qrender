@@ -15,6 +15,8 @@ pub struct FactoidPage {
     pub label: Option<String>,
     pub description: Option<String>,
     pub language: String,
+    /// The item's main image (P18), shown beside the title
+    pub hero: Option<GalleryImage>,
     pub cards: Vec<Card>,
 }
 
@@ -113,6 +115,8 @@ pub struct ItemChip {
     pub qid: String,
     pub label: String,
     pub image_url: Option<String>,
+    /// Small thumbnail of the referenced item's P18, for visual chips
+    pub thumb_url: Option<String>,
     /// Qualifier summary, e.g. "start time: 1963"
     pub note: Option<String>,
 }

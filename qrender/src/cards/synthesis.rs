@@ -23,6 +23,22 @@ pub fn synthesize(
 ) -> FactoidPage {
     let mut cards = Vec::new();
 
+    // The item's main image becomes the page hero. When P18 has just that
+    // one statement, its standalone card would duplicate the hero - skip it.
+    let main_image = item.properties.get("P18");
+    let hero = main_image.and_then(|p| p.statements.first()).and_then(|s| {
+        if let Value::CommonsMedia { file_name, .. } = &s.value {
+            Some(gallery_image(
+                file_name,
+                item.label.as_deref().unwrap_or(&item.qid),
+            ))
+        } else {
+            None
+        }
+    });
+    let hero_consumes_p18 =
+        hero.is_some() && main_image.is_some_and(|p| p.statements.len() == 1);
+
     for (group_name, group_config) in config.sorted_groups() {
         if ignore_ids && group_name == "identifiers" {
             continue;
@@ -33,6 +49,7 @@ pub fn synthesize(
             .pids
             .iter()
             .filter(|pid| seen.insert(pid.as_str()) && !config.is_ignored(pid))
+            .filter(|pid| !(hero_consumes_p18 && *pid == "P18"))
             .filter_map(|pid| item.properties.get(pid))
             .collect();
         let mut group_cards = cards_for_group(&humanize(group_name), false, &properties);
@@ -49,6 +66,7 @@ pub fn synthesize(
         .properties
         .values()
         .filter(|p| !grouped_pids.contains(&p.pid) && !config.is_ignored(&p.pid))
+        .filter(|p| !(hero_consumes_p18 && p.pid == "P18"))
         .collect();
     leftover.sort_by_key(|p| p.pid.strip_prefix('P').and_then(|n| n.parse::<u32>().ok()));
     for property in leftover {
@@ -72,6 +90,7 @@ pub fn synthesize(
         label: item.label.clone(),
         description: item.description.clone(),
         language: language.to_string(),
+        hero,
         cards,
     }
 }
@@ -167,6 +186,7 @@ fn cards_for_group(title: &str, title_is_localized: bool, properties: &[&Propert
                     qid: qid.clone(),
                     label: label.clone(),
                     image_url: image_url.clone(),
+                    thumb_url: image_url.as_deref().map(chip_thumb_url),
                     note: qualifier_note(s),
                 }),
                 _ => None,
@@ -306,6 +326,14 @@ fn qualifier_note(statement: &qjson::Statement) -> Option<String> {
 }
 
 const THUMB_WIDTH: u32 = 640;
+const CHIP_THUMB_WIDTH: u32 = 96; // 2x for the 48px chip thumb
+
+/// image_url arrives as an http FilePath URL from SPARQL; normalize to
+/// https and request a chip-sized thumbnail.
+fn chip_thumb_url(image_url: &str) -> String {
+    let https = image_url.replacen("http://", "https://", 1);
+    format!("{https}?width={CHIP_THUMB_WIDTH}")
+}
 
 /// Path segment encoding for Commons file page URLs
 const FILE_SEGMENT: &percent_encoding::AsciiSet = &percent_encoding::CONTROLS
@@ -444,6 +472,36 @@ mod tests {
         let page = nairobi_page();
         let gallery = find(&page, |c| matches!(c.kind, CardKind::Gallery { .. }));
         assert!(gallery.is_some(), "articleimage group must form a gallery");
+    }
+
+    #[test]
+    fn hero_comes_from_main_image() {
+        let page = nairobi_page();
+        let hero = page.hero.expect("Nairobi has a P18");
+        assert!(hero.thumb_url.contains("width=640"));
+        assert_eq!(hero.caption, "Nairobi");
+        // P18 has a single statement consumed by the hero - no duplicate card
+        assert!(
+            page.cards
+                .iter()
+                .all(|c| c.source_pids != ["P18".to_string()])
+        );
+    }
+
+    #[test]
+    fn chips_carry_thumbnails() {
+        let page = nairobi_page();
+        let card = page
+            .cards
+            .iter()
+            .find(|c| c.source_pids == ["P17"])
+            .expect("country card");
+        let CardKind::ItemChips { items } = &card.kind else {
+            panic!("country must be ItemChips");
+        };
+        let thumb = items[0].thumb_url.as_deref().expect("Kenya has an image");
+        assert!(thumb.starts_with("https://"));
+        assert!(thumb.contains("width=96"));
     }
 
     #[test]

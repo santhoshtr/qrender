@@ -22,10 +22,15 @@
 {% if !sprite.is_empty() %}<svg hidden aria-hidden="true"><defs>{{ sprite|safe }}</defs></svg>{% endif %}
 <div class="page">
   <header class="page-header">
-    <h1>{{ page.label.as_deref().unwrap_or(page.qid.as_str()) }}</h1>
-    {% if let Some(description) = page.description %}
-    <p class="page-header__description">{{ description }}</p>
+    {% if let Some(hero) = page.hero %}
+    <a class="page-header__hero" href="{{ hero.page_url }}"><img src="{{ hero.thumb_url }}" alt="{{ hero.caption }}"></a>
     {% endif %}
+    <div>
+      <h1>{{ page.label.as_deref().unwrap_or(page.qid.as_str()) }}</h1>
+      {% if let Some(description) = page.description %}
+      <p class="page-header__description">{{ description }}</p>
+      {% endif %}
+    </div>
   </header>
 
   <main class="cards">
@@ -99,7 +104,7 @@
       {% when CardKind::ItemChips with { items } %}
       <ul class="chips">
         {% for item in items %}
-        <li class="chip"><a href="https://www.wikidata.org/wiki/{{ item.qid }}">{{ item.label }}</a>{% if let Some(note) = item.note %} <small class="chip__note">{{ note }}</small>{% endif %}</li>
+        <li class="chip">{% if let Some(thumb) = item.thumb_url %}<img class="chip__thumb" src="{{ thumb }}" alt="" loading="lazy">{% endif %}<a href="https://www.wikidata.org/wiki/{{ item.qid }}">{{ item.label }}</a>{% if let Some(note) = item.note %} <small class="chip__note">{{ note }}</small>{% endif %}</li>
         {% endfor %}
       </ul>
 

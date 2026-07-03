@@ -27,6 +27,22 @@ a {
 }
 
 .page-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-100);
+
+  .page-header__hero {
+    flex-shrink: 0;
+
+    img {
+      inline-size: 6rem;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: var(--border-radius-base);
+      display: block;
+    }
+  }
+
   h1 {
     margin: 0;
     font-size: var(--font-size-xxx-large);
@@ -137,6 +153,7 @@ a {
 /* Media */
 .media {
   margin: 0;
+  position: relative;
 
   img,
   video {
@@ -150,6 +167,33 @@ a {
     margin-block-start: var(--spacing-25);
     font-size: var(--font-size-x-small);
     color: var(--color-subtle);
+  }
+}
+
+/* Full-bleed image/video cards: media to the edges, caption on a scrim */
+.card:has(.media img, .media video) {
+  padding: 0;
+
+  .card__title {
+    margin: 0;
+    padding: var(--spacing-100) var(--spacing-100) var(--spacing-50);
+  }
+
+  .media img,
+  .media video {
+    border-radius: 0;
+    inline-size: 100%;
+    object-fit: cover;
+  }
+
+  .media figcaption {
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline: 0;
+    margin: 0;
+    padding: var(--spacing-50) var(--spacing-75);
+    background: linear-gradient(transparent, rgb(0 0 0 / 0.65));
+    color: var(--color-inverted-fixed, #fff);
   }
 }
 
@@ -218,10 +262,21 @@ a {
   gap: var(--spacing-50);
 
   .chip {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-50);
     background-color: var(--background-color-interactive-subtle);
     border: var(--border-subtle);
     border-radius: var(--border-radius-pill);
     padding: var(--spacing-25) var(--spacing-75);
+
+    .chip__thumb {
+      inline-size: 3rem;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: var(--border-radius-circle);
+      margin-inline-start: calc(-1 * var(--spacing-50));
+    }
 
     a {
       text-decoration: none;

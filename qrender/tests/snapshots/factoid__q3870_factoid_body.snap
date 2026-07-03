@@ -20,10 +20,15 @@ expression: body
 </defs></svg>
 <div class="page">
   <header class="page-header">
-    <h1>Nairobi</h1>
     
-    <p class="page-header__description">capital city of Kenya</p>
+    <a class="page-header__hero" href="https://commons.wikimedia.org/wiki/File:Nairobi,%20view%20from%20KICC.JPG"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi,%20view%20from%20KICC.JPG?width=640" alt="Nairobi"></a>
     
+    <div>
+      <h1>Nairobi</h1>
+      
+      <p class="page-header__description">capital city of Kenya</p>
+      
+    </div>
   </header>
 
   <main class="cards">
@@ -207,7 +212,7 @@ expression: body
       
       <ul class="chips">
         
-        <li class="chip"><a href="https://www.wikidata.org/wiki/Q28967580">Sakaja Johnson</a> <small class="chip__note">start time: 2022-01-01</small></li>
+        <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sakaja%20in%202024.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q28967580">Sakaja Johnson</a> <small class="chip__note">start time: 2022-01-01</small></li>
         
       </ul>
 
@@ -219,7 +224,7 @@ expression: body
       
       <ul class="chips">
         
-        <li class="chip"><a href="https://www.wikidata.org/wiki/Q114">Kenya</a></li>
+        <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Kenya%20-%20Location%20Map%20%282013%29%20-%20KEN%20-%20UNOCHA.svg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q114">Kenya</a></li>
         
       </ul>
 
@@ -231,7 +236,7 @@ expression: body
       
       <ul class="chips">
         
-        <li class="chip"><a href="https://www.wikidata.org/wiki/Q3335223">Nairobi City County</a></li>
+        <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q3335223">Nairobi City County</a></li>
         
       </ul>
 
@@ -314,19 +319,19 @@ expression: body
       
       <ul class="chips">
         
-        <li class="chip"><a href="https://www.wikidata.org/wiki/Q41087">Raleigh</a> <small class="chip__note">start time: 2022-01-01</small></li>
+        <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Raleigh%20Skyline.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q41087">Raleigh</a> <small class="chip__note">start time: 2022-01-01</small></li>
         
-        <li class="chip"><a href="https://www.wikidata.org/wiki/Q182852">Kunming</a></li>
+        <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/%E4%BA%94%E5%8D%8E%E5%8C%BA%E4%B8%8E%E7%9B%98%E9%BE%99%E5%8C%BA%E5%A4%A9%E9%99%85%E7%BA%BF%20-%20%E8%88%AA%E6%8B%8D%20-%202025-05-16%2003.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q182852">Kunming</a></li>
         
-        <li class="chip"><a href="https://www.wikidata.org/wiki/Q964130">Colonia Tovar</a></li>
+        <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Colonia-Tovar.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q964130">Colonia Tovar</a></li>
         
-        <li class="chip"><a href="https://www.wikidata.org/wiki/Q16554">Denver</a> <small class="chip__note">start time: 1975-01-01</small></li>
+        <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Denver%2C%20Colorado%20skyline%20%28cropped%29.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q16554">Denver</a> <small class="chip__note">start time: 1975-01-01</small></li>
         
-        <li class="chip"><a href="https://www.wikidata.org/wiki/Q8678">Rio de Janeiro</a></li>
+        <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cidade%20Maravilhosa.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q8678">Rio de Janeiro</a></li>
         
-        <li class="chip"><a href="https://www.wikidata.org/wiki/Q362865">Pingxiang</a></li>
+        <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Pingxiang%2C%20JX%2C%20PRC.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q362865">Pingxiang</a></li>
         
-        <li class="chip"><a href="https://www.wikidata.org/wiki/Q926713">Parintins</a></li>
+        <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Parintins%20Amazonas%20Brazil.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q926713">Parintins</a></li>
         
       </ul>
 
@@ -381,20 +386,6 @@ expression: body
     </section>
     
     <section class="card">
-      <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-photo_library"/></svg><span>image</span></h2>
-      
-      <figure class="media">
-        
-
-<a href="https://commons.wikimedia.org/wiki/File:Nairobi,%20view%20from%20KICC.JPG"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi,%20view%20from%20KICC.JPG?width=640" alt="image" loading="lazy"></a>
-
-
-      </figure>
-
-      
-    </section>
-    
-    <section class="card">
       <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-photo_library"/></svg><span>flag image</span></h2>
       
       <figure class="media">
@@ -427,7 +418,7 @@ expression: body
       
       <ul class="chips">
         
-        <li class="chip"><a href="https://www.wikidata.org/wiki/Q14206200">Southern Rift Valley</a></li>
+        <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Pt%20Lenana%20Mt%20Kenya.JPG?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q14206200">Southern Rift Valley</a></li>
         
       </ul>
 
@@ -439,7 +430,7 @@ expression: body
       
       <ul class="chips">
         
-        <li class="chip"><a href="https://www.wikidata.org/wiki/Q6760">UTC+03:00</a></li>
+        <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/UTC%2B0300%20-%202023.svg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q6760">UTC+03:00</a></li>
         
       </ul>
 
@@ -473,7 +464,7 @@ expression: body
       
       <ul class="chips">
         
-        <li class="chip"><a href="https://www.wikidata.org/wiki/Q867541">Encyclopædia Britannica 11th edition</a> <small class="chip__note">statement is subject of: 1911 Encyclopædia Britannica/Nairobi</small></li>
+        <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Encyclopaedia%20Britannica%201911.svg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q867541">Encyclopædia Britannica 11th edition</a> <small class="chip__note">statement is subject of: 1911 Encyclopædia Britannica/Nairobi</small></li>
         
       </ul>
 
@@ -487,9 +478,9 @@ expression: body
         
         <li class="chip"><a href="https://www.wikidata.org/wiki/Q1061480">Nairobi Province</a></li>
         
-        <li class="chip"><a href="https://www.wikidata.org/wiki/Q114">Kenya</a> <small class="chip__note">start time: 1963-01-01</small></li>
+        <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Kenya%20-%20Location%20Map%20%282013%29%20-%20KEN%20-%20UNOCHA.svg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q114">Kenya</a> <small class="chip__note">start time: 1963-01-01</small></li>
         
-        <li class="chip"><a href="https://www.wikidata.org/wiki/Q3335223">Nairobi City County</a></li>
+        <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q3335223">Nairobi City County</a></li>
         
         <li class="chip"><a href="https://www.wikidata.org/wiki/Q2538511">Kenya Colony</a> <small class="chip__note">start time: 1920-01-01, end time: 1963-01-01</small></li>
         
@@ -503,9 +494,9 @@ expression: body
       
       <ul class="chips">
         
-        <li class="chip"><a href="https://www.wikidata.org/wiki/Q1860">English</a></li>
+        <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/William%20Shakespeare%20-%20Sonnet%20XXX%20-%20Rapenburg%2030%2C%20Leiden%20%28cropped%29.JPG?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q1860">English</a></li>
         
-        <li class="chip"><a href="https://www.wikidata.org/wiki/Q7838">Swahili</a></li>
+        <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Manuscrit%20colonial%20kiswahili-Africa%20Museum.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q7838">Swahili</a></li>
         
         <li class="chip"><a href="https://www.wikidata.org/wiki/Q35787">Maasai</a></li>
         
