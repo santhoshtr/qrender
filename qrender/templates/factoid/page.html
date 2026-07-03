@@ -35,7 +35,7 @@
 
   <main class="cards">
     {% for card in page.cards %}
-    <section class="card">
+    <section class="card" style="--cols: {{ card.layout.cols }}; --rows: {{ card.layout.rows }}">
       <h2 class="card__title">
         {%- if let Some(icon) = card.icon %}<svg class="icon" aria-hidden="true"><use href="#i-{{ icon }}"/></svg>{% endif -%}
         {%- if card.localized_title || card.icon.is_none() %}<span>{{ card.title }}</span>{% else %}<span class="visually-hidden">{{ card.title }}</span>{% endif -%}

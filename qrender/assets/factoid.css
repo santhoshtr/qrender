@@ -21,9 +21,11 @@ a {
 }
 
 .page {
-  max-inline-size: 60rem;
+  max-inline-size: 72rem;
   margin-inline: auto;
   padding: var(--spacing-150);
+  /* container for the grid's breakpoints and the cards' own queries */
+  container-type: inline-size;
 }
 
 .page-header {
@@ -57,14 +59,56 @@ a {
   }
 }
 
+/* Bento grid. Each card carries --cols/--rows spans resolved from its
+   preference cascade; dense flow fills the holes. Fixed track count
+   (stepped down by container width) keeps spans deterministic. */
 .cards {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-100);
+  display: grid;
+  grid-template-columns: repeat(var(--grid-cols, 6), 1fr);
+  grid-auto-rows: 8rem;
+  grid-auto-flow: dense;
+  gap: var(--spacing-75);
   margin-block-start: var(--spacing-150);
 }
 
+@container (inline-size < 48rem) {
+  .cards {
+    --grid-cols: 4;
+  }
+
+  .card {
+    --max-span: 4;
+  }
+}
+
+@container (inline-size < 30rem) {
+  .cards {
+    --grid-cols: 2;
+  }
+
+  .card {
+    --max-span: 2;
+  }
+}
+
+/* True masonry, when the browser has it: natural heights take over,
+   row spans become minimum visual weight. */
+@supports (grid-template-rows: masonry) {
+  .cards {
+    grid-template-rows: masonry;
+  }
+
+  .card {
+    grid-row: auto;
+    min-block-size: calc(var(--rows, 2) * 4rem);
+  }
+}
+
 .card {
+  grid-column: span min(var(--cols, 2), var(--max-span, 6));
+  grid-row: span var(--rows, 2);
+  container-type: inline-size;
+  overflow: hidden;
   background-color: var(--background-color-base);
   border: var(--border-subtle);
   border-radius: var(--border-radius-base);
@@ -106,7 +150,8 @@ a {
   flex-wrap: wrap;
 
   .stat__value {
-    font-size: var(--font-size-xx-large);
+    /* scales with the card's own size, not the viewport */
+    font-size: clamp(1.25rem, 11cqi, 2.25rem);
     font-weight: var(--font-weight-bold);
     color: var(--color-emphasized);
   }
@@ -216,11 +261,11 @@ a {
   }
 }
 
-/* Key-values */
+/* Key-values: two columns when the card is wide, stacked when narrow */
 .kv {
   margin: 0;
   display: grid;
-  grid-template-columns: minmax(8rem, 16rem) 1fr;
+  grid-template-columns: 1fr;
   gap: var(--spacing-25) var(--spacing-100);
 
   dt {
@@ -228,12 +273,27 @@ a {
   }
 
   dd {
-    margin: 0;
+    margin: 0 0 var(--spacing-25);
   }
 
   .kv__value {
     display: block;
   }
+}
+
+@container (inline-size > 24rem) {
+  .kv {
+    grid-template-columns: minmax(8rem, 14rem) 1fr;
+
+    dd {
+      margin: 0;
+    }
+  }
+}
+
+/* Fixed-height tiles clip; let text-heavy cards scroll instead */
+.card:has(.kv, .chips, .links) {
+  overflow-y: auto;
 }
 
 /* Links */

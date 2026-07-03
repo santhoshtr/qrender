@@ -15,6 +15,10 @@ pub struct GroupConfig {
     pub order: Option<i32>,
     /// Symbol name from assets/icons/, shown on cards from this group
     pub icon: Option<String>,
+    /// Bento grid preferences for cards from this group
+    pub cols: Option<u8>,
+    pub rows: Option<u8>,
+    pub sort: Option<i32>,
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone, Default)]
@@ -24,6 +28,10 @@ pub struct PropertyConfig {
     /// Never render this property (structural/meta properties like P31)
     #[serde(default)]
     pub ignore: bool,
+    /// Bento grid preferences; override the group's
+    pub cols: Option<u8>,
+    pub rows: Option<u8>,
+    pub sort: Option<i32>,
 }
 
 impl GroupingConfig {

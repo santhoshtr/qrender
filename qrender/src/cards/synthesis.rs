@@ -8,10 +8,10 @@ use std::collections::HashSet;
 
 use super::format::{display_value, format_time};
 use super::{
-    Card, CardKind, FactoidPage, GalleryImage, ItemChip, KeyValueEntry, LinkEntry, MediaKind,
-    SeriesPoint,
+    Card, CardKind, FactoidPage, GalleryImage, ItemChip, KeyValueEntry, Layout, LinkEntry,
+    MediaKind, SeriesPoint,
 };
-use crate::grouping::GroupingConfig;
+use crate::grouping::{GroupConfig, GroupingConfig};
 
 const POINT_IN_TIME: &str = "P585";
 
@@ -55,6 +55,7 @@ pub fn synthesize(
         let mut group_cards = cards_for_group(&humanize(group_name), false, &properties);
         for card in &mut group_cards {
             card.icon = resolve_icon(card, group_config.icon.as_deref(), config);
+            card.layout = resolve_layout(card, Some(group_config), config);
         }
         cards.extend(group_cards);
     }
@@ -81,9 +82,15 @@ pub fn synthesize(
         let mut property_cards = cards_for_group(&property.label, true, &[property]);
         for card in &mut property_cards {
             card.icon = resolve_icon(card, None, config);
+            card.layout = resolve_layout(card, None, config);
         }
         cards.extend(property_cards);
     }
+
+    // Stable sort: config `sort` reorders across the whole page (images
+    // early, categories late); ties keep group order. DOM order is the
+    // reading order - CSS never reorders.
+    cards.sort_by_key(|card| card.layout.sort);
 
     FactoidPage {
         qid: item.qid.clone(),
@@ -125,6 +132,53 @@ fn resolve_icon(card: &Card, group_icon: Option<&str>, config: &GroupingConfig) 
     }
 }
 
+/// Kind-derived layout defaults, clamped by content: what a card *is*
+/// and how much it holds suggest its visual weight.
+fn kind_layout(kind: &CardKind) -> (u8, u8) {
+    match kind {
+        CardKind::Stat { .. } => (2, 1),
+        CardKind::StatSeries { series, .. } => (2, if series.len() > 6 { 3 } else { 2 }),
+        CardKind::Image { .. } => (2, 2),
+        CardKind::Gallery { images } => (if images.len() >= 4 { 6 } else { 4 }, 2),
+        CardKind::Map { .. } => (2, 2),
+        CardKind::KeyValues { entries } => {
+            let values: usize = entries.iter().map(|e| e.values.len()).sum();
+            (2, (1 + values.div_ceil(3) as u8).clamp(2, 4))
+        }
+        CardKind::ItemChips { items } => (if items.len() >= 4 { 4 } else { 2 }, 1),
+        CardKind::Links { .. } => (2, 1),
+    }
+}
+
+/// Layout cascade: kind defaults (content-aware), then group config,
+/// then per-PID config.
+fn resolve_layout(
+    card: &Card,
+    group_config: Option<&GroupConfig>,
+    config: &GroupingConfig,
+) -> Layout {
+    let (cols, rows) = kind_layout(&card.kind);
+    let mut layout = Layout {
+        cols,
+        rows,
+        ..Layout::default()
+    };
+    if let Some(group) = group_config {
+        layout.cols = group.cols.unwrap_or(layout.cols);
+        layout.rows = group.rows.unwrap_or(layout.rows);
+        layout.sort = group.sort.unwrap_or(layout.sort);
+    }
+    for pid in &card.source_pids {
+        if let Some(property_config) = config.properties.get(pid) {
+            layout.cols = property_config.cols.unwrap_or(layout.cols);
+            layout.rows = property_config.rows.unwrap_or(layout.rows);
+            layout.sort = property_config.sort.unwrap_or(layout.sort);
+            break;
+        }
+    }
+    layout
+}
+
 fn cards_for_group(title: &str, title_is_localized: bool, properties: &[&Property]) -> Vec<Card> {
     let mut cards = Vec::new();
     let mut images: Vec<(String, GalleryImage)> = Vec::new(); // (pid, image)
@@ -150,6 +204,7 @@ fn cards_for_group(title: &str, title_is_localized: bool, properties: &[&Propert
                 Value::Coordinate { lat, lon, .. } => {
                     cards.push(Card {
                         title: property.label.clone(),
+                        layout: Layout::default(),
                         localized_title: true,
                         icon: None,
                         source_pids: vec![property.pid.clone()],
@@ -195,6 +250,7 @@ fn cards_for_group(title: &str, title_is_localized: bool, properties: &[&Propert
         if !chips.is_empty() {
             cards.push(Card {
                 title: property.label.clone(),
+                layout: Layout::default(),
                 localized_title: true,
                 icon: None,
                 source_pids: vec![property.pid.clone()],
@@ -237,6 +293,7 @@ fn cards_for_group(title: &str, title_is_localized: bool, properties: &[&Propert
             let (pid, image) = images.remove(0);
             cards.push(Card {
                 title: image.caption.clone(),
+                layout: Layout::default(),
                 localized_title: true,
                 icon: None,
                 source_pids: vec![pid],
@@ -247,6 +304,7 @@ fn cards_for_group(title: &str, title_is_localized: bool, properties: &[&Propert
             let pids = dedup_pids(images.iter().map(|(pid, _)| pid.clone()));
             cards.push(Card {
                 title: title.to_string(),
+                layout: Layout::default(),
                 localized_title: title_is_localized,
                 icon: None,
                 source_pids: pids,
@@ -261,6 +319,7 @@ fn cards_for_group(title: &str, title_is_localized: bool, properties: &[&Propert
         let pids = dedup_pids(links.iter().map(|(pid, _)| pid.clone()));
         cards.push(Card {
             title: title.to_string(),
+            layout: Layout::default(),
             localized_title: title_is_localized,
             icon: None,
             source_pids: pids,
@@ -277,6 +336,7 @@ fn cards_for_group(title: &str, title_is_localized: bool, properties: &[&Propert
             let (pid, entry) = key_values.remove(0);
             cards.push(Card {
                 title: entry.key,
+                layout: Layout::default(),
                 localized_title: true,
                 icon: None,
                 source_pids: vec![pid],
@@ -290,6 +350,7 @@ fn cards_for_group(title: &str, title_is_localized: bool, properties: &[&Propert
             let pids = dedup_pids(key_values.iter().map(|(pid, _)| pid.clone()));
             cards.push(Card {
                 title: title.to_string(),
+                layout: Layout::default(),
                 localized_title: title_is_localized,
                 icon: None,
                 source_pids: pids,
@@ -407,6 +468,7 @@ fn as_stat_series(property: &Property) -> Option<Card> {
 
     Some(Card {
         title: property.label.clone(),
+        layout: Layout::default(),
         localized_title: true,
         icon: None,
         source_pids: vec![property.pid.clone()],

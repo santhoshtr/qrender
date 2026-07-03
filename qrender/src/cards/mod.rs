@@ -20,6 +20,26 @@ pub struct FactoidPage {
     pub cards: Vec<Card>,
 }
 
+/// Layout preference for the bento grid: column/row spans (in grid
+/// units) and sort weight. Resolved by cascade: kind defaults with
+/// content clamps, then group config, then per-PID config.
+#[derive(Debug, Serialize, Clone, Copy)]
+pub struct Layout {
+    pub cols: u8,
+    pub rows: u8,
+    pub sort: i32,
+}
+
+impl Default for Layout {
+    fn default() -> Self {
+        Layout {
+            cols: 2,
+            rows: 2,
+            sort: 1000,
+        }
+    }
+}
+
 #[derive(Debug, Serialize)]
 pub struct Card {
     pub title: String,
@@ -31,6 +51,7 @@ pub struct Card {
     pub icon: Option<String>,
     /// PIDs this card was built from, for provenance links back to Wikidata
     pub source_pids: Vec<String>,
+    pub layout: Layout,
     #[serde(flatten)]
     pub kind: CardKind,
 }

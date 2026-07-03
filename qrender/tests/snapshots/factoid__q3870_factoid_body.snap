@@ -33,32 +33,7 @@ expression: body
 
   <main class="cards">
     
-    <section class="card">
-      <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-article"/></svg><span class="visually-hidden">Names</span></h2>
-      
-      <dl class="kv">
-        
-        <dt>official name</dt>
-        <dd>
-          <span class="kv__value">Nairobi</span>
-        </dd>
-        
-        <dt>native label</dt>
-        <dd>
-          <span class="kv__value">Nairobi</span>
-        </dd>
-        
-        <dt>demonym</dt>
-        <dd>
-          <span class="kv__value">Nairobien (applies to part: masculine singular)</span><span class="kv__value">Nairobienne (applies to part: feminine singular)</span><span class="kv__value">Nairobian</span><span class="kv__value">nairobienne (applies to part: feminine singular)</span><span class="kv__value">Monairobi</span><span class="kv__value">nairobien (applies to part: masculine singular)</span><span class="kv__value">Najrobiano</span>
-        </dd>
-        
-      </dl>
-
-      
-    </section>
-    
-    <section class="card">
+    <section class="card" style="--cols: 6; --rows: 2">
       <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-photo_library"/></svg><span class="visually-hidden">Articleimage</span></h2>
       
       <div class="gallery">
@@ -104,90 +79,32 @@ expression: body
       
     </section>
     
-    <section class="card">
-      <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-sell"/></svg><span>category for the view of the item</span></h2>
+    <section class="card" style="--cols: 2; --rows: 4">
+      <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-article"/></svg><span class="visually-hidden">Names</span></h2>
       
-      <ul class="chips">
+      <dl class="kv">
         
-        <li class="chip"><a href="https://www.wikidata.org/wiki/Q104596219">Category:Views of Nairobi</a></li>
+        <dt>official name</dt>
+        <dd>
+          <span class="kv__value">Nairobi</span>
+        </dd>
         
-      </ul>
+        <dt>native label</dt>
+        <dd>
+          <span class="kv__value">Nairobi</span>
+        </dd>
+        
+        <dt>demonym</dt>
+        <dd>
+          <span class="kv__value">Nairobien (applies to part: masculine singular)</span><span class="kv__value">Nairobienne (applies to part: feminine singular)</span><span class="kv__value">Nairobian</span><span class="kv__value">nairobienne (applies to part: feminine singular)</span><span class="kv__value">Monairobi</span><span class="kv__value">nairobien (applies to part: masculine singular)</span><span class="kv__value">Najrobiano</span>
+        </dd>
+        
+      </dl>
 
       
     </section>
     
-    <section class="card">
-      <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-sell"/></svg><span>category for maps or plans</span></h2>
-      
-      <ul class="chips">
-        
-        <li class="chip"><a href="https://www.wikidata.org/wiki/Q84054802">Category:Maps of Nairobi</a></li>
-        
-      </ul>
-
-      
-    </section>
-    
-    <section class="card">
-      <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-sell"/></svg><span>category for people born here</span></h2>
-      
-      <ul class="chips">
-        
-        <li class="chip"><a href="https://www.wikidata.org/wiki/Q8064728">Category:Births in Nairobi</a></li>
-        
-      </ul>
-
-      
-    </section>
-    
-    <section class="card">
-      <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-sell"/></svg><span>category for people who died here</span></h2>
-      
-      <ul class="chips">
-        
-        <li class="chip"><a href="https://www.wikidata.org/wiki/Q9688722">Category:Deaths in Nairobi</a></li>
-        
-      </ul>
-
-      
-    </section>
-    
-    <section class="card">
-      <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-sell"/></svg><span>category of associated people</span></h2>
-      
-      <ul class="chips">
-        
-        <li class="chip"><a href="https://www.wikidata.org/wiki/Q7119121">Category:People from Nairobi</a></li>
-        
-      </ul>
-
-      
-    </section>
-    
-    <section class="card">
-      <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-sell"/></svg><span>topic&#39;s main category</span></h2>
-      
-      <ul class="chips">
-        
-        <li class="chip"><a href="https://www.wikidata.org/wiki/Q8795825">Category:Nairobi</a></li>
-        
-      </ul>
-
-      
-    </section>
-    
-    <section class="card">
-      <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-sell"/></svg><span>Commons category</span></h2>
-      
-      <p class="stat">
-        <span class="stat__value">Nairobi</span>
-        
-      </p>
-
-      
-    </section>
-    
-    <section class="card">
+    <section class="card" style="--cols: 2; --rows: 2">
       <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-altitude"/></svg><span class="visually-hidden">Geography</span></h2>
       
       <dl class="kv">
@@ -207,7 +124,7 @@ expression: body
       
     </section>
     
-    <section class="card">
+    <section class="card" style="--cols: 2; --rows: 1">
       <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-person"/></svg><span>head of government</span></h2>
       
       <ul class="chips">
@@ -219,7 +136,7 @@ expression: body
       
     </section>
     
-    <section class="card">
+    <section class="card" style="--cols: 2; --rows: 1">
       <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-location_on"/></svg><span>country</span></h2>
       
       <ul class="chips">
@@ -231,7 +148,7 @@ expression: body
       
     </section>
     
-    <section class="card">
+    <section class="card" style="--cols: 2; --rows: 1">
       <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-location_on"/></svg><span>located in the administrative territorial entity</span></h2>
       
       <ul class="chips">
@@ -243,7 +160,7 @@ expression: body
       
     </section>
     
-    <section class="card">
+    <section class="card" style="--cols: 3; --rows: 2">
       <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-location_on"/></svg><span>coordinate location</span></h2>
       
       <figure class="media map">
@@ -254,7 +171,7 @@ expression: body
       
     </section>
     
-    <section class="card">
+    <section class="card" style="--cols: 2; --rows: 2">
       <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-map"/></svg><span>locator map image</span></h2>
       
       <figure class="media">
@@ -268,7 +185,7 @@ expression: body
       
     </section>
     
-    <section class="card">
+    <section class="card" style="--cols: 3; --rows: 2">
       <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-groups"/></svg><span>population</span></h2>
       
       <p class="stat">
@@ -300,7 +217,7 @@ expression: body
       
     </section>
     
-    <section class="card">
+    <section class="card" style="--cols: 2; --rows: 2">
       <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-volume_up"/></svg><span>pronunciation audio</span></h2>
       
       <figure class="media">
@@ -314,7 +231,7 @@ expression: body
       
     </section>
     
-    <section class="card">
+    <section class="card" style="--cols: 4; --rows: 1">
       <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-communities"/></svg><span>twinned administrative body</span></h2>
       
       <ul class="chips">
@@ -338,7 +255,7 @@ expression: body
       
     </section>
     
-    <section class="card">
+    <section class="card" style="--cols: 2; --rows: 1">
       <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-article"/></svg><span>history of topic</span></h2>
       
       <ul class="chips">
@@ -350,7 +267,7 @@ expression: body
       
     </section>
     
-    <section class="card">
+    <section class="card" style="--cols: 2; --rows: 1">
       <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-article"/></svg><span>economy of topic</span></h2>
       
       <ul class="chips">
@@ -362,7 +279,7 @@ expression: body
       
     </section>
     
-    <section class="card">
+    <section class="card" style="--cols: 2; --rows: 1">
       <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-captive_portal"/></svg><span class="visually-hidden">Web</span></h2>
       
       <ul class="links">
@@ -374,7 +291,7 @@ expression: body
       
     </section>
     
-    <section class="card">
+    <section class="card" style="--cols: 2; --rows: 1">
       <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-tag"/></svg><span>hashtag</span></h2>
       
       <p class="stat">
@@ -385,7 +302,7 @@ expression: body
       
     </section>
     
-    <section class="card">
+    <section class="card" style="--cols: 2; --rows: 2">
       <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-photo_library"/></svg><span>flag image</span></h2>
       
       <figure class="media">
@@ -399,7 +316,7 @@ expression: body
       
     </section>
     
-    <section class="card">
+    <section class="card" style="--cols: 2; --rows: 2">
       <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-photo_library"/></svg><span>coat of arms image</span></h2>
       
       <figure class="media">
@@ -413,7 +330,7 @@ expression: body
       
     </section>
     
-    <section class="card">
+    <section class="card" style="--cols: 2; --rows: 1">
       <h2 class="card__title"><span>part of</span></h2>
       
       <ul class="chips">
@@ -425,7 +342,7 @@ expression: body
       
     </section>
     
-    <section class="card">
+    <section class="card" style="--cols: 2; --rows: 1">
       <h2 class="card__title"><span>located in time zone</span></h2>
       
       <ul class="chips">
@@ -437,7 +354,7 @@ expression: body
       
     </section>
     
-    <section class="card">
+    <section class="card" style="--cols: 2; --rows: 1">
       <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-event"/></svg><span>inception</span></h2>
       
       <p class="stat">
@@ -448,7 +365,7 @@ expression: body
       
     </section>
     
-    <section class="card">
+    <section class="card" style="--cols: 2; --rows: 1">
       <h2 class="card__title"><span>Commons gallery</span></h2>
       
       <p class="stat">
@@ -459,7 +376,7 @@ expression: body
       
     </section>
     
-    <section class="card">
+    <section class="card" style="--cols: 2; --rows: 1">
       <h2 class="card__title"><span>described by source</span></h2>
       
       <ul class="chips">
@@ -471,7 +388,7 @@ expression: body
       
     </section>
     
-    <section class="card">
+    <section class="card" style="--cols: 4; --rows: 1">
       <h2 class="card__title"><span>capital of</span></h2>
       
       <ul class="chips">
@@ -489,7 +406,7 @@ expression: body
       
     </section>
     
-    <section class="card">
+    <section class="card" style="--cols: 2; --rows: 1">
       <h2 class="card__title"><span>language used</span></h2>
       
       <ul class="chips">
@@ -505,7 +422,7 @@ expression: body
       
     </section>
     
-    <section class="card">
+    <section class="card" style="--cols: 2; --rows: 1">
       <h2 class="card__title"><span>on focus list of Wikimedia project</span></h2>
       
       <ul class="chips">
@@ -519,7 +436,7 @@ expression: body
       
     </section>
     
-    <section class="card">
+    <section class="card" style="--cols: 2; --rows: 1">
       <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-captive_portal"/></svg><span>open data portal</span></h2>
       
       <ul class="chips">
@@ -527,6 +444,89 @@ expression: body
         <li class="chip"><a href="https://www.wikidata.org/wiki/Q97130876">Nairobi open data</a></li>
         
       </ul>
+
+      
+    </section>
+    
+    <section class="card" style="--cols: 2; --rows: 1">
+      <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-sell"/></svg><span>category for the view of the item</span></h2>
+      
+      <ul class="chips">
+        
+        <li class="chip"><a href="https://www.wikidata.org/wiki/Q104596219">Category:Views of Nairobi</a></li>
+        
+      </ul>
+
+      
+    </section>
+    
+    <section class="card" style="--cols: 2; --rows: 1">
+      <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-sell"/></svg><span>category for maps or plans</span></h2>
+      
+      <ul class="chips">
+        
+        <li class="chip"><a href="https://www.wikidata.org/wiki/Q84054802">Category:Maps of Nairobi</a></li>
+        
+      </ul>
+
+      
+    </section>
+    
+    <section class="card" style="--cols: 2; --rows: 1">
+      <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-sell"/></svg><span>category for people born here</span></h2>
+      
+      <ul class="chips">
+        
+        <li class="chip"><a href="https://www.wikidata.org/wiki/Q8064728">Category:Births in Nairobi</a></li>
+        
+      </ul>
+
+      
+    </section>
+    
+    <section class="card" style="--cols: 2; --rows: 1">
+      <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-sell"/></svg><span>category for people who died here</span></h2>
+      
+      <ul class="chips">
+        
+        <li class="chip"><a href="https://www.wikidata.org/wiki/Q9688722">Category:Deaths in Nairobi</a></li>
+        
+      </ul>
+
+      
+    </section>
+    
+    <section class="card" style="--cols: 2; --rows: 1">
+      <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-sell"/></svg><span>category of associated people</span></h2>
+      
+      <ul class="chips">
+        
+        <li class="chip"><a href="https://www.wikidata.org/wiki/Q7119121">Category:People from Nairobi</a></li>
+        
+      </ul>
+
+      
+    </section>
+    
+    <section class="card" style="--cols: 2; --rows: 1">
+      <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-sell"/></svg><span>topic&#39;s main category</span></h2>
+      
+      <ul class="chips">
+        
+        <li class="chip"><a href="https://www.wikidata.org/wiki/Q8795825">Category:Nairobi</a></li>
+        
+      </ul>
+
+      
+    </section>
+    
+    <section class="card" style="--cols: 2; --rows: 1">
+      <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-sell"/></svg><span>Commons category</span></h2>
+      
+      <p class="stat">
+        <span class="stat__value">Nairobi</span>
+        
+      </p>
 
       
     </section>
