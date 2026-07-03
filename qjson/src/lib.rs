@@ -4,6 +4,7 @@
 pub mod error;
 pub mod model;
 pub mod sparql;
+pub mod transform;
 
 pub use error::QjsonError;
 pub use model::{Property, Qualifier, Rank, Statement, Value, WikidataItem};
