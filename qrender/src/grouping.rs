@@ -18,9 +18,11 @@ pub struct GroupConfig {
 impl GroupingConfig {
     pub fn sorted_groups(&self) -> Vec<(&String, &GroupConfig)> {
         let mut groups_vec: Vec<(&String, &GroupConfig)> = self.groups.iter().collect();
-        groups_vec.sort_by_key(|(_, config)| config.order);
-        // Reverse to get descending order
-        groups_vec.reverse();
+        // Groups with an explicit order come first (ascending); the rest
+        // follow alphabetically so output is deterministic across runs.
+        groups_vec.sort_by_key(|(name, config)| {
+            (config.order.is_none(), config.order, name.as_str())
+        });
         groups_vec
     }
 }
@@ -59,6 +61,9 @@ pub fn group_properties(
         }
     }
     if !default_group_properties.is_empty() {
+        // item.properties is a HashMap; sort by numeric PID for deterministic output
+        default_group_properties
+            .sort_by_key(|p| p.pid.strip_prefix('P').and_then(|n| n.parse::<u32>().ok()));
         grouped_properties.push((default_group_name, default_group_properties));
     }
 
