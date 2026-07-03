@@ -4,7 +4,7 @@ use qrender::{RenderConfig, RenderFormatOptions, render};
 use std::error::Error;
 
 #[derive(Parser, Debug)]
-#[command(author = "Santhosh Thottingal", version = "1.0", about = "Wikidata Renderer", long_about = None)]
+#[command(author = "Santhosh Thottingal", version, about = "Wikidata Renderer")]
 struct Args {
     /// The QID of the Wikidata item to render
     #[arg(short, long, default_value = "Q405")]
@@ -13,7 +13,7 @@ struct Args {
     #[arg(short, long, default_value = "en")]
     language: String,
 
-    /// Render format (text or html)
+    /// Render format
     #[arg(short, long, default_value_t = RenderFormatOptions::Text, value_enum)]
     format: RenderFormatOptions,
 
