@@ -5,6 +5,7 @@ pub mod data_loading;
 pub mod error;
 pub mod factoid;
 pub mod grouping;
+pub mod icons;
 pub mod textual;
 
 pub use error::QRenderError;
