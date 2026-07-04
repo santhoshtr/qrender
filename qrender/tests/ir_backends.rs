@@ -1,6 +1,7 @@
 //! Golden snapshots for the IR-based text/markdown/wikitext/html backends,
 //! rendered from checked-in WDQS fixtures.
 
+use qrender::archetype::load_archetypes_config;
 use qrender::cards::synthesize;
 use qrender::grouping::load_grouping_config;
 use qrender::textual;
@@ -8,7 +9,13 @@ use qrender::textual;
 fn page(qid: &str, fixture: &str) -> qrender::cards::FactoidPage {
     let response: qjson::sparql::SparqlResponse = serde_json::from_str(fixture).unwrap();
     let item = qjson::transform::transform(qid, &response.results.bindings);
-    synthesize(&item, "en", &load_grouping_config().unwrap(), true)
+    synthesize(
+        &item,
+        "en",
+        &load_grouping_config().unwrap(),
+        &load_archetypes_config().unwrap(),
+        true,
+    )
 }
 
 const Q3870: &str = include_str!("../../qjson/tests/fixtures/Q3870.sparql.json"); // Nairobi

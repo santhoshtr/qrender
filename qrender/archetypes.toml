@@ -1,0 +1,54 @@
+# Archetype resolution: which composition recipe a page gets.
+#
+# p31: instance-of QIDs that select the archetype directly.
+# signals: properties whose presence votes for the archetype when no
+# p31 entry matches - Wikidata's P31 values are too diverse for any
+# curated list to be complete (Nairobi is "big city" Q1549591, not
+# "city" Q515). Four or more signal hits select the archetype; below
+# that the page stays generic, which is always safe.
+#
+# Keep PID/QID label comments, matching the groups.toml convention.
+
+[archetypes.person]
+p31 = [
+  "Q5", # human
+]
+signals = [
+  "P569", # date of birth
+  "P570", # date of death
+  "P106", # occupation
+  "P21",  # sex or gender
+  "P22",  # father
+  "P25",  # mother
+  "P26",  # spouse
+  "P40",  # child
+  "P19",  # place of birth
+  "P20",  # place of death
+  "P734", # family name
+  "P735", # given name
+]
+
+[archetypes.place]
+p31 = [
+  "Q515",      # city
+  "Q1549591",  # big city
+  "Q5119",     # capital
+  "Q6256",     # country
+  "Q3624078",  # sovereign state
+  "Q486972",   # human settlement
+  "Q532",      # village
+  "Q3957",     # town
+  "Q10864048", # first-level administrative division
+]
+signals = [
+  "P625",  # coordinate location
+  "P1082", # population
+  "P17",   # country
+  "P6",    # head of government
+  "P41",   # flag image
+  "P94",   # coat of arms image
+  "P131",  # located in the administrative territorial entity
+  "P421",  # time zone
+  "P2044", # elevation above sea level
+  "P2046", # area
+]

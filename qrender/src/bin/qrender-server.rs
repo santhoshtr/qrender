@@ -16,6 +16,7 @@ use axum::{
 };
 use std::sync::Arc;
 
+use qrender::archetype::{ArchetypesConfig, load_archetypes_config};
 use qrender::cards::synthesize;
 use qrender::factoid::render_page;
 use qrender::grouping::{GroupingConfig, load_grouping_config};
@@ -26,6 +27,7 @@ const CACHE_CONTROL: &str = "public, max-age=3600";
 struct AppState {
     qjson: Arc<qjson::Client>,
     grouping: Arc<GroupingConfig>,
+    archetypes: Arc<ArchetypesConfig>,
 }
 
 #[tokio::main]
@@ -35,6 +37,9 @@ async fn main() {
     let state = AppState {
         qjson: Arc::new(qjson::Client::new()),
         grouping: Arc::new(load_grouping_config().expect("embedded groups.toml must parse")),
+        archetypes: Arc::new(
+            load_archetypes_config().expect("embedded archetypes.toml must parse"),
+        ),
     };
 
     let app = Router::new()
@@ -63,7 +68,7 @@ async fn factoid_page(
         Ok(item) => item,
         Err(error) => return error_response(&error),
     };
-    let page = synthesize(&item, &language, &state.grouping, true);
+    let page = synthesize(&item, &language, &state.grouping, &state.archetypes, true);
     match render_page(&page) {
         Ok(html) => ([(header::CACHE_CONTROL, CACHE_CONTROL)], Html(html)).into_response(),
         Err(error) => (StatusCode::INTERNAL_SERVER_ERROR, error.to_string()).into_response(),
@@ -79,7 +84,7 @@ async fn factoid_json(
         Ok(item) => item,
         Err(error) => return error_response(&error),
     };
-    let page = synthesize(&item, &language, &state.grouping, true);
+    let page = synthesize(&item, &language, &state.grouping, &state.archetypes, true);
     (
         [
             (header::CONTENT_TYPE, "application/json"),

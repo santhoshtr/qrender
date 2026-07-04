@@ -105,7 +105,7 @@
 <style media="(prefers-color-scheme: dark)">{{ tokens_dark|safe }}</style>
 <style>{{ stylesheet|safe }}</style>
 </head>
-<body>
+<body data-archetype="{{ page.archetype }}">
 {% if !sprite.is_empty() %}<svg hidden aria-hidden="true"><defs>{{ sprite|safe }}</defs></svg>{% endif %}
 <div class="page">
   <header class="page-header">
@@ -120,27 +120,44 @@
     </div>
   </header>
 
-  <main class="cards">
-    {% for card in self.tier_cards(Tier::Standard) %}
-    {% call card_section(card) %}{% endcall %}
+  <main>
+    {% for section in page.sections %}
+    <section class="page-section">
+      <h2 class="page-section__title">
+        {%- if let Some(icon) = section.icon %}<svg class="icon" aria-hidden="true"><use href="#i-{{ icon }}"/></svg>{% endif -%}
+        <span class="visually-hidden">{{ section.name }}</span>
+      </h2>
+      <div class="cards">
+        {% for card in section.cards %}
+        {% call card_section(card) %}{% endcall %}
+        {% endfor %}
+      </div>
+    </section>
     {% endfor %}
-  </main>
 
-  {% let footnotes = self.tier_cards(Tier::Footnote) %}
-  {% if !footnotes.is_empty() %}
-  <details class="footnotes">
-    <summary>
-      <svg class="icon" aria-hidden="true"><use href="#i-archive"/></svg>
-      <span>{{ footnotes.len() }}</span>
-      <span class="visually-hidden">Wikimedia metadata</span>
-    </summary>
+    {% if !page.overflow.is_empty() %}
     <div class="cards">
-      {% for card in footnotes %}
+      {% for card in page.overflow %}
       {% call card_section(card) %}{% endcall %}
       {% endfor %}
     </div>
-  </details>
-  {% endif %}
+    {% endif %}
+
+    {% if !page.footnotes.is_empty() %}
+    <details class="footnotes">
+      <summary>
+        <svg class="icon" aria-hidden="true"><use href="#i-archive"/></svg>
+        <span>{{ page.footnotes.len() }}</span>
+        <span class="visually-hidden">Wikimedia metadata</span>
+      </summary>
+      <div class="cards">
+        {% for card in page.footnotes %}
+        {% call card_section(card) %}{% endcall %}
+        {% endfor %}
+      </div>
+    </details>
+    {% endif %}
+  </main>
 
   <footer class="page-footer">
     <p>Data: <a href="https://www.wikidata.org/wiki/{{ page.qid }}">Wikidata {{ page.qid }}</a> (CC0) ·

@@ -11,6 +11,7 @@ use super::{
     Card, CardKind, FactoidPage, GalleryImage, ItemChip, KeyValueEntry, Layout, LinkEntry,
     MediaKind, SeriesPoint, Tier,
 };
+use crate::archetype::{self, ArchetypesConfig};
 use crate::grouping::{GroupConfig, GroupingConfig};
 
 const POINT_IN_TIME: &str = "P585";
@@ -19,6 +20,7 @@ pub fn synthesize(
     item: &WikidataItem,
     language: &str,
     config: &GroupingConfig,
+    archetypes: &ArchetypesConfig,
     ignore_ids: bool,
 ) -> FactoidPage {
     let mut cards = Vec::new();
@@ -88,20 +90,26 @@ pub fn synthesize(
         cards.extend(property_cards);
     }
 
-    // Stable sort: footnote-tier cards sink below everything (all
-    // backends benefit - meta noise ends up last in text output too),
-    // then config `sort` reorders across the whole page (images early,
-    // categories late); ties keep group order. DOM order is the
+    // Stable sort: config `sort` reorders across the whole page (images
+    // early, categories late); ties keep group order. DOM order is the
     // reading order - CSS never reorders.
-    cards.sort_by_key(|card| (card.tier == Tier::Footnote, card.layout.sort));
+    cards.sort_by_key(|card| card.layout.sort);
+    // Footnote-tier cards split off into their own collapsed region.
+    // Sections stay empty until a recipe claims cards for the resolved
+    // archetype; everything unclaimed is the overflow bento grid.
+    let (footnotes, overflow): (Vec<Card>, Vec<Card>) =
+        cards.into_iter().partition(|c| c.tier == Tier::Footnote);
 
     FactoidPage {
         qid: item.qid.clone(),
         label: item.label.clone(),
         description: item.description.clone(),
         language: language.to_string(),
+        archetype: archetype::resolve(item, archetypes),
         hero,
-        cards,
+        sections: Vec::new(),
+        overflow,
+        footnotes,
     }
 }
 
@@ -572,6 +580,7 @@ fn as_stat_series(property: &Property) -> Option<Card> {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use crate::archetype::load_archetypes_config;
     use crate::grouping::load_grouping_config;
 
     fn nairobi_page() -> FactoidPage {
@@ -580,11 +589,17 @@ mod tests {
         ))
         .unwrap();
         let item = qjson::transform::transform("Q3870", &response.results.bindings);
-        synthesize(&item, "en", &load_grouping_config().unwrap(), true)
+        synthesize(
+            &item,
+            "en",
+            &load_grouping_config().unwrap(),
+            &load_archetypes_config().unwrap(),
+            true,
+        )
     }
 
-    fn find<'a>(page: &'a FactoidPage, predicate: impl Fn(&&Card) -> bool) -> Option<&'a Card> {
-        page.cards.iter().find(|c| predicate(c))
+    fn find(page: &FactoidPage, predicate: impl Fn(&&Card) -> bool) -> Option<&Card> {
+        page.all_cards().find(|c| predicate(c))
     }
 
     #[test]
@@ -631,13 +646,12 @@ mod tests {
     #[test]
     fn hero_comes_from_main_image() {
         let page = nairobi_page();
-        let hero = page.hero.expect("Nairobi has a P18");
+        let hero = page.hero.as_ref().expect("Nairobi has a P18");
         assert!(hero.thumb_url.contains("width=640"));
         assert_eq!(hero.caption, "Nairobi");
         // P18 has a single statement consumed by the hero - no duplicate card
         assert!(
-            page.cards
-                .iter()
+            page.all_cards()
                 .all(|c| c.source_pids != ["P18".to_string()])
         );
     }
@@ -645,11 +659,7 @@ mod tests {
     #[test]
     fn chips_carry_thumbnails() {
         let page = nairobi_page();
-        let card = page
-            .cards
-            .iter()
-            .find(|c| c.source_pids == ["P17"])
-            .expect("country card");
+        let card = find(&page, |c| c.source_pids == ["P17"]).expect("country card");
         let CardKind::ItemChips { items } = &card.kind else {
             panic!("country must be ItemChips");
         };
@@ -714,7 +724,13 @@ mod tests {
                 },
             )]),
         };
-        let page = synthesize(&item, "en", &load_grouping_config().unwrap(), true);
+        let page = synthesize(
+            &item,
+            "en",
+            &load_grouping_config().unwrap(),
+            &load_archetypes_config().unwrap(),
+            true,
+        );
         let card = find(&page, |c| c.source_pids == ["P1081"]).expect("meter card");
         let CardKind::Meter {
             value, note, max, ..
@@ -728,24 +744,27 @@ mod tests {
     }
 
     #[test]
-    fn curation_meta_is_footnote_tier() {
+    fn curation_meta_lands_in_footnotes() {
         let page = nairobi_page();
         // categories group (P910 et al.) and ungrouped curation PIDs
         // (P1343 described by source) are footnotes; content is not
-        let categories =
-            find(&page, |c| c.source_pids.contains(&"P910".to_string())).expect("categories card");
-        assert_eq!(categories.tier, Tier::Footnote);
-        let sources = find(&page, |c| c.source_pids == ["P1343"]).expect("described-by card");
-        assert_eq!(sources.tier, Tier::Footnote);
-        let population = find(&page, |c| c.source_pids == ["P1082"]).expect("population card");
-        assert_eq!(population.tier, Tier::Standard);
-        // footnotes sink: once the first appears, everything after is one
-        let first = page
-            .cards
-            .iter()
-            .position(|c| c.tier == Tier::Footnote)
-            .unwrap();
-        assert!(page.cards[first..].iter().all(|c| c.tier == Tier::Footnote));
+        assert!(
+            page.footnotes
+                .iter()
+                .any(|c| c.source_pids.contains(&"P910".to_string())),
+            "categories card must be a footnote"
+        );
+        assert!(
+            page.footnotes.iter().any(|c| c.source_pids == ["P1343"]),
+            "described-by card must be a footnote"
+        );
+        assert!(
+            page.overflow.iter().any(|c| c.source_pids == ["P1082"]),
+            "population stays in the main grid"
+        );
+        // the regions and the tier flag agree
+        assert!(page.footnotes.iter().all(|c| c.tier == Tier::Footnote));
+        assert!(page.overflow.iter().all(|c| c.tier == Tier::Standard));
     }
 
     #[test]

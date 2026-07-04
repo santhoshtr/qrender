@@ -357,6 +357,16 @@ a {
   }
 }
 
+/* Composed sections: icon-only heading above a scoped card grid */
+.page-section {
+  margin-block-start: var(--spacing-200);
+
+  > .page-section__title {
+    margin: 0;
+    color: var(--color-subtle);
+  }
+}
+
 /* Footnotes: Wikimedia-curation meta collapsed behind a quiet pill.
    The count is the only visible text - language-neutral by design. */
 .footnotes {

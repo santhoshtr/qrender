@@ -1,5 +1,6 @@
 use serde::Serialize;
 
+pub mod archetype;
 pub mod cards;
 pub mod data_loading;
 pub mod error;
@@ -10,6 +11,7 @@ pub mod textual;
 
 pub use error::QRenderError;
 
+use crate::archetype::{ArchetypesConfig, load_archetypes_config};
 use crate::grouping::{GroupingConfig, load_grouping_config};
 
 #[derive(clap::ValueEnum, Clone, Default, Debug, Serialize)]
@@ -27,6 +29,7 @@ pub struct RenderConfig {
     pub format: RenderFormatOptions,
     pub ignore_ids: bool,
     pub grouping_config: GroupingConfig,
+    pub archetypes_config: ArchetypesConfig,
     pub language: String,
 }
 
@@ -37,10 +40,12 @@ impl RenderConfig {
         language: &str,
     ) -> Result<Self, QRenderError> {
         let grouping_config = load_grouping_config()?;
+        let archetypes_config = load_archetypes_config()?;
         Ok(RenderConfig {
             format,
             ignore_ids,
             grouping_config,
+            archetypes_config,
             language: language.to_owned(),
         })
     }
@@ -68,6 +73,7 @@ pub fn render_typed_item(
         item,
         &render_config.language,
         &render_config.grouping_config,
+        &render_config.archetypes_config,
         render_config.ignore_ids,
     );
     Ok(match render_config.format {

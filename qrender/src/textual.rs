@@ -16,7 +16,7 @@ pub fn render_text(page: &FactoidPage) -> String {
     if let Some(description) = &page.description {
         let _ = writeln!(out, "{description}");
     }
-    for card in &page.cards {
+    for card in page.all_cards() {
         let _ = writeln!(out, "\n## {}", card.title);
         match &card.kind {
             CardKind::Image { image } => {
@@ -90,7 +90,7 @@ pub fn render_markdown(page: &FactoidPage) -> String {
     if let Some(description) = &page.description {
         let _ = writeln!(out, "*{description}*");
     }
-    for card in &page.cards {
+    for card in page.all_cards() {
         let _ = writeln!(out, "\n## {}", card.title);
         match &card.kind {
             CardKind::Image { image } => {
@@ -170,7 +170,7 @@ pub fn render_wikitext(page: &FactoidPage) -> String {
     if let Some(description) = &page.description {
         let _ = writeln!(out, "{description}");
     }
-    for card in &page.cards {
+    for card in page.all_cards() {
         let _ = writeln!(out, "\n== {} ==", card.title);
         match &card.kind {
             CardKind::Image { image } => {
@@ -257,7 +257,7 @@ pub fn render_html(page: &FactoidPage) -> String {
     if let Some(description) = &page.description {
         let _ = writeln!(out, "<p>{}</p>", escape(description));
     }
-    for card in &page.cards {
+    for card in page.all_cards() {
         let _ = writeln!(out, "<section>\n<h2>{}</h2>", escape(&card.title));
         match &card.kind {
             CardKind::Image { image } => {

@@ -15,9 +15,38 @@ pub struct FactoidPage {
     pub label: Option<String>,
     pub description: Option<String>,
     pub language: String,
+    /// Composition recipe this item resolved to ("person", "place",
+    /// "generic", ...); selects sections and, for HTML, the accent theme
+    pub archetype: String,
     /// The item's main image (P18), shown beside the title
     pub hero: Option<GalleryImage>,
+    /// Archetype-composed regions, in reading order
+    pub sections: Vec<Section>,
+    /// Cards no section claimed - the bento grid
+    pub overflow: Vec<Card>,
+    /// Footnote-tier cards, collapsed at the page end
+    pub footnotes: Vec<Card>,
+}
+
+/// A titled region of a composed page. The name is a machine name;
+/// visually the icon carries the meaning (no string to translate).
+#[derive(Debug, Serialize)]
+pub struct Section {
+    pub name: String,
+    pub icon: Option<String>,
     pub cards: Vec<Card>,
+}
+
+impl FactoidPage {
+    /// Every card in reading order: sections, then overflow, then
+    /// footnotes. Textual backends and the sprite builder walk this.
+    pub fn all_cards(&self) -> impl Iterator<Item = &Card> {
+        self.sections
+            .iter()
+            .flat_map(|s| s.cards.iter())
+            .chain(self.overflow.iter())
+            .chain(self.footnotes.iter())
+    }
 }
 
 /// Layout preference for the bento grid: column/row spans (in grid
