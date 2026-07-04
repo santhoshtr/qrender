@@ -143,6 +143,7 @@ pids = [
 [groups.categories]
 icon = "sell"
 sort = 9000
+footnote = true
 pids = [
   "P373",   # Commons category
   "P7084",
@@ -9810,8 +9811,9 @@ icon = "trophy"
 icon = "sell"
 [properties.P443]
 icon = "volume_up"
-[properties.P460]
+[properties.P460]    # said to be the same as
 icon = "equal"
+footnote = true
 [properties.P485]
 icon = "archive"
 [properties.P551]
@@ -9867,8 +9869,9 @@ icon = "sell"
 icon = "sell"
 [properties.P1853]
 icon = "bloodtype"
-[properties.P1889]
+[properties.P1889]   # different from
 icon = "compare_arrows"
+footnote = true
 [properties.P2031]
 icon = "event"
 [properties.P2043]
@@ -9970,6 +9973,41 @@ ignore = true
 ignore = true
 [properties.P8017]   # generational suffix
 ignore = true
+
+# Wikimedia-curation meta: real data, but noise on a fact page. These
+# render collapsed in the footnote region instead of the main grid.
+[properties.P301]    # category's main topic
+footnote = true
+[properties.P935]    # Commons gallery
+footnote = true
+[properties.P973]    # described at URL
+footnote = true
+[properties.P1151]   # topic's main Wikimedia portal
+footnote = true
+[properties.P1343]   # described by source
+footnote = true
+[properties.P1424]   # topic's main template
+footnote = true
+[properties.P1709]   # equivalent class
+footnote = true
+[properties.P1963]   # properties for this type
+footnote = true
+[properties.P2354]   # has list
+footnote = true
+[properties.P2959]   # permanent duplicated item
+footnote = true
+[properties.P4224]   # category contains
+footnote = true
+[properties.P5008]   # on focus list of Wikimedia project
+footnote = true
+[properties.P5125]   # Wikimedia outline
+footnote = true
+[properties.P5869]   # model item
+footnote = true
+[properties.P6104]   # maintained by WikiProject
+footnote = true
+[properties.P8464]   # content partnership category
+footnote = true
 
 # Quantities on a known scale render as gauges (wx prototype meters)
 [properties.P1081]   # Human Development Index

@@ -9,7 +9,7 @@ use std::collections::HashSet;
 use super::format::{display_value, format_time};
 use super::{
     Card, CardKind, FactoidPage, GalleryImage, ItemChip, KeyValueEntry, Layout, LinkEntry,
-    MediaKind, SeriesPoint,
+    MediaKind, SeriesPoint, Tier,
 };
 use crate::grouping::{GroupConfig, GroupingConfig};
 
@@ -36,8 +36,7 @@ pub fn synthesize(
             None
         }
     });
-    let hero_consumes_p18 =
-        hero.is_some() && main_image.is_some_and(|p| p.statements.len() == 1);
+    let hero_consumes_p18 = hero.is_some() && main_image.is_some_and(|p| p.statements.len() == 1);
 
     for (group_name, group_config) in config.sorted_groups() {
         if ignore_ids && group_name == "identifiers" {
@@ -56,6 +55,7 @@ pub fn synthesize(
         for card in &mut group_cards {
             card.icon = resolve_icon(card, group_config.icon.as_deref(), config);
             card.layout = resolve_layout(card, Some(group_config), config);
+            card.tier = resolve_tier(card, Some(group_config), config);
         }
         cards.extend(group_cards);
     }
@@ -83,14 +83,17 @@ pub fn synthesize(
         for card in &mut property_cards {
             card.icon = resolve_icon(card, None, config);
             card.layout = resolve_layout(card, None, config);
+            card.tier = resolve_tier(card, None, config);
         }
         cards.extend(property_cards);
     }
 
-    // Stable sort: config `sort` reorders across the whole page (images
-    // early, categories late); ties keep group order. DOM order is the
+    // Stable sort: footnote-tier cards sink below everything (all
+    // backends benefit - meta noise ends up last in text output too),
+    // then config `sort` reorders across the whole page (images early,
+    // categories late); ties keep group order. DOM order is the
     // reading order - CSS never reorders.
-    cards.sort_by_key(|card| card.layout.sort);
+    cards.sort_by_key(|card| (card.tier == Tier::Footnote, card.layout.sort));
 
     FactoidPage {
         qid: item.qid.clone(),
@@ -148,6 +151,20 @@ fn kind_layout(kind: &CardKind) -> (u8, u8) {
         CardKind::ItemChips { items } => (if items.len() >= 4 { 4 } else { 2 }, 1),
         CardKind::Links { .. } => (2, 1),
         CardKind::Meter { .. } => (2, 1),
+    }
+}
+
+/// A card is a footnote when its group or any source property is
+/// flagged as Wikimedia-curation meta in groups.toml.
+fn resolve_tier(card: &Card, group_config: Option<&GroupConfig>, config: &GroupingConfig) -> Tier {
+    let property_footnote = card
+        .source_pids
+        .iter()
+        .any(|pid| config.properties.get(pid).is_some_and(|p| p.footnote));
+    if property_footnote || group_config.is_some_and(|g| g.footnote) {
+        Tier::Footnote
+    } else {
+        Tier::Standard
     }
 }
 
@@ -218,6 +235,7 @@ fn cards_for_group(
                     cards.push(Card {
                         title: property.label.clone(),
                         layout: Layout::default(),
+                        tier: Tier::Standard,
                         localized_title: true,
                         icon: None,
                         source_pids: vec![property.pid.clone()],
@@ -264,6 +282,7 @@ fn cards_for_group(
             cards.push(Card {
                 title: property.label.clone(),
                 layout: Layout::default(),
+                tier: Tier::Standard,
                 localized_title: true,
                 icon: None,
                 source_pids: vec![property.pid.clone()],
@@ -307,6 +326,7 @@ fn cards_for_group(
             cards.push(Card {
                 title: image.caption.clone(),
                 layout: Layout::default(),
+                tier: Tier::Standard,
                 localized_title: true,
                 icon: None,
                 source_pids: vec![pid],
@@ -318,6 +338,7 @@ fn cards_for_group(
             cards.push(Card {
                 title: title.to_string(),
                 layout: Layout::default(),
+                tier: Tier::Standard,
                 localized_title: title_is_localized,
                 icon: None,
                 source_pids: pids,
@@ -333,6 +354,7 @@ fn cards_for_group(
         cards.push(Card {
             title: title.to_string(),
             layout: Layout::default(),
+            tier: Tier::Standard,
             localized_title: title_is_localized,
             icon: None,
             source_pids: pids,
@@ -350,6 +372,7 @@ fn cards_for_group(
             cards.push(Card {
                 title: entry.key,
                 layout: Layout::default(),
+                tier: Tier::Standard,
                 localized_title: true,
                 icon: None,
                 source_pids: vec![pid],
@@ -364,6 +387,7 @@ fn cards_for_group(
             cards.push(Card {
                 title: title.to_string(),
                 layout: Layout::default(),
+                tier: Tier::Standard,
                 localized_title: title_is_localized,
                 icon: None,
                 source_pids: pids,
@@ -464,9 +488,7 @@ fn current_quantity(property: &Property) -> Option<(&qjson::Statement, Option<St
 
 fn statement_time(statement: &qjson::Statement) -> Option<(String, Option<u8>)> {
     statement.qualifiers.iter().find_map(|q| match &q.value {
-        Value::Time { iso, precision } if q.pid == POINT_IN_TIME => {
-            Some((iso.clone(), *precision))
-        }
+        Value::Time { iso, precision } if q.pid == POINT_IN_TIME => Some((iso.clone(), *precision)),
         _ => None,
     })
 }
@@ -480,6 +502,7 @@ fn as_meter(property: &Property, meter: &crate::grouping::MeterConfig) -> Option
     Some(Card {
         title: property.label.clone(),
         layout: Layout::default(),
+        tier: Tier::Standard,
         localized_title: true,
         icon: None,
         source_pids: vec![property.pid.clone()],
@@ -534,6 +557,7 @@ fn as_stat_series(property: &Property) -> Option<Card> {
     Some(Card {
         title: property.label.clone(),
         layout: Layout::default(),
+        tier: Tier::Standard,
         localized_title: true,
         icon: None,
         source_pids: vec![property.pid.clone()],
@@ -574,7 +598,10 @@ mod tests {
     fn population_becomes_stat_series() {
         let page = nairobi_page();
         let card = find(&page, |c| c.source_pids == ["P1082"]).expect("population card");
-        let CardKind::StatSeries { current, series, .. } = &card.kind else {
+        let CardKind::StatSeries {
+            current, series, ..
+        } = &card.kind
+        else {
             panic!("population must be a StatSeries, got {:?}", card.kind);
         };
         assert_eq!(series.len(), 3);
@@ -698,6 +725,27 @@ mod tests {
         assert_eq!(*value, 0.601);
         assert_eq!(*max, 1.0);
         assert_eq!(note.as_deref(), Some("2021"));
+    }
+
+    #[test]
+    fn curation_meta_is_footnote_tier() {
+        let page = nairobi_page();
+        // categories group (P910 et al.) and ungrouped curation PIDs
+        // (P1343 described by source) are footnotes; content is not
+        let categories =
+            find(&page, |c| c.source_pids.contains(&"P910".to_string())).expect("categories card");
+        assert_eq!(categories.tier, Tier::Footnote);
+        let sources = find(&page, |c| c.source_pids == ["P1343"]).expect("described-by card");
+        assert_eq!(sources.tier, Tier::Footnote);
+        let population = find(&page, |c| c.source_pids == ["P1082"]).expect("population card");
+        assert_eq!(population.tier, Tier::Standard);
+        // footnotes sink: once the first appears, everything after is one
+        let first = page
+            .cards
+            .iter()
+            .position(|c| c.tier == Tier::Footnote)
+            .unwrap();
+        assert!(page.cards[first..].iter().all(|c| c.tier == Tier::Footnote));
     }
 
     #[test]

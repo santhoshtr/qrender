@@ -1,3 +1,90 @@
+{% macro card_section(card) %}
+<section class="card" style="--cols: {{ card.layout.cols }}; --rows: {{ card.layout.rows }}">
+  <h2 class="card__title">
+    {%- if let Some(icon) = card.icon %}<svg class="icon" aria-hidden="true"><use href="#i-{{ icon }}"/></svg>{% endif -%}
+    {%- if card.localized_title || card.icon.is_none() %}<span>{{ card.title }}</span>{% else %}<span class="visually-hidden">{{ card.title }}</span>{% endif -%}
+  </h2>
+  {% match card.kind %}
+
+  {% when CardKind::Image with { image } %}
+  <figure class="media">
+    {% call media_element(image) %}{% endcall %}
+  </figure>
+
+  {% when CardKind::Gallery with { images } %}
+  <div class="gallery">
+    {% for image in images %}
+    <figure class="media">
+      {% call media_element(image) %}{% endcall %}
+      <figcaption>{{ image.caption }}</figcaption>
+    </figure>
+    {% endfor %}
+  </div>
+
+  {% when CardKind::Stat with { value, note } %}
+  <p class="stat">
+    <span class="stat__value">{{ value }}</span>
+    {% if let Some(note) = note %}<span class="stat__note">{{ note }}</span>{% endif %}
+  </p>
+
+  {% when CardKind::StatSeries with { current, note, series } %}
+  <p class="stat">
+    <span class="stat__value">{{ current }}</span>
+    {% if let Some(note) = note %}<span class="stat__note">{{ note }}</span>{% endif %}
+  </p>
+  <div class="series">
+    {% for point in series %}
+    <div class="series__row">
+      <span class="series__label">{{ point.label }}</span>
+      <span class="series__track"><span class="series__bar" style="inline-size: {{ self.bar_percent(point.value, series) }}%"></span></span>
+      <span class="series__number">{{ point.display }}</span>
+    </div>
+    {% endfor %}
+  </div>
+
+  {% when CardKind::Meter with { value, display, note, min, max, low, high, optimum } %}
+  <p class="stat">
+    <span class="stat__value">{{ display }}</span>
+    {% if let Some(note) = note %}<span class="stat__note">{{ note }}</span>{% endif %}
+  </p>
+  <meter class="gauge" min="{{ min }}" max="{{ max }}" value="{{ value }}"
+    {%- if let Some(low) = low %} low="{{ low }}"{% endif -%}
+    {%- if let Some(high) = high %} high="{{ high }}"{% endif -%}
+    {%- if let Some(optimum) = optimum %} optimum="{{ optimum }}"{% endif %}>{{ display }}</meter>
+
+  {% when CardKind::Map with { lat, lon, label } %}
+  <figure class="media map">
+    <img src="https://maps.wikimedia.org/img/osm-intl,10,{{ lat }},{{ lon }},600x300.png" alt="{{ label }}" loading="lazy">
+    <figcaption>{{ lat }}, {{ lon }}</figcaption>
+  </figure>
+
+  {% when CardKind::KeyValues with { entries } %}
+  <dl class="kv">
+    {% for entry in entries %}
+    <dt>{{ entry.key }}</dt>
+    <dd>
+      {% for value in entry.values %}<span class="kv__value">{{ value }}</span>{% endfor %}
+    </dd>
+    {% endfor %}
+  </dl>
+
+  {% when CardKind::Links with { entries } %}
+  <ul class="links">
+    {% for entry in entries %}
+    <li><a href="{{ entry.url }}" rel="nofollow">{{ entry.label }}</a><br><span class="links__url">{{ entry.url }}</span></li>
+    {% endfor %}
+  </ul>
+
+  {% when CardKind::ItemChips with { items } %}
+  <ul class="chips">
+    {% for item in items %}
+    <li class="chip">{% if let Some(thumb) = item.thumb_url %}<img class="chip__thumb" src="{{ thumb }}" alt="" loading="lazy">{% endif %}<a href="https://www.wikidata.org/wiki/{{ item.qid }}">{{ item.label }}</a>{% if let Some(note) = item.note %} <small class="chip__note">{{ note }}</small>{% endif %}</li>
+    {% endfor %}
+  </ul>
+
+  {% endmatch %}
+</section>
+{% endmacro %}
 {% macro media_element(image) %}
 {% match image.media %}
 {% when MediaKind::Audio %}
@@ -34,94 +121,26 @@
   </header>
 
   <main class="cards">
-    {% for card in page.cards %}
-    <section class="card" style="--cols: {{ card.layout.cols }}; --rows: {{ card.layout.rows }}">
-      <h2 class="card__title">
-        {%- if let Some(icon) = card.icon %}<svg class="icon" aria-hidden="true"><use href="#i-{{ icon }}"/></svg>{% endif -%}
-        {%- if card.localized_title || card.icon.is_none() %}<span>{{ card.title }}</span>{% else %}<span class="visually-hidden">{{ card.title }}</span>{% endif -%}
-      </h2>
-      {% match card.kind %}
-
-      {% when CardKind::Image with { image } %}
-      <figure class="media">
-        {% call media_element(image) %}{% endcall %}
-      </figure>
-
-      {% when CardKind::Gallery with { images } %}
-      <div class="gallery">
-        {% for image in images %}
-        <figure class="media">
-          {% call media_element(image) %}{% endcall %}
-          <figcaption>{{ image.caption }}</figcaption>
-        </figure>
-        {% endfor %}
-      </div>
-
-      {% when CardKind::Stat with { value, note } %}
-      <p class="stat">
-        <span class="stat__value">{{ value }}</span>
-        {% if let Some(note) = note %}<span class="stat__note">{{ note }}</span>{% endif %}
-      </p>
-
-      {% when CardKind::StatSeries with { current, note, series } %}
-      <p class="stat">
-        <span class="stat__value">{{ current }}</span>
-        {% if let Some(note) = note %}<span class="stat__note">{{ note }}</span>{% endif %}
-      </p>
-      <div class="series">
-        {% for point in series %}
-        <div class="series__row">
-          <span class="series__label">{{ point.label }}</span>
-          <span class="series__track"><span class="series__bar" style="inline-size: {{ self.bar_percent(point.value, series) }}%"></span></span>
-          <span class="series__number">{{ point.display }}</span>
-        </div>
-        {% endfor %}
-      </div>
-
-      {% when CardKind::Meter with { value, display, note, min, max, low, high, optimum } %}
-      <p class="stat">
-        <span class="stat__value">{{ display }}</span>
-        {% if let Some(note) = note %}<span class="stat__note">{{ note }}</span>{% endif %}
-      </p>
-      <meter class="gauge" min="{{ min }}" max="{{ max }}" value="{{ value }}"
-        {%- if let Some(low) = low %} low="{{ low }}"{% endif -%}
-        {%- if let Some(high) = high %} high="{{ high }}"{% endif -%}
-        {%- if let Some(optimum) = optimum %} optimum="{{ optimum }}"{% endif %}>{{ display }}</meter>
-
-      {% when CardKind::Map with { lat, lon, label } %}
-      <figure class="media map">
-        <img src="https://maps.wikimedia.org/img/osm-intl,10,{{ lat }},{{ lon }},600x300.png" alt="{{ label }}" loading="lazy">
-        <figcaption>{{ lat }}, {{ lon }}</figcaption>
-      </figure>
-
-      {% when CardKind::KeyValues with { entries } %}
-      <dl class="kv">
-        {% for entry in entries %}
-        <dt>{{ entry.key }}</dt>
-        <dd>
-          {% for value in entry.values %}<span class="kv__value">{{ value }}</span>{% endfor %}
-        </dd>
-        {% endfor %}
-      </dl>
-
-      {% when CardKind::Links with { entries } %}
-      <ul class="links">
-        {% for entry in entries %}
-        <li><a href="{{ entry.url }}" rel="nofollow">{{ entry.label }}</a><br><span class="links__url">{{ entry.url }}</span></li>
-        {% endfor %}
-      </ul>
-
-      {% when CardKind::ItemChips with { items } %}
-      <ul class="chips">
-        {% for item in items %}
-        <li class="chip">{% if let Some(thumb) = item.thumb_url %}<img class="chip__thumb" src="{{ thumb }}" alt="" loading="lazy">{% endif %}<a href="https://www.wikidata.org/wiki/{{ item.qid }}">{{ item.label }}</a>{% if let Some(note) = item.note %} <small class="chip__note">{{ note }}</small>{% endif %}</li>
-        {% endfor %}
-      </ul>
-
-      {% endmatch %}
-    </section>
+    {% for card in self.tier_cards(Tier::Standard) %}
+    {% call card_section(card) %}{% endcall %}
     {% endfor %}
   </main>
+
+  {% let footnotes = self.tier_cards(Tier::Footnote) %}
+  {% if !footnotes.is_empty() %}
+  <details class="footnotes">
+    <summary>
+      <svg class="icon" aria-hidden="true"><use href="#i-archive"/></svg>
+      <span>{{ footnotes.len() }}</span>
+      <span class="visually-hidden">Wikimedia metadata</span>
+    </summary>
+    <div class="cards">
+      {% for card in footnotes %}
+      {% call card_section(card) %}{% endcall %}
+      {% endfor %}
+    </div>
+  </details>
+  {% endif %}
 
   <footer class="page-footer">
     <p>Data: <a href="https://www.wikidata.org/wiki/{{ page.qid }}">Wikidata {{ page.qid }}</a> (CC0) ·

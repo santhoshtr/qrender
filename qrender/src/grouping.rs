@@ -19,6 +19,10 @@ pub struct GroupConfig {
     pub cols: Option<u8>,
     pub rows: Option<u8>,
     pub sort: Option<i32>,
+    /// Wikimedia-curation meta (categories, templates); cards render
+    /// in the collapsed footnote region instead of the main grid
+    #[serde(default)]
+    pub footnote: bool,
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone, Default)]
@@ -32,6 +36,9 @@ pub struct PropertyConfig {
     pub cols: Option<u8>,
     pub rows: Option<u8>,
     pub sort: Option<i32>,
+    /// Wikimedia-curation meta; see GroupConfig::footnote
+    #[serde(default)]
+    pub footnote: bool,
     /// Render this quantity as a gauge (HTML meter element). Not
     /// derivable from data: config declares the scale and what is good.
     pub meter: Option<MeterConfig>,
@@ -55,9 +62,8 @@ impl GroupingConfig {
         let mut groups_vec: Vec<(&String, &GroupConfig)> = self.groups.iter().collect();
         // Groups with an explicit order come first (ascending); the rest
         // follow alphabetically so output is deterministic across runs.
-        groups_vec.sort_by_key(|(name, config)| {
-            (config.order.is_none(), config.order, name.as_str())
-        });
+        groups_vec
+            .sort_by_key(|(name, config)| (config.order.is_none(), config.order, name.as_str()));
         groups_vec
     }
 }

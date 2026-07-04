@@ -40,6 +40,16 @@ impl Default for Layout {
     }
 }
 
+/// Visual weight class. Standard cards fill the main grid; footnote
+/// cards (Wikimedia-curation meta, flagged in groups.toml) collapse
+/// into a details region at the page end.
+#[derive(Debug, Serialize, Clone, Copy, PartialEq, Eq)]
+#[serde(rename_all = "lowercase")]
+pub enum Tier {
+    Standard,
+    Footnote,
+}
+
 #[derive(Debug, Serialize)]
 pub struct Card {
     pub title: String,
@@ -52,6 +62,7 @@ pub struct Card {
     /// PIDs this card was built from, for provenance links back to Wikidata
     pub source_pids: Vec<String>,
     pub layout: Layout,
+    pub tier: Tier,
     #[serde(flatten)]
     pub kind: CardKind,
 }

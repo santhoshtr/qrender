@@ -4,7 +4,7 @@
 
 use askama::Template;
 
-use crate::cards::{CardKind, FactoidPage, MediaKind, SeriesPoint};
+use crate::cards::{Card, CardKind, FactoidPage, MediaKind, SeriesPoint, Tier};
 use crate::error::QRenderError;
 use crate::icons;
 
@@ -19,8 +19,18 @@ struct PageTemplate<'a> {
     stylesheet: &'static str,
 }
 
+/// The footnote region's disclosure icon
+const FOOTNOTE_ICON: &str = "archive";
+
 fn sprite_for(page: &FactoidPage) -> String {
-    let mut names: Vec<&str> = page.cards.iter().filter_map(|c| c.icon.as_deref()).collect();
+    let mut names: Vec<&str> = page
+        .cards
+        .iter()
+        .filter_map(|c| c.icon.as_deref())
+        .collect();
+    if page.cards.iter().any(|c| c.tier == Tier::Footnote) {
+        names.push(FOOTNOTE_ICON);
+    }
     names.sort_unstable();
     names.dedup();
     names.into_iter().filter_map(icons::lookup).collect()
@@ -34,6 +44,10 @@ impl PageTemplate<'_> {
             return 0;
         }
         ((value / max) * 100.0).round() as u32
+    }
+
+    fn tier_cards(&self, tier: Tier) -> Vec<&Card> {
+        self.page.cards.iter().filter(|c| c.tier == tier).collect()
     }
 }
 

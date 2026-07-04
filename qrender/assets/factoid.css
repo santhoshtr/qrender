@@ -357,6 +357,36 @@ a {
   }
 }
 
+/* Footnotes: Wikimedia-curation meta collapsed behind a quiet pill.
+   The count is the only visible text - language-neutral by design. */
+.footnotes {
+  margin-block-start: var(--spacing-150);
+
+  > summary {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-25);
+    padding: var(--spacing-25) var(--spacing-75);
+    border: var(--border-subtle);
+    border-radius: var(--border-radius-pill);
+    color: var(--color-subtle);
+    font-size: var(--font-size-small);
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--background-color-interactive-subtle);
+    }
+  }
+
+  &[open] > summary {
+    color: var(--color-emphasized);
+  }
+
+  > .cards {
+    margin-block-start: var(--spacing-75);
+  }
+}
+
 .page-footer {
   margin-block-start: var(--spacing-200);
   font-size: var(--font-size-small);
