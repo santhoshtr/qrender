@@ -140,25 +140,33 @@ kinds are **derived from value types**, not configured per property:
 | Coordinate value | `Map` (static Wikimedia Maps tile) |
 | Quantity statements with point-in-time qualifiers | `StatSeries` (headline value = preferred rank, else latest) |
 | Quantity on a config-declared scale (HDI, Democracy Index) | `Meter` (native `<meter>`) |
-| Item references | `ItemChips` (with referenced-item thumbnails) |
-| URL values | `Links` |
-| Lone single-valued property | `Stat` |
-| Everything else | `KeyValues` |
+| Lone plain single-valued property | `Stat` |
+| Everything else | `Facts` — labeled rows of rich values (item chips with thumbnails, links, text) |
 
-Property grouping comes from `groups.toml`: a group's properties are
-synthesized together (its images pool into one gallery, its remaining
-values into one key-value card). Ungrouped properties each get their
-own card, ordered by PID. External identifiers are suppressed for
-human-facing output.
+Property grouping comes from `groups.toml`, and grouping means
+grouping: a group's non-visual properties become labeled rows of **one
+`Facts` card** (father/mother/spouse/child are one family card, not
+four fragments), while its images pool into one gallery. Ungrouped
+properties each get their own card, ordered by PID. External
+identifiers are suppressed for human-facing output.
+
+Statement order inside a row is editorial: preferred rank first, then
+statements without an end-time qualifier, then history chronologically
+by start time — so "country: France" leads and wartime occupations
+follow in order, none dropped. Preferred-rank chips carry
+`current: true` and render with emphasis. For media the rule is
+stronger: when any image statement is preferred, the others are
+treated as superseded variants (old flags, alternate crops) and only
+the preferred ones render.
 
 Qualifiers are never dropped: they render as `(label: value)` notes on
 values and chips, because they carry essential context (dates of
 office, ordinals, roles) — especially for LLM consumers.
 
-Two content-consumption rules avoid duplication with the header: a
-single-statement P18 becomes the page hero and loses its card; a
-single-statement hero-emblem property (person: P109 signature) is
-consumed the same way.
+Two content-consumption rules avoid duplication with the header: P18's
+preferred (else first) image becomes the page hero, consuming the
+property when that leaves it nothing else to show; a single-statement
+hero-emblem property (person: P109 signature) is consumed the same way.
 
 Each card then gets three resolved attributes, all cascading
 kind-default → group config → per-PID config:
@@ -243,9 +251,14 @@ consumption rules are the two single-statement header cases above.
   2 by container width); each card spans its `--cols`/`--rows` and
   `grid-auto-flow: dense` packs the holes. True masonry is a
   `@supports` progressive enhancement for browsers that ship it.
-- Cards are `inline-size` containers; their internals (key-value
+- Cards are `inline-size` containers; their internals (fact-row
   columns, stat font size) respond to the span the grid gave them, not
   the viewport, so the same card config works at any size.
+- Images do the explaining wherever possible: a card that is just one
+  or two linked items renders them as tiles whose picture fills half
+  the card (a mayor's face, a timezone's world map) with the label
+  beneath — encyclopedic, rabbit-hole navigation. Row-level chips keep
+  compact round thumbnails.
 - Theming keys off `<body data-archetype="…">`: person and place get a
   serif display title; a place with a hero image gets a full-bleed
   backdrop with the title on a scrim — guarded by `:has()` so an item
