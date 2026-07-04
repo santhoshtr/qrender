@@ -2,6 +2,7 @@
 //! an item" document. The factoid HTML renderer (and the JSON API) render
 //! this; card kinds are derived from the typed values by `synthesize()`.
 
+mod compose;
 mod format;
 mod synthesis;
 
@@ -20,6 +21,8 @@ pub struct FactoidPage {
     pub archetype: String,
     /// The item's main image (P18), shown beside the title
     pub hero: Option<GalleryImage>,
+    /// Archetype-selected facts rendered inside the header
+    pub hero_facts: Option<HeroFacts>,
     /// Archetype-composed regions, in reading order
     pub sections: Vec<Section>,
     /// Cards no section claimed - the bento grid
@@ -35,6 +38,18 @@ pub struct Section {
     pub name: String,
     pub icon: Option<String>,
     pub cards: Vec<Card>,
+}
+
+/// Header facts resolved from the archetype's hero config. All parts
+/// are optional; whatever the data lacks simply doesn't render.
+#[derive(Debug, Serialize)]
+pub struct HeroFacts {
+    /// e.g. "1952 – 2001" (years only, en dash)
+    pub date_range: Option<String>,
+    /// Joined value labels, e.g. "writer · screenwriter"
+    pub tagline: Option<String>,
+    /// A small image, e.g. the P109 signature
+    pub emblem: Option<GalleryImage>,
 }
 
 impl FactoidPage {
@@ -128,6 +143,11 @@ pub enum CardKind {
     ItemChips {
         items: Vec<ItemChip>,
     },
+    /// Cross-property chronology: dated statements (Time values and
+    /// start-time/point-in-time qualifiers) merged and sorted
+    Timeline {
+        events: Vec<TimelineEvent>,
+    },
     /// A quantity on a known scale, e.g. HDI - rendered as a gauge
     Meter {
         value: f64,
@@ -160,6 +180,20 @@ pub enum MediaKind {
     Image,
     Audio,
     Video,
+}
+
+#[derive(Debug, Serialize)]
+pub struct TimelineEvent {
+    /// ISO timestamp, the sort key
+    pub iso: String,
+    /// Formatted for the value's precision, e.g. "1974"
+    pub display: String,
+    /// Localized property label, e.g. "award received"
+    pub label: String,
+    /// Value label for item-valued events, e.g. "Hugo Award"
+    pub detail: Option<String>,
+    /// Small thumbnail of the referenced item's image
+    pub thumb_url: Option<String>,
 }
 
 #[derive(Debug, Serialize)]

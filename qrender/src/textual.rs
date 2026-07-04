@@ -56,6 +56,18 @@ pub fn render_text(page: &FactoidPage) -> String {
             CardKind::Map { lat, lon, .. } => {
                 let _ = writeln!(out, "{lat}, {lon}");
             }
+            CardKind::Timeline { events } => {
+                for event in events {
+                    match &event.detail {
+                        Some(detail) => {
+                            let _ = writeln!(out, "{}: {detail} ({})", event.display, event.label);
+                        }
+                        None => {
+                            let _ = writeln!(out, "{}: {}", event.display, event.label);
+                        }
+                    }
+                }
+            }
             CardKind::KeyValues { entries } => {
                 for entry in entries {
                     let _ = writeln!(out, "{}: {}", entry.key, entry.values.join("; "));
@@ -133,6 +145,19 @@ pub fn render_markdown(page: &FactoidPage) -> String {
             }
             CardKind::Map { lat, lon, .. } => {
                 let _ = writeln!(out, "{lat}, {lon}");
+            }
+            CardKind::Timeline { events } => {
+                for event in events {
+                    match &event.detail {
+                        Some(detail) => {
+                            let _ =
+                                writeln!(out, "- **{}** {detail} ({})", event.display, event.label);
+                        }
+                        None => {
+                            let _ = writeln!(out, "- **{}** {}", event.display, event.label);
+                        }
+                    }
+                }
             }
             CardKind::KeyValues { entries } => {
                 for entry in entries {
@@ -213,6 +238,19 @@ pub fn render_wikitext(page: &FactoidPage) -> String {
             }
             CardKind::Map { lat, lon, .. } => {
                 let _ = writeln!(out, ":* {lat}, {lon}");
+            }
+            CardKind::Timeline { events } => {
+                for event in events {
+                    match &event.detail {
+                        Some(detail) => {
+                            let _ =
+                                writeln!(out, ":* {}: {detail} ({})", event.display, event.label);
+                        }
+                        None => {
+                            let _ = writeln!(out, ":* {}: {}", event.display, event.label);
+                        }
+                    }
+                }
             }
             CardKind::KeyValues { entries } => {
                 for entry in entries {
@@ -326,6 +364,18 @@ pub fn render_html(page: &FactoidPage) -> String {
             }
             CardKind::Map { lat, lon, .. } => {
                 let _ = writeln!(out, "<p>{lat}, {lon}</p>");
+            }
+            CardKind::Timeline { events } => {
+                let _ = writeln!(out, "<ol>");
+                for event in events {
+                    let detail = event
+                        .detail
+                        .as_ref()
+                        .map(|d| format!("{} ({})", escape(d), escape(&event.label)))
+                        .unwrap_or_else(|| escape(&event.label));
+                    let _ = writeln!(out, "<li>{}: {detail}</li>", escape(&event.display));
+                }
+                let _ = writeln!(out, "</ol>");
             }
             CardKind::KeyValues { entries } => {
                 let _ = writeln!(out, "<dl>");

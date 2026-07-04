@@ -9,7 +9,7 @@ use std::collections::HashSet;
 use super::format::{display_value, format_time};
 use super::{
     Card, CardKind, FactoidPage, GalleryImage, ItemChip, KeyValueEntry, Layout, LinkEntry,
-    MediaKind, SeriesPoint, Tier,
+    MediaKind, SeriesPoint, Tier, compose,
 };
 use crate::archetype::{self, ArchetypesConfig};
 use crate::grouping::{GroupConfig, GroupingConfig};
@@ -24,6 +24,12 @@ pub fn synthesize(
     ignore_ids: bool,
 ) -> FactoidPage {
     let mut cards = Vec::new();
+
+    let archetype = archetype::resolve(item, archetypes);
+    let recipe = archetypes.archetypes.get(&archetype);
+    let hero_facts = recipe
+        .and_then(|r| r.hero.as_ref())
+        .and_then(|h| compose::hero_facts(item, h));
 
     // The item's main image becomes the page hero. When P18 has just that
     // one statement, its standalone card would duplicate the hero - skip it.
@@ -40,6 +46,18 @@ pub fn synthesize(
     });
     let hero_consumes_p18 = hero.is_some() && main_image.is_some_and(|p| p.statements.len() == 1);
 
+    // Same for the header emblem (person: P109 signature): a single
+    // statement fully shown in the header needs no card of its own.
+    let emblem_pid = recipe
+        .and_then(|r| r.hero.as_ref())
+        .and_then(|h| h.emblem.as_deref())
+        .unwrap_or("");
+    let emblem_consumed = hero_facts.as_ref().is_some_and(|f| f.emblem.is_some())
+        && item
+            .properties
+            .get(emblem_pid)
+            .is_some_and(|p| p.statements.len() == 1);
+
     for (group_name, group_config) in config.sorted_groups() {
         if ignore_ids && group_name == "identifiers" {
             continue;
@@ -51,6 +69,7 @@ pub fn synthesize(
             .iter()
             .filter(|pid| seen.insert(pid.as_str()) && !config.is_ignored(pid))
             .filter(|pid| !(hero_consumes_p18 && *pid == "P18"))
+            .filter(|pid| !(emblem_consumed && *pid == emblem_pid))
             .filter_map(|pid| item.properties.get(pid))
             .collect();
         let mut group_cards = cards_for_group(&humanize(group_name), false, &properties, config);
@@ -70,6 +89,7 @@ pub fn synthesize(
         .values()
         .filter(|p| !grouped_pids.contains(&p.pid) && !config.is_ignored(&p.pid))
         .filter(|p| !(hero_consumes_p18 && p.pid == "P18"))
+        .filter(|p| !(emblem_consumed && p.pid == emblem_pid))
         .collect();
     leftover.sort_by_key(|p| p.pid.strip_prefix('P').and_then(|n| n.parse::<u32>().ok()));
     for property in leftover {
@@ -94,20 +114,25 @@ pub fn synthesize(
     // early, categories late); ties keep group order. DOM order is the
     // reading order - CSS never reorders.
     cards.sort_by_key(|card| card.layout.sort);
-    // Footnote-tier cards split off into their own collapsed region.
-    // Sections stay empty until a recipe claims cards for the resolved
-    // archetype; everything unclaimed is the overflow bento grid.
-    let (footnotes, overflow): (Vec<Card>, Vec<Card>) =
+    // Footnote-tier cards split off into their own collapsed region;
+    // the recipe's sections claim from the rest, and what no section
+    // claims is the overflow bento grid.
+    let (footnotes, standard): (Vec<Card>, Vec<Card>) =
         cards.into_iter().partition(|c| c.tier == Tier::Footnote);
+    let (sections, overflow) = match recipe {
+        Some(recipe) => compose::sections(item, standard, recipe),
+        None => (Vec::new(), standard),
+    };
 
     FactoidPage {
         qid: item.qid.clone(),
         label: item.label.clone(),
         description: item.description.clone(),
         language: language.to_string(),
-        archetype: archetype::resolve(item, archetypes),
+        archetype,
         hero,
-        sections: Vec::new(),
+        hero_facts,
+        sections,
         overflow,
         footnotes,
     }
@@ -145,7 +170,7 @@ fn resolve_icon(card: &Card, group_icon: Option<&str>, config: &GroupingConfig) 
 
 /// Kind-derived layout defaults, clamped by content: what a card *is*
 /// and how much it holds suggest its visual weight.
-fn kind_layout(kind: &CardKind) -> (u8, u8) {
+pub(super) fn kind_layout(kind: &CardKind) -> (u8, u8) {
     match kind {
         CardKind::Stat { value, .. } => (2, if value.len() > 16 { 2 } else { 1 }),
         CardKind::StatSeries { series, .. } => (2, if series.len() > 6 { 3 } else { 2 }),
@@ -158,6 +183,7 @@ fn kind_layout(kind: &CardKind) -> (u8, u8) {
         }
         CardKind::ItemChips { items } => (if items.len() >= 4 { 4 } else { 2 }, 1),
         CardKind::Links { .. } => (2, 1),
+        CardKind::Timeline { events } => (2, if events.len() > 6 { 4 } else { 3 }),
         CardKind::Meter { .. } => (2, 1),
     }
 }
@@ -436,7 +462,7 @@ const CHIP_THUMB_WIDTH: u32 = 96; // 2x for the 48px chip thumb
 
 /// image_url arrives as an http FilePath URL from SPARQL; normalize to
 /// https and request a chip-sized thumbnail.
-fn chip_thumb_url(image_url: &str) -> String {
+pub(super) fn chip_thumb_url(image_url: &str) -> String {
     let https = image_url.replacen("http://", "https://", 1);
     format!("{https}?width={CHIP_THUMB_WIDTH}")
 }
@@ -462,7 +488,7 @@ fn media_kind(file_name: &str) -> MediaKind {
     }
 }
 
-fn gallery_image(file_name: &str, caption: &str) -> GalleryImage {
+pub(super) fn gallery_image(file_name: &str, caption: &str) -> GalleryImage {
     let encoded = percent_encoding::utf8_percent_encode(file_name, FILE_SEGMENT);
     GalleryImage {
         file_name: file_name.to_string(),
@@ -589,6 +615,21 @@ mod tests {
         ))
         .unwrap();
         let item = qjson::transform::transform("Q3870", &response.results.bindings);
+        synthesize(
+            &item,
+            "en",
+            &load_grouping_config().unwrap(),
+            &load_archetypes_config().unwrap(),
+            true,
+        )
+    }
+
+    fn q42_page() -> FactoidPage {
+        let response: qjson::sparql::SparqlResponse = serde_json::from_str(include_str!(
+            "../../../qjson/tests/fixtures/Q42.sparql.json"
+        ))
+        .unwrap();
+        let item = qjson::transform::transform("Q42", &response.results.bindings);
         synthesize(
             &item,
             "en",
@@ -765,6 +806,64 @@ mod tests {
         // the regions and the tier flag agree
         assert!(page.footnotes.iter().all(|c| c.tier == Tier::Footnote));
         assert!(page.overflow.iter().all(|c| c.tier == Tier::Standard));
+    }
+
+    #[test]
+    fn person_hero_facts_from_recipe() {
+        let page = q42_page();
+        let facts = page.hero_facts.as_ref().expect("Q42 has hero facts");
+        assert_eq!(facts.date_range.as_deref(), Some("1952 – 2001"));
+        assert!(
+            facts
+                .tagline
+                .as_deref()
+                .is_some_and(|t| t.contains("writer")),
+            "tagline from occupations: {:?}",
+            facts.tagline
+        );
+        // the P109 signature is consumed by the header - no card of its own
+        assert!(facts.emblem.is_some());
+        assert!(page.all_cards().all(|c| c.source_pids != ["P109"]));
+    }
+
+    #[test]
+    fn person_timeline_opens_career_section() {
+        let page = q42_page();
+        let career = page
+            .sections
+            .iter()
+            .find(|s| s.name == "career")
+            .expect("career section");
+        let CardKind::Timeline { events } = &career.cards[0].kind else {
+            panic!(
+                "career leads with a timeline, got {:?}",
+                career.cards[0].kind
+            );
+        };
+        assert!(events.len() >= 4);
+        assert!(events.windows(2).all(|w| w[0].iso <= w[1].iso));
+        // birth opens the chronology; awards carry their item as detail
+        assert!(events[0].iso.starts_with("1952"));
+        assert!(
+            events
+                .iter()
+                .any(|e| e.detail.is_some() && e.label == "award received")
+        );
+    }
+
+    #[test]
+    fn person_sections_claim_cards() {
+        let page = q42_page();
+        let names: Vec<&str> = page.sections.iter().map(|s| s.name.as_str()).collect();
+        assert_eq!(names, ["life", "career", "legacy"]);
+        // claimed properties left the overflow grid
+        assert!(
+            page.overflow
+                .iter()
+                .all(|c| !c.source_pids.iter().any(|p| p == "P569" || p == "P166"))
+        );
+        // a place page has no person recipe: everything stays overflow
+        assert!(nairobi_page().sections.is_empty());
     }
 
     #[test]

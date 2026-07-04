@@ -57,6 +57,41 @@ a {
     font-size: var(--font-size-large);
     color: var(--color-subtle);
   }
+
+  .page-header__dates {
+    margin: var(--spacing-25) 0 0;
+    font-size: var(--font-size-large);
+    color: var(--color-subtle);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .page-header__tagline {
+    margin: var(--spacing-25) 0 0;
+    color: var(--color-subtle);
+  }
+
+  /* Emblem (e.g. signature): ink strokes need inverting in dark mode */
+  .page-header__emblem {
+    margin-inline-start: auto;
+
+    img {
+      block-size: 3.5rem;
+      inline-size: auto;
+      max-inline-size: 12rem;
+      object-fit: contain;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .page-header__emblem img {
+    filter: invert(1) hue-rotate(180deg);
+  }
+}
+
+/* Person pages: serif display for the title, mockup-style */
+[data-archetype="person"] .page-header h1 {
+  font-family: var(--font-family-serif);
 }
 
 /* Bento grid. Each card carries --cols/--rows spans resolved from its
@@ -300,8 +335,87 @@ a {
 }
 
 /* Fixed-height tiles clip; let text-heavy cards scroll instead */
-.card:has(.kv, .chips, .links) {
+.card:has(.kv, .chips, .links, .timeline) {
   overflow-y: auto;
+}
+
+/* Timeline: date column, a line-and-dot rail, event body */
+.timeline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  .timeline__event {
+    display: grid;
+    grid-template-columns: 4rem 0.75rem 1fr;
+    column-gap: var(--spacing-50);
+  }
+
+  .timeline__date {
+    color: var(--color-subtle);
+    font-size: var(--font-size-small);
+    font-variant-numeric: tabular-nums;
+    text-align: end;
+  }
+
+  .timeline__marker {
+    position: relative;
+
+    /* the rail */
+    &::before {
+      content: "";
+      position: absolute;
+      inset-block: 0;
+      inset-inline-start: calc(50% - 1px);
+      inline-size: 2px;
+      background-color: var(--background-color-neutral);
+    }
+
+    /* the dot */
+    &::after {
+      content: "";
+      position: absolute;
+      inset-block-start: 0.35rem;
+      inset-inline-start: calc(50% - 0.25rem);
+      inline-size: 0.5rem;
+      block-size: 0.5rem;
+      border-radius: var(--border-radius-circle);
+      background-color: var(--background-color-progressive);
+    }
+  }
+
+  .timeline__event:first-child .timeline__marker::before {
+    inset-block-start: 0.35rem;
+  }
+
+  .timeline__event:last-child .timeline__marker::before {
+    inset-block-end: auto;
+    block-size: 0.35rem;
+  }
+
+  .timeline__body {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-25) var(--spacing-50);
+    padding-block-end: var(--spacing-75);
+  }
+
+  .timeline__event:last-child .timeline__body {
+    padding-block-end: 0;
+  }
+
+  .timeline__thumb {
+    inline-size: 2rem;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: var(--border-radius-circle);
+  }
+
+  .timeline__label {
+    color: var(--color-subtle);
+    font-size: var(--font-size-x-small);
+  }
 }
 
 /* Links */
@@ -357,13 +471,28 @@ a {
   }
 }
 
-/* Composed sections: icon-only heading above a scoped card grid */
+/* Composed sections: icon-only heading above a scoped card grid.
+   A rule line anchors the icon so the section break reads visually. */
 .page-section {
   margin-block-start: var(--spacing-200);
 
   > .page-section__title {
     margin: 0;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-50);
     color: var(--color-subtle);
+
+    .icon {
+      inline-size: 1.5rem;
+      block-size: 1.5rem;
+    }
+
+    &::after {
+      content: "";
+      flex: 1;
+      border-block-start: var(--border-subtle);
+    }
   }
 }
 

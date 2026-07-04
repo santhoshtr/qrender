@@ -28,6 +28,77 @@ signals = [
   "P735", # given name
 ]
 
+[archetypes.person.hero]
+dates = ["P569", "P570"] # date of birth, date of death
+tagline = "P106"         # occupation
+emblem = "P109"          # signature
+
+[[archetypes.person.sections]]
+name = "life"
+icon = "person"
+pids = [
+  "P569",  # date of birth
+  "P570",  # date of death
+  "P21",   # sex or gender
+  "P19",   # place of birth
+  "P20",   # place of death
+  "P119",  # place of burial
+  "P509",  # cause of death
+  "P1196", # manner of death
+  "P22",   # father
+  "P25",   # mother
+  "P26",   # spouse
+  "P40",   # child
+  "P3373", # sibling
+  "P53",   # family
+  "P551",  # residence
+  "P103",  # native language
+  "P1412", # languages spoken, written or signed
+  "P735",  # given name
+  "P734",  # family name
+]
+
+[[archetypes.person.sections]]
+name = "career"
+icon = "event"
+pids = [
+  "P106",  # occupation
+  "P69",   # educated at
+  "P108",  # employer
+  "P39",   # position held
+  "P800",  # notable work
+  "P101",  # field of work
+  "P135",  # movement
+  "P136",  # genre
+  "P737",  # influenced by
+  "P463",  # member of
+  "P1875", # represented by
+]
+
+[archetypes.person.sections.timeline]
+pids = [
+  "P569", # date of birth
+  "P570", # date of death
+  "P106", # occupation (start time)
+  "P69",  # educated at (start time)
+  "P166", # award received (point in time)
+  "P108", # employer (start time)
+  "P39",  # position held (start time)
+  "P512", # academic degree
+  "P26",  # spouse (start time)
+]
+min_events = 4
+
+[[archetypes.person.sections]]
+name = "legacy"
+icon = "trophy"
+pids = [
+  "P166",  # award received
+  "P485",  # archives at
+  "P1442", # image of grave
+  "P856",  # official website
+]
+
 [archetypes.place]
 p31 = [
   "Q515",      # city
