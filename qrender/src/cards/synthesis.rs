@@ -33,20 +33,37 @@ pub fn synthesize(
         .and_then(|r| r.hero.as_ref())
         .and_then(|h| compose::hero_facts(item, h));
 
-    // The item's main image becomes the page hero. When P18 has just that
-    // one statement, its standalone card would duplicate the hero - skip it.
+    // The item's main image becomes the page hero: the preferred-rank
+    // statement when one exists, else the first. When that leaves P18
+    // nothing more to show, its standalone card would duplicate the
+    // hero - skip it.
     let main_image = item.properties.get("P18");
-    let hero = main_image.and_then(|p| p.statements.first()).and_then(|s| {
-        if let Value::CommonsMedia { file_name, .. } = &s.value {
-            Some(gallery_image(
-                file_name,
-                item.label.as_deref().unwrap_or(&item.qid),
-            ))
-        } else {
-            None
-        }
-    });
-    let hero_consumes_p18 = hero.is_some() && main_image.is_some_and(|p| p.statements.len() == 1);
+    let hero = main_image
+        .and_then(|p| {
+            p.statements
+                .iter()
+                .find(|s| s.rank == Rank::Preferred)
+                .or_else(|| p.statements.first())
+        })
+        .and_then(|s| {
+            if let Value::CommonsMedia { file_name, .. } = &s.value {
+                Some(gallery_image(
+                    file_name,
+                    item.label.as_deref().unwrap_or(&item.qid),
+                ))
+            } else {
+                None
+            }
+        });
+    let hero_consumes_p18 = hero.is_some()
+        && main_image.is_some_and(|p| {
+            let preferred = p
+                .statements
+                .iter()
+                .filter(|s| s.rank == Rank::Preferred)
+                .count();
+            p.statements.len() == 1 || preferred == 1
+        });
 
     // Same for the header emblem (person: P109 signature): a single
     // statement fully shown in the header needs no card of its own.
@@ -255,6 +272,14 @@ fn cards_for_group(
             continue;
         }
 
+        // When any media statement is preferred, the others are
+        // superseded variants (old flags, alternate crops) - show only
+        // the preferred ones instead of near-duplicates.
+        let has_preferred_media = property
+            .statements
+            .iter()
+            .any(|s| s.rank == Rank::Preferred && matches!(s.value, Value::CommonsMedia { .. }));
+
         // Media and coordinates make visual cards; everything else
         // becomes one labeled row so a group reads as one card, not a
         // scatter of single-property fragments.
@@ -262,6 +287,9 @@ fn cards_for_group(
         for statement in ordered_statements(property) {
             match &statement.value {
                 Value::CommonsMedia { file_name, .. } => {
+                    if has_preferred_media && statement.rank != Rank::Preferred {
+                        continue;
+                    }
                     images.push((
                         property.pid.clone(),
                         gallery_image(file_name, &property.label),
@@ -863,6 +891,51 @@ mod tests {
             page.all_cards()
                 .all(|c| !matches!(c.kind, CardKind::Timeline { .. }))
         );
+    }
+
+    #[test]
+    fn preferred_media_supersedes_variants() {
+        // Two flag images, one preferred: only the preferred renders
+        // (the other is a superseded variant, not a second flag)
+        let media = |file: &str, rank: qjson::Rank| qjson::Statement {
+            value: qjson::Value::CommonsMedia {
+                file_name: file.to_string(),
+                url: format!("http://commons.wikimedia.org/wiki/Special:FilePath/{file}"),
+            },
+            rank,
+            qualifiers: vec![],
+        };
+        let item = qjson::WikidataItem {
+            qid: "Q1".to_string(),
+            label: Some("Testland".to_string()),
+            description: None,
+            properties: std::collections::HashMap::from([(
+                "P41".to_string(),
+                qjson::Property {
+                    pid: "P41".to_string(),
+                    label: "flag image".to_string(),
+                    statements: vec![
+                        media("Old flag.svg", qjson::Rank::Normal),
+                        media("Flag.svg", qjson::Rank::Preferred),
+                    ],
+                },
+            )]),
+        };
+        let page = synthesize(
+            &item,
+            "en",
+            &load_grouping_config().unwrap(),
+            &load_archetypes_config().unwrap(),
+            true,
+        );
+        let card = find(&page, |c| c.source_pids == ["P41"]).expect("flag card");
+        let CardKind::Image { image } = &card.kind else {
+            panic!(
+                "one preferred flag must be a single Image, got {:?}",
+                card.kind
+            );
+        };
+        assert_eq!(image.file_name, "Flag.svg");
     }
 
     #[test]
