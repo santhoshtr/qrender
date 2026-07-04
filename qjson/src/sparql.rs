@@ -35,9 +35,7 @@ pub struct SparqlValue {
 /// QIDs and language codes are interpolated into the SPARQL query, so they
 /// must be validated first (the Go tool interpolated `lang` unvalidated).
 pub fn validate_qid(qid: &str) -> Result<(), QjsonError> {
-    let ok = qid.len() > 1
-        && qid.starts_with('Q')
-        && qid[1..].bytes().all(|b| b.is_ascii_digit());
+    let ok = qid.len() > 1 && qid.starts_with('Q') && qid[1..].bytes().all(|b| b.is_ascii_digit());
     if ok {
         Ok(())
     } else {

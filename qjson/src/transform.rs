@@ -26,9 +26,7 @@ fn entity_id(uri: &str) -> Option<&str> {
 
 fn commons_file_name(url: &str) -> String {
     let encoded = url.strip_prefix(FILEPATH_PREFIX).unwrap_or(url);
-    percent_decode_str(encoded)
-        .decode_utf8_lossy()
-        .into_owned()
+    percent_decode_str(encoded).decode_utf8_lossy().into_owned()
 }
 
 /// WKT coordinate literal: "Point(lon lat)", optionally prefixed with a

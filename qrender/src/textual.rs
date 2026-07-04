@@ -122,7 +122,11 @@ pub fn render_markdown(page: &FactoidPage) -> String {
                 note,
                 series,
             } => {
-                let _ = writeln!(out, "**{current}** ({})", note.as_deref().unwrap_or("latest"));
+                let _ = writeln!(
+                    out,
+                    "**{current}** ({})",
+                    note.as_deref().unwrap_or("latest")
+                );
                 for point in series {
                     let _ = writeln!(out, "- {}: {}", point.label, point.display);
                 }
@@ -174,8 +178,7 @@ pub fn render_wikitext(page: &FactoidPage) -> String {
             }
             CardKind::Gallery { images } => {
                 for image in images {
-                    let _ =
-                        writeln!(out, "[[File:{}|thumb|{}]]", image.file_name, image.caption);
+                    let _ = writeln!(out, "[[File:{}|thumb|{}]]", image.file_name, image.caption);
                 }
             }
             CardKind::Stat { value, note } => match note {
@@ -199,7 +202,11 @@ pub fn render_wikitext(page: &FactoidPage) -> String {
                 note,
                 series,
             } => {
-                let _ = writeln!(out, ":* {current} ({})", note.as_deref().unwrap_or("latest"));
+                let _ = writeln!(
+                    out,
+                    ":* {current} ({})",
+                    note.as_deref().unwrap_or("latest")
+                );
                 for point in series {
                     let _ = writeln!(out, ":* {}: {}", point.label, point.display);
                 }
