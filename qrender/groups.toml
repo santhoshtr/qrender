@@ -22,19 +22,27 @@ pids = [
 ]
 order = 1
 
-[groups.life]
-icon = "event"
+# Birth-to-death facts in one scannable card, in life order
+[groups.vital]
+icon = "person"
 pids = [
-  "P569", # date of birth
-  "P570", # date of death
-  "P21",  # Gender
+  "P569",  # date of birth
+  "P19",   # place of birth
+  "P21",   # sex or gender
+  "P570",  # date of death
+  "P20",   # place of death
+  "P509",  # cause of death
+  "P1196", # manner of death
+  "P119",  # place of burial
 ]
 
 [groups.located_in]
 icon = "location_on"
 pids = [
-  "P17",  # Country
-  "P131", # Located In The Administrative Territorial Entity
+  "P17",   # Country
+  "P131",  # Located In The Administrative Territorial Entity
+  "P1376", # capital of
+  "P36",   # capital
 ]
 
 [groups.location]
@@ -47,43 +55,19 @@ pids = [
   "P1943",
 ]
 
-[groups.personal]
+# The whole family in one card: parents, partners, children, siblings
+[groups.family]
 icon = "group"
 pids = [
-  "mother",
-  "father",
-  "P22",    # father
-  "P25",    # mother
-  "P3448",  # stepparent
-]
-
-[groups.spouse]
-icon = "group"
-pids = [
-  "P26",  # spouse
-  "P451", # unmarried partner
-]
-
-[groups.children]
-icon = "group"
-pids = [
+  "P22",   # father
+  "P25",   # mother
+  "P3448", # stepparent
+  "P26",   # spouse
+  "P451",  # unmarried partner
   "P40",   # children
   "P1971", # number of children
-]
-
-[groups.life_places]
-icon = "location_on"
-pids = [
-  "P19",  # place of birth
-  "P20",  # place of death
-  "P119", # place of burial
-]
-
-[groups.death_cause]
-icon = "stethoscope"
-pids = [
-  "P509",  # cause of death
-  "P1196", # manner of death
+  "P3373", # sibling
+  "P53",   # family
 ]
 
 [groups.employer]
