@@ -123,3 +123,79 @@ signals = [
   "P2044", # elevation above sea level
   "P2046", # area
 ]
+
+[[archetypes.place.sections]]
+name = "geography"
+icon = "map"
+pids = [
+  "P625",  # coordinate location
+  "P2044", # elevation above sea level
+  "P2046", # area
+  "P421",  # time zone
+  "P17",   # country
+  "P131",  # located in the administrative territorial entity
+  "P1376", # capital of
+  "P36",   # capital
+  "P47",   # shares border with
+  "P206",  # located in or next to body of water
+  "P610",  # highest point
+  "P1589", # lowest point
+]
+
+[[archetypes.place.sections]]
+name = "history"
+icon = "event"
+pids = [
+  "P571",  # inception
+  "P793",  # significant event
+  "P1249", # time of earliest written record
+]
+
+[archetypes.place.sections.timeline]
+pids = [
+  "P571",  # inception
+  "P793",  # significant event
+  "P1249", # time of earliest written record
+  "P576",  # dissolved, abolished or demolished date
+]
+min_events = 4
+
+[[archetypes.place.sections]]
+name = "people"
+icon = "groups"
+pids = [
+  "P1082",  # population
+  "P1539",  # female population
+  "P1540",  # male population
+  "P6343",  # urban population
+  "P6344",  # rural population
+  "P1081",  # Human Development Index
+  "P11593", # Inequality-adjusted HDI
+  "P11547", # Democracy Index
+  "P2250",  # life expectancy
+  "P6897",  # literacy rate
+]
+
+[[archetypes.place.sections]]
+name = "governance"
+icon = "policy"
+pids = [
+  "P6",    # head of government
+  "P35",   # head of state
+  "P194",  # legislative body
+  "P208",  # executive body
+  "P37",   # official language
+  "P38",   # currency
+  "P1313", # office held by head of government
+]
+
+[[archetypes.place.sections]]
+name = "symbols"
+icon = "mountain_flag"
+pids = [
+  "P41",  # flag image
+  "P94",  # coat of arms image
+  "P237", # coat of arms
+  "P163", # flag
+  "P85",  # anthem
+]

@@ -800,8 +800,8 @@ mod tests {
             "described-by card must be a footnote"
         );
         assert!(
-            page.overflow.iter().any(|c| c.source_pids == ["P1082"]),
-            "population stays in the main grid"
+            !page.footnotes.iter().any(|c| c.source_pids == ["P1082"]),
+            "population is content, not a footnote"
         );
         // the regions and the tier flag agree
         assert!(page.footnotes.iter().all(|c| c.tier == Tier::Footnote));
@@ -862,8 +862,21 @@ mod tests {
                 .iter()
                 .all(|c| !c.source_pids.iter().any(|p| p == "P569" || p == "P166"))
         );
-        // a place page has no person recipe: everything stays overflow
-        assert!(nairobi_page().sections.is_empty());
+    }
+
+    #[test]
+    fn place_sections_claim_cards() {
+        let page = nairobi_page();
+        let names: Vec<&str> = page.sections.iter().map(|s| s.name.as_str()).collect();
+        assert!(names.contains(&"geography"), "sections: {names:?}");
+        // population (people section) claimed its StatSeries
+        let people = page.sections.iter().find(|s| s.name == "people").unwrap();
+        assert!(people.cards.iter().any(|c| c.source_pids == ["P1082"]));
+        // Nairobi has too few dated events - no timeline renders
+        assert!(
+            page.all_cards()
+                .all(|c| !matches!(c.kind, CardKind::Timeline { .. }))
+        );
     }
 
     #[test]

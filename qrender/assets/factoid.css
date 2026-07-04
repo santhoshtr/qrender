@@ -94,6 +94,39 @@ a {
   font-family: var(--font-family-serif);
 }
 
+/* Place pages with a main image: full-bleed hero backdrop, title on a
+   scrim. Places without a P18 keep the normal compact header. */
+[data-archetype="place"] .page-header:has(.page-header__hero) {
+  position: relative;
+  display: block;
+
+  .page-header__hero img {
+    inline-size: 100%;
+    block-size: 18rem;
+    object-fit: cover;
+    border-radius: var(--border-radius-base);
+  }
+
+  > div {
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline: 0;
+    padding: var(--spacing-150) var(--spacing-100) var(--spacing-100);
+    background: linear-gradient(transparent, rgb(0 0 0 / 0.75));
+    border-end-start-radius: var(--border-radius-base);
+    border-end-end-radius: var(--border-radius-base);
+
+    h1 {
+      font-family: var(--font-family-serif);
+      color: var(--color-inverted-fixed, #fff);
+    }
+
+    .page-header__description {
+      color: rgb(255 255 255 / 0.85);
+    }
+  }
+}
+
 /* Bento grid. Each card carries --cols/--rows spans resolved from its
    preference cascade; dense flow fills the holes. Fixed track count
    (stepped down by container width) keeps spans deterministic. */
