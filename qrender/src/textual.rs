@@ -4,9 +4,24 @@
 
 use std::fmt::Write;
 
-use crate::cards::{CardKind, FactoidPage};
+use crate::cards::{CardKind, FactValue, FactoidPage};
 
 const WIKIDATA_URL: &str = "https://www.wikidata.org/wiki";
+
+/// Plain-text form of a fact value; items and links lose their URLs.
+fn fact_value_text(value: &FactValue) -> String {
+    match value {
+        FactValue::Item(chip) => match &chip.note {
+            Some(note) => format!("{} ({note})", chip.label),
+            None => chip.label.clone(),
+        },
+        FactValue::Link { url } => url.clone(),
+        FactValue::Text { value, note } => match note {
+            Some(note) => format!("{value} ({note})"),
+            None => value.clone(),
+        },
+    }
+}
 
 pub fn render_text(page: &FactoidPage) -> String {
     let mut out = String::new();
@@ -68,26 +83,16 @@ pub fn render_text(page: &FactoidPage) -> String {
                     }
                 }
             }
-            CardKind::KeyValues { entries } => {
-                for entry in entries {
-                    let _ = writeln!(out, "{}: {}", entry.key, entry.values.join("; "));
+            CardKind::Facts { rows } => {
+                for row in rows {
+                    let values = row
+                        .values
+                        .iter()
+                        .map(fact_value_text)
+                        .collect::<Vec<_>>()
+                        .join("; ");
+                    let _ = writeln!(out, "{}: {values}", row.label);
                 }
-            }
-            CardKind::Links { entries } => {
-                for entry in entries {
-                    let _ = writeln!(out, "{}: {}", entry.label, entry.url);
-                }
-            }
-            CardKind::ItemChips { items } => {
-                let joined = items
-                    .iter()
-                    .map(|item| match &item.note {
-                        Some(note) => format!("{} ({note})", item.label),
-                        None => item.label.clone(),
-                    })
-                    .collect::<Vec<_>>()
-                    .join("; ");
-                let _ = writeln!(out, "{joined}");
             }
         }
     }
@@ -159,27 +164,25 @@ pub fn render_markdown(page: &FactoidPage) -> String {
                     }
                 }
             }
-            CardKind::KeyValues { entries } => {
-                for entry in entries {
-                    let _ = writeln!(out, "- **{}**: {}", entry.key, entry.values.join("; "));
-                }
-            }
-            CardKind::Links { entries } => {
-                for entry in entries {
-                    let _ = writeln!(out, "- [{}]({})", entry.label, entry.url);
-                }
-            }
-            CardKind::ItemChips { items } => {
-                for item in items {
-                    let link = format!("[{}]({WIKIDATA_URL}/{})", item.label, item.qid);
-                    match &item.note {
-                        Some(note) => {
-                            let _ = writeln!(out, "- {link} ({note})");
-                        }
-                        None => {
-                            let _ = writeln!(out, "- {link}");
-                        }
-                    }
+            CardKind::Facts { rows } => {
+                for row in rows {
+                    let values = row
+                        .values
+                        .iter()
+                        .map(|value| match value {
+                            FactValue::Item(chip) => {
+                                let link = format!("[{}]({WIKIDATA_URL}/{})", chip.label, chip.qid);
+                                match &chip.note {
+                                    Some(note) => format!("{link} ({note})"),
+                                    None => link,
+                                }
+                            }
+                            FactValue::Link { url } => format!("<{url}>"),
+                            text => fact_value_text(text),
+                        })
+                        .collect::<Vec<_>>()
+                        .join("; ");
+                    let _ = writeln!(out, "- **{}**: {values}", row.label);
                 }
             }
         }
@@ -252,31 +255,28 @@ pub fn render_wikitext(page: &FactoidPage) -> String {
                     }
                 }
             }
-            CardKind::KeyValues { entries } => {
-                for entry in entries {
-                    let _ = writeln!(out, ";{}", entry.key);
-                    for value in &entry.values {
-                        let _ = writeln!(out, ":* {value}");
-                    }
-                }
-            }
-            CardKind::Links { entries } => {
-                for entry in entries {
-                    let _ = writeln!(out, ":* [{} {}]", entry.url, entry.label);
-                }
-            }
-            CardKind::ItemChips { items } => {
-                for item in items {
-                    match &item.note {
-                        Some(note) => {
-                            let _ = writeln!(
-                                out,
-                                ":* [[wikidata:{}|{}]] ({note})",
-                                item.qid, item.label
-                            );
-                        }
-                        None => {
-                            let _ = writeln!(out, ":* [[wikidata:{}|{}]]", item.qid, item.label);
+            CardKind::Facts { rows } => {
+                for row in rows {
+                    let _ = writeln!(out, ";{}", row.label);
+                    for value in &row.values {
+                        match value {
+                            FactValue::Item(chip) => {
+                                let link = format!("[[wikidata:{}|{}]]", chip.qid, chip.label);
+                                match &chip.note {
+                                    Some(note) => {
+                                        let _ = writeln!(out, ":* {link} ({note})");
+                                    }
+                                    None => {
+                                        let _ = writeln!(out, ":* {link}");
+                                    }
+                                }
+                            }
+                            FactValue::Link { url } => {
+                                let _ = writeln!(out, ":* {url}");
+                            }
+                            text => {
+                                let _ = writeln!(out, ":* {}", fact_value_text(text));
+                            }
                         }
                     }
                 }
@@ -377,44 +377,33 @@ pub fn render_html(page: &FactoidPage) -> String {
                 }
                 let _ = writeln!(out, "</ol>");
             }
-            CardKind::KeyValues { entries } => {
+            CardKind::Facts { rows } => {
                 let _ = writeln!(out, "<dl>");
-                for entry in entries {
-                    let _ = writeln!(out, "<dt>{}</dt>", escape(&entry.key));
-                    for value in &entry.values {
-                        let _ = writeln!(out, "<dd>{}</dd>", escape(value));
+                for row in rows {
+                    let _ = writeln!(out, "<dt>{}</dt>", escape(&row.label));
+                    for value in &row.values {
+                        let rendered = match value {
+                            FactValue::Item(chip) => {
+                                let note = chip
+                                    .note
+                                    .as_ref()
+                                    .map(|n| format!(" ({})", escape(n)))
+                                    .unwrap_or_default();
+                                format!(
+                                    "<a href=\"{WIKIDATA_URL}/{}\">{}</a>{note}",
+                                    chip.qid,
+                                    escape(&chip.label)
+                                )
+                            }
+                            FactValue::Link { url } => {
+                                format!("<a href=\"{}\">{}</a>", escape(url), escape(url))
+                            }
+                            text => escape(&fact_value_text(text)),
+                        };
+                        let _ = writeln!(out, "<dd>{rendered}</dd>");
                     }
                 }
                 let _ = writeln!(out, "</dl>");
-            }
-            CardKind::Links { entries } => {
-                let _ = writeln!(out, "<ul>");
-                for entry in entries {
-                    let _ = writeln!(
-                        out,
-                        "<li><a href=\"{}\">{}</a></li>",
-                        escape(&entry.url),
-                        escape(&entry.label)
-                    );
-                }
-                let _ = writeln!(out, "</ul>");
-            }
-            CardKind::ItemChips { items } => {
-                let _ = writeln!(out, "<ul>");
-                for item in items {
-                    let note = item
-                        .note
-                        .as_ref()
-                        .map(|n| format!(" ({})", escape(n)))
-                        .unwrap_or_default();
-                    let _ = writeln!(
-                        out,
-                        "<li><a href=\"{WIKIDATA_URL}/{}\">{}</a>{note}</li>",
-                        item.qid,
-                        escape(&item.label)
-                    );
-                }
-                let _ = writeln!(out, "</ul>");
             }
         }
         let _ = writeln!(out, "</section>");

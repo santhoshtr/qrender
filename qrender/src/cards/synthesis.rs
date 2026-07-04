@@ -8,13 +8,15 @@ use std::collections::HashSet;
 
 use super::format::{display_value, format_time};
 use super::{
-    Card, CardKind, FactoidPage, GalleryImage, ItemChip, KeyValueEntry, Layout, LinkEntry,
-    MediaKind, SeriesPoint, Tier, compose,
+    Card, CardKind, FactRow, FactValue, FactoidPage, GalleryImage, ItemChip, Layout, MediaKind,
+    SeriesPoint, Tier, compose,
 };
 use crate::archetype::{self, ArchetypesConfig};
 use crate::grouping::{GroupConfig, GroupingConfig};
 
 const POINT_IN_TIME: &str = "P585";
+const START_TIME: &str = "P580";
+const END_TIME: &str = "P582";
 
 pub fn synthesize(
     item: &WikidataItem,
@@ -163,7 +165,6 @@ fn resolve_icon(card: &Card, group_icon: Option<&str>, config: &GroupingConfig) 
     match card.kind {
         CardKind::Image { .. } | CardKind::Gallery { .. } => Some("photo_library".to_string()),
         CardKind::Map { .. } => Some("location_on".to_string()),
-        CardKind::Links { .. } => Some("captive_portal".to_string()),
         _ => None,
     }
 }
@@ -177,12 +178,10 @@ pub(super) fn kind_layout(kind: &CardKind) -> (u8, u8) {
         CardKind::Image { .. } => (2, 2),
         CardKind::Gallery { images } => (if images.len() >= 4 { 6 } else { 4 }, 2),
         CardKind::Map { .. } => (2, 2),
-        CardKind::KeyValues { entries } => {
-            let values: usize = entries.iter().map(|e| e.values.len()).sum();
+        CardKind::Facts { rows } => {
+            let values: usize = rows.iter().map(|r| r.values.len()).sum();
             (2, (1 + values.div_ceil(3) as u8).clamp(2, 4))
         }
-        CardKind::ItemChips { items } => (if items.len() >= 4 { 4 } else { 2 }, 1),
-        CardKind::Links { .. } => (2, 1),
         CardKind::Timeline { events } => (2, if events.len() > 6 { 4 } else { 3 }),
         CardKind::Meter { .. } => (2, 1),
     }
@@ -239,8 +238,7 @@ fn cards_for_group(
 ) -> Vec<Card> {
     let mut cards = Vec::new();
     let mut images: Vec<(String, GalleryImage)> = Vec::new(); // (pid, image)
-    let mut links: Vec<(String, LinkEntry)> = Vec::new();
-    let mut key_values: Vec<(String, KeyValueEntry)> = Vec::new();
+    let mut rows: Vec<(String, FactRow)> = Vec::new(); // (pid, row)
 
     for property in properties {
         // Config-declared gauges (HDI etc.) win over series detection
@@ -257,7 +255,11 @@ fn cards_for_group(
             continue;
         }
 
-        for statement in &property.statements {
+        // Media and coordinates make visual cards; everything else
+        // becomes one labeled row so a group reads as one card, not a
+        // scatter of single-property fragments.
+        let mut values: Vec<FactValue> = Vec::new();
+        for statement in ordered_statements(property) {
             match &statement.value {
                 Value::CommonsMedia { file_name, .. } => {
                     images.push((
@@ -281,72 +283,35 @@ fn cards_for_group(
                     });
                 }
                 Value::Url { url } => {
-                    links.push((
-                        property.pid.clone(),
-                        LinkEntry {
-                            label: property.label.clone(),
-                            url: url.clone(),
-                        },
-                    ));
+                    values.push(FactValue::Link { url: url.clone() });
                 }
-                _ => {}
-            }
-        }
-
-        // Item references become a chip list card per property
-        let chips: Vec<ItemChip> = property
-            .statements
-            .iter()
-            .filter_map(|s| match &s.value {
                 Value::ItemRef {
                     qid,
                     label,
                     image_url,
-                } => Some(ItemChip {
-                    qid: qid.clone(),
-                    label: label.clone(),
-                    image_url: image_url.clone(),
-                    thumb_url: image_url.as_deref().map(chip_thumb_url),
-                    note: qualifier_note(s),
-                }),
-                _ => None,
-            })
-            .collect();
-        if !chips.is_empty() {
-            cards.push(Card {
-                title: property.label.clone(),
-                layout: Layout::default(),
-                tier: Tier::Standard,
-                localized_title: true,
-                icon: None,
-                source_pids: vec![property.pid.clone()],
-                kind: CardKind::ItemChips { items: chips },
-            });
+                } => {
+                    values.push(FactValue::Item(ItemChip {
+                        qid: qid.clone(),
+                        label: label.clone(),
+                        image_url: image_url.clone(),
+                        thumb_url: image_url.as_deref().map(chip_thumb_url),
+                        note: qualifier_note(statement),
+                        current: statement.rank == Rank::Preferred,
+                    }));
+                }
+                other => {
+                    values.push(FactValue::Text {
+                        value: display_value(other),
+                        note: qualifier_note(statement),
+                    });
+                }
+            }
         }
-
-        // Everything not consumed above becomes a key-value entry
-        let values: Vec<String> = property
-            .statements
-            .iter()
-            .filter(|s| {
-                !matches!(
-                    s.value,
-                    Value::CommonsMedia { .. }
-                        | Value::Coordinate { .. }
-                        | Value::Url { .. }
-                        | Value::ItemRef { .. }
-                )
-            })
-            .map(|s| match qualifier_note(s) {
-                Some(note) => format!("{} ({note})", display_value(&s.value)),
-                None => display_value(&s.value),
-            })
-            .collect();
         if !values.is_empty() {
-            key_values.push((
+            rows.push((
                 property.pid.clone(),
-                KeyValueEntry {
-                    key: property.label.clone(),
+                FactRow {
+                    label: property.label.clone(),
                     values,
                 },
             ));
@@ -383,41 +348,39 @@ fn cards_for_group(
         }
     }
 
-    if !links.is_empty() {
-        let pids = dedup_pids(links.iter().map(|(pid, _)| pid.clone()));
-        cards.push(Card {
-            title: title.to_string(),
-            layout: Layout::default(),
-            tier: Tier::Standard,
-            localized_title: title_is_localized,
-            icon: None,
-            source_pids: pids,
-            kind: CardKind::Links {
-                entries: links.into_iter().map(|(_, entry)| entry).collect(),
-            },
-        });
-    }
-
-    match key_values.len() {
+    match rows.len() {
         0 => {}
-        // A lone single-valued property is a stat, not a one-row table
-        1 if key_values[0].1.values.len() == 1 => {
-            let (pid, entry) = key_values.remove(0);
-            cards.push(Card {
-                title: entry.key,
-                layout: Layout::default(),
-                tier: Tier::Standard,
-                localized_title: true,
-                icon: None,
-                source_pids: vec![pid],
-                kind: CardKind::Stat {
-                    value: entry.values.into_iter().next().unwrap(),
-                    note: None,
-                },
-            });
+        1 => {
+            let (pid, row) = rows.remove(0);
+            // A lone plain value is a stat, not a one-row table;
+            // anything richer keeps its row under the property title.
+            if row.values.len() == 1 && matches!(row.values[0], FactValue::Text { .. }) {
+                let Some(FactValue::Text { value, note }) = row.values.into_iter().next() else {
+                    unreachable!()
+                };
+                cards.push(Card {
+                    title: row.label,
+                    layout: Layout::default(),
+                    tier: Tier::Standard,
+                    localized_title: true,
+                    icon: None,
+                    source_pids: vec![pid],
+                    kind: CardKind::Stat { value, note },
+                });
+            } else {
+                cards.push(Card {
+                    title: row.label.clone(),
+                    layout: Layout::default(),
+                    tier: Tier::Standard,
+                    localized_title: true,
+                    icon: None,
+                    source_pids: vec![pid],
+                    kind: CardKind::Facts { rows: vec![row] },
+                });
+            }
         }
         _ => {
-            let pids = dedup_pids(key_values.iter().map(|(pid, _)| pid.clone()));
+            let pids = dedup_pids(rows.iter().map(|(pid, _)| pid.clone()));
             cards.push(Card {
                 title: title.to_string(),
                 layout: Layout::default(),
@@ -425,14 +388,35 @@ fn cards_for_group(
                 localized_title: title_is_localized,
                 icon: None,
                 source_pids: pids,
-                kind: CardKind::KeyValues {
-                    entries: key_values.into_iter().map(|(_, entry)| entry).collect(),
+                kind: CardKind::Facts {
+                    rows: rows.into_iter().map(|(_, row)| row).collect(),
                 },
             });
         }
     }
 
     cards
+}
+
+/// Display order for a property's statements: what holds now first
+/// (preferred rank, then statements without an end-time qualifier),
+/// then history chronologically by start time. Keeps "country: France"
+/// ahead of wartime occupations without dropping them.
+fn ordered_statements(property: &Property) -> Vec<&qjson::Statement> {
+    let mut statements: Vec<&qjson::Statement> = property.statements.iter().collect();
+    statements.sort_by_cached_key(|s| {
+        let ended = s.qualifiers.iter().any(|q| q.pid == END_TIME);
+        let start = s
+            .qualifiers
+            .iter()
+            .find_map(|q| match &q.value {
+                Value::Time { iso, .. } if q.pid == START_TIME => Some(iso.clone()),
+                _ => None,
+            })
+            .unwrap_or_default();
+        (s.rank != Rank::Preferred, ended, start)
+    });
+    statements
 }
 
 fn dedup_pids(pids: impl Iterator<Item = String>) -> Vec<String> {
@@ -698,26 +682,28 @@ mod tests {
     }
 
     #[test]
-    fn chips_carry_thumbnails() {
+    fn grouped_properties_form_one_facts_card() {
         let page = nairobi_page();
-        let card = find(&page, |c| c.source_pids == ["P17"]).expect("country card");
-        let CardKind::ItemChips { items } = &card.kind else {
-            panic!("country must be ItemChips");
+        // the located_in group (country + admin entity) is ONE card
+        // with a labeled row per property - grouping means grouping
+        let card =
+            find(&page, |c| c.source_pids.contains(&"P17".to_string())).expect("located_in card");
+        assert!(card.source_pids.contains(&"P131".to_string()));
+        let CardKind::Facts { rows } = &card.kind else {
+            panic!("located_in must be Facts, got {:?}", card.kind);
         };
-        let thumb = items[0].thumb_url.as_deref().expect("Kenya has an image");
+        let country = rows
+            .iter()
+            .find(|r| r.label == "country")
+            .expect("country row");
+        let FactValue::Item(chip) = &country.values[0] else {
+            panic!("country value must be an item");
+        };
+        assert_eq!(chip.label, "Kenya");
+        assert_eq!(chip.qid, "Q114");
+        let thumb = chip.thumb_url.as_deref().expect("Kenya has an image");
         assert!(thumb.starts_with("https://"));
         assert!(thumb.contains("width=96"));
-    }
-
-    #[test]
-    fn country_becomes_item_chips() {
-        let page = nairobi_page();
-        let card = find(&page, |c| c.source_pids == ["P17"]).expect("country card");
-        let CardKind::ItemChips { items } = &card.kind else {
-            panic!("country must be ItemChips");
-        };
-        assert_eq!(items[0].label, "Kenya");
-        assert_eq!(items[0].qid, "Q114");
     }
 
     #[test]

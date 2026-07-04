@@ -134,14 +134,11 @@ pub enum CardKind {
         lon: f64,
         label: String,
     },
-    KeyValues {
-        entries: Vec<KeyValueEntry>,
-    },
-    Links {
-        entries: Vec<LinkEntry>,
-    },
-    ItemChips {
-        items: Vec<ItemChip>,
+    /// Labeled rows of rich values - the workhorse card. A group's
+    /// properties render as one scannable card, one row each; values
+    /// are item chips (with thumbnails), links, or plain text.
+    Facts {
+        rows: Vec<FactRow>,
     },
     /// Cross-property chronology: dated statements (Time values and
     /// start-time/point-in-time qualifiers) merged and sorted
@@ -204,16 +201,19 @@ pub struct SeriesPoint {
     pub display: String,
 }
 
+/// One property inside a Facts card: localized label plus its values.
 #[derive(Debug, Serialize)]
-pub struct KeyValueEntry {
-    pub key: String,
-    pub values: Vec<String>,
+pub struct FactRow {
+    pub label: String,
+    pub values: Vec<FactValue>,
 }
 
 #[derive(Debug, Serialize)]
-pub struct LinkEntry {
-    pub label: String,
-    pub url: String,
+#[serde(tag = "type", rename_all = "lowercase")]
+pub enum FactValue {
+    Item(ItemChip),
+    Link { url: String },
+    Text { value: String, note: Option<String> },
 }
 
 #[derive(Debug, Serialize)]
@@ -225,4 +225,7 @@ pub struct ItemChip {
     pub thumb_url: Option<String>,
     /// Qualifier summary, e.g. "start time: 1963"
     pub note: Option<String>,
+    /// Preferred-rank statement: the value that holds now (the current
+    /// country, the sitting mayor); rendered with emphasis
+    pub current: bool,
 }

@@ -72,29 +72,28 @@
     {% endfor %}
   </ol>
 
-  {% when CardKind::KeyValues with { entries } %}
-  <dl class="kv">
-    {% for entry in entries %}
-    <dt>{{ entry.key }}</dt>
-    <dd>
-      {% for value in entry.values %}<span class="kv__value">{{ value }}</span>{% endfor %}
-    </dd>
+  {% when CardKind::Facts with { rows } %}
+  <dl class="facts">
+    {% for row in rows %}
+    <div class="facts__row">
+      {% if rows.len() > 1 %}<dt>{{ row.label }}</dt>{% endif %}
+      <dd>
+        <ul class="chips">
+          {% for value in row.values %}
+          {% match value %}
+          {% when FactValue::Item with (chip) %}
+          <li class="chip{% if chip.current %} chip--current{% endif %}">{% if let Some(thumb) = chip.thumb_url %}<img class="chip__thumb" src="{{ thumb }}" alt="" loading="lazy">{% endif %}<a href="https://www.wikidata.org/wiki/{{ chip.qid }}">{{ chip.label }}</a>{% if let Some(note) = chip.note %} <small class="chip__note">{{ note }}</small>{% endif %}</li>
+          {% when FactValue::Link with { url } %}
+          <li class="fact-link"><a href="{{ url }}" rel="nofollow">{{ url }}</a></li>
+          {% when FactValue::Text with { value, note } %}
+          <li class="fact-text">{{ value }}{% if let Some(note) = note %} <small class="fact-note">{{ note }}</small>{% endif %}</li>
+          {% endmatch %}
+          {% endfor %}
+        </ul>
+      </dd>
+    </div>
     {% endfor %}
   </dl>
-
-  {% when CardKind::Links with { entries } %}
-  <ul class="links">
-    {% for entry in entries %}
-    <li><a href="{{ entry.url }}" rel="nofollow">{{ entry.label }}</a><br><span class="links__url">{{ entry.url }}</span></li>
-    {% endfor %}
-  </ul>
-
-  {% when CardKind::ItemChips with { items } %}
-  <ul class="chips">
-    {% for item in items %}
-    <li class="chip">{% if let Some(thumb) = item.thumb_url %}<img class="chip__thumb" src="{{ thumb }}" alt="" loading="lazy">{% endif %}<a href="https://www.wikidata.org/wiki/{{ item.qid }}">{{ item.label }}</a>{% if let Some(note) = item.note %} <small class="chip__note">{{ note }}</small>{% endif %}</li>
-    {% endfor %}
-  </ul>
 
   {% endmatch %}
 </section>

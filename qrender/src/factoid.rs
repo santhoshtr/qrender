@@ -4,7 +4,7 @@
 
 use askama::Template;
 
-use crate::cards::{CardKind, FactoidPage, MediaKind, SeriesPoint};
+use crate::cards::{CardKind, FactValue, FactoidPage, MediaKind, SeriesPoint};
 use crate::error::QRenderError;
 use crate::icons;
 

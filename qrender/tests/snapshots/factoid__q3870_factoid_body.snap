@@ -18,7 +18,6 @@ expression: body
 <symbol id="i-photo_library" viewBox="0 -960 960 960"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></symbol>
 <symbol id="i-policy" viewBox="0 -960 960 960"><path d="M480-80q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 85-29 163.5T688-214L560-342q-18 11-38.5 16.5T480-320q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 22-5.5 42.5T618-398l60 60q20-41 31-86t11-92v-189l-240-90-240 90v189q0 121 68 220t172 132q26-8 49.5-20.5T576-214l56 56q-33 27-71.5 47T480-80Zm0-320q33 0 56.5-23.5T560-480q0-33-23.5-56.5T480-560q-33 0-56.5 23.5T400-480q0 33 23.5 56.5T480-400Zm8-77Z"/></symbol>
 <symbol id="i-sell" viewBox="0 -960 960 960"><path d="M856-390 570-104q-12 12-27 18t-30 6q-15 0-30-6t-27-18L103-457q-11-11-17-25.5T80-513v-287q0-33 23.5-56.5T160-880h287q16 0 31 6.5t26 17.5l352 353q12 12 17.5 27t5.5 30q0 15-5.5 29.5T856-390ZM513-160l286-286-353-354H160v286l353 354ZM260-640q25 0 42.5-17.5T320-700q0-25-17.5-42.5T260-760q-25 0-42.5 17.5T200-700q0 25 17.5 42.5T260-640Zm220 160Z"/></symbol>
-<symbol id="i-tag" viewBox="0 -960 960 960"><path d="m240-160 40-160H120l20-80h160l40-160H180l20-80h160l40-160h80l-40 160h160l40-160h80l-40 160h160l-20 80H660l-40 160h160l-20 80H600l-40 160h-80l40-160H360l-40 160h-80Zm140-240h160l40-160H420l-40 160Z"/></symbol>
 <symbol id="i-volume_up" viewBox="0 -960 960 960"><path d="M560-131v-82q90-26 145-100t55-168q0-94-55-168T560-749v-82q124 28 202 125.5T840-481q0 127-78 224.5T560-131ZM120-360v-240h160l200-200v640L280-360H120Zm440 40v-322q47 22 73.5 66t26.5 96q0 51-26.5 94.5T560-320ZM400-606l-86 86H200v80h114l86 86v-252ZM300-480Z"/></symbol>
 </defs></svg>
 <div class="page">
@@ -48,17 +47,33 @@ expression: body
 <section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-altitude"/></svg><span class="visually-hidden">Geography</span></h2>
   
-  <dl class="kv">
+  <dl class="facts">
     
-    <dt>elevation above sea level</dt>
-    <dd>
-      <span class="kv__value">1661 metre</span>
-    </dd>
+    <div class="facts__row">
+      <dt>elevation above sea level</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="fact-text">1661 metre</li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-    <dt>area</dt>
-    <dd>
-      <span class="kv__value">696 square kilometre</span>
-    </dd>
+    <div class="facts__row">
+      <dt>area</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="fact-text">696 square kilometre</li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
   </dl>
 
@@ -67,28 +82,38 @@ expression: body
 
         
         
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-location_on"/></svg><span>country</span></h2>
+<section class="card" style="--cols: 2; --rows: 2">
+  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-location_on"/></svg><span class="visually-hidden">Located in</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Kenya%20-%20Location%20Map%20%282013%29%20-%20KEN%20-%20UNOCHA.svg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q114">Kenya</a></li>
+    <div class="facts__row">
+      <dt>country</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Kenya%20-%20Location%20Map%20%282013%29%20-%20KEN%20-%20UNOCHA.svg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q114">Kenya</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
-
-  
-</section>
-
-        
-        
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-location_on"/></svg><span>located in the administrative territorial entity</span></h2>
-  
-  <ul class="chips">
+    <div class="facts__row">
+      <dt>located in the administrative territorial entity</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q3335223">Nairobi City County</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q3335223">Nairobi City County</a></li>
-    
-  </ul>
+  </dl>
 
   
 </section>
@@ -108,34 +133,62 @@ expression: body
 
         
         
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><span>located in time zone</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/UTC%2B0300%20-%202023.svg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q6760">UTC+03:00</a></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/UTC%2B0300%20-%202023.svg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q6760">UTC+03:00</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
+  </dl>
 
   
 </section>
 
         
         
-<section class="card" style="--cols: 4; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 3">
   <h2 class="card__title"><span>capital of</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q1061480">Nairobi Province</a></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q1061480">Nairobi Province</a></li>
+          
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q3335223">Nairobi City County</a></li>
+          
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Kenya%20-%20Location%20Map%20%282013%29%20-%20KEN%20-%20UNOCHA.svg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q114">Kenya</a> <small class="chip__note">start time: 1963-01-01</small></li>
+          
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q2538511">Kenya Colony</a> <small class="chip__note">start time: 1920-01-01, end time: 1963-01-01</small></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Kenya%20-%20Location%20Map%20%282013%29%20-%20KEN%20-%20UNOCHA.svg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q114">Kenya</a> <small class="chip__note">start time: 1963-01-01</small></li>
-    
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q3335223">Nairobi City County</a></li>
-    
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q2538511">Kenya Colony</a> <small class="chip__note">start time: 1920-01-01, end time: 1963-01-01</small></li>
-    
-  </ul>
+  </dl>
 
   
 </section>
@@ -213,14 +266,25 @@ expression: body
       <div class="cards">
         
         
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-person"/></svg><span>head of government</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sakaja%20in%202024.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q28967580">Sakaja Johnson</a> <small class="chip__note">start time: 2022-01-01</small></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sakaja%20in%202024.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q28967580">Sakaja Johnson</a> <small class="chip__note">start time: 2022-01-01</small></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
+  </dl>
 
   
 </section>
@@ -325,22 +389,70 @@ expression: body
 <section class="card" style="--cols: 2; --rows: 4">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-article"/></svg><span class="visually-hidden">Names</span></h2>
   
-  <dl class="kv">
+  <dl class="facts">
     
-    <dt>official name</dt>
-    <dd>
-      <span class="kv__value">Nairobi</span>
-    </dd>
+    <div class="facts__row">
+      <dt>official name</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="fact-text">Nairobi</li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-    <dt>native label</dt>
-    <dd>
-      <span class="kv__value">Nairobi</span>
-    </dd>
+    <div class="facts__row">
+      <dt>native label</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="fact-text">Nairobi</li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-    <dt>demonym</dt>
-    <dd>
-      <span class="kv__value">Nairobien (applies to part: masculine singular)</span><span class="kv__value">Nairobienne (applies to part: feminine singular)</span><span class="kv__value">Nairobian</span><span class="kv__value">nairobienne (applies to part: feminine singular)</span><span class="kv__value">Monairobi</span><span class="kv__value">nairobien (applies to part: masculine singular)</span><span class="kv__value">Najrobiano</span>
-    </dd>
+    <div class="facts__row">
+      <dt>demonym</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="fact-text">Nairobien <small class="fact-note">applies to part: masculine singular</small></li>
+          
+          
+          
+          <li class="fact-text">Nairobienne <small class="fact-note">applies to part: feminine singular</small></li>
+          
+          
+          
+          <li class="fact-text">Nairobian</li>
+          
+          
+          
+          <li class="fact-text">nairobienne <small class="fact-note">applies to part: feminine singular</small></li>
+          
+          
+          
+          <li class="fact-text">Monairobi</li>
+          
+          
+          
+          <li class="fact-text">nairobien <small class="fact-note">applies to part: masculine singular</small></li>
+          
+          
+          
+          <li class="fact-text">Najrobiano</li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
   </dl>
 
@@ -381,127 +493,208 @@ expression: body
 
       
       
-<section class="card" style="--cols: 4; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 4">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-communities"/></svg><span>twinned administrative body</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Raleigh%20Skyline.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q41087">Raleigh</a> <small class="chip__note">start time: 2022-01-01</small></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/%E4%BA%94%E5%8D%8E%E5%8C%BA%E4%B8%8E%E7%9B%98%E9%BE%99%E5%8C%BA%E5%A4%A9%E9%99%85%E7%BA%BF%20-%20%E8%88%AA%E6%8B%8D%20-%202025-05-16%2003.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q182852">Kunming</a></li>
+          
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Colonia-Tovar.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q964130">Colonia Tovar</a></li>
+          
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cidade%20Maravilhosa.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q8678">Rio de Janeiro</a></li>
+          
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Pingxiang%2C%20JX%2C%20PRC.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q362865">Pingxiang</a></li>
+          
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Parintins%20Amazonas%20Brazil.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q926713">Parintins</a></li>
+          
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Denver%2C%20Colorado%20skyline%20%28cropped%29.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q16554">Denver</a> <small class="chip__note">start time: 1975-01-01</small></li>
+          
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Raleigh%20Skyline.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q41087">Raleigh</a> <small class="chip__note">start time: 2022-01-01</small></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/%E4%BA%94%E5%8D%8E%E5%8C%BA%E4%B8%8E%E7%9B%98%E9%BE%99%E5%8C%BA%E5%A4%A9%E9%99%85%E7%BA%BF%20-%20%E8%88%AA%E6%8B%8D%20-%202025-05-16%2003.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q182852">Kunming</a></li>
-    
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Colonia-Tovar.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q964130">Colonia Tovar</a></li>
-    
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Denver%2C%20Colorado%20skyline%20%28cropped%29.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q16554">Denver</a> <small class="chip__note">start time: 1975-01-01</small></li>
-    
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cidade%20Maravilhosa.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q8678">Rio de Janeiro</a></li>
-    
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Pingxiang%2C%20JX%2C%20PRC.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q362865">Pingxiang</a></li>
-    
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Parintins%20Amazonas%20Brazil.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q926713">Parintins</a></li>
-    
-  </ul>
+  </dl>
 
   
 </section>
 
       
       
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-article"/></svg><span>history of topic</span></h2>
+<section class="card" style="--cols: 2; --rows: 2">
+  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-article"/></svg><span class="visually-hidden">Topics</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q7805834">timeline of Nairobi history</a></li>
+    <div class="facts__row">
+      <dt>history of topic</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q7805834">timeline of Nairobi history</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
+    <div class="facts__row">
+      <dt>economy of topic</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q106020188">economy of Nairobi</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
+    
+  </dl>
 
   
 </section>
 
       
       
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-article"/></svg><span>economy of topic</span></h2>
-  
-  <ul class="chips">
-    
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q106020188">economy of Nairobi</a></li>
-    
-  </ul>
-
-  
-</section>
-
-      
-      
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-captive_portal"/></svg><span class="visually-hidden">Web</span></h2>
   
-  <ul class="links">
+  <dl class="facts">
     
-    <li><a href="https://nairobi.go.ke/" rel="nofollow">official website</a><br><span class="links__url">https://nairobi.go.ke/</span></li>
+    <div class="facts__row">
+      <dt>official website</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="fact-link"><a href="https://nairobi.go.ke/" rel="nofollow">https://nairobi.go.ke/</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
+    <div class="facts__row">
+      <dt>hashtag</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="fact-text">Nairobi</li>
+          
+          
+        </ul>
+      </dd>
+    </div>
+    
+  </dl>
 
   
 </section>
 
       
       
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-tag"/></svg><span>hashtag</span></h2>
-  
-  <p class="stat">
-    <span class="stat__value">Nairobi</span>
-    
-  </p>
-
-  
-</section>
-
-      
-      
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><span>part of</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Pt%20Lenana%20Mt%20Kenya.JPG?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q14206200">Southern Rift Valley</a></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Pt%20Lenana%20Mt%20Kenya.JPG?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q14206200">Southern Rift Valley</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
+  </dl>
 
   
 </section>
 
       
       
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><span>language used</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/William%20Shakespeare%20-%20Sonnet%20XXX%20-%20Rapenburg%2030%2C%20Leiden%20%28cropped%29.JPG?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q1860">English</a></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/William%20Shakespeare%20-%20Sonnet%20XXX%20-%20Rapenburg%2030%2C%20Leiden%20%28cropped%29.JPG?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q1860">English</a></li>
+          
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Manuscrit%20colonial%20kiswahili-Africa%20Museum.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q7838">Swahili</a></li>
+          
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q35787">Maasai</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Manuscrit%20colonial%20kiswahili-Africa%20Museum.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q7838">Swahili</a></li>
-    
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q35787">Maasai</a></li>
-    
-  </ul>
+  </dl>
 
   
 </section>
 
       
       
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-captive_portal"/></svg><span>open data portal</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q97130876">Nairobi open data</a></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q97130876">Nairobi open data</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
+  </dl>
 
   
 </section>
@@ -514,7 +707,7 @@ expression: body
     <details class="footnotes">
       <summary>
         <svg class="icon" aria-hidden="true"><use href="#i-archive"/></svg>
-        <span>10</span>
+        <span>4</span>
         <span class="visually-hidden">Wikimedia metadata</span>
       </summary>
       <div class="cards">
@@ -533,127 +726,157 @@ expression: body
 
         
         
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><span>described by source</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Encyclopaedia%20Britannica%201911.svg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q867541">Encyclopædia Britannica 11th edition</a> <small class="chip__note">statement is subject of: 1911 Encyclopædia Britannica/Nairobi</small></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Encyclopaedia%20Britannica%201911.svg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q867541">Encyclopædia Britannica 11th edition</a> <small class="chip__note">statement is subject of: 1911 Encyclopædia Britannica/Nairobi</small></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
+  </dl>
 
   
 </section>
 
         
         
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><span>on focus list of Wikimedia project</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q5460604">Wikipedia:List of articles all languages should have</a></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q5460604">Wikipedia:List of articles all languages should have</a></li>
+          
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q6173448">Wikipedia:Vital articles/Level/4</a> <small class="chip__note">point in time: 2022-10-31</small></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q6173448">Wikipedia:Vital articles/Level/4</a> <small class="chip__note">point in time: 2022-10-31</small></li>
-    
-  </ul>
+  </dl>
 
   
 </section>
 
         
         
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-sell"/></svg><span>category for the view of the item</span></h2>
+<section class="card" style="--cols: 2; --rows: 4">
+  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-sell"/></svg><span class="visually-hidden">Categories</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q104596219">Category:Views of Nairobi</a></li>
+    <div class="facts__row">
+      <dt>Commons category</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="fact-text">Nairobi</li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
-
-  
-</section>
-
-        
-        
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-sell"/></svg><span>category for maps or plans</span></h2>
-  
-  <ul class="chips">
+    <div class="facts__row">
+      <dt>category for the view of the item</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q104596219">Category:Views of Nairobi</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q84054802">Category:Maps of Nairobi</a></li>
+    <div class="facts__row">
+      <dt>category for maps or plans</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q84054802">Category:Maps of Nairobi</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
-
-  
-</section>
-
-        
-        
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-sell"/></svg><span>category for people born here</span></h2>
-  
-  <ul class="chips">
+    <div class="facts__row">
+      <dt>category for people born here</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q8064728">Category:Births in Nairobi</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q8064728">Category:Births in Nairobi</a></li>
+    <div class="facts__row">
+      <dt>category for people who died here</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q9688722">Category:Deaths in Nairobi</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
-
-  
-</section>
-
-        
-        
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-sell"/></svg><span>category for people who died here</span></h2>
-  
-  <ul class="chips">
+    <div class="facts__row">
+      <dt>category of associated people</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q7119121">Category:People from Nairobi</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q9688722">Category:Deaths in Nairobi</a></li>
+    <div class="facts__row">
+      <dt>topic&#39;s main category</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q8795825">Category:Nairobi</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
-
-  
-</section>
-
-        
-        
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-sell"/></svg><span>category of associated people</span></h2>
-  
-  <ul class="chips">
-    
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q7119121">Category:People from Nairobi</a></li>
-    
-  </ul>
-
-  
-</section>
-
-        
-        
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-sell"/></svg><span>topic&#39;s main category</span></h2>
-  
-  <ul class="chips">
-    
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q8795825">Category:Nairobi</a></li>
-    
-  </ul>
-
-  
-</section>
-
-        
-        
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-sell"/></svg><span>Commons category</span></h2>
-  
-  <p class="stat">
-    <span class="stat__value">Nairobi</span>
-    
-  </p>
+  </dl>
 
   
 </section>

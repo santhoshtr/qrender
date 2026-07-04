@@ -20,7 +20,6 @@ expression: body
 <symbol id="i-sell" viewBox="0 -960 960 960"><path d="M856-390 570-104q-12 12-27 18t-30 6q-15 0-30-6t-27-18L103-457q-11-11-17-25.5T80-513v-287q0-33 23.5-56.5T160-880h287q16 0 31 6.5t26 17.5l352 353q12 12 17.5 27t5.5 30q0 15-5.5 29.5T856-390ZM513-160l286-286-353-354H160v286l353 354ZM260-640q25 0 42.5-17.5T320-700q0-25-17.5-42.5T260-760q-25 0-42.5 17.5T200-700q0 25 17.5 42.5T260-640Zm220 160Z"/></symbol>
 <symbol id="i-stethoscope" viewBox="0 -960 960 960"><path d="M540-80q-108 0-184-76t-76-184v-23q-86-14-143-80.5T80-600v-240h120v-40h80v160h-80v-40h-40v160q0 66 47 113t113 47q66 0 113-47t47-113v-160h-40v40h-80v-160h80v40h120v240q0 90-57 156.5T360-363v23q0 75 52.5 127.5T540-160q75 0 127.5-52.5T720-340v-67q-35-12-57.5-43T640-520q0-50 35-85t85-35q50 0 85 35t35 85q0 39-22.5 70T800-407v67q0 108-76 184T540-80Zm220-400q17 0 28.5-11.5T800-520q0-17-11.5-28.5T760-560q-17 0-28.5 11.5T720-520q0 17 11.5 28.5T760-480Zm0-40Z"/></symbol>
 <symbol id="i-trophy" viewBox="0 -960 960 960"><path d="M280-120v-80h160v-124q-49-11-87.5-41.5T296-442q-75-9-125.5-65.5T120-640v-40q0-33 23.5-56.5T200-760h80v-80h400v80h80q33 0 56.5 23.5T840-680v40q0 76-50.5 132.5T664-442q-18 46-56.5 76.5T520-324v124h160v80H280Zm0-408v-152h-80v40q0 38 22 68.5t58 43.5Zm200 128q50 0 85-35t35-85v-240H360v240q0 50 35 85t85 35Zm200-128q36-13 58-43.5t22-68.5v-40h-80v152Zm-200-52Z"/></symbol>
-<symbol id="i-visibility" viewBox="0 -960 960 960"><path d="M480-320q75 0 127.5-52.5T660-500q0-75-52.5-127.5T480-680q-75 0-127.5 52.5T300-500q0 75 52.5 127.5T480-320Zm0-72q-45 0-76.5-31.5T372-500q0-45 31.5-76.5T480-608q45 0 76.5 31.5T588-500q0 45-31.5 76.5T480-392Zm0 192q-146 0-266-81.5T40-500q54-137 174-218.5T480-800q146 0 266 81.5T920-500q-54 137-174 218.5T480-200Zm0-300Zm0 220q113 0 207.5-59.5T832-500q-50-101-144.5-160.5T480-720q-113 0-207.5 59.5T128-500q50 101 144.5 160.5T480-280Z"/></symbol>
 <symbol id="i-volume_up" viewBox="0 -960 960 960"><path d="M560-131v-82q90-26 145-100t55-168q0-94-55-168T560-749v-82q124 28 202 125.5T840-481q0 127-78 224.5T560-131ZM120-360v-240h160l200-200v640L280-360H120Zm440 40v-322q47 22 73.5 66t26.5 96q0 51-26.5 94.5T560-320ZM400-606l-86 86H200v80h114l86 86v-252ZM300-480Z"/></symbol>
 </defs></svg>
 <div class="page">
@@ -59,114 +58,195 @@ expression: body
       <div class="cards">
         
         
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-article"/></svg><span>given name</span></h2>
+<section class="card" style="--cols: 2; --rows: 4">
+  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-article"/></svg><span class="visually-hidden">Names</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q463035">Douglas</a> <small class="chip__note">series ordinal: 1, object of statement has role: usual forename</small></li>
+    <div class="facts__row">
+      <dt>given name</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q463035">Douglas</a> <small class="chip__note">series ordinal: 1, object of statement has role: usual forename</small></li>
+          
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q19688263">Noël</a> <small class="chip__note">series ordinal: 2</small></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q19688263">Noël</a> <small class="chip__note">series ordinal: 2</small></li>
+    <div class="facts__row">
+      <dt>family name</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q351735">Adams</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
+    <div class="facts__row">
+      <dt>name in native language</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="fact-text">Douglas Adams</li>
+          
+          
+        </ul>
+      </dd>
+    </div>
+    
+    <div class="facts__row">
+      <dt>short name</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="fact-text">Douglas Adams</li>
+          
+          
+        </ul>
+      </dd>
+    </div>
+    
+    <div class="facts__row">
+      <dt>birth name</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="fact-text">Douglas Noël Adams</li>
+          
+          
+        </ul>
+      </dd>
+    </div>
+    
+    <div class="facts__row">
+      <dt>pseudonym</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="fact-text">David Agnew <small class="fact-note">statement is subject of: David Agnew</small></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
+    
+  </dl>
 
   
 </section>
 
         
         
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-article"/></svg><span>family name</span></h2>
-  
-  <ul class="chips">
-    
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q351735">Adams</a></li>
-    
-  </ul>
-
-  
-</section>
-
-        
-        
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-group"/></svg><span>child</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q14623683">Polly Adams</a></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q14623683">Polly Adams</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
+  </dl>
 
   
 </section>
 
         
         
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-stethoscope"/></svg><span>cause of death</span></h2>
+<section class="card" style="--cols: 2; --rows: 2">
+  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-stethoscope"/></svg><span class="visually-hidden">Death cause</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Heart%20attack%20diagram.png?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q12152">myocardial infarction</a></li>
+    <div class="facts__row">
+      <dt>cause of death</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Heart%20attack%20diagram.png?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q12152">myocardial infarction</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
+    <div class="facts__row">
+      <dt>manner of death</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q3739104">natural causes</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
+    
+  </dl>
 
   
 </section>
 
         
         
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-stethoscope"/></svg><span>manner of death</span></h2>
+<section class="card" style="--cols: 2; --rows: 2">
+  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-language"/></svg><span class="visually-hidden">Languages</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q3739104">natural causes</a></li>
+    <div class="facts__row">
+      <dt>native language</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/William%20Shakespeare%20-%20Sonnet%20XXX%20-%20Rapenburg%2030%2C%20Leiden%20%28cropped%29.JPG?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q1860">English</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
-
-  
-</section>
-
-        
-        
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-language"/></svg><span>native language</span></h2>
-  
-  <ul class="chips">
+    <div class="facts__row">
+      <dt>languages spoken, written or signed</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/William%20Shakespeare%20-%20Sonnet%20XXX%20-%20Rapenburg%2030%2C%20Leiden%20%28cropped%29.JPG?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q1860">English</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/William%20Shakespeare%20-%20Sonnet%20XXX%20-%20Rapenburg%2030%2C%20Leiden%20%28cropped%29.JPG?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q1860">English</a></li>
-    
-  </ul>
-
-  
-</section>
-
-        
-        
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-language"/></svg><span>languages spoken, written or signed</span></h2>
-  
-  <ul class="chips">
-    
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/William%20Shakespeare%20-%20Sonnet%20XXX%20-%20Rapenburg%2030%2C%20Leiden%20%28cropped%29.JPG?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q1860">English</a></li>
-    
-  </ul>
-
-  
-</section>
-
-        
-        
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-event"/></svg><span>sex or gender</span></h2>
-  
-  <ul class="chips">
-    
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q6581097">male</a></li>
-    
-  </ul>
+  </dl>
 
   
 </section>
@@ -176,17 +256,46 @@ expression: body
 <section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-event"/></svg><span class="visually-hidden">Life</span></h2>
   
-  <dl class="kv">
+  <dl class="facts">
     
-    <dt>date of birth</dt>
-    <dd>
-      <span class="kv__value">1952-03-11</span>
-    </dd>
+    <div class="facts__row">
+      <dt>date of birth</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="fact-text">1952-03-11</li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-    <dt>date of death</dt>
-    <dd>
-      <span class="kv__value">2001-05-11</span>
-    </dd>
+    <div class="facts__row">
+      <dt>date of death</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="fact-text">2001-05-11</li>
+          
+          
+        </ul>
+      </dd>
+    </div>
+    
+    <div class="facts__row">
+      <dt>sex or gender</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q6581097">male</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
   </dl>
 
@@ -195,118 +304,176 @@ expression: body
 
         
         
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-location_on"/></svg><span>place of birth</span></h2>
+<section class="card" style="--cols: 2; --rows: 2">
+  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-location_on"/></svg><span class="visually-hidden">Life places</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/KingsCollegeChapelWest.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q350">Cambridge</a></li>
+    <div class="facts__row">
+      <dt>place of birth</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/KingsCollegeChapelWest.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q350">Cambridge</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
+    <div class="facts__row">
+      <dt>place of death</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Aerial-SantaBarbaraCA10-28-08.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q159288">Santa Barbara</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
+    
+    <div class="facts__row">
+      <dt>place of burial</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Egyptian%20Avenue%20Highgate%20Cemetery.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q533697">Highgate Cemetery</a> <small class="chip__note">coordinate location: Point(-0.145444444 51.566527777)</small></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
+    
+  </dl>
 
   
 </section>
 
         
         
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-location_on"/></svg><span>place of death</span></h2>
+<section class="card" style="--cols: 2; --rows: 2">
+  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-group"/></svg><span class="visually-hidden">Personal</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Aerial-SantaBarbaraCA10-28-08.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q159288">Santa Barbara</a></li>
+    <div class="facts__row">
+      <dt>father</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q14623675">Christopher Douglas Adams</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
+    <div class="facts__row">
+      <dt>mother</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q14623678">Janet Adams</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
+    
+  </dl>
 
   
 </section>
 
         
         
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-location_on"/></svg><span>place of burial</span></h2>
-  
-  <ul class="chips">
-    
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Egyptian%20Avenue%20Highgate%20Cemetery.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q533697">Highgate Cemetery</a> <small class="chip__note">coordinate location: Point(-0.145444444 51.566527777)</small></li>
-    
-  </ul>
-
-  
-</section>
-
-        
-        
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-group"/></svg><span>father</span></h2>
-  
-  <ul class="chips">
-    
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q14623675">Christopher Douglas Adams</a></li>
-    
-  </ul>
-
-  
-</section>
-
-        
-        
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-group"/></svg><span>mother</span></h2>
-  
-  <ul class="chips">
-    
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q14623678">Janet Adams</a></li>
-    
-  </ul>
-
-  
-</section>
-
-        
-        
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-group"/></svg><span>spouse</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q14623681">Jane Belson</a> <small class="chip__note">end cause: death of subject, start time: 1991-11-25, end time: 2001-05-11</small></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q14623681">Jane Belson</a> <small class="chip__note">end cause: death of subject, start time: 1991-11-25, end time: 2001-05-11</small></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
+  </dl>
 
   
 </section>
 
         
         
-<section class="card" style="--cols: 4; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 3">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg><span>residence</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/High%20Street%20Brentwood%20Essex%20-%20geograph.org.uk%20-%2019540.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q909993">Brentwood</a> <small class="chip__note">start time: 1957-01-01</small></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/High%20Street%20Brentwood%20Essex%20-%20geograph.org.uk%20-%2019540.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q909993">Brentwood</a> <small class="chip__note">start time: 1957-01-01</small></li>
+          
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Aerial-SantaBarbaraCA10-28-08.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q159288">Santa Barbara</a> <small class="chip__note">end cause: death of subject, end time: 2001-05-11</small></li>
+          
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/KingsCollegeChapelWest.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q350">Cambridge</a> <small class="chip__note">start time: 1952-03-11, end time: 1952-09-01</small></li>
+          
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/London%20Skyline%20%28125508655%29.jpeg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q84">London</a> <small class="chip__note">start time: 1952-09-01, end time: 1957-01-01</small></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/KingsCollegeChapelWest.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q350">Cambridge</a> <small class="chip__note">start time: 1952-03-11, end time: 1952-09-01</small></li>
-    
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/London%20Skyline%20%28125508655%29.jpeg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q84">London</a> <small class="chip__note">start time: 1952-09-01, end time: 1957-01-01</small></li>
-    
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Aerial-SantaBarbaraCA10-28-08.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q159288">Santa Barbara</a> <small class="chip__note">end cause: death of subject, end time: 2001-05-11</small></li>
-    
-  </ul>
+  </dl>
 
   
 </section>
 
         
         
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-person"/></svg><span>sibling</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q14623673">Susan Adams</a> <small class="chip__note">kinship to subject: younger sister</small></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q14623673">Susan Adams</a> <small class="chip__note">kinship to subject: younger sister</small></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
+  </dl>
 
   
 </section>
@@ -387,126 +554,231 @@ expression: body
 
         
         
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-person"/></svg><span>employer</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q3520623">The Digital Village</a> <small class="chip__note">start time: 1996-01-01</small></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Broadcasting%20House%2020160816.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q9531">British Broadcasting Corporation</a></li>
+          
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q3520623">The Digital Village</a> <small class="chip__note">start time: 1996-01-01</small></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Broadcasting%20House%2020160816.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q9531">British Broadcasting Corporation</a></li>
-    
-  </ul>
+  </dl>
 
   
 </section>
 
         
         
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-school"/></svg><span>educated at</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Brentwood%20School%20Front%20%28Large%29.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q4961791">Brentwood School</a> <small class="chip__note">start time: 1959-01-01, end time: 1970-01-01</small></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Brentwood%20School%20Front%20%28Large%29.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q4961791">Brentwood School</a> <small class="chip__note">start time: 1959-01-01, end time: 1970-01-01</small></li>
+          
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/St.%20John%E2%80%99s%20College.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q691283">St John&#39;s College</a> <small class="chip__note">academic degree: Bachelor of Arts, start time: 1971-01-01, end time: 1974-01-01, academic major: English literature</small></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/St.%20John%E2%80%99s%20College.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q691283">St John&#39;s College</a> <small class="chip__note">academic degree: Bachelor of Arts, start time: 1971-01-01, end time: 1974-01-01, academic major: English literature</small></li>
-    
-  </ul>
+  </dl>
 
   
 </section>
 
         
         
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><span>field of work</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q3238422">science fiction literature</a></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q3238422">science fiction literature</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
+  </dl>
 
   
 </section>
 
         
         
-<section class="card" style="--cols: 4; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 4">
   <h2 class="card__title"><span>occupation</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Quito%20Accordion%20player.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q639669">musician</a></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Quito%20Accordion%20player.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q639669">musician</a></li>
+          
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Jerry%20Seinfeld%201992.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q245068">comedian</a></li>
+          
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Leonid%20Pasternak%20-%20The%20Passion%20of%20creation%20%281%29.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q36180">writer</a></li>
+          
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q4853732">children&#39;s writer</a></li>
+          
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Aristophanes%20-%20Project%20Gutenberg%20eText%2012788.png?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q214917">playwright</a></li>
+          
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q18844224">science fiction writer</a></li>
+          
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/The%20Godfather%20Screenplay.JPG?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q28389">screenwriter</a></li>
+          
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Shawn%20Wong%20in%20San%20Francisco%2C%201976.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q6625963">novelist</a> <small class="chip__note">start time: 1979-01-01</small></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Jerry%20Seinfeld%201992.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q245068">comedian</a></li>
-    
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Leonid%20Pasternak%20-%20The%20Passion%20of%20creation%20%281%29.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q36180">writer</a></li>
-    
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q4853732">children&#39;s writer</a></li>
-    
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Shawn%20Wong%20in%20San%20Francisco%2C%201976.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q6625963">novelist</a> <small class="chip__note">start time: 1979-01-01</small></li>
-    
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Aristophanes%20-%20Project%20Gutenberg%20eText%2012788.png?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q214917">playwright</a></li>
-    
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q18844224">science fiction writer</a></li>
-    
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/The%20Godfather%20Screenplay.JPG?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q28389">screenwriter</a></li>
-    
-  </ul>
+  </dl>
 
   
 </section>
 
         
         
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><span>genre</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Illustration%20of%20a%20futuristic%20aircraft%20on%20a%20landing%20pad%20by%20David%20Revoy.png?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q24925">science fiction</a></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Illustration%20of%20a%20futuristic%20aircraft%20on%20a%20landing%20pad%20by%20David%20Revoy.png?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q24925">science fiction</a></li>
+          
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Comedyicon%20PL.png?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q40831">comedy</a></li>
+          
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cruikshank%20-%20The%20Allied%20Bakers.png?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q128758">satire</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Comedyicon%20PL.png?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q40831">comedy</a></li>
-    
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cruikshank%20-%20The%20Allied%20Bakers.png?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q128758">satire</a></li>
-    
-  </ul>
+  </dl>
 
   
 </section>
 
         
         
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><span>member of</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Groucho%20Club%2C%20Soho%2C%20W1%20%282711860818%29.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q5610831">Groucho Club</a></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Groucho%20Club%2C%20Soho%2C%20W1%20%282711860818%29.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q5610831">Groucho Club</a></li>
+          
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q857679">Footlights</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q857679">Footlights</a></li>
-    
-  </ul>
+  </dl>
 
   
 </section>
 
         
         
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><span>notable work</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q7758404">The Private Life of Genghis Khan</a></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q7758404">The Private Life of Genghis Khan</a></li>
+          
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q20736364">Dirk Gently series</a></li>
+          
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q25169">The Hitchhiker&#39;s Guide to the Galaxy</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q20736364">Dirk Gently series</a></li>
-    
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q25169">The Hitchhiker&#39;s Guide to the Galaxy</a></li>
-    
-  </ul>
+  </dl>
 
   
 </section>
@@ -537,44 +809,79 @@ expression: body
 
         
         
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-captive_portal"/></svg><span class="visually-hidden">Web</span></h2>
+<section class="card" style="--cols: 2; --rows: 2">
+  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-captive_portal"/></svg><span>official website</span></h2>
   
-  <ul class="links">
+  <dl class="facts">
     
-    <li><a href="https://douglasadams.com" rel="nofollow">official website</a><br><span class="links__url">https://douglasadams.com</span></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="fact-link"><a href="https://douglasadams.com" rel="nofollow">https://douglasadams.com</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
+  </dl>
 
   
 </section>
 
         
         
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-trophy"/></svg><span>award received</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q2687578">Inkpot Award</a> <small class="chip__note">point in time: 1983-01-01</small></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q2687578">Inkpot Award</a> <small class="chip__note">point in time: 1983-01-01</small></li>
+          
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q131295948">Ditmar Award for Best International Fiction</a> <small class="chip__note">for work: The Hitchhiker&#39;s Guide to the Galaxy, point in time: 1980-01-01</small></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q131295948">Ditmar Award for Best International Fiction</a> <small class="chip__note">for work: The Hitchhiker&#39;s Guide to the Galaxy, point in time: 1980-01-01</small></li>
-    
-  </ul>
+  </dl>
 
   
 </section>
 
         
         
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-archive"/></svg><span>archives at</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/St%20John%27s%20College%2C%20Cambridge%2C%20chapel%20court%2001.JPG?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q67074906">St John&#39;s College Library</a> <small class="chip__note">described at URL: https://www.sjcarchives.org.uk/personal/index.php/papers-of-douglas-noel-adams</small></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/St%20John%27s%20College%2C%20Cambridge%2C%20chapel%20court%2001.JPG?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q67074906">St John&#39;s College Library</a> <small class="chip__note">described at URL: https://www.sjcarchives.org.uk/personal/index.php/papers-of-douglas-noel-adams</small></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
+  </dl>
 
   
 </section>
@@ -588,30 +895,36 @@ expression: body
     <div class="cards">
       
       
-<section class="card" style="--cols: 2; --rows: 3">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-article"/></svg><span class="visually-hidden">Names</span></h2>
+<section class="card" style="--cols: 2; --rows: 2">
+  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-height"/></svg><span class="visually-hidden">Physical</span></h2>
   
-  <dl class="kv">
+  <dl class="facts">
     
-    <dt>name in native language</dt>
-    <dd>
-      <span class="kv__value">Douglas Adams</span>
-    </dd>
+    <div class="facts__row">
+      <dt>height</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="fact-text">1.96 metre</li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-    <dt>short name</dt>
-    <dd>
-      <span class="kv__value">Douglas Adams</span>
-    </dd>
-    
-    <dt>birth name</dt>
-    <dd>
-      <span class="kv__value">Douglas Noël Adams</span>
-    </dd>
-    
-    <dt>pseudonym</dt>
-    <dd>
-      <span class="kv__value">David Agnew (statement is subject of: David Agnew)</span>
-    </dd>
+    <div class="facts__row">
+      <dt>eye color</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Buddhuza%27s%20Eye.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q17122705">brown</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
   </dl>
 
@@ -620,83 +933,100 @@ expression: body
 
       
       
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-visibility"/></svg><span>eye color</span></h2>
-  
-  <ul class="chips">
-    
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Buddhuza%27s%20Eye.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q17122705">brown</a></li>
-    
-  </ul>
-
-  
-</section>
-
-      
-      
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-height"/></svg><span>height</span></h2>
-  
-  <p class="stat">
-    <span class="stat__value">1.96 metre</span>
-    
-  </p>
-
-  
-</section>
-
-      
-      
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><span>country of citizenship</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Palace%20of%20Westminster%20from%20the%20dome%20on%20Methodist%20Central%20Hall.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q145">United Kingdom</a></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Palace%20of%20Westminster%20from%20the%20dome%20on%20Methodist%20Central%20Hall.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q145">United Kingdom</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
+  </dl>
 
   
 </section>
 
       
       
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><span>religion or worldview</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Ephesians%202%2C12%20-%20Greek%20atheos.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q7066">atheism</a></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Ephesians%202%2C12%20-%20Greek%20atheos.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q7066">atheism</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
+  </dl>
 
   
 </section>
 
       
       
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><span>ethnic group</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q7994501">White British</a></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q7994501">White British</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
+  </dl>
 
   
 </section>
 
       
       
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><span>work location</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/London%20Skyline%20%28125508655%29.jpeg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q84">London</a></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/London%20Skyline%20%28125508655%29.jpeg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q84">London</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
+  </dl>
 
   
 </section>
@@ -719,30 +1049,25 @@ expression: body
 
       
       
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><span>instrument</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Classical%20Guitar%20two%20views.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q6607">guitar</a></li>
-    
-  </ul>
-
-  
-</section>
-
+    <div class="facts__row">
       
-      
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><span>nominated for</span></h2>
-  
-  <ul class="chips">
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Classical%20Guitar%20two%20views.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q6607">guitar</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q3414212">Hugo Award for Best Dramatic Presentation</a> <small class="chip__note">for work: The Hitchhiker&#39;s Guide to the Galaxy, point in time: 1979-01-01</small></li>
-    
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q2576795">Locus Award for Best Science Fiction Novel</a> <small class="chip__note">for work: Life, the Universe and Everything, point in time: 1983-01-01</small></li>
-    
-  </ul>
+  </dl>
 
   
 </section>
@@ -750,11 +1075,40 @@ expression: body
       
       
 <section class="card" style="--cols: 2; --rows: 2">
+  <h2 class="card__title"><span>nominated for</span></h2>
+  
+  <dl class="facts">
+    
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q3414212">Hugo Award for Best Dramatic Presentation</a> <small class="chip__note">for work: The Hitchhiker&#39;s Guide to the Galaxy, point in time: 1979-01-01</small></li>
+          
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q2576795">Locus Award for Best Science Fiction Novel</a> <small class="chip__note">for work: Life, the Universe and Everything, point in time: 1983-01-01</small></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
+    
+  </dl>
+
+  
+</section>
+
+      
+      
+<section class="card" style="--cols: 2; --rows: 1">
   <h2 class="card__title"><span>Erdős number</span></h2>
   
   <p class="stat">
-    <span class="stat__value">10 (point in time: 2017-04-13)</span>
-    
+    <span class="stat__value">10</span>
+    <span class="stat__note">point in time: 2017-04-13</span>
   </p>
 
   
@@ -775,28 +1129,50 @@ expression: body
 
       
       
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><span>writing language</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/William%20Shakespeare%20-%20Sonnet%20XXX%20-%20Rapenburg%2030%2C%20Leiden%20%28cropped%29.JPG?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q1860">English</a> <small class="chip__note">object of statement has role: first language</small></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/William%20Shakespeare%20-%20Sonnet%20XXX%20-%20Rapenburg%2030%2C%20Leiden%20%28cropped%29.JPG?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q1860">English</a> <small class="chip__note">object of statement has role: first language</small></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
+  </dl>
 
   
 </section>
 
       
       
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><span>copyright status as a creator</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q73555012">works protected by copyrights</a></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q73555012">works protected by copyrights</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
+  </dl>
 
   
 </section>
@@ -809,119 +1185,186 @@ expression: body
     <details class="footnotes">
       <summary>
         <svg class="icon" aria-hidden="true"><use href="#i-archive"/></svg>
-        <span>8</span>
+        <span>6</span>
         <span class="visually-hidden">Wikimedia metadata</span>
       </summary>
       <div class="cards">
         
         
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-captive_portal"/></svg><span>described at URL</span></h2>
+<section class="card" style="--cols: 2; --rows: 2">
+  <h2 class="card__title"><span>described at URL</span></h2>
   
-  <ul class="links">
+  <dl class="facts">
     
-    <li><a href="https://baike.sogou.com/v367134.htm" rel="nofollow">described at URL</a><br><span class="links__url">https://baike.sogou.com/v367134.htm</span></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="fact-link"><a href="https://baike.sogou.com/v367134.htm" rel="nofollow">https://baike.sogou.com/v367134.htm</a></li>
+          
+          
+          
+          <li class="fact-link"><a href="https://baike.sogou.com/v815123.htm" rel="nofollow">https://baike.sogou.com/v815123.htm</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-    <li><a href="https://baike.sogou.com/v815123.htm" rel="nofollow">described at URL</a><br><span class="links__url">https://baike.sogou.com/v815123.htm</span></li>
-    
-  </ul>
+  </dl>
 
   
 </section>
 
         
         
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><span>described by source</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q105085344">Historical Dictionary of Science Fiction</a> <small class="chip__note">URL: https://sfdictionary.com/author/122/douglas-adams</small></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q105085344">Historical Dictionary of Science Fiction</a> <small class="chip__note">URL: https://sfdictionary.com/author/122/douglas-adams</small></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
+  </dl>
 
   
 </section>
 
         
         
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><span>topic has template</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q22898962">Template:Douglas Adams</a></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q22898962">Template:Douglas Adams</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
+  </dl>
 
   
 </section>
 
         
         
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-compare_arrows"/></svg><span>different from</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q21454969">Douglas Adams</a></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q21454969">Douglas Adams</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
+  </dl>
 
   
 </section>
 
         
         
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><span>on focus list of Wikimedia project</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q6173448">Wikipedia:Vital articles/Level/4</a> <small class="chip__note">point in time: 2022-10-31</small></li>
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q6173448">Wikipedia:Vital articles/Level/4</a> <small class="chip__note">point in time: 2022-10-31</small></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
+  </dl>
 
   
 </section>
 
         
         
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-sell"/></svg><span>related category</span></h2>
+<section class="card" style="--cols: 2; --rows: 2">
+  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-sell"/></svg><span class="visually-hidden">Categories</span></h2>
   
-  <ul class="chips">
+  <dl class="facts">
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q8722666">Category:Films with screenplays by Douglas Adams</a> <small class="chip__note">category contains: film with screenplay by this person</small></li>
+    <div class="facts__row">
+      <dt>Commons category</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="fact-text">Douglas Adams</li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
-
-  
-</section>
-
-        
-        
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-sell"/></svg><span>topic&#39;s main category</span></h2>
-  
-  <ul class="chips">
+    <div class="facts__row">
+      <dt>related category</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q8722666">Category:Films with screenplays by Douglas Adams</a> <small class="chip__note">category contains: film with screenplay by this person</small></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-    <li class="chip"><a href="https://www.wikidata.org/wiki/Q8935487">Category:Douglas Adams</a></li>
+    <div class="facts__row">
+      <dt>topic&#39;s main category</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q8935487">Category:Douglas Adams</a></li>
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-  </ul>
-
-  
-</section>
-
-        
-        
-<section class="card" style="--cols: 2; --rows: 1">
-  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-sell"/></svg><span>Commons category</span></h2>
-  
-  <p class="stat">
-    <span class="stat__value">Douglas Adams</span>
-    
-  </p>
+  </dl>
 
   
 </section>

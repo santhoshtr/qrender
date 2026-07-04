@@ -337,38 +337,51 @@ a {
   }
 }
 
-/* Key-values: two columns when the card is wide, stacked when narrow */
-.kv {
+/* Facts: labeled rows; each row's values are chips, links, or text.
+   Label beside values when the card is wide, stacked when narrow. */
+.facts {
   margin: 0;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--spacing-25) var(--spacing-100);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-50);
 
-  dt {
-    color: var(--color-subtle);
-  }
+  .facts__row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-25) var(--spacing-100);
 
-  dd {
-    margin: 0 0 var(--spacing-25);
-  }
-
-  .kv__value {
-    display: block;
-  }
-}
-
-@container (inline-size > 24rem) {
-  .kv {
-    grid-template-columns: minmax(8rem, 14rem) 1fr;
+    dt {
+      color: var(--color-subtle);
+    }
 
     dd {
       margin: 0;
     }
   }
+
+  .fact-text {
+    flex-basis: 100%;
+
+    .fact-note {
+      color: var(--color-subtle);
+      font-size: var(--font-size-x-small);
+    }
+  }
+
+  .fact-link {
+    flex-basis: 100%;
+    word-break: break-all;
+  }
+}
+
+@container (inline-size > 24rem) {
+  .facts .facts__row {
+    grid-template-columns: minmax(8rem, 12rem) 1fr;
+  }
 }
 
 /* Fixed-height tiles clip; let text-heavy cards scroll instead */
-.card:has(.kv, .chips, .links, .timeline) {
+.card:has(.facts, .timeline) {
   overflow-y: auto;
 }
 
@@ -451,22 +464,6 @@ a {
   }
 }
 
-/* Links */
-.links {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-50);
-
-  .links__url {
-    font-size: var(--font-size-x-small);
-    color: var(--color-subtle);
-    word-break: break-all;
-  }
-}
-
 /* Item chips */
 .chips {
   margin: 0;
@@ -500,6 +497,12 @@ a {
     .chip__note {
       color: var(--color-subtle);
       font-size: var(--font-size-x-small);
+    }
+
+    /* Preferred rank: the value that holds now */
+    &.chip--current {
+      border-color: var(--border-color-progressive);
+      background-color: var(--background-color-progressive-subtle);
     }
   }
 }
