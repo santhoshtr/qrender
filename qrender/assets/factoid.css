@@ -507,6 +507,42 @@ a {
   }
 }
 
+/* A card that is just one or two linked items: the picture takes half
+   the card, the label sits under it - the image does the explaining
+   (a mayor's face, a timezone's world map). Only when the facts card
+   has a single row with at most two values. */
+.facts:has(.facts__row:only-child) .chips:not(:has(.chip:nth-child(3))) {
+  align-items: stretch;
+
+  .chip:has(.chip__thumb) {
+    flex: 1 1 9rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0;
+    border-radius: var(--border-radius-base);
+    overflow: hidden;
+
+    .chip__thumb {
+      inline-size: 100%;
+      block-size: 7rem;
+      aspect-ratio: auto;
+      border-radius: 0;
+      margin-inline-start: 0;
+      background-color: var(--background-color-neutral-subtle);
+    }
+
+    a {
+      padding: var(--spacing-50) var(--spacing-75) var(--spacing-25);
+      font-weight: var(--font-weight-bold);
+    }
+
+    .chip__note {
+      padding: 0 var(--spacing-75) var(--spacing-50);
+    }
+  }
+}
+
 /* Composed sections: icon-only heading above a scoped card grid.
    A rule line anchors the icon so the section break reads visually. */
 .page-section {

@@ -396,6 +396,8 @@ fn cards_for_group(
                     kind: CardKind::Stat { value, note },
                 });
             } else {
+                let mut row = row;
+                feature_chip_thumbs(&mut row);
                 cards.push(Card {
                     title: row.label.clone(),
                     layout: Layout::default(),
@@ -471,12 +473,33 @@ fn qualifier_note(statement: &qjson::Statement) -> Option<String> {
 
 const THUMB_WIDTH: u32 = 640;
 const CHIP_THUMB_WIDTH: u32 = 96; // 2x for the 48px chip thumb
+const FEATURE_THUMB_WIDTH: u32 = 400; // chips rendered as image tiles
 
 /// image_url arrives as an http FilePath URL from SPARQL; normalize to
 /// https and request a chip-sized thumbnail.
 pub(super) fn chip_thumb_url(image_url: &str) -> String {
+    thumb_url(image_url, CHIP_THUMB_WIDTH)
+}
+
+fn thumb_url(image_url: &str, width: u32) -> String {
     let https = image_url.replacen("http://", "https://", 1);
-    format!("{https}?width={CHIP_THUMB_WIDTH}")
+    format!("{https}?width={width}")
+}
+
+/// A card that is just one or two linked items renders them as image
+/// tiles (the picture fills half the card), so the thumbs need real
+/// resolution. The matching layout rule lives in factoid.css.
+fn feature_chip_thumbs(row: &mut FactRow) {
+    if row.values.len() > 2 {
+        return;
+    }
+    for value in &mut row.values {
+        if let FactValue::Item(chip) = value
+            && let Some(image_url) = &chip.image_url
+        {
+            chip.thumb_url = Some(thumb_url(image_url, FEATURE_THUMB_WIDTH));
+        }
+    }
 }
 
 /// Path segment encoding for Commons file page URLs
