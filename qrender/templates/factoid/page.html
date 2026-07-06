@@ -1,5 +1,5 @@
 {% macro card_section(card) %}
-<section class="card" style="--cols: {{ card.layout.cols }}; --rows: {{ card.layout.rows }}">
+<section class="card" data-variant="{{ card.variant }}" style="--cols: {{ card.layout.cols }}; --rows: {{ card.layout.rows }}">
   <h2 class="card__title">
     {%- if let Some(icon) = card.icon %}<svg class="icon" aria-hidden="true"><use href="#i-{{ icon }}"/></svg>{% endif -%}
     {%- if card.localized_title || card.icon.is_none() %}<span>{{ card.title }}</span>{% else %}<span class="visually-hidden">{{ card.title }}</span>{% endif -%}
@@ -82,7 +82,7 @@
           {% for value in row.values %}
           {% match value %}
           {% when FactValue::Item with (chip) %}
-          <li class="chip{% if chip.current %} chip--current{% endif %}">{% if let Some(thumb) = chip.thumb_url %}<img class="chip__thumb" src="{{ thumb }}" alt="" loading="lazy">{% endif %}<a href="https://www.wikidata.org/wiki/{{ chip.qid }}">{{ chip.label }}</a>{% if let Some(span) = chip.span %} <small class="chip__span">{{ span.display() }}</small>{% endif %}{% if let Some(note) = chip.note %} <small class="chip__note">{{ note }}</small>{% endif %}</li>
+          <li class="chip{% if chip.current %} chip--current{% endif %}{% if chip.ended() %} chip--ended{% endif %}">{% if let Some(thumb) = chip.thumb_url %}<img class="chip__thumb" src="{{ thumb }}" alt="" loading="lazy">{% endif %}<a href="https://www.wikidata.org/wiki/{{ chip.qid }}">{{ chip.label }}</a>{% if let Some(span) = chip.span %} <small class="chip__span">{{ span.display() }}</small>{% endif %}{% if let Some(note) = chip.note %} <small class="chip__note">{{ note }}</small>{% endif %}</li>
           {% when FactValue::Link with { url } %}
           <li class="fact-link"><a href="{{ url }}" rel="nofollow">{{ url }}</a></li>
           {% when FactValue::Text with { value, span, note } %}

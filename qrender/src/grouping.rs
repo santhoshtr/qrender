@@ -15,9 +15,8 @@ pub struct GroupConfig {
     pub order: Option<i32>,
     /// Symbol name from assets/icons/, shown on cards from this group
     pub icon: Option<String>,
-    /// Bento grid preferences for cards from this group
-    pub cols: Option<u8>,
-    pub rows: Option<u8>,
+    /// Page-order weight (sizes are not configurable - the presentation
+    /// variant owns them; see cards/plan.rs)
     pub sort: Option<i32>,
     /// Wikimedia-curation meta (categories, templates); cards render
     /// in the collapsed footnote region instead of the main grid
@@ -32,9 +31,7 @@ pub struct PropertyConfig {
     /// Never render this property (structural/meta properties like P31)
     #[serde(default)]
     pub ignore: bool,
-    /// Bento grid preferences; override the group's
-    pub cols: Option<u8>,
-    pub rows: Option<u8>,
+    /// Page-order weight; overrides the group's
     pub sort: Option<i32>,
     /// Wikimedia-curation meta; see GroupConfig::footnote
     #[serde(default)]

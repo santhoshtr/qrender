@@ -152,22 +152,19 @@ fn timeline_card(item: &WikidataItem, config: &TimelineConfig) -> Option<Card> {
     }
     events.sort_by(|a, b| a.iso.cmp(&b.iso));
 
-    let kind = CardKind::Timeline { events };
-    let (cols, rows) = super::synthesis::kind_layout(&kind);
-    Some(Card {
+    let mut card = Card {
         // machine name: the event icon carries the meaning visually
         title: "timeline".to_string(),
         localized_title: false,
         icon: Some("event".to_string()),
         source_pids,
-        layout: Layout {
-            cols,
-            rows,
-            ..Layout::default()
-        },
+        variant: super::Variant::default(),
+        layout: Layout::default(),
         tier: Tier::Standard,
-        kind,
-    })
+        kind: CardKind::Timeline { events },
+    };
+    super::plan::apply(&mut card);
+    Some(card)
 }
 
 fn event_time(statement: &qjson::Statement) -> Option<String> {

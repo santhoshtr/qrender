@@ -513,40 +513,110 @@ a {
   }
 }
 
-/* A card that is just one or two linked items: the picture takes half
-   the card, the label sits under it - the image does the explaining
-   (a mayor's face, a timezone's world map). Only when the facts card
-   has a single row with at most two values. */
-.facts:has(.facts__row:only-child) .chips:not(:has(.chip:nth-child(3))) {
-  align-items: stretch;
+/* ---- Item-card variants (data-variant, chosen in cards/plan.rs) ----
 
-  .chip:has(.chip__thumb) {
-    flex: 1 1 9rem;
-    flex-direction: column;
+   The fill contract: each variant fills its fixed grid size. Images
+   stretch (object-fit: cover), lists clip and scroll, text clamps. */
+
+/* Portrait and tile-strip share the tile look: the picture IS the
+   value (a spouse's face, a school building), label + span beneath. */
+[data-variant="portrait"],
+[data-variant="tile-strip"] {
+  /* collapse the dl plumbing so tiles size against the card itself */
+  .facts,
+  .facts__row,
+  dd {
+    display: contents;
+  }
+
+  .chips {
     align-items: stretch;
-    gap: 0;
-    padding: 0;
-    border-radius: var(--border-radius-base);
-    overflow: hidden;
 
-    .chip__thumb {
-      inline-size: 100%;
-      block-size: 7rem;
-      aspect-ratio: auto;
-      border-radius: 0;
-      margin-inline-start: 0;
+    .chip {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      padding: 0;
+      border-radius: var(--border-radius-base);
+      overflow: hidden;
+
+      .chip__thumb {
+        inline-size: 100%;
+        flex: 1;
+        min-block-size: 0;
+        aspect-ratio: auto;
+        border-radius: 0;
+        margin-inline-start: 0;
+        object-fit: cover;
+        background-color: var(--background-color-neutral-subtle);
+      }
+
+      a {
+        padding: var(--spacing-50) var(--spacing-75) var(--spacing-25);
+        font-weight: var(--font-weight-bold);
+      }
+
+      .chip__note,
+      .chip__span {
+        padding: 0 var(--spacing-75) var(--spacing-50);
+      }
+    }
+  }
+}
+
+/* Portrait: one or two tiles fill the whole card; the image absorbs
+   whatever height the text doesn't need. */
+[data-variant="portrait"] {
+  display: flex;
+  flex-direction: column;
+
+  .chips {
+    flex: 1;
+    min-block-size: 0;
+
+    .chip {
+      flex: 1 1 0;
+      min-inline-size: 0;
+    }
+  }
+}
+
+/* Tile strip: a clipped, scroll-snapped row of fixed-width tiles -
+   three visible, the rest a swipe away. No wrap, no growth. */
+[data-variant="tile-strip"] {
+  display: flex;
+  flex-direction: column;
+
+  .chips {
+    flex: 1;
+    min-block-size: 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+    .chip {
+      flex: 0 0 clamp(8rem, 30cqi, 11rem);
+      scroll-snap-align: start;
+    }
+
+    /* tiles without a picture still hold the strip's shape */
+    .chip:not(:has(.chip__thumb)) {
+      justify-content: center;
       background-color: var(--background-color-neutral-subtle);
     }
+  }
+}
 
-    a {
-      padding: var(--spacing-50) var(--spacing-75) var(--spacing-25);
-      font-weight: var(--font-weight-bold);
-    }
+/* Current-with-history: what holds now keeps its chip emphasis; ended
+   values stack beneath as quiet borderless lines. */
+[data-variant="current-history"] .chips {
+  flex-direction: column;
+  align-items: stretch;
 
-    .chip__note,
-    .chip__span {
-      padding: 0 var(--spacing-75) var(--spacing-50);
-    }
+  .chip--ended {
+    border: none;
+    background: none;
+    padding-block: 0;
   }
 }
 

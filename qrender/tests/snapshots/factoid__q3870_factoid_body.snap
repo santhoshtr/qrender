@@ -44,7 +44,7 @@ expression: body
       <div class="cards">
         
         
-<section class="card" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="facts-table" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-altitude"/></svg><span class="visually-hidden">Geography</span></h2>
   
   <dl class="facts">
@@ -82,7 +82,7 @@ expression: body
 
         
         
-<section class="card" style="--cols: 2; --rows: 3">
+<section class="card" data-variant="facts-table" style="--cols: 2; --rows: 3">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-location_on"/></svg><span class="visually-hidden">Located in</span></h2>
   
   <dl class="facts">
@@ -131,7 +131,7 @@ expression: body
           
           
           
-          <li class="chip"><a href="https://www.wikidata.org/wiki/Q2538511">Kenya Colony</a> <small class="chip__span">1920 – 1963</small></li>
+          <li class="chip chip--ended"><a href="https://www.wikidata.org/wiki/Q2538511">Kenya Colony</a> <small class="chip__span">1920 – 1963</small></li>
           
           
         </ul>
@@ -145,7 +145,7 @@ expression: body
 
         
         
-<section class="card" style="--cols: 3; --rows: 2">
+<section class="card" data-variant="map-panel" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-location_on"/></svg><span>coordinate location</span></h2>
   
   <figure class="media map">
@@ -158,7 +158,7 @@ expression: body
 
         
         
-<section class="card" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="portrait" style="--cols: 2; --rows: 3">
   <h2 class="card__title"><span>located in time zone</span></h2>
   
   <dl class="facts">
@@ -191,7 +191,7 @@ expression: body
       <div class="cards">
         
         
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" data-variant="stat-block" style="--cols: 2; --rows: 1">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-event"/></svg><span>inception</span></h2>
   
   <p class="stat">
@@ -212,7 +212,7 @@ expression: body
       <div class="cards">
         
         
-<section class="card" style="--cols: 3; --rows: 2">
+<section class="card" data-variant="trend" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-groups"/></svg><span>population</span></h2>
   
   <p class="stat">
@@ -254,7 +254,7 @@ expression: body
       <div class="cards">
         
         
-<section class="card" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="portrait" style="--cols: 2; --rows: 3">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-person"/></svg><span>head of government</span></h2>
   
   <dl class="facts">
@@ -287,7 +287,7 @@ expression: body
       <div class="cards">
         
         
-<section class="card" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="media-full" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-photo_library"/></svg><span>flag image</span></h2>
   
   <figure class="media">
@@ -303,7 +303,7 @@ expression: body
 
         
         
-<section class="card" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="media-full" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-photo_library"/></svg><span>coat of arms image</span></h2>
   
   <figure class="media">
@@ -326,7 +326,7 @@ expression: body
     <div class="cards">
       
       
-<section class="card" style="--cols: 6; --rows: 2">
+<section class="card" data-variant="gallery-strip" style="--cols: 6; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-photo_library"/></svg><span class="visually-hidden">Articleimage</span></h2>
   
   <div class="gallery">
@@ -374,7 +374,7 @@ expression: body
 
       
       
-<section class="card" style="--cols: 2; --rows: 4">
+<section class="card" data-variant="facts-table" style="--cols: 2; --rows: 4">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-article"/></svg><span class="visually-hidden">Names</span></h2>
   
   <dl class="facts">
@@ -449,7 +449,7 @@ expression: body
 
       
       
-<section class="card" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="media-full" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-map"/></svg><span>locator map image</span></h2>
   
   <figure class="media">
@@ -465,7 +465,7 @@ expression: body
 
       
       
-<section class="card" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="media-full" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-volume_up"/></svg><span>pronunciation audio</span></h2>
   
   <figure class="media">
@@ -481,7 +481,7 @@ expression: body
 
       
       
-<section class="card" style="--cols: 2; --rows: 4">
+<section class="card" data-variant="tile-strip" style="--cols: 4; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-communities"/></svg><span>twinned administrative body</span></h2>
   
   <dl class="facts">
@@ -492,31 +492,31 @@ expression: body
         <ul class="chips">
           
           
-          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/%E4%BA%94%E5%8D%8E%E5%8C%BA%E4%B8%8E%E7%9B%98%E9%BE%99%E5%8C%BA%E5%A4%A9%E9%99%85%E7%BA%BF%20-%20%E8%88%AA%E6%8B%8D%20-%202025-05-16%2003.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q182852">Kunming</a></li>
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/%E4%BA%94%E5%8D%8E%E5%8C%BA%E4%B8%8E%E7%9B%98%E9%BE%99%E5%8C%BA%E5%A4%A9%E9%99%85%E7%BA%BF%20-%20%E8%88%AA%E6%8B%8D%20-%202025-05-16%2003.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q182852">Kunming</a></li>
           
           
           
-          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Colonia-Tovar.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q964130">Colonia Tovar</a></li>
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Colonia-Tovar.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q964130">Colonia Tovar</a></li>
           
           
           
-          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cidade%20Maravilhosa.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q8678">Rio de Janeiro</a></li>
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cidade%20Maravilhosa.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q8678">Rio de Janeiro</a></li>
           
           
           
-          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Pingxiang%2C%20JX%2C%20PRC.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q362865">Pingxiang</a></li>
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Pingxiang%2C%20JX%2C%20PRC.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q362865">Pingxiang</a></li>
           
           
           
-          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Parintins%20Amazonas%20Brazil.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q926713">Parintins</a></li>
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Parintins%20Amazonas%20Brazil.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q926713">Parintins</a></li>
           
           
           
-          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Denver%2C%20Colorado%20skyline%20%28cropped%29.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q16554">Denver</a> <small class="chip__span">1975 –</small></li>
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Denver%2C%20Colorado%20skyline%20%28cropped%29.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q16554">Denver</a> <small class="chip__span">1975 –</small></li>
           
           
           
-          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Raleigh%20Skyline.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q41087">Raleigh</a> <small class="chip__span">2022 –</small></li>
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Raleigh%20Skyline.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q41087">Raleigh</a> <small class="chip__span">2022 –</small></li>
           
           
         </ul>
@@ -530,7 +530,7 @@ expression: body
 
       
       
-<section class="card" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="facts-table" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-article"/></svg><span class="visually-hidden">Topics</span></h2>
   
   <dl class="facts">
@@ -568,7 +568,7 @@ expression: body
 
       
       
-<section class="card" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="facts-table" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-captive_portal"/></svg><span class="visually-hidden">Web</span></h2>
   
   <dl class="facts">
@@ -606,7 +606,7 @@ expression: body
 
       
       
-<section class="card" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="portrait" style="--cols: 2; --rows: 3">
   <h2 class="card__title"><span>part of</span></h2>
   
   <dl class="facts">
@@ -631,7 +631,7 @@ expression: body
 
       
       
-<section class="card" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="tile-strip" style="--cols: 4; --rows: 2">
   <h2 class="card__title"><span>language used</span></h2>
   
   <dl class="facts">
@@ -642,11 +642,11 @@ expression: body
         <ul class="chips">
           
           
-          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/William%20Shakespeare%20-%20Sonnet%20XXX%20-%20Rapenburg%2030%2C%20Leiden%20%28cropped%29.JPG?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q1860">English</a></li>
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/William%20Shakespeare%20-%20Sonnet%20XXX%20-%20Rapenburg%2030%2C%20Leiden%20%28cropped%29.JPG?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q1860">English</a></li>
           
           
           
-          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Manuscrit%20colonial%20kiswahili-Africa%20Museum.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q7838">Swahili</a></li>
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Manuscrit%20colonial%20kiswahili-Africa%20Museum.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q7838">Swahili</a></li>
           
           
           
@@ -664,7 +664,7 @@ expression: body
 
       
       
-<section class="card" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="fact-line" style="--cols: 2; --rows: 1">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-captive_portal"/></svg><span>open data portal</span></h2>
   
   <dl class="facts">
@@ -701,7 +701,7 @@ expression: body
       <div class="cards">
         
         
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" data-variant="stat-block" style="--cols: 2; --rows: 1">
   <h2 class="card__title"><span>Commons gallery</span></h2>
   
   <p class="stat">
@@ -714,7 +714,7 @@ expression: body
 
         
         
-<section class="card" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="portrait" style="--cols: 2; --rows: 3">
   <h2 class="card__title"><span>described by source</span></h2>
   
   <dl class="facts">
@@ -739,7 +739,7 @@ expression: body
 
         
         
-<section class="card" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="fact-line" style="--cols: 2; --rows: 1">
   <h2 class="card__title"><span>on focus list of Wikimedia project</span></h2>
   
   <dl class="facts">
@@ -768,7 +768,7 @@ expression: body
 
         
         
-<section class="card" style="--cols: 2; --rows: 4">
+<section class="card" data-variant="facts-table" style="--cols: 2; --rows: 4">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-sell"/></svg><span class="visually-hidden">Categories</span></h2>
   
   <dl class="facts">

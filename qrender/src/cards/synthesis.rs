@@ -9,7 +9,7 @@ use std::collections::HashSet;
 use super::format::{display_value, format_time};
 use super::{
     Card, CardKind, FactRow, FactValue, FactoidPage, GalleryImage, ItemChip, Layout, MediaKind,
-    SeriesPoint, TemporalSpan, Tier, compose,
+    SeriesPoint, TemporalSpan, Tier, Variant, compose, plan,
 };
 use crate::archetype::{self, ArchetypesConfig};
 use crate::grouping::{GroupConfig, GroupingConfig};
@@ -94,8 +94,9 @@ pub fn synthesize(
         let mut group_cards = cards_for_group(&humanize(group_name), false, &properties, config);
         for card in &mut group_cards {
             card.icon = resolve_icon(card, group_config.icon.as_deref(), config);
-            card.layout = resolve_layout(card, Some(group_config), config);
+            card.layout.sort = resolve_sort(card, Some(group_config), config);
             card.tier = resolve_tier(card, Some(group_config), config);
+            plan::apply(card);
         }
         cards.extend(group_cards);
     }
@@ -123,8 +124,9 @@ pub fn synthesize(
         let mut property_cards = cards_for_group(&property.label, true, &[property], config);
         for card in &mut property_cards {
             card.icon = resolve_icon(card, None, config);
-            card.layout = resolve_layout(card, None, config);
+            card.layout.sort = resolve_sort(card, None, config);
             card.tier = resolve_tier(card, None, config);
+            plan::apply(card);
         }
         cards.extend(property_cards);
     }
@@ -186,24 +188,6 @@ fn resolve_icon(card: &Card, group_icon: Option<&str>, config: &GroupingConfig) 
     }
 }
 
-/// Kind-derived layout defaults, clamped by content: what a card *is*
-/// and how much it holds suggest its visual weight.
-pub(super) fn kind_layout(kind: &CardKind) -> (u8, u8) {
-    match kind {
-        CardKind::Stat { value, .. } => (2, if value.len() > 16 { 2 } else { 1 }),
-        CardKind::StatSeries { series, .. } => (2, if series.len() > 6 { 3 } else { 2 }),
-        CardKind::Image { .. } => (2, 2),
-        CardKind::Gallery { images } => (if images.len() >= 4 { 6 } else { 4 }, 2),
-        CardKind::Map { .. } => (2, 2),
-        CardKind::Facts { rows } => {
-            let values: usize = rows.iter().map(|r| r.values.len()).sum();
-            (2, (1 + values.div_ceil(3) as u8).clamp(2, 4))
-        }
-        CardKind::Timeline { events } => (2, if events.len() > 6 { 4 } else { 3 }),
-        CardKind::Meter { .. } => (2, 1),
-    }
-}
-
 /// A card is a footnote when its group or any source property is
 /// flagged as Wikimedia-curation meta in groups.toml.
 fn resolve_tier(card: &Card, group_config: Option<&GroupConfig>, config: &GroupingConfig) -> Tier {
@@ -218,33 +202,19 @@ fn resolve_tier(card: &Card, group_config: Option<&GroupConfig>, config: &Groupi
     }
 }
 
-/// Layout cascade: kind defaults (content-aware), then group config,
-/// then per-PID config.
-fn resolve_layout(
-    card: &Card,
-    group_config: Option<&GroupConfig>,
-    config: &GroupingConfig,
-) -> Layout {
-    let (cols, rows) = kind_layout(&card.kind);
-    let mut layout = Layout {
-        cols,
-        rows,
-        ..Layout::default()
-    };
-    if let Some(group) = group_config {
-        layout.cols = group.cols.unwrap_or(layout.cols);
-        layout.rows = group.rows.unwrap_or(layout.rows);
-        layout.sort = group.sort.unwrap_or(layout.sort);
-    }
+/// Page-order weight: group config, then per-PID config. Sizes are not
+/// configurable - the variant owns them (plan.rs).
+fn resolve_sort(card: &Card, group_config: Option<&GroupConfig>, config: &GroupingConfig) -> i32 {
+    let mut sort = group_config
+        .and_then(|g| g.sort)
+        .unwrap_or(Layout::default().sort);
     for pid in &card.source_pids {
         if let Some(property_config) = config.properties.get(pid) {
-            layout.cols = property_config.cols.unwrap_or(layout.cols);
-            layout.rows = property_config.rows.unwrap_or(layout.rows);
-            layout.sort = property_config.sort.unwrap_or(layout.sort);
+            sort = property_config.sort.unwrap_or(sort);
             break;
         }
     }
-    layout
+    sort
 }
 
 fn cards_for_group(
@@ -298,6 +268,7 @@ fn cards_for_group(
                 }
                 Value::Coordinate { lat, lon, .. } => {
                     cards.push(Card {
+                        variant: Variant::default(),
                         title: property.label.clone(),
                         layout: Layout::default(),
                         tier: Tier::Standard,
@@ -356,6 +327,7 @@ fn cards_for_group(
         1 => {
             let (pid, image) = images.remove(0);
             cards.push(Card {
+                variant: Variant::default(),
                 title: image.caption.clone(),
                 layout: Layout::default(),
                 tier: Tier::Standard,
@@ -368,6 +340,7 @@ fn cards_for_group(
         _ => {
             let pids = dedup_pids(images.iter().map(|(pid, _)| pid.clone()));
             cards.push(Card {
+                variant: Variant::default(),
                 title: title.to_string(),
                 layout: Layout::default(),
                 tier: Tier::Standard,
@@ -398,6 +371,7 @@ fn cards_for_group(
                     (None, note) => note,
                 };
                 cards.push(Card {
+                    variant: Variant::default(),
                     title: row.label,
                     layout: Layout::default(),
                     tier: Tier::Standard,
@@ -407,9 +381,8 @@ fn cards_for_group(
                     kind: CardKind::Stat { value, note },
                 });
             } else {
-                let mut row = row;
-                feature_chip_thumbs(&mut row);
                 cards.push(Card {
+                    variant: Variant::default(),
                     title: row.label.clone(),
                     layout: Layout::default(),
                     tier: Tier::Standard,
@@ -423,6 +396,7 @@ fn cards_for_group(
         _ => {
             let pids = dedup_pids(rows.iter().map(|(pid, _)| pid.clone()));
             cards.push(Card {
+                variant: Variant::default(),
                 title: title.to_string(),
                 layout: Layout::default(),
                 tier: Tier::Standard,
@@ -512,7 +486,6 @@ fn qualifier_context(statement: &qjson::Statement) -> (Option<TemporalSpan>, Opt
 
 const THUMB_WIDTH: u32 = 640;
 const CHIP_THUMB_WIDTH: u32 = 96; // 2x for the 48px chip thumb
-const FEATURE_THUMB_WIDTH: u32 = 400; // chips rendered as image tiles
 
 /// image_url arrives as an http FilePath URL from SPARQL; normalize to
 /// https and request a chip-sized thumbnail.
@@ -520,25 +493,9 @@ pub(super) fn chip_thumb_url(image_url: &str) -> String {
     thumb_url(image_url, CHIP_THUMB_WIDTH)
 }
 
-fn thumb_url(image_url: &str, width: u32) -> String {
+pub(super) fn thumb_url(image_url: &str, width: u32) -> String {
     let https = image_url.replacen("http://", "https://", 1);
     format!("{https}?width={width}")
-}
-
-/// A card that is just one or two linked items renders them as image
-/// tiles (the picture fills half the card), so the thumbs need real
-/// resolution. The matching layout rule lives in factoid.css.
-fn feature_chip_thumbs(row: &mut FactRow) {
-    if row.values.len() > 2 {
-        return;
-    }
-    for value in &mut row.values {
-        if let FactValue::Item(chip) = value
-            && let Some(image_url) = &chip.image_url
-        {
-            chip.thumb_url = Some(thumb_url(image_url, FEATURE_THUMB_WIDTH));
-        }
-    }
 }
 
 /// Path segment encoding for Commons file page URLs
@@ -608,6 +565,7 @@ fn as_meter(property: &Property, meter: &crate::grouping::MeterConfig) -> Option
         return None;
     };
     Some(Card {
+        variant: Variant::default(),
         title: property.label.clone(),
         layout: Layout::default(),
         tier: Tier::Standard,
@@ -681,6 +639,7 @@ fn stat_series(property: &Property, mut dated: Vec<(String, &qjson::Statement)>)
         .collect();
 
     Card {
+        variant: Variant::default(),
         title: property.label.clone(),
         layout: Layout::default(),
         tier: Tier::Standard,
@@ -762,6 +721,7 @@ fn as_keyed_quantities(property: &Property, dated: &[(String, &qjson::Statement)
         .collect();
 
     Some(Card {
+        variant: Variant::default(),
         title: property.label.clone(),
         layout: Layout::default(),
         tier: Tier::Standard,

@@ -50,7 +50,7 @@ expression: body
       <div class="cards">
         
         
-<section class="card" style="--cols: 2; --rows: 3">
+<section class="card" data-variant="facts-table" style="--cols: 2; --rows: 3">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-article"/></svg><span class="visually-hidden">Names</span></h2>
   
   <dl class="facts">
@@ -78,7 +78,7 @@ expression: body
           
           
           
-          <li class="chip"><a href="https://www.wikidata.org/wiki/Q37514091">Philpotts</a> <small class="chip__span">– 2020</small></li>
+          <li class="chip chip--ended"><a href="https://www.wikidata.org/wiki/Q37514091">Philpotts</a> <small class="chip__span">– 2020</small></li>
           
           
         </ul>
@@ -118,7 +118,7 @@ expression: body
 
         
         
-<section class="card" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="fact-line" style="--cols: 2; --rows: 1">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-group"/></svg><span>spouse</span></h2>
   
   <dl class="facts">
@@ -129,7 +129,7 @@ expression: body
         <ul class="chips">
           
           
-          <li class="chip"><a href="https://www.wikidata.org/wiki/Q48775294">Emma Portner</a> <small class="chip__span">2018 – 2021</small></li>
+          <li class="chip chip--ended"><a href="https://www.wikidata.org/wiki/Q48775294">Emma Portner</a> <small class="chip__span">2018 – 2021</small></li>
           
           
         </ul>
@@ -143,7 +143,7 @@ expression: body
 
         
         
-<section class="card" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="facts-table" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-language"/></svg><span class="visually-hidden">Languages</span></h2>
   
   <dl class="facts">
@@ -181,7 +181,7 @@ expression: body
 
         
         
-<section class="card" style="--cols: 2; --rows: 3">
+<section class="card" data-variant="facts-table" style="--cols: 2; --rows: 3">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-event"/></svg><span class="visually-hidden">Vital</span></h2>
   
   <dl class="facts">
@@ -252,7 +252,7 @@ expression: body
       <div class="cards">
         
         
-<section class="card" style="--cols: 2; --rows: 4">
+<section class="card" data-variant="timeline" style="--cols: 2; --rows: 4">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-event"/></svg><span class="visually-hidden">timeline</span></h2>
   
   <ol class="timeline">
@@ -306,7 +306,7 @@ expression: body
 
         
         
-<section class="card" style="--cols: 2; --rows: 3">
+<section class="card" data-variant="tile-strip" style="--cols: 4; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-school"/></svg><span>educated at</span></h2>
   
   <dl class="facts">
@@ -317,19 +317,19 @@ expression: body
         <ul class="chips">
           
           
-          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Shamby.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q7487458">Shambhala School</a></li>
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Shamby.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q7487458">Shambhala School</a></li>
           
           
           
-          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Vaughan%20road%20academy%20mon.jpeg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q7917312">Vaughan Road Academy</a></li>
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Vaughan%20road%20academy%20mon.jpeg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q7917312">Vaughan Road Academy</a></li>
           
           
           
-          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Halifax%20Grammar%20School.JPG?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q14875677">Halifax Grammar School</a></li>
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Halifax%20Grammar%20School.JPG?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q14875677">Halifax Grammar School</a></li>
           
           
           
-          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Queen%20Elizabeth%20High%20School%20-%20Halifax.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q7270334">Queen Elizabeth High School</a></li>
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Queen%20Elizabeth%20High%20School%20-%20Halifax.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q7270334">Queen Elizabeth High School</a></li>
           
           
         </ul>
@@ -343,7 +343,7 @@ expression: body
 
         
         
-<section class="card" style="--cols: 2; --rows: 3">
+<section class="card" data-variant="tile-strip" style="--cols: 4; --rows: 2">
   <h2 class="card__title"><span>field of work</span></h2>
   
   <dl class="facts">
@@ -354,11 +354,11 @@ expression: body
         <ul class="chips">
           
           
-          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Greenpeacebelomonte.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q203764">activism</a></li>
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Greenpeacebelomonte.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q203764">activism</a></li>
           
           
           
-          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Clapperboard%2C%20O2%20film%2C%20September%202008.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q932586">film production</a></li>
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Clapperboard%2C%20O2%20film%2C%20September%202008.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q932586">film production</a></li>
           
           
           
@@ -366,7 +366,7 @@ expression: body
           
           
           
-          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Contios%20en%20de%20Nachtvorst%20-%20GVH%20%2881%29.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q222749">acting</a></li>
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Contios%20en%20de%20Nachtvorst%20-%20GVH%20%2881%29.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q222749">acting</a></li>
           
           
         </ul>
@@ -380,7 +380,7 @@ expression: body
 
         
         
-<section class="card" style="--cols: 2; --rows: 4">
+<section class="card" data-variant="tile-strip" style="--cols: 4; --rows: 2">
   <h2 class="card__title"><span>occupation</span></h2>
   
   <dl class="facts">
@@ -395,15 +395,15 @@ expression: body
           
           
           
-          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Badham%20Palance%201974.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q3455803">director</a></li>
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Badham%20Palance%201974.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q3455803">director</a></li>
           
           
           
-          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mahmoud%20Zulfikar%2C%201968.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q2526255">film director</a></li>
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mahmoud%20Zulfikar%2C%201968.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q2526255">film director</a></li>
           
           
           
-          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/US%20Navy%20070702-N-8110K-002%20New%20England%20Cable%20News%20television%20anchor%2C%20Karen%20Meyers%20speaks%20to%20Commander%2C%20Naval%20Sea%20Systems%20Command%2C%20Vice%20Adm.%20Paul%20Sullivan%20about%20the%20Navy%27s%20role%20in%20the%20global%20war%20on%20terrorism.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q947873">television presenter</a></li>
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/US%20Navy%20070702-N-8110K-002%20New%20England%20Cable%20News%20television%20anchor%2C%20Karen%20Meyers%20speaks%20to%20Commander%2C%20Naval%20Sea%20Systems%20Command%2C%20Vice%20Adm.%20Paul%20Sullivan%20about%20the%20Navy%27s%20role%20in%20the%20global%20war%20on%20terrorism.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q947873">television presenter</a></li>
           
           
           
@@ -411,11 +411,11 @@ expression: body
           
           
           
-          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Karen%20Loveland%20directs%20filming%20of%20a%20movie%20for%20the%20Smithsonian%27s%20%22The%20History%20of%20Jazz%22%20exhibition.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q3282637">film producer</a></li>
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Karen%20Loveland%20directs%20filming%20of%20a%20movie%20for%20the%20Smithsonian%27s%20%22The%20History%20of%20Jazz%22%20exhibition.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q3282637">film producer</a></li>
           
           
           
-          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Chaplin%20The%20Kid%20edit.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q33999">actor</a></li>
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Chaplin%20The%20Kid%20edit.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q33999">actor</a></li>
           
           
         </ul>
@@ -437,7 +437,7 @@ expression: body
       <div class="cards">
         
         
-<section class="card" style="--cols: 2; --rows: 3">
+<section class="card" data-variant="chip-list" style="--cols: 2; --rows: 3">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-trophy"/></svg><span>award received</span></h2>
   
   <dl class="facts">
@@ -485,7 +485,7 @@ expression: body
     <div class="cards">
       
       
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" data-variant="stat-block" style="--cols: 2; --rows: 1">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-height"/></svg><span>height</span></h2>
   
   <p class="stat">
@@ -498,7 +498,7 @@ expression: body
 
       
       
-<section class="card" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="portrait" style="--cols: 2; --rows: 3">
   <h2 class="card__title"><span>country of citizenship</span></h2>
   
   <dl class="facts">
@@ -523,7 +523,7 @@ expression: body
 
       
       
-<section class="card" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="fact-line" style="--cols: 2; --rows: 1">
   <h2 class="card__title"><span>sexual orientation</span></h2>
   
   <dl class="facts">
@@ -548,7 +548,7 @@ expression: body
 
       
       
-<section class="card" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="portrait" style="--cols: 2; --rows: 3">
   <h2 class="card__title"><span>religion or worldview</span></h2>
   
   <dl class="facts">
@@ -573,7 +573,7 @@ expression: body
 
       
       
-<section class="card" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="portrait" style="--cols: 2; --rows: 3">
   <h2 class="card__title"><span>work location</span></h2>
   
   <dl class="facts">
@@ -598,7 +598,7 @@ expression: body
 
       
       
-<section class="card" style="--cols: 2; --rows: 3">
+<section class="card" data-variant="chip-list" style="--cols: 2; --rows: 3">
   <h2 class="card__title"><span>nominated for</span></h2>
   
   <dl class="facts">
@@ -639,7 +639,7 @@ expression: body
 
       
       
-<section class="card" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="portrait" style="--cols: 2; --rows: 3">
   <h2 class="card__title"><span>lifestyle</span></h2>
   
   <dl class="facts">
@@ -664,7 +664,7 @@ expression: body
 
       
       
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" data-variant="stat-block" style="--cols: 2; --rows: 1">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-event"/></svg><span>start of work period</span></h2>
   
   <p class="stat">
@@ -677,7 +677,7 @@ expression: body
 
       
       
-<section class="card" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="fact-line" style="--cols: 2; --rows: 1">
   <h2 class="card__title"><span>personal pronoun</span></h2>
   
   <dl class="facts">
@@ -706,7 +706,7 @@ expression: body
 
       
       
-<section class="card" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="facts-table" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-communities"/></svg><span>social media followers</span></h2>
   
   <dl class="facts">
@@ -760,7 +760,7 @@ expression: body
       <div class="cards">
         
         
-<section class="card" style="--cols: 2; --rows: 1">
+<section class="card" data-variant="stat-block" style="--cols: 2; --rows: 1">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-sell"/></svg><span>Commons category</span></h2>
   
   <p class="stat">

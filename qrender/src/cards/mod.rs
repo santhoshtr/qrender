@@ -4,8 +4,10 @@
 
 mod compose;
 mod format;
+mod plan;
 mod synthesis;
 
+pub use plan::Variant;
 pub use synthesis::synthesize;
 
 use serde::Serialize;
@@ -105,6 +107,9 @@ pub struct Card {
     pub icon: Option<String>,
     /// PIDs this card was built from, for provenance links back to Wikidata
     pub source_pids: Vec<String>,
+    /// Visual treatment, chosen from the card's content census
+    /// (plan.rs); the factoid page keys its layout off this
+    pub variant: Variant,
     pub layout: Layout,
     pub tier: Tier,
     #[serde(flatten)]
@@ -265,4 +270,12 @@ pub struct ItemChip {
     /// Preferred-rank statement: the value that holds now (the current
     /// country, the sitting mayor); rendered with emphasis
     pub current: bool,
+}
+
+impl ItemChip {
+    /// The statement no longer holds (its span records an end time);
+    /// rendered as quiet history
+    pub fn ended(&self) -> bool {
+        self.span.as_ref().is_some_and(TemporalSpan::ended)
+    }
 }
