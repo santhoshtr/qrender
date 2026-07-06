@@ -494,9 +494,15 @@ a {
       text-decoration: none;
     }
 
-    .chip__note {
+    .chip__note,
+    .chip__span {
       color: var(--color-subtle);
       font-size: var(--font-size-x-small);
+    }
+
+    /* "2018 – 2021" reads as one token */
+    .chip__span {
+      white-space: nowrap;
     }
 
     /* Preferred rank: the value that holds now */
@@ -537,7 +543,8 @@ a {
       font-weight: var(--font-weight-bold);
     }
 
-    .chip__note {
+    .chip__note,
+    .chip__span {
       padding: 0 var(--spacing-75) var(--spacing-50);
     }
   }

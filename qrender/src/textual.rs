@@ -8,18 +8,30 @@ use crate::cards::{CardKind, FactValue, FactoidPage};
 
 const WIKIDATA_URL: &str = "https://www.wikidata.org/wiki";
 
+/// "(2018 – 2021; role: guest)" - span first, remaining qualifiers after.
+fn context_suffix(span: &Option<crate::cards::TemporalSpan>, note: &Option<String>) -> String {
+    let parts: Vec<String> = span
+        .iter()
+        .map(|s| s.display())
+        .chain(note.iter().cloned())
+        .collect();
+    if parts.is_empty() {
+        String::new()
+    } else {
+        format!(" ({})", parts.join("; "))
+    }
+}
+
 /// Plain-text form of a fact value; items and links lose their URLs.
 fn fact_value_text(value: &FactValue) -> String {
     match value {
-        FactValue::Item(chip) => match &chip.note {
-            Some(note) => format!("{} ({note})", chip.label),
-            None => chip.label.clone(),
-        },
+        FactValue::Item(chip) => {
+            format!("{}{}", chip.label, context_suffix(&chip.span, &chip.note))
+        }
         FactValue::Link { url } => url.clone(),
-        FactValue::Text { value, note } => match note {
-            Some(note) => format!("{value} ({note})"),
-            None => value.clone(),
-        },
+        FactValue::Text { value, span, note } => {
+            format!("{value}{}", context_suffix(span, note))
+        }
     }
 }
 
@@ -170,13 +182,12 @@ pub fn render_markdown(page: &FactoidPage) -> String {
                         .values
                         .iter()
                         .map(|value| match value {
-                            FactValue::Item(chip) => {
-                                let link = format!("[{}]({WIKIDATA_URL}/{})", chip.label, chip.qid);
-                                match &chip.note {
-                                    Some(note) => format!("{link} ({note})"),
-                                    None => link,
-                                }
-                            }
+                            FactValue::Item(chip) => format!(
+                                "[{}]({WIKIDATA_URL}/{}){}",
+                                chip.label,
+                                chip.qid,
+                                context_suffix(&chip.span, &chip.note)
+                            ),
                             FactValue::Link { url } => format!("<{url}>"),
                             text => fact_value_text(text),
                         })
@@ -261,15 +272,13 @@ pub fn render_wikitext(page: &FactoidPage) -> String {
                     for value in &row.values {
                         match value {
                             FactValue::Item(chip) => {
-                                let link = format!("[[wikidata:{}|{}]]", chip.qid, chip.label);
-                                match &chip.note {
-                                    Some(note) => {
-                                        let _ = writeln!(out, ":* {link} ({note})");
-                                    }
-                                    None => {
-                                        let _ = writeln!(out, ":* {link}");
-                                    }
-                                }
+                                let _ = writeln!(
+                                    out,
+                                    ":* [[wikidata:{}|{}]]{}",
+                                    chip.qid,
+                                    chip.label,
+                                    context_suffix(&chip.span, &chip.note)
+                                );
                             }
                             FactValue::Link { url } => {
                                 let _ = writeln!(out, ":* {url}");
@@ -384,15 +393,11 @@ pub fn render_html(page: &FactoidPage) -> String {
                     for value in &row.values {
                         let rendered = match value {
                             FactValue::Item(chip) => {
-                                let note = chip
-                                    .note
-                                    .as_ref()
-                                    .map(|n| format!(" ({})", escape(n)))
-                                    .unwrap_or_default();
                                 format!(
-                                    "<a href=\"{WIKIDATA_URL}/{}\">{}</a>{note}",
+                                    "<a href=\"{WIKIDATA_URL}/{}\">{}</a>{}",
                                     chip.qid,
-                                    escape(&chip.label)
+                                    escape(&chip.label),
+                                    escape(&context_suffix(&chip.span, &chip.note))
                                 )
                             }
                             FactValue::Link { url } => {

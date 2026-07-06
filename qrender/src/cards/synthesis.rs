@@ -9,7 +9,7 @@ use std::collections::HashSet;
 use super::format::{display_value, format_time};
 use super::{
     Card, CardKind, FactRow, FactValue, FactoidPage, GalleryImage, ItemChip, Layout, MediaKind,
-    SeriesPoint, Tier, compose,
+    SeriesPoint, TemporalSpan, Tier, compose,
 };
 use crate::archetype::{self, ArchetypesConfig};
 use crate::grouping::{GroupConfig, GroupingConfig};
@@ -318,19 +318,23 @@ fn cards_for_group(
                     label,
                     image_url,
                 } => {
+                    let (span, note) = qualifier_context(statement);
                     values.push(FactValue::Item(ItemChip {
                         qid: qid.clone(),
                         label: label.clone(),
                         image_url: image_url.clone(),
                         thumb_url: image_url.as_deref().map(chip_thumb_url),
-                        note: qualifier_note(statement),
+                        span,
+                        note,
                         current: statement.rank == Rank::Preferred,
                     }));
                 }
                 other => {
+                    let (span, note) = qualifier_context(statement);
                     values.push(FactValue::Text {
                         value: display_value(other),
-                        note: qualifier_note(statement),
+                        span,
+                        note,
                     });
                 }
             }
@@ -383,8 +387,14 @@ fn cards_for_group(
             // A lone plain value is a stat, not a one-row table;
             // anything richer keeps its row under the property title.
             if row.values.len() == 1 && matches!(row.values[0], FactValue::Text { .. }) {
-                let Some(FactValue::Text { value, note }) = row.values.into_iter().next() else {
+                let Some(FactValue::Text { value, span, note }) = row.values.into_iter().next()
+                else {
                     unreachable!()
+                };
+                let note = match (span, note) {
+                    (Some(span), Some(note)) => Some(format!("{}, {note}", span.display())),
+                    (Some(span), None) => Some(span.display()),
+                    (None, note) => note,
                 };
                 cards.push(Card {
                     title: row.label,
@@ -454,21 +464,49 @@ fn dedup_pids(pids: impl Iterator<Item = String>) -> Vec<String> {
     pids.filter(|pid| seen.insert(pid.clone())).collect()
 }
 
-/// "label: value, label: value" summary of a statement's qualifiers.
-/// Qualifiers often carry essential context (dates of office, ordinals),
-/// so every backend gets them, not just the visual one.
-fn qualifier_note(statement: &qjson::Statement) -> Option<String> {
-    if statement.qualifiers.is_empty() {
-        return None;
+/// Typed context from a statement's qualifiers: the temporal ones
+/// (start/end/point in time) become a TemporalSpan, the rest a
+/// "label: value" note. Qualifiers often carry essential context
+/// (dates of office, ordinals), so every backend gets them.
+fn qualifier_context(statement: &qjson::Statement) -> (Option<TemporalSpan>, Option<String>) {
+    let mut span = TemporalSpan {
+        start: None,
+        end: None,
+        point: None,
+    };
+    let mut notes = Vec::new();
+    for qualifier in &statement.qualifiers {
+        // Qualifier time precision is unavailable from WDQS - year
+        // granularity is the honest display.
+        let year = |value: &Value| match value {
+            Value::Time { iso, .. } => Some(format_time(iso, Some(9))),
+            _ => None,
+        };
+        let slot = match qualifier.pid.as_str() {
+            START_TIME => &mut span.start,
+            END_TIME => &mut span.end,
+            POINT_IN_TIME => &mut span.point,
+            _ => {
+                notes.push(format!(
+                    "{}: {}",
+                    qualifier.label,
+                    display_value(&qualifier.value)
+                ));
+                continue;
+            }
+        };
+        match year(&qualifier.value) {
+            Some(year) if slot.is_none() => *slot = Some(year),
+            _ => notes.push(format!(
+                "{}: {}",
+                qualifier.label,
+                display_value(&qualifier.value)
+            )),
+        }
     }
-    Some(
-        statement
-            .qualifiers
-            .iter()
-            .map(|q| format!("{}: {}", q.label, display_value(&q.value)))
-            .collect::<Vec<_>>()
-            .join(", "),
-    )
+    let span = (span.start.is_some() || span.end.is_some() || span.point.is_some()).then_some(span);
+    let note = (!notes.is_empty()).then(|| notes.join(", "));
+    (span, note)
 }
 
 const THUMB_WIDTH: u32 = 640;
@@ -959,6 +997,37 @@ mod tests {
             );
         };
         assert_eq!(image.file_name, "Flag.svg");
+    }
+
+    #[test]
+    fn temporal_qualifiers_become_a_span() {
+        // Elliot Page: spouse Emma Portner, start 2018, end 2021 - the
+        // chip carries "2018 – 2021", not qualifier prose
+        let response: qjson::sparql::SparqlResponse = serde_json::from_str(include_str!(
+            "../../../qjson/tests/fixtures/Q173399.sparql.json"
+        ))
+        .unwrap();
+        let item = qjson::transform::transform("Q173399", &response.results.bindings);
+        let page = synthesize(
+            &item,
+            "en",
+            &load_grouping_config().unwrap(),
+            &load_archetypes_config().unwrap(),
+            true,
+        );
+        let card = find(&page, |c| c.source_pids.contains(&"P26".to_string())).expect("spouse");
+        let CardKind::Facts { rows } = &card.kind else {
+            panic!("spouse must be Facts, got {:?}", card.kind);
+        };
+        let spouse = rows.iter().find(|r| r.label == "spouse").expect("row");
+        let FactValue::Item(chip) = &spouse.values[0] else {
+            panic!("spouse value must be an item");
+        };
+        assert_eq!(chip.label, "Emma Portner");
+        let span = chip.span.as_ref().expect("marriage span");
+        assert_eq!(span.display(), "2018 – 2021");
+        assert!(span.ended());
+        assert_eq!(chip.note, None, "dates must not repeat as prose");
     }
 
     #[test]

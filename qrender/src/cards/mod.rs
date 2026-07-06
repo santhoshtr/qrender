@@ -212,8 +212,43 @@ pub struct FactRow {
 #[serde(tag = "type", rename_all = "lowercase")]
 pub enum FactValue {
     Item(ItemChip),
-    Link { url: String },
-    Text { value: String, note: Option<String> },
+    Link {
+        url: String,
+    },
+    Text {
+        value: String,
+        span: Option<TemporalSpan>,
+        note: Option<String>,
+    },
+}
+
+/// When a statement held: extracted from start-time/end-time/point-in-time
+/// qualifiers. Displays at year granularity (qualifier time precision is
+/// not available from WDQS) as "2018 – 2021", "2018 –", or "2021".
+#[derive(Debug, Serialize, Clone)]
+pub struct TemporalSpan {
+    pub start: Option<String>,
+    pub end: Option<String>,
+    pub point: Option<String>,
+}
+
+impl TemporalSpan {
+    pub fn display(&self) -> String {
+        match (&self.start, &self.end, &self.point) {
+            (Some(start), Some(end), _) if start == end => start.clone(),
+            (Some(start), Some(end), _) => format!("{start} – {end}"),
+            (Some(start), None, _) => format!("{start} –"),
+            (None, Some(end), _) => format!("– {end}"),
+            (None, None, Some(point)) => point.clone(),
+            (None, None, None) => String::new(),
+        }
+    }
+
+    /// The value no longer holds (an end time has passed... or at least
+    /// been recorded). Drives current-vs-former presentation.
+    pub fn ended(&self) -> bool {
+        self.end.is_some()
+    }
 }
 
 #[derive(Debug, Serialize)]
@@ -223,7 +258,9 @@ pub struct ItemChip {
     pub image_url: Option<String>,
     /// Small thumbnail of the referenced item's P18, for visual chips
     pub thumb_url: Option<String>,
-    /// Qualifier summary, e.g. "start time: 1963"
+    /// When the statement held, e.g. "2018 – 2021" for a former spouse
+    pub span: Option<TemporalSpan>,
+    /// Summary of the remaining (non-temporal) qualifiers
     pub note: Option<String>,
     /// Preferred-rank statement: the value that holds now (the current
     /// country, the sitting mayor); rendered with emphasis
