@@ -709,31 +709,39 @@ expression: body
 <section class="card" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-communities"/></svg><span>social media followers</span></h2>
   
-  <p class="stat">
-    <span class="stat__value">1974124</span>
-    <span class="stat__note">2021</span>
-  </p>
-  <div class="series">
+  <dl class="facts">
     
-    <div class="series__row">
-      <span class="series__label">2021</span>
-      <span class="series__track"><span class="series__bar" style="inline-size: 38%"></span></span>
-      <span class="series__number">1907770</span>
+    <div class="facts__row">
+      <dt>X (Twitter) numeric user ID</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="fact-text">1974124 <small class="fact-note">2021</small></li>
+          
+          
+          
+          <li class="fact-text">1907770 <small class="fact-note">2021</small></li>
+          
+          
+        </ul>
+      </dd>
     </div>
     
-    <div class="series__row">
-      <span class="series__label">2021</span>
-      <span class="series__track"><span class="series__bar" style="inline-size: 39%"></span></span>
-      <span class="series__number">1974124</span>
+    <div class="facts__row">
+      <dt>Instagram username</dt>
+      <dd>
+        <ul class="chips">
+          
+          
+          <li class="fact-text">5058816 <small class="fact-note">2021</small></li>
+          
+          
+        </ul>
+      </dd>
     </div>
     
-    <div class="series__row">
-      <span class="series__label">2021</span>
-      <span class="series__track"><span class="series__bar" style="inline-size: 100%"></span></span>
-      <span class="series__number">5058816</span>
-    </div>
-    
-  </div>
+  </dl>
 
   
 </section>

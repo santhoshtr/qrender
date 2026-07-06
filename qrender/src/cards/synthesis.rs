@@ -266,8 +266,9 @@ fn cards_for_group(
             continue;
         }
         // A quantity property whose statements carry point-in-time
-        // qualifiers is a time series (population, HDI, ...)
-        if let Some(card) = as_stat_series(property) {
+        // qualifiers is a time series (population, HDI, ...) - or
+        // labeled parallel measurements when the years collide
+        if let Some(card) = as_quantity_card(property) {
             cards.push(card);
             continue;
         }
@@ -626,42 +627,60 @@ fn as_meter(property: &Property, meter: &crate::grouping::MeterConfig) -> Option
     })
 }
 
-/// Quantity statements with point-in-time qualifiers form a series card:
-/// the preferred (or latest) value shown big, history as chart points.
-fn as_stat_series(property: &Property) -> Option<Card> {
-    let mut points: Vec<(String, SeriesPoint, Rank)> = Vec::new(); // (iso, point, rank)
+/// Quantity statements with point-in-time qualifiers: distinct years
+/// form a time series (population over time); colliding years
+/// distinguished by other qualifiers are parallel measurements, not a
+/// trend (social media followers per platform), and become labeled
+/// rows instead - a chart of "2021, 2021, 2021" explains nothing.
+fn as_quantity_card(property: &Property) -> Option<Card> {
+    let mut dated: Vec<(String, &qjson::Statement)> = Vec::new(); // (iso, statement)
     for statement in &property.statements {
-        let Value::Quantity { amount, .. } = &statement.value else {
+        let Value::Quantity { .. } = &statement.value else {
             return None;
         };
-        let time = statement.qualifiers.iter().find_map(|q| match &q.value {
-            Value::Time { iso, precision } if q.pid == POINT_IN_TIME => {
-                Some((iso.clone(), *precision))
-            }
-            _ => None,
-        })?;
-        points.push((
-            time.0.clone(),
-            SeriesPoint {
-                label: format_time(&time.0, Some(9)),
-                value: *amount,
-                display: display_value(&statement.value),
-            },
-            statement.rank,
-        ));
+        let (iso, _) = statement_time(statement)?;
+        dated.push((iso, statement));
     }
-    if points.len() < 2 {
+    if dated.len() < 2 {
         return None;
     }
-    points.sort_by(|a, b| a.0.cmp(&b.0));
 
-    let current = points
+    let mut years: Vec<String> = dated
         .iter()
-        .find(|(_, _, rank)| *rank == Rank::Preferred)
-        .unwrap_or_else(|| points.last().unwrap());
-    let (current_display, current_label) = (current.1.display.clone(), current.1.label.clone());
+        .map(|(iso, _)| format_time(iso, Some(9)))
+        .collect();
+    years.sort_unstable();
+    let years_collide = years.windows(2).any(|w| w[0] == w[1]);
+    if years_collide && let Some(card) = as_keyed_quantities(property, &dated) {
+        return Some(card);
+    }
+    Some(stat_series(property, dated))
+}
 
-    Some(Card {
+fn stat_series(property: &Property, mut dated: Vec<(String, &qjson::Statement)>) -> Card {
+    dated.sort_by(|a, b| a.0.cmp(&b.0));
+    let (_, current) = dated
+        .iter()
+        .find(|(_, s)| s.rank == Rank::Preferred)
+        .unwrap_or_else(|| dated.last().unwrap());
+    let current_display = display_value(&current.value);
+    let current_label = statement_time(current).map(|(iso, _)| format_time(&iso, Some(9)));
+
+    let series = dated
+        .iter()
+        .map(|(iso, statement)| {
+            let Value::Quantity { amount, .. } = &statement.value else {
+                unreachable!("as_quantity_card only passes quantities")
+            };
+            SeriesPoint {
+                label: format_time(iso, Some(9)),
+                value: *amount,
+                display: display_value(&statement.value),
+            }
+        })
+        .collect();
+
+    Card {
         title: property.label.clone(),
         layout: Layout::default(),
         tier: Tier::Standard,
@@ -670,9 +689,86 @@ fn as_stat_series(property: &Property) -> Option<Card> {
         source_pids: vec![property.pid.clone()],
         kind: CardKind::StatSeries {
             current: current_display,
-            note: Some(current_label),
-            series: points.into_iter().map(|(_, point, _)| point).collect(),
+            note: current_label,
+            series,
         },
+    }
+}
+
+/// Group same-time measurements by their distinguishing qualifiers
+/// (the platform-identifier qualifier on each social-media-followers
+/// statement). One labeled row per group, current value first.
+fn as_keyed_quantities(property: &Property, dated: &[(String, &qjson::Statement)]) -> Option<Card> {
+    /// The non-temporal qualifiers as sorted (pid, value) pairs
+    type Signature = Vec<(String, String)>;
+    let signature = |statement: &qjson::Statement| -> Signature {
+        let mut key: Signature = statement
+            .qualifiers
+            .iter()
+            .filter(|q| !matches!(q.pid.as_str(), START_TIME | END_TIME | POINT_IN_TIME))
+            .map(|q| (q.pid.clone(), display_value(&q.value)))
+            .collect();
+        key.sort();
+        key
+    };
+
+    // Group in first-seen order; the group label is the distinguishing
+    // qualifiers' property labels ("Instagram username"), which is
+    // where the platform name lives.
+    let mut groups: Vec<(Signature, String, Vec<&qjson::Statement>)> = Vec::new();
+    for (_, statement) in dated {
+        let key = signature(statement);
+        match groups.iter_mut().find(|(k, _, _)| *k == key) {
+            Some((_, _, members)) => members.push(statement),
+            None => {
+                let label = statement
+                    .qualifiers
+                    .iter()
+                    .filter(|q| key.iter().any(|(pid, _)| *pid == q.pid))
+                    .map(|q| q.label.clone())
+                    .collect::<Vec<_>>()
+                    .join(", ");
+                groups.push((key, label, vec![statement]));
+            }
+        }
+    }
+    if groups.len() < 2 {
+        return None;
+    }
+
+    let rows = groups
+        .into_iter()
+        .map(|(_, label, mut members)| {
+            // current first: preferred rank, else latest point in time
+            members.sort_by_cached_key(|s| {
+                (
+                    s.rank != Rank::Preferred,
+                    std::cmp::Reverse(statement_time(s).map(|(iso, _)| iso)),
+                )
+            });
+            let values = members
+                .into_iter()
+                .map(|statement| {
+                    let (span, _) = qualifier_context(statement);
+                    FactValue::Text {
+                        value: display_value(&statement.value),
+                        span,
+                        note: None,
+                    }
+                })
+                .collect();
+            FactRow { label, values }
+        })
+        .collect();
+
+    Some(Card {
+        title: property.label.clone(),
+        layout: Layout::default(),
+        tier: Tier::Standard,
+        localized_title: true,
+        icon: None,
+        source_pids: vec![property.pid.clone()],
+        kind: CardKind::Facts { rows },
     })
 }
 
@@ -999,22 +1095,26 @@ mod tests {
         assert_eq!(image.file_name, "Flag.svg");
     }
 
-    #[test]
-    fn temporal_qualifiers_become_a_span() {
-        // Elliot Page: spouse Emma Portner, start 2018, end 2021 - the
-        // chip carries "2018 – 2021", not qualifier prose
+    fn q173399_page() -> FactoidPage {
         let response: qjson::sparql::SparqlResponse = serde_json::from_str(include_str!(
             "../../../qjson/tests/fixtures/Q173399.sparql.json"
         ))
         .unwrap();
         let item = qjson::transform::transform("Q173399", &response.results.bindings);
-        let page = synthesize(
+        synthesize(
             &item,
             "en",
             &load_grouping_config().unwrap(),
             &load_archetypes_config().unwrap(),
             true,
-        );
+        )
+    }
+
+    #[test]
+    fn temporal_qualifiers_become_a_span() {
+        // Elliot Page: spouse Emma Portner, start 2018, end 2021 - the
+        // chip carries "2018 – 2021", not qualifier prose
+        let page = q173399_page();
         let card = find(&page, |c| c.source_pids.contains(&"P26".to_string())).expect("spouse");
         let CardKind::Facts { rows } = &card.kind else {
             panic!("spouse must be Facts, got {:?}", card.kind);
@@ -1028,6 +1128,31 @@ mod tests {
         assert_eq!(span.display(), "2018 – 2021");
         assert!(span.ended());
         assert_eq!(chip.note, None, "dates must not repeat as prose");
+    }
+
+    #[test]
+    fn same_year_quantities_are_keyed_rows_not_a_series() {
+        // Elliot Page P8687: Twitter (two 2021 points, May preferred)
+        // and Instagram (one 2021 point). Parallel measurements, not a
+        // trend - one labeled row per platform, current value first.
+        let page = q173399_page();
+        let card = find(&page, |c| c.source_pids == ["P8687"]).expect("followers card");
+        let CardKind::Facts { rows } = &card.kind else {
+            panic!("colliding years must be Facts rows, got {:?}", card.kind);
+        };
+        assert_eq!(rows.len(), 2);
+        let twitter = &rows[0];
+        assert!(twitter.label.contains("Twitter"), "{}", twitter.label);
+        let FactValue::Text { value, .. } = &twitter.values[0] else {
+            panic!("quantity row");
+        };
+        assert_eq!(value, "1974124", "preferred (May) value leads");
+        let instagram = &rows[1];
+        assert!(instagram.label.contains("Instagram"), "{}", instagram.label);
+        let FactValue::Text { value, .. } = &instagram.values[0] else {
+            panic!("quantity row");
+        };
+        assert_eq!(value, "5058816");
     }
 
     #[test]
