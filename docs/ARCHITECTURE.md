@@ -92,11 +92,11 @@ Two constraints sharpen the problem:
 ```
 qjson crate                          qrender crate
 ───────────                          ─────────────────────────────────────────────
-WDQS SPARQL ──► typed WikidataItem ──► synthesize ──► compose ──► FactoidPage (IR)
-   (one query)   (Redis, 7-day TTL)    (cards from    (archetype      │
-                                        data types)    recipes)       ├─► textual.rs   text / markdown / wikitext / HTML fragment
-                                                                      ├─► factoid.rs   visual page (Askama + Codex tokens)
-                                                                      └─► JSON as-is   server /api route
+WDQS SPARQL ──► typed WikidataItem ──► synthesize ──► compose ──► density ──► FactoidPage (IR)
+   (one query)   (Redis, 7-day TTL)    (cards from    (archetype   (page-level     │
+                                        data shapes,   recipes)     consolidation)  ├─► textual.rs   text / markdown / wikitext / HTML fragment
+                                        variant per                                 ├─► factoid.rs   visual page (Askama + Codex tokens)
+                                        card: plan.rs)                              └─► JSON as-is   server /api route
 ```
 
 ### 3.1 Data layer (`qjson`)
@@ -159,28 +159,82 @@ stronger: when any image statement is preferred, the others are
 treated as superseded variants (old flags, alternate crops) and only
 the preferred ones render.
 
-Qualifiers are never dropped: they render as `(label: value)` notes on
-values and chips, because they carry essential context (dates of
-office, ordinals, roles) — especially for LLM consumers.
+Two shape rules refine quantity handling: point-in-time quantities
+whose **years are distinct** form a time series; when the years
+collide and other qualifiers vary, they are parallel measurements
+(social media followers per platform), grouped by qualifier signature
+into labeled rows — a chart labeled "2021, 2021, 2021" explains
+nothing.
+
+Qualifiers are never dropped, but they are typed before display:
+start-time/end-time/point-in-time become a structured `TemporalSpan`
+rendered at year granularity — "Emma Portner (2018 – 2021)", never
+"start time: 2018-01-01, end time: 2021-01-01" — and the remaining
+qualifiers render as `(label: value)` notes, because they carry
+essential context (ordinals, roles) — especially for LLM consumers.
+The span's `ended()` drives current-vs-former presentation.
 
 Two content-consumption rules avoid duplication with the header: P18's
 preferred (else first) image becomes the page hero, consuming the
 property when that leaves it nothing else to show; a single-statement
 hero-emblem property (person: P109 signature) is consumed the same way.
 
-Each card then gets three resolved attributes, all cascading
-kind-default → group config → per-PID config:
+Each card then gets three resolved attributes:
 
-- **icon** — a Material Symbols name from the vendored set; the page
-  embeds a tree-shaken sprite of exactly the symbols it uses.
-- **layout** — `cols`/`rows` grid spans (kind defaults are
-  content-aware: a 10-image gallery is wider than a 2-image one) and a
-  `sort` weight. Cards are sorted by `sort` in Rust.
+- **icon** — a Material Symbols name from the vendored set (per-PID
+  config → group config → kind default); the page embeds a tree-shaken
+  sprite of exactly the symbols it uses.
+- **variant + size** — see presentation planning below. Only the
+  `sort` weight is configurable; cards are sorted by it in Rust.
 - **tier** — `standard` or `footnote`. Footnote properties
   (`footnote = true` in `groups.toml`: categories, WikiProject
   maintenance, topic templates, focus lists, described-by-source, …)
   are real data but curation noise; they sort last in every backend
   and collapse behind a `<details>` disclosure on the factoid page.
+
+### 3.2b Presentation planning (`qrender/src/cards/plan.rs`)
+
+Every card gets a **variant** — its visual treatment — chosen from a
+census of what the card actually holds (value count, images, temporal
+spans), never per property or per archetype: a spouse, an employer,
+and a citizenship with the same data shape get the same treatment, on
+any item. Item cards split into `portrait` (1–2 items, at least one
+pictured — the image fills the card), `fact-line` (1–2 plain values,
+one compact line), `tile-strip` (3+ items, mostly pictured — big
+scroll-snapped tiles, three visible), `current-history` (ended spans
+stack as quiet lines under what holds now), and `chip-list`. The other
+kinds map one-to-one (`media-full`, `gallery-strip`, `stat-block`,
+`trend`, `gauge`, `map-panel`, `timeline`, `facts-table`,
+`indicator-table`).
+
+Sizes follow the **fill contract**: each variant declares a fixed grid
+size from a small catalog and guarantees to fill it — images stretch
+(`object-fit: cover`), strips clip and scroll, text clamps. No stage
+predicts rendered height (Rust cannot know fonts and wrapping; a dense
+grid with guessed row spans is exactly the wasted-space bug this
+replaced). Sizes are deliberately **not configurable** — config keeps
+judgment (grouping, ordering, footnotes, meter scales), code keeps
+geometry.
+
+### 3.2c Density (`qrender/src/cards/density.rs`)
+
+Per region (each section, the overflow grid, the footnotes), runs of
+same-shape cards consolidate — a dense item like a country otherwise
+produces dozens of individually fine cards that aggregate into an
+unscannable wall:
+
+- **3+ time-series cards** merge into one `indicator-table`: label,
+  sparkline, current value per row. Fifteen identical bar charts bury
+  the story one table tells.
+- **2+ map cards** merge into one labeled coordinate list (static map
+  tiles cannot mark multiple points; the extreme-point properties
+  P1332–P1335 were four near-identical country tiles).
+
+Merging never crosses a region boundary and never drops data: every
+series point and coordinate stays in every backend. Separately, the
+**visual page** caps any row at 12 values with a "+N" tag linking to
+Wikidata — a 444-language enumeration is a wall, not a card — while
+the JSON API and textual backends keep full lists.
 
 ### 3.3 Composition (`qrender/src/cards/compose.rs`, `archetypes.toml`)
 
@@ -253,12 +307,16 @@ consumption rules are the two single-statement header cases above.
   `@supports` progressive enhancement for browsers that ship it.
 - Cards are `inline-size` containers; their internals (fact-row
   columns, stat font size) respond to the span the grid gave them, not
-  the viewport, so the same card config works at any size.
-- Images do the explaining wherever possible: a card that is just one
-  or two linked items renders them as tiles whose picture fills half
-  the card (a mayor's face, a timezone's world map) with the label
-  beneath — encyclopedic, rabbit-hole navigation. Row-level chips keep
-  compact round thumbnails.
+  the viewport, so the same card works at any size.
+- The stylesheet keys card layout off `data-variant` (set from
+  `plan.rs`), not off structural `:has()` guessing. Images do the
+  explaining wherever possible: portrait cards bleed the picture to
+  the card edges with the label beneath (a spouse's face, a school
+  building) — encyclopedic, rabbit-hole navigation. Row-level chips
+  keep compact round thumbnails.
+- **One surface level per card**: chips are soft content tags
+  (background, no border); the card border is the only box. This is a
+  hard rule — no boxes inside boxes.
 - Theming keys off `<body data-archetype="…">`: person and place get a
   serif display title; a place with a hero image gets a full-bleed
   backdrop with the title on a scrim — guarded by `:has()` so an item
@@ -298,7 +356,8 @@ pids = ["P1082", ...]
 
 [properties.P1082]           # per-PID overrides
 icon = "groups"
-cols = 3                     # featured span in the grid
+sort = 100                   # page-order weight (sizes are not
+                             # configurable - the variant owns them)
 [properties.P31]
 ignore = true                # structural: never a card
 [properties.P5008]
