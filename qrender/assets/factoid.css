@@ -473,12 +473,13 @@ a {
   flex-wrap: wrap;
   gap: var(--spacing-50);
 
+  /* One surface level per card: chips are soft content tags, not a
+     second layer of boxes - background only, no border of their own. */
   .chip {
     display: flex;
     align-items: center;
     gap: var(--spacing-50);
     background-color: var(--background-color-interactive-subtle);
-    border: var(--border-subtle);
     border-radius: var(--border-radius-pill);
     padding: var(--spacing-25) var(--spacing-75);
 
@@ -507,7 +508,6 @@ a {
 
     /* Preferred rank: the value that holds now */
     &.chip--current {
-      border-color: var(--border-color-progressive);
       background-color: var(--background-color-progressive-subtle);
     }
   }
@@ -564,28 +564,53 @@ a {
   }
 }
 
-/* Portrait: one or two tiles fill the whole card; the image absorbs
-   whatever height the text doesn't need. */
+/* Portrait: one or two tiles fill the whole card, full bleed - the
+   image absorbs whatever height the text doesn't need. */
 [data-variant="portrait"] {
   display: flex;
   flex-direction: column;
+  padding: 0;
+
+  .card__title {
+    margin: 0;
+    padding: var(--spacing-100) var(--spacing-100) var(--spacing-50);
+  }
 
   .chips {
     flex: 1;
     min-block-size: 0;
+    gap: var(--spacing-25);
 
     .chip {
       flex: 1 1 0;
       min-inline-size: 0;
+      border-radius: 0;
+      background: none;
+
+      a {
+        padding-inline: var(--spacing-100);
+      }
+
+      .chip__note,
+      .chip__span {
+        padding-inline: var(--spacing-100);
+      }
     }
   }
 }
 
 /* Tile strip: a clipped, scroll-snapped row of fixed-width tiles -
-   three visible, the rest a swipe away. No wrap, no growth. */
+   three visible, the rest a swipe away. No wrap, no growth. The strip
+   bleeds to the card edges; the first tile aligns with the title. */
 [data-variant="tile-strip"] {
   display: flex;
   flex-direction: column;
+  padding: 0;
+
+  .card__title {
+    margin: 0;
+    padding: var(--spacing-100) var(--spacing-100) var(--spacing-50);
+  }
 
   .chips {
     flex: 1;
@@ -593,6 +618,9 @@ a {
     flex-wrap: nowrap;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    padding-inline: var(--spacing-100);
+    scroll-padding-inline: var(--spacing-100);
+    padding-block-end: var(--spacing-100);
 
     .chip {
       flex: 0 0 clamp(8rem, 30cqi, 11rem);
