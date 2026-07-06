@@ -22,6 +22,11 @@ struct PageTemplate<'a> {
 /// The footnote region's disclosure icon
 const FOOTNOTE_ICON: &str = "archive";
 
+/// Enumeration cap for a row's values on the visual page: beyond this
+/// the row shows a "+N" tag linking to Wikidata. The JSON API and the
+/// textual backends keep the full list.
+pub const VISIBLE_VALUES: usize = 12;
+
 fn sprite_for(page: &FactoidPage) -> String {
     let mut names: Vec<&str> = page
         .all_cards()
@@ -44,6 +49,31 @@ impl PageTemplate<'_> {
             return 0;
         }
         ((value / max) * 100.0).round() as u32
+    }
+
+    /// Sparkline polyline points for an indicator row, normalized to a
+    /// 100x24 viewBox (2px inset so the stroke isn't clipped).
+    fn spark_points(&self, series: &[SeriesPoint]) -> String {
+        let (min, max) = series.iter().fold((f64::MAX, f64::MIN), |(lo, hi), p| {
+            (lo.min(p.value), hi.max(p.value))
+        });
+        let range = max - min;
+        let step = 100.0 / (series.len().saturating_sub(1).max(1)) as f64;
+        series
+            .iter()
+            .enumerate()
+            .map(|(i, point)| {
+                let x = step * i as f64;
+                // y grows downward; a flat series draws a middle line
+                let y = if range > 0.0 {
+                    2.0 + 20.0 * (1.0 - (point.value - min) / range)
+                } else {
+                    12.0
+                };
+                format!("{x:.1},{y:.1}")
+            })
+            .collect::<Vec<_>>()
+            .join(" ")
     }
 }
 

@@ -42,6 +42,9 @@ pub enum Variant {
     TileStrip,
     /// Item enumeration with few images
     ChipList,
+    /// Consolidated sibling time series: label, sparkline, current
+    /// value per row (built by the density pass)
+    IndicatorTable,
     /// Multi-property labeled rows (the grouped workhorse)
     #[default]
     FactsTable,
@@ -64,6 +67,7 @@ impl Variant {
             Variant::CurrentWithHistory => "current-history",
             Variant::TileStrip => "tile-strip",
             Variant::ChipList => "chip-list",
+            Variant::IndicatorTable => "indicator-table",
             Variant::FactsTable => "facts-table",
         }
     }
@@ -115,6 +119,7 @@ fn select(kind: &CardKind) -> Variant {
         CardKind::Meter { .. } => Variant::Gauge,
         CardKind::Map { .. } => Variant::MapPanel,
         CardKind::Timeline { .. } => Variant::Timeline,
+        CardKind::Indicators { .. } => Variant::IndicatorTable,
         CardKind::Facts { rows } => {
             let [row] = rows.as_slice() else {
                 return Variant::FactsTable;
@@ -167,6 +172,9 @@ fn size(variant: Variant, kind: &CardKind) -> (u8, u8) {
             (2, if rows[0].values.len() <= 3 { 2 } else { 3 })
         }
         (Variant::TileStrip, _) => (4, 2),
+        (Variant::IndicatorTable, CardKind::Indicators { indicators }) => {
+            (4, if indicators.len() > 7 { 3 } else { 2 })
+        }
         (Variant::ChipList, CardKind::Facts { rows }) => {
             let values = rows[0].values.len();
             (2, (1 + values.div_ceil(3) as u8).clamp(2, 3))

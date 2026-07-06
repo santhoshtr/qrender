@@ -80,6 +80,20 @@ pub fn render_text(page: &FactoidPage) -> String {
                     let _ = writeln!(out, "  {}: {}", point.label, point.display);
                 }
             }
+            CardKind::Indicators { indicators } => {
+                for indicator in indicators {
+                    let _ = writeln!(
+                        out,
+                        "{}: {} ({})",
+                        indicator.label,
+                        indicator.current,
+                        indicator.note.as_deref().unwrap_or("latest")
+                    );
+                    for point in &indicator.series {
+                        let _ = writeln!(out, "  {}: {}", point.label, point.display);
+                    }
+                }
+            }
             CardKind::Map { lat, lon, .. } => {
                 let _ = writeln!(out, "{lat}, {lon}");
             }
@@ -158,6 +172,20 @@ pub fn render_markdown(page: &FactoidPage) -> String {
                 );
                 for point in series {
                     let _ = writeln!(out, "- {}: {}", point.label, point.display);
+                }
+            }
+            CardKind::Indicators { indicators } => {
+                for indicator in indicators {
+                    let _ = writeln!(
+                        out,
+                        "- **{}**: {} ({})",
+                        indicator.label,
+                        indicator.current,
+                        indicator.note.as_deref().unwrap_or("latest")
+                    );
+                    for point in &indicator.series {
+                        let _ = writeln!(out, "  - {}: {}", point.label, point.display);
+                    }
                 }
             }
             CardKind::Map { lat, lon, .. } => {
@@ -248,6 +276,20 @@ pub fn render_wikitext(page: &FactoidPage) -> String {
                 );
                 for point in series {
                     let _ = writeln!(out, ":* {}: {}", point.label, point.display);
+                }
+            }
+            CardKind::Indicators { indicators } => {
+                for indicator in indicators {
+                    let _ = writeln!(
+                        out,
+                        ";{}: {} ({})",
+                        indicator.label,
+                        indicator.current,
+                        indicator.note.as_deref().unwrap_or("latest")
+                    );
+                    for point in &indicator.series {
+                        let _ = writeln!(out, ":* {}: {}", point.label, point.display);
+                    }
                 }
             }
             CardKind::Map { lat, lon, .. } => {
@@ -370,6 +412,27 @@ pub fn render_html(page: &FactoidPage) -> String {
                     );
                 }
                 let _ = writeln!(out, "</ul>");
+            }
+            CardKind::Indicators { indicators } => {
+                let _ = writeln!(out, "<dl>");
+                for indicator in indicators {
+                    let _ = writeln!(out, "<dt>{}</dt>", escape(&indicator.label));
+                    let _ = writeln!(
+                        out,
+                        "<dd><strong>{}</strong> ({})</dd>",
+                        escape(&indicator.current),
+                        escape(indicator.note.as_deref().unwrap_or("latest"))
+                    );
+                    for point in &indicator.series {
+                        let _ = writeln!(
+                            out,
+                            "<dd>{}: {}</dd>",
+                            escape(&point.label),
+                            escape(&point.display)
+                        );
+                    }
+                }
+                let _ = writeln!(out, "</dl>");
             }
             CardKind::Map { lat, lon, .. } => {
                 let _ = writeln!(out, "<p>{lat}, {lon}</p>");

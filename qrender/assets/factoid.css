@@ -381,8 +381,56 @@ a {
 }
 
 /* Fixed-height tiles clip; let text-heavy cards scroll instead */
-.card:has(.facts, .timeline) {
+.card:has(.facts, .timeline, .indicators) {
   overflow-y: auto;
+}
+
+/* Indicator table (density-consolidated sibling time series):
+   label | sparkline | current value, one quiet row each. */
+.indicators {
+  inline-size: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+
+  th {
+    text-align: start;
+    font-weight: var(--font-weight-normal);
+    color: var(--color-subtle);
+    padding-block: var(--spacing-25);
+  }
+
+  td {
+    padding-block: var(--spacing-25);
+  }
+
+  .indicators__spark {
+    inline-size: 30%;
+
+    svg {
+      display: block;
+      inline-size: 100%;
+      block-size: 1.25rem;
+
+      polyline {
+        fill: none;
+        stroke: var(--background-color-progressive);
+        stroke-width: 2;
+        vector-effect: non-scaling-stroke;
+      }
+    }
+  }
+
+  .indicators__value {
+    text-align: end;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-emphasized);
+    white-space: nowrap;
+
+    small {
+      font-weight: var(--font-weight-normal);
+      color: var(--color-subtle);
+    }
+  }
 }
 
 /* Timeline: date column, a line-and-dot rail, event body */
@@ -509,6 +557,16 @@ a {
     /* Preferred rank: the value that holds now */
     &.chip--current {
       background-color: var(--background-color-progressive-subtle);
+    }
+
+    /* Enumeration cap: "+387", linking to the full list on Wikidata */
+    &.chip--more {
+      color: var(--color-subtle);
+      background-color: var(--background-color-neutral-subtle);
+
+      a {
+        color: inherit;
+      }
     }
   }
 }

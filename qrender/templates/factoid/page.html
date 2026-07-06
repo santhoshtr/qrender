@@ -42,6 +42,17 @@
     {% endfor %}
   </div>
 
+  {% when CardKind::Indicators with { indicators } %}
+  <table class="indicators">
+    {% for indicator in indicators %}
+    <tr>
+      <th scope="row">{{ indicator.label }}</th>
+      <td class="indicators__spark"><svg viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true"><polyline points="{{ self.spark_points(indicator.series) }}"/></svg></td>
+      <td class="indicators__value">{{ indicator.current }}{% if let Some(note) = indicator.note %} <small>{{ note }}</small>{% endif %}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
   {% when CardKind::Meter with { value, display, note, min, max, low, high, optimum } %}
   <p class="stat">
     <span class="stat__value">{{ display }}</span>
@@ -80,6 +91,9 @@
       <dd>
         <ul class="chips">
           {% for value in row.values %}
+          {# enumeration cap: a 400-language list is a wall, not a card;
+             the full list stays in the JSON/text backends #}
+          {% if loop.index <= crate::factoid::VISIBLE_VALUES %}
           {% match value %}
           {% when FactValue::Item with (chip) %}
           <li class="chip{% if chip.current %} chip--current{% endif %}{% if chip.ended() %} chip--ended{% endif %}">{% if let Some(thumb) = chip.thumb_url %}<img class="chip__thumb" src="{{ thumb }}" alt="" loading="lazy">{% endif %}<a href="https://www.wikidata.org/wiki/{{ chip.qid }}">{{ chip.label }}</a>{% if let Some(span) = chip.span %} <small class="chip__span">{{ span.display() }}</small>{% endif %}{% if let Some(note) = chip.note %} <small class="chip__note">{{ note }}</small>{% endif %}</li>
@@ -88,7 +102,11 @@
           {% when FactValue::Text with { value, span, note } %}
           <li class="fact-text">{{ value }}{% if let Some(span) = span %} <small class="fact-note">{{ span.display() }}</small>{% endif %}{% if let Some(note) = note %} <small class="fact-note">{{ note }}</small>{% endif %}</li>
           {% endmatch %}
+          {% endif %}
           {% endfor %}
+          {% if row.values.len() > crate::factoid::VISIBLE_VALUES %}
+          <li class="chip chip--more"><a href="https://www.wikidata.org/wiki/{{ page.qid }}">+{{ row.values.len() - crate::factoid::VISIBLE_VALUES }}</a></li>
+          {% endif %}
         </ul>
       </dd>
     </div>

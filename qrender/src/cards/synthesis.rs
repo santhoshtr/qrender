@@ -145,7 +145,7 @@ pub fn synthesize(
         None => (Vec::new(), standard),
     };
 
-    FactoidPage {
+    let mut page = FactoidPage {
         qid: item.qid.clone(),
         label: item.label.clone(),
         description: item.description.clone(),
@@ -156,7 +156,9 @@ pub fn synthesize(
         sections,
         overflow,
         footnotes,
-    }
+    };
+    super::density::consolidate(&mut page);
+    page
 }
 
 fn humanize(group_name: &str) -> String {

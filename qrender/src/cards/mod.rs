@@ -3,6 +3,7 @@
 //! this; card kinds are derived from the typed values by `synthesize()`.
 
 mod compose;
+mod density;
 mod format;
 mod plan;
 mod synthesis;
@@ -150,6 +151,12 @@ pub enum CardKind {
     Timeline {
         events: Vec<TimelineEvent>,
     },
+    /// Sibling time-series consolidated by the density pass: one row
+    /// per indicator (label, current value, sparkline history) instead
+    /// of a wall of identical chart cards
+    Indicators {
+        indicators: Vec<Indicator>,
+    },
     /// A quantity on a known scale, e.g. HDI - rendered as a gauge
     Meter {
         value: f64,
@@ -196,6 +203,18 @@ pub struct TimelineEvent {
     pub detail: Option<String>,
     /// Small thumbnail of the referenced item's image
     pub thumb_url: Option<String>,
+}
+
+/// One consolidated time series: what was a whole StatSeries card
+/// before the density pass merged its region's siblings.
+#[derive(Debug, Serialize)]
+pub struct Indicator {
+    /// Localized property label, e.g. "life expectancy"
+    pub label: String,
+    pub current: String,
+    /// e.g. the year of the current value
+    pub note: Option<String>,
+    pub series: Vec<SeriesPoint>,
 }
 
 #[derive(Debug, Serialize)]
