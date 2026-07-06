@@ -20,6 +20,9 @@ fn page(qid: &str, fixture: &str) -> qrender::cards::FactoidPage {
 
 const Q3870: &str = include_str!("../../qjson/tests/fixtures/Q3870.sparql.json"); // Nairobi
 const Q42: &str = include_str!("../../qjson/tests/fixtures/Q42.sparql.json"); // Douglas Adams
+const Q173399: &str = include_str!("../../qjson/tests/fixtures/Q173399.sparql.json"); // Elliot Page
+const Q90: &str = include_str!("../../qjson/tests/fixtures/Q90.sparql.json"); // Paris
+const Q668: &str = include_str!("../../qjson/tests/fixtures/Q668.sparql.json"); // India
 
 #[test]
 fn q3870_text() {
@@ -49,4 +52,19 @@ fn q42_text() {
 #[test]
 fn q42_markdown() {
     insta::assert_snapshot!(textual::render_markdown(&page("Q42", Q42)));
+}
+
+#[test]
+fn q173399_markdown() {
+    insta::assert_snapshot!(textual::render_markdown(&page("Q173399", Q173399)));
+}
+
+#[test]
+fn q90_markdown() {
+    insta::assert_snapshot!(textual::render_markdown(&page("Q90", Q90)));
+}
+
+#[test]
+fn q668_markdown() {
+    insta::assert_snapshot!(textual::render_markdown(&page("Q668", Q668)));
 }

@@ -1,0 +1,270 @@
+---
+source: qrender/tests/ir_backends.rs
+expression: "textual::render_markdown(&page(\"Q90\", Q90))"
+---
+# Paris
+*capital and most populous city in France*
+
+## Geography
+- **elevation above sea level**: 48 metre; 27 metre (object of statement has role: lowest point); 127 metre (object of statement has role: highest point); 28 metre
+- **area**: 105.4 square kilometre
+
+## highest point
+- **highest point**: [highest point of Paris](https://www.wikidata.org/wiki/Q1440664)
+
+## Located in
+- **country**: [France](https://www.wikidata.org/wiki/Q142) (start time: 1944-08-25, reason for preferred rank: currently valid value); [Francia](https://www.wikidata.org/wiki/Q146246) (start time: 0508-01-01, end time: 0843-01-01); [Kingdom of France](https://www.wikidata.org/wiki/Q70972) (start time: 0987-01-01, end time: 1792-01-01); [French First Republic](https://www.wikidata.org/wiki/Q58296) (start time: 1792-09-21, end time: 1804-12-02); [First French Empire](https://www.wikidata.org/wiki/Q71084) (start time: 1804-12-02, end time: 1815-07-07); [France](https://www.wikidata.org/wiki/Q142) (start time: 1815-07-07, end time: 1940-06-21); [German military administration in occupied France during World War II](https://www.wikidata.org/wiki/Q2748708) (start time: 1940-06-22, end time: 1944-08-24)
+- **located in the administrative territorial entity**: [Grand Paris](https://www.wikidata.org/wiki/Q16665915) (start time: 2016-01-01); [Kingdom of France](https://www.wikidata.org/wiki/Q70972) (end time: 1790-03-03); [Seine](https://www.wikidata.org/wiki/Q1142326) (start time: 1790-03-04, end time: 1967-12-31); [arrondissement of Paris](https://www.wikidata.org/wiki/Q2863958) (start time: 1800-01-01, end time: 1960-06-03); [Île-de-France](https://www.wikidata.org/wiki/Q13917) (start time: 1960-06-04, end time: 2015-12-31); [Paris Department](https://www.wikidata.org/wiki/Q124881945) (start time: 1968-01-01, end time: 2018-12-31)
+- **capital of**: [France](https://www.wikidata.org/wiki/Q142); [Grand Paris](https://www.wikidata.org/wiki/Q16665915); [Île-de-France](https://www.wikidata.org/wiki/Q13917); [Second French Empire](https://www.wikidata.org/wiki/Q71092); [arrondissement of Paris](https://www.wikidata.org/wiki/Q2863958); [zone de défense et de sécurité de Paris](https://www.wikidata.org/wiki/Q88521107); [Paris Commune](https://www.wikidata.org/wiki/Q133132); [Bourbon Restoration in France](https://www.wikidata.org/wiki/Q207162); [metropolitan France](https://www.wikidata.org/wiki/Q212429); [French Fourth Republic](https://www.wikidata.org/wiki/Q69829); [French Second Republic](https://www.wikidata.org/wiki/Q58326); [Neustria](https://www.wikidata.org/wiki/Q106577); [Kingdom of France](https://www.wikidata.org/wiki/Q70972); [French colonial empire](https://www.wikidata.org/wiki/Q179023); [Francia](https://www.wikidata.org/wiki/Q146246); [French First Republic](https://www.wikidata.org/wiki/Q58296); [Seine](https://www.wikidata.org/wiki/Q1142326) (start time: 1790-03-04, end time: 1967-12-31); [First French Empire](https://www.wikidata.org/wiki/Q71084) (start time: 1804-12-02, end time: 1815-07-07); [Paris Department](https://www.wikidata.org/wiki/Q124881945) (start time: 1968-01-01, end time: 2018-12-31)
+
+## coordinate location
+48.856666666, 2.352222222
+
+## located in or next to body of water
+- **located in or next to body of water**: [Seine](https://www.wikidata.org/wiki/Q1471) (reason for preferred rank: tourist attraction); [Bassin de la Villette](https://www.wikidata.org/wiki/Q810526); [Canal de l'Ourcq](https://www.wikidata.org/wiki/Q1032646); [Canal Saint-Martin](https://www.wikidata.org/wiki/Q860172)
+
+## shares border with
+- **shares border with**: [Ivry-sur-Seine](https://www.wikidata.org/wiki/Q193877); [Neuilly-sur-Seine](https://www.wikidata.org/wiki/Q48958); [Montrouge](https://www.wikidata.org/wiki/Q241021); [Saint-Mandé](https://www.wikidata.org/wiki/Q18102); [Gentilly](https://www.wikidata.org/wiki/Q640102); [Issy-les-Moulineaux](https://www.wikidata.org/wiki/Q135265) (start time: 1860-01-01); [Aubervilliers](https://www.wikidata.org/wiki/Q205632) (start time: 1860-01-01); [Montreuil](https://www.wikidata.org/wiki/Q193370) (start time: 1860-01-01); [Charenton-le-Pont](https://www.wikidata.org/wiki/Q212793) (start time: 1860-01-01); [Bagnolet](https://www.wikidata.org/wiki/Q208943) (start time: 1860-01-01); [Saint-Ouen-sur-Seine](https://www.wikidata.org/wiki/Q208889) (start time: 1860-01-01); [Le Pré-Saint-Gervais](https://www.wikidata.org/wiki/Q175999) (start time: 1860-01-01); [Clichy](https://www.wikidata.org/wiki/Q201982) (start time: 1860-01-01); [Pantin](https://www.wikidata.org/wiki/Q209086) (start time: 1860-01-01); [Boulogne-Billancourt](https://www.wikidata.org/wiki/Q172455) (start time: 1860-01-01); [Vanves](https://www.wikidata.org/wiki/Q234728) (start time: 1860-01-01); [Levallois-Perret](https://www.wikidata.org/wiki/Q166640) (start time: 1867-01-01); [Les Lilas](https://www.wikidata.org/wiki/Q256004) (start time: 1867-07-24); [Malakoff](https://www.wikidata.org/wiki/Q253721) (start time: 1883-11-08); [Le Kremlin-Bicêtre](https://www.wikidata.org/wiki/Q135104) (start time: 1896-12-18); [Suresnes](https://www.wikidata.org/wiki/Q193929) (start time: 1925-04-03); [Saint-Cloud](https://www.wikidata.org/wiki/Q189153) (start time: 1925-04-03); [Nogent-sur-Marne](https://www.wikidata.org/wiki/Q212274) (start time: 1929-04-18); [Puteaux](https://www.wikidata.org/wiki/Q234743) (start time: 1929-04-18); [Vincennes](https://www.wikidata.org/wiki/Q193819) (start time: 1929-04-18); [Fontenay-sous-Bois](https://www.wikidata.org/wiki/Q193899) (start time: 1929-04-18); [Joinville-le-Pont](https://www.wikidata.org/wiki/Q609134) (start time: 1929-04-18); [Saint-Maurice](https://www.wikidata.org/wiki/Q274327) (start time: 1929-04-18); [Val-de-Marne](https://www.wikidata.org/wiki/Q12788) (start time: 1968-01-01); [Hauts-de-Seine](https://www.wikidata.org/wiki/Q12543) (start time: 1968-01-01); [Seine-Saint-Denis](https://www.wikidata.org/wiki/Q12761) (start time: 1968-01-01); [Saint-Denis](https://www.wikidata.org/wiki/Q131575588) (start time: 2025-01-01)
+
+## located in time zone
+- **located in time zone**: [UTC+02:00](https://www.wikidata.org/wiki/Q6723) (valid in period: daylight saving time); [UTC+01:00](https://www.wikidata.org/wiki/Q6655) (valid in period: standard time)
+
+## timeline
+- **-0300** inception
+- **1435** Siege of Paris (significant event)
+- **1590** Siege of Paris (significant event)
+- **1789** French Revolution (significant event)
+- **1870** Siege of Paris (significant event)
+- **1871** Paris Commune (significant event)
+- **1900** 1900 Summer Olympics (significant event)
+- **1924** 1924 Summer Olympics (significant event)
+- **2015** November 2015 Paris attacks (significant event)
+- **2024** 2024 Summer Olympics (significant event)
+
+## significant event
+- **significant event**: [Paris Commune](https://www.wikidata.org/wiki/Q133132) (point in time: 1871-01-01); [French Revolution](https://www.wikidata.org/wiki/Q6534) (point in time: 1789-01-01); [Siege of Paris](https://www.wikidata.org/wiki/Q3485975); [Siege of Paris](https://www.wikidata.org/wiki/Q3485978); [November 2015 Paris attacks](https://www.wikidata.org/wiki/Q21479779) (point in time: 2015-11-13); [1900 Summer Olympics](https://www.wikidata.org/wiki/Q8088) (point in time: 1900-01-01); [Siege of Paris](https://www.wikidata.org/wiki/Q3485979) (point in time: 1435-01-01); [Siege of Paris](https://www.wikidata.org/wiki/Q3485985); [Siege of Paris](https://www.wikidata.org/wiki/Q815192); [Siege of Paris](https://www.wikidata.org/wiki/Q3485987); [Siege of Paris](https://www.wikidata.org/wiki/Q3485977); [Siege of Paris](https://www.wikidata.org/wiki/Q3485984) (point in time: 1590-01-01); [Siege of Paris](https://www.wikidata.org/wiki/Q690489) (point in time: 1870-01-01); [Siege of Paris](https://www.wikidata.org/wiki/Q3485976); [Siege of Paris](https://www.wikidata.org/wiki/Q3485982); [Siege of Paris](https://www.wikidata.org/wiki/Q3485986); [Siege of Paris](https://www.wikidata.org/wiki/Q3485983); [2024 Summer Olympics](https://www.wikidata.org/wiki/Q995653) (point in time: 2024-01-01); [1924 Summer Olympics](https://www.wikidata.org/wiki/Q8132) (point in time: 1924-01-01)
+
+## inception
+**-0300**
+
+## population
+**2103778** (2023)
+- 1990: 2152423
+- 1999: 2125246
+- 2008: 2211297
+- 2014: 2243739
+- 2017: 2187526
+- 2018: 2175601
+- 2019: 2165423
+- 2020: 2145906
+- 2022: 2113705
+- 2023: 2103778
+
+## Population
+- **female population**: 1158623 (determination method or standard: census, point in time: 2017-01-01)
+- **male population**: 1028903 (determination method or standard: census, point in time: 2017-01-01)
+
+## legislative body
+- **legislative body**: [Council of Paris](https://www.wikidata.org/wiki/Q775994)
+
+## Government headed by
+- **office held by head of government**: [mayor of Paris](https://www.wikidata.org/wiki/Q12371988) (start time: 1789-07-15); [Prévôt des marchands de Paris](https://www.wikidata.org/wiki/Q1465786) (time of earliest written record: 1100-01-01, end time: 1789-07-14)
+- **head of government**: [Emmanuel Grégoire](https://www.wikidata.org/wiki/Q64281962) (start time: 2026-03-29); [Louis-Basile de Bernage](https://www.wikidata.org/wiki/Q3260385) (start time: 1743-07-26, end time: 1757-08-01); [Jean-Baptiste de Pontcarré de Viarmes](https://www.wikidata.org/wiki/Q3164528) (start time: 1758-01-01, end time: 1764-01-01); [Armand-Jérôme Bignon](https://www.wikidata.org/wiki/Q2861746) (start time: 1764-01-01, end time: 1772-01-01); [Jean-Baptiste de La Michodière](https://www.wikidata.org/wiki/Q17276569) (start time: 1772-01-01, end time: 1777-01-01); [Antoine-Louis Lefebvre de Caumartin](https://www.wikidata.org/wiki/Q2853511) (start time: 1778-01-01, end time: 1784-01-01); [Louis Le Peletier de Morfontaine](https://www.wikidata.org/wiki/Q3262481) (end cause: resignation, start time: 1784-01-01, end time: 1789-04-28); [Jacques de Flesselles](https://www.wikidata.org/wiki/Q1251239) (end cause: deliberate murder, start time: 1789-04-28, end time: 1789-07-14); [Jean Sylvain Bailly](https://www.wikidata.org/wiki/Q1685301) (start time: 1789-07-15, end time: 1791-11-18); [Jérôme Pétion de Villeneuve](https://www.wikidata.org/wiki/Q947901) (member of political party: Girondists, start time: 1791-11-18, end time: 1792-10-15); [Philibert Borie](https://www.wikidata.org/wiki/Q656015) (start time: 1792-07-07, end time: 1792-07-13); [René Boucher](https://www.wikidata.org/wiki/Q2596877) (start time: 1792-10-15, end time: 1792-12-02); [Henri Lefèvre d'Ormesson](https://www.wikidata.org/wiki/Q3131449) (start time: 1792-11-21, end time: 1792-11-21); [Nicolas Chambon](https://www.wikidata.org/wiki/Q1986521) (member of political party: Girondists, start time: 1792-12-01, end time: 1793-02-04); [Jean-Nicolas Pache](https://www.wikidata.org/wiki/Q1685102) (member of political party: The Mountain, start time: 1793-02-14, end time: 1794-05-10); [Jean-Baptiste Fleuriot-Lescot](https://www.wikidata.org/wiki/Q1684642) (member of political party: The Mountain, start time: 1794-05-10, end time: 1794-07-28); [Louis-Antoine Garnier-Pagès](https://www.wikidata.org/wiki/Q601266) (start time: 1848-02-24, end time: 1848-03-05); [Armand Marrast](https://www.wikidata.org/wiki/Q677730) (start time: 1848-03-09, end time: 1848-07-19); [Étienne Arago](https://www.wikidata.org/wiki/Q289303) (start time: 1870-09-04, end time: 1870-11-15); [Jules Ferry](https://www.wikidata.org/wiki/Q959708) (member of political party: Moderate Republicans, start time: 1870-11-15, end time: 1871-06-05); [Jacques Chirac](https://www.wikidata.org/wiki/Q2105) (member of political party: Rally for the Republic, start time: 1977-03-20, end time: 1995-05-16); [Jean Tiberi](https://www.wikidata.org/wiki/Q1685859) (member of political party: Rally for the Republic, start time: 1995-05-22, end time: 2001-03-24); [Bertrand Delanoë](https://www.wikidata.org/wiki/Q256294) (member of political party: Socialist Party, start time: 2001-03-25, end time: 2014-04-05); [Anne Hidalgo](https://www.wikidata.org/wiki/Q2851133) (member of political party: Socialist Party, start time: 2014-04-05, end time: 2026-03-28)
+
+## official language
+- **official language**: [French](https://www.wikidata.org/wiki/Q150)
+
+## Flags and symbols
+- **flag**: [flag of Paris](https://www.wikidata.org/wiki/Q659058)
+- **coat of arms**: [coat of arms of Paris](https://www.wikidata.org/wiki/Q1925366)
+
+## flag image
+![flag image](https://commons.wikimedia.org/wiki/Special:FilePath/Drapeau%20des%20armes%20de%20la%20ville%20de%20Paris.svg?width=640)
+
+## coat of arms image
+![coat of arms image](https://commons.wikimedia.org/wiki/Special:FilePath/Armoiries%20de%20la%20ville%20de%20Paris%20(1949).svg?width=640)
+
+## Articleimage
+![page banner](https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20banner.jpg?width=640)
+![nighttime view](https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20Night.jpg?width=640)
+![nighttime view](https://commons.wikimedia.org/wiki/Special:FilePath/Eiffel%20Tower%20from%20the%20Tour%20Montparnasse,%201%20May%202012%20N2.jpg?width=640)
+![aerial view](https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20-%20Orthophotographie%20-%202018.jpg?width=640)
+![montage image](https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20montage.jpg?width=640)
+![panoramic view](https://commons.wikimedia.org/wiki/Special:FilePath/LaDefense%20pl.jpg?width=640)
+![spherical panorama image](https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise%20above%20Paris,%209%20April%202007.jpg?width=640)
+
+## Names
+- **nickname**: Ville-Lumière; The City of Light; The City of Love; La Ciudad de la Luz
+- **named after**: [Parisii](https://www.wikidata.org/wiki/Q656902)
+- **official name**: Paris
+- **native label**: Paris (pronunciation audio: http://commons.wikimedia.org/wiki/Special:FilePath/LL-Q150%20%28fra%29-Ash%20Crow-Paris.wav)
+- **demonym**: პარიზელები (applies to part: plural, statement is subject of: Parisians); parisín (applies to part: masculine singular); парижанин (applies to part: masculine); парижанин (applies to part: masculine singular); Parisian (grammatical number: singular); парижане (applies to part: plural); párizsi; Pariserinnen (applies to part: feminine plural, statement is subject of: Parisians); parisina (applies to part: feminine singular); parisinos (applies to part: masculine plural); Pariserin (applies to part: feminine singular); Parižan (applies to part: masculine singular); Parisien (grammatical number: singular, grammatical gender: masculine); Paräisserin (applies to part: female); parigini (applies to part: masculine plural); parisenc (applies to part: male); Paräisser (applies to part: male); paryżanin (applies to part: masculine singular); Parizano; парижанка (applies to part: feminine singular); Parisians (grammatical number: plural, statement is subject of: Parisians); Pariser (applies to part: masculine singular, applies to part: masculine plural, statement is subject of: Parisians); parisines (applies to part: feminine plural); parisino (applies to part: neuter); Parižanka (applies to part: feminine singular); парижанка (applies to part: feminine); parisenca (applies to part: female); Parisienne (language of work or name: French, applies to part: feminine singular); პარიზელი (applies to part: singular); Parizian (applies to part: masculine singular); paryżanka (applies to part: feminine singular); Parizianez (applies to part: feminine singular)
+
+## coordinates of northernmost point
+48.902156, 2.3844292
+
+## coordinates of southernmost point
+48.8155755, 2.3444967
+
+## coordinates of easternmost point
+48.8363848, 2.4697602
+
+## coordinates of westernmost point
+48.854199, 2.224122
+
+## replaces
+- **replaces**: [Lutetia](https://www.wikidata.org/wiki/Q270273); [Paris Department](https://www.wikidata.org/wiki/Q124881945) (start time: 2019-01-01)
+
+## Location
+![locator map image](https://commons.wikimedia.org/wiki/Special:FilePath/Paris-Position.svg?width=640)
+![location map](https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20plan%20jms.png?width=640)
+
+## geoshape
+- **geoshape**: <http://commons.wikimedia.org/data/main/Data:Paris.map>
+
+## Motto anthem
+- **motto**: [fluctuat nec mergitur](https://www.wikidata.org/wiki/Q2482095) (language of work or name: Latin, start time: 1853-11-24, IPA transcription: ˈflʊk.tu.at neːk ˈmɛr.ɡi.tur)
+- **motto text**: Fluctuat nec mergitur (literal translation: Es schwankt hin und her, aber geht nicht unter, literal translation: Tossed by the waves but never sunk, literal translation: Il est battu par les flots, mais ne sombre pas, literal translation: 흔들릴지언정 가라앉지 않는다, literal translation: Його хитає, але він не тоне, start time: 1853-11-24)
+
+## pronunciation audio
+![pronunciation audio](https://commons.wikimedia.org/wiki/Special:FilePath/LL-Q150%20(fra)-Visiteuse%20Journ%C3%A9e%202%20-%2026%20(Madehub)-Paris.wav?width=640)
+
+## twinned administrative body
+- **twinned administrative body**: [Rome](https://www.wikidata.org/wiki/Q220) (start time: 1956-01-30); [Mexico City](https://www.wikidata.org/wiki/Q1489); [Dubai](https://www.wikidata.org/wiki/Q612); [Ramallah](https://www.wikidata.org/wiki/Q158119); [Marrakech](https://www.wikidata.org/wiki/Q101625); [Beijing](https://www.wikidata.org/wiki/Q956); [Torreón](https://www.wikidata.org/wiki/Q386991); [Cairo](https://www.wikidata.org/wiki/Q85); [Seoul](https://www.wikidata.org/wiki/Q8684); [Washington, D.C.](https://www.wikidata.org/wiki/Q61); [Porto Alegre](https://www.wikidata.org/wiki/Q40269); [Chicago](https://www.wikidata.org/wiki/Q1297); [Tirana](https://www.wikidata.org/wiki/Q19689); [Kyoto](https://www.wikidata.org/wiki/Q34600) (start time: 1958-06-15); [Tokyo](https://www.wikidata.org/wiki/Q1490) (start time: 1982-07-04); [Berlin](https://www.wikidata.org/wiki/Q64) (start time: 1987-07-02); [Saint Petersburg](https://www.wikidata.org/wiki/Q656) (start time: 1991-01-01); [Kyiv](https://www.wikidata.org/wiki/Q1899) (start time: 1992-11-07); [San Francisco](https://www.wikidata.org/wiki/Q62) (start time: 1996-01-01); [Tbilisi](https://www.wikidata.org/wiki/Q994) (start time: 1997-01-01)
+
+## Topics
+- **history of topic**: [history of Paris](https://www.wikidata.org/wiki/Q845625)
+- **geography of topic**: [geography of Paris](https://www.wikidata.org/wiki/Q12522114)
+- **economy of topic**: [economy of Paris](https://www.wikidata.org/wiki/Q5333743)
+- **demographics of topic**: [demographics of Paris](https://www.wikidata.org/wiki/Q2246902)
+
+## vehicle registration plate code
+**75**
+
+## Web
+- **official website**: <https://www.paris.fr/>; <http://www.villedeparis.fr/>
+- **hashtag**: Paris (language of work or name: French, language of work or name: English)
+
+## continent
+- **continent**: [Europe](https://www.wikidata.org/wiki/Q46)
+
+## contains the administrative territorial entity
+- **contains the administrative territorial entity**: [15th arrondissement of Paris](https://www.wikidata.org/wiki/Q191066); [7th arrondissement of Paris](https://www.wikidata.org/wiki/Q259463); [13th arrondissement of Paris](https://www.wikidata.org/wiki/Q175129); [16th arrondissement of Paris](https://www.wikidata.org/wiki/Q194420); [8th arrondissement of Paris](https://www.wikidata.org/wiki/Q270230); [9th arrondissement of Paris](https://www.wikidata.org/wiki/Q275118); [6th arrondissement of Paris](https://www.wikidata.org/wiki/Q245546); [17th arrondissement of Paris](https://www.wikidata.org/wiki/Q197297); [4th arrondissement of Paris](https://www.wikidata.org/wiki/Q230127); [12th arrondissement of Paris](https://www.wikidata.org/wiki/Q171689); [19th arrondissement of Paris](https://www.wikidata.org/wiki/Q204622); [20th arrondissement of Paris](https://www.wikidata.org/wiki/Q210720); [11th arrondissement of Paris](https://www.wikidata.org/wiki/Q169293); [3rd arrondissement of Paris](https://www.wikidata.org/wiki/Q223140); [18th arrondissement of Paris](https://www.wikidata.org/wiki/Q200126); [5th arrondissement of Paris](https://www.wikidata.org/wiki/Q238723); [1st arrondissement of Paris](https://www.wikidata.org/wiki/Q161741); [Paris Centre](https://www.wikidata.org/wiki/Q96746729); [2nd arrondissement of Paris](https://www.wikidata.org/wiki/Q209549); [10ᵗʰ arrondissement of Paris](https://www.wikidata.org/wiki/Q163948); [14th arrondissement of Paris](https://www.wikidata.org/wiki/Q187153)
+
+## logo image
+![logo image](https://commons.wikimedia.org/wiki/Special:FilePath/Ville%20de%20Paris%20logo.svg?width=640)
+![logo image](https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20horizontal%20logo.svg?width=640)
+
+## award received
+- **award received**: [Companion of the Liberation](https://www.wikidata.org/wiki/Q2990283); [Knight of the Legion of Honour](https://www.wikidata.org/wiki/Q10855271) (point in time: 1900-10-09); [Croix de guerre 1914–1918](https://www.wikidata.org/wiki/Q2727598)
+
+## part of
+- **part of**: [Île-de-France](https://www.wikidata.org/wiki/Q13917)
+
+## patron saint
+- **patron saint**: [Genevieve of Paris](https://www.wikidata.org/wiki/Q235863)
+
+## member of
+- **member of**: [C40 Cities Climate Leadership Group](https://www.wikidata.org/wiki/Q485087); [League of Historical Cities](https://www.wikidata.org/wiki/Q9383972); [World Tourism Cities Federation](https://www.wikidata.org/wiki/Q67652870)
+
+## diocese
+- **diocese**: [Roman Catholic Archdiocese of Paris](https://www.wikidata.org/wiki/Q1242250)
+
+## authority
+- **authority**: [municipality of Paris](https://www.wikidata.org/wiki/Q3278478)
+
+## foods traditionally associated
+- **foods traditionally associated**: [Parisian cuisine](https://www.wikidata.org/wiki/Q21129738)
+
+## depicted by
+- **depicted by**: [Henry IV at the Battle of Ivry, 14 March 1590](https://www.wikidata.org/wiki/Q3725832)
+
+## legal form
+- **legal form**: [commune of France with specific status](https://www.wikidata.org/wiki/Q22927616)
+
+## list of monuments
+- **list of monuments**: [list of monuments and sites in Paris](https://www.wikidata.org/wiki/Q1403319); [list of historic monuments in Paris](https://www.wikidata.org/wiki/Q3252156)
+
+## place name sign
+![place name sign](https://commons.wikimedia.org/wiki/Special:FilePath/Panneau%20Entr%C3%A9e%20Paris%20Avenue%20Porte%20Chapelle%20-%20Paris%20XVIII%20(FR75)%20-%202021-07-26%20-%202.jpg?width=640)
+
+## owner of
+- **owner of**: [Eiffel Tower](https://www.wikidata.org/wiki/Q243); [fontaine de Jarente](https://www.wikidata.org/wiki/Q1435786); [Jacob Wrestling with the Angel](https://www.wikidata.org/wiki/Q3837491); [La Sainte Catherine](https://www.wikidata.org/wiki/Q3212678); [The Sleepers](https://www.wikidata.org/wiki/Q326503); [Belleville funicular tramway](https://www.wikidata.org/wiki/Q1524643); [La Fraternité](https://www.wikidata.org/wiki/Q15921401); [Alexander II](https://www.wikidata.org/wiki/Q24575431); [Pavillon d'Armenonville](https://www.wikidata.org/wiki/Q18086668); [Stade Jean-Bouin](https://www.wikidata.org/wiki/Q670499); [La Famille](https://www.wikidata.org/wiki/Q15921385); [Hôtel de Chalon-Luxembourg](https://www.wikidata.org/wiki/Q369234); [Grand Synagogue of Paris](https://www.wikidata.org/wiki/Q1358886); [Paris Bourse](https://www.wikidata.org/wiki/Q178513); [Parc des Princes](https://www.wikidata.org/wiki/Q193431); [Arc de Triomphe](https://www.wikidata.org/wiki/Q64436); [Accor Arena](https://www.wikidata.org/wiki/Q537720); [hôtel Dodun](https://www.wikidata.org/wiki/Q19832938); [pyramid of bois de Vincennes](https://www.wikidata.org/wiki/Q3411287)
+
+## has part(s) of the class
+- **has part(s) of the class**: [municipal arrondissement of Paris](https://www.wikidata.org/wiki/Q679388) (short name: Arrt)
+
+## budget
+**7561800000 euro** (point in time: 2026-01-01)
+
+## language used
+- **language used**: [French](https://www.wikidata.org/wiki/Q150); [Paris dialect](https://www.wikidata.org/wiki/Q3365565)
+
+## speed limit
+- **speed limit**: 30 kilometre per hour (nature of statement: often); 50 kilometre per hour (nature of statement: mainly)
+
+## coextensive with
+- **coextensive with**: [Paris Department](https://www.wikidata.org/wiki/Q124881945) (start time: 1968-01-01, end time: 2018-12-31)
+
+## escutcheon image
+![escutcheon image](https://commons.wikimedia.org/wiki/Special:FilePath/Ecu%20de%20la%20ville%20de%20Paris.svg?width=640)
+
+## activity policy in this place
+- **activity policy in this place**: [do not feed the animals](https://www.wikidata.org/wiki/Q5286412) (applies to part: Columba, start time: 1979-11-23)
+
+## annual number of weddings
+**9021** (point in time: 2015-01-01)
+
+## located in the statistical territorial entity
+- **located in the statistical territorial entity**: [Paris unité urbaine](https://www.wikidata.org/wiki/Q1082222); [Paris attraction area](https://www.wikidata.org/wiki/Q108921672)
+
+## open data portal
+- **open data portal**: [opendata.paris.fr](https://www.wikidata.org/wiki/Q97064103)
+
+## social media followers
+**2137114** (2022)
+- 2018: 2072859
+- 2021: 2127845
+- 2022: 2137114
+- 2025: 22300
+
+## district heating grid
+- **district heating grid**: [réseau de chaleur urbain CPCU](https://www.wikidata.org/wiki/Q105687036)
+
+## official jobs URL
+- **official jobs URL**: <https://www.paris.fr/paris-recrute>; <https://travaillerpourparis.paris.fr/>
+
+## contact page URL
+- **contact page URL**: <https://www.paris.fr/pages/contact-232>
+
+## Commons gallery
+**Paris**
+
+## topic's main Wikimedia portal
+- **topic's main Wikimedia portal**: [Portal:Paris](https://www.wikidata.org/wiki/Q8253667)
+
+## described by source
+- **described by source**: [Regesta Imperii](https://www.wikidata.org/wiki/Q316838); [Otto's encyclopedia](https://www.wikidata.org/wiki/Q2041543) (statement is subject of: Paříž); [Jewish Encyclopedia of Brockhaus and Efron](https://www.wikidata.org/wiki/Q4173137) (statement is subject of: Q20991872); [The Catholic Encyclopedia](https://www.wikidata.org/wiki/Q302556) (statement is subject of: Catholic Encyclopedia (1913)/Paris); [Small Brockhaus and Efron Encyclopedic Dictionary](https://www.wikidata.org/wiki/Q19180675) (statement is subject of: Q20991873); [1922 Encyclopædia Britannica](https://www.wikidata.org/wiki/Q15987490) (statement is subject of: 1922 Encyclopædia Britannica/Paris); [Meyer’s Universum, Neunzehnter Band](https://www.wikidata.org/wiki/Q137654208) (publication date: 1857-01-01, statement is subject of: Paris); [Brockhaus and Efron Encyclopedic Dictionary](https://www.wikidata.org/wiki/Q602358) (statement is subject of: Q20991871); [Meyer’s Universum, Zwanzigster Band](https://www.wikidata.org/wiki/Q137757464) (publication date: 1859-01-01, statement is subject of: Das neue Paris); [Encyclopædia Britannica 11th edition](https://www.wikidata.org/wiki/Q867541) (statement is subject of: 1911 Encyclopædia Britannica/Paris); [Sytin Military Encyclopedia](https://www.wikidata.org/wiki/Q4114391) (statement is subject of: Q25415904); [The Nuttall Encyclopædia](https://www.wikidata.org/wiki/Q3181656) (subject named as: Paris)
+
+## topic has template
+- **topic has template**: [Template:Paris](https://www.wikidata.org/wiki/Q18220037)
+
+## different from
+- **different from**: [Paris](https://www.wikidata.org/wiki/Q10981622); [Paris](https://www.wikidata.org/wiki/Q7137175); [Paris](https://www.wikidata.org/wiki/Q135952871); [Paris](https://www.wikidata.org/wiki/Q7137165); [Paris](https://www.wikidata.org/wiki/Q3181341); [Paris](https://www.wikidata.org/wiki/Q13107162); [Paris](https://www.wikidata.org/wiki/Q131861025); [Paris](https://www.wikidata.org/wiki/Q576584); [Paris](https://www.wikidata.org/wiki/Q104197); [Paris](https://www.wikidata.org/wiki/Q7137161); [Paris](https://www.wikidata.org/wiki/Q7137193); [Paris](https://www.wikidata.org/wiki/Q30621726); [Paris](https://www.wikidata.org/wiki/Q830149); [Paris](https://www.wikidata.org/wiki/Q7137164); [Paris](https://www.wikidata.org/wiki/Q79917); [Paris](https://www.wikidata.org/wiki/Q3305306); [Paris](https://www.wikidata.org/wiki/Q25907009); [Paris](https://www.wikidata.org/wiki/Q7137172); [Paris](https://www.wikidata.org/wiki/Q20712325); [Paris](https://www.wikidata.org/wiki/Q12503205); [Paris](https://www.wikidata.org/wiki/Q960025); [Paris](https://www.wikidata.org/wiki/Q137412662); [Paris](https://www.wikidata.org/wiki/Q974043); [Q120297794](https://www.wikidata.org/wiki/Q120297794); [Paris](https://www.wikidata.org/wiki/Q934294); [Paris](https://www.wikidata.org/wiki/Q538772); [Paris Township](https://www.wikidata.org/wiki/Q7137363); [Paris](https://www.wikidata.org/wiki/Q48849482); [Paris](https://www.wikidata.org/wiki/Q22134091); [Paris](https://www.wikidata.org/wiki/Q1018504); [Paris](https://www.wikidata.org/wiki/Q1628773); [Paris](https://www.wikidata.org/wiki/Q20709367); [Paris](https://www.wikidata.org/wiki/Q984459); [Paris](https://www.wikidata.org/wiki/Q109513493); [Paris](https://www.wikidata.org/wiki/Q2219239); [Paris](https://www.wikidata.org/wiki/Q118213226); [Paris](https://www.wikidata.org/wiki/Q2220917)
+
+## on focus list of Wikimedia project
+- **on focus list of Wikimedia project**: [Wikipedia:List of articles all languages should have](https://www.wikidata.org/wiki/Q5460604); [NADD Wikidata project](https://www.wikidata.org/wiki/Q123694075); [Wikipedia:Vital articles/Level/4](https://www.wikidata.org/wiki/Q6173448) (point in time: 2022-10-31); [Genadendal Music Archive](https://www.wikidata.org/wiki/Q128903909)
+
+## maintained by WikiProject
+- **maintained by WikiProject**: [WikiProject France](https://www.wikidata.org/wiki/Q10816832); [WikiProject French communes](https://www.wikidata.org/wiki/Q11150178); [WikiProject European Union](https://www.wikidata.org/wiki/Q10858397); [WikiProject World Heritage Sites](https://www.wikidata.org/wiki/Q6907702); [WikiProject Paris](https://www.wikidata.org/wiki/Q15884832); [WikiProject Cities](https://www.wikidata.org/wiki/Q5497514)
+
+## Categories
+- **Commons category**: Paris
+- **category for maps or plans**: [Category:Maps of Paris](https://www.wikidata.org/wiki/Q18668319)
+- **category for honorary citizens of entity**: [Category:Honorary citizens of Paris](https://www.wikidata.org/wiki/Q7981358)
+- **category for people born here**: [Category:Births in Paris](https://www.wikidata.org/wiki/Q9226347)
+- **category for people who died here**: [Category:Deaths in Paris](https://www.wikidata.org/wiki/Q9846779)
+- **category for films shot at this location**: [Category:Films shot in Paris](https://www.wikidata.org/wiki/Q8458184)
+- **category of associated people**: [Category:People from Paris](https://www.wikidata.org/wiki/Q8964470)
+- **topic's main category**: [Category:Paris](https://www.wikidata.org/wiki/Q5626403)
+- **category for people buried here**: [Category:Burials in Paris by place](https://www.wikidata.org/wiki/Q7977477)
