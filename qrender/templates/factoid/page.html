@@ -84,6 +84,33 @@
   </ol>
 
   {% when CardKind::Facts with { rows } %}
+  {% if card.variant.is_chip_cover() %}
+  {# cover chips: the two best values as tiles; every value in the
+     popover grid the ellipsis button opens #}
+  {% for row in rows %}
+  <ul class="chips">
+    {% for value in row.values %}
+    {% if loop.index <= 2 %}
+    {% if loop.first && row.values.len() > 2 %}
+    {% call fact_value(value, card.source_pids.join("-")) %}{% endcall %}
+    {% else %}
+    {% call fact_value(value, "") %}{% endcall %}
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+  </ul>
+  {% if row.values.len() > 2 %}
+  <div class="chips-popover" popover id="chips-{{ card.source_pids.join("-") }}">
+    <h3 class="chips-popover__title">{{ card.title }}</h3>
+    <ul class="chips chips--grid">
+      {% for value in row.values %}
+      {% call fact_value(value, "") %}{% endcall %}
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  {% endfor %}
+  {% else %}
   <dl class="facts">
     {% for row in rows %}
     <div class="facts__row">
@@ -94,14 +121,7 @@
           {# enumeration cap: a 400-language list is a wall, not a card;
              the full list stays in the JSON/text backends #}
           {% if loop.index <= crate::factoid::VISIBLE_VALUES %}
-          {% match value %}
-          {% when FactValue::Item with (chip) %}
-          <li class="chip{% if chip.current %} chip--current{% endif %}{% if chip.ended() %} chip--ended{% endif %}"{% if let Some(note) = chip.note %} title="{{ note }}"{% endif %}>{% if let Some(thumb) = chip.thumb_url %}<img class="chip__thumb" src="{{ thumb }}" alt="" loading="lazy">{% endif %}<a href="https://www.wikidata.org/wiki/{{ chip.qid }}">{{ chip.label }}</a>{% if let Some(span) = chip.span %} <small class="chip__span">{{ span.display() }}</small>{% endif %}{% if let Some(note) = chip.note %} <small class="chip__note">{{ note }}</small>{% endif %}</li>
-          {% when FactValue::Link with { url } %}
-          <li class="fact-link"><a href="{{ url }}" rel="nofollow">{{ url }}</a></li>
-          {% when FactValue::Text with { value, span, note } %}
-          <li class="fact-text">{{ value }}{% if let Some(span) = span %} <small class="fact-note">{{ span.display() }}</small>{% endif %}{% if let Some(note) = note %} <small class="fact-note">{{ note }}</small>{% endif %}</li>
-          {% endmatch %}
+          {% call fact_value(value, "") %}{% endcall %}
           {% endif %}
           {% endfor %}
           {% if row.values.len() > crate::factoid::VISIBLE_VALUES %}
@@ -112,9 +132,20 @@
     </div>
     {% endfor %}
   </dl>
+  {% endif %}
 
   {% endmatch %}
 </section>
+{% endmacro %}
+{% macro fact_value(value, more_target) %}
+{% match value %}
+{% when FactValue::Item with (chip) %}
+<li class="chip{% if chip.current %} chip--current{% endif %}{% if chip.ended() %} chip--ended{% endif %}"{% if let Some(note) = chip.note %} title="{{ note }}"{% endif %}>{% if let Some(thumb) = chip.thumb_url %}<img class="chip__thumb" src="{{ thumb }}" alt="" loading="lazy">{% endif %}{% if !more_target.is_empty() %}<button class="chip__more" popovertarget="chips-{{ more_target }}" aria-label="Show all values">…</button>{% endif %}<a href="https://www.wikidata.org/wiki/{{ chip.qid }}">{{ chip.label }}</a>{% if let Some(span) = chip.span %} <small class="chip__span">{{ span.display() }}</small>{% endif %}{% if let Some(note) = chip.note %} <small class="chip__note">{{ note }}</small>{% endif %}</li>
+{% when FactValue::Link with { url } %}
+<li class="fact-link"><a href="{{ url }}" rel="nofollow">{{ url }}</a></li>
+{% when FactValue::Text with { value, span, note } %}
+<li class="fact-text">{{ value }}{% if let Some(span) = span %} <small class="fact-note">{{ span.display() }}</small>{% endif %}{% if let Some(note) = note %} <small class="fact-note">{{ note }}</small>{% endif %}</li>
+{% endmatch %}
 {% endmacro %}
 {% macro media_element(image) %}
 {% match image.media %}
@@ -210,5 +241,27 @@
     Images: <a href="https://commons.wikimedia.org">Wikimedia Commons</a></p>
   </footer>
 </div>
+<script>
+/* The page's only script: progressive enhancement that morphs a
+   cover-chips card into its popover with a view transition. The
+   popover itself opens natively (popovertarget) without it. */
+document.addEventListener('click', (event) => {
+  const button = event.target.closest('.chip__more');
+  if (!button || !document.startViewTransition) return;
+  const popover = document.getElementById(button.getAttribute('popovertarget'));
+  const card = button.closest('.card');
+  if (!popover || !card) return;
+  event.preventDefault();
+  card.style.viewTransitionName = 'chips-expand';
+  const transition = document.startViewTransition(() => {
+    card.style.viewTransitionName = '';
+    popover.style.viewTransitionName = 'chips-expand';
+    popover.showPopover();
+  });
+  transition.finished.finally(() => {
+    popover.style.viewTransitionName = '';
+  });
+});
+</script>
 </body>
 </html>

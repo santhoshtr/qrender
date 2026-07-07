@@ -383,11 +383,12 @@ a {
 }
 
 /* Fixed-height tiles clip; let text-heavy cards scroll instead.
-   Portrait and tile-strip fill their fixed size by design - no
-   vertical scrollbar for them. */
+   Cover-layout cards fill their fixed size by design - no vertical
+   scrollbar for them (the popover carries the overflow). */
 .card:has(.facts, .timeline, .indicators):not(
     [data-variant="portrait"],
-    [data-variant="tile-strip"]
+    [data-variant="tile-strip"],
+    [data-variant="chip-list"]
   ) {
   overflow-y: auto;
 }
@@ -666,19 +667,40 @@ a {
       &.chip--current {
         background-color: var(--background-color-progressive-subtle);
       }
+
+      /* ellipsis on the cover chip: opens the all-values popover */
+      .chip__more {
+        grid-row: 1;
+        grid-column: 1;
+        justify-self: end;
+        align-self: start;
+        z-index: 1;
+        margin: var(--spacing-50);
+        inline-size: 2rem;
+        block-size: 2rem;
+        border: none;
+        border-radius: var(--border-radius-circle);
+        background-color: rgb(0 0 0 / 0.45);
+        color: var(--color-inverted-fixed, #fff);
+        font: inherit;
+        font-weight: var(--font-weight-bold);
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgb(0 0 0 / 0.65);
+        }
+      }
     }
   }
 }
 
-/* Chip list: wrapped tiles, two or three to a row */
-[data-variant="chip-list"] .chips .chip {
-  flex: 1 1 clamp(7rem, 40cqi, 10rem);
-  min-block-size: 6rem;
-}
-
-/* Portrait: one or two tiles fill the whole card, full bleed - the
-   image absorbs whatever height the text doesn't need. */
-[data-variant="portrait"] {
+/* Cover layout: one or two tiles fill the whole card, full bleed -
+   the image absorbs whatever height the text doesn't need. Portrait
+   is the one-or-two-value case; chip-list and tile-strip show their
+   two best values and put the rest behind the ellipsis popover. */
+[data-variant="chip-list"],
+[data-variant="portrait"],
+[data-variant="tile-strip"] {
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -688,7 +710,7 @@ a {
     padding: var(--spacing-100) var(--spacing-100) var(--spacing-50);
   }
 
-  .chips {
+  .chips:not(.chips--grid) {
     flex: 1;
     min-block-size: 0;
     /* nowrap so stretch gives the tiles the card's height - a wrapped
@@ -709,34 +731,50 @@ a {
   }
 }
 
-/* Tile strip: a clipped, scroll-snapped row of fixed-width tiles -
-   three visible, the rest a swipe away. No wrap, no growth. The strip
-   bleeds to the card edges; the first tile aligns with the title. */
-[data-variant="tile-strip"] {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
+/* All-values popover: the card expands into a tile grid in the top
+   layer; vertical scroll carries long enumerations. */
+.chips-popover {
+  inline-size: min(80vw, 60rem);
+  max-block-size: 80vh;
+  margin: auto;
+  padding: var(--spacing-100);
+  border: none;
+  border-radius: var(--factoid-card-border-radius);
+  background-color: var(--background-color-base);
+  color: var(--color-base);
+  overflow-y: auto;
 
-  .card__title {
-    margin: 0;
-    padding: var(--spacing-100) var(--spacing-100) var(--spacing-50);
+  &::backdrop {
+    background-color: rgb(0 0 0 / 0.4);
   }
 
-  .chips {
-    flex: 1;
-    min-block-size: 0;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding-inline: var(--spacing-100);
-    scroll-padding-inline: var(--spacing-100);
-    padding-block-end: var(--spacing-100);
+  .chips-popover__title {
+    margin: 0 0 var(--spacing-75);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-subtle);
+  }
+
+  .chips--grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+    gap: var(--spacing-50);
 
     .chip {
-      flex: 0 0 clamp(8rem, 30cqi, 11rem);
-      scroll-snap-align: start;
+      min-block-size: 8rem;
     }
   }
+}
+
+@media (width <= 40rem) {
+  .chips-popover {
+    inline-size: 100vw;
+  }
+}
+
+/* The card-to-popover morph the script drives */
+::view-transition-group(chips-expand) {
+  animation-duration: 250ms;
 }
 
 /* Current-with-history: what holds now keeps its chip emphasis; ended

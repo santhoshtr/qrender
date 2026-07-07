@@ -37,10 +37,10 @@ pub enum Variant {
     /// Values with ended spans: what holds now emphasized, history as
     /// quiet lines beneath
     CurrentWithHistory,
-    /// Three or more items, mostly with images: big tiles, clipped,
-    /// horizontally scrollable
+    /// Three or more items, mostly with images: two cover tiles, the
+    /// rest behind the ellipsis popover
     TileStrip,
-    /// Item enumeration with few images
+    /// Item enumeration with few images: same cover treatment
     ChipList,
     /// Consolidated sibling time series: label, sparkline, current
     /// value per row (built by the density pass)
@@ -51,6 +51,12 @@ pub enum Variant {
 }
 
 impl Variant {
+    /// Cover-chips presentation: the card shows the two best chips;
+    /// the full list opens in a popover. Templates branch on this.
+    pub fn is_chip_cover(&self) -> bool {
+        matches!(self, Variant::ChipList | Variant::TileStrip)
+    }
+
     /// Kebab-case name used by both the JSON API and the factoid
     /// page's data-variant attribute.
     pub fn as_str(&self) -> &'static str {
@@ -164,21 +170,18 @@ fn size(variant: Variant, kind: &CardKind) -> (u8, u8) {
             if rows[0].values.len() == 1 {
                 (2, 2)
             } else {
-                (4, 2)
+                (3, 2)
             }
         }
         (Variant::FactLine, _) => (2, 1),
         (Variant::CurrentWithHistory, CardKind::Facts { rows }) => {
             (2, if rows[0].values.len() <= 3 { 2 } else { 3 })
         }
-        (Variant::TileStrip, _) => (4, 2),
+        (Variant::TileStrip, _) => (3, 2),
         (Variant::IndicatorTable, CardKind::Indicators { indicators }) => {
             (4, if indicators.len() > 7 { 3 } else { 2 })
         }
-        (Variant::ChipList, CardKind::Facts { rows }) => {
-            let values = rows[0].values.len();
-            (2, (1 + values.div_ceil(3) as u8).clamp(2, 3))
-        }
+        (Variant::ChipList, _) => (3, 2),
         (Variant::FactsTable, CardKind::Facts { rows }) => {
             let values: usize = rows.iter().map(|r| r.values.len()).sum();
             (2, (1 + values.div_ceil(3) as u8).clamp(2, 4))
@@ -197,10 +200,24 @@ pub(super) fn apply(card: &mut Card) {
     card.layout.cols = cols;
     card.layout.rows = rows;
 
+    // Cover-chips cards show only the two best values up front:
+    // preferred rank first, then values with a picture; stable
+    // otherwise. All backends see the same order.
+    if card.variant.is_chip_cover()
+        && let CardKind::Facts { rows } = &mut card.kind
+    {
+        rows[0].values.sort_by_key(|value| match value {
+            FactValue::Item(chip) => (!chip.current, chip.thumb_url.is_none()),
+            _ => (true, true),
+        });
+    }
+
     // Tile variants render the picture as the card body, not as a
     // 48px chip bead - request tile-resolution thumbnails.
-    if matches!(card.variant, Variant::Portrait | Variant::TileStrip)
-        && let CardKind::Facts { rows } = &mut card.kind
+    if matches!(
+        card.variant,
+        Variant::Portrait | Variant::TileStrip | Variant::ChipList
+    ) && let CardKind::Facts { rows } = &mut card.kind
     {
         for row in rows {
             for value in &mut row.values {

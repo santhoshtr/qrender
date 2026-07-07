@@ -36,9 +36,11 @@ Two constraints sharpen the problem:
 - **Language independence.** Wikidata is multilingual; the renderer
   must not accumulate translatable UI strings of its own (there is no
   translation pipeline here, and there should not need to be one).
-- **Delivery constraints.** Factoid pages ship zero JavaScript,
-  reference only Wikimedia hosts (Commons thumbnails, Wikimedia Maps
-  tiles), and must work in both color schemes and both text directions.
+- **Delivery constraints.** Factoid pages ship no JavaScript beyond
+  one small progressive-enhancement script (the cover-chips popover
+  morph; the page is complete without it), reference only Wikimedia
+  hosts (Commons thumbnails, Wikimedia Maps tiles), and must work in
+  both color schemes and both text directions.
 
 ## 2. Design principles
 
@@ -81,11 +83,13 @@ Two constraints sharpen the problem:
    reorders content. Screen readers, text backends, and the visual
    grid all see the same sequence.
 
-7. **Zero JavaScript; modern CSS does the work.** Bento layout is
+7. **Modern CSS does the work; JS only enhances.** Bento layout is
    `grid-auto-flow: dense` with per-card span variables; cards adapt
-   to their own size with container queries; full-bleed media and
-   scroll behavior use `:has()` and scroll-snap; everything is
-   logical-properties-only so RTL needs no special casing.
+   to their own size with container queries; full-bleed media uses
+   `:has()`; the all-values popover is the native popover attribute;
+   everything is logical-properties-only so RTL needs no special
+   casing. The single inline script morphs a card into its popover
+   with a view transition — cosmetic only, never load-bearing.
 
 ## 3. Pipeline
 
@@ -327,8 +331,8 @@ consumption rules are the two single-statement header cases above.
 - Everything self-contained: Codex design tokens (light + dark) and
   the stylesheet are embedded; the icon sprite contains only the
   symbols the page uses; images come from Commons `Special:FilePath`
-  thumbnails and map tiles from `maps.wikimedia.org`. No other hosts,
-  no JS.
+  thumbnails and map tiles from `maps.wikimedia.org`. No other hosts;
+  the only script is the inline popover-morph enhancement.
 
 **Textual backends** (`textual.rs`): four serializations of the same
 IR walk — `# / ##` headings for text and markdown, `== … ==` for
@@ -436,8 +440,9 @@ WDQS (see the fixtures' git history for the procedure).
 - **No string parsing for visualization.** Data encoded in value
   labels (e.g. model sizes inside software-version strings) is not
   mined; only typed values drive card kinds.
-- **No client-side rendering.** If a feature needs JavaScript, it is
-  the wrong feature for this renderer.
+- **No client-side rendering.** Content never depends on JavaScript;
+  the one inline script is cosmetic (the popover view transition) and
+  the page is complete without it.
 - **No taxonomy walking.** Archetype resolution reads P31 literally
   plus data shape; following P279 subclass chains would cost extra
   queries for a presentation-only decision.
