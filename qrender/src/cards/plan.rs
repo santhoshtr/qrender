@@ -156,13 +156,13 @@ fn size(variant: Variant, kind: &CardKind) -> (u8, u8) {
             (if images.len() >= 4 { 6 } else { 4 }, 2)
         }
         (Variant::StatBlock, CardKind::Stat { value, .. }) => {
-            (2, if value.len() > 16 { 2 } else { 1 })
+            (2, if value.len() > 32 { 2 } else { 1 })
         }
         (Variant::Trend, CardKind::StatSeries { series, .. }) => {
             (2, if series.len() > 6 { 3 } else { 2 })
         }
         (Variant::Gauge, _) => (2, 1),
-        (Variant::MapPanel, _) => (2, 2),
+        (Variant::MapPanel, _) => (1, 1),
         (Variant::Timeline, CardKind::Timeline { events }) => {
             (2, if events.len() > 6 { 4 } else { 3 })
         }

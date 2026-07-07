@@ -64,10 +64,17 @@
     {%- if let Some(optimum) = optimum %} optimum="{{ optimum }}"{% endif %}>{{ display }}</meter>
 
   {% when CardKind::Map with { lat, lon, label } %}
-  <figure class="media map">
-    <img src="https://maps.wikimedia.org/img/osm-intl,10,{{ lat }},{{ lon }},600x300.png" alt="{{ label }}" loading="lazy">
-    <figcaption>{{ lat }}, {{ lon }}</figcaption>
-  </figure>
+  <button class="map-open" popovertarget="map-{{ card.source_pids.join("-") }}" title="{{ lat }}, {{ lon }}">
+    {% if let Some(icon) = card.icon %}<svg class="icon" aria-hidden="true"><use href="#i-{{ icon }}"/></svg>{% else %}{{ lat }}, {{ lon }}{% endif %}
+    <span class="visually-hidden">{{ label }}</span>
+  </button>
+  <div class="card-popover" popover id="map-{{ card.source_pids.join("-") }}">
+    <h3 class="card-popover__title">{{ card.title }}</h3>
+    <figure class="map-figure">
+      <img src="https://maps.wikimedia.org/img/osm-intl,10,{{ lat }},{{ lon }},600x300.png" alt="{{ label }}" loading="lazy">
+      <figcaption>{{ lat }}, {{ lon }}</figcaption>
+    </figure>
+  </div>
 
   {% when CardKind::Timeline with { events } %}
   <ol class="timeline">
@@ -90,17 +97,17 @@
   {% for row in rows %}
   <ul class="chips">
     {% for value in row.values %}
-    {% if loop.index <= 2 %}
+    {% if loop.index <= card.layout.cover_values %}
     {% call fact_value(value) %}{% endcall %}
     {% endif %}
     {% endfor %}
-    {% if row.values.len() > 2 %}
-    <li class="chips__more"><button popovertarget="chips-{{ card.source_pids.join("-") }}" aria-label="Show all values">+{{ row.values.len() - 2 }}</button></li>
+    {% if row.values.len() > card.layout.cover_values %}
+    <li class="chips__more"><button popovertarget="chips-{{ card.source_pids.join("-") }}" aria-label="Show all values">+{{ row.values.len() - card.layout.cover_values }}</button></li>
     {% endif %}
   </ul>
-  {% if row.values.len() > 2 %}
-  <div class="chips-popover" popover id="chips-{{ card.source_pids.join("-") }}">
-    <h3 class="chips-popover__title">{{ card.title }}</h3>
+  {% if row.values.len() > card.layout.cover_values %}
+  <div class="card-popover" popover id="chips-{{ card.source_pids.join("-") }}">
+    <h3 class="card-popover__title">{{ card.title }}</h3>
     <ul class="chips chips--grid">
       {% for value in row.values %}
       {% call fact_value(value) %}{% endcall %}

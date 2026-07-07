@@ -75,6 +75,8 @@ pub struct Layout {
     pub cols: u8,
     pub rows: u8,
     pub sort: i32,
+    /// Values a cover-chips card shows before the +N rail
+    pub cover_values: usize,
 }
 
 impl Default for Layout {
@@ -83,6 +85,7 @@ impl Default for Layout {
             cols: 2,
             rows: 2,
             sort: 1000,
+            cover_values: 2,
         }
     }
 }

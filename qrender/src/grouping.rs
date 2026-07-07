@@ -22,6 +22,11 @@ pub struct GroupConfig {
     /// in the collapsed footnote region instead of the main grid
     #[serde(default)]
     pub footnote: bool,
+    /// PID whose current value names the card: "office held by head of
+    /// government: Prime Minister of India" + "head of government: ..."
+    /// becomes one card titled "Prime Minister of India" listing the
+    /// officeholders, current one on the cover
+    pub title_from: Option<String>,
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone, Default)]

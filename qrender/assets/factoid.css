@@ -732,9 +732,9 @@ a {
   }
 }
 
-/* All-values popover: the card expands into a tile grid in the top
-   layer; vertical scroll carries long enumerations. */
-.chips-popover {
+/* Card popover: a card expands into the top layer - all chip values
+   as a tile grid, or the map image; vertical scroll carries length. */
+.card-popover {
   inline-size: min(80vw, 60rem);
   max-block-size: 80vh;
   margin: auto;
@@ -749,7 +749,7 @@ a {
     background-color: rgb(0 0 0 / 0.4);
   }
 
-  .chips-popover__title {
+  .card-popover__title {
     margin: 0 0 var(--spacing-75);
     font-size: var(--font-size-small);
     font-weight: var(--font-weight-bold);
@@ -765,11 +765,56 @@ a {
       min-block-size: 8rem;
     }
   }
+
+  .map-figure {
+    margin: 0;
+
+    img {
+      inline-size: 100%;
+      block-size: auto;
+      border-radius: var(--border-radius-base);
+      display: block;
+    }
+
+    figcaption {
+      margin-block-start: var(--spacing-25);
+      font-size: var(--font-size-x-small);
+      color: var(--color-subtle);
+      font-variant-numeric: tabular-nums;
+    }
+  }
 }
 
 @media (width <= 40rem) {
-  .chips-popover {
+  .card-popover {
     inline-size: 100vw;
+  }
+}
+
+/* Map card: a compact tile whose button opens the map popover */
+[data-variant="map-panel"] {
+  display: flex;
+  flex-direction: column;
+
+  .map-open {
+    flex: 1;
+    display: grid;
+    place-items: center;
+    border: none;
+    border-radius: var(--border-radius-base);
+    background-color: var(--background-color-neutral-subtle);
+    color: var(--color-subtle);
+    cursor: pointer;
+
+    .icon {
+      inline-size: 2rem;
+      block-size: 2rem;
+    }
+
+    &:hover {
+      background-color: var(--background-color-progressive-subtle);
+      color: var(--color-progressive);
+    }
   }
 }
 

@@ -148,13 +148,20 @@ expression: body
 
         
         
-<section class="card" data-variant="map-panel" data-pid="P625" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="map-panel" data-pid="P625" style="--cols: 1; --rows: 1">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-location_on"/></svg><span>coordinate location</span></h2>
   
-  <figure class="media map">
-    <img src="https://maps.wikimedia.org/img/osm-intl,10,-1.286388888,36.817222222,600x300.png" alt="coordinate location" loading="lazy">
-    <figcaption>-1.286388888, 36.817222222</figcaption>
-  </figure>
+  <button class="map-open" popovertarget="map-P625" title="-1.286388888, 36.817222222">
+    <svg class="icon" aria-hidden="true"><use href="#i-location_on"/></svg>
+    <span class="visually-hidden">coordinate location</span>
+  </button>
+  <div class="card-popover" popover id="map-P625">
+    <h3 class="card-popover__title">coordinate location</h3>
+    <figure class="map-figure">
+      <img src="https://maps.wikimedia.org/img/osm-intl,10,-1.286388888,36.817222222,600x300.png" alt="coordinate location" loading="lazy">
+      <figcaption>-1.286388888, 36.817222222</figcaption>
+    </figure>
+  </div>
 
   
 </section>
@@ -640,8 +647,8 @@ expression: body
     
   </ul>
   
-  <div class="chips-popover" popover id="chips-P190">
-    <h3 class="chips-popover__title">twinned administrative body</h3>
+  <div class="card-popover" popover id="chips-P190">
+    <h3 class="card-popover__title">twinned administrative body</h3>
     <ul class="chips chips--grid">
       
       
@@ -881,8 +888,8 @@ expression: body
     
   </ul>
   
-  <div class="chips-popover" popover id="chips-P2936">
-    <h3 class="chips-popover__title">language used</h3>
+  <div class="card-popover" popover id="chips-P2936">
+    <h3 class="card-popover__title">language used</h3>
     <ul class="chips chips--grid">
       
       

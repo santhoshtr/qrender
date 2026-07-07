@@ -187,10 +187,12 @@ pids = ["sister city", "P190"]
 
 [groups.head_of_state]
 icon = "person"
+title_from = "P1906" # office held by head of state
 pids = ["P1906", "P35"]
 
 [groups.government_headed_by]
 icon = "person"
+title_from = "P1313" # office held by head of government
 pids = ["P1313", "P6"]
 
 [groups.executive_body]

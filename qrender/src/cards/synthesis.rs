@@ -96,12 +96,23 @@ pub fn synthesize(
             .filter(|pid| !(emblem_consumed && *pid == emblem_pid))
             .filter_map(|pid| item.properties.get(pid))
             .collect();
+        let office_label = group_config
+            .title_from
+            .as_deref()
+            .and_then(|pid| item.properties.get(pid))
+            .map(|p| p.label.as_str());
         let mut group_cards = cards_for_group(&humanize(group_name), false, &properties, config);
         for card in &mut group_cards {
+            let named = office_label.is_some_and(|label| apply_title_from(card, label));
             card.icon = resolve_icon(card, group_config.icon.as_deref(), config);
             card.layout.sort = resolve_sort(card, Some(group_config), config);
             card.tier = resolve_tier(card, Some(group_config), config);
             plan::apply(card);
+            if named && card.variant.is_chip_cover() {
+                // one officeholder up front: the current one
+                card.layout.cover_values = 1;
+                card.layout.cols = 2;
+            }
         }
         cards.extend(group_cards);
     }
@@ -164,6 +175,39 @@ pub fn synthesize(
     };
     super::density::consolidate(&mut page);
     page
+}
+
+/// A group's `title_from` property names the card: its current value
+/// label becomes the card title ("Prime Minister of India"), and its
+/// own row disappears - the remaining rows list the officeholders.
+fn apply_title_from(card: &mut Card, office_label: &str) -> bool {
+    let CardKind::Facts { rows } = &mut card.kind else {
+        return false;
+    };
+    if rows.len() < 2 {
+        return false;
+    }
+    let Some(position) = rows.iter().position(|row| row.label == office_label) else {
+        return false;
+    };
+    let title = rows[position]
+        .values
+        .iter()
+        .find_map(|value| match value {
+            FactValue::Item(chip) if chip.current => Some(chip.label.clone()),
+            _ => None,
+        })
+        .or_else(|| {
+            rows[position].values.iter().find_map(|value| match value {
+                FactValue::Item(chip) => Some(chip.label.clone()),
+                _ => None,
+            })
+        });
+    let Some(title) = title else { return false };
+    rows.remove(position);
+    card.title = title;
+    card.localized_title = true;
+    true
 }
 
 fn humanize(group_name: &str) -> String {
