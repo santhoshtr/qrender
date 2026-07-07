@@ -162,7 +162,7 @@ fn size(variant: Variant, kind: &CardKind) -> (u8, u8) {
         }
         (Variant::Portrait, CardKind::Facts { rows }) => {
             if rows[0].values.len() == 1 {
-                (2, 3)
+                (2, 2)
             } else {
                 (4, 2)
             }
