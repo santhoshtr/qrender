@@ -382,8 +382,13 @@ a {
   }
 }
 
-/* Fixed-height tiles clip; let text-heavy cards scroll instead */
-.card:has(.facts, .timeline, .indicators) {
+/* Fixed-height tiles clip; let text-heavy cards scroll instead.
+   Portrait and tile-strip fill their fixed size by design - no
+   vertical scrollbar for them. */
+.card:has(.facts, .timeline, .indicators):not(
+    [data-variant="portrait"],
+    [data-variant="tile-strip"]
+  ) {
   overflow-y: auto;
 }
 
@@ -578,8 +583,12 @@ a {
    The fill contract: each variant fills its fixed grid size. Images
    stretch (object-fit: cover), lists clip and scroll, text clamps. */
 
-/* Portrait and tile-strip share the tile look: the picture IS the
-   value (a spouse's face, a school building), label + span beneath. */
+/* Chip-body cards (chip-list, portrait, tile-strip): each chip is a
+   tile. Everything stacks on one grid cell, so the real <img> fills
+   the tile as its background (no CSS background-image), the link
+   captions it from the bottom over a scrim, and the note moves into
+   the li's title tooltip. */
+[data-variant="chip-list"],
 [data-variant="portrait"],
 [data-variant="tile-strip"] {
   /* collapse the dl plumbing so tiles size against the card itself */
@@ -593,35 +602,78 @@ a {
     align-items: stretch;
 
     .chip {
-      flex-direction: column;
-      align-items: stretch;
+      display: grid;
+      /* minmax(0,) so the image's intrinsic height can't inflate the
+         row and push the caption out of the tile */
+      grid-template-rows: minmax(0, 1fr) auto auto;
       gap: 0;
       padding: 0;
       border-radius: var(--border-radius-base);
       overflow: hidden;
+      background-color: var(--background-color-neutral-subtle);
 
       .chip__thumb {
+        grid-area: 1 / 1 / -1 / -1;
         inline-size: 100%;
-        flex: 1;
+        block-size: 100%;
         min-block-size: 0;
         aspect-ratio: auto;
         border-radius: 0;
         margin-inline-start: 0;
         object-fit: cover;
-        background-color: var(--background-color-neutral-subtle);
+      }
+
+      /* scrim: a light veil over the whole photo (white text stays
+         legible even on white-ish images) deepening at the caption.
+         Explicit block-size: Chrome collapses a stretched pseudo grid
+         item to 0 when the chip's height is content-driven. */
+      &::before {
+        content: "";
+        grid-area: 1 / 1 / -1 / -1;
+        block-size: 100%;
+        background: linear-gradient(rgb(0 0 0 / 0.2) 40%, rgb(0 0 0 / 0.75));
+        z-index: 1;
+      }
+
+      a,
+      .chip__span {
+        z-index: 1;
+        grid-column: 1 / -1;
+        padding-inline: var(--spacing-75);
+        color: var(--color-inverted-fixed, #fff);
       }
 
       a {
-        padding: var(--spacing-50) var(--spacing-75) var(--spacing-25);
+        grid-row: 2;
         font-weight: var(--font-weight-bold);
+        padding-block-end: var(--spacing-25);
       }
 
-      .chip__note,
+      &:not(:has(.chip__span)) a {
+        padding-block-end: var(--spacing-50);
+      }
+
       .chip__span {
-        padding: 0 var(--spacing-75) var(--spacing-50);
+        grid-row: 3;
+        padding-block-end: var(--spacing-50);
+      }
+
+      /* the title tooltip carries the note */
+      .chip__note {
+        display: none;
+      }
+
+      &.chip--current {
+        background-color: var(--background-color-progressive-subtle);
       }
     }
   }
+}
+
+/* Chip list: wrapped tiles, two or three to a row */
+[data-variant="chip-list"] .chips .chip {
+  flex: 1 1 clamp(7rem, 40cqi, 10rem);
+  min-block-size: 6rem;
 }
 
 /* Portrait: one or two tiles fill the whole card, full bleed - the
@@ -639,19 +691,17 @@ a {
   .chips {
     flex: 1;
     min-block-size: 0;
+    /* nowrap so stretch gives the tiles the card's height - a wrapped
+       line grows to the image's intrinsic height and overflows */
+    flex-wrap: nowrap;
     gap: var(--spacing-25);
 
     .chip {
       flex: 1 1 0;
       min-inline-size: 0;
       border-radius: 0;
-      background: none;
 
-      a {
-        padding-inline: var(--spacing-100);
-      }
-
-      .chip__note,
+      a,
       .chip__span {
         padding-inline: var(--spacing-100);
       }
@@ -685,12 +735,6 @@ a {
     .chip {
       flex: 0 0 clamp(8rem, 30cqi, 11rem);
       scroll-snap-align: start;
-    }
-
-    /* tiles without a picture still hold the strip's shape */
-    .chip:not(:has(.chip__thumb)) {
-      justify-content: center;
-      background-color: var(--background-color-neutral-subtle);
     }
   }
 }

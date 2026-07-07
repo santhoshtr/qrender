@@ -96,7 +96,7 @@
           {% if loop.index <= crate::factoid::VISIBLE_VALUES %}
           {% match value %}
           {% when FactValue::Item with (chip) %}
-          <li class="chip{% if chip.current %} chip--current{% endif %}{% if chip.ended() %} chip--ended{% endif %}">{% if let Some(thumb) = chip.thumb_url %}<img class="chip__thumb" src="{{ thumb }}" alt="" loading="lazy">{% endif %}<a href="https://www.wikidata.org/wiki/{{ chip.qid }}">{{ chip.label }}</a>{% if let Some(span) = chip.span %} <small class="chip__span">{{ span.display() }}</small>{% endif %}{% if let Some(note) = chip.note %} <small class="chip__note">{{ note }}</small>{% endif %}</li>
+          <li class="chip{% if chip.current %} chip--current{% endif %}{% if chip.ended() %} chip--ended{% endif %}"{% if let Some(note) = chip.note %} title="{{ note }}"{% endif %}>{% if let Some(thumb) = chip.thumb_url %}<img class="chip__thumb" src="{{ thumb }}" alt="" loading="lazy">{% endif %}<a href="https://www.wikidata.org/wiki/{{ chip.qid }}">{{ chip.label }}</a>{% if let Some(span) = chip.span %} <small class="chip__span">{{ span.display() }}</small>{% endif %}{% if let Some(note) = chip.note %} <small class="chip__note">{{ note }}</small>{% endif %}</li>
           {% when FactValue::Link with { url } %}
           <li class="fact-link"><a href="{{ url }}" rel="nofollow">{{ url }}</a></li>
           {% when FactValue::Text with { value, span, note } %}
