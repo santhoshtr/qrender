@@ -90,7 +90,7 @@ expression: body
 
         
         
-<section class="card" data-variant="facts-table" style="--cols: 2; --rows: 3">
+<section class="card" data-variant="facts-table" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-location_on"/></svg><span class="visually-hidden">Located in</span></h2>
   
   <dl class="facts">
@@ -121,44 +121,6 @@ expression: body
           
           
           <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q3335223">Nairobi City County</a></li>
-          
-          
-          
-          
-        </ul>
-      </dd>
-    </div>
-    
-    <div class="facts__row">
-      <dt>capital of</dt>
-      <dd>
-        <ul class="chips">
-          
-          
-          
-          
-          <li class="chip"><a href="https://www.wikidata.org/wiki/Q1061480">Nairobi Province</a></li>
-          
-          
-          
-          
-          
-          
-          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q3335223">Nairobi City County</a></li>
-          
-          
-          
-          
-          
-          
-          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Kenya%20-%20Location%20Map%20%282013%29%20-%20KEN%20-%20UNOCHA.svg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q114">Kenya</a> <small class="chip__span">1963 –</small></li>
-          
-          
-          
-          
-          
-          
-          <li class="chip chip--ended"><a href="https://www.wikidata.org/wiki/Q2538511">Kenya Colony</a> <small class="chip__span">1920 – 1963</small></li>
           
           
           
@@ -201,6 +163,56 @@ expression: body
           
           
           <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/UTC%2B0300%20-%202023.svg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q6760">UTC+03:00</a></li>
+          
+          
+          
+          
+        </ul>
+      </dd>
+    </div>
+    
+  </dl>
+
+  
+</section>
+
+        
+        
+<section class="card" data-variant="current-history" style="--cols: 2; --rows: 3">
+  <h2 class="card__title"><span>capital of</span></h2>
+  
+  <dl class="facts">
+    
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          
+          
+          <li class="chip"><a href="https://www.wikidata.org/wiki/Q1061480">Nairobi Province</a></li>
+          
+          
+          
+          
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q3335223">Nairobi City County</a></li>
+          
+          
+          
+          
+          
+          
+          <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Kenya%20-%20Location%20Map%20%282013%29%20-%20KEN%20-%20UNOCHA.svg?width=96" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q114">Kenya</a> <small class="chip__span">1963 –</small></li>
+          
+          
+          
+          
+          
+          
+          <li class="chip chip--ended"><a href="https://www.wikidata.org/wiki/Q2538511">Kenya Colony</a> <small class="chip__span">1920 – 1963</small></li>
           
           
           
