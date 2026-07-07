@@ -166,22 +166,23 @@ fn size(variant: Variant, kind: &CardKind) -> (u8, u8) {
         (Variant::Timeline, CardKind::Timeline { events }) => {
             (2, if events.len() > 6 { 4 } else { 3 })
         }
-        (Variant::Portrait, CardKind::Facts { rows }) => {
-            if rows[0].values.len() == 1 {
-                (2, 2)
-            } else {
-                (3, 2)
-            }
-        }
+        (Variant::Portrait, _) => (2, 2),
         (Variant::FactLine, _) => (2, 1),
         (Variant::CurrentWithHistory, CardKind::Facts { rows }) => {
             (2, if rows[0].values.len() <= 3 { 2 } else { 3 })
         }
-        (Variant::TileStrip, _) => (3, 2),
+        // Exactly three values ride one row of three tiles (3 cols);
+        // otherwise the cover is the 2x2 cell grid
+        (Variant::TileStrip | Variant::ChipList, CardKind::Facts { rows }) => {
+            if rows[0].values.len() == 3 {
+                (3, 2)
+            } else {
+                (2, 2)
+            }
+        }
         (Variant::IndicatorTable, CardKind::Indicators { indicators }) => {
             (4, if indicators.len() > 7 { 3 } else { 2 })
         }
-        (Variant::ChipList, _) => (3, 2),
         (Variant::FactsTable, CardKind::Facts { rows }) => {
             let values: usize = rows.iter().map(|r| r.values.len()).sum();
             (2, (1 + values.div_ceil(3) as u8).clamp(2, 4))

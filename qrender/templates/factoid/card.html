@@ -97,7 +97,7 @@
   {# cover chips: the best values as tiles; every value in the
      popover grid the +N rail opens #}
   {% for row in rows %}
-  <ul class="chips {% if card.layout.cover_values == 1 %}chips--single{% else %}chips--cells{% endif %}">
+  <ul class="chips {% if card.layout.cover_values == 1 %}chips--single{% else if row.values.len() == 3 %}chips--row{% else %}chips--cells{% endif %}">
     {% for value in row.values %}
     {% if loop.index <= card.layout.cover_values %}
     {% call fact_value(value) %}{% endcall %}

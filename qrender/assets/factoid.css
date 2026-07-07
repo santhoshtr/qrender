@@ -734,8 +734,9 @@ a {
   }
 
   /* Standard cover: up to four tiles in 2x2 cells; past four the
-     fourth cell is the +N button. Three values leave it empty. */
-  .chips--cells {
+     fourth cell is the +N button. */
+  .chips--cells,
+  .chips--row {
     flex: 1;
     min-block-size: 0;
     display: grid;
@@ -747,6 +748,12 @@ a {
       min-inline-size: 0;
       border-radius: 0;
     }
+  }
+
+  /* Exactly three values: one row of three tiles, no empty cell */
+  .chips--row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: minmax(0, 1fr);
   }
 }
 
