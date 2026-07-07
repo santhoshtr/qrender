@@ -23,7 +23,7 @@ expression: body
 <div class="page">
   <header class="page-header">
     
-    <a class="page-header__hero" href="https://commons.wikimedia.org/wiki/File:Nairobi,%20view%20from%20KICC.JPG"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi,%20view%20from%20KICC.JPG?width=640" alt="Nairobi"></a>
+    <a class="page-header__hero" href="https://commons.wikimedia.org/wiki/File:Nairobi%20banner.jpg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20banner.jpg?width=640" alt="Nairobi"></a>
     
     <div>
       <h1>Nairobi</h1>
@@ -363,19 +363,10 @@ expression: body
     <div class="cards">
       
       
-<section class="card" data-variant="gallery-strip" style="--cols: 6; --rows: 2">
+<section class="card" data-variant="gallery-strip" style="--cols: 4; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-photo_library"/></svg><span class="visually-hidden">Articleimage</span></h2>
   
   <div class="gallery">
-    
-    <figure class="media">
-      
-
-<a href="https://commons.wikimedia.org/wiki/File:Nairobi%20banner.jpg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20banner.jpg?width=640" alt="page banner" loading="lazy"></a>
-
-
-      <figcaption>page banner</figcaption>
-    </figure>
     
     <figure class="media">
       
@@ -705,6 +696,22 @@ expression: body
     </div>
     
   </dl>
+
+  
+</section>
+
+      
+      
+<section class="card" data-variant="media-full" style="--cols: 2; --rows: 2">
+  <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-photo_library"/></svg><span>image</span></h2>
+  
+  <figure class="media">
+    
+
+<a href="https://commons.wikimedia.org/wiki/File:Nairobi,%20view%20from%20KICC.JPG"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi,%20view%20from%20KICC.JPG?width=640" alt="image" loading="lazy"></a>
+
+
+  </figure>
 
   
 </section>

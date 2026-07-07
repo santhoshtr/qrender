@@ -33,12 +33,16 @@ pub fn synthesize(
         .and_then(|r| r.hero.as_ref())
         .and_then(|h| compose::hero_facts(item, h));
 
-    // The item's main image becomes the page hero: the preferred-rank
-    // statement when one exists, else the first. When that leaves P18
+    // The page banner (P948) becomes the page hero when present, else
+    // the item's main image (P18): the preferred-rank statement when
+    // one exists, else the first. When that leaves the source property
     // nothing more to show, its standalone card would duplicate the
     // hero - skip it.
-    let main_image = item.properties.get("P18");
-    let hero = main_image
+    let hero_property = item
+        .properties
+        .get("P948")
+        .or_else(|| item.properties.get("P18"));
+    let hero = hero_property
         .and_then(|p| {
             p.statements
                 .iter()
@@ -55,8 +59,9 @@ pub fn synthesize(
                 None
             }
         });
-    let hero_consumes_p18 = hero.is_some()
-        && main_image.is_some_and(|p| {
+    let hero_pid = hero_property.map(|p| p.pid.as_str()).unwrap_or("");
+    let hero_consumed = hero.is_some()
+        && hero_property.is_some_and(|p| {
             let preferred = p
                 .statements
                 .iter()
@@ -87,7 +92,7 @@ pub fn synthesize(
             .pids
             .iter()
             .filter(|pid| seen.insert(pid.as_str()) && !config.is_ignored(pid))
-            .filter(|pid| !(hero_consumes_p18 && *pid == "P18"))
+            .filter(|pid| !(hero_consumed && *pid == hero_pid))
             .filter(|pid| !(emblem_consumed && *pid == emblem_pid))
             .filter_map(|pid| item.properties.get(pid))
             .collect();
@@ -108,7 +113,7 @@ pub fn synthesize(
         .properties
         .values()
         .filter(|p| !grouped_pids.contains(&p.pid) && !config.is_ignored(&p.pid))
-        .filter(|p| !(hero_consumes_p18 && p.pid == "P18"))
+        .filter(|p| !(hero_consumed && p.pid == hero_pid))
         .filter(|p| !(emblem_consumed && p.pid == emblem_pid))
         .collect();
     leftover.sort_by_key(|p| p.pid.strip_prefix('P').and_then(|n| n.parse::<u32>().ok()));
@@ -816,15 +821,20 @@ mod tests {
     }
 
     #[test]
-    fn hero_comes_from_main_image() {
+    fn hero_prefers_page_banner_over_main_image() {
         let page = nairobi_page();
-        let hero = page.hero.as_ref().expect("Nairobi has a P18");
-        assert!(hero.thumb_url.contains("width=640"));
+        let hero = page.hero.as_ref().expect("Nairobi has a P948 banner");
+        assert!(hero.file_name.contains("banner"));
         assert_eq!(hero.caption, "Nairobi");
-        // P18 has a single statement consumed by the hero - no duplicate card
+        // P948 has a single statement consumed by the hero - no duplicate
+        // card, while P18 (no longer the hero) keeps its own card
         assert!(
             page.all_cards()
-                .all(|c| c.source_pids != ["P18".to_string()])
+                .all(|c| !c.source_pids.contains(&"P948".to_string()))
+        );
+        assert!(
+            page.all_cards()
+                .any(|c| c.source_pids.contains(&"P18".to_string()))
         );
     }
 
