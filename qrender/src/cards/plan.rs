@@ -40,7 +40,9 @@ pub enum Variant {
     /// Three or more items, mostly with images: two cover tiles, the
     /// rest behind the ellipsis popover
     TileStrip,
-    /// Item enumeration with few images: same cover treatment
+    /// Item enumeration with few (but some) images: same cover
+    /// treatment; all-imageless enumerations fall through to a
+    /// FactsTable pill list instead
     ChipList,
     /// Consolidated sibling time series: label, sparkline, current
     /// value per row (built by the density pass)
@@ -140,6 +142,10 @@ fn select(kind: &CardKind) -> Variant {
                 Variant::TileStrip
             } else if c.ended >= 1 {
                 Variant::CurrentWithHistory
+            } else if c.with_image == 0 {
+                // nothing to tile (hashtags, plain strings): a quiet
+                // pill list reads better than empty cover cells
+                Variant::FactsTable
             } else {
                 Variant::ChipList
             }
@@ -288,8 +294,15 @@ mod tests {
     }
 
     #[test]
-    fn plain_enumerations_are_chip_lists() {
+    fn imageless_enumerations_are_pill_lists() {
         let values = (0..5).map(|_| chip(false, false)).collect();
+        assert_eq!(select(&facts(values)), Variant::FactsTable);
+    }
+
+    #[test]
+    fn sparsely_pictured_enumerations_are_chip_lists() {
+        let mut values: Vec<FactValue> = (0..4).map(|_| chip(false, false)).collect();
+        values.push(chip(true, false));
         assert_eq!(select(&facts(values)), Variant::ChipList);
     }
 

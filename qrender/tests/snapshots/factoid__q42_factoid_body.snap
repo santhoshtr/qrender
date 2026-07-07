@@ -957,42 +957,50 @@ expression: body
 
         
         
-<section class="card" data-variant="chip-list" data-pid="P800" style="--cols: 3; --rows: 2">
+<section class="card" data-variant="facts-table" data-pid="P800" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><span>notable work</span></h2>
   
   
-  
-  
-  <ul class="chips chips--row">
+  <dl class="facts">
     
-    
-    
+    <div class="facts__row">
+      
+      <dd>
+        <ul class="chips">
+          
+          
+          
+          
 
 <li class="chip"><a href="https://www.wikidata.org/wiki/Q7758404">The Private Life of Genghis Khan</a></li>
 
 
-    
-    
-    
-    
+          
+          
+          
+          
+          
 
 <li class="chip"><a href="https://www.wikidata.org/wiki/Q20736364">Dirk Gently series</a></li>
 
 
-    
-    
-    
-    
+          
+          
+          
+          
+          
 
 <li class="chip"><a href="https://www.wikidata.org/wiki/Q25169">The Hitchhiker&#39;s Guide to the Galaxy</a></li>
 
 
+          
+          
+          
+        </ul>
+      </dd>
+    </div>
     
-    
-    
-  </ul>
-  
-  
+  </dl>
   
 
   
