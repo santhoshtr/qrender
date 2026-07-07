@@ -667,27 +667,28 @@ a {
       &.chip--current {
         background-color: var(--background-color-progressive-subtle);
       }
+    }
 
-      /* ellipsis on the cover chip: opens the all-values popover */
-      .chip__more {
-        grid-row: 1;
-        grid-column: 1;
-        justify-self: end;
-        align-self: start;
-        z-index: 1;
-        margin: var(--spacing-50);
-        inline-size: 2rem;
-        block-size: 2rem;
+    /* "+N" rail after the cover tiles: a slim full-height button
+       opening the all-values popover */
+    .chips__more {
+      display: flex;
+
+      button {
+        inline-size: 100%;
+        min-inline-size: 2rem;
+        padding-inline: var(--spacing-50);
         border: none;
-        border-radius: var(--border-radius-circle);
-        background-color: rgb(0 0 0 / 0.45);
-        color: var(--color-inverted-fixed, #fff);
+        background-color: var(--background-color-neutral);
+        color: var(--color-subtle);
         font: inherit;
+        font-size: var(--font-size-small);
         font-weight: var(--font-weight-bold);
         cursor: pointer;
 
         &:hover {
-          background-color: rgb(0 0 0 / 0.65);
+          background-color: var(--background-color-progressive-subtle);
+          color: var(--color-progressive);
         }
       }
     }

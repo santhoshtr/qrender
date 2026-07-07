@@ -529,13 +529,10 @@ expression: body
     
     
     
-    
 
-<li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/High%20Street%20Brentwood%20Essex%20-%20geograph.org.uk%20-%2019540.jpg?width=400" alt="" loading="lazy"><button class="chip__more" popovertarget="chips-P551" aria-label="Show all values">…</button><a href="https://www.wikidata.org/wiki/Q909993">Brentwood</a> <small class="chip__span">1957 –</small></li>
+<li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/High%20Street%20Brentwood%20Essex%20-%20geograph.org.uk%20-%2019540.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q909993">Brentwood</a> <small class="chip__span">1957 –</small></li>
 
 
-    
-    
     
     
     
@@ -550,6 +547,8 @@ expression: body
     
     
     
+    
+    <li class="chips__more"><button popovertarget="chips-P551" aria-label="Show all values">+2</button></li>
     
   </ul>
   
@@ -793,13 +792,10 @@ expression: body
     
     
     
-    
 
-<li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Quito%20Accordion%20player.jpg?width=400" alt="" loading="lazy"><button class="chip__more" popovertarget="chips-P106" aria-label="Show all values">…</button><a href="https://www.wikidata.org/wiki/Q639669">musician</a></li>
+<li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Quito%20Accordion%20player.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q639669">musician</a></li>
 
 
-    
-    
     
     
     
@@ -822,6 +818,8 @@ expression: body
     
     
     
+    
+    <li class="chips__more"><button popovertarget="chips-P106" aria-label="Show all values">+6</button></li>
     
   </ul>
   
@@ -898,13 +896,10 @@ expression: body
     
     
     
-    
 
-<li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Illustration%20of%20a%20futuristic%20aircraft%20on%20a%20landing%20pad%20by%20David%20Revoy.png?width=400" alt="" loading="lazy"><button class="chip__more" popovertarget="chips-P136" aria-label="Show all values">…</button><a href="https://www.wikidata.org/wiki/Q24925">science fiction</a></li>
+<li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Illustration%20of%20a%20futuristic%20aircraft%20on%20a%20landing%20pad%20by%20David%20Revoy.png?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q24925">science fiction</a></li>
 
 
-    
-    
     
     
     
@@ -917,6 +912,8 @@ expression: body
     
     
     
+    
+    <li class="chips__more"><button popovertarget="chips-P136" aria-label="Show all values">+1</button></li>
     
   </ul>
   
@@ -1005,13 +1002,10 @@ expression: body
     
     
     
-    
 
-<li class="chip"><button class="chip__more" popovertarget="chips-P800" aria-label="Show all values">…</button><a href="https://www.wikidata.org/wiki/Q7758404">The Private Life of Genghis Khan</a></li>
+<li class="chip"><a href="https://www.wikidata.org/wiki/Q7758404">The Private Life of Genghis Khan</a></li>
 
 
-    
-    
     
     
     
@@ -1024,6 +1018,8 @@ expression: body
     
     
     
+    
+    <li class="chips__more"><button popovertarget="chips-P800" aria-label="Show all values">+1</button></li>
     
   </ul>
   
@@ -1837,7 +1833,7 @@ expression: body
    cover-chips card into its popover with a view transition. The
    popover itself opens natively (popovertarget) without it. */
 document.addEventListener('click', (event) => {
-  const button = event.target.closest('.chip__more');
+  const button = event.target.closest('[popovertarget]');
   if (!button || !document.startViewTransition) return;
   const popover = document.getElementById(button.getAttribute('popovertarget'));
   const card = button.closest('.card');

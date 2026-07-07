@@ -611,13 +611,10 @@ expression: body
     
     
     
-    
 
-<li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/%E4%BA%94%E5%8D%8E%E5%8C%BA%E4%B8%8E%E7%9B%98%E9%BE%99%E5%8C%BA%E5%A4%A9%E9%99%85%E7%BA%BF%20-%20%E8%88%AA%E6%8B%8D%20-%202025-05-16%2003.jpg?width=400" alt="" loading="lazy"><button class="chip__more" popovertarget="chips-P190" aria-label="Show all values">…</button><a href="https://www.wikidata.org/wiki/Q182852">Kunming</a></li>
+<li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/%E4%BA%94%E5%8D%8E%E5%8C%BA%E4%B8%8E%E7%9B%98%E9%BE%99%E5%8C%BA%E5%A4%A9%E9%99%85%E7%BA%BF%20-%20%E8%88%AA%E6%8B%8D%20-%202025-05-16%2003.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q182852">Kunming</a></li>
 
 
-    
-    
     
     
     
@@ -638,6 +635,8 @@ expression: body
     
     
     
+    
+    <li class="chips__more"><button popovertarget="chips-P190" aria-label="Show all values">+5</button></li>
     
   </ul>
   
@@ -861,13 +860,10 @@ expression: body
     
     
     
-    
 
-<li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/William%20Shakespeare%20-%20Sonnet%20XXX%20-%20Rapenburg%2030%2C%20Leiden%20%28cropped%29.JPG?width=400" alt="" loading="lazy"><button class="chip__more" popovertarget="chips-P2936" aria-label="Show all values">…</button><a href="https://www.wikidata.org/wiki/Q1860">English</a></li>
+<li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/William%20Shakespeare%20-%20Sonnet%20XXX%20-%20Rapenburg%2030%2C%20Leiden%20%28cropped%29.JPG?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q1860">English</a></li>
 
 
-    
-    
     
     
     
@@ -880,6 +876,8 @@ expression: body
     
     
     
+    
+    <li class="chips__more"><button popovertarget="chips-P2936" aria-label="Show all values">+1</button></li>
     
   </ul>
   
@@ -1210,7 +1208,7 @@ expression: body
    cover-chips card into its popover with a view transition. The
    popover itself opens natively (popovertarget) without it. */
 document.addEventListener('click', (event) => {
-  const button = event.target.closest('.chip__more');
+  const button = event.target.closest('[popovertarget]');
   if (!button || !document.startViewTransition) return;
   const popover = document.getElementById(button.getAttribute('popovertarget'));
   const card = button.closest('.card');

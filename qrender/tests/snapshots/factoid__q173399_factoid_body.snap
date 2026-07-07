@@ -404,13 +404,10 @@ expression: body
     
     
     
-    
 
-<li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Shamby.jpg?width=400" alt="" loading="lazy"><button class="chip__more" popovertarget="chips-P69" aria-label="Show all values">…</button><a href="https://www.wikidata.org/wiki/Q7487458">Shambhala School</a></li>
+<li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Shamby.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q7487458">Shambhala School</a></li>
 
 
-    
-    
     
     
     
@@ -425,6 +422,8 @@ expression: body
     
     
     
+    
+    <li class="chips__more"><button popovertarget="chips-P69" aria-label="Show all values">+2</button></li>
     
   </ul>
   
@@ -477,13 +476,10 @@ expression: body
     
     
     
-    
 
-<li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Greenpeacebelomonte.jpg?width=400" alt="" loading="lazy"><button class="chip__more" popovertarget="chips-P101" aria-label="Show all values">…</button><a href="https://www.wikidata.org/wiki/Q203764">activism</a></li>
+<li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Greenpeacebelomonte.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q203764">activism</a></li>
 
 
-    
-    
     
     
     
@@ -498,6 +494,8 @@ expression: body
     
     
     
+    
+    <li class="chips__more"><button popovertarget="chips-P101" aria-label="Show all values">+2</button></li>
     
   </ul>
   
@@ -550,13 +548,10 @@ expression: body
     
     
     
-    
 
-<li class="chip chip--current"><button class="chip__more" popovertarget="chips-P106" aria-label="Show all values">…</button><a href="https://www.wikidata.org/wiki/Q10800557">film actor</a></li>
+<li class="chip chip--current"><a href="https://www.wikidata.org/wiki/Q10800557">film actor</a></li>
 
 
-    
-    
     
     
     
@@ -577,6 +572,8 @@ expression: body
     
     
     
+    
+    <li class="chips__more"><button popovertarget="chips-P106" aria-label="Show all values">+5</button></li>
     
   </ul>
   
@@ -655,13 +652,10 @@ expression: body
     
     
     
-    
 
-<li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Time100.svg?width=400" alt="" loading="lazy"><button class="chip__more" popovertarget="chips-P166" aria-label="Show all values">…</button><a href="https://www.wikidata.org/wiki/Q604370">Time 100</a> <small class="chip__span">2024</small></li>
+<li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Time100.svg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q604370">Time 100</a> <small class="chip__span">2024</small></li>
 
 
-    
-    
     
     
     
@@ -678,6 +672,8 @@ expression: body
     
     
     
+    
+    <li class="chips__more"><button popovertarget="chips-P166" aria-label="Show all values">+3</button></li>
     
   </ul>
   
@@ -888,13 +884,10 @@ expression: body
     
     
     
-    
 
-<li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Catherine%20De%20Lean%20and%20Anne%20Emond%20at%20the%202012%20Genie%20Awards.jpg?width=400" alt="" loading="lazy"><button class="chip__more" popovertarget="chips-P1411" aria-label="Show all values">…</button><a href="https://www.wikidata.org/wiki/Q1502249">Genie Awards</a></li>
+<li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Catherine%20De%20Lean%20and%20Anne%20Emond%20at%20the%202012%20Genie%20Awards.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q1502249">Genie Awards</a></li>
 
 
-    
-    
     
     
     
@@ -911,6 +904,8 @@ expression: body
     
     
     
+    
+    <li class="chips__more"><button popovertarget="chips-P1411" aria-label="Show all values">+3</button></li>
     
   </ul>
   
@@ -1147,7 +1142,7 @@ expression: body
    cover-chips card into its popover with a view transition. The
    popover itself opens natively (popovertarget) without it. */
 document.addEventListener('click', (event) => {
-  const button = event.target.closest('.chip__more');
+  const button = event.target.closest('[popovertarget]');
   if (!button || !document.startViewTransition) return;
   const popover = document.getElementById(button.getAttribute('popovertarget'));
   const card = button.closest('.card');
