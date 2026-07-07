@@ -615,7 +615,7 @@ expression: body
   
   
   
-  <ul class="chips">
+  <ul class="chips chips--cells">
     
     
     
@@ -635,6 +635,10 @@ expression: body
     
     
     
+
+<li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cidade%20Maravilhosa.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q8678">Rio de Janeiro</a></li>
+
+
     
     
     
@@ -644,7 +648,9 @@ expression: body
     
     
     
-    <li class="chips__more"><button popovertarget="chips-P190" aria-label="Show all values">+5</button></li>
+    
+    
+    <li class="chips__more"><button popovertarget="chips-P190" aria-label="Show all values">+4</button></li>
     
   </ul>
   
@@ -864,7 +870,7 @@ expression: body
   
   
   
-  <ul class="chips">
+  <ul class="chips chips--cells">
     
     
     
@@ -884,35 +890,14 @@ expression: body
     
     
     
-    
-    <li class="chips__more"><button popovertarget="chips-P2936" aria-label="Show all values">+1</button></li>
-    
-  </ul>
-  
-  <div class="card-popover" popover id="chips-P2936">
-    <h3 class="card-popover__title">language used</h3>
-    <ul class="chips chips--grid">
-      
-      
-
-<li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/William%20Shakespeare%20-%20Sonnet%20XXX%20-%20Rapenburg%2030%2C%20Leiden%20%28cropped%29.JPG?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q1860">English</a></li>
-
-
-      
-      
-
-<li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Manuscrit%20colonial%20kiswahili-Africa%20Museum.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q7838">Swahili</a></li>
-
-
-      
-      
 
 <li class="chip"><a href="https://www.wikidata.org/wiki/Q35787">Maasai</a></li>
 
 
-      
-    </ul>
-  </div>
+    
+    
+    
+  </ul>
   
   
   

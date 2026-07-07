@@ -526,7 +526,7 @@ expression: body
   
   
   
-  <ul class="chips">
+  <ul class="chips chips--cells">
     
     
     
@@ -546,43 +546,22 @@ expression: body
     
     
     
-    
-    
-    
-    <li class="chips__more"><button popovertarget="chips-P551" aria-label="Show all values">+2</button></li>
-    
-  </ul>
-  
-  <div class="card-popover" popover id="chips-P551">
-    <h3 class="card-popover__title">residence</h3>
-    <ul class="chips chips--grid">
-      
-      
-
-<li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/High%20Street%20Brentwood%20Essex%20-%20geograph.org.uk%20-%2019540.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q909993">Brentwood</a> <small class="chip__span">1957 –</small></li>
-
-
-      
-      
-
-<li class="chip chip--ended" title="end cause: death of subject"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Aerial-SantaBarbaraCA10-28-08.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q159288">Santa Barbara</a> <small class="chip__span">– 2001</small> <small class="chip__note">end cause: death of subject</small></li>
-
-
-      
-      
 
 <li class="chip chip--ended"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/KingsCollegeChapelWest.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q350">Cambridge</a> <small class="chip__span">1952</small></li>
 
 
-      
-      
+    
+    
+    
+    
 
 <li class="chip chip--ended"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/London%20Skyline%20%28125508655%29.jpeg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q84">London</a> <small class="chip__span">1952 – 1957</small></li>
 
 
-      
-    </ul>
-  </div>
+    
+    
+    
+  </ul>
   
   
   
@@ -789,7 +768,7 @@ expression: body
   
   
   
-  <ul class="chips">
+  <ul class="chips chips--cells">
     
     
     
@@ -809,6 +788,10 @@ expression: body
     
     
     
+
+<li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Leonid%20Pasternak%20-%20The%20Passion%20of%20creation%20%281%29.jpg?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q36180">writer</a></li>
+
+
     
     
     
@@ -820,7 +803,9 @@ expression: body
     
     
     
-    <li class="chips__more"><button popovertarget="chips-P106" aria-label="Show all values">+6</button></li>
+    
+    
+    <li class="chips__more"><button popovertarget="chips-P106" aria-label="Show all values">+5</button></li>
     
   </ul>
   
@@ -893,7 +878,7 @@ expression: body
   
   
   
-  <ul class="chips">
+  <ul class="chips chips--cells">
     
     
     
@@ -913,35 +898,14 @@ expression: body
     
     
     
-    
-    <li class="chips__more"><button popovertarget="chips-P136" aria-label="Show all values">+1</button></li>
-    
-  </ul>
-  
-  <div class="card-popover" popover id="chips-P136">
-    <h3 class="card-popover__title">genre</h3>
-    <ul class="chips chips--grid">
-      
-      
-
-<li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Illustration%20of%20a%20futuristic%20aircraft%20on%20a%20landing%20pad%20by%20David%20Revoy.png?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q24925">science fiction</a></li>
-
-
-      
-      
-
-<li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Comedyicon%20PL.png?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q40831">comedy</a></li>
-
-
-      
-      
 
 <li class="chip"><img class="chip__thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cruikshank%20-%20The%20Allied%20Bakers.png?width=400" alt="" loading="lazy"><a href="https://www.wikidata.org/wiki/Q128758">satire</a></li>
 
 
-      
-    </ul>
-  </div>
+    
+    
+    
+  </ul>
   
   
   
@@ -999,7 +963,7 @@ expression: body
   
   
   
-  <ul class="chips">
+  <ul class="chips chips--cells">
     
     
     
@@ -1019,35 +983,14 @@ expression: body
     
     
     
-    
-    <li class="chips__more"><button popovertarget="chips-P800" aria-label="Show all values">+1</button></li>
-    
-  </ul>
-  
-  <div class="card-popover" popover id="chips-P800">
-    <h3 class="card-popover__title">notable work</h3>
-    <ul class="chips chips--grid">
-      
-      
-
-<li class="chip"><a href="https://www.wikidata.org/wiki/Q7758404">The Private Life of Genghis Khan</a></li>
-
-
-      
-      
-
-<li class="chip"><a href="https://www.wikidata.org/wiki/Q20736364">Dirk Gently series</a></li>
-
-
-      
-      
 
 <li class="chip"><a href="https://www.wikidata.org/wiki/Q25169">The Hitchhiker&#39;s Guide to the Galaxy</a></li>
 
 
-      
-    </ul>
-  </div>
+    
+    
+    
+  </ul>
   
   
   

@@ -75,7 +75,8 @@ pub struct Layout {
     pub cols: u8,
     pub rows: u8,
     pub sort: i32,
-    /// Values a cover-chips card shows before the +N rail
+    /// Tiles a cover-chips card shows; when more values exist the +N
+    /// button follows (fourth cell, or the side rail when this is 1)
     pub cover_values: usize,
 }
 

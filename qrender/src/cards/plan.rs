@@ -200,9 +200,10 @@ pub(super) fn apply(card: &mut Card) {
     card.layout.cols = cols;
     card.layout.rows = rows;
 
-    // Cover-chips cards show only the two best values up front:
-    // preferred rank first, then values with a picture; stable
-    // otherwise. All backends see the same order.
+    // Cover-chips cards show the best values up front: preferred rank
+    // first, then values with a picture; stable otherwise. All
+    // backends see the same order. The cover holds four cells - all
+    // values when they fit, else three tiles and the +N button.
     if card.variant.is_chip_cover()
         && let CardKind::Facts { rows } = &mut card.kind
     {
@@ -210,6 +211,8 @@ pub(super) fn apply(card: &mut Card) {
             FactValue::Item(chip) => (!chip.current, chip.thumb_url.is_none()),
             _ => (true, true),
         });
+        let len = rows[0].values.len();
+        card.layout.cover_values = if len > 4 { 3 } else { len };
     }
 
     // Tile variants render the picture as the card body, not as a
