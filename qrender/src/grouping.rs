@@ -15,9 +15,13 @@ pub struct GroupConfig {
     pub order: Option<i32>,
     /// Symbol name from assets/icons/, shown on cards from this group
     pub icon: Option<String>,
-    /// Page-order weight (sizes are not configurable - the presentation
-    /// variant owns them; see cards/plan.rs)
+    /// Page-order weight
     pub sort: Option<i32>,
+    /// Fixed (cols, rows) override for this group's cards. The variant
+    /// owns sizes by default (cards/plan.rs); this is the judgment
+    /// escape hatch for when that's wrong (phone codes don't need a
+    /// tall card).
+    pub size: Option<(u8, u8)>,
     /// Wikimedia-curation meta (categories, templates); cards render
     /// in the collapsed footnote region instead of the main grid
     #[serde(default)]
@@ -38,6 +42,8 @@ pub struct PropertyConfig {
     pub ignore: bool,
     /// Page-order weight; overrides the group's
     pub sort: Option<i32>,
+    /// Fixed (cols, rows) override; overrides the group's
+    pub size: Option<(u8, u8)>,
     /// Wikimedia-curation meta; see GroupConfig::footnote
     #[serde(default)]
     pub footnote: bool,

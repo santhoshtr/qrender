@@ -113,6 +113,9 @@ pub fn synthesize(
                 card.layout.cover_values = 1;
                 card.layout.cols = 2;
             }
+            if let Some((cols, rows)) = resolve_size(card, Some(group_config), config) {
+                (card.layout.cols, card.layout.rows) = (cols, rows);
+            }
         }
         cards.extend(group_cards);
     }
@@ -143,6 +146,9 @@ pub fn synthesize(
             card.layout.sort = resolve_sort(card, None, config);
             card.tier = resolve_tier(card, None, config);
             plan::apply(card);
+            if let Some((cols, rows)) = resolve_size(card, None, config) {
+                (card.layout.cols, card.layout.rows) = (cols, rows);
+            }
         }
         cards.extend(property_cards);
     }
@@ -255,6 +261,23 @@ fn resolve_tier(card: &Card, group_config: Option<&GroupConfig>, config: &Groupi
 
 /// Page-order weight: group config, then per-PID config. Sizes are not
 /// configurable - the variant owns them (plan.rs).
+/// Configured (cols, rows) override: per-PID beats group, both beat
+/// the variant's own size.
+fn resolve_size(
+    card: &Card,
+    group_config: Option<&GroupConfig>,
+    config: &GroupingConfig,
+) -> Option<(u8, u8)> {
+    let mut size = group_config.and_then(|g| g.size);
+    for pid in &card.source_pids {
+        if let Some(property_config) = config.properties.get(pid) {
+            size = property_config.size.or(size);
+            break;
+        }
+    }
+    size
+}
+
 fn resolve_sort(card: &Card, group_config: Option<&GroupConfig>, config: &GroupingConfig) -> i32 {
     let mut sort = group_config
         .and_then(|g| g.sort)

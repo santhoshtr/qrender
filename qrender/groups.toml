@@ -281,6 +281,7 @@ pids = ["P1622", "P5658", "P395"]
 
 [groups.phone]
 icon = "call"
+size = [2, 2]
 pids = [
   "P474",  # country calling code
   "P3238", # trunk prefix
@@ -9797,6 +9798,8 @@ icon = "equal"
 footnote = true
 [properties.P485]
 icon = "archive"
+[properties.P487]    # Unicode character
+size = [1, 1]
 [properties.P551]
 icon = "home"
 [properties.P552]
