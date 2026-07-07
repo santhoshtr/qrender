@@ -17,6 +17,7 @@ struct PageTemplate<'a> {
     tokens_light: &'static str,
     tokens_dark: &'static str,
     stylesheet: &'static str,
+    script: &'static str,
 }
 
 /// The footnote region's disclosure icon
@@ -84,6 +85,7 @@ pub fn render_page(page: &FactoidPage) -> Result<String, QRenderError> {
         tokens_light: include_str!("../assets/codex-tokens-light.css"),
         tokens_dark: include_str!("../assets/codex-tokens-dark.css"),
         stylesheet: include_str!("../assets/factoid.css"),
+        script: include_str!("../assets/factoid.js"),
     };
     Ok(template.render()?)
 }

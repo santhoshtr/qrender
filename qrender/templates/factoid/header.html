@@ -1,0 +1,28 @@
+{# Page header: hero image, title, dates/description/tagline, emblem.
+   Included by page.html; `page` comes from the surrounding context. #}
+<header class="page-header">
+  {% if let Some(hero) = page.hero %}
+  <a class="page-header__hero" href="{{ hero.page_url }}"><img src="{{ hero.thumb_url }}" alt="{{ hero.caption }}"></a>
+  {% endif %}
+  <div>
+    <h1>{{ page.label.as_deref().unwrap_or(page.qid.as_str()) }}</h1>
+    {% if let Some(facts) = page.hero_facts %}
+    {% if let Some(range) = facts.date_range %}
+    <p class="page-header__dates">{{ range }}</p>
+    {% endif %}
+    {% endif %}
+    {% if let Some(description) = page.description %}
+    <p class="page-header__description">{{ description }}</p>
+    {% endif %}
+    {% if let Some(facts) = page.hero_facts %}
+    {% if let Some(tagline) = facts.tagline %}
+    <p class="page-header__tagline">{{ tagline }}</p>
+    {% endif %}
+    {% endif %}
+  </div>
+  {% if let Some(facts) = page.hero_facts %}
+  {% if let Some(emblem) = facts.emblem %}
+  <a class="page-header__emblem" href="{{ emblem.page_url }}"><img src="{{ emblem.thumb_url }}" alt="{{ emblem.caption }}" loading="lazy"></a>
+  {% endif %}
+  {% endif %}
+</header>

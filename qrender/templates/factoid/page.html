@@ -1,168 +1,4 @@
-{% macro card_section(card) %}
-<section class="card" data-variant="{{ card.variant }}" data-pid="{{ card.source_pids|join(" ") }}" style="--cols: {{ card.layout.cols }}; --rows: {{ card.layout.rows }}">
-  <h2 class="card__title">
-    {%- if let Some(icon) = card.icon %}<svg class="icon" aria-hidden="true"><use href="#i-{{ icon }}"/></svg>{% endif -%}
-    {%- if card.localized_title || card.icon.is_none() %}<span>{{ card.title }}</span>{% else %}<span class="visually-hidden">{{ card.title }}</span>{% endif -%}
-  </h2>
-  {% match card.kind %}
-
-  {% when CardKind::Image with { image } %}
-  <figure class="media">
-    {% call media_element(image) %}{% endcall %}
-  </figure>
-
-  {% when CardKind::Gallery with { images } %}
-  <div class="gallery">
-    {% for image in images %}
-    <figure class="media">
-      {% call media_element(image) %}{% endcall %}
-      <figcaption>{{ image.caption }}</figcaption>
-    </figure>
-    {% endfor %}
-  </div>
-
-  {% when CardKind::Stat with { value, note } %}
-  <p class="stat">
-    <span class="stat__value">{{ value }}</span>
-    {% if let Some(note) = note %}<span class="stat__note">{{ note }}</span>{% endif %}
-  </p>
-
-  {% when CardKind::StatSeries with { current, note, series } %}
-  <p class="stat">
-    <span class="stat__value">{{ current }}</span>
-    {% if let Some(note) = note %}<span class="stat__note">{{ note }}</span>{% endif %}
-  </p>
-  <div class="series">
-    {% for point in series %}
-    <div class="series__row">
-      <span class="series__label">{{ point.label }}</span>
-      <span class="series__track"><span class="series__bar" style="inline-size: {{ self.bar_percent(point.value, series) }}%"></span></span>
-      <span class="series__number">{{ point.display }}</span>
-    </div>
-    {% endfor %}
-  </div>
-
-  {% when CardKind::Indicators with { indicators } %}
-  <table class="indicators">
-    {% for indicator in indicators %}
-    <tr>
-      <th scope="row">{{ indicator.label }}</th>
-      <td class="indicators__spark"><svg viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true"><polyline points="{{ self.spark_points(indicator.series) }}"/></svg></td>
-      <td class="indicators__value">{{ indicator.current }}{% if let Some(note) = indicator.note %} <small>{{ note }}</small>{% endif %}</td>
-    </tr>
-    {% endfor %}
-  </table>
-
-  {% when CardKind::Meter with { value, display, note, min, max, low, high, optimum } %}
-  <p class="stat">
-    <span class="stat__value">{{ display }}</span>
-    {% if let Some(note) = note %}<span class="stat__note">{{ note }}</span>{% endif %}
-  </p>
-  <meter class="gauge" min="{{ min }}" max="{{ max }}" value="{{ value }}"
-    {%- if let Some(low) = low %} low="{{ low }}"{% endif -%}
-    {%- if let Some(high) = high %} high="{{ high }}"{% endif -%}
-    {%- if let Some(optimum) = optimum %} optimum="{{ optimum }}"{% endif %}>{{ display }}</meter>
-
-  {% when CardKind::Map with { lat, lon, label } %}
-  <button class="map-open" popovertarget="map-{{ card.source_pids.join("-") }}" title="{{ lat }}, {{ lon }}">
-    {% if let Some(icon) = card.icon %}<svg class="icon" aria-hidden="true"><use href="#i-{{ icon }}"/></svg>{% else %}{{ lat }}, {{ lon }}{% endif %}
-    <span class="visually-hidden">{{ label }}</span>
-  </button>
-  <div class="card-popover" popover id="map-{{ card.source_pids.join("-") }}">
-    <h3 class="card-popover__title">{{ card.title }}</h3>
-    <figure class="map-figure">
-      <img src="https://maps.wikimedia.org/img/osm-intl,10,{{ lat }},{{ lon }},600x300.png" alt="{{ label }}" loading="lazy">
-      <figcaption>{{ lat }}, {{ lon }}</figcaption>
-    </figure>
-  </div>
-
-  {% when CardKind::Timeline with { events } %}
-  <ol class="timeline">
-    {% for event in events %}
-    <li class="timeline__event">
-      <span class="timeline__date">{{ event.display }}</span>
-      <span class="timeline__marker" aria-hidden="true"></span>
-      <span class="timeline__body">
-        {%- if let Some(thumb) = event.thumb_url %}<img class="timeline__thumb" src="{{ thumb }}" alt="" loading="lazy">{% endif -%}
-        {%- if let Some(detail) = event.detail %}<span>{{ detail }}</span> <small class="timeline__label">{{ event.label }}</small>{% else %}<span>{{ event.label }}</span>{% endif -%}
-      </span>
-    </li>
-    {% endfor %}
-  </ol>
-
-  {% when CardKind::Facts with { rows } %}
-  {% if card.variant.is_chip_cover() %}
-  {# cover chips: the two best values as tiles; every value in the
-     popover grid the ellipsis button opens #}
-  {% for row in rows %}
-  <ul class="chips">
-    {% for value in row.values %}
-    {% if loop.index <= card.layout.cover_values %}
-    {% call fact_value(value) %}{% endcall %}
-    {% endif %}
-    {% endfor %}
-    {% if row.values.len() > card.layout.cover_values %}
-    <li class="chips__more"><button popovertarget="chips-{{ card.source_pids.join("-") }}" aria-label="Show all values">+{{ row.values.len() - card.layout.cover_values }}</button></li>
-    {% endif %}
-  </ul>
-  {% if row.values.len() > card.layout.cover_values %}
-  <div class="card-popover" popover id="chips-{{ card.source_pids.join("-") }}">
-    <h3 class="card-popover__title">{{ card.title }}</h3>
-    <ul class="chips chips--grid">
-      {% for value in row.values %}
-      {% call fact_value(value) %}{% endcall %}
-      {% endfor %}
-    </ul>
-  </div>
-  {% endif %}
-  {% endfor %}
-  {% else %}
-  <dl class="facts">
-    {% for row in rows %}
-    <div class="facts__row">
-      {% if rows.len() > 1 %}<dt>{{ row.label }}</dt>{% endif %}
-      <dd>
-        <ul class="chips">
-          {% for value in row.values %}
-          {# enumeration cap: a 400-language list is a wall, not a card;
-             the full list stays in the JSON/text backends #}
-          {% if loop.index <= crate::factoid::VISIBLE_VALUES %}
-          {% call fact_value(value) %}{% endcall %}
-          {% endif %}
-          {% endfor %}
-          {% if row.values.len() > crate::factoid::VISIBLE_VALUES %}
-          <li class="chip chip--more"><a href="https://www.wikidata.org/wiki/{{ page.qid }}">+{{ row.values.len() - crate::factoid::VISIBLE_VALUES }}</a></li>
-          {% endif %}
-        </ul>
-      </dd>
-    </div>
-    {% endfor %}
-  </dl>
-  {% endif %}
-
-  {% endmatch %}
-</section>
-{% endmacro %}
-{% macro fact_value(value) %}
-{% match value %}
-{% when FactValue::Item with (chip) %}
-<li class="chip{% if chip.current %} chip--current{% endif %}{% if chip.ended() %} chip--ended{% endif %}"{% if let Some(note) = chip.note %} title="{{ note }}"{% endif %}>{% if let Some(thumb) = chip.thumb_url %}<img class="chip__thumb" src="{{ thumb }}" alt="" loading="lazy">{% endif %}<a href="https://www.wikidata.org/wiki/{{ chip.qid }}">{{ chip.label }}</a>{% if let Some(span) = chip.span %} <small class="chip__span">{{ span.display() }}</small>{% endif %}{% if let Some(note) = chip.note %} <small class="chip__note">{{ note }}</small>{% endif %}</li>
-{% when FactValue::Link with { url } %}
-<li class="fact-link"><a href="{{ url }}" rel="nofollow">{{ url }}</a></li>
-{% when FactValue::Text with { value, span, note } %}
-<li class="fact-text">{{ value }}{% if let Some(span) = span %} <small class="fact-note">{{ span.display() }}</small>{% endif %}{% if let Some(note) = note %} <small class="fact-note">{{ note }}</small>{% endif %}</li>
-{% endmatch %}
-{% endmacro %}
-{% macro media_element(image) %}
-{% match image.media %}
-{% when MediaKind::Audio %}
-<audio controls preload="none" src="{{ image.file_url }}"></audio>
-{% when MediaKind::Video %}
-<video controls preload="none" src="{{ image.file_url }}" poster="{{ image.thumb_url }}"></video>
-{% when MediaKind::Image %}
-<a href="{{ image.page_url }}"><img src="{{ image.thumb_url }}" alt="{{ image.caption }}" loading="lazy"></a>
-{% endmatch %}
-{% endmacro %}
+{%- import "factoid/card.html" as cards -%}
 <!DOCTYPE html>
 <html lang="{{ page.language }}" dir="auto">
 <head>
@@ -176,32 +12,7 @@
 <body data-archetype="{{ page.archetype }}">
 {% if !sprite.is_empty() %}<svg hidden aria-hidden="true"><defs>{{ sprite|safe }}</defs></svg>{% endif %}
 <div class="page">
-  <header class="page-header">
-    {% if let Some(hero) = page.hero %}
-    <a class="page-header__hero" href="{{ hero.page_url }}"><img src="{{ hero.thumb_url }}" alt="{{ hero.caption }}"></a>
-    {% endif %}
-    <div>
-      <h1>{{ page.label.as_deref().unwrap_or(page.qid.as_str()) }}</h1>
-      {% if let Some(facts) = page.hero_facts %}
-      {% if let Some(range) = facts.date_range %}
-      <p class="page-header__dates">{{ range }}</p>
-      {% endif %}
-      {% endif %}
-      {% if let Some(description) = page.description %}
-      <p class="page-header__description">{{ description }}</p>
-      {% endif %}
-      {% if let Some(facts) = page.hero_facts %}
-      {% if let Some(tagline) = facts.tagline %}
-      <p class="page-header__tagline">{{ tagline }}</p>
-      {% endif %}
-      {% endif %}
-    </div>
-    {% if let Some(facts) = page.hero_facts %}
-    {% if let Some(emblem) = facts.emblem %}
-    <a class="page-header__emblem" href="{{ emblem.page_url }}"><img src="{{ emblem.thumb_url }}" alt="{{ emblem.caption }}" loading="lazy"></a>
-    {% endif %}
-    {% endif %}
-  </header>
+  {% include "factoid/header.html" %}
 
   <main>
     {% for section in page.sections %}
@@ -212,7 +23,7 @@
       </h2>
       <div class="cards">
         {% for card in section.cards %}
-        {% call card_section(card) %}{% endcall %}
+        {% call cards::card_section(card, page) %}{% endcall %}
         {% endfor %}
       </div>
     </section>
@@ -221,7 +32,7 @@
     {% if !page.overflow.is_empty() %}
     <div class="cards">
       {% for card in page.overflow %}
-      {% call card_section(card) %}{% endcall %}
+      {% call cards::card_section(card, page) %}{% endcall %}
       {% endfor %}
     </div>
     {% endif %}
@@ -235,7 +46,7 @@
       </summary>
       <div class="cards">
         {% for card in page.footnotes %}
-        {% call card_section(card) %}{% endcall %}
+        {% call cards::card_section(card, page) %}{% endcall %}
         {% endfor %}
       </div>
     </details>
@@ -247,27 +58,6 @@
     Images: <a href="https://commons.wikimedia.org">Wikimedia Commons</a></p>
   </footer>
 </div>
-<script>
-/* The page's only script: progressive enhancement that morphs a
-   cover-chips card into its popover with a view transition. The
-   popover itself opens natively (popovertarget) without it. */
-document.addEventListener('click', (event) => {
-  const button = event.target.closest('[popovertarget]');
-  if (!button || !document.startViewTransition) return;
-  const popover = document.getElementById(button.getAttribute('popovertarget'));
-  const card = button.closest('.card');
-  if (!popover || !card) return;
-  event.preventDefault();
-  card.style.viewTransitionName = 'chips-expand';
-  const transition = document.startViewTransition(() => {
-    card.style.viewTransitionName = '';
-    popover.style.viewTransitionName = 'chips-expand';
-    popover.showPopover();
-  });
-  transition.finished.finally(() => {
-    popover.style.viewTransitionName = '';
-  });
-});
-</script>
+<script>{{ script|safe }}</script>
 </body>
 </html>

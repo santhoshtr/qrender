@@ -1,0 +1,169 @@
+{# One card: title bar, then a body per CardKind. `page` is threaded
+   in for the Wikidata links. Imported by page.html. #}
+{% macro card_section(card, page) %}
+<section class="card" data-variant="{{ card.variant }}" data-pid="{{ card.source_pids|join(" ") }}" style="--cols: {{ card.layout.cols }}; --rows: {{ card.layout.rows }}">
+  <h2 class="card__title">
+    {%- if let Some(icon) = card.icon %}<svg class="icon" aria-hidden="true"><use href="#i-{{ icon }}"/></svg>{% endif -%}
+    {%- if card.localized_title || card.icon.is_none() %}<span>{{ card.title }}</span>{% else %}<span class="visually-hidden">{{ card.title }}</span>{% endif -%}
+  </h2>
+  {% match card.kind %}
+
+  {% when CardKind::Image with { image } %}
+  <figure class="media">
+    {% call media_element(image) %}{% endcall %}
+  </figure>
+
+  {% when CardKind::Gallery with { images } %}
+  <div class="gallery">
+    {% for image in images %}
+    <figure class="media">
+      {% call media_element(image) %}{% endcall %}
+      <figcaption>{{ image.caption }}</figcaption>
+    </figure>
+    {% endfor %}
+  </div>
+
+  {% when CardKind::Stat with { value, note } %}
+  <p class="stat">
+    <span class="stat__value">{{ value }}</span>
+    {% if let Some(note) = note %}<span class="stat__note">{{ note }}</span>{% endif %}
+  </p>
+
+  {% when CardKind::StatSeries with { current, note, series } %}
+  <p class="stat">
+    <span class="stat__value">{{ current }}</span>
+    {% if let Some(note) = note %}<span class="stat__note">{{ note }}</span>{% endif %}
+  </p>
+  <div class="series">
+    {% for point in series %}
+    <div class="series__row">
+      <span class="series__label">{{ point.label }}</span>
+      <span class="series__track"><span class="series__bar" style="inline-size: {{ self.bar_percent(point.value, series) }}%"></span></span>
+      <span class="series__number">{{ point.display }}</span>
+    </div>
+    {% endfor %}
+  </div>
+
+  {% when CardKind::Indicators with { indicators } %}
+  <table class="indicators">
+    {% for indicator in indicators %}
+    <tr>
+      <th scope="row">{{ indicator.label }}</th>
+      <td class="indicators__spark"><svg viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true"><polyline points="{{ self.spark_points(indicator.series) }}"/></svg></td>
+      <td class="indicators__value">{{ indicator.current }}{% if let Some(note) = indicator.note %} <small>{{ note }}</small>{% endif %}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  {% when CardKind::Meter with { value, display, note, min, max, low, high, optimum } %}
+  <p class="stat">
+    <span class="stat__value">{{ display }}</span>
+    {% if let Some(note) = note %}<span class="stat__note">{{ note }}</span>{% endif %}
+  </p>
+  <meter class="gauge" min="{{ min }}" max="{{ max }}" value="{{ value }}"
+    {%- if let Some(low) = low %} low="{{ low }}"{% endif -%}
+    {%- if let Some(high) = high %} high="{{ high }}"{% endif -%}
+    {%- if let Some(optimum) = optimum %} optimum="{{ optimum }}"{% endif %}>{{ display }}</meter>
+
+  {% when CardKind::Map with { lat, lon, label } %}
+  <button class="map-open" popovertarget="map-{{ card.source_pids.join("-") }}" title="{{ lat }}, {{ lon }}">
+    {% if let Some(icon) = card.icon %}<svg class="icon" aria-hidden="true"><use href="#i-{{ icon }}"/></svg>{% else %}{{ lat }}, {{ lon }}{% endif %}
+    <span class="visually-hidden">{{ label }}</span>
+  </button>
+  <div class="card-popover" popover id="map-{{ card.source_pids.join("-") }}">
+    <h3 class="card-popover__title">{{ card.title }}</h3>
+    <figure class="map-figure">
+      <img src="https://maps.wikimedia.org/img/osm-intl,10,{{ lat }},{{ lon }},600x300.png" alt="{{ label }}" loading="lazy">
+      <figcaption>{{ lat }}, {{ lon }}</figcaption>
+    </figure>
+  </div>
+
+  {% when CardKind::Timeline with { events } %}
+  <ol class="timeline">
+    {% for event in events %}
+    <li class="timeline__event">
+      <span class="timeline__date">{{ event.display }}</span>
+      <span class="timeline__marker" aria-hidden="true"></span>
+      <span class="timeline__body">
+        {%- if let Some(thumb) = event.thumb_url %}<img class="timeline__thumb" src="{{ thumb }}" alt="" loading="lazy">{% endif -%}
+        {%- if let Some(detail) = event.detail %}<span>{{ detail }}</span> <small class="timeline__label">{{ event.label }}</small>{% else %}<span>{{ event.label }}</span>{% endif -%}
+      </span>
+    </li>
+    {% endfor %}
+  </ol>
+
+  {% when CardKind::Facts with { rows } %}
+  {% if card.variant.is_chip_cover() %}
+  {# cover chips: the best values as tiles; every value in the
+     popover grid the +N rail opens #}
+  {% for row in rows %}
+  <ul class="chips">
+    {% for value in row.values %}
+    {% if loop.index <= card.layout.cover_values %}
+    {% call fact_value(value) %}{% endcall %}
+    {% endif %}
+    {% endfor %}
+    {% if row.values.len() > card.layout.cover_values %}
+    <li class="chips__more"><button popovertarget="chips-{{ card.source_pids.join("-") }}" aria-label="Show all values">+{{ row.values.len() - card.layout.cover_values }}</button></li>
+    {% endif %}
+  </ul>
+  {% if row.values.len() > card.layout.cover_values %}
+  <div class="card-popover" popover id="chips-{{ card.source_pids.join("-") }}">
+    <h3 class="card-popover__title">{{ card.title }}</h3>
+    <ul class="chips chips--grid">
+      {% for value in row.values %}
+      {% call fact_value(value) %}{% endcall %}
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  {% endfor %}
+  {% else %}
+  <dl class="facts">
+    {% for row in rows %}
+    <div class="facts__row">
+      {% if rows.len() > 1 %}<dt>{{ row.label }}</dt>{% endif %}
+      <dd>
+        <ul class="chips">
+          {% for value in row.values %}
+          {# enumeration cap: a 400-language list is a wall, not a card;
+             the full list stays in the JSON/text backends #}
+          {% if loop.index <= crate::factoid::VISIBLE_VALUES %}
+          {% call fact_value(value) %}{% endcall %}
+          {% endif %}
+          {% endfor %}
+          {% if row.values.len() > crate::factoid::VISIBLE_VALUES %}
+          <li class="chip chip--more"><a href="https://www.wikidata.org/wiki/{{ page.qid }}">+{{ row.values.len() - crate::factoid::VISIBLE_VALUES }}</a></li>
+          {% endif %}
+        </ul>
+      </dd>
+    </div>
+    {% endfor %}
+  </dl>
+  {% endif %}
+
+  {% endmatch %}
+</section>
+{% endmacro %}
+{# One value inside a chips list: item chip, bare link, or text #}
+{% macro fact_value(value) %}
+{% match value %}
+{% when FactValue::Item with (chip) %}
+<li class="chip{% if chip.current %} chip--current{% endif %}{% if chip.ended() %} chip--ended{% endif %}"{% if let Some(note) = chip.note %} title="{{ note }}"{% endif %}>{% if let Some(thumb) = chip.thumb_url %}<img class="chip__thumb" src="{{ thumb }}" alt="" loading="lazy">{% endif %}<a href="https://www.wikidata.org/wiki/{{ chip.qid }}">{{ chip.label }}</a>{% if let Some(span) = chip.span %} <small class="chip__span">{{ span.display() }}</small>{% endif %}{% if let Some(note) = chip.note %} <small class="chip__note">{{ note }}</small>{% endif %}</li>
+{% when FactValue::Link with { url } %}
+<li class="fact-link"><a href="{{ url }}" rel="nofollow">{{ url }}</a></li>
+{% when FactValue::Text with { value, span, note } %}
+<li class="fact-text">{{ value }}{% if let Some(span) = span %} <small class="fact-note">{{ span.display() }}</small>{% endif %}{% if let Some(note) = note %} <small class="fact-note">{{ note }}</small>{% endif %}</li>
+{% endmatch %}
+{% endmacro %}
+{# Media value as the right element: audio, video, or linked image #}
+{% macro media_element(image) %}
+{% match image.media %}
+{% when MediaKind::Audio %}
+<audio controls preload="none" src="{{ image.file_url }}"></audio>
+{% when MediaKind::Video %}
+<video controls preload="none" src="{{ image.file_url }}" poster="{{ image.thumb_url }}"></video>
+{% when MediaKind::Image %}
+<a href="{{ image.page_url }}"><img src="{{ image.thumb_url }}" alt="{{ image.caption }}" loading="lazy"></a>
+{% endmatch %}
+{% endmacro %}
