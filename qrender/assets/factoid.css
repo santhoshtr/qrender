@@ -1,6 +1,8 @@
 /* Factoid page — plain block layout (v1). Uses Codex design tokens. */
 
 * {
+  --factoid-card-border: 0px;
+  --factoid-card-border-radius: 8px;
   box-sizing: border-box;
 }
 
@@ -178,8 +180,8 @@ a {
   container-type: inline-size;
   overflow: hidden;
   background-color: var(--background-color-base);
-  border: var(--border-subtle);
-  border-radius: var(--border-radius-base);
+  border: var(--factoid-card-border);
+  border-radius: var(--factoid-card-border-radius);
   padding: var(--spacing-100);
 
   .card__title {
