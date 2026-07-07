@@ -44,7 +44,7 @@ expression: body
       <div class="cards">
         
         
-<section class="card" data-variant="facts-table" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="facts-table" data-pid="P2044 P2046" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-altitude"/></svg><span class="visually-hidden">Geography</span></h2>
   
   <dl class="facts">
@@ -90,7 +90,7 @@ expression: body
 
         
         
-<section class="card" data-variant="facts-table" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="facts-table" data-pid="P17 P131" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-location_on"/></svg><span class="visually-hidden">Located in</span></h2>
   
   <dl class="facts">
@@ -136,7 +136,7 @@ expression: body
 
         
         
-<section class="card" data-variant="map-panel" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="map-panel" data-pid="P625" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-location_on"/></svg><span>coordinate location</span></h2>
   
   <figure class="media map">
@@ -149,7 +149,7 @@ expression: body
 
         
         
-<section class="card" data-variant="portrait" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="portrait" data-pid="P421" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><span>located in time zone</span></h2>
   
   <dl class="facts">
@@ -178,7 +178,7 @@ expression: body
 
         
         
-<section class="card" data-variant="current-history" style="--cols: 2; --rows: 3">
+<section class="card" data-variant="current-history" data-pid="P1376" style="--cols: 2; --rows: 3">
   <h2 class="card__title"><span>capital of</span></h2>
   
   <dl class="facts">
@@ -236,7 +236,7 @@ expression: body
       <div class="cards">
         
         
-<section class="card" data-variant="stat-block" style="--cols: 2; --rows: 1">
+<section class="card" data-variant="stat-block" data-pid="P571" style="--cols: 2; --rows: 1">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-event"/></svg><span>inception</span></h2>
   
   <p class="stat">
@@ -257,7 +257,7 @@ expression: body
       <div class="cards">
         
         
-<section class="card" data-variant="trend" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="trend" data-pid="P1082" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-groups"/></svg><span>population</span></h2>
   
   <p class="stat">
@@ -299,7 +299,7 @@ expression: body
       <div class="cards">
         
         
-<section class="card" data-variant="portrait" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="portrait" data-pid="P6" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-person"/></svg><span>head of government</span></h2>
   
   <dl class="facts">
@@ -336,7 +336,7 @@ expression: body
       <div class="cards">
         
         
-<section class="card" data-variant="media-full" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="media-full" data-pid="P41" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-photo_library"/></svg><span>flag image</span></h2>
   
   <figure class="media">
@@ -352,7 +352,7 @@ expression: body
 
         
         
-<section class="card" data-variant="media-full" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="media-full" data-pid="P94" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-photo_library"/></svg><span>coat of arms image</span></h2>
   
   <figure class="media">
@@ -375,7 +375,7 @@ expression: body
     <div class="cards">
       
       
-<section class="card" data-variant="gallery-strip" style="--cols: 4; --rows: 2">
+<section class="card" data-variant="gallery-strip" data-pid="P3451 P8592 P2716" style="--cols: 4; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-photo_library"/></svg><span class="visually-hidden">Articleimage</span></h2>
   
   <div class="gallery">
@@ -414,7 +414,7 @@ expression: body
 
       
       
-<section class="card" data-variant="facts-table" style="--cols: 2; --rows: 4">
+<section class="card" data-variant="facts-table" data-pid="P1448 P1705 P1549" style="--cols: 2; --rows: 4">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-article"/></svg><span class="visually-hidden">Names</span></h2>
   
   <dl class="facts">
@@ -519,7 +519,7 @@ expression: body
 
       
       
-<section class="card" data-variant="media-full" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="media-full" data-pid="P242" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-map"/></svg><span>locator map image</span></h2>
   
   <figure class="media">
@@ -535,7 +535,7 @@ expression: body
 
       
       
-<section class="card" data-variant="media-full" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="media-full" data-pid="P443" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-volume_up"/></svg><span>pronunciation audio</span></h2>
   
   <figure class="media">
@@ -551,7 +551,7 @@ expression: body
 
       
       
-<section class="card" data-variant="tile-strip" style="--cols: 4; --rows: 2">
+<section class="card" data-variant="tile-strip" data-pid="P190" style="--cols: 4; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-communities"/></svg><span>twinned administrative body</span></h2>
   
   <dl class="facts">
@@ -622,7 +622,7 @@ expression: body
 
       
       
-<section class="card" data-variant="facts-table" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="facts-table" data-pid="P2184 P8744" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-article"/></svg><span class="visually-hidden">Topics</span></h2>
   
   <dl class="facts">
@@ -668,7 +668,7 @@ expression: body
 
       
       
-<section class="card" data-variant="facts-table" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="facts-table" data-pid="P856 P2572" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-captive_portal"/></svg><span class="visually-hidden">Web</span></h2>
   
   <dl class="facts">
@@ -714,7 +714,7 @@ expression: body
 
       
       
-<section class="card" data-variant="media-full" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="media-full" data-pid="P18" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-photo_library"/></svg><span>image</span></h2>
   
   <figure class="media">
@@ -730,7 +730,7 @@ expression: body
 
       
       
-<section class="card" data-variant="portrait" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="portrait" data-pid="P361" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><span>part of</span></h2>
   
   <dl class="facts">
@@ -759,7 +759,7 @@ expression: body
 
       
       
-<section class="card" data-variant="tile-strip" style="--cols: 4; --rows: 2">
+<section class="card" data-variant="tile-strip" data-pid="P2936" style="--cols: 4; --rows: 2">
   <h2 class="card__title"><span>language used</span></h2>
   
   <dl class="facts">
@@ -802,7 +802,7 @@ expression: body
 
       
       
-<section class="card" data-variant="fact-line" style="--cols: 2; --rows: 1">
+<section class="card" data-variant="fact-line" data-pid="P8402" style="--cols: 2; --rows: 1">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-captive_portal"/></svg><span>open data portal</span></h2>
   
   <dl class="facts">
@@ -843,7 +843,7 @@ expression: body
       <div class="cards">
         
         
-<section class="card" data-variant="stat-block" style="--cols: 2; --rows: 1">
+<section class="card" data-variant="stat-block" data-pid="P935" style="--cols: 2; --rows: 1">
   <h2 class="card__title"><span>Commons gallery</span></h2>
   
   <p class="stat">
@@ -856,7 +856,7 @@ expression: body
 
         
         
-<section class="card" data-variant="portrait" style="--cols: 2; --rows: 2">
+<section class="card" data-variant="portrait" data-pid="P1343" style="--cols: 2; --rows: 2">
   <h2 class="card__title"><span>described by source</span></h2>
   
   <dl class="facts">
@@ -885,7 +885,7 @@ expression: body
 
         
         
-<section class="card" data-variant="fact-line" style="--cols: 2; --rows: 1">
+<section class="card" data-variant="fact-line" data-pid="P5008" style="--cols: 2; --rows: 1">
   <h2 class="card__title"><span>on focus list of Wikimedia project</span></h2>
   
   <dl class="facts">
@@ -921,7 +921,7 @@ expression: body
 
         
         
-<section class="card" data-variant="facts-table" style="--cols: 2; --rows: 4">
+<section class="card" data-variant="facts-table" data-pid="P373 P8989 P7867 P1464 P1465 P1792 P910" style="--cols: 2; --rows: 4">
   <h2 class="card__title"><svg class="icon" aria-hidden="true"><use href="#i-sell"/></svg><span class="visually-hidden">Categories</span></h2>
   
   <dl class="facts">

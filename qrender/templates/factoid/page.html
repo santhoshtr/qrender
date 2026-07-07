@@ -1,5 +1,5 @@
 {% macro card_section(card) %}
-<section class="card" data-variant="{{ card.variant }}" style="--cols: {{ card.layout.cols }}; --rows: {{ card.layout.rows }}">
+<section class="card" data-variant="{{ card.variant }}" data-pid="{{ card.source_pids|join(" ") }}" style="--cols: {{ card.layout.cols }}; --rows: {{ card.layout.rows }}">
   <h2 class="card__title">
     {%- if let Some(icon) = card.icon %}<svg class="icon" aria-hidden="true"><use href="#i-{{ icon }}"/></svg>{% endif -%}
     {%- if card.localized_title || card.icon.is_none() %}<span>{{ card.title }}</span>{% else %}<span class="visually-hidden">{{ card.title }}</span>{% endif -%}
