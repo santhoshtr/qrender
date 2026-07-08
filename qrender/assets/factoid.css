@@ -648,6 +648,8 @@ a {
         grid-row: 2;
         font-weight: var(--font-weight-bold);
         padding-block-end: var(--spacing-25);
+        line-height: 1.2;
+        text-wrap: balance;
       }
 
       &:not(:has(.chip__span)) a {
