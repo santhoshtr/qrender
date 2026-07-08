@@ -181,6 +181,7 @@ mod tests {
                 lat: 1.0,
                 lon: 2.0,
                 label: title.to_string(),
+                geoshape: None,
             },
         }
     }

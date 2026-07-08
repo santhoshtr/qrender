@@ -59,5 +59,6 @@
   </footer>
 </div>
 <script>{{ script|safe }}</script>
+{% if let Some(map_script) = map_script %}<script>{{ map_script|safe }}</script>{% endif %}
 </body>
 </html>

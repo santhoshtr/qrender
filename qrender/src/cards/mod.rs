@@ -143,6 +143,9 @@ pub enum CardKind {
         lat: f64,
         lon: f64,
         label: String,
+        /// Commons map data URL (P3896 geoshape) from the same group,
+        /// drawn as an outline by the interactive viewer
+        geoshape: Option<String>,
     },
     /// Labeled rows of rich values - the workhorse card. A group's
     /// properties render as one scannable card, one row each; values

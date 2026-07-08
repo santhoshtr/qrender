@@ -88,6 +88,10 @@ pub enum Value {
     Url {
         url: String,
     },
+    /// Commons map data page (Data:*.map), e.g. a country outline
+    GeoShape {
+        url: String,
+    },
     ExternalId {
         id: String,
     },
@@ -107,6 +111,7 @@ impl Value {
             Value::Coordinate { raw, .. } => raw,
             Value::CommonsMedia { url, .. } => url,
             Value::Url { url } => url,
+            Value::GeoShape { url } => url,
             Value::ExternalId { id } => id,
         }
     }

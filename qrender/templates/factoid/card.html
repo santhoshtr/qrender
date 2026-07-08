@@ -65,17 +65,21 @@
     {%- if let Some(high) = high %} high="{{ high }}"{% endif -%}
     {%- if let Some(optimum) = optimum %} optimum="{{ optimum }}"{% endif %}>{{ display }}</meter>
 
-  {% when CardKind::Map with { lat, lon, label } %}
+  {% when CardKind::Map with { lat, lon, label, geoshape } %}
   <button class="map-open" popovertarget="map-{{ card.source_pids.join("-") }}" title="{{ lat }}, {{ lon }}">
     {% if let Some(icon) = card.icon %}<svg class="icon" aria-hidden="true"><use href="#i-{{ icon }}"/></svg>{% else %}{{ lat }}, {{ lon }}{% endif %}
     <span class="visually-hidden">{{ label }}</span>
   </button>
   <div class="card-popover" popover id="map-{{ card.source_pids.join("-") }}">
     <h3 class="card-popover__title">{{ card.title }}</h3>
-    <figure class="map-figure">
-      <img src="https://maps.wikimedia.org/img/osm-intl,10,{{ lat }},{{ lon }},600x300.png" alt="{{ label }}" loading="lazy">
-      <figcaption>{{ lat }}, {{ lon }}</figcaption>
-    </figure>
+    {# the figure is the no-JS/no-network fallback; wiki-map swaps it
+       for a Leaflet view once the self-hosted library loads #}
+    <wiki-map latitude="{{ lat }}" longitude="{{ lon }}" zoom="10"{% if let Some(source) = geoshape %} source="{{ source }}"{% endif %}>
+      <figure class="map-figure">
+        <img src="https://maps.wikimedia.org/img/osm-intl,10,{{ lat }},{{ lon }},600x300.png" alt="{{ label }}" loading="lazy">
+        <figcaption>{{ lat }}, {{ lon }}</figcaption>
+      </figure>
+    </wiki-map>
   </div>
 
   {% when CardKind::Timeline with { events } %}

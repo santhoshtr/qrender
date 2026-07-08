@@ -300,6 +300,7 @@ fn cards_for_group(
     let mut cards = Vec::new();
     let mut images: Vec<(String, GalleryImage)> = Vec::new(); // (pid, image)
     let mut rows: Vec<(String, FactRow)> = Vec::new(); // (pid, row)
+    let mut geoshapes: Vec<(String, String, String)> = Vec::new(); // (pid, label, url)
 
     for property in properties {
         // Config-declared gauges (HDI etc.) win over series detection
@@ -353,11 +354,15 @@ fn cards_for_group(
                             lat: *lat,
                             lon: *lon,
                             label: property.label.clone(),
+                            geoshape: None, // attached below
                         },
                     });
                 }
                 Value::Url { url } => {
                     values.push(FactValue::Link { url: url.clone() });
+                }
+                Value::GeoShape { url } => {
+                    geoshapes.push((property.pid.clone(), property.label.clone(), url.clone()));
                 }
                 Value::ItemRef {
                     qid,
@@ -394,6 +399,27 @@ fn cards_for_group(
                 },
             ));
         }
+    }
+
+    // The first geoshape rides the group's map card - the interactive
+    // viewer draws it as an outline. Without a map card (or beyond the
+    // first) a geoshape stays a plain link row: nothing is dropped.
+    let mut geoshapes = geoshapes.into_iter();
+    if let Some(slot) = cards.iter_mut().find_map(|card| match &mut card.kind {
+        CardKind::Map { geoshape, .. } => Some(geoshape),
+        _ => None,
+    }) && let Some((_, _, url)) = geoshapes.next()
+    {
+        *slot = Some(url);
+    }
+    for (pid, label, url) in geoshapes {
+        rows.push((
+            pid,
+            FactRow {
+                label,
+                values: vec![FactValue::Link { url }],
+            },
+        ));
     }
 
     match images.len() {

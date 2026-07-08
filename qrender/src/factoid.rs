@@ -18,6 +18,8 @@ struct PageTemplate<'a> {
     tokens_dark: &'static str,
     stylesheet: &'static str,
     script: &'static str,
+    /// wiki-map web component, embedded only when the page has a map
+    map_script: Option<&'static str>,
 }
 
 /// The footnote region's disclosure icon
@@ -86,6 +88,10 @@ pub fn render_page(page: &FactoidPage) -> Result<String, QRenderError> {
         tokens_dark: include_str!("../assets/codex-tokens-dark.css"),
         stylesheet: include_str!("../assets/factoid.css"),
         script: include_str!("../assets/factoid.js"),
+        map_script: page
+            .all_cards()
+            .any(|c| matches!(c.kind, CardKind::Map { .. }))
+            .then_some(include_str!("../assets/wiki-map.js")),
     };
     Ok(template.render()?)
 }

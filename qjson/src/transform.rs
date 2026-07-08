@@ -91,6 +91,9 @@ fn parse_statement_value(
         "ontology#Url" | "Url" => Value::Url {
             url: value.value.clone(),
         },
+        "ontology#GeoShape" | "GeoShape" => Value::GeoShape {
+            url: value.value.clone(),
+        },
         "ontology#ExternalId" | "ExternalId" => Value::ExternalId {
             id: value.value.clone(),
         },
@@ -108,7 +111,7 @@ fn parse_statement_value(
                 text: display.unwrap_or_else(|| value.value.clone()),
             },
         },
-        // String, Math, GeoShape, TabularData, ...
+        // String, Math, TabularData, ...
         _ => {
             if value.value_type == "uri" {
                 Value::Url {

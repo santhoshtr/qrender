@@ -45,6 +45,21 @@ async fn main() {
     let app = Router::new()
         .route("/", get(usage))
         .route("/healthz", get(async || "ok"))
+        // vendored Leaflet, loaded lazily by the wiki-map component -
+        // factoid pages reference no host besides Wikimedia and self
+        .route(
+            "/static/leaflet.js",
+            get(async || {
+                asset(
+                    "text/javascript",
+                    include_str!("../../assets/vendor/leaflet.js"),
+                )
+            }),
+        )
+        .route(
+            "/static/leaflet.css",
+            get(async || asset("text/css", include_str!("../../assets/vendor/leaflet.css"))),
+        )
         .route("/{lang}/{qid}", get(factoid_page))
         .route("/api/{lang}/{qid}", get(factoid_json))
         .with_state(state);
@@ -58,6 +73,17 @@ async fn main() {
         .expect("failed to bind");
     println!("qrender-server listening on port {port}");
     axum::serve(listener, app).await.expect("server error");
+}
+
+fn asset(content_type: &'static str, body: &'static str) -> Response {
+    (
+        [
+            (header::CONTENT_TYPE, content_type),
+            (header::CACHE_CONTROL, "public, max-age=604800, immutable"),
+        ],
+        body,
+    )
+        .into_response()
 }
 
 async fn factoid_page(

@@ -810,6 +810,16 @@ a {
       font-variant-numeric: tabular-nums;
     }
   }
+
+  wiki-map {
+    display: block;
+  }
+
+  /* the Leaflet container wiki-map swaps in for the static figure */
+  .wiki-map__view {
+    block-size: min(60vh, 32rem);
+    border-radius: var(--border-radius-base);
+  }
 }
 
 @media (width <= 40rem) {
