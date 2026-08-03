@@ -4,8 +4,10 @@
 //! - GET /api/{lang}/{qid}   card IR as JSON (".json" suffix accepted)
 //! - GET /healthz            liveness probe
 //!
-//! Environment: PORT (default 4243), REDIS_URL (optional cache), read
-//! from the environment or a .env file, matching the Go qjson tool.
+//! Environment: PORT (default 4243), REDIS_URL (optional cache),
+//! BASE_PATH (default "", set when reverse-proxied under a subpath,
+//! e.g. "/qrender") - read from the environment or a .env file,
+//! matching the Go qjson tool.
 
 use axum::{
     Router,
@@ -28,6 +30,10 @@ struct AppState {
     qjson: Arc<qjson::Client>,
     grouping: Arc<GroupingConfig>,
     archetypes: Arc<ArchetypesConfig>,
+    /// Reverse-proxy mount point (e.g. "/qrender"), empty at the domain
+    /// root. Prefixed onto self-referential links/asset paths so the
+    /// service works unmodified behind a stripping reverse proxy.
+    base_path: Arc<str>,
 }
 
 #[tokio::main]
@@ -40,6 +46,10 @@ async fn main() {
         archetypes: Arc::new(
             load_archetypes_config().expect("embedded archetypes.toml must parse"),
         ),
+        base_path: std::env::var("BASE_PATH")
+            .unwrap_or_default()
+            .trim_end_matches('/')
+            .into(),
     };
 
     let app = Router::new()
@@ -95,7 +105,7 @@ async fn factoid_page(
         Err(error) => return error_response(&error),
     };
     let page = synthesize(&item, &language, &state.grouping, &state.archetypes, true);
-    match render_page(&page) {
+    match render_page(&page, &state.base_path) {
         Ok(html) => ([(header::CACHE_CONTROL, CACHE_CONTROL)], Html(html)).into_response(),
         Err(error) => (StatusCode::INTERNAL_SERVER_ERROR, error.to_string()).into_response(),
     }
@@ -131,8 +141,9 @@ fn error_response(error: &qjson::QjsonError) -> Response {
     (status, error.to_string()).into_response()
 }
 
-async fn usage() -> Html<&'static str> {
-    Html(
+async fn usage(State(state): State<AppState>) -> Html<String> {
+    let base = &state.base_path;
+    Html(format!(
         r#"<!DOCTYPE html>
 <html lang="en">
 <head><meta charset="utf-8"><title>QRender</title><meta name="color-scheme" content="dark light"></head>
@@ -140,10 +151,10 @@ async fn usage() -> Html<&'static str> {
 <h1>QRender — Wikidata factoids</h1>
 <p>Render a Wikidata item as a card page:</p>
 <ul>
-  <li><a href="/en/Q3870">/en/Q3870</a> — HTML factoid page</li>
-  <li><a href="/api/en/Q3870">/api/en/Q3870</a> — card data as JSON</li>
+  <li><a href="{base}/en/Q3870">{base}/en/Q3870</a> — HTML factoid page</li>
+  <li><a href="{base}/api/en/Q3870">{base}/api/en/Q3870</a> — card data as JSON</li>
 </ul>
 </body>
-</html>"#,
-    )
+</html>"#
+    ))
 }

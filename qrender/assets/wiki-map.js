@@ -6,8 +6,9 @@
    fails - file:// output, offline, old browser - the static image
    simply stays. */
 (() => {
-	const LEAFLET_JS = "/static/leaflet.js";
-	const LEAFLET_CSS = "/static/leaflet.css";
+	const BASE_PATH = window.QRENDER_BASE_PATH || "";
+	const LEAFLET_JS = BASE_PATH + "/static/leaflet.js";
+	const LEAFLET_CSS = BASE_PATH + "/static/leaflet.css";
 	const TILES = "https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}{r}.png";
 	const ATTRIBUTION =
 		'<a href="https://wikimediafoundation.org/wiki/Maps_Terms_of_Use">Wikimedia maps</a> | ' +

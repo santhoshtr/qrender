@@ -59,6 +59,7 @@
   </footer>
 </div>
 <script>{{ script|safe }}</script>
-{% if let Some(map_script) = map_script %}<script>{{ map_script|safe }}</script>{% endif %}
+{% if let Some(map_script) = map_script %}<script>window.QRENDER_BASE_PATH = "{{ base_path }}";</script>
+<script>{{ map_script|safe }}</script>{% endif %}
 </body>
 </html>

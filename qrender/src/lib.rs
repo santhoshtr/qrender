@@ -81,6 +81,6 @@ pub fn render_typed_item(
         RenderFormatOptions::Markdown => textual::render_markdown(&page),
         RenderFormatOptions::Wikitext => textual::render_wikitext(&page),
         RenderFormatOptions::HTML => textual::render_html(&page),
-        RenderFormatOptions::Factoid => factoid::render_page(&page)?,
+        RenderFormatOptions::Factoid => factoid::render_page(&page, "")?,
     })
 }

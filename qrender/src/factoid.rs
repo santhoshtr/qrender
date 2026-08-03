@@ -20,6 +20,10 @@ struct PageTemplate<'a> {
     script: &'static str,
     /// wiki-map web component, embedded only when the page has a map
     map_script: Option<&'static str>,
+    /// Reverse-proxy mount point (e.g. "/qrender"), empty when served
+    /// from the domain root. Exposed to `map_script` via a global so
+    /// its "/static/..." asset paths resolve under the proxy prefix.
+    base_path: &'a str,
 }
 
 /// The footnote region's disclosure icon
@@ -80,7 +84,7 @@ impl PageTemplate<'_> {
     }
 }
 
-pub fn render_page(page: &FactoidPage) -> Result<String, QRenderError> {
+pub fn render_page(page: &FactoidPage, base_path: &str) -> Result<String, QRenderError> {
     let template = PageTemplate {
         page,
         sprite: sprite_for(page),
@@ -92,6 +96,7 @@ pub fn render_page(page: &FactoidPage) -> Result<String, QRenderError> {
             .all_cards()
             .any(|c| matches!(c.kind, CardKind::Map { .. }))
             .then_some(include_str!("../assets/wiki-map.js")),
+        base_path,
     };
     Ok(template.render()?)
 }

@@ -18,7 +18,7 @@ fn sprite_is_tree_shaken() {
         &load_archetypes_config().unwrap(),
         true,
     );
-    let html = render_page(&page).unwrap();
+    let html = render_page(&page, "").unwrap();
     // used on the Nairobi page: population icon, referenced and defined once
     assert!(html.contains("<use href=\"#i-groups\"/>"));
     assert_eq!(html.matches("<symbol id=\"i-groups\"").count(), 1);
@@ -38,7 +38,7 @@ fn q3870_factoid_body() {
         &load_archetypes_config().unwrap(),
         true,
     );
-    let html = render_page(&page).unwrap();
+    let html = render_page(&page, "").unwrap();
     let body = html.split_once("</head>").expect("has a head").1;
     insta::assert_snapshot!(body);
 }
@@ -57,7 +57,7 @@ fn q173399_factoid_body() {
         &load_archetypes_config().unwrap(),
         true,
     );
-    let html = render_page(&page).unwrap();
+    let html = render_page(&page, "").unwrap();
     let body = html.split_once("</head>").expect("has a head").1;
     insta::assert_snapshot!(body);
 }
@@ -74,7 +74,7 @@ fn q42_factoid_body() {
         &load_archetypes_config().unwrap(),
         true,
     );
-    let html = render_page(&page).unwrap();
+    let html = render_page(&page, "").unwrap();
     let body = html.split_once("</head>").expect("has a head").1;
     insta::assert_snapshot!(body);
 }
