@@ -1,0 +1,3557 @@
+{
+ "schema": "composition/0.2",
+ "design": "design/0.2",
+ "qid": "Q117085614",
+ "class_layout": "film",
+ "spreads": [
+  {
+   "id": "identity",
+   "kind": "identity",
+   "concept": null,
+   "template": "identity",
+   "slots": {
+    "head": {
+     "primitive": "title",
+     "item": "Q117085614"
+    },
+    "lead": {
+     "primitive": "prose",
+     "source": "lead",
+     "languages": 51
+    },
+    "hero": {
+     "primitive": "media",
+     "role": "identity",
+     "statement": "Q117085614-dff3e2a4-476e-3974-5457-31299f4f2e7f",
+     "pid": "P18",
+     "file": "Vista Theater Presenting One Battle After Another in VistaVision Sign.jpg",
+     "rank": "normal",
+     "provenance": "none",
+     "qualifiers": [
+      {
+       "pid": "P276",
+       "item": "Q7936468"
+      }
+     ],
+     "kind": "photo",
+     "aspect": 1.8618,
+     "megapixels": 17.52,
+     "credit": {
+      "artist": "Sevgonlernassau",
+      "license": "CC BY 4.0"
+     }
+    },
+    "kind": {
+     "primitive": "kind",
+     "chain": [
+      {
+       "pid": "P31",
+       "values": [
+        {
+         "statement": "Q117085614-698BB8CA-5FD3-4488-A2FF-A5D3C9CF6EC2",
+         "pid": "P31",
+         "item": "Q11424",
+         "rank": "normal",
+         "provenance": "sourced",
+         "image": null,
+         "class": true,
+         "shown": true
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "story",
+   "kind": "facts",
+   "concept": "Q1758354",
+   "template": "columns",
+   "slots": {
+    "gallery": [
+     {
+      "primitive": "network",
+      "role": "gallery",
+      "values": [
+       {
+        "statement": "Q117085614-692BEE52-60D1-4FD2-A251-96DDF682FA13",
+        "pid": "P1877",
+        "item": "Q35155",
+        "rank": "normal",
+        "provenance": "none",
+        "image": {
+         "file": "Thomas Pynchon, high school yearbook editor, 1953.jpg",
+         "kind": "photo",
+         "aspect": 0.6912,
+         "megapixels": 4.66,
+         "credit": {
+          "artist": "Photo presumably taken by \"Mr. DiLillo\", who was identified as staff photographer of The Oysterette (Mead 1989, p. 170).",
+          "license": "Public domain"
+         }
+        },
+        "priority": 0.0
+       }
+      ],
+      "priority": 0.0
+     }
+    ],
+    "sheet": [
+     {
+      "primitive": "fact",
+      "pid": "P136",
+      "form": "list",
+      "statements": [
+       {
+        "statement": "Q117085614-5e93de15-4618-f8f4-7c72-fce04d47527c",
+        "pid": "P136",
+        "item": "Q5778924",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "class": true,
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-07575CC7-8544-4E74-9BA9-040174450A83",
+        "pid": "P136",
+        "item": "Q130232",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "class": true,
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-1449A455-E3AC-49B6-B088-33A9D9D1E0E7",
+        "pid": "P136",
+        "item": "Q959790",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "class": true,
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-66EEAA4F-2733-4D72-8551-1E1C6D2F8E63",
+        "pid": "P136",
+        "item": "Q2484376",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "class": true,
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-ccfa4baa-492d-f319-a114-d5f53718849a",
+        "pid": "P136",
+        "item": "Q188473",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "class": true,
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-ec38e2e4-4df9-e8d8-05a6-4bc16de0c417",
+        "pid": "P136",
+        "item": "Q157443",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "class": true,
+        "shown": true
+       }
+      ],
+      "priority": 2.807
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2408",
+      "form": "list",
+      "statements": [
+       {
+        "statement": "Q117085614-E196FBC9-D76D-42DB-9939-FD31AF8B4AED",
+        "pid": "P2408",
+        "item": "Q34653",
+        "rank": "normal",
+        "provenance": "none",
+        "image": {
+         "file": "1990s decade montage.png",
+         "kind": "photo",
+         "aspect": 1.0194,
+         "megapixels": 1.19,
+         "credit": {
+          "artist": "Arranged by Bacon Noodles",
+          "license": "Public domain"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-4C6A4DA9-3A66-448F-93A3-FD00BA1BF83D",
+        "pid": "P2408",
+        "item": "Q534495",
+        "rank": "normal",
+        "provenance": "none",
+        "image": null,
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-6E582D0D-B1CB-4DF0-9C39-110E5DC00D85",
+        "pid": "P2408",
+        "item": "Q6927",
+        "rank": "normal",
+        "provenance": "none",
+        "image": null,
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-6BF9C5C6-6671-4A9D-A1DA-E8D90631B601",
+        "pid": "P2408",
+        "item": "Q6939",
+        "rank": "normal",
+        "provenance": "none",
+        "image": null,
+        "shown": true
+       }
+      ],
+      "priority": 0.0
+     },
+     {
+      "primitive": "fact",
+      "pid": "P144",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q117085614-3b9720ef-4e8a-3aaa-99d7-4b5e0143c376",
+        "pid": "P144",
+        "item": "Q2738674",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "shown": true
+       }
+      ],
+      "priority": 1.0
+     },
+     {
+      "primitive": "fact",
+      "pid": "P6166",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q117085614-53e85dc6-4892-938e-a95b-f0f25a661ecc",
+        "pid": "P6166",
+        "item": "Q1753999",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "shown": true
+       }
+      ],
+      "priority": 1.0
+     }
+    ]
+   },
+   "prose": {
+    "concepts": [
+     "Q1758354"
+    ]
+   }
+  },
+  {
+   "id": "cast",
+   "kind": "facts",
+   "concept": "Q15267437",
+   "template": "columns",
+   "slots": {
+    "stack": [
+     {
+      "primitive": "network",
+      "pid": "P161",
+      "values": [
+       {
+        "statement": "Q117085614-dbc12d61-40ae-4ded-05ac-d0b820baa2d9",
+        "pid": "P161",
+        "item": "Q38111",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P453",
+          "item": "Q137550600"
+         }
+        ],
+        "image": {
+         "file": "Leonardo DiCaprio - BFI Southbank 3 (crop).jpg",
+         "kind": "photo",
+         "aspect": 0.8141,
+         "megapixels": 0.48,
+         "credit": {
+          "artist": "Raph_PH",
+          "license": "CC BY 4.0"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-5c79ffd6-4c4d-baab-52c2-c5474595e4dd",
+        "pid": "P161",
+        "item": "Q44221",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P4633",
+          "string": "Col. Steven J. Lockjaw"
+         }
+        ],
+        "image": {
+         "file": "Superpower (2023)-60535.jpg",
+         "kind": "photo",
+         "aspect": 0.6668,
+         "megapixels": 7.49,
+         "credit": {
+          "artist": "Harald Krichel",
+          "license": "CC BY-SA 3.0"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-44d03fda-45f3-75c5-88db-b1c9dfda7713",
+        "pid": "P161",
+        "item": "Q7708542",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P4633",
+          "string": "Perfidia"
+         }
+        ],
+        "image": {
+         "file": "Teyana Taylor (cropped).jpg",
+         "kind": "photo",
+         "aspect": 0.7503,
+         "megapixels": 0.54,
+         "credit": {
+          "artist": "VOA",
+          "license": "Public domain"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-F1B8E013-1214-4E13-88F2-9E64BE5098F6",
+        "pid": "P161",
+        "item": "Q193668",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P4633",
+          "string": "Sensei Sergio St. Carlos"
+         }
+        ],
+        "image": {
+         "file": "Benicio del Toro-7624.jpg",
+         "kind": "photo",
+         "aspect": 0.6667,
+         "megapixels": 19.12,
+         "credit": {
+          "artist": "Harald Krichel",
+          "license": "CC BY-SA 4.0"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-3a0d42aa-495a-51b2-8012-e6554b3a7785",
+        "pid": "P161",
+        "item": "Q235141",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P4633",
+          "string": "Deandra"
+         }
+        ],
+        "image": {
+         "file": "Regina Hall NY 2019 (02) (cropped).jpg",
+         "kind": "photo",
+         "aspect": 0.7086,
+         "megapixels": 0.37,
+         "credit": {
+          "artist": "The Other Side",
+          "license": "CC BY 3.0"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-EFE69596-0E39-4C6A-933A-B7B67496F2EF",
+        "pid": "P161",
+        "item": "Q125156936",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P4633",
+          "string": "Willa"
+         }
+        ],
+        "image": {
+         "file": "TIFF-2026-THE-JULIA-SET-CHASE-INFINITI-02 (cropped).png",
+         "kind": "photo",
+         "aspect": 0.6691,
+         "megapixels": 14.22,
+         "credit": {
+          "artist": "JoshPopov",
+          "license": "CC BY-SA 4.0"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-FD992A86-40D7-4011-A347-144A2A416535",
+        "pid": "P161",
+        "item": "Q224754",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P4633",
+          "string": "Virgil Throckmorton"
+         }
+        ],
+        "image": {
+         "file": "Tony Goldwyn (48996884641) (1).jpg",
+         "kind": "photo",
+         "aspect": 0.75,
+         "megapixels": 0.43,
+         "credit": {
+          "artist": "LBJ Library from Austin",
+          "license": "Public domain"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-A5C80B65-7D5D-42FB-8C5C-47CD3713D6D1",
+        "pid": "P161",
+        "item": "Q1151457",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P4633",
+          "string": "Bill Desmond"
+         }
+        ],
+        "image": {
+         "file": "D. W. Moffett - US Army (cropped).jpg",
+         "kind": "photo",
+         "aspect": 0.7949,
+         "megapixels": 2.37,
+         "credit": {
+          "artist": "US_Army_53056_Ambassadors_of_Hollywood_visit_Afghanistan.jpg: Spc. Elisebet Freeburg, Joint Sustainment Command-Afghanistan, PAO\nderivative work: B3t (talk)",
+          "license": "Public domain"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-9C7C245E-1AF7-494A-A574-65B925E4A98C",
+        "pid": "P161",
+        "item": "Q1288447",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P4633",
+          "string": "Roy More"
+         }
+        ],
+        "image": {
+         "file": "Kevin Tighe.jpg",
+         "kind": "photo",
+         "aspect": 0.8045,
+         "megapixels": 0.16,
+         "credit": {
+          "artist": "NBC Television",
+          "license": "Public domain"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-64db0502-4d0c-90a4-5a1f-dba400820b30",
+        "pid": "P161",
+        "item": "Q1321005",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P4633",
+          "string": "Laredo"
+         }
+        ],
+        "image": {
+         "file": "Wood harris air force1.jpg",
+         "kind": "photo",
+         "aspect": 0.6648,
+         "megapixels": 2.93,
+         "credit": {
+          "artist": "Senior Airman Jet Fabara",
+          "license": "Public domain"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-d01873cf-469f-5212-3a5c-a1fb0a760c6b",
+        "pid": "P161",
+        "item": "Q16726249",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P4633",
+          "string": "Mae West"
+         }
+        ],
+        "image": {
+         "file": "Alana Haim during an interview, March 2022.jpg",
+         "kind": "photo",
+         "aspect": 0.7473,
+         "megapixels": 0.62,
+         "credit": {
+          "artist": "Lyn Fairly Media",
+          "license": "CC BY 3.0"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-B72E4FE1-88A3-45CD-88B6-74C9C1662F77",
+        "pid": "P161",
+        "item": "Q122783389",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P4633",
+          "string": "1776 James"
+         }
+        ],
+        "image": {
+         "file": "Jon Beavers - Being Heumann - TIFF 2026-31.jpg",
+         "kind": "photo",
+         "aspect": 0.784,
+         "megapixels": 8.72,
+         "credit": {
+          "artist": "Sarran Hamilton",
+          "license": "CC BY-SA 4.0"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-EDDEA161-3040-4AFD-B072-D9A4A7545BA3",
+        "pid": "P161",
+        "item": "Q904209",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P4633",
+          "string": "Avanti"
+         }
+        ],
+        "image": null,
+        "shown": false
+       },
+       {
+        "statement": "Q117085614-12F2A258-FEE1-4914-903C-4FABEA54C9C4",
+        "pid": "P161",
+        "item": "Q3497183",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P4633",
+          "string": "Gramma Minnie"
+         }
+        ],
+        "image": null,
+        "shown": false
+       },
+       {
+        "statement": "Q117085614-61CE17DC-E5C0-4718-86AA-8391BFDB6E1F",
+        "pid": "P161",
+        "item": "Q15500658",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P4633",
+          "string": "Sandy Irvine"
+         }
+        ],
+        "image": null,
+        "shown": false
+       },
+       {
+        "statement": "Q117085614-0f2a5317-4d1d-9726-eb2f-35fb02d06cd8",
+        "pid": "P161",
+        "item": "Q20657093",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P4633",
+          "string": "Junglepussy"
+         }
+        ],
+        "image": null,
+        "shown": false
+       },
+       {
+        "statement": "Q117085614-897B69DC-0FB3-4D83-B2FE-1B6FAFE921E7",
+        "pid": "P161",
+        "item": "Q109297503",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P4633",
+          "string": "Talleyrand"
+         }
+        ],
+        "image": null,
+        "shown": false
+       },
+       {
+        "statement": "Q117085614-933036D4-5709-4AE8-ABCA-3CFB0E9E7542",
+        "pid": "P161",
+        "item": "Q109564878",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P4633",
+          "string": "Tim Smith"
+         }
+        ],
+        "image": null,
+        "shown": false
+       },
+       {
+        "statement": "Q117085614-4CB29EBD-153C-49A1-AF2A-CF5D24856832",
+        "pid": "P161",
+        "item": "Q133596666",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P4633",
+          "string": "Sommerville"
+         }
+        ],
+        "image": null,
+        "shown": false
+       }
+      ],
+      "priority": 4.322
+     }
+    ]
+   },
+   "prose": {
+    "concepts": [
+     "Q15267437"
+    ]
+   }
+  },
+  {
+   "id": "credits",
+   "kind": "facts",
+   "concept": "Q506702",
+   "template": "columns",
+   "slots": {
+    "stack": [
+     {
+      "primitive": "credits",
+      "pids": [
+       "P57",
+       "P58",
+       "P162",
+       "P86",
+       "P344",
+       "P1040",
+       "P3092"
+      ],
+      "values": [
+       {
+        "statement": "Q117085614-47be3dc1-48ef-ad80-e6e6-005f498246da",
+        "pid": "P57",
+        "item": "Q25132",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": {
+         "file": "Paul Thomas Anderson 2022 (2) (cropped).jpg",
+         "kind": "photo",
+         "aspect": 0.7504,
+         "megapixels": 0.3,
+         "credit": {
+          "artist": "Lyn Fairly Media",
+          "license": "CC BY 3.0"
+         }
+        },
+        "pids": [
+         "P57",
+         "P58",
+         "P162"
+        ],
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-127586CB-18BC-4DFB-BAE7-D41DE4E01A38",
+        "pid": "P162",
+        "item": "Q6204042",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "pids": [
+         "P162"
+        ],
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-1E398569-3DC0-402A-A880-6E3990DAA26A",
+        "pid": "P162",
+        "item": "Q28032030",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "pids": [
+         "P162"
+        ],
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-3B13101D-0AAE-47BB-B359-AA5D2063354F",
+        "pid": "P162",
+        "item": "Q95652740",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "pids": [
+         "P162"
+        ],
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-DC334E06-7F89-4C01-9A2B-0526229623C5",
+        "pid": "P86",
+        "item": "Q286410",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": {
+         "file": "Jonny Greenwood (cropped).jpg",
+         "kind": "photo",
+         "aspect": 0.8324,
+         "megapixels": 0.23,
+         "credit": {
+          "artist": "Zach Klein",
+          "license": "CC BY 2.5"
+         }
+        },
+        "pids": [
+         "P86"
+        ],
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-a1f052fe-4584-7d35-f5ab-12d1288e479e",
+        "pid": "P344",
+        "item": "Q110393717",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "pids": [
+         "P344"
+        ],
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-cc2fa080-42e5-e091-daec-75ec1872c44e",
+        "pid": "P1040",
+        "item": "Q109942993",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "pids": [
+         "P1040"
+        ],
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-bbdf0235-45ab-d938-f8d9-0a585acf8d1d",
+        "pid": "P3092",
+        "item": "Q60229347",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P3831",
+          "item": "Q2867219"
+         }
+        ],
+        "image": null,
+        "pids": [
+         "P3092"
+        ],
+        "shown": true
+       }
+      ],
+      "priority": 0.0
+     }
+    ]
+   },
+   "prose": {
+    "concepts": [
+     "Q506702"
+    ]
+   }
+  },
+  {
+   "id": "production",
+   "kind": "facts",
+   "concept": "Q932586",
+   "template": "columns",
+   "slots": {
+    "stack": [
+     {
+      "primitive": "network",
+      "pid": "P915",
+      "values": [
+       {
+        "statement": "Q117085614-f02e3af4-46a5-7872-0721-3d3aa3d17a9b",
+        "pid": "P915",
+        "item": "Q488702",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": {
+         "file": "Humboldt Bay and Eureka aerial view.jpg",
+         "kind": "photo",
+         "aspect": 1.4985,
+         "megapixels": 1.5,
+         "credit": {
+          "artist": "Robert Campbell",
+          "license": "CC BY-SA 3.0"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-74cbff70-485f-8bba-8e9d-647bf50d0887",
+        "pid": "P915",
+        "item": "Q18013",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": {
+         "file": "Sacramento, California skyline in 2023.jpg",
+         "kind": "photo",
+         "aspect": 2.0186,
+         "megapixels": 12.89,
+         "credit": {
+          "artist": "Quintin Soloviev",
+          "license": "CC BY 4.0"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-5e29c3ca-4d77-1e9f-d4db-34f3d2fd79f6",
+        "pid": "P915",
+        "item": "Q49240",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": {
+         "file": "Aerial view of Stockton, California skyline.jpg",
+         "kind": "photo",
+         "aspect": 1.6212,
+         "megapixels": 15.84,
+         "credit": {
+          "artist": "Quintin Soloviev",
+          "license": "CC BY 4.0"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-cb44fc13-493c-9142-1133-5dedd64b1e60",
+        "pid": "P915",
+        "item": "Q6464680",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": {
+         "file": "La Purisima Mission - Lompoc, CA.jpg",
+         "kind": "photo",
+         "aspect": 1.3333,
+         "megapixels": 3.15,
+         "credit": {
+          "artist": "Jsweida",
+          "license": "CC BY-SA 3.0"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-95b62087-4b9f-7910-b965-f872ed9f62da",
+        "pid": "P915",
+        "item": "Q2049424",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": {
+         "file": "BorregoSprings1.jpg",
+         "kind": "photo",
+         "aspect": 1.3333,
+         "megapixels": 0.48,
+         "credit": {
+          "artist": "Perdelsky at English Wikipedia",
+          "license": "Public domain"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-34407e22-4eb9-c396-94dc-1c75eb7dc407",
+        "pid": "P915",
+        "item": "Q7413623",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "shown": true
+       }
+      ],
+      "priority": 2.807
+     },
+     {
+      "primitive": "network",
+      "pid": "P2061",
+      "values": [
+       {
+        "statement": "Q117085614-0045bf9e-474b-ba5b-d179-e8a423d3d356",
+        "pid": "P2061",
+        "item": "Q20970431",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P518",
+          "item": "Q1788758"
+         },
+         {
+          "pid": "P1932",
+          "string": "1.5:1"
+         }
+        ],
+        "image": {
+         "file": "Aspect-ratio-3x2.svg",
+         "kind": "drawing",
+         "aspect": 1.4717,
+         "megapixels": 0.02,
+         "credit": {
+          "artist": "Jerzy Jalocha N",
+          "license": "Public domain"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-c56d59d8-4ff4-7b62-7d42-004daa39d08d",
+        "pid": "P2061",
+        "item": "Q1383069",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P518",
+          "item": "Q47770"
+         },
+         {
+          "pid": "P518",
+          "item": "Q723685"
+         },
+         {
+          "pid": "P1932",
+          "string": "1.78:1"
+         }
+        ],
+        "image": {
+         "file": "Aspect-ratio-16x9.svg",
+         "kind": "drawing",
+         "aspect": 1.7358,
+         "megapixels": 0.02,
+         "credit": {
+          "artist": "Jerzy Jalocha N",
+          "license": "Public domain"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-a889768c-473a-41a3-32cc-f026ab62fd73",
+        "pid": "P2061",
+        "item": "Q21037379",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P518",
+          "item": "Q5294"
+         },
+         {
+          "pid": "P518",
+          "item": "Q26225765"
+         }
+        ],
+        "image": {
+         "file": "Aspect-ratio-1.85x1.svg",
+         "kind": "drawing",
+         "aspect": 1.8019,
+         "megapixels": 0.02,
+         "credit": {
+          "artist": "Jerzy Jalocha N",
+          "license": "Public domain"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-6b0fd528-4798-0906-4d26-f5d1f1cf758c",
+        "pid": "P2061",
+        "item": "Q22987783",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P518",
+          "item": "Q188575"
+         },
+         {
+          "pid": "P1932",
+          "string": "1.43:1"
+         }
+        ],
+        "image": null,
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-8e34769e-4e11-fc18-b8ab-f34bff1905ed",
+        "pid": "P2061",
+        "item": "Q30302737",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P518",
+          "item": "Q188575"
+         }
+        ],
+        "image": null,
+        "shown": true
+       }
+      ],
+      "priority": 2.585
+     }
+    ],
+    "gallery": [
+     {
+      "primitive": "network",
+      "role": "gallery",
+      "values": [
+       {
+        "statement": "Q117085614-18146dcf-4436-0c83-51d6-2d597c475003",
+        "pid": "P272",
+        "item": "Q8016302",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": {
+         "file": "Gate 4 Warner Bros. Studios.jpg",
+         "kind": "photo",
+         "aspect": 1.5,
+         "megapixels": 17.92,
+         "credit": {
+          "artist": "Coolcaesar",
+          "license": "CC BY-SA 4.0"
+         }
+        },
+        "priority": 1.0
+       },
+       {
+        "statement": "Q117085614-e9052731-430f-f4ce-288c-53985a5c15a1",
+        "pid": "P495",
+        "item": "Q30",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": {
+         "file": "United States - Location Map (2013) - USA - UNOCHA.svg",
+         "kind": "drawing",
+         "aspect": 1.0,
+         "megapixels": 0.06,
+         "credit": {
+          "artist": "UN Office for the Coordination of Humanitarian Affairs (OCHA)",
+          "license": "CC BY 3.0"
+         }
+        },
+        "priority": 1.0
+       }
+      ],
+      "priority": 1.0
+     }
+    ],
+    "sheet": [
+     {
+      "primitive": "fact",
+      "pid": "P364",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q117085614-ac92123a-46bb-9af3-2f7c-b3d6e9307a3a",
+        "pid": "P364",
+        "item": "Q1860",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "class": true,
+        "shown": true
+       }
+      ],
+      "priority": 1.0
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2130",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q117085614-a2a2b482-4ea2-7cc0-7905-1a42680fba0a",
+        "pid": "P2130",
+        "amount": 140000000.0,
+        "unit": "Q4917",
+        "rank": "normal",
+        "provenance": "sourced",
+        "shown": true
+       }
+      ],
+      "priority": 1.0
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2047",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q117085614-48d64c1a-4140-1261-d1dc-2ab5fdf09143",
+        "pid": "P2047",
+        "amount": 9691.0,
+        "unit": "Q11574",
+        "rank": "preferred",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P7452",
+          "item": "Q71536040"
+         }
+        ],
+        "shown": true
+       }
+      ],
+      "priority": 1.0
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2043",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q117085614-9e1c11a0-4f44-3197-139c-7f2949744212",
+        "pid": "P2043",
+        "amount": 4426.0,
+        "unit": "Q11573",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P518",
+          "item": "Q105759907"
+         }
+        ],
+        "shown": true
+       }
+      ],
+      "priority": 1.0
+     },
+     {
+      "primitive": "fact",
+      "pid": "P462",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q117085614-F10F4B40-9796-4B2B-A114-4B0989C20208",
+        "pid": "P462",
+        "item": "Q22006653",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "class": true,
+        "shown": true
+       }
+      ],
+      "priority": 1.0
+     },
+     {
+      "primitive": "fact",
+      "pid": "P4082",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q117085614-da6c341f-428e-ba54-833d-26f782857312",
+        "pid": "P4082",
+        "item": "Q138479019",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P127",
+          "item": "Q224081"
+         }
+        ],
+        "image": null,
+        "shown": true
+       }
+      ],
+      "priority": 1.0
+     },
+     {
+      "primitive": "fact",
+      "pid": "P3803",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q117085614-4e81a71f-4afc-4510-8f1b-fd5965974fcd",
+        "pid": "P3803",
+        "item": "Q1788758",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "class": true,
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-21c137f1-4e09-daf8-784c-6384b4768de1",
+        "pid": "P3803",
+        "item": "Q2518956",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "shown": true
+       }
+      ],
+      "priority": 1.585
+     }
+    ]
+   },
+   "prose": {
+    "concepts": [
+     "Q932586"
+    ]
+   }
+  },
+  {
+   "id": "release",
+   "kind": "facts",
+   "concept": "Q115668531",
+   "template": "columns",
+   "slots": {
+    "gallery": [
+     {
+      "primitive": "network",
+      "role": "gallery",
+      "values": [
+       {
+        "statement": "Q117085614-47daa12a-4daa-80eb-4bbd-69bf04bae4e6",
+        "pid": "P750",
+        "item": "Q8016302",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": {
+         "file": "Gate 4 Warner Bros. Studios.jpg",
+         "kind": "photo",
+         "aspect": 1.5,
+         "megapixels": 17.92,
+         "credit": {
+          "artist": "Coolcaesar",
+          "license": "CC BY-SA 4.0"
+         }
+        },
+        "priority": 1.585
+       },
+       {
+        "statement": "Q117085614-A329C9AC-60C7-4437-80B3-77894E6B4ADF",
+        "pid": "P750",
+        "item": "Q1097348",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P17",
+          "item": "Q28"
+         }
+        ],
+        "image": null,
+        "priority": 1.585
+       }
+      ],
+      "priority": 1.585
+     }
+    ],
+    "sheet": [
+     {
+      "primitive": "fact",
+      "pid": "P577",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q117085614-707756f0-460f-309a-299b-b3f55e34877b",
+        "pid": "P577",
+        "time": "2025-09-08T00:00:00Z",
+        "precision": 11,
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P291",
+          "item": "Q1122565"
+         },
+         {
+          "pid": "P1552",
+          "item": "Q204854"
+         }
+        ],
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-e16c2ace-4afa-ed3c-080d-86179170e583",
+        "pid": "P577",
+        "time": "2025-09-23T00:00:00Z",
+        "precision": 11,
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P291",
+          "item": "Q5434188"
+         }
+        ],
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-8f0659cd-4e5a-0d11-cb66-18eec3d8450e",
+        "pid": "P577",
+        "time": "2025-09-24T00:00:00Z",
+        "precision": 11,
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P291",
+          "item": "Q31"
+         },
+         {
+          "pid": "P291",
+          "item": "Q142"
+         }
+        ],
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-D7ACC607-A76E-498E-A2D7-8B57DAD7707F",
+        "pid": "P577",
+        "time": "2025-09-25T00:00:00Z",
+        "precision": 11,
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P291",
+          "item": "Q28"
+         },
+         {
+          "pid": "P291",
+          "item": "Q38"
+         },
+         {
+          "pid": "P291",
+          "item": "Q213"
+         },
+         {
+          "pid": "P291",
+          "item": "Q408"
+         }
+        ],
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-7cd46390-4cf9-4336-2b53-c56630158da4",
+        "pid": "P577",
+        "time": "2025-09-26T00:00:00Z",
+        "precision": 11,
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P291",
+          "item": "Q16"
+         },
+         {
+          "pid": "P291",
+          "item": "Q20"
+         },
+         {
+          "pid": "P291",
+          "item": "Q27"
+         },
+         {
+          "pid": "P291",
+          "item": "Q29"
+         },
+         {
+          "pid": "P291",
+          "item": "Q30"
+         },
+         {
+          "pid": "P291",
+          "item": "Q33"
+         },
+         {
+          "pid": "P291",
+          "item": "Q34"
+         },
+         {
+          "pid": "P291",
+          "item": "Q37"
+         },
+         {
+          "pid": "P291",
+          "item": "Q40"
+         },
+         {
+          "pid": "P291",
+          "item": "Q145"
+         },
+         {
+          "pid": "P291",
+          "item": "Q191"
+         },
+         {
+          "pid": "P291",
+          "item": "Q211"
+         },
+         {
+          "pid": "P291",
+          "item": "Q218"
+         },
+         {
+          "pid": "P291",
+          "item": "Q219"
+         },
+         {
+          "pid": "P291",
+          "item": "Q228"
+         },
+         {
+          "pid": "P291",
+          "item": "Q668"
+         },
+         {
+          "pid": "P291",
+          "item": "Q881"
+         },
+         {
+          "pid": "P291",
+          "item": "Q1041"
+         }
+        ],
+        "shown": true
+       }
+      ],
+      "priority": 2.585
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2142",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q117085614-a63e655e-4b11-8c7b-2768-45820e297fcd",
+        "pid": "P2142",
+        "amount": 209586604.0,
+        "unit": "Q4917",
+        "rank": "normal",
+        "provenance": "sourced",
+        "shown": true
+       }
+      ],
+      "priority": 1.0
+     },
+     {
+      "primitive": "fact",
+      "pid": "P793",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q117085614-75b4c87b-4312-1543-2c17-426ae1fdb6c1",
+        "pid": "P793",
+        "item": "Q204854",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P276",
+          "item": "Q1122565"
+         },
+         {
+          "pid": "P585",
+          "year": 2025
+         }
+        ],
+        "image": null,
+        "class": true,
+        "shown": true
+       }
+      ],
+      "priority": 1.0
+     },
+     {
+      "primitive": "fact",
+      "pid": "P406",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q117085614-6300dc68-4ed4-c4ce-3edf-806f2f2ae7a3",
+        "pid": "P406",
+        "item": "Q136488200",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "shown": true
+       }
+      ],
+      "priority": 1.0
+     },
+     {
+      "primitive": "fact",
+      "pid": "P1476",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q117085614-2a14a34b-40c9-fac3-3e4f-2aa1c0b136a6",
+        "pid": "P1476",
+        "text": "One Battle After Another",
+        "lang": "en",
+        "rank": "normal",
+        "provenance": "sourced",
+        "shown": true
+       }
+      ],
+      "priority": 1.0
+     },
+     {
+      "primitive": "fact",
+      "pid": "P1638",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q117085614-3f26cdcc-4729-b133-9d39-ecb2e59106c9",
+        "pid": "P1638",
+        "text": "Untitled Paul Thomas Anderson Event Film",
+        "lang": "en",
+        "rank": "normal",
+        "provenance": "sourced",
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-18cf2082-4618-93a9-4e07-25c9039525d4",
+        "pid": "P1638",
+        "text": "BC Project",
+        "lang": "en",
+        "rank": "normal",
+        "provenance": "sourced",
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-d1674e80-4dba-cf9b-00c6-72dd11c7f51b",
+        "pid": "P1638",
+        "text": "Desert Highway",
+        "lang": "en",
+        "rank": "normal",
+        "provenance": "sourced",
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-78aeceff-4606-c220-49f2-1cb32df24af8",
+        "pid": "P1638",
+        "text": "The Battle of Baktan Cross",
+        "lang": "en",
+        "rank": "normal",
+        "provenance": "sourced",
+        "shown": true
+       }
+      ],
+      "priority": 2.322
+     }
+    ]
+   },
+   "prose": {
+    "concepts": [
+     "Q115668531"
+    ]
+   }
+  },
+  {
+   "id": "reception",
+   "kind": "facts",
+   "concept": "Q4482",
+   "template": "columns",
+   "slots": {
+    "sheet": [
+     {
+      "primitive": "fact",
+      "pid": "P444",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q117085614-336EE829-A39D-46D5-84D2-C7C08C8F1E31",
+        "pid": "P444",
+        "string": "4.3/5",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P585",
+          "year": 2025
+         },
+         {
+          "pid": "P7887",
+          "amount": 1447128.0
+         },
+         {
+          "pid": "P447",
+          "item": "Q18709181"
+         },
+         {
+          "pid": "P459",
+          "item": "Q107218751"
+         }
+        ],
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-90DE398D-7E03-4854-9568-30FC4FF85C08",
+        "pid": "P444",
+        "string": "7.9/10",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P447",
+          "item": "Q37312"
+         },
+         {
+          "pid": "P459",
+          "item": "Q107218751"
+         },
+         {
+          "pid": "P585",
+          "year": 2025
+         },
+         {
+          "pid": "P7887",
+          "amount": 212000.0
+         }
+        ],
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-899D199E-D3B3-46C5-B932-99D945D0E442",
+        "pid": "P444",
+        "string": "95/100",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P447",
+          "item": "Q150248"
+         },
+         {
+          "pid": "P459",
+          "item": "Q106515043"
+         },
+         {
+          "pid": "P585",
+          "year": 2025
+         },
+         {
+          "pid": "P7887",
+          "amount": 63.0
+         }
+        ],
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-A11DA1F2-1AFC-4254-990C-6FACC8852B77",
+        "pid": "P444",
+        "string": "94%",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P447",
+          "item": "Q105584"
+         },
+         {
+          "pid": "P459",
+          "item": "Q108403393"
+         },
+         {
+          "pid": "P585",
+          "year": 2025
+         },
+         {
+          "pid": "P7887",
+          "amount": 410.0
+         }
+        ],
+        "shown": true
+       }
+      ],
+      "priority": 2.322
+     },
+     {
+      "primitive": "fact",
+      "pid": "P166",
+      "form": "list",
+      "statements": [
+       {
+        "statement": "Q117085614-15953fe1-4994-a6f6-dd6a-f17f900d2e7e",
+        "pid": "P166",
+        "item": "Q822907",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-b7d87043-4143-6eec-7f9f-73aab3a83fe7",
+        "pid": "P166",
+        "item": "Q849124",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-00437c60-4f4e-168b-74a6-b206dcd0411a",
+        "pid": "P166",
+        "item": "Q586356",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-ff15b807-4885-49ea-5c2a-66e0a5c2466f",
+        "pid": "P166",
+        "item": "Q670282",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": {
+         "file": "Golden Globe.jpg",
+         "kind": "photo",
+         "aspect": 0.6145,
+         "megapixels": 1.83,
+         "credit": {
+          "artist": "Mavelus",
+          "license": "CC BY-SA 4.0"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-3350bc62-44f1-3423-d4fc-a911ca436d67",
+        "pid": "P166",
+        "item": "Q102427",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P585",
+          "year": 2026
+         },
+         {
+          "pid": "P805",
+          "item": "Q85315079"
+         },
+         {
+          "pid": "P1346",
+          "item": "Q25132"
+         },
+         {
+          "pid": "P1346",
+          "item": "Q28032030"
+         },
+         {
+          "pid": "P1346",
+          "item": "Q95652740"
+         }
+        ],
+        "image": {
+         "file": "Oscar-free-version.svg",
+         "kind": "drawing",
+         "aspect": 0.4062,
+         "megapixels": 0.01,
+         "credit": {
+          "artist": "Asav",
+          "license": "CC BY-SA 4.0"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-2f6bbfe8-42df-f963-c746-d362e650600a",
+        "pid": "P166",
+        "item": "Q103360",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P585",
+          "year": 2026
+         },
+         {
+          "pid": "P805",
+          "item": "Q85315079"
+         },
+         {
+          "pid": "P1346",
+          "item": "Q25132"
+         }
+        ],
+        "image": {
+         "file": "Oscar-free-version.svg",
+         "kind": "drawing",
+         "aspect": 0.4062,
+         "megapixels": 0.01,
+         "credit": {
+          "artist": "Asav",
+          "license": "CC BY-SA 4.0"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-d5dc20e6-4fa9-5408-3046-9b398165c3eb",
+        "pid": "P166",
+        "item": "Q107258",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P585",
+          "year": 2026
+         },
+         {
+          "pid": "P805",
+          "item": "Q85315079"
+         },
+         {
+          "pid": "P1346",
+          "item": "Q25132"
+         }
+        ],
+        "image": {
+         "file": "Oscar-free-version.svg",
+         "kind": "drawing",
+         "aspect": 0.4062,
+         "megapixels": 0.01,
+         "credit": {
+          "artist": "Asav",
+          "license": "CC BY-SA 4.0"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-5cd97fd2-43bb-3fca-f782-59eba68f5daf",
+        "pid": "P166",
+        "item": "Q281939",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P585",
+          "year": 2026
+         },
+         {
+          "pid": "P805",
+          "item": "Q85315079"
+         },
+         {
+          "pid": "P1346",
+          "item": "Q109942993"
+         }
+        ],
+        "image": null,
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-53b5cea2-40d5-3715-26aa-1dbddce74583",
+        "pid": "P166",
+        "item": "Q137423654",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P585",
+          "year": 2026
+         },
+         {
+          "pid": "P805",
+          "item": "Q85315079"
+         },
+         {
+          "pid": "P1346",
+          "item": "Q137855674"
+         }
+        ],
+        "image": null,
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-065d2ad9-4fd0-9506-9efa-ef36bdceee6d",
+        "pid": "P166",
+        "item": "Q106291",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P585",
+          "year": 2026
+         },
+         {
+          "pid": "P805",
+          "item": "Q85315079"
+         },
+         {
+          "pid": "P1346",
+          "item": "Q44221"
+         }
+        ],
+        "image": {
+         "file": "Oscar-free-version.svg",
+         "kind": "drawing",
+         "aspect": 0.4062,
+         "megapixels": 0.01,
+         "credit": {
+          "artist": "Asav",
+          "license": "CC BY-SA 4.0"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-b222ba17-410b-20a9-115f-bc0759cb1bb4",
+        "pid": "P166",
+        "item": "Q17748520",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P585",
+          "year": 2026
+         },
+         {
+          "pid": "P805",
+          "item": "Q140267252"
+         }
+        ],
+        "image": null,
+        "class": true,
+        "shown": true
+       }
+      ],
+      "priority": 3.585
+     },
+     {
+      "primitive": "fact",
+      "pid": "P1411",
+      "form": "list",
+      "statements": [
+       {
+        "statement": "Q117085614-5bf3d084-4399-986e-f3de-d4304d0cdeb9",
+        "pid": "P1411",
+        "item": "Q1011564",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-1313d1e6-4220-bd32-71dd-a19a71c138ce",
+        "pid": "P1411",
+        "item": "Q181883",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-7a53eb38-4d5c-1fac-89f6-66994bfd2acc",
+        "pid": "P1411",
+        "item": "Q723830",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-fa539607-4071-9d7e-3069-ebb912c15414",
+        "pid": "P1411",
+        "item": "Q1422140",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-bceaead1-4851-f237-bfda-a4e0ab83fe31",
+        "pid": "P1411",
+        "item": "Q103916",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P585",
+          "year": 2026
+         },
+         {
+          "pid": "P805",
+          "item": "Q85315079"
+         },
+         {
+          "pid": "P2453",
+          "item": "Q38111"
+         }
+        ],
+        "image": null,
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-99671caf-4a67-19bf-d159-f1aa01305f73",
+        "pid": "P1411",
+        "item": "Q106291",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P585",
+          "year": 2026
+         },
+         {
+          "pid": "P805",
+          "item": "Q85315079"
+         },
+         {
+          "pid": "P2453",
+          "item": "Q193668"
+         }
+        ],
+        "image": {
+         "file": "Oscar-free-version.svg",
+         "kind": "drawing",
+         "aspect": 0.4062,
+         "megapixels": 0.01,
+         "credit": {
+          "artist": "Asav",
+          "license": "CC BY-SA 4.0"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-66a75d2e-4625-3ec4-228d-347553bde3a8",
+        "pid": "P1411",
+        "item": "Q106301",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P585",
+          "year": 2026
+         },
+         {
+          "pid": "P805",
+          "item": "Q85315079"
+         },
+         {
+          "pid": "P2453",
+          "item": "Q7708542"
+         }
+        ],
+        "image": {
+         "file": "Oscar-free-version.svg",
+         "kind": "drawing",
+         "aspect": 0.4062,
+         "megapixels": 0.01,
+         "credit": {
+          "artist": "Asav",
+          "license": "CC BY-SA 4.0"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-63d47f82-47e7-8de6-5d8a-f5252917f2b6",
+        "pid": "P1411",
+        "item": "Q131520",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P585",
+          "year": 2026
+         },
+         {
+          "pid": "P805",
+          "item": "Q85315079"
+         },
+         {
+          "pid": "P2453",
+          "item": "Q110393717"
+         }
+        ],
+        "image": {
+         "file": "Oscar-free-version.svg",
+         "kind": "drawing",
+         "aspect": 0.4062,
+         "megapixels": 0.01,
+         "credit": {
+          "artist": "Asav",
+          "license": "CC BY-SA 4.0"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-878d5f89-4f96-cbca-d639-827b82bd54be",
+        "pid": "P1411",
+        "item": "Q488651",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P585",
+          "year": 2026
+         },
+         {
+          "pid": "P805",
+          "item": "Q85315079"
+         },
+         {
+          "pid": "P2453",
+          "item": "Q286410"
+         }
+        ],
+        "image": {
+         "file": "Oscar-free-version.svg",
+         "kind": "drawing",
+         "aspect": 0.4062,
+         "megapixels": 0.01,
+         "credit": {
+          "artist": "Asav",
+          "license": "CC BY-SA 4.0"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-970d24d2-4d0e-a7e9-a315-e49af8064e30",
+        "pid": "P1411",
+        "item": "Q277751",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P585",
+          "year": 2026
+         },
+         {
+          "pid": "P805",
+          "item": "Q85315079"
+         },
+         {
+          "pid": "P2453",
+          "item": "Q116907460"
+         },
+         {
+          "pid": "P2453",
+          "item": "Q116907469"
+         }
+        ],
+        "image": null,
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-843a1f62-4ae2-295e-bb2d-38913b02ba0c",
+        "pid": "P1411",
+        "item": "Q830079",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P585",
+          "year": 2026
+         },
+         {
+          "pid": "P805",
+          "item": "Q85315079"
+         },
+         {
+          "pid": "P2453",
+          "item": "Q16242195"
+         },
+         {
+          "pid": "P2453",
+          "item": "Q16875334"
+         },
+         {
+          "pid": "P2453",
+          "item": "Q137972416"
+         }
+        ],
+        "image": null,
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-5BDE8885-7278-435B-9142-60B5FA089AF2",
+        "pid": "P1411",
+        "item": "Q102427",
+        "rank": "normal",
+        "provenance": "none",
+        "qualifiers": [
+         {
+          "pid": "P585",
+          "year": 2026
+         }
+        ],
+        "image": {
+         "file": "Oscar-free-version.svg",
+         "kind": "drawing",
+         "aspect": 0.4062,
+         "megapixels": 0.01,
+         "credit": {
+          "artist": "Asav",
+          "license": "CC BY-SA 4.0"
+         }
+        },
+        "shown": true
+       }
+      ],
+      "priority": 3.585
+     }
+    ]
+   },
+   "prose": {
+    "concepts": [
+     "Q4482",
+     "Q618779"
+    ]
+   }
+  },
+  {
+   "id": "ratings",
+   "kind": "facts",
+   "concept": "Q14775294",
+   "template": "columns",
+   "slots": {
+    "gallery": [
+     {
+      "primitive": "network",
+      "role": "gallery",
+      "values": [
+       {
+        "statement": "Q117085614-a1be312d-483d-1e77-af40-8ab63a2b6b1e",
+        "pid": "P1657",
+        "item": "Q18665344",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P2676",
+          "amount": 55553.0
+         },
+         {
+          "pid": "P7367",
+          "item": "Q117501801"
+         },
+         {
+          "pid": "P7367",
+          "item": "Q121597885"
+         },
+         {
+          "pid": "P7367",
+          "item": "Q123985313"
+         },
+         {
+          "pid": "P7367",
+          "item": "Q123986363"
+         }
+        ],
+        "image": {
+         "file": "MPA R RATING.svg",
+         "kind": "drawing",
+         "aspect": 1.2457,
+         "megapixels": 0.21,
+         "credit": {
+          "artist": "w:Motion Picture Association",
+          "license": "Public domain"
+         }
+        },
+        "priority": 1.0
+       },
+       {
+        "statement": "Q117085614-7E2E14EE-79BA-4478-9C77-31AB98BEABFC",
+        "pid": "P2629",
+        "item": "Q4550895",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P7367",
+          "item": "Q101979266"
+         },
+         {
+          "pid": "P7367",
+          "item": "Q101979422"
+         },
+         {
+          "pid": "P7367",
+          "item": "Q102174580"
+         },
+         {
+          "pid": "P7367",
+          "item": "Q105639382"
+         }
+        ],
+        "image": {
+         "file": "BBFC 15 2019.svg",
+         "kind": "drawing",
+         "aspect": 1.0,
+         "megapixels": 0.12,
+         "credit": {
+          "artist": "British Board of Film Classification",
+          "license": "Public domain"
+         }
+        },
+        "priority": 1.0
+       },
+       {
+        "statement": "Q117085614-26CCA160-1CF7-4EEF-B6FD-337A29B5278C",
+        "pid": "P1981",
+        "item": "Q20644797",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P2676",
+          "amount": 272971.0
+         }
+        ],
+        "image": {
+         "file": "FSK 16.svg",
+         "kind": "drawing",
+         "aspect": 1.0,
+         "megapixels": 0.59,
+         "credit": {
+          "artist": "Infanf",
+          "license": "Public domain"
+         }
+        },
+        "priority": 1.0
+       },
+       {
+        "statement": "Q117085614-360A4598-CB2F-4562-9CB1-5EB237FBF1C9",
+        "pid": "P2756",
+        "item": "Q23790279",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P2676",
+          "amount": 60749.0
+         }
+        ],
+        "image": {
+         "file": "Eirin Rated PG12.svg",
+         "kind": "drawing",
+         "aspect": 1.5754,
+         "megapixels": 0.17,
+         "credit": {
+          "artist": "映画倫理委員会 (Film Classification and Rating Organization of Japan)",
+          "license": "Public domain"
+         }
+        },
+        "priority": 1.0
+       },
+       {
+        "statement": "Q117085614-44f37171-4fb9-3a24-d98f-bcd10dbb3097",
+        "pid": "P6452",
+        "item": "Q56902855",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P585",
+          "year": 2025
+         },
+         {
+          "pid": "P2676",
+          "string": "DFL/3/64/2025-MUM"
+         }
+        ],
+        "image": {
+         "file": "CBFC A (2020).svg",
+         "kind": "drawing",
+         "aspect": 1.7652,
+         "megapixels": 6.68,
+         "credit": {
+          "artist": "Central Board of Film Certification",
+          "license": "Public domain"
+         }
+        },
+        "priority": 1.0
+       },
+       {
+        "statement": "Q117085614-BABA60D1-5A6E-4DD9-89B7-884CEA133043",
+        "pid": "P3156",
+        "item": "Q26708077",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P2676",
+          "string": "CLAS-979013"
+         },
+         {
+          "pid": "P7367",
+          "item": "Q68182045"
+         },
+         {
+          "pid": "P7367",
+          "item": "Q68182093"
+         },
+         {
+          "pid": "P7367",
+          "item": "Q68182330"
+         },
+         {
+          "pid": "P7367",
+          "item": "Q69569595"
+         }
+        ],
+        "image": {
+         "file": "Australian Classification Mature (M).svg",
+         "kind": "drawing",
+         "aspect": 1.0,
+         "megapixels": 0.04,
+         "credit": {
+          "artist": "User:JamesHenstridge",
+          "license": "Public domain"
+         }
+        },
+        "priority": 1.0
+       },
+       {
+        "statement": "Q117085614-FABF8994-2D31-4F4F-8D51-D3CB603D9DE3",
+        "pid": "P7327",
+        "item": "Q66812927",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P7367",
+          "item": "Q68181753"
+         },
+         {
+          "pid": "P7367",
+          "item": "Q68181937"
+         },
+         {
+          "pid": "P7367",
+          "item": "Q69821989"
+         }
+        ],
+        "image": {
+         "file": "OFLC Restricted 16 (R16) (2022).svg",
+         "kind": "drawing",
+         "aspect": 1.0,
+         "megapixels": 0.26,
+         "credit": {
+          "artist": "Original: Classification Office (New Zealand); Recreated by FireDragonValo",
+          "license": "Public domain"
+         }
+        },
+        "priority": 1.0
+       },
+       {
+        "statement": "Q117085614-8CC56D80-A5D2-4BD3-84EB-0F5054CE7F0F",
+        "pid": "P2363",
+        "item": "Q21571490",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P2676",
+          "string": "NFT/27425/2025"
+         }
+        ],
+        "image": {
+         "file": "18 icon B (Hungary).svg",
+         "kind": "drawing",
+         "aspect": 1.0,
+         "megapixels": 0.0,
+         "credit": {
+          "artist": "This image was created by me, Matthew with Inkscape based on directive 10/2012. (III. 28.) NMHH.",
+          "license": "Public domain"
+         }
+        },
+        "priority": 1.0
+       },
+       {
+        "statement": "Q117085614-8E3BA122-7741-4C46-8102-30F11E301785",
+        "pid": "P5201",
+        "item": "Q52382311",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P7367",
+          "item": "Q108878608"
+         }
+        ],
+        "image": {
+         "file": "IMDA Age Rating - Mature 18.svg",
+         "kind": "drawing",
+         "aspect": 2.3127,
+         "megapixels": 0.16,
+         "credit": {
+          "artist": "Original: Infocomm Media Development Authority (Singapore); Converted to SVG by FireDragonValo",
+          "license": "Public domain"
+         }
+        },
+        "priority": 1.0
+       },
+       {
+        "statement": "Q117085614-114D263E-3C71-4FB5-A5E2-AB8C65AD2038",
+        "pid": "P7573",
+        "item": "Q74434535",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": {
+         "file": "IFCO 15A.svg",
+         "kind": "drawing",
+         "aspect": 1.0,
+         "megapixels": 0.26,
+         "credit": {
+          "artist": "Original: IFCO; Converted to SVG by FireDragonValo",
+          "license": "Public domain"
+         }
+        },
+        "priority": 1.0
+       },
+       {
+        "statement": "Q117085614-00FBFACD-E634-470B-804B-BA7E6DA4A9B7",
+        "pid": "P3216",
+        "item": "Q26678735",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": {
+         "file": "Classificação Indicativa 16 anos.svg",
+         "kind": "drawing",
+         "aspect": 1.0,
+         "megapixels": 0.25,
+         "credit": {
+          "artist": "Ministério da Justiça e Segurança Pública do Brasil",
+          "license": "Public domain"
+         }
+        },
+        "priority": 1.0
+       },
+       {
+        "statement": "Q117085614-20E4EA65-41B7-4509-8B3E-A11F1201F40D",
+        "pid": "P3306",
+        "item": "Q27253947",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": {
+         "file": "ICAA 16.svg",
+         "kind": "drawing",
+         "aspect": 0.8346,
+         "megapixels": 0.06,
+         "credit": {
+          "artist": "Government of Spain",
+          "license": "Public domain"
+         }
+        },
+        "priority": 1.0
+       },
+       {
+        "statement": "Q117085614-183B4C22-069B-48B8-8F3C-5341EDDBD5F3",
+        "pid": "P3428",
+        "item": "Q27925241",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": {
+         "file": "INCAA +16.svg",
+         "kind": "drawing",
+         "aspect": 1.6151,
+         "megapixels": 0.16,
+         "credit": {
+          "artist": "Original: Instituto Nacional de Cine y Artes Audiovisuales; Converted to SVG by FireDragonValo",
+          "license": "Public domain"
+         }
+        },
+        "priority": 1.0
+       },
+       {
+        "statement": "Q117085614-12778481-8297-4D8A-9250-947C987F999F",
+        "pid": "P3818",
+        "item": "Q28951021",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": {
+         "file": "KMRB 15 (2021).svg",
+         "kind": "drawing",
+         "aspect": 1.0,
+         "megapixels": 0.26,
+         "credit": {
+          "artist": "™/® Korea Media Rating Board",
+          "license": "Public domain"
+         }
+        },
+        "priority": 1.0
+       },
+       {
+        "statement": "Q117085614-2F51C8EE-711C-4DBF-ACA9-A0838D7B4E2D",
+        "pid": "P4437",
+        "item": "Q42012505",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": {
+         "file": "FPB - 16 - 2024.svg",
+         "kind": "drawing",
+         "aspect": 1.2987,
+         "megapixels": 0.01,
+         "credit": {
+          "artist": "FPB, vector by FireDragonValo for Film and Publication Board of South Africa",
+          "license": "Public domain"
+         }
+        },
+        "priority": 1.0
+       },
+       {
+        "statement": "Q117085614-EF8FE850-799A-41C3-BE08-2FDDF8364DE9",
+        "pid": "P6658",
+        "item": "Q62371961",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": {
+         "file": "Quebec Rating 13.svg",
+         "kind": "drawing",
+         "aspect": 2.0645,
+         "megapixels": 0.13,
+         "credit": {
+          "artist": "Ministère de la Culture et des Communications (Quebec)",
+          "license": "Public domain"
+         }
+        },
+        "priority": 1.0
+       },
+       {
+        "statement": "Q117085614-c58935f5-4b86-38b2-6ae8-7d13d01c00c7",
+        "pid": "P2684",
+        "item": "Q23649984",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P7367",
+          "item": "Q98034423"
+         },
+         {
+          "pid": "P7367",
+          "item": "Q98042270"
+         }
+        ],
+        "image": {
+         "file": "Kijkwijzer 16.svg",
+         "kind": "drawing",
+         "aspect": 1.0,
+         "megapixels": 0.03,
+         "credit": {
+          "artist": "Nederlands Instituut voor de Classificatie voor Audiovisueel Materiaal (NICAM)",
+          "license": "Public domain"
+         }
+        },
+        "priority": 1.0
+       },
+       {
+        "statement": "Q117085614-D4BBA3F0-61F7-4817-BCA4-D84021742669",
+        "pid": "P3834",
+        "item": "Q28980118",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": {
+         "file": "RTC Mexico B15 2024.svg",
+         "kind": "drawing",
+         "aspect": 1.0057,
+         "megapixels": 0.03,
+         "credit": {
+          "artist": "Government of Mexico",
+          "license": "Public domain"
+         }
+        },
+        "priority": 1.0
+       },
+       {
+        "statement": "Q117085614-2e8b7141-4e1c-630b-730b-143fedcf45f9",
+        "pid": "P2637",
+        "item": "Q23308564",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": {
+         "file": "RARS 18+ (2016).svg",
+         "kind": "drawing",
+         "aspect": 1.002,
+         "megapixels": 0.26,
+         "credit": {
+          "artist": "Art. Lebedev Studio (Студия Артемия Лебедева)",
+          "license": "Public domain"
+         }
+        },
+        "priority": 1.0
+       }
+      ],
+      "priority": 1.0
+     }
+    ],
+    "sheet": [
+     {
+      "primitive": "fact",
+      "pid": "P2758",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q117085614-B44E7C3A-28C6-4E73-9F2B-A9B81F5F3E15",
+        "pid": "P2758",
+        "item": "Q23817729",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-477F64D9-162C-4E60-AE37-2C894CF13619",
+        "pid": "P2758",
+        "item": "Q23817739",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "shown": true
+       }
+      ],
+      "priority": 1.585
+     },
+     {
+      "primitive": "fact",
+      "pid": "P3650",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q117085614-1C835261-84ED-42ED-BCD4-B897784CD373",
+        "pid": "P3650",
+        "item": "Q28732987",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "shown": true
+       }
+      ],
+      "priority": 1.0
+     },
+     {
+      "primitive": "fact",
+      "pid": "P5150",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q117085614-D05EFB4C-A89E-4329-BBDD-CF2E848E2902",
+        "pid": "P5150",
+        "item": "Q52692414",
+        "rank": "normal",
+        "provenance": "sourced",
+        "image": null,
+        "shown": true
+       }
+      ],
+      "priority": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "id": "media",
+   "kind": "media",
+   "concept": "Q131765",
+   "template": "feature-run",
+   "slots": {
+    "run": [
+     {
+      "primitive": "media",
+      "role": "run",
+      "statement": "Q117085614-c150f33c-4ea6-8812-37e9-235cde5ddc31",
+      "pid": "P154",
+      "file": "One Battle After Another logo.svg",
+      "rank": "normal",
+      "provenance": "sourced",
+      "kind": "drawing",
+      "aspect": 1.831,
+      "megapixels": 0.04,
+      "credit": {
+       "artist": "Original:  Warner Bros. Pictures\n\nDerivative work:  Logovectorizer",
+       "license": "Public domain"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "evidence",
+   "kind": "evidence",
+   "concept": "Q121769",
+   "template": "sheet",
+   "slots": {
+    "summary": [
+     {
+      "primitive": "provenance",
+      "sourced": 125,
+      "imported": 0,
+      "none": 10
+     }
+    ],
+    "web": [
+     {
+      "primitive": "fact",
+      "pid": "P856",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q117085614-7062a95d-4d11-1949-d9c7-961f0cc903cc",
+        "pid": "P856",
+        "url": "https://www.onebattleafteranothermovie.com/",
+        "rank": "preferred",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P407",
+          "item": "Q1860"
+         },
+         {
+          "pid": "P813",
+          "year": 2025
+         },
+         {
+          "pid": "P1476",
+          "text": "One Battle After Another | Official Movie Site",
+          "lang": "en"
+         }
+        ],
+        "shown": true
+       }
+      ],
+      "priority": 1.0
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2002",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q117085614-57AE0EE3-E2B5-4280-8690-333CA5CF7F85",
+        "pid": "P2002",
+        "string": "onebattlemovie",
+        "rank": "normal",
+        "provenance": "none",
+        "shown": true
+       }
+      ],
+      "priority": 0.0
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2003",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q117085614-5F64F0EF-7DEC-42B8-A34A-A671AA42EC45",
+        "pid": "P2003",
+        "string": "onebattleafteranothermovie",
+        "rank": "normal",
+        "provenance": "none",
+        "qualifiers": [
+         {
+          "pid": "P12546",
+          "amount": 71795373114.0
+         }
+        ],
+        "shown": true
+       }
+      ],
+      "priority": 0.0
+     },
+     {
+      "primitive": "fact",
+      "pid": "P973",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q117085614-fc254421-4cbf-c4f9-912b-451807e7c862",
+        "pid": "P973",
+        "url": "https://www.warnerbros.com/movies/one-battle-after-another",
+        "rank": "normal",
+        "provenance": "none",
+        "qualifiers": [
+         {
+          "pid": "P407",
+          "item": "Q1860"
+         }
+        ],
+        "shown": true
+       },
+       {
+        "statement": "Q117085614-3c826705-4fd0-36b0-a844-1b195ae6e0b0",
+        "pid": "P973",
+        "url": "https://www.wbawards.com/film/?film=onebattleafteranother",
+        "rank": "normal",
+        "provenance": "none",
+        "qualifiers": [
+         {
+          "pid": "P407",
+          "item": "Q1860"
+         }
+        ],
+        "shown": true
+       }
+      ],
+      "priority": 0.0
+     }
+    ],
+    "sheet": [
+     {
+      "primitive": "fact",
+      "pid": "P373",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q117085614-efc52465-477f-4855-a2e7-98eebb16a3b3",
+        "pid": "P373",
+        "string": "One Battle After Another",
+        "rank": "normal",
+        "provenance": "none",
+        "shown": true
+       }
+      ],
+      "priority": 0.0
+     }
+    ],
+    "projects": [
+     {
+      "primitive": "sitelinks",
+      "families": {
+       "wikipedia": [
+        "ar",
+        "arz",
+        "awa",
+        "be",
+        "bg",
+        "bn",
+        "br",
+        "bs",
+        "ca",
+        "ckb",
+        "cs",
+        "da",
+        "de",
+        "el",
+        "en",
+        "es",
+        "et",
+        "eu",
+        "fa",
+        "fi",
+        "fr",
+        "gl",
+        "he",
+        "hu",
+        "id",
+        "it",
+        "ja",
+        "kk",
+        "ko",
+        "lt",
+        "lv",
+        "mk",
+        "ms",
+        "mzn",
+        "nl",
+        "no",
+        "pl",
+        "pt",
+        "ro",
+        "ru",
+        "simple",
+        "sr",
+        "sv",
+        "tg",
+        "th",
+        "tr",
+        "uk",
+        "ur",
+        "vi",
+        "zh",
+        "zh_yue"
+       ],
+       "wikiquote": [
+        "en"
+       ]
+      }
+     }
+    ],
+    "identifiers": [
+     {
+      "primitive": "identifiers",
+      "values": [
+       {
+        "pid": "P3106",
+        "string": "film/one-battle-after-another",
+        "statement": "Q117085614-C2DA1F92-C07B-417A-A58F-2459D0BD167A"
+       },
+       {
+        "pid": "P3212",
+        "string": "0000-0007-7E2D-0000-Z-0000-0000-6",
+        "statement": "Q117085614-2e51b593-4aa0-2659-a4c8-0b96cb27d463"
+       },
+       {
+        "pid": "P5318",
+        "string": "46813",
+        "statement": "Q117085614-e79bf56f-4852-a210-1c9f-683779b817b9"
+       },
+       {
+        "pid": "P2755",
+        "string": "165146",
+        "statement": "Q117085614-481F1307-2359-4E6C-A743-4E91356CE943"
+       },
+       {
+        "pid": "P6383",
+        "string": "12710300",
+        "statement": "Q117085614-DAD51FCF-88C2-4677-BE09-548A99599362"
+       },
+       {
+        "pid": "P12320",
+        "string": "one-battle-after-another",
+        "statement": "Q117085614-58810C42-D562-4F3E-93C9-0A9D9E282FFB"
+       },
+       {
+        "pid": "P13460",
+        "string": "23830",
+        "statement": "Q117085614-58850706-8471-4441-B418-DAC21A28BC72"
+       },
+       {
+        "pid": "P8680",
+        "string": "225116",
+        "statement": "Q117085614-96DD6B35-44DE-41FE-BC3D-E1A5F3591F64"
+       },
+       {
+        "pid": "P9821",
+        "string": "15536",
+        "statement": "Q117085614-7621E751-4FB9-4BA8-BF25-3A621B4DEAC0"
+       },
+       {
+        "pid": "P2704",
+        "string": "10.5240/211D-FF57-B1C0-05D5-93ED-F",
+        "statement": "Q117085614-54b365e9-4ce7-0731-1f90-908d133e131c"
+       },
+       {
+        "pid": "P8298",
+        "string": "movie/bebe611d-8178-481a-a4f2-de743b5b135a",
+        "statement": "Q117085614-3ac207a2-45e9-e772-d09b-13854cd3100d"
+       },
+       {
+        "pid": "P1651",
+        "string": "Uye8x9ilHAY",
+        "statement": "Q117085614-311f5aa4-4a15-3317-06a6-d7b40d43d65a"
+       },
+       {
+        "pid": "P7285",
+        "string": "1265934",
+        "statement": "Q117085614-93342e46-4c88-a940-21a6-38922ed22f94"
+       },
+       {
+        "pid": "P7118",
+        "string": "W1577207",
+        "statement": "Q117085614-89fe61ba-4ec4-0019-96d5-64017b23908b"
+       },
+       {
+        "pid": "P7091",
+        "string": "107445",
+        "statement": "Q117085614-0d0e95a7-4e1a-9a04-ae86-244a730dfe44"
+       },
+       {
+        "pid": "P7293",
+        "string": "9815199968805606",
+        "statement": "Q117085614-68fb5262-434d-ec23-3eb0-c70f221923b8"
+       },
+       {
+        "pid": "P214",
+        "string": "2005176725915424980003",
+        "statement": "Q117085614-b2f6dd91-4e53-de0a-7ceb-e2ecff0f0671"
+       },
+       {
+        "pid": "P7334",
+        "string": "4597040",
+        "statement": "Q117085614-7f0f09a3-4891-985d-0350-eae86a99d398"
+       },
+       {
+        "pid": "P8055",
+        "string": "B0FR6PZZ2C",
+        "statement": "Q117085614-41794b90-4065-0b91-f722-13b23816c582"
+       },
+       {
+        "pid": "P2465",
+        "string": "400953",
+        "statement": "Q117085614-4189AD8B-92D8-4A65-9868-7354293881CF"
+       },
+       {
+        "pid": "P4665",
+        "string": "3322169",
+        "statement": "Q117085614-ca66e455-4225-87f4-b9e4-a0fd2edd657d"
+       },
+       {
+        "pid": "P9203",
+        "string": "10646-one-battle-after-another-2025",
+        "statement": "Q117085614-6e3cd51d-40b8-dc6c-495b-5faf2c5d70ea"
+       },
+       {
+        "pid": "P6256",
+        "string": "76092",
+        "statement": "Q117085614-59538354-440a-b49f-93b2-cc0f02f40291"
+       },
+       {
+        "pid": "P9205",
+        "string": "279375",
+        "statement": "Q117085614-276ef1e5-4d61-de20-4ee3-1bddbe3ab5b2"
+       },
+       {
+        "pid": "P10045",
+        "string": "17431603321",
+        "statement": "Q117085614-40ba441c-40c8-768c-c9c8-1d285834bef5"
+       },
+       {
+        "pid": "P10255",
+        "string": "619765",
+        "statement": "Q117085614-eb6bbadb-46f0-c6a6-e4aa-b86408b3236c"
+       },
+       {
+        "pid": "P11598",
+        "string": "one-battle-after-another",
+        "statement": "Q117085614-b584f3ed-4106-0206-b3a7-852d576a4892"
+       },
+       {
+        "pid": "P10267",
+        "string": "movie/954426",
+        "statement": "Q117085614-8b7c6a33-4f15-5217-2196-ad1548d4c6c2"
+       },
+       {
+        "pid": "P5311",
+        "string": "55427",
+        "statement": "Q117085614-4ebc7316-4596-1842-b8ef-17185ee82247"
+       },
+       {
+        "pid": "P10821",
+        "string": "939925",
+        "statement": "Q117085614-3638df88-43a8-8256-fea3-fddd276e9bc1"
+       },
+       {
+        "pid": "P10269",
+        "string": "193473",
+        "statement": "Q117085614-743e6a1a-4ea8-2183-5d4c-862ada10d48e"
+       },
+       {
+        "pid": "P8847",
+        "string": "10867004",
+        "statement": "Q117085614-d4c36507-4308-3bda-a128-f4a6d73345de"
+       },
+       {
+        "pid": "P7222",
+        "string": "104106",
+        "statement": "Q117085614-df6eec10-4444-1606-43e1-6fd66162799a"
+       },
+       {
+        "pid": "P12683",
+        "string": "film/143439",
+        "statement": "Q117085614-2892bdb9-4b7a-e3ba-94bd-6218d0b67dd8"
+       },
+       {
+        "pid": "P12241",
+        "string": "94412",
+        "statement": "Q117085614-ec58ded9-4d80-6c6a-8118-5fd16acda9f7"
+       },
+       {
+        "pid": "P5327",
+        "string": "filme/one-battle-after-another",
+        "statement": "Q117085614-8ae51495-4e7e-b262-ba50-8ed4758e38dc"
+       },
+       {
+        "pid": "P3135",
+        "string": "2093308",
+        "statement": "Q117085614-66b50bd9-46e3-3bfb-f4a5-05d76a692ee5"
+       },
+       {
+        "pid": "P5865",
+        "string": "one-battle-after-another",
+        "statement": "Q117085614-e593f8b9-4305-274b-5a17-df35c27610e8"
+       },
+       {
+        "pid": "P6839",
+        "string": "Film/OneBattleAfterAnother",
+        "statement": "Q117085614-eb10477b-47d1-6698-d759-6b5c798b6ab7"
+       },
+       {
+        "pid": "P6992",
+        "string": "One_Battle_After_Another",
+        "statement": "Q117085614-d8d1f704-4ae6-fb27-a5a8-f44dd62b7e0c"
+       },
+       {
+        "pid": "P6262",
+        "string": "warnerbros:One_Battle_After_Another",
+        "statement": "Q117085614-37de5ab9-4051-52d1-555f-7a00228e1055"
+       },
+       {
+        "pid": "P1417",
+        "string": "topic/One-Battle-After-Another",
+        "statement": "Q117085614-8b502a61-4771-518e-ff64-f60ce4b842c6"
+       },
+       {
+        "pid": "P6932",
+        "string": "one-battle-after-another-movie-review-2025",
+        "statement": "Q117085614-12482535-FF80-4384-9889-9F46EF3AEA5E"
+       },
+       {
+        "pid": "P13904",
+        "string": "movies/121982",
+        "statement": "Q117085614-9828F4EE-654A-433A-BC87-38CDC50EEDE2"
+       },
+       {
+        "pid": "P13992",
+        "string": "1797896",
+        "statement": "Q117085614-ADC679CC-A89E-421B-8D0D-113460C55721"
+       },
+       {
+        "pid": "P14671",
+        "string": "55553",
+        "statement": "Q117085614-958CA425-E943-4EAC-A7E0-91623C6F1B74"
+       },
+       {
+        "pid": "P14710",
+        "string": "FRL03203",
+        "statement": "Q117085614-EE5BFCC2-262E-41E1-BFC5-CA3B6112B8F3"
+       },
+       {
+        "pid": "P14801",
+        "string": "one-battle-after-another-q29sbgvjdglvbjpwwc0xmdi5mdix",
+        "statement": "Q117085614-D0120BDD-6AEA-4C01-9649-CEF1847B945A"
+       },
+       {
+        "pid": "P12879",
+        "string": "196269",
+        "statement": "Q117085614-25A49E6F-BF1A-4693-A39E-AA490BE247F1"
+       },
+       {
+        "pid": "P14821",
+        "string": "30144839",
+        "statement": "Q117085614-C7FC6A1E-DEE2-4E03-BE10-A2DB78661CAD"
+       },
+       {
+        "pid": "P4632",
+        "string": "11887",
+        "statement": "Q117085614-83EDE45A-283F-4BBB-AD2E-428233470EC3"
+       },
+       {
+        "pid": "P5990",
+        "string": "one-battle-after-another-2025",
+        "statement": "Q117085614-3B0DF8E5-C106-4759-B7DE-AA98B1E4AE6B"
+       },
+       {
+        "pid": "P9586",
+        "string": "umc.cmc.66y1fmjq8p3jni6jntoj53id7",
+        "statement": "Q117085614-0825ca3c-4343-4e96-8ab3-06fafcf45d18"
+       },
+       {
+        "pid": "P11460",
+        "string": "6562d1dbf8acedbdfebce1d1",
+        "statement": "Q117085614-fd94374b-b431-4285-a84c-9ee1103ba677"
+       },
+       {
+        "pid": "P905",
+        "string": "262145",
+        "statement": "Q117085614-16cc3962-41a2-2cd1-d742-c3dade2a9146"
+       },
+       {
+        "pid": "P7777",
+        "string": "311364",
+        "statement": "Q117085614-6da63941-4ab5-8801-fbff-e5a37126a89f"
+       },
+       {
+        "pid": "P10454",
+        "string": "414147",
+        "statement": "Q117085614-d7724bd6-4d70-3606-625a-6b3d200937fc"
+       },
+       {
+        "pid": "P5233",
+        "string": "t368869",
+        "statement": "Q117085614-90e4a35d-4b5d-0bf4-079c-fb3d0bac3f2a"
+       },
+       {
+        "pid": "P8531",
+        "string": "311364",
+        "statement": "Q117085614-1a56e988-4d16-e3a3-1186-c49e36a0277f"
+       },
+       {
+        "pid": "P10167",
+        "string": "one-battle-after-another",
+        "statement": "Q117085614-70d7ea1f-4c2b-431a-37ae-2570f94e8756"
+       },
+       {
+        "pid": "P3808",
+        "string": "One-Battle-After-Another-(2025)",
+        "statement": "Q117085614-f373e5f9-41e8-5f90-a063-a8838cb04bf0"
+       },
+       {
+        "pid": "P3302",
+        "string": "288781",
+        "statement": "Q117085614-8049ff2f-4724-d396-bf5e-4793e7c505ac"
+       },
+       {
+        "pid": "P12196",
+        "string": "355416",
+        "statement": "Q117085614-e45a46f0-42da-d312-5d17-6ce554cbb581"
+       },
+       {
+        "pid": "P7978",
+        "string": "49518",
+        "statement": "Q117085614-9fd12e89-4507-b6b5-0fc8-3897a59025d6"
+       },
+       {
+        "pid": "P3138",
+        "string": "396242",
+        "statement": "Q117085614-cbf4f0c4-40eb-bcf2-7777-ca660c975fbe"
+       },
+       {
+        "pid": "P5786",
+        "string": "one-battle-after-another",
+        "statement": "Q117085614-2c3eef44-4d23-e575-f452-36d40b0f6723"
+       },
+       {
+        "pid": "P480",
+        "string": "910030",
+        "statement": "Q117085614-01c8209b-4031-bae5-119e-992613be3200"
+       },
+       {
+        "pid": "P10303",
+        "string": "bitva-za-bitvoy",
+        "statement": "Q117085614-50af1724-40a5-bcc0-97e0-3f40fcdd2803"
+       },
+       {
+        "pid": "P5032",
+        "string": "10059894",
+        "statement": "Q117085614-9cb31bf5-4579-04eb-197f-2de94a8634fa"
+       },
+       {
+        "pid": "P6359",
+        "string": "358908",
+        "statement": "Q117085614-65420BE4-159B-4DC3-9411-B9E3A7C23C7A"
+       },
+       {
+        "pid": "P2671",
+        "string": "/g/11tms1fbgr",
+        "statement": "Q117085614-8e77f7ae-4bf3-17e0-cc88-967ee4af76ab"
+       },
+       {
+        "pid": "P3107",
+        "string": "624998",
+        "statement": "Q117085614-9cb37f76-4376-3376-3e5c-97381fb2a7c0"
+       },
+       {
+        "pid": "P5253",
+        "string": "251744",
+        "statement": "Q117085614-60f7f92d-49d3-6423-1c40-d81d7678e9c4"
+       },
+       {
+        "pid": "P7132",
+        "string": "66964",
+        "statement": "Q117085614-78d70351-471d-521e-136e-c639854f207f"
+       },
+       {
+        "pid": "P4780",
+        "string": "117029",
+        "statement": "Q117085614-2a4f3289-43cc-a659-ffdd-1f822a1061f4"
+       },
+       {
+        "pid": "P11346",
+        "string": "una-battaglia-dopo-laltra-isstsg9r",
+        "statement": "Q117085614-e91c7c7d-40b0-c6b7-535f-7b43f4813e61"
+       },
+       {
+        "pid": "P4783",
+        "string": "63959",
+        "statement": "Q117085614-04e404a5-4ba6-d0e0-6cd0-2f03f2dbb82f"
+       },
+       {
+        "pid": "P5099",
+        "string": "film1/unabattagliadopolaltra",
+        "statement": "Q117085614-839ad1de-49b3-8d96-be06-e8da7f2f658f"
+       },
+       {
+        "pid": "P2346",
+        "string": "1653971",
+        "statement": "Q117085614-5280171e-4ab3-1108-48c5-5c08b5062530"
+       },
+       {
+        "pid": "P4529",
+        "string": "36176155",
+        "statement": "Q117085614-294478FF-098C-4104-AB0D-16B5D2E3A7CA"
+       },
+       {
+        "pid": "P6127",
+        "string": "one-battle-after-another",
+        "statement": "Q117085614-90E86BEB-E545-40C5-B34F-0EEB7EACD5B0"
+       },
+       {
+        "pid": "P8013",
+        "string": "movies/one-battle-after-another-2025",
+        "statement": "Q117085614-9E10A87D-5AD0-47B2-B59E-78E0DBF7B511"
+       },
+       {
+        "pid": "P10100",
+        "string": "72691307",
+        "statement": "Q117085614-D9184A9C-6935-45F3-9DF2-F3DE55E43C54"
+       },
+       {
+        "pid": "P12492",
+        "string": "848797",
+        "statement": "Q117085614-D02E402C-2935-4558-9DF9-DC9BF023F810"
+       },
+       {
+        "pid": "P1562",
+        "string": "am598895",
+        "statement": "Q117085614-66c0eb99-4a61-9fa5-186e-d2a7e7650183"
+       },
+       {
+        "pid": "P12096",
+        "string": "3029855",
+        "statement": "Q117085614-b94d3e21-482f-1e16-1ce6-5bb87bee4907"
+       },
+       {
+        "pid": "P5128",
+        "string": "44725",
+        "statement": "Q117085614-8B213F2E-BA6B-417B-9C6E-2D95B68044B0"
+       },
+       {
+        "pid": "P2334",
+        "string": "728206",
+        "statement": "Q117085614-c8129e23-46c4-82d9-d4a0-90be8754bcae"
+       },
+       {
+        "pid": "P13888",
+        "string": "1537151",
+        "statement": "Q117085614-CB79025D-FC79-48E7-8671-AF3279EEFAA1"
+       },
+       {
+        "pid": "P345",
+        "string": "tt30144839",
+        "statement": "Q117085614-2e35b3a6-41a8-492b-a676-18af98ccc05e"
+       },
+       {
+        "pid": "P1265",
+        "string": "311364",
+        "statement": "Q117085614-221db7b2-48c7-117f-b771-fd6f74f60f69"
+       },
+       {
+        "pid": "P1258",
+        "string": "m/one_battle_after_another",
+        "statement": "Q117085614-22f60c06-4e74-d879-9ad4-5ec5a62c79e1"
+       },
+       {
+        "pid": "P1712",
+        "string": "movie/one-battle-after-another",
+        "statement": "Q117085614-385d983c-4859-edc0-9afd-3a73c8ede8dd"
+       },
+       {
+        "pid": "P1970",
+        "string": "1170755",
+        "statement": "Q117085614-6e5748e2-409f-65a0-df68-2752190d5ee0"
+       },
+       {
+        "pid": "P2603",
+        "string": "5437094",
+        "statement": "Q117085614-1a7d8e13-4521-3705-9506-4cd06564e4b4"
+       },
+       {
+        "pid": "P2529",
+        "string": "1476388",
+        "statement": "Q117085614-e2828a75-4750-1aa1-67c9-c016ed48f062"
+       },
+       {
+        "pid": "P4947",
+        "string": "1054867",
+        "statement": "Q117085614-7ac44c71-4797-d8ee-53ed-21cba5fc722f"
+       },
+       {
+        "pid": "P7299",
+        "string": "363407",
+        "statement": "Q117085614-67c23eb2-426b-a5e8-3c81-fa499a8f65db"
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "unshown": []
+}

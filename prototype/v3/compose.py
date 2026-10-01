@@ -28,14 +28,15 @@ import math
 import re
 import sys
 import tomllib
-import urllib.parse
 from pathlib import Path
+
+from primitives import credits, network, succession
+from values import entity_id, qual_year, qualifier_of, value_of, year_of
 
 HERE = Path(__file__).resolve().parent
 CONFIG = tomllib.loads((HERE / "layouts.toml").read_text())
 ROLES = CONFIG["roles"]
 TH = CONFIG["thresholds"]
-ENTITY = "http://www.wikidata.org/entity/"
 SCHEMA = "composition/0.2"
 DESIGN = "design/0.2"
 
@@ -43,74 +44,98 @@ AUDIO = (".ogg", ".oga", ".wav", ".mp3", ".flac", ".opus")
 VIDEO = (".webm", ".ogv", ".mp4")
 
 
-# ------------------------------------------------------------------ values
+# ------------------------------------------------------------------ rules
+# The decisions of a facts spread are data: ordered rules, and the first
+# rule whose conditions all hold wins. A condition names a predicate and the
+# value it must have. The predicates are computed in the Composer (the
+# vocabulary); the rules only combine them.
+
+# Before any statement of a property is claimed.
+PROPERTY_RULES = [
+    {"id": "office-title", "when": {"office_title": True}, "make": "skip"},
+    {"id": "extreme-point", "when": {"role": "extreme_point"}, "make": "skip"},
+    {"id": "office", "when": {"role": "office"}, "make": "succession"},
+    {"id": "crew", "when": {"role": "crew"}, "make": "club"},
+    {"id": "values", "when": {}, "make": "values"},
+]
+
+# Values of an item property that ended are history: a group of their own.
+SPLIT_RULES = [
+    {
+        "id": "former-values",
+        "when": {"type": "WikibaseItem", "relation": False},
+        "make": "split-ended",
+    },
+]
+
+# The block of one group of values.
+BLOCK_RULES = [
+    {"id": "media", "when": {"type": "CommonsMedia"}, "make": "media"},
+    {"id": "coordinate", "when": {"type": "GlobeCoordinate"}, "make": "map"},
+    {
+        "id": "series",
+        "when": {"type": "Quantity", "role": "series", "distinct_years": True},
+        "make": "series",
+    },
+    {
+        "id": "former",
+        "when": {"type": "WikibaseItem", "former": True},
+        "make": "former-list",
+    },
+    {
+        "id": "few-pictures",
+        "when": {"type": "WikibaseItem", "mostly_pictured": False},
+        "make": "item-list",
+    },
+    {"id": "single", "when": {"type": "WikibaseItem", "few": True}, "make": "single"},
+    {"id": "set", "when": {"type": "WikibaseItem"}, "make": "network"},
+    {"id": "row", "when": {}, "make": "fact"},
+]
+
+# The order of the values of a set.
+ORDER_RULES = [
+    {"id": "billing", "when": {"role": "billing"}, "order": "references"},
+    {"id": "pictured", "when": {}, "order": "pictured"},
+]
+
+# The first block of these primitives leads its spread.
+LEAD = ("succession", "map")
+
+# The slot of every other block.
+PLACEMENT_RULES = [
+    {"id": "single", "when": {"make": "single"}, "slot": "gallery"},
+    {"id": "row", "when": {"primitive": "fact"}, "slot": "sheet"},
+    {
+        "id": "picture",
+        "when": {"primitive": "media", "audio": False},
+        "slot": "gallery",
+    },
+    {"id": "block", "when": {}, "slot": "stack"},
+]
+
+# The template, from the lead.
+TEMPLATE_RULES = [
+    {"id": "office", "when": {"lead": "succession"}, "template": "lead-beside"},
+    {"id": "map", "when": {"lead": "map"}, "template": "hero-plus-stack"},
+    {"id": "plain", "when": {}, "template": "columns"},
+]
 
 
-def entity_id(value):
-    if (
-        isinstance(value, str)
-        and value.startswith(ENTITY)
-        and re.fullmatch(r"[PQ]\d+", value[len(ENTITY) :])
-    ):
-        return value[len(ENTITY) :]
+def match(rules, predicate):
+    """The first rule whose conditions all hold. predicate(name) gives the
+    value of a predicate; it is computed only when a rule asks for it."""
+    for rule in rules:
+        if all(holds(predicate(k), v) for k, v in rule["when"].items()):
+            return rule
     return None
 
 
-def year_of(iso):
-    m = re.match(r"^([+-]?)0*(\d+)-", iso or "")
-    if not m:
-        return None
-    return -int(m.group(2)) if m.group(1) == "-" else int(m.group(2))
-
-
-def qual_year(st, pid):
-    return next(
-        (year_of(q["value"]) for q in st["qualifiers"] if q["pid"] == pid), None
-    )
-
-
-def value_of(st):
-    """A statement value, as identifiers and raw values."""
-    v, kind = st["value"], st["type"]
-    if kind == "WikibaseItem":
-        return {"item": entity_id(v)}
-    if kind == "Quantity":
-        return {
-            "amount": float(v),
-            "unit": None if st["unit"] in (None, "Q199") else st["unit"],
-        }
-    if kind == "Time":
-        return {"time": v, "precision": st["precision"]}
-    if kind == "Monolingualtext":
-        return {"text": v, "lang": st["value_lang"]}
-    if kind == "CommonsMedia":
-        return {"file": urllib.parse.unquote(v.rsplit("/", 1)[-1])}
-    if kind == "GlobeCoordinate":
-        m = re.search(r"(?:entity/(Q\d+)> )?Point\(([-\d.]+) ([-\d.]+)\)", v)
-        return {
-            "lat": float(m.group(3)),
-            "lon": float(m.group(2)),
-            "globe": m.group(1) or "Q2",
-        }
-    if kind == "Url":
-        return {"url": v}
-    return {"string": v}
-
-
-def qualifier_of(q):
-    v = q["value"]
-    if entity_id(v):
-        return {"pid": q["pid"], "item": entity_id(v)}
-    if re.match(r"^[+-]?\d{4,}-\d\d-\d\dT", v):
-        return {"pid": q["pid"], "year": year_of(v)}
-    if v.startswith("http://www.wikidata.org/.well-known/genid"):
-        return None  # "some value": nothing to show
-    if q.get("value_lang"):
-        return {"pid": q["pid"], "text": v, "lang": q["value_lang"]}
-    try:
-        return {"pid": q["pid"], "amount": float(v)}
-    except ValueError:
-        return {"pid": q["pid"], "string": v}
+def holds(actual, wanted):
+    if isinstance(actual, (set, frozenset)):
+        return wanted in actual
+    if isinstance(wanted, tuple):
+        return actual in wanted
+    return actual == wanted
 
 
 class Composer:
@@ -376,33 +401,6 @@ class Composer:
             ],
         }
 
-    def succession(self, holder_pid):
-        """An office and its holders: the office as the title, the holder now
-        as the lead picture, the predecessors newest first, a few shown and
-        the rest behind "+N"."""
-        holders = self.current(self.free(holder_pid))
-        if not holders:
-            return None
-        self.take(holders)
-        office_pid = ROLES["office"][holder_pid]
-        office = self.current(self.free(office_pid))
-        office = self.take(office[:1])[0] if office else None
-        now, before = holders[0], holders[1:]
-        before.sort(
-            key=lambda s: -(qual_year(s, "P580") or qual_year(s, "P582") or -(10**6))
-        )
-        return {
-            "primitive": "succession",
-            "pid": holder_pid,
-            "office": self.statement(office) if office else None,
-            "holder": self.statement(now),
-            "before": [
-                dict(self.statement(s), shown=i < TH["succession_shown"])
-                for i, s in enumerate(before)
-            ],
-            "priority": self.priority(holder_pid, holders),
-        }
-
     def map_block(self, st, spread_pids):
         block = {"primitive": "map", **self.statement(st)}
         area = self.c["quantities"].get(self.qid, {}).get("values", {}).get("P2046")
@@ -424,42 +422,84 @@ class Composer:
             block["markers"] = markers
         return block
 
-    def items_blocks(self, pid, sts):
-        """Item values: history as a dated list, many values as a list, a
-        pictured set, or small values for the shared gallery."""
-        out, singles = [], []
-        sts = self.current(sts)
-        ended = [] if pid in ROLES["relation"] else [s for s in sts if self.ended(s)]
-        if ended:
-            block = self.fact(pid, ended, "list")
-            block["former"] = True
-            out.append(block)
-            sts = [s for s in sts if s not in ended]
-        if not sts:
-            return out, singles
-        pictured = sum(1 for s in sts if s["value_image"])
-        if pictured < TH["run_pictured"] * len(sts):
-            out.append(self.fact(pid, sts, "list" if len(sts) > 2 else None))
-        elif len(sts) <= 2:
-            singles += [
-                dict(self.statement(s), priority=self.priority(pid, sts)) for s in sts
-            ]
-        else:
-            # A large set shows its first pictures, pictured values first;
-            # all the values are in "+N".
-            sts = sorted(sts, key=lambda s: not s["value_image"])
-            out.append(
-                {
-                    "primitive": "network",
-                    "pid": pid,
-                    "values": [
-                        dict(self.statement(s), shown=i < TH["set_max"])
-                        for i, s in enumerate(sts)
-                    ],
-                    "priority": self.priority(pid, sts),
-                }
+    # -------------------------------------------------------------- rules
+
+    def roles(self, pid):
+        """The roles of a property (layouts.toml [roles])."""
+        return {name for name, members in ROLES.items() if pid in members}
+
+    def property_predicate(self, pid):
+        values = {
+            "office_title": lambda: pid in self.offices,
+            "role": lambda: self.roles(pid),
+        }
+        return lambda name: values[name]()
+
+    def group_predicate(self, pid, sts, former=False):
+        values = {
+            "type": lambda: sts[0]["type"],
+            "role": lambda: self.roles(pid),
+            "relation": lambda: "relation" in self.roles(pid),
+            "former": lambda: former,
+            "few": lambda: len(sts) <= 2,
+            "mostly_pictured": lambda: (
+                sum(1 for s in sts if s["value_image"]) >= TH["run_pictured"] * len(sts)
+            ),
+            "distinct_years": lambda: self.series(pid, sts) is not None,
+        }
+        return lambda name: values[name]()
+
+    def blocks_for(self, pid, sts, spread_pids=()):
+        """The blocks of the claimed statements of one property, by the rules,
+        as (make, block) pairs."""
+        groups = [(sts, False)]
+        if sts[0]["type"] == "WikibaseItem":
+            sts = self.current(sts)  # item values: current first
+            groups = [(sts, False)]
+            if match(SPLIT_RULES, self.group_predicate(pid, sts)):
+                ended = [s for s in sts if self.ended(s)]
+                groups = [(ended, True), ([s for s in sts if s not in ended], False)]
+        out = []
+        for group, former in groups:
+            if group:
+                rule = match(BLOCK_RULES, self.group_predicate(pid, group, former))
+                out += [
+                    (rule["make"], b)
+                    for b in self.make(rule["make"], pid, group, spread_pids)
+                ]
+        return out
+
+    def order_key(self, order):
+        """The sort key of an order rule. Python sorts are stable, so equal
+        values keep the order they had (current first, for items)."""
+        if order == "references":
+            return lambda s: (
+                -len(self.c["references"].get(s["id"], [])),
+                not s["value_image"],
+                int(entity_id(s["value"])[1:]) if entity_id(s["value"]) else 10**12,
             )
-        return out, singles
+        return lambda s: not s["value_image"]  # pictured values first
+
+    def make(self, make, pid, sts, spread_pids):
+        """The blocks that one rule makes of a group of values."""
+        if make == "media":
+            return [self.media_block(sts[0], "stack")]
+        if make == "map":
+            return [self.map_block(sts[0], spread_pids)]
+        if make == "series":
+            return [self.series(pid, sts)]
+        if make == "former-list":
+            return [{**self.fact(pid, sts, "list"), "former": True}]
+        if make == "item-list":
+            return [self.fact(pid, sts, "list" if len(sts) > 2 else None)]
+        if make == "single":
+            # Small values: each joins the shared gallery of its spread.
+            p = self.priority(pid, sts)
+            return [dict(self.statement(s), priority=p) for s in sts]
+        if make == "network":
+            order = match(ORDER_RULES, self.group_predicate(pid, sts))["order"]
+            return [network.build(self, pid, sts, TH["set_max"], self.order_key(order))]
+        return [self.fact(pid, sts)]
 
     def reverse_block(self, pids):
         """Works by the item, from statements on the works."""
@@ -584,95 +624,75 @@ class Composer:
                     >= TH["run_pictured"] * len(live)
                 ):
                     pids.append(pid)
-        blocks, singles, rows = [], [], []
+        made = []  # (make, block), in the order of the spread's properties
         for pid in pids:
-            if pid in self.offices or pid in ROLES["extreme_point"]:
-                continue  # the office titles its holders; points go on the map
-            if pid in ROLES["office"]:
-                block = self.succession(pid)
+            rule = match(PROPERTY_RULES, self.property_predicate(pid))
+            if rule["make"] == "club":
+                # All the crew properties of the spread: one block, by
+                # person, where the first of them is.
+                if not any(m == "credits" for m, _ in made):
+                    crew = [p for p in pids if "crew" in self.roles(p)]
+                    block = credits.build(self, crew, TH["set_max"])
+                    if block:
+                        made.append(("credits", block))
+            elif rule["make"] == "succession":
+                block = succession.build(
+                    self, pid, ROLES["office"][pid], TH["succession_shown"]
+                )
                 if block:
-                    blocks.append(block)
-                continue
-            sts = self.take(self.free(pid))
-            if not sts:
-                continue
-            kind = sts[0]["type"]
-            if kind == "CommonsMedia":
-                blocks.append(self.media_block(sts[0], "stack"))
-            elif kind == "GlobeCoordinate":
-                blocks.append(self.map_block(sts[0], pids))
-            elif (
-                kind == "Quantity" and pid in ROLES["series"] and self.series(pid, sts)
-            ):
-                blocks.append(self.series(pid, sts))
-            elif kind == "WikibaseItem":
-                b, s_ = self.items_blocks(pid, sts)
-                blocks += [x for x in b if x["primitive"] != "fact"]
-                rows += [x for x in b if x["primitive"] == "fact"]
-                singles += s_
-            else:
-                rows.append(self.fact(pid, sts))
+                    made.append(("succession", block))
+            elif rule["make"] == "values":
+                sts = self.take(self.free(pid))
+                if sts:
+                    made += self.blocks_for(pid, sts, pids)
         # The age at death, from the two dates: an intrinsic fact.
         birth, death = self.by_pid.get("P569"), self.by_pid.get("P570")
         if birth and death:
-            for r in rows:
-                if r["pid"] == "P570":
+            for _, r in made:
+                if r.get("primitive") == "fact" and r["pid"] == "P570":
                     b, d = year_of(birth[0]["value"]), year_of(death[0]["value"])
                     bm, dm = birth[0]["value"][5:10], death[0]["value"][5:10]
                     r["age"] = {"pid": "P3629", "years": d - b - (1 if dm < bm else 0)}
         reverse = self.reverse_block(sp.get("reverse", []))
         if reverse:
-            blocks.append(reverse)
-        gallery = None
-        if singles:
-            singles.sort(key=lambda v: (v.get("image") is None, -v["priority"]))
-            gallery = {
-                "primitive": "network",
-                "role": "gallery",
-                "values": singles,
-                "priority": max(v["priority"] for v in singles),
-            }
-        if not blocks and not rows and not gallery:
+            made.append(("works", reverse))
+        if not made:
             return None
+        slots, template = self.place(made)
+        return self.spread(sp, slots, template)
+
+    def place(self, made):
+        """Slots and template of a facts spread, by the placement rules."""
+        placed = {"stack": [], "gallery": [], "sheet": []}
+        singles = []
+        for make, block in made:
+            facts = {
+                "make": make,
+                "primitive": block.get("primitive"),
+                "audio": block.get("kind") == "audio",
+            }
+            slot = match(PLACEMENT_RULES, facts.get)["slot"]
+            (singles if make == "single" else placed[slot]).append(block)
         slots = {}
-        lead = next(
-            (b for b in blocks if b["primitive"] in ("succession", "map")), None
-        )
+        lead = next((b for b in placed["stack"] if b["primitive"] in LEAD), None)
         if lead:
             slots["hero"] = lead
-            blocks = [b for b in blocks if b is not lead]
-        if blocks:
-            slots["stack"] = blocks
-        if rows:
-            slots["sheet"] = rows
-        # Single pictures of different properties: a slot of their own, at
-        # full width after the others, not at the end of the stack, where
-        # they make the stack taller than the hero and the sheet.
-        # A single picture of the item (a locator map, a seal) is one of them.
-        pictures = [
-            b
-            for b in slots.get("stack", [])
-            if b["primitive"] == "media" and b["kind"] != "audio"
-        ]
-        if pictures:
-            slots["stack"] = [b for b in slots["stack"] if b not in pictures]
-            if not slots["stack"]:
-                del slots["stack"]
-        if gallery or pictures:
-            # Before the sheet in reading order: pictures first. A template
-            # with named rows still places it after the two columns.
-            sheet = slots.pop("sheet", None)
-            slots["gallery"] = pictures + ([gallery] if gallery else [])
-            if sheet:
-                slots["sheet"] = sheet
-        template = (
-            "lead-beside"
-            if lead and lead["primitive"] == "succession"
-            else "hero-plus-stack"
-            if lead
-            else "columns"
-        )
-        return self.spread(sp, slots, template)
+        stack = [b for b in placed["stack"] if b is not lead]
+        if stack:
+            slots["stack"] = stack
+        # Single pictures of different properties, of the item and of its
+        # values: a slot of their own, before the sheet in reading order. A
+        # template with named rows places it after the two columns.
+        gallery = placed["gallery"]
+        if singles:
+            gallery.append(network.gallery(singles))
+        if gallery:
+            slots["gallery"] = gallery
+        if placed["sheet"]:
+            slots["sheet"] = placed["sheet"]
+        lead_kind = lead["primitive"] if lead else None
+        template = match(TEMPLATE_RULES, {"lead": lead_kind}.get)["template"]
+        return slots, template
 
     def scale(self, sp):
         """The item against its container and its peers, and its series."""
@@ -740,12 +760,18 @@ class Composer:
             if not sts:
                 continue
             if sts[0]["type"] == "WikibaseItem":
-                b, s_ = self.items_blocks(p, sts)
-                stack += [x for x in b if x["primitive"] != "fact"]
-                rows += [x for x in b if x["primitive"] == "fact"]
+                made = self.blocks_for(p, sts)
+                stack += [
+                    b for m, b in made if m != "single" and b["primitive"] != "fact"
+                ]
                 rows += [
-                    self.fact(p, [next(x for x in sts if x["id"] == v["statement"])])
-                    for v in s_
+                    b for m, b in made if m != "single" and b["primitive"] == "fact"
+                ]
+                # A small value is a row here: this spread has no gallery.
+                rows += [
+                    self.fact(p, [next(x for x in sts if x["id"] == b["statement"])])
+                    for m, b in made
+                    if m == "single"
                 ]
             else:
                 rows.append(self.fact(p, sts))

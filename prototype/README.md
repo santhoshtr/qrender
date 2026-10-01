@@ -55,6 +55,7 @@ python3 prototype/v2/compose_v2.py Q405 ig   # writes v2/q405-ig-v2.html (offlin
 
 ```bash
 python3 prototype/v3/content.py Q3870 en   # layer 1: data/content/q3870.json and data/text/q3870.en.json (network)
+                                           # an existing content file is kept; add --refresh to fetch it again
 python3 prototype/v3/compose.py Q3870      # layer 2: data/composition/q3870.json (no labels, any language)
 python3 prototype/v3/localize.py Q3870 en  # localize: data/view/q3870.en.json (every string resolved)
 python3 prototype/v3/render.py Q3870 en    # templates only: v3/q3870-en.html, with design/ as layer 3
@@ -63,8 +64,14 @@ python3 prototype/v3/render.py Q3870 en    # templates only: v3/q3870-en.html, w
 The composition does not depend on the language: `v3/q3870-gu.html` is rendered
 from the same composition file with the Gujarati text file.
 
+The decisions of a facts spread are ordered rule tables at the top of
+`compose.py`. Some primitives have one module each in `primitives/` (credits,
+network, succession), with the composition and the template of the primitive
+together.
+
 Pages: Nairobi (Q3870) in English and Gujarati, Paris (Q90) in English and
-Malayalam, Nelson Mandela (Q8023) in Tulu. The same programs make all of them.
+Malayalam, Nelson Mandela (Q8023) in Tulu, One Battle After Another
+(Q117085614) in English. The same programs make all of them.
 
 ## Build
 

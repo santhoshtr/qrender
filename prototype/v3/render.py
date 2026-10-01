@@ -23,11 +23,14 @@ import sys
 import urllib.parse
 from pathlib import Path
 
+from primitives import credits, network, succession
+
 HERE = Path(__file__).resolve().parent
 STANDARD_WIDTHS = (330, 500, 960, 1280, 1920)
 FILEPATH = "https://commons.wikimedia.org/wiki/Special:FilePath/"
 WIKIPEDIA_LOGO = FILEPATH + "Wikipedia-logo-v2.svg?width=60"
 
+UI = sys.modules[__name__]  # the template helpers, for the primitive modules
 IDS = itertools.count(1)  # ids for popovers and dialogs
 DIALOGS = []  # dialogs go at the end of the page
 PROV = {}  # words for the provenance tags, from the view
@@ -290,33 +293,6 @@ def scroller(name, figures):
     return f'<div class="run scroll" tabindex="0" role="group" aria-label="{e(name)}">{figures}</div>'
 
 
-def p_network(b):
-    if b.get("role") == "gallery":
-        return f'<div class="block set"><div class="run">{"".join(item_figure(v, v["property"]) for v in b["values"])}</div></div>'
-    shown = [v for v in b["values"] if v.get("shown", True)]
-    rest = len(b["values"]) - len(shown)
-    more = ""
-    if rest:
-        n = dialog(t(b["property"]), "".join(value_line(v) for v in b["values"]))
-        more = f'<button class="more" type="button" command="show-modal" commandfor="d{n}">+{rest}</button>'
-    return (
-        f'<div class="block set"><h3>{t(b["property"])} <span class="note">{len(b["values"])}</span></h3>'
-        f"{scroller(b['property']['text'], ''.join(item_figure(v) for v in shown))}{more}</div>"
-    )
-
-
-def p_succession(b):
-    """An office and its holders: the holder now, large; the predecessors
-    newest first, a few shown and the rest in a dialog."""
-    office = part(b["office"]["display"]) if b.get("office") else t(b["property"])
-    before = value_lines(b["before"], office) if b["before"] else ""
-    return (
-        f'<div class="block succession"><h3>{office}</h3>{item_figure(b["holder"], b["property"])}'
-        + (f'<div class="before">{before}</div>' if before else "")
-        + "</div>"
-    )
-
-
 def p_works(b):
     """Works by the item: pictures, or a list when most have no picture."""
     title = ", ".join(t(p) for p in b["properties"])
@@ -562,8 +538,9 @@ PRIMITIVES = {
     "series": p_series,
     "map": p_map,
     "fact": p_fact,
-    "network": p_network,
-    "succession": p_succession,
+    "network": lambda b: network.html(b, UI),
+    "succession": lambda b: succession.html(b, UI),
+    "credits": lambda b: credits.html(b, UI),
     "works": p_works,
     "time": p_time,
     "absent": p_absent,

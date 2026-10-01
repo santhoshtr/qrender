@@ -302,6 +302,145 @@ id = "evidence"
 concept = "Q121769"    # reference
 kind = "evidence"
 
+# -------------------------------------------------------------------- film
+
+[class_layouts.film]
+match_p31 = ["Q11424"]     # film
+
+[[class_layouts.film.spreads]]
+id = "identity"
+kind = "identity"
+
+[[class_layouts.film.spreads]]
+id = "story"
+concept = "Q1758354"   # plot
+prose = ["Q1758354"]
+kind = "facts"
+pids = [
+  "P136",   # genre
+  "P921",   # main subject
+  "P840",   # narrative location
+  "P2408",  # set in period
+  "P144",   # based on
+  "P1877",  # after a work by
+  "P6166",  # quotes work
+]
+
+[[class_layouts.film.spreads]]
+id = "cast"
+concept = "Q15267437"  # cast
+prose = ["Q15267437"]
+kind = "facts"
+pids = [
+  "P161",   # cast member
+  "P725",   # voice actor
+]
+
+[[class_layouts.film.spreads]]
+id = "credits"
+concept = "Q506702"    # film crew
+prose = ["Q506702"]
+kind = "facts"
+pids = [                 # role "crew": one block, by person
+  "P57",    # director
+  "P58",    # screenwriter
+  "P162",   # producer
+  "P1431",  # executive producer
+  "P86",    # composer
+  "P344",   # director of photography
+  "P1040",  # film editor
+  "P2554",  # production designer
+  "P3092",  # film crew member
+]
+
+[[class_layouts.film.spreads]]
+id = "production"
+concept = "Q932586"    # film production
+prose = ["Q932586"]
+kind = "facts"
+pids = [
+  "P272",   # production company
+  "P495",   # country of origin
+  "P364",   # original language of film or TV show
+  "P915",   # filming location
+  "P2130",  # capital cost
+  "P2047",  # duration
+  "P2043",  # length
+  "P2061",  # aspect ratio (W:H)
+  "P462",   # color
+  "P4082",  # captured with
+  "P3803",  # film format
+]
+
+[[class_layouts.film.spreads]]
+id = "release"
+concept = "Q115668531" # film release
+prose = ["Q115668531"]
+kind = "facts"
+pids = [
+  "P577",   # publication date
+  "P750",   # distributed by
+  "P2142",  # box office
+  "P793",   # significant event
+  "P406",   # soundtrack release
+  "P1476",  # title
+  "P1638",  # working title
+]
+
+[[class_layouts.film.spreads]]
+id = "reception"
+concept = "Q4482"      # film criticism
+prose = ["Q4482", "Q618779"]   # film criticism, award
+kind = "facts"
+pids = [
+  "P444",   # review score
+  "P166",   # award received
+  "P1411",  # nominated for
+]
+
+[[class_layouts.film.spreads]]
+id = "ratings"
+concept = "Q14775294"  # motion picture rating system
+kind = "facts"
+pids = [
+  "P1657",  # MPA film rating
+  "P2629",  # BBFC rating
+  "P1981",  # FSK film rating
+  "P2756",  # EIRIN film rating
+  "P6452",  # CBFC rating
+  "P3156",  # Australian Classification
+  "P7327",  # OFLC classification
+  "P2758",  # CNC film rating (France)
+  "P2363",  # NMHH film rating
+  "P5201",  # IMDA rating
+  "P7573",  # IFCO rating
+  "P3216",  # ClassInd rating
+  "P3306",  # ICAA rating
+  "P3428",  # INCAA film rating
+  "P3650",  # JMK film rating
+  "P3818",  # KMRB film rating
+  "P4437",  # FPB rating
+  "P5150",  # IGAC rating
+  "P6658",  # RCQ classification
+  "P2684",  # Kijkwijzer rating
+  "P3834",  # RTC film rating
+  "P2637",  # RARS rating
+]
+
+[[class_layouts.film.spreads]]
+id = "media"
+concept = "Q131765"    # multimedia
+kind = "media"
+
+[[class_layouts.film.spreads]]
+id = "more"
+kind = "more"
+
+[[class_layouts.film.spreads]]
+id = "evidence"
+concept = "Q121769"    # reference
+kind = "evidence"
+
 # ----------------------------------------------------------------- generic
 # For an item no class layout matches: the head, then the pictured relations,
 # then the rest.
@@ -375,6 +514,26 @@ series = [
   "P2131",  # nominal GDP
   "P2132",  # nominal GDP per capita
   "P2769",  # budget
+]
+# The people who made a work. A spread shows them as one block, each person
+# once, with every role they had (a director who also wrote and produced).
+crew = [
+  "P57",    # director
+  "P58",    # screenwriter
+  "P162",   # producer
+  "P1431",  # executive producer
+  "P86",    # composer
+  "P344",   # director of photography
+  "P1040",  # film editor
+  "P2554",  # production designer
+  "P3092",  # film crew member
+]
+# Values with an order of importance that Wikidata does not record (who is
+# billed first). The count of references on each statement stands in for
+# it; ties break on the item number, which is the same in every language.
+billing = [
+  "P161",   # cast member
+  "P725",   # voice actor
 ]
 # People and organisations in the life of the item. An end date (a divorce,
 # a death, the end of a membership) does not make the value former: it is
