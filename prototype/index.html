@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QRender static prototypes</title>
+<link rel="stylesheet" href="v1/codex-tokens-light.css">
+<link rel="stylesheet" href="v1/prototype.css">
+<style>
+	.wrap {
+		max-inline-size: 760px;
+		margin-inline: auto;
+		padding: var( --spacing-300 ) var( --spacing-100 );
+	}
+
+	h1 {
+		font-family: var( --font-family-heading-main );
+		font-weight: var( --font-weight-normal );
+	}
+
+	.key {
+		display: grid;
+		grid-template-columns: repeat( auto-fill, minmax( 180px, 1fr ) );
+		gap: var( --spacing-50 );
+		margin-block: var( --spacing-100 );
+	}
+
+	.key span {
+		border-radius: var( --radius-tile );
+		padding: var( --spacing-50 ) var( --spacing-75 );
+		font-size: var( --font-size-small );
+	}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>QRender static prototypes</h1>
+<p>Design studies for the factoid page. Each page is static HTML built from the
+qjson data of one Wikidata item. No value, label or image on a page comes from
+anywhere else.</p>
+
+<ul>
+	<li><a href="v1/q90.html">Paris (Q90)</a> — place archetype, a data-rich item, English labels.</li>
+	<li><a href="v1/q3870.html">Nairobi (Q3870)</a> — place archetype, 58 statements against
+		the 435 of Paris, Gujarati labels with the English fallback of the label chain.</li>
+	<li><a href="v1/q8023.html">Nelson Mandela (Q8023)</a> — person archetype, English labels.
+		One life on one axis, and 89 awards.</li>
+	<li><a href="v1/q8023-tcy.html">Nelson Mandela (Q8023), Tulu</a> — the same page built by
+		the same code with the label language <code>tcy, mul, en</code>. Wikidata holds
+		7 Tulu property labels and 4 Tulu values for this item; everything else falls back.</li>
+	<li><a href="v1/q117085614.html">One Battle After Another (Q117085614)</a> — film archetype,
+		English labels. Scores, a cast strip, crew cards, 23 rating systems, and a hole
+		where the plot should be.</li>
+	<li><a href="v1/q117085614-ml.html">One Battle After Another (Q117085614), Malayalam</a> —
+		the same page with the label language <code>ml, mul, en</code>. The film has
+		53 sitelinks and not one Indic Wikipedia among them, so the structure reads in
+		Malayalam and the article behind it is English.</li>
+	<li><a href="v1/q41181-hi.html">Golden eagle (Q41181), Hindi</a> — taxon archetype.
+		110 sitelinks, among them Malayalam, Tamil, Bengali and Urdu, but no Hindi
+		article; 39 common names in 36 languages, and not one in Hindi, although India
+		is in the bird's range. (<a href="v1/q41181.html">English version</a>.)</li>
+	<li><a href="v1/q405-ig.html">Moon (Q405), Igbo</a> — astronomical object archetype.
+		The Igbo article is one line. Igbo has labels for most properties but for few
+		values, and the page counts them. An orbit to scale, a map of the Moon, and a
+		3D model that loads only on request.</li>
+</ul>
+
+<h2>Second generation: composed by rule</h2>
+<p>One program composes each page from the data by rule, with no code for
+the item: dimensions from the classes of the properties, a colour for each
+dimension, a scale against the container, a place among peers, the absences
+that peers make visible, the provenance of each card, and the English lead
+with labels in the page language above the linked words.</p>
+<ul>
+	<li><a href="v2/q405-ig-v2.html">Moon (Q405), Igbo</a></li>
+	<li><a href="v2/q3870-gu-v2.html">Nairobi (Q3870), Gujarati</a></li>
+	<li><a href="v2/q41181-hi-v2.html">Golden eagle (Q41181), Hindi</a></li>
+</ul>
+
+<h2>Third generation: three layers</h2>
+<p>Content, composition and design are separate, and the renderer only fills
+templates. The composition is computed once and is the same in every language.</p>
+<ul>
+	<li><a href="v3/q3870-en.html">Nairobi (Q3870), English</a></li>
+	<li><a href="v3/q3870-gu.html">Nairobi (Q3870), Gujarati</a> — the same composition, the Gujarati text layer</li>
+	<li><a href="v3/q90-en.html">Paris (Q90), English</a> and <a href="v3/q90-ml.html">Malayalam</a> — the density test: 689 statements</li>
+	<li><a href="v3/q8023-tcy.html">Nelson Mandela (Q8023), Tulu</a> — a person on the generic layout, with few Tulu labels</li>
+</ul>
+
+</div>
+</body>
+</html>

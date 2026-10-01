@@ -1,0 +1,500 @@
+# Judgment for the v3 composer. Everything the composer cannot derive from
+# the data is here, one decision to a line, with the label of each PID and
+# QID. The composer reads this file and the content layer; nothing else.
+#
+# Two kinds of judgment:
+# - class layouts: which spreads a kind of item has, in which order, and the
+#   properties each spread shows. The first spread that lists a statement's
+#   property shows it; a statement no spread lists goes to "more", collapsed
+#   at the end, so no data is lost.
+# - property roles: what a property is for, when its datatype does not say.
+
+# ============================================================ class layouts
+#
+# A spread has an id, a concept (the Wikidata item that titles it), prose
+# concepts (items whose label or alias names an article section for it), a
+# kind (how the composer builds it) and the properties it takes. Kinds:
+#   identity  the page head: title and description, banner, lead beside the picture, kinds
+#   facts     the properties listed, each by the shape of its data
+#   scale     share of the container, peers, series of the properties listed
+#   history   a time axis of events and history spans (property roles)
+#   media     the Commons files no spread took
+#   more      everything left, collapsed
+#   evidence  web presence, curation, sources, identifiers, provenance
+
+[class_layouts.settlement]
+match_p31 = [
+  "Q515",      # city
+  "Q1549591",  # big city
+  "Q5119",     # capital city
+  "Q1637706",  # city with millions of inhabitants
+  "Q200250",   # metropolis
+  "Q3957",     # town
+  "Q532",      # village
+  "Q486972",   # human settlement
+]
+
+[[class_layouts.settlement.spreads]]
+id = "identity"
+kind = "identity"
+
+[[class_layouts.settlement.spreads]]
+id = "location"
+concept = "Q2221906"   # geographic location
+prose = ["Q1071", "Q7937"]   # geography, climate
+kind = "facts"
+pids = [
+  "P625",   # coordinate location
+  "P1332", "P1333", "P1334", "P1335",   # northern, southern, eastern, western points
+  "P131",   # located in the administrative territorial entity
+  "P47",    # shares border with
+  "P206",   # located in or next to body of water
+  "P30",    # continent
+  "P361",   # part of
+  "P2044",  # elevation above sea level
+  "P610",   # highest point
+  "P1589",  # lowest point
+  "P242",   # locator map image
+  "P3896",  # geoshape
+  "P150",   # contains the administrative territorial entity
+  "P8138",  # located in the statistical territorial entity
+]
+
+[[class_layouts.settlement.spreads]]
+id = "names"
+concept = "Q82799"     # name
+kind = "facts"
+pids = [
+  "P1448",  # official name
+  "P1705",  # native label
+  "P1449",  # nickname
+  "P1549",  # demonym
+  "P138",   # named after
+  "P1451",  # motto text
+  "P1546",  # motto
+  "P237",   # coat of arms
+  "P163",   # flag
+  "P94",    # coat of arms image
+  "P41",    # flag image
+  "P417",   # patron saint
+  "P443",   # pronunciation audio
+  "P898",   # IPA transcription
+  "P1813",  # short name
+  "P281",   # postal code
+  "P473",   # local dialing code
+  "P395",   # licence plate code
+]
+
+[[class_layouts.settlement.spreads]]
+id = "government"
+concept = "Q7188"      # government
+prose = ["Q7188", "Q7163"]   # government, politics
+kind = "facts"
+pids = [
+  "P6",     # head of government
+  "P35",    # head of state
+  "P1313",  # office held by head of government
+  "P1906",  # office held by head of state
+  "P194",   # legislative body
+  "P208",   # executive body
+  "P1454",  # legal form
+  "P2769",  # budget
+  "P1376",  # capital of
+  "P797",   # authority
+  "P708",   # diocese
+]
+
+[[class_layouts.settlement.spreads]]
+id = "demography"
+concept = "Q37732"     # demography
+prose = ["Q37732"]
+kind = "scale"
+pids = [
+  "P1082",  # population
+  "P4179",  # tabular population
+  "P2046",  # area
+  "P1539",  # female population
+  "P1540",  # male population
+  "P5982",  # annual number of weddings
+  "P2936",  # language used
+  "P37",    # official language
+]
+
+[[class_layouts.settlement.spreads]]
+id = "economy"
+concept = "Q159810"    # economy
+prose = ["Q159810"]
+kind = "facts"
+pids = [
+  "P2131",  # nominal GDP
+  "P2132",  # nominal GDP per capita
+  "P2299",  # PPP GDP per capita
+  "P1830",  # owner of
+  "P8744",  # economy of topic
+]
+
+[[class_layouts.settlement.spreads]]
+id = "connections"
+concept = "Q930933"    # relation
+prose = ["Q184711"]    # twin town
+kind = "facts"
+pids = [
+  "P190",   # twinned administrative body
+  "P463",   # member of
+  "P166",   # award received
+  "P1299",  # depicted by
+]
+
+[[class_layouts.settlement.spreads]]
+id = "history"
+concept = "Q309"       # history
+prose = ["Q309"]
+kind = "history"
+pids = ["P2184"]       # history of topic
+
+[[class_layouts.settlement.spreads]]
+id = "media"
+concept = "Q131765"    # multimedia
+prose = ["Q11042"]     # culture
+kind = "media"
+
+[[class_layouts.settlement.spreads]]
+id = "more"
+kind = "more"
+
+[[class_layouts.settlement.spreads]]
+id = "evidence"
+concept = "Q121769"    # reference
+kind = "evidence"
+
+# ------------------------------------------------------------------ person
+# A person has no time axis: a life is told by its spreads, and the dates
+# live in the life spread.
+
+[class_layouts.person]
+match_p31 = ["Q5"]     # human
+
+[[class_layouts.person.spreads]]
+id = "identity"
+kind = "identity"
+
+[[class_layouts.person.spreads]]
+id = "life"
+concept = "Q36279"     # biography
+prose = ["Q36279"]
+kind = "facts"
+pids = [
+  "P569",   # date of birth
+  "P19",    # place of birth
+  "P570",   # date of death
+  "P20",    # place of death
+  "P509",   # cause of death
+  "P1196",  # manner of death
+  "P119",   # place of burial
+  "P21",    # sex or gender
+  "P27",    # country of citizenship
+  "P103",   # native language
+  "P1412",  # languages spoken, written or signed
+  "P140",   # religion or worldview
+  "P551",   # residence
+  "P2632",  # place of detention
+]
+
+[[class_layouts.person.spreads]]
+id = "family"
+concept = "Q8436"      # family
+prose = ["Q8436"]
+kind = "facts"
+pids = [
+  "P22",    # father
+  "P25",    # mother
+  "P26",    # spouse
+  "P451",   # unmarried partner
+  "P40",    # child
+  "P3373",  # sibling
+  "P1038",  # relative
+  "P53",    # family
+  "P1971",  # number of children
+]
+
+[[class_layouts.person.spreads]]
+id = "education"
+concept = "Q8434"      # education
+prose = ["Q8434"]
+kind = "facts"
+pids = [
+  "P69",    # educated at
+  "P512",   # academic degree
+  "P184",   # doctoral advisor
+  "P185",   # doctoral student
+  "P1066",  # student of
+  "P802",   # student
+  "P812",   # academic major
+]
+
+[[class_layouts.person.spreads]]
+id = "work"
+concept = "Q12737077"  # occupation
+prose = ["Q12737077"]
+kind = "facts"
+pids = [
+  "P106",   # occupation
+  "P39",    # position held
+  "P108",   # employer
+  "P102",   # member of political party
+  "P463",   # member of
+  "P101",   # field of work
+  "P1344",  # participant in
+  "P800",   # notable work
+  "P737",   # influenced by
+]
+# Works by the person are statements on the works. These properties, pointing
+# to the person, are fetched in reverse.
+reverse = [
+  "P50",    # author
+  "P57",    # director
+  "P58",    # screenwriter
+  "P86",    # composer
+  "P162",   # producer
+  "P170",   # creator
+  "P175",   # performer
+  "P178",   # developer
+]
+
+[[class_layouts.person.spreads]]
+id = "awards"
+concept = "Q618779"    # award
+prose = ["Q618779"]
+kind = "facts"
+pids = [
+  "P166",   # award received
+  "P1411",  # nominated for
+]
+
+[[class_layouts.person.spreads]]
+id = "names"
+concept = "Q82799"     # name
+kind = "facts"
+pids = [
+  "P1559",  # name in native language
+  "P1477",  # birth name
+  "P735",   # given name
+  "P734",   # family name
+  "P1449",  # nickname
+  "P742",   # pseudonym
+  "P1813",  # short name
+  "P443",   # pronunciation audio
+  "P898",   # IPA transcription
+  "P109",   # signature
+]
+
+[[class_layouts.person.spreads]]
+id = "media"
+concept = "Q131765"    # multimedia
+kind = "media"
+
+[[class_layouts.person.spreads]]
+id = "more"
+kind = "more"
+
+[[class_layouts.person.spreads]]
+id = "evidence"
+concept = "Q121769"    # reference
+kind = "evidence"
+
+# ----------------------------------------------------------------- generic
+# For an item no class layout matches: the head, then the pictured relations,
+# then the rest.
+
+[class_layouts.generic]
+match_p31 = []
+
+[[class_layouts.generic.spreads]]
+id = "identity"
+kind = "identity"
+
+[[class_layouts.generic.spreads]]
+id = "location"
+concept = "Q2221906"   # geographic location
+kind = "facts"
+pids = ["P625", "P131", "P17", "P276", "P361", "P242"]
+
+[[class_layouts.generic.spreads]]
+id = "relations"
+concept = "Q930933"    # relation
+kind = "facts"
+pictured = true        # also any item property whose values are mostly pictured
+
+[[class_layouts.generic.spreads]]
+id = "history"
+concept = "Q309"       # history
+prose = ["Q309"]
+kind = "history"
+
+[[class_layouts.generic.spreads]]
+id = "media"
+concept = "Q131765"    # multimedia
+kind = "media"
+
+[[class_layouts.generic.spreads]]
+id = "more"
+kind = "more"
+
+[[class_layouts.generic.spreads]]
+id = "evidence"
+concept = "Q121769"    # reference
+kind = "evidence"
+
+# ========================================================== property roles
+#
+# What a property is for, when its datatype does not say. Community-editable
+# data: the strategy document's property-to-role mapping.
+
+[roles]
+# Events of the item's own history: they go on the time axis.
+event = [
+  "P571",   # inception
+  "P576",   # dissolved, abolished or demolished date
+  "P1619",  # date of official opening
+  "P793",   # significant event
+  "P1365",  # replaces
+  "P1366",  # replaced by
+]
+# Relations whose spans change what the item is: its former countries, the
+# states it was the capital of. Their dated spans go on the time axis.
+history_span = [
+  "P17",    # country
+  "P1376",  # capital of
+  "P131",   # located in the administrative territorial entity
+]
+# Measurements dated by point in time: a series, never events.
+series = [
+  "P1082",  # population
+  "P1539",  # female population
+  "P1540",  # male population
+  "P2131",  # nominal GDP
+  "P2132",  # nominal GDP per capita
+  "P2769",  # budget
+]
+# People and organisations in the life of the item. An end date (a divorce,
+# a death, the end of a membership) does not make the value former: it is
+# part of the item's story, so the value is pictured with its dates like any
+# other. Ended values of other properties (a former country) are a list.
+relation = [
+  "P26",    # spouse
+  "P451",   # unmarried partner
+  "P102",   # member of political party
+  "P463",   # member of
+  "P108",   # employer
+  "P69",    # educated at
+]
+# A Commons data file that holds a series.
+tabular = [
+  "P4179",  # tabular population
+]
+# Points that mark the extent of the item: markers on its map.
+extreme_point = ["P1332", "P1333", "P1334", "P1335"]
+# Accounts, codes and URLs: the item on the web. They go to evidence.
+web = [
+  "P856",   # official website
+  "P2002",  # X username
+  "P2003",  # Instagram username
+  "P2013",  # Facebook username
+  "P2397",  # YouTube channel ID
+  "P4264",  # LinkedIn company ID
+  "P2572",  # hashtag
+  "P1482",  # Stack Exchange tag
+  "P238",   # IATA airport code
+  "P10311", # official jobs URL
+  "P11266", # contact page URL
+  "P8402",  # open data portal
+  "P3984",  # subreddit
+  "P8687",  # social media followers
+  "P973",   # described at URL
+  "P1581",  # official blog URL
+]
+
+# An office holder and the property that names the office: a succession
+# block, with the office as its title.
+[roles.office]
+P6 = "P1313"     # head of government -> office held by head of government
+P35 = "P1906"    # head of state -> office held by head of state
+
+# ------------------------------------------------------------- thresholds
+[thresholds]
+time_points = 4          # fewer distinct years than this: no time axis
+peers = 5                # fewer peers with a value than this: no peer lineup
+run_pictured = 0.5       # a set of values is pictured when half have pictures
+set_max = 12             # pictures shown in a set before "+N"
+absence = 0.6            # a property most peers have: 60 % of them
+absence_min_peers = 20   # fewer peers than this: no absence is shown
+chain_max = 5            # classes shown in the identity chain
+list_shown = 12          # values shown in a long list before "+N"
+succession_shown = 6     # predecessors shown before "+N"
+
+# ------------------------------------------------------------ comparisons
+[containers]
+P397 = "scale"           # parent astronomical body
+P171 = "scale"           # parent taxon
+P17 = "share"            # country
+P131 = "share"           # located in the administrative territorial entity
+P361 = "share"           # part of
+
+# Quantities that describe the thing itself, so comparing them with the
+# container or with peers means something.
+[compare]
+pids = [
+  "P1082",  # population
+  "P2046",  # area
+  "P2044",  # elevation above sea level
+  "P2067",  # mass
+  "P2120",  # radius
+  "P2386",  # diameter
+  "P2050",  # wingspan
+]
+
+# ----------------------------------------------------------------- media
+[media]
+# Photographs of the subject itself, in order of preference for the feature.
+views = [
+  "P3451",  # nighttime view
+  "P8592",  # aerial view
+  "P5775",  # image of interior
+  "P18",    # image
+  "P4291",  # panoramic view
+]
+min_megapixels = 1.0
+
+[media.assessments]
+"Featured pictures on Wikimedia Commons" = 3
+"Quality images" = 2
+"Valued images" = 1
+
+# ------------------------------------------------------------- evidence
+[evidence]
+# Curation metadata: real data, but not what a reader reads. The footnote
+# tier of the first renderer.
+pids = [
+  "P10280", "P1151", "P1343", "P1424", "P1464", "P1465", "P1709", "P1740",
+  "P1791", "P1792", "P1889", "P1963", "P2354", "P2959", "P301", "P373",
+  "P4224", "P460", "P5008", "P5125", "P5869", "P6104", "P7084", "P7867",
+  "P8464", "P8989", "P910", "P935",
+]
+
+# The "... of topic" properties point to an item about one part of the
+# subject. Each one belongs to the spread about that part, as its topic.
+[topics]
+P2184 = "history"        # history of topic
+P2633 = "location"       # geography of topic
+P9241 = "demography"     # demographics of topic
+P8744 = "economy"        # economy of topic
+
+# Qualifier values that mark the two ends of a range.
+[range_ends]
+Q10585806 = "min"        # minimum
+Q10578722 = "max"        # maximum
+
+# References whose properties are all in this list point back into a
+# Wikimedia project or at a guess. They are not sources.
+[provenance]
+not_a_source = ["P143", "P813", "P4656", "P887", "P3452"]

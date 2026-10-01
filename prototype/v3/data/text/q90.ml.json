@@ -1,0 +1,5032 @@
+{
+ "lang": "ml",
+ "labels": {
+  "P10046": {
+   "label": "Apple Maps \"auid\" identifier",
+   "lang": "en",
+   "description": "identifier of a place in Apple Maps with dec “auid”; for hex “place-id”, use P14749 instead",
+   "description_lang": "en"
+  },
+  "P10077": {
+   "label": "Spanish Cultural Heritage thesauri ID",
+   "lang": "en",
+   "description": "identifier for an item in any of the Spanish Cultural Heritage thesauri",
+   "description_lang": "en"
+  },
+  "P1015": {
+   "label": "NORAF ID",
+   "lang": "mul",
+   "description": "Norwegian Authority File: Persons and Corporate Bodies",
+   "description_lang": "en"
+  },
+  "P1017": {
+   "label": "Vatican Library ID (former scheme)",
+   "lang": "en",
+   "description": "historical identifier for authority control used at the Vatican Library. Format: \"ADV\" + 8 digits. Use P8034 for newer IDs.",
+   "description_lang": "en"
+  },
+  "P102": {
+   "label": "രാഷ്ട്രീയ പാർട്ടി",
+   "lang": "ml",
+   "description": "ഏതു രാഷ്ട്രീയപാർട്ടിയിലെ അംഗമാണെന്നത് അല്ലെങ്കിൽ അഫിലിയേറ്റ് ചെയ്തിട്ടുള്ള രാഷ്ട്രീയ പാർട്ടി",
+   "description_lang": "ml"
+  },
+  "P10227": {
+   "label": "National Library of Ireland ID",
+   "lang": "en",
+   "description": "identifier of a National Library of Ireland authority record",
+   "description_lang": "en"
+  },
+  "P10234": {
+   "label": "Der Spiegel topic ID",
+   "lang": "mul",
+   "description": "identifier for topics in the German news portal “Der Spiegel”",
+   "description_lang": "en"
+  },
+  "P10280": {
+   "label": "category for honorary citizens of entity",
+   "lang": "en",
+   "description": "category containing the honorary citizens of a settlement (administrative unit, country). Honorary citizens may or may not be citizens of the country",
+   "description_lang": "en"
+  },
+  "P10291": {
+   "label": "Wikisimpsons article ID",
+   "lang": "en",
+   "description": "identifier for a Wikisimpsons article",
+   "description_lang": "en"
+  },
+  "P10311": {
+   "label": "official jobs URL",
+   "lang": "en",
+   "description": "web page for jobs an employer offers",
+   "description_lang": "en"
+  },
+  "P10321": {
+   "label": "Urban Electric Transit city ID",
+   "lang": "en",
+   "description": "identifier for a city in the Urban Electric Transit database",
+   "description_lang": "en"
+  },
+  "P10326": {
+   "label": "ICPSR Geographic Names Thesaurus ID",
+   "lang": "en",
+   "description": "identifier for a geographic place in the ICPSR Geographic Names Thesaurus",
+   "description_lang": "en"
+  },
+  "P1036": {
+   "label": "Dewey Decimal Classification",
+   "lang": "en",
+   "description": "use with qualifier \"edition (P747)\" with item value \"DDC 23\" or create new item to represent the corresponding DDC edition",
+   "description_lang": "en"
+  },
+  "P10376": {
+   "label": "ScienceDirect topic ID",
+   "lang": "en",
+   "description": "identifier for a topic on the research publication website ScienceDirect",
+   "description_lang": "en"
+  },
+  "P10397": {
+   "label": "SBN place ID",
+   "lang": "en",
+   "description": "identifier for a place issued by National Library Service (SBN) of Italy",
+   "description_lang": "en"
+  },
+  "P1048": {
+   "label": "NCL ID",
+   "lang": "en",
+   "description": "identifier for authority control issued by the National Central Library in Taiwan",
+   "description_lang": "en"
+  },
+  "P10480": {
+   "label": "symogih.org ID",
+   "lang": "en",
+   "description": "identifier for a resource in the symogih.org database",
+   "description_lang": "en"
+  },
+  "P10730": {
+   "label": "Data Commons ID",
+   "lang": "mul",
+   "description": "identifier in the Data Commons knowledge graph",
+   "description_lang": "en"
+  },
+  "P1082": {
+   "label": "ജനസംഖ്യ",
+   "lang": "ml",
+   "description": "താമസിക്കുന്ന ആൾക്കാരുടെ എണ്ണം",
+   "description_lang": "ml"
+  },
+  "P10832": {
+   "label": "WorldCat Entities ID",
+   "lang": "en",
+   "description": "identifier for a person, work, place, historical period, or event from the WorldCat Entities linked data service",
+   "description_lang": "en"
+  },
+  "P10883": {
+   "label": "The Encyclopedia of Fantasy ID",
+   "lang": "en",
+   "description": "identifier for an entry on the Encyclopedia of Fantasy website",
+   "description_lang": "en"
+  },
+  "P10916": {
+   "label": "Süddeutsche Zeitung topic ID",
+   "lang": "en",
+   "description": "identifier for a topic at the Süddeutsche Zeitung newspaper website",
+   "description_lang": "en"
+  },
+  "P11012": {
+   "label": "EU Knowledge Graph item ID",
+   "lang": "en",
+   "description": "identifier for the corresponding entity in the EU Knowledge Graph",
+   "description_lang": "en"
+  },
+  "P11054": {
+   "label": "grammatical number",
+   "lang": "en",
+   "description": "grammatical number category (singular, plural, etc.) of pronouns and certain types of nouns",
+   "description_lang": "en"
+  },
+  "P11137": {
+   "label": "Reddit topic ID (obsolete)",
+   "lang": "en",
+   "description": "identifier of a topic on Reddit",
+   "description_lang": "en"
+  },
+  "P11245": {
+   "label": "YouTube handle",
+   "lang": "en",
+   "description": "unique identifier of a person, organization or channel on YouTube; do not include the \"@\" symbol",
+   "description_lang": "en"
+  },
+  "P11266": {
+   "label": "contact page URL",
+   "lang": "en",
+   "description": "URL to the official page listing the subject's contact information or a contact form",
+   "description_lang": "en"
+  },
+  "P11386": {
+   "label": "Listal ID",
+   "lang": "en",
+   "description": "identifier for a person, a character, a creation or a place in the Listal database",
+   "description_lang": "en"
+  },
+  "P11408": {
+   "label": "Pixiv Encyclopedia ID",
+   "lang": "en",
+   "description": "identifier for an article on Pixiv Encyclopedia",
+   "description_lang": "en"
+  },
+  "P11493": {
+   "label": "Biblissima authority ID",
+   "lang": "en",
+   "description": "identifier of an entity in the Biblissima database",
+   "description_lang": "en"
+  },
+  "P11496": {
+   "label": "CiNii Research ID",
+   "lang": "en",
+   "description": "19-digits identifier in CiNii Research",
+   "description_lang": "en"
+  },
+  "P1151": {
+   "label": "വിക്കിപീഡിയയിലെ ഈ വിഷയത്തിന്റെ കവാടം",
+   "lang": "ml",
+   "description": "Wikimedia portal associated with this topic",
+   "description_lang": "en"
+  },
+  "P11620": {
+   "label": "Hungarian National Namespace place ID (new)",
+   "lang": "en",
+   "description": "identifier for a place in the Hungarian National Namespace",
+   "description_lang": "en"
+  },
+  "P11662": {
+   "label": "IATE entry ID",
+   "lang": "en",
+   "description": "identifier for an entry in the Inter-Active Terminology for Europe website at iate.europa.eu",
+   "description_lang": "en"
+  },
+  "P11693": {
+   "label": "OpenStreetMap node ID",
+   "lang": "en",
+   "description": "ID of a node in OpenStreetMap for the item",
+   "description_lang": "en"
+  },
+  "P11762": {
+   "label": "Britannica Kids kids level article ID",
+   "lang": "en",
+   "description": "identifier of a kids level (up to grade 5) article in Britannica Kids",
+   "description_lang": "en"
+  },
+  "P11764": {
+   "label": "Britannica Kids students level article ID",
+   "lang": "en",
+   "description": "identifier of a students level (grades 6-8) article in Britannica Kids",
+   "description_lang": "en"
+  },
+  "P11765": {
+   "label": "Britannica Kids scholars level article ID",
+   "lang": "en",
+   "description": "identifier of a scholars level (grade 9 and up) article in Britannica Kids",
+   "description_lang": "en"
+  },
+  "P11946": {
+   "label": "Mythoskop ID",
+   "lang": "en",
+   "description": "identifier of beings, locations, concepts and sources related to Greek mythology in the web portal Mythoskop",
+   "description_lang": "en"
+  },
+  "P11947": {
+   "label": "Lemmy community ID",
+   "lang": "en",
+   "description": "name of the Lemmy community associated to the subject",
+   "description_lang": "en"
+  },
+  "P12036": {
+   "label": "NHK ONE  News topic ID",
+   "lang": "en",
+   "description": "identifier for a topic on NHK ONE  News",
+   "description_lang": "en"
+  },
+  "P12062": {
+   "label": "Pinakes city ID",
+   "lang": "en",
+   "description": "numeric identifier for a city in the Pinakes database",
+   "description_lang": "en"
+  },
+  "P12086": {
+   "label": "WikiKids ID",
+   "lang": "en",
+   "description": "identifier of the article on the Dutch online encyclopedia for kids",
+   "description_lang": "en"
+  },
+  "P12187": {
+   "label": "Thesaurus Linguae Aegyptiae ID",
+   "lang": "en",
+   "description": "identifier for a metadata thesaurus entry in the Thesaurus Linguae Aegyptiae",
+   "description_lang": "en"
+  },
+  "P1225": {
+   "label": "U.S. National Archives Identifier",
+   "lang": "en",
+   "description": "identifier for the United States National Archives and Records Administration's online catalog",
+   "description_lang": "en"
+  },
+  "P12361": {
+   "label": "Bluesky handle",
+   "lang": "en",
+   "description": "account handle on Bluesky",
+   "description_lang": "en"
+  },
+  "P12385": {
+   "label": "Gran Enciclopèdia Catalana ID",
+   "lang": "en",
+   "description": "identifier for an item in the Gran Enciclopèdia Catalana",
+   "description_lang": "en"
+  },
+  "P12409": {
+   "label": "Bluesky DID",
+   "lang": "en",
+   "description": "(qualifier) the Bluesky decentralised identifier (DID) of the account",
+   "description_lang": "en"
+  },
+  "P1245": {
+   "label": "OmegaWiki Defined Meaning",
+   "lang": "en",
+   "description": "\"Defined Meaning\" on the site",
+   "description_lang": "en"
+  },
+  "P1248": {
+   "label": "KulturNav-ID",
+   "lang": "en",
+   "description": "identifier for people, places, events, etc. used by some Nordic museums",
+   "description_lang": "en"
+  },
+  "P1249": {
+   "label": "time of earliest written record",
+   "lang": "en",
+   "description": "first time a subject was mentioned in writing",
+   "description_lang": "en"
+  },
+  "P12546": {
+   "label": "Instagram numeric ID",
+   "lang": "en",
+   "description": "unique numeric identifier for Instagram accounts",
+   "description_lang": "en"
+  },
+  "P12749": {
+   "label": "SNARC ID",
+   "lang": "en",
+   "description": "unique identifier for people, places and organisations represented in Welsh collections",
+   "description_lang": "en"
+  },
+  "P12800": {
+   "label": "விக்கிடியா கட்டுரை இனங்காட்டி",
+   "lang": "ml",
+   "description": "identifier for an article on Vikidia (format \"lang-code:title\")",
+   "description_lang": "en"
+  },
+  "P12874": {
+   "label": "Valencian Library ID",
+   "lang": "en",
+   "description": "identifier for authority control used by the Valencian Library",
+   "description_lang": "en"
+  },
+  "P1296": {
+   "label": "Gran Enciclopèdia Catalana ID (former scheme)",
+   "lang": "en",
+   "description": "identifier for an item in the Gran Enciclopèdia Catalana. Replaced with \"Gran Enciclopèdia Catalana ID (P12385)\"",
+   "description_lang": "en"
+  },
+  "P1299": {
+   "label": "depicted by",
+   "lang": "en",
+   "description": "object depicting this subject (object being creative works such as books, films, paintings)",
+   "description_lang": "en"
+  },
+  "P13044": {
+   "label": "characteristic of",
+   "lang": "en",
+   "description": "subject item or statement is a characteristic, quality, property, or state of this object (use a more specific property where possible)",
+   "description_lang": "en"
+  },
+  "P13059": {
+   "label": "Babelio subject ID",
+   "lang": "en",
+   "description": "identifier for a subject on the French literature site Babelio",
+   "description_lang": "en"
+  },
+  "P13061": {
+   "label": "World Historical Gazetteer place ID",
+   "lang": "en",
+   "description": "identifier for a place in the World Historical Gazetteer",
+   "description_lang": "en"
+  },
+  "P131": {
+   "label": "സ്ഥിതിചെയ്യുന്ന ഭരണസ്ഥലം",
+   "lang": "ml",
+   "description": "ഇനിപ്പറയുന്ന അഡ്മിനിസ്ട്രേറ്റീവ് യൂണിറ്റിന്റെ പ്രദേശത്താണ് ഈ ഇനം സ്ഥിതിചെയ്യുന്നത്. അഡ്മിനിസ്ട്രേറ്റീവ് അല്ലാത്ത സ്ഥലങ്ങൾക്കും  ഇവന്റുകൾക്കും P276 ഉപയോഗിക്കുക. ഇനം അഡ്മിനിസ്ട്രേറ്റീവ് എന്റിറ്റിയിൽ ഭാഗികമായി മാത്രം വീണാൽ P1382 ​​ഉപയോഗിക്കുക.",
+   "description_lang": "ml"
+  },
+  "P1313": {
+   "label": "office held by the head of government",
+   "lang": "en",
+   "description": "political office that is fulfilled by the head of the government of this item",
+   "description_lang": "en"
+  },
+  "P13141": {
+   "label": "El Moudjahid topic ID",
+   "lang": "mul",
+   "description": "identifier for a topic in the Algerian French-language newspaper ''El Moudjahid''",
+   "description_lang": "en"
+  },
+  "P13160": {
+   "label": "Radio Algeria topic ID (Arabic)",
+   "lang": "en",
+   "description": "identifier for a topic in the Algerian Arabic-language website of the sound broadcasting company Radio Algeria",
+   "description_lang": "en"
+  },
+  "P13161": {
+   "label": "Radio Algeria topic ID (French)",
+   "lang": "en",
+   "description": "identifier for a topic in the Algerian French-language website of the sound broadcasting company ''Radio Algeria''",
+   "description_lang": "en"
+  },
+  "P13279": {
+   "label": "Dictionary of Late Antiquity ID",
+   "lang": "en",
+   "description": "identifier for a subject page in The Oxford Dictionary of Late Antiquity",
+   "description_lang": "en"
+  },
+  "P1332": {
+   "label": "coordinates of northernmost point",
+   "lang": "en",
+   "description": "northernmost point of a location. For an administrative entity this includes offshore islands",
+   "description_lang": "en"
+  },
+  "P1333": {
+   "label": "coordinates of southernmost point",
+   "lang": "en",
+   "description": "southernmost point of a place. For administrative entities this includes offshore islands",
+   "description_lang": "en"
+  },
+  "P13337": {
+   "label": "domain name",
+   "lang": "en",
+   "description": "registered internet domain name that identifies this entity",
+   "description_lang": "en"
+  },
+  "P1334": {
+   "label": "coordinates of easternmost point",
+   "lang": "en",
+   "description": "easternmost point of a location",
+   "description_lang": "en"
+  },
+  "P1335": {
+   "label": "coordinates of westernmost point",
+   "lang": "en",
+   "description": "westernmost point of a location",
+   "description_lang": "en"
+  },
+  "P1343": {
+   "label": "ഇതേപ്പറ്റി വിവരിച്ചിട്ടുള്ള ഇടങ്ങൾ",
+   "lang": "ml",
+   "description": "അവലംബം",
+   "description_lang": "ml"
+  },
+  "P13526": {
+   "label": "Euronews topic ID",
+   "lang": "en",
+   "description": "identifier of a topic at the English-language website of Euronews",
+   "description_lang": "en"
+  },
+  "P13591": {
+   "label": "‎Yale LUX ID",
+   "lang": "mul",
+   "description": "identifier for an entity in Yale's LUX cross collection knowledge graph",
+   "description_lang": "en"
+  },
+  "P1365": {
+   "label": "മുൻഗാമി",
+   "lang": "ml",
+   "description": "person, state or item replaced. Use \"structure replaces\" (P1398) for structures. Use \"follows\" (P155) if the previous item was not replaced or predecessor and successor are identical",
+   "description_lang": "en"
+  },
+  "P1368": {
+   "label": "National Library of Latvia ID",
+   "lang": "en",
+   "description": "identifier assigned by the National Library of Latvia",
+   "description_lang": "en"
+  },
+  "P13750": {
+   "label": "Arab Encyclopedia concept ID",
+   "lang": "en",
+   "description": "digital identifier for a topic within the articles of the Arabic Encyclopedia",
+   "description_lang": "en"
+  },
+  "P1376": {
+   "label": "എന്തിന്റെ തലസ്ഥാനം",
+   "lang": "ml",
+   "description": "country, state, department, canton or other administrative division of which the municipality is the governmental seat",
+   "description_lang": "en"
+  },
+  "P13772": {
+   "label": "Harper's tag",
+   "lang": "en",
+   "description": "tag in Harper's Magazine",
+   "description_lang": "en"
+  },
+  "P138": {
+   "label": "പേര് വന്ന വഴി",
+   "lang": "ml",
+   "description": "entity or event that inspired the subject's name, or namesake (in at least one language). Qualifier \"applies to name\" (P5168) can be used to indicate which one",
+   "description_lang": "en"
+  },
+  "P13835": {
+   "label": "Kulturenvanteri taxonomy ID",
+   "lang": "en",
+   "description": "identifier of a culture, century, place, etc. in the Kulturenvanteri database",
+   "description_lang": "en"
+  },
+  "P1417": {
+   "label": "ഓൺലൈൻ ബ്രിട്ടാനിക്കയിലേക്കുള്ള കണ്ണി",
+   "lang": "ml",
+   "description": "identifier for an article in the online version of Encyclopædia Britannica",
+   "description_lang": "en"
+  },
+  "P1424": {
+   "label": "വിഷയത്തിന്റെ പ്രധാന ഫലകം",
+   "lang": "ml",
+   "description": "ഒരു വിഷയവുമായി ബന്ധപ്പെട്ട പ്രധാന ഫലകം (ടെംപ്ലേറ്റ്)",
+   "description_lang": "ml"
+  },
+  "P14269": {
+   "label": "Anarâš aavis topic ID",
+   "lang": "en",
+   "description": "identifier for topics in the online Inari Sámi newspaper Anarâš aavis",
+   "description_lang": "en"
+  },
+  "P143": {
+   "label": "ഇറക്കുമതി സ്രോതസ്",
+   "lang": "ml",
+   "description": "source of this claim's value; used in references section by bots or humans importing data from Wikimedia projects",
+   "description_lang": "en"
+  },
+  "P1438": {
+   "label": "Jewish Encyclopedia ID (Russian)",
+   "lang": "en",
+   "description": "Article ID in the Electronic Jewish Encyclopedia in Russian",
+   "description_lang": "en"
+  },
+  "P14457": {
+   "label": "subject named as (monolingual text)",
+   "lang": "en",
+   "description": "(with an associated language code) name by which a subject is recorded in a database, mentioned as a contributor of a work, or is referred to in a particular context",
+   "description_lang": "en"
+  },
+  "P14470": {
+   "label": "‎Giant Bomb Wiki ID",
+   "lang": "en",
+   "description": "identifier for a page on the Giant Bomb Wiki",
+   "description_lang": "en"
+  },
+  "P1448": {
+   "label": "ഔദ്യോഗിക നാമം",
+   "lang": "ml",
+   "description": "വിഷയഹേതുവിന് ഔദ്യോഗിക ഭാഷയിലുള്ള ഔദ്യോഗിക നാമം",
+   "description_lang": "ml"
+  },
+  "P1449": {
+   "label": "കളിപ്പേര്",
+   "lang": "ml",
+   "description": "informal name (for a pseudonym use P742)",
+   "description_lang": "en"
+  },
+  "P1451": {
+   "label": "motto text",
+   "lang": "en",
+   "description": "short motivation sentence associated to item",
+   "description_lang": "en"
+  },
+  "P1454": {
+   "label": "legal form",
+   "lang": "en",
+   "description": "legal form of an entity",
+   "description_lang": "en"
+  },
+  "P1456": {
+   "label": "list of monuments",
+   "lang": "en",
+   "description": "link to the list of heritage monuments in the place/area",
+   "description_lang": "en"
+  },
+  "P14586": {
+   "label": "KSW place ID",
+   "lang": "en",
+   "description": "place in the database of Klassik Stiftung Weimar",
+   "description_lang": "en"
+  },
+  "P1464": {
+   "label": "ഇവിടെ ജനിച്ചവർക്കുള്ള വിഭാഗം",
+   "lang": "ml",
+   "description": "ഈ സ്ഥലത്തു ജനിച്ചവരെ ഉൾക്കൊള്ളുന്ന കൂട്ടം",
+   "description_lang": "ml"
+  },
+  "P1465": {
+   "label": "ഈ സ്ഥലത്തുവച്ചു മരണമടഞ്ഞവർ",
+   "lang": "ml",
+   "description": "category item for people who died in this location",
+   "description_lang": "en"
+  },
+  "P1482": {
+   "label": "Stack Exchange tag",
+   "lang": "en",
+   "description": "tag on the Stack Exchange websites",
+   "description_lang": "en"
+  },
+  "P150": {
+   "label": "contains the administrative territorial entity",
+   "lang": "en",
+   "description": "(list of) direct subdivisions of an administrative territorial entity",
+   "description_lang": "en"
+  },
+  "P1534": {
+   "label": "end cause",
+   "lang": "en",
+   "description": "qualifier used together with the end date qualifier (P582) to specify the reason for the end",
+   "description_lang": "en"
+  },
+  "P1539": {
+   "label": "സ്ത്രീജനസംഖ്യ",
+   "lang": "ml",
+   "description": "ഒരു ആവാസവ്യവസ്ഥയിലെ സ്ത്രീകളുടെ എണ്ണം",
+   "description_lang": "ml"
+  },
+  "P154": {
+   "label": "ലോഗോയുടെ ചിത്രം",
+   "lang": "ml",
+   "description": "graphic mark, icon, logo, or emblem commonly used by commercial enterprises, organisations, and products",
+   "description_lang": "en"
+  },
+  "P1540": {
+   "label": "പുരുഷജനസംഖ്യ",
+   "lang": "ml",
+   "description": "number of male people inhabiting the place; number of male people of subject",
+   "description_lang": "en"
+  },
+  "P1546": {
+   "label": "motto",
+   "lang": "mul",
+   "description": "description of the motto of the subject",
+   "description_lang": "en"
+  },
+  "P1549": {
+   "label": "നിവാസി",
+   "lang": "ml",
+   "description": "name for people or things associated with a given place, usually based off the place name",
+   "description_lang": "en"
+  },
+  "P1552": {
+   "label": "സ്വഭാവം",
+   "lang": "ml",
+   "description": "inherent or distinguishing quality or feature of the entity. Use a more specific property when possible",
+   "description_lang": "en"
+  },
+  "P1566": {
+   "label": "GeoNames ID",
+   "lang": "mul",
+   "description": "identifier in the GeoNames geographical database",
+   "description_lang": "en"
+  },
+  "P159": {
+   "label": "മുഖ്യകാര്യാലയത്തിന്റെ സ്ഥാനം",
+   "lang": "ml",
+   "description": "city or town where an organization's headquarters is or has been situated. Use P276 qualifier for specific building",
+   "description_lang": "en"
+  },
+  "P1617": {
+   "label": "ബിബിസി കാര്യങ്ങളുടെ തിരിച്ചറിയല്‍ രേഖ",
+   "lang": "ml",
+   "description": "identifier in the BBC Things database, automatically enriched with Wikipedia and MusicBrainz content",
+   "description_lang": "en"
+  },
+  "P163": {
+   "label": "പതാക",
+   "lang": "ml",
+   "description": "subject's flag",
+   "description_lang": "en"
+  },
+  "P166": {
+   "label": "ലഭിച്ച പുരസ്കാരങ്ങൾ",
+   "lang": "ml",
+   "description": "award or recognition received by a person, organization or creative work",
+   "description_lang": "en"
+  },
+  "P1667": {
+   "label": "Getty Thesaurus of Geographic Names ID",
+   "lang": "en",
+   "description": "identifier in the Getty Thesaurus of Geographic Names",
+   "description_lang": "en"
+  },
+  "P17": {
+   "label": "രാജ്യം",
+   "lang": "ml",
+   "description": "ഈ ഇനത്തിന്റെ പരമാധികാര രാഷ്ട്രം (മനുഷ്യർക്കായുള്ള ഇനങ്ങളിൽ ഉപയോഗിക്കാൻ പാടില്ല)",
+   "description_lang": "ml"
+  },
+  "P1705": {
+   "label": "തദ്ദേശനാമം",
+   "lang": "ml",
+   "description": "ഔദ്യോഗിക അഥവാ യഥാർത്ഥ ഭാഷയിലെ പേര്",
+   "description_lang": "ml"
+  },
+  "P1740": {
+   "label": "category for films shot at this location",
+   "lang": "en",
+   "description": "the object is a category for films shot at or in the subject",
+   "description_lang": "en"
+  },
+  "P1766": {
+   "label": "place name sign",
+   "lang": "en",
+   "description": "image of (road) sign with place name on it",
+   "description_lang": "en"
+  },
+  "P1791": {
+   "label": "category for people buried here",
+   "lang": "en",
+   "description": "Wikimedia category for people with a burial site within this area",
+   "description_lang": "en"
+  },
+  "P1792": {
+   "label": "category of associated people",
+   "lang": "en",
+   "description": "Wikimedia category for people associated with this place or organization",
+   "description_lang": "en"
+  },
+  "P18": {
+   "label": "ചിത്രം",
+   "lang": "ml",
+   "description": "വിഷയത്തെക്കുറിച്ചുള്ള ഉചിതമായ ദൃശ്യങ്ങൾ",
+   "description_lang": "ml"
+  },
+  "P180": {
+   "label": "സൃഷ്ടിയിലുള്ളത്",
+   "lang": "ml",
+   "description": "സൃഷ്ടിയിലുള്ള സാധനം",
+   "description_lang": "ml"
+  },
+  "P1810": {
+   "label": "subject named as",
+   "lang": "en",
+   "description": "name by which a subject is recorded in a database, mentioned as a contributor of a work, or is referred to in a particular context",
+   "description_lang": "en"
+  },
+  "P1813": {
+   "label": "ഹ്രസ്വ നാമം",
+   "lang": "ml",
+   "description": "short name of a place, organisation, person, journal, Wikidata property, etc. Used by some Wikipedia templates",
+   "description_lang": "en"
+  },
+  "P1830": {
+   "label": "ഉടമ",
+   "lang": "ml",
+   "description": "entities owned by the subject",
+   "description_lang": "en"
+  },
+  "P1871": {
+   "label": "CERL Thesaurus ID",
+   "lang": "en",
+   "description": "identifier in the Consortium of European Research Libraries Thesaurus",
+   "description_lang": "en"
+  },
+  "P1889": {
+   "label": "ഇതിൽ നിന്നും വ്യത്യസ്തം",
+   "lang": "ml",
+   "description": "item that is different from another item, with which it may be confused",
+   "description_lang": "en"
+  },
+  "P1890": {
+   "label": "CCAB ID",
+   "lang": "mul",
+   "description": "Collective Catalog of Bibliographic Authorities of Chile ID",
+   "description_lang": "en"
+  },
+  "P190": {
+   "label": "സഹോദര നഗരം",
+   "lang": "ml",
+   "description": "twin towns, sister cities, twinned municipalities and other localities that have a partnership or cooperative agreement, either legally or informally acknowledged by their governments",
+   "description_lang": "en"
+  },
+  "P1937": {
+   "label": "UN/LOCODE",
+   "lang": "mul",
+   "description": "geographic location code maintained by UNECE (United Nations Economic Commission for Europe) for over 103,000 locations in 249 countries and territories to identify ports, airports, and transport hubs",
+   "description_lang": "en"
+  },
+  "P194": {
+   "label": "ഭരണവിഭാഗം",
+   "lang": "ml",
+   "description": "legislative body governing this entity; political institution with elected representatives, such as a parliament/legislature or council",
+   "description_lang": "en"
+  },
+  "P1943": {
+   "label": "location map",
+   "lang": "en",
+   "description": "blank geographic map image suitable for overlaying coordinate points, as defined at c:Category:Location maps",
+   "description_lang": "en"
+  },
+  "P1968": {
+   "label": "Foursquare ID",
+   "lang": "mul",
+   "description": "ID of a place in Foursquare City Guide",
+   "description_lang": "en"
+  },
+  "P1997": {
+   "label": "Facebook location ID",
+   "lang": "en",
+   "description": "identifier for a place in Facebook",
+   "description_lang": "en"
+  },
+  "P2002": {
+   "label": "ട്വിറ്റർ ഉപയോക്തൃനാമം",
+   "lang": "ml",
+   "description": "ട്വിറ്ററിൽ ഉപയോഗിക്കുന്ന പേര്",
+   "description_lang": "ml"
+  },
+  "P2003": {
+   "label": "ഇൻസ്റ്റഗ്രാം ഉപയോക്തൃനാമം",
+   "lang": "ml",
+   "description": "ഇൻസ്റ്റഗ്രാമിൽ ഉപയോഗിക്കുന്ന പേര്",
+   "description_lang": "ml"
+  },
+  "P2013": {
+   "label": "ഫേസ്‌ബുക്ക് ഐ.ഡി.",
+   "lang": "ml",
+   "description": "ഫേസ്‌ബുക്കിൽ തിരിച്ചറിയാനുള്ള ഉപാധി",
+   "description_lang": "ml"
+  },
+  "P2041": {
+   "label": "National Gallery of Victoria artist ID",
+   "lang": "en",
+   "description": "identifier assigned to an artist by the National Gallery of Victoria in Australia",
+   "description_lang": "en"
+  },
+  "P2044": {
+   "label": "സമുദ്രനിരപ്പിൽ നിന്നുമുള്ള ഉയരം",
+   "lang": "ml",
+   "description": "height of the item (geographical object) as measured relative to sea level",
+   "description_lang": "en"
+  },
+  "P2046": {
+   "label": "വിസ്തീർണ്ണം",
+   "lang": "ml",
+   "description": "ഒരു വസ്തു ഉൾക്കൊള്ളുന്ന പരപ്പളവ്",
+   "description_lang": "ml"
+  },
+  "P206": {
+   "label": "located in or next to body of water",
+   "lang": "en",
+   "description": "body of water on or next to which a place is located",
+   "description_lang": "en"
+  },
+  "P2093": {
+   "label": "സൃഷ്ടിച്ചയാളുടെ പേര്",
+   "lang": "ml",
+   "description": "stores unspecified author or editor name for publications; use if Wikidata item for author (P50) or editor (P98) does not exist or is not known. Do not use both.",
+   "description_lang": "en"
+  },
+  "P2096": {
+   "label": "മീഡിയയുടെ സൂചന",
+   "lang": "ml",
+   "description": "മീഡിയ ഉള്ളടക്കത്തിന്റെ വിശദാംശം",
+   "description_lang": "ml"
+  },
+  "P213": {
+   "label": "ഐ.എസ്.എൻ.ഐ. (ഐ.എസ്.ഒ. 27729)",
+   "lang": "ml",
+   "description": "International Standard Name Identifier for an identity. Starting with 0000.",
+   "description_lang": "en"
+  },
+  "P214": {
+   "label": "വി.ഐ.എ.എഫ്. തിരിച്ചറിയലുപാധി",
+   "lang": "ml",
+   "description": "identifier for the Virtual International Authority File database [format: up to 22 digits]; please note: VIAF is a cluster, the ID can include multiple items",
+   "description_lang": "en"
+  },
+  "P2163": {
+   "label": "FAST ID",
+   "lang": "mul",
+   "description": "authority control identifier in WorldCat's “FAST Linked Data” authority file",
+   "description_lang": "en"
+  },
+  "P2184": {
+   "label": "history of topic",
+   "lang": "en",
+   "description": "item about the historical development of a subject's topic, example: \"history of Argentina\" for \"Argentina\". To list key events of the topic, use \"significant event\" (P793)",
+   "description_lang": "en"
+  },
+  "P2241": {
+   "label": "reason for deprecated rank",
+   "lang": "en",
+   "description": "qualifier to indicate why a particular statement should have deprecated rank",
+   "description_lang": "en"
+  },
+  "P227": {
+   "label": "ജി.എൻ.ഡി. തിരിച്ചറിയലുപാധി",
+   "lang": "ml",
+   "description": "identifier from the Gemeinsame Normdatei authority file of names, subjects, and organizations",
+   "description_lang": "en"
+  },
+  "P2326": {
+   "label": "GNS Unique Feature ID",
+   "lang": "en",
+   "description": "identifier for geographic entities according to the National Geospatial-Intelligence Agency's GEOnet Names Server",
+   "description_lang": "en"
+  },
+  "P2347": {
+   "label": "YSO ID",
+   "lang": "mul",
+   "description": "identifier for a concept in the General Finnish Ontology YSO",
+   "description_lang": "en"
+  },
+  "P237": {
+   "label": "coat of arms",
+   "lang": "en",
+   "description": "subject's coat of arms",
+   "description_lang": "en"
+  },
+  "P238": {
+   "label": "IATA airport code",
+   "lang": "en",
+   "description": "three-letter identifier for designating airports, railway stations or cities (for airlines, see P229)",
+   "description_lang": "en"
+  },
+  "P2397": {
+   "label": "YouTube channel ID",
+   "lang": "en",
+   "description": "ID of the YouTube channel of a person or organisation (not to be confused with the name of the channel) The ID can also be used for music.youtube.com IDs",
+   "description_lang": "en"
+  },
+  "P242": {
+   "label": "locator map image",
+   "lang": "en",
+   "description": "geographic map image which highlights the location of the subject within some larger entity",
+   "description_lang": "en"
+  },
+  "P244": {
+   "label": "Library of Congress Authorities ID",
+   "lang": "mul",
+   "description": "Library of Congress name authority (persons, families, corporate bodies, events, places, works and expressions) and subject authority identifier [Format: 1-2 specific letters followed by 8-10 digits (see regex). For manifestations, use P1144]",
+   "description_lang": "en"
+  },
+  "P2441": {
+   "label": "literal translation",
+   "lang": "en",
+   "description": "direct or word-for-word translation of a name or phrase (qualifier for name, title, inscription, and quotation properties)",
+   "description_lang": "en"
+  },
+  "P248": {
+   "label": "ഇവിടെ പറയുന്നു",
+   "lang": "ml",
+   "description": "അവലംബത്തിനായുള്ള ഫീൽഡുകളിൽ ഉപയോഗിക്കുന്നു. എവിടെയാണ് അവലംബം നൽകിയിരിക്കുന്നത് എന്നുപറയുന്നതിന്",
+   "description_lang": "ml"
+  },
+  "P2503": {
+   "label": "Historical Gazetteer (GOV) ID",
+   "lang": "en",
+   "description": "Historical Gazetteer",
+   "description_lang": "en"
+  },
+  "P2572": {
+   "label": "ഹാഷ് ടാഗ്",
+   "lang": "ml",
+   "description": "reference keyword associated with this item for online communities (do not include the \"#\" symbol which is often used as a prefixed indicator)",
+   "description_lang": "en"
+  },
+  "P2581": {
+   "label": "BabelNet ID",
+   "lang": "en",
+   "description": "ID in BabelNet encyclopedic dictionary",
+   "description_lang": "en"
+  },
+  "P2586": {
+   "label": "INSEE department code",
+   "lang": "en",
+   "description": "code for departments of France assigned by the National Institute of Statistics and Economic Studies (INSEE)",
+   "description_lang": "en"
+  },
+  "P2633": {
+   "label": "വിഷയത്തിന്റെ ഭൂമിശാസ്ത്രം",
+   "lang": "ml",
+   "description": "item that deals with the geography of the subject. Sample: \"Rio de Janeiro\" uses this property with value \"geography of Rio de Janeiro\" (Q10288853). For the location of a subject, use \"location\" (P276).",
+   "description_lang": "en"
+  },
+  "P2670": {
+   "label": "has part(s) of the class",
+   "lang": "en",
+   "description": "the subject has one or more parts of the object class",
+   "description_lang": "en"
+  },
+  "P268": {
+   "label": "ഫ്രഞ്ച് ദേശീയ ഗ്രന്ഥശാല തിരിച്ചറിയല്‍ സംഖ്യ",
+   "lang": "ml",
+   "description": "identifier for the subject issued by BNF (Bibliothèque nationale de France). Format: 8 digits followed by a check-digit or letter, do not include the initial 'cb'.",
+   "description_lang": "en"
+  },
+  "P269": {
+   "label": "IdRef ID",
+   "lang": "mul",
+   "description": "identifier for authority control in the French collaborative library catalog (see also P1025). Format: 8 digits followed by a digit or \"X\"",
+   "description_lang": "en"
+  },
+  "P271": {
+   "label": "NACSIS-CAT",
+   "lang": "mul",
+   "description": "identifier for book authors in NACSIS-CAT, the union catalog for university libraries and research institutions in Japan",
+   "description_lang": "en"
+  },
+  "P2716": {
+   "label": "montage image",
+   "lang": "en",
+   "description": "image file that assembles two or more other images of item",
+   "description_lang": "en"
+  },
+  "P2769": {
+   "label": "budget",
+   "lang": "en",
+   "description": "assigned monetary amount for a project (for the estimated cost of a film, also commonly referred to as budget, use P2130)",
+   "description_lang": "en"
+  },
+  "P281": {
+   "label": "പോസ്റ്റൽ കോഡ്",
+   "lang": "ml",
+   "description": "നിശ്ചിത സ്ഥലത്തെ തപാൽ ഓഫീസ് നമ്പർ കാണിക്കുന്നു",
+   "description_lang": "ml"
+  },
+  "P2868": {
+   "label": "subject has role",
+   "lang": "en",
+   "description": "role held by the item the statement appears on (\"subject\") in the context of that statement. For the role of the statement object/value, use P3831 (\"object has role\"). For acting roles, use P453 (\"character role\"). For persons, use P39.",
+   "description_lang": "en"
+  },
+  "P2892": {
+   "label": "UMLS CUI",
+   "lang": "en",
+   "description": "NLM Unified Medical Language System (UMLS) controlled biomedical vocabulary unique identifier",
+   "description_lang": "en"
+  },
+  "P2924": {
+   "label": "Great Russian Encyclopedia Online ID (2017)",
+   "lang": "en",
+   "description": "identifier for an entry on old.bigenc.ru, the official site of the Great Russian Encyclopedia Online 2014–2017 (current version of bigenc.ru is P11514)",
+   "description_lang": "en"
+  },
+  "P2936": {
+   "label": "ഉപയോഗിക്കുന്ന ഭാഷ",
+   "lang": "ml",
+   "description": "language widely used (spoken or written) in this place or at this event or organisation",
+   "description_lang": "en"
+  },
+  "P2950": {
+   "label": "Nomisma ID",
+   "lang": "en",
+   "description": "identifier in Nomisma.org, a linked open data thesaurus of numismatic concepts",
+   "description_lang": "en"
+  },
+  "P2966": {
+   "label": "National Library of Wales Authority ID",
+   "lang": "en",
+   "description": "identifier of persons, corporate entities and families in the National Library of Wales Archives and Manuscripts database",
+   "description_lang": "en"
+  },
+  "P30": {
+   "label": "വൻകര",
+   "lang": "ml",
+   "description": "ഏത് വൻകരയിൽ ആണ് സ്ഥിതിചെയ്യുന്നത്",
+   "description_lang": "ml"
+  },
+  "P300": {
+   "label": "ISO 3166-2 code",
+   "lang": "en",
+   "description": "identifier for a country subdivision per ISO 3166-2 (include country code)",
+   "description_lang": "en"
+  },
+  "P304": {
+   "label": "താൾ",
+   "lang": "ml",
+   "description": "page number of source referenced for statement. Note \"column(s)\" (P3903) and \"folio(s)\" (P7416) for other numbering systems",
+   "description_lang": "en"
+  },
+  "P3065": {
+   "label": "RERO ID",
+   "lang": "mul",
+   "description": "identifier in the Library network of Western Switzerland's RERO database",
+   "description_lang": "en"
+  },
+  "P3086": {
+   "label": "speed limit",
+   "lang": "en",
+   "description": "maximum speed allowed on a transport route or in a certain area",
+   "description_lang": "en"
+  },
+  "P31": {
+   "label": "തരം",
+   "lang": "ml",
+   "description": "ഈ വിഷയം ഒരു പ്രത്യേക ഉദാഹരണവും അംഗവുമായ തരം/ക്ലാസ്/വർഗ്ഗം",
+   "description_lang": "ml"
+  },
+  "P3106": {
+   "label": "The Guardian topic ID",
+   "lang": "en",
+   "description": "identifier for a topic at the Guardian newspaper website",
+   "description_lang": "en"
+  },
+  "P3134": {
+   "label": "Tripadvisor ID",
+   "lang": "en",
+   "description": "identifier of a place (region, hotel, restaurant, attraction), in TripAdvisor",
+   "description_lang": "en"
+  },
+  "P3206": {
+   "label": "data.gouv.fr organisation ID",
+   "lang": "en",
+   "description": "identifier of an organization on the French national open-data platform data.gouv.fr",
+   "description_lang": "en"
+  },
+  "P3218": {
+   "label": "Auñamendi ID",
+   "lang": "en",
+   "description": "identifier of an item in Auñamendi Encyclopaedia",
+   "description_lang": "en"
+  },
+  "P3219": {
+   "label": "Encyclopædia Universalis ID",
+   "lang": "mul",
+   "description": "identifier for an article in the online version of Encyclopædia Universalis",
+   "description_lang": "en"
+  },
+  "P3222": {
+   "label": "NE.se ID",
+   "lang": "mul",
+   "description": "ID of article on the Swedish Nationalencyklopedin (NE.se) site",
+   "description_lang": "en"
+  },
+  "P3365": {
+   "label": "Treccani ID",
+   "lang": "mul",
+   "description": "identifier for the Italian Treccani website and encyclopedia",
+   "description_lang": "en"
+  },
+  "P3403": {
+   "label": "coextensive with",
+   "lang": "en",
+   "description": "this item has the same boundary as the target item; area associated with (this) entity is identical with the area associated with that entity",
+   "description_lang": "en"
+  },
+  "P3415": {
+   "label": "start period",
+   "lang": "en",
+   "description": "initial period in which the statement is valid (including the period-value)",
+   "description_lang": "en"
+  },
+  "P3417": {
+   "label": "ക്വാറ ടോപിക് ഐ.ഡി.",
+   "lang": "ml",
+   "description": "ക്വാറയില്‍ ഒരു വിഷയത്തെ കുറിച്ച് തിരഞ്ഞെടുക്കല്‍ ( മലയാള ഭാഷയില്‍)",
+   "description_lang": "ml"
+  },
+  "P3430": {
+   "label": "SNAC ARK ID",
+   "lang": "en",
+   "description": "identifier for items in the Social Networks and Archival Context system",
+   "description_lang": "en"
+  },
+  "P3451": {
+   "label": "രാത്രികാല കാഴ്ച",
+   "lang": "ml",
+   "description": "image at night or in twilight",
+   "description_lang": "en"
+  },
+  "P349": {
+   "label": "NDL Authority ID",
+   "lang": "en",
+   "description": "identifier for authority control per the National Diet Library of Japan",
+   "description_lang": "en"
+  },
+  "P3500": {
+   "label": "Ringgold ID",
+   "lang": "mul",
+   "description": "identifier for organisations in the publishing industry supply chain",
+   "description_lang": "en"
+  },
+  "P3553": {
+   "label": "Zhihu topic ID",
+   "lang": "en",
+   "description": "numeric id of topics (tags) of questions on Zhihu, a Chinese question-and-answer website",
+   "description_lang": "en"
+  },
+  "P36": {
+   "label": "തലസ്ഥാനം",
+   "lang": "ml",
+   "description": "seat of government of a country, province, state or other type of administrative territorial entity",
+   "description_lang": "en"
+  },
+  "P361": {
+   "label": "ഇതിന്റെ ഭാഗം",
+   "lang": "ml",
+   "description": "വിഷയം ആ വസ്തുവിന്റെ ഒരു ഭാഗമാണ്",
+   "description_lang": "ml"
+  },
+  "P3629": {
+   "label": "age of subject at event",
+   "lang": "en",
+   "description": "the age of the subject according to the cited source at the time of an event. Used as a qualifier of significant event property",
+   "description_lang": "en"
+  },
+  "P37": {
+   "label": "ഔദ്യോഗിക ഭാഷ",
+   "lang": "ml",
+   "description": "language designated as official by this item",
+   "description_lang": "en"
+  },
+  "P373": {
+   "label": "കോമൺസ് വർഗ്ഗം",
+   "lang": "ml",
+   "description": "name of the Wikimedia Commons category containing files related to this item (without the prefix \"Category:\")",
+   "description_lang": "en"
+  },
+  "P374": {
+   "label": "Insee municipality code",
+   "lang": "en",
+   "description": "identifier/code with five digits or letters for a municipality or a municipal arrondissement in France, per the National Institute of Statistics and Economic Studies",
+   "description_lang": "en"
+  },
+  "P3740": {
+   "label": "number of works",
+   "lang": "en",
+   "description": "qualifier on identifiers, e.g. for creators or locations, giving the number of works in the external database associated with the subject of the identifier",
+   "description_lang": "en"
+  },
+  "P3744": {
+   "label": "number of subscribers",
+   "lang": "en",
+   "description": "number of subscribers for subscription-based companies, e.g. telecommunication companies, newspapers, pay-TV channels, software, etc.",
+   "description_lang": "en"
+  },
+  "P3749": {
+   "label": "Google Maps CID",
+   "lang": "mul",
+   "description": "in Google Maps, Customer identifier for a place",
+   "description_lang": "en"
+  },
+  "P3788": {
+   "label": "BNMM authority ID",
+   "lang": "en",
+   "description": "authority control identifier used at the National Library of Argentina",
+   "description_lang": "en"
+  },
+  "P3831": {
+   "label": "പങ്ക്",
+   "lang": "ml",
+   "description": "ഇനത്തിന്റെ പങ്ക്",
+   "description_lang": "ml"
+  },
+  "P3847": {
+   "label": "Open Library subject ID",
+   "lang": "en",
+   "description": "identifier for a topic in the Open Library database",
+   "description_lang": "en"
+  },
+  "P3896": {
+   "label": "geoshape",
+   "lang": "en",
+   "description": "geographic data from Wikimedia Commons",
+   "description_lang": "en"
+  },
+  "P395": {
+   "label": "vehicle registration plate code",
+   "lang": "en",
+   "description": "distinguishing sign or part of vehicle registration associated with the subject (e.g. military or diplomat).  Registration plate may include flag and country code of its country of registration.",
+   "description_lang": "en"
+  },
+  "P396": {
+   "label": "SBN author ID",
+   "lang": "en",
+   "description": "identifier issued by National Library Service (SBN) of Italy",
+   "description_lang": "en"
+  },
+  "P3984": {
+   "label": "subreddit",
+   "lang": "mul",
+   "description": "name of the Reddit forum associated to this subject",
+   "description_lang": "en"
+  },
+  "P4004": {
+   "label": "escutcheon image",
+   "lang": "en",
+   "description": "use for the shield part only: use P94 for a coat of arms",
+   "description_lang": "en"
+  },
+  "P402": {
+   "label": "ഓപ്പൺസ്ട്രീറ്റ്മാപ്പ് റിലേഷൻ ഐഡി",
+   "lang": "ml",
+   "description": "identifier for a relation in OpenStreetMap",
+   "description_lang": "en"
+  },
+  "P4058": {
+   "label": "FINESS ID",
+   "lang": "en",
+   "description": "identifier of a medical facility in France in the FINESS directory",
+   "description_lang": "en"
+  },
+  "P407": {
+   "label": "കൃതിയുടെ അല്ലെങ്കിൽ പേരിന്റെ ഭാഷ",
+   "lang": "ml",
+   "description": "language associated with this creative work (such as books, shows, songs, broadcasts or websites) or a name (for persons use \"native language\" (P103) and \"languages spoken, written or signed\" (P1412))",
+   "description_lang": "en"
+  },
+  "P409": {
+   "label": "Libraries Australia ID",
+   "lang": "en",
+   "description": "identifier issued by the National Library of Australia. VIAF component. Format: 1-12 digits, removing leading zero-padding.",
+   "description_lang": "en"
+  },
+  "P41": {
+   "label": "പതാകയുടെ ചിത്രം",
+   "lang": "ml",
+   "description": "image of the item's flag",
+   "description_lang": "en"
+  },
+  "P417": {
+   "label": "patron saint",
+   "lang": "en",
+   "description": "patron saint adopted by the subject",
+   "description_lang": "en"
+  },
+  "P4173": {
+   "label": "Instagram location ID",
+   "lang": "en",
+   "description": "identifier for a location on Instagram",
+   "description_lang": "en"
+  },
+  "P4179": {
+   "label": "tabular population",
+   "lang": "en",
+   "description": "same as population (P1082); used when there is data for many different points in time",
+   "description_lang": "en"
+  },
+  "P4212": {
+   "label": "PACTOLS thesaurus ID",
+   "lang": "en",
+   "description": "identifier in the PACTOLS archaeology thesaurus by FRANTIQ",
+   "description_lang": "en"
+  },
+  "P4223": {
+   "label": "Treccani's Enciclopedia Italiana ID",
+   "lang": "en",
+   "description": "identifier for the Enciclopedia Italiana on Treccani website",
+   "description_lang": "en"
+  },
+  "P4264": {
+   "label": "LinkedIn company or organization ID",
+   "lang": "en",
+   "description": "identifier for an official company, school, organisation page, or showcase page, on LinkedIn",
+   "description_lang": "en"
+  },
+  "P4272": {
+   "label": "DPLA subject term",
+   "lang": "en",
+   "description": "term for an item's subject area in the Digital Public Library of America",
+   "description_lang": "en"
+  },
+  "P4291": {
+   "label": "panoramic view",
+   "lang": "en",
+   "description": "panoramic view of the object",
+   "description_lang": "en"
+  },
+  "P4342": {
+   "label": "Store norske leksikon-ID",
+   "lang": "mul",
+   "description": "identifier of an article in the online encyclopedia snl.no",
+   "description_lang": "en"
+  },
+  "P4390": {
+   "label": "mapping relation type",
+   "lang": "en",
+   "description": "qualifier to more precisely define the relation of the item to the external identifier using SKOS",
+   "description_lang": "en"
+  },
+  "P443": {
+   "label": "ഉച്ചാരണ ശബ്ദം",
+   "lang": "ml",
+   "description": "audio file with pronunciation",
+   "description_lang": "en"
+  },
+  "P4440": {
+   "label": "Biblioteca Nacional de México ID",
+   "lang": "en",
+   "description": "authority control identifier used at the Biblioteca Nacional de México",
+   "description_lang": "en"
+  },
+  "P4527": {
+   "label": "UK Parliament thesaurus ID",
+   "lang": "en",
+   "description": "identifier in the thesaurus of subject headings maintained by the librarians in the House of Commons in the UK",
+   "description_lang": "en"
+  },
+  "P459": {
+   "label": "നിർണ്ണയ രീതി",
+   "lang": "ml",
+   "description": "വില നിശ്ചയിച്ച രീതി",
+   "description_lang": "ml"
+  },
+  "P4619": {
+   "label": "National Library of Brazil ID",
+   "lang": "en",
+   "description": "identifier for an element in the database of the National Library of Brazil",
+   "description_lang": "en"
+  },
+  "P463": {
+   "label": "എവിടെയെല്ലാം അംഗമാണ്",
+   "lang": "ml",
+   "description": "organization, club or musical group to which the subject belongs. Do not use for membership in ethnic or social groups, nor for holding a political position, such as a member of parliament (use P39 for that)",
+   "description_lang": "en"
+  },
+  "P4640": {
+   "label": "spherical panorama image",
+   "lang": "en",
+   "description": "image with the field of view 360×180 degrees",
+   "description_lang": "en"
+  },
+  "P4672": {
+   "label": "Early Modern Letters Online location ID",
+   "lang": "en",
+   "description": "identifier for a location in the Early Modern Letters Online database maintained by the University of Oxford",
+   "description_lang": "en"
+  },
+  "P47": {
+   "label": "അതിർത്തി പങ്കിടുന്നത്",
+   "lang": "ml",
+   "description": "countries or administrative subdivisions, of equal level, that this item borders, either by land or water. A single common point is enough.",
+   "description_lang": "en"
+  },
+  "P473": {
+   "label": "പ്രാദേശിക ഡയലിംഗ് കോഡ്",
+   "lang": "ml",
+   "description": "ആശയവിനിമയ ശൃംഖലയിൽ പ്രദേശത്തെ തിരിച്ചറിയാനുള്ള കോഡ്",
+   "description_lang": "ml"
+  },
+  "P478": {
+   "label": "വാല്യം",
+   "lang": "ml",
+   "description": "volume of a book or music release in a collection/series or a published collection of journal issues in a serial publication",
+   "description_lang": "en"
+  },
+  "P4813": {
+   "label": "PARES ID",
+   "lang": "en",
+   "description": "identifier for a person, place, or topic on the Spanish Archives Portal",
+   "description_lang": "en"
+  },
+  "P486": {
+   "label": "MeSH descriptor ID",
+   "lang": "en",
+   "description": "identifier for Descriptor or Supplementary concept in the Medical Subject Headings controlled vocabulary",
+   "description_lang": "en"
+  },
+  "P4900": {
+   "label": "broader concept",
+   "lang": "en",
+   "description": "qualifier to indicate a broader concept that the present item is part of, as mapped by an external source. The statement being qualified should be an exact match.",
+   "description_lang": "en"
+  },
+  "P50": {
+   "label": "രചയിതാവ്",
+   "lang": "ml",
+   "description": "ഒരു ലിഖിത കൃതിയുടെ പ്രധാന സ്രഷ്ടാവ്(കൾ) (കൃതികളിൽ ഉപയോഗിക്കുക, മനുഷ്യരിലല്ല); വിക്കിഡാറ്റ ഇനം അജ്ഞാതമോ നിലവിലില്ലെങ്കിലോ P2093 (രചയിതാവിന്റെ പേര് സ്ട്രിംഗ്) ഉപയോഗിക്കുക.",
+   "description_lang": "ml"
+  },
+  "P5008": {
+   "label": "on focus list of Wikimedia project",
+   "lang": "en",
+   "description": "property to indicate that an item is of particular interest for a Wikimedia project. This property does not add notability. Items should not be created with this property if they are not notable for Wikidata. See also P6104, P972, P2354",
+   "description_lang": "en"
+  },
+  "P5019": {
+   "label": "Brockhaus Enzyklopädie online ID",
+   "lang": "en",
+   "description": "identifier for an article in the online version of Brockhaus Enzyklopädie",
+   "description_lang": "en"
+  },
+  "P5023": {
+   "label": "activity policy in this place",
+   "lang": "en",
+   "description": "policy for activities in this place, for example no photos, photos allowed, no flash, lighting fires, flying drones, etc.",
+   "description_lang": "en"
+  },
+  "P5063": {
+   "label": "Interlingual Index ID",
+   "lang": "en",
+   "description": "identifier for a concept in the Global WordNet Association's Collaborative Interlingual Index",
+   "description_lang": "en"
+  },
+  "P5102": {
+   "label": "nature of statement",
+   "lang": "en",
+   "description": "(qualifier only) the underlying circumstances of this statement",
+   "description_lang": "en"
+  },
+  "P518": {
+   "label": "ബാധകമാകുന്ന ഭാഗം",
+   "lang": "ml",
+   "description": "part, aspect, or form of the item to which the claim applies",
+   "description_lang": "en"
+  },
+  "P5185": {
+   "label": "വ്യാകരണപരമായ ലിംഗഭേദം",
+   "lang": "ml",
+   "description": "grammatical gender of the word",
+   "description_lang": "en"
+  },
+  "P5247": {
+   "label": "Giant Bomb ID (former scheme)",
+   "lang": "en",
+   "description": "identifier at the Giant Bomb database of video games, fictional characters and voice actors",
+   "description_lang": "en"
+  },
+  "P5432": {
+   "label": "setlist.fm venue ID",
+   "lang": "en",
+   "description": "identifier for a music venue at Setlist.fm",
+   "description_lang": "en"
+  },
+  "P5436": {
+   "label": "number of viewers/listeners",
+   "lang": "en",
+   "description": "number of viewers of a television or broadcasting program; web traffic on websites",
+   "description_lang": "en"
+  },
+  "P5551": {
+   "label": "Courrier international topic ID",
+   "lang": "en",
+   "description": "identifier for a topic on the Courrier international website",
+   "description_lang": "en"
+  },
+  "P5573": {
+   "label": "archINFORM location ID",
+   "lang": "en",
+   "description": "identifier for a location on the archINFORM website",
+   "description_lang": "en"
+  },
+  "P571": {
+   "label": "ഉത്പത്തി",
+   "lang": "ml",
+   "description": "സംഘടനയും മറ്റും സ്ഥാപിച്ച തീയതി",
+   "description_lang": "ml"
+  },
+  "P5737": {
+   "label": "Moegirlpedia ID",
+   "lang": "en",
+   "description": "Chinese-, Japanese-, or English-language articles and categories about ACG culture hosted on any of the Moegirlpedia family of wikis",
+   "description_lang": "en"
+  },
+  "P577": {
+   "label": "പ്രസിദ്ധീകരിച്ച തീയതി",
+   "lang": "ml",
+   "description": "date or point in time when a work or product was first published or released",
+   "description_lang": "en"
+  },
+  "P5785": {
+   "label": "EU Participant Identification Code",
+   "lang": "en",
+   "description": "ID of organization participating in EU programmes",
+   "description_lang": "en"
+  },
+  "P580": {
+   "label": "പ്രാരംഭത്തീയതി",
+   "lang": "ml",
+   "description": "time an entity begins to exist or a statement starts being valid",
+   "description_lang": "en"
+  },
+  "P582": {
+   "label": "സമാപനത്തീയതി",
+   "lang": "ml",
+   "description": "moment when an entity ceases to exist and a statement stops being entirely valid or no longer be true",
+   "description_lang": "en"
+  },
+  "P5843": {
+   "label": "Gynopedia ID",
+   "lang": "en",
+   "description": "identifier for a place (city, region or country) on the Gynopedia wiki about sexual and reproductive health care",
+   "description_lang": "en"
+  },
+  "P585": {
+   "label": "പ്രാബല്യത്തീയതി",
+   "lang": "ml",
+   "description": "സംഭവം നടന്ന, അല്ലെങ്കിൽ, അവസ്ഥ പ്രാബല്യത്തിൽ വന്ന തീയതിയോ സമയമോ, ഏതു വർഷത്തെ കണക്കനുസരിച്ച്, ഏതു കാലഘട്ടത്തിൽ",
+   "description_lang": "ml"
+  },
+  "P5905": {
+   "label": "Comic Vine ID",
+   "lang": "mul",
+   "description": "identifier at the Comic Vine database of comic books, fictional characters, people, films and television series/episodes",
+   "description_lang": "en"
+  },
+  "P5982": {
+   "label": "annual number of weddings",
+   "lang": "en",
+   "description": "number of marriages per year in a location",
+   "description_lang": "en"
+  },
+  "P6": {
+   "label": "ഭരണാധികാരി",
+   "lang": "ml",
+   "description": "head of the executive power of this town, city, municipality, state, country, or other governmental body",
+   "description_lang": "en"
+  },
+  "P605": {
+   "label": "NUTS code",
+   "lang": "en",
+   "description": "code for a region per NUTS (Nomenclature des unités territoriales statistiques), a geocode standard for referencing the administrative divisions of countries for statistical purposes",
+   "description_lang": "en"
+  },
+  "P6058": {
+   "label": "Larousse ID",
+   "lang": "mul",
+   "description": "identifier for a subject on the 'Encyclopédie Larousse'",
+   "description_lang": "en"
+  },
+  "P610": {
+   "label": "ഏറ്റവും ഉയരം കൂടിയ സ്ഥാനം",
+   "lang": "ml",
+   "description": "point with highest elevation in a region or path",
+   "description_lang": "en"
+  },
+  "P6104": {
+   "label": "maintained by WikiProject",
+   "lang": "en",
+   "description": "WikiProject that maintains this property, item, or linked pages. If the WikiProject is hosted outside of Wikidata, identify the hosting project using the qualifier \"part of\" (P361)",
+   "description_lang": "en"
+  },
+  "P6200": {
+   "label": "BBC News topic ID",
+   "lang": "mul",
+   "description": "identifier for a topic on the BBC News website",
+   "description_lang": "en"
+  },
+  "P625": {
+   "label": "ഭൗമനിർദ്ദേശാങ്കങ്ങൾ",
+   "lang": "ml",
+   "description": "ഭൂമിയിലെ സ്ഥാനം",
+   "description_lang": "ml"
+  },
+  "P6262": {
+   "label": "Fandom article ID",
+   "lang": "en",
+   "description": "identifier of an article on Fandom (Wikia). Format: subdomain:Page_title (language-code.subdomain:Page_title for non-English wikis)",
+   "description_lang": "en"
+  },
+  "P6293": {
+   "label": "YSA ID",
+   "lang": "mul",
+   "description": "identifier for a concept in the General Finnish Thesaurus YSA",
+   "description_lang": "en"
+  },
+  "P6385": {
+   "label": "Krugosvet article (archived)",
+   "lang": "en",
+   "description": "link to article of Russian-language online encyclopedia",
+   "description_lang": "en"
+  },
+  "P6404": {
+   "label": "Treccani's Dizionario di Storia ID",
+   "lang": "en",
+   "description": "identifier for Dizionario di Storia (\"Dictionary of History\") by Treccani",
+   "description_lang": "en"
+  },
+  "P646": {
+   "label": "ഫ്രീബേസ് ഐ.ഡി.",
+   "lang": "ml",
+   "description": "Machine Identifier (MID) for a topic in the former Freebase knowledge graph; new Freebase MIDs are no longer issued, but existing /m/ identifiers remain in use, including by Google Knowledge Graph",
+   "description_lang": "en"
+  },
+  "P648": {
+   "label": "ഓപ്പണ്‍ ലൈബ്രറി",
+   "lang": "ml",
+   "description": "identifier for a work (\"W\"), edition (\"M\") or author (\"A\") for book data of the Internet Archive",
+   "description_lang": "en"
+  },
+  "P6552": {
+   "label": "X (Twitter) numeric user ID",
+   "lang": "en",
+   "description": "numeric identifier for a user on X; use as qualifier for P2002 \"X username\"",
+   "description_lang": "en"
+  },
+  "P6573": {
+   "label": "Klexikon article ID",
+   "lang": "en",
+   "description": "ID of an article in Klexikon",
+   "description_lang": "en"
+  },
+  "P6698": {
+   "label": "Japan Search name ID",
+   "lang": "en",
+   "description": "identifier in the Japan Search portal",
+   "description_lang": "en"
+  },
+  "P6706": {
+   "label": "De Agostini ID",
+   "lang": "en",
+   "description": "identifier for a subject on the Enciclopedia De Agostini online",
+   "description_lang": "en"
+  },
+  "P672": {
+   "label": "MeSH tree code",
+   "lang": "en",
+   "description": "hierarchical category codes for MeSH descriptors (≠ MeSH ID)",
+   "description_lang": "en"
+  },
+  "P6766": {
+   "label": "Who's on First ID",
+   "lang": "mul",
+   "description": "identifier from the Who's on First database",
+   "description_lang": "en"
+  },
+  "P6773": {
+   "label": "HAL structure ID",
+   "lang": "en",
+   "description": "numerical code for a research institution as stored in HAL author affiliations",
+   "description_lang": "en"
+  },
+  "P6821": {
+   "label": "Alvin ID",
+   "lang": "en",
+   "description": "platform for digital collections and digitized cultural heritage in Uppsala about, managed by Uppsala university library",
+   "description_lang": "en"
+  },
+  "P6839": {
+   "label": "TV Tropes ID",
+   "lang": "en",
+   "description": "identifier in the TV Tropes online wiki",
+   "description_lang": "en"
+  },
+  "P6900": {
+   "label": "NicoNicoPedia ID",
+   "lang": "en",
+   "description": "identifier for an article in NicoNicoPedia",
+   "description_lang": "en"
+  },
+  "P691": {
+   "label": "NL CR AUT ID",
+   "lang": "en",
+   "description": "identifier in the Czech National Authority Database of National Library of the Czech Republic (NL CR)",
+   "description_lang": "en"
+  },
+  "P6987": {
+   "label": "Hungarian National Namespace place ID (old)",
+   "lang": "en",
+   "description": "identifier for a place in the Hungarian National Namespace",
+   "description_lang": "en"
+  },
+  "P708": {
+   "label": "രൂപത",
+   "lang": "ml",
+   "description": "administrative division of the church to which the element belongs; use P5607 for other types of ecclesiastical territorial entities",
+   "description_lang": "en"
+  },
+  "P7085": {
+   "label": "TikTok username",
+   "lang": "en",
+   "description": "this item's username on TikTok; do not include the “@” symbol",
+   "description_lang": "en"
+  },
+  "P7108": {
+   "label": "location of the point of view",
+   "lang": "en",
+   "description": "geographic location of point of view, may or may not be depicted",
+   "description_lang": "en"
+  },
+  "P7185": {
+   "label": "eska.pl topic ID",
+   "lang": "en",
+   "description": "identifier for an topic on eska.pl site",
+   "description_lang": "en"
+  },
+  "P7197": {
+   "label": "OpenWeatherMap city ID",
+   "lang": "en",
+   "description": "identifier for a location on OpenWeatherMap (not exclusively cities)",
+   "description_lang": "en"
+  },
+  "P7284": {
+   "label": "The Independent topic ID",
+   "lang": "en",
+   "description": "identifier for an topic on website of the English newspaper \"The Independent\"",
+   "description_lang": "en"
+  },
+  "P7305": {
+   "label": "Online PWN Encyclopedia ID",
+   "lang": "en",
+   "description": "identifier for an entry in the online release of the Online PWN Encyclopedia",
+   "description_lang": "en"
+  },
+  "P7452": {
+   "label": "reason for preferred rank",
+   "lang": "en",
+   "description": "qualifier to allow the reason to be indicated why a particular statement should be considered preferred",
+   "description_lang": "en"
+  },
+  "P7471": {
+   "label": "iNaturalist place ID",
+   "lang": "en",
+   "description": "identifier for a place in iNaturalist",
+   "description_lang": "en"
+  },
+  "P7502": {
+   "label": "Golden ID (archived)",
+   "lang": "en",
+   "description": "ID page in Golden knowledge base",
+   "description_lang": "en"
+  },
+  "P7522": {
+   "label": "SK cinema authority ID",
+   "lang": "en",
+   "description": "identifier for a person, organisation, topic, event, genre or work title in the SK cinema authority file (Heslár SFÚ)",
+   "description_lang": "en"
+  },
+  "P7562": {
+   "label": "UVL group ID",
+   "lang": "en",
+   "description": "identifier of a group in the Universal Videogame List",
+   "description_lang": "en"
+  },
+  "P7607": {
+   "label": "WikiTree category or space",
+   "lang": "en",
+   "description": "Categories in Wikitree for things that also exist in Wikidata like cemeteries",
+   "description_lang": "en"
+  },
+  "P7666": {
+   "label": "article ID in the Lithuanian Universal Encyclopedia Online",
+   "lang": "en",
+   "description": "identifier for an item in the online edition of the Visuotinė lietuvių enciklopedija",
+   "description_lang": "en"
+  },
+  "P7704": {
+   "label": "Europeana entity",
+   "lang": "en",
+   "description": "identifier for persons, places and topics at Europeana",
+   "description_lang": "en"
+  },
+  "P7783": {
+   "label": "J-GLOBAL ID",
+   "lang": "en",
+   "description": "identifier of a topic on J-GLOBAL",
+   "description_lang": "en"
+  },
+  "P7846": {
+   "label": "Beta maṣāḥǝft ID",
+   "lang": "en",
+   "description": "stable identifier of a resource linked to the Ethiopic manuscript tradition present in the Beta maṣāḥǝft research environment (https://betamasaheft.eu/)",
+   "description_lang": "en"
+  },
+  "P7850": {
+   "label": "Joconde location ID",
+   "lang": "en",
+   "description": "identifier for places from the Service des Musées de France Joconde authority file",
+   "description_lang": "en"
+  },
+  "P7867": {
+   "label": "category for maps or plans",
+   "lang": "en",
+   "description": "name of the Wikimedia category specifically for maps or plans of this item",
+   "description_lang": "en"
+  },
+  "P7870": {
+   "label": "Analysis & Policy Observatory term ID",
+   "lang": "en",
+   "description": "identifier for a term in the Analysis & Policy Observatory taxonomy",
+   "description_lang": "en"
+  },
+  "P793": {
+   "label": "പ്രധാനപ്പെട്ട സംഭവം",
+   "lang": "ml",
+   "description": "significant or notable events associated with the subject",
+   "description_lang": "en"
+  },
+  "P7960": {
+   "label": "Joconde discovery ID",
+   "lang": "en",
+   "description": "identifier for a discovery environment in the Service des Musées de France Joconde authority file",
+   "description_lang": "en"
+  },
+  "P797": {
+   "label": "authority",
+   "lang": "en",
+   "description": "entity having executive power on given entity",
+   "description_lang": "en"
+  },
+  "P805": {
+   "label": "statement is subject of",
+   "lang": "en",
+   "description": "(qualifying) item that describes the relation identified in this statement",
+   "description_lang": "en"
+  },
+  "P8119": {
+   "label": "HASC",
+   "lang": "mul",
+   "description": "Hierarchical Administrative Subdivision Code: code to represent a country's administrative divisions, such as states, provinces, and regions",
+   "description_lang": "en"
+  },
+  "P8136": {
+   "label": "Il Sole 24 Ore topic ID",
+   "lang": "en",
+   "description": "identifier for a topic on the website of Il Sole 24 Ore newspaper",
+   "description_lang": "en"
+  },
+  "P8138": {
+   "label": "located in the statistical territorial entity",
+   "lang": "en",
+   "description": "statistical territorial entity in which a place is located or is part of. If a municipality or county is split into or part of several regions: add several values",
+   "description_lang": "en"
+  },
+  "P8168": {
+   "label": "FactGrid item ID",
+   "lang": "en",
+   "description": "identifier for an item in FactGrid",
+   "description_lang": "en"
+  },
+  "P8179": {
+   "label": "Canadiana Name Authority ID",
+   "lang": "en",
+   "description": "system control number used in the Canadiana Name Authority File, format: \"ncf\" followed by 8 digits",
+   "description_lang": "en"
+  },
+  "P8189": {
+   "label": "J9U ID",
+   "lang": "mul",
+   "description": "identifier used by the National Library of Israel",
+   "description_lang": "en"
+  },
+  "P8217": {
+   "label": "iDAI.gazetteer ID",
+   "lang": "en",
+   "description": "identifier for a place in the database iDAI.gazetteer compiled by the German Archaeological Institute",
+   "description_lang": "en"
+  },
+  "P8309": {
+   "label": "Yle topic ID",
+   "lang": "en",
+   "description": "identifier for topics in Finland's national broadcaster Yle's web services",
+   "description_lang": "en"
+  },
+  "P8313": {
+   "label": "Lex ID",
+   "lang": "en",
+   "description": "identifier of an article in the online encyclopedia.lex.dk",
+   "description_lang": "en"
+  },
+  "P8400": {
+   "label": "House Divided ID",
+   "lang": "en",
+   "description": "identifier of a topic in House Divided: The Civil War Research Engine at Dickinson College",
+   "description_lang": "en"
+  },
+  "P8402": {
+   "label": "open data portal",
+   "lang": "en",
+   "description": "platform with publicly accessible data of an organization",
+   "description_lang": "en"
+  },
+  "P8406": {
+   "label": "Grove Art Online ID",
+   "lang": "en",
+   "description": "identifier of a topic in Grove Art Online",
+   "description_lang": "en"
+  },
+  "P8408": {
+   "label": "KBpedia ID",
+   "lang": "en",
+   "description": "identifier for the KBpedia knowledge graph, which provides consistent mappings across seven large-scale public knowledge bases including Wikidata, and is used to promote data interoperability and extraction of training sets for machine learning",
+   "description_lang": "en"
+  },
+  "P8419": {
+   "label": "Archive of Our Own tag",
+   "lang": "en",
+   "description": "tag for this item on Archive of Our Own",
+   "description_lang": "en"
+  },
+  "P8422": {
+   "label": "EHESS ID of a French commune",
+   "lang": "en",
+   "description": "identifier with digits to describe of French commune by EHESS",
+   "description_lang": "en"
+  },
+  "P8519": {
+   "label": "RKD thesaurus ID",
+   "lang": "en",
+   "description": "identifier in the RKD thesaurus (Rijksbureau voor Kunsthistorische Documentatie)",
+   "description_lang": "en"
+  },
+  "P854": {
+   "label": "അവലംബ യൂ.ആർ.എൽ.",
+   "lang": "ml",
+   "description": "should be used for Internet URLs as references. Use \"Wikimedia import URL\" (P4656) for imports from Wikimedia sites",
+   "description_lang": "en"
+  },
+  "P856": {
+   "label": "ഔദ്യോഗിക വെബ്‌സൈറ്റ്",
+   "lang": "ml",
+   "description": "വെബ്‌സൈറ്റിലോട്ടുള്ള യു.ആർ.എൽ.",
+   "description_lang": "ml"
+  },
+  "P8590": {
+   "label": "Jewish Encyclopedia ID",
+   "lang": "en",
+   "description": "article identifier in online version of 1906 Jewish Encyclopedia",
+   "description_lang": "en"
+  },
+  "P8592": {
+   "label": "aerial view",
+   "lang": "en",
+   "description": "image of the subject taken from the air",
+   "description_lang": "en"
+  },
+  "P8593": {
+   "label": "Hikr waypoint ID",
+   "lang": "en",
+   "description": "numerical identifier for a waypoint on hikr.org",
+   "description_lang": "en"
+  },
+  "P8630": {
+   "label": "Thomas Jefferson Encyclopedia ID",
+   "lang": "en",
+   "description": "identifier for an entry on the Thomas Jefferson Encyclopedia website",
+   "description_lang": "en"
+  },
+  "P868": {
+   "label": "foods traditionally associated",
+   "lang": "en",
+   "description": "foods associated with an event, place, or people",
+   "description_lang": "en"
+  },
+  "P8687": {
+   "label": "social media followers",
+   "lang": "en",
+   "description": "number of subscribers on a particular social media website (use as main statement only; see P3744 instead for qualifier). Qualify with \"point in time\" and property for account. For Twitter, use numeric id.",
+   "description_lang": "en"
+  },
+  "P8714": {
+   "label": "GADM ID",
+   "lang": "en",
+   "description": "identifier in the Global Administrative Areas database",
+   "description_lang": "en"
+  },
+  "P8744": {
+   "label": "economy of topic",
+   "lang": "en",
+   "description": "item that deals with the economy of the subject",
+   "description_lang": "en"
+  },
+  "P8798": {
+   "label": "for color scheme",
+   "lang": "en",
+   "description": "which color scheme this statement is designed for",
+   "description_lang": "en"
+  },
+  "P8814": {
+   "label": "WordNet 3.1 Synset ID",
+   "lang": "en",
+   "description": "Synset identifier in Princeton’s WordNet Version 3.1",
+   "description_lang": "en"
+  },
+  "P8885": {
+   "label": "Namuwiki ID",
+   "lang": "en",
+   "description": "identifier of an article on Namuwiki",
+   "description_lang": "en"
+  },
+  "P8899": {
+   "label": "Swedish National Library Arken ID",
+   "lang": "en",
+   "description": "identifier of an entry in the Arken website maintained by the National Library of Sweden",
+   "description_lang": "en"
+  },
+  "P8974": {
+   "label": "SPAP ID",
+   "lang": "en",
+   "description": "identifier used by the Swiss Performing Arts Platform",
+   "description_lang": "en"
+  },
+  "P898": {
+   "label": "ഉച്ചാരണം (IPA)",
+   "lang": "ml",
+   "description": "transcription in the International Phonetic Alphabet",
+   "description_lang": "en"
+  },
+  "P902": {
+   "label": "HDS ID",
+   "lang": "en",
+   "description": "identifier in HDS/HLS/DHS/DSS: Historical Dictionary of Switzerland (Q642074), a national encyclopedia",
+   "description_lang": "en"
+  },
+  "P9037": {
+   "label": "BHCL-UUID",
+   "lang": "mul",
+   "description": "UUID of authorities used in the Bibliography of the History of the Czech Lands (BHCL)",
+   "description_lang": "en"
+  },
+  "P910": {
+   "label": "വിഷയത്തിന്റെ പ്രധാന വർഗ്ഗം",
+   "lang": "ml",
+   "description": "പ്രധാന വിക്കിമീഡിയ വർഗ്ഗം",
+   "description_lang": "ml"
+  },
+  "P9100": {
+   "label": "GitHub topic",
+   "lang": "en",
+   "description": "GitHub topic for a repository or subject",
+   "description_lang": "en"
+  },
+  "P9223": {
+   "label": "Provenio UUID",
+   "lang": "en",
+   "description": "UUID of a book owner in the Provenance Database of Book Owners and the Book Provenance Records",
+   "description_lang": "en"
+  },
+  "P9226": {
+   "label": "ARAE ID",
+   "lang": "en",
+   "description": "identifier for an entity (person, organization, family) in the Archivo de la Real Academia Española",
+   "description_lang": "en"
+  },
+  "P9241": {
+   "label": "demographics of topic",
+   "lang": "en",
+   "description": "item that deals with demographics of the subject",
+   "description_lang": "en"
+  },
+  "P9272": {
+   "label": "DeCS ID",
+   "lang": "en",
+   "description": "identifier in the Health Sciences Descriptors thesaurus",
+   "description_lang": "en"
+  },
+  "P9293": {
+   "label": "AIATSIS Place Thesaurus ID",
+   "lang": "en",
+   "description": "identifier for a place in the AIATSIS Place Thesaurus",
+   "description_lang": "en"
+  },
+  "P9314": {
+   "label": "Latin Place Names ID",
+   "lang": "en",
+   "description": "identifier for the Latin name of a place in the database Latin Place Names",
+   "description_lang": "en"
+  },
+  "P9318": {
+   "label": "Ávvir topic ID",
+   "lang": "en",
+   "description": "identifier of a topic in the Northern Sámi publication Ávvir",
+   "description_lang": "en"
+  },
+  "P9322": {
+   "label": "SVKKL authority ID",
+   "lang": "en",
+   "description": "identifier in the regional authority database of Central Bohemian Research Library",
+   "description_lang": "en"
+  },
+  "P9346": {
+   "label": "France 24 topic ID (French)",
+   "lang": "en",
+   "description": "identifier of a topic on the French version of the France 24 website",
+   "description_lang": "en"
+  },
+  "P935": {
+   "label": "വിക്കിമീഡിയയിലെ ചിത്രശാല",
+   "lang": "ml",
+   "description": "name of the Wikimedia Commons gallery page(s) related to this item (is suitable to allow multiple links to more gallery pages)",
+   "description_lang": "en"
+  },
+  "P9368": {
+   "label": "CNA topic ID",
+   "lang": "mul",
+   "description": "identifier for a topic on CNA's website",
+   "description_lang": "en"
+  },
+  "P9371": {
+   "label": "FranceArchives agent ID",
+   "lang": "en",
+   "description": "identifier for a person on FranceArchives",
+   "description_lang": "en"
+  },
+  "P94": {
+   "label": "coat of arms image",
+   "lang": "en",
+   "description": "image of the item's coat of arms - for the shield part only use P4004",
+   "description_lang": "en"
+  },
+  "P9466": {
+   "label": "Gyldendals Teaterleksikon ID",
+   "lang": "en",
+   "description": "identifier of an article in the online encyclopedia teaterleksikon.lex.dk",
+   "description_lang": "en"
+  },
+  "P948": {
+   "label": "പേജ് ബാനർ",
+   "lang": "ml",
+   "description": "വിഷയത്തെപ്പറ്റിയുള്ള ഒരു വലിയ ചിത്രം",
+   "description_lang": "ml"
+  },
+  "P9482": {
+   "label": "Catalogue of the General State Archives ID",
+   "lang": "en",
+   "description": "identifier for an entity (person, organization, family) in the catalog of the General State Archives of Greece",
+   "description_lang": "en"
+  },
+  "P949": {
+   "label": "National Library of Israel ID (old)",
+   "lang": "en",
+   "description": "former identifier for authority control used at the National Library of Israel. Replaced with \"National Library of Israel J9U ID\" (P8189)",
+   "description_lang": "en"
+  },
+  "P9495": {
+   "label": "National Historical Museums of Sweden ID",
+   "lang": "en",
+   "description": "authority identification for an entry in the collections of the National Historical Museums of Sweden",
+   "description_lang": "en"
+  },
+  "P950": {
+   "label": "National Library of Spain SpMaBN ID",
+   "lang": "mul",
+   "description": "semi-deprecated control number of the National Library of Spain catalog powered by Symphony. Format for persons: \"XX\" followed by 4 to 7 digits. (Formerly referred to in VIAF as BNE)",
+   "description_lang": "en"
+  },
+  "P9545": {
+   "label": "Encyclopedia of China (Second Edition) ID",
+   "lang": "en",
+   "description": "identifier for an article in the online version of Encyclopedia of China (Second Edition)",
+   "description_lang": "en"
+  },
+  "P9611": {
+   "label": "district heating grid",
+   "lang": "en",
+   "description": "district heating (or cooling) grid of region/locality connecting producers and residential or commercial consumers in the area",
+   "description_lang": "en"
+  },
+  "P9629": {
+   "label": "Armeniapedia ID",
+   "lang": "en",
+   "description": "numeric identifier for an article in the online encyclopedia Armeniapedia",
+   "description_lang": "en"
+  },
+  "P9675": {
+   "label": "MediaWiki page ID",
+   "lang": "en",
+   "description": "numeric identifier of a page in a MediaWiki wiki",
+   "description_lang": "en"
+  },
+  "P972": {
+   "label": "catalog",
+   "lang": "en",
+   "description": "catalog for the item, or, as a qualifier of P528 – catalog for which the 'catalog code' is valid",
+   "description_lang": "en"
+  },
+  "P9734": {
+   "label": "Treccani's Enciclopedia Dantesca ID",
+   "lang": "en",
+   "description": "identifier for an item in the Enciclopedia Dantesca",
+   "description_lang": "en"
+  },
+  "P9757": {
+   "label": "Schoenberg Database of Manuscripts place ID",
+   "lang": "en",
+   "description": "identifier for a place in the Schoenberg Database of Manuscripts",
+   "description_lang": "en"
+  },
+  "P9809": {
+   "label": "Enciclopedia dell'Arte Antica ID",
+   "lang": "en",
+   "description": "identifier for an item in the Enciclopedia dell'Arte Antica on the Istituto dell'Enciclopedia Italiana website",
+   "description_lang": "en"
+  },
+  "P982": {
+   "label": "MusicBrainz area ID",
+   "lang": "en",
+   "description": "identifier for an area in the MusicBrainz open music database",
+   "description_lang": "en"
+  },
+  "P9826": {
+   "label": "Great Encyclopedia of Cyril and Methodius entry ID",
+   "lang": "en",
+   "description": "ID for an entry on the Great Encyclopedia of Cyrill and Methodius",
+   "description_lang": "en"
+  },
+  "P9850": {
+   "label": "Enciclopedia dell'Arte Medievale ID",
+   "lang": "en",
+   "description": "alphabetical identifier for an item in the Enciclopedia dell'Arte Medievale on the Istituto dell'Enciclopedia Italiana website",
+   "description_lang": "en"
+  },
+  "P9885": {
+   "label": "Bing ID",
+   "lang": "mul",
+   "description": "identifier for an entity in Microsoft Bing; the former public Bing Search resolver was retired on 11 August 2025, while bingId remains exposed by Azure AI Language Entity Linking",
+   "description_lang": "en"
+  },
+  "P9957": {
+   "label": "museum-digital place ID",
+   "lang": "en",
+   "description": "identifier for a place in museum-digital's md:term vocabulary",
+   "description_lang": "en"
+  },
+  "P9964": {
+   "label": "Kalliope-Verbund (GND) ID",
+   "lang": "en",
+   "description": "GND identifier for an entity in the Kalliope-Verbund database",
+   "description_lang": "en"
+  },
+  "P998": {
+   "label": "Curlie ID",
+   "lang": "mul",
+   "description": "category path at Open Directory Project",
+   "description_lang": "en"
+  },
+  "P9983": {
+   "label": "Enciclopedia dei ragazzi ID",
+   "lang": "en",
+   "description": "identifier for an item in the Enciclopedia dei ragazzi on the Institute of the Italian Encyclopaedia website",
+   "description_lang": "en"
+  },
+  "P9984": {
+   "label": "CANTIC ID",
+   "lang": "mul",
+   "description": "identifier for authority control managed by the Library of Catalonia",
+   "description_lang": "en"
+  },
+  "Q101608434": {
+   "label": "dark-on-light color scheme",
+   "lang": "en",
+   "description": "color scheme that uses dark-colored text and icons on a light background",
+   "description_lang": "en"
+  },
+  "Q101625": {
+   "label": "മരാക്കേഷ്",
+   "lang": "ml",
+   "description": "city in Marrakesh-Safi, Morocco",
+   "description_lang": "en"
+  },
+  "Q1018504": {
+   "label": "Paris",
+   "lang": "en",
+   "description": "city in and the county seat of Henry County, Tennessee, United States",
+   "description_lang": "en"
+  },
+  "Q1032646": {
+   "label": "Canal de l'Ourcq",
+   "lang": "en",
+   "description": "canal",
+   "description_lang": "en"
+  },
+  "Q104197": {
+   "label": "Paris",
+   "lang": "mul",
+   "description": "വിക്കിപീഡിയ വിവക്ഷ താൾ",
+   "description_lang": "ml"
+  },
+  "Q1052584": {
+   "label": "Rally for the Republic",
+   "lang": "en",
+   "description": "former French political party",
+   "description_lang": "en"
+  },
+  "Q105265074": {
+   "label": "canonical tag",
+   "lang": "en",
+   "description": "tag quality used by Archive of Our Own",
+   "description_lang": "en"
+  },
+  "Q105687036": {
+   "label": "réseau de chaleur urbain CPCU",
+   "lang": "en",
+   "description": "district heating system in Paris, France",
+   "description_lang": "en"
+  },
+  "Q105740844": {
+   "label": "Parisians",
+   "lang": "en",
+   "description": "people from or residents of Paris, France",
+   "description_lang": "en"
+  },
+  "Q106577": {
+   "label": "ന്യൂസ്ട്രിയ",
+   "lang": "ml",
+   "description": "ഫ്രാങ്ക്സ് സാമ്രാജ്യത്തിന്റെ പടിഞ്ഞാറ് ഭാഗം",
+   "description_lang": "ml"
+  },
+  "Q1066984": {
+   "label": "financial center",
+   "lang": "en",
+   "description": "city that is home to a large number of internationally significant banks, businesses, and stock exchanges",
+   "description_lang": "en"
+  },
+  "Q107316855": {
+   "label": "additional tag",
+   "lang": "en",
+   "description": "tag category used by Archive of Our Own",
+   "description_lang": "en"
+  },
+  "Q107994593": {
+   "label": "1922 Encyclopædia Britannica/Paris",
+   "lang": "en",
+   "description": "encyclopedic article",
+   "description_lang": "en"
+  },
+  "Q1081225": {
+   "label": "Paris metropolitan area",
+   "lang": "en",
+   "description": "statistical area corresponding to Paris commuting catchment area",
+   "description_lang": "en"
+  },
+  "Q10816832": {
+   "label": "WikiProject France",
+   "lang": "en",
+   "description": "Wikimedia subject-area collaboration",
+   "description_lang": "en"
+  },
+  "Q108178728": {
+   "label": "national capital",
+   "lang": "en",
+   "description": "capital of a sovereign state",
+   "description_lang": "en"
+  },
+  "Q1082222": {
+   "label": "Paris unité urbaine",
+   "lang": "en",
+   "description": "Paris and surrounding built-up areas",
+   "description_lang": "en"
+  },
+  "Q10855271": {
+   "label": "Knight of the Legion of Honour",
+   "lang": "en",
+   "description": "first rank of the French Legion of Honour",
+   "description_lang": "en"
+  },
+  "Q10858397": {
+   "label": "WikiProject European Union",
+   "lang": "en",
+   "description": "Wikimedia subject-area collaboration",
+   "description_lang": "en"
+  },
+  "Q108921672": {
+   "label": "Paris attraction area",
+   "lang": "en",
+   "description": "attraction area located in France",
+   "description_lang": "en"
+  },
+  "Q109513493": {
+   "label": "Paris",
+   "lang": "en",
+   "description": "village in Republic of the Congo",
+   "description_lang": "en"
+  },
+  "Q10981622": {
+   "label": "Paris",
+   "lang": "en",
+   "description": "unincorporated community in Stark County, Ohio",
+   "description_lang": "en"
+  },
+  "Q110786": {
+   "label": "ഏകവചനം",
+   "lang": "ml",
+   "description": "വ്യാകരണ ഏകം",
+   "description_lang": "ml"
+  },
+  "Q11150178": {
+   "label": "WikiProject French communes",
+   "lang": "en",
+   "description": "Wikimedia subject-area collaboration",
+   "description_lang": "en"
+  },
+  "Q11418818": {
+   "label": "commercial capital city",
+   "lang": "en",
+   "description": "not official title of a city where commerce is most active in a country",
+   "description_lang": "en"
+  },
+  "Q1142326": {
+   "label": "Seine",
+   "lang": "en",
+   "description": "former French department (1790–1968)",
+   "description_lang": "en"
+  },
+  "Q11446": {
+   "label": "കപ്പൽ",
+   "lang": "ml",
+   "description": "large buoyant watercraft",
+   "description_lang": "en"
+  },
+  "Q11573": {
+   "label": "മീറ്റർ",
+   "lang": "ml",
+   "description": "SI unit of length",
+   "description_lang": "en"
+  },
+  "Q118213226": {
+   "label": "Paris",
+   "lang": "en",
+   "description": "Unincorporated community in Mecosta County, Michigan",
+   "description_lang": "en"
+  },
+  "Q1187811": {
+   "label": "college town",
+   "lang": "en",
+   "description": "community dominated by its university population",
+   "description_lang": "en"
+  },
+  "Q12004": {
+   "label": "ഓക്ക്",
+   "lang": "ml",
+   "description": "ക്വേർക്കസ് ജീനസിലെ ചെടി",
+   "description_lang": "ml"
+  },
+  "Q1200957": {
+   "label": "വിനോദസഞ്ചാര സ്ഥലം",
+   "lang": "ml",
+   "description": "place attracting many tourists",
+   "description_lang": "en"
+  },
+  "Q120297794": {
+   "description": "Wikimedia disambiguation page",
+   "description_lang": "en"
+  },
+  "Q1236807": {
+   "label": "URL redirection",
+   "lang": "en",
+   "description": "technique for making a Web page available under more than one URL address",
+   "description_lang": "en"
+  },
+  "Q123694075": {
+   "label": "NADD Wikidata project",
+   "lang": "mul",
+   "description": "WikiProject of the Network Archives Design and Digital Culture",
+   "description_lang": "en"
+  },
+  "Q12371988": {
+   "label": "mayor of Paris",
+   "lang": "en",
+   "description": "head of municipal government in Paris, France",
+   "description_lang": "en"
+  },
+  "Q1242250": {
+   "label": "റോമൻ കത്തോലിക്ക അതിരൂപത, പാരീസ്",
+   "lang": "ml",
+   "description": "ഫ്രാൻസിലെ റോമൻ കത്തോലിക്കാ അതിരൂപത",
+   "description_lang": "ml"
+  },
+  "Q124881945": {
+   "label": "Paris Department",
+   "lang": "en",
+   "description": "former French department (1968–2019)",
+   "description_lang": "en"
+  },
+  "Q12503205": {
+   "label": "Paris",
+   "lang": "mul",
+   "description": "village in Gorontalo Regency, Gorontalo, Indonesia",
+   "description_lang": "en"
+  },
+  "Q1251239": {
+   "label": "Jacques de Flesselles",
+   "lang": "mul",
+   "description": "French politician (1730-1789)",
+   "description_lang": "en"
+  },
+  "Q12522114": {
+   "label": "geography of Paris",
+   "lang": "en",
+   "description": "overview of the geography of Paris",
+   "description_lang": "en"
+  },
+  "Q12543": {
+   "label": "Hauts-de-Seine",
+   "lang": "en",
+   "description": "French department",
+   "description_lang": "en"
+  },
+  "Q12761": {
+   "label": "Seine-Saint-Denis",
+   "lang": "en",
+   "description": "French department in Île-de-France",
+   "description_lang": "en"
+  },
+  "Q12788": {
+   "label": "Val-de-Marne",
+   "lang": "mul",
+   "description": "French department",
+   "description_lang": "en"
+  },
+  "Q128903909": {
+   "label": "Genadendal Music Archive",
+   "lang": "en",
+   "description": "cataloguing and digitisation project",
+   "description_lang": "en"
+  },
+  "Q1297": {
+   "label": "ഷിക്കാഗോ",
+   "lang": "ml",
+   "description": "അമേരിക്കയിലെ ഒരു സ്ഥലം",
+   "description_lang": "ml"
+  },
+  "Q13107162": {
+   "label": "Paris",
+   "lang": "en",
+   "description": "locality in Norrtälje Municipality, Sweden",
+   "description_lang": "en"
+  },
+  "Q131308418": {
+   "label": "Places GeoNames",
+   "lang": "en"
+  },
+  "Q131575588": {
+   "label": "Saint-Denis",
+   "lang": "mul",
+   "description": "subprefecture and commune in Île-de-France, France",
+   "description_lang": "en"
+  },
+  "Q131861025": {
+   "label": "Paris",
+   "lang": "en",
+   "description": "ghost town in Linn County, Kansas, United States",
+   "description_lang": "en"
+  },
+  "Q1321": {
+   "label": "സ്പാനിഷ്‌ ഭാഷ",
+   "lang": "ml",
+   "description": "Romance language originating in the Iberian Peninsula",
+   "description_lang": "en"
+  },
+  "Q133132": {
+   "label": "Paris Commune",
+   "lang": "en",
+   "description": "revolutionary city council of Paris in 1871",
+   "description_lang": "en"
+  },
+  "Q134445478": {
+   "label": "cultural capital",
+   "lang": "en"
+  },
+  "Q135104": {
+   "label": "Le Kremlin-Bicêtre",
+   "lang": "mul",
+   "description": "commune in Val-de-Marne, France",
+   "description_lang": "en"
+  },
+  "Q135265": {
+   "label": "Issy-les-Moulineaux",
+   "lang": "mul",
+   "description": "commune in Hauts-de-Seine, France",
+   "description_lang": "en"
+  },
+  "Q1358886": {
+   "label": "Grand Synagogue of Paris",
+   "lang": "en",
+   "description": "synagogue",
+   "description_lang": "en"
+  },
+  "Q135952871": {
+   "label": "Paris",
+   "lang": "en",
+   "description": "a village in the Republic of Congo",
+   "description_lang": "en"
+  },
+  "Q1370565": {
+   "label": "sash",
+   "lang": "en",
+   "description": "band or strip of fabric wrapped around the waist or worn over the shoulder or hips and usually tied",
+   "description_lang": "en"
+  },
+  "Q137412662": {
+   "label": "Paris",
+   "lang": "en"
+  },
+  "Q137654208": {
+   "label": "Meyer’s Universum, Neunzehnter Band",
+   "lang": "en",
+   "description": "collection, 1857, vol. 19",
+   "description_lang": "en"
+  },
+  "Q137654687": {
+   "label": "Paris",
+   "lang": "en",
+   "description": "article in Meyer’s Universum, 1857",
+   "description_lang": "en"
+  },
+  "Q137757464": {
+   "label": "Meyer’s Universum, Zwanzigster Band",
+   "lang": "en",
+   "description": "collection, 1859, vol. 20",
+   "description_lang": "en"
+  },
+  "Q137757709": {
+   "label": "Das neue Paris",
+   "lang": "en",
+   "description": "article in Meyer’s Universum, 1859",
+   "description_lang": "en"
+  },
+  "Q13917": {
+   "label": "Île-de-France",
+   "lang": "en",
+   "description": "administrative region of France",
+   "description_lang": "en"
+  },
+  "Q1403319": {
+   "label": "list of monuments and sites in Paris",
+   "lang": "en",
+   "description": "Wikimedia list article",
+   "description_lang": "en"
+  },
+  "Q14112": {
+   "label": "Corse",
+   "lang": "mul",
+   "description": "French single territorial collectivity and island in the Mediterranean Sea",
+   "description_lang": "en"
+  },
+  "Q142": {
+   "label": "ഫ്രാൻസ്",
+   "lang": "ml",
+   "description": "ഫ്രാൻ‌സ് (France) പടിഞ്ഞാറൻ യൂറോപ്പിലെ പ്രമുഖ രാജ്യമാണ്",
+   "description_lang": "ml"
+  },
+  "Q1422929": {
+   "label": "primate city",
+   "lang": "en",
+   "description": "disproportionately large city in its country or region",
+   "description_lang": "en"
+  },
+  "Q1431547": {
+   "label": "Saint-Jacques Tower",
+   "lang": "en",
+   "description": "tower",
+   "description_lang": "en"
+  },
+  "Q1435786": {
+   "label": "fontaine de Jarente",
+   "lang": "en",
+   "description": "fountain in Paris, France",
+   "description_lang": "en"
+  },
+  "Q1440664": {
+   "label": "highest point of Paris",
+   "lang": "en"
+  },
+  "Q146246": {
+   "label": "Franciaf",
+   "lang": "en",
+   "description": "Frankish Kingdom from 481 to 843",
+   "description_lang": "en"
+  },
+  "Q1465786": {
+   "label": "Prévôt des marchands de Paris",
+   "lang": "en",
+   "description": "mayor of Paris during the ancien régime",
+   "description_lang": "en"
+  },
+  "Q146786": {
+   "label": "ബഹുവചനം",
+   "lang": "ml",
+   "description": "grammatical number",
+   "description_lang": "en"
+  },
+  "Q1471": {
+   "label": "സീൻ നദി",
+   "lang": "ml",
+   "description": "river in France",
+   "description_lang": "en"
+  },
+  "Q1489": {
+   "label": "മെക്സിക്കോ സിറ്റി",
+   "lang": "ml",
+   "description": "capital and largest city of Mexico",
+   "description_lang": "en"
+  },
+  "Q1490": {
+   "label": "ടോക്കിയോ",
+   "lang": "ml",
+   "description": "ജപ്പാന്റെ തലസ്ഥാനവും ഏറ്റവും ജനസംഖ്യയുള്ള പ്രിഫെക്ചറും",
+   "description_lang": "ml"
+  },
+  "Q150": {
+   "label": "ഫ്രഞ്ച് ഭാഷ",
+   "lang": "ml",
+   "description": "ലോകമെമ്പാടുമായി 13 കോടിയോളം ആളുകൾ മാതൃഭാഷയായും 60 കോടിയോളം ആളുകൾ രണ്ടാംഭാഷയോ മൂന്നാംഭാഷയോ ആയി സംസാരിക്കുന്ന ഇന്തോ-യൂറോപ്യൻ ഗോത്രത്തിൽപ്പെട്ട ഭാഷയാണ്‌ ഫ്രഞ്ച് (français, pronounced [fʁɑ̃sɛ])",
+   "description_lang": "ml"
+  },
+  "Q1524643": {
+   "label": "Belleville funicular tramway",
+   "lang": "en",
+   "description": "rail line in Belleville quarter of Paris, France",
+   "description_lang": "en"
+  },
+  "Q1549591": {
+   "label": "big city",
+   "lang": "en",
+   "description": "city with a population of between 100,000 and 250,000",
+   "description_lang": "en"
+  },
+  "Q158119": {
+   "label": "റാമല്ല",
+   "lang": "ml",
+   "description": "city in the State of Palestine",
+   "description_lang": "en"
+  },
+  "Q15884832": {
+   "label": "WikiProject Paris",
+   "lang": "en"
+  },
+  "Q15921385": {
+   "label": "La Famille",
+   "lang": "en",
+   "description": "painting by Henri Martin",
+   "description_lang": "en"
+  },
+  "Q15921401": {
+   "label": "La Fraternité",
+   "lang": "en",
+   "description": "sculpture by Jules Dalou",
+   "description_lang": "en"
+  },
+  "Q15987490": {
+   "label": "1922 Encyclopædia Britannica",
+   "lang": "en",
+   "description": "12th edition of Encyclopædia Britannica",
+   "description_lang": "en"
+  },
+  "Q161741": {
+   "label": "1st arrondissement of Paris",
+   "lang": "en",
+   "description": "one of the 20 arrondissements (administrative districts) of Paris",
+   "description_lang": "en"
+  },
+  "Q1628773": {
+   "label": "Paris",
+   "lang": "en",
+   "description": "human settlement in Denmark",
+   "description_lang": "en"
+  },
+  "Q163948": {
+   "label": "10ᵗʰ arrondissement of Paris",
+   "lang": "en",
+   "description": "one of the 20 administrative districts of Paris, France",
+   "description_lang": "en"
+  },
+  "Q166640": {
+   "label": "Levallois-Perret",
+   "lang": "mul",
+   "description": "commune in Hauts-de-Seine, France",
+   "description_lang": "en"
+  },
+  "Q16665884": {
+   "label": "Aix-Marseille-Provence",
+   "lang": "mul",
+   "description": "French intercommunal structure in Bouches-du-Rhône, Var, and Vaucluse",
+   "description_lang": "en"
+  },
+  "Q16665897": {
+   "label": "Metropolis of Lyon",
+   "lang": "en",
+   "description": "French territorial collectivity created in 2015, exercising the competences of both a metropolis and a département",
+   "description_lang": "en"
+  },
+  "Q16665915": {
+   "label": "Grand Paris",
+   "lang": "en",
+   "description": "an administrative structure for cooperation covering the City of Paris and its nearest surrounding suburbs.",
+   "description_lang": "en"
+  },
+  "Q1684642": {
+   "label": "Jean-Baptiste Fleuriot-Lescot",
+   "lang": "mul",
+   "description": "artist and mayor of Paris (1761-1794)",
+   "description_lang": "en"
+  },
+  "Q1685102": {
+   "label": "Jean-Nicolas Pache",
+   "lang": "mul",
+   "description": "French politician (1746-1823)",
+   "description_lang": "en"
+  },
+  "Q1685301": {
+   "label": "Jean Sylvain Bailly",
+   "lang": "en",
+   "description": "French astronomer, mathematician, freemason, and political leader (1736-1793)",
+   "description_lang": "en"
+  },
+  "Q1685859": {
+   "label": "Jean Tiberi",
+   "lang": "mul",
+   "description": "12th Mayor of Paris",
+   "description_lang": "en"
+  },
+  "Q169293": {
+   "label": "11th arrondissement of Paris",
+   "lang": "en",
+   "description": "one of the 20 administrative districts of Paris, France",
+   "description_lang": "en"
+  },
+  "Q170972": {
+   "label": "Socialist Party",
+   "lang": "en",
+   "description": "French political party (1969–present)",
+   "description_lang": "en"
+  },
+  "Q171689": {
+   "label": "12th arrondissement of Paris",
+   "lang": "en",
+   "description": "one of the 20 administrative districts of Paris, France",
+   "description_lang": "en"
+  },
+  "Q172455": {
+   "label": "Boulogne-Billancourt",
+   "lang": "mul",
+   "description": "French commune in Hauts-de-Seine, Île-de-France",
+   "description_lang": "en"
+  },
+  "Q17276569": {
+   "label": "Jean-Baptiste de La Michodière",
+   "lang": "en",
+   "description": "French politician",
+   "description_lang": "en"
+  },
+  "Q174844": {
+   "label": "megacity",
+   "lang": "en",
+   "description": "very large city with a total population in excess of ten million people",
+   "description_lang": "en"
+  },
+  "Q175129": {
+   "label": "13th arrondissement of Paris",
+   "lang": "en",
+   "description": "one of the 20 administrative districts of Paris, France",
+   "description_lang": "en"
+  },
+  "Q175999": {
+   "label": "Le Pré-Saint-Gervais",
+   "lang": "mul",
+   "description": "commune in Seine-Saint-Denis, France",
+   "description_lang": "en"
+  },
+  "Q1775415": {
+   "label": "സ്ത്രീലിംഗം",
+   "lang": "ml",
+   "description": "വ്യാകരണ ലിംഗഭേദം",
+   "description_lang": "ml"
+  },
+  "Q1775461": {
+   "label": "നപുംസകം",
+   "lang": "ml",
+   "description": "വ്യാകരണ ലിംഗഭേദം",
+   "description_lang": "ml"
+  },
+  "Q178513": {
+   "label": "Paris Bourse",
+   "lang": "en",
+   "description": "French securities market, replaced by Euronext Paris",
+   "description_lang": "en"
+  },
+  "Q179023": {
+   "label": "French colonial empire",
+   "lang": "en",
+   "description": "set of territories that were under French rule primarily from the 17th century to the late 1960s",
+   "description_lang": "en"
+  },
+  "Q180154": {
+   "label": "kilometre per hour",
+   "lang": "en",
+   "description": "unit of speed",
+   "description_lang": "en"
+  },
+  "Q18086668": {
+   "label": "Pavillon d'Armenonville",
+   "lang": "en",
+   "description": "building in Bois de Boulogne, Paris",
+   "description_lang": "en"
+  },
+  "Q18102": {
+   "label": "Saint-Mandé",
+   "lang": "mul",
+   "description": "commune in Val-de-Marne, France",
+   "description_lang": "en"
+  },
+  "Q18220037": {
+   "label": "Template:Paris",
+   "lang": "en",
+   "description": "ഫലകം വിക്കിപീഡിയ",
+   "description_lang": "ml"
+  },
+  "Q182429": {
+   "label": "m/s",
+   "lang": "mul",
+   "description": "SI unit of speed and velocity",
+   "description_lang": "en"
+  },
+  "Q1860": {
+   "label": "ഇംഗ്ലീഷ്",
+   "lang": "ml",
+   "description": "ആംഗലേയഭാഷ",
+   "description_lang": "ml"
+  },
+  "Q18668319": {
+   "label": "Category:Maps of Paris",
+   "lang": "en",
+   "description": "വിക്കിപീഡിയ:വർഗ്ഗീകരണം",
+   "description_lang": "ml"
+  },
+  "Q187153": {
+   "label": "14th arrondissement of Paris",
+   "lang": "en",
+   "description": "one of the arrondissements of the capital city of France",
+   "description_lang": "en"
+  },
+  "Q188": {
+   "label": "ജർമ്മൻ ഭാഷ",
+   "lang": "ml",
+   "description": "West Germanic language",
+   "description_lang": "en"
+  },
+  "Q189153": {
+   "label": "Saint-Cloud",
+   "lang": "mul",
+   "description": "town in Hauts-de-Seine, France",
+   "description_lang": "en"
+  },
+  "Q1899": {
+   "label": "കീവ്",
+   "lang": "ml",
+   "description": "capital and largest city of Ukraine",
+   "description_lang": "en"
+  },
+  "Q191066": {
+   "label": "15th arrondissement of Paris",
+   "lang": "en",
+   "description": "one of the 20 administrative districts of Paris, France",
+   "description_lang": "en"
+  },
+  "Q19180675": {
+   "label": "Small Brockhaus and Efron Encyclopedic Dictionary",
+   "lang": "en",
+   "description": "Russian encyclopedic dictionary",
+   "description_lang": "en"
+  },
+  "Q1925366": {
+   "label": "coat of arms of Paris",
+   "lang": "en",
+   "description": "Unique heraldic visual design on an escutcheon, shield, surcoat, or tabard of Paris",
+   "description_lang": "en"
+  },
+  "Q193370": {
+   "label": "Montreuil",
+   "lang": "mul",
+   "description": "commune in Seine-Saint-Denis, France",
+   "description_lang": "en"
+  },
+  "Q193431": {
+   "label": "Parc des Princes",
+   "lang": "mul",
+   "description": "multipurpose sports venue in Paris, France",
+   "description_lang": "en"
+  },
+  "Q193622": {
+   "label": "order",
+   "lang": "en",
+   "description": "visible honour awarded to an individual recipient",
+   "description_lang": "en"
+  },
+  "Q193819": {
+   "label": "Vincennes",
+   "lang": "mul",
+   "description": "commune in Val-de-Marne, France",
+   "description_lang": "en"
+  },
+  "Q193877": {
+   "label": "Ivry-sur-Seine",
+   "lang": "mul",
+   "description": "commune in Val-de-Marne, France",
+   "description_lang": "en"
+  },
+  "Q193899": {
+   "label": "Fontenay-sous-Bois",
+   "lang": "mul",
+   "description": "commune in Val-de-Marne, France",
+   "description_lang": "en"
+  },
+  "Q193929": {
+   "label": "Suresnes",
+   "lang": "mul",
+   "description": "French commune in Hauts-de-Seine, Île-de-France",
+   "description_lang": "en"
+  },
+  "Q194420": {
+   "label": "16th arrondissement of Paris",
+   "lang": "en",
+   "description": "one of the 20 administrative districts of Paris, France",
+   "description_lang": "en"
+  },
+  "Q19689": {
+   "label": "ടിറാന",
+   "lang": "ml",
+   "description": "അൽബേനിയയുടെ തലസ്ഥാനം",
+   "description_lang": "ml"
+  },
+  "Q197297": {
+   "label": "17th arrondissement of Paris",
+   "lang": "en",
+   "description": "one of the 20 administrative districts of Paris, France",
+   "description_lang": "en"
+  },
+  "Q19832938": {
+   "label": "hôtel Dodun",
+   "lang": "en"
+  },
+  "Q1986521": {
+   "label": "Nicolas Chambon",
+   "lang": "mul",
+   "description": "ഫ്രഞ്ച് രാഷ്ട്രീയപ്രവർത്തകൻ (1748–1826)",
+   "description_lang": "ml"
+  },
+  "Q199": {
+   "label": "1",
+   "lang": "mul",
+   "description": "എണ്ണൽ സംഖ്യ",
+   "description_lang": "ml"
+  },
+  "Q200126": {
+   "label": "18th arrondissement of Paris",
+   "lang": "en",
+   "description": "one of the arrondissements of Paris, France",
+   "description_lang": "en"
+  },
+  "Q200250": {
+   "label": "മെട്രോപോളിസ്",
+   "lang": "ml",
+   "description": "large and significant city or urban area usually with millions of inhabitants",
+   "description_lang": "en"
+  },
+  "Q201610": {
+   "label": "status quo",
+   "lang": "en",
+   "description": "Latin term meaning the existing state of affairs",
+   "description_lang": "en"
+  },
+  "Q201982": {
+   "label": "Clichy",
+   "lang": "mul",
+   "description": "commune in Hauts-de-Seine, France",
+   "description_lang": "en"
+  },
+  "Q2041543": {
+   "label": "Ottův slovník naučný",
+   "lang": "mul",
+   "description": "1888–1909 edition of the largest printed encyclopedia written in the Czech language",
+   "description_lang": "en"
+  },
+  "Q204622": {
+   "label": "19th arrondissement of Paris",
+   "lang": "en",
+   "description": "one of the 20 administrative districts of Paris, France",
+   "description_lang": "en"
+  },
+  "Q205632": {
+   "label": "Aubervilliers",
+   "lang": "mul",
+   "description": "French commune in Seine-Saint-Denis, Île-de-France",
+   "description_lang": "en"
+  },
+  "Q20709367": {
+   "label": "Paris",
+   "lang": "en",
+   "description": "unincorporated community in Jefferson and Jennings counties, Indiana, United States",
+   "description_lang": "en"
+  },
+  "Q20712325": {
+   "label": "Paris",
+   "lang": "en",
+   "description": "unincorporated community in Lane County, Oregon, United States",
+   "description_lang": "en"
+  },
+  "Q207162": {
+   "label": "Bourbon Restoration in France",
+   "lang": "en",
+   "description": "period of French history, 1814–1830",
+   "description_lang": "en"
+  },
+  "Q207776": {
+   "label": "Girondists",
+   "lang": "en",
+   "description": "political faction",
+   "description_lang": "en"
+  },
+  "Q208511": {
+   "label": "ആഗോള നഗരം",
+   "lang": "ml",
+   "description": "city which is an important node in the global economy",
+   "description_lang": "en"
+  },
+  "Q208889": {
+   "label": "Saint-Ouen-sur-Seine",
+   "lang": "mul",
+   "description": "French commune in Seine-Saint-Denis, Île-de-France",
+   "description_lang": "en"
+  },
+  "Q208943": {
+   "label": "Bagnolet",
+   "lang": "mul",
+   "description": "commune in Seine-Saint-Denis, France",
+   "description_lang": "en"
+  },
+  "Q209086": {
+   "label": "Pantin",
+   "lang": "mul",
+   "description": "commune in Seine-Saint-Denis, France",
+   "description_lang": "en"
+  },
+  "Q209239": {
+   "label": "Columba",
+   "lang": "mul",
+   "description": "genus of pigeons",
+   "description_lang": "en"
+  },
+  "Q209549": {
+   "label": "2nd arrondissement of Paris",
+   "lang": "en",
+   "description": "municipality of Paris, France",
+   "description_lang": "en"
+  },
+  "Q20991871": {
+   "description": "encyclopedic article",
+   "description_lang": "en"
+  },
+  "Q20991872": {
+   "description": "encyclopedic article",
+   "description_lang": "en"
+  },
+  "Q20991873": {
+   "description": "encyclopedic article",
+   "description_lang": "en"
+  },
+  "Q2105": {
+   "label": "Jacques Chirac",
+   "lang": "mul",
+   "description": "സർക്കാർ ഉദ്യോഗസ്ഥൻ, ഫ്രാൻസ്",
+   "description_lang": "ml"
+  },
+  "Q210720": {
+   "label": "20th arrondissement of Paris",
+   "lang": "en",
+   "description": "municipal district of Paris, France",
+   "description_lang": "en"
+  },
+  "Q21129738": {
+   "label": "Parisian cuisine",
+   "lang": "en"
+  },
+  "Q211568": {
+   "label": "fleur-de-lis",
+   "lang": "en",
+   "description": "stylized iris flower used as a heraldic symbol",
+   "description_lang": "en"
+  },
+  "Q212274": {
+   "label": "Nogent-sur-Marne",
+   "lang": "mul",
+   "description": "French commune in Val-de-Marne, Île-de-France",
+   "description_lang": "en"
+  },
+  "Q212429": {
+   "label": "metropolitan France",
+   "lang": "en",
+   "description": "part of France located in Europe",
+   "description_lang": "en"
+  },
+  "Q212793": {
+   "label": "Charenton-le-Pont",
+   "lang": "mul",
+   "description": "commune in Val-de-Marne, France",
+   "description_lang": "en"
+  },
+  "Q21479779": {
+   "label": "2015 നവംബറിലെ പാരീസ് ആക്രമണം",
+   "lang": "ml",
+   "description": "series of terrorist attacks in Paris, France, Europe, on November 13, 2015",
+   "description_lang": "en"
+  },
+  "Q220": {
+   "label": "റോം",
+   "lang": "ml",
+   "description": "ഇറ്റലിയുടെ തലസ്ഥാനവും ഏറ്റവും വലിയ നഗരവും",
+   "description_lang": "ml"
+  },
+  "Q22134091": {
+   "label": "Paris",
+   "lang": "en",
+   "description": "unincorporated community",
+   "description_lang": "en"
+  },
+  "Q2219239": {
+   "label": "Paris",
+   "lang": "en",
+   "description": "town in Grant County, Wisconsin, United States",
+   "description_lang": "en"
+  },
+  "Q2220917": {
+   "label": "Paris",
+   "lang": "en",
+   "description": "civil town in Kenosha County, Wisconsin",
+   "description_lang": "en"
+  },
+  "Q223140": {
+   "label": "3rd arrondissement of Paris",
+   "lang": "en",
+   "description": "one of the 20 administrative districts of Paris, France",
+   "description_lang": "en"
+  },
+  "Q2240381": {
+   "label": "fashion capital",
+   "lang": "en",
+   "description": "city that influences fashion trends",
+   "description_lang": "en"
+  },
+  "Q2246902": {
+   "label": "demographics of Paris",
+   "lang": "en",
+   "description": "overview about the demographics of Paris",
+   "description_lang": "en"
+  },
+  "Q22923920": {
+   "label": "territorial collectivity of France with special status",
+   "lang": "en"
+  },
+  "Q22927616": {
+   "label": "commune of France with specific status",
+   "lang": "en",
+   "description": "type of territorial collectivity in France",
+   "description_lang": "en"
+  },
+  "Q230127": {
+   "label": "4th arrondissement of Paris",
+   "lang": "en",
+   "description": "one of the 20 administrative districts of Paris, France",
+   "description_lang": "en"
+  },
+  "Q23020118": {
+   "label": "Moderate Republicans",
+   "lang": "en",
+   "description": "parliamentary group in the French Second Republic",
+   "description_lang": "en"
+  },
+  "Q234728": {
+   "label": "Vanves",
+   "lang": "mul",
+   "description": "commune in Hauts-de-Seine, France",
+   "description_lang": "en"
+  },
+  "Q234743": {
+   "label": "Puteaux",
+   "lang": "mul",
+   "description": "commune in Hauts-de-Seine, France",
+   "description_lang": "en"
+  },
+  "Q235863": {
+   "label": "ജെനിവീവ്",
+   "lang": "ml",
+   "description": "Patron saint of Paris (c.419/422 - c.502/512)",
+   "description_lang": "en"
+  },
+  "Q23860467": {
+   "label": "Paříž",
+   "lang": "mul",
+   "description": "article in Otto's encyclopedia",
+   "description_lang": "en"
+  },
+  "Q238723": {
+   "label": "5th arrondissement of Paris",
+   "lang": "en",
+   "description": "one of the 20 administrative districts of Paris, France",
+   "description_lang": "en"
+  },
+  "Q241021": {
+   "label": "Montrouge",
+   "lang": "mul",
+   "description": "commune in Hauts-de-Seine, France",
+   "description_lang": "en"
+  },
+  "Q243": {
+   "label": "ഈഫൽ ഗോപുരം",
+   "lang": "ml",
+   "description": "പാരീസിലെ ചാമ്പ് ഡി മാര്‍സില്‍ സ്ഥിതിചെയ്യുന്ന ഗോപുരം",
+   "description_lang": "ml"
+  },
+  "Q245546": {
+   "label": "6th arrondissement of Paris",
+   "lang": "en",
+   "description": "one of the 20 administrative districts of Paris, France",
+   "description_lang": "en"
+  },
+  "Q24575431": {
+   "label": "Alexander II",
+   "lang": "en",
+   "description": "holy water font depicting Pope Alexander II in the Church of Saint Eustache, Paris",
+   "description_lang": "en"
+  },
+  "Q2482095": {
+   "label": "fluctuat nec mergitur",
+   "lang": "en",
+   "description": "the motto of Paris",
+   "description_lang": "en"
+  },
+  "Q25343": {
+   "label": "ചതുരശ്ര മീറ്റർ",
+   "lang": "ml",
+   "description": "വിസ്തീർണ്ണത്തിന്റെ SI ഏകകം",
+   "description_lang": "ml"
+  },
+  "Q253721": {
+   "label": "Malakoff",
+   "lang": "mul",
+   "description": "commune in Hauts-de-Seine, France",
+   "description_lang": "en"
+  },
+  "Q25415904": {
+   "description": "encyclopedic article",
+   "description_lang": "en"
+  },
+  "Q256004": {
+   "label": "Les Lilas",
+   "lang": "mul",
+   "description": "commune in Seine-Saint-Denis, France",
+   "description_lang": "en"
+  },
+  "Q256294": {
+   "label": "Bertrand Delanoë",
+   "lang": "mul",
+   "description": "13th Mayor of Paris",
+   "description_lang": "en"
+  },
+  "Q25907009": {
+   "label": "Paris",
+   "lang": "mul",
+   "description": "village in Nduga Regency, Highland Papua, Indonesia",
+   "description_lang": "en"
+  },
+  "Q259463": {
+   "label": "7th arrondissement of Paris",
+   "lang": "en",
+   "description": "municipal arrondissement in Île-de-France, France",
+   "description_lang": "en"
+  },
+  "Q2596877": {
+   "label": "René Boucher",
+   "lang": "en",
+   "description": "French revolutionary",
+   "description_lang": "en"
+  },
+  "Q26006": {
+   "label": "Laurus nobilis",
+   "lang": "mul",
+   "description": "species of plant",
+   "description_lang": "en"
+  },
+  "Q2689628": {
+   "label": "speech scroll",
+   "lang": "en",
+   "description": "illustrative device denoting speech in art, used in pre-Columbian Mesoamerica and Medieval Europe",
+   "description_lang": "en"
+  },
+  "Q270230": {
+   "label": "8th arrondissement of Paris",
+   "lang": "en",
+   "description": "administrative district of Paris",
+   "description_lang": "en"
+  },
+  "Q270273": {
+   "label": "Lutetia",
+   "lang": "en",
+   "description": "Roman city, predecessor of Paris",
+   "description_lang": "en"
+  },
+  "Q2727598": {
+   "label": "Croix de guerre 1914–1918",
+   "lang": "en",
+   "description": "French military decoration",
+   "description_lang": "en"
+  },
+  "Q274327": {
+   "label": "Saint-Maurice",
+   "lang": "mul",
+   "description": "commune in Val-de-Marne, France",
+   "description_lang": "en"
+  },
+  "Q2748708": {
+   "label": "German military administration in occupied France during World War II",
+   "lang": "en",
+   "description": "1940 interim occupation authority established by Nazi Germany during World War II",
+   "description_lang": "en"
+  },
+  "Q275118": {
+   "label": "9th arrondissement of Paris",
+   "lang": "en",
+   "description": "one of the 20 administrative districts of Paris, France",
+   "description_lang": "en"
+  },
+  "Q28378282": {
+   "label": "verified account or profile",
+   "lang": "en",
+   "description": "social media account or profile which has satisfied the host service's criteria for verification",
+   "description_lang": "en"
+  },
+  "Q2851133": {
+   "label": "Anne Hidalgo",
+   "lang": "mul",
+   "description": "Spanish–French politician",
+   "description_lang": "en"
+  },
+  "Q2853511": {
+   "label": "Antoine-Louis Lefebvre de Caumartin",
+   "lang": "mul"
+  },
+  "Q2861746": {
+   "label": "Armand-Jérôme Bignon",
+   "lang": "mul",
+   "description": "French lawyer",
+   "description_lang": "en"
+  },
+  "Q2863958": {
+   "label": "arrondissement of Paris",
+   "lang": "en",
+   "description": "arrondissement of France in the Île-de-France region",
+   "description_lang": "en"
+  },
+  "Q289303": {
+   "label": "Étienne Arago",
+   "lang": "mul",
+   "description": "French playwright and politician (1802–1892)",
+   "description_lang": "en"
+  },
+  "Q28962312": {
+   "label": "often",
+   "lang": "en",
+   "description": "value for qualifier P5102 indicating that the statement is true in many, but not necessarily a majority, of cases",
+   "description_lang": "en"
+  },
+  "Q2990283": {
+   "label": "Companion of the Liberation",
+   "lang": "en",
+   "description": "military decoration issued by the Free French army",
+   "description_lang": "en"
+  },
+  "Q302556": {
+   "label": "The Catholic Encyclopedia",
+   "lang": "en",
+   "description": "English-language encyclopedia",
+   "description_lang": "en"
+  },
+  "Q30278109": {
+   "label": "lowest point",
+   "lang": "en",
+   "description": "point with lowest elevation in a region, on a path, of a race",
+   "description_lang": "en"
+  },
+  "Q30621726": {
+   "label": "Paris",
+   "lang": "en",
+   "description": "in New Hampshire",
+   "description_lang": "en"
+  },
+  "Q3131449": {
+   "label": "Henri Lefèvre d'Ormesson",
+   "lang": "en",
+   "description": "French politician",
+   "description_lang": "en"
+  },
+  "Q3164528": {
+   "label": "Jean-Baptiste de Pontcarré de Viarmes",
+   "lang": "mul",
+   "description": "French jurist (1702-1775)",
+   "description_lang": "en"
+  },
+  "Q316838": {
+   "label": "Regesta Imperii",
+   "lang": "mul"
+  },
+  "Q3181341": {
+   "label": "പാരിസ്",
+   "lang": "ml",
+   "description": "county seat of Bourbon County, Kentucky, United States",
+   "description_lang": "en"
+  },
+  "Q3181656": {
+   "label": "The Nuttall Encyclopædia",
+   "lang": "en",
+   "description": "British encyclopedia",
+   "description_lang": "en"
+  },
+  "Q3212678": {
+   "label": "La Sainte Catherine",
+   "lang": "en",
+   "description": "sculpture by Julien Lorieux",
+   "description_lang": "en"
+  },
+  "Q3252156": {
+   "label": "list of historic monuments in Paris",
+   "lang": "en",
+   "description": "Wikimedia list article",
+   "description_lang": "en"
+  },
+  "Q3260385": {
+   "label": "Louis-Basile de Bernage",
+   "lang": "en",
+   "description": "French jurist (1691-1767)",
+   "description_lang": "en"
+  },
+  "Q3262481": {
+   "label": "Louis Le Peletier de Morfontaine",
+   "lang": "en",
+   "description": "(1730-1799)",
+   "description_lang": "en"
+  },
+  "Q326503": {
+   "label": "The Sleepers",
+   "lang": "en",
+   "description": "painting by Gustave Courbet",
+   "description_lang": "en"
+  },
+  "Q3278478": {
+   "label": "municipality of Paris",
+   "lang": "en",
+   "description": "municipal government of Paris, France",
+   "description_lang": "en"
+  },
+  "Q3305306": {
+   "label": "പാരിസ്",
+   "lang": "ml",
+   "description": "community in Ontario, Canada",
+   "description_lang": "en"
+  },
+  "Q3309634": {
+   "label": "Michel Fleury",
+   "lang": "en",
+   "description": "French historian and archivist (1923–2002)",
+   "description_lang": "en"
+  },
+  "Q3365565": {
+   "label": "Paris dialect",
+   "lang": "en"
+  },
+  "Q3393392": {
+   "label": "highest point",
+   "lang": "mul",
+   "description": "highest elevation of a geographical zone",
+   "description_lang": "en"
+  },
+  "Q3411287": {
+   "label": "pyramid of bois de Vincennes",
+   "lang": "en",
+   "description": "obelisk in Paris, France",
+   "description_lang": "en"
+  },
+  "Q34600": {
+   "label": "ക്യോട്ടോ",
+   "lang": "ml",
+   "description": "city in the Kyōto Prefecture, Japan",
+   "description_lang": "en"
+  },
+  "Q3485975": {
+   "label": "Siege of Paris",
+   "lang": "en",
+   "description": "1360 siege during the Hundred Years' War, penultimate action of the Edwardian Phase of the Hundred Years' War",
+   "description_lang": "en"
+  },
+  "Q3485976": {
+   "label": "Siege of Paris",
+   "lang": "en",
+   "description": "1370 siege",
+   "description_lang": "en"
+  },
+  "Q3485977": {
+   "label": "Siege of Paris",
+   "lang": "en",
+   "description": "1358 siege",
+   "description_lang": "en"
+  },
+  "Q3485978": {
+   "label": "Siege of Paris",
+   "lang": "en",
+   "description": "1420 siege",
+   "description_lang": "en"
+  },
+  "Q3485979": {
+   "label": "Siege of Paris",
+   "lang": "en",
+   "description": "1435 part of the Hundred Years' War",
+   "description_lang": "en"
+  },
+  "Q3485982": {
+   "label": "Siege of Paris",
+   "lang": "en",
+   "description": "1429 Joan D' Arc's Siege",
+   "description_lang": "en"
+  },
+  "Q3485983": {
+   "label": "Siege of Paris",
+   "lang": "en",
+   "description": "856 siege",
+   "description_lang": "en"
+  },
+  "Q3485984": {
+   "label": "Siege of Paris",
+   "lang": "en",
+   "description": "1590 diege of the French Wars of Religion",
+   "description_lang": "en"
+  },
+  "Q3485985": {
+   "label": "Siege of Paris",
+   "lang": "en",
+   "description": "861 siege",
+   "description_lang": "en"
+  },
+  "Q3485986": {
+   "label": "Siege of Paris",
+   "lang": "en",
+   "description": "845 first siege of the Vikings to the capital of the kingdom of the West Franks",
+   "description_lang": "en"
+  },
+  "Q3485987": {
+   "label": "Siege of Paris",
+   "lang": "en",
+   "description": "978 siege",
+   "description_lang": "en"
+  },
+  "Q369234": {
+   "label": "Hôtel de Chalon-Luxembourg",
+   "lang": "en",
+   "description": "hôtel particulier",
+   "description_lang": "en"
+  },
+  "Q3725832": {
+   "label": "Henry IV at the Battle of Ivry, 14 March 1590",
+   "lang": "en",
+   "description": "painting in the Uffizi Gallery, Florence, Italy, by Peter Paul Rubens",
+   "description_lang": "en"
+  },
+  "Q3837491": {
+   "label": "La Lutte de Jacob avec l’Ange",
+   "lang": "mul",
+   "description": "mural by Eugène Delacroix",
+   "description_lang": "en"
+  },
+  "Q386991": {
+   "label": "Torreón",
+   "lang": "en",
+   "description": "municipal seat of Torreón, State of Coahuila, Mexico",
+   "description_lang": "en"
+  },
+  "Q397": {
+   "label": "ലാറ്റിൻ",
+   "lang": "ml",
+   "description": "Indo-European language of the Italic branch",
+   "description_lang": "en"
+  },
+  "Q39825": {
+   "label": "കാനേഷുമാരി",
+   "lang": "ml",
+   "description": "survey designed to collect data about all members of a population",
+   "description_lang": "en"
+  },
+  "Q39893449": {
+   "label": "exact match",
+   "lang": "en",
+   "description": "SKOS mapping relation (for use with P4390): two concepts have equivalent meaning, and the link can be exploited across a wide range of applications and schemes; the link is meant to be transitive",
+   "description_lang": "en"
+  },
+  "Q40269": {
+   "label": "Porto Alegre",
+   "lang": "mul",
+   "description": "municipality of Rio Grande do Sul state, Brazil",
+   "description_lang": "en"
+  },
+  "Q4114391": {
+   "label": "Sytin Military Encyclopedia",
+   "lang": "en",
+   "description": "Russian military encyclopedia",
+   "description_lang": "en"
+  },
+  "Q4173137": {
+   "label": "Jewish Encyclopedia of Brockhaus and Efron",
+   "lang": "en",
+   "description": "encyclopedia",
+   "description_lang": "en"
+  },
+  "Q429340": {
+   "label": "mural crown",
+   "lang": "en",
+   "description": "heraldic crown resembling a wall",
+   "description_lang": "en"
+  },
+  "Q46": {
+   "label": "യൂറോപ്പ്",
+   "lang": "ml",
+   "description": "ഭൂഖണ്ഡം",
+   "description_lang": "ml"
+  },
+  "Q4676786": {
+   "label": "deliberate murder",
+   "lang": "en",
+   "description": "intentionally causing the death of another human being after rationally considering the timing or method of doing so",
+   "description_lang": "en"
+  },
+  "Q47088290": {
+   "label": "masculine singular",
+   "lang": "en",
+   "description": "grammatical gender",
+   "description_lang": "en"
+  },
+  "Q47088292": {
+   "label": "masculine plural",
+   "lang": "en",
+   "description": "grammatical gender",
+   "description_lang": "en"
+  },
+  "Q47088293": {
+   "label": "feminine singular",
+   "lang": "en",
+   "description": "gender and number inflection",
+   "description_lang": "en"
+  },
+  "Q47088295": {
+   "label": "feminine plural",
+   "lang": "en",
+   "description": "grammatical gender",
+   "description_lang": "en"
+  },
+  "Q48268": {
+   "label": "ഇന്റർനാഷണൽ യൂണിയൻ ഫോർ ദ കൺസർവേഷൻ ഓഫ് നേച്ചർ ആൻഡ് നാച്ചുറൽ റിസോഴ്‌സ്",
+   "lang": "ml",
+   "description": "international organization",
+   "description_lang": "en"
+  },
+  "Q484170": {
+   "label": "commune of France",
+   "lang": "en",
+   "description": "France territorial subdivision for municipalities",
+   "description_lang": "en"
+  },
+  "Q485087": {
+   "label": "C40 Cities",
+   "lang": "mul",
+   "description": "group of cities around the world",
+   "description_lang": "en"
+  },
+  "Q48849482": {
+   "label": "Paris",
+   "lang": "en",
+   "description": "ghost town in Lincoln County, Kansas, United States",
+   "description_lang": "en"
+  },
+  "Q48958": {
+   "label": "Neuilly-sur-Seine",
+   "lang": "mul",
+   "description": "commune in Hauts-de-Seine, France",
+   "description_lang": "en"
+  },
+  "Q4916": {
+   "label": "യൂറോ",
+   "lang": "ml",
+   "description": "currency of most countries in the European Union",
+   "description_lang": "en"
+  },
+  "Q499327": {
+   "label": "പുല്ലിംഗം",
+   "lang": "ml",
+   "description": "grammatical gender",
+   "description_lang": "en"
+  },
+  "Q515": {
+   "label": "നഗരം",
+   "lang": "ml",
+   "description": "large human settlement",
+   "description_lang": "en"
+  },
+  "Q51929311": {
+   "label": "largest city",
+   "lang": "en",
+   "description": "city which has the greatest population in a country",
+   "description_lang": "en"
+  },
+  "Q5286412": {
+   "label": "do not feed the animals",
+   "lang": "en",
+   "description": "policy forbidding feeding of wild or captive animals in some location",
+   "description_lang": "en"
+  },
+  "Q5287": {
+   "label": "ജാപ്പനീസ് ഭാഷ",
+   "lang": "ml",
+   "description": "language spoken in East Asia",
+   "description_lang": "en"
+  },
+  "Q5333743": {
+   "label": "economy of Paris",
+   "lang": "en",
+   "description": "economy of the region",
+   "description_lang": "en"
+  },
+  "Q537720": {
+   "label": "Accor Arena",
+   "lang": "mul",
+   "description": "indoor sports arena and concert hall in Bercy, Paris, France",
+   "description_lang": "en"
+  },
+  "Q538772": {
+   "label": "Paris",
+   "lang": "en",
+   "description": "town in New York",
+   "description_lang": "en"
+  },
+  "Q5460604": {
+   "label": "വിക്കിപീഡിയ:സുപ്രധാന ലേഖനങ്ങൾ",
+   "lang": "ml",
+   "description": "list of 1000 articles every Wikipedia edition should have",
+   "description_lang": "en"
+  },
+  "Q5497514": {
+   "label": "WikiProject Cities",
+   "lang": "en",
+   "description": "Wikimedia subject-area collaboration",
+   "description_lang": "en"
+  },
+  "Q5626403": {
+   "label": "വർഗ്ഗം:പാരിസ്",
+   "lang": "ml",
+   "description": "വിക്കിമീഡിയ വർഗ്ഗം",
+   "description_lang": "ml"
+  },
+  "Q570116": {
+   "label": "വിനോദസഞ്ചാര കേന്ദ്രം",
+   "lang": "ml",
+   "description": "place of interest where tourists visit",
+   "description_lang": "en"
+  },
+  "Q576584": {
+   "label": "പാരിസ്",
+   "lang": "ml",
+   "description": "city in Illinois",
+   "description_lang": "en"
+  },
+  "Q58296": {
+   "label": "French First Republic",
+   "lang": "en",
+   "description": "republic governing France, 1792–1804",
+   "description_lang": "en"
+  },
+  "Q58326": {
+   "label": "French Second Republic",
+   "lang": "en",
+   "description": "government of France between 1848-1852",
+   "description_lang": "en"
+  },
+  "Q601266": {
+   "label": "Louis-Antoine Garnier-Pagès",
+   "lang": "mul",
+   "description": "French politician (1803-1878)",
+   "description_lang": "en"
+  },
+  "Q602358": {
+   "label": "Brockhaus and Efron Encyclopedic Dictionary",
+   "lang": "en",
+   "description": "comprehensive multi-volume encyclopedia in Russian",
+   "description_lang": "en"
+  },
+  "Q609134": {
+   "label": "Joinville-le-Pont",
+   "lang": "mul",
+   "description": "commune in Val-de-Marne, France",
+   "description_lang": "en"
+  },
+  "Q61": {
+   "label": "വാഷിങ്ടൺ ഡി.സി",
+   "lang": "ml",
+   "description": "യു.എസ്.എയുടെ തലസ്ഥാനം",
+   "description_lang": "ml"
+  },
+  "Q612": {
+   "label": "ദുബായ്",
+   "lang": "ml",
+   "description": "യുണൈറ്റഡ് അറബ് എമിറേറ്റ്സിലെ ഏറ്റവും ജനസംഖ്യയുള്ള നഗരം",
+   "description_lang": "ml"
+  },
+  "Q6173448": {
+   "label": "വിക്കിപീഡിയ:സുപ്രധാന ലേഖനങ്ങൾ/നില/4",
+   "lang": "ml",
+   "description": "Wikimedia project page",
+   "description_lang": "en"
+  },
+  "Q62": {
+   "label": "സാൻ ഫ്രാൻസിസ്കോ",
+   "lang": "ml",
+   "description": "city and county in California, US",
+   "description_lang": "en"
+  },
+  "Q64": {
+   "label": "ബെർലിൻ",
+   "lang": "ml",
+   "description": "ജർമ്മനിയുടെ തലസ്ഥാനം",
+   "description_lang": "ml"
+  },
+  "Q640102": {
+   "label": "Gentilly",
+   "lang": "mul",
+   "description": "commune in Val-de-Marne, France",
+   "description_lang": "en"
+  },
+  "Q64281962": {
+   "label": "Emmanuel Grégoire",
+   "lang": "mul",
+   "description": "French politician",
+   "description_lang": "en"
+  },
+  "Q64436": {
+   "label": "Arc de Triomphe",
+   "lang": "en",
+   "description": "triumphal arch in Paris",
+   "description_lang": "en"
+  },
+  "Q6465": {
+   "label": "ഫ്രാൻസിലെ വകുപ്പ്",
+   "lang": "ml",
+   "description": "administrative subdivision in France",
+   "description_lang": "en"
+  },
+  "Q652": {
+   "label": "ഇറ്റാലിയൻ ഭാഷ",
+   "lang": "ml",
+   "description": "Romance language",
+   "description_lang": "en"
+  },
+  "Q6534": {
+   "label": "ഫ്രഞ്ച് വിപ്ലവം",
+   "lang": "ml",
+   "description": "A period of political and societal change in France from 1789 to 1799",
+   "description_lang": "en"
+  },
+  "Q656": {
+   "label": "സെന്റ് പീറ്റേഴ്സ്ബർഗ്",
+   "lang": "ml",
+   "description": "റഷ്യൻ നഗരവും റഷ്യയിലെ ഒരു ഫെഡറൽ സബ്ജക്ടും",
+   "description_lang": "ml"
+  },
+  "Q656015": {
+   "label": "Philibert Borie",
+   "lang": "mul",
+   "description": "French physician (1759-1832)",
+   "description_lang": "en"
+  },
+  "Q656902": {
+   "label": "Parisii",
+   "lang": "en",
+   "description": "Gallic tribe",
+   "description_lang": "en"
+  },
+  "Q6581072": {
+   "label": "സ്ത്രീ",
+   "lang": "ml",
+   "description": "മനുഷ്യരിലെ സ്ത്രീ ലിംഗം. Property:P21. സ്ത്രീകള്‍ Property P279",
+   "description_lang": "ml"
+  },
+  "Q6581097": {
+   "label": "പുരുഷൻ",
+   "lang": "ml",
+   "description": "പുരുഷൻ ആയുള്ള വ്യക്തി",
+   "description_lang": "ml"
+  },
+  "Q659058": {
+   "label": "flag of Paris",
+   "lang": "en",
+   "description": "flag",
+   "description_lang": "en"
+  },
+  "Q670499": {
+   "label": "Stade Jean-Bouin",
+   "lang": "en",
+   "description": "stadium in Paris, France",
+   "description_lang": "en"
+  },
+  "Q67652870": {
+   "label": "World Tourism Cities Federation",
+   "lang": "en",
+   "description": "China-based international organization",
+   "description_lang": "en"
+  },
+  "Q677730": {
+   "label": "Armand Marrast",
+   "lang": "mul",
+   "description": "French politician (1801-1852)",
+   "description_lang": "en"
+  },
+  "Q679388": {
+   "label": "municipal arrondissement of Paris",
+   "lang": "en",
+   "description": "each of 20 administrative districts within the city of Paris",
+   "description_lang": "en"
+  },
+  "Q690489": {
+   "label": "Siege of Paris",
+   "lang": "en",
+   "description": "1870 siege during the Franco-Prussian War",
+   "description_lang": "en"
+  },
+  "Q6907702": {
+   "label": "WikiProject World Heritage Sites",
+   "lang": "en",
+   "description": "Wikimedia subject-area collaboration",
+   "description_lang": "en"
+  },
+  "Q69808": {
+   "label": "വിഷി ഫ്രാൻസ്",
+   "lang": "ml",
+   "description": "client state of Nazi Germany, administering the Free Zone in southern France and French colonial possessions (1940–1944)",
+   "description_lang": "en"
+  },
+  "Q69829": {
+   "label": "French Fourth Republic",
+   "lang": "en",
+   "description": "government of France between 1946 and 1958",
+   "description_lang": "en"
+  },
+  "Q7016": {
+   "label": "17th century",
+   "lang": "en",
+   "description": "നൂറ്റാണ്ട്",
+   "description_lang": "ml"
+  },
+  "Q7026": {
+   "label": "കാറ്റലൻ ഭാഷ",
+   "lang": "ml",
+   "description": "Western Romance language",
+   "description_lang": "en"
+  },
+  "Q70972": {
+   "label": "Kingdom of France",
+   "lang": "en",
+   "description": "monarchical state that ruled France from 987 to 1792, and again from 1814 to 1848 (except during the Hundred Days in 1815)",
+   "description_lang": "en"
+  },
+  "Q71084": {
+   "label": "Premier Empire",
+   "lang": "mul",
+   "description": "empire of Napoleon I of France, from 1804 to 1815",
+   "description_lang": "en"
+  },
+  "Q71092": {
+   "label": "Second Empire",
+   "lang": "mul",
+   "description": "government of France under Napoleon III, from 1852 to 1870",
+   "description_lang": "en"
+  },
+  "Q712226": {
+   "label": "ചതുരശ്ര കിലോമീറ്റർ",
+   "lang": "ml",
+   "description": "ഉപരിതല വിസ്തീർണ്ണത്തിന്റെ ഒരു ഏകകം",
+   "description_lang": "ml"
+  },
+  "Q7137161": {
+   "label": "Paris",
+   "lang": "en",
+   "description": "unincorporated community in Linn County, Iowa",
+   "description_lang": "en"
+  },
+  "Q7137164": {
+   "label": "Paris",
+   "lang": "en",
+   "description": "unincorporated community in Lafayette County, Mississippi",
+   "description_lang": "en"
+  },
+  "Q7137165": {
+   "label": "Paris",
+   "lang": "en",
+   "description": "former human settlement in Kiribati",
+   "description_lang": "en"
+  },
+  "Q7137172": {
+   "label": "Paris",
+   "lang": "en",
+   "description": "census-designated place in Washington County, Pennsylvania",
+   "description_lang": "en"
+  },
+  "Q7137175": {
+   "label": "Paris",
+   "lang": "en",
+   "description": "unincorporated community in Virginia",
+   "description_lang": "en"
+  },
+  "Q7137193": {
+   "label": "Paris",
+   "lang": "en",
+   "description": "unincorporated community in Kenosha County, Wisconsin",
+   "description_lang": "en"
+  },
+  "Q7137363": {
+   "label": "Paris Township",
+   "lang": "mul",
+   "description": "township in Portage County, Ohio",
+   "description_lang": "en"
+  },
+  "Q71536244": {
+   "label": "currently valid value",
+   "lang": "en",
+   "description": "reason for preferred rank based on validity",
+   "description_lang": "en"
+  },
+  "Q7737": {
+   "label": "റഷ്യൻ ഭാഷ",
+   "lang": "ml",
+   "description": "East Slavic language",
+   "description_lang": "en"
+  },
+  "Q775994": {
+   "label": "Council of Paris",
+   "lang": "en",
+   "description": "body governing the capital of France",
+   "description_lang": "en"
+  },
+  "Q7850": {
+   "label": "ചൈനീസ് ഭാഷ",
+   "lang": "ml",
+   "description": "language group of the Sinitic languages",
+   "description_lang": "en"
+  },
+  "Q796919": {
+   "label": "resignation",
+   "lang": "en",
+   "description": "act of giving up or quitting an office or position",
+   "description_lang": "en"
+  },
+  "Q7977477": {
+   "label": "Category:Burials in Paris by place",
+   "lang": "ml",
+   "description": "വിക്കിമീഡിയ വർഗ്ഗം",
+   "description_lang": "ml"
+  },
+  "Q7981358": {
+   "label": "Category:Honorary citizens of Paris",
+   "lang": "en",
+   "description": "വിക്കിമീഡിയ വർഗ്ഗം",
+   "description_lang": "ml"
+  },
+  "Q79917": {
+   "label": "Paris",
+   "lang": "en",
+   "description": "city in Arkansas, United States",
+   "description_lang": "en"
+  },
+  "Q8088": {
+   "label": "1900 Summer Olympics",
+   "lang": "en",
+   "description": "Games of the II Olympiad, celebrated in Paris (France) in 1900",
+   "description_lang": "en"
+  },
+  "Q810526": {
+   "label": "Bassin de la Villette",
+   "lang": "en",
+   "description": "canal",
+   "description_lang": "en"
+  },
+  "Q8132": {
+   "label": "1924 Summer Olympics",
+   "lang": "en",
+   "description": "Games of the VIII Olympiad, in Paris, France",
+   "description_lang": "en"
+  },
+  "Q815192": {
+   "label": "Siege of Paris",
+   "lang": "en",
+   "description": "885 raid on the Seine in the Kingdom of West Franks",
+   "description_lang": "en"
+  },
+  "Q820122": {
+   "label": "The Mountain",
+   "lang": "en",
+   "description": "political group during the French Revolution",
+   "description_lang": "en"
+  },
+  "Q8253667": {
+   "label": "Portal:Paris",
+   "lang": "en",
+   "description": "Wikimedia portal",
+   "description_lang": "en"
+  },
+  "Q830149": {
+   "label": "പാരിസ്, ടെക്സാസ്",
+   "lang": "ml",
+   "description": "city in and county seat of Lamar County, Texas, United States",
+   "description_lang": "en"
+  },
+  "Q845625": {
+   "label": "history of Paris",
+   "lang": "en",
+   "description": "history of the capital city of France",
+   "description_lang": "en"
+  },
+  "Q8458184": {
+   "label": "Category:Films shot in Paris",
+   "lang": "en",
+   "description": "വിക്കിമീഡിയ വർഗ്ഗം",
+   "description_lang": "ml"
+  },
+  "Q84641281": {
+   "label": "1911 Encyclopædia Britannica/Paris",
+   "lang": "en",
+   "description": "encyclopedia article",
+   "description_lang": "en"
+  },
+  "Q85": {
+   "label": "കെയ്റോ",
+   "lang": "ml",
+   "description": "capital city of Egypt",
+   "description_lang": "en"
+  },
+  "Q860172": {
+   "label": "Canal Saint-Martin",
+   "lang": "en",
+   "description": "canal in Paris",
+   "description_lang": "en"
+  },
+  "Q867541": {
+   "label": "Encyclopædia Britannica 11th edition",
+   "lang": "en",
+   "description": "11th edition of Encyclopædia Britannica",
+   "description_lang": "en"
+  },
+  "Q8684": {
+   "label": "സോൾ",
+   "lang": "ml",
+   "description": "capital and largest city of South Korea",
+   "description_lang": "en"
+  },
+  "Q88521107": {
+   "label": "zone de défense et de sécurité de Paris",
+   "lang": "en",
+   "description": "defense and security zone of France",
+   "description_lang": "en"
+  },
+  "Q8964470": {
+   "label": "Category:People from Paris",
+   "lang": "en",
+   "description": "വിക്കിമീഡിയ വർഗ്ഗം",
+   "description_lang": "ml"
+  },
+  "Q90": {
+   "label": "പാരിസ്",
+   "lang": "ml",
+   "description": "ഫ്രാന്‍സിലെ നഗരം",
+   "description_lang": "ml"
+  },
+  "Q91013007": {
+   "label": "mainly",
+   "lang": "en",
+   "description": "value for qualifier P5102 indicating that the statement is valid in a majority (but not all) cases",
+   "description_lang": "en"
+  },
+  "Q9226347": {
+   "label": "Category:Births in Paris",
+   "lang": "en",
+   "description": "വിക്കിമീഡിയ വർഗ്ഗം",
+   "description_lang": "ml"
+  },
+  "Q934294": {
+   "label": "Paris",
+   "lang": "en",
+   "description": "town in Oxford County, Maine, United States",
+   "description_lang": "en"
+  },
+  "Q9383972": {
+   "label": "League of Historical Cities",
+   "lang": "en",
+   "description": "സംഘടന",
+   "description_lang": "ml"
+  },
+  "Q947901": {
+   "label": "Jérôme Pétion de Villeneuve",
+   "lang": "mul",
+   "description": "French politician (1756-1794)",
+   "description_lang": "en"
+  },
+  "Q956": {
+   "label": "ബെയ്‌ജിങ്ങ്‌",
+   "lang": "ml",
+   "description": "capital city of China",
+   "description_lang": "en"
+  },
+  "Q959708": {
+   "label": "Jules Ferry",
+   "lang": "mul",
+   "description": "French politician (1832-1893)",
+   "description_lang": "en"
+  },
+  "Q960025": {
+   "label": "പാരിസ്",
+   "lang": "ml",
+   "description": "city in and county seat of Monroe County, Missouri, United States",
+   "description_lang": "en"
+  },
+  "Q96746729": {
+   "label": "Paris Centre",
+   "lang": "en",
+   "description": "administrative division of Paris",
+   "description_lang": "en"
+  },
+  "Q97064103": {
+   "label": "opendata.paris.fr",
+   "lang": "en",
+   "description": "Paris open data portal",
+   "description_lang": "en"
+  },
+  "Q974043": {
+   "label": "Paris",
+   "lang": "en",
+   "description": "former community in Yukon, Canada",
+   "description_lang": "en"
+  },
+  "Q984459": {
+   "label": "Paris",
+   "lang": "en",
+   "description": "city in and county seat of Bear Lake County, Idaho, United States",
+   "description_lang": "en"
+  },
+  "Q9846779": {
+   "label": "Category:Deaths in Paris",
+   "lang": "en",
+   "description": "വിക്കിമീഡിയ വർഗ്ഗം",
+   "description_lang": "ml"
+  },
+  "Q99223443": {
+   "label": "Catholic Encyclopedia (1913)/Paris",
+   "lang": "en"
+  },
+  "Q994": {
+   "label": "റ്റ്ബിലിസി",
+   "lang": "ml",
+   "description": "capital and the largest city of Georgia (country)",
+   "description_lang": "en"
+  },
+  "Q995653": {
+   "label": "ഒളിമ്പിക്സ് 2024 (പാരീസ്)",
+   "lang": "ml",
+   "description": "games of the XXXIII Olympiad, in Paris, France",
+   "description_lang": "en"
+  }
+ },
+ "concepts": {
+  "Q1071": {
+   "label": "ഭൂമിശാസ്ത്രം",
+   "lang": "ml",
+   "names": [
+    "Geography",
+    "ഭൂമിശാസ്ത്രം"
+   ]
+  },
+  "Q11042": {
+   "label": "സംസ്കാരം",
+   "lang": "ml",
+   "names": [
+    "സംസ്കാരം"
+   ]
+  },
+  "Q121769": {
+   "label": "അവലംബം",
+   "lang": "ml",
+   "names": [
+    "അവലംബം"
+   ]
+  },
+  "Q12737077": {
+   "label": "തൊഴിൽ",
+   "lang": "ml",
+   "names": [
+    "അധിനിവേശം",
+    "തൊഴില്",
+    "തൊഴിൽ"
+   ]
+  },
+  "Q131765": {
+   "label": "മൾട്ടിമീഡിയ",
+   "lang": "ml",
+   "names": [
+    "മൾട്ടിമീഡിയ"
+   ]
+  },
+  "Q159810": {
+   "label": "സമ്പദ്ഘടന",
+   "lang": "ml",
+   "names": [
+    "സമ്പദ്ഘടന",
+    "സമ്പദ്‌വ്യവസ്ഥ"
+   ]
+  },
+  "Q184711": {
+   "label": "സഹോദര നഗരം",
+   "lang": "ml",
+   "names": [
+    "സഹോദര നഗരം"
+   ]
+  },
+  "Q2221906": {
+   "label": "ഭൂസ്ഥാനം",
+   "lang": "ml",
+   "names": [
+    "ഭൂസ്ഥാനം"
+   ]
+  },
+  "Q309": {
+   "label": "ചരിത്രം",
+   "lang": "ml",
+   "names": [
+    "ചരിത്രം"
+   ]
+  },
+  "Q36279": {
+   "label": "ജീവചരിത്രം",
+   "lang": "ml",
+   "names": [
+    "Biography",
+    "ജീവചരിത്രം",
+    "ജീവിതരേഖ"
+   ]
+  },
+  "Q37732": {
+   "label": "ജനസംഖ്യാപഠനം",
+   "lang": "ml",
+   "names": [
+    "Demography",
+    "ജനസംഖ്യാപഠനം",
+    "ഡെമോഗ്രഫി"
+   ]
+  },
+  "Q618779": {
+   "label": "പുരസ്കാരം",
+   "lang": "ml",
+   "names": [
+    "Award",
+    "അവാർഡ്",
+    "പുരസ്കാരം"
+   ]
+  },
+  "Q7163": {
+   "label": "രാഷ്ട്രതന്ത്രം",
+   "lang": "ml",
+   "names": [
+    "രാഷ്ട്രതന്ത്രം"
+   ]
+  },
+  "Q7188": {
+   "label": "സർക്കാർ",
+   "lang": "ml",
+   "names": [
+    "ഗവൺമെന്റ്",
+    "ഭരണകൂടം",
+    "സർക്കാർ"
+   ]
+  },
+  "Q7937": {
+   "label": "അന്തരീക്ഷസ്ഥിതി",
+   "lang": "ml",
+   "names": [
+    "അന്തരീക്ഷസ്ഥിതി"
+   ]
+  },
+  "Q82799": {
+   "label": "name",
+   "lang": "en",
+   "names": []
+  },
+  "Q8434": {
+   "label": "വിദ്യാഭ്യാസം",
+   "lang": "ml",
+   "names": [
+    "വിദ്യാഭ്യാസം"
+   ]
+  },
+  "Q8436": {
+   "label": "കുടുംബം",
+   "lang": "ml",
+   "names": [
+    "കുടുംബം"
+   ]
+  },
+  "Q930933": {
+   "label": "relation",
+   "lang": "en",
+   "names": []
+  }
+ },
+ "article": {
+  "title": "പാരിസ്",
+  "paragraphs": [
+   "<a href=\"/wiki/%E0%B4%AB%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B5%BB%E0%B4%B8%E0%B5%8D\" title=\"ഫ്രാൻസ്\">ഫ്രാൻസിന്റെ</a> തലസ്ഥാന നഗരമാണ് <b>പാരിസ്</b>. ഫ്രഞ്ചു ഉച്ചാരണം പാരി(paʁi ). വടക്കൻ ഫ്രാൻസിലെ <a href=\"/wiki/%E0%B4%B8%E0%B5%80%E0%B5%BB_%E0%B4%A8%E0%B4%A6%E0%B4%BF\" title=\"സീൻ നദി\">സീൻ നദിയുടെ</a>(സെയിൻ എന്നും പറയും) തീരത്ത് <a href=\"/w/index.php?title=%E0%B4%87%E0%B5%BD-%E0%B4%A1%E0%B4%BF-%E0%B4%AB%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B5%BB%E0%B4%B8%E0%B5%8D&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"ഇൽ-ഡി-ഫ്രാൻസ് (ഇതുവരെ എഴുതപ്പെട്ടിട്ടില്ല)\">ഇൽ-ഡി-ഫ്രാൻസ്</a> പ്രദേശത്തിന്റെ ഹൃദയഭാഗത്തായാണ് ഈ നഗരം സ്ഥിതി ചെയ്യുന്നത്.  പ്രണയത്തിന്റേയും കലാസാഹിത്യങ്ങളുടേയും കേന്ദ്രസ്ഥാനമായി  പാരിസ് അറിയപ്പെടുന്നു.  പാരിസ് നഗരത്തിന്റെ ഭൂമിശാസ്ത്രപരമായ ഭരണപരിധിക്ക്  <a href=\"/wiki/1860\" title=\"1860\">1860ന്</a> ശേഷം കാര്യമായ മാറ്റം വന്നിട്ടില്ല. പാരിസ് നഗരത്തിന്റെ വിസ്തീർണം 105.4 ചതുരശ്ര കിലോമീറ്ററാണ്. 2014 ജനവരിയിലെ  കണക്കു പ്രകാരം  പാരിസ് നഗരത്തിലെ ജനസംഖ്യ 2,241,246 ആണ്..    <a href=\"/w/index.php?title=%E0%B4%AA%E0%B4%BE%E0%B4%B0%E0%B4%BF%E0%B4%B8%E0%B5%8D_%E0%B4%AF%E0%B5%81%E0%B4%A3%E0%B5%88%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B5%8D_%E0%B4%85%E0%B5%BC%E0%B4%AC%E0%B5%88%E0%B5%BB&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"പാരിസ് യുണൈറ്റ് അർബൈൻ (ഇതുവരെ എഴുതപ്പെട്ടിട്ടില്ല)\">ബൃഹദ് പാരിസ് നഗരത്തിന്റെ</a>  വിസ്തീർണം 2844 ചതുരശ്രകിലോമീറ്റർ;ജനസംഖ്യ 12,005,077   അതിനുമപ്പുറം വ്യാപിച്ചു കിടക്കുന്ന പരിസരപ്രദേശങ്ങൾ കൂടി ഉൾക്കൊള്ളുന്ന  മെട്രോപോലിറ്റൻ പാരിസ്   <a href=\"/wiki/%E0%B4%AF%E0%B5%82%E0%B4%B1%E0%B5%8B%E0%B4%AA%E0%B5%8D\" class=\"mw-redirect\" title=\"യൂറോപ്\">യൂറോപ്പിലെ</a> ഏറ്റവും ജനസംഖ്യയുള്ള മെട്രോപൊളിറ്റൻ പ്രദേശങ്ങളിലൊന്നാണ്. \nഇന്ന് ലോകത്തിലെ ഒരു പ്രധാന <a href=\"/wiki/%E0%B4%B5%E0%B5%8D%E0%B4%AF%E0%B4%BE%E0%B4%AA%E0%B4%BE%E0%B4%B0%E0%B4%82\" title=\"വ്യാപാരം\">വ്യാപാര</a>, <a href=\"/wiki/%E0%B4%B8%E0%B4%82%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%B0%E0%B4%82\" title=\"സംസ്കാരം\">സാംസ്കാരിക</a> കേന്ദ്രമാണ് പാരിസ്. <a href=\"/wiki/%E0%B4%B0%E0%B4%BE%E0%B4%B7%E0%B5%8D%E0%B4%9F%E0%B5%8D%E0%B4%B0%E0%B5%80%E0%B4%AF%E0%B4%82\" title=\"രാഷ്ട്രീയം\">രാഷ്ട്രീയം</a>, <a href=\"/wiki/%E0%B4%B5%E0%B4%BF%E0%B4%A6%E0%B5%8D%E0%B4%AF%E0%B4%BE%E0%B4%AD%E0%B5%8D%E0%B4%AF%E0%B4%BE%E0%B4%B8%E0%B4%82\" title=\"വിദ്യാഭ്യാസം\">വിദ്യാഭ്യാസം</a>, <a href=\"/wiki/%E0%B4%B5%E0%B4%BF%E0%B4%A8%E0%B5%8B%E0%B4%A6%E0%B4%82\" title=\"വിനോദം\">വിനോദം</a>, <a href=\"/w/index.php?title=%E0%B4%B5%E0%B4%BE%E0%B5%BC%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%BE%E0%B4%AE%E0%B4%BE%E0%B4%A6%E0%B5%8D%E0%B4%A7%E0%B5%8D%E0%B4%AF%E0%B4%AE%E0%B4%82&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"വാർത്താമാദ്ധ്യമം (ഇതുവരെ എഴുതപ്പെട്ടിട്ടില്ല)\">വാർത്താമാദ്ധ്യമം</a>, <a href=\"/wiki/%E0%B4%AB%E0%B4%BE%E0%B4%B7%E0%B5%BB\" title=\"ഫാഷൻ\">ഫാഷൻ</a>, <a href=\"/wiki/%E0%B4%B6%E0%B4%BE%E0%B4%B8%E0%B5%8D%E0%B4%A4%E0%B5%8D%E0%B4%B0%E0%B4%82\" title=\"ശാസ്ത്രം\">ശാസ്ത്രം</a> എന്നീ രംഗങ്ങളിൽ പാരിസ് ചെലുത്തുന്ന സ്വാധീനം അതിനെ ലോകത്തിലെ ഏറ്റവും പ്രധാനപ്പെട്ട ആഗോള നഗരങ്ങളിലൊന്നാക്കിയിരിക്കുന്നു. <a href=\"/w/index.php?title=%E0%B4%AB%E0%B5%8B%E0%B5%BC%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B5%81%E0%B5%BA_%E0%B4%AE%E0%B4%BE%E0%B4%B8%E0%B4%BF%E0%B4%95&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"ഫോർച്ചുൺ മാസിക (ഇതുവരെ എഴുതപ്പെട്ടിട്ടില്ല)\">ഫോർച്ചുൺ മാസിക</a> പുറത്തിറക്കിയ <a href=\"/w/index.php?title=%E0%B4%AB%E0%B5%8B%E0%B5%BC%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B5%81%E0%B5%BA_%E0%B4%97%E0%B5%8D%E0%B4%B2%E0%B5%8B%E0%B4%AC%E0%B5%BD_500&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"ഫോർച്ചുൺ ഗ്ലോബൽ 500 (ഇതുവരെ എഴുതപ്പെട്ടിട്ടില്ല)\">ഫോർച്ചുൺ ഗ്ലോബൽ 500</a> പട്ടികയിലുള്ള 36 കമ്പനികൾ പാരിസ് പ്രദേശം ആസ്ഥാനമാക്കി പ്രവർത്തിക്കുന്നു. <a href=\"/wiki/%E0%B4%AF%E0%B5%81%E0%B4%A8%E0%B5%86%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8B\" title=\"യുനെസ്കോ\">യുനെസ്കോ</a>, <a href=\"/w/index.php?title=Organisation_for_Economic_Co-operation_and_Development&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"Organisation for Economic Co-operation and Development (ഇതുവരെ എഴുതപ്പെട്ടിട്ടില്ല)\">ഒഇസിഡി</a>, <a href=\"/w/index.php?title=International_Chamber_of_Commerce&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"International Chamber of Commerce (ഇതുവരെ എഴുതപ്പെട്ടിട്ടില്ല)\">ഐസിസി</a> തുടങ്ങിയ അന്താരാഷ്ട്ര സംഘടനകളും പാരിസ് കേന്ദ്രമാക്കി പ്രവർത്തിക്കുന്നുണ്ട്.\n",
+   "ലോകത്തിലെ ഏറ്റവും പ്രശസ്തമായ വിനോദസഞ്ചാര കേന്ദ്രമാണ് പാരിസ്. വർഷംതോറും ഏകദേശം 3 കോടി വിദേശ വിനോദസഞ്ചാരികളാണ് ഇവിടെയെത്തുന്നത്.\n",
+   "1900, 1924 എന്നീ വർഷങ്ങളിലെ <a href=\"/wiki/%E0%B4%92%E0%B4%B3%E0%B4%BF%E0%B4%AE%E0%B5%8D%E0%B4%AA%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%B8%E0%B5%8D\" title=\"ഒളിമ്പിക്സ്\">ഒളിമ്പിക്സ്</a> മൽസരങ്ങൾ ഇവിടെയാണ്‌ നടത്തപ്പെട്ടത്\n\n"
+  ],
+  "links": {
+   "ശാസ്ത്രം": "Q336",
+   "സംസ്കാരം": "Q11042",
+   "ഒളിമ്പിക്സ്": "Q5389",
+   "ഫ്രാൻസ്": "Q142",
+   "വിനോദം": "Q173799",
+   "യൂറോപ്പ്": "Q46",
+   "യൂറോപ്": "Q46",
+   "യുനെസ്കോ": "Q7809",
+   "വിദ്യാഭ്യാസം": "Q8434",
+   "രാഷ്ട്രീയം": "Q7163",
+   "ഫാഷൻ": "Q12684",
+   "വ്യാപാരം": "Q601401",
+   "1860": "Q7691",
+   "സീൻ നദി": "Q1471"
+  },
+  "sections": [
+   {
+    "title": "ചരിത്രം",
+    "anchor": "ചരിത്രം",
+    "index": "1"
+   },
+   {
+    "title": "നഗരം ഇന്ന്",
+    "anchor": "നഗരം_ഇന്ന്",
+    "index": "16"
+   },
+   {
+    "title": "അവലംബം",
+    "anchor": "അവലംബം",
+    "index": "20"
+   },
+   {
+    "title": "ചിത്രശാല",
+    "anchor": "ചിത്രശാല",
+    "index": "21"
+   }
+  ],
+  "concept_sections": {
+   "Q121769": [
+    "അവലംബം"
+   ],
+   "Q309": [
+    "ചരിത്രം"
+   ]
+  },
+  "section_text": {
+   "ചരിത്രം": "ക്രിസ്തുവിന് മുമ്പ് മൂന്നാം ശതകത്തിൽ പാരിസി എന്ന <a href=\"/w/index.php?title=%E0%B4%97%E0%B4%BE%E0%B5%BE_%E0%B4%B5%E0%B4%82%E0%B4%B6%E0%B4%9C%E0%B5%BC&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"ഗാൾ വംശജർ (ഇതുവരെ എഴുതപ്പെട്ടിട്ടില്ല)\">ഗാൾ  വംശജർ</a> സെയിൻ നദിയിലെ ഇന്ന് <a href=\"/w/index.php?title=%E0%B4%87%E0%B5%BD_%E0%B4%A1%E0%B4%BF%E0%B4%B2%E0%B4%BE%E0%B4%B8%E0%B4%BF%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B4%BF&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"ഇൽ ഡിലാസിറ്റി (ഇതുവരെ എഴുതപ്പെട്ടിട്ടില്ല)\">ഇൽ ഡിലാസിറ്റി</a> എന്നറിയപ്പെടുന്ന കൊച്ചു ദ്വീപിൽ  താമസമുറപ്പിച്ചതായും ആ ജനപഥം പിന്നീട്  പാരിസ് എന്ന പേരിലറിയപ്പെട്ടതായും പറയപ്പെടുന്നു\n\n"
+  }
+ },
+ "fallback_article": {
+  "title": "Paris",
+  "paragraphs": [
+   "<b>Paris</b> is the <a href=\"/wiki/Capital_city\" title=\"Capital city\">capital</a> and <a href=\"/wiki/List_of_communes_in_France_with_over_20,000_inhabitants\" title=\"List of communes in France with over 20,000 inhabitants\">largest city</a> of <a href=\"/wiki/France\" title=\"France\">France</a>, with an estimated city population of 2.04 million in an area of 105.4&#160;km<sup>2</sup> (40.7&#160;sq&#160;mi), as of January&#160;2026<sup class=\"plainlinks noexcerpt noprint asof-tag update\" style=\"display:none;\"><a class=\"external text\" data-mw-original-href=\"//en.wikipedia.org/w/index.php?title=Paris&amp;action=edit\" href=\"https://en.wikipedia.org/w/index.php?title=Paris&amp;action=edit\">&#91;update&#93;</a></sup>, and a metropolitan population of 13.3 million (2023). Located on the <a href=\"/wiki/Seine\" title=\"Seine\">Seine</a> in the centre of the <a href=\"/wiki/%C3%8Ele-de-France\" title=\"Île-de-France\">Île-de-France</a> region, it is the <a href=\"/wiki/List_of_metropolitan_areas_in_Europe\" title=\"List of metropolitan areas in Europe\">largest metropolitan area</a> and <a href=\"/wiki/List_of_cities_in_the_European_Union_by_population_within_city_limits\" title=\"List of cities in the European Union by population within city limits\">fourth-most populous city</a> in the <a href=\"/wiki/European_Union\" title=\"European Union\">European Union</a> (EU). Paris is nicknamed the \"City of Light\" mainly due to its leading role in the <a href=\"/wiki/Age_of_Enlightenment\" title=\"Age of Enlightenment\">Age of Enlightenment</a>.\n",
+   "Administratively, Paris is divided into <a href=\"/wiki/Arrondissements_of_Paris\" title=\"Arrondissements of Paris\">twenty arrondissements</a> (districts), each having their own cultural identity. <a href=\"/wiki/Haussmann%27s_renovation_of_Paris\" title=\"Haussmann&#39;s renovation of Paris\">Haussmann's renovation of Paris</a>, which created new boulevards, parks, and public works, gave birth to a modern city known as the \"<a href=\"/wiki/Paris,_Capital_of_the_19th_Century\" title=\"Paris, Capital of the 19th Century\">capital of the 19th century</a>\". Paris is a major railway, motorway, and air-transport hub; in 2024 <a href=\"/wiki/Charles_de_Gaulle_Airport\" class=\"mw-redirect\" title=\"Charles de Gaulle Airport\">Charles de Gaulle Airport</a> was the EU's <a href=\"/wiki/List_of_the_busiest_airports_in_Europe\" title=\"List of the busiest airports in Europe\">busiest airport</a>. Paris has one of the most <a href=\"/wiki/Sustainable_transportation\" class=\"mw-redirect\" title=\"Sustainable transportation\">sustainable transportation</a> systems in the world and is one of only two cities that have received the <a href=\"/wiki/Sustainable_Transport_Award\" title=\"Sustainable Transport Award\">Sustainable Transport Award</a> twice. Its <a href=\"/wiki/Art_Nouveau\" title=\"Art Nouveau\">Art Nouveau</a>-decorated <a href=\"/wiki/Paris_M%C3%A9tro\" class=\"mw-redirect\" title=\"Paris Métro\">Métro</a> has become a symbol of the city. Paris is known for its museums and architectural landmarks: the <a href=\"/wiki/Louvre\" title=\"Louvre\">Louvre</a> is the largest and most-visited museum in the world; the <a href=\"/wiki/Mus%C3%A9e_d%27Orsay\" title=\"Musée d&#39;Orsay\">Musée d'Orsay</a>, <a href=\"/wiki/Mus%C3%A9e_Marmottan_Monet\" title=\"Musée Marmottan Monet\">Musée Marmottan Monet</a>, and <a href=\"/wiki/Mus%C3%A9e_de_l%27Orangerie\" title=\"Musée de l&#39;Orangerie\">Musée de l'Orangerie</a> are noted for their collections of French <a href=\"/wiki/Impressionism\" title=\"Impressionism\">Impressionist</a> art, while the <span title=\"French-language text\"><span lang=\"fr\" style=\"font-style: normal;\"><a href=\"/wiki/Mus%C3%A9e_National_d%27Art_Moderne\" title=\"Musée National d&#39;Art Moderne\">Musée National d'Art Moderne</a></span></span>, <a href=\"/wiki/Mus%C3%A9e_Rodin\" title=\"Musée Rodin\">Musée Rodin</a>, and <a href=\"/wiki/Mus%C3%A9e_Picasso\" class=\"mw-redirect\" title=\"Musée Picasso\">Musée Picasso</a> are noted for their collections of <a href=\"/wiki/Modern_art\" title=\"Modern art\">modern</a> and <a href=\"/wiki/Contemporary_art\" title=\"Contemporary art\">contemporary art</a>. Parts of the city along the Seine have been designated a <a href=\"/wiki/UNESCO\" title=\"UNESCO\">UNESCO</a> <a href=\"/wiki/World_Heritage_Site\" title=\"World Heritage Site\">World Heritage Site</a> since 1991<sup class=\"plainlinks noexcerpt noprint asof-tag update\" style=\"display:none;\"><a class=\"external text\" data-mw-original-href=\"//en.wikipedia.org/w/index.php?title=Paris&amp;action=edit\" href=\"https://en.wikipedia.org/w/index.php?title=Paris&amp;action=edit\">&#91;update&#93;</a></sup>.\n",
+   "The <a href=\"/wiki/President_of_France\" title=\"President of France\">president of France</a> and both houses of the <a href=\"/wiki/French_Parliament\" title=\"French Parliament\">French Parliament</a> sit in Paris. Paris is home to several <a href=\"/wiki/United_Nations\" title=\"United Nations\">United Nations</a> organisations, including UNESCO, as well as other international organisations such as the <a href=\"/wiki/OECD\" title=\"OECD\">OECD</a>, the <a href=\"/wiki/International_Bureau_of_Weights_and_Measures\" title=\"International Bureau of Weights and Measures\">International Bureau of Weights and Measures</a> (in neighbouring <a href=\"/wiki/Saint-Cloud\" title=\"Saint-Cloud\">Saint-Cloud</a>), the <a href=\"/wiki/International_Energy_Agency\" title=\"International Energy Agency\">International Energy Agency</a>, the <a href=\"/wiki/Organisation_internationale_de_la_Francophonie\" title=\"Organisation internationale de la Francophonie\">Organisation internationale de la Francophonie</a>, the <a href=\"/wiki/International_Federation_for_Human_Rights\" title=\"International Federation for Human Rights\">International Federation for Human Rights</a>, and the <a href=\"/wiki/F%C3%A9d%C3%A9ration_Internationale_de_l%27Automobile\" title=\"Fédération Internationale de l&#39;Automobile\">Fédération internationale de l'Automobile</a>, along with European bodies such as the <a href=\"/wiki/European_Space_Agency\" title=\"European Space Agency\">European Space Agency</a>, the <a href=\"/wiki/European_Banking_Authority\" title=\"European Banking Authority\">European Banking Authority</a>, and the <a href=\"/wiki/European_Securities_and_Markets_Authority\" title=\"European Securities and Markets Authority\">European Securities and Markets Authority</a>. The city <a href=\"/wiki/Sport_in_Paris\" class=\"mw-redirect\" title=\"Sport in Paris\">hosts many sporting events</a>, such as the <a href=\"/wiki/French_Open\" title=\"French Open\">French Open</a>, and is the home of the <a href=\"/wiki/Association_football\" title=\"Association football\">association football</a> club <a href=\"/wiki/Paris_Saint-Germain_FC\" title=\"Paris Saint-Germain FC\">Paris Saint-Germain</a> and the <a href=\"/wiki/Rugby_union\" title=\"Rugby union\">rugby union</a> club <a href=\"/wiki/Stade_Fran%C3%A7ais\" title=\"Stade Français\">Stade Français</a>. Paris has also hosted the <a href=\"/wiki/Summer_Olympics\" class=\"mw-redirect\" title=\"Summer Olympics\">Summer Olympics</a> three times, in <a href=\"/wiki/1900_Summer_Olympics\" title=\"1900 Summer Olympics\">1900</a>, <a href=\"/wiki/1924_Summer_Olympics\" title=\"1924 Summer Olympics\">1924</a> and <a href=\"/wiki/2024_Summer_Olympics\" title=\"2024 Summer Olympics\">2024</a>.\n",
+   "<br /><span class=\"error mw-ext-cite-error\" lang=\"en\" dir=\"ltr\">Cite error: There are <code>&lt;ref&#160;group&#61;lower-alpha&gt;</code> tags&#160;or <code>&#123;&#123;efn&#125;&#125;</code> templates on this page, but the references will not show without a <code>&#123;&#123;reflist&#124;group&#61;lower-alpha&#125;&#125;</code> template&#160;or <code>&#123;&#123;notelist&#125;&#125;</code> template (see the <a href=\"/wiki/Help:Cite_errors/Cite_error_group_refs_without_references\" title=\"Help:Cite errors/Cite error group refs without references\">help page</a>).</span>"
+  ],
+  "links": {
+   "International Bureau of Weights and Measures": "Q229478",
+   "European Union": "Q458",
+   "European Space Agency": "Q42262",
+   "Association football": "Q2736",
+   "Impressionism": "Q40415",
+   "Louvre": "Q19675",
+   "Paris": "Q90",
+   "Sport in Paris": "Q90",
+   "President of France": "Q191954",
+   "Rugby union": "Q5849",
+   "Summer Olympic Games": "Q159821",
+   "Summer Olympics": "Q159821",
+   "Age of Enlightenment": "Q12539",
+   "Paris Metro": "Q50716",
+   "Paris Métro": "Q50716",
+   "Musée d'Orsay": "Q23402",
+   "Seine": "Q1471",
+   "Art Nouveau": "Q34636",
+   "Contemporary art": "Q186030",
+   "Organisation internationale de la Francophonie": "Q134102",
+   "1924 Summer Olympics": "Q8132",
+   "Paris Charles de Gaulle Airport": "Q46280",
+   "Charles de Gaulle Airport": "Q46280",
+   "French Open": "Q43605",
+   "Modern art": "Q38166",
+   "1900 Summer Olympics": "Q8088",
+   "Capital city": "Q5119",
+   "Fédération Internationale de l'Automobile": "Q179412",
+   "List of metropolitan areas in Europe": "Q1030300",
+   "International Energy Agency": "Q826700",
+   "Paris Saint-Germain FC": "Q483020",
+   "Saint-Cloud": "Q189153",
+   "Musée National d'Art Moderne": "Q1895953",
+   "Sustainable transport": "Q1364310",
+   "Sustainable transportation": "Q1364310",
+   "French Parliament": "Q632552",
+   "Musée Rodin": "Q650519",
+   "Arrondissements of Paris": "Q679388",
+   "List of cities in the European Union by population within city limits": "Q727640",
+   "Stade Français": "Q1361000",
+   "Musée Picasso Paris": "Q743206",
+   "Musée Picasso": "Q743206",
+   "Musée Marmottan Monet": "Q1327886",
+   "International Federation for Human Rights": "Q730498",
+   "Haussmann's renovation of Paris": "Q1117470",
+   "List of the busiest airports in Europe": "Q959720",
+   "Musée de l'Orangerie": "Q726781",
+   "France": "Q142",
+   "2024 Summer Olympics": "Q995653",
+   "UNESCO": "Q7809",
+   "European Securities and Markets Authority": "Q769112",
+   "European Banking Authority": "Q769548",
+   "OECD": "Q41550",
+   "Sustainable Transport Award": "Q16952022",
+   "Paris, Capital of the 19th Century": "Q85792230",
+   "List of communes in France with over 20,000 inhabitants": "Q2723600",
+   "United Nations": "Q1065",
+   "World Heritage Site": "Q9259",
+   "Île-de-France": "Q13917",
+   "English Channel": "Q34640",
+   "Louis XIV": "Q7742",
+   "Montmartre": "Q186115",
+   "Académie royale de peinture et de sculpture": "Q337579",
+   "François Girardon": "Q712497",
+   "Île de la Cité": "Q190063",
+   "Île Saint-Louis": "Q211034",
+   "Antoine Coysevox": "Q505134",
+   "Nicolas Coustou": "Q1348290",
+   "Pierre Mignard": "Q360010",
+   "Paris Region": "Q13917",
+   "17th-century French art": "Q63349743",
+   "French Baroque and Classicism": "Q63349743",
+   "Parisii (Gaul)": "Q656902",
+   "Height above mean sea level": "Q6452016",
+   "Above mean sea level": "Q6452016"
+  },
+  "sections": [
+   {
+    "title": "Etymology",
+    "anchor": "Etymology",
+    "index": "1"
+   },
+   {
+    "title": "History",
+    "anchor": "History",
+    "index": "2"
+   },
+   {
+    "title": "Geography",
+    "anchor": "Geography",
+    "index": "7"
+   },
+   {
+    "title": "Administration",
+    "anchor": "Administration",
+    "index": "9"
+   },
+   {
+    "title": "Cityscape",
+    "anchor": "Cityscape",
+    "index": "15"
+   },
+   {
+    "title": "Demographics",
+    "anchor": "Demographics",
+    "index": "19"
+   },
+   {
+    "title": "Economy",
+    "anchor": "Economy",
+    "index": "22"
+   },
+   {
+    "title": "Culture",
+    "anchor": "Culture",
+    "index": "25"
+   },
+   {
+    "title": "Sports",
+    "anchor": "Sports",
+    "index": "38"
+   },
+   {
+    "title": "Infrastructure",
+    "anchor": "Infrastructure",
+    "index": "39"
+   },
+   {
+    "title": "International relations",
+    "anchor": "International_relations",
+    "index": "53"
+   },
+   {
+    "title": "In popular culture",
+    "anchor": "In_popular_culture",
+    "index": "57"
+   },
+   {
+    "title": "See also",
+    "anchor": "See_also",
+    "index": "58"
+   },
+   {
+    "title": "Notes",
+    "anchor": "Notes",
+    "index": "59"
+   },
+   {
+    "title": "References",
+    "anchor": "References",
+    "index": "60"
+   },
+   {
+    "title": "Further reading",
+    "anchor": "Further_reading",
+    "index": "63"
+   },
+   {
+    "title": "External links",
+    "anchor": "External_links",
+    "index": "64"
+   }
+  ],
+  "concept_sections": {
+   "Q1071": [
+    "Geography"
+   ],
+   "Q11042": [
+    "Culture"
+   ],
+   "Q159810": [
+    "Economy"
+   ],
+   "Q309": [
+    "History"
+   ]
+  },
+  "section_text": {
+   "History": "The <i><a href=\"/wiki/Parisii_(Gaul)\" title=\"Parisii (Gaul)\">Parisii</a></i> people inhabited the Paris area from around the middle of the 3rd century BC. One of the area's major north–south trade routes crossed the <a href=\"/wiki/Seine\" title=\"Seine\">Seine</a> on the <a href=\"/wiki/%C3%8Ele_de_la_Cit%C3%A9\" title=\"Île de la Cité\">Île de la Cité</a>, which gradually became an important trading centre. The Parisii traded with many river towns, some as far away as the Iberian Peninsula, and minted their own coins.\n",
+   "Geography": "Paris is located in northern central France, in a north-bending arc of the river <a href=\"/wiki/Seine\" title=\"Seine\">Seine</a>, whose crest includes two islands, the <a href=\"/wiki/%C3%8Ele_Saint-Louis\" title=\"Île Saint-Louis\">Île Saint-Louis</a> and the larger <a href=\"/wiki/%C3%8Ele_de_la_Cit%C3%A9\" title=\"Île de la Cité\">Île de la Cité</a>, which form the oldest part of Paris. The river's mouth on the <a href=\"/wiki/English_Channel\" title=\"English Channel\">English Channel</a> (<i>La Manche</i>) is about 233&#160;mi (375&#160;km) downstream from Paris. Paris is spread widely on both banks of the river. Overall, Paris is relatively flat, and the lowest point is 35&#160;m (115&#160;ft) <a href=\"/wiki/Above_mean_sea_level\" class=\"mw-redirect\" title=\"Above mean sea level\">above sea level</a>. Paris has several prominent hills, the highest of which is <a href=\"/wiki/Montmartre\" title=\"Montmartre\">Montmartre</a> at 130&#160;m (427&#160;ft).\n",
+   "Economy": "The economy of the City of Paris is based largely on services and commerce. Of the 390,480 enterprises in Paris, 80.6 percent are engaged in commerce, transportation, and diverse services, 6.5 percent in construction, and 3.8 percent in industry. The story is similar in the <a href=\"/wiki/Paris_Region\" class=\"mw-redirect\" title=\"Paris Region\">Paris Region</a> (Île-de-France): 76.7 percent of enterprises are engaged in commerce and services, and 3.4 percent in industry.\n",
+   "Culture": "For centuries, Paris has attracted artists from around the world. As a result, Paris has acquired a reputation as the \"City of Art\". Italian artists were a profound influence on the development of art in Paris in the 16th and 17th centuries, particularly in sculpture and reliefs. Painting and sculpture became the pride of the French monarchy, and the French royal family commissioned many Parisian artists to adorn their palaces during the <a href=\"/wiki/French_Baroque_and_Classicism\" class=\"mw-redirect\" title=\"French Baroque and Classicism\">French Baroque and Classicism</a> era. Sculptors such as <a href=\"/wiki/Fran%C3%A7ois_Girardon\" title=\"François Girardon\">Girardon</a>, <a href=\"/wiki/Antoine_Coysevox\" title=\"Antoine Coysevox\">Coysevox</a>, and <a href=\"/wiki/Nicolas_Coustou\" title=\"Nicolas Coustou\">Coustou</a> acquired reputations as the finest artists in the royal court in 17th-century France. <a href=\"/wiki/Pierre_Mignard\" title=\"Pierre Mignard\">Pierre Mignard</a> became the first painter to King <a href=\"/wiki/Louis_XIV\" title=\"Louis XIV\">Louis XIV</a> during this period. In 1648, the <i><a href=\"/wiki/Acad%C3%A9mie_royale_de_peinture_et_de_sculpture\" title=\"Académie royale de peinture et de sculpture\">Académie royale de peinture et de sculpture</a></i> (Royal Academy of Painting and Sculpture) was established to accommodate the dramatic interest in art in the capital.\n"
+  }
+ },
+ "page_images": {
+  "Q10981622": {
+   "file": "OHMap-doton-Paris.png",
+   "width": 309,
+   "height": 352,
+   "artist": "User:Nyttend",
+   "license": "Public domain",
+   "source": "en.wikipedia.org"
+  },
+  "Q1142326": {
+   "file": "Département de la Seine avant-après 1860.png",
+   "width": 964,
+   "height": 899,
+   "artist": "Gundan",
+   "license": "CC BY-SA 4.0",
+   "source": "en.wikipedia.org"
+  },
+  "Q12371988": {
+   "file": "Flag of the Mayor of Paris.svg",
+   "width": 900,
+   "height": 600,
+   "artist": "Unknown author Unknown author",
+   "license": "Public domain",
+   "source": "en.wikipedia.org"
+  },
+  "Q12522114": {
+   "file": "Paris by Sentinel-2.jpg",
+   "width": 5945,
+   "height": 4987,
+   "artist": "Copernicus Sentinel-2, ESA",
+   "license": "CC BY-SA 3.0 igo",
+   "source": "en.wikipedia.org"
+  },
+  "Q1403319": {
+   "file": "Paris printable tourist attractions map.jpg",
+   "width": 2105,
+   "height": 1488,
+   "artist": "Tripomatic.com",
+   "license": "CC BY-SA 3.0",
+   "source": "en.wikipedia.org"
+  },
+  "Q1422929": {
+   "file": "Countries with a primate city 2026.09.svg",
+   "width": 2754,
+   "height": 1398,
+   "artist": "@DarwinPeacock",
+   "license": "CC0",
+   "source": "en.wikipedia.org"
+  },
+  "Q146246": {
+   "file": "Franks expansion.gif",
+   "width": 790,
+   "height": 505,
+   "artist": "No machine-readable author provided. Roke~commonswiki assumed (based on copyright claims).",
+   "license": "CC BY-SA 3.0",
+   "source": "en.wikipedia.org"
+  },
+  "Q179023": {
+   "file": "Royal Standard of the King of France.svg",
+   "width": 1200,
+   "height": 800,
+   "artist": "Sodacan",
+   "license": "CC BY-SA 3.0",
+   "source": "en.wikipedia.org"
+  },
+  "Q207162": {
+   "file": "Royal flag of France during the Bourbon Restoration.svg",
+   "width": 900,
+   "height": 600,
+   "artist": "Sodacan",
+   "license": "CC BY-SA 4.0",
+   "source": "en.wikipedia.org"
+  },
+  "Q212429": {
+   "file": "Fr-map.png",
+   "width": 326,
+   "height": 351,
+   "artist": "",
+   "license": "Public domain",
+   "source": "en.wikipedia.org"
+  },
+  "Q22134091": {
+   "file": "Ice rescue at Corps' M.J. Kirwan Dam (5281899788).jpg",
+   "width": 600,
+   "height": 400,
+   "artist": "U.S. Army Corps of Engineers from USA",
+   "license": "Public domain",
+   "source": "en.wikipedia.org"
+  },
+  "Q2219239": {
+   "file": "WI; Grant County Map; Town of Paris.png",
+   "width": 607,
+   "height": 780,
+   "artist": "AEtheEditor",
+   "license": "CC0",
+   "source": "en.wikipedia.org"
+  },
+  "Q2220917": {
+   "file": "WI; Kenosha County Map; Town of Paris.png",
+   "width": 1588,
+   "height": 775,
+   "artist": "AEtheEditor",
+   "license": "CC0",
+   "source": "en.wikipedia.org"
+  },
+  "Q2240381": {
+   "file": "Carolina Herrera AW14 12.jpg",
+   "width": 800,
+   "height": 530,
+   "artist": "CHRISTOPHER MACSURAK from Chicago, USA",
+   "license": "CC BY 2.0",
+   "source": "en.wikipedia.org"
+  },
+  "Q2246902": {
+   "file": "Paris uu ua jms.png",
+   "width": 570,
+   "height": 622,
+   "artist": "The original uploader was ThePromenader at English Wikipedia .",
+   "license": "CC BY-SA 3.0",
+   "source": "en.wikipedia.org"
+  },
+  "Q2482095": {
+   "file": "Armoiries de la ville de Paris (1949).svg",
+   "width": 794,
+   "height": 1123,
+   "artist": "RaphaëlMignon",
+   "license": "CC BY 4.0",
+   "source": "en.wikipedia.org"
+  },
+  "Q2748708": {
+   "file": "War ensign of Germany (1938–1945).svg",
+   "width": 1000,
+   "height": 600,
+   "artist": "Unknown author Unknown author",
+   "license": "Public domain",
+   "source": "en.wikipedia.org"
+  },
+  "Q2863958": {
+   "file": "Locator map of Departement Paris 2019.png",
+   "width": 2500,
+   "height": 1821,
+   "artist": "Tschubby",
+   "license": "CC BY-SA 3.0",
+   "source": "en.wikipedia.org"
+  },
+  "Q3252156": {
+   "file": "Pavillon de Flore from Tuileries, Paris October 2011 001.jpg",
+   "width": 4288,
+   "height": 2848,
+   "artist": "Kimberly Vardeman .",
+   "license": "CC BY 2.0",
+   "source": "en.wikipedia.org"
+  },
+  "Q484170": {
+   "file": "FR-communes-2020.png",
+   "width": 3410,
+   "height": 2930,
+   "artist": "Roland45",
+   "license": "CC BY-SA 4.0",
+   "source": "en.wikipedia.org"
+  },
+  "Q48849482": {
+   "file": "Map of Lincoln Co, Ks, USA.png",
+   "width": 938,
+   "height": 784,
+   "artist": "Designed and published by the Kansas Department of Transportation.",
+   "license": "Public domain",
+   "source": "en.wikipedia.org"
+  },
+  "Q5333743": {
+   "file": "Tour-Total.jpg",
+   "width": 3312,
+   "height": 4416,
+   "artist": "I Tangopaso ( talk )) created this photograph.",
+   "license": "PD",
+   "source": "en.wikipedia.org"
+  },
+  "Q538772": {
+   "file": "NY 12 nb starting descent to New Hartford, July 2023.jpg",
+   "width": 2929,
+   "height": 2197,
+   "artist": "Mr. Matté (if there is an issue with this image, contact me using this image's Commons talk page , my Commons user talk page , or my English Wikipedia user talk page ; I'll know about it a lot faster)",
+   "license": "CC BY-SA 4.0",
+   "source": "en.wikipedia.org"
+  },
+  "Q58326": {
+   "file": "Flag of France.svg",
+   "width": 900,
+   "height": 600,
+   "artist": "https://commons.wikimedia.org/wiki/File:Flag_of_France.svg , https://diffusion.shom.fr/pro/downloadable/download/sample/sample_id/73/ , https://www.gouvernement.fr/charte/charte-graphique-les-fondamentaux/les-couleurs , User:Anomie , User:MSGJ , User:SKopp",
+   "license": "PD",
+   "source": "en.wikipedia.org"
+  },
+  "Q71092": {
+   "file": "Flag of France.svg",
+   "width": 900,
+   "height": 600,
+   "artist": "https://commons.wikimedia.org/wiki/File:Flag_of_France.svg , https://diffusion.shom.fr/pro/downloadable/download/sample/sample_id/73/ , https://www.gouvernement.fr/charte/charte-graphique-les-fondamentaux/les-couleurs , User:Anomie , User:MSGJ , User:SKopp",
+   "license": "PD",
+   "source": "en.wikipedia.org"
+  },
+  "Q845625": {
+   "file": "Palais de la Cite.jpg",
+   "width": 1127,
+   "height": 757,
+   "artist": "Limbourg Brothers",
+   "license": "Public domain",
+   "source": "en.wikipedia.org"
+  }
+ }
+}

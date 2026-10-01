@@ -1,0 +1,1092 @@
+/* Design system 0.2 for composed pages.
+
+   Layer 3 of the three-layer composition. The composition names templates,
+   slots and primitives; this file says what they look like at every width.
+   It is the only place with geometry.
+
+   - One page grid of 12 columns. Every spread takes the page tracks with
+     subgrid, so all spreads align to the same columns.
+   - A template is a set of slot spans. A container query on the page moves
+     every slot to the full width when the page is narrow.
+   - Rows are always content-sized. Nothing has a fixed height except what
+     has an aspect ratio of its own.
+   - Colour means the spread (the dimension of the data), nothing else.
+   Native nesting and logical properties only. */
+
+:root {
+	--page-max: 1280px;
+	--gutter: 16px;
+	--gap: 16px;
+	--radius: 8px;
+	--run-height: 200px;
+	--set-height: 150px;
+	--feature-max: 560px;
+	--ink: var( --color-subtle );
+	--soft: var( --background-color-neutral-subtle );
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background-color: var( --background-color-base );
+	color: var( --color-base );
+	font-family: var( --font-family-system-sans );
+	font-size: var( --font-size-medium );
+	line-height: var( --line-height-medium );
+}
+
+a {
+	color: var( --color-progressive );
+	text-decoration: none;
+
+	&:hover { text-decoration: underline; }
+}
+
+/* A string that did not come in the page language. */
+.fb {
+	text-decoration: underline dotted color-mix( in srgb, currentColor 45%, transparent );
+	text-underline-offset: 0.2em;
+}
+
+.note {
+	color: var( --color-subtle );
+	font-size: var( --font-size-small );
+	font-weight: var( --font-weight-normal );
+}
+
+/* Spread colours: one for each dimension of the data, shared by the class
+   layouts. Only the option-* colours are categorical in Codex; red and
+   maroon are not used, because red means "destructive". */
+[data-spread='location'], [data-spread='connections'] { --ink: var( --color-option-green ); --soft: var( --background-color-option-green ); }
+[data-spread='demography'], [data-spread='economy'] { --ink: var( --color-option-blue ); --soft: var( --background-color-option-blue ); }
+[data-spread='government'], [data-spread='work'], [data-spread='relations'] { --ink: var( --color-option-purple ); --soft: var( --background-color-option-purple ); }
+[data-spread='history'], [data-spread='life'] { --ink: var( --color-option-orange ); --soft: var( --background-color-option-orange ); }
+[data-spread='names'], [data-spread='family'] { --ink: var( --color-option-pink ); --soft: var( --background-color-option-pink ); }
+[data-spread='education'], [data-spread='awards'] { --ink: var( --color-option-yellow ); --soft: var( --background-color-option-yellow ); }
+[data-spread='media'] { --ink: var( --color-option-lime ); --soft: var( --background-color-option-lime ); }
+[data-spread='evidence'], [data-spread='identity'], [data-spread='more'] { --ink: var( --color-subtle ); --soft: var( --background-color-neutral-subtle ); }
+
+/* A set of pictures in a stack of columns takes the whole width of the
+   stack: pictures need width, and text blocks flow in the columns under it. */
+.t-columns > [data-slot='stack'] > .set { column-span: all; }
+
+/* A spread with a colour has a tinted band behind its title. */
+.spread:is( [data-spread='location'], [data-spread='connections'], [data-spread='demography'],
+	[data-spread='economy'], [data-spread='government'], [data-spread='work'], [data-spread='relations'],
+	[data-spread='history'], [data-spread='life'], [data-spread='names'], [data-spread='family'],
+	[data-spread='education'], [data-spread='awards'], [data-spread='media'] ) > h2 {
+	background: linear-gradient( to right, var( --soft ), transparent 60% );
+	padding-inline: var( --spacing-75 );
+	border-start-start-radius: var( --radius );
+}
+
+/* A label that is not in the page language has an action to add it. It
+   shows when the pointer or the focus is on the label, and it is always
+   there for a keyboard. It is a badge on the corner of the label, out of
+   the flow, so that it takes no space when it is hidden. */
+.fb-group { position: relative; }
+
+.add-label {
+	position: absolute;
+	inset-block-start: -0.7em;
+	inset-inline-end: -0.9em;
+	z-index: 1;
+	display: inline-grid;
+	place-items: center;
+	inline-size: 1.4em;
+	block-size: 1.4em;
+	border-radius: 50%;
+	font-size: 0.75em;
+	font-weight: var( --font-weight-bold );
+	line-height: 1;
+	vertical-align: middle;
+	color: var( --color-inverted );
+	background-color: var( --color-progressive );
+	opacity: 0;
+	text-decoration: none;
+
+	.fb-group:hover > &,
+	&:focus-visible { opacity: 1; }
+}
+
+/* The tools of a statement or a picture: credit, edit. They show on hover
+   and on focus, and always on a touch screen. */
+.tools {
+	display: inline-flex;
+	gap: 2px;
+	opacity: 0;
+	transition: opacity 0.15s;
+
+	:is( .row, .m, .map, .block > h3 ):is( :hover, :focus-within ) > & { opacity: 1; }
+
+	@media ( hover: none ) { opacity: 1; }
+}
+
+.v > .edit,
+.block > h3 > .edit { opacity: 0; }
+.v:is( :hover, :focus-within ) > .edit,
+.block > h3:is( :hover, :focus-within ) > .edit { opacity: 1; }
+
+.edit,
+.info {
+	display: inline-grid;
+	place-items: center;
+	inline-size: 22px;
+	block-size: 22px;
+	padding: 0;
+	border: 0;
+	border-radius: 50%;
+	font: inherit;
+	font-size: 12px;
+	font-weight: var( --font-weight-bold );
+	line-height: 1;
+	color: var( --color-subtle );
+	background-color: var( --background-color-interactive-subtle );
+	cursor: pointer;
+	text-decoration: none;
+
+	&:hover { color: var( --color-progressive ); text-decoration: none; }
+}
+
+.info { font-family: var( --font-family-serif ); font-style: italic; }
+
+/* On a picture the tools sit in the top corner. */
+:is( .m, .map ) > .tools {
+	position: absolute;
+	inset-block-start: var( --spacing-50 );
+	inset-inline-end: var( --spacing-50 );
+
+	& > :is( .edit, .info ) { background-color: rgba( 255, 255, 255, 0.85 ); color: #202122; }
+}
+
+/* The credit of a picture: a popover, opened by its (i) button. */
+.pop {
+	margin: 0;
+	max-inline-size: 320px;
+	padding: var( --spacing-50 ) var( --spacing-75 );
+	border: 1px solid var( --border-color-base );
+	border-radius: var( --border-radius-base );
+	background-color: var( --background-color-base );
+	color: var( --color-base );
+	font-size: var( --font-size-x-small );
+	box-shadow: 0 2px 8px var( --box-shadow-color-alpha-base );
+	inset: auto;
+	position-area: block-end span-inline-start;
+	position-try-fallbacks: flip-block, flip-inline;
+}
+
+/* The rest of a list: a button that opens a dialog. */
+.more {
+	margin-inline-start: 2px;
+	padding: 0 var( --spacing-75 );
+	border: 1px solid var( --border-color-base );
+	border-radius: var( --border-radius-pill );
+	background-color: var( --background-color-base );
+	color: var( --color-progressive );
+	font: inherit;
+	font-size: var( --font-size-small );
+	font-weight: var( --font-weight-bold );
+	cursor: pointer;
+
+	&:hover { background-color: var( --background-color-interactive-subtle ); }
+
+	/* In a block (a flex column) it keeps its own width. */
+	.block > & { align-self: start; }
+}
+
+dialog {
+	inline-size: min( 720px, 100vw - 2 * var( --gutter ) );
+	max-block-size: 80vh;
+	padding: 0;
+	border: 1px solid var( --border-color-base );
+	border-radius: var( --radius );
+	background-color: var( --background-color-base );
+	color: var( --color-base );
+
+	&::backdrop { background-color: rgba( 0, 0, 0, 0.35 ); }
+
+	& header {
+		position: sticky;
+		inset-block-start: 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: var( --spacing-75 ) var( --spacing-100 );
+		background-color: var( --background-color-base );
+		border-block-end: 1px solid var( --border-color-muted );
+
+		& h2 { margin: 0; font-size: var( --font-size-large ); }
+		& button { border: 0; background: none; font-size: var( --font-size-x-large ); cursor: pointer; }
+	}
+
+	& .dialog-body {
+		padding: var( --spacing-100 );
+		font-size: var( --font-size-small );
+	}
+
+	/* All the values of a long list, in balanced columns. */
+	& .dialog-body {
+		columns: 2 240px;
+		column-gap: var( --spacing-200 );
+	}
+}
+
+/* ---------- chrome ---------- */
+
+.chrome {
+	border-block-end: 1px solid var( --border-color-muted );
+
+	& > div {
+		max-inline-size: var( --page-max );
+		margin-inline: auto;
+		padding: var( --spacing-75 ) var( --gutter );
+		display: flex;
+		align-items: center;
+		gap: var( --spacing-100 );
+	}
+
+	& .wordmark {
+		font-family: var( --font-family-serif );
+		font-size: var( --font-size-x-large );
+		color: var( --color-base );
+	}
+
+	& input {
+		flex: 0 1 420px;
+		min-inline-size: 0;
+		font: inherit;
+		padding: var( --spacing-35 ) var( --spacing-75 );
+		border: 1px solid var( --border-color-base );
+		border-radius: var( --border-radius-base );
+	}
+}
+
+/* ---------- the page grid ---------- */
+
+.page {
+	max-inline-size: var( --page-max );
+	margin-inline: auto;
+	padding: var( --spacing-150 ) var( --gutter ) var( --spacing-400 );
+	display: grid;
+	grid-template-columns: repeat( 12, minmax( 0, 1fr ) );
+	column-gap: var( --gap );
+	row-gap: var( --spacing-300 );
+	container: page / inline-size;
+}
+
+.spread {
+	grid-column: 1 / -1;
+	display: grid;
+	grid-template-columns: subgrid;
+	row-gap: var( --gap );
+	align-items: start;
+
+	& > h2 {
+		grid-column: 1 / -1;
+		margin: 0;
+		display: flex;
+		align-items: baseline;
+		gap: var( --spacing-75 );
+		padding-block-end: var( --spacing-50 );
+
+		/* Wikidata labels are lower case by convention. The first letter is
+		   raised for display; in a script without case this does nothing. */
+		&::first-letter { text-transform: uppercase; }
+		border-block-end: 2px solid var( --ink );
+		font-family: var( --font-family-serif );
+		font-size: var( --font-size-xx-large );
+		font-weight: var( --font-weight-normal );
+		line-height: var( --line-height-xx-large );
+	}
+
+	& > [data-slot] {
+		grid-column: 1 / -1;
+		min-inline-size: 0;
+	}
+
+	& > [data-slot='stack'] {
+		display: flex;
+		flex-direction: column;
+		gap: var( --gap );
+	}
+}
+
+/* ---------- templates ---------- */
+
+/* The page head, the same for every class: the title and description,
+   the banner, then the lead beside the picture of the item. The kinds go
+   under the picture.
+
+   The picture is sized by its height, not by a column: its width is the
+   head height × its aspect ratio, at most 40% of the page. A grid column
+   would make a portrait very tall (width ÷ aspect). So the head has its own
+   two columns, not the page subgrid: the lead takes what the picture
+   leaves. The last row is flexible, so the extra height of the lead goes
+   to it. */
+.t-identity {
+	--head-height: 440px;
+	grid-template-columns: minmax( 0, 1fr ) auto;
+	grid-template-rows: [head] auto [band] auto [top] auto [bottom] 1fr;
+	column-gap: var( --spacing-200 );
+
+	& > [data-slot='head'] { grid-row: head; }
+	& > [data-slot='band'] { grid-row: band; }
+	& > [data-slot='lead'] { grid-column: 1; grid-row: top / span 2; }
+	& > [data-slot='hero'] { grid-column: 2; grid-row: top; }
+
+	/* The kinds do not make the picture column wider. */
+	& > [data-slot='kind'] { grid-column: 2; grid-row: bottom; contain: inline-size; }
+
+	& > [data-slot='hero'] > .m {
+		inline-size: calc( var( --head-height ) * var( --a ) );
+		/* Not a percentage: in an auto column it is cyclic, and the browser
+		   ignores it when it sizes the column. */
+		max-inline-size: 40cqi;
+	}
+}
+
+.t-lead-beside {
+	& > [data-slot='hero'] { grid-column: 1 / span 5; }
+	& > [data-slot='stack'] { grid-column: 6 / -1; }
+}
+
+.t-hero-plus-stack {
+	& > [data-slot='hero'] { grid-column: 1 / span 7; }
+	& > [data-slot='stack'] { grid-column: 8 / -1; }}
+
+/* The sheet goes under the shorter column, not under both with an empty
+   area next to it. In lead-beside the hero (a portrait) is the taller one,
+   so the sheet goes under the stack; in hero-plus-stack the hero (a map or
+   a wide picture) is the shorter one, so the sheet goes under the hero.
+   The last row is flexible: the extra height of the tall column goes to
+   it, not to the short one. */
+.t-lead-beside,
+.t-hero-plus-stack {
+	grid-template-rows: [title] auto [prose] auto [top] auto [bottom] 1fr [gallery] auto;
+
+	& > h2 { grid-row: title; }
+	& > .prose-slot { grid-row: prose; }
+	& > [data-slot='hero'] { grid-row: top / span 2; }
+	& > [data-slot='stack'] { grid-row: top; }
+	& > [data-slot='sheet'] { grid-row: bottom; }
+	& > [data-slot='gallery'] { grid-row: gallery; }
+	& > .prose-links { grid-row: -1; }
+}
+
+.t-lead-beside > [data-slot='sheet'] { grid-column: 6 / -1; }
+
+.t-hero-plus-stack {
+	& > [data-slot='hero'] { grid-row: top; }
+	& > [data-slot='stack'] { grid-row: top / span 2; }
+	& > [data-slot='sheet'] { grid-column: 1 / span 7; }
+}
+
+/* Blocks without a shape of their own stand side by side. Without a hero,
+   the stack takes the whole width. */
+.t-columns {
+	& > [data-slot='hero'] { grid-column: 1 / span 4; }
+	&:not( :has( > [data-slot='hero'] ) ) > [data-slot='stack'] { grid-column: 1 / -1; }
+
+	/* Blocks of uneven height flow in balanced columns, down each column,
+	   so a short block does not leave the height of a tall one empty. */
+	& > [data-slot='stack'] {
+		grid-column: 5 / -1;
+		display: block;
+		columns: 3 260px;
+		column-gap: var( --gap );
+
+		& > * {
+			break-inside: avoid;
+			margin-block-end: var( --gap );
+		}
+	}
+}
+
+/* Narrow: every slot takes the full width, in reading order, and sets of
+   pictures get a lower row so that two fit side by side. */
+@container page ( width < 760px ) {
+	.t-identity {
+		grid-template-columns: minmax( 0, 1fr );
+
+		& > [data-slot='hero'] > .m { max-inline-size: 100%; }
+		& > [data-slot='kind'] { contain: none; }
+	}
+
+	.spread {
+		grid-template-rows: none !important;
+
+		& > * { grid-row: auto !important; }
+		& > [data-slot] { grid-column: 1 / -1 !important; }
+	}
+
+	.set .run,
+	.run.small { --h: 100px; }
+}
+
+.prose-links {
+	grid-column: 1 / -1;
+	display: flex;
+	flex-wrap: wrap;
+	gap: var( --spacing-50 ) var( --spacing-100 );
+	font-size: var( --font-size-small );
+	color: var( --color-subtle );
+
+	& a { font-weight: var( --font-weight-semi-bold ); }
+}
+
+/* ---------- blocks ---------- */
+
+.block {
+	display: flex;
+	flex-direction: column;
+	gap: var( --spacing-50 );
+
+	& > h3 {
+		margin: 0;
+		display: flex;
+		align-items: baseline;
+		gap: var( --spacing-50 );
+		font-size: var( --font-size-small );
+		font-weight: var( --font-weight-bold );
+		color: var( --ink );
+
+		& .note { font-weight: var( --font-weight-normal ); }
+	}
+}
+
+/* Provenance by exception. A sourced statement has no mark. A statement
+   whose only reference is a Wikipedia has a "W" tag, with the words in its
+   title. A statement with no reference has a small open mark. */
+.prov-imported {
+	margin-inline-start: 4px;
+	padding: 0 3px;
+	border: 1px solid currentColor;
+	border-radius: 3px;
+	font-size: 9px;
+	font-weight: var( --font-weight-bold );
+	color: var( --color-subtle );
+	vertical-align: middle;
+	cursor: help;
+}
+
+.prov-none {
+	display: inline-block;
+	margin-inline-start: 4px;
+	inline-size: 6px;
+	block-size: 6px;
+	border: 1px solid var( --border-color-base );
+	border-radius: 50%;
+	vertical-align: middle;
+	cursor: help;
+}
+
+/* The prose of a spread: its article section, as a short column. */
+.prose-slot {
+	grid-column: 1 / span 8;
+	font-family: var( --font-family-serif );
+	font-size: var( --font-size-medium );
+
+	& p {
+		margin: 0;
+		line-height: 1.7;
+		max-inline-size: 70ch;
+		text-wrap: pretty;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 5;
+		line-clamp: 5;
+		overflow: hidden;
+	}
+
+	& .read {
+		font-family: var( --font-family-system-sans );
+		font-size: var( --font-size-small );
+		font-weight: var( --font-weight-semi-bold );
+	}
+}
+
+/* An office: the holder now, and the holders before. */
+.succession {
+	& > .m { max-inline-size: 320px; }
+
+	& .before { font-size: var( --font-size-small ); }
+}
+
+/* "More": the rest of the statements, closed until the reader opens it. */
+.t-collapsed > details {
+	grid-column: 1 / -1;
+
+	& > summary {
+		padding-block: var( --spacing-50 );
+		border-block-start: 1px solid var( --border-color-muted );
+	}
+}
+
+/* ---------- media: every picture keeps its own shape ---------- */
+
+.m {
+	position: relative;
+	margin: 0;
+	aspect-ratio: var( --a );
+	max-inline-size: 100%;
+	border-radius: var( --radius );
+	overflow: hidden;
+	background-color: #1b1f23;
+
+	& > img,
+	& > a > img,
+	& > video {
+		display: block;
+		inline-size: 100%;
+		block-size: 100%;
+		object-fit: cover;
+	}
+
+	& > a { display: contents; }
+
+	& figcaption {
+		position: absolute;
+		inset-inline: 0;
+		inset-block-end: 0;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		column-gap: var( --spacing-50 );
+		padding: var( --spacing-250 ) var( --spacing-75 ) var( --spacing-50 );
+		background: linear-gradient( to top, rgba( 0, 0, 0, 0.78 ), transparent );
+		color: #fff;
+		font-size: var( --font-size-x-small );
+		line-height: 1.35;
+		pointer-events: none;
+
+		& a { color: #fff; pointer-events: auto; }
+		& b { font-size: var( --font-size-small ); }
+		& .prov-imported { color: #fff; }
+		& .prov-none { border-color: rgba( 255, 255, 255, 0.75 ); }
+	}
+
+	/* A drawing is shown whole on white, with its caption under the drawing. */
+	/* A drawing or a logo is shown whole on white. The caption is under it,
+	   not over it: the figure is two rows, the drawing fits in the first,
+	   and the figure keeps its aspect ratio for the justified run. */
+	&.k-drawing {
+		/* The drawing is fitted in its box, so the box need not have its
+		   shape: a box at least 1.5 wide for 1 high leaves room for the
+		   caption under a tall, narrow logo. */
+		--box: max( var( --a ), 1.5 );
+		aspect-ratio: var( --box );
+		display: grid;
+		grid-template-rows: minmax( 0, 1fr ) auto;
+		background-color: var( --background-color-base );
+		border: 1px solid var( --border-color-muted );
+
+		& img { object-fit: contain; padding: var( --spacing-75 ) var( --spacing-75 ) var( --spacing-25 ); }
+
+		& figcaption {
+			position: static;
+			padding: 0 var( --spacing-75 ) var( --spacing-50 );
+			background: none;
+			color: var( --color-base );
+
+			& a { color: var( --color-progressive ); }
+			& .prov-imported { color: var( --color-subtle ); }
+			& .prov-none { border-color: var( --border-color-base ); }
+		}
+	}
+
+	/* Video controls are at the bottom, so the caption goes to the top. */
+	&.k-video {
+		background-color: #000;
+
+		& video { object-fit: contain; }
+
+		& figcaption {
+			inset-block: 0 auto;
+			padding: var( --spacing-50 ) var( --spacing-75 ) var( --spacing-250 );
+			background: linear-gradient( to bottom, rgba( 0, 0, 0, 0.7 ), transparent );
+		}
+	}
+
+	&.k-empty {
+		background-color: var( --background-color-base );
+		border: 1px dashed var( --border-color-base );
+
+		& figcaption { background: none; color: var( --color-base ); }
+		& figcaption a { color: var( --color-progressive ); }
+	}
+}
+
+.from {
+	font-size: 9px;
+	font-weight: var( --font-weight-bold );
+	border: 1px solid currentColor;
+	border-radius: 3px;
+	padding: 0 3px;
+	cursor: help;
+}
+
+.assessed { color: #f5c518; }
+
+/* Justified runs, by CSS alone. Each picture grows in proportion to its
+   aspect ratio from a basis of aspect × row height, the run wraps where the
+   browser finds room, and the trailing item keeps the last row from
+   stretching. No row breaks are computed anywhere. */
+.run {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+
+	& > .m {
+		flex: calc( var( --a ) * 100 ) 1 calc( var( --a ) * var( --h, var( --run-height ) ) );
+	}
+
+	& > .m.k-drawing {
+		flex: calc( var( --box ) * 100 ) 1 calc( var( --box ) * var( --h, var( --run-height ) ) );
+	}
+
+	&::after {
+		content: '';
+		flex-grow: 1e4;
+	}
+}
+
+.set .run,
+.run.small { --h: var( --set-height ); }
+
+/* The values of one property have equal importance: they take one row, not
+   many. Each picture has the row height and its own width (height ×
+   aspect); the row scrolls and snaps to each picture. A picture cut at the
+   edge shows that there is more. */
+.run.scroll {
+	flex-wrap: nowrap;
+	overflow-x: auto;
+	overscroll-behavior-x: contain;
+	scroll-snap-type: x mandatory;
+	scroll-padding-inline: 0;
+	scrollbar-width: thin;
+	padding-block-end: var( --spacing-25 );
+
+	& > .m {
+		flex: none;
+		inline-size: calc( var( --a ) * var( --h ) );
+		scroll-snap-align: start;
+	}
+
+	& > .m.k-drawing { inline-size: calc( var( --box ) * var( --h ) ); }
+
+	&::after { content: none; }
+
+	&:focus-visible {
+		outline: 2px solid var( --color-progressive );
+		outline-offset: 2px;
+	}
+}
+
+/* The picture of the item itself needs no property name. */
+[data-spread='identity'] .m figcaption > span:first-child { display: none; }
+
+/* The feature: one picture, as large as the page allows, whole. */
+.feature .m {
+	inline-size: min( 100%, calc( var( --feature-max ) * var( --a ) ) );
+	margin-inline: auto;
+}
+
+.band .m {
+	inline-size: 100%;
+}
+
+/* ---------- identity ---------- */
+
+.title {
+	& h1 {
+		margin: 0;
+		font-family: var( --font-family-heading-main );
+		font-weight: var( --font-weight-normal );
+		font-size: clamp( 2.25rem, 6cqi, 3.5rem );
+		line-height: 1.05;
+	}
+
+	& p { margin: var( --spacing-50 ) 0 0; font-size: var( --font-size-large ); color: var( --color-subtle ); }
+}
+
+.kind {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var( --spacing-50 ) var( --spacing-150 );
+	font-size: var( --font-size-small );
+
+	& .k { display: block; color: var( --color-subtle ); font-size: var( --font-size-x-small ); }
+}
+
+.lead {
+	& p {
+		margin: 0 0 var( --spacing-75 );
+		line-height: 1.7;
+		max-inline-size: 70ch;
+		text-wrap: pretty;
+	}
+
+	& summary {
+		cursor: pointer;
+		color: var( --color-progressive );
+		font-size: var( --font-size-small );
+	}
+
+	& .source { font-size: var( --font-size-small ); color: var( --color-subtle ); }
+}
+
+ruby rt {
+	font-size: 0.6em;
+	color: var( --color-option-green );
+	/* Chromium spreads ruby text over the width of the base word, even with
+	   ruby-align: center, and that splits the clusters of Indic scripts
+	   ("કેન્યા" became "ક ેન્યા"). One inline block cannot be split. */
+	ruby-align: center;
+
+	& > span { display: inline-block; }
+}
+
+/* ---------- scale, peers, series ---------- */
+
+.bars {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	font-size: var( --font-size-small );
+
+	& .bar {
+		display: grid;
+		grid-template-columns: minmax( 0, 10em ) minmax( 0, 1fr ) auto;
+		align-items: center;
+		gap: var( --spacing-75 );
+		color: var( --color-base );
+
+		& .name { color: var( --color-subtle ); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+		& .val { font-weight: var( --font-weight-semi-bold ); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+		& .track {
+			block-size: 12px;
+			border-radius: 6px;
+			background-color: var( --background-color-neutral );
+
+			& span {
+				display: block;
+				block-size: 100%;
+				inline-size: calc( var( --f ) * 100% );
+				min-inline-size: 2px;
+				border-radius: 6px;
+				background-color: color-mix( in srgb, var( --ink ) 45%, transparent );
+			}
+		}
+
+		&.self .name { color: var( --ink ); font-weight: var( --font-weight-bold ); }
+		&.self .track span { background-color: var( --ink ); }
+	}
+}
+
+.scale .bars .track span { background-color: var( --ink ); }
+
+.columns {
+	display: flex;
+	align-items: flex-end;
+	gap: var( --spacing-100 );
+	block-size: 160px;
+
+	& > div {
+		flex: 1;
+		block-size: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 2px;
+		font-size: var( --font-size-x-small );
+		font-variant-numeric: tabular-nums;
+	}
+
+	& .col {
+		inline-size: 100%;
+		max-inline-size: 64px;
+		block-size: calc( var( --f ) * 100% );
+		background-color: var( --ink );
+		border-start-start-radius: 4px;
+		border-start-end-radius: 4px;
+	}
+
+	/* A long series: thin columns, labels only on the ends and the peak.
+	   The labels are out of the flow, on the top and bottom edges of the
+	   chart, so that each column has the same height for its bar and a
+	   label does not cover the bars next to it. Horizontally each label
+	   keeps its static place: the centre of its column. */
+	&.dense {
+		position: relative;
+		gap: 1px;
+		padding-block: 16px;
+
+		& > div { font-size: 10px; white-space: nowrap; }
+		& > div > :not( .col ) { position: absolute; }
+		& > div > :first-child { inset-block-start: 0; }
+		& > div > .note { inset-block-end: 0; font-size: 10px; }
+
+		/* The labels of the first and the last column stay inside the chart. */
+		& > div:first-child > :not( .col ) { inset-inline-start: 0; }
+		& > div:last-child > :not( .col ) { inset-inline-end: 0; }
+	}
+}
+
+/* ---------- map ---------- */
+
+.map {
+	position: relative;
+	margin: 0;
+	aspect-ratio: 8 / 5;
+	border-radius: var( --radius );
+	overflow: hidden;
+	background-color: var( --background-color-neutral );
+
+	& img { display: block; inline-size: 100%; block-size: 100%; object-fit: cover; }
+
+	/* Physical left and top: a map does not flip with the text direction. */
+	& .pin {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		inline-size: 16px;
+		block-size: 16px;
+		translate: -50% -50%;
+		border-radius: 50%;
+		background-color: var( --color-progressive );
+		border: 3px solid #fff;
+		box-shadow: 0 0 0 1px rgba( 0, 0, 0, 0.4 );
+	}
+
+	/* The extreme points of the item, placed by the renderer on its frame. */
+	& .marker {
+		position: absolute;
+		inline-size: 10px;
+		block-size: 10px;
+		translate: -50% -50%;
+		rotate: 45deg;
+		background-color: var( --ink );
+		border: 2px solid #fff;
+	}
+
+	& figcaption {
+		position: absolute;
+		inset-inline-start: var( --spacing-50 );
+		inset-block-end: var( --spacing-50 );
+		background-color: rgba( 255, 255, 255, 0.9 );
+		padding: 2px var( --spacing-50 );
+		border-radius: 4px;
+		font-size: var( --font-size-x-small );
+	}
+}
+
+/* ---------- the time axis ---------- */
+
+.axis {
+	display: flex;
+	flex-direction: column;
+	gap: var( --spacing-75 );
+
+	& .ends {
+		display: flex;
+		justify-content: space-between;
+		font-size: var( --font-size-small );
+		font-weight: var( --font-weight-bold );
+		color: var( --ink );
+		border-block-start: 2px solid var( --ink );
+		padding-block-start: 2px;
+	}
+
+	& .track {
+		display: grid;
+		grid-template-columns: minmax( 0, 12em ) minmax( 0, 1fr );
+		gap: var( --spacing-100 );
+		align-items: start;
+	}
+
+	& .track-name { font-size: var( --font-size-small ); color: var( --color-subtle ); }
+
+	& .line {
+		position: relative;
+		block-size: 14px;
+		border-block-end: 1px solid var( --border-color-muted );
+	}
+
+	/* Positions come from the composer as fractions of the item's own span. */
+	& .dot {
+		position: absolute;
+		inset-inline-start: calc( var( --p ) * 100% );
+		inset-block-start: 3px;
+		inline-size: 10px;
+		block-size: 10px;
+		translate: -50% 0;
+		border-radius: 50%;
+		background-color: var( --ink );
+	}
+
+	& .span {
+		position: absolute;
+		inset-inline-start: calc( var( --s ) * 100% );
+		inline-size: calc( ( var( --e ) - var( --s ) ) * 100% );
+		inset-block-start: 4px;
+		block-size: 8px;
+		border-radius: 4px;
+		background-color: var( --ink );
+		min-inline-size: 4px;
+	}
+
+	& .open { background: linear-gradient( to right, var( --ink ), transparent ); }
+	& .open-start { background: linear-gradient( to left, var( --ink ), transparent ); }
+	& .open.open-start { background: linear-gradient( to right, transparent, var( --ink ), transparent ); }
+
+	& .marks {
+		grid-column: 2;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2px var( --spacing-100 );
+		font-size: var( --font-size-small );
+
+		& b { font-variant-numeric: tabular-nums; }
+	}
+}
+
+/* ---------- the fact sheet ---------- */
+
+.sheet {
+	columns: 3 280px;
+	column-gap: var( --spacing-200 );
+	margin: 0;
+	font-size: var( --font-size-small );
+}
+
+.row {
+	break-inside: avoid;
+	display: grid;
+	grid-template-columns: minmax( 0, 40% ) minmax( 0, 1fr ) auto;
+	gap: 0 var( --spacing-75 );
+	align-items: baseline;
+	padding-block: var( --spacing-35 );
+	border-block-end: 1px solid var( --border-color-muted );
+
+	& dt { color: var( --color-subtle ); }
+
+	& dd {
+		margin: 0;
+		font-weight: var( --font-weight-semi-bold );
+		font-variant-numeric: tabular-nums;
+		overflow-wrap: anywhere;
+
+		& .note { font-weight: var( --font-weight-normal ); }
+	}
+
+	/* A value that has ended: shown, but quieter than the current ones. */
+	&.former dd { font-weight: var( --font-weight-normal ); color: var( --color-subtle ); }
+
+	&.absent {
+		& dt { font-style: italic; }
+		& dd { font-weight: var( --font-weight-normal ); color: var( --color-subtle ); }
+	}
+}
+
+/* A value on its own line. It looks the same in a row of one value, in a
+   row of many, in a list and in a dialog: the type of the value sets its
+   look, not the number of values. */
+.v {
+	position: relative;
+	display: block;
+	break-inside: avoid;
+	padding-block: 1px;
+	font-weight: var( --font-weight-semi-bold );
+	/* A value or its note can be a long URL: it breaks anywhere. */
+	overflow-wrap: anywhere;
+
+	& .note { font-weight: var( --font-weight-normal ); }
+
+	/* The edit action is out of the flow, after the end of the line, so
+	   that when it is hidden it does not make an empty line. */
+	& > .edit {
+		position: absolute;
+		inset-block-start: 0;
+		inset-inline-start: 100%;
+	}
+}
+
+.block > .list { font-size: var( --font-size-small ); }
+
+/* A count for a project family, in the evidence spread. Not a value. */
+.chip {
+	display: inline-block;
+	background-color: var( --soft );
+	border-radius: var( --border-radius-pill );
+	padding: 0 var( --spacing-75 );
+	margin: 1px 2px 1px 0;
+}
+
+/* A sheet inside a stack is one column: the stack is already narrow. */
+[data-slot='stack'] .sheet { columns: auto; }
+
+/* ---------- evidence ---------- */
+
+.stack-bar {
+	display: flex;
+	gap: 2px;
+	block-size: 14px;
+	border-radius: 7px;
+	overflow: hidden;
+	max-inline-size: 640px;
+
+	& span { flex: var( --n ); }
+	& .p-sourced { background-color: var( --color-base ); }
+	& .p-imported { background-color: var( --color-subtle ); }
+	& .p-none { background-color: var( --border-color-base ); }
+}
+
+.legend {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var( --spacing-50 ) var( --spacing-150 );
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: var( --font-size-small );
+}
+
+.idlist {
+	columns: 3 260px;
+	column-gap: var( --spacing-150 );
+	font-size: var( --font-size-x-small );
+
+	& div {
+		break-inside: avoid;
+		display: flex;
+		justify-content: space-between;
+		gap: var( --spacing-50 );
+		border-block-end: 1px solid var( --border-color-muted );
+		padding-block: 2px;
+	}
+
+	& span:last-child { font-family: var( --font-family-monospace ); word-break: break-all; }
+}
+
+details > summary {
+	cursor: pointer;
+	color: var( --color-progressive );
+	font-size: var( --font-size-small );
+}
+
+audio { inline-size: 100%; max-inline-size: 360px; block-size: 32px; }
+
+.provenance-note {
+	grid-column: 1 / -1;
+	font-size: var( --font-size-x-small );
+	color: var( --color-subtle );
+	border-block-start: 1px solid var( --border-color-muted );
+	padding-block-start: var( --spacing-100 );
+}

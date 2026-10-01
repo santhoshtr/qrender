@@ -1,0 +1,2148 @@
+{
+ "schema": "composition/0.2",
+ "design": "design/0.2",
+ "qid": "Q3870",
+ "class_layout": "settlement",
+ "spreads": [
+  {
+   "id": "identity",
+   "kind": "identity",
+   "concept": null,
+   "template": "identity",
+   "slots": {
+    "head": {
+     "primitive": "title",
+     "item": "Q3870"
+    },
+    "band": {
+     "primitive": "media",
+     "role": "banner",
+     "statement": "Q3870-A0C31207-3629-4146-A40C-F782B53A3B8E",
+     "pid": "P948",
+     "file": "Nairobi banner.jpg",
+     "rank": "normal",
+     "provenance": "none",
+     "kind": "photo",
+     "aspect": 7.0,
+     "megapixels": 0.63,
+     "credit": {
+      "artist": "Nairobi_Skyline2.jpg: Nite Owl\nderivative work: Jjtkk",
+      "license": "CC BY 3.0"
+     }
+    },
+    "lead": {
+     "primitive": "prose",
+     "source": "lead",
+     "languages": 210
+    },
+    "hero": {
+     "primitive": "media",
+     "role": "identity",
+     "statement": "Q3870-CDB8853E-E3FF-4FFB-A1C4-D361D1941C09",
+     "pid": "P18",
+     "file": "Nairobi, view from KICC.JPG",
+     "rank": "normal",
+     "provenance": "imported",
+     "kind": "photo",
+     "aspect": 1.3333,
+     "megapixels": 5.88,
+     "credit": {
+      "artist": "Daryona",
+      "license": "CC BY-SA 3.0"
+     }
+    },
+    "kind": {
+     "primitive": "kind",
+     "chain": [
+      {
+       "pid": "P31",
+       "values": [
+        {
+         "statement": "Q3870-2736f1e4-4ee5-4e83-5716-2f3a1342a72d",
+         "pid": "P31",
+         "item": "Q3976641",
+         "rank": "normal",
+         "provenance": "none",
+         "image": null,
+         "class": true,
+         "shown": true
+        },
+        {
+         "statement": "Q3870-8DB111B6-A456-415E-B31F-F347FB7B5A7E",
+         "pid": "P31",
+         "item": "Q1549591",
+         "rank": "normal",
+         "provenance": "none",
+         "image": null,
+         "class": true,
+         "shown": true
+        }
+       ]
+      },
+      {
+       "pid": "P17",
+       "values": [
+        {
+         "statement": "q3870-0E5DBC98-C3CE-4B7B-ABF9-9DE608F75033",
+         "pid": "P17",
+         "item": "Q114",
+         "rank": "normal",
+         "provenance": "sourced",
+         "image": {
+          "file": "Kenya - Location Map (2013) - KEN - UNOCHA.svg",
+          "kind": "drawing",
+          "aspect": 1.004,
+          "megapixels": 0.06,
+          "credit": {
+           "artist": "UN Office for the Coordination of Humanitarian Affairs (OCHA)",
+           "license": "CC BY 3.0"
+          }
+         }
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "location",
+   "kind": "facts",
+   "concept": "Q2221906",
+   "template": "hero-plus-stack",
+   "slots": {
+    "hero": {
+     "primitive": "map",
+     "statement": "q3870-1E53683E-BEE0-4626-BB29-B507C7E63CC1",
+     "pid": "P625",
+     "lat": -1.286388888,
+     "lon": 36.817222222,
+     "globe": "Q2",
+     "rank": "normal",
+     "provenance": "imported",
+     "extent_m": 26382
+    },
+    "gallery": [
+     {
+      "primitive": "media",
+      "role": "stack",
+      "statement": "Q3870-47c653cf-4974-f489-be4f-d96f1d09e845",
+      "pid": "P242",
+      "file": "Nairobi County location map.png",
+      "rank": "normal",
+      "provenance": "none",
+      "kind": "photo",
+      "aspect": 0.9083,
+      "megapixels": 0.33,
+      "credit": {
+       "artist": "Nairobi123",
+       "license": "CC BY-SA 3.0"
+      }
+     },
+     {
+      "primitive": "network",
+      "role": "gallery",
+      "values": [
+       {
+        "statement": "Q3870-151aa368-4f9b-8c44-a966-a0d006542910",
+        "pid": "P131",
+        "item": "Q3335223",
+        "rank": "normal",
+        "provenance": "none",
+        "image": {
+         "file": "Nairobi city hall.jpg",
+         "kind": "photo",
+         "aspect": 1.5056,
+         "megapixels": 6.87,
+         "credit": {
+          "artist": "Jorge Láscar",
+          "license": "CC BY-SA 2.0"
+         }
+        },
+        "priority": 2.0
+       },
+       {
+        "statement": "Q3870-867EB6CE-A958-4470-8EC6-ECDAB3F7BE95",
+        "pid": "P361",
+        "item": "Q14206200",
+        "rank": "normal",
+        "provenance": "imported",
+        "image": {
+         "file": "Pt Lenana Mt Kenya.JPG",
+         "kind": "photo",
+         "aspect": 1.3333,
+         "megapixels": 5.04,
+         "credit": {
+          "artist": "User:Chris 73",
+          "license": "CC BY-SA 3.0"
+         }
+        },
+        "priority": 0.667
+       }
+      ],
+      "priority": 2.0
+     }
+    ],
+    "sheet": [
+     {
+      "primitive": "fact",
+      "pid": "P2044",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q3870-CA9EEE35-AF3E-42D8-A8F9-40FF1612E8C4",
+        "pid": "P2044",
+        "amount": 1661.0,
+        "unit": "Q11573",
+        "rank": "normal",
+        "provenance": "imported",
+        "shown": true
+       }
+      ],
+      "priority": 1.667
+     }
+    ]
+   },
+   "prose": {
+    "concepts": [
+     "Q1071",
+     "Q7937"
+    ]
+   }
+  },
+  {
+   "id": "names",
+   "kind": "facts",
+   "concept": "Q82799",
+   "template": "columns",
+   "slots": {
+    "stack": [
+     {
+      "primitive": "media",
+      "role": "stack",
+      "statement": "Q3870-440fc8f6-4adc-ce59-334d-45729b509d61",
+      "pid": "P443",
+      "file": "Swa-nairobi.ogg",
+      "rank": "normal",
+      "provenance": "none",
+      "qualifiers": [
+       {
+        "pid": "P407",
+        "item": "Q7838"
+       }
+      ],
+      "kind": "audio",
+      "bytes": 46243,
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Swa-nairobi.ogg",
+      "credit": {
+       "artist": "Kaethe17",
+       "license": "CC BY 4.0"
+      }
+     }
+    ],
+    "gallery": [
+     {
+      "primitive": "media",
+      "role": "stack",
+      "statement": "Q3870-1A782A27-C974-4509-9A1D-5AEE0CE6FE6B",
+      "pid": "P94",
+      "file": "Coat of Arms of Nairobi.svg",
+      "rank": "normal",
+      "provenance": "imported",
+      "kind": "drawing",
+      "aspect": 0.9918,
+      "megapixels": 0.53,
+      "credit": {
+       "artist": "Josedar (SVG conversion)",
+       "license": "CC BY-SA 4.0"
+      }
+     },
+     {
+      "primitive": "media",
+      "role": "stack",
+      "statement": "q3870-A25BEA96-C552-461F-B004-0691B4C77E17",
+      "pid": "P41",
+      "file": "Flag of Nairobi.svg",
+      "rank": "normal",
+      "provenance": "none",
+      "kind": "drawing",
+      "aspect": 1.5,
+      "megapixels": 1.81,
+      "credit": {
+       "artist": "earlier version Mandingoesque; this version Johannes Rössel",
+       "license": "Public domain"
+      }
+     }
+    ],
+    "sheet": [
+     {
+      "primitive": "fact",
+      "pid": "P1448",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q3870-132c8bfc-44a0-5ef1-2cbd-907b9ef9cb74",
+        "pid": "P1448",
+        "text": "Nairobi",
+        "lang": "sw",
+        "rank": "normal",
+        "provenance": "imported",
+        "shown": true
+       }
+      ],
+      "priority": 1.0
+     },
+     {
+      "primitive": "fact",
+      "pid": "P1705",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q3870-c572491d-4fb1-c157-4976-600ee2d998bc",
+        "pid": "P1705",
+        "text": "Nairobi",
+        "lang": "sw",
+        "rank": "normal",
+        "provenance": "imported",
+        "shown": true
+       }
+      ],
+      "priority": 1.0
+     },
+     {
+      "primitive": "fact",
+      "pid": "P1549",
+      "form": "list",
+      "statements": [
+       {
+        "statement": "Q3870-2A76A56E-703F-4562-9A87-DB5B65E78EAF",
+        "pid": "P1549",
+        "text": "Nairobien",
+        "lang": "fr",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P518",
+          "item": "Q47088290"
+         }
+        ],
+        "shown": true
+       },
+       {
+        "statement": "Q3870-5E3EAF33-5202-4DCB-A88E-E8DDB5A7C1E6",
+        "pid": "P1549",
+        "text": "Nairobienne",
+        "lang": "fr",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P518",
+          "item": "Q47088293"
+         }
+        ],
+        "shown": true
+       },
+       {
+        "statement": "Q3870-71D162BA-6706-463C-90B7-B52EA1CB0DEA",
+        "pid": "P1549",
+        "text": "Nairobian",
+        "lang": "en",
+        "rank": "normal",
+        "provenance": "none",
+        "shown": true
+       },
+       {
+        "statement": "Q3870-76fd8080-4403-1e12-6c5d-62a5b99a2b63",
+        "pid": "P1549",
+        "text": "nairobienne",
+        "lang": "fr",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P518",
+          "item": "Q47088293"
+         }
+        ],
+        "shown": true
+       },
+       {
+        "statement": "Q3870-9d1b3086-492e-b6bb-c1a5-50aff87441f5",
+        "pid": "P1549",
+        "text": "Monairobi",
+        "lang": "tn",
+        "rank": "normal",
+        "provenance": "none",
+        "shown": true
+       },
+       {
+        "statement": "Q3870-a8b1df5d-45a5-16c4-cb62-9a9b1e20d9ba",
+        "pid": "P1549",
+        "text": "nairobien",
+        "lang": "fr",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P518",
+          "item": "Q47088290"
+         }
+        ],
+        "shown": true
+       },
+       {
+        "statement": "Q3870-c7780e89-49b8-b287-262a-0695d03be1de",
+        "pid": "P1549",
+        "text": "Najrobiano",
+        "lang": "eo",
+        "rank": "normal",
+        "provenance": "none",
+        "shown": true
+       }
+      ],
+      "priority": 2.989
+     },
+     {
+      "primitive": "fact",
+      "pid": "P281",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q3870-37e2d0c7-4b3a-2f17-bbaf-2d6bced21575",
+        "pid": "P281",
+        "string": "00100",
+        "rank": "normal",
+        "provenance": "none",
+        "shown": true
+       }
+      ],
+      "priority": 1.667
+     },
+     {
+      "primitive": "fact",
+      "pid": "P473",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q3870-6FE7D124-1E44-4FB0-AB8B-915E211CCB4C",
+        "pid": "P473",
+        "string": "020",
+        "rank": "normal",
+        "provenance": "imported",
+        "shown": true
+       }
+      ],
+      "priority": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "id": "government",
+   "kind": "facts",
+   "concept": "Q7188",
+   "template": "lead-beside",
+   "slots": {
+    "hero": {
+     "primitive": "succession",
+     "pid": "P6",
+     "office": null,
+     "holder": {
+      "statement": "Q3870-33a779c9-4066-ab17-7a5c-eba18db690cd",
+      "pid": "P6",
+      "item": "Q28967580",
+      "rank": "normal",
+      "provenance": "sourced",
+      "qualifiers": [
+       {
+        "pid": "P580",
+        "year": 2022
+       }
+      ],
+      "image": {
+       "file": "Sakaja in 2024.jpg",
+       "kind": "photo",
+       "aspect": 0.9509,
+       "megapixels": 0.76,
+       "credit": {
+        "artist": "LuffyDe",
+        "license": "CC0"
+       }
+      }
+     },
+     "before": [],
+     "priority": 2.0
+    },
+    "stack": [
+     {
+      "primitive": "network",
+      "pid": "P1376",
+      "values": [
+       {
+        "statement": "Q3870-6EC77BD0-28B5-472E-97A1-FD8BEFCAC7B2",
+        "pid": "P1376",
+        "item": "Q114",
+        "rank": "normal",
+        "provenance": "none",
+        "qualifiers": [
+         {
+          "pid": "P580",
+          "year": 1963
+         }
+        ],
+        "image": {
+         "file": "Kenya - Location Map (2013) - KEN - UNOCHA.svg",
+         "kind": "drawing",
+         "aspect": 1.004,
+         "megapixels": 0.06,
+         "credit": {
+          "artist": "UN Office for the Coordination of Humanitarian Affairs (OCHA)",
+          "license": "CC BY 3.0"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q3870-9a5f9c5d-44b1-2480-fc54-9263fdba6f7f",
+        "pid": "P1376",
+        "item": "Q3335223",
+        "rank": "normal",
+        "provenance": "none",
+        "image": {
+         "file": "Nairobi city hall.jpg",
+         "kind": "photo",
+         "aspect": 1.5056,
+         "megapixels": 6.87,
+         "credit": {
+          "artist": "Jorge Láscar",
+          "license": "CC BY-SA 2.0"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q3870-37f6382c-47fe-1ac8-2ab0-403675a9a399",
+        "pid": "P1376",
+        "item": "Q1061480",
+        "rank": "normal",
+        "provenance": "none",
+        "image": null,
+        "shown": true
+       }
+      ],
+      "priority": 2.0
+     }
+    ],
+    "sheet": [
+     {
+      "primitive": "fact",
+      "pid": "P1376",
+      "form": "list",
+      "statements": [
+       {
+        "statement": "Q3870-CE13795B-5331-4076-97B8-27FA28F1A8E4",
+        "pid": "P1376",
+        "item": "Q2538511",
+        "rank": "normal",
+        "provenance": "none",
+        "qualifiers": [
+         {
+          "pid": "P580",
+          "year": 1920
+         },
+         {
+          "pid": "P582",
+          "year": 1963
+         }
+        ],
+        "image": null,
+        "shown": true
+       }
+      ],
+      "priority": 2.0,
+      "former": true
+     }
+    ]
+   },
+   "prose": {
+    "concepts": [
+     "Q7188",
+     "Q7163"
+    ]
+   }
+  },
+  {
+   "id": "demography",
+   "kind": "scale",
+   "concept": "Q37732",
+   "template": "columns",
+   "slots": {
+    "hero": {
+     "primitive": "scale",
+     "mode": "share",
+     "container": {
+      "pid": "P17",
+      "item": "Q114"
+     },
+     "measures": [
+      {
+       "pid": "P1082",
+       "ratio": 0.114405,
+       "amount": 5545000.0,
+       "whole": 48468138.0,
+       "unit": null,
+       "statement": "Q3870-7194a63a-4237-d601-f3ec-7f65c52b5d2f",
+       "provenance": "sourced"
+      },
+      {
+       "pid": "P2046",
+       "ratio": 0.001197,
+       "amount": 696000000.0,
+       "whole": 581309000000.0,
+       "unit": "Q25343",
+       "statement": "Q3870-01917E9D-53D8-4B77-8A29-BB34D1865615",
+       "provenance": "imported"
+      }
+     ]
+    },
+    "stack": [
+     {
+      "primitive": "peers",
+      "pid": "P1082",
+      "class": "Q1549591",
+      "container": "Q114",
+      "rank": 1,
+      "of": 6,
+      "members": [
+       {
+        "item": "Q3870",
+        "amount": 5545000.0,
+        "fraction": 1.0,
+        "self": true,
+        "shown": true
+       },
+       {
+        "item": "Q225641",
+        "amount": 1208333.0,
+        "fraction": 0.2179,
+        "self": false,
+        "shown": true
+       },
+       {
+        "item": "Q214485",
+        "amount": 397957.0,
+        "fraction": 0.0718,
+        "self": false,
+        "shown": true
+       },
+       {
+        "item": "Q239421",
+        "amount": 307990.0,
+        "fraction": 0.0555,
+        "self": false,
+        "shown": true
+       },
+       {
+        "item": "Q322149",
+        "amount": 289380.0,
+        "fraction": 0.0522,
+        "self": false,
+        "shown": true
+       },
+       {
+        "item": "Q693093",
+        "amount": 114109.0,
+        "fraction": 0.0206,
+        "self": false,
+        "shown": true
+       }
+      ]
+     },
+     {
+      "primitive": "peers",
+      "pid": "P2044",
+      "class": "Q1549591",
+      "container": "Q114",
+      "rank": 3,
+      "of": 5,
+      "members": [
+       {
+        "item": "Q322149",
+        "amount": 2095.0,
+        "fraction": 1.0,
+        "self": false,
+        "shown": true
+       },
+       {
+        "item": "Q239421",
+        "amount": 1850.0,
+        "fraction": 0.8831,
+        "self": false,
+        "shown": true
+       },
+       {
+        "item": "Q3870",
+        "amount": 1661.0,
+        "fraction": 0.7928,
+        "self": true,
+        "shown": true
+       },
+       {
+        "item": "Q214485",
+        "amount": 1131.0,
+        "fraction": 0.5399,
+        "self": false,
+        "shown": true
+       },
+       {
+        "item": "Q225641",
+        "amount": 50.0,
+        "fraction": 0.0239,
+        "self": false,
+        "shown": true
+       }
+      ]
+     },
+     {
+      "primitive": "series",
+      "pid": "P1082",
+      "points": [
+       {
+        "year": 2009,
+        "amount": 3138369.0,
+        "fraction": 0.566,
+        "statement": "Q3870-9F5EDA05-CE52-4CB9-9D54-69297C507F4B",
+        "provenance": "imported"
+       },
+       {
+        "year": 2010,
+        "amount": 3240155.0,
+        "fraction": 0.5843,
+        "statement": "Q3870-53d14d3e-4db5-3a52-7493-5f03d6b0f8bc",
+        "provenance": "sourced"
+       },
+       {
+        "year": 2016,
+        "amount": 5545000.0,
+        "fraction": 1.0,
+        "statement": "Q3870-7194a63a-4237-d601-f3ec-7f65c52b5d2f",
+        "provenance": "sourced"
+       }
+      ]
+     }
+    ],
+    "sheet": [
+     {
+      "primitive": "fact",
+      "pid": "P2046",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q3870-01917E9D-53D8-4B77-8A29-BB34D1865615",
+        "pid": "P2046",
+        "amount": 696.0,
+        "unit": "Q712226",
+        "rank": "normal",
+        "provenance": "imported",
+        "shown": true
+       }
+      ],
+      "priority": 1.0
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2936",
+      "form": "list",
+      "statements": [
+       {
+        "statement": "Q3870-5fbcb3dc-4fac-d878-8efb-3aa8cb9e3a34",
+        "pid": "P2936",
+        "item": "Q1860",
+        "rank": "normal",
+        "provenance": "none",
+        "image": null,
+        "class": true,
+        "shown": true
+       },
+       {
+        "statement": "Q3870-811d25e4-482b-900c-0ff4-79373d7f7c1f",
+        "pid": "P2936",
+        "item": "Q7838",
+        "rank": "normal",
+        "provenance": "none",
+        "image": null,
+        "class": true,
+        "shown": true
+       },
+       {
+        "statement": "Q3870-C76DED1F-647C-442C-A40F-02561DA833FA",
+        "pid": "P2936",
+        "item": "Q35787",
+        "rank": "normal",
+        "provenance": "none",
+        "image": null,
+        "class": true,
+        "shown": true
+       }
+      ],
+      "priority": 0.333
+     }
+    ]
+   },
+   "prose": {
+    "concepts": [
+     "Q37732"
+    ]
+   }
+  },
+  {
+   "id": "economy",
+   "kind": "facts",
+   "concept": "Q159810",
+   "template": "columns",
+   "slots": {
+    "sheet": [
+     {
+      "primitive": "fact",
+      "pid": "P8744",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q3870-61B917C3-73DF-4DB2-88F4-858C180792EE",
+        "pid": "P8744",
+        "item": "Q106020188",
+        "rank": "normal",
+        "provenance": "none",
+        "image": null,
+        "class": true,
+        "shown": true
+       }
+      ],
+      "priority": 0.333
+     }
+    ]
+   },
+   "prose": {
+    "concepts": [
+     "Q159810"
+    ]
+   }
+  },
+  {
+   "id": "connections",
+   "kind": "facts",
+   "concept": "Q930933",
+   "template": "columns",
+   "slots": {
+    "stack": [
+     {
+      "primitive": "network",
+      "pid": "P190",
+      "values": [
+       {
+        "statement": "Q3870-1074ff47-48bc-2fcc-cb9e-5e384c041157",
+        "pid": "P190",
+        "item": "Q41087",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P580",
+          "year": 2022
+         }
+        ],
+        "image": {
+         "file": "Raleigh Skyline.jpg",
+         "kind": "photo",
+         "aspect": 1.7778,
+         "megapixels": 9.0,
+         "credit": {
+          "artist": "Abhiram Juvvadi",
+          "license": "CC BY-SA 4.0"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q3870-944510db-413c-3106-a230-4003aa228893",
+        "pid": "P190",
+        "item": "Q16554",
+        "rank": "normal",
+        "provenance": "none",
+        "qualifiers": [
+         {
+          "pid": "P580",
+          "year": 1975
+         }
+        ],
+        "image": {
+         "file": "Denver, Colorado skyline (cropped).jpg",
+         "kind": "photo",
+         "aspect": 1.8989,
+         "megapixels": 19.85,
+         "credit": {
+          "artist": "Quintin Soloviev",
+          "license": "CC BY 4.0"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q3870-6ef11667-456d-fbaa-5cb6-3610d0630726",
+        "pid": "P190",
+        "item": "Q182852",
+        "rank": "normal",
+        "provenance": "none",
+        "image": {
+         "file": "五华区与盘龙区天际线 - 航拍 - 2025-05-16 03.jpg",
+         "kind": "photo",
+         "aspect": 1.7778,
+         "megapixels": 9.14,
+         "credit": {
+          "artist": "瑞丽江的河水",
+          "license": "CC BY-SA 4.0"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q3870-7faee803-4a4d-4e94-fbbe-59105f1e235d",
+        "pid": "P190",
+        "item": "Q964130",
+        "rank": "normal",
+        "provenance": "none",
+        "image": {
+         "file": "Colonia-Tovar.jpg",
+         "kind": "photo",
+         "aspect": 1.3333,
+         "megapixels": 1.92,
+         "credit": {
+          "artist": "Pascual De Ruvo (Pderuvo at en.wikipedia)",
+          "license": "CC BY-SA 3.0"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q3870-99cd8e17-40bb-0dfb-ec5f-525051419f11",
+        "pid": "P190",
+        "item": "Q8678",
+        "rank": "normal",
+        "provenance": "none",
+        "image": {
+         "file": "Cidade Maravilhosa.jpg",
+         "kind": "photo",
+         "aspect": 1.8727,
+         "megapixels": 7.11,
+         "credit": {
+          "artist": "Rafael Rabello de Barros",
+          "license": "CC BY-SA 3.0"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q3870-a5c6467f-4d01-5ed3-b0b0-017d86cdbbcf",
+        "pid": "P190",
+        "item": "Q362865",
+        "rank": "normal",
+        "provenance": "none",
+        "image": {
+         "file": "Pingxiang, JX, PRC.jpg",
+         "kind": "photo",
+         "aspect": 1.3333,
+         "megapixels": 1.23,
+         "credit": {
+          "artist": "Chinaculturefriend",
+          "license": "CC BY-SA 3.0"
+         }
+        },
+        "shown": true
+       },
+       {
+        "statement": "Q3870-d52d8bc6-4929-65de-636c-2b744a5f8180",
+        "pid": "P190",
+        "item": "Q926713",
+        "rank": "normal",
+        "provenance": "none",
+        "image": {
+         "file": "Parintins Amazonas Brazil.jpg",
+         "kind": "photo",
+         "aspect": 1.4904,
+         "megapixels": 19.09,
+         "credit": {
+          "artist": "Mário Oliveira - MTUR",
+          "license": "Public domain"
+         }
+        },
+        "shown": true
+       }
+      ],
+      "priority": 2.333
+     }
+    ]
+   },
+   "prose": {
+    "concepts": [
+     "Q184711"
+    ]
+   }
+  },
+  {
+   "id": "history",
+   "kind": "history",
+   "concept": "Q309",
+   "template": "axis",
+   "slots": {},
+   "prose": {
+    "concepts": [
+     "Q309"
+    ]
+   },
+   "topics": [
+    {
+     "statement": "Q3870-1A7BF03E-D843-481A-B22B-F5152EB57622",
+     "pid": "P2184",
+     "item": "Q7805834",
+     "rank": "normal",
+     "provenance": "none",
+     "image": null
+    }
+   ],
+   "silent": [
+    {
+     "primitive": "time",
+     "reason": "below_threshold",
+     "points": 3,
+     "needs": 4
+    }
+   ]
+  },
+  {
+   "id": "media",
+   "kind": "media",
+   "concept": "Q131765",
+   "template": "feature-run",
+   "slots": {
+    "feature": {
+     "primitive": "media",
+     "role": "feature",
+     "statement": "Q3870-fe773bbd-4577-a990-e957-4d6d414fe772",
+     "pid": "P3451",
+     "file": "Nairobi economic capital of africa.jpg",
+     "rank": "normal",
+     "provenance": "none",
+     "kind": "photo",
+     "aspect": 1.0,
+     "megapixels": 1.17,
+     "credit": {
+      "artist": "Africanmodern",
+      "license": "CC BY-SA 4.0"
+     }
+    },
+    "run": [
+     {
+      "primitive": "media",
+      "role": "run",
+      "statement": "Q3870-cfd717f6-4ffe-aef1-370a-61685652b434",
+      "pid": "P2716",
+      "file": "Nairobi Montage A.jpg",
+      "rank": "normal",
+      "provenance": "none",
+      "kind": "photo",
+      "aspect": 0.6633,
+      "megapixels": 2.17,
+      "credit": {
+       "artist": "Southlondoneye (talk) 20:30, 29 March 2015 (UTC)",
+       "license": "CC BY-SA 3.0"
+      }
+     },
+     {
+      "primitive": "media",
+      "role": "run",
+      "statement": "Q3870-20df2e59-4c79-2ae7-7443-3de2e58b431c",
+      "pid": "P8592",
+      "file": "Nairobi Aerial Photo.jpg",
+      "rank": "normal",
+      "provenance": "none",
+      "kind": "photo",
+      "aspect": 1.6234,
+      "megapixels": 0.62,
+      "credit": {
+       "artist": "Mkimemia at English Wikipedia",
+       "license": "Public domain"
+      }
+     },
+     {
+      "primitive": "media",
+      "role": "run",
+      "statement": "Q3870-781aa9f8-4b48-3287-0c81-a57d4b0f0b1a",
+      "pid": "P10",
+      "file": "Google Timelapse- Nairobi, Kenya.webm",
+      "rank": "normal",
+      "provenance": "none",
+      "kind": "video",
+      "aspect": 1.7778,
+      "megapixels": 8.29,
+      "bytes": 29393409,
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Google_Timelapse-_Nairobi%2C_Kenya.webm",
+      "credit": {
+       "artist": "Google Earth",
+       "license": "CC BY 3.0"
+      }
+     }
+    ]
+   },
+   "prose": {
+    "concepts": [
+     "Q11042"
+    ]
+   }
+  },
+  {
+   "id": "more",
+   "kind": "more",
+   "concept": null,
+   "template": "collapsed",
+   "slots": {
+    "sheet": [
+     {
+      "primitive": "fact",
+      "pid": "P571",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q3870-5cd9e5fc-4d39-0416-0b37-99ff83e95d3f",
+        "pid": "P571",
+        "time": "1899-01-01T00:00:00Z",
+        "precision": 9,
+        "rank": "normal",
+        "provenance": "none",
+        "shown": true
+       }
+      ],
+      "priority": 2.0
+     }
+    ]
+   }
+  },
+  {
+   "id": "evidence",
+   "kind": "evidence",
+   "concept": "Q121769",
+   "template": "sheet",
+   "slots": {
+    "summary": [
+     {
+      "primitive": "provenance",
+      "sourced": 9,
+      "imported": 12,
+      "none": 43
+     }
+    ],
+    "web": [
+     {
+      "primitive": "fact",
+      "pid": "P856",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q3870-3e3a59dc-4ee8-8741-5a5b-915d7c3e8787",
+        "pid": "P856",
+        "url": "https://nairobi.go.ke/",
+        "rank": "normal",
+        "provenance": "imported",
+        "shown": true
+       }
+      ],
+      "priority": 1.333
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2002",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q3870-6277a993-4668-de43-60e3-921d30017e87",
+        "pid": "P2002",
+        "string": "047County",
+        "rank": "normal",
+        "provenance": "none",
+        "shown": true
+       }
+      ],
+      "priority": 0.0
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2003",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q3870-54203bf5-4c4b-d452-8212-4ac15c6709ca",
+        "pid": "P2003",
+        "string": "nairobi_citycountygovernment",
+        "rank": "normal",
+        "provenance": "none",
+        "shown": true
+       }
+      ],
+      "priority": 0.0
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2013",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q3870-8204b22f-48c7-aaa6-41f7-eacd282e4520",
+        "pid": "P2013",
+        "string": "CountyGovernment047",
+        "rank": "normal",
+        "provenance": "none",
+        "shown": true
+       }
+      ],
+      "priority": 0.0
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2572",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q3870-E278BB26-83AC-49D5-BC50-81820EDB5DBA",
+        "pid": "P2572",
+        "string": "Nairobi",
+        "rank": "normal",
+        "provenance": "none",
+        "shown": true
+       }
+      ],
+      "priority": 0.333
+     },
+     {
+      "primitive": "fact",
+      "pid": "P8402",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q3870-04564b02-471b-8d76-3382-d94fe7cce59a",
+        "pid": "P8402",
+        "item": "Q97130876",
+        "rank": "normal",
+        "provenance": "none",
+        "image": null,
+        "shown": true
+       }
+      ],
+      "priority": 0.333
+     },
+     {
+      "primitive": "fact",
+      "pid": "P3984",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q3870-7f1607b1-9ea9-4ba0-a1fb-b47e0031afab",
+        "pid": "P3984",
+        "string": "nairobi",
+        "rank": "normal",
+        "provenance": "none",
+        "shown": true
+       }
+      ],
+      "priority": 0.0
+     }
+    ],
+    "sheet": [
+     {
+      "primitive": "fact",
+      "pid": "P1343",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q3870-B67AC2D3-B294-4E60-8B3C-0F3E44F29B65",
+        "pid": "P1343",
+        "item": "Q867541",
+        "rank": "normal",
+        "provenance": "none",
+        "qualifiers": [
+         {
+          "pid": "P805",
+          "item": "Q84643330"
+         }
+        ],
+        "image": {
+         "file": "Encyclopaedia Britannica 1911.svg",
+         "kind": "drawing",
+         "aspect": 1.5779,
+         "megapixels": 0.41,
+         "credit": {
+          "artist": "Encyclopaedia_Britannica_1911.png: Encyclopaedia Britannica\nderivative work: Diego Grez return fire",
+          "license": "Public domain"
+         }
+        },
+        "shown": true
+       }
+      ],
+      "priority": 0.667
+     },
+     {
+      "primitive": "fact",
+      "pid": "P1464",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q3870-823EF887-C4B2-407E-A4B1-6F1221DAA44E",
+        "pid": "P1464",
+        "item": "Q8064728",
+        "rank": "normal",
+        "provenance": "none",
+        "image": null,
+        "shown": true
+       }
+      ],
+      "priority": 1.667
+     },
+     {
+      "primitive": "fact",
+      "pid": "P1465",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q3870-6c37ee95-4e0f-b196-39d9-5a3d0293cb4c",
+        "pid": "P1465",
+        "item": "Q9688722",
+        "rank": "normal",
+        "provenance": "none",
+        "image": null,
+        "shown": true
+       }
+      ],
+      "priority": 1.333
+     },
+     {
+      "primitive": "fact",
+      "pid": "P1792",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q3870-026808A0-B746-44D4-BB48-93773A13F103",
+        "pid": "P1792",
+        "item": "Q7119121",
+        "rank": "normal",
+        "provenance": "none",
+        "image": null,
+        "shown": true
+       }
+      ],
+      "priority": 2.0
+     },
+     {
+      "primitive": "fact",
+      "pid": "P373",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "q3870-DE51CCFE-910F-45AF-B222-24C4499457D1",
+        "pid": "P373",
+        "string": "Nairobi",
+        "rank": "normal",
+        "provenance": "none",
+        "shown": true
+       }
+      ],
+      "priority": 2.0
+     },
+     {
+      "primitive": "fact",
+      "pid": "P5008",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q3870-1F928894-44E4-4612-8236-052DC953A303",
+        "pid": "P5008",
+        "item": "Q5460604",
+        "rank": "normal",
+        "provenance": "none",
+        "image": null,
+        "shown": true
+       },
+       {
+        "statement": "Q3870-8EFDD308-245B-47D3-AF0B-47F030006BF4",
+        "pid": "P5008",
+        "item": "Q6173448",
+        "rank": "normal",
+        "provenance": "none",
+        "qualifiers": [
+         {
+          "pid": "P585",
+          "year": 2022
+         }
+        ],
+        "image": null,
+        "shown": true
+       }
+      ],
+      "priority": 0.333
+     },
+     {
+      "primitive": "fact",
+      "pid": "P7867",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q3870-82038ded-4dde-4f63-8fad-1ba79795565e",
+        "pid": "P7867",
+        "item": "Q84054802",
+        "rank": "normal",
+        "provenance": "none",
+        "image": null,
+        "shown": true
+       }
+      ],
+      "priority": 0.667
+     },
+     {
+      "primitive": "fact",
+      "pid": "P8989",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q3870-a6da711b-2a3e-4d45-9359-b26cb8b6f992",
+        "pid": "P8989",
+        "item": "Q104596219",
+        "rank": "normal",
+        "provenance": "none",
+        "image": null,
+        "shown": true
+       }
+      ],
+      "priority": 0.333
+     },
+     {
+      "primitive": "fact",
+      "pid": "P910",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q3870-97C1D762-F9E1-402E-A4A5-4B41BD9234A5",
+        "pid": "P910",
+        "item": "Q8795825",
+        "rank": "normal",
+        "provenance": "none",
+        "image": null,
+        "shown": true
+       }
+      ],
+      "priority": 2.0
+     },
+     {
+      "primitive": "fact",
+      "pid": "P935",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q3870-29A90393-2434-46B8-8EF1-DD7E2EB082C9",
+        "pid": "P935",
+        "string": "Nairobi",
+        "rank": "normal",
+        "provenance": "imported",
+        "shown": true
+       }
+      ],
+      "priority": 0.333
+     }
+    ],
+    "projects": [
+     {
+      "primitive": "sitelinks",
+      "families": {
+       "wikipedia": [
+        "ady",
+        "af",
+        "als",
+        "am",
+        "an",
+        "ar",
+        "ary",
+        "arz",
+        "as",
+        "ast",
+        "avk",
+        "awa",
+        "az",
+        "azb",
+        "ba",
+        "ban",
+        "bat_smg",
+        "bcl",
+        "be",
+        "be_x_old",
+        "bew",
+        "bg",
+        "bjn",
+        "bm",
+        "bn",
+        "bo",
+        "br",
+        "bs",
+        "bxr",
+        "ca",
+        "cdo",
+        "ce",
+        "ceb",
+        "ckb",
+        "crh",
+        "cs",
+        "cy",
+        "da",
+        "dag",
+        "de",
+        "dga",
+        "diq",
+        "dty",
+        "ee",
+        "el",
+        "en",
+        "eo",
+        "es",
+        "et",
+        "eu",
+        "ext",
+        "fa",
+        "ff",
+        "fi",
+        "fo",
+        "fr",
+        "frr",
+        "fy",
+        "ga",
+        "gd",
+        "gl",
+        "gn",
+        "ha",
+        "hak",
+        "he",
+        "hi",
+        "hif",
+        "hr",
+        "hsb",
+        "ht",
+        "hu",
+        "hy",
+        "hyw",
+        "ia",
+        "iba",
+        "id",
+        "ie",
+        "ilo",
+        "inh",
+        "io",
+        "is",
+        "it",
+        "ja",
+        "jam",
+        "jv",
+        "ka",
+        "kaa",
+        "kab",
+        "kai",
+        "kbp",
+        "kg",
+        "kge",
+        "ki",
+        "kk",
+        "kn",
+        "knc",
+        "ko",
+        "ku",
+        "kw",
+        "ky",
+        "la",
+        "lb",
+        "lez",
+        "lfn",
+        "li",
+        "lij",
+        "lld",
+        "lmo",
+        "ln",
+        "lt",
+        "lv",
+        "mad",
+        "mag",
+        "mdf",
+        "mg",
+        "mhr",
+        "mi",
+        "min",
+        "mk",
+        "ml",
+        "mn",
+        "mni",
+        "mr",
+        "mrj",
+        "ms",
+        "my",
+        "myv",
+        "mzn",
+        "nap",
+        "nds",
+        "nds_nl",
+        "ne",
+        "new",
+        "nl",
+        "nn",
+        "no",
+        "nso",
+        "nv",
+        "ny",
+        "oc",
+        "olo",
+        "os",
+        "pa",
+        "pap",
+        "pl",
+        "pms",
+        "pnb",
+        "ps",
+        "pt",
+        "qu",
+        "ro",
+        "roa_tara",
+        "ru",
+        "rue",
+        "rw",
+        "sah",
+        "sat",
+        "sc",
+        "scn",
+        "sco",
+        "sd",
+        "se",
+        "sh",
+        "shi",
+        "simple",
+        "sk",
+        "sl",
+        "smn",
+        "sn",
+        "so",
+        "sq",
+        "sr",
+        "ss",
+        "st",
+        "su",
+        "sv",
+        "sw",
+        "szl",
+        "szy",
+        "ta",
+        "te",
+        "tg",
+        "th",
+        "tk",
+        "tl",
+        "tly",
+        "tok",
+        "tr",
+        "tt",
+        "udm",
+        "ug",
+        "uk",
+        "ur",
+        "uz",
+        "vec",
+        "vep",
+        "vi",
+        "vo",
+        "war",
+        "wo",
+        "wuu",
+        "xmf",
+        "yi",
+        "yo",
+        "zgh",
+        "zh",
+        "zh_classical",
+        "zh_min_nan",
+        "zh_yue",
+        "zu"
+       ],
+       "wikivoyage": [
+        "bn",
+        "de",
+        "en",
+        "es",
+        "fa",
+        "fi",
+        "fr",
+        "he",
+        "id",
+        "it",
+        "ja",
+        "nl",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "vi",
+        "zh"
+       ],
+       "wikinews": [
+        "de",
+        "en",
+        "fr",
+        "nl",
+        "ru"
+       ],
+       "wikiquote": [
+        "et",
+        "it",
+        "vi"
+       ]
+      }
+     }
+    ],
+    "identifiers": [
+     {
+      "primitive": "identifiers",
+      "values": [
+       {
+        "pid": "P9322",
+        "string": "0423566-Nairobi-Kena",
+        "statement": "Q3870-056A0DF8-2C05-4CAB-B29F-03C8F2538DDC"
+       },
+       {
+        "pid": "P13772",
+        "string": "nairobi",
+        "statement": "Q3870-69C91E53-EF28-412E-BDB5-2761C1E4EFF2"
+       },
+       {
+        "pid": "P269",
+        "string": "029153042",
+        "statement": "q3870-70be1d20-4a8d-7254-a934-e3b34e306d3e"
+       },
+       {
+        "pid": "P8179",
+        "string": "ncf10290894",
+        "statement": "q3870-24176e28-4fde-fa50-7200-87d4d31632f4"
+       },
+       {
+        "pid": "P268",
+        "string": "118650453",
+        "statement": "Q3870-3FC74FB4-D299-4DF5-B457-6E2B1895078B"
+       },
+       {
+        "pid": "P646",
+        "string": "/m/05d49",
+        "statement": "Q3870-45B554CF-AD6A-427E-8CA5-696A15E7FFC2"
+       },
+       {
+        "pid": "P998",
+        "string": "Regional/Africa/Kenya/Localities/Nairobi/",
+        "statement": "Q3870-3E969D80-373C-4E50-8782-81F6CBB9202D"
+       },
+       {
+        "pid": "P1566",
+        "string": "184745",
+        "statement": "Q3870-2658E8F5-F349-4F7F-B160-10481D0835E3"
+       },
+       {
+        "pid": "P349",
+        "string": "00628843",
+        "statement": "Q3870-7B698F55-DA05-4264-9A69-12E789F517CF"
+       },
+       {
+        "pid": "P2326",
+        "string": "-2258072",
+        "statement": "Q3870-16D7B48A-8762-4DCA-B139-A97F2B84B388"
+       },
+       {
+        "pid": "P1417",
+        "string": "place/Nairobi",
+        "statement": "Q3870-4B3BEC4F-C408-4757-ACA1-1431A805390A"
+       },
+       {
+        "pid": "P1281",
+        "string": "1528488",
+        "statement": "Q3870-55A94730-C491-4E8B-AEDC-5D06DA654191"
+       },
+       {
+        "pid": "P1036",
+        "string": "2--67625",
+        "statement": "Q3870-6805455c-4ad5-a0c3-5dbd-3b53e1cb132f"
+       },
+       {
+        "pid": "P402",
+        "string": "9185096",
+        "statement": "Q3870-8eaa355d-47b6-2b88-0fe6-0b4fb7881e07"
+       },
+       {
+        "pid": "P982",
+        "string": "4cc373f3-8b60-400b-8aa3-6df3fe4ab8fb",
+        "statement": "Q3870-78F20CD7-7826-4785-A5A9-6E1437E1295E"
+       },
+       {
+        "pid": "P2163",
+        "string": "1204373",
+        "statement": "Q3870-3f9f11f9-47fb-81af-5445-40e75a776c04"
+       },
+       {
+        "pid": "P2924",
+        "string": "2246269",
+        "statement": "Q3870-267131B3-E61E-4517-82C2-87A5BA1CF49F"
+       },
+       {
+        "pid": "P300",
+        "string": "KE-110",
+        "statement": "q3870-B4476E42-05AD-4070-BDA8-181581C389F2"
+       },
+       {
+        "pid": "P1617",
+        "string": "bfe2de9d-fde7-4781-89ca-1735ede10982",
+        "statement": "Q3870-8d71e29a-4c55-00ba-a50e-23beb4afa3f1"
+       },
+       {
+        "pid": "P1225",
+        "string": "10044568",
+        "statement": "Q3870-9F371F34-D0E9-42F4-A9D3-9DCC61136FD7"
+       },
+       {
+        "pid": "P1245",
+        "string": "457020",
+        "statement": "Q3870-A2E80EC1-F0B1-47FA-9F9B-228423598021"
+       },
+       {
+        "pid": "P691",
+        "string": "ge432139",
+        "statement": "Q3870-B88EDE75-5C33-41EB-AED6-006C5A91FB22"
+       },
+       {
+        "pid": "P901",
+        "string": "KE05",
+        "statement": "Q3870-B875F373-157A-4344-B8A9-4CEBD3851097"
+       },
+       {
+        "pid": "P3365",
+        "string": "nairobi",
+        "statement": "Q3870-48cd5dc4-471e-d9e6-a09c-678e94f05d6e"
+       },
+       {
+        "pid": "P1667",
+        "string": "7001116",
+        "statement": "Q3870-a462c491-482d-4bba-8c8f-b28d017a7704"
+       },
+       {
+        "pid": "P1296",
+        "string": "0045300",
+        "statement": "Q3870-C81ABA19-5187-462A-9E47-7C5E2819EF5C"
+       },
+       {
+        "pid": "P1937",
+        "string": "KENBO",
+        "statement": "Q3870-a928a257-4c91-6fec-354d-4982f299a9c6"
+       },
+       {
+        "pid": "P950",
+        "string": "XX453921",
+        "statement": "q3870-fc63a185-4c5a-c0f7-02dc-21cc2ef849c7"
+       },
+       {
+        "pid": "P4527",
+        "string": "11803",
+        "statement": "Q3870-41301917-4984-4114-842F-EF33F5716B8A"
+       },
+       {
+        "pid": "P2347",
+        "string": "110125",
+        "statement": "Q3870-AF7F0336-5837-4977-A74E-F616B4639B0F"
+       },
+       {
+        "pid": "P1871",
+        "string": "cnl00030086",
+        "statement": "Q3870-d219b7b0-4356-2201-b0b0-57691b822fd4"
+       },
+       {
+        "pid": "P3417",
+        "string": "Nairobi-Kenya-1",
+        "statement": "Q3870-8ef03be1-41f8-ea51-0d89-1e3d44918d2d"
+       },
+       {
+        "pid": "P3134",
+        "string": "294207",
+        "statement": "Q3870-a2b7cc8b-44c8-9672-70aa-3b7c1c6a4bfc"
+       },
+       {
+        "pid": "P1997",
+        "string": "114751268540391",
+        "statement": "Q3870-ee496f19-44d2-7722-39b9-c4b7fcfe6e5a"
+       },
+       {
+        "pid": "P5843",
+        "string": "Nairobi",
+        "statement": "Q3870-21CB5D06-1263-4286-8A25-21B9766B618B"
+       },
+       {
+        "pid": "P3219",
+        "string": "nairobi",
+        "statement": "Q3870-AAF8F864-5463-4B5D-A929-A0C8816FFDC1"
+       },
+       {
+        "pid": "P6200",
+        "string": "cq26565v4d9t",
+        "statement": "Q3870-1a07d5f5-7b3b-43fd-83f3-d807b5c272c8"
+       },
+       {
+        "pid": "P2581",
+        "string": "00015561n",
+        "statement": "Q3870-dee67422-4455-c260-dd5b-cecdd56c8899"
+       },
+       {
+        "pid": "P5184",
+        "string": "b03n2669a",
+        "statement": "Q3870-6ed63a78-447f-ea6e-98c5-4622b33ae2b4"
+       },
+       {
+        "pid": "P5905",
+        "string": "4020-61168",
+        "statement": "Q3870-62D963A3-6F32-4CC8-8AFF-E0C29174F961"
+       },
+       {
+        "pid": "P6706",
+        "string": "Nairobi",
+        "statement": "Q3870-43796714-471e-692e-9fe1-9910cf19464a"
+       },
+       {
+        "pid": "P4342",
+        "string": "Nairobi",
+        "statement": "Q3870-BB9F92A9-4A4F-42C1-9E4C-90FFC20376B4"
+       },
+       {
+        "pid": "P7305",
+        "string": "3945429",
+        "statement": "Q3870-27e7d54e-470e-ceff-dc33-efa5a14b8fc7"
+       },
+       {
+        "pid": "P3749",
+        "string": "17856493610344092236",
+        "statement": "Q3870-f7071a88-488a-92e1-5af1-19eb6b7ec6df"
+       },
+       {
+        "pid": "P5063",
+        "string": "i83637",
+        "statement": "Q3870-ABD08DA2-3031-4554-9EB5-0E1A14D36CF0"
+       },
+       {
+        "pid": "P4223",
+        "string": "nairobi",
+        "statement": "Q3870-E5FC209F-4456-4D5C-ABBE-51F991857C5F"
+       },
+       {
+        "pid": "P5337",
+        "string": "CAAqIQgKIhtDQkFTRGdvSUwyMHZNRFZrTkRrU0FtcGhLQUFQAQ",
+        "statement": "Q3870-b01efb60-4ee0-3f03-fb14-3c8245b6ad53"
+       },
+       {
+        "pid": "P6404",
+        "string": "nairobi",
+        "statement": "Q3870-82EC4E21-F532-40A3-BF00-42D1B9F2CD76"
+       },
+       {
+        "pid": "P7506",
+        "string": "1074255",
+        "statement": "Q3870-64e58102-4089-b71c-9c5a-800d6fed2ed9"
+       },
+       {
+        "pid": "P8349",
+        "string": "38283",
+        "statement": "Q3870-357ba70a-4e92-9210-e4eb-9d672dae382e"
+       },
+       {
+        "pid": "P8408",
+        "string": "NairobiArea-Kenya",
+        "statement": "Q3870-3999357C-1B8C-43B0-B48F-A629B2F85390"
+       },
+       {
+        "pid": "P9346",
+        "string": "nairobi",
+        "statement": "Q3870-22ec3636-4854-eea0-2dc4-264d7f75163f"
+       },
+       {
+        "pid": "P5573",
+        "string": "8464",
+        "statement": "Q3870-F6FD08D5-10D9-48D4-9990-A7F1F6E97D67"
+       },
+       {
+        "pid": "P6766",
+        "string": "421174401",
+        "statement": "Q3870-B0CC255C-4E69-4BD4-A8B0-D9A8BE4C7C07"
+       },
+       {
+        "pid": "P6723",
+        "string": "global-african-history/nairobi-kenya",
+        "statement": "Q3870-C575520E-978F-4701-B2B7-B33402DBD428"
+       },
+       {
+        "pid": "P6621",
+        "string": "Nairobi",
+        "statement": "Q3870-c9f6ddd1-4899-b218-4b5b-02ba2da30180"
+       },
+       {
+        "pid": "P8814",
+        "string": "08948355-n",
+        "statement": "Q3870-79515548-8831-4F16-8E25-40F0EB8FF487"
+       },
+       {
+        "pid": "P9957",
+        "string": "20868",
+        "statement": "Q3870-45365C79-0FDD-464A-915B-E3C628540620"
+       },
+       {
+        "pid": "P8168",
+        "string": "Q449252",
+        "statement": "Q3870-B0C3B696-1590-49CF-BA05-EF41A3F068B9"
+       },
+       {
+        "pid": "P7471",
+        "string": "10957",
+        "statement": "Q3870-de986b3b-4008-252b-f146-2f4df6d9783f"
+       },
+       {
+        "pid": "P8119",
+        "string": "KE.NB",
+        "statement": "Q3870-b75f6250-427a-2c32-1854-74e579b4bdd8"
+       },
+       {
+        "pid": "P7502",
+        "string": "Nairobi-PJED",
+        "statement": "Q3870-e4ae9f76-4c27-54c3-49ae-de3bf2546760"
+       },
+       {
+        "pid": "P9100",
+        "string": "nairobi",
+        "statement": "Q3870-99728FCC-64E8-428F-9602-9D3FC613784E"
+       },
+       {
+        "pid": "P7197",
+        "string": "184745",
+        "statement": "Q3870-fe3482c4-40c2-18a4-50a3-d51624c77fac"
+       },
+       {
+        "pid": "P8519",
+        "string": "15689",
+        "statement": "Q3870-b251694e-4531-46e5-8c25-739d91ea4049"
+       },
+       {
+        "pid": "P10730",
+        "string": "wikidataId/Q3870",
+        "statement": "Q3870-53b6e6fa-4eaa-6f8d-7169-967df2adc906"
+       },
+       {
+        "pid": "P10291",
+        "string": "49149",
+        "statement": "Q3870-71069163-5E19-4A60-9574-8074CDFD0CA1"
+       },
+       {
+        "pid": "P10832",
+        "string": "E39PBJccgHVhXJcjCxQ6cXJxDq",
+        "statement": "Q3870-5cffb789-4da5-9555-82dc-5853f0342ae2"
+       },
+       {
+        "pid": "P9495",
+        "string": "geo/24610d81-9de7-4a91-97fc-9bb4cf1b8c7e",
+        "statement": "Q3870-9e26f7e2-49bb-80c9-fcaf-65647668d578"
+       },
+       {
+        "pid": "P8189",
+        "string": "987007552644805171",
+        "statement": "Q3870-EA7078D5-4F35-416E-8675-1BB80B4E1B13"
+       },
+       {
+        "pid": "P8313",
+        "string": "Nairobi",
+        "statement": "Q3870-F5045C3C-1D39-48E2-93E1-C6AA759AF9BE"
+       },
+       {
+        "pid": "P8424",
+        "string": "2862891",
+        "statement": "Q3870-f5e4c438-46d4-1acf-d680-8514be4118e2"
+       },
+       {
+        "pid": "P12800",
+        "string": "fr:Nairobi",
+        "statement": "Q3870-05E1397F-0990-4401-B1D5-A3AF14998A5A"
+       },
+       {
+        "pid": "P10397",
+        "string": "TSAL000079",
+        "statement": "Q3870-A55C2A2A-30A0-4ED9-9A50-1896DC0F73B0"
+       },
+       {
+        "pid": "P12800",
+        "string": "en:Nairobi",
+        "statement": "Q3870-73885414-625E-4C79-9225-432C09C2FAC5"
+       },
+       {
+        "pid": "P12086",
+        "string": "Nairobi",
+        "statement": "Q3870-AF31DE7E-1AC4-45D1-8C2D-1CDF97CC26DF"
+       },
+       {
+        "pid": "P12800",
+        "string": "it:Nairobi",
+        "statement": "Q3870-92992E03-12B9-43BA-A5D5-AD242018FD7C"
+       },
+       {
+        "pid": "P13591",
+        "string": "place/2594dec6-5ad7-4c29-9b82-864ef69905b3",
+        "statement": "Q3870-74A9643B-40BA-4F89-9CFA-650859F5C2FC"
+       },
+       {
+        "pid": "P12385",
+        "string": "nairobi-0",
+        "statement": "Q3870-f19dfabf-c4d2-448d-bb86-ce550d268c24"
+       },
+       {
+        "pid": "P12749",
+        "string": "Q1381",
+        "statement": "Q3870-D9F12C10-406A-4DFC-B7A5-7DC1287A17AC"
+       },
+       {
+        "pid": "P12800",
+        "string": "es:Nairobi",
+        "statement": "Q3870-EE9747E4-9551-4ADA-AB43-035BE0377950"
+       },
+       {
+        "pid": "P213",
+        "string": "000000010791732X",
+        "statement": "Q3870-27A2390F-F31D-47D2-9BF5-0CE54F8DF385"
+       },
+       {
+        "pid": "P227",
+        "string": "4041172-2",
+        "statement": "Q3870-739619CB-F9AA-43F6-BA0F-13A48F9540CF"
+       },
+       {
+        "pid": "P244",
+        "string": "n79011090",
+        "statement": "Q3870-9C5F7916-06C9-4B10-AEAD-F883C96AC71D"
+       },
+       {
+        "pid": "P214",
+        "string": "264835402",
+        "statement": "Q3870-DF30BBA0-6B16-409E-8577-685ED4E2D109"
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "unshown": []
+}
