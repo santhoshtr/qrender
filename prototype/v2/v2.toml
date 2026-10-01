@@ -1,0 +1,140 @@
+# Judgment for the second-generation composer (compose_v2.py).
+#
+# The composer derives everything it can from the data. What is left is here:
+# one line for each decision, with the label of each PID and QID, so that a
+# community can read and change it. Card grouping and the footnote tier come
+# from qrender/groups.toml, not from this file.
+
+# ------------------------------------------------------------- dimensions
+#
+# A dimension is one region of the page. Its colour is the same on every page,
+# so a colour means one thing: "a measurement", "a place", "a date". Its title
+# is a Wikidata item, shown in the page language where the item has a label.
+# The order here is the order of precedence when a property qualifies for more
+# than one dimension; the order on the page follows the amount of data.
+
+[[dimensions]]
+id = "measure"
+concept = "Q107715"   # physical quantity
+tint = "blue"
+icon = "straighten"
+
+[[dimensions]]
+id = "space"
+concept = "Q1071"     # geography
+tint = "green"
+icon = "map"
+
+[[dimensions]]
+id = "time"
+concept = "Q309"      # history
+tint = "orange"
+icon = "event"
+
+[[dimensions]]
+id = "names"
+concept = "Q82799"    # name
+tint = "pink"
+icon = "language"
+
+[[dimensions]]
+id = "relations"
+concept = "Q930933"   # relation
+tint = "purple"
+icon = "communities"
+
+[[dimensions]]
+id = "media"
+concept = "Q131765"   # multimedia
+tint = "lime"
+icon = "photo_library"
+
+[[dimensions]]
+id = "evidence"
+concept = "Q121769"   # reference
+tint = "grey"
+icon = "local_library"
+
+# Property classes (the P31 of a property, kept by Wikidata editors) that put
+# an item-valued or text property in a dimension. The datatype decides first:
+# a quantity is a measure, a date is time, a coordinate is space, a Commons
+# file is media, an identifier or a footnote property is evidence. Everything
+# that is left, and matches no class here, is a relation.
+[classes]
+Q19643892 = "names"   # Wikidata property to indicate a name
+Q18615777 = "space"   # Wikidata property to indicate a location
+Q19829914 = "space"   # Wikidata property related to places
+Q22964785 = "time"    # Wikidata property related to events
+Q18608756 = "time"    # Wikidata property for birth or death
+
+# ------------------------------------------------------------ comparisons
+#
+# How the item compares with the item that contains it. "scale" draws the two
+# side by side (a moon and its planet). "share" draws the item as a part of
+# the whole (a city in its country).
+[containers]
+P397 = "scale"        # parent astronomical body
+P171 = "scale"        # parent taxon
+P17 = "share"         # country
+P131 = "share"        # located in the administrative territorial entity
+P361 = "share"        # part of
+
+# Quantities that describe the thing itself. Only these are compared with the
+# container or with peers. Orbital elements are not in the list: the orbit of
+# the Earth is around the Sun, and a comparison with the Moon's orbit would
+# mean nothing.
+[compare]
+pids = [
+  "P2067",  # mass
+  "P2120",  # radius
+  "P2386",  # diameter
+  "P2046",  # area
+  "P2234",  # volume
+  "P2054",  # density
+  "P7015",  # surface gravity
+  "P1082",  # population
+  "P2044",  # elevation above sea level
+  "P2050",  # wingspan
+  "P2048",  # height
+]
+
+# How peers are drawn for a quantity. The default is a sorted bar list. A
+# radius or a diameter of round bodies reads better as discs to scale.
+[peer_shape]
+P2120 = "disc"        # radius
+P2386 = "disc"        # diameter
+
+# Qualifier values that mark the two ends of a range.
+[range_ends]
+Q10585806 = "min"     # minimum
+Q10578722 = "max"     # maximum
+
+# ------------------------------------------------------------------- media
+#
+# Which picture a region celebrates with a feature row of its own. A
+# community assessment on Commons counts most. Without one, the property
+# decides: these properties hold a photograph of the subject itself, in
+# order of preference. A collage (P2716), a flag or a map is not a view.
+# Below the minimum resolution a picture is never a feature.
+[media]
+views = [
+  "P3451",  # nighttime view
+  "P8592",  # aerial view
+  "P5775",  # image of interior
+  "P18",    # image
+  "P4291",  # panoramic view
+]
+min_megapixels = 1.0
+# The people who lead the item. Their portrait may lead its region, like the
+# best view leads the media region.
+lead_portraits = [
+  "P6",     # head of government
+  "P35",    # head of state
+  "P1037",  # director / manager
+  "P488",   # chairperson
+]
+
+[media.assessments]
+"Featured pictures on Wikimedia Commons" = 3
+"Quality images" = 2
+"Valued images" = 1
