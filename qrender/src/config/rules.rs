@@ -23,33 +23,58 @@ pub struct Rules {
     pub template: Vec<TemplateRule>,
 }
 
-/// A row of a rule table: its id, and whether it has no condition.
+/// A row of a rule table: its id and its condition.
 pub trait Row {
+    type When: PartialEq + Default;
+
     fn id(&self) -> &str;
-    fn unconditional(&self) -> bool;
+    fn when(&self) -> &Self::When;
+
+    fn unconditional(&self) -> bool {
+        *self.when() == Self::When::default()
+    }
+}
+
+/// A condition that can be checked against the facts of type `F`.
+pub trait When<F> {
+    fn holds(&self, facts: &F) -> bool;
+}
+
+/// The first rule whose condition holds.
+pub fn first<'r, R, F>(rules: &'r [R], facts: &F) -> &'r R
+where
+    R: Row,
+    R::When: When<F>,
+{
+    rules
+        .iter()
+        .find(|rule| rule.when().holds(facts))
+        .expect("validated at load: the last rule of a table has no condition")
 }
 
 macro_rules! row {
-    ($($rule:ty),*) => {$(
+    ($($rule:ty => $when:ty),* $(,)?) => {$(
         impl Row for $rule {
+            type When = $when;
+
             fn id(&self) -> &str {
                 &self.id
             }
 
-            fn unconditional(&self) -> bool {
-                self.when == Default::default()
+            fn when(&self) -> &$when {
+                &self.when
             }
         }
     )*};
 }
 
 row!(
-    PropertyRule,
-    SplitRule,
-    BlockRule,
-    OrderRule,
-    PlacementRule,
-    TemplateRule
+    PropertyRule => PropertyWhen,
+    SplitRule => GroupWhen,
+    BlockRule => GroupWhen,
+    OrderRule => GroupWhen,
+    PlacementRule => PlacementWhen,
+    TemplateRule => TemplateWhen,
 );
 
 // ------------------------------------------------------------- property

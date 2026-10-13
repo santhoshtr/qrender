@@ -2,5 +2,7 @@
 //! crate has no network and no I/O; it reads the content and the text that
 //! the `content` crate gives it.
 
+pub mod compose;
 pub mod config;
+pub mod schema;
 pub mod vocab;
