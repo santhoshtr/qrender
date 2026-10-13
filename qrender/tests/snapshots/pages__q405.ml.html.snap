@@ -615,7 +615,7 @@ expression: html
       <audio controls preload="none" src="https://commons.wikimedia.org/wiki/Special:FilePath/Hy-%D4%BC%D5%B8%D6%82%D5%BD%D5%AB%D5%B6%20%28Moon%29.ogg">
       </audio>
         <span class="note"><a href="https://www.wikidata.org/wiki/Q8785">അർമേനിയൻ ഭാഷ</a> · 2016</span>
-      </div><div class="block sounds">
+      </div><qr-sounds class="block sounds">
     <h3>ഉച്ചാരണ ശബ്ദം <span class="note">3</span></h3>
     <select class="sound-choice" hidden aria-label="ഉച്ചാരണ ശബ്ദം"><option value="0">സ്വീഡിഷ് ഭാഷ</option><option value="1">ജർമ്മൻ ഭാഷ</option><option value="2">അമേരിക്കൻ ഇംഗ്ലീഷ്</option></select><div class="sound">
             <span class="sound-name">സ്വീഡിഷ് ഭാഷ</span>
@@ -632,7 +632,7 @@ expression: html
             <audio controls preload="none" src="https://commons.wikimedia.org/wiki/Special:FilePath/En-us-moon.ogg"></audio><span class="tools"><span class="prov-none" title="—"></span><a class="edit"
        href="https://www.wikidata.org/wiki/Q405#P443"
        aria-label="Edit">✎</a></span>
-        </div></div>
+        </div></qr-sounds>
 </div></section>
             <section class="spread t-collapsed" data-spread="more" data-dimension="neutral">
         <details>
@@ -1435,23 +1435,31 @@ if ( !( 'commandForElement' in HTMLButtonElement.prototype ) ) {
 		}
 	}
 } )();
-// Progressive enhancement only: the recordings of one property (the
-// pronunciations of the name) become one player with a choice of
-// language. Without this script every recording keeps its own player.
-for ( const block of document.querySelectorAll( '.sounds' ) ) {
-	const choice = block.querySelector( '.sound-choice' );
-	const sounds = [ ...block.querySelectorAll( '.sound' ) ];
-	const show = ( chosen ) => {
-		sounds.forEach( ( sound, i ) => {
-			sound.hidden = i !== chosen;
-			if ( i !== chosen ) {
-				sound.querySelector( 'audio' ).pause();
+// The qr-sounds element: the recordings of one property (the
+// pronunciations of the name) as one player with a choice of language.
+// Progressive enhancement only: an element that is not defined shows its
+// children, so without this script every recording keeps its own player.
+if ( 'customElements' in window ) {
+	customElements.define( 'qr-sounds', class extends HTMLElement {
+		connectedCallback() {
+			const choice = this.querySelector( '.sound-choice' );
+			const sounds = [ ...this.querySelectorAll( '.sound' ) ];
+			if ( !choice || sounds.length < 2 ) {
+				return;
 			}
-		} );
-	};
-	choice.hidden = false;
-	show( 0 );
-	choice.addEventListener( 'change', () => show( Number( choice.value ) ) );
+			const show = ( chosen ) => {
+				sounds.forEach( ( sound, i ) => {
+					sound.hidden = i !== chosen;
+					if ( i !== chosen ) {
+						sound.querySelector( 'audio' ).pause();
+					}
+				} );
+			};
+			choice.hidden = false;
+			show( Number( choice.value ) || 0 );
+			choice.addEventListener( 'change', () => show( Number( choice.value ) ) );
+		}
+	} );
 }
 </script>
 </body>

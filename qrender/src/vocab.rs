@@ -122,6 +122,34 @@ pub enum Primitive {
     Identifiers,
 }
 
+impl Primitive {
+    /// Every primitive, in the order of their CSS in the stylesheet and of
+    /// their scripts in a page.
+    pub const ALL: [Primitive; 21] = [
+        Self::Title,
+        Self::Kind,
+        Self::Prose,
+        Self::Media,
+        Self::Pictures,
+        Self::Sounds,
+        Self::Map,
+        Self::Fact,
+        Self::Series,
+        Self::Scale,
+        Self::Peers,
+        Self::Network,
+        Self::Succession,
+        Self::Credits,
+        Self::Score,
+        Self::Works,
+        Self::Time,
+        Self::Absent,
+        Self::Provenance,
+        Self::Sitelinks,
+        Self::Identifiers,
+    ];
+}
+
 /// A named arrangement of slots, defined by the design system.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, JsonSchema, Deserialize)]
 #[serde(rename_all = "kebab-case")]
@@ -221,6 +249,41 @@ pub enum RangeEnd {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn all_primitives_are_listed() {
+        // The variant names, from the generated schema of the enum.
+        let schema = serde_json::to_string(&schemars::schema_for!(Primitive)).unwrap();
+        let mut names: Vec<String> =
+            serde_json::from_str::<serde_json::Value>(&schema).unwrap()["oneOf"]
+                .as_array()
+                .map(|all| {
+                    // Documented variants have a "const" each; the others share
+                    // one "enum".
+                    all.iter()
+                        .flat_map(|v| {
+                            let named = v["enum"].as_array().cloned().unwrap_or_default();
+                            named.into_iter().chain(v.get("const").cloned())
+                        })
+                        .filter_map(|v| v.as_str().map(str::to_string))
+                        .collect()
+                })
+                .unwrap_or_default();
+        names.sort();
+        let mut listed: Vec<String> = Primitive::ALL
+            .iter()
+            .map(|p| {
+                serde_json::to_value(p)
+                    .unwrap()
+                    .as_str()
+                    .unwrap()
+                    .to_string()
+            })
+            .collect();
+        listed.sort();
+        assert!(!names.is_empty());
+        assert_eq!(listed, names, "Primitive::ALL must list every variant once");
+    }
 
     #[test]
     fn role_set() {

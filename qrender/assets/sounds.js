@@ -1,18 +1,26 @@
-// Progressive enhancement only: the recordings of one property (the
-// pronunciations of the name) become one player with a choice of
-// language. Without this script every recording keeps its own player.
-for ( const block of document.querySelectorAll( '.sounds' ) ) {
-	const choice = block.querySelector( '.sound-choice' );
-	const sounds = [ ...block.querySelectorAll( '.sound' ) ];
-	const show = ( chosen ) => {
-		sounds.forEach( ( sound, i ) => {
-			sound.hidden = i !== chosen;
-			if ( i !== chosen ) {
-				sound.querySelector( 'audio' ).pause();
+// The qr-sounds element: the recordings of one property (the
+// pronunciations of the name) as one player with a choice of language.
+// Progressive enhancement only: an element that is not defined shows its
+// children, so without this script every recording keeps its own player.
+if ( 'customElements' in window ) {
+	customElements.define( 'qr-sounds', class extends HTMLElement {
+		connectedCallback() {
+			const choice = this.querySelector( '.sound-choice' );
+			const sounds = [ ...this.querySelectorAll( '.sound' ) ];
+			if ( !choice || sounds.length < 2 ) {
+				return;
 			}
-		} );
-	};
-	choice.hidden = false;
-	show( 0 );
-	choice.addEventListener( 'change', () => show( Number( choice.value ) ) );
+			const show = ( chosen ) => {
+				sounds.forEach( ( sound, i ) => {
+					sound.hidden = i !== chosen;
+					if ( i !== chosen ) {
+						sound.querySelector( 'audio' ).pause();
+					}
+				} );
+			};
+			choice.hidden = false;
+			show( Number( choice.value ) || 0 );
+			choice.addEventListener( 'change', () => show( Number( choice.value ) ) );
+		}
+	} );
 }

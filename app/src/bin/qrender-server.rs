@@ -76,7 +76,7 @@ async fn design(Path((version, file)): Path<(String, String)>) -> Response {
         return StatusCode::NOT_FOUND.into_response();
     }
     let body = match file.as_str() {
-        "page.css" => STYLESHEET,
+        "page.css" => STYLESHEET.as_str(),
         "tokens.css" => TOKENS,
         _ => return StatusCode::NOT_FOUND.into_response(),
     };

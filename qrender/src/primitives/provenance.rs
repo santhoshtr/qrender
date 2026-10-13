@@ -23,6 +23,9 @@ pub struct Html<'a> {
     pub b: &'a Provenance,
 }
 
+/// The CSS of this primitive (design/primitives/provenance.css).
+pub const CSS: &str = include_str!("../../design/primitives/provenance.css");
+
 pub fn build(c: &Composer) -> Provenance {
     let mut counts = Provenance {
         sourced: 0,

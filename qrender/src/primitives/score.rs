@@ -33,6 +33,9 @@ pub struct Html<'a> {
     pub b: &'a Score,
 }
 
+/// The CSS of this primitive (design/primitives/score.css).
+pub const CSS: &str = include_str!("../../design/primitives/score.css");
+
 #[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct ScoreValue {
     pub statement: StatementId,

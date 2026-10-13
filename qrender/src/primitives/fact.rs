@@ -37,6 +37,9 @@ pub struct Html<'a> {
     pub b: &'a Fact,
 }
 
+/// The CSS of this primitive (design/primitives/fact.css).
+pub const CSS: &str = include_str!("../../design/primitives/fact.css");
+
 /// HTML: a row of the fact sheet (templates/primitives/fact-row.html).
 #[derive(askama::Template)]
 #[template(path = "primitives/fact-row.html")]

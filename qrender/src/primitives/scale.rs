@@ -24,6 +24,9 @@ pub struct Html<'a> {
     pub b: &'a Scale,
 }
 
+/// The CSS of this primitive (design/primitives/scale.css).
+pub const CSS: &str = include_str!("../../design/primitives/scale.css");
+
 #[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct Container {
     pub pid: Pid,

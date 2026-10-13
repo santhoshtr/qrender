@@ -35,6 +35,12 @@ pub struct Html<'a> {
     pub b: &'a Sounds,
 }
 
+/// The CSS of this primitive (design/primitives/sounds.css).
+pub const CSS: &str = include_str!("../../design/primitives/sounds.css");
+
+/// The script of this primitive: the `qr-sounds` element (assets/sounds.js).
+pub const JS: &str = include_str!("../../assets/sounds.js");
+
 /// Group the recordings of one property that follow each other in a slot.
 /// A single recording stays a media block.
 pub fn group(blocks: Vec<Block>) -> Vec<Block> {

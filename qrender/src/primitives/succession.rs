@@ -30,6 +30,9 @@ pub struct Html<'a> {
     pub b: &'a Succession,
 }
 
+/// The CSS of this primitive (design/primitives/succession.css).
+pub const CSS: &str = include_str!("../../design/primitives/succession.css");
+
 /// `holder`: the holder property (P6); `office`: the property that names
 /// its office (P1313). Claims the holders and the current office.
 pub fn build(

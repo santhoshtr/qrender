@@ -19,6 +19,9 @@ pub struct Html<'a> {
     pub b: &'a Identifiers,
 }
 
+/// The CSS of this primitive (design/primitives/identifiers.css).
+pub const CSS: &str = include_str!("../../design/primitives/identifiers.css");
+
 #[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct Identifier {
     pub pid: Pid,

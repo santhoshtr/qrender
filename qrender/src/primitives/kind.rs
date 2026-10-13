@@ -23,6 +23,9 @@ pub struct Html<'a> {
     pub b: &'a Kind,
 }
 
+/// The CSS of this primitive (design/primitives/kind.css).
+pub const CSS: &str = include_str!("../../design/primitives/kind.css");
+
 #[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct ChainLink {
     pub pid: Pid,

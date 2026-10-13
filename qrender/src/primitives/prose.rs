@@ -21,6 +21,9 @@ pub struct Html<'a> {
     pub b: &'a Prose,
 }
 
+/// The CSS of this primitive (design/primitives/prose.css).
+pub const CSS: &str = include_str!("../../design/primitives/prose.css");
+
 #[derive(Debug, Clone, Copy, Serialize, JsonSchema)]
 #[serde(rename_all = "lowercase")]
 pub enum ProseSource {

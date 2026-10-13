@@ -9,7 +9,7 @@
 
 use askama::Template;
 
-use super::design::{SCRIPTS, STYLESHEET, TOKENS};
+use super::design::{STYLESHEET, TOKENS, scripts};
 use super::ui::{Arg, Ref, Shown, Ui};
 use crate::localize::format::Part;
 use crate::localize::{Label, SpreadView, View};
@@ -32,13 +32,19 @@ pub enum Styles<'a> {
 
 pub fn page(view: &View, styles: Styles) -> String {
     let ui = Ui::new(view);
+    let shown: Vec<_> = view
+        .spreads
+        .iter()
+        .flat_map(|s| s.spread.slots.values().flatten())
+        .map(Block::primitive)
+        .collect();
     render(Page {
         ui: &ui,
         view,
         styles,
         tokens: TOKENS,
-        stylesheet: STYLESHEET,
-        scripts: SCRIPTS,
+        stylesheet: &STYLESHEET,
+        scripts: scripts(&shown),
     })
 }
 
@@ -54,7 +60,7 @@ struct Page<'a> {
     styles: Styles<'a>,
     tokens: &'static str,
     stylesheet: &'static str,
-    scripts: &'static str,
+    scripts: String,
 }
 
 #[derive(Template)]

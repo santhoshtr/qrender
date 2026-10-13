@@ -98,6 +98,11 @@ fn html_pages() {
         ids.dedup();
         assert_eq!(ids.len(), count, "{page}: duplicate ids");
 
+        // A primitive's script is on the page when its element is.
+        let element = doc.select(&select("qr-sounds")).count() > 0;
+        let script = html.contains("customElements.define( 'qr-sounds'");
+        assert_eq!(element, script, "{page}: qr-sounds element {element}, script {script}");
+
         insta::assert_snapshot!(format!("{page}.html"), html);
     }
 }

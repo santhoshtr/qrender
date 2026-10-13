@@ -32,6 +32,9 @@ pub struct Html<'a> {
     pub b: &'a Map,
 }
 
+/// The CSS of this primitive (design/primitives/map.css).
+pub const CSS: &str = include_str!("../../design/primitives/map.css");
+
 #[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct Marker {
     pub pid: Pid,

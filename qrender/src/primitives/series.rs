@@ -35,6 +35,9 @@ pub struct Html<'a> {
     pub b: &'a Series,
 }
 
+/// The CSS of this primitive (design/primitives/series.css).
+pub const CSS: &str = include_str!("../../design/primitives/series.css");
+
 /// The Commons data file of a series.
 #[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct Source {

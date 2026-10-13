@@ -18,6 +18,9 @@ pub struct Html<'a> {
     pub b: &'a Title,
 }
 
+/// The CSS of this primitive (design/primitives/title.css).
+pub const CSS: &str = include_str!("../../design/primitives/title.css");
+
 /// Markdown: the title and the description.
 pub fn markdown(b: &Title, md: &mut crate::render::markdown::Markdown) {
     let label = md.view.labels.get(&content::EntityId::Item(b.item));

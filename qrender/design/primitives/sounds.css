@@ -1,6 +1,7 @@
-/* sounds: the recordings of one property, one player and a choice. */
+/* sounds: the recordings of one property, one player and a choice (the
+   qr-sounds element). */
 
-.sounds {
+qr-sounds {
 	& .sound {
 		display: flex;
 		flex-wrap: wrap;

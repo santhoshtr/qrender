@@ -19,6 +19,9 @@ pub struct Html<'a> {
     pub b: &'a Sitelinks,
 }
 
+/// The CSS of this primitive (design/primitives/sitelinks.css).
+pub const CSS: &str = include_str!("../../design/primitives/sitelinks.css");
+
 /// Site id suffixes of the language projects. "wiki" is Wikipedia.
 const FAMILIES: [&str; 8] = [
     "wiki",

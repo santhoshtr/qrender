@@ -28,6 +28,9 @@ pub struct Html<'a> {
     pub b: &'a Time,
 }
 
+/// The CSS of this primitive (design/primitives/time.css).
+pub const CSS: &str = include_str!("../../design/primitives/time.css");
+
 #[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct Track {
     pub pid: Pid,
