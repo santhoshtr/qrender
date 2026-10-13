@@ -41,7 +41,7 @@ kind = "identity"
 [[class_layouts.settlement.spreads]]
 id = "location"
 dimension = "place"
-concept = "Q2221906"   # geographic location
+concept = "Q1071"      # geography
 prose = ["Q1071", "Q7937"]   # geography, climate
 kind = "facts"
 pids = [
@@ -567,7 +567,7 @@ kind = "identity"
 [[class_layouts.generic.spreads]]
 id = "location"
 dimension = "place"
-concept = "Q2221906"   # geographic location
+concept = "Q1071"      # geography
 kind = "facts"
 pids = ["P625", "P131", "P17", "P276", "P361", "P242"]
 
