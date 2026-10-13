@@ -59,6 +59,13 @@ id = "coordinate"
 when = { type = "GlobeCoordinate" }
 make = "map"
 
+# A role decides before the datatype: review scores are cards, whatever
+# the datatype of the score.
+[[block]]
+id = "score"
+when = { role = "score" }
+make = "score"
+
 [[block]]
 id = "series"
 when = { type = "Quantity", role = "series", distinct_years = true }
@@ -83,11 +90,6 @@ make = "single"
 id = "set"
 when = { type = "WikibaseItem" }
 make = "network"
-
-[[block]]
-id = "score"
-when = { role = "score" }
-make = "score"
 
 [[block]]
 id = "row"
