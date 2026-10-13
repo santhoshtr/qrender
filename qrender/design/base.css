@@ -316,8 +316,7 @@ dialog {
 	}
 }
 
-/* Narrow: every slot takes the full width, in reading order, and sets of
-   pictures get a lower row so that two fit side by side. */
+/* Narrow: every slot takes the full width, in reading order. */
 @container page ( width < 760px ) {
 	.spread {
 		grid-template-rows: none !important;
@@ -325,11 +324,6 @@ dialog {
 		& > * { grid-row: auto !important; }
 		& > [data-slot] { grid-column: 1 / -1 !important; }
 	}
-
-	/* Never applies: the rule with the set height comes later, with the
-	   same specificity (a container query adds none). Kept as in v3. */
-	.set .run,
-	.run.small { --h: 100px; }
 }
 
 .prose-links {
@@ -554,6 +548,14 @@ dialog {
 
 .set .run,
 .run.small { --h: var( --set-height ); }
+
+/* Narrow: sets of pictures get a lower row, so that two fit side by side.
+   After the rule above: a container query adds no specificity, so the
+   later rule wins. */
+@container page ( width < 760px ) {
+	.set .run,
+	.run.small { --h: 100px; }
+}
 
 /* The values of one property have equal importance: they take one row, not
    many. Each picture has the row height and its own width (height ×
