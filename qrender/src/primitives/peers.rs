@@ -23,6 +23,8 @@ pub struct Peers {
     /// The item's place, from the largest.
     pub rank: usize,
     pub of: usize,
+    /// The SI unit of the amounts; None for a count.
+    pub unit: Option<Qid>,
     pub members: Vec<Member>,
 }
 
@@ -83,6 +85,7 @@ pub fn build(c: &Composer) -> Vec<Peers> {
             container: peers.container,
             rank,
             of: members.len(),
+            unit: Some(mine.unit).filter(|u| u.number() != 199),
             members: members
                 .iter()
                 .enumerate()
@@ -117,8 +120,12 @@ pub fn markdown(b: &Peers, md: &mut crate::render::markdown::Markdown) {
             )
         })
         .collect();
+    let unit = b
+        .unit
+        .map(|u| format!(" ({})", md.label(content::EntityId::Item(u))))
+        .unwrap_or_default();
     let key = format!(
-        "{} among {}",
+        "{}{unit} among {}",
         md.property(b.pid),
         md.label(content::EntityId::Item(b.class))
     );

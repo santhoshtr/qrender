@@ -1730,6 +1730,17 @@
           "format": "uint",
           "minimum": 0,
           "type": "integer"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Qid"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The SI unit of the amounts; None for a count."
         }
       },
       "required": [
@@ -1737,6 +1748,7 @@
         "class",
         "rank",
         "of",
+        "unit",
         "members"
       ],
       "type": "object"

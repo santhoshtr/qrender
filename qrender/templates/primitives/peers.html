@@ -2,8 +2,9 @@
     link, so its name has no add action: no link in a link. -#}
 <div class="block">
     <h3>
-        {{ ui.text(ui.property(b.pid), true)|safe }} <span class="note">{{ ui.text(ui.item(b.class), true)|safe }}
-        {%- if let Some(c) = b.container %}· {{ ui.text(ui.item(c), true)|safe }}{% endif %} · {{ b.rank }} / {{ b.of }}</span></h3><div class="bars">
+        {{ ui.text(ui.property(b.pid), true)|safe }}
+        {%- if let Some(u) = b.unit %} <span class="note">({{ ui.text(ui.item(u), true)|safe }})</span>{% endif %} <span class="note">{{ ui.text(ui.item(b.class), true)|safe }}
+        {%- if let Some(c) = b.container %} · {{ ui.text(ui.item(c), true)|safe }}{% endif %} · {{ b.rank }} / {{ b.of }}</span></h3><div class="bars">
         {%- for m in b.members -%}{%- if m.shown -%}
             {%- let l = ui.item(m.item) -%}
             <a class="bar{% if m.is_self %} self{% endif %}" href="{{ l.href }}"><span class="name">{{ ui.text(&l, false)|safe }}</span><span class="track"><span style="--f:{{ ui.css_number(m.fraction) }}"></span></span><span class="val">{{ ui.part(ui.number(m.amount))|safe }}</span></a>
