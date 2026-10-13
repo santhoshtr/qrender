@@ -85,10 +85,17 @@ pub fn build(
     form: Option<FactForm>,
     rule: Option<&str>,
 ) -> Fact {
+    let form = form.unwrap_or_else(|| shape(c, statements));
+    let mut statements = statements.to_vec();
+    if form == FactForm::Range {
+        // The minimum first, whatever the order of the data.
+        statements.sort_by_key(|s| end(c, s) != Some(RangeEnd::Min));
+    }
+    let statements = statements.as_slice();
     let values = statements.iter().map(|s| c.statement(s));
     Fact {
         pid,
-        form: form.unwrap_or_else(|| shape(c, statements)),
+        form,
         statements: mark_shown(values, c.config.layouts.thresholds.list_shown),
         priority: c.priority(pid, statements),
         former: false,
@@ -97,18 +104,19 @@ pub fn build(
     }
 }
 
+/// The end of a range that a statement's qualifiers mark (minimum or
+/// maximum), if any.
+fn end(c: &Composer, statement: &Statement) -> Option<RangeEnd> {
+    statement.qualifiers.iter().find_map(|q| match q.value {
+        QualifierValue::Entity {
+            entity: EntityId::Item(item),
+        } => c.config.layouts.range_ends.get(&item).copied(),
+        _ => None,
+    })
+}
+
 fn shape(c: &Composer, statements: &[&Statement]) -> FactForm {
-    let range_ends = &c.config.layouts.range_ends;
-    let ends: HashSet<RangeEnd> = statements
-        .iter()
-        .flat_map(|s| &s.qualifiers)
-        .filter_map(|q| match q.value {
-            QualifierValue::Entity {
-                entity: EntityId::Item(item),
-            } => range_ends.get(&item).copied(),
-            _ => None,
-        })
-        .collect();
+    let ends: HashSet<RangeEnd> = statements.iter().filter_map(|s| end(c, s)).collect();
     let quantity = statements[0].value.datatype() == Datatype::Quantity;
     if quantity
         && statements.len() == 2

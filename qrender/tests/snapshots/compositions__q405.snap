@@ -1019,21 +1019,6 @@ expression: composition
             "form": "range",
             "statements": [
               {
-                "statement": "Q405-e0b1953e-46a7-cbf5-1d2e-2986ddc1eea8",
-                "pid": "P2076",
-                "amount": 390.0,
-                "unit": "Q11579",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P1480",
-                    "item": "Q10578722"
-                  }
-                ],
-                "shown": true
-              },
-              {
                 "statement": "Q405-ec9fb884-4c0f-53d7-2326-505d9f1016b2",
                 "pid": "P2076",
                 "amount": 95.0,
@@ -1044,6 +1029,21 @@ expression: composition
                   {
                     "pid": "P1480",
                     "item": "Q10585806"
+                  }
+                ],
+                "shown": true
+              },
+              {
+                "statement": "Q405-e0b1953e-46a7-cbf5-1d2e-2986ddc1eea8",
+                "pid": "P2076",
+                "amount": 390.0,
+                "unit": "Q11579",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P1480",
+                    "item": "Q10578722"
                   }
                 ],
                 "shown": true
