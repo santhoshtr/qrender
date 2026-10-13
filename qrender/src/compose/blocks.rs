@@ -75,10 +75,32 @@ impl<'a> Composer<'a> {
         let id = rule;
         let rule = Some(rule);
         let block = match make {
-            // The first value only, as in v3; the others are claimed but not
-            // shown (to fix after parity).
-            BlockMake::Media => Block::Media(media::build(self, group[0], MediaRole::Stack, rule)),
-            BlockMake::Map => Block::Map(map::build(self, group[0], spread_pids, rule)),
+            // One block for each file of the property.
+            BlockMake::Media => {
+                return group
+                    .iter()
+                    .map(|s| Made::Block {
+                        make: Some(make),
+                        block: Block::Media(media::build(self, s, MediaRole::Stack, rule)),
+                    })
+                    .collect();
+            }
+            // The map of the first (current) coordinate; the others are a
+            // row of the sheet.
+            BlockMake::Map => {
+                let map = Made::Block {
+                    make: Some(make),
+                    block: Block::Map(map::build(self, group[0], spread_pids, rule)),
+                };
+                let mut out = vec![map];
+                if group.len() > 1 {
+                    out.push(Made::Block {
+                        make: Some(BlockMake::Fact),
+                        block: Block::Fact(fact::build(self, pid, &group[1..], None, rule)),
+                    });
+                }
+                return out;
+            }
             BlockMake::Series => match series::dated(self, pid, group, rule) {
                 Some(series) => Block::Series(series),
                 None => return Vec::new(),

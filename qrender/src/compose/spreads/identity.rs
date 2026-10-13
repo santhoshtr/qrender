@@ -27,9 +27,9 @@ pub fn build(c: &mut Composer, spec: &SpreadSpec) -> Spread {
             item: c.content.qid,
         })],
     );
+    // The first banner; the others go to the media spread.
     let banners = c.free(*PAGE_BANNER);
-    // The first banner only, as in v3 (to fix after parity).
-    if let Some(banner) = c.take(banners).first() {
+    if let Some(banner) = c.take(banners.into_iter().take(1)).first() {
         let block = media::build(c, banner, MediaRole::Banner, None);
         slots.insert(Slot::Band, vec![Block::Media(block)]);
     }
