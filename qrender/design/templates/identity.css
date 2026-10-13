@@ -24,6 +24,15 @@
 	/* The kinds do not make the picture column wider. */
 	& > [data-slot='kind'] { grid-column: 2; grid-row: bottom; contain: inline-size; }
 
+	/* Without a picture of the item, there is no second column: the kinds
+	   go under the lead. */
+	&:not( :has( > [data-slot='hero'] ) ) {
+		grid-template-columns: minmax( 0, 1fr );
+
+		& > [data-slot='lead'] { grid-row: top; }
+		& > [data-slot='kind'] { grid-column: 1; contain: none; }
+	}
+
 	& > [data-slot='hero'] > .m {
 		inline-size: calc( var( --head-height ) * var( --a ) );
 		/* Not a percentage: in an auto column it is cyclic, and the browser
