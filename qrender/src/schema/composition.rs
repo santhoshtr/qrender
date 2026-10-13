@@ -23,6 +23,9 @@ pub struct Composition {
     pub qid: Qid,
     pub class_layout: String,
     pub spreads: Vec<Spread>,
+    /// The spreads of the class layout that have nothing to show, and why.
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub dropped: Vec<Dropped>,
     /// Statements that no spread shows. Always empty: a test checks it.
     pub unshown: Vec<StatementId>,
 }
@@ -42,6 +45,15 @@ pub struct Spread {
     #[serde(skip_serializing_if = "Vec::is_empty")]
     pub topics: Vec<StatementRef>,
     /// Primitives that had too little data, with the reason.
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub silent: Vec<Silence>,
+}
+
+/// A spread with nothing to show. `silent`: the silences of its
+/// primitives; empty when its properties have no statements.
+#[derive(Debug, Clone, Serialize, JsonSchema)]
+pub struct Dropped {
+    pub id: String,
     #[serde(skip_serializing_if = "Vec::is_empty")]
     pub silent: Vec<Silence>,
 }

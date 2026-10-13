@@ -8,10 +8,10 @@ use crate::compose::Composer;
 use crate::compose::picture::media_kind;
 use crate::config::SpreadSpec;
 use crate::primitives::media::{self, MediaRole};
-use crate::schema::{Block, MediaKind, Spread};
+use crate::schema::{Block, MediaKind};
 use crate::vocab::{Slot, Template};
 
-pub fn build(c: &mut Composer, spec: &SpreadSpec) -> Option<Spread> {
+pub fn build(c: &mut Composer, spec: &SpreadSpec) -> super::Built {
     let files: Vec<&Statement> = c
         .content
         .statements
@@ -20,7 +20,7 @@ pub fn build(c: &mut Composer, spec: &SpreadSpec) -> Option<Spread> {
         .collect();
     let files = c.take(files);
     if files.is_empty() {
-        return None;
+        return Err(Vec::new());
     }
     // The first file with the best score.
     let feature = files
@@ -65,5 +65,5 @@ pub fn build(c: &mut Composer, spec: &SpreadSpec) -> Option<Spread> {
     if !audio.is_empty() {
         slots.insert(Slot::Audio, audio);
     }
-    Some(c.spread(spec, slots, Template::FeatureRun, Vec::new()))
+    Ok(c.spread(spec, slots, Template::FeatureRun, Vec::new()))
 }

@@ -8,10 +8,10 @@ use crate::compose::Composer;
 use crate::compose::blocks::Made;
 use crate::config::SpreadSpec;
 use crate::primitives::{fact, peers, scale, series};
-use crate::schema::{Block, Silence, SilenceReason, Spread};
+use crate::schema::{Block, Silence, SilenceReason};
 use crate::vocab::{Primitive, Role, Slot, Template};
 
-pub fn build<'a>(c: &mut Composer<'a>, spec: &'a SpreadSpec) -> Option<Spread> {
+pub fn build<'a>(c: &mut Composer<'a>, spec: &'a SpreadSpec) -> super::Built {
     let pids = &spec.pids;
     let mut slots = IndexMap::new();
     let mut silent = Vec::new();
@@ -108,7 +108,7 @@ pub fn build<'a>(c: &mut Composer<'a>, spec: &'a SpreadSpec) -> Option<Spread> {
         slots.insert(Slot::Sheet, rows);
     }
     if slots.is_empty() {
-        return None;
+        return Err(silent);
     }
-    Some(c.spread(spec, slots, Template::Columns, silent))
+    Ok(c.spread(spec, slots, Template::Columns, silent))
 }

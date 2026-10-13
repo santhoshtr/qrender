@@ -182,5 +182,42 @@ expression: composition
       }
     }
   ],
+  "dropped": [
+    {
+      "id": "government"
+    },
+    {
+      "id": "demography",
+      "silent": [
+        {
+          "primitive": "scale",
+          "reason": "no_comparable_quantity"
+        }
+      ]
+    },
+    {
+      "id": "economy"
+    },
+    {
+      "id": "connections"
+    },
+    {
+      "id": "history",
+      "silent": [
+        {
+          "primitive": "time",
+          "reason": "below_threshold",
+          "points": 0,
+          "needs": 4
+        }
+      ]
+    },
+    {
+      "id": "media"
+    },
+    {
+      "id": "more"
+    }
+  ],
   "unshown": []
 }

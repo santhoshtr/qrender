@@ -19,8 +19,8 @@ use indexmap::IndexMap;
 
 use crate::config::{ClassLayout, Config, SpreadSpec};
 use crate::schema::{
-    Block, COMPOSITION_SCHEMA, Composition, DESIGN, ProseConcepts, Provenance, QualifierShown,
-    Silence, Spread, StatementRef, ValueShown, round_to,
+    Block, COMPOSITION_SCHEMA, Composition, DESIGN, Dropped, ProseConcepts, Provenance,
+    QualifierShown, Silence, Spread, StatementRef, ValueShown, round_to,
 };
 use crate::vocab::{Role, Slot, SpreadKind, Template};
 use crate::wikidata::{END_TIME, START_TIME};
@@ -128,9 +128,15 @@ impl<'a> Composer<'a> {
             _ => 0,
         });
         let mut built: IndexMap<&str, Spread> = IndexMap::new();
+        let mut dropped: IndexMap<&str, Vec<Silence>> = IndexMap::new();
         for spec in order {
-            if let Some(spread) = spreads::build(&mut self, spec) {
-                built.insert(&spec.id, spread);
+            match spreads::build(&mut self, spec) {
+                Ok(spread) => {
+                    built.insert(&spec.id, spread);
+                }
+                Err(silent) => {
+                    dropped.insert(&spec.id, silent);
+                }
             }
         }
         Composition {
@@ -142,6 +148,17 @@ impl<'a> Composer<'a> {
                 .spreads
                 .iter()
                 .filter_map(|s| built.shift_remove(s.id.as_str()))
+                .collect(),
+            dropped: layout
+                .spreads
+                .iter()
+                .filter_map(|s| {
+                    let silent = dropped.shift_remove(s.id.as_str())?;
+                    Some(Dropped {
+                        id: s.id.clone(),
+                        silent,
+                    })
+                })
                 .collect(),
             unshown: self.unclaimed().iter().map(|s| s.id.clone()).collect(),
         }

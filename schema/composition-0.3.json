@@ -427,6 +427,24 @@
       ],
       "type": "object"
     },
+    "Dropped": {
+      "description": "A spread with nothing to show. `silent`: the silences of its\nprimitives; empty when its properties have no statements.",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "silent": {
+          "items": {
+            "$ref": "#/$defs/Silence"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "type": "object"
+    },
     "EntityId": {
       "pattern": "^[QP][1-9][0-9]*$",
       "type": "string"
@@ -3142,6 +3160,13 @@
     },
     "design": {
       "type": "string"
+    },
+    "dropped": {
+      "description": "The spreads of the class layout that have nothing to show, and why.",
+      "items": {
+        "$ref": "#/$defs/Dropped"
+      },
+      "type": "array"
     },
     "qid": {
       "$ref": "#/$defs/Qid"

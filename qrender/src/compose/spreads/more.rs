@@ -7,10 +7,10 @@ use indexmap::IndexMap;
 use crate::compose::Composer;
 use crate::config::SpreadSpec;
 use crate::primitives::fact;
-use crate::schema::{Block, Spread};
+use crate::schema::Block;
 use crate::vocab::{Slot, Template};
 
-pub fn build(c: &mut Composer, spec: &SpreadSpec) -> Option<Spread> {
+pub fn build(c: &mut Composer, spec: &SpreadSpec) -> super::Built {
     let mut left: IndexMap<Pid, Vec<&Statement>> = IndexMap::new();
     for s in c.unclaimed() {
         if s.value.datatype() != Datatype::ExternalId {
@@ -25,10 +25,10 @@ pub fn build(c: &mut Composer, spec: &SpreadSpec) -> Option<Spread> {
         })
         .collect();
     if rows.is_empty() {
-        return None;
+        return Err(Vec::new());
     }
     // The most important first; the sort is stable.
     rows.sort_by(|a, b| b.priority.total_cmp(&a.priority));
     let slots = IndexMap::from([(Slot::Sheet, rows.into_iter().map(Block::Fact).collect())]);
-    Some(c.spread(spec, slots, Template::Collapsed, Vec::new()))
+    Ok(c.spread(spec, slots, Template::Collapsed, Vec::new()))
 }

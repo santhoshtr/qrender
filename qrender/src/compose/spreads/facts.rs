@@ -10,11 +10,11 @@ use crate::config::SpreadSpec;
 use crate::config::rules::{PropertyMake, first};
 use crate::primitives::fact::Age;
 use crate::primitives::{credits, succession, works};
-use crate::schema::{Block, Spread};
+use crate::schema::Block;
 use crate::vocab::Role;
 use crate::wikidata::{AGE, DATE_OF_BIRTH, DATE_OF_DEATH, INSTANCE_OF};
 
-pub fn build<'a>(c: &mut Composer<'a>, spec: &'a SpreadSpec) -> Option<Spread> {
+pub fn build<'a>(c: &mut Composer<'a>, spec: &'a SpreadSpec) -> super::Built {
     let pids = properties(c, spec);
     let config = c.config;
     let thresholds = &config.layouts.thresholds;
@@ -78,10 +78,10 @@ pub fn build<'a>(c: &mut Composer<'a>, spec: &'a SpreadSpec) -> Option<Spread> {
         });
     }
     if made.is_empty() {
-        return None;
+        return Err(Vec::new());
     }
     let (slots, template) = c.place(made);
-    Some(c.spread(spec, slots, template, Vec::new()))
+    Ok(c.spread(spec, slots, template, Vec::new()))
 }
 
 /// The spread's properties; with `pictured`, also any item property whose

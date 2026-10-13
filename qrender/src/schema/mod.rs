@@ -5,7 +5,8 @@ pub mod composition;
 pub mod value;
 
 pub use composition::{
-    Block, COMPOSITION_SCHEMA, Composition, DESIGN, ProseConcepts, Silence, SilenceReason, Spread,
+    Block, COMPOSITION_SCHEMA, Composition, DESIGN, Dropped, ProseConcepts, Silence, SilenceReason,
+    Spread,
 };
 
 pub use value::{
