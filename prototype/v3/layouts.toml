@@ -528,6 +528,18 @@ crew = [
   "P2554",  # production designer
   "P3092",  # film crew member
 ]
+# Review scores: a card each, with the logo of the source.
+score = [
+  "P444",   # review score
+]
+# Values whose Wikidata description is shown under them: works, where the
+# description says what the work is ("novel by Thomas Pynchon"). Not for
+# classes ("drama film"), whose descriptions are general.
+described = [
+  "P144",   # based on
+  "P1877",  # after a work by
+  "P6166",  # quotes work
+]
 # Values with an order of importance that Wikidata does not record (who is
 # billed first). The count of references on each statement stands in for
 # it; ties break on the item number, which is the same in every language.
@@ -623,6 +635,11 @@ views = [
   "P4291",  # panoramic view
 ]
 min_megapixels = 1.0
+# Qualifiers whose value is shown by its logo (P154): a review score by
+# IMDb or Rotten Tomatoes. A logo is known at a glance, in every language.
+qualifier_logos = [
+  "P447",   # review score by
+]
 
 [media.assessments]
 "Featured pictures on Wikimedia Commons" = 3

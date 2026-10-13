@@ -30,7 +30,7 @@ import sys
 import tomllib
 from pathlib import Path
 
-from primitives import credits, network, succession
+from primitives import credits, network, score, succession
 from values import entity_id, qual_year, qualifier_of, value_of, year_of
 
 HERE = Path(__file__).resolve().parent
@@ -89,6 +89,7 @@ BLOCK_RULES = [
     },
     {"id": "single", "when": {"type": "WikibaseItem", "few": True}, "make": "single"},
     {"id": "set", "when": {"type": "WikibaseItem"}, "make": "network"},
+    {"id": "score", "when": {"role": "score"}, "make": "score"},
     {"id": "row", "when": {}, "make": "fact"},
 ]
 
@@ -191,6 +192,8 @@ class Composer:
             )
             if entity_id(st["value"]) in self.classes:
                 out["class"] = True
+            elif "described" in self.roles(st["pid"]):
+                out["described"] = True  # its description is shown under it
         return out
 
     def take(self, sts):
@@ -496,6 +499,8 @@ class Composer:
             # Small values: each joins the shared gallery of its spread.
             p = self.priority(pid, sts)
             return [dict(self.statement(s), priority=p) for s in sts]
+        if make == "score":
+            return [score.build(self, pid, sts)]
         if make == "network":
             order = match(ORDER_RULES, self.group_predicate(pid, sts))["order"]
             return [network.build(self, pid, sts, TH["set_max"], self.order_key(order))]

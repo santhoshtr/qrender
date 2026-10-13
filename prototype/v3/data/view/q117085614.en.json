@@ -184,6 +184,7 @@
           "license": "Public domain"
          }
         },
+        "described": true,
         "priority": 0.0,
         "property": {
          "id": "P1877",
@@ -198,7 +199,12 @@
          "fallback": false,
          "href": "https://www.wikidata.org/wiki/Q35155"
         },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P1877"
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P1877",
+        "description": {
+         "text": "American novelist (born 1937)",
+         "lang": "en",
+         "fallback": false
+        }
        }
       ],
       "priority": 0.0
@@ -517,6 +523,7 @@
         "rank": "normal",
         "provenance": "sourced",
         "image": null,
+        "described": true,
         "shown": true,
         "property": {
          "id": "P144",
@@ -531,7 +538,12 @@
          "fallback": false,
          "href": "https://www.wikidata.org/wiki/Q2738674"
         },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P144"
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P144",
+        "description": {
+         "text": "novel by Thomas Pynchon",
+         "lang": "en",
+         "fallback": false
+        }
        }
       ],
       "priority": 1.0,
@@ -554,6 +566,7 @@
         "rank": "normal",
         "provenance": "sourced",
         "image": null,
+        "described": true,
         "shown": true,
         "property": {
          "id": "P6166",
@@ -568,7 +581,12 @@
          "fallback": false,
          "href": "https://www.wikidata.org/wiki/Q1753999"
         },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P6166"
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P6166",
+        "description": {
+         "text": "1971 song performed by Gil Scott-Heron",
+         "lang": "en",
+         "fallback": false
+        }
        }
       ],
       "priority": 1.0,
@@ -4268,279 +4286,122 @@
    "concept": "Q4482",
    "template": "columns",
    "slots": {
-    "sheet": [
+    "stack": [
      {
-      "primitive": "fact",
+      "primitive": "score",
       "pid": "P444",
-      "form": "value",
-      "statements": [
+      "values": [
        {
         "statement": "Q117085614-336EE829-A39D-46D5-84D2-C7C08C8F1E31",
         "pid": "P444",
         "string": "4.3/5",
-        "rank": "normal",
         "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P585",
-          "year": 2025,
-          "property": {
-           "id": "P585",
-           "text": "point in time",
-           "lang": "en",
-           "fallback": false
+        "source": {
+         "item": "Q18709181",
+         "image": {
+          "file": "Letterboxd-Logo-H-Pos-RGB.svg",
+          "kind": "drawing",
+          "aspect": 9.4815,
+          "megapixels": 0.03,
+          "credit": {
+           "artist": "Letterboxd",
+           "license": "Public domain"
           }
          },
-         {
-          "pid": "P7887",
-          "amount": 1447128.0,
-          "property": {
-           "id": "P7887",
-           "text": "number of reviews/ratings",
-           "lang": "en",
-           "fallback": false
-          },
-          "display": {
-           "text": "1,447,128"
-          },
-          "amount_display": "1,447,128"
-         },
-         {
-          "pid": "P447",
-          "item": "Q18709181",
-          "property": {
-           "id": "P447",
-           "text": "review score by",
-           "lang": "en",
-           "fallback": false
-          },
-          "display": {
-           "id": "Q18709181",
-           "text": "Letterboxd",
-           "lang": "en",
-           "fallback": false,
-           "href": "https://www.wikidata.org/wiki/Q18709181"
-          }
-         },
-         {
-          "pid": "P459",
-          "item": "Q107218751",
-          "property": {
-           "id": "P459",
-           "text": "determination method or standard",
-           "lang": "en",
-           "fallback": false
-          },
-          "display": {
-           "id": "Q107218751",
-           "text": "weighted average",
-           "lang": "en",
-           "fallback": false,
-           "href": "https://www.wikidata.org/wiki/Q107218751"
-          }
-         }
-        ],
-        "shown": true,
-        "property": {
-         "id": "P444",
-         "text": "review score",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "4.3/5"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P444",
-        "note": [
-         {
-          "text": "2025"
-         },
-         {
-          "text": "1,447,128"
-         },
-         {
+         "display": {
           "id": "Q18709181",
           "text": "Letterboxd",
           "lang": "en",
           "fallback": false,
           "href": "https://www.wikidata.org/wiki/Q18709181"
-         },
-         {
+         }
+        },
+        "method": {
+         "item": "Q107218751",
+         "display": {
           "id": "Q107218751",
           "text": "weighted average",
           "lang": "en",
           "fallback": false,
           "href": "https://www.wikidata.org/wiki/Q107218751"
          }
-        ]
+        },
+        "count": {
+         "pid": "P7887",
+         "amount": 1447128.0,
+         "property": {
+          "id": "P7887",
+          "text": "number of reviews/ratings",
+          "lang": "en",
+          "fallback": false
+         },
+         "display": {
+          "text": "1,447,128"
+         },
+         "amount_display": "1,447,128"
+        },
+        "year": 2025,
+        "property": {
+         "id": "P444",
+         "text": "review score",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "2025"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P444"
        },
        {
         "statement": "Q117085614-90DE398D-7E03-4854-9568-30FC4FF85C08",
         "pid": "P444",
         "string": "7.9/10",
-        "rank": "normal",
         "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P447",
-          "item": "Q37312",
-          "property": {
-           "id": "P447",
-           "text": "review score by",
-           "lang": "en",
-           "fallback": false
-          },
-          "display": {
-           "id": "Q37312",
-           "text": "IMDb",
-           "lang": "en",
-           "fallback": false,
-           "href": "https://www.wikidata.org/wiki/Q37312"
+        "source": {
+         "item": "Q37312",
+         "image": {
+          "file": "IMDB Logo 2016.svg",
+          "kind": "drawing",
+          "aspect": 1.9828,
+          "megapixels": 0.17,
+          "credit": {
+           "artist": "Internet Movie Database",
+           "license": "Public domain"
           }
          },
-         {
-          "pid": "P459",
-          "item": "Q107218751",
-          "property": {
-           "id": "P459",
-           "text": "determination method or standard",
-           "lang": "en",
-           "fallback": false
-          },
-          "display": {
-           "id": "Q107218751",
-           "text": "weighted average",
-           "lang": "en",
-           "fallback": false,
-           "href": "https://www.wikidata.org/wiki/Q107218751"
-          }
-         },
-         {
-          "pid": "P585",
-          "year": 2025,
-          "property": {
-           "id": "P585",
-           "text": "point in time",
-           "lang": "en",
-           "fallback": false
-          }
-         },
-         {
-          "pid": "P7887",
-          "amount": 212000.0,
-          "property": {
-           "id": "P7887",
-           "text": "number of reviews/ratings",
-           "lang": "en",
-           "fallback": false
-          },
-          "display": {
-           "text": "212,000"
-          },
-          "amount_display": "212,000"
-         }
-        ],
-        "shown": true,
-        "property": {
-         "id": "P444",
-         "text": "review score",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "7.9/10"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P444",
-        "note": [
-         {
+         "display": {
           "id": "Q37312",
           "text": "IMDb",
           "lang": "en",
           "fallback": false,
           "href": "https://www.wikidata.org/wiki/Q37312"
-         },
-         {
+         }
+        },
+        "method": {
+         "item": "Q107218751",
+         "display": {
           "id": "Q107218751",
           "text": "weighted average",
           "lang": "en",
           "fallback": false,
           "href": "https://www.wikidata.org/wiki/Q107218751"
+         }
+        },
+        "count": {
+         "pid": "P7887",
+         "amount": 212000.0,
+         "property": {
+          "id": "P7887",
+          "text": "number of reviews/ratings",
+          "lang": "en",
+          "fallback": false
          },
-         {
-          "text": "2025"
-         },
-         {
+         "display": {
           "text": "212,000"
-         }
-        ]
-       },
-       {
-        "statement": "Q117085614-899D199E-D3B3-46C5-B932-99D945D0E442",
-        "pid": "P444",
-        "string": "95/100",
-        "rank": "normal",
-        "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P447",
-          "item": "Q150248",
-          "property": {
-           "id": "P447",
-           "text": "review score by",
-           "lang": "en",
-           "fallback": false
-          },
-          "display": {
-           "id": "Q150248",
-           "text": "Metacritic",
-           "lang": "en",
-           "fallback": false,
-           "href": "https://www.wikidata.org/wiki/Q150248"
-          }
          },
-         {
-          "pid": "P459",
-          "item": "Q106515043",
-          "property": {
-           "id": "P459",
-           "text": "determination method or standard",
-           "lang": "en",
-           "fallback": false
-          },
-          "display": {
-           "id": "Q106515043",
-           "text": "Metascore",
-           "lang": "en",
-           "fallback": false,
-           "href": "https://www.wikidata.org/wiki/Q106515043"
-          }
-         },
-         {
-          "pid": "P585",
-          "year": 2025,
-          "property": {
-           "id": "P585",
-           "text": "point in time",
-           "lang": "en",
-           "fallback": false
-          }
-         },
-         {
-          "pid": "P7887",
-          "amount": 63.0,
-          "property": {
-           "id": "P7887",
-           "text": "number of reviews/ratings",
-           "lang": "en",
-           "fallback": false
-          },
-          "display": {
-           "text": "63"
-          },
-          "amount_display": "63"
-         }
-        ],
-        "shown": true,
+         "amount_display": "212,000"
+        },
+        "year": 2025,
         "property": {
          "id": "P444",
          "text": "review score",
@@ -4548,99 +4409,60 @@
          "fallback": false
         },
         "display": {
-         "text": "95/100"
+         "text": "2025"
         },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P444",
-        "note": [
-         {
-          "id": "Q150248",
-          "text": "Metacritic",
-          "lang": "en",
-          "fallback": false,
-          "href": "https://www.wikidata.org/wiki/Q150248"
-         },
-         {
-          "id": "Q106515043",
-          "text": "Metascore",
-          "lang": "en",
-          "fallback": false,
-          "href": "https://www.wikidata.org/wiki/Q106515043"
-         },
-         {
-          "text": "2025"
-         },
-         {
-          "text": "63"
-         }
-        ]
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P444"
        },
        {
         "statement": "Q117085614-A11DA1F2-1AFC-4254-990C-6FACC8852B77",
         "pid": "P444",
         "string": "94%",
-        "rank": "normal",
         "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P447",
-          "item": "Q105584",
-          "property": {
-           "id": "P447",
-           "text": "review score by",
-           "lang": "en",
-           "fallback": false
-          },
-          "display": {
-           "id": "Q105584",
-           "text": "Rotten Tomatoes",
-           "lang": "en",
-           "fallback": false,
-           "href": "https://www.wikidata.org/wiki/Q105584"
+        "source": {
+         "item": "Q105584",
+         "image": {
+          "file": "Rotten Tomatoes logo.svg",
+          "kind": "drawing",
+          "aspect": 3.5088,
+          "megapixels": 0.1,
+          "credit": {
+           "artist": "Emily Oberman from Pentagram, modified by Throast",
+           "license": "Public domain"
           }
          },
-         {
-          "pid": "P459",
-          "item": "Q108403393",
-          "property": {
-           "id": "P459",
-           "text": "determination method or standard",
-           "lang": "en",
-           "fallback": false
-          },
-          "display": {
-           "id": "Q108403393",
-           "text": "Tomatometer score",
-           "lang": "en",
-           "fallback": false,
-           "href": "https://www.wikidata.org/wiki/Q108403393"
-          }
-         },
-         {
-          "pid": "P585",
-          "year": 2025,
-          "property": {
-           "id": "P585",
-           "text": "point in time",
-           "lang": "en",
-           "fallback": false
-          }
-         },
-         {
-          "pid": "P7887",
-          "amount": 410.0,
-          "property": {
-           "id": "P7887",
-           "text": "number of reviews/ratings",
-           "lang": "en",
-           "fallback": false
-          },
-          "display": {
-           "text": "410"
-          },
-          "amount_display": "410"
+         "display": {
+          "id": "Q105584",
+          "text": "Rotten Tomatoes",
+          "lang": "en",
+          "fallback": false,
+          "href": "https://www.wikidata.org/wiki/Q105584"
          }
-        ],
-        "shown": true,
+        },
+        "method": {
+         "item": "Q108403393",
+         "display": {
+          "id": "Q108403393",
+          "text": "Tomatometer score",
+          "lang": "en",
+          "fallback": false,
+          "href": "https://www.wikidata.org/wiki/Q108403393"
+         }
+        },
+        "count": {
+         "pid": "P7887",
+         "amount": 410.0,
+         "property": {
+          "id": "P7887",
+          "text": "number of reviews/ratings",
+          "lang": "en",
+          "fallback": false
+         },
+         "display": {
+          "text": "410"
+         },
+         "amount_display": "410"
+        },
+        "year": 2025,
         "property": {
          "id": "P444",
          "text": "review score",
@@ -4648,31 +4470,70 @@
          "fallback": false
         },
         "display": {
-         "text": "94%"
+         "text": "2025"
         },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P444",
-        "note": [
-         {
-          "id": "Q105584",
-          "text": "Rotten Tomatoes",
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P444"
+       },
+       {
+        "statement": "Q117085614-899D199E-D3B3-46C5-B932-99D945D0E442",
+        "pid": "P444",
+        "string": "95/100",
+        "provenance": "sourced",
+        "source": {
+         "item": "Q150248",
+         "image": {
+          "file": "Metacritic logo.svg",
+          "kind": "drawing",
+          "aspect": 4.4,
+          "megapixels": 0.01,
+          "credit": {
+           "artist": "Fandom",
+           "license": "Public domain"
+          }
+         },
+         "display": {
+          "id": "Q150248",
+          "text": "Metacritic",
           "lang": "en",
           "fallback": false,
-          "href": "https://www.wikidata.org/wiki/Q105584"
-         },
-         {
-          "id": "Q108403393",
-          "text": "Tomatometer score",
-          "lang": "en",
-          "fallback": false,
-          "href": "https://www.wikidata.org/wiki/Q108403393"
-         },
-         {
-          "text": "2025"
-         },
-         {
-          "text": "410"
+          "href": "https://www.wikidata.org/wiki/Q150248"
          }
-        ]
+        },
+        "method": {
+         "item": "Q106515043",
+         "display": {
+          "id": "Q106515043",
+          "text": "Metascore",
+          "lang": "en",
+          "fallback": false,
+          "href": "https://www.wikidata.org/wiki/Q106515043"
+         }
+        },
+        "count": {
+         "pid": "P7887",
+         "amount": 63.0,
+         "property": {
+          "id": "P7887",
+          "text": "number of reviews/ratings",
+          "lang": "en",
+          "fallback": false
+         },
+         "display": {
+          "text": "63"
+         },
+         "amount_display": "63"
+        },
+        "year": 2025,
+        "property": {
+         "id": "P444",
+         "text": "review score",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "2025"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P444"
        }
       ],
       "priority": 2.322,
@@ -4682,7 +4543,9 @@
        "lang": "en",
        "fallback": false
       }
-     },
+     }
+    ],
+    "sheet": [
      {
       "primitive": "fact",
       "pid": "P166",
@@ -7896,8 +7759,8 @@
       ],
       "coverage": {
        "lang": "en",
-       "have": 256,
-       "total": 257
+       "have": 254,
+       "total": 255
       }
      }
     ],
@@ -8545,6 +8408,471 @@
          "text": "400953"
         },
         "edit": "https://www.wikidata.org/wiki/Q117085614#P2465"
+       },
+       {
+        "pid": "P10303",
+        "string": "bitva-za-bitvoy",
+        "statement": "Q117085614-50af1724-40a5-bcc0-97e0-3f40fcdd2803",
+        "property": {
+         "id": "P10303",
+         "text": "Film.ru film ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "bitva-za-bitvoy"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P10303"
+       },
+       {
+        "pid": "P5032",
+        "string": "10059894",
+        "statement": "Q117085614-9cb31bf5-4579-04eb-197f-2de94a8634fa",
+        "property": {
+         "id": "P5032",
+         "text": "Filmweb.pl film ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "10059894"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P5032"
+       },
+       {
+        "pid": "P6359",
+        "string": "358908",
+        "statement": "Q117085614-65420BE4-159B-4DC3-9411-B9E3A7C23C7A",
+        "property": {
+         "id": "P6359",
+         "text": "Crew United title ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "358908"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P6359"
+       },
+       {
+        "pid": "P2671",
+        "string": "/g/11tms1fbgr",
+        "statement": "Q117085614-8e77f7ae-4bf3-17e0-cc88-967ee4af76ab",
+        "property": {
+         "id": "P2671",
+         "text": "Google Knowledge Graph ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "/g/11tms1fbgr"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P2671"
+       },
+       {
+        "pid": "P3107",
+        "string": "624998",
+        "statement": "Q117085614-9cb37f76-4376-3376-3e5c-97381fb2a7c0",
+        "property": {
+         "id": "P3107",
+         "text": "LdiF ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "624998"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P3107"
+       },
+       {
+        "pid": "P5253",
+        "string": "251744",
+        "statement": "Q117085614-60f7f92d-49d3-6423-1c40-d81d7678e9c4",
+        "property": {
+         "id": "P5253",
+         "text": "FilmTv.it movie ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "251744"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P5253"
+       },
+       {
+        "pid": "P7132",
+        "string": "66964",
+        "statement": "Q117085614-78d70351-471d-521e-136e-c639854f207f",
+        "property": {
+         "id": "P7132",
+         "text": "ComingSoon.it film ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "66964"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P7132"
+       },
+       {
+        "pid": "P4780",
+        "string": "117029",
+        "statement": "Q117085614-2a4f3289-43cc-a659-ffdd-1f822a1061f4",
+        "property": {
+         "id": "P4780",
+         "text": "MYmovies audiovisual work ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "117029"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P4780"
+       },
+       {
+        "pid": "P11346",
+        "string": "una-battaglia-dopo-laltra-isstsg9r",
+        "statement": "Q117085614-e91c7c7d-40b0-c6b7-535f-7b43f4813e61",
+        "property": {
+         "id": "P11346",
+         "text": "Cinematografo.it film ID (new)",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "una-battaglia-dopo-laltra-isstsg9r"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P11346"
+       },
+       {
+        "pid": "P4783",
+        "string": "63959",
+        "statement": "Q117085614-04e404a5-4ba6-d0e0-6cd0-2f03f2dbb82f",
+        "property": {
+         "id": "P4783",
+         "text": "Movieplayer film ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "63959"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P4783"
+       },
+       {
+        "pid": "P5099",
+        "string": "film1/unabattagliadopolaltra",
+        "statement": "Q117085614-839ad1de-49b3-8d96-be06-e8da7f2f658f",
+        "property": {
+         "id": "P5099",
+         "text": "Il mondo dei doppiatori ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "film1/unabattagliadopolaltra"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P5099"
+       },
+       {
+        "pid": "P2346",
+        "string": "1653971",
+        "statement": "Q117085614-5280171e-4ab3-1108-48c5-5c08b5062530",
+        "property": {
+         "id": "P2346",
+         "text": "Elonet movie ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "1653971"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P2346"
+       },
+       {
+        "pid": "P4529",
+        "string": "36176155",
+        "statement": "Q117085614-294478FF-098C-4104-AB0D-16B5D2E3A7CA",
+        "property": {
+         "id": "P4529",
+         "text": "Douban film ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "36176155"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P4529"
+       },
+       {
+        "pid": "P6127",
+        "string": "one-battle-after-another",
+        "statement": "Q117085614-90E86BEB-E545-40C5-B34F-0EEB7EACD5B0",
+        "property": {
+         "id": "P6127",
+         "text": "Letterboxd film ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "one-battle-after-another"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P6127"
+       },
+       {
+        "pid": "P8013",
+        "string": "movies/one-battle-after-another-2025",
+        "statement": "Q117085614-9E10A87D-5AD0-47B2-B59E-78E0DBF7B511",
+        "property": {
+         "id": "P8013",
+         "text": "Trakt.tv ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "movies/one-battle-after-another-2025"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P8013"
+       },
+       {
+        "pid": "P10100",
+        "string": "72691307",
+        "statement": "Q117085614-D9184A9C-6935-45F3-9DF2-F3DE55E43C54",
+        "property": {
+         "id": "P10100",
+         "text": "SensCritique work ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "72691307"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P10100"
+       },
+       {
+        "pid": "P12492",
+        "string": "848797",
+        "statement": "Q117085614-D02E402C-2935-4558-9DF9-DC9BF023F810",
+        "property": {
+         "id": "P12492",
+         "text": "Trakt.tv film ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "848797"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P12492"
+       },
+       {
+        "pid": "P1562",
+        "string": "am598895",
+        "statement": "Q117085614-66c0eb99-4a61-9fa5-186e-d2a7e7650183",
+        "property": {
+         "id": "P1562",
+         "text": "AllMovie title ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "am598895"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P1562"
+       },
+       {
+        "pid": "P12096",
+        "string": "3029855",
+        "statement": "Q117085614-b94d3e21-482f-1e16-1ce6-5bb87bee4907",
+        "property": {
+         "id": "P12096",
+         "text": "Kinobox film ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "3029855"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P12096"
+       },
+       {
+        "pid": "P5128",
+        "string": "44725",
+        "statement": "Q117085614-8B213F2E-BA6B-417B-9C6E-2D95B68044B0",
+        "property": {
+         "id": "P5128",
+         "text": "ICAA film catalogue ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "44725"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P5128"
+       },
+       {
+        "pid": "P2334",
+        "string": "728206",
+        "statement": "Q117085614-c8129e23-46c4-82d9-d4a0-90be8754bcae",
+        "property": {
+         "id": "P2334",
+         "text": "Swedish Film Database ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "728206"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P2334"
+       },
+       {
+        "pid": "P13888",
+        "string": "1537151",
+        "statement": "Q117085614-CB79025D-FC79-48E7-8671-AF3279EEFAA1",
+        "property": {
+         "id": "P13888",
+         "text": "‎Does the Dog Die? media ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "1537151"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P13888"
+       },
+       {
+        "pid": "P345",
+        "string": "tt30144839",
+        "statement": "Q117085614-2e35b3a6-41a8-492b-a676-18af98ccc05e",
+        "property": {
+         "id": "P345",
+         "text": "IMDb ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "tt30144839"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P345"
+       },
+       {
+        "pid": "P1265",
+        "string": "311364",
+        "statement": "Q117085614-221db7b2-48c7-117f-b771-fd6f74f60f69",
+        "property": {
+         "id": "P1265",
+         "text": "AlloCiné film ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "311364"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P1265"
+       },
+       {
+        "pid": "P1258",
+        "string": "m/one_battle_after_another",
+        "statement": "Q117085614-22f60c06-4e74-d879-9ad4-5ec5a62c79e1",
+        "property": {
+         "id": "P1258",
+         "text": "Rotten Tomatoes ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "m/one_battle_after_another"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P1258"
+       },
+       {
+        "pid": "P1712",
+        "string": "movie/one-battle-after-another",
+        "statement": "Q117085614-385d983c-4859-edc0-9afd-3a73c8ede8dd",
+        "property": {
+         "id": "P1712",
+         "text": "Metacritic ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "movie/one-battle-after-another"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P1712"
+       },
+       {
+        "pid": "P1970",
+        "string": "1170755",
+        "statement": "Q117085614-6e5748e2-409f-65a0-df68-2752190d5ee0",
+        "property": {
+         "id": "P1970",
+         "text": "MovieMeter film ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "1170755"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P1970"
+       },
+       {
+        "pid": "P2603",
+        "string": "5437094",
+        "statement": "Q117085614-1a7d8e13-4521-3705-9506-4cd06564e4b4",
+        "property": {
+         "id": "P2603",
+         "text": "Kinopoisk film ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "5437094"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P2603"
+       },
+       {
+        "pid": "P2529",
+        "string": "1476388",
+        "statement": "Q117085614-e2828a75-4750-1aa1-67c9-c016ed48f062",
+        "property": {
+         "id": "P2529",
+         "text": "ČSFD film ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "1476388"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P2529"
+       },
+       {
+        "pid": "P4947",
+        "string": "1054867",
+        "statement": "Q117085614-7ac44c71-4797-d8ee-53ed-21cba5fc722f",
+        "property": {
+         "id": "P4947",
+         "text": "TMDB movie ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "1054867"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P4947"
+       },
+       {
+        "pid": "P7299",
+        "string": "363407",
+        "statement": "Q117085614-67c23eb2-426b-a5e8-3c81-fa499a8f65db",
+        "property": {
+         "id": "P7299",
+         "text": "MUBI film numeric ID",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "363407"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q117085614#P7299"
        },
        {
         "pid": "P4665",
@@ -9250,471 +9578,6 @@
          "text": "910030"
         },
         "edit": "https://www.wikidata.org/wiki/Q117085614#P480"
-       },
-       {
-        "pid": "P10303",
-        "string": "bitva-za-bitvoy",
-        "statement": "Q117085614-50af1724-40a5-bcc0-97e0-3f40fcdd2803",
-        "property": {
-         "id": "P10303",
-         "text": "Film.ru film ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "bitva-za-bitvoy"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P10303"
-       },
-       {
-        "pid": "P5032",
-        "string": "10059894",
-        "statement": "Q117085614-9cb31bf5-4579-04eb-197f-2de94a8634fa",
-        "property": {
-         "id": "P5032",
-         "text": "Filmweb.pl film ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "10059894"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P5032"
-       },
-       {
-        "pid": "P6359",
-        "string": "358908",
-        "statement": "Q117085614-65420BE4-159B-4DC3-9411-B9E3A7C23C7A",
-        "property": {
-         "id": "P6359",
-         "text": "Crew United title ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "358908"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P6359"
-       },
-       {
-        "pid": "P2671",
-        "string": "/g/11tms1fbgr",
-        "statement": "Q117085614-8e77f7ae-4bf3-17e0-cc88-967ee4af76ab",
-        "property": {
-         "id": "P2671",
-         "text": "Google Knowledge Graph ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "/g/11tms1fbgr"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P2671"
-       },
-       {
-        "pid": "P3107",
-        "string": "624998",
-        "statement": "Q117085614-9cb37f76-4376-3376-3e5c-97381fb2a7c0",
-        "property": {
-         "id": "P3107",
-         "text": "LdiF ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "624998"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P3107"
-       },
-       {
-        "pid": "P5253",
-        "string": "251744",
-        "statement": "Q117085614-60f7f92d-49d3-6423-1c40-d81d7678e9c4",
-        "property": {
-         "id": "P5253",
-         "text": "FilmTv.it movie ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "251744"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P5253"
-       },
-       {
-        "pid": "P7132",
-        "string": "66964",
-        "statement": "Q117085614-78d70351-471d-521e-136e-c639854f207f",
-        "property": {
-         "id": "P7132",
-         "text": "ComingSoon.it film ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "66964"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P7132"
-       },
-       {
-        "pid": "P4780",
-        "string": "117029",
-        "statement": "Q117085614-2a4f3289-43cc-a659-ffdd-1f822a1061f4",
-        "property": {
-         "id": "P4780",
-         "text": "MYmovies audiovisual work ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "117029"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P4780"
-       },
-       {
-        "pid": "P11346",
-        "string": "una-battaglia-dopo-laltra-isstsg9r",
-        "statement": "Q117085614-e91c7c7d-40b0-c6b7-535f-7b43f4813e61",
-        "property": {
-         "id": "P11346",
-         "text": "Cinematografo.it film ID (new)",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "una-battaglia-dopo-laltra-isstsg9r"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P11346"
-       },
-       {
-        "pid": "P4783",
-        "string": "63959",
-        "statement": "Q117085614-04e404a5-4ba6-d0e0-6cd0-2f03f2dbb82f",
-        "property": {
-         "id": "P4783",
-         "text": "Movieplayer film ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "63959"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P4783"
-       },
-       {
-        "pid": "P5099",
-        "string": "film1/unabattagliadopolaltra",
-        "statement": "Q117085614-839ad1de-49b3-8d96-be06-e8da7f2f658f",
-        "property": {
-         "id": "P5099",
-         "text": "Il mondo dei doppiatori ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "film1/unabattagliadopolaltra"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P5099"
-       },
-       {
-        "pid": "P2346",
-        "string": "1653971",
-        "statement": "Q117085614-5280171e-4ab3-1108-48c5-5c08b5062530",
-        "property": {
-         "id": "P2346",
-         "text": "Elonet movie ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "1653971"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P2346"
-       },
-       {
-        "pid": "P4529",
-        "string": "36176155",
-        "statement": "Q117085614-294478FF-098C-4104-AB0D-16B5D2E3A7CA",
-        "property": {
-         "id": "P4529",
-         "text": "Douban film ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "36176155"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P4529"
-       },
-       {
-        "pid": "P6127",
-        "string": "one-battle-after-another",
-        "statement": "Q117085614-90E86BEB-E545-40C5-B34F-0EEB7EACD5B0",
-        "property": {
-         "id": "P6127",
-         "text": "Letterboxd film ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "one-battle-after-another"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P6127"
-       },
-       {
-        "pid": "P8013",
-        "string": "movies/one-battle-after-another-2025",
-        "statement": "Q117085614-9E10A87D-5AD0-47B2-B59E-78E0DBF7B511",
-        "property": {
-         "id": "P8013",
-         "text": "Trakt.tv ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "movies/one-battle-after-another-2025"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P8013"
-       },
-       {
-        "pid": "P10100",
-        "string": "72691307",
-        "statement": "Q117085614-D9184A9C-6935-45F3-9DF2-F3DE55E43C54",
-        "property": {
-         "id": "P10100",
-         "text": "SensCritique work ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "72691307"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P10100"
-       },
-       {
-        "pid": "P12492",
-        "string": "848797",
-        "statement": "Q117085614-D02E402C-2935-4558-9DF9-DC9BF023F810",
-        "property": {
-         "id": "P12492",
-         "text": "Trakt.tv film ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "848797"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P12492"
-       },
-       {
-        "pid": "P1562",
-        "string": "am598895",
-        "statement": "Q117085614-66c0eb99-4a61-9fa5-186e-d2a7e7650183",
-        "property": {
-         "id": "P1562",
-         "text": "AllMovie title ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "am598895"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P1562"
-       },
-       {
-        "pid": "P12096",
-        "string": "3029855",
-        "statement": "Q117085614-b94d3e21-482f-1e16-1ce6-5bb87bee4907",
-        "property": {
-         "id": "P12096",
-         "text": "Kinobox film ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "3029855"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P12096"
-       },
-       {
-        "pid": "P5128",
-        "string": "44725",
-        "statement": "Q117085614-8B213F2E-BA6B-417B-9C6E-2D95B68044B0",
-        "property": {
-         "id": "P5128",
-         "text": "ICAA film catalogue ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "44725"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P5128"
-       },
-       {
-        "pid": "P2334",
-        "string": "728206",
-        "statement": "Q117085614-c8129e23-46c4-82d9-d4a0-90be8754bcae",
-        "property": {
-         "id": "P2334",
-         "text": "Swedish Film Database ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "728206"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P2334"
-       },
-       {
-        "pid": "P13888",
-        "string": "1537151",
-        "statement": "Q117085614-CB79025D-FC79-48E7-8671-AF3279EEFAA1",
-        "property": {
-         "id": "P13888",
-         "text": "‎Does the Dog Die? media ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "1537151"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P13888"
-       },
-       {
-        "pid": "P345",
-        "string": "tt30144839",
-        "statement": "Q117085614-2e35b3a6-41a8-492b-a676-18af98ccc05e",
-        "property": {
-         "id": "P345",
-         "text": "IMDb ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "tt30144839"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P345"
-       },
-       {
-        "pid": "P1265",
-        "string": "311364",
-        "statement": "Q117085614-221db7b2-48c7-117f-b771-fd6f74f60f69",
-        "property": {
-         "id": "P1265",
-         "text": "AlloCiné film ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "311364"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P1265"
-       },
-       {
-        "pid": "P1258",
-        "string": "m/one_battle_after_another",
-        "statement": "Q117085614-22f60c06-4e74-d879-9ad4-5ec5a62c79e1",
-        "property": {
-         "id": "P1258",
-         "text": "Rotten Tomatoes ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "m/one_battle_after_another"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P1258"
-       },
-       {
-        "pid": "P1712",
-        "string": "movie/one-battle-after-another",
-        "statement": "Q117085614-385d983c-4859-edc0-9afd-3a73c8ede8dd",
-        "property": {
-         "id": "P1712",
-         "text": "Metacritic ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "movie/one-battle-after-another"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P1712"
-       },
-       {
-        "pid": "P1970",
-        "string": "1170755",
-        "statement": "Q117085614-6e5748e2-409f-65a0-df68-2752190d5ee0",
-        "property": {
-         "id": "P1970",
-         "text": "MovieMeter film ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "1170755"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P1970"
-       },
-       {
-        "pid": "P2603",
-        "string": "5437094",
-        "statement": "Q117085614-1a7d8e13-4521-3705-9506-4cd06564e4b4",
-        "property": {
-         "id": "P2603",
-         "text": "Kinopoisk film ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "5437094"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P2603"
-       },
-       {
-        "pid": "P2529",
-        "string": "1476388",
-        "statement": "Q117085614-e2828a75-4750-1aa1-67c9-c016ed48f062",
-        "property": {
-         "id": "P2529",
-         "text": "ČSFD film ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "1476388"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P2529"
-       },
-       {
-        "pid": "P4947",
-        "string": "1054867",
-        "statement": "Q117085614-7ac44c71-4797-d8ee-53ed-21cba5fc722f",
-        "property": {
-         "id": "P4947",
-         "text": "TMDB movie ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "1054867"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P4947"
-       },
-       {
-        "pid": "P7299",
-        "string": "363407",
-        "statement": "Q117085614-67c23eb2-426b-a5e8-3c81-fa499a8f65db",
-        "property": {
-         "id": "P7299",
-         "text": "MUBI film numeric ID",
-         "lang": "en",
-         "fallback": false
-        },
-        "display": {
-         "text": "363407"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q117085614#P7299"
        }
       ]
      }

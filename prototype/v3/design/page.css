@@ -73,7 +73,7 @@ a {
 
 /* A set of pictures in a stack of columns takes the whole width of the
    stack: pictures need width, and text blocks flow in the columns under it. */
-.t-columns > [data-slot='stack'] > .set { column-span: all; }
+.t-columns > [data-slot='stack'] > :is( .set, .scores ) { column-span: all; }
 
 /* A spread with a colour has a tinted band behind its title. */
 .spread:is( [data-spread='location'], [data-spread='connections'], [data-spread='demography'],
@@ -122,7 +122,7 @@ a {
 	opacity: 0;
 	transition: opacity 0.15s;
 
-	:is( .row, .m, .map, .block > h3 ):is( :hover, :focus-within ) > & { opacity: 1; }
+	:is( .row, .m, .map, .card, .block > h3 ):is( :hover, :focus-within ) > & { opacity: 1; }
 
 	@media ( hover: none ) { opacity: 1; }
 }
@@ -508,6 +508,71 @@ dialog {
 		font-size: var( --font-size-small );
 		font-weight: var( --font-weight-semi-bold );
 	}
+}
+
+/* Review scores: what a casual reader looks for first. The source is its
+   logo, known at a glance in every language; the score is large. */
+.scores {
+	display: flex;
+	flex-direction: row;  /* a block is a column; the cards are a row */
+	flex-wrap: wrap;
+	gap: var( --gap );
+
+	& .card {
+		position: relative;
+		flex: 1 1 150px;
+		max-inline-size: 220px;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		gap: var( --spacing-25 );
+		padding: var( --spacing-75 ) var( --spacing-100 );
+		border: 1px solid var( --border-color-muted );
+		border-radius: var( --radius );
+		background-color: var( --background-color-base );
+	}
+
+	& .logo {
+		block-size: 28px;
+		max-inline-size: 150px;
+		object-fit: contain;
+		object-position: left;
+	}
+
+	& .source { font-weight: var( --font-weight-bold ); }
+
+	& .value {
+		font-size: 2.25rem;
+		line-height: 1.1;
+		font-variant-numeric: tabular-nums;
+	}
+
+	& :is( .method, .meta ) {
+		font-size: var( --font-size-small );
+		color: var( --color-subtle );
+	}
+
+	& .meta {
+		display: flex;
+		gap: var( --spacing-50 );
+		font-variant-numeric: tabular-nums;
+	}
+
+	& > .card > .tools {
+		position: absolute;
+		inset-block-start: var( --spacing-50 );
+		inset-inline-end: var( --spacing-50 );
+	}
+}
+
+/* The description of a value: a quiet second line. */
+.desc {
+	display: block;
+	font-size: var( --font-size-small );
+	font-weight: var( --font-weight-normal );
+	color: var( --color-subtle );
+
+	figcaption & { color: inherit; opacity: 0.85; flex-basis: 100%; }
 }
 
 /* An office: the holder now, and the holders before. */

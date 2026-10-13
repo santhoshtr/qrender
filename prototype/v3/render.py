@@ -23,7 +23,7 @@ import sys
 import urllib.parse
 from pathlib import Path
 
-from primitives import credits, network, succession
+from primitives import credits, network, score, succession
 
 HERE = Path(__file__).resolve().parent
 STANDARD_WIDTHS = (330, 500, 960, 1280, 1920)
@@ -136,6 +136,12 @@ def srcset(name):
     )
 
 
+def desc(v):
+    """The description of a value, when the composer asked for it: a quiet
+    second line ("novel by Thomas Pynchon")."""
+    return f'<span class="desc">{t(v["description"])}</span>' if v.get("description") else ""
+
+
 def value_line(s):
     """One value on its own line: the value, its note, its edit action. A
     value looks the same in a row of one value and in a row of many."""
@@ -143,6 +149,7 @@ def value_line(s):
     return (
         f'<span class="v">{part(s["display"])}'
         + (f' <span class="note">{n}</span>' if n else "")
+        + desc(s)
         + edit(s)
         + "</span>"
     )
@@ -266,7 +273,7 @@ def item_figure(v, prop=None):
     empty slot that asks for one."""
     image = v.get("image")
     head = f"<span>{t(prop)}</span>" if prop else ""
-    name = f"<b>{part(v['display'])}</b>"
+    name = f"<b>{part(v['display'])}</b>{desc(v)}"
     n = note(v.get("note"))
     n = f"<span>{n}</span>" if n else ""
     if not image:
@@ -432,7 +439,10 @@ def fact_value(b):
         else ""
     )
     return (
-        part(sts[0]["display"]) + (f' <span class="note">{n}</span>' if n else "") + age
+        part(sts[0]["display"])
+        + (f' <span class="note">{n}</span>' if n else "")
+        + age
+        + desc(sts[0])
     )
 
 
@@ -541,6 +551,7 @@ PRIMITIVES = {
     "network": lambda b: network.html(b, UI),
     "succession": lambda b: succession.html(b, UI),
     "credits": lambda b: credits.html(b, UI),
+    "score": lambda b: score.html(b, UI),
     "works": p_works,
     "time": p_time,
     "absent": p_absent,

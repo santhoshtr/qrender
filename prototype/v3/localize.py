@@ -210,6 +210,12 @@ class Localizer:
             out["percent"] = self.percent(x["ratio"])
         if "qualifiers" in x:
             out["note"] = self.note(x)
+        # A value the composer marked carries its description (a work: "novel
+        # by Thomas Pynchon"), in its own language.
+        if x.get("described") and isinstance(x.get("item"), str):
+            desc = self.description(x["item"])
+            if desc:
+                out["description"] = desc
         if "item" in x and "image" in x and not x["image"] and not x.get("class"):
             page = self.t.get("page_images", {}).get(x["item"])
             if page:

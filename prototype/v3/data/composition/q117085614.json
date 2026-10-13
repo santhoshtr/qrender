@@ -90,6 +90,7 @@
           "license": "Public domain"
          }
         },
+        "described": true,
         "priority": 0.0
        }
       ],
@@ -230,6 +231,7 @@
         "rank": "normal",
         "provenance": "sourced",
         "image": null,
+        "described": true,
         "shown": true
        }
       ],
@@ -247,6 +249,7 @@
         "rank": "normal",
         "provenance": "sourced",
         "image": null,
+        "described": true,
         "shown": true
        }
       ],
@@ -1630,119 +1633,124 @@
    "concept": "Q4482",
    "template": "columns",
    "slots": {
-    "sheet": [
+    "stack": [
      {
-      "primitive": "fact",
+      "primitive": "score",
       "pid": "P444",
-      "form": "value",
-      "statements": [
+      "values": [
        {
         "statement": "Q117085614-336EE829-A39D-46D5-84D2-C7C08C8F1E31",
         "pid": "P444",
         "string": "4.3/5",
-        "rank": "normal",
         "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P585",
-          "year": 2025
-         },
-         {
-          "pid": "P7887",
-          "amount": 1447128.0
-         },
-         {
-          "pid": "P447",
-          "item": "Q18709181"
-         },
-         {
-          "pid": "P459",
-          "item": "Q107218751"
+        "source": {
+         "item": "Q18709181",
+         "image": {
+          "file": "Letterboxd-Logo-H-Pos-RGB.svg",
+          "kind": "drawing",
+          "aspect": 9.4815,
+          "megapixels": 0.03,
+          "credit": {
+           "artist": "Letterboxd",
+           "license": "Public domain"
+          }
          }
-        ],
-        "shown": true
+        },
+        "method": {
+         "item": "Q107218751"
+        },
+        "count": {
+         "pid": "P7887",
+         "amount": 1447128.0
+        },
+        "year": 2025
        },
        {
         "statement": "Q117085614-90DE398D-7E03-4854-9568-30FC4FF85C08",
         "pid": "P444",
         "string": "7.9/10",
-        "rank": "normal",
         "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P447",
-          "item": "Q37312"
-         },
-         {
-          "pid": "P459",
-          "item": "Q107218751"
-         },
-         {
-          "pid": "P585",
-          "year": 2025
-         },
-         {
-          "pid": "P7887",
-          "amount": 212000.0
+        "source": {
+         "item": "Q37312",
+         "image": {
+          "file": "IMDB Logo 2016.svg",
+          "kind": "drawing",
+          "aspect": 1.9828,
+          "megapixels": 0.17,
+          "credit": {
+           "artist": "Internet Movie Database",
+           "license": "Public domain"
+          }
          }
-        ],
-        "shown": true
-       },
-       {
-        "statement": "Q117085614-899D199E-D3B3-46C5-B932-99D945D0E442",
-        "pid": "P444",
-        "string": "95/100",
-        "rank": "normal",
-        "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P447",
-          "item": "Q150248"
-         },
-         {
-          "pid": "P459",
-          "item": "Q106515043"
-         },
-         {
-          "pid": "P585",
-          "year": 2025
-         },
-         {
-          "pid": "P7887",
-          "amount": 63.0
-         }
-        ],
-        "shown": true
+        },
+        "method": {
+         "item": "Q107218751"
+        },
+        "count": {
+         "pid": "P7887",
+         "amount": 212000.0
+        },
+        "year": 2025
        },
        {
         "statement": "Q117085614-A11DA1F2-1AFC-4254-990C-6FACC8852B77",
         "pid": "P444",
         "string": "94%",
-        "rank": "normal",
         "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P447",
-          "item": "Q105584"
-         },
-         {
-          "pid": "P459",
-          "item": "Q108403393"
-         },
-         {
-          "pid": "P585",
-          "year": 2025
-         },
-         {
-          "pid": "P7887",
-          "amount": 410.0
+        "source": {
+         "item": "Q105584",
+         "image": {
+          "file": "Rotten Tomatoes logo.svg",
+          "kind": "drawing",
+          "aspect": 3.5088,
+          "megapixels": 0.1,
+          "credit": {
+           "artist": "Emily Oberman from Pentagram, modified by Throast",
+           "license": "Public domain"
+          }
          }
-        ],
-        "shown": true
+        },
+        "method": {
+         "item": "Q108403393"
+        },
+        "count": {
+         "pid": "P7887",
+         "amount": 410.0
+        },
+        "year": 2025
+       },
+       {
+        "statement": "Q117085614-899D199E-D3B3-46C5-B932-99D945D0E442",
+        "pid": "P444",
+        "string": "95/100",
+        "provenance": "sourced",
+        "source": {
+         "item": "Q150248",
+         "image": {
+          "file": "Metacritic logo.svg",
+          "kind": "drawing",
+          "aspect": 4.4,
+          "megapixels": 0.01,
+          "credit": {
+           "artist": "Fandom",
+           "license": "Public domain"
+          }
+         }
+        },
+        "method": {
+         "item": "Q106515043"
+        },
+        "count": {
+         "pid": "P7887",
+         "amount": 63.0
+        },
+        "year": 2025
        }
       ],
       "priority": 2.322
-     },
+     }
+    ],
+    "sheet": [
      {
       "primitive": "fact",
       "pid": "P166",
@@ -3158,6 +3166,161 @@
         "statement": "Q117085614-4189AD8B-92D8-4A65-9868-7354293881CF"
        },
        {
+        "pid": "P10303",
+        "string": "bitva-za-bitvoy",
+        "statement": "Q117085614-50af1724-40a5-bcc0-97e0-3f40fcdd2803"
+       },
+       {
+        "pid": "P5032",
+        "string": "10059894",
+        "statement": "Q117085614-9cb31bf5-4579-04eb-197f-2de94a8634fa"
+       },
+       {
+        "pid": "P6359",
+        "string": "358908",
+        "statement": "Q117085614-65420BE4-159B-4DC3-9411-B9E3A7C23C7A"
+       },
+       {
+        "pid": "P2671",
+        "string": "/g/11tms1fbgr",
+        "statement": "Q117085614-8e77f7ae-4bf3-17e0-cc88-967ee4af76ab"
+       },
+       {
+        "pid": "P3107",
+        "string": "624998",
+        "statement": "Q117085614-9cb37f76-4376-3376-3e5c-97381fb2a7c0"
+       },
+       {
+        "pid": "P5253",
+        "string": "251744",
+        "statement": "Q117085614-60f7f92d-49d3-6423-1c40-d81d7678e9c4"
+       },
+       {
+        "pid": "P7132",
+        "string": "66964",
+        "statement": "Q117085614-78d70351-471d-521e-136e-c639854f207f"
+       },
+       {
+        "pid": "P4780",
+        "string": "117029",
+        "statement": "Q117085614-2a4f3289-43cc-a659-ffdd-1f822a1061f4"
+       },
+       {
+        "pid": "P11346",
+        "string": "una-battaglia-dopo-laltra-isstsg9r",
+        "statement": "Q117085614-e91c7c7d-40b0-c6b7-535f-7b43f4813e61"
+       },
+       {
+        "pid": "P4783",
+        "string": "63959",
+        "statement": "Q117085614-04e404a5-4ba6-d0e0-6cd0-2f03f2dbb82f"
+       },
+       {
+        "pid": "P5099",
+        "string": "film1/unabattagliadopolaltra",
+        "statement": "Q117085614-839ad1de-49b3-8d96-be06-e8da7f2f658f"
+       },
+       {
+        "pid": "P2346",
+        "string": "1653971",
+        "statement": "Q117085614-5280171e-4ab3-1108-48c5-5c08b5062530"
+       },
+       {
+        "pid": "P4529",
+        "string": "36176155",
+        "statement": "Q117085614-294478FF-098C-4104-AB0D-16B5D2E3A7CA"
+       },
+       {
+        "pid": "P6127",
+        "string": "one-battle-after-another",
+        "statement": "Q117085614-90E86BEB-E545-40C5-B34F-0EEB7EACD5B0"
+       },
+       {
+        "pid": "P8013",
+        "string": "movies/one-battle-after-another-2025",
+        "statement": "Q117085614-9E10A87D-5AD0-47B2-B59E-78E0DBF7B511"
+       },
+       {
+        "pid": "P10100",
+        "string": "72691307",
+        "statement": "Q117085614-D9184A9C-6935-45F3-9DF2-F3DE55E43C54"
+       },
+       {
+        "pid": "P12492",
+        "string": "848797",
+        "statement": "Q117085614-D02E402C-2935-4558-9DF9-DC9BF023F810"
+       },
+       {
+        "pid": "P1562",
+        "string": "am598895",
+        "statement": "Q117085614-66c0eb99-4a61-9fa5-186e-d2a7e7650183"
+       },
+       {
+        "pid": "P12096",
+        "string": "3029855",
+        "statement": "Q117085614-b94d3e21-482f-1e16-1ce6-5bb87bee4907"
+       },
+       {
+        "pid": "P5128",
+        "string": "44725",
+        "statement": "Q117085614-8B213F2E-BA6B-417B-9C6E-2D95B68044B0"
+       },
+       {
+        "pid": "P2334",
+        "string": "728206",
+        "statement": "Q117085614-c8129e23-46c4-82d9-d4a0-90be8754bcae"
+       },
+       {
+        "pid": "P13888",
+        "string": "1537151",
+        "statement": "Q117085614-CB79025D-FC79-48E7-8671-AF3279EEFAA1"
+       },
+       {
+        "pid": "P345",
+        "string": "tt30144839",
+        "statement": "Q117085614-2e35b3a6-41a8-492b-a676-18af98ccc05e"
+       },
+       {
+        "pid": "P1265",
+        "string": "311364",
+        "statement": "Q117085614-221db7b2-48c7-117f-b771-fd6f74f60f69"
+       },
+       {
+        "pid": "P1258",
+        "string": "m/one_battle_after_another",
+        "statement": "Q117085614-22f60c06-4e74-d879-9ad4-5ec5a62c79e1"
+       },
+       {
+        "pid": "P1712",
+        "string": "movie/one-battle-after-another",
+        "statement": "Q117085614-385d983c-4859-edc0-9afd-3a73c8ede8dd"
+       },
+       {
+        "pid": "P1970",
+        "string": "1170755",
+        "statement": "Q117085614-6e5748e2-409f-65a0-df68-2752190d5ee0"
+       },
+       {
+        "pid": "P2603",
+        "string": "5437094",
+        "statement": "Q117085614-1a7d8e13-4521-3705-9506-4cd06564e4b4"
+       },
+       {
+        "pid": "P2529",
+        "string": "1476388",
+        "statement": "Q117085614-e2828a75-4750-1aa1-67c9-c016ed48f062"
+       },
+       {
+        "pid": "P4947",
+        "string": "1054867",
+        "statement": "Q117085614-7ac44c71-4797-d8ee-53ed-21cba5fc722f"
+       },
+       {
+        "pid": "P7299",
+        "string": "363407",
+        "statement": "Q117085614-67c23eb2-426b-a5e8-3c81-fa499a8f65db"
+       },
+       {
         "pid": "P4665",
         "string": "3322169",
         "statement": "Q117085614-ca66e455-4225-87f4-b9e4-a0fd2edd657d"
@@ -3391,161 +3554,6 @@
         "pid": "P480",
         "string": "910030",
         "statement": "Q117085614-01c8209b-4031-bae5-119e-992613be3200"
-       },
-       {
-        "pid": "P10303",
-        "string": "bitva-za-bitvoy",
-        "statement": "Q117085614-50af1724-40a5-bcc0-97e0-3f40fcdd2803"
-       },
-       {
-        "pid": "P5032",
-        "string": "10059894",
-        "statement": "Q117085614-9cb31bf5-4579-04eb-197f-2de94a8634fa"
-       },
-       {
-        "pid": "P6359",
-        "string": "358908",
-        "statement": "Q117085614-65420BE4-159B-4DC3-9411-B9E3A7C23C7A"
-       },
-       {
-        "pid": "P2671",
-        "string": "/g/11tms1fbgr",
-        "statement": "Q117085614-8e77f7ae-4bf3-17e0-cc88-967ee4af76ab"
-       },
-       {
-        "pid": "P3107",
-        "string": "624998",
-        "statement": "Q117085614-9cb37f76-4376-3376-3e5c-97381fb2a7c0"
-       },
-       {
-        "pid": "P5253",
-        "string": "251744",
-        "statement": "Q117085614-60f7f92d-49d3-6423-1c40-d81d7678e9c4"
-       },
-       {
-        "pid": "P7132",
-        "string": "66964",
-        "statement": "Q117085614-78d70351-471d-521e-136e-c639854f207f"
-       },
-       {
-        "pid": "P4780",
-        "string": "117029",
-        "statement": "Q117085614-2a4f3289-43cc-a659-ffdd-1f822a1061f4"
-       },
-       {
-        "pid": "P11346",
-        "string": "una-battaglia-dopo-laltra-isstsg9r",
-        "statement": "Q117085614-e91c7c7d-40b0-c6b7-535f-7b43f4813e61"
-       },
-       {
-        "pid": "P4783",
-        "string": "63959",
-        "statement": "Q117085614-04e404a5-4ba6-d0e0-6cd0-2f03f2dbb82f"
-       },
-       {
-        "pid": "P5099",
-        "string": "film1/unabattagliadopolaltra",
-        "statement": "Q117085614-839ad1de-49b3-8d96-be06-e8da7f2f658f"
-       },
-       {
-        "pid": "P2346",
-        "string": "1653971",
-        "statement": "Q117085614-5280171e-4ab3-1108-48c5-5c08b5062530"
-       },
-       {
-        "pid": "P4529",
-        "string": "36176155",
-        "statement": "Q117085614-294478FF-098C-4104-AB0D-16B5D2E3A7CA"
-       },
-       {
-        "pid": "P6127",
-        "string": "one-battle-after-another",
-        "statement": "Q117085614-90E86BEB-E545-40C5-B34F-0EEB7EACD5B0"
-       },
-       {
-        "pid": "P8013",
-        "string": "movies/one-battle-after-another-2025",
-        "statement": "Q117085614-9E10A87D-5AD0-47B2-B59E-78E0DBF7B511"
-       },
-       {
-        "pid": "P10100",
-        "string": "72691307",
-        "statement": "Q117085614-D9184A9C-6935-45F3-9DF2-F3DE55E43C54"
-       },
-       {
-        "pid": "P12492",
-        "string": "848797",
-        "statement": "Q117085614-D02E402C-2935-4558-9DF9-DC9BF023F810"
-       },
-       {
-        "pid": "P1562",
-        "string": "am598895",
-        "statement": "Q117085614-66c0eb99-4a61-9fa5-186e-d2a7e7650183"
-       },
-       {
-        "pid": "P12096",
-        "string": "3029855",
-        "statement": "Q117085614-b94d3e21-482f-1e16-1ce6-5bb87bee4907"
-       },
-       {
-        "pid": "P5128",
-        "string": "44725",
-        "statement": "Q117085614-8B213F2E-BA6B-417B-9C6E-2D95B68044B0"
-       },
-       {
-        "pid": "P2334",
-        "string": "728206",
-        "statement": "Q117085614-c8129e23-46c4-82d9-d4a0-90be8754bcae"
-       },
-       {
-        "pid": "P13888",
-        "string": "1537151",
-        "statement": "Q117085614-CB79025D-FC79-48E7-8671-AF3279EEFAA1"
-       },
-       {
-        "pid": "P345",
-        "string": "tt30144839",
-        "statement": "Q117085614-2e35b3a6-41a8-492b-a676-18af98ccc05e"
-       },
-       {
-        "pid": "P1265",
-        "string": "311364",
-        "statement": "Q117085614-221db7b2-48c7-117f-b771-fd6f74f60f69"
-       },
-       {
-        "pid": "P1258",
-        "string": "m/one_battle_after_another",
-        "statement": "Q117085614-22f60c06-4e74-d879-9ad4-5ec5a62c79e1"
-       },
-       {
-        "pid": "P1712",
-        "string": "movie/one-battle-after-another",
-        "statement": "Q117085614-385d983c-4859-edc0-9afd-3a73c8ede8dd"
-       },
-       {
-        "pid": "P1970",
-        "string": "1170755",
-        "statement": "Q117085614-6e5748e2-409f-65a0-df68-2752190d5ee0"
-       },
-       {
-        "pid": "P2603",
-        "string": "5437094",
-        "statement": "Q117085614-1a7d8e13-4521-3705-9506-4cd06564e4b4"
-       },
-       {
-        "pid": "P2529",
-        "string": "1476388",
-        "statement": "Q117085614-e2828a75-4750-1aa1-67c9-c016ed48f062"
-       },
-       {
-        "pid": "P4947",
-        "string": "1054867",
-        "statement": "Q117085614-7ac44c71-4797-d8ee-53ed-21cba5fc722f"
-       },
-       {
-        "pid": "P7299",
-        "string": "363407",
-        "statement": "Q117085614-67c23eb2-426b-a5e8-3c81-fa499a8f65db"
        }
       ]
      }

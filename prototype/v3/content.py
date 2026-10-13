@@ -179,6 +179,19 @@ def file_name(url):
 # ---------------------------------------------------------------- side data
 
 
+def logos(qids):
+    """The logo (P154) of each item: the source of a review score."""
+    if not qids:
+        return {}
+    rows = sparql(f"""SELECT ?item ?logo WHERE {{
+        VALUES ?item {{ {" ".join("wd:" + q for q in sorted(qids))} }}
+        ?item wdt:P154 ?logo }}""")
+    out = {}
+    for r in rows:
+        out.setdefault(local(r["item"]["value"]), file_name(r["logo"]["value"]))
+    return out
+
+
 def classes_among(qids):
     """The value items that are classes: they have a subclass-of (P279)
     statement. "Lawyer", "species", "big city" are classes; their picture
@@ -682,6 +695,15 @@ def fetch_content(qid):
     media = {file_name(s["value"]) for s in sts if s["type"] == "CommonsMedia"}
     media |= {s["value_image"] for s in sts if s["value_image"]}
     media |= {r["image"] for r in reverse if r["image"]}
+    marks = logos(
+        {
+            entity_id(q["value"])
+            for s in sts
+            for q in s["qualifiers"]
+            if q["pid"] in CONFIG["media"]["qualifier_logos"] and entity_id(q["value"])
+        }
+    )
+    media |= set(marks.values())
     targets = [qid] + ([container] if container else [])
     sitelinks = api(
         "www.wikidata.org", action="wbgetentities", ids=qid, props="sitelinks"
@@ -706,6 +728,7 @@ def fetch_content(qid):
         "class_layout": layout,
         "reverse": reverse,
         "tabular": {k: v for k, v in tables.items() if v},
+        "logos": marks,
     }
 
 
