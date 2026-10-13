@@ -186,6 +186,19 @@ pub enum MediaKind {
     Model3d,
 }
 
+impl MediaKind {
+    /// The name the design system uses (`k-<name>`).
+    pub fn name(self) -> &'static str {
+        match self {
+            Self::Photo => "photo",
+            Self::Drawing => "drawing",
+            Self::Audio => "audio",
+            Self::Video => "video",
+            Self::Model3d => "model3d",
+        }
+    }
+}
+
 /// A picture (or a sound, a video, a 3D model): intrinsic facts only.
 #[derive(Debug, Clone, PartialEq, Serialize, JsonSchema)]
 pub struct Picture {

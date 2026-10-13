@@ -28,6 +28,23 @@ pub struct Fact {
     pub rule: Option<String>,
 }
 
+/// HTML: a fact outside a sheet slot, as a sheet of one row
+/// (templates/primitives/fact.html).
+#[derive(askama::Template)]
+#[template(path = "primitives/fact.html")]
+pub struct Html<'a> {
+    pub ui: &'a crate::render::ui::Ui<'a>,
+    pub b: &'a Fact,
+}
+
+/// HTML: a row of the fact sheet (templates/primitives/fact-row.html).
+#[derive(askama::Template)]
+#[template(path = "primitives/fact-row.html")]
+pub struct Row<'a> {
+    pub ui: &'a crate::render::ui::Ui<'a>,
+    pub b: &'a Fact,
+}
+
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, JsonSchema)]
 #[serde(rename_all = "lowercase")]
 pub enum FactForm {
@@ -39,6 +56,18 @@ pub enum FactForm {
     Variants,
     /// Many values, one per line.
     List,
+}
+
+impl FactForm {
+    /// The name the design system uses (`r-<name>`).
+    pub fn name(self) -> &'static str {
+        match self {
+            Self::Value => "value",
+            Self::Range => "range",
+            Self::Variants => "variants",
+            Self::List => "list",
+        }
+    }
 }
 
 #[derive(Debug, Clone, Serialize, JsonSchema)]
@@ -94,4 +123,22 @@ fn shape(c: &Composer, statements: &[&Statement]) -> FactForm {
     } else {
         FactForm::Value
     }
+}
+
+/// Markdown: the row, with all of its values.
+pub fn markdown(b: &Fact, md: &mut crate::render::markdown::Markdown) {
+    let mut values: Vec<String> = b.statements.iter().map(|s| md.value(s)).collect();
+    if let (Some(age), Some(first)) = (&b.age, values.first_mut()) {
+        let words = crate::localize::messages::format(
+            md.view.msg("qrender-age"),
+            &[&age.years.to_string()],
+        );
+        first.push_str(&format!(" ({words})"));
+    }
+    let key = if b.former {
+        format!("{} (former)", md.property(b.pid))
+    } else {
+        md.property(b.pid)
+    };
+    md.items(&key, &values);
 }

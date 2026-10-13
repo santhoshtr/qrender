@@ -1,0 +1,4 @@
+{#- The projects with a page about the item, the most first. -#}
+<div class="block"><div>
+{%- for p in ui.view.projects -%}<span class="chip">{{ p.name }} <b>{{ p.count }}</b>{% if p.local %} ✓{% endif %}</span>{%- endfor -%}
+</div></div>

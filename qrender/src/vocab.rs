@@ -122,6 +122,47 @@ pub enum Slot {
     Absent,
 }
 
+impl Template {
+    /// The name the design system uses (`t-<name>`).
+    pub fn name(self) -> &'static str {
+        match self {
+            Self::Identity => "identity",
+            Self::LeadBeside => "lead-beside",
+            Self::HeroPlusStack => "hero-plus-stack",
+            Self::Columns => "columns",
+            Self::Axis => "axis",
+            Self::FeatureRun => "feature-run",
+            Self::Sheet => "sheet",
+            Self::Collapsed => "collapsed",
+        }
+    }
+}
+
+impl Slot {
+    /// The name the design system uses (`data-slot`).
+    pub fn name(self) -> &'static str {
+        match self {
+            Self::Head => "head",
+            Self::Band => "band",
+            Self::Lead => "lead",
+            Self::Hero => "hero",
+            Self::Kind => "kind",
+            Self::Stack => "stack",
+            Self::Gallery => "gallery",
+            Self::Sheet => "sheet",
+            Self::Axis => "axis",
+            Self::Feature => "feature",
+            Self::Run => "run",
+            Self::Audio => "audio",
+            Self::Summary => "summary",
+            Self::Web => "web",
+            Self::Projects => "projects",
+            Self::Identifiers => "identifiers",
+            Self::Absent => "absent",
+        }
+    }
+}
+
 /// How the item is compared with its container.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, JsonSchema, Deserialize)]
 #[serde(rename_all = "kebab-case")]

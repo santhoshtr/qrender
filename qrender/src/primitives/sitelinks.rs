@@ -11,6 +11,14 @@ pub struct Sitelinks {
     pub families: IndexMap<String, Vec<String>>,
 }
 
+/// HTML: the template binding. The markup is templates/primitives/sitelinks.html.
+#[derive(askama::Template)]
+#[template(path = "primitives/sitelinks.html")]
+pub struct Html<'a> {
+    pub ui: &'a crate::render::ui::Ui<'a>,
+    pub b: &'a Sitelinks,
+}
+
 /// Site id suffixes of the language projects. "wiki" is Wikipedia.
 const FAMILIES: [&str; 8] = [
     "wiki",
@@ -58,6 +66,26 @@ pub fn build(sitelinks: &IndexMap<String, String>) -> Sitelinks {
         codes.sort();
     }
     Sitelinks { families }
+}
+
+/// Markdown: the projects with a page about the item.
+pub fn markdown(_: &Sitelinks, md: &mut crate::render::markdown::Markdown) {
+    let projects: Vec<String> = md
+        .view
+        .projects
+        .iter()
+        .map(|p| {
+            format!(
+                "{} {}{}",
+                p.name,
+                p.count,
+                if p.local { " (this language)" } else { "" }
+            )
+        })
+        .collect();
+    if !projects.is_empty() {
+        md.paragraph(&format!("Projects: {}", projects.join(", ")));
+    }
 }
 
 #[cfg(test)]

@@ -1,0 +1,19 @@
+{%- import "macros.html" as m -%}
+{#- Review scores, one card each, with the logo of the source. -#}
+<div class="block scores">
+{%- for v in b.values -%}
+<div class="card">
+{%- if let Some(source) = v.source -%}
+{%- match source.image -%}
+{%- when Some with (logo) -%}<img class="logo" src="{{ ui.src(&logo.file, 240) }}" alt="{{ ui.item(source.item).text }}" loading="lazy">
+{%- when None -%}<span class="source">{{ ui.part(ui.entity(source.item))|safe }}</span>
+{%- endmatch -%}
+{%- endif -%}
+<b class="value">{{ v.string }}</b>
+{%- if let Some(method) = v.method %}<span class="method">{{ ui.part(ui.entity(method.item))|safe }}</span>{% endif -%}
+<span class="meta">
+{%- if let Some(count) = v.count %}<span class="count" title="{{ ui.property(count.pid).text }}">{{ ui.part(ui.number(count.amount))|safe }}</span>{% endif -%}
+{%- if let Some(year) = v.year %}<span class="year">{{ ui.year(year) }}</span>{% endif -%}
+</span><span class="tools">{% call m::prov(ui, v.provenance) %}{% endcall %}{% call m::edit(ui, ui.edit(v.pid)) %}{% endcall %}</span></div>
+{%- endfor -%}
+</div>

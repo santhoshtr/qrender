@@ -24,6 +24,14 @@ pub struct Map {
     pub rule: Option<String>,
 }
 
+/// HTML: the template binding. The markup is templates/primitives/map.html.
+#[derive(askama::Template)]
+#[template(path = "primitives/map.html")]
+pub struct Html<'a> {
+    pub ui: &'a crate::render::ui::Ui<'a>,
+    pub b: &'a Map,
+}
+
 #[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct Marker {
     pub pid: Pid,
@@ -65,5 +73,14 @@ pub fn build(
         extent_m: area.map(|a| a.amount.sqrt().round_ties_even() as i64),
         markers,
         rule: rule.map(str::to_string),
+    }
+}
+
+/// Markdown: the coordinate, and the extreme points.
+pub fn markdown(b: &Map, md: &mut crate::render::markdown::Markdown) {
+    md.item(&md.property(b.statement.pid), &md.value(&b.statement));
+    for m in &b.markers {
+        let value = md.part(&md.view.part(&m.value));
+        md.item(&md.property(m.pid), &value);
     }
 }

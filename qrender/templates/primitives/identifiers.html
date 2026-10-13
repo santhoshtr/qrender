@@ -1,0 +1,8 @@
+{%- import "macros.html" as m -%}
+{#- The identifiers of the item in other databases, in a dialog. -#}
+{%- let n = ui.id() -%}
+{%- let count = b.values.len().to_string() -%}
+<button class="more" type="button" command="show-modal" commandfor="d{{ n }}"># {{ count }}</button>
+{%- call m::dialog(ui, n, count) -%}<div class="idlist">
+{%- for v in ui.identifiers(b) -%}<div><span>{{ ui.text(ui.property(v.pid), true)|safe }}</span><span>{{ v.string }}</span></div>{%- endfor -%}
+</div>{%- endcall -%}

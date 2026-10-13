@@ -1,0 +1,18 @@
+{#- A time axis: a track for each property, points and spans on the item's
+    own span of years. An unknown start or end is a fade to that edge. -#}
+<div class="axis"><div class="ends"><span>{{ ui.year(b.from) }}</span><span>{{ ui.year(b.to) }}</span></div>
+{%- for track in b.tracks -%}
+<div class="track"><span class="track-name">{{ ui.text(ui.property(track.pid), true)|safe }}</span><div class="line">
+{%- for m in track.marks -%}
+{%- if let Some(p) = m.year_pos -%}<span class="dot" style="--p:{{ ui.css_number(p) }}"></span>
+{%- else -%}<span class="span{% if m.start_pos.is_none() %} open-start{% endif %}{% if m.end_pos.is_none() %} open{% endif %}" style="--s:{{ ui.css_number(m.start_pos.unwrap_or(0.0)) }};--e:{{ ui.css_number(m.end_pos.unwrap_or(1.0)) }}"></span>
+{%- endif -%}
+{%- endfor -%}
+</div><div class="marks">
+{%- for m in track.marks -%}
+<span><b>{% if let Some(y) = m.year %}{{ ui.year(y) }}{% else %}{% if let Some(y) = m.start %}{{ ui.year(y) }}{% endif %} – {% if let Some(y) = m.end %}{{ ui.year(y) }}{% endif %}{% endif %}</b>
+{%- if let Some(item) = m.item %} {{ ui.part(ui.entity(item))|safe }}{% endif %}</span>
+{%- endfor -%}
+</div></div>
+{%- endfor -%}
+</div>

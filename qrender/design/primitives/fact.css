@@ -1,0 +1,39 @@
+/* fact: the rows of the fact sheet. */
+
+/* ---------- the fact sheet ---------- */
+
+.sheet {
+	columns: 3 280px;
+	column-gap: var( --spacing-200 );
+	margin: 0;
+	font-size: var( --font-size-small );
+}
+
+.row {
+	break-inside: avoid;
+	display: grid;
+	grid-template-columns: minmax( 0, 40% ) minmax( 0, 1fr ) auto;
+	gap: 0 var( --spacing-75 );
+	align-items: baseline;
+	padding-block: var( --spacing-35 );
+	border-block-end: 1px solid var( --border-color-muted );
+
+	& dt { color: var( --color-subtle ); }
+
+	& dd {
+		margin: 0;
+		font-weight: var( --font-weight-semi-bold );
+		font-variant-numeric: tabular-nums;
+		overflow-wrap: anywhere;
+
+		& .note { font-weight: var( --font-weight-normal ); }
+	}
+
+	/* A value that has ended: shown, but quieter than the current ones. */
+	&.former dd { font-weight: var( --font-weight-normal ); color: var( --color-subtle ); }
+
+	&.absent {
+		& dt { font-style: italic; }
+		& dd { font-weight: var( --font-weight-normal ); color: var( --color-subtle ); }
+	}
+}

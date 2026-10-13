@@ -129,7 +129,7 @@ fn link(el: &mut Element, links: &Links) {
 
 /// The text of raw HTML: numeric character references and the named ones
 /// that attribute values use. Another named reference stays as it is.
-fn decode_entities(raw: &str) -> String {
+pub(crate) fn decode_entities(raw: &str) -> String {
     let mut out = String::with_capacity(raw.len());
     let mut rest = raw;
     while let Some(start) = rest.find('&') {

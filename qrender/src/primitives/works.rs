@@ -18,11 +18,28 @@ pub struct Works {
     pub priority: f64,
 }
 
+/// HTML: the template binding. The markup is templates/primitives/works.html.
+#[derive(askama::Template)]
+#[template(path = "primitives/works.html")]
+pub struct Html<'a> {
+    pub ui: &'a crate::render::ui::Ui<'a>,
+    pub b: &'a Works,
+}
+
 #[derive(Debug, Clone, Copy, Serialize, JsonSchema)]
 #[serde(rename_all = "lowercase")]
 pub enum WorksForm {
     Run,
     List,
+}
+
+impl WorksForm {
+    pub fn name(self) -> &'static str {
+        match self {
+            Self::Run => "run",
+            Self::List => "list",
+        }
+    }
 }
 
 #[derive(Debug, Clone, Serialize, JsonSchema)]
@@ -74,4 +91,21 @@ pub fn build(c: &Composer, reverse: &[Pid]) -> Option<Works> {
         priority: 1.0 + (1.0 + values.len() as f64).log2(),
         values,
     })
+}
+
+/// Markdown: every work, with its year.
+pub fn markdown(b: &Works, md: &mut crate::render::markdown::Markdown) {
+    let values: Vec<String> = b
+        .values
+        .iter()
+        .map(|w| {
+            let name = md.label(content::EntityId::Item(w.item));
+            match w.year {
+                Some(y) => format!("{name} ({})", md.view.year(y)),
+                None => name,
+            }
+        })
+        .collect();
+    let key: Vec<String> = b.pids.iter().map(|p| md.property(*p)).collect();
+    md.items(&key.join(", "), &values);
 }

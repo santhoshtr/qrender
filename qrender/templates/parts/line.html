@@ -1,0 +1,8 @@
+{%- import "macros.html" as m -%}
+{#- One value on its own line: the value, its note, its edit action. A value
+    looks the same in a row of one value and in a row of many. -#}
+<span class="v">{{ ui.part(s.part)|safe }}
+{%- if !s.note.is_empty() %} <span class="note">{{ ui.note(s.note.as_slice())|safe }}</span>{% endif -%}
+{%- if let Some(d) = s.description %}<span class="desc">{% call m::description(d) %}{% endcall %}</span>{% endif -%}
+{%- if let Some(e) = s.edit %}{% call m::edit(ui, e) %}{% endcall %}{% endif -%}
+</span>

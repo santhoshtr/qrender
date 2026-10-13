@@ -1,0 +1,7 @@
+/* feature-run: one feature picture, then a justified run. */
+
+/* The feature: one picture, as large as the page allows, whole. */
+.feature .m {
+	inline-size: min( 100%, calc( var( --feature-max ) * var( --a ) ) );
+	margin-inline: auto;
+}

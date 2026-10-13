@@ -30,6 +30,8 @@ pub enum Part {
         text: String,
         /// For `<time datetime>`: years 1 to 9999 only.
         datetime: Option<String>,
+        /// Wikidata precision: 9 year, 10 month, 11 day.
+        precision: u8,
     },
     /// A text; with its language when it is a monolingual text.
     Text {
@@ -142,13 +144,28 @@ impl View {
             ),
         };
         let datetime = ((1..=9999).contains(&year) && precision >= 9).then_some(datetime);
-        Part::Time { text, datetime }
+        Part::Time {
+            text,
+            datetime,
+            precision: precision.min(11),
+        }
     }
 
     fn text(&self, text: &str) -> Part {
         Part::Text {
             text: text.to_string(),
             lang: None,
+        }
+    }
+}
+
+impl NumberKind {
+    /// The `data-f` of a number for the browser's formatter.
+    pub fn name(self) -> &'static str {
+        match self {
+            Self::Plain => "number",
+            Self::Scientific => "scientific",
+            Self::Percent => "percent",
         }
     }
 }

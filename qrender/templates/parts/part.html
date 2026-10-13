@@ -1,0 +1,21 @@
+{%- import "macros.html" as m -%}
+{#- One value: an entity link, a number, a date, a text, a link. A number
+    and a date carry their raw value for the browser's Intl. -#}
+{%- match p -%}
+{%- when Part::Entity with (id) -%}
+{%- let l = ui.label(id) -%}
+{%- if l.fallback && l.add.is_some() -%}
+<span class="fb-group"><a href="{{ l.href }}">{{ ui.text(&l, false)|safe }}</a>{% call m::add_label(ui, l) %}{% endcall %}</span>
+{%- else -%}
+<a href="{{ l.href }}">{{ ui.text(&l, false)|safe }}</a>
+{%- endif -%}
+{%- when Part::Number with { value, kind, text, unit } -%}
+<data value="{{ value }}" data-f="{{ kind.name() }}">{{ text }}</data>
+{%- if let Some(u) = unit %} <span class="note">{{ ui.text(ui.item(u), true)|safe }}</span>{% endif -%}
+{%- when Part::Time with { text, datetime, precision } -%}
+{%- if let Some(d) = datetime -%}<time datetime="{{ d }}" data-p="{{ precision }}">{{ text }}</time>{%- else -%}{{ text }}{%- endif -%}
+{%- when Part::Text with { text, lang } -%}
+{%- if let Some(lang) = lang -%}<span lang="{{ lang }}">{{ text }}</span> <span class="note">{{ lang }}</span>{%- else -%}{{ text }}{%- endif -%}
+{%- when Part::Link with { text, href } -%}
+<a href="{{ href }}">{{ text }}</a>
+{%- endmatch -%}

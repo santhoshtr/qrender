@@ -1,0 +1,26 @@
+/* columns: blocks without a shape of their own, side by side. */
+
+/* A set of pictures in a stack of columns takes the whole width of the
+   stack: pictures need width, and text blocks flow in the columns under it. */
+.t-columns > [data-slot='stack'] > :is( .set, .scores ) { column-span: all; }
+
+/* Blocks without a shape of their own stand side by side. Without a hero,
+   the stack takes the whole width. */
+.t-columns {
+	& > [data-slot='hero'] { grid-column: 1 / span 4; }
+	&:not( :has( > [data-slot='hero'] ) ) > [data-slot='stack'] { grid-column: 1 / -1; }
+
+	/* Blocks of uneven height flow in balanced columns, down each column,
+	   so a short block does not leave the height of a tall one empty. */
+	& > [data-slot='stack'] {
+		grid-column: 5 / -1;
+		display: block;
+		columns: 3 260px;
+		column-gap: var( --gap );
+
+		& > * {
+			break-inside: avoid;
+			margin-block-end: var( --gap );
+		}
+	}
+}

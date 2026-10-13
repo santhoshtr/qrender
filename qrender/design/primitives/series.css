@@ -1,0 +1,49 @@
+/* series */
+
+.columns {
+	display: flex;
+	align-items: flex-end;
+	gap: var( --spacing-100 );
+	block-size: 160px;
+
+	& > div {
+		flex: 1;
+		block-size: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 2px;
+		font-size: var( --font-size-x-small );
+		font-variant-numeric: tabular-nums;
+	}
+
+	& .col {
+		inline-size: 100%;
+		max-inline-size: 64px;
+		block-size: calc( var( --f ) * 100% );
+		background-color: var( --ink );
+		border-start-start-radius: 4px;
+		border-start-end-radius: 4px;
+	}
+
+	/* A long series: thin columns, labels only on the ends and the peak.
+	   The labels are out of the flow, on the top and bottom edges of the
+	   chart, so that each column has the same height for its bar and a
+	   label does not cover the bars next to it. Horizontally each label
+	   keeps its static place: the centre of its column. */
+	&.dense {
+		position: relative;
+		gap: 1px;
+		padding-block: 16px;
+
+		& > div { font-size: 10px; white-space: nowrap; }
+		& > div > :not( .col ) { position: absolute; }
+		& > div > :first-child { inset-block-start: 0; }
+		& > div > .note { inset-block-end: 0; font-size: 10px; }
+
+		/* The labels of the first and the last column stay inside the chart. */
+		& > div:first-child > :not( .col ) { inset-inline-start: 0; }
+		& > div:last-child > :not( .col ) { inset-inline-end: 0; }
+	}
+}

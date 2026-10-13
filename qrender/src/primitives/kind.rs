@@ -15,6 +15,14 @@ pub struct Kind {
     pub chain: Vec<ChainLink>,
 }
 
+/// HTML: the template binding. The markup is templates/primitives/kind.html.
+#[derive(askama::Template)]
+#[template(path = "primitives/kind.html")]
+pub struct Html<'a> {
+    pub ui: &'a crate::render::ui::Ui<'a>,
+    pub b: &'a Kind,
+}
+
 #[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct ChainLink {
     pub pid: Pid,
@@ -48,4 +56,13 @@ pub fn build(c: &mut Composer) -> Kind {
         }
     }
     Kind { chain }
+}
+
+/// Markdown: every class and the container (no "+N" in text).
+pub fn markdown(b: &Kind, md: &mut crate::render::markdown::Markdown) {
+    for link in &b.chain {
+        let values: Vec<String> = link.values.iter().map(|v| md.value(v)).collect();
+        md.item(&md.property(link.pid), &values.join(", "));
+    }
+    md.end();
 }

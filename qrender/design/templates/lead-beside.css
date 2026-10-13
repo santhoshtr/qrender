@@ -1,0 +1,38 @@
+/* lead-beside and hero-plus-stack: a hero beside a stack, the sheet under
+   the shorter column. */
+
+.t-lead-beside {
+	& > [data-slot='hero'] { grid-column: 1 / span 5; }
+	& > [data-slot='stack'] { grid-column: 6 / -1; }
+}
+
+.t-hero-plus-stack {
+	& > [data-slot='hero'] { grid-column: 1 / span 7; }
+	& > [data-slot='stack'] { grid-column: 8 / -1; }}
+
+/* The sheet goes under the shorter column, not under both with an empty
+   area next to it. In lead-beside the hero (a portrait) is the taller one,
+   so the sheet goes under the stack; in hero-plus-stack the hero (a map or
+   a wide picture) is the shorter one, so the sheet goes under the hero.
+   The last row is flexible: the extra height of the tall column goes to
+   it, not to the short one. */
+.t-lead-beside,
+.t-hero-plus-stack {
+	grid-template-rows: [title] auto [prose] auto [top] auto [bottom] 1fr [gallery] auto;
+
+	& > h2 { grid-row: title; }
+	& > .prose-slot { grid-row: prose; }
+	& > [data-slot='hero'] { grid-row: top / span 2; }
+	& > [data-slot='stack'] { grid-row: top; }
+	& > [data-slot='sheet'] { grid-row: bottom; }
+	& > [data-slot='gallery'] { grid-row: gallery; }
+	& > .prose-links { grid-row: -1; }
+}
+
+.t-lead-beside > [data-slot='sheet'] { grid-column: 6 / -1; }
+
+.t-hero-plus-stack {
+	& > [data-slot='hero'] { grid-row: top; }
+	& > [data-slot='stack'] { grid-row: top / span 2; }
+	& > [data-slot='sheet'] { grid-column: 1 / span 7; }
+}

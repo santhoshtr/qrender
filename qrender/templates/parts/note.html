@@ -1,0 +1,1 @@
+{%- for p in parts -%}{%- if !loop.first %} · {% endif -%}{{ ui.part(p)|safe }}{%- endfor -%}

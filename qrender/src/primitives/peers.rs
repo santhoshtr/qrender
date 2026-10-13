@@ -26,6 +26,14 @@ pub struct Peers {
     pub members: Vec<Member>,
 }
 
+/// HTML: the template binding. The markup is templates/primitives/peers.html.
+#[derive(askama::Template)]
+#[template(path = "primitives/peers.html")]
+pub struct Html<'a> {
+    pub ui: &'a crate::render::ui::Ui<'a>,
+    pub b: &'a Peers,
+}
+
 #[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct Member {
     pub item: Qid,
@@ -94,4 +102,28 @@ pub fn build(c: &Composer) -> Vec<Peers> {
     }
     out.truncate(LINEUPS);
     out
+}
+
+/// Markdown: the item's rank, and the whole lineup.
+pub fn markdown(b: &Peers, md: &mut crate::render::markdown::Markdown) {
+    let lineup: Vec<String> = b
+        .members
+        .iter()
+        .map(|m| {
+            format!(
+                "{} {}",
+                md.label(content::EntityId::Item(m.item)),
+                crate::localize::format::number(m.amount)
+            )
+        })
+        .collect();
+    let key = format!(
+        "{} among {}",
+        md.property(b.pid),
+        md.label(content::EntityId::Item(b.class))
+    );
+    md.item(
+        &key,
+        &format!("rank {} of {}: {}", b.rank, b.of, lineup.join(", ")),
+    );
 }

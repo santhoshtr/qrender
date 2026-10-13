@@ -25,6 +25,14 @@ pub struct Score {
     pub rule: Option<String>,
 }
 
+/// HTML: the template binding. The markup is templates/primitives/score.html.
+#[derive(askama::Template)]
+#[template(path = "primitives/score.html")]
+pub struct Html<'a> {
+    pub ui: &'a crate::render::ui::Ui<'a>,
+    pub b: &'a Score,
+}
+
 #[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct ScoreValue {
     pub statement: StatementId,
@@ -117,4 +125,38 @@ pub fn build(c: &Composer, pid: Pid, statements: &[&Statement], rule: Option<&st
         priority: c.priority(pid, statements),
         rule: rule.map(str::to_string),
     }
+}
+
+/// Markdown: each score with its source, method, count and year.
+pub fn markdown(b: &Score, md: &mut crate::render::markdown::Markdown) {
+    let values: Vec<String> = b
+        .values
+        .iter()
+        .map(|v| {
+            let mut about = Vec::new();
+            if let Some(s) = &v.source {
+                about.push(md.label(content::EntityId::Item(s.item)));
+            }
+            if let Some(m) = &v.method {
+                about.push(md.label(content::EntityId::Item(m.item)));
+            }
+            if let Some(c) = &v.count {
+                about.push(format!(
+                    "{} {}",
+                    md.property(c.pid),
+                    crate::localize::format::number(c.amount)
+                ));
+            }
+            if let Some(y) = v.year {
+                about.push(md.view.year(y));
+            }
+            format!(
+                "{} ({}){}",
+                v.string,
+                about.join(", "),
+                crate::render::markdown::provenance_words(v.provenance)
+            )
+        })
+        .collect();
+    md.items(&md.property(b.pid), &values);
 }

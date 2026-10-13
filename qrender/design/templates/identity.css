@@ -1,0 +1,46 @@
+/* identity: the page head, the same for every class. */
+
+/* The page head, the same for every class: the title and description,
+   the banner, then the lead beside the picture of the item. The kinds go
+   under the picture.
+
+   The picture is sized by its height, not by a column: its width is the
+   head height × its aspect ratio, at most 40% of the page. A grid column
+   would make a portrait very tall (width ÷ aspect). So the head has its own
+   two columns, not the page subgrid: the lead takes what the picture
+   leaves. The last row is flexible, so the extra height of the lead goes
+   to it. */
+.t-identity {
+	--head-height: 440px;
+	grid-template-columns: minmax( 0, 1fr ) auto;
+	grid-template-rows: [head] auto [band] auto [top] auto [bottom] 1fr;
+	column-gap: var( --spacing-200 );
+
+	& > [data-slot='head'] { grid-row: head; }
+	& > [data-slot='band'] { grid-row: band; }
+	& > [data-slot='lead'] { grid-column: 1; grid-row: top / span 2; }
+	& > [data-slot='hero'] { grid-column: 2; grid-row: top; }
+
+	/* The kinds do not make the picture column wider. */
+	& > [data-slot='kind'] { grid-column: 2; grid-row: bottom; contain: inline-size; }
+
+	& > [data-slot='hero'] > .m {
+		inline-size: calc( var( --head-height ) * var( --a ) );
+		/* Not a percentage: in an auto column it is cyclic, and the browser
+		   ignores it when it sizes the column. */
+		max-inline-size: 40cqi;
+	}
+}
+
+.band .m {
+	inline-size: 100%;
+}
+
+@container page ( width < 760px ) {
+	.t-identity {
+		grid-template-columns: minmax( 0, 1fr );
+
+		& > [data-slot='hero'] > .m { max-inline-size: 100%; }
+		& > [data-slot='kind'] { contain: none; }
+	}
+}

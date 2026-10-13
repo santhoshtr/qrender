@@ -11,6 +11,14 @@ pub struct Identifiers {
     pub values: Vec<Identifier>,
 }
 
+/// HTML: the template binding. The markup is templates/primitives/identifiers.html.
+#[derive(askama::Template)]
+#[template(path = "primitives/identifiers.html")]
+pub struct Html<'a> {
+    pub ui: &'a crate::render::ui::Ui<'a>,
+    pub b: &'a Identifiers,
+}
+
 #[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct Identifier {
     pub pid: Pid,
@@ -40,4 +48,12 @@ pub fn build(c: &mut Composer) -> Identifiers {
             })
             .collect(),
     }
+}
+
+/// Markdown: every identifier.
+pub fn markdown(b: &Identifiers, md: &mut crate::render::markdown::Markdown) {
+    for v in &b.values {
+        md.item(&md.property(v.pid), &v.string);
+    }
+    md.end();
 }

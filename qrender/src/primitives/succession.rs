@@ -22,6 +22,14 @@ pub struct Succession {
     pub rule: Option<String>,
 }
 
+/// HTML: the template binding. The markup is templates/primitives/succession.html.
+#[derive(askama::Template)]
+#[template(path = "primitives/succession.html")]
+pub struct Html<'a> {
+    pub ui: &'a crate::render::ui::Ui<'a>,
+    pub b: &'a Succession,
+}
+
 /// `holder`: the holder property (P6); `office`: the property that names
 /// its office (P1313). Claims the holders and the current office.
 pub fn build(
@@ -56,4 +64,17 @@ pub fn build(
         priority: c.priority(holder, &holders),
         rule: rule.map(str::to_string),
     })
+}
+
+/// Markdown: the office, the holder now, the holders before.
+pub fn markdown(b: &Succession, md: &mut crate::render::markdown::Markdown) {
+    let office = match &b.office {
+        Some(o) => md.value(o),
+        None => md.property(b.pid),
+    };
+    md.item(&office, &md.value(&b.holder));
+    let before: Vec<String> = b.before.iter().map(|v| md.value(v)).collect();
+    if !before.is_empty() {
+        md.items(&format!("{office} (before)"), &before);
+    }
 }

@@ -6,6 +6,7 @@ pub mod compose;
 pub mod config;
 pub mod localize;
 pub mod primitives;
+pub mod render;
 pub mod schema;
 pub mod vocab;
 pub mod wikidata;

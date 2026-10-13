@@ -21,6 +21,14 @@ pub struct Credits {
     pub rule: Option<String>,
 }
 
+/// HTML: the template binding. The markup is templates/primitives/credits.html.
+#[derive(askama::Template)]
+#[template(path = "primitives/credits.html")]
+pub struct Html<'a> {
+    pub ui: &'a crate::render::ui::Ui<'a>,
+    pub b: &'a Credits,
+}
+
 #[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct Person {
     /// The person's first statement.
@@ -73,4 +81,12 @@ pub fn build(c: &mut Composer, pids: &[Pid], shown: usize, rule: Option<&str>) -
         values,
         rule: rule.map(str::to_string),
     })
+}
+
+/// Markdown: each person with all of their roles.
+pub fn markdown(b: &Credits, md: &mut crate::render::markdown::Markdown) {
+    for p in &b.values {
+        let roles: Vec<String> = p.pids.iter().map(|r| md.property(*r)).collect();
+        md.item(&roles.join(", "), &md.value(&p.statement));
+    }
 }

@@ -20,6 +20,14 @@ pub struct Time {
     pub tracks: Vec<Track>,
 }
 
+/// HTML: the template binding. The markup is templates/primitives/time.html.
+#[derive(askama::Template)]
+#[template(path = "primitives/time.html")]
+pub struct Html<'a> {
+    pub ui: &'a crate::render::ui::Ui<'a>,
+    pub b: &'a Time,
+}
+
 #[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct Track {
     pub pid: Pid,
@@ -152,4 +160,29 @@ fn mark(c: &Composer, s: &Statement, event: bool, span: bool) -> Option<Mark> {
         precision,
         provenance: shown.provenance,
     })
+}
+
+/// Markdown: each track, its points and spans in order.
+pub fn markdown(b: &Time, md: &mut crate::render::markdown::Markdown) {
+    for track in &b.tracks {
+        let marks: Vec<String> = track
+            .marks
+            .iter()
+            .map(|m| {
+                let when = match m.year {
+                    Some(y) => md.view.year(y),
+                    None => format!(
+                        "{} – {}",
+                        m.start.map(|y| md.view.year(y)).unwrap_or_default(),
+                        m.end.map(|y| md.view.year(y)).unwrap_or_default()
+                    ),
+                };
+                match m.item {
+                    Some(item) => format!("{when} {}", md.label(content::EntityId::Item(item))),
+                    None => when,
+                }
+            })
+            .collect();
+        md.items(&md.property(track.pid), &marks);
+    }
 }

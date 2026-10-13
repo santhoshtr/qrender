@@ -1,0 +1,11 @@
+/* collapsed: "more", closed until the reader opens it. */
+
+/* "More": the rest of the statements, closed until the reader opens it. */
+.t-collapsed > details {
+	grid-column: 1 / -1;
+
+	& > summary {
+		padding-block: var( --spacing-50 );
+		border-block-start: 1px solid var( --border-color-muted );
+	}
+}

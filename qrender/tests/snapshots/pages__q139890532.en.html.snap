@@ -1,0 +1,88 @@
+---
+source: qrender/tests/pages.rs
+expression: html
+---
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-locale="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kokkachal</title>
+<link rel="stylesheet" href="design/0.2/tokens.css">
+<link rel="stylesheet" href="design/0.2/page.css">
+</head>
+<body>
+<header class="chrome"><div><span class="wordmark">Wikipedia</span><input type="search" placeholder="Search Wikipedia" aria-label="Search Wikipedia"></div></header>
+<main class="page">
+<section class="spread t-identity" data-spread="identity"><div data-slot="head"><div class="title"><h1>Kokkachal</h1><p>Hamlet in Kasaragod district, Kerala, India</p></div></div><div data-slot="lead"><div class="lead" lang="en"><p><b>Kokkachal</b> (കൊക്കച്ചാൽ, <a href="https://en.wikipedia.org/wiki/Help:IPA/Malayalam">&#91;ko̞kːɐt͡ʃːaːl&#93;</a>; also spelled <b>Kokkechal</b>) is a small locality and settlement situated in the <a href="https://en.wikipedia.org/wiki/Kasaragod_district">Kasaragod district</a> in the Indian state of <a href="https://en.wikipedia.org/wiki/Kerala">Kerala</a>. It falls under the administration of the <a href="https://en.wikipedia.org/wiki/Manjeshwaram_taluk">Manjeshwaram taluk</a> near the northern border of the state.</p><p class="source"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Wikipedia-logo-v2.svg?width=60" alt="" width="18"> <a href="https://en.wikipedia.org/wiki/Kokkachal">en.wikipedia.org</a> · 3</p></div></div><div data-slot="kind"><div class="kind"><div><span class="k">instance of</span><a href="https://www.wikidata.org/wiki/Q532">village</a></div><div><span class="k">country</span><a href="https://www.wikidata.org/wiki/Q668">India</a></div></div></div></section>
+<section class="spread t-hero-plus-stack" data-spread="location"><h2>geographic location</h2><div class="prose-slot" lang="en"><p>Kokkachal is situated along the rural routes connecting <a href="https://en.wikipedia.org/wiki/Bandiyod">Bandiyod</a> (approximately 6.5&#160;km away) and Dharmathadukka. Geographically, it sits close to the border of the Puthige and Mangalpady local government jurisdictions. The landscape is characterized by the typical midland topography of Northern Malabar, with seasonal streams feeding into larger coastal river systems.</p><a class="read" href="https://en.wikipedia.org/wiki/Kokkachal#Geography">Geography ↗</a></div><div data-slot="hero"><figure class="map"><img src="https://maps.wikimedia.org/img/osm-intl,11,12.656889,74.963924,800x500@2x.png" alt=""><span class="pin"></span><figcaption>coordinate location 12.6569, 74.9639 <span class="prov-none" title="—"></span></figcaption><span class="tools"><a class="edit" href="https://www.wikidata.org/wiki/Q139890532#P625" aria-label="Edit">✎</a></span></figure></div><div data-slot="gallery"><div class="block set"><div class="run"><figure class="m k-drawing" style="--a:0.6922"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kasaragod-map.svg?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Kasaragod-map.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Kasaragod-map.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Kasaragod-map.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Kasaragod-map.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Kasaragod-map.svg?width=1920 1920w" sizes="(max-width: 760px) 50vw, 20vw" alt="" loading="lazy"><figcaption><span>located in the administrative territorial entity</span><b><a href="https://www.wikidata.org/wiki/Q1419703">Kasaragod district</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info" type="button" popovertarget="p1" aria-label="Credit">i</button><span id="p1" popover class="pop">Rajeshodayanchal at ml.wikipedia · CC BY-SA 3.0</span><a class="edit" href="https://www.wikidata.org/wiki/Q139890532#P131" aria-label="Edit">✎</a></span></figure></div></div></div></section>
+<section class="spread t-columns" data-spread="names"><h2>name</h2><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>postal code</dt><dd>671322</dd><span class="tools"><span class="prov-none" title="—"></span><a class="edit" href="https://www.wikidata.org/wiki/Q139890532#P281" aria-label="Edit">✎</a></span></div></dl></section>
+<section class="spread t-sheet" data-spread="evidence"><h2>reference</h2><div data-slot="summary"><div class="block"><div class="stack-bar"><span class="p-none" style="--n:5"></span></div><ul class="legend"><li> stated in / reference URL <b>0</b></li><li><span class="prov-imported" title="imported from Wikimedia project">W</span> imported from Wikimedia project <b>0</b></li><li><span class="prov-none" title="—"></span> — <b>5</b></li></ul><p class="note">en: 9 / 9</p></div></div><dl class="sheet" data-slot="sheet"></dl><div data-slot="projects"><div class="block"><div><span class="chip">wikipedia <b>3</b> ✓</span></div></div></div><div data-slot="identifiers"><button class="more" type="button" command="show-modal" commandfor="d2"># 0</button><dialog id="d2" closedby="any"><header><h2>0</h2><button type="button" command="close" commandfor="d2" aria-label="Close">×</button></header><div class="dialog-body"><div class="idlist"></div></div></dialog></div></section>
+<section class="spread t-sheet" data-spread="evidence"><p class="prose-links"><a href="https://en.wikipedia.org/wiki/Kokkachal#Education_and_Institutions">Education and Institutions</a> · <a href="https://en.wikipedia.org/wiki/Kokkachal#Transport">Transport</a> · <a href="https://en.wikipedia.org/wiki/Kokkachal#See_also">See also</a> · <a href="https://en.wikipedia.org/wiki/Kokkachal#References">References</a></p></section>
+<p class="provenance-note">Composed by rule from Wikidata item <a href="https://www.wikidata.org/wiki/Q139890532">Q139890532</a> (composition/0.3, view/0.2, design/0.2). The lead paragraph, the section paragraphs and the section links come from Wikipedia. Pictures come from Wikimedia Commons; a W on a picture marks one from an article, not from Wikidata; a W on a value marks a statement whose only reference is a Wikipedia.</p>
+</main>
+<script>// Progressive enhancement only: opens and closes dialogs in browsers
+// without the invoker commands API. The content does not need it.
+if ( !( 'commandForElement' in HTMLButtonElement.prototype ) ) {
+	document.addEventListener( 'click', ( event ) => {
+		const button = event.target.closest( 'button[commandfor]' );
+		if ( !button ) {
+			return;
+		}
+		const target = document.getElementById( button.getAttribute( 'commandfor' ) );
+		if ( !target ) {
+			return;
+		}
+		if ( button.getAttribute( 'command' ) === 'close' ) {
+			target.close();
+		} else {
+			target.showModal();
+		}
+	} );
+}
+// Progressive enhancement only: numbers and dates in the formats of the
+// page locale, by the browser's Intl. The server writes a neutral text
+// (digits without grouping, ISO dates); without this script it stays,
+// correct but not localized.
+( () => {
+	const locale = document.documentElement.dataset.locale || document.documentElement.lang;
+	let number, percent;
+	try {
+		number = new Intl.NumberFormat( locale, { maximumFractionDigits: 20 } );
+		percent = new Intl.NumberFormat( locale, { style: 'percent', maximumSignificantDigits: 2 } );
+	} catch ( e ) {
+		return;
+	}
+	for ( const el of document.querySelectorAll( 'data[data-f]' ) ) {
+		const value = Number( el.value );
+		if ( Number.isNaN( value ) ) {
+			continue;
+		}
+		if ( el.dataset.f === 'number' ) {
+			el.textContent = number.format( value );
+		} else if ( el.dataset.f === 'percent' ) {
+			el.textContent = percent.format( value );
+		}
+		// "scientific" keeps its neutral text: m × 10ⁿ.
+	}
+	// Wikidata precision: 9 year, 10 month, 11 day.
+	const options = {
+		9: { year: 'numeric' },
+		10: { year: 'numeric', month: 'long' },
+		11: { year: 'numeric', month: 'long', day: 'numeric' }
+	};
+	for ( const el of document.querySelectorAll( 'time[datetime][data-p]' ) ) {
+		const [ year, month = 1, day = 1 ] = el.dateTime.split( '-' ).map( Number );
+		const date = new Date( Date.UTC( 2000, month - 1, day ) );
+		date.setUTCFullYear( year ); // Date.UTC reads years below 100 as 19xx
+		try {
+			el.textContent = new Intl.DateTimeFormat( locale,
+				{ ...options[ Math.min( Number( el.dataset.p ), 11 ) ], timeZone: 'UTC' } ).format( date );
+		} catch ( e ) {
+			// The neutral text stays.
+		}
+	}
+} )();
+</script>
+</body>
+</html>

@@ -15,6 +15,14 @@ pub struct Provenance {
     pub none: usize,
 }
 
+/// HTML: the template binding. The markup is templates/primitives/provenance.html.
+#[derive(askama::Template)]
+#[template(path = "primitives/provenance.html")]
+pub struct Html<'a> {
+    pub ui: &'a crate::render::ui::Ui<'a>,
+    pub b: &'a Provenance,
+}
+
 pub fn build(c: &Composer) -> Provenance {
     let mut counts = Provenance {
         sourced: 0,
@@ -32,4 +40,13 @@ pub fn build(c: &Composer) -> Provenance {
         }
     }
     counts
+}
+
+/// Markdown: the provenance counts and the label coverage.
+pub fn markdown(b: &Provenance, md: &mut crate::render::markdown::Markdown) {
+    let coverage = &md.view.coverage;
+    md.paragraph(&format!(
+        "Statements: {} sourced, {} imported from Wikipedia, {} without a reference. Labels in {}: {} of {}.",
+        b.sourced, b.imported, b.none, md.view.lang, coverage.have, coverage.total
+    ));
 }

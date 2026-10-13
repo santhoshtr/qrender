@@ -1,0 +1,27 @@
+/* provenance */
+
+/* ---------- evidence ---------- */
+
+.stack-bar {
+	display: flex;
+	gap: 2px;
+	block-size: 14px;
+	border-radius: 7px;
+	overflow: hidden;
+	max-inline-size: 640px;
+
+	& span { flex: var( --n ); }
+	& .p-sourced { background-color: var( --color-base ); }
+	& .p-imported { background-color: var( --color-subtle ); }
+	& .p-none { background-color: var( --border-color-base ); }
+}
+
+.legend {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var( --spacing-50 ) var( --spacing-150 );
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: var( --font-size-small );
+}

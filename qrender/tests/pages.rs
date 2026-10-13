@@ -1,0 +1,106 @@
+//! The renderers, for every fixture page: snapshots of the HTML and the
+//! Markdown, and the rules every HTML page keeps.
+
+use std::fs;
+use std::path::Path;
+
+use content::{Content, Text};
+use qrender::config::Config;
+use qrender::localize::View;
+use qrender::render::html::{self, Styles};
+use qrender::render::markdown;
+use scraper::{Html, Selector};
+
+const PAGES: [&str; 10] = [
+    "q3870.en",
+    "q3870.gu",
+    "q90.en",
+    "q90.ml",
+    "q8023.tcy",
+    "q117085614.en",
+    "q405.en",
+    "q405.ml",
+    "q139890532.en",
+    "q139890532.ml",
+];
+
+/// Hosts a page may load from: Commons (its pages and its media server)
+/// and Wikimedia maps only.
+const HOSTS: [&str; 3] = [
+    "https://commons.wikimedia.org/",
+    "https://upload.wikimedia.org/",
+    "https://maps.wikimedia.org/",
+];
+
+fn view(page: &str) -> View {
+    let read = |path: String| {
+        fs::read_to_string(Path::new(env!("CARGO_MANIFEST_DIR")).join("..").join(path)).unwrap()
+    };
+    let qid = page.split('.').next().unwrap();
+    let content: Content =
+        serde_json::from_str(&read(format!("fixtures/content/{qid}.json"))).unwrap();
+    let text: Text = serde_json::from_str(&read(format!("fixtures/text/{page}.json"))).unwrap();
+    qrender::localize(&qrender::compose(&content, Config::embedded()), &text)
+}
+
+fn select(s: &str) -> Selector {
+    Selector::parse(s).unwrap()
+}
+
+#[test]
+fn html_pages() {
+    for page in PAGES {
+        // Linked styles: the snapshot holds the markup, not the stylesheet.
+        let html = html::page(&view(page), Styles::Linked("design/0.2"));
+        let doc = Html::parse_document(&html);
+
+        // No link in a link: the parser would close the outer link early.
+        assert_eq!(
+            doc.select(&select("a a")).count(),
+            0,
+            "{page}: a link in a link"
+        );
+        // Every invoker and popover button has its target.
+        for button in doc.select(&select("[commandfor], [popovertarget]")) {
+            let id = button
+                .attr("commandfor")
+                .or(button.attr("popovertarget"))
+                .unwrap();
+            let target = select(&format!("#{id}"));
+            assert_eq!(
+                doc.select(&target).count(),
+                1,
+                "{page}: no single target #{id}"
+            );
+        }
+        // Pictures, sounds and videos only from Wikimedia hosts.
+        for el in doc.select(&select("img[src], video[src], video[poster], audio[src]")) {
+            for attr in ["src", "poster"] {
+                if let Some(url) = el.attr(attr) {
+                    assert!(
+                        HOSTS.iter().any(|h| url.starts_with(h)),
+                        "{page}: {attr} {url}"
+                    );
+                }
+            }
+        }
+        // Ids are unique.
+        let mut ids: Vec<&str> = doc
+            .select(&select("[id]"))
+            .filter_map(|e| e.attr("id"))
+            .collect();
+        let count = ids.len();
+        ids.sort_unstable();
+        ids.dedup();
+        assert_eq!(ids.len(), count, "{page}: duplicate ids");
+
+        insta::assert_snapshot!(format!("{page}.html"), html);
+    }
+}
+
+#[test]
+fn markdown_pages() {
+    for page in PAGES {
+        insta::assert_snapshot!(format!("{page}.md"), markdown::page(&view(page)));
+    }
+}

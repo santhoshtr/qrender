@@ -1,0 +1,3 @@
+{#- The small values of different properties of a spread, one picture
+    each, with the name of the property. -#}
+{%- for v in b.values -%}{{ ui.figure_with(ui.value(&v.statement), ui.property(v.statement.pid))|safe }}{%- endfor -%}

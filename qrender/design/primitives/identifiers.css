@@ -1,0 +1,18 @@
+/* identifiers */
+
+.idlist {
+	columns: 3 260px;
+	column-gap: var( --spacing-150 );
+	font-size: var( --font-size-x-small );
+
+	& div {
+		break-inside: avoid;
+		display: flex;
+		justify-content: space-between;
+		gap: var( --spacing-50 );
+		border-block-end: 1px solid var( --border-color-muted );
+		padding-block: 2px;
+	}
+
+	& span:last-child { font-family: var( --font-family-monospace ); word-break: break-all; }
+}

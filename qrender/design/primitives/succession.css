@@ -1,0 +1,8 @@
+/* succession */
+
+/* An office: the holder now, and the holders before. */
+.succession {
+	& > .m { max-inline-size: 320px; }
+
+	& .before { font-size: var( --font-size-small ); }
+}

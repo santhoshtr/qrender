@@ -16,6 +16,14 @@ pub struct Scale {
     pub measures: Vec<Measure>,
 }
 
+/// HTML: the template binding. The markup is templates/primitives/scale.html.
+#[derive(askama::Template)]
+#[template(path = "primitives/scale.html")]
+pub struct Html<'a> {
+    pub ui: &'a crate::render::ui::Ui<'a>,
+    pub b: &'a Scale,
+}
+
 #[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct Container {
     pub pid: Pid,
@@ -74,4 +82,18 @@ pub fn build(c: &Composer, spread_pids: &[Pid]) -> Option<Scale> {
         container: Container { pid, item },
         measures,
     })
+}
+
+/// Markdown: each measure as a share of the container.
+pub fn markdown(b: &Scale, md: &mut crate::render::markdown::Markdown) {
+    let container = md.label(content::EntityId::Item(b.container.item));
+    for m in &b.measures {
+        let crate::localize::format::Part::Number { text, .. } =
+            crate::localize::format::percent(m.ratio)
+        else {
+            continue;
+        };
+        md.item(&md.property(m.pid), &format!("{text} of {container}"));
+    }
+    md.end();
 }

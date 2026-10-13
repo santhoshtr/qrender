@@ -27,6 +27,14 @@ pub struct Series {
     pub rule: Option<String>,
 }
 
+/// HTML: the template binding. The markup is templates/primitives/series.html.
+#[derive(askama::Template)]
+#[template(path = "primitives/series.html")]
+pub struct Html<'a> {
+    pub ui: &'a crate::render::ui::Ui<'a>,
+    pub b: &'a Series,
+}
+
 /// The Commons data file of a series.
 #[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct Source {
@@ -174,4 +182,24 @@ fn number(cell: &Cell) -> Option<f64> {
         Cell::Number(n) => n.as_f64(),
         _ => None,
     }
+}
+
+/// Markdown: every point, "year: amount".
+pub fn markdown(b: &Series, md: &mut crate::render::markdown::Markdown) {
+    let points: Vec<String> = b
+        .points
+        .iter()
+        .map(|p| {
+            format!(
+                "{}: {}",
+                md.view.year(p.year),
+                crate::localize::format::number(p.amount)
+            )
+        })
+        .collect();
+    let mut value = points.join("; ");
+    if let Some(source) = &b.source {
+        value.push_str(&format!(" (source: {})", source.file));
+    }
+    md.item(&md.property(b.pid), &value);
 }

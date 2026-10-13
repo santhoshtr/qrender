@@ -46,6 +46,22 @@ pub struct GalleryValue {
     pub priority: f64,
 }
 
+/// HTML: a set (templates/primitives/network.html).
+#[derive(askama::Template)]
+#[template(path = "primitives/network.html")]
+pub struct Html<'a> {
+    pub ui: &'a crate::render::ui::Ui<'a>,
+    pub b: &'a Network,
+}
+
+/// HTML: the gallery of a spread (templates/primitives/gallery.html).
+#[derive(askama::Template)]
+#[template(path = "primitives/gallery.html")]
+pub struct GalleryHtml<'a> {
+    pub ui: &'a crate::render::ui::Ui<'a>,
+    pub b: &'a Gallery,
+}
+
 /// A set, in the order of the order rule; the first `shown` are shown.
 pub fn build(
     c: &Composer,
@@ -89,5 +105,18 @@ pub fn gallery(mut values: Vec<GalleryValue>, rule: Option<&str>) -> Gallery {
         priority: values.iter().map(|v| v.priority).fold(f64::MIN, f64::max),
         values,
         rule: rule.map(str::to_string),
+    }
+}
+
+/// Markdown: every value of the set.
+pub fn markdown(b: &Network, md: &mut crate::render::markdown::Markdown) {
+    let values: Vec<String> = b.values.iter().map(|v| md.value(v)).collect();
+    md.items(&md.property(b.pid), &values);
+}
+
+/// Markdown: each small value with its property.
+pub fn gallery_markdown(b: &Gallery, md: &mut crate::render::markdown::Markdown) {
+    for v in &b.values {
+        md.item(&md.property(v.statement.pid), &md.value(&v.statement));
     }
 }

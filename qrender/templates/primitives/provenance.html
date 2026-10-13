@@ -1,0 +1,11 @@
+{%- import "macros.html" as m -%}
+{#- How many statements are sourced, imported, or without a reference; and
+    the label coverage of the page language. -#}
+{%- let rows = ui.legend(b) -%}
+<div class="block"><div class="stack-bar">
+{%- for r in rows.iter() -%}{%- if r.count > 0 %}<span class="p-{{ r.kind }}" style="--n:{{ r.count }}"></span>{% endif -%}{%- endfor -%}
+</div><ul class="legend">
+{%- for r in rows.iter() -%}
+<li>{% call m::prov(ui, Some(r.mark)) %}{% endcall %} {% if r.labels.is_empty() %}—{% else %}{% for l in r.labels %}{% if !loop.first %} / {% endif %}{{ ui.text(l, true)|safe }}{% endfor %}{% endif %} <b>{{ r.count }}</b></li>
+{%- endfor -%}
+</ul><p class="note">{{ ui.view.lang }}: {{ ui.view.coverage.have }} / {{ ui.view.coverage.total }}</p></div>

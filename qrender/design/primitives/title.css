@@ -1,0 +1,13 @@
+/* title */
+
+.title {
+	& h1 {
+		margin: 0;
+		font-family: var( --font-family-heading-main );
+		font-weight: var( --font-weight-normal );
+		font-size: clamp( 2.25rem, 6cqi, 3.5rem );
+		line-height: 1.05;
+	}
+
+	& p { margin: var( --spacing-50 ) 0 0; font-size: var( --font-size-large ); color: var( --color-subtle ); }
+}

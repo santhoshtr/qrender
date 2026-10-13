@@ -1,0 +1,71 @@
+/* time */
+
+/* ---------- the time axis ---------- */
+
+.axis {
+	display: flex;
+	flex-direction: column;
+	gap: var( --spacing-75 );
+
+	& .ends {
+		display: flex;
+		justify-content: space-between;
+		font-size: var( --font-size-small );
+		font-weight: var( --font-weight-bold );
+		color: var( --ink );
+		border-block-start: 2px solid var( --ink );
+		padding-block-start: 2px;
+	}
+
+	& .track {
+		display: grid;
+		grid-template-columns: minmax( 0, 12em ) minmax( 0, 1fr );
+		gap: var( --spacing-100 );
+		align-items: start;
+	}
+
+	& .track-name { font-size: var( --font-size-small ); color: var( --color-subtle ); }
+
+	& .line {
+		position: relative;
+		block-size: 14px;
+		border-block-end: 1px solid var( --border-color-muted );
+	}
+
+	/* Positions come from the composer as fractions of the item's own span. */
+	& .dot {
+		position: absolute;
+		inset-inline-start: calc( var( --p ) * 100% );
+		inset-block-start: 3px;
+		inline-size: 10px;
+		block-size: 10px;
+		translate: -50% 0;
+		border-radius: 50%;
+		background-color: var( --ink );
+	}
+
+	& .span {
+		position: absolute;
+		inset-inline-start: calc( var( --s ) * 100% );
+		inline-size: calc( ( var( --e ) - var( --s ) ) * 100% );
+		inset-block-start: 4px;
+		block-size: 8px;
+		border-radius: 4px;
+		background-color: var( --ink );
+		min-inline-size: 4px;
+	}
+
+	& .open { background: linear-gradient( to right, var( --ink ), transparent ); }
+	& .open-start { background: linear-gradient( to left, var( --ink ), transparent ); }
+	& .open.open-start { background: linear-gradient( to right, transparent, var( --ink ), transparent ); }
+
+	& .marks {
+		grid-column: 2;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2px var( --spacing-100 );
+		font-size: var( --font-size-small );
+
+		& b { font-variant-numeric: tabular-nums; }
+	}
+}

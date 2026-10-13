@@ -1,0 +1,49 @@
+/* map */
+
+/* ---------- map ---------- */
+
+.map {
+	position: relative;
+	margin: 0;
+	aspect-ratio: 8 / 5;
+	border-radius: var( --radius );
+	overflow: hidden;
+	background-color: var( --background-color-neutral );
+
+	& img { display: block; inline-size: 100%; block-size: 100%; object-fit: cover; }
+
+	/* Physical left and top: a map does not flip with the text direction. */
+	& .pin {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		inline-size: 16px;
+		block-size: 16px;
+		translate: -50% -50%;
+		border-radius: 50%;
+		background-color: var( --color-progressive );
+		border: 3px solid #fff;
+		box-shadow: 0 0 0 1px rgba( 0, 0, 0, 0.4 );
+	}
+
+	/* The extreme points of the item, placed by the renderer on its frame. */
+	& .marker {
+		position: absolute;
+		inline-size: 10px;
+		block-size: 10px;
+		translate: -50% -50%;
+		rotate: 45deg;
+		background-color: var( --ink );
+		border: 2px solid #fff;
+	}
+
+	& figcaption {
+		position: absolute;
+		inset-inline-start: var( --spacing-50 );
+		inset-block-end: var( --spacing-50 );
+		background-color: rgba( 255, 255, 255, 0.9 );
+		padding: 2px var( --spacing-50 );
+		border-radius: 4px;
+		font-size: var( --font-size-x-small );
+	}
+}

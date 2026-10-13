@@ -1,0 +1,56 @@
+/* score */
+
+/* Review scores: what a casual reader looks for first. The source is its
+   logo, known at a glance in every language; the score is large. */
+.scores {
+	display: flex;
+	flex-direction: row;  /* a block is a column; the cards are a row */
+	flex-wrap: wrap;
+	gap: var( --gap );
+
+	& .card {
+		position: relative;
+		flex: 1 1 150px;
+		max-inline-size: 220px;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		gap: var( --spacing-25 );
+		padding: var( --spacing-75 ) var( --spacing-100 );
+		border: 1px solid var( --border-color-muted );
+		border-radius: var( --radius );
+		background-color: var( --background-color-base );
+	}
+
+	& .logo {
+		block-size: 28px;
+		max-inline-size: 150px;
+		object-fit: contain;
+		object-position: left;
+	}
+
+	& .source { font-weight: var( --font-weight-bold ); }
+
+	& .value {
+		font-size: 2.25rem;
+		line-height: 1.1;
+		font-variant-numeric: tabular-nums;
+	}
+
+	& :is( .method, .meta ) {
+		font-size: var( --font-size-small );
+		color: var( --color-subtle );
+	}
+
+	& .meta {
+		display: flex;
+		gap: var( --spacing-50 );
+		font-variant-numeric: tabular-nums;
+	}
+
+	& > .card > .tools {
+		position: absolute;
+		inset-block-start: var( --spacing-50 );
+		inset-inline-end: var( --spacing-50 );
+	}
+}

@@ -31,6 +31,15 @@ pub enum Dir {
     Rtl,
 }
 
+impl Dir {
+    pub fn name(self) -> &'static str {
+        match self {
+            Self::Ltr => "ltr",
+            Self::Rtl => "rtl",
+        }
+    }
+}
+
 pub fn locale(lang: &Lang) -> String {
     let code = lang.as_str();
     LOCALES

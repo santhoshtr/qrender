@@ -7,6 +7,7 @@ edition.workspace = true
 
 [dependencies]
 content = { path = "../content" }
+askama = "0.16"
 indexmap.workspace = true
 lol_html = "3"
 percent-encoding.workspace = true
@@ -19,3 +20,4 @@ toml.workspace = true
 [dev-dependencies]
 insta = { version = "1", features = ["json"] }
 jsonschema = { version = "0.58", default-features = false }
+scraper = "0.24"
