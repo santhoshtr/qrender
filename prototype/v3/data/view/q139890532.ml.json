@@ -1,0 +1,394 @@
+{
+ "schema": "view/0.1",
+ "composition": "composition/0.2",
+ "design": "design/0.2",
+ "qid": "Q139890532",
+ "lang": "ml",
+ "dir": "ltr",
+ "page_title": "കൊക്കച്ചാൽ",
+ "provenance_labels": {
+  "sourced": {
+   "id": "P248",
+   "text": "ഇവിടെ പറയുന്നു",
+   "lang": "ml",
+   "fallback": false
+  },
+  "imported": {
+   "id": "P143",
+   "text": "ഇറക്കുമതി സ്രോതസ്",
+   "lang": "ml",
+   "fallback": false
+  }
+ },
+ "spreads": [
+  {
+   "id": "identity",
+   "kind": "identity",
+   "concept": null,
+   "template": "identity",
+   "slots": {
+    "head": {
+     "primitive": "title",
+     "item": "Q139890532",
+     "title": {
+      "id": "Q139890532",
+      "text": "കൊക്കച്ചാൽ",
+      "lang": "ml",
+      "fallback": false
+     },
+     "description": {
+      "text": "കേരളത്തിലെ കാസർഗോഡ് ജില്ലയിലെ പ്രദേശം, ഇന്ത്യ",
+      "lang": "ml",
+      "fallback": false
+     }
+    },
+    "lead": {
+     "primitive": "prose",
+     "source": "lead",
+     "languages": 3,
+     "article": {
+      "lang": "ml",
+      "local": true,
+      "host": "ml.wikipedia.org",
+      "url": "https://ml.wikipedia.org/wiki/%E0%B4%95%E0%B5%8A%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%BE%E0%B5%BD",
+      "paragraphs": [
+       "ഇന്ത്യൻ സംസ്ഥാനമായ കേരളത്തിലെ <a href=\"https://ml.wikipedia.org/wiki/%E0%B4%95%E0%B4%BE%E0%B4%B8%E0%B5%BC%E0%B4%97%E0%B5%8B%E0%B4%A1%E0%B5%8D_%E0%B4%9C%E0%B4%BF%E0%B4%B2%E0%B5%8D%E0%B4%B2\">കാസർഗോഡ് ജില്ലയിൽ</a> സ്ഥിതിചെയ്യുന്ന ഒരു ചെറിയ പ്രദേശവും വാസസ്ഥലവുമാണ് <b>കൊക്കച്ചാൽ</b>. സംസ്ഥാനത്തിന്റെ വടക്കൻ അതിർത്തിക്കടുത്തുള്ള മഞ്ചേശ്വരം താലൂക്കിന്റെ ഭരണത്തിൻ കീഴിലാണ് ഇത് സ്ഥിതിചെയ്യുന്നത്."
+      ],
+      "more": []
+     }
+    },
+    "kind": {
+     "primitive": "kind",
+     "chain": [
+      {
+       "pid": "P31",
+       "values": [
+        {
+         "statement": "Q139890532-6e4e2314-426f-970e-f527-2a2d233539c0",
+         "pid": "P31",
+         "item": "Q532",
+         "rank": "normal",
+         "provenance": "none",
+         "image": null,
+         "class": true,
+         "shown": true,
+         "property": {
+          "id": "P31",
+          "text": "തരം",
+          "lang": "ml",
+          "fallback": false
+         },
+         "display": {
+          "id": "Q532",
+          "text": "ഗ്രാമം",
+          "lang": "ml",
+          "fallback": false,
+          "href": "https://www.wikidata.org/wiki/Q532"
+         },
+         "edit": "https://www.wikidata.org/wiki/Q139890532#P31"
+        }
+       ],
+       "property": {
+        "id": "P31",
+        "text": "തരം",
+        "lang": "ml",
+        "fallback": false
+       }
+      },
+      {
+       "pid": "P17",
+       "values": [
+        {
+         "statement": "Q139890532-42ec4f16-4b40-d4b3-6860-a45f174953d2",
+         "pid": "P17",
+         "item": "Q668",
+         "rank": "normal",
+         "provenance": "none",
+         "image": {
+          "file": "India-locator-map-blank.svg",
+          "kind": "drawing",
+          "aspect": 0.857,
+          "megapixels": 2.58,
+          "credit": {
+           "artist": "",
+           "license": "CC BY-SA 3.0"
+          }
+         },
+         "property": {
+          "id": "P17",
+          "text": "രാജ്യം",
+          "lang": "ml",
+          "fallback": false
+         },
+         "display": {
+          "id": "Q668",
+          "text": "ഇന്ത്യ",
+          "lang": "ml",
+          "fallback": false,
+          "href": "https://www.wikidata.org/wiki/Q668"
+         },
+         "edit": "https://www.wikidata.org/wiki/Q139890532#P17"
+        }
+       ],
+       "property": {
+        "id": "P17",
+        "text": "രാജ്യം",
+        "lang": "ml",
+        "fallback": false
+       }
+      }
+     ]
+    }
+   },
+   "title": null,
+   "prose_text": null,
+   "prose_links": []
+  },
+  {
+   "id": "location",
+   "kind": "facts",
+   "concept": "Q2221906",
+   "template": "hero-plus-stack",
+   "slots": {
+    "hero": {
+     "primitive": "map",
+     "statement": "Q139890532-8b12df07-47e4-b4f5-52d1-4f57a49d0909",
+     "pid": "P625",
+     "lat": 12.656889,
+     "lon": 74.963924,
+     "globe": "Q2",
+     "rank": "normal",
+     "provenance": "none",
+     "property": {
+      "id": "P625",
+      "text": "ഭൗമനിർദ്ദേശാങ്കങ്ങൾ",
+      "lang": "ml",
+      "fallback": false
+     },
+     "edit": "https://www.wikidata.org/wiki/Q139890532#P625"
+    },
+    "gallery": [
+     {
+      "primitive": "network",
+      "role": "gallery",
+      "values": [
+       {
+        "statement": "Q139890532-f3afeba0-427d-dfb4-a02a-1e58a98af09a",
+        "pid": "P131",
+        "item": "Q1419703",
+        "rank": "normal",
+        "provenance": "none",
+        "image": {
+         "file": "Kasaragod-map.svg",
+         "kind": "drawing",
+         "aspect": 0.6922,
+         "megapixels": 5.27,
+         "credit": {
+          "artist": "Rajeshodayanchal at ml.wikipedia",
+          "license": "CC BY-SA 3.0"
+         }
+        },
+        "priority": 0.0,
+        "property": {
+         "id": "P131",
+         "text": "സ്ഥിതിചെയ്യുന്ന ഭരണസ്ഥലം",
+         "lang": "ml",
+         "fallback": false
+        },
+        "display": {
+         "id": "Q1419703",
+         "text": "കാസർഗോഡ് ജില്ല",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q1419703"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q139890532#P131"
+       }
+      ],
+      "priority": 0.0
+     }
+    ]
+   },
+   "prose": {
+    "concepts": [
+     "Q1071",
+     "Q7937"
+    ]
+   },
+   "title": {
+    "text": "ഭൂസ്ഥാനം",
+    "lang": "ml",
+    "fallback": false
+   },
+   "prose_text": {
+    "html": "ബന്തിയോടിനെ <a href=\"https://ml.wikipedia.org/wiki/%E0%B4%A7%E0%B5%BC%E0%B4%AE%E0%B5%8D%E0%B4%AE%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%9F%E0%B5%8D%E0%B4%95\">ധർമ്മത്തടുക്കയുമായി</a> ബന്ധിപ്പിക്കുന്ന ഗ്രാമീണ റൂട്ടുകളിലായാണ് കൊക്കച്ചാൽ സ്ഥിതി ചെയ്യുന്നത്.. ഭൂമിശാസ്ത്രപരമായി, ഇത് പുത്തിഗെ, മംഗൽപാടി തദ്ദേശ സ്വയംഭരണ അധികാരപരിധികളുടെ അതിർത്തിയോട് ചേർന്നാണ് സ്ഥിതി ചെയ്യുന്നത്. വടക്കൻ മലബാറിന്റെ സാധാരണ മധ്യപ്രദേശ ഭൂപ്രകൃതിയാണ് ഈ ഭൂപ്രകൃതിയുടെ സവിശേഷത, സീസണൽ അരുവികൾ വലിയ തീരദേശ നദീ സംവിധാനങ്ങളിലേക്ക് ഒഴുകുന്നു.",
+    "lang": "ml",
+    "local": true,
+    "title": "ഭൂമിശാസ്ത്രം",
+    "href": "https://ml.wikipedia.org/wiki/%E0%B4%95%E0%B5%8A%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%BE%E0%B5%BD#ഭൂമിശാസ്ത്രം"
+   },
+   "prose_links": [
+    {
+     "text": "ഭൂമിശാസ്ത്രം",
+     "lang": "ml",
+     "href": "https://ml.wikipedia.org/wiki/%E0%B4%95%E0%B5%8A%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%BE%E0%B5%BD#ഭൂമിശാസ്ത്രം"
+    }
+   ]
+  },
+  {
+   "id": "names",
+   "kind": "facts",
+   "concept": "Q82799",
+   "template": "columns",
+   "slots": {
+    "sheet": [
+     {
+      "primitive": "fact",
+      "pid": "P281",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q139890532-36d5bae9-4d5a-a948-c7c6-dc4c3a8e63bc",
+        "pid": "P281",
+        "string": "671322",
+        "rank": "normal",
+        "provenance": "none",
+        "shown": true,
+        "property": {
+         "id": "P281",
+         "text": "പോസ്റ്റൽ കോഡ്",
+         "lang": "ml",
+         "fallback": false
+        },
+        "display": {
+         "text": "671322"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q139890532#P281"
+       }
+      ],
+      "priority": 0.0,
+      "property": {
+       "id": "P281",
+       "text": "പോസ്റ്റൽ കോഡ്",
+       "lang": "ml",
+       "fallback": false
+      }
+     }
+    ]
+   },
+   "title": {
+    "text": "name",
+    "lang": "en",
+    "fallback": true
+   },
+   "prose_text": null,
+   "prose_links": []
+  },
+  {
+   "id": "evidence",
+   "kind": "evidence",
+   "concept": "Q121769",
+   "template": "sheet",
+   "slots": {
+    "summary": [
+     {
+      "primitive": "provenance",
+      "sourced": 0,
+      "imported": 0,
+      "none": 5,
+      "legend": [
+       {
+        "kind": "sourced",
+        "labels": [
+         {
+          "id": "P248",
+          "text": "ഇവിടെ പറയുന്നു",
+          "lang": "ml",
+          "fallback": false
+         },
+         {
+          "id": "P854",
+          "text": "അവലംബ യൂ.ആർ.എൽ.",
+          "lang": "ml",
+          "fallback": false
+         }
+        ],
+        "count": 0
+       },
+       {
+        "kind": "imported",
+        "labels": [
+         {
+          "id": "P143",
+          "text": "ഇറക്കുമതി സ്രോതസ്",
+          "lang": "ml",
+          "fallback": false
+         }
+        ],
+        "count": 0
+       },
+       {
+        "kind": "none",
+        "labels": [],
+        "count": 5
+       }
+      ],
+      "coverage": {
+       "lang": "ml",
+       "have": 9,
+       "total": 9
+      }
+     }
+    ],
+    "sheet": [],
+    "projects": [
+     {
+      "primitive": "sitelinks",
+      "families": [
+       {
+        "name": "wikipedia",
+        "count": 3,
+        "local": true
+       }
+      ]
+     }
+    ],
+    "identifiers": [
+     {
+      "primitive": "identifiers",
+      "values": []
+     }
+    ]
+   },
+   "title": {
+    "text": "അവലംബം",
+    "lang": "ml",
+    "fallback": false
+   },
+   "prose_text": null,
+   "prose_links": []
+  }
+ ],
+ "unmatched_sections": [
+  {
+   "text": "വിദ്യാഭ്യാസവും സ്ഥാപനങ്ങളും",
+   "lang": "ml",
+   "href": "https://ml.wikipedia.org/wiki/%E0%B4%95%E0%B5%8A%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%BE%E0%B5%BD#വിദ്യാഭ്യാസവും_സ്ഥാപനങ്ങളും"
+  },
+  {
+   "text": "ഗതാഗതം",
+   "lang": "ml",
+   "href": "https://ml.wikipedia.org/wiki/%E0%B4%95%E0%B5%8A%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%BE%E0%B5%BD#ഗതാഗതം"
+  },
+  {
+   "text": "ഇതും കാണുക",
+   "lang": "ml",
+   "href": "https://ml.wikipedia.org/wiki/%E0%B4%95%E0%B5%8A%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%BE%E0%B5%BD#ഇതും_കാണുക"
+  },
+  {
+   "text": "പരാമർശങ്ങൾ",
+   "lang": "ml",
+   "href": "https://ml.wikipedia.org/wiki/%E0%B4%95%E0%B5%8A%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%BE%E0%B5%BD#പരാമർശങ്ങൾ"
+  }
+ ]
+}

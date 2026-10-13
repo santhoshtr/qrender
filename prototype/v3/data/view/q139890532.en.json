@@ -1,0 +1,394 @@
+{
+ "schema": "view/0.1",
+ "composition": "composition/0.2",
+ "design": "design/0.2",
+ "qid": "Q139890532",
+ "lang": "en",
+ "dir": "ltr",
+ "page_title": "Kokkachal",
+ "provenance_labels": {
+  "sourced": {
+   "id": "P248",
+   "text": "stated in",
+   "lang": "en",
+   "fallback": false
+  },
+  "imported": {
+   "id": "P143",
+   "text": "imported from Wikimedia project",
+   "lang": "en",
+   "fallback": false
+  }
+ },
+ "spreads": [
+  {
+   "id": "identity",
+   "kind": "identity",
+   "concept": null,
+   "template": "identity",
+   "slots": {
+    "head": {
+     "primitive": "title",
+     "item": "Q139890532",
+     "title": {
+      "id": "Q139890532",
+      "text": "Kokkachal",
+      "lang": "en",
+      "fallback": false
+     },
+     "description": {
+      "text": "Hamlet in Kasaragod district, Kerala, India",
+      "lang": "en",
+      "fallback": false
+     }
+    },
+    "lead": {
+     "primitive": "prose",
+     "source": "lead",
+     "languages": 3,
+     "article": {
+      "lang": "en",
+      "local": true,
+      "host": "en.wikipedia.org",
+      "url": "https://en.wikipedia.org/wiki/Kokkachal",
+      "paragraphs": [
+       "<b>Kokkachal</b> (കൊക്കച്ചാൽ, <a href=\"https://en.wikipedia.org/wiki/Help:IPA/Malayalam\">&#91;ko̞kːɐt͡ʃːaːl&#93;</a>; also spelled <b>Kokkechal</b>) is a small locality and settlement situated in the <a href=\"https://en.wikipedia.org/wiki/Kasaragod_district\">Kasaragod district</a> in the Indian state of <a href=\"https://en.wikipedia.org/wiki/Kerala\">Kerala</a>. It falls under the administration of the <a href=\"https://en.wikipedia.org/wiki/Manjeshwaram_taluk\">Manjeshwaram taluk</a> near the northern border of the state."
+      ],
+      "more": []
+     }
+    },
+    "kind": {
+     "primitive": "kind",
+     "chain": [
+      {
+       "pid": "P31",
+       "values": [
+        {
+         "statement": "Q139890532-6e4e2314-426f-970e-f527-2a2d233539c0",
+         "pid": "P31",
+         "item": "Q532",
+         "rank": "normal",
+         "provenance": "none",
+         "image": null,
+         "class": true,
+         "shown": true,
+         "property": {
+          "id": "P31",
+          "text": "instance of",
+          "lang": "en",
+          "fallback": false
+         },
+         "display": {
+          "id": "Q532",
+          "text": "village",
+          "lang": "en",
+          "fallback": false,
+          "href": "https://www.wikidata.org/wiki/Q532"
+         },
+         "edit": "https://www.wikidata.org/wiki/Q139890532#P31"
+        }
+       ],
+       "property": {
+        "id": "P31",
+        "text": "instance of",
+        "lang": "en",
+        "fallback": false
+       }
+      },
+      {
+       "pid": "P17",
+       "values": [
+        {
+         "statement": "Q139890532-42ec4f16-4b40-d4b3-6860-a45f174953d2",
+         "pid": "P17",
+         "item": "Q668",
+         "rank": "normal",
+         "provenance": "none",
+         "image": {
+          "file": "India-locator-map-blank.svg",
+          "kind": "drawing",
+          "aspect": 0.857,
+          "megapixels": 2.58,
+          "credit": {
+           "artist": "",
+           "license": "CC BY-SA 3.0"
+          }
+         },
+         "property": {
+          "id": "P17",
+          "text": "country",
+          "lang": "en",
+          "fallback": false
+         },
+         "display": {
+          "id": "Q668",
+          "text": "India",
+          "lang": "en",
+          "fallback": false,
+          "href": "https://www.wikidata.org/wiki/Q668"
+         },
+         "edit": "https://www.wikidata.org/wiki/Q139890532#P17"
+        }
+       ],
+       "property": {
+        "id": "P17",
+        "text": "country",
+        "lang": "en",
+        "fallback": false
+       }
+      }
+     ]
+    }
+   },
+   "title": null,
+   "prose_text": null,
+   "prose_links": []
+  },
+  {
+   "id": "location",
+   "kind": "facts",
+   "concept": "Q2221906",
+   "template": "hero-plus-stack",
+   "slots": {
+    "hero": {
+     "primitive": "map",
+     "statement": "Q139890532-8b12df07-47e4-b4f5-52d1-4f57a49d0909",
+     "pid": "P625",
+     "lat": 12.656889,
+     "lon": 74.963924,
+     "globe": "Q2",
+     "rank": "normal",
+     "provenance": "none",
+     "property": {
+      "id": "P625",
+      "text": "coordinate location",
+      "lang": "en",
+      "fallback": false
+     },
+     "edit": "https://www.wikidata.org/wiki/Q139890532#P625"
+    },
+    "gallery": [
+     {
+      "primitive": "network",
+      "role": "gallery",
+      "values": [
+       {
+        "statement": "Q139890532-f3afeba0-427d-dfb4-a02a-1e58a98af09a",
+        "pid": "P131",
+        "item": "Q1419703",
+        "rank": "normal",
+        "provenance": "none",
+        "image": {
+         "file": "Kasaragod-map.svg",
+         "kind": "drawing",
+         "aspect": 0.6922,
+         "megapixels": 5.27,
+         "credit": {
+          "artist": "Rajeshodayanchal at ml.wikipedia",
+          "license": "CC BY-SA 3.0"
+         }
+        },
+        "priority": 0.0,
+        "property": {
+         "id": "P131",
+         "text": "located in the administrative territorial entity",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "id": "Q1419703",
+         "text": "Kasaragod district",
+         "lang": "en",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q1419703"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q139890532#P131"
+       }
+      ],
+      "priority": 0.0
+     }
+    ]
+   },
+   "prose": {
+    "concepts": [
+     "Q1071",
+     "Q7937"
+    ]
+   },
+   "title": {
+    "text": "geographic location",
+    "lang": "en",
+    "fallback": false
+   },
+   "prose_text": {
+    "html": "Kokkachal is situated along the rural routes connecting <a href=\"https://en.wikipedia.org/wiki/Bandiyod\">Bandiyod</a> (approximately 6.5&#160;km away) and Dharmathadukka. Geographically, it sits close to the border of the Puthige and Mangalpady local government jurisdictions. The landscape is characterized by the typical midland topography of Northern Malabar, with seasonal streams feeding into larger coastal river systems.",
+    "lang": "en",
+    "local": true,
+    "title": "Geography",
+    "href": "https://en.wikipedia.org/wiki/Kokkachal#Geography"
+   },
+   "prose_links": [
+    {
+     "text": "Geography",
+     "lang": "en",
+     "href": "https://en.wikipedia.org/wiki/Kokkachal#Geography"
+    }
+   ]
+  },
+  {
+   "id": "names",
+   "kind": "facts",
+   "concept": "Q82799",
+   "template": "columns",
+   "slots": {
+    "sheet": [
+     {
+      "primitive": "fact",
+      "pid": "P281",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q139890532-36d5bae9-4d5a-a948-c7c6-dc4c3a8e63bc",
+        "pid": "P281",
+        "string": "671322",
+        "rank": "normal",
+        "provenance": "none",
+        "shown": true,
+        "property": {
+         "id": "P281",
+         "text": "postal code",
+         "lang": "en",
+         "fallback": false
+        },
+        "display": {
+         "text": "671322"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q139890532#P281"
+       }
+      ],
+      "priority": 0.0,
+      "property": {
+       "id": "P281",
+       "text": "postal code",
+       "lang": "en",
+       "fallback": false
+      }
+     }
+    ]
+   },
+   "title": {
+    "text": "name",
+    "lang": "en",
+    "fallback": false
+   },
+   "prose_text": null,
+   "prose_links": []
+  },
+  {
+   "id": "evidence",
+   "kind": "evidence",
+   "concept": "Q121769",
+   "template": "sheet",
+   "slots": {
+    "summary": [
+     {
+      "primitive": "provenance",
+      "sourced": 0,
+      "imported": 0,
+      "none": 5,
+      "legend": [
+       {
+        "kind": "sourced",
+        "labels": [
+         {
+          "id": "P248",
+          "text": "stated in",
+          "lang": "en",
+          "fallback": false
+         },
+         {
+          "id": "P854",
+          "text": "reference URL",
+          "lang": "en",
+          "fallback": false
+         }
+        ],
+        "count": 0
+       },
+       {
+        "kind": "imported",
+        "labels": [
+         {
+          "id": "P143",
+          "text": "imported from Wikimedia project",
+          "lang": "en",
+          "fallback": false
+         }
+        ],
+        "count": 0
+       },
+       {
+        "kind": "none",
+        "labels": [],
+        "count": 5
+       }
+      ],
+      "coverage": {
+       "lang": "en",
+       "have": 9,
+       "total": 9
+      }
+     }
+    ],
+    "sheet": [],
+    "projects": [
+     {
+      "primitive": "sitelinks",
+      "families": [
+       {
+        "name": "wikipedia",
+        "count": 3,
+        "local": true
+       }
+      ]
+     }
+    ],
+    "identifiers": [
+     {
+      "primitive": "identifiers",
+      "values": []
+     }
+    ]
+   },
+   "title": {
+    "text": "reference",
+    "lang": "en",
+    "fallback": false
+   },
+   "prose_text": null,
+   "prose_links": []
+  }
+ ],
+ "unmatched_sections": [
+  {
+   "text": "Education and Institutions",
+   "lang": "en",
+   "href": "https://en.wikipedia.org/wiki/Kokkachal#Education_and_Institutions"
+  },
+  {
+   "text": "Transport",
+   "lang": "en",
+   "href": "https://en.wikipedia.org/wiki/Kokkachal#Transport"
+  },
+  {
+   "text": "See also",
+   "lang": "en",
+   "href": "https://en.wikipedia.org/wiki/Kokkachal#See_also"
+  },
+  {
+   "text": "References",
+   "lang": "en",
+   "href": "https://en.wikipedia.org/wiki/Kokkachal#References"
+  }
+ ]
+}
