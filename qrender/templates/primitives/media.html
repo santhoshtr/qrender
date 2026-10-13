@@ -5,17 +5,31 @@
 {%- let role = b.role.name() -%}
 {%- let edit = ui.edit(b.statement.pid) -%}
 {%- if kind == "audio" -%}
-    <div class="block"><h3>{{ ui.text(ui.property(b.statement.pid), true)|safe }}{% call m::prov(ui, b.statement.provenance) %}{% endcall %}{% call m::edit(ui, edit) %}{% endcall %}</h3><audio controls preload="none" src="{{ ui.file(file) }}"></audio>
-        {%- let note = ui.qualifiers(b.statement.qualifiers.as_slice()) -%}
-        {%- if !note.is_empty() %}<span class="note">{{ ui.note(note.as_slice())|safe }}</span>{% endif -%}
+    <div class="block">
+      <h3>{{ ui.text(ui.property(b.statement.pid), true)|safe }}{% call m::prov(ui, b.statement.provenance) %}{% endcall %}{% call m::edit(ui, edit) %}{% endcall %}</h3>
+      <audio controls preload="none" src="{{ ui.file(file) }}">
+      </audio>
+      {%- let note = ui.qualifiers(b.statement.qualifiers.as_slice()) -%}
+      {%- if !note.is_empty() %}
+        <span class="note">{{ ui.note(note.as_slice())|safe }}</span>
+      {% endif -%}
     </div>
 {%- else if kind == "video" -%}
-    <figure class="m k-video" style="--a:{{ ui.aspect(b.picture.aspect) }}"><video controls
-       preload="none"
-       poster="{{ ui.src(file, 960) }}"
-       src="{% if let Some(url) = b.picture.url %}{{ url }}{% else %}{{ ui.file(file) }}{% endif %}"></video><figcaption><span>{{ ui.text(ui.property(b.statement.pid), true)|safe }}</span>{% call m::prov(ui, b.statement.provenance) %}{% endcall %}
-        {%- if let Some(bytes) = b.picture.bytes %}<span class="size">{{ ui.megabytes(bytes) }}</span>{% endif -%}
-    </figcaption><span class="tools">{{ ui.credit(&b.picture.credit)|safe }}{% call m::edit(ui, edit) %}{% endcall %}</span></figure>
+    <figure class="m k-video" style="--a:{{ ui.aspect(b.picture.aspect) }}">
+      <video controls
+        preload="none"
+        poster="{{ ui.src(file, 960) }}"
+        src="{% if let Some(url) = b.picture.url %}{{ url }}{% else %}{{ ui.file(file) }}{% endif %}">
+      </video>
+      <figcaption>
+        <span>{{ ui.text(ui.property(b.statement.pid), true)|safe }}</span>
+        {% call m::prov(ui, b.statement.provenance) %}{% endcall %}
+        {%- if let Some(bytes) = b.picture.bytes %}
+          <span class="size">{{ ui.megabytes(bytes) }}</span>
+        {% endif -%}
+      </figcaption>
+      <span class="tools">{{ ui.credit(&b.picture.credit)|safe }}{% call m::edit(ui, edit) %}{% endcall %}</span>
+    </figure>
 {%- else -%}
     <figure class="m k-{{ kind }}" style="--a:{{ ui.aspect(b.picture.aspect) }}">
         <a href="{{ ui.commons_page(file) }}">
@@ -28,11 +42,14 @@
         {%- if role != "identity" && role != "banner" -%}
             <figcaption>
                 <span>{{ ui.text(ui.property(b.statement.pid), true)|safe }}</span>
-                {%- if !b.picture.assessed.is_empty() %}<span class="assessed"
-      title="{{ b.picture.assessed|join(", ") }}">★</span>{% endif -%}
+                {%- if !b.picture.assessed.is_empty() %}
+                <span class="assessed"
+                  title="{{ b.picture.assessed|join(", ") }}">★</span>
+                {% endif -%}
                 {% call m::prov(ui, b.statement.provenance) %}
                 {% endcall %}
             </figcaption>
         {%- endif -%}
-        <span class="tools">{{ ui.credit(&b.picture.credit)|safe }}{% call m::edit(ui, edit) %}{% endcall %}</span></figure>
+        <span class="tools">{{ ui.credit(&b.picture.credit)|safe }}{% call m::edit(ui, edit) %}{% endcall %}</span>
+    </figure>
 {%- endif -%}
