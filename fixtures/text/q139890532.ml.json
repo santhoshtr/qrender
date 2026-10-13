@@ -1,0 +1,463 @@
+{
+  "schema": "text/0.1",
+  "lang": "ml",
+  "labels": {
+    "P131": {
+      "label": {
+        "text": "സ്ഥിതിചെയ്യുന്ന ഭരണസ്ഥലം",
+        "lang": "ml"
+      },
+      "description": {
+        "text": "ഇനിപ്പറയുന്ന അഡ്മിനിസ്ട്രേറ്റീവ് യൂണിറ്റിന്റെ പ്രദേശത്താണ് ഈ ഇനം സ്ഥിതിചെയ്യുന്നത്. അഡ്മിനിസ്ട്രേറ്റീവ് അല്ലാത്ത സ്ഥലങ്ങൾക്കും  ഇവന്റുകൾക്കും P276 ഉപയോഗിക്കുക. ഇനം അഡ്മിനിസ്ട്രേറ്റീവ് എന്റിറ്റിയിൽ ഭാഗികമായി മാത്രം വീണാൽ P1382 ​​ഉപയോഗിക്കുക.",
+        "lang": "ml"
+      }
+    },
+    "P143": {
+      "label": {
+        "text": "ഇറക്കുമതി സ്രോതസ്",
+        "lang": "ml"
+      },
+      "description": {
+        "text": "source of this claim's value; used in references section by bots or humans importing data from Wikimedia projects",
+        "lang": "en"
+      }
+    },
+    "P17": {
+      "label": {
+        "text": "രാജ്യം",
+        "lang": "ml"
+      },
+      "description": {
+        "text": "ഈ ഇനത്തിന്റെ പരമാധികാര രാഷ്ട്രം (മനുഷ്യർക്കായുള്ള ഇനങ്ങളിൽ ഉപയോഗിക്കാൻ പാടില്ല)",
+        "lang": "ml"
+      }
+    },
+    "P248": {
+      "label": {
+        "text": "ഇവിടെ പറയുന്നു",
+        "lang": "ml"
+      },
+      "description": {
+        "text": "അവലംബത്തിനായുള്ള ഫീൽഡുകളിൽ ഉപയോഗിക്കുന്നു. എവിടെയാണ് അവലംബം നൽകിയിരിക്കുന്നത് എന്നുപറയുന്നതിന്",
+        "lang": "ml"
+      }
+    },
+    "P281": {
+      "label": {
+        "text": "പോസ്റ്റൽ കോഡ്",
+        "lang": "ml"
+      },
+      "description": {
+        "text": "നിശ്ചിത സ്ഥലത്തെ തപാൽ ഓഫീസ് നമ്പർ കാണിക്കുന്നു",
+        "lang": "ml"
+      }
+    },
+    "P31": {
+      "label": {
+        "text": "തരം",
+        "lang": "ml"
+      },
+      "description": {
+        "text": "ഈ വിഷയം ഒരു പ്രത്യേക ഉദാഹരണവും അംഗവുമായ തരം/ക്ലാസ്/വർഗ്ഗം",
+        "lang": "ml"
+      }
+    },
+    "P3629": {
+      "label": {
+        "text": "age of subject at event",
+        "lang": "en"
+      },
+      "description": {
+        "text": "the age of the subject according to the cited source at the time of an event. Used as a qualifier of significant event property",
+        "lang": "en"
+      }
+    },
+    "P625": {
+      "label": {
+        "text": "ഭൗമനിർദ്ദേശാങ്കങ്ങൾ",
+        "lang": "ml"
+      },
+      "description": {
+        "text": "ഭൂമിയിലെ സ്ഥാനം",
+        "lang": "ml"
+      }
+    },
+    "P854": {
+      "label": {
+        "text": "അവലംബ യൂ.ആർ.എൽ.",
+        "lang": "ml"
+      },
+      "description": {
+        "text": "should be used for Internet URLs as references. Use \"Wikimedia import URL\" (P4656) for imports from Wikimedia sites",
+        "lang": "en"
+      }
+    },
+    "Q139890532": {
+      "label": {
+        "text": "കൊക്കച്ചാൽ",
+        "lang": "ml"
+      },
+      "description": {
+        "text": "കേരളത്തിലെ കാസർഗോഡ് ജില്ലയിലെ പ്രദേശം, ഇന്ത്യ",
+        "lang": "ml"
+      }
+    },
+    "Q1419703": {
+      "label": {
+        "text": "കാസർഗോഡ് ജില്ല",
+        "lang": "ml"
+      },
+      "description": {
+        "text": "കേരളത്തിലെ ജില്ല",
+        "lang": "ml"
+      }
+    },
+    "Q532": {
+      "label": {
+        "text": "ഗ്രാമം",
+        "lang": "ml"
+      },
+      "description": {
+        "text": "small clustered human settlement smaller than a town",
+        "lang": "en"
+      }
+    },
+    "Q668": {
+      "label": {
+        "text": "ഇന്ത്യ",
+        "lang": "ml"
+      },
+      "description": {
+        "text": "തെക്കനേഷ്യയിലെ ഒരു രാജ്യം",
+        "lang": "ml"
+      }
+    }
+  },
+  "concepts": {
+    "Q1071": {
+      "label": {
+        "text": "ഭൂമിശാസ്ത്രം",
+        "lang": "ml"
+      },
+      "names": [
+        "Geography",
+        "ഭൂമിശാസ്ത്രം"
+      ]
+    },
+    "Q11042": {
+      "label": {
+        "text": "സംസ്കാരം",
+        "lang": "ml"
+      },
+      "names": [
+        "സംസ്കാരം"
+      ]
+    },
+    "Q115668531": {
+      "label": {
+        "text": "film release",
+        "lang": "en"
+      },
+      "names": []
+    },
+    "Q121769": {
+      "label": {
+        "text": "അവലംബം",
+        "lang": "ml"
+      },
+      "names": [
+        "അവലംബം"
+      ]
+    },
+    "Q12737077": {
+      "label": {
+        "text": "തൊഴിൽ",
+        "lang": "ml"
+      },
+      "names": [
+        "അധിനിവേശം",
+        "തൊഴില്",
+        "തൊഴിൽ"
+      ]
+    },
+    "Q131765": {
+      "label": {
+        "text": "മൾട്ടിമീഡിയ",
+        "lang": "ml"
+      },
+      "names": [
+        "മൾട്ടിമീഡിയ"
+      ]
+    },
+    "Q14775294": {
+      "label": {
+        "text": "ഫിലിം സർട്ടിഫിക്കേഷൻ",
+        "lang": "ml"
+      },
+      "names": [
+        "ഫിലിം സർട്ടിഫിക്കേഷൻ"
+      ]
+    },
+    "Q15267437": {
+      "label": {
+        "text": "cast",
+        "lang": "en"
+      },
+      "names": []
+    },
+    "Q159810": {
+      "label": {
+        "text": "സമ്പദ്ഘടന",
+        "lang": "ml"
+      },
+      "names": [
+        "സമ്പദ്ഘടന",
+        "സമ്പദ്‌വ്യവസ്ഥ"
+      ]
+    },
+    "Q1758354": {
+      "label": {
+        "text": "plot",
+        "lang": "en"
+      },
+      "names": []
+    },
+    "Q184711": {
+      "label": {
+        "text": "സഹോദര നഗരം",
+        "lang": "ml"
+      },
+      "names": [
+        "സഹോദര നഗരം"
+      ]
+    },
+    "Q2221906": {
+      "label": {
+        "text": "ഭൂസ്ഥാനം",
+        "lang": "ml"
+      },
+      "names": [
+        "ഭൂസ്ഥാനം"
+      ]
+    },
+    "Q309": {
+      "label": {
+        "text": "ചരിത്രം",
+        "lang": "ml"
+      },
+      "names": [
+        "ചരിത്രം"
+      ]
+    },
+    "Q36279": {
+      "label": {
+        "text": "ജീവചരിത്രം",
+        "lang": "ml"
+      },
+      "names": [
+        "Biography",
+        "ജീവചരിത്രം",
+        "ജീവിതരേഖ"
+      ]
+    },
+    "Q37732": {
+      "label": {
+        "text": "ജനസംഖ്യാപഠനം",
+        "lang": "ml"
+      },
+      "names": [
+        "Demography",
+        "ജനസംഖ്യാപഠനം",
+        "ഡെമോഗ്രഫി"
+      ]
+    },
+    "Q4482": {
+      "label": {
+        "text": "film criticism",
+        "lang": "en"
+      },
+      "names": []
+    },
+    "Q506702": {
+      "label": {
+        "text": "film crew",
+        "lang": "en"
+      },
+      "names": []
+    },
+    "Q618779": {
+      "label": {
+        "text": "പുരസ്കാരം",
+        "lang": "ml"
+      },
+      "names": [
+        "Award",
+        "അവാർഡ്",
+        "പുരസ്കാരം"
+      ]
+    },
+    "Q7163": {
+      "label": {
+        "text": "രാഷ്ട്രതന്ത്രം",
+        "lang": "ml"
+      },
+      "names": [
+        "രാഷ്ട്രതന്ത്രം"
+      ]
+    },
+    "Q7188": {
+      "label": {
+        "text": "സർക്കാർ",
+        "lang": "ml"
+      },
+      "names": [
+        "ഗവൺമെന്റ്",
+        "ഭരണകൂടം",
+        "സർക്കാർ"
+      ]
+    },
+    "Q7937": {
+      "label": {
+        "text": "അന്തരീക്ഷസ്ഥിതി",
+        "lang": "ml"
+      },
+      "names": [
+        "അന്തരീക്ഷസ്ഥിതി"
+      ]
+    },
+    "Q82799": {
+      "label": {
+        "text": "name",
+        "lang": "en"
+      },
+      "names": []
+    },
+    "Q8434": {
+      "label": {
+        "text": "വിദ്യാഭ്യാസം",
+        "lang": "ml"
+      },
+      "names": [
+        "വിദ്യാഭ്യാസം"
+      ]
+    },
+    "Q8436": {
+      "label": {
+        "text": "കുടുംബം",
+        "lang": "ml"
+      },
+      "names": [
+        "കുടുംബം"
+      ]
+    },
+    "Q930933": {
+      "label": {
+        "text": "relation",
+        "lang": "en"
+      },
+      "names": []
+    },
+    "Q932586": {
+      "label": {
+        "text": "സിനിമാ നിർമ്മാണം",
+        "lang": "ml"
+      },
+      "names": [
+        "സിനിമാ നിർമ്മാണം"
+      ]
+    }
+  },
+  "article": {
+    "title": "കൊക്കച്ചാൽ",
+    "paragraphs": [
+      "ഇന്ത്യൻ സംസ്ഥാനമായ കേരളത്തിലെ <a href=\"/wiki/%E0%B4%95%E0%B4%BE%E0%B4%B8%E0%B5%BC%E0%B4%97%E0%B5%8B%E0%B4%A1%E0%B5%8D_%E0%B4%9C%E0%B4%BF%E0%B4%B2%E0%B5%8D%E0%B4%B2\" title=\"കാസർഗോഡ് ജില്ല\">കാസർഗോഡ് ജില്ലയിൽ</a> സ്ഥിതിചെയ്യുന്ന ഒരു ചെറിയ പ്രദേശവും വാസസ്ഥലവുമാണ് <b>കൊക്കച്ചാൽ</b>. സംസ്ഥാനത്തിന്റെ വടക്കൻ അതിർത്തിക്കടുത്തുള്ള മഞ്ചേശ്വരം താലൂക്കിന്റെ ഭരണത്തിൻ കീഴിലാണ് ഇത് സ്ഥിതിചെയ്യുന്നത്.\n"
+    ],
+    "links": {
+      "കാസർഗോഡ് ജില്ല": "Q1419703",
+      "ധർമ്മത്തട്ക": "Q5269340"
+    },
+    "sections": [
+      {
+        "title": "ഭൂമിശാസ്ത്രം",
+        "anchor": "ഭൂമിശാസ്ത്രം",
+        "index": "1"
+      },
+      {
+        "title": "വിദ്യാഭ്യാസവും സ്ഥാപനങ്ങളും",
+        "anchor": "വിദ്യാഭ്യാസവും_സ്ഥാപനങ്ങളും",
+        "index": "2"
+      },
+      {
+        "title": "ഗതാഗതം",
+        "anchor": "ഗതാഗതം",
+        "index": "3"
+      },
+      {
+        "title": "ഇതും കാണുക",
+        "anchor": "ഇതും_കാണുക",
+        "index": "4"
+      },
+      {
+        "title": "പരാമർശങ്ങൾ",
+        "anchor": "പരാമർശങ്ങൾ",
+        "index": "5"
+      }
+    ],
+    "concept_sections": {
+      "Q1071": [
+        "ഭൂമിശാസ്ത്രം"
+      ]
+    },
+    "section_text": {
+      "ഭൂമിശാസ്ത്രം": "<a href=\"/w/index.php?title=%E0%B4%AC%E0%B4%A8%E0%B5%8D%E0%B4%A4%E0%B4%BF%E0%B4%AF%E0%B5%8B%E0%B4%9F%E0%B5%8D&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"ബന്തിയോട് (ഇതുവരെ എഴുതപ്പെട്ടിട്ടില്ല)\">ബന്തിയോടിനെ</a> <a href=\"/wiki/%E0%B4%A7%E0%B5%BC%E0%B4%AE%E0%B5%8D%E0%B4%AE%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%9F%E0%B5%8D%E0%B4%95\" title=\"ധർമ്മത്തട്ക\">ധർമ്മത്തടുക്കയുമായി</a> ബന്ധിപ്പിക്കുന്ന ഗ്രാമീണ റൂട്ടുകളിലായാണ് കൊക്കച്ചാൽ സ്ഥിതി ചെയ്യുന്നത്.. ഭൂമിശാസ്ത്രപരമായി, ഇത് പുത്തിഗെ, മംഗൽപാടി തദ്ദേശ സ്വയംഭരണ അധികാരപരിധികളുടെ അതിർത്തിയോട് ചേർന്നാണ് സ്ഥിതി ചെയ്യുന്നത്. വടക്കൻ മലബാറിന്റെ സാധാരണ മധ്യപ്രദേശ ഭൂപ്രകൃതിയാണ് ഈ ഭൂപ്രകൃതിയുടെ സവിശേഷത, സീസണൽ അരുവികൾ വലിയ തീരദേശ നദീ സംവിധാനങ്ങളിലേക്ക് ഒഴുകുന്നു.\n"
+    }
+  },
+  "fallback_article": {
+    "title": "Kokkachal",
+    "paragraphs": [
+      "<b>Kokkachal</b> (<span title=\"Malayalam-language text\"><span lang=\"ml\">കൊക്കച്ചാൽ</span></span>, <span class=\"IPA nowrap\" lang=\"ml-Latn-fonipa\"><a href=\"/wiki/Help:IPA/Malayalam\" title=\"Help:IPA/Malayalam\">&#91;ko̞kːɐt͡ʃːaːl&#93;</a></span>; also spelled <b>Kokkechal</b>) is a small locality and settlement situated in the <a href=\"/wiki/Kasaragod_district\" title=\"Kasaragod district\">Kasaragod district</a> in the Indian state of <a href=\"/wiki/Kerala\" title=\"Kerala\">Kerala</a>. It falls under the administration of the <a href=\"/wiki/Manjeshwaram_taluk\" title=\"Manjeshwaram taluk\">Manjeshwaram taluk</a> near the northern border of the state.\n"
+    ],
+    "links": {
+      "Kerala": "Q1186",
+      "Kasaragod district": "Q1419703",
+      "Manjeshwaram taluk": "Q31701629",
+      "Bandiyod": "Q24942047"
+    },
+    "sections": [
+      {
+        "title": "Geography",
+        "anchor": "Geography",
+        "index": "1"
+      },
+      {
+        "title": "Education and Institutions",
+        "anchor": "Education_and_Institutions",
+        "index": "2"
+      },
+      {
+        "title": "Transport",
+        "anchor": "Transport",
+        "index": "3"
+      },
+      {
+        "title": "See also",
+        "anchor": "See_also",
+        "index": "4"
+      },
+      {
+        "title": "References",
+        "anchor": "References",
+        "index": "5"
+      }
+    ],
+    "concept_sections": {
+      "Q1071": [
+        "Geography"
+      ]
+    },
+    "section_text": {
+      "Geography": "Kokkachal is situated along the rural routes connecting <a href=\"/wiki/Bandiyod\" title=\"Bandiyod\">Bandiyod</a> (approximately 6.5&#160;km away) and Dharmathadukka. Geographically, it sits close to the border of the Puthige and Mangalpady local government jurisdictions. The landscape is characterized by the typical midland topography of Northern Malabar, with seasonal streams feeding into larger coastal river systems.\n"
+    }
+  },
+  "page_images": {}
+}

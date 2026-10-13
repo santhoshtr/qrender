@@ -1,0 +1,5668 @@
+{
+  "schema": "text/0.1",
+  "lang": "tcy",
+  "labels": {
+    "P1001": {
+      "label": {
+        "text": "applies to jurisdiction",
+        "lang": "en"
+      },
+      "description": {
+        "text": "the item (institution, law, public office, public register, etc) or statement belongs to or has power over or applies to the value (a territorial jurisdiction: a country, state, municipality, etc)",
+        "lang": "en"
+      }
+    },
+    "P10021": {
+      "label": {
+        "text": "UAE University Libraries ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person or an organization in the authority file of United Arab Emirates University Libraries through VIAF",
+        "lang": "en"
+      }
+    },
+    "P1003": {
+      "label": {
+        "text": "National Library of Romania ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for authority control used at the National Library of Romania",
+        "lang": "en"
+      }
+    },
+    "P1005": {
+      "label": {
+        "text": "National Library of Portugal ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an author in the Biblioteca Nacional de Portugal",
+        "lang": "en"
+      }
+    },
+    "P1006": {
+      "label": {
+        "text": "Nationale Thesaurus voor Auteursnamen ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for person names (not: works nor organisations) from the Dutch National Thesaurus for Author names (which also contains non-authors)",
+        "lang": "en"
+      }
+    },
+    "P10069": {
+      "label": {
+        "text": "Tabakalera ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an authority in the catalogue of Tabakalera, contemporary culture centre in Donostia",
+        "lang": "en"
+      }
+    },
+    "P10141": {
+      "label": {
+        "text": "Academy of Athens authority ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an authority in the catalogue of the Academy of Athens Library",
+        "lang": "en"
+      }
+    },
+    "P1015": {
+      "label": {
+        "text": "NORAF ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "Norwegian Authority File: Persons and Corporate Bodies",
+        "lang": "en"
+      }
+    },
+    "P1017": {
+      "label": {
+        "text": "Vatican Library ID (former scheme)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "historical identifier for authority control used at the Vatican Library. Format: \"ADV\" + 8 digits. Use P8034 for newer IDs.",
+        "lang": "en"
+      }
+    },
+    "P102": {
+      "label": {
+        "text": "member of political party",
+        "lang": "en"
+      },
+      "description": {
+        "text": "the political party of which a person is or has been a member or otherwise affiliated",
+        "lang": "en"
+      }
+    },
+    "P10227": {
+      "label": {
+        "text": "National Library of Ireland ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of a National Library of Ireland authority record",
+        "lang": "en"
+      }
+    },
+    "P10242": {
+      "label": {
+        "text": "Lur Encyclopedic Dictionary ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an entry in the Lur Hiztegi Entziklopedikoa (Lur Encyclopedic Dictionary)",
+        "lang": "en"
+      }
+    },
+    "P1027": {
+      "label": {
+        "text": "conferred by",
+        "lang": "en"
+      },
+      "description": {
+        "text": "person or organization who grants an award, certification, grant, or role",
+        "lang": "en"
+      }
+    },
+    "P10297": {
+      "label": {
+        "text": "Google Arts & Culture entity ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person, event, place, or other entity on the Google Arts & Culture website",
+        "lang": "en"
+      }
+    },
+    "P103": {
+      "label": {
+        "text": "native language",
+        "lang": "en"
+      },
+      "description": {
+        "text": "language or languages a person (or group) has learned from early childhood",
+        "lang": "en"
+      }
+    },
+    "P10302": {
+      "label": {
+        "text": "Film.ru person ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for people in the Russian film database on film.ru",
+        "lang": "en"
+      }
+    },
+    "P10328": {
+      "label": {
+        "text": "ICPSR Personal Names Authority List ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person in the ICPSR Personal Names Authority List",
+        "lang": "en"
+      }
+    },
+    "P1038": {
+      "label": {
+        "text": "relative",
+        "lang": "en"
+      },
+      "description": {
+        "text": "family member (qualify with \"kinship to subject\", P1039; for direct family member please use specific property)",
+        "lang": "en"
+      }
+    },
+    "P10387": {
+      "label": {
+        "text": "Databazeknih.cz author ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "numeric ID of author in Databáze knih",
+        "lang": "en"
+      }
+    },
+    "P1039": {
+      "label": {
+        "text": "kinship to subject",
+        "lang": "en"
+      },
+      "description": {
+        "text": "qualifier of \"relative\" (P1038) to indicate less usual family relationships (ancestor, son-in-law, adoptions, etc); indicate how the qualificator item is related to the main item",
+        "lang": "en"
+      }
+    },
+    "P10400": {
+      "label": {
+        "text": "CBDB.cz author ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "numeric ID of author in Československá bibliografická databáze",
+        "lang": "en"
+      }
+    },
+    "P1048": {
+      "label": {
+        "text": "NCL ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for authority control issued by the National Central Library in Taiwan",
+        "lang": "en"
+      }
+    },
+    "P10527": {
+      "label": {
+        "text": "documentation files at",
+        "lang": "en"
+      },
+      "description": {
+        "text": "institution that holds documentation files about the subject",
+        "lang": "en"
+      }
+    },
+    "P10553": {
+      "label": {
+        "text": "IxTheo",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier for a person or an organization in the Index Theologicus (IxTheo)",
+        "lang": "en"
+      }
+    },
+    "P106": {
+      "label": {
+        "text": "ಬೇಲೆ",
+        "lang": "tcy"
+      },
+      "description": {
+        "text": "occupation of a person. See also \"field of work\" (Property:P101), \"position held\" (Property:P39). Not for groups of people. There, use \"field of work\" (Property:P101), \"industry\" (Property:P452), \"members have occupation\" (Property:P3989).",
+        "lang": "en"
+      }
+    },
+    "P10608": {
+      "label": {
+        "text": "FID performing arts ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "Specialised Information Service Performing Arts",
+        "lang": "en"
+      }
+    },
+    "P10632": {
+      "label": {
+        "text": "OpenSanctions ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of persons, companies, luxury vessels of political, criminal, or economic interest at opensanctions.org",
+        "lang": "en"
+      }
+    },
+    "P10660": {
+      "label": {
+        "text": "C-SPAN person numeric ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person's appearances on C-SPAN using the numeric ID format, replaces P2190's string format ID",
+        "lang": "en"
+      }
+    },
+    "P10706": {
+      "label": {
+        "text": "DACS ID (2022)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "code to identify 50,000 artists as members of the British collective rights management organisation DACS and sister organizations worldwide",
+        "lang": "en"
+      }
+    },
+    "P10757": {
+      "label": {
+        "text": "Personality Database profile ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of a human, fictional character, or other entity on the Personality Database website",
+        "lang": "en"
+      }
+    },
+    "P10780": {
+      "label": {
+        "text": "Radio France person ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "alphabetical identifier for a person on the Radio France website",
+        "lang": "en"
+      }
+    },
+    "P10832": {
+      "label": {
+        "text": "WorldCat Entities ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person, work, place, historical period, or event from the WorldCat Entities linked data service",
+        "lang": "en"
+      }
+    },
+    "P109": {
+      "label": {
+        "text": "signature",
+        "lang": "en"
+      },
+      "description": {
+        "text": "image of a person's signature",
+        "lang": "en"
+      }
+    },
+    "P11120": {
+      "label": {
+        "text": "Rai Teche person ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person on Rai Teche's official website",
+        "lang": "en"
+      }
+    },
+    "P11156": {
+      "label": {
+        "text": "MMB ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an authority in the catalogue of the Lilian Voudouri Music Library of Greece",
+        "lang": "en"
+      }
+    },
+    "P11180": {
+      "label": {
+        "text": "Central Library of Volos authority ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an authority in the catalogue of the Central Library of Volos",
+        "lang": "en"
+      }
+    },
+    "P11182": {
+      "label": {
+        "text": "UOM ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an authority in the catalogue of the Library and Information Center of the University of Macedonia",
+        "lang": "en"
+      }
+    },
+    "P11185": {
+      "label": {
+        "text": "Levadia Library ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an authority in the catalogue of the Central Public Library of Levadia",
+        "lang": "en"
+      }
+    },
+    "P11194": {
+      "label": {
+        "text": "Famous Birthdays ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier for entities listed on the Famous Birthdays website",
+        "lang": "en"
+      }
+    },
+    "P11249": {
+      "label": {
+        "text": "KBR person ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person in the online public catalogue of the Royal Library of Belgium (KBR)",
+        "lang": "en"
+      }
+    },
+    "P11271": {
+      "label": {
+        "text": "African American Visual Artists Database ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for entry on African American Visual Artists Database",
+        "lang": "en"
+      }
+    },
+    "P11386": {
+      "label": {
+        "text": "Listal ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person, a character, a creation or a place in the Listal database",
+        "lang": "en"
+      }
+    },
+    "P11483": {
+      "label": {
+        "text": "Anadolu Agency infographic ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an infographic by Anadolu Agency",
+        "lang": "en"
+      }
+    },
+    "P11496": {
+      "label": {
+        "text": "CiNii Research ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "19-digits identifier in CiNii Research",
+        "lang": "en"
+      }
+    },
+    "P11683": {
+      "label": {
+        "text": "Ivi person ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "ID of an actor on Ivi.ru",
+        "lang": "en"
+      }
+    },
+    "P11686": {
+      "label": {
+        "text": "University of Barcelona authority ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "register of authorities of the University of Barcelona",
+        "lang": "en"
+      }
+    },
+    "P1185": {
+      "label": {
+        "text": "Rodovid ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person on rodovid.org",
+        "lang": "en"
+      }
+    },
+    "P119": {
+      "label": {
+        "text": "place of burial",
+        "lang": "en"
+      },
+      "description": {
+        "text": "location of grave, resting place, place of ash-scattering, etc. (e.g., town/city or cemetery) for a person or animal. There may be several places: e.g., re-burials, parts of body buried separately.",
+        "lang": "en"
+      }
+    },
+    "P1196": {
+      "label": {
+        "text": "manner of death",
+        "lang": "en"
+      },
+      "description": {
+        "text": "general circumstances of a person's death; e.g. natural causes, accident, suicide, homicide, etc. Use 'cause of death' (P509) for the specific physiological mechanism, e.g. heart attack, trauma, pneumonia etc.",
+        "lang": "en"
+      }
+    },
+    "P1207": {
+      "label": {
+        "text": "NUKAT ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for authority control in the Center of Warsaw University Library catalog",
+        "lang": "en"
+      }
+    },
+    "P12086": {
+      "label": {
+        "text": "WikiKids ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of the article on the Dutch online encyclopedia for kids",
+        "lang": "en"
+      }
+    },
+    "P12098": {
+      "label": {
+        "text": "Kinobox person ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person on the Kinobox.cz website",
+        "lang": "en"
+      }
+    },
+    "P1213": {
+      "label": {
+        "text": "NLC authorities",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person per National Library of China",
+        "lang": "en"
+      }
+    },
+    "P1225": {
+      "label": {
+        "text": "U.S. National Archives Identifier",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for the United States National Archives and Records Administration's online catalog",
+        "lang": "en"
+      }
+    },
+    "P12385": {
+      "label": {
+        "text": "Gran Enciclopèdia Catalana ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an item in the Gran Enciclopèdia Catalana",
+        "lang": "en"
+      }
+    },
+    "P12451": {
+      "label": {
+        "text": "Arabic Ontology lexical concept ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a lexical concept in the Birzeit University Arabic Ontology database of morphologic entities",
+        "lang": "en"
+      }
+    },
+    "P12458": {
+      "label": {
+        "text": "Parsifal cluster ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier for a cluster related to a person or an organization in Parsifal, the collective catalogue of the Unione romana biblioteche ecclesiastiche (Union of Roman ecclesiastical libraries)",
+        "lang": "en"
+      }
+    },
+    "P1263": {
+      "label": {
+        "text": "NNDB people ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier in the Notable Names Database, a biographical database: only for people entries",
+        "lang": "en"
+      }
+    },
+    "P1266": {
+      "label": {
+        "text": "AlloCiné person ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person on the AlloCiné film database",
+        "lang": "en"
+      }
+    },
+    "P12749": {
+      "label": {
+        "text": "SNARC ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "unique identifier for people, places and organisations represented in Welsh collections",
+        "lang": "en"
+      }
+    },
+    "P1280": {
+      "label": {
+        "text": "CONOR.SI ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the National and University Library, Ljubljana database",
+        "lang": "en"
+      }
+    },
+    "P12800": {
+      "label": {
+        "text": "Vikidia article ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier for an article on Vikidia (format \"lang-code:title\")",
+        "lang": "en"
+      }
+    },
+    "P1284": {
+      "label": {
+        "text": "Munzinger person ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier on the Munzinger Archiv",
+        "lang": "en"
+      }
+    },
+    "P12854": {
+      "label": {
+        "text": "Plex person key",
+        "lang": "en"
+      },
+      "description": {
+        "text": "24 hex character identifier for person on Plex",
+        "lang": "en"
+      }
+    },
+    "P1296": {
+      "label": {
+        "text": "Gran Enciclopèdia Catalana ID (former scheme)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an item in the Gran Enciclopèdia Catalana. Replaced with \"Gran Enciclopèdia Catalana ID (P12385)\"",
+        "lang": "en"
+      }
+    },
+    "P13019": {
+      "label": {
+        "text": "RedBA Granada authority ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an authority in the collective catalogue of the libraries of the Archdiocesis of Granada",
+        "lang": "en"
+      }
+    },
+    "P13049": {
+      "label": {
+        "text": "DDB person (GND) ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "GND identifier for an entity in the Deutsche Digitale Bibliothek (DDB)",
+        "lang": "en"
+      }
+    },
+    "P1309": {
+      "label": {
+        "text": "EGAXA ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in Bibliotheca Alexandrina",
+        "lang": "en"
+      }
+    },
+    "P131": {
+      "label": {
+        "text": "ಆಡಳಿತ ಪ್ರಾದೇಶಿಕ ಘಟಕಲೆಡ್ ಉಂಡು",
+        "lang": "tcy"
+      },
+      "description": {
+        "text": "ಈ ಜಾಗೆಲೆಡ್ ಉಪ್ಪುನ",
+        "lang": "tcy"
+      }
+    },
+    "P13141": {
+      "label": {
+        "text": "El Moudjahid topic ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier for a topic in the Algerian French-language newspaper ''El Moudjahid''",
+        "lang": "en"
+      }
+    },
+    "P1315": {
+      "label": {
+        "text": "National Library of Australia Person ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier for people or organizations per National Library of Australia (see also P409 for the older Libraries Australia identifier). Format: 5 to 7 digits.",
+        "lang": "en"
+      }
+    },
+    "P13166": {
+      "label": {
+        "text": "PUG authority ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "numerical identifier for an authority record in the authority file of the Library of the Pontifical Gregorian University (PUG)",
+        "lang": "en"
+      }
+    },
+    "P13204": {
+      "label": {
+        "text": "Wellcome Collection concept ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person or topic, in the Wellcome Collection catalogue",
+        "lang": "en"
+      }
+    },
+    "P13255": {
+      "label": {
+        "text": "L'Humanité topic ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a topic on the L'Humanité website",
+        "lang": "en"
+      }
+    },
+    "P13278": {
+      "label": {
+        "text": "Jeune Afrique person ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for persons on French-language website of Jeune Afrique",
+        "lang": "en"
+      }
+    },
+    "P1343": {
+      "label": {
+        "text": "described by source",
+        "lang": "en"
+      },
+      "description": {
+        "text": "work where this item is described, in statistical contexts, a methodological note describing the data",
+        "lang": "en"
+      }
+    },
+    "P1344": {
+      "label": {
+        "text": "participant in",
+        "lang": "en"
+      },
+      "description": {
+        "text": "event in which a person, organization or creative work was/is a participant; inverse of P710 or P1923",
+        "lang": "en"
+      }
+    },
+    "P13591": {
+      "label": {
+        "text": "‎Yale LUX ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier for an entity in Yale's LUX cross collection knowledge graph",
+        "lang": "en"
+      }
+    },
+    "P13613": {
+      "label": {
+        "text": "Enciclopedia Galega Universal ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "numerical identifier for an ítem in Enciclopedia Galega Universal",
+        "lang": "en"
+      }
+    },
+    "P1365": {
+      "label": {
+        "text": "replaces",
+        "lang": "en"
+      },
+      "description": {
+        "text": "person, state or item replaced. Use \"structure replaces\" (P1398) for structures. Use \"follows\" (P155) if the previous item was not replaced or predecessor and successor are identical",
+        "lang": "en"
+      }
+    },
+    "P1366": {
+      "label": {
+        "text": "replaced by",
+        "lang": "en"
+      },
+      "description": {
+        "text": "other person or item which continues the item by replacing it in its role. Use P156 (\"followed by\") if the item is not replaced nor identical, but adds to the series (e.g. books in a series)",
+        "lang": "en"
+      }
+    },
+    "P1368": {
+      "label": {
+        "text": "National Library of Latvia ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier assigned by the National Library of Latvia",
+        "lang": "en"
+      }
+    },
+    "P1375": {
+      "label": {
+        "text": "NSK (VIAF) ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an item in the National and University Library in Zagreb (including leading zeroes), used in VIAF",
+        "lang": "en"
+      }
+    },
+    "P13772": {
+      "label": {
+        "text": "Harper's tag",
+        "lang": "en"
+      },
+      "description": {
+        "text": "tag in Harper's Magazine",
+        "lang": "en"
+      }
+    },
+    "P13804": {
+      "label": {
+        "text": "‎Sancho el Sabio Foundation ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for authority names from the catalogue of Sancho el Sabio Foundation",
+        "lang": "en"
+      }
+    },
+    "P13947": {
+      "label": {
+        "text": "‎Biography.com ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person in the Biography.com website",
+        "lang": "en"
+      }
+    },
+    "P13951": {
+      "label": {
+        "text": "National Virtual Library of India ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an authority record in the Catalogue of the National Library of India",
+        "lang": "en"
+      }
+    },
+    "P140": {
+      "label": {
+        "text": "religion or worldview",
+        "lang": "en"
+      },
+      "description": {
+        "text": "religion of a person, organization or religious building, or associated with this subject",
+        "lang": "en"
+      }
+    },
+    "P1412": {
+      "label": {
+        "text": "languages spoken, written or signed",
+        "lang": "en"
+      },
+      "description": {
+        "text": "language(s) that a person or a people speaks, writes or signs, including the native language(s)",
+        "lang": "en"
+      }
+    },
+    "P1417": {
+      "label": {
+        "text": "Encyclopædia Britannica Online ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an article in the online version of Encyclopædia Britannica",
+        "lang": "en"
+      }
+    },
+    "P14178": {
+      "label": {
+        "text": "Obálky knih ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the Czech book cover database Obálky knih",
+        "lang": "en"
+      }
+    },
+    "P14211": {
+      "label": {
+        "text": "Library of the University of Santiago de Compostela authority ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Register of all bibliographic items found in the Library of the University of Santiago de Compostela (BUSC)",
+        "lang": "en"
+      }
+    },
+    "P14225": {
+      "label": {
+        "text": "NSK ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier for an item in the catalogue of the National and University Library in Zagreb",
+        "lang": "en"
+      }
+    },
+    "P143": {
+      "label": {
+        "text": "ಆಮದು ಮಲ್ತ್‌ನೆ",
+        "lang": "tcy"
+      },
+      "description": {
+        "text": "source of this claim's value; used in references section by bots or humans importing data from Wikimedia projects",
+        "lang": "en"
+      }
+    },
+    "P1430": {
+      "label": {
+        "text": "Open Plaques subject ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person or other subject included in the OpenPlaques website",
+        "lang": "en"
+      }
+    },
+    "P14375": {
+      "label": {
+        "text": "Bundestag Group Minutes ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "people mentioned in the parliamentary group minutes of the parties in the German Bundestag",
+        "lang": "en"
+      }
+    },
+    "P1441": {
+      "label": {
+        "text": "present in work",
+        "lang": "en"
+      },
+      "description": {
+        "text": "this (fictional or fictionalized) entity, place, or person appears in that work as part of the narration (use P2860 for works citing other works, P361/P1433 for works being part of other works, P1343 for entities described in non-fictional accounts)",
+        "lang": "en"
+      }
+    },
+    "P14536": {
+      "label": {
+        "text": "FES digital collections entity ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "entity in the digital collections of the Friedrich Ebert Foundation",
+        "lang": "en"
+      }
+    },
+    "P14559": {
+      "label": {
+        "text": "prisoner number",
+        "lang": "en"
+      },
+      "description": {
+        "text": "number or identifier assigned to a prisoner, to be used as a qualifier for P2632 (place of detention)",
+        "lang": "en"
+      }
+    },
+    "P1472": {
+      "label": {
+        "text": "Commons Creator page",
+        "lang": "en"
+      },
+      "description": {
+        "text": "name of Commons Infobox template residing in \"Creator\" namespace on Wikimedia Commons",
+        "lang": "en"
+      }
+    },
+    "P14750": {
+      "label": {
+        "text": "HAND ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier for a real person or fictional character in the HAND (Human and Digital) Talent ID registry",
+        "lang": "en"
+      }
+    },
+    "P1477": {
+      "label": {
+        "text": "birth name",
+        "lang": "en"
+      },
+      "description": {
+        "text": "full name of a person at birth, if different from their current, generally used name",
+        "lang": "en"
+      }
+    },
+    "P1534": {
+      "label": {
+        "text": "end cause",
+        "lang": "en"
+      },
+      "description": {
+        "text": "qualifier used together with the end date qualifier (P582) to specify the reason for the end",
+        "lang": "en"
+      }
+    },
+    "P1545": {
+      "label": {
+        "text": "series ordinal",
+        "lang": "en"
+      },
+      "description": {
+        "text": "position of an item in its parent series (most frequently a 1-based index), generally to be used as a qualifier (different from \"rank\" defined as a class, and from \"ranking\" defined as a property for evaluating a quality)",
+        "lang": "en"
+      }
+    },
+    "P1552": {
+      "label": {
+        "text": "has characteristic",
+        "lang": "en"
+      },
+      "description": {
+        "text": "inherent or distinguishing quality or feature of the entity. Use a more specific property when possible",
+        "lang": "en"
+      }
+    },
+    "P1559": {
+      "label": {
+        "text": "name in native language",
+        "lang": "en"
+      },
+      "description": {
+        "text": "name of a person in their native language",
+        "lang": "en"
+      }
+    },
+    "P1580": {
+      "label": {
+        "text": "University of Barcelona authority ID (former scheme)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "register of authorities of the University of Barcelona; replaced by P11686",
+        "lang": "en"
+      }
+    },
+    "P1617": {
+      "label": {
+        "text": "BBC Things ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the BBC Things database, automatically enriched with Wikipedia and MusicBrainz content",
+        "lang": "en"
+      }
+    },
+    "P166": {
+      "label": {
+        "text": "award received",
+        "lang": "en"
+      },
+      "description": {
+        "text": "award or recognition received by a person, organization or creative work",
+        "lang": "en"
+      }
+    },
+    "P1670": {
+      "label": {
+        "text": "Canadiana Authorities ID (former scheme)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "obsolete identifier for authority control per the Library and Archives Canada. Format: 4 digits + 1 letter + 4 digits + optional F",
+        "lang": "en"
+      }
+    },
+    "P1686": {
+      "label": {
+        "text": "for work",
+        "lang": "en"
+      },
+      "description": {
+        "text": "qualifier of award received (P166) to specify the work that an award was given to the creator for",
+        "lang": "en"
+      }
+    },
+    "P1695": {
+      "label": {
+        "text": "NLP ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "National Library of Poland unique identifier. Format: \"a\" followed by 13 digits. For the newer 16-digit format use P7293",
+        "lang": "en"
+      }
+    },
+    "P17": {
+      "label": {
+        "text": "ದೇಸೊ",
+        "lang": "tcy"
+      },
+      "description": {
+        "text": "sovereign state that this subject item is in (not to be used for human beings)",
+        "lang": "en"
+      }
+    },
+    "P1706": {
+      "label": {
+        "text": "together with",
+        "lang": "en"
+      },
+      "description": {
+        "text": "qualifier to specify the item that this property is shared with",
+        "lang": "en"
+      }
+    },
+    "P1711": {
+      "label": {
+        "text": "British Museum person or institution ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person or institution in the British Museum person-institution thesaurus",
+        "lang": "en"
+      }
+    },
+    "P1728": {
+      "label": {
+        "text": "AllMusic artist ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an artist, musical group, or record label in the AllMusic database (record labels are listed as \"artists\")",
+        "lang": "en"
+      }
+    },
+    "P1741": {
+      "label": {
+        "text": "GTAA ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier for GTAA, a thesaurus used in audiovisual archives (NISV, EYE)",
+        "lang": "en"
+      }
+    },
+    "P18": {
+      "label": {
+        "text": "ಪಟೊ",
+        "lang": "tcy"
+      },
+      "description": {
+        "text": "ವಿಸಯೊತ ಬಗೆಟ್ಟುಪ್ಪುನಾ ಪಟ",
+        "lang": "tcy"
+      }
+    },
+    "P1801": {
+      "label": {
+        "text": "plaque image",
+        "lang": "en"
+      },
+      "description": {
+        "text": "image of plaque or inscription commemorating or mentioning the subject. For graves, use grave picture (P1442)",
+        "lang": "en"
+      }
+    },
+    "P1810": {
+      "label": {
+        "text": "subject named as",
+        "lang": "en"
+      },
+      "description": {
+        "text": "name by which a subject is recorded in a database, mentioned as a contributor of a work, or is referred to in a particular context",
+        "lang": "en"
+      }
+    },
+    "P1816": {
+      "label": {
+        "text": "National Portrait Gallery (London) person ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier for sitters and artists represented in the National Portrait Gallery, London",
+        "lang": "en"
+      }
+    },
+    "P1890": {
+      "label": {
+        "text": "CCAB ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "Collective Catalog of Bibliographic Authorities of Chile ID",
+        "lang": "en"
+      }
+    },
+    "P19": {
+      "label": {
+        "text": "place of birth",
+        "lang": "en"
+      },
+      "description": {
+        "text": "most specific known birth location of a person, animal or fictional character",
+        "lang": "en"
+      }
+    },
+    "P1932": {
+      "label": {
+        "text": "object named as",
+        "lang": "en"
+      },
+      "description": {
+        "text": "use as qualifier to indicate how the object's value was given in the source",
+        "lang": "en"
+      }
+    },
+    "P1953": {
+      "label": {
+        "text": "Discogs artist ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a band or person in the Discogs database",
+        "lang": "en"
+      }
+    },
+    "P1977": {
+      "label": {
+        "text": "Les Archives du spectacle person ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "Identifier for an actor/actress/playwright in the Les Archives du spectacle database",
+        "lang": "en"
+      }
+    },
+    "P20": {
+      "label": {
+        "text": "place of death",
+        "lang": "en"
+      },
+      "description": {
+        "text": "most specific known (e.g. city instead of country, or hospital instead of city) death location of a person, animal or fictional character",
+        "lang": "en"
+      }
+    },
+    "P2002": {
+      "label": {
+        "text": "X (Twitter) username",
+        "lang": "en"
+      },
+      "description": {
+        "text": "username on X (formerly Twitter); do not include the '@' symbol",
+        "lang": "en"
+      }
+    },
+    "P2019": {
+      "label": {
+        "text": "AllMovie person ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person on the AllMovie film database",
+        "lang": "en"
+      }
+    },
+    "P2031": {
+      "label": {
+        "text": "start of work period",
+        "lang": "en"
+      },
+      "description": {
+        "text": "start of period during which a person or group flourished (fl. = \"floruit\") in their professional activity",
+        "lang": "en"
+      }
+    },
+    "P2042": {
+      "label": {
+        "text": "Artsy artist ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier at the Artsy website",
+        "lang": "en"
+      }
+    },
+    "P21": {
+      "label": {
+        "text": "ಲಿಂಗೊ",
+        "lang": "tcy"
+      },
+      "description": {
+        "text": "sex or gender identity of human or animal. For human: male, female, non-binary, intersex, transgender female, transgender male, agender, etc. For animal: male organism, female organism. Groups of same gender use subclass of (P279)",
+        "lang": "en"
+      }
+    },
+    "P2121": {
+      "label": {
+        "text": "prize money",
+        "lang": "en"
+      },
+      "description": {
+        "text": "amount in a specific currency",
+        "lang": "en"
+      }
+    },
+    "P213": {
+      "label": {
+        "text": "ISNI",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "International Standard Name Identifier for an identity. Starting with 0000.",
+        "lang": "en"
+      }
+    },
+    "P214": {
+      "label": {
+        "text": "VIAF cluster ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for the Virtual International Authority File database [format: up to 22 digits]; please note: VIAF is a cluster, the ID can include multiple items",
+        "lang": "en"
+      }
+    },
+    "P2163": {
+      "label": {
+        "text": "FAST ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "authority control identifier in WorldCat's “FAST Linked Data” authority file",
+        "lang": "en"
+      }
+    },
+    "P2168": {
+      "label": {
+        "text": "Swedish Film Database person ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person on the Swedish Film Database (SFDb)",
+        "lang": "en"
+      }
+    },
+    "P2188": {
+      "label": {
+        "text": "BiblioNet author ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the BiblioNet database of authors, created by the National Book Centre of Greece, many Greek individual publishers and their professional associations",
+        "lang": "en"
+      }
+    },
+    "P2190": {
+      "label": {
+        "text": "C-SPAN person string ID (deprecated)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person's appearances on C-SPAN as strings. Use P10660 instead.",
+        "lang": "en"
+      }
+    },
+    "P22": {
+      "label": {
+        "text": "father",
+        "lang": "en"
+      },
+      "description": {
+        "text": "male parent of the subject. For stepfather, use \"stepparent\" (P3448)",
+        "lang": "en"
+      }
+    },
+    "P227": {
+      "label": {
+        "text": "GND",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier from the Gemeinsame Normdatei authority file of names, subjects, and organizations",
+        "lang": "en"
+      }
+    },
+    "P2354": {
+      "label": {
+        "text": "has list",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia list related to this subject",
+        "lang": "en"
+      }
+    },
+    "P2373": {
+      "label": {
+        "text": "Genius artist ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an artist or label on Genius",
+        "lang": "en"
+      }
+    },
+    "P2435": {
+      "label": {
+        "text": "port.hu person identifier",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "PORT-network film database: identifier for a person",
+        "lang": "en"
+      }
+    },
+    "P244": {
+      "label": {
+        "text": "Library of Congress Authorities ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "Library of Congress name authority (persons, families, corporate bodies, events, places, works and expressions) and subject authority identifier [Format: 1-2 specific letters followed by 8-10 digits (see regex). For manifestations, use P1144]",
+        "lang": "en"
+      }
+    },
+    "P245": {
+      "label": {
+        "text": "Union List of Artist Names ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier from the Getty Union List of Artist Names",
+        "lang": "en"
+      }
+    },
+    "P248": {
+      "label": {
+        "text": "stated in",
+        "lang": "en"
+      },
+      "description": {
+        "text": "to be used in the references field to refer to the information document or database in which a claim is made; for qualifiers use P805; for the type of document in which a claim is made use P3865",
+        "lang": "en"
+      }
+    },
+    "P25": {
+      "label": {
+        "text": "mother",
+        "lang": "en"
+      },
+      "description": {
+        "text": "female parent of the subject. For stepmother, use \"stepparent\" (P3448)",
+        "lang": "en"
+      }
+    },
+    "P2572": {
+      "label": {
+        "text": "hashtag",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "reference keyword associated with this item for online communities (do not include the \"#\" symbol which is often used as a prefixed indicator)",
+        "lang": "en"
+      }
+    },
+    "P2581": {
+      "label": {
+        "text": "BabelNet ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "ID in BabelNet encyclopedic dictionary",
+        "lang": "en"
+      }
+    },
+    "P26": {
+      "label": {
+        "text": "ಕಂಡನಿ/ಬುಡೆದಿ",
+        "lang": "tcy"
+      },
+      "description": {
+        "text": "ಕಂಡನಿ ಅತ್ತಂಡ ಬುಡೆದಿ",
+        "lang": "tcy"
+      }
+    },
+    "P2600": {
+      "label": {
+        "text": "Geni profile ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "profile on the Geni.com genealogy website",
+        "lang": "en"
+      }
+    },
+    "P2604": {
+      "label": {
+        "text": "Kinopoisk person ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person in the Kinopoisk.ru database",
+        "lang": "en"
+      }
+    },
+    "P2605": {
+      "label": {
+        "text": "ČSFD person ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person in the Czecho-Slovak film database ČSFD",
+        "lang": "en"
+      }
+    },
+    "P2607": {
+      "label": {
+        "text": "BookBrainz author ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a creator per the BookBrainz open book encyclopedia",
+        "lang": "en"
+      }
+    },
+    "P2632": {
+      "label": {
+        "text": "place of detention",
+        "lang": "en"
+      },
+      "description": {
+        "text": "place where this person is or was detained",
+        "lang": "en"
+      }
+    },
+    "P268": {
+      "label": {
+        "text": "BnF ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier for the subject issued by BNF (Bibliothèque nationale de France). Format: 8 digits followed by a check-digit or letter, do not include the initial 'cb'.",
+        "lang": "en"
+      }
+    },
+    "P269": {
+      "label": {
+        "text": "IdRef ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier for authority control in the French collaborative library catalog (see also P1025). Format: 8 digits followed by a digit or \"X\"",
+        "lang": "en"
+      }
+    },
+    "P2699": {
+      "label": {
+        "text": "URL",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "location of a resource",
+        "lang": "en"
+      }
+    },
+    "P27": {
+      "label": {
+        "text": "country of citizenship",
+        "lang": "en"
+      },
+      "description": {
+        "text": "the object is a country that recognizes the subject as its citizen",
+        "lang": "en"
+      }
+    },
+    "P271": {
+      "label": {
+        "text": "NACSIS-CAT",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier for book authors in NACSIS-CAT, the union catalog for university libraries and research institutions in Japan",
+        "lang": "en"
+      }
+    },
+    "P2734": {
+      "label": {
+        "text": "Unz Review author ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "author identifier at The Unz Review (unz.org), a content-archiving website",
+        "lang": "en"
+      }
+    },
+    "P2799": {
+      "label": {
+        "text": "BVMC person ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of an author on the Biblioteca Virtual Miguel de Cervantes",
+        "lang": "en"
+      }
+    },
+    "P2868": {
+      "label": {
+        "text": "subject has role",
+        "lang": "en"
+      },
+      "description": {
+        "text": "role held by the item the statement appears on (\"subject\") in the context of that statement. For the role of the statement object/value, use P3831 (\"object has role\"). For acting roles, use P453 (\"character role\"). For persons, use P39.",
+        "lang": "en"
+      }
+    },
+    "P2889": {
+      "label": {
+        "text": "FamilySearch person ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "ID of a person on FamilySearch",
+        "lang": "en"
+      }
+    },
+    "P2924": {
+      "label": {
+        "text": "Great Russian Encyclopedia Online ID (2017)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an entry on old.bigenc.ru, the official site of the Great Russian Encyclopedia Online 2014–2017 (current version of bigenc.ru is P11514)",
+        "lang": "en"
+      }
+    },
+    "P2949": {
+      "label": {
+        "text": "WikiTree person ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person in the WikiTree genealogy website",
+        "lang": "en"
+      }
+    },
+    "P2959": {
+      "label": {
+        "text": "permanent duplicated item",
+        "lang": "en"
+      },
+      "description": {
+        "text": "this item duplicates another item and they can't be merged, as one Wikimedia project includes two pages, e.g. in different scripts or languages (examples: cdowiki, gomwiki, nanwiki). Use P31=Q17362920 when the Wikimedia project could merge the pages.",
+        "lang": "en"
+      }
+    },
+    "P2963": {
+      "label": {
+        "text": "Goodreads author ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of an author on the Goodreads website",
+        "lang": "en"
+      }
+    },
+    "P2966": {
+      "label": {
+        "text": "National Library of Wales Authority ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of persons, corporate entities and families in the National Library of Wales Archives and Manuscripts database",
+        "lang": "en"
+      }
+    },
+    "P3029": {
+      "label": {
+        "text": "UK National Archives ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person, family or organisation, in the UK's National Archives database",
+        "lang": "en"
+      }
+    },
+    "P3065": {
+      "label": {
+        "text": "RERO ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier in the Library network of Western Switzerland's RERO database",
+        "lang": "en"
+      }
+    },
+    "P31": {
+      "label": {
+        "text": "ಉದಾರ್ಮೆಗ್",
+        "lang": "tcy"
+      },
+      "description": {
+        "text": "ಈ ವಿಸಯೊ ಒಂಜಿ ನಿರ್ದಿಸ್ಟೊ ಉದಾರ್ಮೆ ಬುಕ್ಕೊ ಸದಸ್ಯೆ ಆದಿಪ್ಪುನ ಹ್ಯಾಟ್ ವರ್ಗೊ.",
+        "lang": "tcy"
+      }
+    },
+    "P3106": {
+      "label": {
+        "text": "The Guardian topic ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a topic at the Guardian newspaper website",
+        "lang": "en"
+      }
+    },
+    "P3192": {
+      "label": {
+        "text": "Last.fm ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier for an artist, group or work, on Last.fm",
+        "lang": "en"
+      }
+    },
+    "P3219": {
+      "label": {
+        "text": "Encyclopædia Universalis ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier for an article in the online version of Encyclopædia Universalis",
+        "lang": "en"
+      }
+    },
+    "P3221": {
+      "label": {
+        "text": "New York Times topic ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of a topic at the New York Times website",
+        "lang": "en"
+      }
+    },
+    "P3222": {
+      "label": {
+        "text": "NE.se ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "ID of article on the Swedish Nationalencyklopedin (NE.se) site",
+        "lang": "en"
+      }
+    },
+    "P3280": {
+      "label": {
+        "text": "BAnQ authority ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an authority record for authors, works, and subject headings in the Bibliothèque et Archives nationales du Québec (BAnQ).",
+        "lang": "en"
+      }
+    },
+    "P3348": {
+      "label": {
+        "text": "National Library of Greece ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "authority ID from the National Library of Greece Authority Records",
+        "lang": "en"
+      }
+    },
+    "P3365": {
+      "label": {
+        "text": "Treccani ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier for the Italian Treccani website and encyclopedia",
+        "lang": "en"
+      }
+    },
+    "P3388": {
+      "label": {
+        "text": "LittleSis people ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "entry in the LittleSis who-knows-who of government and business database",
+        "lang": "en"
+      }
+    },
+    "P3417": {
+      "label": {
+        "text": "Quora topic ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a topic on Quora (English language version)",
+        "lang": "en"
+      }
+    },
+    "P3430": {
+      "label": {
+        "text": "SNAC ARK ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for items in the Social Networks and Archival Context system",
+        "lang": "en"
+      }
+    },
+    "P345": {
+      "label": {
+        "text": "IMDb ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier for the IMDb (with prefix 'tt', 'nm', 'co', 'ev', 'ch' or 'ni')",
+        "lang": "en"
+      }
+    },
+    "P3478": {
+      "label": {
+        "text": "Songkick artist ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an artist on Songkick",
+        "lang": "en"
+      }
+    },
+    "P349": {
+      "label": {
+        "text": "NDL Authority ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for authority control per the National Diet Library of Japan",
+        "lang": "en"
+      }
+    },
+    "P3544": {
+      "label": {
+        "text": "Te Papa agent ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier assigned to a person or organisation by the Museum of New Zealand Te Papa Tongarewa",
+        "lang": "en"
+      }
+    },
+    "P3602": {
+      "label": {
+        "text": "candidacy in election",
+        "lang": "en"
+      },
+      "description": {
+        "text": "election where the subject is a candidate",
+        "lang": "en"
+      }
+    },
+    "P3629": {
+      "label": {
+        "text": "age of subject at event",
+        "lang": "en"
+      },
+      "description": {
+        "text": "the age of the subject according to the cited source at the time of an event. Used as a qualifier of significant event property",
+        "lang": "en"
+      }
+    },
+    "P3630": {
+      "label": {
+        "text": "Babelio author ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an author on the literature website Babelio",
+        "lang": "en"
+      }
+    },
+    "P373": {
+      "label": {
+        "text": "Commons category",
+        "lang": "en"
+      },
+      "description": {
+        "text": "name of the Wikimedia Commons category containing files related to this item (without the prefix \"Category:\")",
+        "lang": "en"
+      }
+    },
+    "P3740": {
+      "label": {
+        "text": "number of works",
+        "lang": "en"
+      },
+      "description": {
+        "text": "qualifier on identifiers, e.g. for creators or locations, giving the number of works in the external database associated with the subject of the identifier",
+        "lang": "en"
+      }
+    },
+    "P3744": {
+      "label": {
+        "text": "number of subscribers",
+        "lang": "en"
+      },
+      "description": {
+        "text": "number of subscribers for subscription-based companies, e.g. telecommunication companies, newspapers, pay-TV channels, software, etc.",
+        "lang": "en"
+      }
+    },
+    "P3782": {
+      "label": {
+        "text": "Artnet artist ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of an artist in the Artnet database of auction results",
+        "lang": "en"
+      }
+    },
+    "P3846": {
+      "label": {
+        "text": "DBC author ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for authors set by the Danish Bibliographic Centre",
+        "lang": "en"
+      }
+    },
+    "P3847": {
+      "label": {
+        "text": "Open Library subject ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a topic in the Open Library database",
+        "lang": "en"
+      }
+    },
+    "P39": {
+      "label": {
+        "text": "position held",
+        "lang": "en"
+      },
+      "description": {
+        "text": "subject currently or formerly holds the object position or public office",
+        "lang": "en"
+      }
+    },
+    "P396": {
+      "label": {
+        "text": "SBN author ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier issued by National Library Service (SBN) of Italy",
+        "lang": "en"
+      }
+    },
+    "P3987": {
+      "label": {
+        "text": "SHARE Catalogue author ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for authors in SHARE Catalogue, a linked data federated catalogue of several Southern Italy universities",
+        "lang": "en"
+      }
+    },
+    "P40": {
+      "label": {
+        "text": "child",
+        "lang": "en"
+      },
+      "description": {
+        "text": "subject has object as child. Do not use for stepchildren—use \"relative\" (P1038), qualified with \"kinship to subject\" (P1039)",
+        "lang": "en"
+      }
+    },
+    "P4012": {
+      "label": {
+        "text": "Semantic Scholar author ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an author in the Semantic Scholar database",
+        "lang": "en"
+      }
+    },
+    "P407": {
+      "label": {
+        "text": "language of work or name",
+        "lang": "en"
+      },
+      "description": {
+        "text": "language associated with this creative work (such as books, shows, songs, broadcasts or websites) or a name (for persons use \"native language\" (P103) and \"languages spoken, written or signed\" (P1412))",
+        "lang": "en"
+      }
+    },
+    "P409": {
+      "label": {
+        "text": "Libraries Australia ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier issued by the National Library of Australia. VIAF component. Format: 1-12 digits, removing leading zero-padding.",
+        "lang": "en"
+      }
+    },
+    "P4200": {
+      "label": {
+        "text": "Christie's creator ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an artist in the Christie's online database",
+        "lang": "en"
+      }
+    },
+    "P4293": {
+      "label": {
+        "text": "PM20 folder ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a folder in the ZBW Pressemappe 20. Jahrhundert (20th century press archive)",
+        "lang": "en"
+      }
+    },
+    "P434": {
+      "label": {
+        "text": "MusicBrainz artist ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person, group, or other entity represented as an artist in MusicBrainz",
+        "lang": "en"
+      }
+    },
+    "P4342": {
+      "label": {
+        "text": "Store norske leksikon-ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier of an article in the online encyclopedia snl.no",
+        "lang": "en"
+      }
+    },
+    "P4390": {
+      "label": {
+        "text": "mapping relation type",
+        "lang": "en"
+      },
+      "description": {
+        "text": "qualifier to more precisely define the relation of the item to the external identifier using SKOS",
+        "lang": "en"
+      }
+    },
+    "P4431": {
+      "label": {
+        "text": "Google Doodle",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "Google Doodle celebrating this entity or event",
+        "lang": "en"
+      }
+    },
+    "P4514": {
+      "label": {
+        "text": "Africultures person ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "ID of a person at French website Africultures",
+        "lang": "en"
+      }
+    },
+    "P4527": {
+      "label": {
+        "text": "UK Parliament thesaurus ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the thesaurus of subject headings maintained by the librarians in the House of Commons in the UK",
+        "lang": "en"
+      }
+    },
+    "P4604": {
+      "label": {
+        "text": "World Rugby Hall of Fame inductee ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an inductee at the World Rugby Hall of Fame",
+        "lang": "en"
+      }
+    },
+    "P4619": {
+      "label": {
+        "text": "National Library of Brazil ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an element in the database of the National Library of Brazil",
+        "lang": "en"
+      }
+    },
+    "P463": {
+      "label": {
+        "text": "member of",
+        "lang": "en"
+      },
+      "description": {
+        "text": "organization, club or musical group to which the subject belongs. Do not use for membership in ethnic or social groups, nor for holding a political position, such as a member of parliament (use P39 for that)",
+        "lang": "en"
+      }
+    },
+    "P4657": {
+      "label": {
+        "text": "The Numbers person ID (archived)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of an actor or filmmaker at The Numbers",
+        "lang": "en"
+      }
+    },
+    "P4663": {
+      "label": {
+        "text": "DACS ID (former)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "obsolete code used to identify 50,000 artists as members of the British collective rights management organisation DACS and sister organisations worldwide",
+        "lang": "en"
+      }
+    },
+    "P4666": {
+      "label": {
+        "text": "CineMagia person ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person on the Cinemagia.ro website",
+        "lang": "en"
+      }
+    },
+    "P478": {
+      "label": {
+        "text": "volume",
+        "lang": "en"
+      },
+      "description": {
+        "text": "volume of a book or music release in a collection/series or a published collection of journal issues in a serial publication",
+        "lang": "en"
+      }
+    },
+    "P4789": {
+      "label": {
+        "text": "Who's Who UK ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in \"Who's Who\" or \"Who Was Who\", UK edition",
+        "lang": "en"
+      }
+    },
+    "P4927": {
+      "label": {
+        "text": "Invaluable.com person ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an artist or other person at Invaluable.com",
+        "lang": "en"
+      }
+    },
+    "P4985": {
+      "label": {
+        "text": "TMDB person ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person at The Movie Database",
+        "lang": "en"
+      }
+    },
+    "P50": {
+      "label": {
+        "text": "author",
+        "lang": "en"
+      },
+      "description": {
+        "text": "main creator(s) of a written work (use on works, not humans); use P2093 (author name string) when Wikidata item is unknown or does not exist",
+        "lang": "en"
+      }
+    },
+    "P5008": {
+      "label": {
+        "text": "on focus list of Wikimedia project",
+        "lang": "en"
+      },
+      "description": {
+        "text": "property to indicate that an item is of particular interest for a Wikimedia project. This property does not add notability. Items should not be created with this property if they are not notable for Wikidata. See also P6104, P972, P2354",
+        "lang": "en"
+      }
+    },
+    "P5019": {
+      "label": {
+        "text": "Brockhaus Enzyklopädie online ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an article in the online version of Brockhaus Enzyklopädie",
+        "lang": "en"
+      }
+    },
+    "P5034": {
+      "label": {
+        "text": "대한민국 국립중앙도서관 ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier for name and subject authority in the database of the National Library of Korea",
+        "lang": "en"
+      }
+    },
+    "P5063": {
+      "label": {
+        "text": "Interlingual Index ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a concept in the Global WordNet Association's Collaborative Interlingual Index",
+        "lang": "en"
+      }
+    },
+    "P509": {
+      "label": {
+        "text": "cause of death",
+        "lang": "en"
+      },
+      "description": {
+        "text": "underlying or immediate cause of death. Underlying cause (e.g. car accident, stomach cancer) preferred. Use 'manner of death' (P1196) for broadest category, e.g. natural causes, accident, homicide, suicide",
+        "lang": "en"
+      }
+    },
+    "P512": {
+      "label": {
+        "text": "academic degree",
+        "lang": "en"
+      },
+      "description": {
+        "text": "academic degree that the person holds",
+        "lang": "en"
+      }
+    },
+    "P5298": {
+      "label": {
+        "text": "Webb-site person ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person on \"Webb-site Who's Who\"",
+        "lang": "en"
+      }
+    },
+    "P535": {
+      "label": {
+        "text": "Find a Grave memorial ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of an individual's burial place in the Find a Grave database",
+        "lang": "en"
+      }
+    },
+    "P5361": {
+      "label": {
+        "text": "BNB person ID (OBSOLETE)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of a person in the British National Bibliography (bnb.data.bl.uk)",
+        "lang": "en"
+      }
+    },
+    "P5421": {
+      "label": {
+        "text": "Trading Card Database name ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person or other named entity in the Trading Card Database (TCDb)",
+        "lang": "en"
+      }
+    },
+    "P551": {
+      "label": {
+        "text": "residence",
+        "lang": "en"
+      },
+      "description": {
+        "text": "the place where the person is or has been, resident",
+        "lang": "en"
+      }
+    },
+    "P5551": {
+      "label": {
+        "text": "Courrier international topic ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a topic on the Courrier international website",
+        "lang": "en"
+      }
+    },
+    "P5587": {
+      "label": {
+        "text": "Libris-URI",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an item in the catalogue of the Swedish National Library",
+        "lang": "en"
+      }
+    },
+    "P5592": {
+      "label": {
+        "text": "number of works accessible online",
+        "lang": "en"
+      },
+      "description": {
+        "text": "qualifier on external identifiers, for the number of works in a collection or items in a database which are freely accessible online (if different from P3740)",
+        "lang": "en"
+      }
+    },
+    "P5617": {
+      "label": {
+        "text": "Evene ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person on the Evene website",
+        "lang": "en"
+      }
+    },
+    "P569": {
+      "label": {
+        "text": "date of birth",
+        "lang": "en"
+      },
+      "description": {
+        "text": "date on which the subject was born",
+        "lang": "en"
+      }
+    },
+    "P570": {
+      "label": {
+        "text": "ಸೈತಿನ ದಿನೊ",
+        "lang": "tcy"
+      },
+      "description": {
+        "text": "date on which the subject died",
+        "lang": "en"
+      }
+    },
+    "P5731": {
+      "label": {
+        "text": "Angelicum ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an entity in the online catalogue of the Pontifical University of Saint Thomas Aquinas (Angelicum)",
+        "lang": "en"
+      }
+    },
+    "P5739": {
+      "label": {
+        "text": "Pontificia Università della Santa Croce ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an entity in the online catalogue of the Pontifical University of the Holy Cross (PUSC)",
+        "lang": "en"
+      }
+    },
+    "P577": {
+      "label": {
+        "text": "publication date",
+        "lang": "en"
+      },
+      "description": {
+        "text": "date or point in time when a work or product was first published or released",
+        "lang": "en"
+      }
+    },
+    "P58": {
+      "label": {
+        "text": "screenwriter",
+        "lang": "en"
+      },
+      "description": {
+        "text": "person(s) who wrote the script for subject item",
+        "lang": "en"
+      }
+    },
+    "P580": {
+      "label": {
+        "text": "ಸುರುವಾಯಿ ಪೊರ್ತು",
+        "lang": "tcy"
+      },
+      "description": {
+        "text": "ಉಂದು ಸಮಯೊನು ತೆರಿಪಾವುಂಡು",
+        "lang": "tcy"
+      }
+    },
+    "P582": {
+      "label": {
+        "text": "end time",
+        "lang": "en"
+      },
+      "description": {
+        "text": "moment when an entity ceases to exist and a statement stops being entirely valid or no longer be true",
+        "lang": "en"
+      }
+    },
+    "P585": {
+      "label": {
+        "text": "point in time",
+        "lang": "en"
+      },
+      "description": {
+        "text": "date something took place, existed or a statement was true; for providing time use the \"refine date\" property (P4241)",
+        "lang": "en"
+      }
+    },
+    "P5882": {
+      "label": {
+        "text": "Muziekweb performer ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a performer, composer or band at Muziekweb",
+        "lang": "en"
+      }
+    },
+    "P5905": {
+      "label": {
+        "text": "Comic Vine ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier at the Comic Vine database of comic books, fictional characters, people, films and television series/episodes",
+        "lang": "en"
+      }
+    },
+    "P6058": {
+      "label": {
+        "text": "Larousse ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier for a subject on the 'Encyclopédie Larousse'",
+        "lang": "en"
+      }
+    },
+    "P6104": {
+      "label": {
+        "text": "maintained by WikiProject",
+        "lang": "en"
+      },
+      "description": {
+        "text": "WikiProject that maintains this property, item, or linked pages. If the WikiProject is hosted outside of Wikidata, identify the hosting project using the qualifier \"part of\" (P361)",
+        "lang": "en"
+      }
+    },
+    "P6200": {
+      "label": {
+        "text": "BBC News topic ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier for a topic on the BBC News website",
+        "lang": "en"
+      }
+    },
+    "P6208": {
+      "label": {
+        "text": "award rationale",
+        "lang": "en"
+      },
+      "description": {
+        "text": "qualifier to add short citation explaining the official reason for awarding a prize to a winner by the person or organization who gives the award. Do not use this property to annotate or add comments about a person's award. No quote marked needed.",
+        "lang": "en"
+      }
+    },
+    "P6275": {
+      "label": {
+        "text": "copyright representative",
+        "lang": "en"
+      },
+      "description": {
+        "text": "person or organisation who represents the copyright for this person or work of art",
+        "lang": "en"
+      }
+    },
+    "P6351": {
+      "label": {
+        "text": "Genius artist numeric ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "numeric identifier for an artist on Genius",
+        "lang": "en"
+      }
+    },
+    "P6379": {
+      "label": {
+        "text": "has works in the collection",
+        "lang": "en"
+      },
+      "description": {
+        "text": "collection that has works of this person or organisation (use archives at [P485] for archives)",
+        "lang": "en"
+      }
+    },
+    "P6385": {
+      "label": {
+        "text": "Krugosvet article (archived)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "link to article of Russian-language online encyclopedia",
+        "lang": "en"
+      }
+    },
+    "P6394": {
+      "label": {
+        "text": "ELNET ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier assigned by the ELNET consortium of Estonian libraries. Format: 7 digits, \"x\" or another digit",
+        "lang": "en"
+      }
+    },
+    "P6404": {
+      "label": {
+        "text": "Treccani's Dizionario di Storia ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for Dizionario di Storia (\"Dictionary of History\") by Treccani",
+        "lang": "en"
+      }
+    },
+    "P646": {
+      "label": {
+        "text": "Freebase ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Machine Identifier (MID) for a topic in the former Freebase knowledge graph; new Freebase MIDs are no longer issued, but existing /m/ identifiers remain in use, including by Google Knowledge Graph",
+        "lang": "en"
+      }
+    },
+    "P648": {
+      "label": {
+        "text": "Internet Archive OpenLibrary ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier for a work (\"W\"), edition (\"M\") or author (\"A\") for book data of the Internet Archive",
+        "lang": "en"
+      }
+    },
+    "P6552": {
+      "label": {
+        "text": "X (Twitter) numeric user ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "numeric identifier for a user on X; use as qualifier for P2002 \"X username\"",
+        "lang": "en"
+      }
+    },
+    "P6573": {
+      "label": {
+        "text": "Klexikon article ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "ID of an article in Klexikon",
+        "lang": "en"
+      }
+    },
+    "P6578": {
+      "label": {
+        "text": "MutualArt artist ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an artist in the MutualArt database",
+        "lang": "en"
+      }
+    },
+    "P6683": {
+      "label": {
+        "text": "Alexander Turnbull Library ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for names in the Alexander Turnbull Library thesaurus module for unpublished collections",
+        "lang": "en"
+      }
+    },
+    "P6723": {
+      "label": {
+        "text": "BlackPast.org ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for articles on BlackPast.org",
+        "lang": "en"
+      }
+    },
+    "P6870": {
+      "label": {
+        "text": "Latvian National Encyclopedia Online ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an article in the website of the Latvian National Encyclopedia",
+        "lang": "en"
+      }
+    },
+    "P6886": {
+      "label": {
+        "text": "writing language",
+        "lang": "en"
+      },
+      "description": {
+        "text": "language in which the writer has written their work",
+        "lang": "en"
+      }
+    },
+    "P69": {
+      "label": {
+        "text": "ಓದ್‍ನೆ",
+        "lang": "tcy"
+      },
+      "description": {
+        "text": "ಓದಿನ ಶೈಕ್ಷಣಿಕ ಸಂಸ್ತೆದ ಪುದರ್",
+        "lang": "tcy"
+      }
+    },
+    "P691": {
+      "label": {
+        "text": "NL CR AUT ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the Czech National Authority Database of National Library of the Czech Republic (NL CR)",
+        "lang": "en"
+      }
+    },
+    "P701": {
+      "label": {
+        "text": "Dodis ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the Dodis database (Diplomatic Documents of Switzerland 1945-1969), see Q661051",
+        "lang": "en"
+      }
+    },
+    "P7024": {
+      "label": {
+        "text": "Flemish Public Libraries ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "authority control identifier of the Flemish Public Libraries",
+        "lang": "en"
+      }
+    },
+    "P7026": {
+      "label": {
+        "text": "Lebanese National Library ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "authority control identifier of the Lebanese National Library",
+        "lang": "en"
+      }
+    },
+    "P7029": {
+      "label": {
+        "text": "National Library of Russia ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for authority control used by the National Library of Russia, Saint-Petersburg",
+        "lang": "en"
+      }
+    },
+    "P7050": {
+      "label": {
+        "text": "Album of the Year artist ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an artist on the Album of the Year (AOTY) website",
+        "lang": "en"
+      }
+    },
+    "P7157": {
+      "label": {
+        "text": "The Top Tens ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "item's ID on The Top Tens website",
+        "lang": "en"
+      }
+    },
+    "P7184": {
+      "label": {
+        "text": "Awards & Winners artist ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an artist on Awards & Winners site",
+        "lang": "en"
+      }
+    },
+    "P7214": {
+      "label": {
+        "text": "Allcinema person ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of person on Allcinema database",
+        "lang": "en"
+      }
+    },
+    "P723": {
+      "label": {
+        "text": "DBNL author ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an author in the Digitale Bibliotheek voor de Nederlandse Letteren",
+        "lang": "en"
+      }
+    },
+    "P7293": {
+      "label": {
+        "text": "PLWABN ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "National Library of Poland record no. identifier. Format: \"98\", followed by 10 digits, then ending with \"5606\"",
+        "lang": "en"
+      }
+    },
+    "P7305": {
+      "label": {
+        "text": "Online PWN Encyclopedia ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an entry in the online release of the Online PWN Encyclopedia",
+        "lang": "en"
+      }
+    },
+    "P734": {
+      "label": {
+        "text": "family name",
+        "lang": "en"
+      },
+      "description": {
+        "text": "part of full name of person",
+        "lang": "en"
+      }
+    },
+    "P735": {
+      "label": {
+        "text": "given name",
+        "lang": "en"
+      },
+      "description": {
+        "text": "first name or another given name of this person; values used with the property should not link disambiguations nor family names",
+        "lang": "en"
+      }
+    },
+    "P7369": {
+      "label": {
+        "text": "National Library of Chile ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for authority control managed by the National Library of Chile",
+        "lang": "en"
+      }
+    },
+    "P737": {
+      "label": {
+        "text": "influenced by",
+        "lang": "en"
+      },
+      "description": {
+        "text": "the subject (person, idea, etc.) was influenced or inspired by this object entity, e.g. \"Heidegger was influenced by Aristotle\"",
+        "lang": "en"
+      }
+    },
+    "P7502": {
+      "label": {
+        "text": "Golden ID (archived)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "ID page in Golden knowledge base",
+        "lang": "en"
+      }
+    },
+    "P7545": {
+      "label": {
+        "text": "askArt person ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for the askArt website",
+        "lang": "en"
+      }
+    },
+    "P7553": {
+      "label": {
+        "text": "Sinemalar person ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person on the Sinemalar site (cinema)",
+        "lang": "en"
+      }
+    },
+    "P7666": {
+      "label": {
+        "text": "article ID in the Lithuanian Universal Encyclopedia Online",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an item in the online edition of the Visuotinė lietuvių enciklopedija",
+        "lang": "en"
+      }
+    },
+    "P7699": {
+      "label": {
+        "text": "National Library of Lithuania ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "authority id at the National Library of Lithuania, part of VIAF (code LIH)",
+        "lang": "en"
+      }
+    },
+    "P7700": {
+      "label": {
+        "text": "Slovak National Library (VIAF) ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "authority id in Slovak National Library, a VIAF component (code SKMASNL)",
+        "lang": "en"
+      }
+    },
+    "P7763": {
+      "label": {
+        "text": "copyright status as a creator",
+        "lang": "en"
+      },
+      "description": {
+        "text": "states if the body of work published during the lifetime of this creator is still copyrighted or in the public domain",
+        "lang": "en"
+      }
+    },
+    "P7796": {
+      "label": {
+        "text": "BeWeb person ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person, in the Italian Episcopal Conference database",
+        "lang": "en"
+      }
+    },
+    "P7842": {
+      "label": {
+        "text": "Vienna History Wiki ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "numeric identifier of a page in the Vienna History Wiki",
+        "lang": "en"
+      }
+    },
+    "P7865": {
+      "label": {
+        "text": "CoBiS author ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "ID for authors in CoBiS, Coordination of the Special and Specialist Libraries of the Turin Metropolitan Area",
+        "lang": "en"
+      }
+    },
+    "P7902": {
+      "label": {
+        "text": "Deutsche Biographie (GND) ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "GND identifier for an entity in the Deutsche Biographie",
+        "lang": "en"
+      }
+    },
+    "P7982": {
+      "label": {
+        "text": "Hrvatska enciklopedija ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an article in the Croatian Encyclopedia (Hrvatska enciklopedija)",
+        "lang": "en"
+      }
+    },
+    "P800": {
+      "label": {
+        "text": "magnum opus",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "notable scientific, artistic or literary work, or other work of significance among subject's works",
+        "lang": "en"
+      }
+    },
+    "P8024": {
+      "label": {
+        "text": "Nobel Laureate API ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "REST API service with info about Nobel laureates",
+        "lang": "en"
+      }
+    },
+    "P8034": {
+      "label": {
+        "text": "Vatican Library VcBA ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "authority control for a subject on the website opac.vatlib.it of the Vatican Library. Format 3 digits + \"/\" + 1 to 6 digits; \"/\" is sometimes rendered as \"_\"",
+        "lang": "en"
+      }
+    },
+    "P8179": {
+      "label": {
+        "text": "Canadiana Name Authority ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "system control number used in the Canadiana Name Authority File, format: \"ncf\" followed by 8 digits",
+        "lang": "en"
+      }
+    },
+    "P8189": {
+      "label": {
+        "text": "J9U ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier used by the National Library of Israel",
+        "lang": "en"
+      }
+    },
+    "P8286": {
+      "label": {
+        "text": "Olympedia people ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an athlete (sportsperson), coach, referee, etc. at Olympedia.org",
+        "lang": "en"
+      }
+    },
+    "P8309": {
+      "label": {
+        "text": "Yle topic ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for topics in Finland's national broadcaster Yle's web services",
+        "lang": "en"
+      }
+    },
+    "P8313": {
+      "label": {
+        "text": "Lex ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of an article in the online encyclopedia.lex.dk",
+        "lang": "en"
+      }
+    },
+    "P8445": {
+      "label": {
+        "text": "Our Campaigns candidate ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of a candidate in the Our Campaigns political candidate database",
+        "lang": "en"
+      }
+    },
+    "P854": {
+      "label": {
+        "text": "reference URL",
+        "lang": "en"
+      },
+      "description": {
+        "text": "should be used for Internet URLs as references. Use \"Wikimedia import URL\" (P4656) for imports from Wikimedia sites",
+        "lang": "en"
+      }
+    },
+    "P856": {
+      "label": {
+        "text": "official website",
+        "lang": "en"
+      },
+      "description": {
+        "text": "URL of the official page of an item (current or former). Usage: If a listed URL no longer points to the official website, do not remove it, but see the \"Hijacked or dead websites\" section of the Talk page",
+        "lang": "en"
+      }
+    },
+    "P8568": {
+      "label": {
+        "text": "Jewish Virtual Library ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the Jewish Virtual Library",
+        "lang": "en"
+      }
+    },
+    "P866": {
+      "label": {
+        "text": "Perlentaucher ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier in Perlentaucher (Q2071388)",
+        "lang": "en"
+      }
+    },
+    "P8687": {
+      "label": {
+        "text": "social media followers",
+        "lang": "en"
+      },
+      "description": {
+        "text": "number of subscribers on a particular social media website (use as main statement only; see P3744 instead for qualifier). Qualify with \"point in time\" and property for account. For Twitter, use numeric id.",
+        "lang": "en"
+      }
+    },
+    "P8814": {
+      "label": {
+        "text": "WordNet 3.1 Synset ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Synset identifier in Princeton’s WordNet Version 3.1",
+        "lang": "en"
+      }
+    },
+    "P8849": {
+      "label": {
+        "text": "CONOR.BG ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "authority control ID in CONOR.BG (authority control of Bulgarian libraries)",
+        "lang": "en"
+      }
+    },
+    "P8851": {
+      "label": {
+        "text": "CONOR.SR ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "authority control ID in CONOR.SR (authority control of Serbian libraries)",
+        "lang": "en"
+      }
+    },
+    "P8902": {
+      "label": {
+        "text": "Archives at Yale agent ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person, organization or family in Archives at Yale",
+        "lang": "en"
+      }
+    },
+    "P8951": {
+      "label": {
+        "text": "Order of Canada recipient ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for the recipients of the Order of Canada, one of the highest orders conferred by the Canadian government",
+        "lang": "en"
+      }
+    },
+    "P8974": {
+      "label": {
+        "text": "SPAP ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier used by the Swiss Performing Arts Platform",
+        "lang": "en"
+      }
+    },
+    "P9037": {
+      "label": {
+        "text": "BHCL-UUID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "UUID of authorities used in the Bibliography of the History of the Czech Lands (BHCL)",
+        "lang": "en"
+      }
+    },
+    "P906": {
+      "label": {
+        "text": "SELIBR ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier per National Library of Sweden Libris library catalog",
+        "lang": "en"
+      }
+    },
+    "P910": {
+      "label": {
+        "text": "topic's main category",
+        "lang": "en"
+      },
+      "description": {
+        "text": "main Wikimedia category",
+        "lang": "en"
+      }
+    },
+    "P9171": {
+      "label": {
+        "text": "RILM ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an entity in the Répertoire International de Littérature Musicale through VIAF",
+        "lang": "en"
+      }
+    },
+    "P9247": {
+      "label": {
+        "text": "Pontifical University of Salamanca ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an authority in the catalogue of the library of the Pontifical University of Salamanca",
+        "lang": "en"
+      }
+    },
+    "P9251": {
+      "label": {
+        "text": "Cyprus University of Technology ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an authority in the catalogue of the library of the Cyprus University of Technology",
+        "lang": "en"
+      }
+    },
+    "P9322": {
+      "label": {
+        "text": "SVKKL authority ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the regional authority database of Central Bohemian Research Library",
+        "lang": "en"
+      }
+    },
+    "P9346": {
+      "label": {
+        "text": "France 24 topic ID (French)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of a topic on the French version of the France 24 website",
+        "lang": "en"
+      }
+    },
+    "P935": {
+      "label": {
+        "text": "Commons gallery",
+        "lang": "en"
+      },
+      "description": {
+        "text": "name of the Wikimedia Commons gallery page(s) related to this item (is suitable to allow multiple links to more gallery pages)",
+        "lang": "en"
+      }
+    },
+    "P937": {
+      "label": {
+        "text": "work location",
+        "lang": "en"
+      },
+      "description": {
+        "text": "location where persons or organisations were actively participating in employment, business or other work",
+        "lang": "en"
+      }
+    },
+    "P9371": {
+      "label": {
+        "text": "FranceArchives agent ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person on FranceArchives",
+        "lang": "en"
+      }
+    },
+    "P949": {
+      "label": {
+        "text": "National Library of Israel ID (old)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "former identifier for authority control used at the National Library of Israel. Replaced with \"National Library of Israel J9U ID\" (P8189)",
+        "lang": "en"
+      }
+    },
+    "P9493": {
+      "label": {
+        "text": "artist files at",
+        "lang": "en"
+      },
+      "description": {
+        "text": "institution or collection that holds artist files about the subject",
+        "lang": "en"
+      }
+    },
+    "P950": {
+      "label": {
+        "text": "National Library of Spain SpMaBN ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "semi-deprecated control number of the National Library of Spain catalog powered by Symphony. Format for persons: \"XX\" followed by 4 to 7 digits. (Formerly referred to in VIAF as BNE)",
+        "lang": "en"
+      }
+    },
+    "P9570": {
+      "label": {
+        "text": "scope note",
+        "lang": "en"
+      },
+      "description": {
+        "text": "note that describes what a term means in the context of a controlled vocabulary; use as a qualifier for identifier statements when a controlled vocabulary has a scope note",
+        "lang": "en"
+      }
+    },
+    "P9594": {
+      "label": {
+        "text": "Bodleian Archives & Manuscripts person ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person in the database Bodleian Archives & Manuscripts",
+        "lang": "en"
+      }
+    },
+    "P9675": {
+      "label": {
+        "text": "MediaWiki page ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "numeric identifier of a page in a MediaWiki wiki",
+        "lang": "en"
+      }
+    },
+    "P9807": {
+      "label": {
+        "text": "SNK ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "authority control for the Slovak National Library, used in its catalog",
+        "lang": "en"
+      }
+    },
+    "P990": {
+      "label": {
+        "text": "audio recording of the subject's spoken voice",
+        "lang": "en"
+      },
+      "description": {
+        "text": "audio file representing the speaking voice of a person; or of an animated cartoon or other fictitious character",
+        "lang": "en"
+      }
+    },
+    "P9918": {
+      "label": {
+        "text": "Kallías ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in Kallías, the catalog of the German Literature Archive Marbach (DLA Marbach)",
+        "lang": "en"
+      }
+    },
+    "P9937": {
+      "label": {
+        "text": "Postimees topic ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for topics in the online version of Estonia's daily newspaper Postimees",
+        "lang": "en"
+      }
+    },
+    "P9964": {
+      "label": {
+        "text": "Kalliope-Verbund (GND) ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "GND identifier for an entity in the Kalliope-Verbund database",
+        "lang": "en"
+      }
+    },
+    "P9984": {
+      "label": {
+        "text": "CANTIC ID",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "identifier for authority control managed by the Library of Catalonia",
+        "lang": "en"
+      }
+    },
+    "Q101422305": {
+      "label": {
+        "text": "honorary doctor of the Howard University",
+        "lang": "en"
+      }
+    },
+    "Q101547": {
+      "label": {
+        "text": "Thabo Mbeki",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "President of South Africa from 1999 to 2008",
+        "lang": "en"
+      }
+    },
+    "Q1020378": {
+      "label": {
+        "text": "Mvezo",
+        "lang": "en"
+      },
+      "description": {
+        "text": "village in the Eastern Cape, South Africa",
+        "lang": "en"
+      }
+    },
+    "Q10492742": {
+      "label": {
+        "text": "Evelyn Mase",
+        "lang": "en"
+      },
+      "description": {
+        "text": "South African nurse and first wife of Nelson Mandela (1922-2004)",
+        "lang": "en"
+      }
+    },
+    "Q105672762": {
+      "label": {
+        "text": "honorary doctor of Paris 8 University",
+        "lang": "en"
+      }
+    },
+    "Q1077746": {
+      "label": {
+        "text": "Mo Ibrahim Prize for Achievement in African Leadership",
+        "lang": "en"
+      },
+      "description": {
+        "text": "award",
+        "lang": "en"
+      }
+    },
+    "Q10855226": {
+      "label": {
+        "text": "Grand Cross of the Legion of Honour",
+        "lang": "en"
+      },
+      "description": {
+        "text": "fifth rank of the French Legion of Honour",
+        "lang": "en"
+      }
+    },
+    "Q113161450": {
+      "label": {
+        "text": "Grand Star of People's Friendship",
+        "lang": "en"
+      },
+      "description": {
+        "text": "highest class of the state decoration \"Star of People's Friendship\" in the GDR (1959-1990)",
+        "lang": "en"
+      }
+    },
+    "Q11336485": {
+      "label": {
+        "text": "WikiProject Royalty and Nobility",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia subject-area collaboration",
+        "lang": "en"
+      }
+    },
+    "Q11415564": {
+      "label": {
+        "text": "doctor honoris causa",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "honorary academic degree",
+        "lang": "en"
+      }
+    },
+    "Q114717208": {
+      "label": {
+        "text": "World Economic Forum Annual Meeting 1992",
+        "lang": "en"
+      }
+    },
+    "Q11499147": {
+      "label": {
+        "text": "political activist",
+        "lang": "en"
+      },
+      "description": {
+        "text": "activist wanting political change",
+        "lang": "en"
+      }
+    },
+    "Q115472323": {
+      "label": {
+        "text": "Address to the Nation",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Speech by Nelson Mandela, 13 April 1993",
+        "lang": "en"
+      }
+    },
+    "Q115599548": {
+      "label": {
+        "text": "Inaugural Address as President of South Africa",
+        "lang": "en"
+      },
+      "description": {
+        "text": "inauguration address by Nelson Mandela at Cape Town, South Africa, May 9, 1994",
+        "lang": "en"
+      }
+    },
+    "Q115647426": {
+      "label": {
+        "text": "Nobel Peace Prize Address",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Nobel Peace Prize address by Nelson Mandela on December 10, 1993 in Oslo, Norway",
+        "lang": "en"
+      }
+    },
+    "Q115653803": {
+      "label": {
+        "text": "Africa: An Encyclopedic Reference",
+        "lang": "en"
+      },
+      "description": {
+        "text": "encyclopedia published in Moscow, 1986",
+        "lang": "en"
+      }
+    },
+    "Q116299533": {
+      "label": {
+        "text": "Address at the Conference of the Pan-African Freedom Movement of East and Central Africa",
+        "lang": "en"
+      },
+      "description": {
+        "text": "speech by Nelson Mandela at a Pan-African convention in Addis Ababa in January 1962",
+        "lang": "en"
+      }
+    },
+    "Q118545254": {
+      "label": {
+        "text": "Order of Eduardo Mondlane, 1st class",
+        "lang": "en"
+      }
+    },
+    "Q1199342": {
+      "label": {
+        "text": "Long Walk to Freedom",
+        "lang": "en"
+      },
+      "description": {
+        "text": "autobiography of Nelson Mandela",
+        "lang": "en"
+      }
+    },
+    "Q12126034": {
+      "label": {
+        "text": "Mandela: Long Walk to Freedom",
+        "lang": "en"
+      },
+      "description": {
+        "text": "2013 film by Justin Chadwick",
+        "lang": "en"
+      }
+    },
+    "Q121364143": {
+      "label": {
+        "text": "honorary degree from Spelman College",
+        "lang": "en"
+      },
+      "description": {
+        "text": "degree recognizing exceptional achievement or distinction in a field or activity consistent with the mission of Spelman",
+        "lang": "en"
+      }
+    },
+    "Q121465478": {
+      "label": {
+        "text": "first winner",
+        "lang": "en"
+      },
+      "description": {
+        "text": "historical winner of first edition of a championship or any competition or award",
+        "lang": "en"
+      }
+    },
+    "Q123155276": {
+      "label": {
+        "text": "Live and Let Live",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "song by the English singer-songwriter and rock musician Peter Gabriel (2023)",
+        "lang": "en"
+      }
+    },
+    "Q123956760": {
+      "label": {
+        "text": "WikiProject AfroCreatives",
+        "lang": "en"
+      },
+      "description": {
+        "text": "WikiProject focused on Africa’s creative economy",
+        "lang": "en"
+      }
+    },
+    "Q126416227": {
+      "label": {
+        "text": "honorary doctor of the University of Paris 1 Pantheon-Sorbonne",
+        "lang": "en"
+      }
+    },
+    "Q126543985": {
+      "label": {
+        "text": "Long Walk to Freedom",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "1995 edition",
+        "lang": "en"
+      }
+    },
+    "Q127239878": {
+      "label": {
+        "text": "Freedom of the London Borough of Greenwich",
+        "lang": "en"
+      },
+      "description": {
+        "text": "award issued 1966 - 2011",
+        "lang": "en"
+      }
+    },
+    "Q127240561": {
+      "label": {
+        "text": "Freedom of the Royal Borough of Greenwich",
+        "lang": "en"
+      },
+      "description": {
+        "text": "award",
+        "lang": "en"
+      }
+    },
+    "Q13218": {
+      "label": {
+        "text": "Xhosa",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Nguni language of southern South Africa",
+        "lang": "en"
+      }
+    },
+    "Q1324269": {
+      "label": {
+        "text": "Gandhi Peace Prize",
+        "lang": "en"
+      },
+      "description": {
+        "text": "award for contributions towards social, economic and political transformation through non-violence and other Gandhian methods",
+        "lang": "en"
+      }
+    },
+    "Q1331130": {
+      "label": {
+        "text": "Royal Order of the Seraphim",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Swedish order of chivalry (1748–)",
+        "lang": "en"
+      }
+    },
+    "Q13377518": {
+      "label": {
+        "text": "Knight Grand Cross of the Order of St. Olav‎",
+        "lang": "en"
+      }
+    },
+    "Q13382529": {
+      "label": {
+        "text": "WikiProject Human rights",
+        "lang": "en"
+      },
+      "description": {
+        "text": "WikiProject",
+        "lang": "en"
+      }
+    },
+    "Q138905570": {
+      "label": {
+        "text": "Honorary King's Counsel",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "honorific for lawyers in some Commonwealth realms",
+        "lang": "en"
+      }
+    },
+    "Q1399663": {
+      "label": {
+        "text": "Order of the Star of Ghana",
+        "lang": "en"
+      },
+      "description": {
+        "text": "national award",
+        "lang": "en"
+      }
+    },
+    "Q140067624": {
+      "label": {
+        "text": "Honorary doctor of the University of Fort Hare",
+        "lang": "en"
+      },
+      "description": {
+        "text": "honorary title awarded by the University of Fort Hare",
+        "lang": "en"
+      }
+    },
+    "Q14196": {
+      "label": {
+        "text": "Afrikaans",
+        "lang": "en"
+      },
+      "description": {
+        "text": "West Germanic language evolved from Dutch vernacular in the 17th–18th century Dutch Cape Colony; spoken primarily in South Africa and Namibia; developed among Dutch settlers and the enslaved population, gradually diverging from Dutch",
+        "lang": "en"
+      }
+    },
+    "Q14775521": {
+      "label": {
+        "text": "Makaziwe Mandela",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "Daughter of Nelson Mandela and Evelyn Ntoko",
+        "lang": "en"
+      }
+    },
+    "Q1479435": {
+      "label": {
+        "text": "Félix Houphouët-Boigny Peace Prize",
+        "lang": "en"
+      },
+      "description": {
+        "text": "distinction in the field of peace",
+        "lang": "en"
+      }
+    },
+    "Q1502630": {
+      "label": {
+        "text": "World Rugby Hall of Fame",
+        "lang": "en"
+      },
+      "description": {
+        "text": "award",
+        "lang": "en"
+      }
+    },
+    "Q15124269": {
+      "label": {
+        "text": "honorary citizen of Paris",
+        "lang": "en"
+      },
+      "description": {
+        "text": "title of honor conferred by the city of Paris, France",
+        "lang": "en"
+      }
+    },
+    "Q1517662": {
+      "label": {
+        "text": "The Elders",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "association of outstanding former statesmen and women, peace activists, human rights activists and prominent intellectuals",
+        "lang": "en"
+      }
+    },
+    "Q151813": {
+      "label": {
+        "text": "F. W. de Klerk",
+        "lang": "en"
+      },
+      "description": {
+        "text": "7th state president of South Africa from 1989 to 1994",
+        "lang": "en"
+      }
+    },
+    "Q15279674": {
+      "label": {
+        "text": "Grandmaster of the Order of Good Hope",
+        "lang": "en"
+      }
+    },
+    "Q15279700": {
+      "label": {
+        "text": "Order of Mapungubwe in Platinum",
+        "lang": "en"
+      }
+    },
+    "Q15279719": {
+      "label": {
+        "text": "ოქროს ოლიმპიური ორდენი",
+        "lang": "mul"
+      }
+    },
+    "Q15280138": {
+      "label": {
+        "text": "Honorary Companion of the Order of Australia",
+        "lang": "en"
+      },
+      "description": {
+        "text": "award in the Order of Australia",
+        "lang": "en"
+      }
+    },
+    "Q15280142": {
+      "label": {
+        "text": "Honorary Companion of the Order of Canada",
+        "lang": "en"
+      }
+    },
+    "Q15280177": {
+      "label": {
+        "text": "Grand Cross of the National Order of Mali",
+        "lang": "en"
+      },
+      "description": {
+        "text": "highest dignity of the National Order of Mali",
+        "lang": "en"
+      }
+    },
+    "Q15304953": {
+      "label": {
+        "text": "WikiProject African diaspora",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikiproject improving coverage of cultural contributions of people of African descent",
+        "lang": "en"
+      }
+    },
+    "Q15622972": {
+      "label": {
+        "text": "Giuseppe Motta Medal",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Swiss award",
+        "lang": "en"
+      }
+    },
+    "Q15647601": {
+      "label": {
+        "text": "Secretary General of the Non-Aligned Movement",
+        "lang": "en"
+      },
+      "description": {
+        "text": "highest position in the Non-Aligned Movement",
+        "lang": "en"
+      }
+    },
+    "Q15711702": {
+      "label": {
+        "text": "I Am Prepared to Die",
+        "lang": "en"
+      },
+      "description": {
+        "text": "speech by Nelson Mandela",
+        "lang": "en"
+      }
+    },
+    "Q1581457": {
+      "label": {
+        "text": "Queen Elizabeth II Golden Jubilee Medal",
+        "lang": "en"
+      },
+      "description": {
+        "text": "medal",
+        "lang": "en"
+      }
+    },
+    "Q15884639": {
+      "label": {
+        "text": "WikiProject Core biographies",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Sub-project of WikiProject Biography",
+        "lang": "en"
+      }
+    },
+    "Q15884641": {
+      "label": {
+        "text": "WikiProject Politicians",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia subject area collaboration",
+        "lang": "en"
+      }
+    },
+    "Q15885083": {
+      "label": {
+        "text": "WikiProject Socialism",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia subject-area collaboration",
+        "lang": "en"
+      }
+    },
+    "Q15885086": {
+      "label": {
+        "text": "WikiProject South Africa",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia subject-area collaboration",
+        "lang": "en"
+      }
+    },
+    "Q16103879": {
+      "label": {
+        "text": "Nosekeni Fanny",
+        "lang": "en"
+      },
+      "description": {
+        "text": "mother of Nelson Mandela",
+        "lang": "en"
+      }
+    },
+    "Q16103937": {
+      "label": {
+        "text": "Zenani Mandela-Dlamini",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "South African diplomat",
+        "lang": "en"
+      }
+    },
+    "Q16103975": {
+      "label": {
+        "text": "Thembekile Mandela",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "(1945-1969)",
+        "lang": "en"
+      }
+    },
+    "Q16141090": {
+      "label": {
+        "text": "Order of Agostinho Neto",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Angolan state award",
+        "lang": "en"
+      }
+    },
+    "Q16141095": {
+      "label": {
+        "text": "Order of Augusto César Sandino",
+        "lang": "en"
+      }
+    },
+    "Q16272231": {
+      "label": {
+        "text": "Conversations With Myself",
+        "lang": "en"
+      },
+      "description": {
+        "text": "book, compilation of works by Nelson Mandela",
+        "lang": "en"
+      }
+    },
+    "Q1667571": {
+      "label": {
+        "text": "Al-Gaddafi International Prize for Human Rights",
+        "lang": "en"
+      },
+      "description": {
+        "text": "annual Libyan human rights award",
+        "lang": "en"
+      }
+    },
+    "Q16744266": {
+      "label": {
+        "text": "member of the National Assembly of South Africa",
+        "lang": "en"
+      },
+      "description": {
+        "text": "member of the National Assembly of the Parliament of South Africa",
+        "lang": "en"
+      }
+    },
+    "Q170027": {
+      "label": {
+        "text": "University of London",
+        "lang": "en"
+      },
+      "description": {
+        "text": "federal research university in London, England",
+        "lang": "en"
+      }
+    },
+    "Q17144": {
+      "label": {
+        "text": "Presidential Medal of Freedom",
+        "lang": "en"
+      },
+      "description": {
+        "text": "joint-highest civilian award of the United States, bestowed by the President",
+        "lang": "en"
+      }
+    },
+    "Q17182806": {
+      "label": {
+        "text": "Ahimsa Award",
+        "lang": "en"
+      },
+      "description": {
+        "text": "annual award",
+        "lang": "en"
+      }
+    },
+    "Q17366068": {
+      "label": {
+        "text": "Collar of the Order of Isabella the Catholic‎",
+        "lang": "en"
+      },
+      "description": {
+        "text": "highest class grade of the Order of Isabella the Catholic",
+        "lang": "en"
+      }
+    },
+    "Q1765120": {
+      "label": {
+        "text": "Bachelor of Arts",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "type of undergraduate qualification",
+        "lang": "en"
+      }
+    },
+    "Q1783222": {
+      "label": {
+        "text": "Order of the Nile",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Egyptian medal",
+        "lang": "en"
+      }
+    },
+    "Q1814626": {
+      "label": {
+        "text": "Gadla Henry Mphakanyiswa",
+        "lang": "en"
+      },
+      "description": {
+        "text": "(1880-1928)",
+        "lang": "en"
+      }
+    },
+    "Q1820710": {
+      "label": {
+        "text": "Nishan-e-Pakistan",
+        "lang": "en"
+      },
+      "description": {
+        "text": "the highest of civil awards and decorations given by the Government of Pakistan for the highest degree of service to the country and nation of Pakistan",
+        "lang": "en"
+      }
+    },
+    "Q185493": {
+      "label": {
+        "text": "Order of Lenin",
+        "lang": "en"
+      },
+      "description": {
+        "text": "highest decoration awarded by the Soviet Union (1930-1991)",
+        "lang": "en"
+      }
+    },
+    "Q1856170": {
+      "label": {
+        "text": "Qunu",
+        "lang": "en"
+      },
+      "description": {
+        "text": "small rural village in South Africa",
+        "lang": "en"
+      }
+    },
+    "Q1860": {
+      "label": {
+        "text": "ಇಂಗ್ಲಿಷ್ ಪಾತೆರೊ",
+        "lang": "tcy"
+      },
+      "description": {
+        "text": "West Germanic language",
+        "lang": "en"
+      }
+    },
+    "Q18814623": {
+      "label": {
+        "text": "autobiographer",
+        "lang": "en"
+      },
+      "description": {
+        "text": "person who wrote their autobiography",
+        "lang": "en"
+      }
+    },
+    "Q19070822": {
+      "label": {
+        "text": "Nelson Mandela's inaugural address",
+        "lang": "en"
+      }
+    },
+    "Q193619": {
+      "label": {
+        "text": "Union of South Africa",
+        "lang": "en"
+      },
+      "description": {
+        "text": "state in southern Africa from 1910 to 1961, predecessor to the Republic of South Africa",
+        "lang": "en"
+      }
+    },
+    "Q19756330": {
+      "label": {
+        "text": "granddaughter",
+        "lang": "en"
+      },
+      "description": {
+        "text": "female grandchild. Avoid using with \"relative\" (P1038): add item for child instead and list there (both with \"child\" (P40))",
+        "lang": "en"
+      }
+    },
+    "Q1976985": {
+      "label": {
+        "text": "The Nelson-Atkins Museum of Art",
+        "lang": "en"
+      },
+      "description": {
+        "text": "art museum in Kansas City, Missouri",
+        "lang": "en"
+      }
+    },
+    "Q199": {
+      "label": {
+        "text": "೧",
+        "lang": "tcy"
+      },
+      "description": {
+        "text": "natural number one",
+        "lang": "en"
+      }
+    },
+    "Q1991972": {
+      "label": {
+        "text": "Order of José Martí",
+        "lang": "en"
+      }
+    },
+    "Q2005511": {
+      "label": {
+        "text": "University of Fort Hare",
+        "lang": "en"
+      },
+      "description": {
+        "text": "university in Alice, Eastern Cape, South Africa",
+        "lang": "en"
+      }
+    },
+    "Q20203866": {
+      "label": {
+        "text": "Four Freedoms Award – Freedom Medal",
+        "lang": "en"
+      },
+      "description": {
+        "text": "American award",
+        "lang": "en"
+      }
+    },
+    "Q2029246": {
+      "label": {
+        "text": "Order of Jamaica",
+        "lang": "en"
+      },
+      "description": {
+        "text": "national order in the Jamaican honours system",
+        "lang": "en"
+      }
+    },
+    "Q204369": {
+      "label": {
+        "text": "Zindzi Mandela",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "South African diplomat and poet (1960–2020)",
+        "lang": "en"
+      }
+    },
+    "Q207": {
+      "label": {
+        "text": "George W. Bush",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "43rd President of the United States (2001–2009)",
+        "lang": "en"
+      }
+    },
+    "Q20859482": {
+      "label": {
+        "text": "Grand Collar of the Order of Prince Henry",
+        "lang": "en"
+      }
+    },
+    "Q209896": {
+      "label": {
+        "text": "honorary degree",
+        "lang": "en"
+      },
+      "description": {
+        "text": "degree awarded to honour an individual, waiving requirements",
+        "lang": "en"
+      }
+    },
+    "Q2104774": {
+      "label": {
+        "text": "Makgatho Mandela",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "South African lawyer (1950–2005)",
+        "lang": "en"
+      }
+    },
+    "Q2118528": {
+      "label": {
+        "text": "International Simón Bolívar Prize",
+        "lang": "en"
+      },
+      "description": {
+        "text": "UNESCO award",
+        "lang": "en"
+      }
+    },
+    "Q217105": {
+      "label": {
+        "text": "political prisoner",
+        "lang": "en"
+      },
+      "description": {
+        "text": "someone imprisoned because they have opposed or criticized the government responsible for their imprisonment",
+        "lang": "en"
+      }
+    },
+    "Q21829613": {
+      "label": {
+        "text": "WikiProject Military biography",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Sub-project of WikiProject Biography",
+        "lang": "en"
+      }
+    },
+    "Q21829825": {
+      "label": {
+        "text": "WikiProject Correction and Detention Facilities",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia subject-area collaboration",
+        "lang": "en"
+      }
+    },
+    "Q21830379": {
+      "label": {
+        "text": "WikiProject African military history",
+        "lang": "en"
+      },
+      "description": {
+        "text": "sub-project of WikiProject Military history",
+        "lang": "en"
+      }
+    },
+    "Q22937894": {
+      "label": {
+        "text": "Mandela",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "family name",
+        "lang": "en"
+      }
+    },
+    "Q23769799": {
+      "label": {
+        "text": "Grand Cross with Collar of the Order of the White Rose of Finland",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Finnish award (order), highest decoration in Finland",
+        "lang": "en"
+      }
+    },
+    "Q239062": {
+      "label": {
+        "text": "Winnie Madikizela-Mandela",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "South African activist and politician (1936-2018)",
+        "lang": "en"
+      }
+    },
+    "Q239105": {
+      "label": {
+        "text": "Graça Machel",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "Mozambican humanitarian activist and politician",
+        "lang": "en"
+      }
+    },
+    "Q2413375": {
+      "label": {
+        "text": "The Open University",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "university in Milton Keynes, UK",
+        "lang": "en"
+      }
+    },
+    "Q2493731": {
+      "label": {
+        "text": "Arthur Ashe Courage Award",
+        "lang": "en"
+      },
+      "description": {
+        "text": "ESPY Award",
+        "lang": "en"
+      }
+    },
+    "Q2522577": {
+      "label": {
+        "text": "Order of Stara Planina",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Bulgarian order of merit in three classes, grand cross only in one division for civilian merits, first and second class in divisions for military and civilian merits (1966–)",
+        "lang": "en"
+      }
+    },
+    "Q25691265": {
+      "label": {
+        "text": "Nelson Mandela (duplicate item)",
+        "lang": "en"
+      }
+    },
+    "Q258": {
+      "label": {
+        "text": "ದಕ್ಷಿಣ ಆಫ್ರಿಕಾ",
+        "lang": "tcy"
+      },
+      "description": {
+        "text": "country in southern Africa",
+        "lang": "en"
+      }
+    },
+    "Q27028": {
+      "label": {
+        "text": "United Nations Prize in the Field of Human Rights",
+        "lang": "en"
+      },
+      "description": {
+        "text": "human rights award (1968–)",
+        "lang": "en"
+      }
+    },
+    "Q273884": {
+      "label": {
+        "text": "President of South Africa",
+        "lang": "en"
+      },
+      "description": {
+        "text": "South Africa's head of state and head of government",
+        "lang": "en"
+      }
+    },
+    "Q2782533": {
+      "label": {
+        "text": "Nelson",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "male given name",
+        "lang": "en"
+      }
+    },
+    "Q28378282": {
+      "label": {
+        "text": "verified account or profile",
+        "lang": "en"
+      },
+      "description": {
+        "text": "social media account or profile which has satisfied the host service's criteria for verification",
+        "lang": "en"
+      }
+    },
+    "Q28389": {
+      "label": {
+        "text": "screenwriter",
+        "lang": "en"
+      },
+      "description": {
+        "text": "writer who writes for films, TV shows, comics and games",
+        "lang": "en"
+      }
+    },
+    "Q28481165": {
+      "label": {
+        "text": "Order of Prince Yaroslav the Wise, 1st class",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Ukrainian state award",
+        "lang": "en"
+      }
+    },
+    "Q29062963": {
+      "label": {
+        "text": "honorary doctorate of the University of Las Palmas, Gran Canaria",
+        "lang": "en"
+      }
+    },
+    "Q30242234": {
+      "label": {
+        "text": "freedom fighter",
+        "lang": "en"
+      },
+      "description": {
+        "text": "person who takes part in a resistance movement against an oppressive political or social establishment",
+        "lang": "en"
+      }
+    },
+    "Q305317": {
+      "label": {
+        "text": "South African Communist Party",
+        "lang": "en"
+      },
+      "description": {
+        "text": "political party in South Africa",
+        "lang": "en"
+      }
+    },
+    "Q308907": {
+      "label": {
+        "text": "Lenin Peace Prize",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Soviet Union award named in honor of Vladimir Lenin",
+        "lang": "en"
+      }
+    },
+    "Q3127846": {
+      "label": {
+        "text": "Order of Friendship",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Czechoslovak decoration",
+        "lang": "en"
+      }
+    },
+    "Q315975": {
+      "label": {
+        "text": "Andrés Pastrana Arango",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "President of Colombia from 1998 to 2002",
+        "lang": "en"
+      }
+    },
+    "Q31696": {
+      "label": {
+        "text": "Bruno Kreisky Award for Services to Human Rights",
+        "lang": "en"
+      },
+      "description": {
+        "text": "human rights prize",
+        "lang": "en"
+      }
+    },
+    "Q317107": {
+      "label": {
+        "text": "Bakili Muluzi",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "Malawian politician",
+        "lang": "en"
+      }
+    },
+    "Q322132": {
+      "label": {
+        "text": "Bharat Ratna",
+        "lang": "en"
+      },
+      "description": {
+        "text": "India's highest civilian award",
+        "lang": "en"
+      }
+    },
+    "Q3286546": {
+      "label": {
+        "text": "respiratory disease",
+        "lang": "en"
+      },
+      "description": {
+        "text": "disease of the respiratory system",
+        "lang": "en"
+      }
+    },
+    "Q3295156": {
+      "label": {
+        "text": "Jawaharlal Nehru Award for International Understanding",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Award",
+        "lang": "en"
+      }
+    },
+    "Q33203": {
+      "label": {
+        "text": "Methodism",
+        "lang": "en"
+      },
+      "description": {
+        "text": "group of historically related denominations of Protestant Christianity",
+        "lang": "en"
+      }
+    },
+    "Q3321940": {
+      "label": {
+        "text": "Princess of Asturias Award for International Cooperation",
+        "lang": "en"
+      },
+      "description": {
+        "text": "award",
+        "lang": "en"
+      }
+    },
+    "Q3404977": {
+      "label": {
+        "text": "Ludovic-Trarieux International Human Rights Prize",
+        "lang": "en"
+      },
+      "description": {
+        "text": "international human rights award",
+        "lang": "en"
+      }
+    },
+    "Q35637": {
+      "label": {
+        "text": "Nobel Peace Prize",
+        "lang": "en"
+      },
+      "description": {
+        "text": "one of five Nobel Prizes",
+        "lang": "en"
+      }
+    },
+    "Q3586532": {
+      "label": {
+        "text": "1994 South African presidential elections",
+        "lang": "en"
+      }
+    },
+    "Q3739104": {
+      "label": {
+        "text": "natural causes",
+        "lang": "en"
+      },
+      "description": {
+        "text": "manner of death not involving external or willful factors",
+        "lang": "en"
+      }
+    },
+    "Q384437": {
+      "label": {
+        "text": "Order of the Lion",
+        "lang": "en"
+      },
+      "description": {
+        "text": "former order of Malawi",
+        "lang": "en"
+      }
+    },
+    "Q39893449": {
+      "label": {
+        "text": "exact match",
+        "lang": "en"
+      },
+      "description": {
+        "text": "SKOS mapping relation (for use with P4390): two concepts have equivalent meaning, and the link can be exploited across a wide range of applications and schemes; the link is meant to be transitive",
+        "lang": "en"
+      }
+    },
+    "Q40348": {
+      "label": {
+        "text": "lawyer",
+        "lang": "en"
+      },
+      "description": {
+        "text": "legal professional",
+        "lang": "en"
+      }
+    },
+    "Q42312684": {
+      "label": {
+        "text": "Grand Cross of the Order of the Aztec Eagle",
+        "lang": "en"
+      }
+    },
+    "Q42336756": {
+      "label": {
+        "text": "Ndileka Mandela",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "social activist in South Africa",
+        "lang": "en"
+      }
+    },
+    "Q4287156": {
+      "label": {
+        "text": "Isitwalandwe Medal",
+        "lang": "en"
+      },
+      "description": {
+        "text": "highest award given by the African National Congress",
+        "lang": "en"
+      }
+    },
+    "Q42955191": {
+      "label": {
+        "text": "Dare Not Linger",
+        "lang": "en"
+      },
+      "description": {
+        "text": "book by Nelson Mandela and Mandla Langa",
+        "lang": "en"
+      }
+    },
+    "Q4315048": {
+      "label": {
+        "text": "Order of Playa Girón",
+        "lang": "en"
+      },
+      "description": {
+        "text": "award",
+        "lang": "en"
+      }
+    },
+    "Q46002746": {
+      "label": {
+        "text": "Dictionary of African Biography",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "encyclopedia of African biographies",
+        "lang": "en"
+      }
+    },
+    "Q463303": {
+      "label": {
+        "text": "American Academy of Arts and Sciences",
+        "lang": "en"
+      },
+      "description": {
+        "text": "United States honorary society and policy research center",
+        "lang": "en"
+      }
+    },
+    "Q47035798": {
+      "label": {
+        "text": "honorary doctor of the Autonomous University of Barcelona",
+        "lang": "en"
+      }
+    },
+    "Q48786": {
+      "label": {
+        "text": "Sakharov Prize",
+        "lang": "en"
+      },
+      "description": {
+        "text": "award honouring individuals and groups of people who have dedicated their lives to the defense of human rights and freedom of thought",
+        "lang": "en"
+      }
+    },
+    "Q4913761": {
+      "label": {
+        "text": "WikiProject Biography",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia subject-area collaboration",
+        "lang": "en"
+      }
+    },
+    "Q498339": {
+      "label": {
+        "text": "honorary Canadian citizenship",
+        "lang": "en"
+      },
+      "description": {
+        "text": "award",
+        "lang": "en"
+      }
+    },
+    "Q5": {
+      "label": {
+        "text": "ಮಾನವೆ",
+        "lang": "tcy"
+      },
+      "description": {
+        "text": "ಹೋಮೋ ಸೇಪಿಯನ್ಸ್‍ದ ಸಾಮಾನ್ಯೊ ಪುದರ್",
+        "lang": "tcy"
+      }
+    },
+    "Q50621171": {
+      "label": {
+        "text": "honorary doctor of the University of Madrid Complutense",
+        "lang": "en"
+      }
+    },
+    "Q50845586": {
+      "label": {
+        "text": "honorary doctorate of the University of Cape Town",
+        "lang": "en"
+      }
+    },
+    "Q50920401": {
+      "label": {
+        "text": "SAPA Foundation, Swiss Archive of the Performing Arts",
+        "lang": "en"
+      },
+      "description": {
+        "text": "national memorial institution for the field of Swiss dance and theater culture",
+        "lang": "en"
+      }
+    },
+    "Q5254719": {
+      "label": {
+        "text": "Delta Prize for Global Understanding",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Joint award by Delta Airlines and the University of Georgia",
+        "lang": "en"
+      }
+    },
+    "Q5305654": {
+      "label": {
+        "text": "Drakenstein Correctional Centre",
+        "lang": "en"
+      },
+      "description": {
+        "text": "building in South Africa",
+        "lang": "en"
+      }
+    },
+    "Q534643": {
+      "label": {
+        "text": "University of the Witwatersrand",
+        "lang": "en"
+      },
+      "description": {
+        "text": "public research university in Johannesburg, South Africa",
+        "lang": "en"
+      }
+    },
+    "Q5460604": {
+      "label": {
+        "text": "Wikipedia:List of articles all languages should have",
+        "lang": "en"
+      },
+      "description": {
+        "text": "list of 1000 articles every Wikipedia edition should have",
+        "lang": "en"
+      }
+    },
+    "Q5492483": {
+      "label": {
+        "text": "WikiProject Politics",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia subject-area collaboration",
+        "lang": "en"
+      }
+    },
+    "Q55139818": {
+      "label": {
+        "text": "honorary doctorate of the Vrije Universiteit Brussel",
+        "lang": "en"
+      },
+      "description": {
+        "text": "honorary doctorate conferred by the VUB",
+        "lang": "en"
+      }
+    },
+    "Q55669983": {
+      "label": {
+        "text": "Travel diary from the Rivonia Trial",
+        "lang": "en"
+      },
+      "description": {
+        "text": "diary by Nelson Mandela",
+        "lang": "en"
+      }
+    },
+    "Q55697": {
+      "label": {
+        "text": "Order of the Smile",
+        "lang": "en"
+      },
+      "description": {
+        "text": "international award",
+        "lang": "en"
+      }
+    },
+    "Q55819532": {
+      "label": {
+        "text": "Robben Island Maximum Security Prison",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Maximum Security Prison‎ at Robben Island, Cape Town",
+        "lang": "en"
+      }
+    },
+    "Q5912944": {
+      "label": {
+        "text": "Houghton Estate",
+        "lang": "en"
+      },
+      "description": {
+        "text": "suburb of Johannesburg",
+        "lang": "en"
+      }
+    },
+    "Q6020082": {
+      "label": {
+        "text": "Indian Council for Cultural Relations",
+        "lang": "en"
+      },
+      "description": {
+        "text": "cultural promotion organization",
+        "lang": "en"
+      }
+    },
+    "Q6173448": {
+      "label": {
+        "text": "Wikipedia:Vital articles/Level/4",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia project page",
+        "lang": "en"
+      }
+    },
+    "Q63072128": {
+      "label": {
+        "text": "honorary doctor of the University of Hong Kong",
+        "lang": "en"
+      }
+    },
+    "Q63089015": {
+      "label": {
+        "text": "honorary doctor of the Peking University",
+        "lang": "en"
+      }
+    },
+    "Q64965767": {
+      "label": {
+        "text": "Bailiff Grand Cross of the Order of Saint John",
+        "lang": "en"
+      },
+      "description": {
+        "text": "award in the Order of Saint John",
+        "lang": "en"
+      }
+    },
+    "Q6565314": {
+      "label": {
+        "text": "J. William Fulbright Prize",
+        "lang": "en"
+      },
+      "description": {
+        "text": "award",
+        "lang": "en"
+      }
+    },
+    "Q65658851": {
+      "label": {
+        "text": "We Have Waited Too Long for Our Freedom",
+        "lang": "en"
+      },
+      "description": {
+        "text": "1990 speech by Nelson Mandela",
+        "lang": "en"
+      }
+    },
+    "Q6581097": {
+      "label": {
+        "text": "ಆನ್",
+        "lang": "tcy"
+      },
+      "description": {
+        "text": "ಪುಲ್ಲಿಂಗೊ",
+        "lang": "tcy"
+      }
+    },
+    "Q6585944": {
+      "label": {
+        "text": "list of awards and honours bestowed upon Nelson Mandela",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia list article",
+        "lang": "en"
+      }
+    },
+    "Q67155293": {
+      "label": {
+        "text": "Grand Cross of the Order of Liberty",
+        "lang": "en"
+      }
+    },
+    "Q677993": {
+      "label": {
+        "text": "University of South Africa",
+        "lang": "en"
+      },
+      "description": {
+        "text": "public university in South Africa",
+        "lang": "en"
+      }
+    },
+    "Q6905532": {
+      "label": {
+        "text": "Atatürk International Peace Prize",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Turkish award",
+        "lang": "en"
+      }
+    },
+    "Q71521142": {
+      "label": {
+        "text": "reproduction right not represented by CISAC member",
+        "lang": "en"
+      },
+      "description": {
+        "text": "mentioned by a member of CISAC that reproduction rights of visual works of an artist are not represented by them",
+        "lang": "en"
+      }
+    },
+    "Q7182737": {
+      "label": {
+        "text": "Philadelphia Liberty Medal",
+        "lang": "en"
+      },
+      "description": {
+        "text": "American medal, human rights award",
+        "lang": "en"
+      }
+    },
+    "Q7214342": {
+      "label": {
+        "text": "Category:Nelson Mandela",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia category",
+        "lang": "en"
+      }
+    },
+    "Q721743": {
+      "label": {
+        "text": "Congressional Gold Medal",
+        "lang": "en"
+      },
+      "description": {
+        "text": "award bestowed by the United States Congress",
+        "lang": "en"
+      }
+    },
+    "Q7225734": {
+      "label": {
+        "text": "Pollsmoor prison",
+        "lang": "en"
+      },
+      "description": {
+        "text": "building in South Africa",
+        "lang": "en"
+      }
+    },
+    "Q727815": {
+      "label": {
+        "text": "Order of the Companions of O. R. Tambo",
+        "lang": "en"
+      },
+      "description": {
+        "text": "award",
+        "lang": "en"
+      }
+    },
+    "Q73555012": {
+      "label": {
+        "text": "works protected by copyrights",
+        "lang": "en"
+      },
+      "description": {
+        "text": "literary and artistic works by creator protected by copyrights (author's rights)",
+        "lang": "en"
+      }
+    },
+    "Q791135": {
+      "label": {
+        "text": "Order of Friendship",
+        "lang": "en"
+      },
+      "description": {
+        "text": "state award of the Russian Federation",
+        "lang": "en"
+      }
+    },
+    "Q8023": {
+      "label": {
+        "text": "Nelson Mandela",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "President of South Africa and anti-apartheid activist (1918–2013)",
+        "lang": "en"
+      }
+    },
+    "Q82955": {
+      "label": {
+        "text": "politician",
+        "lang": "en"
+      },
+      "description": {
+        "text": "person who seeks or holds a political office or mandate or is otherwise politically active",
+        "lang": "en"
+      }
+    },
+    "Q83162": {
+      "label": {
+        "text": "African National Congress",
+        "lang": "en"
+      },
+      "description": {
+        "text": "left-wing nationalist political party in South Africa",
+        "lang": "en"
+      }
+    },
+    "Q8486462": {
+      "label": {
+        "text": "WikiProject History",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia subject-area collaboration",
+        "lang": "en"
+      }
+    },
+    "Q849164": {
+      "label": {
+        "text": "Cape Province",
+        "lang": "en"
+      },
+      "description": {
+        "text": "former province of South Africa",
+        "lang": "en"
+      }
+    },
+    "Q8503593": {
+      "label": {
+        "text": "WikiProject Africa",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia subject-area collaboration",
+        "lang": "en"
+      }
+    },
+    "Q86503339": {
+      "label": {
+        "text": "Honorary Doctor at Karolinska Institutet",
+        "lang": "en"
+      }
+    },
+    "Q865528": {
+      "label": {
+        "text": "University of Warwick",
+        "lang": "en"
+      },
+      "description": {
+        "text": "university in Coventry, United Kingdom",
+        "lang": "en"
+      }
+    },
+    "Q87048619": {
+      "label": {
+        "text": "countries with longer than 50 years pma",
+        "lang": "en"
+      },
+      "description": {
+        "text": "countries and regions with copyright protection for authors' lifetime plus 50 years, or more, after their deaths",
+        "lang": "en"
+      }
+    },
+    "Q894841": {
+      "label": {
+        "text": "Ambassador of Conscience Award",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Amnesty International award",
+        "lang": "en"
+      }
+    },
+    "Q9072": {
+      "label": {
+        "text": "Estonian",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Finnic language",
+        "lang": "en"
+      }
+    },
+    "Q911151": {
+      "label": {
+        "text": "Alan Paton Award",
+        "lang": "en"
+      },
+      "description": {
+        "text": "award",
+        "lang": "en"
+      }
+    },
+    "Q93190": {
+      "label": {
+        "text": "divorce",
+        "lang": "en"
+      },
+      "description": {
+        "text": "termination of a marital union",
+        "lang": "en"
+      }
+    },
+    "Q93976": {
+      "label": {
+        "text": "Order of the Gold Lion of the House of Nassau",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Chivalric order in Luxembourg and Netherlands",
+        "lang": "en"
+      }
+    },
+    "Q94056": {
+      "label": {
+        "text": "Order of Merit",
+        "lang": "en"
+      },
+      "description": {
+        "text": "dynastic order recognising distinguished service in Commonwealth realms (1902-)",
+        "lang": "en"
+      }
+    },
+    "Q959320": {
+      "label": {
+        "text": "Doctor of Laws",
+        "lang": "en"
+      },
+      "description": {
+        "text": "doctoral degree in law",
+        "lang": "en"
+      }
+    },
+    "Q959713": {
+      "label": {
+        "text": "Salim Lamrani",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "French teacher and writer",
+        "lang": "en"
+      }
+    },
+    "Q96233293": {
+      "label": {
+        "text": "honorary doctor of the University of Calcutta",
+        "lang": "en"
+      }
+    },
+    "Q96323738": {
+      "label": {
+        "text": "honorary doctor of the University of Pretoria",
+        "lang": "en"
+      }
+    },
+    "Q97556388": {
+      "label": {
+        "text": "Honorary doctor of Leiden University",
+        "lang": "en"
+      }
+    },
+    "Q976544": {
+      "label": {
+        "text": "Order of the Elephant",
+        "lang": "en"
+      },
+      "description": {
+        "text": "chivalric order in one class, highest order of Denmark",
+        "lang": "en"
+      }
+    },
+    "Q983310": {
+      "label": {
+        "text": "Luis Taruc",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Philippine Marxist politician (1913–2005)",
+        "lang": "en"
+      }
+    },
+    "Q99078844": {
+      "label": {
+        "text": "honorary doctor of the University of the Witwatersrand",
+        "lang": "en"
+      }
+    },
+    "Q99521170": {
+      "label": {
+        "text": "death of subject",
+        "lang": "en"
+      },
+      "description": {
+        "text": "death of the person represented by the parent item (i. e. not their spouse); end cause of marriage, significant event",
+        "lang": "en"
+      }
+    },
+    "Q99980667": {
+      "label": {
+        "text": "honorary doctor of the University of Antwerp",
+        "lang": "en"
+      }
+    }
+  },
+  "concepts": {
+    "Q1071": {
+      "label": {
+        "text": "ಭೂಗೋಳ ಶಾಸ್ತ್ರ",
+        "lang": "tcy"
+      },
+      "names": [
+        "ಭೂಗೋಳ ಶಾಸ್ತ್ರ"
+      ]
+    },
+    "Q11042": {
+      "label": {
+        "text": "culture",
+        "lang": "en"
+      },
+      "names": []
+    },
+    "Q121769": {
+      "label": {
+        "text": "reference",
+        "lang": "en"
+      },
+      "names": []
+    },
+    "Q12737077": {
+      "label": {
+        "text": "occupation",
+        "lang": "en"
+      },
+      "names": []
+    },
+    "Q131765": {
+      "label": {
+        "text": "multimedia",
+        "lang": "en"
+      },
+      "names": []
+    },
+    "Q159810": {
+      "label": {
+        "text": "economy",
+        "lang": "en"
+      },
+      "names": []
+    },
+    "Q184711": {
+      "label": {
+        "text": "twin town",
+        "lang": "en"
+      },
+      "names": []
+    },
+    "Q2221906": {
+      "label": {
+        "text": "geographic location",
+        "lang": "en"
+      },
+      "names": []
+    },
+    "Q309": {
+      "label": {
+        "text": "history",
+        "lang": "en"
+      },
+      "names": []
+    },
+    "Q36279": {
+      "label": {
+        "text": "biography",
+        "lang": "en"
+      },
+      "names": []
+    },
+    "Q37732": {
+      "label": {
+        "text": "demography",
+        "lang": "en"
+      },
+      "names": []
+    },
+    "Q618779": {
+      "label": {
+        "text": "award",
+        "lang": "en"
+      },
+      "names": []
+    },
+    "Q7163": {
+      "label": {
+        "text": "politics",
+        "lang": "en"
+      },
+      "names": []
+    },
+    "Q7188": {
+      "label": {
+        "text": "government",
+        "lang": "en"
+      },
+      "names": []
+    },
+    "Q7937": {
+      "label": {
+        "text": "climate",
+        "lang": "en"
+      },
+      "names": []
+    },
+    "Q82799": {
+      "label": {
+        "text": "name",
+        "lang": "en"
+      },
+      "names": []
+    },
+    "Q8434": {
+      "label": {
+        "text": "education",
+        "lang": "en"
+      },
+      "names": []
+    },
+    "Q8436": {
+      "label": {
+        "text": "family",
+        "lang": "en"
+      },
+      "names": []
+    },
+    "Q930933": {
+      "label": {
+        "text": "relation",
+        "lang": "en"
+      },
+      "names": []
+    }
+  },
+  "article": null,
+  "fallback_article": {
+    "title": "Nelson Mandela",
+    "paragraphs": [
+      "<b>Nelson Rolihlahla Mandela</b> (18 July 1918&#160;&#8211;&#32;5 December 2013) was a South African <a href=\"/wiki/Internal_resistance_to_South_African_apartheid\" class=\"mw-redirect\" title=\"Internal resistance to South African apartheid\">anti-apartheid revolutionary</a>, <a href=\"/wiki/Politics_of_South_Africa\" title=\"Politics of South Africa\">politician</a>, and <a href=\"/wiki/Philanthropy\" title=\"Philanthropy\">philanthropist</a>, who served as <a href=\"/wiki/President_of_South_Africa\" title=\"President of South Africa\">President of South Africa</a> from 1994 to 1999. He was the country's first <a href=\"/wiki/Black_people\" title=\"Black people\">black</a> head of state and the first elected in a <a href=\"/wiki/Universal_suffrage\" title=\"Universal suffrage\">fully representative</a> democratic election. <a href=\"/wiki/Presidency_of_Nelson_Mandela\" title=\"Presidency of Nelson Mandela\">His government</a> focused on dismantling the legacy of <a href=\"/wiki/Apartheid_in_South_Africa\" class=\"mw-redirect\" title=\"Apartheid in South Africa\">apartheid</a> by tackling institutionalised <a href=\"/wiki/Racism\" title=\"Racism\">racism</a> and fostering racial <a href=\"/wiki/Conflict_resolution\" title=\"Conflict resolution\">reconciliation</a>. Ideologically an <a href=\"/wiki/African_nationalism\" title=\"African nationalism\">African nationalist</a> and <a href=\"/wiki/Socialism\" title=\"Socialism\">socialist</a>, he served as President of the <a href=\"/wiki/African_National_Congress\" title=\"African National Congress\">African National Congress</a> (ANC) party from 1991 to 1997.\n",
+      "A <a href=\"/wiki/Xhosa_people\" title=\"Xhosa people\">Xhosa</a>, Mandela was born in <a href=\"/wiki/Mvezo\" title=\"Mvezo\">Mvezo</a> to the <a href=\"/wiki/Thembu\" title=\"Thembu\">Thembu</a> royal family. He studied law at the <a href=\"/wiki/Fort_Hare_University\" class=\"mw-redirect\" title=\"Fort Hare University\">University of Fort Hare</a> and the <a href=\"/wiki/University_of_Witwatersrand\" class=\"mw-redirect\" title=\"University of Witwatersrand\">University of the Witwatersrand</a> before working as a lawyer in <a href=\"/wiki/Johannesburg\" title=\"Johannesburg\">Johannesburg</a>. There he became involved in <a href=\"/wiki/Anti-colonialism\" class=\"mw-redirect\" title=\"Anti-colonialism\">anti-colonial</a> and African nationalist politics, joining the ANC in 1943 and co-founding its <a href=\"/wiki/African_National_Congress_Youth_League\" title=\"African National Congress Youth League\">Youth League</a> in 1944. After the <a href=\"/wiki/National_Party_(South_Africa)\" title=\"National Party (South Africa)\">National Party</a>'s <a href=\"/wiki/Dominant_minority\" title=\"Dominant minority\">white-only government</a> established apartheid—a system of <a href=\"/wiki/Racial_segregation\" title=\"Racial segregation\">racial segregation</a> that privileged <a href=\"/wiki/White_South_African\" class=\"mw-redirect\" title=\"White South African\">whites</a>—he and the ANC committed themselves to its overthrow. Mandela was appointed President of the ANC's <a href=\"/wiki/Transvaal_Province\" class=\"mw-redirect\" title=\"Transvaal Province\">Transvaal</a> branch, rising to prominence for his involvement in the 1952 <a href=\"/wiki/Defiance_Campaign\" title=\"Defiance Campaign\">Defiance Campaign</a> and the 1955 <a href=\"/wiki/Congress_of_the_People_(1955)\" title=\"Congress of the People (1955)\">Congress of the People</a>. He was repeatedly arrested for <a href=\"/wiki/Sedition\" title=\"Sedition\">seditious</a> activities and was unsuccessfully prosecuted in the <a href=\"/wiki/1956_Treason_Trial\" title=\"1956 Treason Trial\">1956 Treason Trial</a>. Influenced by <a href=\"/wiki/Marxism\" title=\"Marxism\">Marxism</a>, he secretly joined the <a href=\"/wiki/South_African_Communist_Party\" title=\"South African Communist Party\">South African Communist Party</a> (SACP). Although initially committed to non-violent protest, in association with the SACP he co-founded the militant <a href=\"/wiki/Umkhonto_we_Sizwe\" class=\"mw-redirect\" title=\"Umkhonto we Sizwe\">Umkhonto we Sizwe</a> in 1961 and led a <a href=\"/wiki/Sabotage\" title=\"Sabotage\">sabotage</a> campaign against the government. In 1962, he was arrested for conspiring to overthrow the state and sentenced to life imprisonment in the <a href=\"/wiki/Rivonia_Trial\" title=\"Rivonia Trial\">Rivonia Trial</a>.\n",
+      "Mandela served 27 years in prison, initially on <a href=\"/wiki/Robben_Island\" title=\"Robben Island\">Robben Island</a>, and later in <a href=\"/wiki/Pollsmoor_Prison\" title=\"Pollsmoor Prison\">Pollsmoor Prison</a> and <a href=\"/wiki/Drakenstein_Correctional_Centre\" title=\"Drakenstein Correctional Centre\">Victor Verster Prison</a>. Amid growing domestic and international pressure, and with fears of a racial civil war, President <a href=\"/wiki/F._W._de_Klerk\" title=\"F. W. de Klerk\">F. W. de Klerk</a> released him in 1990. Mandela and de Klerk negotiated an end to apartheid and organised the <a href=\"/wiki/South_African_general_election,_1994\" class=\"mw-redirect\" title=\"South African general election, 1994\">1994 multiracial general election</a> in which Mandela led the ANC to victory and became President. Leading a <a href=\"/wiki/Government_of_National_Unity_(South_Africa)\" class=\"mw-redirect\" title=\"Government of National Unity (South Africa)\">broad coalition government</a> which promulgated a <a href=\"/wiki/Constitution_of_South_Africa\" title=\"Constitution of South Africa\">new constitution</a>, Mandela emphasised reconciliation between the country's racial groups and created the <a href=\"/wiki/Truth_and_Reconciliation_Commission_(South_Africa)\" title=\"Truth and Reconciliation Commission (South Africa)\">Truth and Reconciliation Commission</a> to investigate past <a href=\"/wiki/Human_rights_in_South_Africa\" title=\"Human rights in South Africa\">human rights</a> abuses. Economically, Mandela's administration retained its predecessor's <a href=\"/wiki/Economic_liberalism\" title=\"Economic liberalism\">liberal framework</a> despite his own socialist beliefs, also introducing measures to encourage <a href=\"/wiki/Land_reform\" title=\"Land reform\">land reform</a>, combat poverty, and expand healthcare services. Internationally, he acted as mediator in the <a href=\"/wiki/Pan_Am_Flight_103_bombing_trial\" title=\"Pan Am Flight 103 bombing trial\">Pan Am Flight 103 bombing trial</a> and served as Secretary-General of the <a href=\"/wiki/Non-Aligned_Movement\" title=\"Non-Aligned Movement\">Non-Aligned Movement</a> from 1998 to 1999. He declined a second presidential term and in 1999 was succeeded by his deputy, <a href=\"/wiki/Thabo_Mbeki\" title=\"Thabo Mbeki\">Thabo Mbeki</a>. Mandela became an elder statesman and focused on combating poverty and <a href=\"/wiki/HIV/AIDS\" title=\"HIV/AIDS\">HIV/AIDS</a> through the charitable <a href=\"/wiki/Nelson_Mandela_Foundation\" title=\"Nelson Mandela Foundation\">Nelson Mandela Foundation</a>.\n",
+      "Mandela was a controversial figure for much of his life. Although critics on the <a href=\"/wiki/Right-wing_politics\" title=\"Right-wing politics\">right</a> denounced him as a <a href=\"/wiki/Communism\" title=\"Communism\">communist</a> <a href=\"/wiki/Terrorism\" title=\"Terrorism\">terrorist</a> and those on the <a href=\"/wiki/Far-left_politics\" title=\"Far-left politics\">radical left</a> deemed him too eager to negotiate and reconcile with apartheid's supporters, he gained international acclaim for his activism. Widely regarded as an icon of <a href=\"/wiki/Ethical_leadership\" title=\"Ethical leadership\">moral leadership</a>, <a href=\"/wiki/Democracy\" title=\"Democracy\">democracy</a> and <a href=\"/wiki/Social_justice\" title=\"Social justice\">social justice</a>, he received <a href=\"/wiki/List_of_Nelson_Mandela_awards_and_honours\" class=\"mw-redirect\" title=\"List of Nelson Mandela awards and honours\">more than 250 honours</a>—including the <a href=\"/wiki/Nobel_Peace_Prize\" title=\"Nobel Peace Prize\">Nobel Peace Prize</a>—and became the subject of a <a href=\"/wiki/Cult_of_personality\" title=\"Cult of personality\">cult of personality</a>. He is held in deep respect within South Africa, where he is often referred to by his <a href=\"/wiki/Xhosa_clan_names\" title=\"Xhosa clan names\">Xhosa clan name</a>, <b>Madiba</b>, and described as the \"<a href=\"/wiki/Father_of_the_Nation\" title=\"Father of the Nation\">Father of the Nation</a>\".\n",
+      "<br /><span class=\"error mw-ext-cite-error\" lang=\"en\" dir=\"ltr\">Cite error: There are <code>&lt;ref&#160;group&#61;lower-alpha&gt;</code> tags&#160;or <code>&#123;&#123;efn&#125;&#125;</code> templates on this page, but the references will not show without a <code>&#123;&#123;reflist&#124;group&#61;lower-alpha&#125;&#125;</code> template&#160;or <code>&#123;&#123;notelist&#125;&#125;</code> template (see the <a href=\"/wiki/Help:Cite_errors/Cite_error_group_refs_without_references\" title=\"Help:Cite errors/Cite error group refs without references\">help page</a>).</span>"
+    ],
+    "links": {
+      "African National Congress": "Q83162",
+      "Black people": "Q817393",
+      "Democracy": "Q7174",
+      "F. W. de Klerk": "Q151813",
+      "Racism": "Q8461",
+      "Robben Island": "Q192493",
+      "Racial segregation": "Q59816",
+      "Socialism": "Q7272",
+      "Politics of South Africa": "Q1155268",
+      "Sabotage": "Q193518",
+      "Social justice": "Q264892",
+      "Right-wing politics": "Q76074",
+      "Johannesburg": "Q34647",
+      "University of Fort Hare": "Q2005511",
+      "Fort Hare University": "Q2005511",
+      "Cult of personality": "Q192914",
+      "Land reform": "Q208128",
+      "Philanthropy": "Q185733",
+      "Rivonia Trial": "Q1639868",
+      "National unity government": "Q327922",
+      "Government of National Unity (South Africa)": "Q327922",
+      "Decolonization": "Q230533",
+      "Anti-colonialism": "Q230533",
+      "President of South Africa": "Q273884",
+      "Sedition": "Q544394",
+      "National Party (South Africa)": "Q740718",
+      "List of awards and honours received by Nelson Mandela": "Q6585944",
+      "List of Nelson Mandela awards and honours": "Q6585944",
+      "Conflict resolution": "Q1194317",
+      "Constitution of South Africa": "Q60567",
+      "Defiance Campaign": "Q1182666",
+      "Dominant minority": "Q2581810",
+      "1956 Treason Trial": "Q1119564",
+      "Marxism": "Q7264",
+      "Pollsmoor Prison": "Q7225734",
+      "Apartheid": "Q11409",
+      "Apartheid in South Africa": "Q11409",
+      "Pan Am Flight 103 bombing trial": "Q7129557",
+      "Drakenstein Correctional Centre": "Q5305654",
+      "African nationalism": "Q3874021",
+      "African National Congress Youth League": "Q295642",
+      "Congress of the People (1955)": "Q5160909",
+      "HIV/AIDS": "Q12199",
+      "Communism": "Q6186",
+      "Mvezo": "Q1020378",
+      "Father of the Nation": "Q2918497",
+      "Internal resistance to apartheid": "Q3354415",
+      "Internal resistance to South African apartheid": "Q3354415",
+      "Far-left politics": "Q1129409",
+      "Ethical leadership": "Q5403411",
+      "Economic liberalism": "Q729119",
+      "Nobel Peace Prize": "Q35637",
+      "Human rights in South Africa": "Q5938459",
+      "Presidency of Nelson Mandela": "Q7241103",
+      "Nelson Mandela Foundation": "Q3075517",
+      "Non-Aligned Movement": "Q83201",
+      "Terrorism": "Q7283",
+      "Truth and Reconciliation Commission (South Africa)": "Q373032",
+      "Thabo Mbeki": "Q101547",
+      "South African Communist Party": "Q305317",
+      "UMkhonto weSizwe": "Q1136236",
+      "Umkhonto we Sizwe": "Q1136236",
+      "Universal suffrage": "Q319891",
+      "Transvaal (province)": "Q190959",
+      "Transvaal Province": "Q190959",
+      "University of the Witwatersrand": "Q534643",
+      "University of Witwatersrand": "Q534643",
+      "1994 South African general election": "Q957012",
+      "South African general election, 1994": "Q957012",
+      "Thembu": "Q1779499",
+      "Xhosa clan names": "Q8044006",
+      "White South Africans": "Q785378",
+      "White South African": "Q785378",
+      "Xhosa people": "Q207996"
+    },
+    "sections": [
+      {
+        "title": "Early life",
+        "anchor": "Early_life",
+        "index": "1"
+      },
+      {
+        "title": "Early revolutionary activity",
+        "anchor": "Early_revolutionary_activity",
+        "index": "5"
+      },
+      {
+        "title": "Imprisonment",
+        "anchor": "Imprisonment",
+        "index": "10"
+      },
+      {
+        "title": "Negotiations to end apartheid",
+        "anchor": "Negotiations_to_end_apartheid",
+        "index": "15"
+      },
+      {
+        "title": "Presidency of South Africa (1994–1999)",
+        "anchor": "Presidency_of_South_Africa_(1994–1999)",
+        "index": "18"
+      },
+      {
+        "title": "Post-presidency and final years (1999–2013)",
+        "anchor": "Post-presidency_and_final_years_(1999–2013)",
+        "index": "28"
+      },
+      {
+        "title": "Political positions",
+        "anchor": "Political_positions",
+        "index": "32"
+      },
+      {
+        "title": "Personal life",
+        "anchor": "Personal_life",
+        "index": "35"
+      },
+      {
+        "title": "Legacy",
+        "anchor": "Legacy",
+        "index": "36"
+      },
+      {
+        "title": "See also",
+        "anchor": "See_also",
+        "index": "39"
+      },
+      {
+        "title": "References",
+        "anchor": "References",
+        "index": "40"
+      },
+      {
+        "title": "External links",
+        "anchor": "External_links",
+        "index": "43"
+      }
+    ],
+    "concept_sections": {},
+    "section_text": {}
+  },
+  "page_images": {
+    "Q11499147": {
+      "file": "Peace symbol (bold).svg",
+      "width": 16,
+      "height": 16,
+      "artist": "Kwamikagami",
+      "license": "CC BY-SA 4.0",
+      "source": "en.wikipedia.org"
+    },
+    "Q13218": {
+      "file": "South Africa 2011 Xhosa speakers proportion map.svg",
+      "width": 809,
+      "height": 709,
+      "artist": "Htonl",
+      "license": "Public domain",
+      "source": "en.wikipedia.org"
+    },
+    "Q1479435": {
+      "file": "CifondationFHB2.JPG",
+      "width": 3510,
+      "height": 1989,
+      "artist": "Zenman",
+      "license": "CC-BY-SA-3.0",
+      "source": "en.wikipedia.org"
+    },
+    "Q16103975": {
+      "file": "Nelson Mandela 1994.jpg",
+      "width": 1500,
+      "height": 1940,
+      "artist": "Kingkongphoto & www.celebrity-photos.com from Laurel",
+      "license": "CC BY-SA 2.0",
+      "source": "en.wikipedia.org"
+    },
+    "Q18814623": {
+      "file": "Champaigne, Philippe de - Saint Augustin - 1645-1650.jpg",
+      "width": 3135,
+      "height": 3812,
+      "artist": "Philippe de Champaigne",
+      "license": "Public domain",
+      "source": "en.wikipedia.org"
+    },
+    "Q273884": {
+      "file": "21.11.2025 – Presidente da República da África do Sul, Cyril Ramaphosa (54938010569) (cropped).jpg",
+      "width": 1120,
+      "height": 1492,
+      "artist": "Ricardo Stuckert",
+      "license": "CC BY 4.0",
+      "source": "en.wikipedia.org"
+    },
+    "Q31696": {
+      "file": "Bruno-Kreisky-01.JPG",
+      "width": 1536,
+      "height": 2048,
+      "artist": "Sculptor : Christine Pillhofer Image : Priwo",
+      "license": "Public domain",
+      "source": "en.wikipedia.org"
+    },
+    "Q3286546": {
+      "file": "Emphysema low mag.jpg",
+      "width": 3288,
+      "height": 1979,
+      "artist": "Nephron",
+      "license": "CC BY-SA 3.0",
+      "source": "en.wikipedia.org"
+    },
+    "Q6585944": {
+      "file": "Nelson Mandela.jpg",
+      "width": 273,
+      "height": 349,
+      "artist": "White House Photograph Office, Clinton Administration",
+      "license": "Public domain",
+      "source": "en.wikipedia.org"
+    }
+  }
+}

@@ -1,0 +1,275 @@
+//! The configuration: `layouts.toml` and `rules.toml`, embedded at build
+//! time, parsed and checked once.
+
+pub mod layouts;
+pub mod rules;
+
+use std::collections::{HashMap, HashSet};
+use std::sync::LazyLock;
+
+use content::Pid;
+
+pub use layouts::{ClassLayout, Layouts, SpreadSpec, Thresholds};
+pub use rules::Rules;
+
+use crate::vocab::{Role, RoleSet, SpreadKind};
+use rules::Row;
+
+const LAYOUTS: &str = include_str!("../../layouts.toml");
+const RULES: &str = include_str!("../../rules.toml");
+
+#[derive(Debug, thiserror::Error)]
+pub enum ConfigError {
+    #[error("{file}: {source}")]
+    Toml {
+        file: &'static str,
+        source: toml::de::Error,
+    },
+    #[error("invalid configuration:\n- {}", .0.join("\n- "))]
+    Invalid(Vec<String>),
+}
+
+#[derive(Debug)]
+pub struct Config {
+    pub layouts: Layouts,
+    pub rules: Rules,
+    roles: HashMap<Pid, RoleSet>,
+    hash: u64,
+}
+
+impl Config {
+    /// The embedded configuration. A test checks that it loads, so this
+    /// cannot fail in a build that passed its tests.
+    pub fn embedded() -> &'static Config {
+        static CONFIG: LazyLock<Config> = LazyLock::new(|| {
+            Config::parse(LAYOUTS, RULES).unwrap_or_else(|e| panic!("embedded configuration: {e}"))
+        });
+        &CONFIG
+    }
+
+    pub fn parse(layouts: &str, rules: &str) -> Result<Config, ConfigError> {
+        let toml_error = |file| move |source| ConfigError::Toml { file, source };
+        let layouts: Layouts = toml::from_str(layouts).map_err(toml_error("layouts.toml"))?;
+        let rules: Rules = toml::from_str(rules).map_err(toml_error("rules.toml"))?;
+        let errors = validate(&layouts, &rules);
+        if !errors.is_empty() {
+            return Err(ConfigError::Invalid(errors));
+        }
+        Ok(Config {
+            roles: role_index(&layouts),
+            hash: fnv1a(&[LAYOUTS, RULES]),
+            layouts,
+            rules,
+        })
+    }
+
+    /// The roles of a property.
+    pub fn roles(&self, pid: Pid) -> RoleSet {
+        self.roles.get(&pid).copied().unwrap_or_default()
+    }
+
+    /// A hash of both files. It is part of the cache key of a composition
+    /// and a view, so a change of the configuration invalidates them.
+    pub fn hash(&self) -> u64 {
+        self.hash
+    }
+}
+
+fn role_index(layouts: &Layouts) -> HashMap<Pid, RoleSet> {
+    let mut index: HashMap<Pid, RoleSet> = HashMap::new();
+    for (role, pids) in &layouts.roles.lists {
+        for pid in pids {
+            index.entry(*pid).or_default().insert(*role);
+        }
+    }
+    for pid in layouts.roles.office.keys() {
+        index.entry(*pid).or_default().insert(Role::Office);
+    }
+    index
+}
+
+fn validate(layouts: &Layouts, rules: &Rules) -> Vec<String> {
+    let mut errors = Vec::new();
+    table("property", &rules.property, &mut errors);
+    table("split", &rules.split, &mut errors);
+    table("block", &rules.block, &mut errors);
+    table("order", &rules.order, &mut errors);
+    table("placement", &rules.placement, &mut errors);
+    table("template", &rules.template, &mut errors);
+    if rules.lead.primitives.is_empty() {
+        errors.push("lead: no primitives".into());
+    }
+
+    if layouts.roles.lists.contains_key(&Role::Office) {
+        errors.push("roles: office is a table of holder -> office, not a list".into());
+    }
+    match layouts.class_layouts.get("generic") {
+        None => errors.push("class_layouts: no generic layout".into()),
+        Some(generic) if !generic.match_p31.is_empty() => {
+            errors.push("class_layouts.generic: match_p31 must be empty".into())
+        }
+        Some(_) => {}
+    }
+    let mut spread_ids = HashSet::new();
+    for (name, layout) in &layouts.class_layouts {
+        class_layout(name, layout, &mut errors);
+        spread_ids.extend(layout.spreads.iter().map(|s| s.id.as_str()));
+    }
+    for (pid, spread) in &layouts.topics {
+        if !spread_ids.contains(spread.as_str()) {
+            errors.push(format!(
+                "topics: {pid} names spread {spread:?}, which no layout has"
+            ));
+        }
+    }
+    let t = &layouts.thresholds;
+    for (name, share) in [("run_pictured", t.run_pictured), ("absence", t.absence)] {
+        if !(0.0..=1.0).contains(&share) {
+            errors.push(format!(
+                "thresholds.{name}: {share} is not a share (0 to 1)"
+            ));
+        }
+    }
+    errors
+}
+
+/// A table has rules, unique ids, and a last rule without a condition.
+fn table<R: Row>(name: &str, rows: &[R], errors: &mut Vec<String>) {
+    let mut ids = HashSet::new();
+    for row in rows {
+        if !ids.insert(row.id()) {
+            errors.push(format!("{name}: rule id {:?} is not unique", row.id()));
+        }
+    }
+    match rows.last() {
+        None => errors.push(format!("{name}: no rules")),
+        Some(last) if !last.unconditional() => errors.push(format!(
+            "{name}: the last rule ({:?}) must have no condition",
+            last.id()
+        )),
+        Some(_) => {}
+    }
+}
+
+/// The identity spread comes first; spread ids are unique; "more" and
+/// "evidence" are there at most once.
+fn class_layout(name: &str, layout: &ClassLayout, errors: &mut Vec<String>) {
+    if layout.spreads.first().map(|s| s.kind) != Some(SpreadKind::Identity) {
+        errors.push(format!(
+            "class_layouts.{name}: the first spread must be identity"
+        ));
+    }
+    let mut ids = HashSet::new();
+    for spread in &layout.spreads {
+        if !ids.insert(spread.id.as_str()) {
+            errors.push(format!(
+                "class_layouts.{name}: spread id {:?} twice",
+                spread.id
+            ));
+        }
+    }
+    for kind in [SpreadKind::Identity, SpreadKind::More, SpreadKind::Evidence] {
+        if layout.spreads.iter().filter(|s| s.kind == kind).count() > 1 {
+            errors.push(format!(
+                "class_layouts.{name}: more than one {kind:?} spread"
+            ));
+        }
+    }
+}
+
+/// FNV-1a, 64 bit: a hash that stays the same across Rust releases, so a
+/// cache key made by one build is valid for the next.
+fn fnv1a(parts: &[&str]) -> u64 {
+    let mut hash: u64 = 0xcbf2_9ce4_8422_2325;
+    for byte in parts.iter().flat_map(|p| p.bytes().chain([0])) {
+        hash ^= u64::from(byte);
+        hash = hash.wrapping_mul(0x0100_0000_01b3);
+    }
+    hash
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::vocab::{SpreadKind, Template};
+
+    #[test]
+    fn embedded_config_loads() {
+        let config = Config::embedded();
+        let layouts = &config.layouts;
+        assert_eq!(
+            layouts.class_layouts.keys().collect::<Vec<_>>(),
+            ["settlement", "person", "film", "astronomical", "generic"]
+        );
+        let settlement = &layouts.class_layouts["settlement"];
+        assert_eq!(settlement.spreads[0].kind, SpreadKind::Identity);
+        assert_eq!(
+            settlement.spreads.last().unwrap().kind,
+            SpreadKind::Evidence
+        );
+        assert_eq!(layouts.thresholds.set_max, 12);
+        assert_eq!(config.rules.block.last().unwrap().id, "row");
+        assert_eq!(
+            config.rules.template.last().unwrap().template,
+            Template::Columns
+        );
+    }
+
+    #[test]
+    fn roles_by_property() {
+        let config = Config::embedded();
+        let pid = |s: &str| s.parse::<Pid>().unwrap();
+        assert!(config.roles(pid("P6")).has(Role::Office));
+        assert!(config.roles(pid("P26")).has(Role::Relation));
+        // A property can have more than one role.
+        let p1082 = config.roles(pid("P1082"));
+        assert!(p1082.has(Role::Series));
+        assert!(!config.roles(pid("P31")).has(Role::Series));
+        assert_eq!(
+            config.layouts.roles.office[&pid("P6")],
+            pid("P1313"),
+            "head of government -> office held by head of government"
+        );
+        assert!(config.layouts.roles.list(Role::ExtremePoint).len() == 4);
+    }
+
+    fn invalid(layouts: &str, rules: &str) -> String {
+        Config::parse(layouts, rules).unwrap_err().to_string()
+    }
+
+    #[test]
+    fn unknown_names_are_errors() {
+        let bad_rule = RULES.replacen("make = \"fact\"", "make = \"facts\"", 1);
+        assert!(invalid(LAYOUTS, &bad_rule).contains("rules.toml"));
+        let bad_predicate = RULES.replacen("few = true", "fewer = true", 1);
+        assert!(invalid(LAYOUTS, &bad_predicate).contains("rules.toml"));
+        let bad_role = LAYOUTS.replacen("event = [", "events = [", 1);
+        assert!(invalid(&bad_role, RULES).contains("layouts.toml"));
+        let bad_pid = LAYOUTS.replacen("\"P571\",", "\"571\",", 1);
+        assert!(invalid(&bad_pid, RULES).contains("layouts.toml"));
+    }
+
+    #[test]
+    fn tables_end_with_an_unconditional_rule() {
+        let rules = RULES.replace(
+            "id = \"plain\"\ntemplate = \"columns\"",
+            "id = \"plain\"\nwhen = { lead = \"map\" }\ntemplate = \"columns\"",
+        );
+        assert!(invalid(LAYOUTS, &rules).contains("template: the last rule (\"plain\")"));
+        let rules = RULES.replace("id = \"map\"\nwhen", "id = \"office\"\nwhen");
+        assert!(invalid(LAYOUTS, &rules).contains("\"office\" is not unique"));
+    }
+
+    #[test]
+    fn layouts_are_checked() {
+        let layouts = LAYOUTS.replacen("P2184 = \"history\"", "P2184 = \"histories\"", 1);
+        assert!(invalid(&layouts, RULES).contains("\"histories\", which no layout has"));
+    }
+
+    #[test]
+    fn hash_is_stable() {
+        assert_eq!(fnv1a(&["a"]), fnv1a(&["a"]));
+        assert_ne!(fnv1a(&["ab", "c"]), fnv1a(&["a", "bc"]));
+        assert_eq!(fnv1a(&[]), 0xcbf2_9ce4_8422_2325);
+    }
+}

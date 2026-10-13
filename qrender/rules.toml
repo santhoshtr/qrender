@@ -1,0 +1,151 @@
+# The decisions of the composer, as ordered rule tables. In each table the
+# first rule whose conditions all hold wins. A condition is an AND of named
+# predicates (qrender/src/compose/facts.rs lists them). A rule without
+# `when` always holds, and every table ends with one.
+#
+# Each block records the id of the rule that made it, so the composition
+# says why a value looks the way it looks.
+
+# ------------------------------------------------------------- property
+# Before any statement of a property is claimed.
+
+[[property]]
+id = "office-title"
+when = { office_title = true }   # shown as the title of its succession
+make = "skip"
+
+[[property]]
+id = "extreme-point"
+when = { role = "extreme_point" }  # shown as markers on the map
+make = "skip"
+
+[[property]]
+id = "office"
+when = { role = "office" }
+make = "succession"
+
+[[property]]
+id = "crew"
+when = { role = "crew" }
+make = "credits"
+
+[[property]]
+id = "values"
+make = "values"
+
+# ---------------------------------------------------------------- split
+# Values of an item property that ended are history: a group of their own.
+# Not for the `relation` role: an ended marriage is part of a life.
+
+[[split]]
+id = "former-values"
+when = { type = "WikibaseItem", relation = false }
+make = "split-ended"
+
+[[split]]
+id = "together"
+make = "together"
+
+# ---------------------------------------------------------------- block
+# The block of one group of values.
+
+[[block]]
+id = "media"
+when = { type = "CommonsMedia" }
+make = "media"
+
+[[block]]
+id = "coordinate"
+when = { type = "GlobeCoordinate" }
+make = "map"
+
+[[block]]
+id = "series"
+when = { type = "Quantity", role = "series", distinct_years = true }
+make = "series"
+
+[[block]]
+id = "former"
+when = { type = "WikibaseItem", former = true }
+make = "former-list"
+
+[[block]]
+id = "few-pictures"
+when = { type = "WikibaseItem", mostly_pictured = false }
+make = "item-list"
+
+[[block]]
+id = "single"
+when = { type = "WikibaseItem", few = true }
+make = "single"
+
+[[block]]
+id = "set"
+when = { type = "WikibaseItem" }
+make = "network"
+
+[[block]]
+id = "score"
+when = { role = "score" }
+make = "score"
+
+[[block]]
+id = "row"
+make = "fact"
+
+# ---------------------------------------------------------------- order
+# The order of the values of a set.
+
+[[order]]
+id = "billing"
+when = { role = "billing" }
+order = "references"
+
+[[order]]
+id = "pictured"
+order = "pictured"
+
+# ----------------------------------------------------------------- lead
+# The first block of one of these primitives leads its spread.
+
+[lead]
+primitives = ["succession", "map"]
+
+# ------------------------------------------------------------ placement
+# The slot of every block that does not lead.
+
+[[placement]]
+id = "single"
+when = { make = "single" }       # small values: the gallery of the spread
+slot = "gallery"
+
+[[placement]]
+id = "row"
+when = { primitive = "fact" }
+slot = "sheet"
+
+[[placement]]
+id = "picture"
+when = { primitive = "media", audio = false }
+slot = "gallery"
+
+[[placement]]
+id = "block"
+slot = "stack"
+
+# ------------------------------------------------------------- template
+# The template of a facts spread, from its lead.
+
+[[template]]
+id = "office"
+when = { lead = "succession" }
+template = "lead-beside"
+
+[[template]]
+id = "map"
+when = { lead = "map" }
+template = "hero-plus-stack"
+
+[[template]]
+id = "plain"
+template = "columns"

@@ -1,0 +1,477 @@
+{
+  "schema": "text/0.1",
+  "lang": "en",
+  "labels": {
+    "P131": {
+      "label": {
+        "text": "located in the administrative territorial entity",
+        "lang": "en"
+      },
+      "description": {
+        "text": "the item is located on the territory of the following administrative entity. Use P276 for specifying locations that are non-administrative places and for items about events. Use P1382 if the item falls only partially into the administrative entity",
+        "lang": "en"
+      }
+    },
+    "P143": {
+      "label": {
+        "text": "imported from Wikimedia project",
+        "lang": "en"
+      },
+      "description": {
+        "text": "source of this claim's value; used in references section by bots or humans importing data from Wikimedia projects",
+        "lang": "en"
+      }
+    },
+    "P17": {
+      "label": {
+        "text": "country",
+        "lang": "en"
+      },
+      "description": {
+        "text": "sovereign state that this subject item is in (not to be used for human beings)",
+        "lang": "en"
+      }
+    },
+    "P248": {
+      "label": {
+        "text": "stated in",
+        "lang": "en"
+      },
+      "description": {
+        "text": "to be used in the references field to refer to the information document or database in which a claim is made; for qualifiers use P805; for the type of document in which a claim is made use P3865",
+        "lang": "en"
+      }
+    },
+    "P281": {
+      "label": {
+        "text": "postal code",
+        "lang": "en"
+      },
+      "description": {
+        "text": "code assigned by postal authorities for the subject area or building for the purpose of sorting and routing mail",
+        "lang": "en"
+      }
+    },
+    "P31": {
+      "label": {
+        "text": "instance of",
+        "lang": "en"
+      },
+      "description": {
+        "text": "type to which this subject corresponds/belongs. Different from P279 (subclass of); for example: K2 is an instance of mountain; volcano is a subclass of mountain",
+        "lang": "en"
+      }
+    },
+    "P3629": {
+      "label": {
+        "text": "age of subject at event",
+        "lang": "en"
+      },
+      "description": {
+        "text": "the age of the subject according to the cited source at the time of an event. Used as a qualifier of significant event property",
+        "lang": "en"
+      }
+    },
+    "P625": {
+      "label": {
+        "text": "coordinate location",
+        "lang": "en"
+      },
+      "description": {
+        "text": "geocoordinates of the subject. For Earth, please note that only the WGS84 geodetic datum is currently supported",
+        "lang": "en"
+      }
+    },
+    "P854": {
+      "label": {
+        "text": "reference URL",
+        "lang": "en"
+      },
+      "description": {
+        "text": "should be used for Internet URLs as references. Use \"Wikimedia import URL\" (P4656) for imports from Wikimedia sites",
+        "lang": "en"
+      }
+    },
+    "Q139890532": {
+      "label": {
+        "text": "Kokkachal",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Hamlet in Kasaragod district, Kerala, India",
+        "lang": "en"
+      }
+    },
+    "Q1419703": {
+      "label": {
+        "text": "Kasaragod district",
+        "lang": "en"
+      },
+      "description": {
+        "text": "District of Kerala, India",
+        "lang": "en"
+      }
+    },
+    "Q532": {
+      "label": {
+        "text": "village",
+        "lang": "en"
+      },
+      "description": {
+        "text": "small clustered human settlement smaller than a town",
+        "lang": "en"
+      }
+    },
+    "Q668": {
+      "label": {
+        "text": "India",
+        "lang": "en"
+      },
+      "description": {
+        "text": "country in South Asia",
+        "lang": "en"
+      }
+    }
+  },
+  "concepts": {
+    "Q1071": {
+      "label": {
+        "text": "geography",
+        "lang": "en"
+      },
+      "names": [
+        "geographical science",
+        "geography",
+        "geography (general)"
+      ]
+    },
+    "Q11042": {
+      "label": {
+        "text": "culture",
+        "lang": "en"
+      },
+      "names": [
+        "cultural activity",
+        "culture",
+        "cultures"
+      ]
+    },
+    "Q115668531": {
+      "label": {
+        "text": "film release",
+        "lang": "en"
+      },
+      "names": [
+        "film release",
+        "movie release"
+      ]
+    },
+    "Q121769": {
+      "label": {
+        "text": "reference",
+        "lang": "en"
+      },
+      "names": [
+        "base object",
+        "linked object",
+        "reference"
+      ]
+    },
+    "Q12737077": {
+      "label": {
+        "text": "occupation",
+        "lang": "en"
+      },
+      "names": [
+        "job",
+        "non-professional work activities",
+        "non-professional work activity",
+        "occupation",
+        "occupations",
+        "profession",
+        "work"
+      ]
+    },
+    "Q131765": {
+      "label": {
+        "text": "multimedia",
+        "lang": "en"
+      },
+      "names": [
+        "multimedia"
+      ]
+    },
+    "Q14775294": {
+      "label": {
+        "text": "motion picture rating system",
+        "lang": "en"
+      },
+      "names": [
+        "motion picture content rating system",
+        "motion picture rating system"
+      ]
+    },
+    "Q15267437": {
+      "label": {
+        "text": "cast",
+        "lang": "en"
+      },
+      "names": [
+        "cast",
+        "theatrical cast",
+        "vocal cast"
+      ]
+    },
+    "Q159810": {
+      "label": {
+        "text": "economy",
+        "lang": "en"
+      },
+      "names": [
+        "economy"
+      ]
+    },
+    "Q1758354": {
+      "label": {
+        "text": "plot",
+        "lang": "en"
+      },
+      "names": [
+        "plot",
+        "sjužet",
+        "sujet",
+        "syuzhet"
+      ]
+    },
+    "Q184711": {
+      "label": {
+        "text": "twin town",
+        "lang": "en"
+      },
+      "names": [
+        "sister city",
+        "twin town",
+        "twin towns and sister cities"
+      ]
+    },
+    "Q2221906": {
+      "label": {
+        "text": "geographic location",
+        "lang": "en"
+      },
+      "names": [
+        "geographic location",
+        "geographical location",
+        "location",
+        "place",
+        "setting"
+      ]
+    },
+    "Q309": {
+      "label": {
+        "text": "history",
+        "lang": "en"
+      },
+      "names": [
+        "historical record",
+        "history",
+        "human history"
+      ]
+    },
+    "Q36279": {
+      "label": {
+        "text": "biography",
+        "lang": "en"
+      },
+      "names": [
+        "bio",
+        "biography"
+      ]
+    },
+    "Q37732": {
+      "label": {
+        "text": "demography",
+        "lang": "en"
+      },
+      "names": [
+        "demographic research",
+        "demography",
+        "population research"
+      ]
+    },
+    "Q4482": {
+      "label": {
+        "text": "film criticism",
+        "lang": "en"
+      },
+      "names": [
+        "FilmCriticism",
+        "film criticism",
+        "film review",
+        "motion picture criticism",
+        "motion picture review",
+        "movie criticism",
+        "movie review",
+        "movie reviews"
+      ]
+    },
+    "Q506702": {
+      "label": {
+        "text": "film crew",
+        "lang": "en"
+      },
+      "names": [
+        "film crew",
+        "movie crew"
+      ]
+    },
+    "Q618779": {
+      "label": {
+        "text": "award",
+        "lang": "en"
+      },
+      "names": [
+        "Awards and Prizes",
+        "award",
+        "honor",
+        "honour",
+        "medal",
+        "prize"
+      ]
+    },
+    "Q7163": {
+      "label": {
+        "text": "politics",
+        "lang": "en"
+      },
+      "names": [
+        "politics"
+      ]
+    },
+    "Q7188": {
+      "label": {
+        "text": "government",
+        "lang": "en"
+      },
+      "names": [
+        "gov",
+        "government",
+        "govt.",
+        "gvmnt"
+      ]
+    },
+    "Q7937": {
+      "label": {
+        "text": "climate",
+        "lang": "en"
+      },
+      "names": [
+        "climate",
+        "local climate",
+        "weather system"
+      ]
+    },
+    "Q82799": {
+      "label": {
+        "text": "name",
+        "lang": "en"
+      },
+      "names": [
+        "label",
+        "name"
+      ]
+    },
+    "Q8434": {
+      "label": {
+        "text": "education",
+        "lang": "en"
+      },
+      "names": [
+        "education"
+      ]
+    },
+    "Q8436": {
+      "label": {
+        "text": "family",
+        "lang": "en"
+      },
+      "names": [
+        "a family",
+        "families",
+        "family"
+      ]
+    },
+    "Q930933": {
+      "label": {
+        "text": "relation",
+        "lang": "en"
+      },
+      "names": [
+        "connection",
+        "link",
+        "linkage",
+        "relation",
+        "relationship"
+      ]
+    },
+    "Q932586": {
+      "label": {
+        "text": "film production",
+        "lang": "en"
+      },
+      "names": [
+        "film production",
+        "filmmaking",
+        "movie production"
+      ]
+    }
+  },
+  "article": {
+    "title": "Kokkachal",
+    "paragraphs": [
+      "<b>Kokkachal</b> (<span title=\"Malayalam-language text\"><span lang=\"ml\">കൊക്കച്ചാൽ</span></span>, <span class=\"IPA nowrap\" lang=\"ml-Latn-fonipa\"><a href=\"/wiki/Help:IPA/Malayalam\" title=\"Help:IPA/Malayalam\">&#91;ko̞kːɐt͡ʃːaːl&#93;</a></span>; also spelled <b>Kokkechal</b>) is a small locality and settlement situated in the <a href=\"/wiki/Kasaragod_district\" title=\"Kasaragod district\">Kasaragod district</a> in the Indian state of <a href=\"/wiki/Kerala\" title=\"Kerala\">Kerala</a>. It falls under the administration of the <a href=\"/wiki/Manjeshwaram_taluk\" title=\"Manjeshwaram taluk\">Manjeshwaram taluk</a> near the northern border of the state.\n"
+    ],
+    "links": {
+      "Kerala": "Q1186",
+      "Kasaragod district": "Q1419703",
+      "Manjeshwaram taluk": "Q31701629",
+      "Bandiyod": "Q24942047"
+    },
+    "sections": [
+      {
+        "title": "Geography",
+        "anchor": "Geography",
+        "index": "1"
+      },
+      {
+        "title": "Education and Institutions",
+        "anchor": "Education_and_Institutions",
+        "index": "2"
+      },
+      {
+        "title": "Transport",
+        "anchor": "Transport",
+        "index": "3"
+      },
+      {
+        "title": "See also",
+        "anchor": "See_also",
+        "index": "4"
+      },
+      {
+        "title": "References",
+        "anchor": "References",
+        "index": "5"
+      }
+    ],
+    "concept_sections": {
+      "Q1071": [
+        "Geography"
+      ]
+    },
+    "section_text": {
+      "Geography": "Kokkachal is situated along the rural routes connecting <a href=\"/wiki/Bandiyod\" title=\"Bandiyod\">Bandiyod</a> (approximately 6.5&#160;km away) and Dharmathadukka. Geographically, it sits close to the border of the Puthige and Mangalpady local government jurisdictions. The landscape is characterized by the typical midland topography of Northern Malabar, with seasonal streams feeding into larger coastal river systems.\n"
+    }
+  },
+  "page_images": {}
+}

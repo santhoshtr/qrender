@@ -1,0 +1,2273 @@
+{
+  "schema": "text/0.1",
+  "lang": "en",
+  "labels": {
+    "P10": {
+      "label": {
+        "text": "video",
+        "lang": "en"
+      },
+      "description": {
+        "text": "relevant video; use property P18 for images; for film trailers, qualify with \"object has role\" (P3831)=\"trailer\" (Q622550); for films, qualify with \"object has role\" (P3831)=\"full video available on Wikimedia Commons\" (Q89347362)",
+        "lang": "en"
+      }
+    },
+    "P10291": {
+      "label": {
+        "text": "Wikisimpsons article ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a Wikisimpsons article",
+        "lang": "en"
+      }
+    },
+    "P1036": {
+      "label": {
+        "text": "Dewey Decimal Classification",
+        "lang": "en"
+      },
+      "description": {
+        "text": "use with qualifier \"edition (P747)\" with item value \"DDC 23\" or create new item to represent the corresponding DDC edition",
+        "lang": "en"
+      }
+    },
+    "P10397": {
+      "label": {
+        "text": "SBN place ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a place issued by National Library Service (SBN) of Italy",
+        "lang": "en"
+      }
+    },
+    "P10730": {
+      "label": {
+        "text": "Data Commons ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the Data Commons knowledge graph",
+        "lang": "en"
+      }
+    },
+    "P1082": {
+      "label": {
+        "text": "population",
+        "lang": "en"
+      },
+      "description": {
+        "text": "number of people inhabiting the place; number of people of subject",
+        "lang": "en"
+      }
+    },
+    "P10832": {
+      "label": {
+        "text": "WorldCat Entities ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person, work, place, historical period, or event from the WorldCat Entities linked data service",
+        "lang": "en"
+      }
+    },
+    "P12086": {
+      "label": {
+        "text": "WikiKids ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of the article on the Dutch online encyclopedia for kids",
+        "lang": "en"
+      }
+    },
+    "P1225": {
+      "label": {
+        "text": "U.S. National Archives Identifier",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for the United States National Archives and Records Administration's online catalog",
+        "lang": "en"
+      }
+    },
+    "P12385": {
+      "label": {
+        "text": "Gran Enciclopèdia Catalana ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an item in the Gran Enciclopèdia Catalana",
+        "lang": "en"
+      }
+    },
+    "P1245": {
+      "label": {
+        "text": "OmegaWiki Defined Meaning",
+        "lang": "en"
+      },
+      "description": {
+        "text": "\"Defined Meaning\" on the site",
+        "lang": "en"
+      }
+    },
+    "P12749": {
+      "label": {
+        "text": "SNARC ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "unique identifier for people, places and organisations represented in Welsh collections",
+        "lang": "en"
+      }
+    },
+    "P12800": {
+      "label": {
+        "text": "Vikidia article ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an article on Vikidia (format \"lang-code:title\")",
+        "lang": "en"
+      }
+    },
+    "P1281": {
+      "label": {
+        "text": "WOEID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a location on Yahoo! GeoPlanet and Flickr",
+        "lang": "en"
+      }
+    },
+    "P1296": {
+      "label": {
+        "text": "Gran Enciclopèdia Catalana ID (former scheme)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an item in the Gran Enciclopèdia Catalana. Replaced with \"Gran Enciclopèdia Catalana ID (P12385)\"",
+        "lang": "en"
+      }
+    },
+    "P131": {
+      "label": {
+        "text": "located in the administrative territorial entity",
+        "lang": "en"
+      },
+      "description": {
+        "text": "the item is located on the territory of the following administrative entity. Use P276 for specifying locations that are non-administrative places and for items about events. Use P1382 if the item falls only partially into the administrative entity",
+        "lang": "en"
+      }
+    },
+    "P1343": {
+      "label": {
+        "text": "described by source",
+        "lang": "en"
+      },
+      "description": {
+        "text": "work where this item is described, in statistical contexts, a methodological note describing the data",
+        "lang": "en"
+      }
+    },
+    "P13591": {
+      "label": {
+        "text": "‎Yale LUX ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an entity in Yale's LUX cross collection knowledge graph",
+        "lang": "en"
+      }
+    },
+    "P1376": {
+      "label": {
+        "text": "capital of",
+        "lang": "en"
+      },
+      "description": {
+        "text": "country, state, department, canton or other administrative division of which the municipality is the governmental seat",
+        "lang": "en"
+      }
+    },
+    "P13772": {
+      "label": {
+        "text": "Harper's tag",
+        "lang": "en"
+      },
+      "description": {
+        "text": "tag in Harper's Magazine",
+        "lang": "en"
+      }
+    },
+    "P1417": {
+      "label": {
+        "text": "Encyclopædia Britannica Online ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an article in the online version of Encyclopædia Britannica",
+        "lang": "en"
+      }
+    },
+    "P143": {
+      "label": {
+        "text": "imported from Wikimedia project",
+        "lang": "en"
+      },
+      "description": {
+        "text": "source of this claim's value; used in references section by bots or humans importing data from Wikimedia projects",
+        "lang": "en"
+      }
+    },
+    "P14457": {
+      "label": {
+        "text": "subject named as (monolingual text)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "(with an associated language code) name by which a subject is recorded in a database, mentioned as a contributor of a work, or is referred to in a particular context",
+        "lang": "en"
+      }
+    },
+    "P1448": {
+      "label": {
+        "text": "official name",
+        "lang": "en"
+      },
+      "description": {
+        "text": "official name of the subject in its official language(s)",
+        "lang": "en"
+      }
+    },
+    "P1464": {
+      "label": {
+        "text": "category for people born here",
+        "lang": "en"
+      },
+      "description": {
+        "text": "category item that groups people born in this place",
+        "lang": "en"
+      }
+    },
+    "P1465": {
+      "label": {
+        "text": "category for people who died here",
+        "lang": "en"
+      },
+      "description": {
+        "text": "category item for people who died in this location",
+        "lang": "en"
+      }
+    },
+    "P1549": {
+      "label": {
+        "text": "demonym",
+        "lang": "en"
+      },
+      "description": {
+        "text": "name for people or things associated with a given place, usually based off the place name",
+        "lang": "en"
+      }
+    },
+    "P1566": {
+      "label": {
+        "text": "GeoNames ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the GeoNames geographical database",
+        "lang": "en"
+      }
+    },
+    "P1617": {
+      "label": {
+        "text": "BBC Things ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the BBC Things database, automatically enriched with Wikipedia and MusicBrainz content",
+        "lang": "en"
+      }
+    },
+    "P1667": {
+      "label": {
+        "text": "Getty Thesaurus of Geographic Names ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the Getty Thesaurus of Geographic Names",
+        "lang": "en"
+      }
+    },
+    "P17": {
+      "label": {
+        "text": "country",
+        "lang": "en"
+      },
+      "description": {
+        "text": "sovereign state that this subject item is in (not to be used for human beings)",
+        "lang": "en"
+      }
+    },
+    "P1705": {
+      "label": {
+        "text": "native label",
+        "lang": "en"
+      },
+      "description": {
+        "text": "label for the items in their official language or their original language",
+        "lang": "en"
+      }
+    },
+    "P1792": {
+      "label": {
+        "text": "category of associated people",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia category for people associated with this place or organization",
+        "lang": "en"
+      }
+    },
+    "P18": {
+      "label": {
+        "text": "image",
+        "lang": "en"
+      },
+      "description": {
+        "text": "image of relevant illustration of the subject; if available, also use more specific properties (sample: coat of arms image, locator map, flag image, signature image, logo image, collage image)",
+        "lang": "en"
+      }
+    },
+    "P1810": {
+      "label": {
+        "text": "subject named as",
+        "lang": "en"
+      },
+      "description": {
+        "text": "name by which a subject is recorded in a database, mentioned as a contributor of a work, or is referred to in a particular context",
+        "lang": "en"
+      }
+    },
+    "P1871": {
+      "label": {
+        "text": "CERL Thesaurus ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the Consortium of European Research Libraries Thesaurus",
+        "lang": "en"
+      }
+    },
+    "P190": {
+      "label": {
+        "text": "twinned administrative body",
+        "lang": "en"
+      },
+      "description": {
+        "text": "twin towns, sister cities, twinned municipalities and other localities that have a partnership or cooperative agreement, either legally or informally acknowledged by their governments",
+        "lang": "en"
+      }
+    },
+    "P1937": {
+      "label": {
+        "text": "UN/LOCODE",
+        "lang": "en"
+      },
+      "description": {
+        "text": "geographic location code maintained by UNECE (United Nations Economic Commission for Europe) for over 103,000 locations in 249 countries and territories to identify ports, airports, and transport hubs",
+        "lang": "en"
+      }
+    },
+    "P1997": {
+      "label": {
+        "text": "Facebook location ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a place in Facebook",
+        "lang": "en"
+      }
+    },
+    "P2002": {
+      "label": {
+        "text": "X (Twitter) username",
+        "lang": "en"
+      },
+      "description": {
+        "text": "username on X (formerly Twitter); do not include the '@' symbol",
+        "lang": "en"
+      }
+    },
+    "P2003": {
+      "label": {
+        "text": "Instagram username",
+        "lang": "en"
+      },
+      "description": {
+        "text": "item's username on Instagram",
+        "lang": "en"
+      }
+    },
+    "P2013": {
+      "label": {
+        "text": "Facebook username",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an official (preferably) Facebook person, product or organization page (everything that follows URL part 'https://www.facebook.com/')",
+        "lang": "en"
+      }
+    },
+    "P2044": {
+      "label": {
+        "text": "elevation above sea level",
+        "lang": "en"
+      },
+      "description": {
+        "text": "height of the item (geographical object) as measured relative to sea level",
+        "lang": "en"
+      }
+    },
+    "P2046": {
+      "label": {
+        "text": "area",
+        "lang": "en"
+      },
+      "description": {
+        "text": "area occupied by an object",
+        "lang": "en"
+      }
+    },
+    "P2093": {
+      "label": {
+        "text": "author name string",
+        "lang": "en"
+      },
+      "description": {
+        "text": "stores unspecified author or editor name for publications; use if Wikidata item for author (P50) or editor (P98) does not exist or is not known. Do not use both.",
+        "lang": "en"
+      }
+    },
+    "P213": {
+      "label": {
+        "text": "ISNI",
+        "lang": "en"
+      },
+      "description": {
+        "text": "International Standard Name Identifier for an identity. Starting with 0000.",
+        "lang": "en"
+      }
+    },
+    "P214": {
+      "label": {
+        "text": "VIAF cluster ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for the Virtual International Authority File database [format: up to 22 digits]; please note: VIAF is a cluster, the ID can include multiple items",
+        "lang": "en"
+      }
+    },
+    "P2163": {
+      "label": {
+        "text": "FAST ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "authority control identifier in WorldCat's “FAST Linked Data” authority file",
+        "lang": "en"
+      }
+    },
+    "P2184": {
+      "label": {
+        "text": "history of topic",
+        "lang": "en"
+      },
+      "description": {
+        "text": "item about the historical development of a subject's topic, example: \"history of Argentina\" for \"Argentina\". To list key events of the topic, use \"significant event\" (P793)",
+        "lang": "en"
+      }
+    },
+    "P227": {
+      "label": {
+        "text": "GND ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier from the Gemeinsame Normdatei authority file of names, subjects, and organizations",
+        "lang": "en"
+      }
+    },
+    "P2326": {
+      "label": {
+        "text": "GNS Unique Feature ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for geographic entities according to the National Geospatial-Intelligence Agency's GEOnet Names Server",
+        "lang": "en"
+      }
+    },
+    "P2347": {
+      "label": {
+        "text": "YSO ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a concept in the General Finnish Ontology YSO",
+        "lang": "en"
+      }
+    },
+    "P242": {
+      "label": {
+        "text": "locator map image",
+        "lang": "en"
+      },
+      "description": {
+        "text": "geographic map image which highlights the location of the subject within some larger entity",
+        "lang": "en"
+      }
+    },
+    "P244": {
+      "label": {
+        "text": "Library of Congress Authorities ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Library of Congress name authority (persons, families, corporate bodies, events, places, works and expressions) and subject authority identifier [Format: 1-2 specific letters followed by 8-10 digits (see regex). For manifestations, use P1144]",
+        "lang": "en"
+      }
+    },
+    "P248": {
+      "label": {
+        "text": "stated in",
+        "lang": "en"
+      },
+      "description": {
+        "text": "to be used in the references field to refer to the information document or database in which a claim is made; for qualifiers use P805; for the type of document in which a claim is made use P3865",
+        "lang": "en"
+      }
+    },
+    "P2572": {
+      "label": {
+        "text": "hashtag",
+        "lang": "en"
+      },
+      "description": {
+        "text": "reference keyword associated with this item for online communities (do not include the \"#\" symbol which is often used as a prefixed indicator)",
+        "lang": "en"
+      }
+    },
+    "P2581": {
+      "label": {
+        "text": "BabelNet ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "ID in BabelNet encyclopedic dictionary",
+        "lang": "en"
+      }
+    },
+    "P268": {
+      "label": {
+        "text": "Bibliothèque nationale de France ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for the subject issued by BNF (Bibliothèque nationale de France). Format: 8 digits followed by a check-digit or letter, do not include the initial 'cb'.",
+        "lang": "en"
+      }
+    },
+    "P269": {
+      "label": {
+        "text": "IdRef ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for authority control in the French collaborative library catalog (see also P1025). Format: 8 digits followed by a digit or \"X\"",
+        "lang": "en"
+      }
+    },
+    "P2716": {
+      "label": {
+        "text": "montage image",
+        "lang": "en"
+      },
+      "description": {
+        "text": "image file that assembles two or more other images of item",
+        "lang": "en"
+      }
+    },
+    "P281": {
+      "label": {
+        "text": "postal code",
+        "lang": "en"
+      },
+      "description": {
+        "text": "code assigned by postal authorities for the subject area or building for the purpose of sorting and routing mail",
+        "lang": "en"
+      }
+    },
+    "P2924": {
+      "label": {
+        "text": "Great Russian Encyclopedia Online ID (2017)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an entry on old.bigenc.ru, the official site of the Great Russian Encyclopedia Online 2014–2017 (current version of bigenc.ru is P11514)",
+        "lang": "en"
+      }
+    },
+    "P2936": {
+      "label": {
+        "text": "language used",
+        "lang": "en"
+      },
+      "description": {
+        "text": "language widely used (spoken or written) in this place or at this event or organisation",
+        "lang": "en"
+      }
+    },
+    "P300": {
+      "label": {
+        "text": "ISO 3166-2 code",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a country subdivision per ISO 3166-2 (include country code)",
+        "lang": "en"
+      }
+    },
+    "P31": {
+      "label": {
+        "text": "instance of",
+        "lang": "en"
+      },
+      "description": {
+        "text": "type to which this subject corresponds/belongs. Different from P279 (subclass of); for example: K2 is an instance of mountain; volcano is a subclass of mountain",
+        "lang": "en"
+      }
+    },
+    "P3134": {
+      "label": {
+        "text": "Tripadvisor ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of a place (region, hotel, restaurant, attraction), in TripAdvisor",
+        "lang": "en"
+      }
+    },
+    "P3219": {
+      "label": {
+        "text": "Encyclopædia Universalis ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an article in the online version of Encyclopædia Universalis",
+        "lang": "en"
+      }
+    },
+    "P3365": {
+      "label": {
+        "text": "Treccani ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for the Italian Treccani website and encyclopedia",
+        "lang": "en"
+      }
+    },
+    "P3417": {
+      "label": {
+        "text": "Quora topic ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a topic on Quora (English language version)",
+        "lang": "en"
+      }
+    },
+    "P3451": {
+      "label": {
+        "text": "nighttime view",
+        "lang": "en"
+      },
+      "description": {
+        "text": "image at night or in twilight",
+        "lang": "en"
+      }
+    },
+    "P349": {
+      "label": {
+        "text": "NDL Authority ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for authority control per the National Diet Library of Japan",
+        "lang": "en"
+      }
+    },
+    "P361": {
+      "label": {
+        "text": "part of",
+        "lang": "en"
+      },
+      "description": {
+        "text": "object of which the subject is a part (if this subject is already part of object A which is a part of object B, then please only make the subject part of object A), inverse property of \"has part\" (P527, see also \"has parts of the class\" (P2670))",
+        "lang": "en"
+      }
+    },
+    "P3629": {
+      "label": {
+        "text": "age of subject at event",
+        "lang": "en"
+      },
+      "description": {
+        "text": "the age of the subject according to the cited source at the time of an event. Used as a qualifier of significant event property",
+        "lang": "en"
+      }
+    },
+    "P373": {
+      "label": {
+        "text": "Commons category",
+        "lang": "en"
+      },
+      "description": {
+        "text": "name of the Wikimedia Commons category containing files related to this item (without the prefix \"Category:\")",
+        "lang": "en"
+      }
+    },
+    "P3749": {
+      "label": {
+        "text": "Google Maps Customer ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "in Google Maps, Customer identifier for a place",
+        "lang": "en"
+      }
+    },
+    "P3984": {
+      "label": {
+        "text": "subreddit",
+        "lang": "en"
+      },
+      "description": {
+        "text": "name of the Reddit forum associated to this subject",
+        "lang": "en"
+      }
+    },
+    "P402": {
+      "label": {
+        "text": "OpenStreetMap relation ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a relation in OpenStreetMap",
+        "lang": "en"
+      }
+    },
+    "P407": {
+      "label": {
+        "text": "language of work or name",
+        "lang": "en"
+      },
+      "description": {
+        "text": "language associated with this creative work (such as books, shows, songs, broadcasts or websites) or a name (for persons use \"native language\" (P103) and \"languages spoken, written or signed\" (P1412))",
+        "lang": "en"
+      }
+    },
+    "P41": {
+      "label": {
+        "text": "flag image",
+        "lang": "en"
+      },
+      "description": {
+        "text": "image of the item's flag",
+        "lang": "en"
+      }
+    },
+    "P4223": {
+      "label": {
+        "text": "Treccani's Enciclopedia Italiana ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for the Enciclopedia Italiana on Treccani website",
+        "lang": "en"
+      }
+    },
+    "P4342": {
+      "label": {
+        "text": "Great Norwegian Encyclopedia ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of an article in the online encyclopedia snl.no",
+        "lang": "en"
+      }
+    },
+    "P443": {
+      "label": {
+        "text": "pronunciation audio",
+        "lang": "en"
+      },
+      "description": {
+        "text": "audio file with pronunciation",
+        "lang": "en"
+      }
+    },
+    "P4527": {
+      "label": {
+        "text": "UK Parliament thesaurus ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the thesaurus of subject headings maintained by the librarians in the House of Commons in the UK",
+        "lang": "en"
+      }
+    },
+    "P473": {
+      "label": {
+        "text": "local dialing code",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier dedicated to subject city by the area communication network",
+        "lang": "en"
+      }
+    },
+    "P5008": {
+      "label": {
+        "text": "on focus list of Wikimedia project",
+        "lang": "en"
+      },
+      "description": {
+        "text": "property to indicate that an item is of particular interest for a Wikimedia project. This property does not add notability. Items should not be created with this property if they are not notable for Wikidata. See also P6104, P972, P2354",
+        "lang": "en"
+      }
+    },
+    "P5063": {
+      "label": {
+        "text": "Interlingual Index ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a concept in the Global WordNet Association's Collaborative Interlingual Index",
+        "lang": "en"
+      }
+    },
+    "P518": {
+      "label": {
+        "text": "applies to part",
+        "lang": "en"
+      },
+      "description": {
+        "text": "part, aspect, or form of the item to which the claim applies",
+        "lang": "en"
+      }
+    },
+    "P5184": {
+      "label": {
+        "text": "Daum Encyclopedia ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for content in the Daum Encyclopedia",
+        "lang": "en"
+      }
+    },
+    "P5337": {
+      "label": {
+        "text": "Google News topics ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a subject in the news on Google News",
+        "lang": "en"
+      }
+    },
+    "P5573": {
+      "label": {
+        "text": "archINFORM location ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a location on the archINFORM website",
+        "lang": "en"
+      }
+    },
+    "P571": {
+      "label": {
+        "text": "inception",
+        "lang": "en"
+      },
+      "description": {
+        "text": "time when an entity begins to exist; for date of official opening use P1619",
+        "lang": "en"
+      }
+    },
+    "P577": {
+      "label": {
+        "text": "publication date",
+        "lang": "en"
+      },
+      "description": {
+        "text": "date or point in time when a work or product was first published or released",
+        "lang": "en"
+      }
+    },
+    "P580": {
+      "label": {
+        "text": "start time",
+        "lang": "en"
+      },
+      "description": {
+        "text": "time an entity begins to exist or a statement starts being valid",
+        "lang": "en"
+      }
+    },
+    "P582": {
+      "label": {
+        "text": "end time",
+        "lang": "en"
+      },
+      "description": {
+        "text": "moment when an entity ceases to exist and a statement stops being entirely valid or no longer be true",
+        "lang": "en"
+      }
+    },
+    "P5843": {
+      "label": {
+        "text": "Gynopedia ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a place (city, region or country) on the Gynopedia wiki about sexual and reproductive health care",
+        "lang": "en"
+      }
+    },
+    "P585": {
+      "label": {
+        "text": "point in time",
+        "lang": "en"
+      },
+      "description": {
+        "text": "date something took place, existed or a statement was true; for providing time use the \"refine date\" property (P4241)",
+        "lang": "en"
+      }
+    },
+    "P5905": {
+      "label": {
+        "text": "Comic Vine ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier at the Comic Vine database of comic books, fictional characters, people, films and television series/episodes",
+        "lang": "en"
+      }
+    },
+    "P6": {
+      "label": {
+        "text": "head of government",
+        "lang": "en"
+      },
+      "description": {
+        "text": "head of the executive power of this town, city, municipality, state, country, or other governmental body",
+        "lang": "en"
+      }
+    },
+    "P6200": {
+      "label": {
+        "text": "BBC News topic ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a topic on the BBC News website",
+        "lang": "en"
+      }
+    },
+    "P625": {
+      "label": {
+        "text": "coordinate location",
+        "lang": "en"
+      },
+      "description": {
+        "text": "geocoordinates of the subject. For Earth, please note that only the WGS84 geodetic datum is currently supported",
+        "lang": "en"
+      }
+    },
+    "P6404": {
+      "label": {
+        "text": "Treccani's Dizionario di Storia ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for Dizionario di Storia (\"Dictionary of History\") by Treccani",
+        "lang": "en"
+      }
+    },
+    "P646": {
+      "label": {
+        "text": "Freebase ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Machine Identifier (MID) for a topic in the former Freebase knowledge graph; new Freebase MIDs are no longer issued, but existing /m/ identifiers remain in use, including by Google Knowledge Graph",
+        "lang": "en"
+      }
+    },
+    "P6621": {
+      "label": {
+        "text": "Le Figaro tag ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a topic on the website of Le Figaro",
+        "lang": "en"
+      }
+    },
+    "P6706": {
+      "label": {
+        "text": "De Agostini ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a subject on the Enciclopedia De Agostini online",
+        "lang": "en"
+      }
+    },
+    "P6723": {
+      "label": {
+        "text": "BlackPast.org ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for articles on BlackPast.org",
+        "lang": "en"
+      }
+    },
+    "P6766": {
+      "label": {
+        "text": "Who's on First ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier from the Who's on First database",
+        "lang": "en"
+      }
+    },
+    "P691": {
+      "label": {
+        "text": "NL CR AUT ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the Czech National Authority Database of National Library of the Czech Republic (NL CR)",
+        "lang": "en"
+      }
+    },
+    "P7197": {
+      "label": {
+        "text": "OpenWeatherMap city ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a location on OpenWeatherMap (not exclusively cities)",
+        "lang": "en"
+      }
+    },
+    "P7305": {
+      "label": {
+        "text": "Online PWN Encyclopedia ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an entry in the online release of the Online PWN Encyclopedia",
+        "lang": "en"
+      }
+    },
+    "P7471": {
+      "label": {
+        "text": "iNaturalist place ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a place in iNaturalist",
+        "lang": "en"
+      }
+    },
+    "P7502": {
+      "label": {
+        "text": "Golden ID (archived)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "ID page in Golden knowledge base",
+        "lang": "en"
+      }
+    },
+    "P7506": {
+      "label": {
+        "text": "Naver Encyclopedia ID (pre-August 2026)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "ID of an document in Naver Encyclopedia (using IDs issued prior to August 2026)",
+        "lang": "en"
+      }
+    },
+    "P7867": {
+      "label": {
+        "text": "category for maps or plans",
+        "lang": "en"
+      },
+      "description": {
+        "text": "name of the Wikimedia category specifically for maps or plans of this item",
+        "lang": "en"
+      }
+    },
+    "P805": {
+      "label": {
+        "text": "statement is subject of",
+        "lang": "en"
+      },
+      "description": {
+        "text": "(qualifying) item that describes the relation identified in this statement",
+        "lang": "en"
+      }
+    },
+    "P8119": {
+      "label": {
+        "text": "HASC",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Hierarchical Administrative Subdivision Code: code to represent a country's administrative divisions, such as states, provinces, and regions",
+        "lang": "en"
+      }
+    },
+    "P8168": {
+      "label": {
+        "text": "FactGrid item ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an item in FactGrid",
+        "lang": "en"
+      }
+    },
+    "P8179": {
+      "label": {
+        "text": "Canadiana Name Authority ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "system control number used in the Canadiana Name Authority File, format: \"ncf\" followed by 8 digits",
+        "lang": "en"
+      }
+    },
+    "P8189": {
+      "label": {
+        "text": "J9U entity ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier used by the National Library of Israel",
+        "lang": "en"
+      }
+    },
+    "P8313": {
+      "label": {
+        "text": "Lex ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of an article in the online encyclopedia.lex.dk",
+        "lang": "en"
+      }
+    },
+    "P8349": {
+      "label": {
+        "text": "Proleksis enciklopedija ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a topic in Proleksis enciklopedija",
+        "lang": "en"
+      }
+    },
+    "P8402": {
+      "label": {
+        "text": "open data portal",
+        "lang": "en"
+      },
+      "description": {
+        "text": "platform with publicly accessible data of an organization",
+        "lang": "en"
+      }
+    },
+    "P8408": {
+      "label": {
+        "text": "KBpedia ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for the KBpedia knowledge graph, which provides consistent mappings across seven large-scale public knowledge bases including Wikidata, and is used to promote data interoperability and extraction of training sets for machine learning",
+        "lang": "en"
+      }
+    },
+    "P8424": {
+      "label": {
+        "text": "OpenHistoricalMap relation ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of a relation in OpenHistoricalMap, preferably a chronology relation; see also P402, the corresponding property for OpenStreetMap relations",
+        "lang": "en"
+      }
+    },
+    "P8519": {
+      "label": {
+        "text": "RKD thesaurus ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the RKD thesaurus (Rijksbureau voor Kunsthistorische Documentatie)",
+        "lang": "en"
+      }
+    },
+    "P854": {
+      "label": {
+        "text": "reference URL",
+        "lang": "en"
+      },
+      "description": {
+        "text": "should be used for Internet URLs as references. Use \"Wikimedia import URL\" (P4656) for imports from Wikimedia sites",
+        "lang": "en"
+      }
+    },
+    "P856": {
+      "label": {
+        "text": "official website",
+        "lang": "en"
+      },
+      "description": {
+        "text": "URL of the official page of an item (current or former). Usage: If a listed URL no longer points to the official website, do not remove it, but see the \"Hijacked or dead websites\" section of the Talk page",
+        "lang": "en"
+      }
+    },
+    "P8592": {
+      "label": {
+        "text": "aerial view",
+        "lang": "en"
+      },
+      "description": {
+        "text": "image of the subject taken from the air",
+        "lang": "en"
+      }
+    },
+    "P8744": {
+      "label": {
+        "text": "economy of topic",
+        "lang": "en"
+      },
+      "description": {
+        "text": "item that deals with the economy of the subject",
+        "lang": "en"
+      }
+    },
+    "P8814": {
+      "label": {
+        "text": "WordNet 3.1 Synset ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Synset identifier in Princeton’s WordNet Version 3.1",
+        "lang": "en"
+      }
+    },
+    "P8989": {
+      "label": {
+        "text": "category for the view of the item",
+        "lang": "en"
+      },
+      "description": {
+        "text": "category for the view of this item (object, place)",
+        "lang": "en"
+      }
+    },
+    "P901": {
+      "label": {
+        "text": "FIPS 10-4 (countries and regions)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "deprecated code for countries and regions assigned by the United States government",
+        "lang": "en"
+      }
+    },
+    "P910": {
+      "label": {
+        "text": "topic's main category",
+        "lang": "en"
+      },
+      "description": {
+        "text": "main Wikimedia category",
+        "lang": "en"
+      }
+    },
+    "P9100": {
+      "label": {
+        "text": "GitHub topic",
+        "lang": "en"
+      },
+      "description": {
+        "text": "GitHub topic for a repository or subject",
+        "lang": "en"
+      }
+    },
+    "P9322": {
+      "label": {
+        "text": "SVKKL authority ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the regional authority database of Central Bohemian Research Library",
+        "lang": "en"
+      }
+    },
+    "P9346": {
+      "label": {
+        "text": "France 24 topic ID (French)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of a topic on the French version of the France 24 website",
+        "lang": "en"
+      }
+    },
+    "P935": {
+      "label": {
+        "text": "Commons gallery",
+        "lang": "en"
+      },
+      "description": {
+        "text": "name of the Wikimedia Commons gallery page(s) related to this item (is suitable to allow multiple links to more gallery pages)",
+        "lang": "en"
+      }
+    },
+    "P94": {
+      "label": {
+        "text": "coat of arms image",
+        "lang": "en"
+      },
+      "description": {
+        "text": "image of the item's coat of arms - for the shield part only use P4004",
+        "lang": "en"
+      }
+    },
+    "P948": {
+      "label": {
+        "text": "page banner",
+        "lang": "en"
+      },
+      "description": {
+        "text": "image at top of an article about the topic, mainly used by Wikivoyage and Women in Red",
+        "lang": "en"
+      }
+    },
+    "P9495": {
+      "label": {
+        "text": "National Historical Museums of Sweden ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "authority identification for an entry in the collections of the National Historical Museums of Sweden",
+        "lang": "en"
+      }
+    },
+    "P950": {
+      "label": {
+        "text": "National Library of Spain SpMaBN ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "semi-deprecated control number of the National Library of Spain catalog powered by Symphony. Format for persons: \"XX\" followed by 4 to 7 digits. (Formerly referred to in VIAF as BNE)",
+        "lang": "en"
+      }
+    },
+    "P9675": {
+      "label": {
+        "text": "MediaWiki page ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "numeric identifier of a page in a MediaWiki wiki",
+        "lang": "en"
+      }
+    },
+    "P982": {
+      "label": {
+        "text": "MusicBrainz area ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an area in the MusicBrainz open music database",
+        "lang": "en"
+      }
+    },
+    "P9957": {
+      "label": {
+        "text": "museum-digital place ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a place in museum-digital's md:term vocabulary",
+        "lang": "en"
+      }
+    },
+    "P998": {
+      "label": {
+        "text": "Curlie ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "category path at Open Directory Project",
+        "lang": "en"
+      }
+    },
+    "Q104596219": {
+      "label": {
+        "text": "Category:Views of Nairobi",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia category",
+        "lang": "en"
+      }
+    },
+    "Q106020188": {
+      "label": {
+        "text": "economy of Nairobi",
+        "lang": "en"
+      },
+      "description": {
+        "text": "economy of the region",
+        "lang": "en"
+      }
+    },
+    "Q1061480": {
+      "label": {
+        "text": "Nairobi Province",
+        "lang": "en"
+      },
+      "description": {
+        "text": "former province of Kenya",
+        "lang": "en"
+      }
+    },
+    "Q114": {
+      "label": {
+        "text": "Kenya",
+        "lang": "en"
+      },
+      "description": {
+        "text": "country in Eastern Africa",
+        "lang": "en"
+      }
+    },
+    "Q11573": {
+      "label": {
+        "text": "metre",
+        "lang": "en"
+      },
+      "description": {
+        "text": "SI unit of length",
+        "lang": "en"
+      }
+    },
+    "Q14206200": {
+      "label": {
+        "text": "Southern Rift Valley",
+        "lang": "en"
+      }
+    },
+    "Q1549591": {
+      "label": {
+        "text": "big city",
+        "lang": "en"
+      },
+      "description": {
+        "text": "city with a population of between 100,000 and 250,000",
+        "lang": "en"
+      }
+    },
+    "Q16554": {
+      "label": {
+        "text": "Denver",
+        "lang": "en"
+      },
+      "description": {
+        "text": "consolidated city-county and capital of the U.S. state of Colorado",
+        "lang": "en"
+      }
+    },
+    "Q182852": {
+      "label": {
+        "text": "Kunming",
+        "lang": "en"
+      },
+      "description": {
+        "text": "capital of Yunnan province, China",
+        "lang": "en"
+      }
+    },
+    "Q1860": {
+      "label": {
+        "text": "English",
+        "lang": "en"
+      },
+      "description": {
+        "text": "West Germanic language",
+        "lang": "en"
+      }
+    },
+    "Q199": {
+      "label": {
+        "text": "1",
+        "lang": "en"
+      },
+      "description": {
+        "text": "natural number one",
+        "lang": "en"
+      }
+    },
+    "Q214485": {
+      "label": {
+        "text": "Kisumu",
+        "lang": "en"
+      },
+      "description": {
+        "text": "city in Kenya",
+        "lang": "en"
+      }
+    },
+    "Q225641": {
+      "label": {
+        "text": "Mombasa",
+        "lang": "en"
+      },
+      "description": {
+        "text": "city in Kenya",
+        "lang": "en"
+      }
+    },
+    "Q239421": {
+      "label": {
+        "text": "Nakuru",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "city in Kenya",
+        "lang": "en"
+      }
+    },
+    "Q25343": {
+      "label": {
+        "text": "square metre",
+        "lang": "en"
+      },
+      "description": {
+        "text": "SI unit of area",
+        "lang": "en"
+      }
+    },
+    "Q2538511": {
+      "label": {
+        "text": "Kenya Colony",
+        "lang": "en"
+      },
+      "description": {
+        "text": "former UK possession in Africa between 1920 and 1963",
+        "lang": "en"
+      }
+    },
+    "Q28967580": {
+      "label": {
+        "text": "Sakaja Johnson",
+        "lang": "en"
+      },
+      "description": {
+        "text": "politician",
+        "lang": "en"
+      }
+    },
+    "Q322149": {
+      "label": {
+        "text": "Eldoret",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Town in Kenya",
+        "lang": "en"
+      }
+    },
+    "Q3335223": {
+      "label": {
+        "text": "Nairobi City County",
+        "lang": "en"
+      },
+      "description": {
+        "text": "county in Kenya",
+        "lang": "en"
+      }
+    },
+    "Q35787": {
+      "label": {
+        "text": "Maasai",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Eastern Nilotic language",
+        "lang": "en"
+      }
+    },
+    "Q362865": {
+      "label": {
+        "text": "Pingxiang",
+        "lang": "en"
+      },
+      "description": {
+        "text": "prefecture-level city in Jiangxi, People's Republic of China",
+        "lang": "en"
+      }
+    },
+    "Q3870": {
+      "label": {
+        "text": "Nairobi",
+        "lang": "en"
+      },
+      "description": {
+        "text": "capital city of Kenya",
+        "lang": "en"
+      }
+    },
+    "Q3976641": {
+      "label": {
+        "text": "administrative territorial entity of Kenya",
+        "lang": "en"
+      },
+      "description": {
+        "text": "administrative divisions",
+        "lang": "en"
+      }
+    },
+    "Q41087": {
+      "label": {
+        "text": "Raleigh",
+        "lang": "en"
+      },
+      "description": {
+        "text": "capital city of the U.S. state of North Carolina and seat of Wake County",
+        "lang": "en"
+      }
+    },
+    "Q47088290": {
+      "label": {
+        "text": "masculine singular",
+        "lang": "en"
+      },
+      "description": {
+        "text": "grammatical gender",
+        "lang": "en"
+      }
+    },
+    "Q47088293": {
+      "label": {
+        "text": "feminine singular",
+        "lang": "en"
+      },
+      "description": {
+        "text": "gender and number inflection",
+        "lang": "en"
+      }
+    },
+    "Q5460604": {
+      "label": {
+        "text": "Wikipedia:List of articles all languages should have",
+        "lang": "en"
+      },
+      "description": {
+        "text": "list of 1000 articles every Wikipedia edition should have",
+        "lang": "en"
+      }
+    },
+    "Q6173448": {
+      "label": {
+        "text": "Wikipedia:Vital articles/Level/4",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia project page",
+        "lang": "en"
+      }
+    },
+    "Q693093": {
+      "label": {
+        "text": "Machakos",
+        "lang": "en"
+      },
+      "description": {
+        "text": "municipality in Machakos County, Kenya",
+        "lang": "en"
+      }
+    },
+    "Q7119121": {
+      "label": {
+        "text": "Category:People from Nairobi",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia category",
+        "lang": "en"
+      }
+    },
+    "Q712226": {
+      "label": {
+        "text": "square kilometre",
+        "lang": "en"
+      },
+      "description": {
+        "text": "decimal multiple of the SI unit of surface area",
+        "lang": "en"
+      }
+    },
+    "Q7805834": {
+      "label": {
+        "text": "timeline of Nairobi history",
+        "lang": "en"
+      }
+    },
+    "Q7838": {
+      "label": {
+        "text": "Swahili",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Bantu language spoken mainly in East Africa",
+        "lang": "en"
+      }
+    },
+    "Q8064728": {
+      "label": {
+        "text": "Category:Births in Nairobi",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia category",
+        "lang": "en"
+      }
+    },
+    "Q84054802": {
+      "label": {
+        "text": "Category:Maps of Nairobi",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia category",
+        "lang": "en"
+      }
+    },
+    "Q84643330": {
+      "label": {
+        "text": "1911 Encyclopædia Britannica/Nairobi",
+        "lang": "en"
+      },
+      "description": {
+        "text": "encyclopedia article",
+        "lang": "en"
+      }
+    },
+    "Q867541": {
+      "label": {
+        "text": "Encyclopædia Britannica 11th edition",
+        "lang": "en"
+      },
+      "description": {
+        "text": "11th edition of Encyclopædia Britannica",
+        "lang": "en"
+      }
+    },
+    "Q8678": {
+      "label": {
+        "text": "Rio de Janeiro",
+        "lang": "en"
+      },
+      "description": {
+        "text": "city of Rio de Janeiro state, Brazil",
+        "lang": "en"
+      }
+    },
+    "Q8795825": {
+      "label": {
+        "text": "Category:Nairobi",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia category",
+        "lang": "en"
+      }
+    },
+    "Q926713": {
+      "label": {
+        "text": "Parintins",
+        "lang": "en"
+      },
+      "description": {
+        "text": "municipality of Amazonas state, Brazil",
+        "lang": "en"
+      }
+    },
+    "Q964130": {
+      "label": {
+        "text": "Colonia Tovar",
+        "lang": "en"
+      },
+      "description": {
+        "text": "human settlement in Venezuela",
+        "lang": "en"
+      }
+    },
+    "Q9688722": {
+      "label": {
+        "text": "Category:Deaths in Nairobi",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia category",
+        "lang": "en"
+      }
+    },
+    "Q97130876": {
+      "label": {
+        "text": "Nairobi open data",
+        "lang": "en"
+      }
+    }
+  },
+  "concepts": {
+    "Q1071": {
+      "label": {
+        "text": "geography",
+        "lang": "en"
+      },
+      "names": [
+        "geographical science",
+        "geography",
+        "geography (general)"
+      ]
+    },
+    "Q11042": {
+      "label": {
+        "text": "culture",
+        "lang": "en"
+      },
+      "names": [
+        "cultural activity",
+        "culture",
+        "cultures"
+      ]
+    },
+    "Q121769": {
+      "label": {
+        "text": "reference",
+        "lang": "en"
+      },
+      "names": [
+        "base object",
+        "linked object",
+        "reference"
+      ]
+    },
+    "Q12737077": {
+      "label": {
+        "text": "occupation",
+        "lang": "en"
+      },
+      "names": [
+        "job",
+        "non-professional work activities",
+        "non-professional work activity",
+        "occupation",
+        "occupations",
+        "profession",
+        "work"
+      ]
+    },
+    "Q131765": {
+      "label": {
+        "text": "multimedia",
+        "lang": "en"
+      },
+      "names": [
+        "multimedia"
+      ]
+    },
+    "Q159810": {
+      "label": {
+        "text": "economy",
+        "lang": "en"
+      },
+      "names": [
+        "economy"
+      ]
+    },
+    "Q184711": {
+      "label": {
+        "text": "twin town",
+        "lang": "en"
+      },
+      "names": [
+        "sister city",
+        "twin town",
+        "twin towns and sister cities"
+      ]
+    },
+    "Q2221906": {
+      "label": {
+        "text": "geographic location",
+        "lang": "en"
+      },
+      "names": [
+        "geographic location",
+        "geographical location",
+        "location",
+        "place",
+        "setting"
+      ]
+    },
+    "Q309": {
+      "label": {
+        "text": "history",
+        "lang": "en"
+      },
+      "names": [
+        "historical record",
+        "history",
+        "human history"
+      ]
+    },
+    "Q36279": {
+      "label": {
+        "text": "biography",
+        "lang": "en"
+      },
+      "names": [
+        "bio",
+        "biography"
+      ]
+    },
+    "Q37732": {
+      "label": {
+        "text": "demography",
+        "lang": "en"
+      },
+      "names": [
+        "demographic research",
+        "demography",
+        "population research"
+      ]
+    },
+    "Q618779": {
+      "label": {
+        "text": "award",
+        "lang": "en"
+      },
+      "names": [
+        "Awards and Prizes",
+        "award",
+        "honor",
+        "honour",
+        "medal",
+        "prize"
+      ]
+    },
+    "Q7163": {
+      "label": {
+        "text": "politics",
+        "lang": "en"
+      },
+      "names": [
+        "politics"
+      ]
+    },
+    "Q7188": {
+      "label": {
+        "text": "government",
+        "lang": "en"
+      },
+      "names": [
+        "gov",
+        "government",
+        "govt.",
+        "gvmnt"
+      ]
+    },
+    "Q7937": {
+      "label": {
+        "text": "climate",
+        "lang": "en"
+      },
+      "names": [
+        "climate",
+        "local climate",
+        "weather system"
+      ]
+    },
+    "Q82799": {
+      "label": {
+        "text": "name",
+        "lang": "en"
+      },
+      "names": [
+        "label",
+        "name"
+      ]
+    },
+    "Q8434": {
+      "label": {
+        "text": "education",
+        "lang": "en"
+      },
+      "names": [
+        "education"
+      ]
+    },
+    "Q8436": {
+      "label": {
+        "text": "family",
+        "lang": "en"
+      },
+      "names": [
+        "a family",
+        "families",
+        "family"
+      ]
+    },
+    "Q930933": {
+      "label": {
+        "text": "relation",
+        "lang": "en"
+      },
+      "names": [
+        "connection",
+        "link",
+        "linkage",
+        "relation",
+        "relationship"
+      ]
+    }
+  },
+  "article": {
+    "title": "Nairobi",
+    "paragraphs": [
+      "<b>Nairobi</b> (<span class=\"rt-commentedText nowrap\"><span class=\"IPA nopopups noexcerpt\" lang=\"en-fonipa\"><a href=\"/wiki/Help:IPA/English\" title=\"Help:IPA/English\">/<span style=\"border-bottom:1px dotted\"><span title=\"&#39;n&#39; in &#39;nigh&#39;\">n</span><span title=\"/aɪ/: &#39;i&#39; in &#39;tide&#39;\">aɪ</span><span title=\"/ˈ/: primary stress follows\">ˈ</span><span title=\"&#39;r&#39; in &#39;rye&#39;\">r</span><span title=\"/oʊ/: &#39;o&#39; in &#39;code&#39;\">oʊ</span><span title=\"&#39;b&#39; in &#39;buy&#39;\">b</span><span title=\"/i/: &#39;y&#39; in &#39;happy&#39;\">i</span></span>/</a></span>&#32;<span class=\"ext-phonos\"><span data-nosnippet=\"\" id=\"ooui-php-1\" class=\"noexcerpt ext-phonos-PhonosButton ext-phonos-PhonosButton-emptylabel oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-frameless oo-ui-buttonElement-size-medium oo-ui-iconElement oo-ui-buttonWidget\" data-ooui=\"{&quot;_&quot;:&quot;mw.Phonos.PhonosButton&quot;,&quot;href&quot;:&quot;\\/\\/upload.wikimedia.org\\/wikipedia\\/commons\\/transcoded\\/4\\/47\\/Swa-nairobi.ogg\\/Swa-nairobi.ogg.mp3&quot;,&quot;rel&quot;:[&quot;nofollow&quot;],&quot;framed&quot;:false,&quot;icon&quot;:&quot;volumeUp&quot;,&quot;data&quot;:{&quot;ipa&quot;:&quot;&quot;,&quot;text&quot;:&quot;&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;wikibase&quot;:&quot;&quot;,&quot;file&quot;:&quot;Swa-nairobi.ogg&quot;},&quot;classes&quot;:[&quot;noexcerpt&quot;,&quot;ext-phonos-PhonosButton&quot;,&quot;ext-phonos-PhonosButton-emptylabel&quot;]}\"><a role=\"button\" tabindex=\"0\" href=\"//upload.wikimedia.org/wikipedia/commons/transcoded/4/47/Swa-nairobi.ogg/Swa-nairobi.ogg.mp3\" rel=\"nofollow\" aria-label=\"Play audio\" title=\"Play audio\" class=\"oo-ui-buttonElement-button\"><span class=\"oo-ui-iconElement-icon oo-ui-icon-volumeUp\"></span><span class=\"oo-ui-labelElement-label\"></span><span class=\"oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator\"></span></a></span><sup class=\"ext-phonos-attribution noexcerpt navigation-not-searchable\"><a href=\"/wiki/File:Swa-nairobi.ogg\" title=\"File:Swa-nairobi.ogg\">ⓘ</a></sup></span></span> <a href=\"/wiki/Help:Pronunciation_respelling_key\" title=\"Help:Pronunciation respelling key\"><i title=\"English pronunciation respelling\">ny-<span style=\"font-size:90%\">ROH</span>-bee</i></a>) (<i>Jiji kuu la Nairobi</i>, in <a href=\"/wiki/Swahili_language\" class=\"mw-redirect\" title=\"Swahili language\">Swahili</a>),  is the <a href=\"/wiki/Capital_city\" title=\"Capital city\">capital</a> and largest city of <a href=\"/wiki/Kenya\" title=\"Kenya\">Kenya</a>, located in the south-central part of the country. As of 2026, it has a population of 5.6 million and a metropolitan population of 15.95 million, making it the <a href=\"/wiki/List_of_cities_in_Africa_by_population\" title=\"List of cities in Africa by population\">8th most populous city</a> in <a href=\"/wiki/Africa\" title=\"Africa\">Africa</a> and the 4th most populous metropolitan area. The city goes beyond its borders and has expanded into neighbouring counties, making it the 4th largest metropolitan area in Africa.\n",
+      "Nicknamed the \"Green City under the Sun\", Nairobi is uniquely notable for being the only capital city in the world that hosts a <a href=\"/wiki/Nairobi_National_Park\" title=\"Nairobi National Park\">national park</a> within its boundaries. Its name originates from the <a href=\"/wiki/Maasai_language\" title=\"Maasai language\">Maasai</a> phrase <i>Enkare Nyirobi</i>, meaning \"place of cool waters\".\n",
+      "As the national capital, Nairobi is home to the <a href=\"/wiki/Parliament_Buildings_(Kenya)\" title=\"Parliament Buildings (Kenya)\">Kenyan Parliament Buildings</a>, the <a href=\"/wiki/State_House,_Nairobi\" title=\"State House, Nairobi\">State House</a> and the <a href=\"/wiki/Supreme_Court_of_Kenya\" title=\"Supreme Court of Kenya\">Supreme Court Building</a>. It is the major financial and economic hub of <a href=\"/wiki/East_Africa\" title=\"East Africa\">East Africa</a>, hosting thousands of Kenyan businesses and international companies and organisations, including the <a href=\"/wiki/United_Nations_Environment_Programme\" title=\"United Nations Environment Programme\">United Nations Environment Programme</a> (UN Environment) and the <a href=\"/wiki/United_Nations_Office_at_Nairobi\" title=\"United Nations Office at Nairobi\">United Nations Office at Nairobi</a> (UNON). The <a href=\"/wiki/Nairobi_Securities_Exchange\" title=\"Nairobi Securities Exchange\">Nairobi Securities Exchange</a> (NSE) is one of the largest <a href=\"/wiki/Stock_exchange\" title=\"Stock exchange\">stock exchanges</a> in Africa and the second-oldest exchange on the continent. It is Africa's fourth-largest stock exchange by trading volume, capable of processing 10 million trades a day. Nairobi is considered a <a href=\"/wiki/Global_city\" title=\"Global city\">global city</a> and was ranked as a \"Beta World City\" by the <a href=\"/wiki/Globalization_and_World_Cities_Research_Network\" title=\"Globalization and World Cities Research Network\">Globalisation and World Cities Research Network</a> as of 2024.\n",
+      "Nairobi was founded in 1898 by colonial authorities in <a href=\"/wiki/British_East_Africa\" class=\"mw-redirect\" title=\"British East Africa\">British East Africa</a>, as a rail depot on the <a href=\"/wiki/Uganda#Railroad\" title=\"Uganda\">Uganda</a>–<a href=\"/wiki/Rail_transport_in_Kenya\" title=\"Rail transport in Kenya\">Kenya Railway.</a> The authorities favoured it as an ideal resting place due to its <a href=\"/wiki/Montane_ecosystems\" class=\"mw-redirect\" title=\"Montane ecosystems\">high elevation</a>, <a href=\"/wiki/Temperate_climate\" title=\"Temperate climate\">temperate climate</a>, and adequate water supply. The town quickly grew to replace <a href=\"/wiki/Mombasa\" title=\"Mombasa\">Mombasa</a> as the capital of Kenya in 1907.\n",
+      "After independence in 1963, Nairobi became the capital of the <a href=\"/wiki/Kenya\" title=\"Kenya\">Republic of Kenya</a>. During Kenya's early period, the city became a centre for the <a href=\"/wiki/Coffee\" title=\"Coffee\">coffee</a>, <a href=\"/wiki/Tea\" title=\"Tea\">tea</a> and <a href=\"/wiki/Sisal\" title=\"Sisal\">sisal</a> industries. Successive post-independence governments have built and turned Nairobi into a modern metropolitan city with a diverse population and a growing economy.\n",
+      "<br /><span class=\"error mw-ext-cite-error\" lang=\"en\" dir=\"ltr\">Cite error: There are <code>&lt;ref&#160;group&#61;lower-alpha&gt;</code> tags&#160;or <code>&#123;&#123;efn&#125;&#125;</code> templates on this page, but the references will not show without a <code>&#123;&#123;reflist&#124;group&#61;lower-alpha&#125;&#125;</code> template&#160;or <code>&#123;&#123;notelist&#125;&#125;</code> template (see the <a href=\"/wiki/Help:Cite_errors/Cite_error_group_refs_without_references\" title=\"Help:Cite errors/Cite error group refs without references\">help page</a>).</span>"
+    ],
+    "links": {
+      "Stock exchange": "Q11691",
+      "Swahili": "Q7838",
+      "Swahili language": "Q7838",
+      "Tea": "Q6097",
+      "Uganda": "Q1036",
+      "United Nations Environment Programme": "Q182016",
+      "Temperate climate": "Q167466",
+      "Sisal": "Q159221",
+      "Capital city": "Q5119",
+      "Kenya": "Q114",
+      "Mombasa": "Q225641",
+      "East Africa": "Q27407",
+      "Coffee": "Q8486",
+      "Global city": "Q208511",
+      "Nairobi National Park": "Q739993",
+      "Maasai language": "Q35787",
+      "East Africa Protectorate": "Q876185",
+      "British East Africa": "Q876185",
+      "Nairobi Securities Exchange": "Q2384385",
+      "State House, Nairobi": "Q3497294",
+      "Africa": "Q15",
+      "Rail transport in Kenya": "Q850755",
+      "United Nations Office at Nairobi": "Q1021627",
+      "Globalization and World Cities Research Network": "Q1531726",
+      "Montane ecosystem": "Q1141462",
+      "Montane ecosystems": "Q1141462",
+      "Supreme Court of Kenya": "Q2368297",
+      "List of cities in Africa by population": "Q4733189",
+      "Parliament Buildings (Kenya)": "Q110579137",
+      "Maasai people": "Q163022",
+      "Kikuyu people": "Q203178",
+      "London Stock Exchange": "Q171240",
+      "Uganda Railway": "Q500115",
+      "Pastoralism": "Q9056738",
+      "Kamba people": "Q1143929",
+      "Sister city": "Q184711",
+      "Agriculturist": "Q1781198",
+      "Agriculturalist": "Q1781198",
+      "Indians in Kenya": "Q6024095",
+      "George Whitehouse": "Q56665460"
+    },
+    "sections": [
+      {
+        "title": "History",
+        "anchor": "History",
+        "index": "1"
+      },
+      {
+        "title": "Geography",
+        "anchor": "Geography",
+        "index": "6"
+      },
+      {
+        "title": "Parks and gardens",
+        "anchor": "Parks_and_gardens",
+        "index": "11"
+      },
+      {
+        "title": "Political divisions",
+        "anchor": "Political_divisions",
+        "index": "13"
+      },
+      {
+        "title": "Economy",
+        "anchor": "Economy",
+        "index": "15"
+      },
+      {
+        "title": "Demographics",
+        "anchor": "Demographics",
+        "index": "19"
+      },
+      {
+        "title": "Culture",
+        "anchor": "Culture",
+        "index": "21"
+      },
+      {
+        "title": "Sports",
+        "anchor": "Sports",
+        "index": "25"
+      },
+      {
+        "title": "Places of worship",
+        "anchor": "Places_of_worship",
+        "index": "33"
+      },
+      {
+        "title": "Education",
+        "anchor": "Education",
+        "index": "34"
+      },
+      {
+        "title": "Infrastructure",
+        "anchor": "Infrastructure",
+        "index": "36"
+      },
+      {
+        "title": "Crime and law enforcement",
+        "anchor": "Crime_and_law_enforcement",
+        "index": "46"
+      },
+      {
+        "title": "Media",
+        "anchor": "Media",
+        "index": "47"
+      },
+      {
+        "title": "Notable people",
+        "anchor": "Notable_people",
+        "index": "48"
+      },
+      {
+        "title": "Pop culture",
+        "anchor": "Pop_culture",
+        "index": "49"
+      },
+      {
+        "title": "Twin towns and sister cities",
+        "anchor": "Twin_towns_and_sister_cities",
+        "index": "50"
+      },
+      {
+        "title": "Notes",
+        "anchor": "Notes",
+        "index": "51"
+      },
+      {
+        "title": "References",
+        "anchor": "References",
+        "index": "52"
+      },
+      {
+        "title": "External links",
+        "anchor": "External_links",
+        "index": "53"
+      }
+    ],
+    "concept_sections": {
+      "Q1071": [
+        "Geography"
+      ],
+      "Q11042": [
+        "Culture"
+      ],
+      "Q159810": [
+        "Economy"
+      ],
+      "Q184711": [
+        "Twin_towns_and_sister_cities"
+      ],
+      "Q309": [
+        "History"
+      ],
+      "Q8434": [
+        "Education"
+      ]
+    },
+    "section_text": {
+      "History": "The site of Nairobi was originally a swamp land occupied by a <a href=\"/wiki/Pastoralism\" title=\"Pastoralism\">pastoralist</a> people, the <a href=\"/wiki/Maasai_people\" title=\"Maasai people\">Maasai</a>, the long-distance trader community, <a href=\"/wiki/Kamba_people\" title=\"Kamba people\">Akamba People</a>, as well as the <a href=\"/wiki/Agriculturalist\" class=\"mw-redirect\" title=\"Agriculturalist\">agriculturalist</a> <a href=\"/wiki/Kikuyu_people\" title=\"Kikuyu people\">Kikuyu people</a>. The name Nairobi comes from the <a href=\"/wiki/Maasai_language\" title=\"Maasai language\">Maasai</a> expression meaning 'cool waters'. referring to the cold water stream which flowed through the area. With the arrival of the <a href=\"/wiki/Uganda_Railway\" title=\"Uganda Railway\">Uganda Railway</a>, the site was identified by <a href=\"/wiki/George_Whitehouse\" title=\"George Whitehouse\">Sir George Whitehouse</a> for a store depot, shunting ground and camping ground for the <a href=\"/wiki/Indians_in_Kenya\" title=\"Indians in Kenya\">Indian</a> labourers working on the railway.\n",
+      "Geography": "Nairobi is situated at <span class=\"geo-inline\"><span class=\"plainlinks nourlexpansion\"><a class=\"external text\" href=\"https://geohack.toolforge.org/geohack.php?pagename=Nairobi&amp;params=1_09_S_36_39_E_&amp;title=Nairobi%2C+Kenya\"><span class=\"geo-default\"><span class=\"geo-dms\" title=\"Maps, aerial photos, and other data for this location\"><span class=\"latitude\">1°09′S</span> <span class=\"longitude\">36°39′E</span></span></span><span class=\"geo-multi-punct\">&#xfeff; / &#xfeff;</span><span class=\"geo-nondefault\"><span class=\"vcard\"><span class=\"geo-dec\" title=\"Maps, aerial photos, and other data for this location\">1.150°S 36.650°E</span><span style=\"display:none\">&#xfeff; / <span class=\"geo\">-1.150; 36.650</span></span><span style=\"display:none\">&#xfeff; (<span class=\"fn org\">Nairobi, Kenya</span>)</span></span></span></a></span></span> and <span class=\"geo-inline\"><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r1156832818\" /><span class=\"plainlinks nourlexpansion\"><a class=\"external text\" href=\"https://geohack.toolforge.org/geohack.php?pagename=Nairobi&amp;params=1_27_S_37_06_E_&amp;title=Nairobi%2C+Kenya\"><span class=\"geo-default\"><span class=\"geo-dms\" title=\"Maps, aerial photos, and other data for this location\"><span class=\"latitude\">1°27′S</span> <span class=\"longitude\">37°06′E</span></span></span><span class=\"geo-multi-punct\">&#xfeff; / &#xfeff;</span><span class=\"geo-nondefault\"><span class=\"vcard\"><span class=\"geo-dec\" title=\"Maps, aerial photos, and other data for this location\">1.450°S 37.100°E</span><span style=\"display:none\">&#xfeff; / <span class=\"geo\">-1.450; 37.100</span></span><span style=\"display:none\">&#xfeff; (<span class=\"fn org\">Nairobi, Kenya</span>)</span></span></span></a></span></span> and occupies 696 square kilometres (270&#160;sq&#160;mi).\n",
+      "Economy": "Nairobi is home to the <a href=\"/wiki/Nairobi_Securities_Exchange\" title=\"Nairobi Securities Exchange\">Nairobi Securities Exchange</a> (NSE), one of Africa's largest <a href=\"/wiki/Stock_exchange\" title=\"Stock exchange\">stock exchanges</a>. The NSE was officially recognised as an overseas stock exchange by the <a href=\"/wiki/London_Stock_Exchange\" title=\"London Stock Exchange\">London Stock Exchange</a> in 1953. The exchange is Africa's fourth largest in terms of trading volumes, and fifth largest in terms of Market Capitalization as a percentage of GDP.\n",
+      "Culture": "Nairobi is diverse in African cultures. As a cosmopolitan African city, it hosts all the diverse tribes that make up Kenya, and hosts a large immigrant population from other African countries.\n",
+      "Education": "The majority of schools follow the Kenyan Competence Based Education (CBE). Nairobi Innovation Week (NIW) is an annual that was started in 2015. It is organized by the University of Nairobi and in collaboration with government agencies. It focuses on partnerships, innovations, incubation, and startups. It promotes an entrepreneurial culture. It is an event for local and international innovators to showcase innovations, and to network.\n",
+      "Twin_towns_and_sister_cities": "Nairobi is <a href=\"/wiki/Sister_city\" title=\"Sister city\">twinned</a> with:\n"
+    }
+  },
+  "page_images": {
+    "Q1061480": {
+      "file": "Nairobi city hall.jpg",
+      "width": 3216,
+      "height": 2136,
+      "artist": "Jorge Láscar",
+      "license": "CC BY-SA 2.0",
+      "source": "en.wikipedia.org"
+    },
+    "Q2538511": {
+      "file": "Flag of Kenya (1921–1963).svg",
+      "width": 1200,
+      "height": 600,
+      "artist": "Oren neu dag",
+      "license": "CC BY-SA 3.0",
+      "source": "en.wikipedia.org"
+    }
+  }
+}

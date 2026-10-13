@@ -1,23 +1,14 @@
 [package]
 name = "qrender"
+description = "Layers 2 and 3: composition, localize and renderers. No network."
 version.workspace = true
 authors.workspace = true
 edition.workspace = true
-default-run = "qrender"
 
 [dependencies]
-serde = { version = "1.0.219", features = ["derive"] }
-serde_json = { version = "1.0.140" }
-tokio = { version = "1.44.2", features = ["full"] }
-clap = { version = "4.5.1", features = ["derive"] }
-thiserror = "2"
-toml = "1.1"
-qjson = { version = "0.1.0", path = "../qjson" }
-askama = "0.16.0"
-percent-encoding = "2.3.2"
-axum = "0.8.9"
-dotenvy = "0.15.7"
-
-[dev-dependencies]
-insta = "1"
-qjson = { path = "../qjson" }
+content = { path = "../content" }
+indexmap.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+toml.workspace = true
