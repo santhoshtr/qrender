@@ -3,16 +3,18 @@
     another slot form a small run. -#}
 {%- let name = slot.name() -%}
 {%- if name == "gallery" -%}
-<div data-slot="gallery"><div class="block set"><div class="run">{%- for b in blocks -%}{{ ui.block(b)|safe }}{%- endfor -%}</div></div></div>
+    <div data-slot="gallery"><div class="block set"><div class="run">{%- for b in blocks -%}{{ ui.block(b)|safe }}{%- endfor -%}</div></div></div>
 {%- else if ui.is_sheet(slot) -%}
-<dl class="sheet" data-slot="{{ name }}">{%- for b in blocks -%}{{ ui.sheet_block(b)|safe }}{%- endfor -%}</dl>
+    <dl class="sheet" data-slot="{{ name }}">{%- for b in blocks -%}{{ ui.sheet_block(b)|safe }}{%- endfor -%}</dl>
 {%- else -%}
-<div data-slot="{{ name }}">{% if ui.wraps(slot) %}<div class="{{ name }}">{% endif %}
-{%- for g in ui.groups(slot, blocks) -%}
-{%- match g -%}
-{%- when Group::Run with (run) -%}<div class="run small">{% for b in run %}{{ ui.media(b)|safe }}{% endfor %}</div>
-{%- when Group::One with (b) -%}{{ ui.block(b)|safe }}
-{%- endmatch -%}
+    <div data-slot="{{ name }}">
+        {% if ui.wraps(slot) %}<div class="{{ name }}"> {% endif %}
+        {%- for g in ui.groups(slot, blocks) -%}
+            {%- match g -%}
+            {%- when Group::Run with (run) -%}<div class="run small">{% for b in run %}{{ ui.media(b)|safe }}{% endfor %}</div>
+            {%- when Group::One with (b) -%}{{ ui.block(b)|safe }}
+        {%- endmatch -%}
 {%- endfor -%}
-{% if ui.wraps(slot) %}</div>{% endif %}</div>
+{% if ui.wraps(slot) %} </div>{% endif %}
+</div>
 {%- endif -%}

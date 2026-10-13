@@ -1,8 +1,9 @@
 <div class="kind">
-{%- for link in b.chain -%}
-<div><span class="k">{{ ui.text(ui.property(link.pid), true)|safe }}</span>
-{%- for v in link.values -%}{%- if v.shown != Some(false) -%}{%- if !loop.first %}, {% endif -%}{{ ui.part(ui.value_part(&v.value))|safe }}{%- endif -%}{%- endfor -%}
-{%- let rest = ui.hidden_refs(link.values.as_slice()) -%}{%- if rest > 0 %} <span class="note">+{{ rest }}</span>{% endif -%}
-</div>
-{%- endfor -%}
+    {%- for link in b.chain -%}
+        <div>
+            <span class="k">{{ ui.text(ui.property(link.pid), true)|safe }}</span>
+            {%- for v in link.values -%}{%- if v.shown != Some(false) -%}{%- if !loop.first %}, {% endif -%}{{ ui.part(ui.value_part(&v.value))|safe }}{%- endif -%}{%- endfor -%}
+            {%- let rest = ui.hidden_refs(link.values.as_slice()) -%}{%- if rest > 0 %} <span class="note">+{{ rest }}</span>{% endif -%}
+        </div>
+    {%- endfor -%}
 </div>

@@ -2,9 +2,15 @@
 {%- match ui.view.lead -%}
 {%- when Some with (a) -%}
 <div class="lead" lang="{{ a.lang }}">
-{%- for p in a.paragraphs %}<p>{{ p|safe }}</p>{% endfor -%}
-{%- if !a.more.is_empty() %}<details><summary>¶ +{{ a.more.len() }}</summary>{% for p in a.more %}<p>{{ p|safe }}</p>{% endfor %}</details>{% endif -%}
-<p class="source"><img src="{{ ui.wikipedia_logo() }}" alt="" width="18"> <a href="{{ a.url }}">{{ a.host }}</a> · {{ b.languages }}</p></div>
+    {%- for p in a.paragraphs %}<p>{{ p|safe }}</p>{% endfor -%}
+    {%- if !a.more.is_empty() %}<details><summary>¶ +{{ a.more.len() }}</summary>{% for p in a.more %}<p>{{ p|safe }}</p>{% endfor %}</details>{% endif -%}
+    <p class="source">
+        <img src="{{ ui.wikipedia_logo() }}" alt="" width="18">
+        <a href="{{ a.url }}">{{ a.host }}</a> · {{ b.languages }}
+    </p>
+</div>
 {%- when None -%}
-<div class="lead"><p class="note">— {{ b.languages }}</p></div>
+<div class="lead">
+    <p class="note">— {{ b.languages }}</p>
+</div>
 {%- endmatch -%}

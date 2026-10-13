@@ -4,6 +4,6 @@
 {%- for s in values.iter() -%}{%- if s.shown -%}{{ ui.line(s)|safe }}{%- endif -%}{%- endfor -%}
 {%- let rest = ui.hidden(values) -%}
 {%- if rest > 0 -%}
-{%- let n = ui.id() -%}
-{% call m::more(n, rest) %}{% endcall %}{% call m::dialog(ui, n, heading) %}{%- for s in values.iter() -%}{{ ui.line(s)|safe }}{%- endfor -%}{% endcall %}
+    {%- let n = ui.id() -%}
+    {% call m::more(n, rest) %}{% endcall %}{% call m::dialog(ui, n, heading) %}{%- for s in values.iter() -%}{{ ui.line(s)|safe }}{%- endfor -%}{% endcall %}
 {%- endif -%}

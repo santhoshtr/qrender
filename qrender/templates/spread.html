@@ -1,14 +1,18 @@
 {%- import "macros.html" as m -%}
 {%- if s.spread.template.name() == "collapsed" -%}
-<section class="spread t-collapsed" data-spread="{{ s.spread.id }}"><details><summary>+{{ ui.block_count(s) }}</summary>
-{%- for (slot, blocks) in s.spread.slots -%}{{ ui.slot(slot, blocks.as_slice())|safe }}{%- endfor -%}
-</details></section>
+    <section class="spread t-collapsed" data-spread="{{ s.spread.id }}">
+        <details>
+            <summary>+{{ ui.block_count(s) }}</summary>
+            {%- for (slot, blocks) in s.spread.slots -%}{{ ui.slot(slot, blocks.as_slice())|safe }}{%- endfor -%}
+        </details>
+    </section>
 {%- else -%}
-<section class="spread t-{{ s.spread.template.name() }}" data-spread="{{ s.spread.id }}">
-{%- if s.spread.id != "identity" -%}{%- if let Some(t) = s.title %}<h2>{{ ui.text(t, false)|safe }}</h2>{% endif -%}{%- endif -%}
-{%- if let Some(p) = s.prose_text %}<div class="prose-slot" lang="{{ p.lang }}"><p>{{ p.html|safe }}</p><a class="read" href="{{ p.href }}">{{ p.title }} ↗</a></div>{% endif -%}
-{%- for (slot, blocks) in s.spread.slots -%}{{ ui.slot(slot, blocks.as_slice())|safe }}{%- endfor -%}
-{%- let links = ui.prose_links(s) -%}
-{%- if !links.is_empty() %}<p class="prose-links">{{ ui.note(links.as_slice())|safe }}</p>{% endif -%}
-</section>
+    <section class="spread t-{{ s.spread.template.name() }}"
+             data-spread="{{ s.spread.id }}">
+        {%- if s.spread.id != "identity" -%}{%- if let Some(t) = s.title %}<h2>{{ ui.text(t, false)|safe }}</h2>{% endif -%}{%- endif -%}
+        {%- if let Some(p) = s.prose_text %}<div class="prose-slot" lang="{{ p.lang }}"><p>{{ p.html|safe }}</p><a class="read" href="{{ p.href }}">{{ p.title }} ↗</a></div>{% endif -%}
+        {%- for (slot, blocks) in s.spread.slots -%}{{ ui.slot(slot, blocks.as_slice())|safe }}{%- endfor -%}
+        {%- let links = ui.prose_links(s) -%}
+        {%- if !links.is_empty() %}<p class="prose-links">{{ ui.note(links.as_slice())|safe }}</p>{% endif -%}
+    </section>
 {%- endif -%}

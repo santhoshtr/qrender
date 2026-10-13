@@ -3,15 +3,18 @@
 {%- let values = ui.works(b) -%}
 {%- let heading = ui.heading(b.pids.as_slice()) -%}
 {%- let rest = ui.hidden(values.as_slice()) -%}
-<div class="block set"><h3><span>
-{%- for p in b.pids -%}{%- if !loop.first %}, {% endif -%}{{ ui.text(ui.property(p), true)|safe }}{%- endfor -%}
-</span> <span class="note">{{ values.len() }}</span></h3>
-{%- if b.form.name() == "list" -%}
-<div class="list">{%- for s in values.iter() -%}{%- if s.shown -%}{{ ui.line(s)|safe }}{%- endif -%}{%- endfor -%}
-{%- if rest > 0 -%}{%- let n = ui.id() -%}{% call m::more(n, rest) %}{% endcall %}{% call m::dialog(ui, n, heading) %}{%- for s in values.iter() -%}{{ ui.line(s)|safe }}{%- endfor -%}{% endcall %}{%- endif -%}
-</div>
-{%- else -%}
-{%- call m::scroller(heading) -%}{%- for s in values.iter() -%}{%- if s.shown -%}{{ ui.figure(s)|safe }}{%- endif -%}{%- endfor -%}{%- endcall -%}
-{%- if rest > 0 -%}{%- let n = ui.id() -%}{% call m::more(n, rest) %}{% endcall %}{% call m::dialog(ui, n, heading) %}{%- for s in values.iter() -%}{{ ui.line(s)|safe }}{%- endfor -%}{% endcall %}{%- endif -%}
-{%- endif -%}
+<div class="block set">
+    <h3>
+        <span>
+            {%- for p in b.pids -%}{%- if !loop.first %}, {% endif -%}{{ ui.text(ui.property(p), true)|safe }}{%- endfor -%}
+        </span> <span class="note">{{ values.len() }}</span>
+    </h3>
+    {%- if b.form.name() == "list" -%}
+        <div class="list">{%- for s in values.iter() -%}{%- if s.shown -%}{{ ui.line(s)|safe }}{%- endif -%}{%- endfor -%}
+            {%- if rest > 0 -%}{%- let n = ui.id() -%}{% call m::more(n, rest) %}{% endcall %}{% call m::dialog(ui, n, heading) %}{%- for s in values.iter() -%}{{ ui.line(s)|safe }}{%- endfor -%}{% endcall %}{%- endif -%}
+        </div>
+    {%- else -%}
+        {%- call m::scroller(heading) -%}{%- for s in values.iter() -%}{%- if s.shown -%}{{ ui.figure(s)|safe }}{%- endif -%}{%- endfor -%}{%- endcall -%}
+        {%- if rest > 0 -%}{%- let n = ui.id() -%}{% call m::more(n, rest) %}{% endcall %}{% call m::dialog(ui, n, heading) %}{%- for s in values.iter() -%}{{ ui.line(s)|safe }}{%- endfor -%}{% endcall %}{%- endif -%}
+    {%- endif -%}
 </div>

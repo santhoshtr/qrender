@@ -1,42 +1,48 @@
 {#- Leaf markup: small parts that call nothing. Every other shared part is
     a template of its own (parts/), rendered once by a `Ui` method. -#}
-
 {#- The action to add a label in the page language, for a fallback. It goes
     after a link, not in it: a link in a link is not valid HTML. -#}
 {%- macro add_label(ui, l) -%}
-{%- if l.fallback -%}{%- if let Some(add) = l.add -%}
-<a class="add-label" href="{{ add }}" aria-label="{{ ui.msg("qrender-add-label") }}">+</a>
-{%- endif -%}{%- endif -%}
+    {%- if l.fallback -%}{%- if let Some(add) = l.add -%}
+        <a class="add-label"
+           href="{{ add }}"
+           aria-label="{{ ui.msg("qrender-add-label") }}">+</a>
+    {%- endif -%}{%- endif -%}
 {%- endmacro -%}
-
 {%- macro description(d) -%}
-{%- if d.fallback -%}<span class="fb" lang="{{ d.lang }}">{{ d.text }}</span>{%- else -%}{{ d.text }}{%- endif -%}
+    {%- if d.fallback -%}<span class="fb" lang="{{ d.lang }}">{{ d.text }}</span>{%- else -%}{{ d.text }}{%- endif -%}
 {%- endmacro -%}
-
 {#- Provenance, marked by exception: a sourced statement carries no mark;
     one whose only reference is a Wikipedia carries a worded tag; one with
     no reference carries a quiet mark. -#}
 {%- macro prov(ui, kind) -%}
-{%- let mark = ui.mark(kind) -%}
-{%- if mark == "imported" -%}<span class="prov-imported" title="{{ ui.imported() }}">W</span>
+    {%- let mark = ui.mark(kind) -%}
+    {%- if mark == "imported" -%}<span class="prov-imported" title="{{ ui.imported() }}">W</span>
 {%- else if mark == "none" -%}<span class="prov-none" title="—"></span>{%- endif -%}
 {%- endmacro -%}
-
 {%- macro edit(ui, href) -%}
-<a class="edit" href="{{ href }}" aria-label="{{ ui.msg("qrender-edit") }}">✎</a>
+    <a class="edit"
+       href="{{ href }}"
+       aria-label="{{ ui.msg("qrender-edit") }}">✎</a>
 {%- endmacro -%}
-
 {%- macro more(n, rest) -%}
-<button class="more" type="button" command="show-modal" commandfor="d{{ n }}">+{{ rest }}</button>
+    <button class="more" type="button" command="show-modal" commandfor="d{{ n }}">+{{ rest }}</button>
 {%- endmacro -%}
-
 {#- A dialog with the rest of a list, opened by an invoker button. -#}
 {%- macro dialog(ui, n, heading) -%}
-<dialog id="d{{ n }}" closedby="any"><header><h2>{{ heading }}</h2><button type="button" command="close" commandfor="d{{ n }}" aria-label="{{ ui.msg("qrender-close") }}">×</button></header><div class="dialog-body">{{ caller() }}</div></dialog>
+    <dialog id="d{{ n }}" closedby="any">
+        <header>
+            <h2>{{ heading }}</h2>
+            <button type="button"
+                    command="close"
+                    commandfor="d{{ n }}"
+                    aria-label="{{ ui.msg("qrender-close") }}">×</button>
+        </header>
+        <div class="dialog-body">{{ caller() }}</div>
+    </dialog>
 {%- endmacro -%}
-
 {#- The values of one property, of equal importance: one row that scrolls.
     It takes the keyboard focus, so arrow keys scroll it. -#}
 {%- macro scroller(name) -%}
-<div class="run scroll" tabindex="0" role="group" aria-label="{{ name }}">{{ caller() }}</div>
+    <div class="run scroll" tabindex="0" role="group" aria-label="{{ name }}">{{ caller() }}</div>
 {%- endmacro -%}

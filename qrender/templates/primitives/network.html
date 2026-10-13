@@ -3,8 +3,9 @@
     in a dialog. -#}
 {%- let values = ui.values(b.values.as_slice()) -%}
 {%- let title = ui.property(b.pid) -%}
-<div class="block set"><h3>{{ ui.text(&title, true)|safe }} <span class="note">{{ values.len() }}</span></h3>
-{%- call m::scroller(title.text) -%}{%- for s in values.iter() -%}{%- if s.shown -%}{{ ui.figure(s)|safe }}{%- endif -%}{%- endfor -%}{%- endcall -%}
-{%- let rest = ui.hidden(values.as_slice()) -%}
-{%- if rest > 0 -%}{%- let n = ui.id() -%}{% call m::more(n, rest) %}{% endcall %}{% call m::dialog(ui, n, title.text) %}{%- for s in values.iter() -%}{{ ui.line(s)|safe }}{%- endfor -%}{% endcall %}{%- endif -%}
+<div class="block set">
+    <h3>{{ ui.text(&title, true)|safe }} <span class="note">{{ values.len() }}</span></h3>
+    {%- call m::scroller(title.text) -%}{%- for s in values.iter() -%}{%- if s.shown -%}{{ ui.figure(s)|safe }}{%- endif -%}{%- endfor -%}{%- endcall -%}
+    {%- let rest = ui.hidden(values.as_slice()) -%}
+    {%- if rest > 0 -%}{%- let n = ui.id() -%}{% call m::more(n, rest) %}{% endcall %}{% call m::dialog(ui, n, title.text) %}{%- for s in values.iter() -%}{{ ui.line(s)|safe }}{%- endfor -%}{% endcall %}{%- endif -%}
 </div>

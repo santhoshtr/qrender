@@ -2,9 +2,14 @@
 {#- A map with the item at its centre and its extreme points as markers.
     The zoom and the marker places are computed for this frame (render/map.rs). -#}
 {%- if let Some(f) = ui.map(b) -%}
-<figure class="map"><img src="{{ f.tile }}" alt=""><span class="pin"></span>
-{%- for (left, top, mk) in f.markers -%}
-<span class="marker" style="left:{{ ui.percent_css(left) }}%;top:{{ ui.percent_css(top) }}%" title="{{ ui.property(mk.pid).text }}"></span>
-{%- endfor -%}
-<figcaption>{{ ui.text(ui.property(b.statement.pid), true)|safe }} {{ ui.coordinate(f.lat, f.lon) }} {% call m::prov(ui, b.statement.provenance) %}{% endcall %}</figcaption><span class="tools">{% call m::edit(ui, ui.edit(b.statement.pid)) %}{% endcall %}</span></figure>
+    <figure class="map">
+        <img src="{{ f.tile }}" alt="">
+        <span class="pin"></span>
+        {%- for (left, top, mk) in f.markers -%}
+            <span class="marker"
+                  style="left:{{ ui.percent_css(left) }}%;
+                         top:{{ ui.percent_css(top) }}%"
+                  title="{{ ui.property(mk.pid).text }}"></span>
+        {%- endfor -%}
+        <figcaption>{{ ui.text(ui.property(b.statement.pid), true)|safe }} {{ ui.coordinate(f.lat, f.lon) }} {% call m::prov(ui, b.statement.provenance) %}{% endcall %}</figcaption><span class="tools">{% call m::edit(ui, ui.edit(b.statement.pid)) %}{% endcall %}</span></figure>
 {%- endif -%}

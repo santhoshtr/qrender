@@ -3,33 +3,871 @@ source: qrender/tests/pages.rs
 expression: html
 ---
 <!DOCTYPE html>
-<html lang="gu" dir="ltr" data-locale="gu">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>નૈરોબી</title>
-<link rel="stylesheet" href="design/0.2/tokens.css">
-<link rel="stylesheet" href="design/0.2/page.css">
+<html lang="gu"
+      dir="ltr"
+      data-locale="gu">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>નૈરોબી</title>
+        <link rel="stylesheet" href="design/0.2/tokens.css">
+        <link rel="stylesheet" href="design/0.2/page.css">
 </head>
 <body>
-<header class="chrome"><div><span class="wordmark">Wikipedia</span><input type="search" placeholder="Search Wikipedia" aria-label="Search Wikipedia"></div></header>
-<main class="page">
-<section class="spread t-identity" data-spread="identity"><div data-slot="head"><div class="title"><h1>નૈરોબી</h1><p><span class="fb" lang="en">capital city of Kenya</span></p></div></div><div data-slot="band"><div class="band"><figure class="m k-photo" style="--a:7"><a href="https://commons.wikimedia.org/wiki/File:Nairobi_banner.jpg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20banner.jpg?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20banner.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20banner.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20banner.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20banner.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20banner.jpg?width=1920 1920w" sizes="100vw" alt=""></a><span class="tools"><button class="info" type="button" popovertarget="p1" aria-label="Credit">i</button><span id="p1" popover class="pop">Nairobi_Skyline2.jpg: Nite Owl
-derivative work: Jjtkk · CC BY 3.0</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P948" aria-label="Edit">✎</a></span></figure></div></div><div data-slot="lead"><div class="lead" lang="en"><p><b>Nairobi</b> (/naɪˈroʊbi/&#32;ⓘ <i>ny-ROH-bee</i>) (<i>Jiji kuu la Nairobi</i>, in <ruby><a href="https://www.wikidata.org/wiki/Q7838">Swahili</a><rt><span>સ્વાહિલી</span></rt></ruby>),  is the <a href="https://www.wikidata.org/wiki/Q5119">capital</a> and largest city of <ruby><a href="https://www.wikidata.org/wiki/Q114">Kenya</a><rt><span>કેન્યા</span></rt></ruby>, located in the south-central part of the country. As of 2026, it has a population of 5.6 million and a metropolitan population of 15.95 million, making it the <a href="https://www.wikidata.org/wiki/Q4733189">8th most populous city</a> in <a href="https://www.wikidata.org/wiki/Q15">Africa</a> and the 4th most populous metropolitan area. The city goes beyond its borders and has expanded into neighbouring counties, making it the 4th largest metropolitan area in Africa.</p><details><summary>¶ +5</summary><p>Nicknamed the "Green City under the Sun", Nairobi is uniquely notable for being the only capital city in the world that hosts a <a href="https://www.wikidata.org/wiki/Q739993">national park</a> within its boundaries. Its name originates from the <a href="https://www.wikidata.org/wiki/Q35787">Maasai</a> phrase <i>Enkare Nyirobi</i>, meaning "place of cool waters".</p><p>As the national capital, Nairobi is home to the <a href="https://www.wikidata.org/wiki/Q110579137">Kenyan Parliament Buildings</a>, the <a href="https://www.wikidata.org/wiki/Q3497294">State House</a> and the <a href="https://www.wikidata.org/wiki/Q2368297">Supreme Court Building</a>. It is the major financial and economic hub of <a href="https://www.wikidata.org/wiki/Q27407">East Africa</a>, hosting thousands of Kenyan businesses and international companies and organisations, including the <a href="https://www.wikidata.org/wiki/Q182016">United Nations Environment Programme</a> (UN Environment) and the <a href="https://www.wikidata.org/wiki/Q1021627">United Nations Office at Nairobi</a> (UNON). The <a href="https://www.wikidata.org/wiki/Q2384385">Nairobi Securities Exchange</a> (NSE) is one of the largest <a href="https://www.wikidata.org/wiki/Q11691">stock exchanges</a> in Africa and the second-oldest exchange on the continent. It is Africa's fourth-largest stock exchange by trading volume, capable of processing 10 million trades a day. Nairobi is considered a <a href="https://www.wikidata.org/wiki/Q208511">global city</a> and was ranked as a "Beta World City" by the <a href="https://www.wikidata.org/wiki/Q1531726">Globalisation and World Cities Research Network</a> as of 2024.</p><p>Nairobi was founded in 1898 by colonial authorities in <a href="https://www.wikidata.org/wiki/Q876185">British East Africa</a>, as a rail depot on the <a href="https://www.wikidata.org/wiki/Q1036">Uganda</a>–<a href="https://www.wikidata.org/wiki/Q850755">Kenya Railway.</a> The authorities favoured it as an ideal resting place due to its <a href="https://www.wikidata.org/wiki/Q1141462">high elevation</a>, <a href="https://www.wikidata.org/wiki/Q167466">temperate climate</a>, and adequate water supply. The town quickly grew to replace <ruby><a href="https://www.wikidata.org/wiki/Q225641">Mombasa</a><rt><span>મોમ્બાસા</span></rt></ruby> as the capital of Kenya in 1907.</p><p>After independence in 1963, Nairobi became the capital of the <ruby><a href="https://www.wikidata.org/wiki/Q114">Republic of Kenya</a><rt><span>કેન્યા</span></rt></ruby>. During Kenya's early period, the city became a centre for the <a href="https://www.wikidata.org/wiki/Q8486">coffee</a>, <a href="https://www.wikidata.org/wiki/Q6097">tea</a> and <a href="https://www.wikidata.org/wiki/Q159221">sisal</a> industries. Successive post-independence governments have built and turned Nairobi into a modern metropolitan city with a diverse population and a growing economy.</p><p>Cite error: There are &lt;ref&#160;group&#61;lower-alpha&gt; tags&#160;or &#123;&#123;efn&#125;&#125; templates on this page, but the references will not show without a &#123;&#123;reflist&#124;group&#61;lower-alpha&#125;&#125; template&#160;or &#123;&#123;notelist&#125;&#125; template (see the help page).</p></details><p class="source"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Wikipedia-logo-v2.svg?width=60" alt="" width="18"> <a href="https://en.wikipedia.org/wiki/Nairobi">en.wikipedia.org</a> · 210</p></div></div><div data-slot="hero"><figure class="m k-photo" style="--a:1.3333"><a href="https://commons.wikimedia.org/wiki/File:Nairobi%2C_view_from_KICC.JPG"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%2C%20view%20from%20KICC.JPG?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%2C%20view%20from%20KICC.JPG?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%2C%20view%20from%20KICC.JPG?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%2C%20view%20from%20KICC.JPG?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%2C%20view%20from%20KICC.JPG?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%2C%20view%20from%20KICC.JPG?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw" alt="" fetchpriority="high"></a><span class="tools"><button class="info" type="button" popovertarget="p2" aria-label="Credit">i</button><span id="p2" popover class="pop">Daryona · CC BY-SA 3.0</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P18" aria-label="Edit">✎</a></span></figure></div><div data-slot="kind"><div class="kind"><div><span class="k">ઉદાહરણ</span><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q3976641"><span class="fb" lang="en">administrative territorial entity of Kenya</span></a><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q3976641" aria-label="Add a label in your language">+</a></span>, <span class="fb-group"><a href="https://www.wikidata.org/wiki/Q1549591"><span class="fb" lang="en">big city</span></a><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q1549591" aria-label="Add a label in your language">+</a></span></div><div><span class="k">દેશ</span><a href="https://www.wikidata.org/wiki/Q114">કેન્યા</a></div></div></div></section>
-<section class="spread t-hero-plus-stack" data-spread="location"><h2><span class="fb" lang="en">geographic location</span></h2><div class="prose-slot" lang="en"><p>Nairobi is situated at 1°09′S 36°39′E&#xfeff; / &#xfeff;1.150°S 36.650°E&#xfeff; / -1.150; 36.650&#xfeff; (Nairobi, Kenya) and 1°27′S 37°06′E&#xfeff; / &#xfeff;1.450°S 37.100°E&#xfeff; / -1.450; 37.100&#xfeff; (Nairobi, Kenya) and occupies 696 square kilometres (270&#160;sq&#160;mi).</p><a class="read" href="https://en.wikipedia.org/wiki/Nairobi#Geography">Geography ↗</a></div><div data-slot="hero"><figure class="map"><img src="https://maps.wikimedia.org/img/osm-intl,11,-1.286388888,36.817222222,800x500@2x.png" alt=""><span class="pin"></span><figcaption>સ્થળના અક્ષાંસ રેખાંશ -1.28639, 36.8172 <span class="prov-imported" title="આયાત કર્યું">W</span></figcaption><span class="tools"><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P625" aria-label="Edit">✎</a></span></figure></div><div data-slot="gallery"><div class="block set"><div class="run"><figure class="m k-photo" style="--a:0.9083"><a href="https://commons.wikimedia.org/wiki/File:Nairobi_County_location_map.png"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw" alt="" loading="lazy"></a><figcaption><span>સ્થાન દર્શક નક્શો</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info" type="button" popovertarget="p3" aria-label="Credit">i</button><span id="p3" popover class="pop">Nairobi123 · CC BY-SA 3.0</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P242" aria-label="Edit">✎</a></span></figure><figure class="m k-photo" style="--a:1.5056"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=1920 1920w" sizes="(max-width: 760px) 50vw, 20vw" alt="" loading="lazy"><figcaption><span>પ્રશાસન વિભાગમાં આવેલ છે</span><b><a href="https://www.wikidata.org/wiki/Q3335223">નૈરોબી કાઉન્ટી</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info" type="button" popovertarget="p4" aria-label="Credit">i</button><span id="p4" popover class="pop">Jorge Láscar · CC BY-SA 2.0</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P131" aria-label="Edit">✎</a></span></figure><figure class="m k-photo" style="--a:1.3333"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pt%20Lenana%20Mt%20Kenya.JPG?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Pt%20Lenana%20Mt%20Kenya.JPG?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Pt%20Lenana%20Mt%20Kenya.JPG?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Pt%20Lenana%20Mt%20Kenya.JPG?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Pt%20Lenana%20Mt%20Kenya.JPG?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Pt%20Lenana%20Mt%20Kenya.JPG?width=1920 1920w" sizes="(max-width: 760px) 50vw, 20vw" alt="" loading="lazy"><figcaption><span>નો ભાગ છે</span><b><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q14206200"><span class="fb" lang="en">Southern Rift Valley</span></a><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q14206200" aria-label="Add a label in your language">+</a></span></b><span class="prov-imported" title="આયાત કર્યું">W</span></figcaption><span class="tools"><button class="info" type="button" popovertarget="p5" aria-label="Credit">i</button><span id="p5" popover class="pop">User:Chris 73 · CC BY-SA 3.0</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P361" aria-label="Edit">✎</a></span></figure></div></div></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>સમુદ્ર સપાટીથી ઉંચાઇ</dt><dd><data value="1661" data-f="number">1661</data> <span class="note">મીટર</span></dd><span class="tools"><span class="prov-imported" title="આયાત કર્યું">W</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P2044" aria-label="Edit">✎</a></span></div></dl></section>
-<section class="spread t-columns" data-spread="names"><h2>નામ</h2><div data-slot="stack"><div class="block"><h3>ઉચ્ચાર ધ્વનિ<span class="prov-none" title="—"></span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P443" aria-label="Edit">✎</a></h3><audio controls preload="none" src="https://commons.wikimedia.org/wiki/Special:FilePath/Swa-nairobi.ogg"></audio><span class="note"><a href="https://www.wikidata.org/wiki/Q7838">સ્વાહિલી</a></span></div></div><div data-slot="gallery"><div class="block set"><div class="run"><figure class="m k-drawing" style="--a:0.9918"><a href="https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_Nairobi.svg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw" alt="" loading="lazy"></a><figcaption><span>રાજચિહ્નની છબી</span><span class="prov-imported" title="આયાત કર્યું">W</span></figcaption><span class="tools"><button class="info" type="button" popovertarget="p6" aria-label="Credit">i</button><span id="p6" popover class="pop">Josedar (SVG conversion) · CC BY-SA 4.0</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P94" aria-label="Edit">✎</a></span></figure><figure class="m k-drawing" style="--a:1.5"><a href="https://commons.wikimedia.org/wiki/File:Flag_of_Nairobi.svg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw" alt="" loading="lazy"></a><figcaption><span>ધ્વજની છબી</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info" type="button" popovertarget="p7" aria-label="Credit">i</button><span id="p7" popover class="pop">earlier version Mandingoesque; this version Johannes Rössel · Public domain</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P41" aria-label="Edit">✎</a></span></figure></div></div></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>સત્તાવાર નામ</dt><dd><span lang="sw">Nairobi</span> <span class="note">sw</span></dd><span class="tools"><span class="prov-imported" title="આયાત કર્યું">W</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P1448" aria-label="Edit">✎</a></span></div><div class="row r-value"><dt>સ્થાનિક વર્ણન</dt><dd><span lang="sw">Nairobi</span> <span class="note">sw</span></dd><span class="tools"><span class="prov-imported" title="આયાત કર્યું">W</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P1705" aria-label="Edit">✎</a></span></div><div class="row r-list"><dt>વસનારાનું સંબોધન</dt><dd><span class="v"><span lang="fr">Nairobien</span> <span class="note">fr</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q47088290">પુલ્લિંગ એકવચન</a></span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P1549" aria-label="Edit">✎</a></span><span class="v"><span lang="fr">Nairobienne</span> <span class="note">fr</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q47088293">સ્ત્રીલિંગ એકવચન</a></span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P1549" aria-label="Edit">✎</a></span><span class="v"><span lang="en">Nairobian</span> <span class="note">en</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P1549" aria-label="Edit">✎</a></span><span class="v"><span lang="fr">nairobienne</span> <span class="note">fr</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q47088293">સ્ત્રીલિંગ એકવચન</a></span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P1549" aria-label="Edit">✎</a></span><span class="v"><span lang="tn">Monairobi</span> <span class="note">tn</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P1549" aria-label="Edit">✎</a></span><span class="v"><span lang="fr">nairobien</span> <span class="note">fr</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q47088290">પુલ્લિંગ એકવચન</a></span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P1549" aria-label="Edit">✎</a></span><span class="v"><span lang="eo">Najrobiano</span> <span class="note">eo</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P1549" aria-label="Edit">✎</a></span></dd><span class="tools"></span></div><div class="row r-value"><dt>પોસ્ટલ કોડ</dt><dd>00100</dd><span class="tools"><span class="prov-none" title="—"></span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P281" aria-label="Edit">✎</a></span></div><div class="row r-value"><dt>સ્થાનિક ડાયલિંગ કોડ</dt><dd>020</dd><span class="tools"><span class="prov-imported" title="આયાત કર્યું">W</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P473" aria-label="Edit">✎</a></span></div></dl></section>
-<section class="spread t-lead-beside" data-spread="government"><h2>સરકાર</h2><div data-slot="hero"><div class="block succession"><h3>સરકારના વડા</h3><figure class="m k-photo" style="--a:0.9509"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sakaja%20in%202024.jpg?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Sakaja%20in%202024.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Sakaja%20in%202024.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Sakaja%20in%202024.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Sakaja%20in%202024.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Sakaja%20in%202024.jpg?width=1920 1920w" sizes="(max-width: 760px) 50vw, 20vw" alt="" loading="lazy"><figcaption><span>સરકારના વડા</span><b><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q28967580"><span class="fb" lang="en">Sakaja Johnson</span></a><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q28967580" aria-label="Add a label in your language">+</a></span></b><span>2022 –</span></figcaption><span class="tools"><button class="info" type="button" popovertarget="p8" aria-label="Credit">i</button><span id="p8" popover class="pop">LuffyDe · CC0</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P6" aria-label="Edit">✎</a></span></figure></div></div><div data-slot="stack"><div class="block set"><h3>મુખ્ય મથક છે <span class="note">3</span></h3><div class="run scroll" tabindex="0" role="group" aria-label="મુખ્ય મથક છે"><figure class="m k-drawing" style="--a:1.004"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kenya%20-%20Location%20Map%20%282013%29%20-%20KEN%20-%20UNOCHA.svg?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Kenya%20-%20Location%20Map%20%282013%29%20-%20KEN%20-%20UNOCHA.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Kenya%20-%20Location%20Map%20%282013%29%20-%20KEN%20-%20UNOCHA.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Kenya%20-%20Location%20Map%20%282013%29%20-%20KEN%20-%20UNOCHA.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Kenya%20-%20Location%20Map%20%282013%29%20-%20KEN%20-%20UNOCHA.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Kenya%20-%20Location%20Map%20%282013%29%20-%20KEN%20-%20UNOCHA.svg?width=1920 1920w" sizes="(max-width: 760px) 50vw, 20vw" alt="" loading="lazy"><figcaption><b><a href="https://www.wikidata.org/wiki/Q114">કેન્યા</a></b><span>1963 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info" type="button" popovertarget="p9" aria-label="Credit">i</button><span id="p9" popover class="pop">UN Office for the Coordination of Humanitarian Affairs (OCHA) · CC BY 3.0</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P1376" aria-label="Edit">✎</a></span></figure><figure class="m k-photo" style="--a:1.5056"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=1920 1920w" sizes="(max-width: 760px) 50vw, 20vw" alt="" loading="lazy"><figcaption><b><a href="https://www.wikidata.org/wiki/Q3335223">નૈરોબી કાઉન્ટી</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info" type="button" popovertarget="p10" aria-label="Credit">i</button><span id="p10" popover class="pop">Jorge Láscar · CC BY-SA 2.0</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P1376" aria-label="Edit">✎</a></span></figure><figure class="m k-photo" style="--a:1.5056"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=1920 1920w" sizes="(max-width: 760px) 50vw, 20vw" alt="" loading="lazy"><figcaption><b><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q1061480"><span class="fb" lang="en">Nairobi Province</span></a><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q1061480" aria-label="Add a label in your language">+</a></span></b><span class="from" title="en.wikipedia.org">W</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info" type="button" popovertarget="p11" aria-label="Credit">i</button><span id="p11" popover class="pop">Jorge Láscar · CC BY-SA 2.0</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P1376" aria-label="Edit">✎</a></span></figure></div></div></div><dl class="sheet" data-slot="sheet"><div class="row r-list former"><dt>મુખ્ય મથક છે</dt><dd><span class="v"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q2538511"><span class="fb" lang="en">Kenya Colony</span></a><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q2538511" aria-label="Add a label in your language">+</a></span> <span class="note">1920 – 1963</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P1376" aria-label="Edit">✎</a></span></dd><span class="tools"></span></div></dl></section>
-<section class="spread t-columns" data-spread="demography"><h2>વસ્તી-વિષયક માહિતીઓ</h2><div data-slot="hero"><div class="block scale"><h3>દેશ: <a href="https://www.wikidata.org/wiki/Q114">કેન્યા</a></h3><div class="bars"><div class="bar self"><span class="name">વસ્તી / જનસંખ્યા</span><span class="track"><span style="--f:0.114405"></span></span><span class="val"><data value="0.114405" data-f="percent">11 %</data></span></div><div class="bar self"><span class="name">ક્ષેત્રફળ</span><span class="track"><span style="--f:0.001197"></span></span><span class="val"><data value="0.001197" data-f="percent">0.12 %</data></span></div></div></div></div><div data-slot="stack"><div class="block"><h3>વસ્તી / જનસંખ્યા <span class="note"><span class="fb-group"><span class="fb" lang="en">big city</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q1549591" aria-label="Add a label in your language">+</a></span> · કેન્યા · 1 / 6</span></h3><div class="bars"><a class="bar self" href="https://www.wikidata.org/wiki/Q3870"><span class="name">નૈરોબી</span><span class="track"><span style="--f:1"></span></span><span class="val"><data value="5545000" data-f="number">5545000</data></span></a><a class="bar" href="https://www.wikidata.org/wiki/Q225641"><span class="name">મોમ્બાસા</span><span class="track"><span style="--f:0.2179"></span></span><span class="val"><data value="1208333" data-f="number">1208333</data></span></a><a class="bar" href="https://www.wikidata.org/wiki/Q214485"><span class="name">કિસુમુ શહેર</span><span class="track"><span style="--f:0.0718"></span></span><span class="val"><data value="397957" data-f="number">397957</data></span></a><a class="bar" href="https://www.wikidata.org/wiki/Q239421"><span class="name">નાકુરુ</span><span class="track"><span style="--f:0.0555"></span></span><span class="val"><data value="307990" data-f="number">307990</data></span></a><a class="bar" href="https://www.wikidata.org/wiki/Q322149"><span class="name">એલ્ડોરેટ</span><span class="track"><span style="--f:0.0522"></span></span><span class="val"><data value="289380" data-f="number">289380</data></span></a><a class="bar" href="https://www.wikidata.org/wiki/Q693093"><span class="name">મેંકાકોસ</span><span class="track"><span style="--f:0.0206"></span></span><span class="val"><data value="114109" data-f="number">114109</data></span></a></div></div><div class="block"><h3>સમુદ્ર સપાટીથી ઉંચાઇ <span class="note"><span class="fb-group"><span class="fb" lang="en">big city</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q1549591" aria-label="Add a label in your language">+</a></span> · કેન્યા · 3 / 5</span></h3><div class="bars"><a class="bar" href="https://www.wikidata.org/wiki/Q322149"><span class="name">એલ્ડોરેટ</span><span class="track"><span style="--f:1"></span></span><span class="val"><data value="2095" data-f="number">2095</data></span></a><a class="bar" href="https://www.wikidata.org/wiki/Q239421"><span class="name">નાકુરુ</span><span class="track"><span style="--f:0.8831"></span></span><span class="val"><data value="1850" data-f="number">1850</data></span></a><a class="bar self" href="https://www.wikidata.org/wiki/Q3870"><span class="name">નૈરોબી</span><span class="track"><span style="--f:0.7928"></span></span><span class="val"><data value="1661" data-f="number">1661</data></span></a><a class="bar" href="https://www.wikidata.org/wiki/Q214485"><span class="name">કિસુમુ શહેર</span><span class="track"><span style="--f:0.5399"></span></span><span class="val"><data value="1131" data-f="number">1131</data></span></a><a class="bar" href="https://www.wikidata.org/wiki/Q225641"><span class="name">મોમ્બાસા</span><span class="track"><span style="--f:0.0239"></span></span><span class="val"><data value="50" data-f="number">50</data></span></a></div></div><div class="block"><h3>વસ્તી / જનસંખ્યા</h3><div class="columns"><div title="2009: 3138369"><span><data value="3138369" data-f="number">3138369</data></span><span class="col" style="--f:0.566"></span><span class="note">2009</span></div><div title="2010: 3240155"><span><data value="3240155" data-f="number">3240155</data></span><span class="col" style="--f:0.5843"></span><span class="note">2010</span></div><div title="2016: 5545000"><span><data value="5545000" data-f="number">5545000</data></span><span class="col" style="--f:1"></span><span class="note">2016</span></div></div></div></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>ક્ષેત્રફળ</dt><dd><data value="696" data-f="number">696</data> <span class="note">km²</span></dd><span class="tools"><span class="prov-imported" title="આયાત કર્યું">W</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P2046" aria-label="Edit">✎</a></span></div><div class="row r-list"><dt>સત્તાવાર / માન્યતા પ્રાપ્ત ભાષાઓ</dt><dd><span class="v"><a href="https://www.wikidata.org/wiki/Q1860">અંગ્રેજી</a><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P2936" aria-label="Edit">✎</a></span><span class="v"><a href="https://www.wikidata.org/wiki/Q7838">સ્વાહિલી</a><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P2936" aria-label="Edit">✎</a></span><span class="v"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q35787"><span class="fb" lang="en">Maasai</span></a><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q35787" aria-label="Add a label in your language">+</a></span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P2936" aria-label="Edit">✎</a></span></dd><span class="tools"></span></div></dl></section>
-<section class="spread t-columns" data-spread="economy"><h2><span class="fb" lang="en">economy</span></h2><div class="prose-slot" lang="en"><p>Nairobi is home to the <a href="https://www.wikidata.org/wiki/Q2384385">Nairobi Securities Exchange</a> (NSE), one of Africa's largest <a href="https://www.wikidata.org/wiki/Q11691">stock exchanges</a>. The NSE was officially recognised as an overseas stock exchange by the <a href="https://www.wikidata.org/wiki/Q171240">London Stock Exchange</a> in 1953. The exchange is Africa's fourth largest in terms of trading volumes, and fifth largest in terms of Market Capitalization as a percentage of GDP.</p><a class="read" href="https://en.wikipedia.org/wiki/Nairobi#Economy">Economy ↗</a></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt><span class="fb-group"><span class="fb" lang="en">economy of topic</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P8744" aria-label="Add a label in your language">+</a></span></dt><dd><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q106020188"><span class="fb" lang="en">economy of Nairobi</span></a><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q106020188" aria-label="Add a label in your language">+</a></span></dd><span class="tools"><span class="prov-none" title="—"></span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P8744" aria-label="Edit">✎</a></span></div></dl></section>
-<section class="spread t-columns" data-spread="connections"><h2><span class="fb" lang="en">relation</span></h2><div class="prose-slot" lang="en"><p>Nairobi is <a href="https://www.wikidata.org/wiki/Q184711">twinned</a> with:</p><a class="read" href="https://en.wikipedia.org/wiki/Nairobi#Twin_towns_and_sister_cities">Twin towns and sister cities ↗</a></div><div data-slot="stack"><div class="block set"><h3>જોડકું શહેર <span class="note">7</span></h3><div class="run scroll" tabindex="0" role="group" aria-label="જોડકું શહેર"><figure class="m k-photo" style="--a:1.7778"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Raleigh%20Skyline.jpg?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Raleigh%20Skyline.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Raleigh%20Skyline.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Raleigh%20Skyline.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Raleigh%20Skyline.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Raleigh%20Skyline.jpg?width=1920 1920w" sizes="(max-width: 760px) 50vw, 20vw" alt="" loading="lazy"><figcaption><b><a href="https://www.wikidata.org/wiki/Q41087">રેલે</a></b><span>2022 –</span></figcaption><span class="tools"><button class="info" type="button" popovertarget="p12" aria-label="Credit">i</button><span id="p12" popover class="pop">Abhiram Juvvadi · CC BY-SA 4.0</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P190" aria-label="Edit">✎</a></span></figure><figure class="m k-photo" style="--a:1.8989"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Denver%2C%20Colorado%20skyline%20%28cropped%29.jpg?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Denver%2C%20Colorado%20skyline%20%28cropped%29.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Denver%2C%20Colorado%20skyline%20%28cropped%29.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Denver%2C%20Colorado%20skyline%20%28cropped%29.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Denver%2C%20Colorado%20skyline%20%28cropped%29.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Denver%2C%20Colorado%20skyline%20%28cropped%29.jpg?width=1920 1920w" sizes="(max-width: 760px) 50vw, 20vw" alt="" loading="lazy"><figcaption><b><a href="https://www.wikidata.org/wiki/Q16554">ડેનવર</a></b><span>1975 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info" type="button" popovertarget="p13" aria-label="Credit">i</button><span id="p13" popover class="pop">Quintin Soloviev · CC BY 4.0</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P190" aria-label="Edit">✎</a></span></figure><figure class="m k-photo" style="--a:1.7778"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/%E4%BA%94%E5%8D%8E%E5%8C%BA%E4%B8%8E%E7%9B%98%E9%BE%99%E5%8C%BA%E5%A4%A9%E9%99%85%E7%BA%BF%20-%20%E8%88%AA%E6%8B%8D%20-%202025-05-16%2003.jpg?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/%E4%BA%94%E5%8D%8E%E5%8C%BA%E4%B8%8E%E7%9B%98%E9%BE%99%E5%8C%BA%E5%A4%A9%E9%99%85%E7%BA%BF%20-%20%E8%88%AA%E6%8B%8D%20-%202025-05-16%2003.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/%E4%BA%94%E5%8D%8E%E5%8C%BA%E4%B8%8E%E7%9B%98%E9%BE%99%E5%8C%BA%E5%A4%A9%E9%99%85%E7%BA%BF%20-%20%E8%88%AA%E6%8B%8D%20-%202025-05-16%2003.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/%E4%BA%94%E5%8D%8E%E5%8C%BA%E4%B8%8E%E7%9B%98%E9%BE%99%E5%8C%BA%E5%A4%A9%E9%99%85%E7%BA%BF%20-%20%E8%88%AA%E6%8B%8D%20-%202025-05-16%2003.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/%E4%BA%94%E5%8D%8E%E5%8C%BA%E4%B8%8E%E7%9B%98%E9%BE%99%E5%8C%BA%E5%A4%A9%E9%99%85%E7%BA%BF%20-%20%E8%88%AA%E6%8B%8D%20-%202025-05-16%2003.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/%E4%BA%94%E5%8D%8E%E5%8C%BA%E4%B8%8E%E7%9B%98%E9%BE%99%E5%8C%BA%E5%A4%A9%E9%99%85%E7%BA%BF%20-%20%E8%88%AA%E6%8B%8D%20-%202025-05-16%2003.jpg?width=1920 1920w" sizes="(max-width: 760px) 50vw, 20vw" alt="" loading="lazy"><figcaption><b><a href="https://www.wikidata.org/wiki/Q182852">કુન્મિંગ</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info" type="button" popovertarget="p14" aria-label="Credit">i</button><span id="p14" popover class="pop">瑞丽江的河水 · CC BY-SA 4.0</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P190" aria-label="Edit">✎</a></span></figure><figure class="m k-photo" style="--a:1.3333"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Colonia-Tovar.jpg?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Colonia-Tovar.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Colonia-Tovar.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Colonia-Tovar.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Colonia-Tovar.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Colonia-Tovar.jpg?width=1920 1920w" sizes="(max-width: 760px) 50vw, 20vw" alt="" loading="lazy"><figcaption><b><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q964130"><span class="fb" lang="en">Colonia Tovar</span></a><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q964130" aria-label="Add a label in your language">+</a></span></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info" type="button" popovertarget="p15" aria-label="Credit">i</button><span id="p15" popover class="pop">Pascual De Ruvo (Pderuvo at en.wikipedia) · CC BY-SA 3.0</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P190" aria-label="Edit">✎</a></span></figure><figure class="m k-photo" style="--a:1.8727"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cidade%20Maravilhosa.jpg?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Cidade%20Maravilhosa.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Cidade%20Maravilhosa.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Cidade%20Maravilhosa.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Cidade%20Maravilhosa.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Cidade%20Maravilhosa.jpg?width=1920 1920w" sizes="(max-width: 760px) 50vw, 20vw" alt="" loading="lazy"><figcaption><b><a href="https://www.wikidata.org/wiki/Q8678">રિયો ડિ જેનેરો</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info" type="button" popovertarget="p16" aria-label="Credit">i</button><span id="p16" popover class="pop">Rafael Rabello de Barros · CC BY-SA 3.0</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P190" aria-label="Edit">✎</a></span></figure><figure class="m k-photo" style="--a:1.3333"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pingxiang%2C%20JX%2C%20PRC.jpg?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Pingxiang%2C%20JX%2C%20PRC.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Pingxiang%2C%20JX%2C%20PRC.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Pingxiang%2C%20JX%2C%20PRC.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Pingxiang%2C%20JX%2C%20PRC.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Pingxiang%2C%20JX%2C%20PRC.jpg?width=1920 1920w" sizes="(max-width: 760px) 50vw, 20vw" alt="" loading="lazy"><figcaption><b><a href="https://www.wikidata.org/wiki/Q362865">પિંગક્સીઆંગ</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info" type="button" popovertarget="p17" aria-label="Credit">i</button><span id="p17" popover class="pop">Chinaculturefriend · CC BY-SA 3.0</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P190" aria-label="Edit">✎</a></span></figure><figure class="m k-photo" style="--a:1.4904"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Parintins%20Amazonas%20Brazil.jpg?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Parintins%20Amazonas%20Brazil.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Parintins%20Amazonas%20Brazil.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Parintins%20Amazonas%20Brazil.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Parintins%20Amazonas%20Brazil.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Parintins%20Amazonas%20Brazil.jpg?width=1920 1920w" sizes="(max-width: 760px) 50vw, 20vw" alt="" loading="lazy"><figcaption><b><a href="https://www.wikidata.org/wiki/Q926713">પેરિંટિન્સ</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info" type="button" popovertarget="p18" aria-label="Credit">i</button><span id="p18" popover class="pop">Mário Oliveira - MTUR · Public domain</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P190" aria-label="Edit">✎</a></span></figure></div></div></div></section>
-<section class="spread t-axis" data-spread="history"><h2>ઈતિહાસ</h2><div class="prose-slot" lang="en"><p>The site of Nairobi was originally a swamp land occupied by a <a href="https://www.wikidata.org/wiki/Q9056738">pastoralist</a> people, the <a href="https://www.wikidata.org/wiki/Q163022">Maasai</a>, the long-distance trader community, <a href="https://www.wikidata.org/wiki/Q1143929">Akamba People</a>, as well as the <a href="https://www.wikidata.org/wiki/Q1781198">agriculturalist</a> <a href="https://www.wikidata.org/wiki/Q203178">Kikuyu people</a>. The name Nairobi comes from the <a href="https://www.wikidata.org/wiki/Q35787">Maasai</a> expression meaning 'cool waters'. referring to the cold water stream which flowed through the area. With the arrival of the <a href="https://www.wikidata.org/wiki/Q500115">Uganda Railway</a>, the site was identified by <a href="https://www.wikidata.org/wiki/Q56665460">Sir George Whitehouse</a> for a store depot, shunting ground and camping ground for the <a href="https://www.wikidata.org/wiki/Q6024095">Indian</a> labourers working on the railway.</p><a class="read" href="https://en.wikipedia.org/wiki/Nairobi#History">History ↗</a></div><p class="prose-links"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q7805834"><span class="fb" lang="en">timeline of Nairobi history</span></a><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q7805834" aria-label="Add a label in your language">+</a></span></p></section>
-<section class="spread t-feature-run" data-spread="media"><h2><span class="fb" lang="en">multimedia</span></h2><div class="prose-slot" lang="en"><p>Nairobi is diverse in African cultures. As a cosmopolitan African city, it hosts all the diverse tribes that make up Kenya, and hosts a large immigrant population from other African countries.</p><a class="read" href="https://en.wikipedia.org/wiki/Nairobi#Culture">Culture ↗</a></div><div data-slot="feature"><div class="feature"><figure class="m k-photo" style="--a:1"><a href="https://commons.wikimedia.org/wiki/File:Nairobi_economic_capital_of_africa.jpg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=1920 1920w" sizes="100vw" alt="" loading="lazy"></a><figcaption><span><span class="fb-group"><span class="fb" lang="en">nighttime view</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P3451" aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info" type="button" popovertarget="p19" aria-label="Credit">i</button><span id="p19" popover class="pop">Africanmodern · CC BY-SA 4.0</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P3451" aria-label="Edit">✎</a></span></figure></div></div><div data-slot="run"><div class="run"><figure class="m k-photo" style="--a:0.6633"><a href="https://commons.wikimedia.org/wiki/File:Nairobi_Montage_A.jpg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw" alt="" loading="lazy"></a><figcaption><span>કોલાઝ છબી</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info" type="button" popovertarget="p20" aria-label="Credit">i</button><span id="p20" popover class="pop">Southlondoneye (talk) 20:30, 29 March 2015 (UTC) · CC BY-SA 3.0</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P2716" aria-label="Edit">✎</a></span></figure><figure class="m k-photo" style="--a:1.6234"><a href="https://commons.wikimedia.org/wiki/File:Nairobi_Aerial_Photo.jpg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw" alt="" loading="lazy"></a><figcaption><span><span class="fb-group"><span class="fb" lang="en">aerial view</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P8592" aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info" type="button" popovertarget="p21" aria-label="Credit">i</button><span id="p21" popover class="pop">Mkimemia at English Wikipedia · Public domain</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P8592" aria-label="Edit">✎</a></span></figure><figure class="m k-video" style="--a:1.7778"><video controls preload="none" poster="https://commons.wikimedia.org/wiki/Special:FilePath/Google%20Timelapse-%20Nairobi%2C%20Kenya.webm?width=960" src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Google_Timelapse-_Nairobi%2C_Kenya.webm"></video><figcaption><span>ચલચિત્ર</span><span class="prov-none" title="—"></span><span class="size">29 MB</span></figcaption><span class="tools"><button class="info" type="button" popovertarget="p22" aria-label="Credit">i</button><span id="p22" popover class="pop">Google Earth · CC BY 3.0</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P10" aria-label="Edit">✎</a></span></figure></div></div></section>
-<section class="spread t-collapsed" data-spread="more"><details><summary>+1</summary><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>સ્થાપન દિવસ / રચના દિવસ</dt><dd><time datetime="1899" data-p="9">1899</time></dd><span class="tools"><span class="prov-none" title="—"></span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P571" aria-label="Edit">✎</a></span></div></dl></details></section>
-<section class="spread t-sheet" data-spread="evidence"><h2><span class="fb" lang="en">reference</span></h2><div data-slot="summary"><div class="block"><div class="stack-bar"><span class="p-sourced" style="--n:9"></span><span class="p-imported" style="--n:12"></span><span class="p-none" style="--n:43"></span></div><ul class="legend"><li> કહેવાયું છે / જાળસ્થળ <b>9</b></li><li><span class="prov-imported" title="આયાત કર્યું">W</span> આયાત કર્યું <b>12</b></li><li><span class="prov-none" title="—"></span> — <b>43</b></li></ul><p class="note">gu: 50 / 63</p></div></div><dl class="sheet" data-slot="web"><div class="row r-value"><dt>અધિકૃત વેબસાઇટ</dt><dd><a href="https://nairobi.go.ke/">https://nairobi.go.ke/</a></dd><span class="tools"><span class="prov-imported" title="આયાત કર્યું">W</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P856" aria-label="Edit">✎</a></span></div><div class="row r-value"><dt>ટ્વીટર યુઝરનેઈમ</dt><dd>047County</dd><span class="tools"><span class="prov-none" title="—"></span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P2002" aria-label="Edit">✎</a></span></div><div class="row r-value"><dt><span class="fb-group"><span class="fb" lang="en">Instagram username</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P2003" aria-label="Add a label in your language">+</a></span></dt><dd>nairobi_citycountygovernment</dd><span class="tools"><span class="prov-none" title="—"></span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P2003" aria-label="Edit">✎</a></span></div><div class="row r-value"><dt>ફેસબુક પ્રોફાઇલ આઈડી</dt><dd>CountyGovernment047</dd><span class="tools"><span class="prov-none" title="—"></span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P2013" aria-label="Edit">✎</a></span></div><div class="row r-value"><dt>hashtag</dt><dd>Nairobi</dd><span class="tools"><span class="prov-none" title="—"></span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P2572" aria-label="Edit">✎</a></span></div><div class="row r-value"><dt><span class="fb-group"><span class="fb" lang="en">open data portal</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P8402" aria-label="Add a label in your language">+</a></span></dt><dd><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q97130876"><span class="fb" lang="en">Nairobi open data</span></a><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q97130876" aria-label="Add a label in your language">+</a></span></dd><span class="tools"><span class="prov-none" title="—"></span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P8402" aria-label="Edit">✎</a></span></div><div class="row r-value"><dt>subreddit</dt><dd>nairobi</dd><span class="tools"><span class="prov-none" title="—"></span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P3984" aria-label="Edit">✎</a></span></div></dl><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>સંદર્ભ</dt><dd><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q867541"><span class="fb" lang="en">Encyclopædia Britannica 11th edition</span></a><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q867541" aria-label="Add a label in your language">+</a></span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q84643330"><span class="fb" lang="en">1911 Encyclopædia Britannica/Nairobi</span></a><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q84643330" aria-label="Add a label in your language">+</a></span></span></dd><span class="tools"><span class="prov-none" title="—"></span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P1343" aria-label="Edit">✎</a></span></div><div class="row r-value"><dt>અહીં જન્મેલા લોકોની શ્રેણી</dt><dd><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q8064728"><span class="fb" lang="en">Category:Births in Nairobi</span></a><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q8064728" aria-label="Add a label in your language">+</a></span></dd><span class="tools"><span class="prov-none" title="—"></span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P1464" aria-label="Edit">✎</a></span></div><div class="row r-value"><dt><span class="fb-group"><span class="fb" lang="en">category for people who died here</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P1465" aria-label="Add a label in your language">+</a></span></dt><dd><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q9688722"><span class="fb" lang="en">Category:Deaths in Nairobi</span></a><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q9688722" aria-label="Add a label in your language">+</a></span></dd><span class="tools"><span class="prov-none" title="—"></span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P1465" aria-label="Edit">✎</a></span></div><div class="row r-value"><dt>સંબંધિત લોકોની શ્રેણી</dt><dd><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q7119121"><span class="fb" lang="en">Category:People from Nairobi</span></a><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q7119121" aria-label="Add a label in your language">+</a></span></dd><span class="tools"><span class="prov-none" title="—"></span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P1792" aria-label="Edit">✎</a></span></div><div class="row r-value"><dt>કોમન્સ શ્રેણી</dt><dd>Nairobi</dd><span class="tools"><span class="prov-none" title="—"></span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P373" aria-label="Edit">✎</a></span></div><div class="row r-value"><dt><span class="fb-group"><span class="fb" lang="en">on focus list of Wikimedia project</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P5008" aria-label="Add a label in your language">+</a></span></dt><dd><span class="v"><a href="https://www.wikidata.org/wiki/Q5460604">વિકિપીડિયા:દરેક ભાષાના વિકિપીડિયામાં હોવા જોઈએ એવા પ્રારંભિક લેખોની યાદી</a><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P5008" aria-label="Edit">✎</a></span><span class="v"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q6173448"><span class="fb" lang="en">Wikipedia:Vital articles/Level/4</span></a><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q6173448" aria-label="Add a label in your language">+</a></span> <span class="note">2022</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P5008" aria-label="Edit">✎</a></span></dd><span class="tools"></span></div><div class="row r-value"><dt><span class="fb-group"><span class="fb" lang="en">category for maps or plans</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P7867" aria-label="Add a label in your language">+</a></span></dt><dd><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q84054802"><span class="fb" lang="en">Category:Maps of Nairobi</span></a><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q84054802" aria-label="Add a label in your language">+</a></span></dd><span class="tools"><span class="prov-none" title="—"></span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P7867" aria-label="Edit">✎</a></span></div><div class="row r-value"><dt><span class="fb-group"><span class="fb" lang="en">category for the view of the item</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P8989" aria-label="Add a label in your language">+</a></span></dt><dd><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q104596219"><span class="fb" lang="en">Category:Views of Nairobi</span></a><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q104596219" aria-label="Add a label in your language">+</a></span></dd><span class="tools"><span class="prov-none" title="—"></span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P8989" aria-label="Edit">✎</a></span></div><div class="row r-value"><dt>વિષયની મુખ્ય શ્રેણી</dt><dd><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q8795825"><span class="fb" lang="en">Category:Nairobi</span></a><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q8795825" aria-label="Add a label in your language">+</a></span></dd><span class="tools"><span class="prov-none" title="—"></span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P910" aria-label="Edit">✎</a></span></div><div class="row r-value"><dt>વિકિમીડિયા કોમન્સ ગેલેરી</dt><dd>Nairobi</dd><span class="tools"><span class="prov-imported" title="આયાત કર્યું">W</span><a class="edit" href="https://www.wikidata.org/wiki/Q3870#P935" aria-label="Edit">✎</a></span></div></dl><div data-slot="projects"><div class="block"><div><span class="chip">wikipedia <b>210</b></span><span class="chip">wikivoyage <b>19</b></span><span class="chip">wikinews <b>5</b></span><span class="chip">wikiquote <b>3</b></span></div></div></div><div data-slot="identifiers"><button class="more" type="button" command="show-modal" commandfor="d23"># 85</button><dialog id="d23" closedby="any"><header><h2>85</h2><button type="button" command="close" commandfor="d23" aria-label="Close">×</button></header><div class="dialog-body"><div class="idlist"><div><span><span class="fb-group"><span class="fb" lang="en">archINFORM location ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P5573" aria-label="Add a label in your language">+</a></span></span><span>8464</span></div><div><span><span class="fb-group"><span class="fb" lang="en">BabelNet ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P2581" aria-label="Add a label in your language">+</a></span></span><span>00015561n</span></div><div><span>BBC News topic ID</span><span>cq26565v4d9t</span></div><div><span><span class="fb-group"><span class="fb" lang="en">BBC Things ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P1617" aria-label="Add a label in your language">+</a></span></span><span>bfe2de9d-fde7-4781-89ca-1735ede10982</span></div><div><span><span class="fb-group"><span class="fb" lang="en">BlackPast.org ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P6723" aria-label="Add a label in your language">+</a></span></span><span>global-african-history/nairobi-kenya</span></div><div><span>BnF ID</span><span>118650453</span></div><div><span><span class="fb-group"><span class="fb" lang="en">Canadiana Name Authority ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P8179" aria-label="Add a label in your language">+</a></span></span><span>ncf10290894</span></div><div><span><span class="fb-group"><span class="fb" lang="en">CERL Thesaurus ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P1871" aria-label="Add a label in your language">+</a></span></span><span>cnl00030086</span></div><div><span>Comic Vine ID</span><span>4020-61168</span></div><div><span>Curlie ID</span><span>Regional/Africa/Kenya/Localities/Nairobi/</span></div><div><span>Data Commons ID</span><span>wikidataId/Q3870</span></div><div><span><span class="fb-group"><span class="fb" lang="en">Daum Encyclopedia ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P5184" aria-label="Add a label in your language">+</a></span></span><span>b03n2669a</span></div><div><span><span class="fb-group"><span class="fb" lang="en">De Agostini ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P6706" aria-label="Add a label in your language">+</a></span></span><span>Nairobi</span></div><div><span><span class="fb-group"><span class="fb" lang="en">Dewey Decimal Classification</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P1036" aria-label="Add a label in your language">+</a></span></span><span>2--67625</span></div><div><span><span class="fb-group"><span class="fb" lang="en">Encyclopædia Britannica Online ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P1417" aria-label="Add a label in your language">+</a></span></span><span>place/Nairobi</span></div><div><span>Encyclopædia Universalis ID</span><span>nairobi</span></div><div><span><span class="fb-group"><span class="fb" lang="en">Facebook location ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P1997" aria-label="Add a label in your language">+</a></span></span><span>114751268540391</span></div><div><span><span class="fb-group"><span class="fb" lang="en">FactGrid item ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P8168" aria-label="Add a label in your language">+</a></span></span><span>Q449252</span></div><div><span>FAST ID</span><span>1204373</span></div><div><span>FIPS 10-4</span><span>KE05</span></div><div><span><span class="fb-group"><span class="fb" lang="en">France 24 topic ID (French)</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P9346" aria-label="Add a label in your language">+</a></span></span><span>nairobi</span></div><div><span>GeoNames ID</span><span>184745</span></div><div><span><span class="fb-group"><span class="fb" lang="en">Getty Thesaurus of Geographic Names ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P1667" aria-label="Add a label in your language">+</a></span></span><span>7001116</span></div><div><span><span class="fb-group"><span class="fb" lang="en">GitHub topic</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P9100" aria-label="Add a label in your language">+</a></span></span><span>nairobi</span></div><div><span><span class="fb-group"><span class="fb" lang="en">GNS Unique Feature ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P2326" aria-label="Add a label in your language">+</a></span></span><span>-2258072</span></div><div><span><span class="fb-group"><span class="fb" lang="en">Golden ID (archived)</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P7502" aria-label="Add a label in your language">+</a></span></span><span>Nairobi-PJED</span></div><div><span>Google Maps CID</span><span>17856493610344092236</span></div><div><span><span class="fb-group"><span class="fb" lang="en">Google News topics ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P5337" aria-label="Add a label in your language">+</a></span></span><span>CAAqIQgKIhtDQkFTRGdvSUwyMHZNRFZrTkRrU0FtcGhLQUFQAQ</span></div><div><span><span class="fb-group"><span class="fb" lang="en">Gran Enciclopèdia Catalana ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P12385" aria-label="Add a label in your language">+</a></span></span><span>nairobi-0</span></div><div><span><span class="fb-group"><span class="fb" lang="en">Gran Enciclopèdia Catalana ID (former scheme)</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P1296" aria-label="Add a label in your language">+</a></span></span><span>0045300</span></div><div><span><span class="fb-group"><span class="fb" lang="en">Great Russian Encyclopedia Online ID (2017)</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P2924" aria-label="Add a label in your language">+</a></span></span><span>2246269</span></div><div><span><span class="fb-group"><span class="fb" lang="en">Gynopedia ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P5843" aria-label="Add a label in your language">+</a></span></span><span>Nairobi</span></div><div><span><span class="fb-group"><span class="fb" lang="en">Harper&#39;s tag</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P13772" aria-label="Add a label in your language">+</a></span></span><span>nairobi</span></div><div><span>HASC</span><span>KE.NB</span></div><div><span>IdRef ID</span><span>029153042</span></div><div><span><span class="fb-group"><span class="fb" lang="en">iNaturalist place ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P7471" aria-label="Add a label in your language">+</a></span></span><span>10957</span></div><div><span><span class="fb-group"><span class="fb" lang="en">Interlingual Index ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P5063" aria-label="Add a label in your language">+</a></span></span><span>i83637</span></div><div><span>ISNI (ISO 27729)</span><span>000000010791732X</span></div><div><span><span class="fb-group"><span class="fb" lang="en">ISO 3166-2 code</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P300" aria-label="Add a label in your language">+</a></span></span><span>KE-110</span></div><div><span>J9U ID</span><span>987007552644805171</span></div><div><span><span class="fb-group"><span class="fb" lang="en">KBpedia ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P8408" aria-label="Add a label in your language">+</a></span></span><span>NairobiArea-Kenya</span></div><div><span><span class="fb-group"><span class="fb" lang="en">Le Figaro tag ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P6621" aria-label="Add a label in your language">+</a></span></span><span>Nairobi</span></div><div><span><span class="fb-group"><span class="fb" lang="en">Lex ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P8313" aria-label="Add a label in your language">+</a></span></span><span>Nairobi</span></div><div><span><span class="fb-group"><span class="fb" lang="en">museum-digital place ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P9957" aria-label="Add a label in your language">+</a></span></span><span>20868</span></div><div><span><span class="fb-group"><span class="fb" lang="en">MusicBrainz area ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P982" aria-label="Add a label in your language">+</a></span></span><span>4cc373f3-8b60-400b-8aa3-6df3fe4ab8fb</span></div><div><span><span class="fb-group"><span class="fb" lang="en">National Historical Museums of Sweden ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P9495" aria-label="Add a label in your language">+</a></span></span><span>geo/24610d81-9de7-4a91-97fc-9bb4cf1b8c7e</span></div><div><span>National Library of Spain SpMaBN ID</span><span>XX453921</span></div><div><span><span class="fb-group"><span class="fb" lang="en">Naver Encyclopedia ID (pre-August 2026)</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P7506" aria-label="Add a label in your language">+</a></span></span><span>1074255</span></div><div><span><span class="fb-group"><span class="fb" lang="en">NL CR AUT ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P691" aria-label="Add a label in your language">+</a></span></span><span>ge432139</span></div><div><span><span class="fb-group"><span class="fb" lang="en">OmegaWiki Defined Meaning</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P1245" aria-label="Add a label in your language">+</a></span></span><span>457020</span></div><div><span><span class="fb-group"><span class="fb" lang="en">Online PWN Encyclopedia ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P7305" aria-label="Add a label in your language">+</a></span></span><span>3945429</span></div><div><span><span class="fb-group"><span class="fb" lang="en">OpenHistoricalMap relation ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P8424" aria-label="Add a label in your language">+</a></span></span><span>2862891</span></div><div><span><span class="fb-group"><span class="fb" lang="en">OpenStreetMap relation ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P402" aria-label="Add a label in your language">+</a></span></span><span>9185096</span></div><div><span><span class="fb-group"><span class="fb" lang="en">OpenWeatherMap city ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P7197" aria-label="Add a label in your language">+</a></span></span><span>184745</span></div><div><span><span class="fb-group"><span class="fb" lang="en">Proleksis enciklopedija ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P8349" aria-label="Add a label in your language">+</a></span></span><span>38283</span></div><div><span><span class="fb-group"><span class="fb" lang="en">Quora topic ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P3417" aria-label="Add a label in your language">+</a></span></span><span>Nairobi-Kenya-1</span></div><div><span><span class="fb-group"><span class="fb" lang="en">RKD thesaurus ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P8519" aria-label="Add a label in your language">+</a></span></span><span>15689</span></div><div><span><span class="fb-group"><span class="fb" lang="en">SBN place ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P10397" aria-label="Add a label in your language">+</a></span></span><span>TSAL000079</span></div><div><span><span class="fb-group"><span class="fb" lang="en">SNARC ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P12749" aria-label="Add a label in your language">+</a></span></span><span>Q1381</span></div><div><span>Store norske leksikon-ID</span><span>Nairobi</span></div><div><span><span class="fb-group"><span class="fb" lang="en">SVKKL authority ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P9322" aria-label="Add a label in your language">+</a></span></span><span>0423566-Nairobi-Kena</span></div><div><span>Treccani ID</span><span>nairobi</span></div><div><span><span class="fb-group"><span class="fb" lang="en">Treccani&#39;s Dizionario di Storia ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P6404" aria-label="Add a label in your language">+</a></span></span><span>nairobi</span></div><div><span><span class="fb-group"><span class="fb" lang="en">Treccani&#39;s Enciclopedia Italiana ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P4223" aria-label="Add a label in your language">+</a></span></span><span>nairobi</span></div><div><span><span class="fb-group"><span class="fb" lang="en">Tripadvisor ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P3134" aria-label="Add a label in your language">+</a></span></span><span>294207</span></div><div><span><span class="fb-group"><span class="fb" lang="en">U.S. National Archives Identifier</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P1225" aria-label="Add a label in your language">+</a></span></span><span>10044568</span></div><div><span><span class="fb-group"><span class="fb" lang="en">UK Parliament thesaurus ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P4527" aria-label="Add a label in your language">+</a></span></span><span>11803</span></div><div><span>UN/LOCODE</span><span>KENBO</span></div><div><span>VIAF ઓળખ ક્રમાંક</span><span>264835402</span></div><div><span>Vikidia article ID</span><span>fr:Nairobi</span></div><div><span>Vikidia article ID</span><span>en:Nairobi</span></div><div><span>Vikidia article ID</span><span>it:Nairobi</span></div><div><span>Vikidia article ID</span><span>es:Nairobi</span></div><div><span>Who&#39;s on First ID</span><span>421174401</span></div><div><span><span class="fb-group"><span class="fb" lang="en">WikiKids ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P12086" aria-label="Add a label in your language">+</a></span></span><span>Nairobi</span></div><div><span><span class="fb-group"><span class="fb" lang="en">Wikisimpsons article ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P10291" aria-label="Add a label in your language">+</a></span></span><span>49149</span></div><div><span>WOEID</span><span>1528488</span></div><div><span><span class="fb-group"><span class="fb" lang="en">WordNet 3.1 Synset ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P8814" aria-label="Add a label in your language">+</a></span></span><span>08948355-n</span></div><div><span><span class="fb-group"><span class="fb" lang="en">WorldCat Entities ID</span><a class="add-label" href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P10832" aria-label="Add a label in your language">+</a></span></span><span>E39PBJccgHVhXJcjCxQ6cXJxDq</span></div><div><span>YSO ID</span><span>110125</span></div><div><span>એન. ડી. એલ. ઓળખ</span><span>00628843</span></div><div><span>એલ. સી. સી. એન. ઓળખ</span><span>n79011090</span></div><div><span>જીએનડી ઓળખ</span><span>4041172-2</span></div><div><span>ફ્રીબેઝ આઈડી</span><span>/m/05d49</span></div><div><span>‎Yale LUX ID</span><span>place/2594dec6-5ad7-4c29-9b82-864ef69905b3</span></div></div></div></dialog></div></section>
-<section class="spread t-sheet" data-spread="evidence"><p class="prose-links"><a href="https://en.wikipedia.org/wiki/Nairobi#Parks_and_gardens">Parks and gardens</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Political_divisions">Political divisions</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Demographics">Demographics</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Sports">Sports</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Places_of_worship">Places of worship</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Infrastructure">Infrastructure</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Crime_and_law_enforcement">Crime and law enforcement</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Media">Media</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Notable_people">Notable people</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Pop_culture">Pop culture</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Notes">Notes</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#References">References</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#External_links">External links</a></p></section>
-<p class="provenance-note">Composed by rule from Wikidata item <a href="https://www.wikidata.org/wiki/Q3870">Q3870</a> (composition/0.3, view/0.2, design/0.2). The lead paragraph, the section paragraphs and the section links come from Wikipedia. Pictures come from Wikimedia Commons; a W on a picture marks one from an article, not from Wikidata; a W on a value marks a statement whose only reference is a Wikipedia.</p>
-</main>
-<script>// Progressive enhancement only: opens and closes dialogs in browsers
+    <header class="chrome">
+        <div>
+            <span class="wordmark">Wikipedia</span><input type="search"
+       placeholder="Search Wikipedia"
+       aria-label="Search Wikipedia">
+        </div>
+    </header>
+    <main class="page">
+            <section class="spread t-identity"
+             data-spread="identity"><div data-slot="head">
+        <div class="title"><h1>નૈરોબી</h1>
+        <p>
+            <span class="fb" lang="en">capital city of Kenya</span>
+        </p>
+    </div>
+</div><div data-slot="band">
+        <div class="band"> <figure class="m k-photo" style="--a:7">
+        <a href="https://commons.wikimedia.org/wiki/File:Nairobi_banner.jpg">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20banner.jpg?width=960"
+                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20banner.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20banner.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20banner.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20banner.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20banner.jpg?width=1920 1920w" sizes="100vw"
+                 alt="">
+        </a><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p1"
+            aria-label="Credit">i</button><span id="p1" popover class="pop">Nairobi_Skyline2.jpg: Nite Owl
+derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P948"
+       aria-label="Edit">✎</a></span></figure> </div>
+</div><div data-slot="lead">
+        <div class="lead" lang="en"><p><b>Nairobi</b> (/naɪˈroʊbi/&#32;ⓘ <i>ny-ROH-bee</i>) (<i>Jiji kuu la Nairobi</i>, in <ruby><a href="https://www.wikidata.org/wiki/Q7838">Swahili</a><rt><span>સ્વાહિલી</span></rt></ruby>),  is the <a href="https://www.wikidata.org/wiki/Q5119">capital</a> and largest city of <ruby><a href="https://www.wikidata.org/wiki/Q114">Kenya</a><rt><span>કેન્યા</span></rt></ruby>, located in the south-central part of the country. As of 2026, it has a population of 5.6 million and a metropolitan population of 15.95 million, making it the <a href="https://www.wikidata.org/wiki/Q4733189">8th most populous city</a> in <a href="https://www.wikidata.org/wiki/Q15">Africa</a> and the 4th most populous metropolitan area. The city goes beyond its borders and has expanded into neighbouring counties, making it the 4th largest metropolitan area in Africa.</p><details><summary>¶ +5</summary><p>Nicknamed the "Green City under the Sun", Nairobi is uniquely notable for being the only capital city in the world that hosts a <a href="https://www.wikidata.org/wiki/Q739993">national park</a> within its boundaries. Its name originates from the <a href="https://www.wikidata.org/wiki/Q35787">Maasai</a> phrase <i>Enkare Nyirobi</i>, meaning "place of cool waters".</p><p>As the national capital, Nairobi is home to the <a href="https://www.wikidata.org/wiki/Q110579137">Kenyan Parliament Buildings</a>, the <a href="https://www.wikidata.org/wiki/Q3497294">State House</a> and the <a href="https://www.wikidata.org/wiki/Q2368297">Supreme Court Building</a>. It is the major financial and economic hub of <a href="https://www.wikidata.org/wiki/Q27407">East Africa</a>, hosting thousands of Kenyan businesses and international companies and organisations, including the <a href="https://www.wikidata.org/wiki/Q182016">United Nations Environment Programme</a> (UN Environment) and the <a href="https://www.wikidata.org/wiki/Q1021627">United Nations Office at Nairobi</a> (UNON). The <a href="https://www.wikidata.org/wiki/Q2384385">Nairobi Securities Exchange</a> (NSE) is one of the largest <a href="https://www.wikidata.org/wiki/Q11691">stock exchanges</a> in Africa and the second-oldest exchange on the continent. It is Africa's fourth-largest stock exchange by trading volume, capable of processing 10 million trades a day. Nairobi is considered a <a href="https://www.wikidata.org/wiki/Q208511">global city</a> and was ranked as a "Beta World City" by the <a href="https://www.wikidata.org/wiki/Q1531726">Globalisation and World Cities Research Network</a> as of 2024.</p><p>Nairobi was founded in 1898 by colonial authorities in <a href="https://www.wikidata.org/wiki/Q876185">British East Africa</a>, as a rail depot on the <a href="https://www.wikidata.org/wiki/Q1036">Uganda</a>–<a href="https://www.wikidata.org/wiki/Q850755">Kenya Railway.</a> The authorities favoured it as an ideal resting place due to its <a href="https://www.wikidata.org/wiki/Q1141462">high elevation</a>, <a href="https://www.wikidata.org/wiki/Q167466">temperate climate</a>, and adequate water supply. The town quickly grew to replace <ruby><a href="https://www.wikidata.org/wiki/Q225641">Mombasa</a><rt><span>મોમ્બાસા</span></rt></ruby> as the capital of Kenya in 1907.</p><p>After independence in 1963, Nairobi became the capital of the <ruby><a href="https://www.wikidata.org/wiki/Q114">Republic of Kenya</a><rt><span>કેન્યા</span></rt></ruby>. During Kenya's early period, the city became a centre for the <a href="https://www.wikidata.org/wiki/Q8486">coffee</a>, <a href="https://www.wikidata.org/wiki/Q6097">tea</a> and <a href="https://www.wikidata.org/wiki/Q159221">sisal</a> industries. Successive post-independence governments have built and turned Nairobi into a modern metropolitan city with a diverse population and a growing economy.</p><p>Cite error: There are &lt;ref&#160;group&#61;lower-alpha&gt; tags&#160;or &#123;&#123;efn&#125;&#125; templates on this page, but the references will not show without a &#123;&#123;reflist&#124;group&#61;lower-alpha&#125;&#125; template&#160;or &#123;&#123;notelist&#125;&#125; template (see the help page).</p></details><p class="source">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Wikipedia-logo-v2.svg?width=60" alt="" width="18">
+        <a href="https://en.wikipedia.org/wiki/Nairobi">en.wikipedia.org</a> · 210
+    </p>
+</div>
+</div><div data-slot="hero">
+        <figure class="m k-photo" style="--a:1.3333">
+        <a href="https://commons.wikimedia.org/wiki/File:Nairobi%2C_view_from_KICC.JPG">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%2C%20view%20from%20KICC.JPG?width=960"
+                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%2C%20view%20from%20KICC.JPG?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%2C%20view%20from%20KICC.JPG?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%2C%20view%20from%20KICC.JPG?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%2C%20view%20from%20KICC.JPG?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%2C%20view%20from%20KICC.JPG?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
+                 alt="" fetchpriority="high">
+        </a><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p2"
+            aria-label="Credit">i</button><span id="p2" popover class="pop">Daryona · CC BY-SA 3.0</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P18"
+       aria-label="Edit">✎</a></span></figure>
+</div><div data-slot="kind">
+        <div class="kind"><div>
+            <span class="k">ઉદાહરણ</span><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q3976641"><span class="fb" lang="en">administrative territorial entity of Kenya</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q3976641"
+           aria-label="Add a label in your language">+</a></span>, <span class="fb-group"><a href="https://www.wikidata.org/wiki/Q1549591"><span class="fb" lang="en">big city</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q1549591"
+           aria-label="Add a label in your language">+</a></span></div><div>
+            <span class="k">દેશ</span><a href="https://www.wikidata.org/wiki/Q114">કેન્યા</a></div></div>
+</div></section>
+            <section class="spread t-hero-plus-stack"
+             data-spread="location"><h2><span class="fb" lang="en">geographic location</span></h2><div class="prose-slot" lang="en"><p>Nairobi is situated at 1°09′S 36°39′E&#xfeff; / &#xfeff;1.150°S 36.650°E&#xfeff; / -1.150; 36.650&#xfeff; (Nairobi, Kenya) and 1°27′S 37°06′E&#xfeff; / &#xfeff;1.450°S 37.100°E&#xfeff; / -1.450; 37.100&#xfeff; (Nairobi, Kenya) and occupies 696 square kilometres (270&#160;sq&#160;mi).</p><a class="read" href="https://en.wikipedia.org/wiki/Nairobi#Geography">Geography ↗</a></div><div data-slot="hero">
+        <figure class="map">
+        <img src="https://maps.wikimedia.org/img/osm-intl,11,-1.286388888,36.817222222,800x500@2x.png" alt="">
+        <span class="pin"></span><figcaption>સ્થળના અક્ષાંસ રેખાંશ -1.28639, 36.8172 <span class="prov-imported" title="આયાત કર્યું">W</span></figcaption><span class="tools"><a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P625"
+       aria-label="Edit">✎</a></span></figure>
+</div><div data-slot="gallery"><div class="block set"><div class="run"><figure class="m k-photo" style="--a:0.9083">
+        <a href="https://commons.wikimedia.org/wiki/File:Nairobi_County_location_map.png">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=960"
+                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
+                 alt="" loading="lazy">
+        </a><figcaption>
+                <span>સ્થાન દર્શક નક્શો</span><span class="prov-none" title="—"></span>
+            </figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p3"
+            aria-label="Credit">i</button><span id="p3" popover class="pop">Nairobi123 · CC BY-SA 3.0</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P242"
+       aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
+        style="--a:1.5056">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=960"
+         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=1920 1920w"
+         sizes="(max-width: 760px) 50vw,
+                20vw"
+         alt=""
+         loading="lazy">
+    <figcaption><span>પ્રશાસન વિભાગમાં આવેલ છે</span><b><a href="https://www.wikidata.org/wiki/Q3335223">નૈરોબી કાઉન્ટી</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p4"
+            aria-label="Credit">i</button><span id="p4" popover class="pop">Jorge Láscar · CC BY-SA 2.0</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P131"
+       aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
+        style="--a:1.3333">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pt%20Lenana%20Mt%20Kenya.JPG?width=960"
+         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Pt%20Lenana%20Mt%20Kenya.JPG?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Pt%20Lenana%20Mt%20Kenya.JPG?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Pt%20Lenana%20Mt%20Kenya.JPG?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Pt%20Lenana%20Mt%20Kenya.JPG?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Pt%20Lenana%20Mt%20Kenya.JPG?width=1920 1920w"
+         sizes="(max-width: 760px) 50vw,
+                20vw"
+         alt=""
+         loading="lazy">
+    <figcaption><span>નો ભાગ છે</span><b><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q14206200"><span class="fb" lang="en">Southern Rift Valley</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q14206200"
+           aria-label="Add a label in your language">+</a></span></b><span class="prov-imported" title="આયાત કર્યું">W</span></figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p5"
+            aria-label="Credit">i</button><span id="p5" popover class="pop">User:Chris 73 · CC BY-SA 3.0</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P361"
+       aria-label="Edit">✎</a></span></figure></div></div></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>સમુદ્ર સપાટીથી ઉંચાઇ</dt><dd><data value="1661" data-f="number">1661</data> <span class="note">મીટર</span></dd>
+    <span class="tools">
+            <span class="prov-imported" title="આયાત કર્યું">W</span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P2044"
+       aria-label="Edit">✎</a>
+        </span>
+</div></dl></section>
+            <section class="spread t-columns"
+             data-spread="names"><h2>નામ</h2><div data-slot="stack">
+        <div class="block"><h3>ઉચ્ચાર ધ્વનિ<span class="prov-none" title="—"></span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P443"
+       aria-label="Edit">✎</a></h3><audio controls preload="none" src="https://commons.wikimedia.org/wiki/Special:FilePath/Swa-nairobi.ogg"></audio><span class="note"><a href="https://www.wikidata.org/wiki/Q7838">સ્વાહિલી</a></span></div>
+</div><div data-slot="gallery"><div class="block set"><div class="run"><figure class="m k-drawing" style="--a:0.9918">
+        <a href="https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_Nairobi.svg">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=960"
+                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
+                 alt="" loading="lazy">
+        </a><figcaption>
+                <span>રાજચિહ્નની છબી</span><span class="prov-imported" title="આયાત કર્યું">W</span>
+            </figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p6"
+            aria-label="Credit">i</button><span id="p6" popover class="pop">Josedar (SVG conversion) · CC BY-SA 4.0</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P94"
+       aria-label="Edit">✎</a></span></figure><figure class="m k-drawing" style="--a:1.5">
+        <a href="https://commons.wikimedia.org/wiki/File:Flag_of_Nairobi.svg">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=960"
+                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
+                 alt="" loading="lazy">
+        </a><figcaption>
+                <span>ધ્વજની છબી</span><span class="prov-none" title="—"></span>
+            </figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p7"
+            aria-label="Credit">i</button><span id="p7" popover class="pop">earlier version Mandingoesque; this version Johannes Rössel · Public domain</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P41"
+       aria-label="Edit">✎</a></span></figure></div></div></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>સત્તાવાર નામ</dt><dd><span lang="sw">Nairobi</span> <span class="note">sw</span></dd>
+    <span class="tools">
+            <span class="prov-imported" title="આયાત કર્યું">W</span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P1448"
+       aria-label="Edit">✎</a>
+        </span>
+</div><div class="row r-value"><dt>સ્થાનિક વર્ણન</dt><dd><span lang="sw">Nairobi</span> <span class="note">sw</span></dd>
+    <span class="tools">
+            <span class="prov-imported" title="આયાત કર્યું">W</span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P1705"
+       aria-label="Edit">✎</a>
+        </span>
+</div><div class="row r-list"><dt>વસનારાનું સંબોધન</dt><dd><span class="v"><span lang="fr">Nairobien</span> <span class="note">fr</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q47088290">પુલ્લિંગ એકવચન</a></span>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P1549"
+       aria-label="Edit">✎</a>
+    </span><span class="v"><span lang="fr">Nairobienne</span> <span class="note">fr</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q47088293">સ્ત્રીલિંગ એકવચન</a></span>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P1549"
+       aria-label="Edit">✎</a>
+    </span><span class="v"><span lang="en">Nairobian</span> <span class="note">en</span>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P1549"
+       aria-label="Edit">✎</a>
+    </span><span class="v"><span lang="fr">nairobienne</span> <span class="note">fr</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q47088293">સ્ત્રીલિંગ એકવચન</a></span>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P1549"
+       aria-label="Edit">✎</a>
+    </span><span class="v"><span lang="tn">Monairobi</span> <span class="note">tn</span>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P1549"
+       aria-label="Edit">✎</a>
+    </span><span class="v"><span lang="fr">nairobien</span> <span class="note">fr</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q47088290">પુલ્લિંગ એકવચન</a></span>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P1549"
+       aria-label="Edit">✎</a>
+    </span><span class="v"><span lang="eo">Najrobiano</span> <span class="note">eo</span>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P1549"
+       aria-label="Edit">✎</a>
+    </span></dd>
+    <span class="tools"></span>
+</div><div class="row r-value"><dt>પોસ્ટલ કોડ</dt><dd>00100</dd>
+    <span class="tools">
+            <span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P281"
+       aria-label="Edit">✎</a>
+        </span>
+</div><div class="row r-value"><dt>સ્થાનિક ડાયલિંગ કોડ</dt><dd>020</dd>
+    <span class="tools">
+            <span class="prov-imported" title="આયાત કર્યું">W</span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P473"
+       aria-label="Edit">✎</a>
+        </span>
+</div></dl></section>
+            <section class="spread t-lead-beside"
+             data-spread="government"><h2>સરકાર</h2><div data-slot="hero">
+        <div class="block succession">
+    <h3>સરકારના વડા</h3>
+<figure class="m k-photo"
+        style="--a:0.9509">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sakaja%20in%202024.jpg?width=960"
+         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Sakaja%20in%202024.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Sakaja%20in%202024.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Sakaja%20in%202024.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Sakaja%20in%202024.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Sakaja%20in%202024.jpg?width=1920 1920w"
+         sizes="(max-width: 760px) 50vw,
+                20vw"
+         alt=""
+         loading="lazy">
+    <figcaption><span>સરકારના વડા</span><b><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q28967580"><span class="fb" lang="en">Sakaja Johnson</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q28967580"
+           aria-label="Add a label in your language">+</a></span></b><span>2022 –</span></figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p8"
+            aria-label="Credit">i</button><span id="p8" popover class="pop">LuffyDe · CC0</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P6"
+       aria-label="Edit">✎</a></span></figure></div>
+</div><div data-slot="stack">
+        <div class="block set">
+    <h3>મુખ્ય મથક છે <span class="note">3</span></h3><div class="run scroll" tabindex="0" role="group" aria-label="મુખ્ય મથક છે"><figure class="m k-drawing"
+        style="--a:1.004">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kenya%20-%20Location%20Map%20%282013%29%20-%20KEN%20-%20UNOCHA.svg?width=960"
+         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Kenya%20-%20Location%20Map%20%282013%29%20-%20KEN%20-%20UNOCHA.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Kenya%20-%20Location%20Map%20%282013%29%20-%20KEN%20-%20UNOCHA.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Kenya%20-%20Location%20Map%20%282013%29%20-%20KEN%20-%20UNOCHA.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Kenya%20-%20Location%20Map%20%282013%29%20-%20KEN%20-%20UNOCHA.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Kenya%20-%20Location%20Map%20%282013%29%20-%20KEN%20-%20UNOCHA.svg?width=1920 1920w"
+         sizes="(max-width: 760px) 50vw,
+                20vw"
+         alt=""
+         loading="lazy">
+    <figcaption><b><a href="https://www.wikidata.org/wiki/Q114">કેન્યા</a></b><span>1963 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p9"
+            aria-label="Credit">i</button><span id="p9" popover class="pop">UN Office for the Coordination of Humanitarian Affairs (OCHA) · CC BY 3.0</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P1376"
+       aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
+        style="--a:1.5056">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=960"
+         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=1920 1920w"
+         sizes="(max-width: 760px) 50vw,
+                20vw"
+         alt=""
+         loading="lazy">
+    <figcaption><b><a href="https://www.wikidata.org/wiki/Q3335223">નૈરોબી કાઉન્ટી</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p10"
+            aria-label="Credit">i</button><span id="p10" popover class="pop">Jorge Láscar · CC BY-SA 2.0</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P1376"
+       aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
+        style="--a:1.5056">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=960"
+         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=1920 1920w"
+         sizes="(max-width: 760px) 50vw,
+                20vw"
+         alt=""
+         loading="lazy">
+    <figcaption><b><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q1061480"><span class="fb" lang="en">Nairobi Province</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q1061480"
+           aria-label="Add a label in your language">+</a></span></b><span class="from" title="en.wikipedia.org">W</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p11"
+            aria-label="Credit">i</button><span id="p11" popover class="pop">Jorge Láscar · CC BY-SA 2.0</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P1376"
+       aria-label="Edit">✎</a></span></figure></div></div>
+</div><dl class="sheet" data-slot="sheet"><div class="row r-list former"><dt>મુખ્ય મથક છે</dt><dd><span class="v"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q2538511"><span class="fb" lang="en">Kenya Colony</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q2538511"
+           aria-label="Add a label in your language">+</a></span> <span class="note">1920 – 1963</span>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P1376"
+       aria-label="Edit">✎</a>
+    </span></dd>
+    <span class="tools"></span>
+</div></dl></section>
+            <section class="spread t-columns"
+             data-spread="demography"><h2>વસ્તી-વિષયક માહિતીઓ</h2><div data-slot="hero">
+        <div class="block scale">
+    <h3>દેશ: <a href="https://www.wikidata.org/wiki/Q114">કેન્યા</a></h3>
+    <div class="bars"><div class="bar self"><span class="name">વસ્તી / જનસંખ્યા</span><span class="track"><span style="--f:0.114405"></span></span><span class="val"><data value="0.114405" data-f="percent">11 %</data></span></div><div class="bar self"><span class="name">ક્ષેત્રફળ</span><span class="track"><span style="--f:0.001197"></span></span><span class="val"><data value="0.001197" data-f="percent">0.12 %</data></span></div></div>
+</div>
+</div><div data-slot="stack">
+        <div class="block">
+    <h3>
+        વસ્તી / જનસંખ્યા <span class="note"><span class="fb-group"><span class="fb"
+      lang="en">big city</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q1549591"
+           aria-label="Add a label in your language">+</a></span>· કેન્યા · 1 / 6</span></h3><div class="bars"><a class="bar self" href="https://www.wikidata.org/wiki/Q3870"><span class="name">નૈરોબી</span><span class="track"><span style="--f:1"></span></span><span class="val"><data value="5545000" data-f="number">5545000</data></span></a><a class="bar" href="https://www.wikidata.org/wiki/Q225641"><span class="name">મોમ્બાસા</span><span class="track"><span style="--f:0.2179"></span></span><span class="val"><data value="1208333" data-f="number">1208333</data></span></a><a class="bar" href="https://www.wikidata.org/wiki/Q214485"><span class="name">કિસુમુ શહેર</span><span class="track"><span style="--f:0.0718"></span></span><span class="val"><data value="397957" data-f="number">397957</data></span></a><a class="bar" href="https://www.wikidata.org/wiki/Q239421"><span class="name">નાકુરુ</span><span class="track"><span style="--f:0.0555"></span></span><span class="val"><data value="307990" data-f="number">307990</data></span></a><a class="bar" href="https://www.wikidata.org/wiki/Q322149"><span class="name">એલ્ડોરેટ</span><span class="track"><span style="--f:0.0522"></span></span><span class="val"><data value="289380" data-f="number">289380</data></span></a><a class="bar" href="https://www.wikidata.org/wiki/Q693093"><span class="name">મેંકાકોસ</span><span class="track"><span style="--f:0.0206"></span></span><span class="val"><data value="114109" data-f="number">114109</data></span></a></div>
+</div><div class="block">
+    <h3>
+        સમુદ્ર સપાટીથી ઉંચાઇ <span class="note"><span class="fb-group"><span class="fb"
+      lang="en">big city</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q1549591"
+           aria-label="Add a label in your language">+</a></span>· કેન્યા · 3 / 5</span></h3><div class="bars"><a class="bar" href="https://www.wikidata.org/wiki/Q322149"><span class="name">એલ્ડોરેટ</span><span class="track"><span style="--f:1"></span></span><span class="val"><data value="2095" data-f="number">2095</data></span></a><a class="bar" href="https://www.wikidata.org/wiki/Q239421"><span class="name">નાકુરુ</span><span class="track"><span style="--f:0.8831"></span></span><span class="val"><data value="1850" data-f="number">1850</data></span></a><a class="bar self" href="https://www.wikidata.org/wiki/Q3870"><span class="name">નૈરોબી</span><span class="track"><span style="--f:0.7928"></span></span><span class="val"><data value="1661" data-f="number">1661</data></span></a><a class="bar" href="https://www.wikidata.org/wiki/Q214485"><span class="name">કિસુમુ શહેર</span><span class="track"><span style="--f:0.5399"></span></span><span class="val"><data value="1131" data-f="number">1131</data></span></a><a class="bar" href="https://www.wikidata.org/wiki/Q225641"><span class="name">મોમ્બાસા</span><span class="track"><span style="--f:0.0239"></span></span><span class="val"><data value="50" data-f="number">50</data></span></a></div>
+</div><div class="block"><h3>વસ્તી / જનસંખ્યા</h3>
+    <div class="columns"><div title="2009: 3138369"><span><data value="3138369" data-f="number">3138369</data></span><span class="col" style="--f:0.566"></span><span class="note">2009</span></div><div title="2010: 3240155"><span><data value="3240155" data-f="number">3240155</data></span><span class="col" style="--f:0.5843"></span><span class="note">2010</span></div><div title="2016: 5545000"><span><data value="5545000" data-f="number">5545000</data></span><span class="col" style="--f:1"></span><span class="note">2016</span></div></div></div>
+</div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>ક્ષેત્રફળ</dt><dd><data value="696" data-f="number">696</data> <span class="note">km²</span></dd>
+    <span class="tools">
+            <span class="prov-imported" title="આયાત કર્યું">W</span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P2046"
+       aria-label="Edit">✎</a>
+        </span>
+</div><div class="row r-list"><dt>સત્તાવાર / માન્યતા પ્રાપ્ત ભાષાઓ</dt><dd><span class="v"><a href="https://www.wikidata.org/wiki/Q1860">અંગ્રેજી</a>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P2936"
+       aria-label="Edit">✎</a>
+    </span><span class="v"><a href="https://www.wikidata.org/wiki/Q7838">સ્વાહિલી</a>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P2936"
+       aria-label="Edit">✎</a>
+    </span><span class="v"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q35787"><span class="fb" lang="en">Maasai</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q35787"
+           aria-label="Add a label in your language">+</a></span>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P2936"
+       aria-label="Edit">✎</a>
+    </span></dd>
+    <span class="tools"></span>
+</div></dl></section>
+            <section class="spread t-columns"
+             data-spread="economy"><h2><span class="fb" lang="en">economy</span></h2><div class="prose-slot" lang="en"><p>Nairobi is home to the <a href="https://www.wikidata.org/wiki/Q2384385">Nairobi Securities Exchange</a> (NSE), one of Africa's largest <a href="https://www.wikidata.org/wiki/Q11691">stock exchanges</a>. The NSE was officially recognised as an overseas stock exchange by the <a href="https://www.wikidata.org/wiki/Q171240">London Stock Exchange</a> in 1953. The exchange is Africa's fourth largest in terms of trading volumes, and fifth largest in terms of Market Capitalization as a percentage of GDP.</p><a class="read" href="https://en.wikipedia.org/wiki/Nairobi#Economy">Economy ↗</a></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt><span class="fb-group"><span class="fb"
+      lang="en">economy of topic</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P8744"
+           aria-label="Add a label in your language">+</a></span></dt><dd><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q106020188"><span class="fb" lang="en">economy of Nairobi</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q106020188"
+           aria-label="Add a label in your language">+</a></span></dd>
+    <span class="tools">
+            <span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P8744"
+       aria-label="Edit">✎</a>
+        </span>
+</div></dl></section>
+            <section class="spread t-columns"
+             data-spread="connections"><h2><span class="fb" lang="en">relation</span></h2><div class="prose-slot" lang="en"><p>Nairobi is <a href="https://www.wikidata.org/wiki/Q184711">twinned</a> with:</p><a class="read" href="https://en.wikipedia.org/wiki/Nairobi#Twin_towns_and_sister_cities">Twin towns and sister cities ↗</a></div><div data-slot="stack">
+        <div class="block set">
+    <h3>જોડકું શહેર <span class="note">7</span></h3><div class="run scroll" tabindex="0" role="group" aria-label="જોડકું શહેર"><figure class="m k-photo"
+        style="--a:1.7778">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Raleigh%20Skyline.jpg?width=960"
+         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Raleigh%20Skyline.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Raleigh%20Skyline.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Raleigh%20Skyline.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Raleigh%20Skyline.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Raleigh%20Skyline.jpg?width=1920 1920w"
+         sizes="(max-width: 760px) 50vw,
+                20vw"
+         alt=""
+         loading="lazy">
+    <figcaption><b><a href="https://www.wikidata.org/wiki/Q41087">રેલે</a></b><span>2022 –</span></figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p12"
+            aria-label="Credit">i</button><span id="p12" popover class="pop">Abhiram Juvvadi · CC BY-SA 4.0</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P190"
+       aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
+        style="--a:1.8989">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Denver%2C%20Colorado%20skyline%20%28cropped%29.jpg?width=960"
+         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Denver%2C%20Colorado%20skyline%20%28cropped%29.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Denver%2C%20Colorado%20skyline%20%28cropped%29.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Denver%2C%20Colorado%20skyline%20%28cropped%29.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Denver%2C%20Colorado%20skyline%20%28cropped%29.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Denver%2C%20Colorado%20skyline%20%28cropped%29.jpg?width=1920 1920w"
+         sizes="(max-width: 760px) 50vw,
+                20vw"
+         alt=""
+         loading="lazy">
+    <figcaption><b><a href="https://www.wikidata.org/wiki/Q16554">ડેનવર</a></b><span>1975 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p13"
+            aria-label="Credit">i</button><span id="p13" popover class="pop">Quintin Soloviev · CC BY 4.0</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P190"
+       aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
+        style="--a:1.7778">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/%E4%BA%94%E5%8D%8E%E5%8C%BA%E4%B8%8E%E7%9B%98%E9%BE%99%E5%8C%BA%E5%A4%A9%E9%99%85%E7%BA%BF%20-%20%E8%88%AA%E6%8B%8D%20-%202025-05-16%2003.jpg?width=960"
+         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/%E4%BA%94%E5%8D%8E%E5%8C%BA%E4%B8%8E%E7%9B%98%E9%BE%99%E5%8C%BA%E5%A4%A9%E9%99%85%E7%BA%BF%20-%20%E8%88%AA%E6%8B%8D%20-%202025-05-16%2003.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/%E4%BA%94%E5%8D%8E%E5%8C%BA%E4%B8%8E%E7%9B%98%E9%BE%99%E5%8C%BA%E5%A4%A9%E9%99%85%E7%BA%BF%20-%20%E8%88%AA%E6%8B%8D%20-%202025-05-16%2003.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/%E4%BA%94%E5%8D%8E%E5%8C%BA%E4%B8%8E%E7%9B%98%E9%BE%99%E5%8C%BA%E5%A4%A9%E9%99%85%E7%BA%BF%20-%20%E8%88%AA%E6%8B%8D%20-%202025-05-16%2003.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/%E4%BA%94%E5%8D%8E%E5%8C%BA%E4%B8%8E%E7%9B%98%E9%BE%99%E5%8C%BA%E5%A4%A9%E9%99%85%E7%BA%BF%20-%20%E8%88%AA%E6%8B%8D%20-%202025-05-16%2003.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/%E4%BA%94%E5%8D%8E%E5%8C%BA%E4%B8%8E%E7%9B%98%E9%BE%99%E5%8C%BA%E5%A4%A9%E9%99%85%E7%BA%BF%20-%20%E8%88%AA%E6%8B%8D%20-%202025-05-16%2003.jpg?width=1920 1920w"
+         sizes="(max-width: 760px) 50vw,
+                20vw"
+         alt=""
+         loading="lazy">
+    <figcaption><b><a href="https://www.wikidata.org/wiki/Q182852">કુન્મિંગ</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p14"
+            aria-label="Credit">i</button><span id="p14" popover class="pop">瑞丽江的河水 · CC BY-SA 4.0</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P190"
+       aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
+        style="--a:1.3333">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Colonia-Tovar.jpg?width=960"
+         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Colonia-Tovar.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Colonia-Tovar.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Colonia-Tovar.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Colonia-Tovar.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Colonia-Tovar.jpg?width=1920 1920w"
+         sizes="(max-width: 760px) 50vw,
+                20vw"
+         alt=""
+         loading="lazy">
+    <figcaption><b><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q964130"><span class="fb" lang="en">Colonia Tovar</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q964130"
+           aria-label="Add a label in your language">+</a></span></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p15"
+            aria-label="Credit">i</button><span id="p15" popover class="pop">Pascual De Ruvo (Pderuvo at en.wikipedia) · CC BY-SA 3.0</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P190"
+       aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
+        style="--a:1.8727">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cidade%20Maravilhosa.jpg?width=960"
+         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Cidade%20Maravilhosa.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Cidade%20Maravilhosa.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Cidade%20Maravilhosa.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Cidade%20Maravilhosa.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Cidade%20Maravilhosa.jpg?width=1920 1920w"
+         sizes="(max-width: 760px) 50vw,
+                20vw"
+         alt=""
+         loading="lazy">
+    <figcaption><b><a href="https://www.wikidata.org/wiki/Q8678">રિયો ડિ જેનેરો</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p16"
+            aria-label="Credit">i</button><span id="p16" popover class="pop">Rafael Rabello de Barros · CC BY-SA 3.0</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P190"
+       aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
+        style="--a:1.3333">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pingxiang%2C%20JX%2C%20PRC.jpg?width=960"
+         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Pingxiang%2C%20JX%2C%20PRC.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Pingxiang%2C%20JX%2C%20PRC.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Pingxiang%2C%20JX%2C%20PRC.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Pingxiang%2C%20JX%2C%20PRC.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Pingxiang%2C%20JX%2C%20PRC.jpg?width=1920 1920w"
+         sizes="(max-width: 760px) 50vw,
+                20vw"
+         alt=""
+         loading="lazy">
+    <figcaption><b><a href="https://www.wikidata.org/wiki/Q362865">પિંગક્સીઆંગ</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p17"
+            aria-label="Credit">i</button><span id="p17" popover class="pop">Chinaculturefriend · CC BY-SA 3.0</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P190"
+       aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
+        style="--a:1.4904">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Parintins%20Amazonas%20Brazil.jpg?width=960"
+         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Parintins%20Amazonas%20Brazil.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Parintins%20Amazonas%20Brazil.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Parintins%20Amazonas%20Brazil.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Parintins%20Amazonas%20Brazil.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Parintins%20Amazonas%20Brazil.jpg?width=1920 1920w"
+         sizes="(max-width: 760px) 50vw,
+                20vw"
+         alt=""
+         loading="lazy">
+    <figcaption><b><a href="https://www.wikidata.org/wiki/Q926713">પેરિંટિન્સ</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p18"
+            aria-label="Credit">i</button><span id="p18" popover class="pop">Mário Oliveira - MTUR · Public domain</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P190"
+       aria-label="Edit">✎</a></span></figure></div></div>
+</div></section>
+            <section class="spread t-axis"
+             data-spread="history"><h2>ઈતિહાસ</h2><div class="prose-slot" lang="en"><p>The site of Nairobi was originally a swamp land occupied by a <a href="https://www.wikidata.org/wiki/Q9056738">pastoralist</a> people, the <a href="https://www.wikidata.org/wiki/Q163022">Maasai</a>, the long-distance trader community, <a href="https://www.wikidata.org/wiki/Q1143929">Akamba People</a>, as well as the <a href="https://www.wikidata.org/wiki/Q1781198">agriculturalist</a> <a href="https://www.wikidata.org/wiki/Q203178">Kikuyu people</a>. The name Nairobi comes from the <a href="https://www.wikidata.org/wiki/Q35787">Maasai</a> expression meaning 'cool waters'. referring to the cold water stream which flowed through the area. With the arrival of the <a href="https://www.wikidata.org/wiki/Q500115">Uganda Railway</a>, the site was identified by <a href="https://www.wikidata.org/wiki/Q56665460">Sir George Whitehouse</a> for a store depot, shunting ground and camping ground for the <a href="https://www.wikidata.org/wiki/Q6024095">Indian</a> labourers working on the railway.</p><a class="read" href="https://en.wikipedia.org/wiki/Nairobi#History">History ↗</a></div><p class="prose-links"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q7805834"><span class="fb" lang="en">timeline of Nairobi history</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q7805834"
+           aria-label="Add a label in your language">+</a></span></p></section>
+            <section class="spread t-feature-run"
+             data-spread="media"><h2><span class="fb" lang="en">multimedia</span></h2><div class="prose-slot" lang="en"><p>Nairobi is diverse in African cultures. As a cosmopolitan African city, it hosts all the diverse tribes that make up Kenya, and hosts a large immigrant population from other African countries.</p><a class="read" href="https://en.wikipedia.org/wiki/Nairobi#Culture">Culture ↗</a></div><div data-slot="feature">
+        <div class="feature"> <figure class="m k-photo" style="--a:1">
+        <a href="https://commons.wikimedia.org/wiki/File:Nairobi_economic_capital_of_africa.jpg">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=960"
+                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=1920 1920w" sizes="100vw"
+                 alt="" loading="lazy">
+        </a><figcaption>
+                <span><span class="fb-group"><span class="fb"
+      lang="en">nighttime view</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P3451"
+           aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span>
+            </figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p19"
+            aria-label="Credit">i</button><span id="p19" popover class="pop">Africanmodern · CC BY-SA 4.0</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P3451"
+       aria-label="Edit">✎</a></span></figure> </div>
+</div><div data-slot="run">
+        <div class="run"> <figure class="m k-photo" style="--a:0.6633">
+        <a href="https://commons.wikimedia.org/wiki/File:Nairobi_Montage_A.jpg">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=960"
+                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
+                 alt="" loading="lazy">
+        </a><figcaption>
+                <span>કોલાઝ છબી</span><span class="prov-none" title="—"></span>
+            </figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p20"
+            aria-label="Credit">i</button><span id="p20" popover class="pop">Southlondoneye (talk) 20:30, 29 March 2015 (UTC) · CC BY-SA 3.0</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P2716"
+       aria-label="Edit">✎</a></span></figure><figure class="m k-photo" style="--a:1.6234">
+        <a href="https://commons.wikimedia.org/wiki/File:Nairobi_Aerial_Photo.jpg">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=960"
+                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
+                 alt="" loading="lazy">
+        </a><figcaption>
+                <span><span class="fb-group"><span class="fb"
+      lang="en">aerial view</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P8592"
+           aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span>
+            </figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p21"
+            aria-label="Credit">i</button><span id="p21" popover class="pop">Mkimemia at English Wikipedia · Public domain</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P8592"
+       aria-label="Edit">✎</a></span></figure><figure class="m k-video" style="--a:1.7778"><video controls
+       preload="none"
+       poster="https://commons.wikimedia.org/wiki/Special:FilePath/Google%20Timelapse-%20Nairobi%2C%20Kenya.webm?width=960"
+       src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Google_Timelapse-_Nairobi%2C_Kenya.webm"></video><figcaption><span>ચલચિત્ર</span><span class="prov-none" title="—"></span><span class="size">29 MB</span></figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p22"
+            aria-label="Credit">i</button><span id="p22" popover class="pop">Google Earth · CC BY 3.0</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P10"
+       aria-label="Edit">✎</a></span></figure> </div>
+</div></section>
+            <section class="spread t-collapsed" data-spread="more">
+        <details>
+            <summary>+1</summary><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>સ્થાપન દિવસ / રચના દિવસ</dt><dd><time datetime="1899"
+      data-p="9">1899</time></dd>
+    <span class="tools">
+            <span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P571"
+       aria-label="Edit">✎</a>
+        </span>
+</div></dl></details>
+    </section>
+            <section class="spread t-sheet"
+             data-spread="evidence"><h2><span class="fb" lang="en">reference</span></h2><div data-slot="summary">
+        <div class="block">
+    <div class="stack-bar"><span class="p-sourced" style="--n:9"></span>
+<span class="p-imported" style="--n:12"></span>
+<span class="p-none" style="--n:43"></span>
+</div>
+<ul class="legend"><li> કહેવાયું છે / જાળસ્થળ <b>9</b></li><li><span class="prov-imported" title="આયાત કર્યું">W</span> આયાત કર્યું <b>12</b></li><li><span class="prov-none" title="—"></span> — <b>43</b></li></ul>
+<p class="note">gu: 50 / 63</p>
+</div>
+</div><dl class="sheet" data-slot="web"><div class="row r-value"><dt>અધિકૃત વેબસાઇટ</dt><dd><a href="https://nairobi.go.ke/">https://nairobi.go.ke/</a></dd>
+    <span class="tools">
+            <span class="prov-imported" title="આયાત કર્યું">W</span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P856"
+       aria-label="Edit">✎</a>
+        </span>
+</div><div class="row r-value"><dt>ટ્વીટર યુઝરનેઈમ</dt><dd>047County</dd>
+    <span class="tools">
+            <span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P2002"
+       aria-label="Edit">✎</a>
+        </span>
+</div><div class="row r-value"><dt><span class="fb-group"><span class="fb"
+      lang="en">Instagram username</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P2003"
+           aria-label="Add a label in your language">+</a></span></dt><dd>nairobi_citycountygovernment</dd>
+    <span class="tools">
+            <span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P2003"
+       aria-label="Edit">✎</a>
+        </span>
+</div><div class="row r-value"><dt>ફેસબુક પ્રોફાઇલ આઈડી</dt><dd>CountyGovernment047</dd>
+    <span class="tools">
+            <span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P2013"
+       aria-label="Edit">✎</a>
+        </span>
+</div><div class="row r-value"><dt>hashtag</dt><dd>Nairobi</dd>
+    <span class="tools">
+            <span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P2572"
+       aria-label="Edit">✎</a>
+        </span>
+</div><div class="row r-value"><dt><span class="fb-group"><span class="fb"
+      lang="en">open data portal</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P8402"
+           aria-label="Add a label in your language">+</a></span></dt><dd><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q97130876"><span class="fb" lang="en">Nairobi open data</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q97130876"
+           aria-label="Add a label in your language">+</a></span></dd>
+    <span class="tools">
+            <span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P8402"
+       aria-label="Edit">✎</a>
+        </span>
+</div><div class="row r-value"><dt>subreddit</dt><dd>nairobi</dd>
+    <span class="tools">
+            <span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P3984"
+       aria-label="Edit">✎</a>
+        </span>
+</div></dl><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>સંદર્ભ</dt><dd><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q867541"><span class="fb" lang="en">Encyclopædia Britannica 11th edition</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q867541"
+           aria-label="Add a label in your language">+</a></span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q84643330"><span class="fb" lang="en">1911 Encyclopædia Britannica/Nairobi</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q84643330"
+           aria-label="Add a label in your language">+</a></span></span></dd>
+    <span class="tools">
+            <span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P1343"
+       aria-label="Edit">✎</a>
+        </span>
+</div><div class="row r-value"><dt>અહીં જન્મેલા લોકોની શ્રેણી</dt><dd><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q8064728"><span class="fb" lang="en">Category:Births in Nairobi</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q8064728"
+           aria-label="Add a label in your language">+</a></span></dd>
+    <span class="tools">
+            <span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P1464"
+       aria-label="Edit">✎</a>
+        </span>
+</div><div class="row r-value"><dt><span class="fb-group"><span class="fb"
+      lang="en">category for people who died here</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P1465"
+           aria-label="Add a label in your language">+</a></span></dt><dd><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q9688722"><span class="fb" lang="en">Category:Deaths in Nairobi</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q9688722"
+           aria-label="Add a label in your language">+</a></span></dd>
+    <span class="tools">
+            <span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P1465"
+       aria-label="Edit">✎</a>
+        </span>
+</div><div class="row r-value"><dt>સંબંધિત લોકોની શ્રેણી</dt><dd><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q7119121"><span class="fb" lang="en">Category:People from Nairobi</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q7119121"
+           aria-label="Add a label in your language">+</a></span></dd>
+    <span class="tools">
+            <span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P1792"
+       aria-label="Edit">✎</a>
+        </span>
+</div><div class="row r-value"><dt>કોમન્સ શ્રેણી</dt><dd>Nairobi</dd>
+    <span class="tools">
+            <span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P373"
+       aria-label="Edit">✎</a>
+        </span>
+</div><div class="row r-value"><dt><span class="fb-group"><span class="fb"
+      lang="en">on focus list of Wikimedia project</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P5008"
+           aria-label="Add a label in your language">+</a></span></dt><dd><span class="v"><a href="https://www.wikidata.org/wiki/Q5460604">વિકિપીડિયા:દરેક ભાષાના વિકિપીડિયામાં હોવા જોઈએ એવા પ્રારંભિક લેખોની યાદી</a>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P5008"
+       aria-label="Edit">✎</a>
+    </span><span class="v"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q6173448"><span class="fb" lang="en">Wikipedia:Vital articles/Level/4</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q6173448"
+           aria-label="Add a label in your language">+</a></span> <span class="note">2022</span>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P5008"
+       aria-label="Edit">✎</a>
+    </span></dd>
+    <span class="tools"></span>
+</div><div class="row r-value"><dt><span class="fb-group"><span class="fb"
+      lang="en">category for maps or plans</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P7867"
+           aria-label="Add a label in your language">+</a></span></dt><dd><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q84054802"><span class="fb" lang="en">Category:Maps of Nairobi</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q84054802"
+           aria-label="Add a label in your language">+</a></span></dd>
+    <span class="tools">
+            <span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P7867"
+       aria-label="Edit">✎</a>
+        </span>
+</div><div class="row r-value"><dt><span class="fb-group"><span class="fb"
+      lang="en">category for the view of the item</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P8989"
+           aria-label="Add a label in your language">+</a></span></dt><dd><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q104596219"><span class="fb" lang="en">Category:Views of Nairobi</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q104596219"
+           aria-label="Add a label in your language">+</a></span></dd>
+    <span class="tools">
+            <span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P8989"
+       aria-label="Edit">✎</a>
+        </span>
+</div><div class="row r-value"><dt>વિષયની મુખ્ય શ્રેણી</dt><dd><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q8795825"><span class="fb" lang="en">Category:Nairobi</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q8795825"
+           aria-label="Add a label in your language">+</a></span></dd>
+    <span class="tools">
+            <span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P910"
+       aria-label="Edit">✎</a>
+        </span>
+</div><div class="row r-value"><dt>વિકિમીડિયા કોમન્સ ગેલેરી</dt><dd>Nairobi</dd>
+    <span class="tools">
+            <span class="prov-imported" title="આયાત કર્યું">W</span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P935"
+       aria-label="Edit">✎</a>
+        </span>
+</div></dl><div data-slot="projects">
+        <div class="block">
+    <div><span class="chip">wikipedia <b>210</b></span><span class="chip">wikivoyage <b>19</b></span><span class="chip">wikinews <b>5</b></span><span class="chip">wikiquote <b>3</b></span></div>
+</div>
+</div><div data-slot="identifiers">
+        <button class="more" type="button" command="show-modal" commandfor="d23"># 85</button><dialog id="d23" closedby="any">
+        <header>
+            <h2>85</h2>
+            <button type="button"
+                    command="close"
+                    commandfor="d23"
+                    aria-label="Close">×</button>
+        </header>
+        <div class="dialog-body"><div class="idlist"><div><span><span class="fb-group"><span class="fb"
+      lang="en">archINFORM location ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P5573"
+           aria-label="Add a label in your language">+</a></span></span><span>8464</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">BabelNet ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P2581"
+           aria-label="Add a label in your language">+</a></span></span><span>00015561n</span></div><div><span>BBC News topic ID</span><span>cq26565v4d9t</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">BBC Things ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P1617"
+           aria-label="Add a label in your language">+</a></span></span><span>bfe2de9d-fde7-4781-89ca-1735ede10982</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">BlackPast.org ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P6723"
+           aria-label="Add a label in your language">+</a></span></span><span>global-african-history/nairobi-kenya</span></div><div><span>BnF ID</span><span>118650453</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">Canadiana Name Authority ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P8179"
+           aria-label="Add a label in your language">+</a></span></span><span>ncf10290894</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">CERL Thesaurus ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P1871"
+           aria-label="Add a label in your language">+</a></span></span><span>cnl00030086</span></div><div><span>Comic Vine ID</span><span>4020-61168</span></div><div><span>Curlie ID</span><span>Regional/Africa/Kenya/Localities/Nairobi/</span></div><div><span>Data Commons ID</span><span>wikidataId/Q3870</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">Daum Encyclopedia ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P5184"
+           aria-label="Add a label in your language">+</a></span></span><span>b03n2669a</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">De Agostini ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P6706"
+           aria-label="Add a label in your language">+</a></span></span><span>Nairobi</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">Dewey Decimal Classification</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P1036"
+           aria-label="Add a label in your language">+</a></span></span><span>2--67625</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">Encyclopædia Britannica Online ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P1417"
+           aria-label="Add a label in your language">+</a></span></span><span>place/Nairobi</span></div><div><span>Encyclopædia Universalis ID</span><span>nairobi</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">Facebook location ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P1997"
+           aria-label="Add a label in your language">+</a></span></span><span>114751268540391</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">FactGrid item ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P8168"
+           aria-label="Add a label in your language">+</a></span></span><span>Q449252</span></div><div><span>FAST ID</span><span>1204373</span></div><div><span>FIPS 10-4</span><span>KE05</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">France 24 topic ID (French)</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P9346"
+           aria-label="Add a label in your language">+</a></span></span><span>nairobi</span></div><div><span>GeoNames ID</span><span>184745</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">Getty Thesaurus of Geographic Names ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P1667"
+           aria-label="Add a label in your language">+</a></span></span><span>7001116</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">GitHub topic</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P9100"
+           aria-label="Add a label in your language">+</a></span></span><span>nairobi</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">GNS Unique Feature ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P2326"
+           aria-label="Add a label in your language">+</a></span></span><span>-2258072</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">Golden ID (archived)</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P7502"
+           aria-label="Add a label in your language">+</a></span></span><span>Nairobi-PJED</span></div><div><span>Google Maps CID</span><span>17856493610344092236</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">Google News topics ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P5337"
+           aria-label="Add a label in your language">+</a></span></span><span>CAAqIQgKIhtDQkFTRGdvSUwyMHZNRFZrTkRrU0FtcGhLQUFQAQ</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">Gran Enciclopèdia Catalana ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P12385"
+           aria-label="Add a label in your language">+</a></span></span><span>nairobi-0</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">Gran Enciclopèdia Catalana ID (former scheme)</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P1296"
+           aria-label="Add a label in your language">+</a></span></span><span>0045300</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">Great Russian Encyclopedia Online ID (2017)</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P2924"
+           aria-label="Add a label in your language">+</a></span></span><span>2246269</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">Gynopedia ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P5843"
+           aria-label="Add a label in your language">+</a></span></span><span>Nairobi</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">Harper&#39;s tag</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P13772"
+           aria-label="Add a label in your language">+</a></span></span><span>nairobi</span></div><div><span>HASC</span><span>KE.NB</span></div><div><span>IdRef ID</span><span>029153042</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">iNaturalist place ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P7471"
+           aria-label="Add a label in your language">+</a></span></span><span>10957</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">Interlingual Index ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P5063"
+           aria-label="Add a label in your language">+</a></span></span><span>i83637</span></div><div><span>ISNI (ISO 27729)</span><span>000000010791732X</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">ISO 3166-2 code</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P300"
+           aria-label="Add a label in your language">+</a></span></span><span>KE-110</span></div><div><span>J9U ID</span><span>987007552644805171</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">KBpedia ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P8408"
+           aria-label="Add a label in your language">+</a></span></span><span>NairobiArea-Kenya</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">Le Figaro tag ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P6621"
+           aria-label="Add a label in your language">+</a></span></span><span>Nairobi</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">Lex ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P8313"
+           aria-label="Add a label in your language">+</a></span></span><span>Nairobi</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">museum-digital place ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P9957"
+           aria-label="Add a label in your language">+</a></span></span><span>20868</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">MusicBrainz area ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P982"
+           aria-label="Add a label in your language">+</a></span></span><span>4cc373f3-8b60-400b-8aa3-6df3fe4ab8fb</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">National Historical Museums of Sweden ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P9495"
+           aria-label="Add a label in your language">+</a></span></span><span>geo/24610d81-9de7-4a91-97fc-9bb4cf1b8c7e</span></div><div><span>National Library of Spain SpMaBN ID</span><span>XX453921</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">Naver Encyclopedia ID (pre-August 2026)</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P7506"
+           aria-label="Add a label in your language">+</a></span></span><span>1074255</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">NL CR AUT ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P691"
+           aria-label="Add a label in your language">+</a></span></span><span>ge432139</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">OmegaWiki Defined Meaning</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P1245"
+           aria-label="Add a label in your language">+</a></span></span><span>457020</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">Online PWN Encyclopedia ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P7305"
+           aria-label="Add a label in your language">+</a></span></span><span>3945429</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">OpenHistoricalMap relation ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P8424"
+           aria-label="Add a label in your language">+</a></span></span><span>2862891</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">OpenStreetMap relation ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P402"
+           aria-label="Add a label in your language">+</a></span></span><span>9185096</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">OpenWeatherMap city ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P7197"
+           aria-label="Add a label in your language">+</a></span></span><span>184745</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">Proleksis enciklopedija ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P8349"
+           aria-label="Add a label in your language">+</a></span></span><span>38283</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">Quora topic ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P3417"
+           aria-label="Add a label in your language">+</a></span></span><span>Nairobi-Kenya-1</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">RKD thesaurus ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P8519"
+           aria-label="Add a label in your language">+</a></span></span><span>15689</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">SBN place ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P10397"
+           aria-label="Add a label in your language">+</a></span></span><span>TSAL000079</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">SNARC ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P12749"
+           aria-label="Add a label in your language">+</a></span></span><span>Q1381</span></div><div><span>Store norske leksikon-ID</span><span>Nairobi</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">SVKKL authority ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P9322"
+           aria-label="Add a label in your language">+</a></span></span><span>0423566-Nairobi-Kena</span></div><div><span>Treccani ID</span><span>nairobi</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">Treccani&#39;s Dizionario di Storia ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P6404"
+           aria-label="Add a label in your language">+</a></span></span><span>nairobi</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">Treccani&#39;s Enciclopedia Italiana ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P4223"
+           aria-label="Add a label in your language">+</a></span></span><span>nairobi</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">Tripadvisor ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P3134"
+           aria-label="Add a label in your language">+</a></span></span><span>294207</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">U.S. National Archives Identifier</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P1225"
+           aria-label="Add a label in your language">+</a></span></span><span>10044568</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">UK Parliament thesaurus ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P4527"
+           aria-label="Add a label in your language">+</a></span></span><span>11803</span></div><div><span>UN/LOCODE</span><span>KENBO</span></div><div><span>VIAF ઓળખ ક્રમાંક</span><span>264835402</span></div><div><span>Vikidia article ID</span><span>fr:Nairobi</span></div><div><span>Vikidia article ID</span><span>en:Nairobi</span></div><div><span>Vikidia article ID</span><span>it:Nairobi</span></div><div><span>Vikidia article ID</span><span>es:Nairobi</span></div><div><span>Who&#39;s on First ID</span><span>421174401</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">WikiKids ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P12086"
+           aria-label="Add a label in your language">+</a></span></span><span>Nairobi</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">Wikisimpsons article ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P10291"
+           aria-label="Add a label in your language">+</a></span></span><span>49149</span></div><div><span>WOEID</span><span>1528488</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">WordNet 3.1 Synset ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P8814"
+           aria-label="Add a label in your language">+</a></span></span><span>08948355-n</span></div><div><span><span class="fb-group"><span class="fb"
+      lang="en">WorldCat Entities ID</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P10832"
+           aria-label="Add a label in your language">+</a></span></span><span>E39PBJccgHVhXJcjCxQ6cXJxDq</span></div><div><span>YSO ID</span><span>110125</span></div><div><span>એન. ડી. એલ. ઓળખ</span><span>00628843</span></div><div><span>એલ. સી. સી. એન. ઓળખ</span><span>n79011090</span></div><div><span>જીએનડી ઓળખ</span><span>4041172-2</span></div><div><span>ફ્રીબેઝ આઈડી</span><span>/m/05d49</span></div><div><span>‎Yale LUX ID</span><span>place/2594dec6-5ad7-4c29-9b82-864ef69905b3</span></div></div></div>
+    </dialog>
+</div></section>
+            <section class="spread t-sheet" data-spread="evidence">
+                <p class="prose-links"><a href="https://en.wikipedia.org/wiki/Nairobi#Parks_and_gardens">Parks and gardens</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Political_divisions">Political divisions</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Demographics">Demographics</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Sports">Sports</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Places_of_worship">Places of worship</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Infrastructure">Infrastructure</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Crime_and_law_enforcement">Crime and law enforcement</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Media">Media</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Notable_people">Notable people</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Pop_culture">Pop culture</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Notes">Notes</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#References">References</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#External_links">External links</a></p>
+            </section>
+        <p class="provenance-note">Composed by rule from Wikidata item <a href="https://www.wikidata.org/wiki/Q3870">Q3870</a> (composition/0.3, view/0.2, design/0.2). The lead paragraph, the section paragraphs and the section links come from Wikipedia. Pictures come from Wikimedia Commons; a W on a picture marks one from an article, not from Wikidata; a W on a value marks a statement whose only reference is a Wikipedia.</p>
+    </main>
+    <script>// Progressive enhancement only: opens and closes dialogs in browsers
 // without the invoker commands API. The content does not need it.
 if ( !( 'commandForElement' in HTMLButtonElement.prototype ) ) {
 	document.addEventListener( 'click', ( event ) => {

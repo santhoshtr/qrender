@@ -2,12 +2,16 @@
 {#- Measurements over time, as columns. With many points, only the ends
     and the peak carry numbers. -#}
 <div class="block"><h3>{{ ui.text(ui.property(b.pid), true)|safe }}{% call m::prov(ui, b.provenance) %}{% endcall %}
-{%- if b.statement.is_some() %}{% call m::edit(ui, ui.edit(b.pid)) %}{% endcall %}{% endif -%}
-</h3><div class="columns{% if b.points.len() > 12 %} dense{% endif %}">
-{%- for p in b.points -%}
-{%- let n = ui.number(p.amount) -%}
-<div title="{{ ui.year(p.year) }}: {{ ui.part_text(n) }}"><span>{% if p.labelled != Some(false) %}{{ ui.part(n)|safe }}{% endif %}</span><span class="col" style="--f:{{ ui.css_number(p.fraction) }}"></span><span class="note">{% if p.labelled != Some(false) %}{{ ui.year(p.year) }}{% endif %}</span></div>
-{%- endfor -%}
-</div>
-{%- if let Some(source) = b.source %}<p class="note"><a href="{{ ui.commons_data(&source.file) }}">{{ source.file }}</a></p>{% endif -%}
+    {%- if b.statement.is_some() %}
+        {% call m::edit(ui, ui.edit(b.pid)) %}
+        {% endcall %}
+    {% endif -%}
+    </h3>
+    <div class="columns{% if b.points.len() > 12 %} dense{% endif %}">
+        {%- for p in b.points -%}
+            {%- let n = ui.number(p.amount) -%}
+            <div title="{{ ui.year(p.year) }}: {{ ui.part_text(n) }}"><span>{% if p.labelled != Some(false) %}{{ ui.part(n)|safe }}{% endif %}</span><span class="col" style="--f:{{ ui.css_number(p.fraction) }}"></span><span class="note">{% if p.labelled != Some(false) %}{{ ui.year(p.year) }}{% endif %}</span></div>
+        {%- endfor -%}
+    </div>
+    {%- if let Some(source) = b.source %}<p class="note"><a href="{{ ui.commons_data(&source.file) }}">{{ source.file }}</a></p>{% endif -%}
 </div>

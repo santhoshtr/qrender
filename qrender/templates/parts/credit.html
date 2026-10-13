@@ -1,6 +1,9 @@
 {#- The author and licence of a picture, behind an (i) button. -#}
 {%- let words = ui.credit_text(c) -%}
 {%- if !words.is_empty() -%}
-{%- let n = ui.id() -%}
-<button class="info" type="button" popovertarget="p{{ n }}" aria-label="{{ ui.msg("qrender-credit") }}">i</button><span id="p{{ n }}" popover class="pop">{{ words }}</span>
+    {%- let n = ui.id() -%}
+    <button class="info"
+            type="button"
+            popovertarget="p{{ n }}"
+            aria-label="{{ ui.msg("qrender-credit") }}">i</button><span id="p{{ n }}" popover class="pop">{{ words }}</span>
 {%- endif -%}

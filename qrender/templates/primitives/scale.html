@@ -1,6 +1,9 @@
 {#- The item as a share of its container. -#}
-<div class="block scale"><h3>{{ ui.text(ui.property(b.container.pid), true)|safe }}: {{ ui.part(ui.entity(b.container.item))|safe }}</h3><div class="bars">
-{%- for m in b.measures -%}
-<div class="bar self"><span class="name">{{ ui.text(ui.property(m.pid), true)|safe }}</span><span class="track"><span style="--f:{{ ui.share(m.ratio) }}"></span></span><span class="val">{{ ui.part(ui.percent(m.ratio))|safe }}</span></div>
-{%- endfor -%}
-</div></div>
+<div class="block scale">
+    <h3>{{ ui.text(ui.property(b.container.pid), true)|safe }}: {{ ui.part(ui.entity(b.container.item))|safe }}</h3>
+    <div class="bars">
+        {%- for m in b.measures -%}
+            <div class="bar self"><span class="name">{{ ui.text(ui.property(m.pid), true)|safe }}</span><span class="track"><span style="--f:{{ ui.share(m.ratio) }}"></span></span><span class="val">{{ ui.part(ui.percent(m.ratio))|safe }}</span></div>
+        {%- endfor -%}
+    </div>
+</div>

@@ -1,5 +1,10 @@
 {%- import "macros.html" as m -%}
 {%- let l = ui.item(b.item) -%}
 <div class="title"><h1>{{ l.text }}{% if l.fallback %}{% if let Some(lang) = l.lang %} <span class="note">{{ lang }}</span>{% endif %}{% endif %}</h1>
-{%- if let Some(d) = l.description %}<p>{% call m::description(d) %}{% endcall %}</p>{% endif -%}
+    {%- if let Some(d) = l.description %}
+        <p>
+            {% call m::description(d) %}
+            {% endcall %}
+        </p>
+    {% endif -%}
 </div>
