@@ -549,7 +549,7 @@
           ]
         },
         "statements": {
-          "description": "The first `list_shown` are shown; the rest are behind \"+N\".",
+          "description": "The first `row_shown` are shown; the rest are behind \"+N\".",
           "items": {
             "$ref": "#/$defs/StatementRef"
           },

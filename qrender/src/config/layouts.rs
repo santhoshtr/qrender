@@ -92,6 +92,8 @@ pub struct Thresholds {
     pub chain_max: usize,
     /// Values shown in a long list before "+N".
     pub list_shown: usize,
+    /// Values shown in a row of the fact sheet before "+N".
+    pub row_shown: usize,
     /// Predecessors shown before "+N".
     pub succession_shown: usize,
 }

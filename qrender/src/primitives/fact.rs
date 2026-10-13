@@ -15,7 +15,7 @@ use crate::vocab::RangeEnd;
 pub struct Fact {
     pub pid: Pid,
     pub form: FactForm,
-    /// The first `list_shown` are shown; the rest are behind "+N".
+    /// The first `row_shown` are shown; the rest are behind "+N".
     pub statements: Vec<StatementRef>,
     pub priority: f64,
     /// The values ended: history, not the present.
@@ -96,7 +96,7 @@ pub fn build(
     Fact {
         pid,
         form,
-        statements: mark_shown(values, c.config.layouts.thresholds.list_shown),
+        statements: mark_shown(values, c.config.layouts.thresholds.row_shown),
         priority: c.priority(pid, statements),
         former: false,
         age: None,
