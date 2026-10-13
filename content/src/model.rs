@@ -62,7 +62,7 @@ pub struct Statement {
 }
 
 /// Deprecated statements are dropped when the content is fetched.
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize, schemars::JsonSchema)]
 #[serde(rename_all = "lowercase")]
 pub enum Rank {
     Preferred,
@@ -310,6 +310,40 @@ impl QualifierValue {
             Self::String {
                 string: raw.to_string(),
             }
+        }
+    }
+
+    /// A qualifier value of a known datatype (`wikibase:propertyType`). A
+    /// string stays a string ("1997" is not a number), which the guess of
+    /// `from_raw` cannot know.
+    pub fn from_typed(datatype: &str, raw: &str, lang: Option<&str>) -> Self {
+        if raw.starts_with(GENID) {
+            return Self::SomeValue;
+        }
+        let entity = || raw.strip_prefix(ENTITY).and_then(|e| e.parse().ok());
+        let string = || Self::String {
+            string: raw.to_string(),
+        };
+        match Datatype::parse(datatype) {
+            Datatype::Time => Self::Time {
+                time: raw.to_string(),
+            },
+            Datatype::Quantity => raw
+                .parse()
+                .map_or_else(|_| string(), |amount| Self::Amount { amount }),
+            Datatype::Monolingualtext => match lang {
+                Some(lang) => Self::Text {
+                    text: raw.to_string(),
+                    lang: lang.to_string(),
+                },
+                None => string(),
+            },
+            // Items, and the entity types the composer has no name for
+            // (properties, lexemes): an entity when it is one.
+            Datatype::WikibaseItem | Datatype::Other => {
+                entity().map_or_else(string, |entity| Self::Entity { entity })
+            }
+            _ => string(),
         }
     }
 
@@ -561,6 +595,36 @@ mod tests {
             k("Virgil Throckmorton"),
             QualifierValue::String {
                 string: "Virgil Throckmorton".into()
+            }
+        );
+    }
+
+    #[test]
+    fn typed_qualifiers() {
+        let t = QualifierValue::from_typed;
+        assert_eq!(
+            t("String", "1997", None),
+            QualifierValue::String {
+                string: "1997".into()
+            }
+        );
+        assert_eq!(
+            t("Quantity", "1997", None),
+            QualifierValue::Amount { amount: 1997.0 }
+        );
+        assert!(matches!(
+            t(
+                "WikibaseProperty",
+                "http://www.wikidata.org/entity/P31",
+                None
+            ),
+            QualifierValue::Entity { .. }
+        ));
+        assert_eq!(t("Time", "1963-12-12T00:00:00Z", None).year(), Some(1963));
+        assert_eq!(
+            t("ExternalId", "1234", None),
+            QualifierValue::String {
+                string: "1234".into()
             }
         );
     }

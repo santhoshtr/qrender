@@ -216,7 +216,7 @@ pub fn plain(html: &str) -> String {
             _ => {}
         }
     }
-    crate::localize::article::decode_entities(&out)
+    content::html::decode_entities(&out)
 }
 
 impl crate::schema::ValueShown {

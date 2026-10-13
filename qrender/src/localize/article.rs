@@ -78,7 +78,7 @@ fn clean(el: &mut Element, links: &Links) {
         "img" => {
             // The attribute is raw HTML text: decode it, and the rewriter
             // escapes it again as text.
-            let alt = decode_entities(&el.get_attribute("alt").unwrap_or_default());
+            let alt = content::html::decode_entities(&el.get_attribute("alt").unwrap_or_default());
             el.replace(&alt, ContentType::Text);
         }
         "a" => link(el, links),
@@ -125,48 +125,6 @@ fn link(el: &mut Element, links: &Links) {
         el.after(&gloss.text, ContentType::Text);
         el.after("<rt><span>", ContentType::Html);
     }
-}
-
-/// The text of raw HTML: numeric character references and the named ones
-/// that attribute values use. Another named reference stays as it is.
-pub(crate) fn decode_entities(raw: &str) -> String {
-    let mut out = String::with_capacity(raw.len());
-    let mut rest = raw;
-    while let Some(start) = rest.find('&') {
-        out.push_str(&rest[..start]);
-        rest = &rest[start..];
-        let decoded = rest.find(';').filter(|&end| end <= 10).and_then(|end| {
-            let name = &rest[1..end];
-            let c = match name {
-                "amp" => Some('&'),
-                "lt" => Some('<'),
-                "gt" => Some('>'),
-                "quot" => Some('"'),
-                "apos" => Some('\''),
-                "nbsp" => Some('\u{a0}'),
-                _ => match name.strip_prefix('#') {
-                    Some(hex) if hex.starts_with(['x', 'X']) => u32::from_str_radix(&hex[1..], 16)
-                        .ok()
-                        .and_then(char::from_u32),
-                    Some(dec) => dec.parse().ok().and_then(char::from_u32),
-                    None => None,
-                },
-            };
-            c.map(|c| (c, end))
-        });
-        match decoded {
-            Some((c, end)) => {
-                out.push(c);
-                rest = &rest[end + 1..];
-            }
-            None => {
-                out.push('&');
-                rest = &rest[1..];
-            }
-        }
-    }
-    out.push_str(rest);
-    out
 }
 
 fn set_href(el: &mut Element, href: &str) {
@@ -269,7 +227,7 @@ mod tests {
     #[test]
     fn entities() {
         assert_eq!(
-            decode_entities("a &amp; b &lt;c&gt; &#233;&#x41; &copy; & x"),
+            content::html::decode_entities("a &amp; b &lt;c&gt; &#233;&#x41; &copy; & x"),
             "a & b <c> éA &copy; & x"
         );
         // A picture whose text is markup: it stays text.

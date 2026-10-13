@@ -1,13 +1,19 @@
 [package]
 name = "app"
-description = "The qrender command line and, later, the server"
+description = "The qrender command line and web service"
 version.workspace = true
 authors.workspace = true
 edition.workspace = true
 
 [dependencies]
+axum = "0.8"
 clap = { version = "4", features = ["derive"] }
-content = { path = "../content" }
+content = { path = "../content", features = ["cache"] }
+dotenvy = "0.15"
 qrender = { path = "../qrender" }
 serde.workspace = true
 serde_json.workspace = true
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "net", "time", "signal"] }
+
+[dev-dependencies]
+insta = "1"

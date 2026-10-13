@@ -22,6 +22,27 @@ impl IdError {
     }
 }
 
+/// The JSON Schema of an identifier: a string with a pattern.
+macro_rules! string_schema {
+    ($name:ident, $pattern:expr) => {
+        impl schemars::JsonSchema for $name {
+            fn schema_name() -> std::borrow::Cow<'static, str> {
+                stringify!($name).into()
+            }
+
+            fn json_schema(_: &mut schemars::SchemaGenerator) -> schemars::Schema {
+                schemars::json_schema!({ "type": "string", "pattern": $pattern })
+            }
+        }
+    };
+}
+
+string_schema!(Qid, "^Q[1-9][0-9]*$");
+string_schema!(Pid, "^P[1-9][0-9]*$");
+string_schema!(EntityId, "^[QP][1-9][0-9]*$");
+string_schema!(StatementId, "^[QqPp][0-9]+[-$][0-9A-Fa-f-]+$");
+string_schema!(Lang, "^[a-z]{2,8}(-[a-z0-9]{1,8})*$");
+
 /// An entity identifier: a prefix letter and a number. The number is kept,
 /// so the type is `Copy` and sorts by number (Q2 before Q10).
 macro_rules! entity_id {

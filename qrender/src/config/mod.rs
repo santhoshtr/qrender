@@ -63,6 +63,39 @@ impl Config {
         })
     }
 
+    /// What the fetcher needs from the layouts: layout matching, reverse
+    /// properties, container properties, qualifier logos, concepts.
+    pub fn fetch_settings(&self) -> content::Settings {
+        let layouts = &self.layouts;
+        let mut concepts: Vec<content::Qid> = layouts
+            .class_layouts
+            .values()
+            .flat_map(|l| &l.spreads)
+            .flat_map(|s| s.concept.iter().chain(&s.prose))
+            .copied()
+            .collect();
+        concepts.sort();
+        concepts.dedup();
+        content::Settings {
+            layouts: layouts
+                .class_layouts
+                .iter()
+                .map(|(name, l)| content::LayoutMatch {
+                    name: name.clone(),
+                    match_p31: l.match_p31.clone(),
+                    reverse: l
+                        .spreads
+                        .iter()
+                        .flat_map(|s| s.reverse.iter().copied())
+                        .collect(),
+                })
+                .collect(),
+            containers: layouts.containers.keys().copied().collect(),
+            qualifier_logos: layouts.media.qualifier_logos.clone(),
+            concepts,
+        }
+    }
+
     /// The roles of a property.
     pub fn roles(&self, pid: Pid) -> RoleSet {
         self.roles.get(&pid).copied().unwrap_or_default()

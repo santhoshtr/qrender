@@ -6,8 +6,14 @@
 //! - [`Text`], one for each item and language: labels, descriptions, the
 //!   article, page images.
 
+#[cfg(feature = "cache")]
+pub mod cache;
+#[cfg(feature = "fetch")]
+pub mod fetch;
+pub mod html;
 pub mod id;
 pub mod model;
+pub mod settings;
 pub mod text;
 
 pub use id::{EntityId, IdError, Lang, Pid, Qid, StatementId};
@@ -16,4 +22,5 @@ pub use model::{
     Qualifier, QualifierValue, QuantityRecord, Rank, ReverseWork, Statement, Table, Value,
     ValueError, ValueImage,
 };
+pub use settings::{LayoutMatch, Settings};
 pub use text::{Article, Concept, LangText, PageImage, Section, TEXT_SCHEMA, Term, Text};
