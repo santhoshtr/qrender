@@ -26,4 +26,5 @@ properties! {
     DATE_OF_DEATH = "P570", "date of death";
     AGE = "P3629", "age of subject at event";
     AREA = "P2046", "area";
+    LANGUAGE = "P407", "language of work or name";
 }

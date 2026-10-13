@@ -1,0 +1,29 @@
+/* sounds: the recordings of one property, one player and a choice. */
+
+.sounds {
+	& .sound {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: var( --spacing-25 ) var( --spacing-75 );
+
+		&[hidden] { display: none; }
+	}
+
+	& .sound-name { font-weight: var( --font-weight-semi-bold ); }
+
+	/* With the choice shown, the choice names the recording. */
+	& select:not( [hidden] ) ~ .sound .sound-name { display: none; }
+
+	& select {
+		align-self: start;
+		max-inline-size: 100%;
+		padding: var( --spacing-25 ) var( --spacing-50 );
+		border: 1px solid var( --border-color-base );
+		border-radius: var( --border-radius-base );
+		background-color: var( --background-color-base );
+		color: var( --color-base );
+		font: inherit;
+		font-size: var( --font-size-small );
+	}
+}

@@ -1,0 +1,25 @@
+{%- import "macros.html" as m -%}
+{#- The recordings of one property (the pronunciation of the name in
+    several languages): one block. Every recording has its player, so the
+    page is whole without JavaScript; assets/sounds.js shows the choice of
+    language and keeps one player. -#}
+<div class="block sounds">
+    <h3>{{ ui.text(ui.property(b.pid), true)|safe }} <span class="note">{{ b.sounds.len() }}</span></h3>
+    <select class="sound-choice" hidden aria-label="{{ ui.property(b.pid).text }}">
+        {%- for s in b.sounds -%}
+            <option value="{{ loop.index0 }}">{{ ui.sound_label(s) }}</option>
+        {%- endfor -%}
+    </select>
+    {%- for s in b.sounds -%}
+        {%- let edit = ui.edit(s.media.statement.pid) -%}
+        <div class="sound">
+            <span class="sound-name">{{ ui.sound_label(s) }}</span>
+            <audio controls preload="none" src="{{ ui.file(ui.media_file(&s.media)) }}"></audio>
+            {%- let note = ui.sound_note(s) -%}
+            {%- if !note.is_empty() %}
+                <span class="note">{{ ui.note(note.as_slice())|safe }}</span>
+            {% endif -%}
+            <span class="tools">{% call m::prov(ui, s.media.statement.provenance) %}{% endcall %}{% call m::edit(ui, edit) %}{% endcall %}</span>
+        </div>
+    {%- endfor -%}
+</div>

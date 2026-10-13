@@ -152,6 +152,7 @@ impl<'a> Composer<'a> {
                     spread.slots = std::mem::take(&mut spread.slots)
                         .into_iter()
                         .map(|(slot, blocks)| {
+                            let blocks = crate::primitives::sounds::group(blocks);
                             (slot, crate::primitives::pictures::group(slot, blocks))
                         })
                         .collect();

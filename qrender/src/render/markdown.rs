@@ -13,7 +13,7 @@ use crate::localize::format::Part;
 use crate::localize::{Label, SpreadView, View};
 use crate::primitives::{
     absent, credits, fact, identifiers, kind, map, media, network, peers, pictures, prose,
-    provenance, scale, score, series, sitelinks, succession, time, title, works,
+    provenance, scale, score, series, sitelinks, sounds, succession, time, title, works,
 };
 use crate::schema::{Block, Provenance, StatementRef};
 
@@ -71,6 +71,7 @@ impl Markdown<'_> {
             Block::Prose(b) => prose::markdown(b, self),
             Block::Media(b) => media::markdown(b, self),
             Block::Pictures(b) => pictures::markdown(b, self),
+            Block::Sounds(b) => sounds::markdown(b, self),
             Block::Map(b) => map::markdown(b, self),
             Block::Fact(b) => fact::markdown(b, self),
             Block::Series(b) => series::markdown(b, self),

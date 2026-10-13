@@ -1790,70 +1790,76 @@ expression: composition
             }
           },
           {
-            "primitive": "media",
-            "role": "audio",
-            "statement": "Q405-116b2c60-0888-4b1e-8deb-fa27bf5d796a",
+            "primitive": "sounds",
             "pid": "P443",
-            "file": "LL-Q9027 (swe)-Moonhouse-Månen.wav",
-            "rank": "normal",
-            "provenance": "sourced",
-            "qualifiers": [
+            "sounds": [
               {
-                "pid": "P407",
-                "item": "Q9027"
-              }
-            ],
-            "kind": "audio",
-            "bytes": 109356,
-            "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/LL-Q9027_%28swe%29-Moonhouse-M%C3%A5nen.wav",
-            "credit": {
-              "artist": "Speaker: Moonhouse\nRecorder: Moonhouse",
-              "license": "CC0"
-            }
-          },
-          {
-            "primitive": "media",
-            "role": "audio",
-            "statement": "Q405-67A562D7-FFEE-493B-8646-C116B537BB69",
-            "pid": "P443",
-            "file": "LL-Q188 (deu)-Sebastian Wallroth-Mond.wav",
-            "rank": "normal",
-            "provenance": "none",
-            "qualifiers": [
+                "role": "audio",
+                "statement": "Q405-116b2c60-0888-4b1e-8deb-fa27bf5d796a",
+                "pid": "P443",
+                "file": "LL-Q9027 (swe)-Moonhouse-Månen.wav",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P407",
+                    "item": "Q9027"
+                  }
+                ],
+                "kind": "audio",
+                "bytes": 109356,
+                "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/LL-Q9027_%28swe%29-Moonhouse-M%C3%A5nen.wav",
+                "credit": {
+                  "artist": "Speaker: Moonhouse\nRecorder: Moonhouse",
+                  "license": "CC0"
+                },
+                "language": "Q9027"
+              },
               {
-                "pid": "P407",
-                "item": "Q188"
-              }
-            ],
-            "kind": "audio",
-            "bytes": 83220,
-            "url": "https://upload.wikimedia.org/wikipedia/commons/7/74/LL-Q188_%28deu%29-Sebastian_Wallroth-Mond.wav",
-            "credit": {
-              "artist": "Speaker: Sebastian Wallroth\nRecorder: Sebastian Wallroth",
-              "license": "CC0"
-            }
-          },
-          {
-            "primitive": "media",
-            "role": "audio",
-            "statement": "Q405-d8b0c216-482f-3fa5-b87b-b0dc02ff7bd0",
-            "pid": "P443",
-            "file": "En-us-moon.ogg",
-            "rank": "normal",
-            "provenance": "none",
-            "qualifiers": [
+                "role": "audio",
+                "statement": "Q405-67A562D7-FFEE-493B-8646-C116B537BB69",
+                "pid": "P443",
+                "file": "LL-Q188 (deu)-Sebastian Wallroth-Mond.wav",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P407",
+                    "item": "Q188"
+                  }
+                ],
+                "kind": "audio",
+                "bytes": 83220,
+                "url": "https://upload.wikimedia.org/wikipedia/commons/7/74/LL-Q188_%28deu%29-Sebastian_Wallroth-Mond.wav",
+                "credit": {
+                  "artist": "Speaker: Sebastian Wallroth\nRecorder: Sebastian Wallroth",
+                  "license": "CC0"
+                },
+                "language": "Q188"
+              },
               {
-                "pid": "P407",
-                "item": "Q7976"
+                "role": "audio",
+                "statement": "Q405-d8b0c216-482f-3fa5-b87b-b0dc02ff7bd0",
+                "pid": "P443",
+                "file": "En-us-moon.ogg",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P407",
+                    "item": "Q7976"
+                  }
+                ],
+                "kind": "audio",
+                "bytes": 10049,
+                "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/En-us-moon.ogg",
+                "credit": {
+                  "artist": "Dvortygirl",
+                  "license": "CC BY-SA 3.0"
+                },
+                "language": "Q7976"
               }
-            ],
-            "kind": "audio",
-            "bytes": 10049,
-            "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/En-us-moon.ogg",
-            "credit": {
-              "artist": "Dvortygirl",
-              "license": "CC BY-SA 3.0"
-            }
+            ]
           }
         ]
       }

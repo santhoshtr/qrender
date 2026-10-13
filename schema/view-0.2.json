@@ -158,6 +158,19 @@
           "type": "object"
         },
         {
+          "$ref": "#/$defs/Sounds",
+          "properties": {
+            "primitive": {
+              "const": "sounds",
+              "type": "string"
+            }
+          },
+          "required": [
+            "primitive"
+          ],
+          "type": "object"
+        },
+        {
           "$ref": "#/$defs/Map",
           "properties": {
             "primitive": {
@@ -2373,6 +2386,11 @@
           "const": "pictures",
           "description": "Single pictures that follow each other in a slot: one run.",
           "type": "string"
+        },
+        {
+          "const": "sounds",
+          "description": "The recordings of one property (pronunciations): one player.",
+          "type": "string"
         }
       ]
     },
@@ -2840,6 +2858,292 @@
       },
       "required": [
         "families"
+      ],
+      "type": "object"
+    },
+    "Sound": {
+      "anyOf": [
+        {
+          "description": "An item. None for \"unknown value\".",
+          "properties": {
+            "item": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Qid"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "item"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "amount": {
+              "format": "double",
+              "type": "number"
+            },
+            "unit": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Qid"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "amount",
+            "unit"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "precision": {
+              "format": "uint8",
+              "maximum": 255,
+              "minimum": 0,
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "time": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "time",
+            "precision"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "lang": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "text",
+            "lang"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "file": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "file"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "globe": {
+              "$ref": "#/$defs/Qid"
+            },
+            "lat": {
+              "format": "double",
+              "type": "number"
+            },
+            "lon": {
+              "format": "double",
+              "type": "number"
+            }
+          },
+          "required": [
+            "lat",
+            "lon",
+            "globe"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "url"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "string": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "string"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "\"Unknown value\" of a property that is not an item property.",
+          "properties": {
+            "some_value": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "some_value"
+          ],
+          "type": "object"
+        }
+      ],
+      "description": "A statement as the composition shows it.",
+      "properties": {
+        "aspect": {
+          "description": "Width / height, rounded to 4 places.",
+          "format": "double",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "assessed": {
+          "description": "Commons assessments: \"Quality images\", ...",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "bytes": {
+          "description": "Size and URL, for the kinds that play: audio, video, 3D.",
+          "format": "uint64",
+          "minimum": 0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "class": {
+          "description": "The value is a class: its picture would show an example only.",
+          "type": "boolean"
+        },
+        "credit": {
+          "$ref": "#/$defs/Credit"
+        },
+        "described": {
+          "description": "The value's description is shown under it (a work).",
+          "type": "boolean"
+        },
+        "image": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Picture"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The picture of an item value. None for a class value."
+        },
+        "kind": {
+          "$ref": "#/$defs/MediaKind"
+        },
+        "language": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Qid"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The language of the recording (its \"language of work or name\"\nqualifier): the name of its choice."
+        },
+        "megapixels": {
+          "format": "double",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "pid": {
+          "$ref": "#/$defs/Pid"
+        },
+        "provenance": {
+          "$ref": "#/$defs/Provenance"
+        },
+        "qualifiers": {
+          "items": {
+            "$ref": "#/$defs/QualifierShown"
+          },
+          "type": "array"
+        },
+        "rank": {
+          "$ref": "#/$defs/Rank"
+        },
+        "role": {
+          "$ref": "#/$defs/MediaRole"
+        },
+        "rule": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "shown": {
+          "description": "False when the value is behind \"+N\".",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "statement": {
+          "$ref": "#/$defs/StatementId"
+        },
+        "url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "role",
+        "statement",
+        "pid",
+        "rank",
+        "provenance",
+        "kind",
+        "credit"
+      ],
+      "type": "object"
+    },
+    "Sounds": {
+      "properties": {
+        "pid": {
+          "$ref": "#/$defs/Pid"
+        },
+        "sounds": {
+          "items": {
+            "$ref": "#/$defs/Sound"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "pid",
+        "sounds"
       ],
       "type": "object"
     },

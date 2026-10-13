@@ -474,28 +474,24 @@ expression: html
       <audio controls preload="none" src="https://commons.wikimedia.org/wiki/Special:FilePath/Hy-%D4%BC%D5%B8%D6%82%D5%BD%D5%AB%D5%B6%20%28Moon%29.ogg">
       </audio>
         <span class="note"><a href="https://www.wikidata.org/wiki/Q8785">Armenian</a> · 2016</span>
-      </div><div class="block">
-      <h3>pronunciation audio<a class="edit"
+      </div><div class="block sounds">
+    <h3>pronunciation audio <span class="note">3</span></h3>
+    <select class="sound-choice" hidden aria-label="pronunciation audio"><option value="0">Swedish</option><option value="1">German</option><option value="2">American English</option></select><div class="sound">
+            <span class="sound-name">Swedish</span>
+            <audio controls preload="none" src="https://commons.wikimedia.org/wiki/Special:FilePath/LL-Q9027%20%28swe%29-Moonhouse-M%C3%A5nen.wav"></audio><span class="tools"><a class="edit"
        href="https://www.wikidata.org/wiki/Q405#P443"
-       aria-label="Edit">✎</a></h3>
-      <audio controls preload="none" src="https://commons.wikimedia.org/wiki/Special:FilePath/LL-Q9027%20%28swe%29-Moonhouse-M%C3%A5nen.wav">
-      </audio>
-        <span class="note"><a href="https://www.wikidata.org/wiki/Q9027">Swedish</a></span>
-      </div><div class="block">
-      <h3>pronunciation audio<span class="prov-none" title="—"></span><a class="edit"
+       aria-label="Edit">✎</a></span>
+        </div><div class="sound">
+            <span class="sound-name">German</span>
+            <audio controls preload="none" src="https://commons.wikimedia.org/wiki/Special:FilePath/LL-Q188%20%28deu%29-Sebastian%20Wallroth-Mond.wav"></audio><span class="tools"><span class="prov-none" title="—"></span><a class="edit"
        href="https://www.wikidata.org/wiki/Q405#P443"
-       aria-label="Edit">✎</a></h3>
-      <audio controls preload="none" src="https://commons.wikimedia.org/wiki/Special:FilePath/LL-Q188%20%28deu%29-Sebastian%20Wallroth-Mond.wav">
-      </audio>
-        <span class="note"><a href="https://www.wikidata.org/wiki/Q188">German</a></span>
-      </div><div class="block">
-      <h3>pronunciation audio<span class="prov-none" title="—"></span><a class="edit"
+       aria-label="Edit">✎</a></span>
+        </div><div class="sound">
+            <span class="sound-name">American English</span>
+            <audio controls preload="none" src="https://commons.wikimedia.org/wiki/Special:FilePath/En-us-moon.ogg"></audio><span class="tools"><span class="prov-none" title="—"></span><a class="edit"
        href="https://www.wikidata.org/wiki/Q405#P443"
-       aria-label="Edit">✎</a></h3>
-      <audio controls preload="none" src="https://commons.wikimedia.org/wiki/Special:FilePath/En-us-moon.ogg">
-      </audio>
-        <span class="note"><a href="https://www.wikidata.org/wiki/Q7976">American English</a></span>
-      </div>
+       aria-label="Edit">✎</a></span>
+        </div></div>
 </div></section>
             <section class="spread t-collapsed" data-spread="more" data-dimension="neutral">
         <details>
@@ -909,6 +905,24 @@ if ( !( 'commandForElement' in HTMLButtonElement.prototype ) ) {
 		}
 	}
 } )();
+// Progressive enhancement only: the recordings of one property (the
+// pronunciations of the name) become one player with a choice of
+// language. Without this script every recording keeps its own player.
+for ( const block of document.querySelectorAll( '.sounds' ) ) {
+	const choice = block.querySelector( '.sound-choice' );
+	const sounds = [ ...block.querySelectorAll( '.sound' ) ];
+	const show = ( chosen ) => {
+		sounds.forEach( ( sound, i ) => {
+			sound.hidden = i !== chosen;
+			if ( i !== chosen ) {
+				sound.querySelector( 'audio' ).pause();
+			}
+		} );
+	};
+	choice.hidden = false;
+	show( 0 );
+	choice.addEventListener( 'change', () => show( Number( choice.value ) ) );
+}
 </script>
 </body>
 </html>

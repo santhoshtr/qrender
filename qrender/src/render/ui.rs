@@ -487,6 +487,31 @@ impl<'v> Ui<'v> {
         ]
     }
 
+    /// The name of a recording's choice: its language, else its note,
+    /// else its file.
+    pub fn sound_label(&self, s: &crate::primitives::sounds::Sound) -> String {
+        if let Some(language) = s.language {
+            return self.item(language).text;
+        }
+        match self.qualifiers(&s.media.statement.qualifiers).first() {
+            Some(part) => self.part_text(part),
+            None => self.media_file(&s.media).to_string(),
+        }
+    }
+
+    /// The note of a recording, without its language: the choice names it.
+    pub fn sound_note(&self, s: &crate::primitives::sounds::Sound) -> Vec<Part> {
+        let qualifiers: Vec<QualifierShown> = s
+            .media
+            .statement
+            .qualifiers
+            .iter()
+            .filter(|q| s.language.is_none() || q.pid != *crate::wikidata::LANGUAGE)
+            .cloned()
+            .collect();
+        self.qualifiers(&qualifiers)
+    }
+
     /// The first statement of a row.
     pub fn first<'a>(&self, statements: &'a [StatementRef]) -> &'a StatementRef {
         &statements[0]

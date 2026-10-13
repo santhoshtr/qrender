@@ -25,6 +25,7 @@ pub const STYLESHEET: &str = concat!(
     include_str!("../../design/primitives/score.css"),
     include_str!("../../design/primitives/succession.css"),
     include_str!("../../design/primitives/sitelinks.css"),
+    include_str!("../../design/primitives/sounds.css"),
     include_str!("../../design/primitives/provenance.css"),
     include_str!("../../design/primitives/identifiers.css"),
 );
@@ -33,4 +34,5 @@ pub const STYLESHEET: &str = concat!(
 pub const SCRIPTS: &str = concat!(
     include_str!("../../assets/invokers.js"),
     include_str!("../../assets/intl.js"),
+    include_str!("../../assets/sounds.js"),
 );

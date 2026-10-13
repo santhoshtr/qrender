@@ -103,6 +103,8 @@ pub enum Primitive {
     Media,
     /// Single pictures that follow each other in a slot: one run.
     Pictures,
+    /// The recordings of one property (pronunciations): one player.
+    Sounds,
     Map,
     Fact,
     Series,
