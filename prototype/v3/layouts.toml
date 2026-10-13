@@ -441,6 +441,90 @@ id = "evidence"
 concept = "Q121769"    # reference
 kind = "evidence"
 
+# ------------------------------------------------------------ astronomical
+# A body in space: its measures against its parent body (P397, the
+# container) and against its peers, then its orbit.
+
+[class_layouts.astronomical]
+match_p31 = [
+  "Q2537",      # natural satellite
+  "Q1086783",   # regular moon
+  "Q85793519",  # planetary-mass moon
+  "Q109645860", # planetary moon
+  "Q634",       # planet
+  "Q128207",    # terrestrial planet
+  "Q3504248",   # inner planet of the Solar System
+  "Q523",       # star
+  "Q3863",      # asteroid
+]
+
+[[class_layouts.astronomical.spreads]]
+id = "identity"
+kind = "identity"
+
+[[class_layouts.astronomical.spreads]]
+id = "physical"
+concept = "Q4373292"   # physical property
+prose = ["Q4373292"]
+kind = "scale"
+pids = [
+  "P2067",  # mass
+  "P2120",  # radius
+  "P2386",  # diameter
+  "P2046",  # area
+  "P2234",  # volume as quantity
+  "P2054",  # density
+  "P7015",  # surface gravity
+  "P1102",  # flattening
+  "P4501",  # albedo
+  "P1215",  # apparent magnitude
+  "P2076",  # temperature
+  "P5348",  # angular diameter
+]
+
+[[class_layouts.astronomical.spreads]]
+id = "orbit"
+concept = "Q4130"      # orbit
+prose = ["Q4130"]
+kind = "facts"
+pids = [
+  "P522",   # type of orbit
+  "P2146",  # orbital period
+  "P4341",  # synodic period
+  "P2233",  # semi-major axis of an orbit
+  "P2243",  # apoapsis
+  "P2244",  # periapsis
+  "P1096",  # orbital eccentricity
+  "P2045",  # orbital inclination
+  "P2583",  # distance from Earth
+]
+
+[[class_layouts.astronomical.spreads]]
+id = "relations"
+concept = "Q930933"    # relation
+kind = "facts"
+pictured = true        # also any item property whose values are mostly pictured
+
+[[class_layouts.astronomical.spreads]]
+id = "history"
+concept = "Q309"       # history
+prose = ["Q309"]
+kind = "history"
+
+[[class_layouts.astronomical.spreads]]
+id = "media"
+concept = "Q131765"    # multimedia
+kind = "media"
+
+[[class_layouts.astronomical.spreads]]
+id = "more"
+kind = "more"
+
+[[class_layouts.astronomical.spreads]]
+id = "evidence"
+concept = "Q121769"    # reference
+kind = "evidence"
+
 # ----------------------------------------------------------------- generic
 # For an item no class layout matches: the head, then the pictured relations,
 # then the rest.

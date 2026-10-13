@@ -322,123 +322,3025 @@
    "prose_links": []
   },
   {
-   "id": "location",
-   "kind": "facts",
-   "concept": "Q2221906",
-   "template": "hero-plus-stack",
+   "id": "physical",
+   "kind": "scale",
+   "concept": "Q4373292",
+   "template": "columns",
    "slots": {
     "hero": {
-     "primitive": "map",
-     "statement": "Q405-2af50ee1-4054-2751-bcd5-c6c0912f7b16",
-     "pid": "P625",
-     "lat": 0.0,
-     "lon": 0.0,
-     "globe": "Q405",
-     "rank": "normal",
-     "provenance": "none",
-     "extent_m": 6158734,
-     "property": {
-      "id": "P625",
-      "text": "ഭൗമനിർദ്ദേശാങ്കങ്ങൾ",
-      "lang": "ml",
-      "fallback": false
+     "primitive": "scale",
+     "mode": "scale",
+     "container": {
+      "pid": "P397",
+      "item": "Q2",
+      "property": {
+       "id": "P397",
+       "text": "parent astronomical body",
+       "lang": "en",
+       "fallback": true,
+       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P397"
+      },
+      "display": {
+       "id": "Q2",
+       "text": "ഭൂമി",
+       "lang": "ml",
+       "fallback": false,
+       "href": "https://www.wikidata.org/wiki/Q2"
+      }
      },
-     "edit": "https://www.wikidata.org/wiki/Q405#P625"
-    },
-    "gallery": [
-     {
-      "primitive": "network",
-      "role": "gallery",
-      "values": [
-       {
-        "statement": "Q405-8c4d68c1-43ab-7947-1900-3310e2f87cac",
-        "pid": "P361",
-        "item": "Q18589965",
-        "rank": "normal",
-        "provenance": "none",
-        "image": {
-         "file": "Lagrange points Earth vs Moon.jpg",
-         "kind": "photo",
-         "aspect": 1.1671,
-         "megapixels": 0.2,
-         "credit": {
-          "artist": "No machine-readable author provided. Vulpecula assumed (based on copyright claims).",
-          "license": "Public domain"
-         }
-        },
-        "priority": 0.735,
-        "property": {
-         "id": "P361",
-         "text": "ഇതിന്റെ ഭാഗം",
+     "measures": [
+      {
+       "pid": "P2046",
+       "ratio": 0.074363,
+       "amount": 37930000000000.0,
+       "whole": 510064472000000.0,
+       "unit": "Q25343",
+       "statement": "Q405-6095b598-4782-eddc-d2aa-f5d86f5de81e",
+       "provenance": "sourced",
+       "property": {
+        "id": "P2046",
+        "text": "വിസ്തീർണ്ണം",
+        "lang": "ml",
+        "fallback": false
+       },
+       "display": {
+        "text": "3.79 × 10¹³",
+        "unit": {
+         "id": "Q25343",
+         "text": "ചതുരശ്ര മീറ്റർ",
          "lang": "ml",
          "fallback": false
-        },
+        }
+       },
+       "edit": "https://www.wikidata.org/wiki/Q405#P2046",
+       "amount_display": "3.79 × 10¹³",
+       "percent": "7.4 %"
+      },
+      {
+       "pid": "P2067",
+       "ratio": 0.012303,
+       "amount": 7.3477e+22,
+       "whole": 5.97237e+24,
+       "unit": "Q11570",
+       "statement": "Q405-13a99111-4718-a11c-1644-a5e0bc11483b",
+       "provenance": "sourced",
+       "property": {
+        "id": "P2067",
+        "text": "ഭാരം/തൂക്കം",
+        "lang": "ml",
+        "fallback": false
+       },
+       "display": {
+        "text": "7.35 × 10²²",
+        "unit": {
+         "id": "Q11570",
+         "text": "കിലോഗ്രാം",
+         "lang": "ml",
+         "fallback": false
+        }
+       },
+       "edit": "https://www.wikidata.org/wiki/Q405#P2067",
+       "amount_display": "7.35 × 10²²",
+       "percent": "1.2 %"
+      },
+      {
+       "pid": "P2120",
+       "ratio": 0.273266,
+       "amount": 1737100.0,
+       "whole": 6356800.0,
+       "unit": "Q11573",
+       "statement": "Q405-b9e73f2a-4b12-e158-6a38-4a1e9ca452f7",
+       "provenance": "imported",
+       "property": {
+        "id": "P2120",
+        "text": "radius",
+        "lang": "mul",
+        "fallback": false
+       },
+       "display": {
+        "text": "1,737,100",
+        "unit": {
+         "id": "Q11573",
+         "text": "മീറ്റർ",
+         "lang": "ml",
+         "fallback": false
+        }
+       },
+       "edit": "https://www.wikidata.org/wiki/Q405#P2120",
+       "amount_display": "1,737,100",
+       "percent": "27 %"
+      },
+      {
+       "pid": "P2386",
+       "ratio": 0.272814,
+       "amount": 3476200.0,
+       "whole": 12742000.0,
+       "unit": "Q11573",
+       "statement": "Q405-46525552-4598-5333-1cd4-496dddaa0fc2",
+       "provenance": "sourced",
+       "property": {
+        "id": "P2386",
+        "text": "diameter",
+        "lang": "en",
+        "fallback": true,
+        "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2386"
+       },
+       "display": {
+        "text": "3,476,200",
+        "unit": {
+         "id": "Q11573",
+         "text": "മീറ്റർ",
+         "lang": "ml",
+         "fallback": false
+        }
+       },
+       "edit": "https://www.wikidata.org/wiki/Q405#P2386",
+       "amount_display": "3,476,200",
+       "percent": "27 %"
+      }
+     ]
+    },
+    "stack": [
+     {
+      "primitive": "peers",
+      "pid": "P2067",
+      "class": "Q1086783",
+      "container": null,
+      "rank": 4,
+      "of": 47,
+      "members": [
+       {
+        "item": "Q3169",
+        "amount": 1.48148e+23,
+        "fraction": 1.0,
+        "self": false,
+        "shown": true,
         "display": {
-         "id": "Q18589965",
-         "text": "Earth–Moon system",
+         "id": "Q3169",
+         "text": "ഗാനിമേഡ്",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q3169"
+        },
+        "amount_display": "1.48 × 10²³"
+       },
+       {
+        "item": "Q3134",
+        "amount": 1.07566e+23,
+        "fraction": 0.7261,
+        "self": false,
+        "shown": true,
+        "display": {
+         "id": "Q3134",
+         "text": "കാലിസ്റ്റോ",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q3134"
+        },
+        "amount_display": "1.08 × 10²³"
+       },
+       {
+        "item": "Q3123",
+        "amount": 8.9296e+22,
+        "fraction": 0.6027,
+        "self": false,
+        "shown": true,
+        "display": {
+         "id": "Q3123",
+         "text": "അയോ",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q3123"
+        },
+        "amount_display": "8.93 × 10²²"
+       },
+       {
+        "item": "Q405",
+        "amount": 7.3477e+22,
+        "fraction": 0.496,
+        "self": true,
+        "shown": true,
+        "display": {
+         "id": "Q405",
+         "text": "ചന്ദ്രൻ",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q405"
+        },
+        "amount_display": "7.35 × 10²²"
+       },
+       {
+        "item": "Q3143",
+        "amount": 4.7986e+22,
+        "fraction": 0.3239,
+        "self": false,
+        "shown": true,
+        "display": {
+         "id": "Q3143",
+         "text": "യൂറോപ്പ",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q3143"
+        },
+        "amount_display": "4.8 × 10²²"
+       },
+       {
+        "item": "Q3322",
+        "amount": 3.527e+21,
+        "fraction": 0.0238,
+        "self": false,
+        "shown": true,
+        "display": {
+         "id": "Q3322",
+         "text": "ടൈറ്റാനിയ",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q3322"
+        },
+        "amount_display": "3.53 × 10²¹"
+       },
+       {
+        "item": "Q3332",
+        "amount": 3.01e+21,
+        "fraction": 0.0203,
+        "self": false,
+        "shown": true,
+        "display": {
+         "id": "Q3332",
+         "text": "ഒബെറോൺ",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q3332"
+        },
+        "amount_display": "3.01 × 10²¹"
+       },
+       {
+        "item": "Q15050",
+        "amount": 2.3065e+21,
+        "fraction": 0.0156,
+        "self": false,
+        "shown": true,
+        "display": {
+         "id": "Q15050",
+         "text": "റിയ",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q15050"
+        },
+        "amount_display": "2.31 × 10²¹"
+       },
+       {
+        "item": "Q17958",
+        "amount": 1.8055e+21,
+        "fraction": 0.0122,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q17958",
+         "text": "Iapetus",
          "lang": "en",
          "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q18589965",
-         "href": "https://www.wikidata.org/wiki/Q18589965"
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17958",
+         "href": "https://www.wikidata.org/wiki/Q17958"
         },
-        "edit": "https://www.wikidata.org/wiki/Q405#P361"
+        "amount_display": "1.81 × 10²¹"
+       },
+       {
+        "item": "Q3343",
+        "amount": 1.4e+21,
+        "fraction": 0.0095,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q3343",
+         "text": "Ariel",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3343",
+         "href": "https://www.wikidata.org/wiki/Q3343"
+        },
+        "amount_display": "1.4 × 10²¹"
+       },
+       {
+        "item": "Q3338",
+        "amount": 1.2e+21,
+        "fraction": 0.0081,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q3338",
+         "text": "Umbriel",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3338",
+         "href": "https://www.wikidata.org/wiki/Q3338"
+        },
+        "amount_display": "1.2 × 10²¹"
+       },
+       {
+        "item": "Q15040",
+        "amount": 1.09546e+21,
+        "fraction": 0.0074,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q15040",
+         "text": "Dione",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15040",
+         "href": "https://www.wikidata.org/wiki/Q15040"
+        },
+        "amount_display": "1.1 × 10²¹"
+       },
+       {
+        "item": "Q15047",
+        "amount": 6.1739e+20,
+        "fraction": 0.0042,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q15047",
+         "text": "Tethys",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15047",
+         "href": "https://www.wikidata.org/wiki/Q15047"
+        },
+        "amount_display": "6.17 × 10²⁰"
+       },
+       {
+        "item": "Q3303",
+        "amount": 1.0804339e+20,
+        "fraction": 0.0007,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q3303",
+         "text": "എൻസിലാഡസ്",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q3303"
+        },
+        "amount_display": "1.08 × 10²⁰"
+       },
+       {
+        "item": "Q3352",
+        "amount": 6.6e+19,
+        "fraction": 0.0004,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q3352",
+         "text": "Miranda",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3352",
+         "href": "https://www.wikidata.org/wiki/Q3352"
+        },
+        "amount_display": "6.6 × 10¹⁹"
+       },
+       {
+        "item": "Q16081",
+        "amount": 5e+19,
+        "fraction": 0.0003,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q16081",
+         "text": "പ്രോതിയസ്",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q16081"
+        },
+        "amount_display": "5 × 10¹⁹"
+       },
+       {
+        "item": "Q15034",
+        "amount": 3.75e+19,
+        "fraction": 0.0003,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q15034",
+         "text": "മിമസ്",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q15034"
+        },
+        "amount_display": "3.75 × 10¹⁹"
+       },
+       {
+        "item": "Q15037",
+        "amount": 5.58e+18,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q15037",
+         "text": "Hyperion",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15037",
+         "href": "https://www.wikidata.org/wiki/Q15037"
+        },
+        "amount_display": "5.58 × 10¹⁸"
+       },
+       {
+        "item": "Q15662",
+        "amount": 2.9e+18,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q15662",
+         "text": "Puck",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15662",
+         "href": "https://www.wikidata.org/wiki/Q15662"
+        },
+        "amount_display": "2.9 × 10¹⁸"
+       },
+       {
+        "item": "Q3257",
+        "amount": 2.1e+18,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q3257",
+         "text": "അമാൽത്തിയ",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q3257"
+        },
+        "amount_display": "2.1 × 10¹⁸"
+       },
+       {
+        "item": "Q17754",
+        "amount": 1.9e+18,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q17754",
+         "text": "Janus",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17754",
+         "href": "https://www.wikidata.org/wiki/Q17754"
+        },
+        "amount_display": "1.9 × 10¹⁸"
+       },
+       {
+        "item": "Q15644",
+        "amount": 1.7e+18,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q15644",
+         "text": "പോർഷ്യ",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q15644"
+        },
+        "amount_display": "1.7 × 10¹⁸"
+       },
+       {
+        "item": "Q16765",
+        "amount": 1.5e+18,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q16765",
+         "text": "തീബ്",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q16765"
+        },
+        "amount_display": "1.5 × 10¹⁸"
+       },
+       {
+        "item": "Q15643",
+        "amount": 5.6e+17,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q15643",
+         "text": "Juliet",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15643",
+         "href": "https://www.wikidata.org/wiki/Q15643"
+        },
+        "amount_display": "5.6 × 10¹⁷"
+       },
+       {
+        "item": "Q17751",
+        "amount": 5.3e+17,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q17751",
+         "text": "Epimetheus",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17751",
+         "href": "https://www.wikidata.org/wiki/Q17751"
+        },
+        "amount_display": "5.3 × 10¹⁷"
+       },
+       {
+        "item": "Q15658",
+        "amount": 3.6e+17,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q15658",
+         "text": "Belinda",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15658",
+         "href": "https://www.wikidata.org/wiki/Q15658"
+        },
+        "amount_display": "3.6 × 10¹⁷"
+       },
+       {
+        "item": "Q15633",
+        "amount": 3.4e+17,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q15633",
+         "text": "ക്രസീഡിയ",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q15633"
+        },
+        "amount_display": "3.4 × 10¹⁷"
+       },
+       {
+        "item": "Q15646",
+        "amount": 2.5e+17,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q15646",
+         "text": "Rosalind",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15646",
+         "href": "https://www.wikidata.org/wiki/Q15646"
+        },
+        "amount_display": "2.5 × 10¹⁷"
+       },
+       {
+        "item": "Q15637",
+        "amount": 1.8e+17,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q15637",
+         "text": "ഡെസ്ഡിമോണ",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q15637"
+        },
+        "amount_display": "1.8 × 10¹⁷"
+       },
+       {
+        "item": "Q17739",
+        "amount": 1.6e+17,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q17739",
+         "text": "Prometheus",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17739",
+         "href": "https://www.wikidata.org/wiki/Q17739"
+        },
+        "amount_display": "1.6 × 10¹⁷"
+       },
+       {
+        "item": "Q17746",
+        "amount": 1.4e+17,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q17746",
+         "text": "Pandora",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17746",
+         "href": "https://www.wikidata.org/wiki/Q17746"
+        },
+        "amount_display": "1.4 × 10¹⁷"
+       },
+       {
+        "item": "Q16755",
+        "amount": 1.2e+17,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q16755",
+         "text": "മെറ്റിസ്",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q16755"
+        },
+        "amount_display": "1.2 × 10¹⁷"
+       },
+       {
+        "item": "Q15629",
+        "amount": 9.3e+16,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q15629",
+         "text": "Bianca",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15629",
+         "href": "https://www.wikidata.org/wiki/Q15629"
+        },
+        "amount_display": "9.3 × 10¹⁶"
+       },
+       {
+        "item": "Q15660",
+        "amount": 1.8e+16,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q15660",
+         "text": "Perdita",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15660",
+         "href": "https://www.wikidata.org/wiki/Q15660"
+        },
+        "amount_display": "1.8 × 10¹⁶"
+       },
+       {
+        "item": "Q17875",
+        "amount": 1.1e+16,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q17875",
+         "text": "Helene",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17875",
+         "href": "https://www.wikidata.org/wiki/Q17875"
+        },
+        "amount_display": "1.1 × 10¹⁶"
+       },
+       {
+        "item": "Q15667",
+        "amount": 9000000000000000.0,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q15667",
+         "text": "Mab",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15667",
+         "href": "https://www.wikidata.org/wiki/Q15667"
+        },
+        "amount_display": "9 × 10¹⁵"
+       },
+       {
+        "item": "Q16757",
+        "amount": 7500000000000000.0,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q16757",
+         "text": "അഡ്രാസ്റ്റിയ",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q16757"
+        },
+        "amount_display": "7.5 × 10¹⁵"
+       },
+       {
+        "item": "Q17707",
+        "amount": 7000000000000000.0,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q17707",
+         "text": "Atlas",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17707",
+         "href": "https://www.wikidata.org/wiki/Q17707"
+        },
+        "amount_display": "7 × 10¹⁵"
+       },
+       {
+        "item": "Q17705",
+        "amount": 5000000000000000.0,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q17705",
+         "text": "Pan",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17705",
+         "href": "https://www.wikidata.org/wiki/Q17705"
+        },
+        "amount_display": "5 × 10¹⁵"
+       },
+       {
+        "item": "Q17857",
+        "amount": 4000000000000000.0,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q17857",
+         "text": "Telesto",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17857",
+         "href": "https://www.wikidata.org/wiki/Q17857"
+        },
+        "amount_display": "4 × 10¹⁵"
+       },
+       {
+        "item": "Q15655",
+        "amount": 3000000000000000.0,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q15655",
+         "text": "Cupid",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15655",
+         "href": "https://www.wikidata.org/wiki/Q15655"
+        },
+        "amount_display": "3 × 10¹⁵"
+       },
+       {
+        "item": "Q17869",
+        "amount": 2500000000000000.0,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q17869",
+         "text": "Calypso",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17869",
+         "href": "https://www.wikidata.org/wiki/Q17869"
+        },
+        "amount_display": "2.5 × 10¹⁵"
+       },
+       {
+        "item": "Q17850",
+        "amount": 33000000000000.0,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q17850",
+         "text": "Pallene",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17850",
+         "href": "https://www.wikidata.org/wiki/Q17850"
+        },
+        "amount_display": "3.3 × 10¹³"
+       },
+       {
+        "item": "Q17782",
+        "amount": 9000000000000.0,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q17782",
+         "text": "Methone",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17782",
+         "href": "https://www.wikidata.org/wiki/Q17782"
+        },
+        "amount_display": "9 × 10¹²"
+       },
+       {
+        "item": "Q17882",
+        "amount": 4500000000000.0,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q17882",
+         "text": "Polydeuces",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17882",
+         "href": "https://www.wikidata.org/wiki/Q17882"
+        },
+        "amount_display": "4.5 × 10¹²"
+       },
+       {
+        "item": "Q17788",
+        "amount": 1500000000000.0,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q17788",
+         "text": "Anthe",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17788",
+         "href": "https://www.wikidata.org/wiki/Q17788"
+        },
+        "amount_display": "1.5 × 10¹²"
+       },
+       {
+        "item": "Q17762",
+        "amount": 60000000000.0,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q17762",
+         "text": "Aegaeon",
+         "lang": "mul",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q17762"
+        },
+        "amount_display": "6 × 10¹⁰"
        }
       ],
-      "priority": 0.735
+      "property": {
+       "id": "P2067",
+       "text": "ഭാരം/തൂക്കം",
+       "lang": "ml",
+       "fallback": false
+      },
+      "class_label": {
+       "id": "Q1086783",
+       "text": "regular moon",
+       "lang": "en",
+       "fallback": true,
+       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1086783"
+      }
+     },
+     {
+      "primitive": "peers",
+      "pid": "P2120",
+      "class": "Q1086783",
+      "container": null,
+      "rank": 4,
+      "of": 33,
+      "members": [
+       {
+        "item": "Q3169",
+        "amount": 2631000.0,
+        "fraction": 1.0,
+        "self": false,
+        "shown": true,
+        "display": {
+         "id": "Q3169",
+         "text": "ഗാനിമേഡ്",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q3169"
+        },
+        "amount_display": "2,631,000"
+       },
+       {
+        "item": "Q3134",
+        "amount": 2410000.0,
+        "fraction": 0.916,
+        "self": false,
+        "shown": true,
+        "display": {
+         "id": "Q3134",
+         "text": "കാലിസ്റ്റോ",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q3134"
+        },
+        "amount_display": "2,410,000"
+       },
+       {
+        "item": "Q3123",
+        "amount": 1821600.0,
+        "fraction": 0.6924,
+        "self": false,
+        "shown": true,
+        "display": {
+         "id": "Q3123",
+         "text": "അയോ",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q3123"
+        },
+        "amount_display": "1,821,600"
+       },
+       {
+        "item": "Q405",
+        "amount": 1737100.0,
+        "fraction": 0.6602,
+        "self": true,
+        "shown": true,
+        "display": {
+         "id": "Q405",
+         "text": "ചന്ദ്രൻ",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q405"
+        },
+        "amount_display": "1,737,100"
+       },
+       {
+        "item": "Q3143",
+        "amount": 1560800.0,
+        "fraction": 0.5932,
+        "self": false,
+        "shown": true,
+        "display": {
+         "id": "Q3143",
+         "text": "യൂറോപ്പ",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q3143"
+        },
+        "amount_display": "1,560,800"
+       },
+       {
+        "item": "Q3322",
+        "amount": 788400.0,
+        "fraction": 0.2997,
+        "self": false,
+        "shown": true,
+        "display": {
+         "id": "Q3322",
+         "text": "ടൈറ്റാനിയ",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q3322"
+        },
+        "amount_display": "788,400"
+       },
+       {
+        "item": "Q15050",
+        "amount": 764000.0,
+        "fraction": 0.2904,
+        "self": false,
+        "shown": true,
+        "display": {
+         "id": "Q15050",
+         "text": "റിയ",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q15050"
+        },
+        "amount_display": "764,000"
+       },
+       {
+        "item": "Q3332",
+        "amount": 761400.0,
+        "fraction": 0.2894,
+        "self": false,
+        "shown": true,
+        "display": {
+         "id": "Q3332",
+         "text": "ഒബെറോൺ",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q3332"
+        },
+        "amount_display": "761,400"
+       },
+       {
+        "item": "Q17958",
+        "amount": 734500.0,
+        "fraction": 0.2792,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q17958",
+         "text": "Iapetus",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17958",
+         "href": "https://www.wikidata.org/wiki/Q17958"
+        },
+        "amount_display": "734,500"
+       },
+       {
+        "item": "Q3338",
+        "amount": 585000.0,
+        "fraction": 0.2223,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q3338",
+         "text": "Umbriel",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3338",
+         "href": "https://www.wikidata.org/wiki/Q3338"
+        },
+        "amount_display": "585,000"
+       },
+       {
+        "item": "Q3343",
+        "amount": 578900.0,
+        "fraction": 0.22,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q3343",
+         "text": "Ariel",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3343",
+         "href": "https://www.wikidata.org/wiki/Q3343"
+        },
+        "amount_display": "578,900"
+       },
+       {
+        "item": "Q15040",
+        "amount": 561700.0,
+        "fraction": 0.2135,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q15040",
+         "text": "Dione",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15040",
+         "href": "https://www.wikidata.org/wiki/Q15040"
+        },
+        "amount_display": "561,700"
+       },
+       {
+        "item": "Q15047",
+        "amount": 531100.0,
+        "fraction": 0.2019,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q15047",
+         "text": "Tethys",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15047",
+         "href": "https://www.wikidata.org/wiki/Q15047"
+        },
+        "amount_display": "531,100"
+       },
+       {
+        "item": "Q3303",
+        "amount": 252100.0,
+        "fraction": 0.0958,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q3303",
+         "text": "എൻസിലാഡസ്",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q3303"
+        },
+        "amount_display": "252,100"
+       },
+       {
+        "item": "Q16081",
+        "amount": 209000.0,
+        "fraction": 0.0794,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q16081",
+         "text": "പ്രോതിയസ്",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q16081"
+        },
+        "amount_display": "209,000"
+       },
+       {
+        "item": "Q15034",
+        "amount": 198200.0,
+        "fraction": 0.0753,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q15034",
+         "text": "മിമസ്",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q15034"
+        },
+        "amount_display": "198,200"
+       },
+       {
+        "item": "Q15037",
+        "amount": 135000.0,
+        "fraction": 0.0513,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q15037",
+         "text": "Hyperion",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15037",
+         "href": "https://www.wikidata.org/wiki/Q15037"
+        },
+        "amount_display": "135,000"
+       },
+       {
+        "item": "Q3257",
+        "amount": 83000.0,
+        "fraction": 0.0315,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q3257",
+         "text": "അമാൽത്തിയ",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q3257"
+        },
+        "amount_display": "83,000"
+       },
+       {
+        "item": "Q15662",
+        "amount": 81000.0,
+        "fraction": 0.0308,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q15662",
+         "text": "Puck",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15662",
+         "href": "https://www.wikidata.org/wiki/Q15662"
+        },
+        "amount_display": "81,000"
+       },
+       {
+        "item": "Q15644",
+        "amount": 70000.0,
+        "fraction": 0.0266,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q15644",
+         "text": "പോർഷ്യ",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q15644"
+        },
+        "amount_display": "70,000"
+       },
+       {
+        "item": "Q15643",
+        "amount": 53000.0,
+        "fraction": 0.0201,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q15643",
+         "text": "Juliet",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15643",
+         "href": "https://www.wikidata.org/wiki/Q15643"
+        },
+        "amount_display": "53,000"
+       },
+       {
+        "item": "Q16765",
+        "amount": 49000.0,
+        "fraction": 0.0186,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q16765",
+         "text": "തീബ്",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q16765"
+        },
+        "amount_display": "49,000"
+       },
+       {
+        "item": "Q15646",
+        "amount": 36000.0,
+        "fraction": 0.0137,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q15646",
+         "text": "Rosalind",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15646",
+         "href": "https://www.wikidata.org/wiki/Q15646"
+        },
+        "amount_display": "36,000"
+       },
+       {
+        "item": "Q15637",
+        "amount": 35000.0,
+        "fraction": 0.0133,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q15637",
+         "text": "ഡെസ്ഡിമോണ",
+         "lang": "ml",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q15637"
+        },
+        "amount_display": "35,000"
+       },
+       {
+        "item": "Q15655",
+        "amount": 18000.0,
+        "fraction": 0.0068,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q15655",
+         "text": "Cupid",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15655",
+         "href": "https://www.wikidata.org/wiki/Q15655"
+        },
+        "amount_display": "18,000"
+       },
+       {
+        "item": "Q15660",
+        "amount": 13000.0,
+        "fraction": 0.0049,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q15660",
+         "text": "Perdita",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15660",
+         "href": "https://www.wikidata.org/wiki/Q15660"
+        },
+        "amount_display": "13,000"
+       },
+       {
+        "item": "Q15667",
+        "amount": 12000.0,
+        "fraction": 0.0046,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q15667",
+         "text": "Mab",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15667",
+         "href": "https://www.wikidata.org/wiki/Q15667"
+        },
+        "amount_display": "12,000"
+       },
+       {
+        "item": "Q17706",
+        "amount": 3800.0,
+        "fraction": 0.0014,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q17706",
+         "text": "Daphnis",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17706",
+         "href": "https://www.wikidata.org/wiki/Q17706"
+        },
+        "amount_display": "3,800"
+       },
+       {
+        "item": "Q17850",
+        "amount": 2500.0,
+        "fraction": 0.001,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q17850",
+         "text": "Pallene",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17850",
+         "href": "https://www.wikidata.org/wiki/Q17850"
+        },
+        "amount_display": "2,500"
+       },
+       {
+        "item": "Q17782",
+        "amount": 1600.0,
+        "fraction": 0.0006,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q17782",
+         "text": "Methone",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17782",
+         "href": "https://www.wikidata.org/wiki/Q17782"
+        },
+        "amount_display": "1,600"
+       },
+       {
+        "item": "Q17882",
+        "amount": 1300.0,
+        "fraction": 0.0005,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q17882",
+         "text": "Polydeuces",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17882",
+         "href": "https://www.wikidata.org/wiki/Q17882"
+        },
+        "amount_display": "1,300"
+       },
+       {
+        "item": "Q17788",
+        "amount": 900.0,
+        "fraction": 0.0003,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q17788",
+         "text": "Anthe",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17788",
+         "href": "https://www.wikidata.org/wiki/Q17788"
+        },
+        "amount_display": "900"
+       },
+       {
+        "item": "Q15658",
+        "amount": 0.067,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false,
+        "display": {
+         "id": "Q15658",
+         "text": "Belinda",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15658",
+         "href": "https://www.wikidata.org/wiki/Q15658"
+        },
+        "amount_display": "0.067"
+       }
+      ],
+      "property": {
+       "id": "P2120",
+       "text": "radius",
+       "lang": "mul",
+       "fallback": false
+      },
+      "class_label": {
+       "id": "Q1086783",
+       "text": "regular moon",
+       "lang": "en",
+       "fallback": true,
+       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1086783"
+      }
      }
     ],
     "sheet": [
      {
       "primitive": "fact",
-      "pid": "P276",
+      "pid": "P2067",
       "form": "value",
       "statements": [
        {
-        "statement": "Q405-e88d8133-4e05-dde1-3c5f-d5da7365ed04",
-        "pid": "P276",
-        "item": "Q7879772",
+        "statement": "Q405-13a99111-4718-a11c-1644-a5e0bc11483b",
+        "pid": "P2067",
+        "amount": 73.4767,
+        "unit": "Q613726",
         "rank": "normal",
-        "provenance": "none",
-        "image": {
-         "file": "Solar System True Color EN.png",
-         "aspect": 1.7778,
-         "kind": "photo",
-         "credit": {
-          "artist": "Omarius257",
-          "license": "CC BY-SA 4.0"
-         },
-         "from": "en.wikipedia.org"
-        },
+        "provenance": "sourced",
         "shown": true,
         "property": {
-         "id": "P276",
-         "text": "സ്ഥാനം",
+         "id": "P2067",
+         "text": "ഭാരം/തൂക്കം",
          "lang": "ml",
          "fallback": false
         },
         "display": {
-         "id": "Q7879772",
-         "text": "inner Solar System",
+         "text": "73.4767",
+         "unit": {
+          "id": "Q613726",
+          "text": "yottagram",
+          "lang": "en",
+          "fallback": true,
+          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q613726"
+         }
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P2067",
+        "amount_display": "73.4767"
+       }
+      ],
+      "priority": 2.918,
+      "property": {
+       "id": "P2067",
+       "text": "ഭാരം/തൂക്കം",
+       "lang": "ml",
+       "fallback": false
+      }
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2120",
+      "form": "variants",
+      "statements": [
+       {
+        "statement": "Q405-b9e73f2a-4b12-e158-6a38-4a1e9ca452f7",
+        "pid": "P2120",
+        "amount": 1738.14,
+        "unit": "Q828224",
+        "rank": "normal",
+        "provenance": "imported",
+        "qualifiers": [
+         {
+          "pid": "P518",
+          "item": "Q23538",
+          "property": {
+           "id": "P518",
+           "text": "ബാധകമാകുന്ന ഭാഗം",
+           "lang": "ml",
+           "fallback": false
+          },
+          "display": {
+           "id": "Q23538",
+           "text": "ഭൂമദ്ധ്യരേഖ",
+           "lang": "ml",
+           "fallback": false,
+           "href": "https://www.wikidata.org/wiki/Q23538"
+          }
+         }
+        ],
+        "shown": true,
+        "property": {
+         "id": "P2120",
+         "text": "radius",
+         "lang": "mul",
+         "fallback": false
+        },
+        "display": {
+         "text": "1,738.14",
+         "unit": {
+          "id": "Q828224",
+          "text": "കിലോമീറ്റർ",
+          "lang": "ml",
+          "fallback": false
+         }
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P2120",
+        "amount_display": "1,738.14",
+        "note": [
+         {
+          "id": "Q23538",
+          "text": "ഭൂമദ്ധ്യരേഖ",
+          "lang": "ml",
+          "fallback": false,
+          "href": "https://www.wikidata.org/wiki/Q23538"
+         }
+        ]
+       },
+       {
+        "statement": "Q405-e97956a1-4f71-0951-f036-48f4db1c4022",
+        "pid": "P2120",
+        "amount": 1737.1,
+        "unit": "Q828224",
+        "rank": "normal",
+        "provenance": "imported",
+        "qualifiers": [
+         {
+          "pid": "P518",
+          "item": "Q2796622",
+          "property": {
+           "id": "P518",
+           "text": "ബാധകമാകുന്ന ഭാഗം",
+           "lang": "ml",
+           "fallback": false
+          },
+          "display": {
+           "id": "Q2796622",
+           "text": "mean",
+           "lang": "en",
+           "fallback": true,
+           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q2796622",
+           "href": "https://www.wikidata.org/wiki/Q2796622"
+          }
+         }
+        ],
+        "shown": true,
+        "property": {
+         "id": "P2120",
+         "text": "radius",
+         "lang": "mul",
+         "fallback": false
+        },
+        "display": {
+         "text": "1,737.1",
+         "unit": {
+          "id": "Q828224",
+          "text": "കിലോമീറ്റർ",
+          "lang": "ml",
+          "fallback": false
+         }
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P2120",
+        "amount_display": "1,737.1",
+        "note": [
+         {
+          "id": "Q2796622",
+          "text": "mean",
+          "lang": "en",
+          "fallback": true,
+          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q2796622",
+          "href": "https://www.wikidata.org/wiki/Q2796622"
+         }
+        ]
+       },
+       {
+        "statement": "Q405-80aad16d-4d7e-8ec1-b6bb-4d7354e00ea9",
+        "pid": "P2120",
+        "amount": 1735.97,
+        "unit": "Q828224",
+        "rank": "normal",
+        "provenance": "none",
+        "qualifiers": [
+         {
+          "pid": "P518",
+          "item": "Q183273",
+          "property": {
+           "id": "P518",
+           "text": "ബാധകമാകുന്ന ഭാഗം",
+           "lang": "ml",
+           "fallback": false
+          },
+          "display": {
+           "id": "Q183273",
+           "text": "geographical pole",
+           "lang": "en",
+           "fallback": true,
+           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q183273",
+           "href": "https://www.wikidata.org/wiki/Q183273"
+          }
+         }
+        ],
+        "shown": true,
+        "property": {
+         "id": "P2120",
+         "text": "radius",
+         "lang": "mul",
+         "fallback": false
+        },
+        "display": {
+         "text": "1,735.97",
+         "unit": {
+          "id": "Q828224",
+          "text": "കിലോമീറ്റർ",
+          "lang": "ml",
+          "fallback": false
+         }
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P2120",
+        "amount_display": "1,735.97",
+        "note": [
+         {
+          "id": "Q183273",
+          "text": "geographical pole",
+          "lang": "en",
+          "fallback": true,
+          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q183273",
+          "href": "https://www.wikidata.org/wiki/Q183273"
+         }
+        ]
+       }
+      ],
+      "priority": 1.347,
+      "property": {
+       "id": "P2120",
+       "text": "radius",
+       "lang": "mul",
+       "fallback": false
+      }
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2386",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-46525552-4598-5333-1cd4-496dddaa0fc2",
+        "pid": "P2386",
+        "amount": 3476.2,
+        "unit": "Q828224",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P518",
+          "item": "Q23538",
+          "property": {
+           "id": "P518",
+           "text": "ബാധകമാകുന്ന ഭാഗം",
+           "lang": "ml",
+           "fallback": false
+          },
+          "display": {
+           "id": "Q23538",
+           "text": "ഭൂമദ്ധ്യരേഖ",
+           "lang": "ml",
+           "fallback": false,
+           "href": "https://www.wikidata.org/wiki/Q23538"
+          }
+         }
+        ],
+        "shown": true,
+        "property": {
+         "id": "P2386",
+         "text": "diameter",
          "lang": "en",
          "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q7879772",
-         "href": "https://www.wikidata.org/wiki/Q7879772"
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2386"
         },
-        "edit": "https://www.wikidata.org/wiki/Q405#P276"
+        "display": {
+         "text": "3,476.2",
+         "unit": {
+          "id": "Q828224",
+          "text": "കിലോമീറ്റർ",
+          "lang": "ml",
+          "fallback": false
+         }
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P2386",
+        "amount_display": "3,476.2",
+        "note": [
+         {
+          "id": "Q23538",
+          "text": "ഭൂമദ്ധ്യരേഖ",
+          "lang": "ml",
+          "fallback": false,
+          "href": "https://www.wikidata.org/wiki/Q23538"
+         }
+        ]
+       }
+      ],
+      "priority": 1.735,
+      "property": {
+       "id": "P2386",
+       "text": "diameter",
+       "lang": "en",
+       "fallback": true,
+       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2386"
+      }
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2046",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-6095b598-4782-eddc-d2aa-f5d86f5de81e",
+        "pid": "P2046",
+        "amount": 37930000.0,
+        "unit": "Q712226",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P459",
+          "item": "Q1379273",
+          "property": {
+           "id": "P459",
+           "text": "നിർണ്ണയ രീതി",
+           "lang": "ml",
+           "fallback": false
+          },
+          "display": {
+           "id": "Q1379273",
+           "text": "surface area",
+           "lang": "en",
+           "fallback": true,
+           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1379273",
+           "href": "https://www.wikidata.org/wiki/Q1379273"
+          }
+         }
+        ],
+        "shown": true,
+        "property": {
+         "id": "P2046",
+         "text": "വിസ്തീർണ്ണം",
+         "lang": "ml",
+         "fallback": false
+        },
+        "display": {
+         "text": "37,930,000",
+         "unit": {
+          "id": "Q712226",
+          "text": "ചതുരശ്ര കിലോമീറ്റർ",
+          "lang": "ml",
+          "fallback": false
+         }
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P2046",
+        "amount_display": "37,930,000",
+        "note": [
+         {
+          "id": "Q1379273",
+          "text": "surface area",
+          "lang": "en",
+          "fallback": true,
+          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1379273",
+          "href": "https://www.wikidata.org/wiki/Q1379273"
+         }
+        ]
+       }
+      ],
+      "priority": 1.367,
+      "property": {
+       "id": "P2046",
+       "text": "വിസ്തീർണ്ണം",
+       "lang": "ml",
+       "fallback": false
+      }
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2234",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-58c07c5d-4583-c848-6997-a81ca3f72dfd",
+        "pid": "P2234",
+        "amount": 21968000000.0,
+        "unit": "Q25517",
+        "rank": "normal",
+        "provenance": "none",
+        "shown": true,
+        "property": {
+         "id": "P2234",
+         "text": "volume as quantity",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2234"
+        },
+        "display": {
+         "text": "2.2 × 10¹⁰",
+         "unit": {
+          "id": "Q25517",
+          "text": "cubic metre",
+          "lang": "en",
+          "fallback": true,
+          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q25517"
+         }
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P2234",
+        "amount_display": "2.2 × 10¹⁰"
+       }
+      ],
+      "priority": 0.816,
+      "property": {
+       "id": "P2234",
+       "text": "volume as quantity",
+       "lang": "en",
+       "fallback": true,
+       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2234"
+      }
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2054",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-e24b8852-416d-b3be-2617-dc0e84952a7b",
+        "pid": "P2054",
+        "amount": 3.344,
+        "unit": "Q13147228",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P515",
+          "item": "Q11438",
+          "property": {
+           "id": "P515",
+           "text": "state of matter",
+           "lang": "en",
+           "fallback": true,
+           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P515"
+          },
+          "display": {
+           "id": "Q11438",
+           "text": "ഖരം",
+           "lang": "ml",
+           "fallback": false,
+           "href": "https://www.wikidata.org/wiki/Q11438"
+          }
+         }
+        ],
+        "shown": true,
+        "property": {
+         "id": "P2054",
+         "text": "density",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2054"
+        },
+        "display": {
+         "text": "3.344",
+         "unit": {
+          "id": "Q13147228",
+          "text": "gram per cubic centimetre",
+          "lang": "en",
+          "fallback": true,
+          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q13147228"
+         }
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P2054",
+        "amount_display": "3.344",
+        "note": [
+         {
+          "id": "Q11438",
+          "text": "ഖരം",
+          "lang": "ml",
+          "fallback": false,
+          "href": "https://www.wikidata.org/wiki/Q11438"
+         }
+        ]
+       }
+      ],
+      "priority": 2.061,
+      "property": {
+       "id": "P2054",
+       "text": "density",
+       "lang": "en",
+       "fallback": true,
+       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2054"
+      }
+     },
+     {
+      "primitive": "fact",
+      "pid": "P7015",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-1169a613-4b5c-0dac-be5a-169eacf38ec1",
+        "pid": "P7015",
+        "amount": 1.62,
+        "unit": "Q1051665",
+        "rank": "normal",
+        "provenance": "sourced",
+        "shown": true,
+        "property": {
+         "id": "P7015",
+         "text": "surface gravity",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P7015"
+        },
+        "display": {
+         "text": "1.62",
+         "unit": {
+          "id": "Q1051665",
+          "text": "metre per square second",
+          "lang": "en",
+          "fallback": true,
+          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1051665"
+         }
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P7015",
+        "amount_display": "1.62"
+       }
+      ],
+      "priority": 1.653,
+      "property": {
+       "id": "P7015",
+       "text": "surface gravity",
+       "lang": "en",
+       "fallback": true,
+       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P7015"
+      }
+     },
+     {
+      "primitive": "fact",
+      "pid": "P1102",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-2c4655c1-4117-45c2-4161-c03451ee42c5",
+        "pid": "P1102",
+        "amount": 0.00125,
+        "unit": null,
+        "rank": "normal",
+        "provenance": "none",
+        "shown": true,
+        "property": {
+         "id": "P1102",
+         "text": "flattening",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1102"
+        },
+        "display": {
+         "text": "0.00125"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P1102",
+        "amount_display": "0.00125"
        }
       ],
       "priority": 0.041,
       "property": {
-       "id": "P276",
-       "text": "സ്ഥാനം",
-       "lang": "ml",
+       "id": "P1102",
+       "text": "flattening",
+       "lang": "en",
+       "fallback": true,
+       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1102"
+      }
+     },
+     {
+      "primitive": "fact",
+      "pid": "P4501",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-8426DDCA-8940-4C49-B4F6-D6DE3983DDFB",
+        "pid": "P4501",
+        "amount": 0.136,
+        "unit": null,
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P1013",
+          "item": "Q1411145",
+          "property": {
+           "id": "P1013",
+           "text": "ഉപയോഗിച്ച മാനദണ്ഡം",
+           "lang": "ml",
+           "fallback": false
+          },
+          "display": {
+           "id": "Q1411145",
+           "text": "radiance",
+           "lang": "en",
+           "fallback": true,
+           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1411145",
+           "href": "https://www.wikidata.org/wiki/Q1411145"
+          }
+         }
+        ],
+        "shown": true,
+        "property": {
+         "id": "P4501",
+         "text": "albedo",
+         "lang": "mul",
+         "fallback": false
+        },
+        "display": {
+         "text": "0.136"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P4501",
+        "amount_display": "0.136",
+        "note": [
+         {
+          "id": "Q1411145",
+          "text": "radiance",
+          "lang": "en",
+          "fallback": true,
+          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1411145",
+          "href": "https://www.wikidata.org/wiki/Q1411145"
+         }
+        ]
+       }
+      ],
+      "priority": 2.714,
+      "property": {
+       "id": "P4501",
+       "text": "albedo",
+       "lang": "mul",
        "fallback": false
+      }
+     },
+     {
+      "primitive": "fact",
+      "pid": "P1215",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-202d7046-4064-7f9f-6f5e-37807895aa74",
+        "pid": "P1215",
+        "amount": -12.74,
+        "unit": null,
+        "rank": "normal",
+        "provenance": "sourced",
+        "shown": true,
+        "property": {
+         "id": "P1215",
+         "text": "apparent magnitude",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1215"
+        },
+        "display": {
+         "text": "-12.74"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P1215",
+        "amount_display": "-12.74"
+       }
+      ],
+      "priority": 2.02,
+      "property": {
+       "id": "P1215",
+       "text": "apparent magnitude",
+       "lang": "en",
+       "fallback": true,
+       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1215"
+      }
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2076",
+      "form": "range",
+      "statements": [
+       {
+        "statement": "Q405-e0b1953e-46a7-cbf5-1d2e-2986ddc1eea8",
+        "pid": "P2076",
+        "amount": 390.0,
+        "unit": "Q11579",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P1480",
+          "item": "Q10578722",
+          "property": {
+           "id": "P1480",
+           "text": "sourcing circumstances",
+           "lang": "en",
+           "fallback": true,
+           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1480"
+          },
+          "display": {
+           "id": "Q10578722",
+           "text": "maximum",
+           "lang": "en",
+           "fallback": true,
+           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q10578722",
+           "href": "https://www.wikidata.org/wiki/Q10578722"
+          }
+         }
+        ],
+        "shown": true,
+        "property": {
+         "id": "P2076",
+         "text": "temperature",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2076"
+        },
+        "display": {
+         "text": "390",
+         "unit": {
+          "id": "Q11579",
+          "text": "കെൽവിൻ",
+          "lang": "ml",
+          "fallback": false
+         }
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P2076",
+        "amount_display": "390",
+        "note": [
+         {
+          "id": "Q10578722",
+          "text": "maximum",
+          "lang": "en",
+          "fallback": true,
+          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q10578722",
+          "href": "https://www.wikidata.org/wiki/Q10578722"
+         }
+        ]
+       },
+       {
+        "statement": "Q405-ec9fb884-4c0f-53d7-2326-505d9f1016b2",
+        "pid": "P2076",
+        "amount": 95.0,
+        "unit": "Q11579",
+        "rank": "normal",
+        "provenance": "none",
+        "qualifiers": [
+         {
+          "pid": "P1480",
+          "item": "Q10585806",
+          "property": {
+           "id": "P1480",
+           "text": "sourcing circumstances",
+           "lang": "en",
+           "fallback": true,
+           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1480"
+          },
+          "display": {
+           "id": "Q10585806",
+           "text": "minimum",
+           "lang": "en",
+           "fallback": true,
+           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q10585806",
+           "href": "https://www.wikidata.org/wiki/Q10585806"
+          }
+         }
+        ],
+        "shown": true,
+        "property": {
+         "id": "P2076",
+         "text": "temperature",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2076"
+        },
+        "display": {
+         "text": "95",
+         "unit": {
+          "id": "Q11579",
+          "text": "കെൽവിൻ",
+          "lang": "ml",
+          "fallback": false
+         }
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P2076",
+        "amount_display": "95",
+        "note": [
+         {
+          "id": "Q10585806",
+          "text": "minimum",
+          "lang": "en",
+          "fallback": true,
+          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q10585806",
+          "href": "https://www.wikidata.org/wiki/Q10585806"
+         }
+        ]
+       }
+      ],
+      "priority": 1.939,
+      "property": {
+       "id": "P2076",
+       "text": "temperature",
+       "lang": "en",
+       "fallback": true,
+       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2076"
+      }
+     },
+     {
+      "primitive": "fact",
+      "pid": "P5348",
+      "form": "range",
+      "statements": [
+       {
+        "statement": "Q405-3e47a8a5-4609-f89b-c84d-0604b63f2a60",
+        "pid": "P5348",
+        "amount": 29.3,
+        "unit": "Q209426",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P1480",
+          "item": "Q10585806",
+          "property": {
+           "id": "P1480",
+           "text": "sourcing circumstances",
+           "lang": "en",
+           "fallback": true,
+           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1480"
+          },
+          "display": {
+           "id": "Q10585806",
+           "text": "minimum",
+           "lang": "en",
+           "fallback": true,
+           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q10585806",
+           "href": "https://www.wikidata.org/wiki/Q10585806"
+          }
+         }
+        ],
+        "shown": true,
+        "property": {
+         "id": "P5348",
+         "text": "angular diameter",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5348"
+        },
+        "display": {
+         "text": "29.3",
+         "unit": {
+          "id": "Q209426",
+          "text": "arcminute",
+          "lang": "en",
+          "fallback": true,
+          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q209426"
+         }
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P5348",
+        "amount_display": "29.3",
+        "note": [
+         {
+          "id": "Q10585806",
+          "text": "minimum",
+          "lang": "en",
+          "fallback": true,
+          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q10585806",
+          "href": "https://www.wikidata.org/wiki/Q10585806"
+         }
+        ]
+       },
+       {
+        "statement": "Q405-d672cb78-407c-89de-d240-b74277692a60",
+        "pid": "P5348",
+        "amount": 34.1,
+        "unit": "Q209426",
+        "rank": "preferred",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P1480",
+          "item": "Q10578722",
+          "property": {
+           "id": "P1480",
+           "text": "sourcing circumstances",
+           "lang": "en",
+           "fallback": true,
+           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1480"
+          },
+          "display": {
+           "id": "Q10578722",
+           "text": "maximum",
+           "lang": "en",
+           "fallback": true,
+           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q10578722",
+           "href": "https://www.wikidata.org/wiki/Q10578722"
+          }
+         }
+        ],
+        "shown": true,
+        "property": {
+         "id": "P5348",
+         "text": "angular diameter",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5348"
+        },
+        "display": {
+         "text": "34.1",
+         "unit": {
+          "id": "Q209426",
+          "text": "arcminute",
+          "lang": "en",
+          "fallback": true,
+          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q209426"
+         }
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P5348",
+        "amount_display": "34.1",
+        "note": [
+         {
+          "id": "Q10578722",
+          "text": "maximum",
+          "lang": "en",
+          "fallback": true,
+          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q10578722",
+          "href": "https://www.wikidata.org/wiki/Q10578722"
+         }
+        ]
+       }
+      ],
+      "priority": 1.626,
+      "property": {
+       "id": "P5348",
+       "text": "angular diameter",
+       "lang": "en",
+       "fallback": true,
+       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5348"
       }
      }
     ]
    },
+   "prose": {
+    "concepts": [
+     "Q4373292"
+    ]
+   },
    "title": {
-    "text": "ഭൂസ്ഥാനം",
+    "text": "ഭൗതികഗുണങ്ങൾ",
+    "lang": "ml",
+    "fallback": false
+   },
+   "prose_text": null,
+   "prose_links": []
+  },
+  {
+   "id": "orbit",
+   "kind": "facts",
+   "concept": "Q4130",
+   "template": "columns",
+   "slots": {
+    "sheet": [
+     {
+      "primitive": "fact",
+      "pid": "P522",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-9ca436b0-4f53-4ea8-3cce-235b6b33fa3f",
+        "pid": "P522",
+        "item": "Q218056",
+        "rank": "normal",
+        "provenance": "none",
+        "qualifiers": [
+         {
+          "pid": "P805",
+          "item": "Q210539",
+          "property": {
+           "id": "P805",
+           "text": "statement is subject of",
+           "lang": "en",
+           "fallback": true,
+           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P805"
+          },
+          "display": {
+           "id": "Q210539",
+           "text": "orbit of the Moon",
+           "lang": "en",
+           "fallback": true,
+           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q210539",
+           "href": "https://www.wikidata.org/wiki/Q210539"
+          }
+         }
+        ],
+        "image": null,
+        "class": true,
+        "shown": true,
+        "property": {
+         "id": "P522",
+         "text": "type of orbit",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P522"
+        },
+        "display": {
+         "id": "Q218056",
+         "text": "high Earth orbit",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q218056",
+         "href": "https://www.wikidata.org/wiki/Q218056"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P522",
+        "note": [
+         {
+          "id": "Q210539",
+          "text": "orbit of the Moon",
+          "lang": "en",
+          "fallback": true,
+          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q210539",
+          "href": "https://www.wikidata.org/wiki/Q210539"
+         }
+        ]
+       }
+      ],
+      "priority": 0.041,
+      "property": {
+       "id": "P522",
+       "text": "type of orbit",
+       "lang": "en",
+       "fallback": true,
+       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P522"
+      }
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2146",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-5bce72a1-48c7-83b1-2f6a-8b7cdfe9e271",
+        "pid": "P2146",
+        "amount": 27.321661,
+        "unit": "Q573",
+        "rank": "normal",
+        "provenance": "sourced",
+        "shown": true,
+        "property": {
+         "id": "P2146",
+         "text": "orbital period",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2146"
+        },
+        "display": {
+         "text": "27.3217",
+         "unit": {
+          "id": "Q573",
+          "text": "ദിവസം",
+          "lang": "ml",
+          "fallback": false
+         }
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P2146",
+        "amount_display": "27.3217"
+       }
+      ],
+      "priority": 2.714,
+      "property": {
+       "id": "P2146",
+       "text": "orbital period",
+       "lang": "en",
+       "fallback": true,
+       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2146"
+      }
+     },
+     {
+      "primitive": "fact",
+      "pid": "P4341",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-8af852c5-4056-63bf-70da-7171204d92a3",
+        "pid": "P4341",
+        "amount": 29.530589,
+        "unit": "Q573",
+        "rank": "normal",
+        "provenance": "none",
+        "shown": true,
+        "property": {
+         "id": "P4341",
+         "text": "synodic period",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4341"
+        },
+        "display": {
+         "text": "29.5306",
+         "unit": {
+          "id": "Q573",
+          "text": "ദിവസം",
+          "lang": "ml",
+          "fallback": false
+         }
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P4341",
+        "amount_display": "29.5306"
+       }
+      ],
+      "priority": 0.041,
+      "property": {
+       "id": "P4341",
+       "text": "synodic period",
+       "lang": "en",
+       "fallback": true,
+       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4341"
+      }
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2233",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-d17fe47a-465b-b99c-d4bb-30ac8de0dd3a",
+        "pid": "P2233",
+        "amount": 384400.0,
+        "unit": "Q828224",
+        "rank": "normal",
+        "provenance": "none",
+        "shown": true,
+        "property": {
+         "id": "P2233",
+         "text": "semi-major axis of an orbit",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2233"
+        },
+        "display": {
+         "text": "384,400",
+         "unit": {
+          "id": "Q828224",
+          "text": "കിലോമീറ്റർ",
+          "lang": "ml",
+          "fallback": false
+         }
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P2233",
+        "amount_display": "384,400"
+       }
+      ],
+      "priority": 1.959,
+      "property": {
+       "id": "P2233",
+       "text": "semi-major axis of an orbit",
+       "lang": "en",
+       "fallback": true,
+       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2233"
+      }
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2243",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-010e561f-4a80-182f-d181-0748f6553851",
+        "pid": "P2243",
+        "amount": 405500.0,
+        "unit": "Q828224",
+        "rank": "normal",
+        "provenance": "none",
+        "shown": true,
+        "property": {
+         "id": "P2243",
+         "text": "apoapsis",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2243"
+        },
+        "display": {
+         "text": "405,500",
+         "unit": {
+          "id": "Q828224",
+          "text": "കിലോമീറ്റർ",
+          "lang": "ml",
+          "fallback": false
+         }
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P2243",
+        "amount_display": "405,500"
+       }
+      ],
+      "priority": 0.571,
+      "property": {
+       "id": "P2243",
+       "text": "apoapsis",
+       "lang": "en",
+       "fallback": true,
+       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2243"
+      }
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2244",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-b7211dc6-4322-fa31-dc0e-d97b1d419f34",
+        "pid": "P2244",
+        "amount": 363300.0,
+        "unit": "Q828224",
+        "rank": "normal",
+        "provenance": "none",
+        "shown": true,
+        "property": {
+         "id": "P2244",
+         "text": "periapsis",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2244"
+        },
+        "display": {
+         "text": "363,300",
+         "unit": {
+          "id": "Q828224",
+          "text": "കിലോമീറ്റർ",
+          "lang": "ml",
+          "fallback": false
+         }
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P2244",
+        "amount_display": "363,300"
+       }
+      ],
+      "priority": 0.571,
+      "property": {
+       "id": "P2244",
+       "text": "periapsis",
+       "lang": "en",
+       "fallback": true,
+       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2244"
+      }
+     },
+     {
+      "primitive": "fact",
+      "pid": "P1096",
+      "form": "variants",
+      "statements": [
+       {
+        "statement": "Q405-4417bc00-4dab-5212-6be9-2ab2222cc2a7",
+        "pid": "P1096",
+        "amount": 0.054908,
+        "unit": null,
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P585",
+          "year": 1850,
+          "property": {
+           "id": "P585",
+           "text": "പ്രാബല്യത്തീയതി",
+           "lang": "ml",
+           "fallback": false
+          }
+         }
+        ],
+        "shown": true,
+        "property": {
+         "id": "P1096",
+         "text": "orbital eccentricity",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1096"
+        },
+        "display": {
+         "text": "0.054908"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P1096",
+        "amount_display": "0.054908",
+        "note": [
+         {
+          "text": "1850"
+         }
+        ]
+       },
+       {
+        "statement": "Q405-5d0f9ed3-4cce-520d-eb0e-092e7df88587",
+        "pid": "P1096",
+        "amount": 0.0567,
+        "unit": null,
+        "rank": "preferred",
+        "provenance": "imported",
+        "shown": true,
+        "property": {
+         "id": "P1096",
+         "text": "orbital eccentricity",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1096"
+        },
+        "display": {
+         "text": "0.0567"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P1096",
+        "amount_display": "0.0567"
+       }
+      ],
+      "priority": 2.918,
+      "property": {
+       "id": "P1096",
+       "text": "orbital eccentricity",
+       "lang": "en",
+       "fallback": true,
+       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1096"
+      }
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2045",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-38ac2119-4b99-fd90-e87e-b41a8e30ffa2",
+        "pid": "P2045",
+        "amount": 5.145,
+        "unit": "Q28390",
+        "rank": "normal",
+        "provenance": "imported",
+        "qualifiers": [
+         {
+          "pid": "P2210",
+          "item": "Q79852",
+          "property": {
+           "id": "P2210",
+           "text": "relative to",
+           "lang": "en",
+           "fallback": true,
+           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2210"
+          },
+          "display": {
+           "id": "Q79852",
+           "text": "ക്രാന്തിവൃത്തം",
+           "lang": "ml",
+           "fallback": false,
+           "href": "https://www.wikidata.org/wiki/Q79852"
+          }
+         }
+        ],
+        "shown": true,
+        "property": {
+         "id": "P2045",
+         "text": "orbital inclination",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2045"
+        },
+        "display": {
+         "text": "5.145",
+         "unit": {
+          "id": "Q28390",
+          "text": "ഡിഗ്രി",
+          "lang": "ml",
+          "fallback": false
+         }
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P2045",
+        "amount_display": "5.145",
+        "note": [
+         {
+          "id": "Q79852",
+          "text": "ക്രാന്തിവൃത്തം",
+          "lang": "ml",
+          "fallback": false,
+          "href": "https://www.wikidata.org/wiki/Q79852"
+         }
+        ]
+       }
+      ],
+      "priority": 1.755,
+      "property": {
+       "id": "P2045",
+       "text": "orbital inclination",
+       "lang": "en",
+       "fallback": true,
+       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2045"
+      }
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2583",
+      "form": "variants",
+      "statements": [
+       {
+        "statement": "Q405-e5f38993-42d8-a410-f26b-36518c8fe3f7",
+        "pid": "P2583",
+        "amount": 385000.5,
+        "unit": "Q828224",
+        "rank": "preferred",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P4934",
+          "item": "Q4130",
+          "property": {
+           "id": "P4934",
+           "text": "calculated from",
+           "lang": "en",
+           "fallback": true,
+           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4934"
+          },
+          "display": {
+           "id": "Q4130",
+           "text": "ഭ്രമണപഥം",
+           "lang": "ml",
+           "fallback": false,
+           "href": "https://www.wikidata.org/wiki/Q4130"
+          }
+         }
+        ],
+        "shown": true,
+        "property": {
+         "id": "P2583",
+         "text": "distance from Earth",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2583"
+        },
+        "display": {
+         "text": "385,000",
+         "unit": {
+          "id": "Q828224",
+          "text": "കിലോമീറ്റർ",
+          "lang": "ml",
+          "fallback": false
+         }
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P2583",
+        "amount_display": "385,000",
+        "note": [
+         {
+          "id": "Q4130",
+          "text": "ഭ്രമണപഥം",
+          "lang": "ml",
+          "fallback": false,
+          "href": "https://www.wikidata.org/wiki/Q4130"
+         }
+        ]
+       },
+       {
+        "statement": "Q405-715e12f3-42c8-93c2-4aa8-0a06cd36113d",
+        "pid": "P2583",
+        "amount": 356565.0,
+        "unit": "Q828224",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P585",
+          "year": 2018,
+          "property": {
+           "id": "P585",
+           "text": "പ്രാബല്യത്തീയതി",
+           "lang": "ml",
+           "fallback": false
+          }
+         },
+         {
+          "pid": "P1013",
+          "item": "Q1349468",
+          "property": {
+           "id": "P1013",
+           "text": "ഉപയോഗിച്ച മാനദണ്ഡം",
+           "lang": "ml",
+           "fallback": false
+          },
+          "display": {
+           "id": "Q1349468",
+           "text": "perigee",
+           "lang": "en",
+           "fallback": true,
+           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1349468",
+           "href": "https://www.wikidata.org/wiki/Q1349468"
+          }
+         }
+        ],
+        "shown": true,
+        "property": {
+         "id": "P2583",
+         "text": "distance from Earth",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2583"
+        },
+        "display": {
+         "text": "356,565",
+         "unit": {
+          "id": "Q828224",
+          "text": "കിലോമീറ്റർ",
+          "lang": "ml",
+          "fallback": false
+         }
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P2583",
+        "amount_display": "356,565",
+        "note": [
+         {
+          "text": "2018"
+         },
+         {
+          "id": "Q1349468",
+          "text": "perigee",
+          "lang": "en",
+          "fallback": true,
+          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1349468",
+          "href": "https://www.wikidata.org/wiki/Q1349468"
+         }
+        ]
+       },
+       {
+        "statement": "Q405-8a7a3fbc-4689-8509-6694-6e0425683a1a",
+        "pid": "P2583",
+        "amount": 406464.0,
+        "unit": "Q828224",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P585",
+          "year": 2018,
+          "property": {
+           "id": "P585",
+           "text": "പ്രാബല്യത്തീയതി",
+           "lang": "ml",
+           "fallback": false
+          }
+         },
+         {
+          "pid": "P1013",
+          "item": "Q1179441",
+          "property": {
+           "id": "P1013",
+           "text": "ഉപയോഗിച്ച മാനദണ്ഡം",
+           "lang": "ml",
+           "fallback": false
+          },
+          "display": {
+           "id": "Q1179441",
+           "text": "അപഭൂ",
+           "lang": "ml",
+           "fallback": false,
+           "href": "https://www.wikidata.org/wiki/Q1179441"
+          }
+         }
+        ],
+        "shown": true,
+        "property": {
+         "id": "P2583",
+         "text": "distance from Earth",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2583"
+        },
+        "display": {
+         "text": "406,464",
+         "unit": {
+          "id": "Q828224",
+          "text": "കിലോമീറ്റർ",
+          "lang": "ml",
+          "fallback": false
+         }
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P2583",
+        "amount_display": "406,464",
+        "note": [
+         {
+          "text": "2018"
+         },
+         {
+          "id": "Q1179441",
+          "text": "അപഭൂ",
+          "lang": "ml",
+          "fallback": false,
+          "href": "https://www.wikidata.org/wiki/Q1179441"
+         }
+        ]
+       }
+      ],
+      "priority": 2.041,
+      "property": {
+       "id": "P2583",
+       "text": "distance from Earth",
+       "lang": "en",
+       "fallback": true,
+       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2583"
+      }
+     }
+    ]
+   },
+   "prose": {
+    "concepts": [
+     "Q4130"
+    ]
+   },
+   "title": {
+    "text": "ഭ്രമണപഥം",
     "lang": "ml",
     "fallback": false
    },
@@ -799,6 +3701,39 @@
          "href": "https://www.wikidata.org/wiki/Q426778"
         },
         "edit": "https://www.wikidata.org/wiki/Q405#P708"
+       },
+       {
+        "statement": "Q405-8c4d68c1-43ab-7947-1900-3310e2f87cac",
+        "pid": "P361",
+        "item": "Q18589965",
+        "rank": "normal",
+        "provenance": "none",
+        "image": {
+         "file": "Lagrange points Earth vs Moon.jpg",
+         "kind": "photo",
+         "aspect": 1.1671,
+         "megapixels": 0.2,
+         "credit": {
+          "artist": "No machine-readable author provided. Vulpecula assumed (based on copyright claims).",
+          "license": "Public domain"
+         }
+        },
+        "priority": 0.735,
+        "property": {
+         "id": "P361",
+         "text": "ഇതിന്റെ ഭാഗം",
+         "lang": "ml",
+         "fallback": false
+        },
+        "display": {
+         "id": "Q18589965",
+         "text": "Earth–Moon system",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q18589965",
+         "href": "https://www.wikidata.org/wiki/Q18589965"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P361"
        },
        {
         "statement": "Q405-fc76e94c-4f8b-739c-85ef-9f84cb7d6440",
@@ -1382,586 +4317,6 @@
     "sheet": [
      {
       "primitive": "fact",
-      "pid": "P2067",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-13a99111-4718-a11c-1644-a5e0bc11483b",
-        "pid": "P2067",
-        "amount": 73.4767,
-        "unit": "Q613726",
-        "rank": "normal",
-        "provenance": "sourced",
-        "shown": true,
-        "property": {
-         "id": "P2067",
-         "text": "ഭാരം/തൂക്കം",
-         "lang": "ml",
-         "fallback": false
-        },
-        "display": {
-         "text": "73.4767",
-         "unit": {
-          "id": "Q613726",
-          "text": "yottagram",
-          "lang": "en",
-          "fallback": true,
-          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q613726"
-         }
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P2067",
-        "amount_display": "73.4767"
-       }
-      ],
-      "priority": 2.918,
-      "property": {
-       "id": "P2067",
-       "text": "ഭാരം/തൂക്കം",
-       "lang": "ml",
-       "fallback": false
-      }
-     },
-     {
-      "primitive": "fact",
-      "pid": "P1096",
-      "form": "variants",
-      "statements": [
-       {
-        "statement": "Q405-4417bc00-4dab-5212-6be9-2ab2222cc2a7",
-        "pid": "P1096",
-        "amount": 0.054908,
-        "unit": null,
-        "rank": "normal",
-        "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P585",
-          "year": 1850,
-          "property": {
-           "id": "P585",
-           "text": "പ്രാബല്യത്തീയതി",
-           "lang": "ml",
-           "fallback": false
-          }
-         }
-        ],
-        "shown": true,
-        "property": {
-         "id": "P1096",
-         "text": "orbital eccentricity",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1096"
-        },
-        "display": {
-         "text": "0.054908"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P1096",
-        "amount_display": "0.054908",
-        "note": [
-         {
-          "text": "1850"
-         }
-        ]
-       },
-       {
-        "statement": "Q405-5d0f9ed3-4cce-520d-eb0e-092e7df88587",
-        "pid": "P1096",
-        "amount": 0.0567,
-        "unit": null,
-        "rank": "preferred",
-        "provenance": "imported",
-        "shown": true,
-        "property": {
-         "id": "P1096",
-         "text": "orbital eccentricity",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1096"
-        },
-        "display": {
-         "text": "0.0567"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P1096",
-        "amount_display": "0.0567"
-       }
-      ],
-      "priority": 2.918,
-      "property": {
-       "id": "P1096",
-       "text": "orbital eccentricity",
-       "lang": "en",
-       "fallback": true,
-       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1096"
-      }
-     },
-     {
-      "primitive": "fact",
-      "pid": "P4501",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-8426DDCA-8940-4C49-B4F6-D6DE3983DDFB",
-        "pid": "P4501",
-        "amount": 0.136,
-        "unit": null,
-        "rank": "normal",
-        "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P1013",
-          "item": "Q1411145",
-          "property": {
-           "id": "P1013",
-           "text": "ഉപയോഗിച്ച മാനദണ്ഡം",
-           "lang": "ml",
-           "fallback": false
-          },
-          "display": {
-           "id": "Q1411145",
-           "text": "radiance",
-           "lang": "en",
-           "fallback": true,
-           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1411145",
-           "href": "https://www.wikidata.org/wiki/Q1411145"
-          }
-         }
-        ],
-        "shown": true,
-        "property": {
-         "id": "P4501",
-         "text": "albedo",
-         "lang": "mul",
-         "fallback": false
-        },
-        "display": {
-         "text": "0.136"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P4501",
-        "amount_display": "0.136",
-        "note": [
-         {
-          "id": "Q1411145",
-          "text": "radiance",
-          "lang": "en",
-          "fallback": true,
-          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1411145",
-          "href": "https://www.wikidata.org/wiki/Q1411145"
-         }
-        ]
-       }
-      ],
-      "priority": 2.714,
-      "property": {
-       "id": "P4501",
-       "text": "albedo",
-       "lang": "mul",
-       "fallback": false
-      }
-     },
-     {
-      "primitive": "fact",
-      "pid": "P2146",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-5bce72a1-48c7-83b1-2f6a-8b7cdfe9e271",
-        "pid": "P2146",
-        "amount": 27.321661,
-        "unit": "Q573",
-        "rank": "normal",
-        "provenance": "sourced",
-        "shown": true,
-        "property": {
-         "id": "P2146",
-         "text": "orbital period",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2146"
-        },
-        "display": {
-         "text": "27.3217",
-         "unit": {
-          "id": "Q573",
-          "text": "ദിവസം",
-          "lang": "ml",
-          "fallback": false
-         }
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P2146",
-        "amount_display": "27.3217"
-       }
-      ],
-      "priority": 2.714,
-      "property": {
-       "id": "P2146",
-       "text": "orbital period",
-       "lang": "en",
-       "fallback": true,
-       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2146"
-      }
-     },
-     {
-      "primitive": "fact",
-      "pid": "P2054",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-e24b8852-416d-b3be-2617-dc0e84952a7b",
-        "pid": "P2054",
-        "amount": 3.344,
-        "unit": "Q13147228",
-        "rank": "normal",
-        "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P515",
-          "item": "Q11438",
-          "property": {
-           "id": "P515",
-           "text": "state of matter",
-           "lang": "en",
-           "fallback": true,
-           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P515"
-          },
-          "display": {
-           "id": "Q11438",
-           "text": "ഖരം",
-           "lang": "ml",
-           "fallback": false,
-           "href": "https://www.wikidata.org/wiki/Q11438"
-          }
-         }
-        ],
-        "shown": true,
-        "property": {
-         "id": "P2054",
-         "text": "density",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2054"
-        },
-        "display": {
-         "text": "3.344",
-         "unit": {
-          "id": "Q13147228",
-          "text": "gram per cubic centimetre",
-          "lang": "en",
-          "fallback": true,
-          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q13147228"
-         }
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P2054",
-        "amount_display": "3.344",
-        "note": [
-         {
-          "id": "Q11438",
-          "text": "ഖരം",
-          "lang": "ml",
-          "fallback": false,
-          "href": "https://www.wikidata.org/wiki/Q11438"
-         }
-        ]
-       }
-      ],
-      "priority": 2.061,
-      "property": {
-       "id": "P2054",
-       "text": "density",
-       "lang": "en",
-       "fallback": true,
-       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2054"
-      }
-     },
-     {
-      "primitive": "fact",
-      "pid": "P2583",
-      "form": "variants",
-      "statements": [
-       {
-        "statement": "Q405-e5f38993-42d8-a410-f26b-36518c8fe3f7",
-        "pid": "P2583",
-        "amount": 385000.5,
-        "unit": "Q828224",
-        "rank": "preferred",
-        "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P4934",
-          "item": "Q4130",
-          "property": {
-           "id": "P4934",
-           "text": "calculated from",
-           "lang": "en",
-           "fallback": true,
-           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4934"
-          },
-          "display": {
-           "id": "Q4130",
-           "text": "ഭ്രമണപഥം",
-           "lang": "ml",
-           "fallback": false,
-           "href": "https://www.wikidata.org/wiki/Q4130"
-          }
-         }
-        ],
-        "shown": true,
-        "property": {
-         "id": "P2583",
-         "text": "distance from Earth",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2583"
-        },
-        "display": {
-         "text": "385,000",
-         "unit": {
-          "id": "Q828224",
-          "text": "കിലോമീറ്റർ",
-          "lang": "ml",
-          "fallback": false
-         }
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P2583",
-        "amount_display": "385,000",
-        "note": [
-         {
-          "id": "Q4130",
-          "text": "ഭ്രമണപഥം",
-          "lang": "ml",
-          "fallback": false,
-          "href": "https://www.wikidata.org/wiki/Q4130"
-         }
-        ]
-       },
-       {
-        "statement": "Q405-715e12f3-42c8-93c2-4aa8-0a06cd36113d",
-        "pid": "P2583",
-        "amount": 356565.0,
-        "unit": "Q828224",
-        "rank": "normal",
-        "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P585",
-          "year": 2018,
-          "property": {
-           "id": "P585",
-           "text": "പ്രാബല്യത്തീയതി",
-           "lang": "ml",
-           "fallback": false
-          }
-         },
-         {
-          "pid": "P1013",
-          "item": "Q1349468",
-          "property": {
-           "id": "P1013",
-           "text": "ഉപയോഗിച്ച മാനദണ്ഡം",
-           "lang": "ml",
-           "fallback": false
-          },
-          "display": {
-           "id": "Q1349468",
-           "text": "perigee",
-           "lang": "en",
-           "fallback": true,
-           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1349468",
-           "href": "https://www.wikidata.org/wiki/Q1349468"
-          }
-         }
-        ],
-        "shown": true,
-        "property": {
-         "id": "P2583",
-         "text": "distance from Earth",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2583"
-        },
-        "display": {
-         "text": "356,565",
-         "unit": {
-          "id": "Q828224",
-          "text": "കിലോമീറ്റർ",
-          "lang": "ml",
-          "fallback": false
-         }
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P2583",
-        "amount_display": "356,565",
-        "note": [
-         {
-          "text": "2018"
-         },
-         {
-          "id": "Q1349468",
-          "text": "perigee",
-          "lang": "en",
-          "fallback": true,
-          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1349468",
-          "href": "https://www.wikidata.org/wiki/Q1349468"
-         }
-        ]
-       },
-       {
-        "statement": "Q405-8a7a3fbc-4689-8509-6694-6e0425683a1a",
-        "pid": "P2583",
-        "amount": 406464.0,
-        "unit": "Q828224",
-        "rank": "normal",
-        "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P585",
-          "year": 2018,
-          "property": {
-           "id": "P585",
-           "text": "പ്രാബല്യത്തീയതി",
-           "lang": "ml",
-           "fallback": false
-          }
-         },
-         {
-          "pid": "P1013",
-          "item": "Q1179441",
-          "property": {
-           "id": "P1013",
-           "text": "ഉപയോഗിച്ച മാനദണ്ഡം",
-           "lang": "ml",
-           "fallback": false
-          },
-          "display": {
-           "id": "Q1179441",
-           "text": "അപഭൂ",
-           "lang": "ml",
-           "fallback": false,
-           "href": "https://www.wikidata.org/wiki/Q1179441"
-          }
-         }
-        ],
-        "shown": true,
-        "property": {
-         "id": "P2583",
-         "text": "distance from Earth",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2583"
-        },
-        "display": {
-         "text": "406,464",
-         "unit": {
-          "id": "Q828224",
-          "text": "കിലോമീറ്റർ",
-          "lang": "ml",
-          "fallback": false
-         }
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P2583",
-        "amount_display": "406,464",
-        "note": [
-         {
-          "text": "2018"
-         },
-         {
-          "id": "Q1179441",
-          "text": "അപഭൂ",
-          "lang": "ml",
-          "fallback": false,
-          "href": "https://www.wikidata.org/wiki/Q1179441"
-         }
-        ]
-       }
-      ],
-      "priority": 2.041,
-      "property": {
-       "id": "P2583",
-       "text": "distance from Earth",
-       "lang": "en",
-       "fallback": true,
-       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2583"
-      }
-     },
-     {
-      "primitive": "fact",
-      "pid": "P1215",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-202d7046-4064-7f9f-6f5e-37807895aa74",
-        "pid": "P1215",
-        "amount": -12.74,
-        "unit": null,
-        "rank": "normal",
-        "provenance": "sourced",
-        "shown": true,
-        "property": {
-         "id": "P1215",
-         "text": "apparent magnitude",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1215"
-        },
-        "display": {
-         "text": "-12.74"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P1215",
-        "amount_display": "-12.74"
-       }
-      ],
-      "priority": 2.02,
-      "property": {
-       "id": "P1215",
-       "text": "apparent magnitude",
-       "lang": "en",
-       "fallback": true,
-       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1215"
-      }
-     },
-     {
-      "primitive": "fact",
-      "pid": "P2233",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-d17fe47a-465b-b99c-d4bb-30ac8de0dd3a",
-        "pid": "P2233",
-        "amount": 384400.0,
-        "unit": "Q828224",
-        "rank": "normal",
-        "provenance": "none",
-        "shown": true,
-        "property": {
-         "id": "P2233",
-         "text": "semi-major axis of an orbit",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2233"
-        },
-        "display": {
-         "text": "384,400",
-         "unit": {
-          "id": "Q828224",
-          "text": "കിലോമീറ്റർ",
-          "lang": "ml",
-          "fallback": false
-         }
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P2233",
-        "amount_display": "384,400"
-       }
-      ],
-      "priority": 1.959,
-      "property": {
-       "id": "P2233",
-       "text": "semi-major axis of an orbit",
-       "lang": "en",
-       "fallback": true,
-       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2233"
-      }
-     },
-     {
-      "primitive": "fact",
       "pid": "P138",
       "form": "value",
       "statements": [
@@ -2027,831 +4382,6 @@
        "text": "പേര് വന്ന വഴി",
        "lang": "ml",
        "fallback": false
-      }
-     },
-     {
-      "primitive": "fact",
-      "pid": "P2076",
-      "form": "range",
-      "statements": [
-       {
-        "statement": "Q405-e0b1953e-46a7-cbf5-1d2e-2986ddc1eea8",
-        "pid": "P2076",
-        "amount": 390.0,
-        "unit": "Q11579",
-        "rank": "normal",
-        "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P1480",
-          "item": "Q10578722",
-          "property": {
-           "id": "P1480",
-           "text": "sourcing circumstances",
-           "lang": "en",
-           "fallback": true,
-           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1480"
-          },
-          "display": {
-           "id": "Q10578722",
-           "text": "maximum",
-           "lang": "en",
-           "fallback": true,
-           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q10578722",
-           "href": "https://www.wikidata.org/wiki/Q10578722"
-          }
-         }
-        ],
-        "shown": true,
-        "property": {
-         "id": "P2076",
-         "text": "temperature",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2076"
-        },
-        "display": {
-         "text": "390",
-         "unit": {
-          "id": "Q11579",
-          "text": "കെൽവിൻ",
-          "lang": "ml",
-          "fallback": false
-         }
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P2076",
-        "amount_display": "390",
-        "note": [
-         {
-          "id": "Q10578722",
-          "text": "maximum",
-          "lang": "en",
-          "fallback": true,
-          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q10578722",
-          "href": "https://www.wikidata.org/wiki/Q10578722"
-         }
-        ]
-       },
-       {
-        "statement": "Q405-ec9fb884-4c0f-53d7-2326-505d9f1016b2",
-        "pid": "P2076",
-        "amount": 95.0,
-        "unit": "Q11579",
-        "rank": "normal",
-        "provenance": "none",
-        "qualifiers": [
-         {
-          "pid": "P1480",
-          "item": "Q10585806",
-          "property": {
-           "id": "P1480",
-           "text": "sourcing circumstances",
-           "lang": "en",
-           "fallback": true,
-           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1480"
-          },
-          "display": {
-           "id": "Q10585806",
-           "text": "minimum",
-           "lang": "en",
-           "fallback": true,
-           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q10585806",
-           "href": "https://www.wikidata.org/wiki/Q10585806"
-          }
-         }
-        ],
-        "shown": true,
-        "property": {
-         "id": "P2076",
-         "text": "temperature",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2076"
-        },
-        "display": {
-         "text": "95",
-         "unit": {
-          "id": "Q11579",
-          "text": "കെൽവിൻ",
-          "lang": "ml",
-          "fallback": false
-         }
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P2076",
-        "amount_display": "95",
-        "note": [
-         {
-          "id": "Q10585806",
-          "text": "minimum",
-          "lang": "en",
-          "fallback": true,
-          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q10585806",
-          "href": "https://www.wikidata.org/wiki/Q10585806"
-         }
-        ]
-       }
-      ],
-      "priority": 1.939,
-      "property": {
-       "id": "P2076",
-       "text": "temperature",
-       "lang": "en",
-       "fallback": true,
-       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2076"
-      }
-     },
-     {
-      "primitive": "fact",
-      "pid": "P2045",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-38ac2119-4b99-fd90-e87e-b41a8e30ffa2",
-        "pid": "P2045",
-        "amount": 5.145,
-        "unit": "Q28390",
-        "rank": "normal",
-        "provenance": "imported",
-        "qualifiers": [
-         {
-          "pid": "P2210",
-          "item": "Q79852",
-          "property": {
-           "id": "P2210",
-           "text": "relative to",
-           "lang": "en",
-           "fallback": true,
-           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2210"
-          },
-          "display": {
-           "id": "Q79852",
-           "text": "ക്രാന്തിവൃത്തം",
-           "lang": "ml",
-           "fallback": false,
-           "href": "https://www.wikidata.org/wiki/Q79852"
-          }
-         }
-        ],
-        "shown": true,
-        "property": {
-         "id": "P2045",
-         "text": "orbital inclination",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2045"
-        },
-        "display": {
-         "text": "5.145",
-         "unit": {
-          "id": "Q28390",
-          "text": "ഡിഗ്രി",
-          "lang": "ml",
-          "fallback": false
-         }
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P2045",
-        "amount_display": "5.145",
-        "note": [
-         {
-          "id": "Q79852",
-          "text": "ക്രാന്തിവൃത്തം",
-          "lang": "ml",
-          "fallback": false,
-          "href": "https://www.wikidata.org/wiki/Q79852"
-         }
-        ]
-       }
-      ],
-      "priority": 1.755,
-      "property": {
-       "id": "P2045",
-       "text": "orbital inclination",
-       "lang": "en",
-       "fallback": true,
-       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2045"
-      }
-     },
-     {
-      "primitive": "fact",
-      "pid": "P2386",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-46525552-4598-5333-1cd4-496dddaa0fc2",
-        "pid": "P2386",
-        "amount": 3476.2,
-        "unit": "Q828224",
-        "rank": "normal",
-        "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P518",
-          "item": "Q23538",
-          "property": {
-           "id": "P518",
-           "text": "ബാധകമാകുന്ന ഭാഗം",
-           "lang": "ml",
-           "fallback": false
-          },
-          "display": {
-           "id": "Q23538",
-           "text": "ഭൂമദ്ധ്യരേഖ",
-           "lang": "ml",
-           "fallback": false,
-           "href": "https://www.wikidata.org/wiki/Q23538"
-          }
-         }
-        ],
-        "shown": true,
-        "property": {
-         "id": "P2386",
-         "text": "diameter",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2386"
-        },
-        "display": {
-         "text": "3,476.2",
-         "unit": {
-          "id": "Q828224",
-          "text": "കിലോമീറ്റർ",
-          "lang": "ml",
-          "fallback": false
-         }
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P2386",
-        "amount_display": "3,476.2",
-        "note": [
-         {
-          "id": "Q23538",
-          "text": "ഭൂമദ്ധ്യരേഖ",
-          "lang": "ml",
-          "fallback": false,
-          "href": "https://www.wikidata.org/wiki/Q23538"
-         }
-        ]
-       }
-      ],
-      "priority": 1.735,
-      "property": {
-       "id": "P2386",
-       "text": "diameter",
-       "lang": "en",
-       "fallback": true,
-       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2386"
-      }
-     },
-     {
-      "primitive": "fact",
-      "pid": "P7015",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-1169a613-4b5c-0dac-be5a-169eacf38ec1",
-        "pid": "P7015",
-        "amount": 1.62,
-        "unit": "Q1051665",
-        "rank": "normal",
-        "provenance": "sourced",
-        "shown": true,
-        "property": {
-         "id": "P7015",
-         "text": "surface gravity",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P7015"
-        },
-        "display": {
-         "text": "1.62",
-         "unit": {
-          "id": "Q1051665",
-          "text": "metre per square second",
-          "lang": "en",
-          "fallback": true,
-          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1051665"
-         }
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P7015",
-        "amount_display": "1.62"
-       }
-      ],
-      "priority": 1.653,
-      "property": {
-       "id": "P7015",
-       "text": "surface gravity",
-       "lang": "en",
-       "fallback": true,
-       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P7015"
-      }
-     },
-     {
-      "primitive": "fact",
-      "pid": "P5348",
-      "form": "range",
-      "statements": [
-       {
-        "statement": "Q405-3e47a8a5-4609-f89b-c84d-0604b63f2a60",
-        "pid": "P5348",
-        "amount": 29.3,
-        "unit": "Q209426",
-        "rank": "normal",
-        "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P1480",
-          "item": "Q10585806",
-          "property": {
-           "id": "P1480",
-           "text": "sourcing circumstances",
-           "lang": "en",
-           "fallback": true,
-           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1480"
-          },
-          "display": {
-           "id": "Q10585806",
-           "text": "minimum",
-           "lang": "en",
-           "fallback": true,
-           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q10585806",
-           "href": "https://www.wikidata.org/wiki/Q10585806"
-          }
-         }
-        ],
-        "shown": true,
-        "property": {
-         "id": "P5348",
-         "text": "angular diameter",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5348"
-        },
-        "display": {
-         "text": "29.3",
-         "unit": {
-          "id": "Q209426",
-          "text": "arcminute",
-          "lang": "en",
-          "fallback": true,
-          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q209426"
-         }
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P5348",
-        "amount_display": "29.3",
-        "note": [
-         {
-          "id": "Q10585806",
-          "text": "minimum",
-          "lang": "en",
-          "fallback": true,
-          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q10585806",
-          "href": "https://www.wikidata.org/wiki/Q10585806"
-         }
-        ]
-       },
-       {
-        "statement": "Q405-d672cb78-407c-89de-d240-b74277692a60",
-        "pid": "P5348",
-        "amount": 34.1,
-        "unit": "Q209426",
-        "rank": "preferred",
-        "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P1480",
-          "item": "Q10578722",
-          "property": {
-           "id": "P1480",
-           "text": "sourcing circumstances",
-           "lang": "en",
-           "fallback": true,
-           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1480"
-          },
-          "display": {
-           "id": "Q10578722",
-           "text": "maximum",
-           "lang": "en",
-           "fallback": true,
-           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q10578722",
-           "href": "https://www.wikidata.org/wiki/Q10578722"
-          }
-         }
-        ],
-        "shown": true,
-        "property": {
-         "id": "P5348",
-         "text": "angular diameter",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5348"
-        },
-        "display": {
-         "text": "34.1",
-         "unit": {
-          "id": "Q209426",
-          "text": "arcminute",
-          "lang": "en",
-          "fallback": true,
-          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q209426"
-         }
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P5348",
-        "amount_display": "34.1",
-        "note": [
-         {
-          "id": "Q10578722",
-          "text": "maximum",
-          "lang": "en",
-          "fallback": true,
-          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q10578722",
-          "href": "https://www.wikidata.org/wiki/Q10578722"
-         }
-        ]
-       }
-      ],
-      "priority": 1.626,
-      "property": {
-       "id": "P5348",
-       "text": "angular diameter",
-       "lang": "en",
-       "fallback": true,
-       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5348"
-      }
-     },
-     {
-      "primitive": "fact",
-      "pid": "P2046",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-6095b598-4782-eddc-d2aa-f5d86f5de81e",
-        "pid": "P2046",
-        "amount": 37930000.0,
-        "unit": "Q712226",
-        "rank": "normal",
-        "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P459",
-          "item": "Q1379273",
-          "property": {
-           "id": "P459",
-           "text": "നിർണ്ണയ രീതി",
-           "lang": "ml",
-           "fallback": false
-          },
-          "display": {
-           "id": "Q1379273",
-           "text": "surface area",
-           "lang": "en",
-           "fallback": true,
-           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1379273",
-           "href": "https://www.wikidata.org/wiki/Q1379273"
-          }
-         }
-        ],
-        "shown": true,
-        "property": {
-         "id": "P2046",
-         "text": "വിസ്തീർണ്ണം",
-         "lang": "ml",
-         "fallback": false
-        },
-        "display": {
-         "text": "37,930,000",
-         "unit": {
-          "id": "Q712226",
-          "text": "ചതുരശ്ര കിലോമീറ്റർ",
-          "lang": "ml",
-          "fallback": false
-         }
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P2046",
-        "amount_display": "37,930,000",
-        "note": [
-         {
-          "id": "Q1379273",
-          "text": "surface area",
-          "lang": "en",
-          "fallback": true,
-          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1379273",
-          "href": "https://www.wikidata.org/wiki/Q1379273"
-         }
-        ]
-       }
-      ],
-      "priority": 1.367,
-      "property": {
-       "id": "P2046",
-       "text": "വിസ്തീർണ്ണം",
-       "lang": "ml",
-       "fallback": false
-      }
-     },
-     {
-      "primitive": "fact",
-      "pid": "P2120",
-      "form": "variants",
-      "statements": [
-       {
-        "statement": "Q405-b9e73f2a-4b12-e158-6a38-4a1e9ca452f7",
-        "pid": "P2120",
-        "amount": 1738.14,
-        "unit": "Q828224",
-        "rank": "normal",
-        "provenance": "imported",
-        "qualifiers": [
-         {
-          "pid": "P518",
-          "item": "Q23538",
-          "property": {
-           "id": "P518",
-           "text": "ബാധകമാകുന്ന ഭാഗം",
-           "lang": "ml",
-           "fallback": false
-          },
-          "display": {
-           "id": "Q23538",
-           "text": "ഭൂമദ്ധ്യരേഖ",
-           "lang": "ml",
-           "fallback": false,
-           "href": "https://www.wikidata.org/wiki/Q23538"
-          }
-         }
-        ],
-        "shown": true,
-        "property": {
-         "id": "P2120",
-         "text": "radius",
-         "lang": "mul",
-         "fallback": false
-        },
-        "display": {
-         "text": "1,738.14",
-         "unit": {
-          "id": "Q828224",
-          "text": "കിലോമീറ്റർ",
-          "lang": "ml",
-          "fallback": false
-         }
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P2120",
-        "amount_display": "1,738.14",
-        "note": [
-         {
-          "id": "Q23538",
-          "text": "ഭൂമദ്ധ്യരേഖ",
-          "lang": "ml",
-          "fallback": false,
-          "href": "https://www.wikidata.org/wiki/Q23538"
-         }
-        ]
-       },
-       {
-        "statement": "Q405-e97956a1-4f71-0951-f036-48f4db1c4022",
-        "pid": "P2120",
-        "amount": 1737.1,
-        "unit": "Q828224",
-        "rank": "normal",
-        "provenance": "imported",
-        "qualifiers": [
-         {
-          "pid": "P518",
-          "item": "Q2796622",
-          "property": {
-           "id": "P518",
-           "text": "ബാധകമാകുന്ന ഭാഗം",
-           "lang": "ml",
-           "fallback": false
-          },
-          "display": {
-           "id": "Q2796622",
-           "text": "mean",
-           "lang": "en",
-           "fallback": true,
-           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q2796622",
-           "href": "https://www.wikidata.org/wiki/Q2796622"
-          }
-         }
-        ],
-        "shown": true,
-        "property": {
-         "id": "P2120",
-         "text": "radius",
-         "lang": "mul",
-         "fallback": false
-        },
-        "display": {
-         "text": "1,737.1",
-         "unit": {
-          "id": "Q828224",
-          "text": "കിലോമീറ്റർ",
-          "lang": "ml",
-          "fallback": false
-         }
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P2120",
-        "amount_display": "1,737.1",
-        "note": [
-         {
-          "id": "Q2796622",
-          "text": "mean",
-          "lang": "en",
-          "fallback": true,
-          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q2796622",
-          "href": "https://www.wikidata.org/wiki/Q2796622"
-         }
-        ]
-       },
-       {
-        "statement": "Q405-80aad16d-4d7e-8ec1-b6bb-4d7354e00ea9",
-        "pid": "P2120",
-        "amount": 1735.97,
-        "unit": "Q828224",
-        "rank": "normal",
-        "provenance": "none",
-        "qualifiers": [
-         {
-          "pid": "P518",
-          "item": "Q183273",
-          "property": {
-           "id": "P518",
-           "text": "ബാധകമാകുന്ന ഭാഗം",
-           "lang": "ml",
-           "fallback": false
-          },
-          "display": {
-           "id": "Q183273",
-           "text": "geographical pole",
-           "lang": "en",
-           "fallback": true,
-           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q183273",
-           "href": "https://www.wikidata.org/wiki/Q183273"
-          }
-         }
-        ],
-        "shown": true,
-        "property": {
-         "id": "P2120",
-         "text": "radius",
-         "lang": "mul",
-         "fallback": false
-        },
-        "display": {
-         "text": "1,735.97",
-         "unit": {
-          "id": "Q828224",
-          "text": "കിലോമീറ്റർ",
-          "lang": "ml",
-          "fallback": false
-         }
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P2120",
-        "amount_display": "1,735.97",
-        "note": [
-         {
-          "id": "Q183273",
-          "text": "geographical pole",
-          "lang": "en",
-          "fallback": true,
-          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q183273",
-          "href": "https://www.wikidata.org/wiki/Q183273"
-         }
-        ]
-       }
-      ],
-      "priority": 1.347,
-      "property": {
-       "id": "P2120",
-       "text": "radius",
-       "lang": "mul",
-       "fallback": false
-      }
-     },
-     {
-      "primitive": "fact",
-      "pid": "P2234",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-58c07c5d-4583-c848-6997-a81ca3f72dfd",
-        "pid": "P2234",
-        "amount": 21968000000.0,
-        "unit": "Q25517",
-        "rank": "normal",
-        "provenance": "none",
-        "shown": true,
-        "property": {
-         "id": "P2234",
-         "text": "volume as quantity",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2234"
-        },
-        "display": {
-         "text": "2.2 × 10¹⁰",
-         "unit": {
-          "id": "Q25517",
-          "text": "cubic metre",
-          "lang": "en",
-          "fallback": true,
-          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q25517"
-         }
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P2234",
-        "amount_display": "2.2 × 10¹⁰"
-       }
-      ],
-      "priority": 0.816,
-      "property": {
-       "id": "P2234",
-       "text": "volume as quantity",
-       "lang": "en",
-       "fallback": true,
-       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2234"
-      }
-     },
-     {
-      "primitive": "fact",
-      "pid": "P2244",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-b7211dc6-4322-fa31-dc0e-d97b1d419f34",
-        "pid": "P2244",
-        "amount": 363300.0,
-        "unit": "Q828224",
-        "rank": "normal",
-        "provenance": "none",
-        "shown": true,
-        "property": {
-         "id": "P2244",
-         "text": "periapsis",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2244"
-        },
-        "display": {
-         "text": "363,300",
-         "unit": {
-          "id": "Q828224",
-          "text": "കിലോമീറ്റർ",
-          "lang": "ml",
-          "fallback": false
-         }
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P2244",
-        "amount_display": "363,300"
-       }
-      ],
-      "priority": 0.571,
-      "property": {
-       "id": "P2244",
-       "text": "periapsis",
-       "lang": "en",
-       "fallback": true,
-       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2244"
-      }
-     },
-     {
-      "primitive": "fact",
-      "pid": "P2243",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-010e561f-4a80-182f-d181-0748f6553851",
-        "pid": "P2243",
-        "amount": 405500.0,
-        "unit": "Q828224",
-        "rank": "normal",
-        "provenance": "none",
-        "shown": true,
-        "property": {
-         "id": "P2243",
-         "text": "apoapsis",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2243"
-        },
-        "display": {
-         "text": "405,500",
-         "unit": {
-          "id": "Q828224",
-          "text": "കിലോമീറ്റർ",
-          "lang": "ml",
-          "fallback": false
-         }
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P2243",
-        "amount_display": "405,500"
-       }
-      ],
-      "priority": 0.571,
-      "property": {
-       "id": "P2243",
-       "text": "apoapsis",
-       "lang": "en",
-       "fallback": true,
-       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2243"
       }
      },
      {
@@ -3060,48 +4590,6 @@
      },
      {
       "primitive": "fact",
-      "pid": "P4341",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-8af852c5-4056-63bf-70da-7171204d92a3",
-        "pid": "P4341",
-        "amount": 29.530589,
-        "unit": "Q573",
-        "rank": "normal",
-        "provenance": "none",
-        "shown": true,
-        "property": {
-         "id": "P4341",
-         "text": "synodic period",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4341"
-        },
-        "display": {
-         "text": "29.5306",
-         "unit": {
-          "id": "Q573",
-          "text": "ദിവസം",
-          "lang": "ml",
-          "fallback": false
-         }
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P4341",
-        "amount_display": "29.5306"
-       }
-      ],
-      "priority": 0.041,
-      "property": {
-       "id": "P4341",
-       "text": "synodic period",
-       "lang": "en",
-       "fallback": true,
-       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4341"
-      }
-     },
-     {
-      "primitive": "fact",
       "pid": "P3872",
       "form": "value",
       "statements": [
@@ -3235,47 +4723,6 @@
      },
      {
       "primitive": "fact",
-      "pid": "P1299",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-ad0d60f2-402c-4de1-246d-546a61c7bf24",
-        "pid": "P1299",
-        "item": "Q782683",
-        "rank": "normal",
-        "provenance": "none",
-        "image": null,
-        "class": true,
-        "shown": true,
-        "property": {
-         "id": "P1299",
-         "text": "depicted by",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1299"
-        },
-        "display": {
-         "id": "Q782683",
-         "text": "the Moon in fiction",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q782683",
-         "href": "https://www.wikidata.org/wiki/Q782683"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P1299"
-       }
-      ],
-      "priority": 0.041,
-      "property": {
-       "id": "P1299",
-       "text": "depicted by",
-       "lang": "en",
-       "fallback": true,
-       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1299"
-      }
-     },
-     {
-      "primitive": "fact",
       "pid": "P1542",
       "form": "value",
       "statements": [
@@ -3317,38 +4764,36 @@
      },
      {
       "primitive": "fact",
-      "pid": "P1102",
+      "pid": "P625",
       "form": "value",
       "statements": [
        {
-        "statement": "Q405-2c4655c1-4117-45c2-4161-c03451ee42c5",
-        "pid": "P1102",
-        "amount": 0.00125,
-        "unit": null,
+        "statement": "Q405-2af50ee1-4054-2751-bcd5-c6c0912f7b16",
+        "pid": "P625",
+        "lat": 0.0,
+        "lon": 0.0,
+        "globe": "Q405",
         "rank": "normal",
         "provenance": "none",
         "shown": true,
         "property": {
-         "id": "P1102",
-         "text": "flattening",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1102"
+         "id": "P625",
+         "text": "ഭൗമനിർദ്ദേശാങ്കങ്ങൾ",
+         "lang": "ml",
+         "fallback": false
         },
         "display": {
-         "text": "0.00125"
+         "text": "0, 0"
         },
-        "edit": "https://www.wikidata.org/wiki/Q405#P1102",
-        "amount_display": "0.00125"
+        "edit": "https://www.wikidata.org/wiki/Q405#P625"
        }
       ],
       "priority": 0.041,
       "property": {
-       "id": "P1102",
-       "text": "flattening",
-       "lang": "en",
-       "fallback": true,
-       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1102"
+       "id": "P625",
+       "text": "ഭൗമനിർദ്ദേശാങ്കങ്ങൾ",
+       "lang": "ml",
+       "fallback": false
       }
      },
      {
@@ -3403,74 +4848,90 @@
      },
      {
       "primitive": "fact",
-      "pid": "P522",
+      "pid": "P276",
       "form": "value",
       "statements": [
        {
-        "statement": "Q405-9ca436b0-4f53-4ea8-3cce-235b6b33fa3f",
-        "pid": "P522",
-        "item": "Q218056",
+        "statement": "Q405-e88d8133-4e05-dde1-3c5f-d5da7365ed04",
+        "pid": "P276",
+        "item": "Q7879772",
         "rank": "normal",
         "provenance": "none",
-        "qualifiers": [
-         {
-          "pid": "P805",
-          "item": "Q210539",
-          "property": {
-           "id": "P805",
-           "text": "statement is subject of",
-           "lang": "en",
-           "fallback": true,
-           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P805"
-          },
-          "display": {
-           "id": "Q210539",
-           "text": "orbit of the Moon",
-           "lang": "en",
-           "fallback": true,
-           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q210539",
-           "href": "https://www.wikidata.org/wiki/Q210539"
-          }
-         }
-        ],
-        "image": null,
-        "class": true,
+        "image": {
+         "file": "Solar System True Color EN.png",
+         "aspect": 1.7778,
+         "kind": "photo",
+         "credit": {
+          "artist": "Omarius257",
+          "license": "CC BY-SA 4.0"
+         },
+         "from": "en.wikipedia.org"
+        },
         "shown": true,
         "property": {
-         "id": "P522",
-         "text": "type of orbit",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P522"
+         "id": "P276",
+         "text": "സ്ഥാനം",
+         "lang": "ml",
+         "fallback": false
         },
         "display": {
-         "id": "Q218056",
-         "text": "high Earth orbit",
+         "id": "Q7879772",
+         "text": "inner Solar System",
          "lang": "en",
          "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q218056",
-         "href": "https://www.wikidata.org/wiki/Q218056"
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q7879772",
+         "href": "https://www.wikidata.org/wiki/Q7879772"
         },
-        "edit": "https://www.wikidata.org/wiki/Q405#P522",
-        "note": [
-         {
-          "id": "Q210539",
-          "text": "orbit of the Moon",
-          "lang": "en",
-          "fallback": true,
-          "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q210539",
-          "href": "https://www.wikidata.org/wiki/Q210539"
-         }
-        ]
+        "edit": "https://www.wikidata.org/wiki/Q405#P276"
        }
       ],
       "priority": 0.041,
       "property": {
-       "id": "P522",
-       "text": "type of orbit",
+       "id": "P276",
+       "text": "സ്ഥാനം",
+       "lang": "ml",
+       "fallback": false
+      }
+     },
+     {
+      "primitive": "fact",
+      "pid": "P1299",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-ad0d60f2-402c-4de1-246d-546a61c7bf24",
+        "pid": "P1299",
+        "item": "Q782683",
+        "rank": "normal",
+        "provenance": "none",
+        "image": null,
+        "class": true,
+        "shown": true,
+        "property": {
+         "id": "P1299",
+         "text": "depicted by",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1299"
+        },
+        "display": {
+         "id": "Q782683",
+         "text": "the Moon in fiction",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q782683",
+         "href": "https://www.wikidata.org/wiki/Q782683"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P1299"
+       }
+      ],
+      "priority": 0.041,
+      "property": {
+       "id": "P1299",
+       "text": "depicted by",
        "lang": "en",
        "fallback": true,
-       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P522"
+       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1299"
       }
      }
     ]
@@ -3530,8 +4991,8 @@
       ],
       "coverage": {
        "lang": "ml",
-       "have": 50,
-       "total": 123
+       "have": 71,
+       "total": 173
       }
      }
     ],
@@ -3853,128 +5314,6 @@
           "fallback": true,
           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q21400695",
           "href": "https://www.wikidata.org/wiki/Q21400695"
-         }
-        ]
-       },
-       {
-        "statement": "Q405-811538f6-4156-6068-c76d-c14483e7452b",
-        "pid": "P1343",
-        "item": "Q105085344",
-        "rank": "normal",
-        "provenance": "none",
-        "qualifiers": [
-         {
-          "pid": "P1810",
-          "string": "Luna",
-          "property": {
-           "id": "P1810",
-           "text": "subject named as",
-           "lang": "en",
-           "fallback": true,
-           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1810"
-          },
-          "display": {
-           "text": "Luna"
-          }
-         },
-         {
-          "pid": "P2699",
-          "string": "https://sfdictionary.com/view/353/luna",
-          "property": {
-           "id": "P2699",
-           "text": "യു.ആർ.എൽ.",
-           "lang": "ml",
-           "fallback": false
-          },
-          "display": {
-           "text": "https://sfdictionary.com/view/353/luna"
-          }
-         }
-        ],
-        "image": null,
-        "shown": true,
-        "property": {
-         "id": "P1343",
-         "text": "ഇതേപ്പറ്റി വിവരിച്ചിട്ടുള്ള ഇടങ്ങൾ",
-         "lang": "ml",
-         "fallback": false
-        },
-        "display": {
-         "id": "Q105085344",
-         "text": "Historical Dictionary of Science Fiction",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q105085344",
-         "href": "https://www.wikidata.org/wiki/Q105085344"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P1343",
-        "note": [
-         {
-          "text": "Luna"
-         },
-         {
-          "text": "https://sfdictionary.com/view/353/luna"
-         }
-        ]
-       },
-       {
-        "statement": "Q405-8F919EAF-2C81-43DF-9CC4-2A3B7956B1C0",
-        "pid": "P1343",
-        "item": "Q1547546",
-        "rank": "normal",
-        "provenance": "none",
-        "qualifiers": [
-         {
-          "pid": "P805",
-          "item": "Q113559766",
-          "property": {
-           "id": "P805",
-           "text": "statement is subject of",
-           "lang": "en",
-           "fallback": true,
-           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P805"
-          },
-          "display": {
-           "id": "Q113559766",
-           "text": "Zedler:Mond-Regenbogen",
-           "lang": "mul",
-           "fallback": false,
-           "href": "https://www.wikidata.org/wiki/Q113559766"
-          }
-         }
-        ],
-        "image": {
-         "file": "Zedler-titel.png",
-         "kind": "photo",
-         "aspect": 1.9081,
-         "megapixels": 0.07,
-         "credit": {
-          "artist": "",
-          "license": "Public domain"
-         }
-        },
-        "shown": true,
-        "property": {
-         "id": "P1343",
-         "text": "ഇതേപ്പറ്റി വിവരിച്ചിട്ടുള്ള ഇടങ്ങൾ",
-         "lang": "ml",
-         "fallback": false
-        },
-        "display": {
-         "id": "Q1547546",
-         "text": "Zedler, Großes vollständiges Universallexicon aller Wissenschaften und Künste",
-         "lang": "mul",
-         "fallback": false,
-         "href": "https://www.wikidata.org/wiki/Q1547546"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P1343",
-        "note": [
-         {
-          "id": "Q113559766",
-          "text": "Zedler:Mond-Regenbogen",
-          "lang": "mul",
-          "fallback": false,
-          "href": "https://www.wikidata.org/wiki/Q113559766"
          }
         ]
        },
@@ -4403,7 +5742,7 @@
           "license": "Public domain"
          }
         },
-        "shown": false,
+        "shown": true,
         "property": {
          "id": "P1343",
          "text": "ഇതേപ്പറ്റി വിവരിച്ചിട്ടുള്ള ഇടങ്ങൾ",
@@ -4467,7 +5806,7 @@
           "license": "Public domain"
          }
         },
-        "shown": false,
+        "shown": true,
         "property": {
          "id": "P1343",
          "text": "ഇതേപ്പറ്റി വിവരിച്ചിട്ടുള്ള ഇടങ്ങൾ",
@@ -4673,6 +6012,128 @@
           "lang": "mul",
           "fallback": false,
           "href": "https://www.wikidata.org/wiki/Q23860555"
+         }
+        ]
+       },
+       {
+        "statement": "Q405-811538f6-4156-6068-c76d-c14483e7452b",
+        "pid": "P1343",
+        "item": "Q105085344",
+        "rank": "normal",
+        "provenance": "none",
+        "qualifiers": [
+         {
+          "pid": "P1810",
+          "string": "Luna",
+          "property": {
+           "id": "P1810",
+           "text": "subject named as",
+           "lang": "en",
+           "fallback": true,
+           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1810"
+          },
+          "display": {
+           "text": "Luna"
+          }
+         },
+         {
+          "pid": "P2699",
+          "string": "https://sfdictionary.com/view/353/luna",
+          "property": {
+           "id": "P2699",
+           "text": "യു.ആർ.എൽ.",
+           "lang": "ml",
+           "fallback": false
+          },
+          "display": {
+           "text": "https://sfdictionary.com/view/353/luna"
+          }
+         }
+        ],
+        "image": null,
+        "shown": false,
+        "property": {
+         "id": "P1343",
+         "text": "ഇതേപ്പറ്റി വിവരിച്ചിട്ടുള്ള ഇടങ്ങൾ",
+         "lang": "ml",
+         "fallback": false
+        },
+        "display": {
+         "id": "Q105085344",
+         "text": "Historical Dictionary of Science Fiction",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q105085344",
+         "href": "https://www.wikidata.org/wiki/Q105085344"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P1343",
+        "note": [
+         {
+          "text": "Luna"
+         },
+         {
+          "text": "https://sfdictionary.com/view/353/luna"
+         }
+        ]
+       },
+       {
+        "statement": "Q405-8F919EAF-2C81-43DF-9CC4-2A3B7956B1C0",
+        "pid": "P1343",
+        "item": "Q1547546",
+        "rank": "normal",
+        "provenance": "none",
+        "qualifiers": [
+         {
+          "pid": "P805",
+          "item": "Q113559766",
+          "property": {
+           "id": "P805",
+           "text": "statement is subject of",
+           "lang": "en",
+           "fallback": true,
+           "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P805"
+          },
+          "display": {
+           "id": "Q113559766",
+           "text": "Zedler:Mond-Regenbogen",
+           "lang": "mul",
+           "fallback": false,
+           "href": "https://www.wikidata.org/wiki/Q113559766"
+          }
+         }
+        ],
+        "image": {
+         "file": "Zedler-titel.png",
+         "kind": "photo",
+         "aspect": 1.9081,
+         "megapixels": 0.07,
+         "credit": {
+          "artist": "",
+          "license": "Public domain"
+         }
+        },
+        "shown": false,
+        "property": {
+         "id": "P1343",
+         "text": "ഇതേപ്പറ്റി വിവരിച്ചിട്ടുള്ള ഇടങ്ങൾ",
+         "lang": "ml",
+         "fallback": false
+        },
+        "display": {
+         "id": "Q1547546",
+         "text": "Zedler, Großes vollständiges Universallexicon aller Wissenschaften und Künste",
+         "lang": "mul",
+         "fallback": false,
+         "href": "https://www.wikidata.org/wiki/Q1547546"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P1343",
+        "note": [
+         {
+          "id": "Q113559766",
+          "text": "Zedler:Mond-Regenbogen",
+          "lang": "mul",
+          "fallback": false,
+          "href": "https://www.wikidata.org/wiki/Q113559766"
          }
         ]
        }
@@ -5891,6 +7352,488 @@
         "edit": "https://www.wikidata.org/wiki/Q405#P6839"
        },
        {
+        "pid": "P3106",
+        "string": "science/moon",
+        "statement": "Q405-DB3FFF02-9F12-4846-89E2-D25701CD76FA",
+        "property": {
+         "id": "P3106",
+         "text": "The Guardian topic ID",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P3106"
+        },
+        "display": {
+         "text": "science/moon"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P3106"
+       },
+       {
+        "pid": "P268",
+        "string": "119358377",
+        "statement": "q405-08A26655-C353-47CF-9D36-B587ADB688C9",
+        "property": {
+         "id": "P268",
+         "text": "ഫ്രഞ്ച് ദേശീയ ഗ്രന്ഥശാല തിരിച്ചറിയല്‍ സംഖ്യ",
+         "lang": "ml",
+         "fallback": false
+        },
+        "display": {
+         "text": "119358377"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P268"
+       },
+       {
+        "pid": "P672",
+        "string": "G01.060.075.730.700.200.500",
+        "statement": "Q405-20c529ce-487a-94f7-a3a5-acd57359c165",
+        "property": {
+         "id": "P672",
+         "text": "MeSH tree code",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P672"
+        },
+        "display": {
+         "text": "G01.060.075.730.700.200.500"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P672"
+       },
+       {
+        "pid": "P950",
+        "string": "XX456648",
+        "statement": "Q405-2387a6dc-4b04-2e8f-787d-4f22f37f7427",
+        "property": {
+         "id": "P950",
+         "text": "National Library of Spain SpMaBN ID",
+         "lang": "mul",
+         "fallback": false
+        },
+        "display": {
+         "text": "XX456648"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P950"
+       },
+       {
+        "pid": "P269",
+        "string": "027282414",
+        "statement": "q405-45773725-0DC5-4EE2-88DC-9AD586CDA38D",
+        "property": {
+         "id": "P269",
+         "text": "IdRef ID",
+         "lang": "mul",
+         "fallback": false
+        },
+        "display": {
+         "text": "027282414"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P269"
+       },
+       {
+        "pid": "P998",
+        "string": "World/Deutsch/Wissenschaft/Naturwissenschaften/Astronomie/Sonnensystem/Planeten/Erde/Mond/",
+        "statement": "Q405-3a2d5629-44b9-1006-9b62-948413770ffe",
+        "property": {
+         "id": "P998",
+         "text": "Curlie ID",
+         "lang": "mul",
+         "fallback": false
+        },
+        "display": {
+         "text": "World/Deutsch/Wissenschaft/Naturwissenschaften/Astronomie/Sonnensystem/Planeten/Erde/Mond/"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P998"
+       },
+       {
+        "pid": "P998",
+        "string": "World/Español/Ciencia_y_tecnología/Astronomía/Sistema_Solar/Planetas/Tierra/Luna/",
+        "statement": "Q405-4760183f-4b8b-e271-655e-80b087832fb1",
+        "property": {
+         "id": "P998",
+         "text": "Curlie ID",
+         "lang": "mul",
+         "fallback": false
+        },
+        "display": {
+         "text": "World/Español/Ciencia_y_tecnología/Astronomía/Sistema_Solar/Planetas/Tierra/Luna/"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P998"
+       },
+       {
+        "pid": "P998",
+        "string": "World/Japanese/科学/自然科学/天文学/太陽系/月/",
+        "statement": "Q405-526a6cbd-47de-0106-3736-7d7ce2784215",
+        "property": {
+         "id": "P998",
+         "text": "Curlie ID",
+         "lang": "mul",
+         "fallback": false
+        },
+        "display": {
+         "text": "World/Japanese/科学/自然科学/天文学/太陽系/月/"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P998"
+       },
+       {
+        "pid": "P691",
+        "string": "ph117905",
+        "statement": "Q405-5ee767ed-4296-cad5-a9a0-77b7ec4dabd7",
+        "property": {
+         "id": "P691",
+         "text": "NL CR AUT ID",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P691"
+        },
+        "display": {
+         "text": "ph117905"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P691"
+       },
+       {
+        "pid": "P1004",
+        "string": "73cba8a4-cacb-45b9-8e02-654f716e2e7a",
+        "statement": "Q405-670aa688-de78-4461-9446-de5495d88931",
+        "property": {
+         "id": "P1004",
+         "text": "MusicBrainz place ID",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1004"
+        },
+        "display": {
+         "text": "73cba8a4-cacb-45b9-8e02-654f716e2e7a"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P1004"
+       },
+       {
+        "pid": "P646",
+        "string": "/m/04wv_",
+        "statement": "Q405-840D8E82-96D2-404C-A302-474913504FCC",
+        "property": {
+         "id": "P646",
+         "text": "ഫ്രീബേസ് ഐ.ഡി.",
+         "lang": "ml",
+         "fallback": false
+        },
+        "display": {
+         "text": "/m/04wv_"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P646"
+       },
+       {
+        "pid": "P2612",
+        "string": "Moon",
+        "statement": "Q405-3F439A83-F323-4B83-9E23-7676A5DB204E",
+        "property": {
+         "id": "P2612",
+         "text": "TED topic ID",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2612"
+        },
+        "display": {
+         "text": "Moon"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P2612"
+       },
+       {
+        "pid": "P1667",
+        "string": "7030645",
+        "statement": "Q405-68147548-4319-5900-4ba3-2a86fe636c3c",
+        "property": {
+         "id": "P1667",
+         "text": "Getty Thesaurus of Geographic Names ID",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1667"
+        },
+        "display": {
+         "text": "7030645"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P1667"
+       },
+       {
+        "pid": "P1296",
+        "string": "0120438",
+        "statement": "Q405-7E541E13-9251-4C33-BC85-AC670060B6E9",
+        "property": {
+         "id": "P1296",
+         "text": "Gran Enciclopèdia Catalana ID (former scheme)",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1296"
+        },
+        "display": {
+         "text": "0120438"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P1296"
+       },
+       {
+        "pid": "P1245",
+        "string": "5730",
+        "statement": "Q405-81B1F73E-16FC-47ED-9DF9-07AB4EAF5592",
+        "property": {
+         "id": "P1245",
+         "text": "OmegaWiki Defined Meaning",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1245"
+        },
+        "display": {
+         "text": "5730"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P1245"
+       },
+       {
+        "pid": "P508",
+        "string": "9292",
+        "statement": "q405-A917C3DA-37CF-40AD-A6D9-DBE8B19169BA",
+        "property": {
+         "id": "P508",
+         "text": "BNCF പദാവലി",
+         "lang": "ml",
+         "fallback": false
+        },
+        "display": {
+         "text": "9292"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P508"
+       },
+       {
+        "pid": "P486",
+        "string": "D016081",
+        "statement": "Q405-aee1c53d-46b6-53be-3cf8-c8224150ad8e",
+        "property": {
+         "id": "P486",
+         "text": "MeSH descriptor ID",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P486"
+        },
+        "display": {
+         "text": "D016081"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P486"
+       },
+       {
+        "pid": "P1417",
+        "string": "place/Moon",
+        "statement": "Q405-82A02734-D068-443B-8C17-AFE583031483",
+        "property": {
+         "id": "P1417",
+         "text": "ഓൺലൈൻ ബ്രിട്ടാനിക്കയിലേക്കുള്ള കണ്ണി",
+         "lang": "ml",
+         "fallback": false
+        },
+        "display": {
+         "text": "place/Moon"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P1417"
+       },
+       {
+        "pid": "P4342",
+        "string": "Månen",
+        "statement": "Q405-1662E594-B580-45DB-A873-961200C2CD65",
+        "property": {
+         "id": "P4342",
+         "text": "Store norske leksikon-ID",
+         "lang": "mul",
+         "fallback": false
+        },
+        "display": {
+         "text": "Månen"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P4342"
+       },
+       {
+        "pid": "P4212",
+        "string": "pcrtZSukuWlnHA",
+        "statement": "Q405-1AAD1FDF-AC86-48BF-9B44-583651B5B7C4",
+        "property": {
+         "id": "P4212",
+         "text": "PACTOLS thesaurus ID",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4212"
+        },
+        "display": {
+         "text": "pcrtZSukuWlnHA"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P4212"
+       },
+       {
+        "pid": "P2163",
+        "string": "1240375",
+        "statement": "Q405-7044048f-4ff4-8b55-fd32-56872c1ba6ba",
+        "property": {
+         "id": "P2163",
+         "text": "FAST ID",
+         "lang": "mul",
+         "fallback": false
+        },
+        "display": {
+         "text": "1240375"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P2163"
+       },
+       {
+        "pid": "P998",
+        "string": "Science/Astronomy/Solar_System/Planets/Earth/Moon/",
+        "statement": "Q405-AD49E992-3629-49F5-9A85-8B16A4475F61",
+        "property": {
+         "id": "P998",
+         "text": "Curlie ID",
+         "lang": "mul",
+         "fallback": false
+        },
+        "display": {
+         "text": "Science/Astronomy/Solar_System/Planets/Earth/Moon/"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P998"
+       },
+       {
+        "pid": "P4839",
+        "string": "Entity[\"PlanetaryMoon\", \"Moon\"]",
+        "statement": "Q405-169bce68-4446-e9a9-dbf8-50044024cc01",
+        "property": {
+         "id": "P4839",
+         "text": "Wolfram Language entity code",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4839"
+        },
+        "display": {
+         "text": "Entity[\"PlanetaryMoon\", \"Moon\"]"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P4839"
+       },
+       {
+        "pid": "P3180",
+        "string": "g1261",
+        "statement": "Q405-5BB68A90-69D8-483A-BB02-47830F2FF486",
+        "property": {
+         "id": "P3180",
+         "text": "Visual Novel Database ID",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P3180"
+        },
+        "display": {
+         "text": "g1261"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P3180"
+       },
+       {
+        "pid": "P5551",
+        "string": "lune",
+        "statement": "Q405-0B9AAD97-D333-4508-9225-9AE18EB9F4FB",
+        "property": {
+         "id": "P5551",
+         "text": "Courrier international topic ID",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5551"
+        },
+        "display": {
+         "text": "lune"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P5551"
+       },
+       {
+        "pid": "P3553",
+        "string": "19577524",
+        "statement": "Q405-581E9657-9DCE-4259-BF4B-53E4B7948F00",
+        "property": {
+         "id": "P3553",
+         "text": "Zhihu topic ID",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P3553"
+        },
+        "display": {
+         "text": "19577524"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P3553"
+       },
+       {
+        "pid": "P1368",
+        "string": "000055659",
+        "statement": "Q405-c75854da-43a5-1919-dd94-edb82e982c6f",
+        "property": {
+         "id": "P1368",
+         "text": "LNB ID",
+         "lang": "mul",
+         "fallback": false
+        },
+        "display": {
+         "text": "000055659"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P1368"
+       },
+       {
+        "pid": "P5019",
+        "string": "mond-20",
+        "statement": "Q405-38889a65-467b-301b-8889-aac0c1b1a46b",
+        "property": {
+         "id": "P5019",
+         "text": "Brockhaus Enzyklopädie online ID",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5019"
+        },
+        "display": {
+         "text": "mond-20"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P5019"
+       },
+       {
+        "pid": "P5421",
+        "string": "89162",
+        "statement": "Q405-259FBC58-62AF-4BDA-8BE3-E6895B6D29E4",
+        "property": {
+         "id": "P5421",
+         "text": "Trading Card Database name ID",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5421"
+        },
+        "display": {
+         "text": "89162"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P5421"
+       },
+       {
+        "pid": "P1375",
+        "string": "000229177",
+        "statement": "Q405-cc1a3c54-47e9-10a6-3e0c-f3de21a43680",
+        "property": {
+         "id": "P1375",
+         "text": "NSK (VIAF) ID",
+         "lang": "en",
+         "fallback": true,
+         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1375"
+        },
+        "display": {
+         "text": "000229177"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P1375"
+       },
+       {
+        "pid": "P3219",
+        "string": "lune",
+        "statement": "Q405-7bd88b42-4bba-67f9-dee4-5a0b16416b8f",
+        "property": {
+         "id": "P3219",
+         "text": "Encyclopædia Universalis ID",
+         "lang": "mul",
+         "fallback": false
+        },
+        "display": {
+         "text": "lune"
+        },
+        "edit": "https://www.wikidata.org/wiki/Q405#P3219"
+       },
+       {
         "pid": "P8814",
         "string": "09381255-n",
         "statement": "Q405-8FC8FEFB-1937-4B25-99A0-A923F2E6510B",
@@ -6692,488 +8635,6 @@
          "text": "146123"
         },
         "edit": "https://www.wikidata.org/wiki/Q405#P13613"
-       },
-       {
-        "pid": "P3106",
-        "string": "science/moon",
-        "statement": "Q405-DB3FFF02-9F12-4846-89E2-D25701CD76FA",
-        "property": {
-         "id": "P3106",
-         "text": "The Guardian topic ID",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P3106"
-        },
-        "display": {
-         "text": "science/moon"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P3106"
-       },
-       {
-        "pid": "P268",
-        "string": "119358377",
-        "statement": "q405-08A26655-C353-47CF-9D36-B587ADB688C9",
-        "property": {
-         "id": "P268",
-         "text": "ഫ്രഞ്ച് ദേശീയ ഗ്രന്ഥശാല തിരിച്ചറിയല്‍ സംഖ്യ",
-         "lang": "ml",
-         "fallback": false
-        },
-        "display": {
-         "text": "119358377"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P268"
-       },
-       {
-        "pid": "P672",
-        "string": "G01.060.075.730.700.200.500",
-        "statement": "Q405-20c529ce-487a-94f7-a3a5-acd57359c165",
-        "property": {
-         "id": "P672",
-         "text": "MeSH tree code",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P672"
-        },
-        "display": {
-         "text": "G01.060.075.730.700.200.500"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P672"
-       },
-       {
-        "pid": "P950",
-        "string": "XX456648",
-        "statement": "Q405-2387a6dc-4b04-2e8f-787d-4f22f37f7427",
-        "property": {
-         "id": "P950",
-         "text": "National Library of Spain SpMaBN ID",
-         "lang": "mul",
-         "fallback": false
-        },
-        "display": {
-         "text": "XX456648"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P950"
-       },
-       {
-        "pid": "P269",
-        "string": "027282414",
-        "statement": "q405-45773725-0DC5-4EE2-88DC-9AD586CDA38D",
-        "property": {
-         "id": "P269",
-         "text": "IdRef ID",
-         "lang": "mul",
-         "fallback": false
-        },
-        "display": {
-         "text": "027282414"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P269"
-       },
-       {
-        "pid": "P998",
-        "string": "World/Deutsch/Wissenschaft/Naturwissenschaften/Astronomie/Sonnensystem/Planeten/Erde/Mond/",
-        "statement": "Q405-3a2d5629-44b9-1006-9b62-948413770ffe",
-        "property": {
-         "id": "P998",
-         "text": "Curlie ID",
-         "lang": "mul",
-         "fallback": false
-        },
-        "display": {
-         "text": "World/Deutsch/Wissenschaft/Naturwissenschaften/Astronomie/Sonnensystem/Planeten/Erde/Mond/"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P998"
-       },
-       {
-        "pid": "P998",
-        "string": "World/Español/Ciencia_y_tecnología/Astronomía/Sistema_Solar/Planetas/Tierra/Luna/",
-        "statement": "Q405-4760183f-4b8b-e271-655e-80b087832fb1",
-        "property": {
-         "id": "P998",
-         "text": "Curlie ID",
-         "lang": "mul",
-         "fallback": false
-        },
-        "display": {
-         "text": "World/Español/Ciencia_y_tecnología/Astronomía/Sistema_Solar/Planetas/Tierra/Luna/"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P998"
-       },
-       {
-        "pid": "P998",
-        "string": "World/Japanese/科学/自然科学/天文学/太陽系/月/",
-        "statement": "Q405-526a6cbd-47de-0106-3736-7d7ce2784215",
-        "property": {
-         "id": "P998",
-         "text": "Curlie ID",
-         "lang": "mul",
-         "fallback": false
-        },
-        "display": {
-         "text": "World/Japanese/科学/自然科学/天文学/太陽系/月/"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P998"
-       },
-       {
-        "pid": "P691",
-        "string": "ph117905",
-        "statement": "Q405-5ee767ed-4296-cad5-a9a0-77b7ec4dabd7",
-        "property": {
-         "id": "P691",
-         "text": "NL CR AUT ID",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P691"
-        },
-        "display": {
-         "text": "ph117905"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P691"
-       },
-       {
-        "pid": "P1004",
-        "string": "73cba8a4-cacb-45b9-8e02-654f716e2e7a",
-        "statement": "Q405-670aa688-de78-4461-9446-de5495d88931",
-        "property": {
-         "id": "P1004",
-         "text": "MusicBrainz place ID",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1004"
-        },
-        "display": {
-         "text": "73cba8a4-cacb-45b9-8e02-654f716e2e7a"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P1004"
-       },
-       {
-        "pid": "P646",
-        "string": "/m/04wv_",
-        "statement": "Q405-840D8E82-96D2-404C-A302-474913504FCC",
-        "property": {
-         "id": "P646",
-         "text": "ഫ്രീബേസ് ഐ.ഡി.",
-         "lang": "ml",
-         "fallback": false
-        },
-        "display": {
-         "text": "/m/04wv_"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P646"
-       },
-       {
-        "pid": "P2612",
-        "string": "Moon",
-        "statement": "Q405-3F439A83-F323-4B83-9E23-7676A5DB204E",
-        "property": {
-         "id": "P2612",
-         "text": "TED topic ID",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2612"
-        },
-        "display": {
-         "text": "Moon"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P2612"
-       },
-       {
-        "pid": "P1667",
-        "string": "7030645",
-        "statement": "Q405-68147548-4319-5900-4ba3-2a86fe636c3c",
-        "property": {
-         "id": "P1667",
-         "text": "Getty Thesaurus of Geographic Names ID",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1667"
-        },
-        "display": {
-         "text": "7030645"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P1667"
-       },
-       {
-        "pid": "P1296",
-        "string": "0120438",
-        "statement": "Q405-7E541E13-9251-4C33-BC85-AC670060B6E9",
-        "property": {
-         "id": "P1296",
-         "text": "Gran Enciclopèdia Catalana ID (former scheme)",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1296"
-        },
-        "display": {
-         "text": "0120438"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P1296"
-       },
-       {
-        "pid": "P1245",
-        "string": "5730",
-        "statement": "Q405-81B1F73E-16FC-47ED-9DF9-07AB4EAF5592",
-        "property": {
-         "id": "P1245",
-         "text": "OmegaWiki Defined Meaning",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1245"
-        },
-        "display": {
-         "text": "5730"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P1245"
-       },
-       {
-        "pid": "P508",
-        "string": "9292",
-        "statement": "q405-A917C3DA-37CF-40AD-A6D9-DBE8B19169BA",
-        "property": {
-         "id": "P508",
-         "text": "BNCF പദാവലി",
-         "lang": "ml",
-         "fallback": false
-        },
-        "display": {
-         "text": "9292"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P508"
-       },
-       {
-        "pid": "P486",
-        "string": "D016081",
-        "statement": "Q405-aee1c53d-46b6-53be-3cf8-c8224150ad8e",
-        "property": {
-         "id": "P486",
-         "text": "MeSH descriptor ID",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P486"
-        },
-        "display": {
-         "text": "D016081"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P486"
-       },
-       {
-        "pid": "P1417",
-        "string": "place/Moon",
-        "statement": "Q405-82A02734-D068-443B-8C17-AFE583031483",
-        "property": {
-         "id": "P1417",
-         "text": "ഓൺലൈൻ ബ്രിട്ടാനിക്കയിലേക്കുള്ള കണ്ണി",
-         "lang": "ml",
-         "fallback": false
-        },
-        "display": {
-         "text": "place/Moon"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P1417"
-       },
-       {
-        "pid": "P4342",
-        "string": "Månen",
-        "statement": "Q405-1662E594-B580-45DB-A873-961200C2CD65",
-        "property": {
-         "id": "P4342",
-         "text": "Store norske leksikon-ID",
-         "lang": "mul",
-         "fallback": false
-        },
-        "display": {
-         "text": "Månen"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P4342"
-       },
-       {
-        "pid": "P4212",
-        "string": "pcrtZSukuWlnHA",
-        "statement": "Q405-1AAD1FDF-AC86-48BF-9B44-583651B5B7C4",
-        "property": {
-         "id": "P4212",
-         "text": "PACTOLS thesaurus ID",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4212"
-        },
-        "display": {
-         "text": "pcrtZSukuWlnHA"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P4212"
-       },
-       {
-        "pid": "P2163",
-        "string": "1240375",
-        "statement": "Q405-7044048f-4ff4-8b55-fd32-56872c1ba6ba",
-        "property": {
-         "id": "P2163",
-         "text": "FAST ID",
-         "lang": "mul",
-         "fallback": false
-        },
-        "display": {
-         "text": "1240375"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P2163"
-       },
-       {
-        "pid": "P998",
-        "string": "Science/Astronomy/Solar_System/Planets/Earth/Moon/",
-        "statement": "Q405-AD49E992-3629-49F5-9A85-8B16A4475F61",
-        "property": {
-         "id": "P998",
-         "text": "Curlie ID",
-         "lang": "mul",
-         "fallback": false
-        },
-        "display": {
-         "text": "Science/Astronomy/Solar_System/Planets/Earth/Moon/"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P998"
-       },
-       {
-        "pid": "P4839",
-        "string": "Entity[\"PlanetaryMoon\", \"Moon\"]",
-        "statement": "Q405-169bce68-4446-e9a9-dbf8-50044024cc01",
-        "property": {
-         "id": "P4839",
-         "text": "Wolfram Language entity code",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4839"
-        },
-        "display": {
-         "text": "Entity[\"PlanetaryMoon\", \"Moon\"]"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P4839"
-       },
-       {
-        "pid": "P3180",
-        "string": "g1261",
-        "statement": "Q405-5BB68A90-69D8-483A-BB02-47830F2FF486",
-        "property": {
-         "id": "P3180",
-         "text": "Visual Novel Database ID",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P3180"
-        },
-        "display": {
-         "text": "g1261"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P3180"
-       },
-       {
-        "pid": "P5551",
-        "string": "lune",
-        "statement": "Q405-0B9AAD97-D333-4508-9225-9AE18EB9F4FB",
-        "property": {
-         "id": "P5551",
-         "text": "Courrier international topic ID",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5551"
-        },
-        "display": {
-         "text": "lune"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P5551"
-       },
-       {
-        "pid": "P3553",
-        "string": "19577524",
-        "statement": "Q405-581E9657-9DCE-4259-BF4B-53E4B7948F00",
-        "property": {
-         "id": "P3553",
-         "text": "Zhihu topic ID",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P3553"
-        },
-        "display": {
-         "text": "19577524"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P3553"
-       },
-       {
-        "pid": "P1368",
-        "string": "000055659",
-        "statement": "Q405-c75854da-43a5-1919-dd94-edb82e982c6f",
-        "property": {
-         "id": "P1368",
-         "text": "LNB ID",
-         "lang": "mul",
-         "fallback": false
-        },
-        "display": {
-         "text": "000055659"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P1368"
-       },
-       {
-        "pid": "P5019",
-        "string": "mond-20",
-        "statement": "Q405-38889a65-467b-301b-8889-aac0c1b1a46b",
-        "property": {
-         "id": "P5019",
-         "text": "Brockhaus Enzyklopädie online ID",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5019"
-        },
-        "display": {
-         "text": "mond-20"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P5019"
-       },
-       {
-        "pid": "P5421",
-        "string": "89162",
-        "statement": "Q405-259FBC58-62AF-4BDA-8BE3-E6895B6D29E4",
-        "property": {
-         "id": "P5421",
-         "text": "Trading Card Database name ID",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5421"
-        },
-        "display": {
-         "text": "89162"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P5421"
-       },
-       {
-        "pid": "P1375",
-        "string": "000229177",
-        "statement": "Q405-cc1a3c54-47e9-10a6-3e0c-f3de21a43680",
-        "property": {
-         "id": "P1375",
-         "text": "NSK (VIAF) ID",
-         "lang": "en",
-         "fallback": true,
-         "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1375"
-        },
-        "display": {
-         "text": "000229177"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P1375"
-       },
-       {
-        "pid": "P3219",
-        "string": "lune",
-        "statement": "Q405-7bd88b42-4bba-67f9-dee4-5a0b16416b8f",
-        "property": {
-         "id": "P3219",
-         "text": "Encyclopædia Universalis ID",
-         "lang": "mul",
-         "fallback": false
-        },
-        "display": {
-         "text": "lune"
-        },
-        "edit": "https://www.wikidata.org/wiki/Q405#P3219"
        }
       ]
      }

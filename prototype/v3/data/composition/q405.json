@@ -2,7 +2,7 @@
  "schema": "composition/0.2",
  "design": "design/0.2",
  "qid": "Q405",
- "class_layout": "generic",
+ "class_layout": "astronomical",
  "spreads": [
   {
    "id": "identity",
@@ -139,67 +139,1191 @@
    }
   },
   {
-   "id": "location",
-   "kind": "facts",
-   "concept": "Q2221906",
-   "template": "hero-plus-stack",
+   "id": "physical",
+   "kind": "scale",
+   "concept": "Q4373292",
+   "template": "columns",
    "slots": {
     "hero": {
-     "primitive": "map",
-     "statement": "Q405-2af50ee1-4054-2751-bcd5-c6c0912f7b16",
-     "pid": "P625",
-     "lat": 0.0,
-     "lon": 0.0,
-     "globe": "Q405",
-     "rank": "normal",
-     "provenance": "none",
-     "extent_m": 6158734
+     "primitive": "scale",
+     "mode": "scale",
+     "container": {
+      "pid": "P397",
+      "item": "Q2"
+     },
+     "measures": [
+      {
+       "pid": "P2046",
+       "ratio": 0.074363,
+       "amount": 37930000000000.0,
+       "whole": 510064472000000.0,
+       "unit": "Q25343",
+       "statement": "Q405-6095b598-4782-eddc-d2aa-f5d86f5de81e",
+       "provenance": "sourced"
+      },
+      {
+       "pid": "P2067",
+       "ratio": 0.012303,
+       "amount": 7.3477e+22,
+       "whole": 5.97237e+24,
+       "unit": "Q11570",
+       "statement": "Q405-13a99111-4718-a11c-1644-a5e0bc11483b",
+       "provenance": "sourced"
+      },
+      {
+       "pid": "P2120",
+       "ratio": 0.273266,
+       "amount": 1737100.0,
+       "whole": 6356800.0,
+       "unit": "Q11573",
+       "statement": "Q405-b9e73f2a-4b12-e158-6a38-4a1e9ca452f7",
+       "provenance": "imported"
+      },
+      {
+       "pid": "P2386",
+       "ratio": 0.272814,
+       "amount": 3476200.0,
+       "whole": 12742000.0,
+       "unit": "Q11573",
+       "statement": "Q405-46525552-4598-5333-1cd4-496dddaa0fc2",
+       "provenance": "sourced"
+      }
+     ]
     },
-    "gallery": [
+    "stack": [
      {
-      "primitive": "network",
-      "role": "gallery",
-      "values": [
+      "primitive": "peers",
+      "pid": "P2067",
+      "class": "Q1086783",
+      "container": null,
+      "rank": 4,
+      "of": 47,
+      "members": [
        {
-        "statement": "Q405-8c4d68c1-43ab-7947-1900-3310e2f87cac",
-        "pid": "P361",
-        "item": "Q18589965",
-        "rank": "normal",
-        "provenance": "none",
-        "image": {
-         "file": "Lagrange points Earth vs Moon.jpg",
-         "kind": "photo",
-         "aspect": 1.1671,
-         "megapixels": 0.2,
-         "credit": {
-          "artist": "No machine-readable author provided. Vulpecula assumed (based on copyright claims).",
-          "license": "Public domain"
-         }
-        },
-        "priority": 0.735
+        "item": "Q3169",
+        "amount": 1.48148e+23,
+        "fraction": 1.0,
+        "self": false,
+        "shown": true
+       },
+       {
+        "item": "Q3134",
+        "amount": 1.07566e+23,
+        "fraction": 0.7261,
+        "self": false,
+        "shown": true
+       },
+       {
+        "item": "Q3123",
+        "amount": 8.9296e+22,
+        "fraction": 0.6027,
+        "self": false,
+        "shown": true
+       },
+       {
+        "item": "Q405",
+        "amount": 7.3477e+22,
+        "fraction": 0.496,
+        "self": true,
+        "shown": true
+       },
+       {
+        "item": "Q3143",
+        "amount": 4.7986e+22,
+        "fraction": 0.3239,
+        "self": false,
+        "shown": true
+       },
+       {
+        "item": "Q3322",
+        "amount": 3.527e+21,
+        "fraction": 0.0238,
+        "self": false,
+        "shown": true
+       },
+       {
+        "item": "Q3332",
+        "amount": 3.01e+21,
+        "fraction": 0.0203,
+        "self": false,
+        "shown": true
+       },
+       {
+        "item": "Q15050",
+        "amount": 2.3065e+21,
+        "fraction": 0.0156,
+        "self": false,
+        "shown": true
+       },
+       {
+        "item": "Q17958",
+        "amount": 1.8055e+21,
+        "fraction": 0.0122,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q3343",
+        "amount": 1.4e+21,
+        "fraction": 0.0095,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q3338",
+        "amount": 1.2e+21,
+        "fraction": 0.0081,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q15040",
+        "amount": 1.09546e+21,
+        "fraction": 0.0074,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q15047",
+        "amount": 6.1739e+20,
+        "fraction": 0.0042,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q3303",
+        "amount": 1.0804339e+20,
+        "fraction": 0.0007,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q3352",
+        "amount": 6.6e+19,
+        "fraction": 0.0004,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q16081",
+        "amount": 5e+19,
+        "fraction": 0.0003,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q15034",
+        "amount": 3.75e+19,
+        "fraction": 0.0003,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q15037",
+        "amount": 5.58e+18,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q15662",
+        "amount": 2.9e+18,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q3257",
+        "amount": 2.1e+18,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q17754",
+        "amount": 1.9e+18,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q15644",
+        "amount": 1.7e+18,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q16765",
+        "amount": 1.5e+18,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q15643",
+        "amount": 5.6e+17,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q17751",
+        "amount": 5.3e+17,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q15658",
+        "amount": 3.6e+17,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q15633",
+        "amount": 3.4e+17,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q15646",
+        "amount": 2.5e+17,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q15637",
+        "amount": 1.8e+17,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q17739",
+        "amount": 1.6e+17,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q17746",
+        "amount": 1.4e+17,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q16755",
+        "amount": 1.2e+17,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q15629",
+        "amount": 9.3e+16,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q15660",
+        "amount": 1.8e+16,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q17875",
+        "amount": 1.1e+16,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q15667",
+        "amount": 9000000000000000.0,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q16757",
+        "amount": 7500000000000000.0,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q17707",
+        "amount": 7000000000000000.0,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q17705",
+        "amount": 5000000000000000.0,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q17857",
+        "amount": 4000000000000000.0,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q15655",
+        "amount": 3000000000000000.0,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q17869",
+        "amount": 2500000000000000.0,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q17850",
+        "amount": 33000000000000.0,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q17782",
+        "amount": 9000000000000.0,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q17882",
+        "amount": 4500000000000.0,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q17788",
+        "amount": 1500000000000.0,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q17762",
+        "amount": 60000000000.0,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
        }
-      ],
-      "priority": 0.735
+      ]
+     },
+     {
+      "primitive": "peers",
+      "pid": "P2120",
+      "class": "Q1086783",
+      "container": null,
+      "rank": 4,
+      "of": 33,
+      "members": [
+       {
+        "item": "Q3169",
+        "amount": 2631000.0,
+        "fraction": 1.0,
+        "self": false,
+        "shown": true
+       },
+       {
+        "item": "Q3134",
+        "amount": 2410000.0,
+        "fraction": 0.916,
+        "self": false,
+        "shown": true
+       },
+       {
+        "item": "Q3123",
+        "amount": 1821600.0,
+        "fraction": 0.6924,
+        "self": false,
+        "shown": true
+       },
+       {
+        "item": "Q405",
+        "amount": 1737100.0,
+        "fraction": 0.6602,
+        "self": true,
+        "shown": true
+       },
+       {
+        "item": "Q3143",
+        "amount": 1560800.0,
+        "fraction": 0.5932,
+        "self": false,
+        "shown": true
+       },
+       {
+        "item": "Q3322",
+        "amount": 788400.0,
+        "fraction": 0.2997,
+        "self": false,
+        "shown": true
+       },
+       {
+        "item": "Q15050",
+        "amount": 764000.0,
+        "fraction": 0.2904,
+        "self": false,
+        "shown": true
+       },
+       {
+        "item": "Q3332",
+        "amount": 761400.0,
+        "fraction": 0.2894,
+        "self": false,
+        "shown": true
+       },
+       {
+        "item": "Q17958",
+        "amount": 734500.0,
+        "fraction": 0.2792,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q3338",
+        "amount": 585000.0,
+        "fraction": 0.2223,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q3343",
+        "amount": 578900.0,
+        "fraction": 0.22,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q15040",
+        "amount": 561700.0,
+        "fraction": 0.2135,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q15047",
+        "amount": 531100.0,
+        "fraction": 0.2019,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q3303",
+        "amount": 252100.0,
+        "fraction": 0.0958,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q16081",
+        "amount": 209000.0,
+        "fraction": 0.0794,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q15034",
+        "amount": 198200.0,
+        "fraction": 0.0753,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q15037",
+        "amount": 135000.0,
+        "fraction": 0.0513,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q3257",
+        "amount": 83000.0,
+        "fraction": 0.0315,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q15662",
+        "amount": 81000.0,
+        "fraction": 0.0308,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q15644",
+        "amount": 70000.0,
+        "fraction": 0.0266,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q15643",
+        "amount": 53000.0,
+        "fraction": 0.0201,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q16765",
+        "amount": 49000.0,
+        "fraction": 0.0186,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q15646",
+        "amount": 36000.0,
+        "fraction": 0.0137,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q15637",
+        "amount": 35000.0,
+        "fraction": 0.0133,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q15655",
+        "amount": 18000.0,
+        "fraction": 0.0068,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q15660",
+        "amount": 13000.0,
+        "fraction": 0.0049,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q15667",
+        "amount": 12000.0,
+        "fraction": 0.0046,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q17706",
+        "amount": 3800.0,
+        "fraction": 0.0014,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q17850",
+        "amount": 2500.0,
+        "fraction": 0.001,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q17782",
+        "amount": 1600.0,
+        "fraction": 0.0006,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q17882",
+        "amount": 1300.0,
+        "fraction": 0.0005,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q17788",
+        "amount": 900.0,
+        "fraction": 0.0003,
+        "self": false,
+        "shown": false
+       },
+       {
+        "item": "Q15658",
+        "amount": 0.067,
+        "fraction": 0.0,
+        "self": false,
+        "shown": false
+       }
+      ]
      }
     ],
     "sheet": [
      {
       "primitive": "fact",
-      "pid": "P276",
+      "pid": "P2067",
       "form": "value",
       "statements": [
        {
-        "statement": "Q405-e88d8133-4e05-dde1-3c5f-d5da7365ed04",
-        "pid": "P276",
-        "item": "Q7879772",
+        "statement": "Q405-13a99111-4718-a11c-1644-a5e0bc11483b",
+        "pid": "P2067",
+        "amount": 73.4767,
+        "unit": "Q613726",
+        "rank": "normal",
+        "provenance": "sourced",
+        "shown": true
+       }
+      ],
+      "priority": 2.918
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2120",
+      "form": "variants",
+      "statements": [
+       {
+        "statement": "Q405-b9e73f2a-4b12-e158-6a38-4a1e9ca452f7",
+        "pid": "P2120",
+        "amount": 1738.14,
+        "unit": "Q828224",
+        "rank": "normal",
+        "provenance": "imported",
+        "qualifiers": [
+         {
+          "pid": "P518",
+          "item": "Q23538"
+         }
+        ],
+        "shown": true
+       },
+       {
+        "statement": "Q405-e97956a1-4f71-0951-f036-48f4db1c4022",
+        "pid": "P2120",
+        "amount": 1737.1,
+        "unit": "Q828224",
+        "rank": "normal",
+        "provenance": "imported",
+        "qualifiers": [
+         {
+          "pid": "P518",
+          "item": "Q2796622"
+         }
+        ],
+        "shown": true
+       },
+       {
+        "statement": "Q405-80aad16d-4d7e-8ec1-b6bb-4d7354e00ea9",
+        "pid": "P2120",
+        "amount": 1735.97,
+        "unit": "Q828224",
         "rank": "normal",
         "provenance": "none",
-        "image": null,
+        "qualifiers": [
+         {
+          "pid": "P518",
+          "item": "Q183273"
+         }
+        ],
+        "shown": true
+       }
+      ],
+      "priority": 1.347
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2386",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-46525552-4598-5333-1cd4-496dddaa0fc2",
+        "pid": "P2386",
+        "amount": 3476.2,
+        "unit": "Q828224",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P518",
+          "item": "Q23538"
+         }
+        ],
+        "shown": true
+       }
+      ],
+      "priority": 1.735
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2046",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-6095b598-4782-eddc-d2aa-f5d86f5de81e",
+        "pid": "P2046",
+        "amount": 37930000.0,
+        "unit": "Q712226",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P459",
+          "item": "Q1379273"
+         }
+        ],
+        "shown": true
+       }
+      ],
+      "priority": 1.367
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2234",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-58c07c5d-4583-c848-6997-a81ca3f72dfd",
+        "pid": "P2234",
+        "amount": 21968000000.0,
+        "unit": "Q25517",
+        "rank": "normal",
+        "provenance": "none",
+        "shown": true
+       }
+      ],
+      "priority": 0.816
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2054",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-e24b8852-416d-b3be-2617-dc0e84952a7b",
+        "pid": "P2054",
+        "amount": 3.344,
+        "unit": "Q13147228",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P515",
+          "item": "Q11438"
+         }
+        ],
+        "shown": true
+       }
+      ],
+      "priority": 2.061
+     },
+     {
+      "primitive": "fact",
+      "pid": "P7015",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-1169a613-4b5c-0dac-be5a-169eacf38ec1",
+        "pid": "P7015",
+        "amount": 1.62,
+        "unit": "Q1051665",
+        "rank": "normal",
+        "provenance": "sourced",
+        "shown": true
+       }
+      ],
+      "priority": 1.653
+     },
+     {
+      "primitive": "fact",
+      "pid": "P1102",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-2c4655c1-4117-45c2-4161-c03451ee42c5",
+        "pid": "P1102",
+        "amount": 0.00125,
+        "unit": null,
+        "rank": "normal",
+        "provenance": "none",
         "shown": true
        }
       ],
       "priority": 0.041
+     },
+     {
+      "primitive": "fact",
+      "pid": "P4501",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-8426DDCA-8940-4C49-B4F6-D6DE3983DDFB",
+        "pid": "P4501",
+        "amount": 0.136,
+        "unit": null,
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P1013",
+          "item": "Q1411145"
+         }
+        ],
+        "shown": true
+       }
+      ],
+      "priority": 2.714
+     },
+     {
+      "primitive": "fact",
+      "pid": "P1215",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-202d7046-4064-7f9f-6f5e-37807895aa74",
+        "pid": "P1215",
+        "amount": -12.74,
+        "unit": null,
+        "rank": "normal",
+        "provenance": "sourced",
+        "shown": true
+       }
+      ],
+      "priority": 2.02
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2076",
+      "form": "range",
+      "statements": [
+       {
+        "statement": "Q405-e0b1953e-46a7-cbf5-1d2e-2986ddc1eea8",
+        "pid": "P2076",
+        "amount": 390.0,
+        "unit": "Q11579",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P1480",
+          "item": "Q10578722"
+         }
+        ],
+        "shown": true
+       },
+       {
+        "statement": "Q405-ec9fb884-4c0f-53d7-2326-505d9f1016b2",
+        "pid": "P2076",
+        "amount": 95.0,
+        "unit": "Q11579",
+        "rank": "normal",
+        "provenance": "none",
+        "qualifiers": [
+         {
+          "pid": "P1480",
+          "item": "Q10585806"
+         }
+        ],
+        "shown": true
+       }
+      ],
+      "priority": 1.939
+     },
+     {
+      "primitive": "fact",
+      "pid": "P5348",
+      "form": "range",
+      "statements": [
+       {
+        "statement": "Q405-3e47a8a5-4609-f89b-c84d-0604b63f2a60",
+        "pid": "P5348",
+        "amount": 29.3,
+        "unit": "Q209426",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P1480",
+          "item": "Q10585806"
+         }
+        ],
+        "shown": true
+       },
+       {
+        "statement": "Q405-d672cb78-407c-89de-d240-b74277692a60",
+        "pid": "P5348",
+        "amount": 34.1,
+        "unit": "Q209426",
+        "rank": "preferred",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P1480",
+          "item": "Q10578722"
+         }
+        ],
+        "shown": true
+       }
+      ],
+      "priority": 1.626
      }
+    ]
+   },
+   "prose": {
+    "concepts": [
+     "Q4373292"
+    ]
+   }
+  },
+  {
+   "id": "orbit",
+   "kind": "facts",
+   "concept": "Q4130",
+   "template": "columns",
+   "slots": {
+    "sheet": [
+     {
+      "primitive": "fact",
+      "pid": "P522",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-9ca436b0-4f53-4ea8-3cce-235b6b33fa3f",
+        "pid": "P522",
+        "item": "Q218056",
+        "rank": "normal",
+        "provenance": "none",
+        "qualifiers": [
+         {
+          "pid": "P805",
+          "item": "Q210539"
+         }
+        ],
+        "image": null,
+        "class": true,
+        "shown": true
+       }
+      ],
+      "priority": 0.041
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2146",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-5bce72a1-48c7-83b1-2f6a-8b7cdfe9e271",
+        "pid": "P2146",
+        "amount": 27.321661,
+        "unit": "Q573",
+        "rank": "normal",
+        "provenance": "sourced",
+        "shown": true
+       }
+      ],
+      "priority": 2.714
+     },
+     {
+      "primitive": "fact",
+      "pid": "P4341",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-8af852c5-4056-63bf-70da-7171204d92a3",
+        "pid": "P4341",
+        "amount": 29.530589,
+        "unit": "Q573",
+        "rank": "normal",
+        "provenance": "none",
+        "shown": true
+       }
+      ],
+      "priority": 0.041
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2233",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-d17fe47a-465b-b99c-d4bb-30ac8de0dd3a",
+        "pid": "P2233",
+        "amount": 384400.0,
+        "unit": "Q828224",
+        "rank": "normal",
+        "provenance": "none",
+        "shown": true
+       }
+      ],
+      "priority": 1.959
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2243",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-010e561f-4a80-182f-d181-0748f6553851",
+        "pid": "P2243",
+        "amount": 405500.0,
+        "unit": "Q828224",
+        "rank": "normal",
+        "provenance": "none",
+        "shown": true
+       }
+      ],
+      "priority": 0.571
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2244",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-b7211dc6-4322-fa31-dc0e-d97b1d419f34",
+        "pid": "P2244",
+        "amount": 363300.0,
+        "unit": "Q828224",
+        "rank": "normal",
+        "provenance": "none",
+        "shown": true
+       }
+      ],
+      "priority": 0.571
+     },
+     {
+      "primitive": "fact",
+      "pid": "P1096",
+      "form": "variants",
+      "statements": [
+       {
+        "statement": "Q405-4417bc00-4dab-5212-6be9-2ab2222cc2a7",
+        "pid": "P1096",
+        "amount": 0.054908,
+        "unit": null,
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P585",
+          "year": 1850
+         }
+        ],
+        "shown": true
+       },
+       {
+        "statement": "Q405-5d0f9ed3-4cce-520d-eb0e-092e7df88587",
+        "pid": "P1096",
+        "amount": 0.0567,
+        "unit": null,
+        "rank": "preferred",
+        "provenance": "imported",
+        "shown": true
+       }
+      ],
+      "priority": 2.918
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2045",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-38ac2119-4b99-fd90-e87e-b41a8e30ffa2",
+        "pid": "P2045",
+        "amount": 5.145,
+        "unit": "Q28390",
+        "rank": "normal",
+        "provenance": "imported",
+        "qualifiers": [
+         {
+          "pid": "P2210",
+          "item": "Q79852"
+         }
+        ],
+        "shown": true
+       }
+      ],
+      "priority": 1.755
+     },
+     {
+      "primitive": "fact",
+      "pid": "P2583",
+      "form": "variants",
+      "statements": [
+       {
+        "statement": "Q405-e5f38993-42d8-a410-f26b-36518c8fe3f7",
+        "pid": "P2583",
+        "amount": 385000.5,
+        "unit": "Q828224",
+        "rank": "preferred",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P4934",
+          "item": "Q4130"
+         }
+        ],
+        "shown": true
+       },
+       {
+        "statement": "Q405-715e12f3-42c8-93c2-4aa8-0a06cd36113d",
+        "pid": "P2583",
+        "amount": 356565.0,
+        "unit": "Q828224",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P585",
+          "year": 2018
+         },
+         {
+          "pid": "P1013",
+          "item": "Q1349468"
+         }
+        ],
+        "shown": true
+       },
+       {
+        "statement": "Q405-8a7a3fbc-4689-8509-6694-6e0425683a1a",
+        "pid": "P2583",
+        "amount": 406464.0,
+        "unit": "Q828224",
+        "rank": "normal",
+        "provenance": "sourced",
+        "qualifiers": [
+         {
+          "pid": "P585",
+          "year": 2018
+         },
+         {
+          "pid": "P1013",
+          "item": "Q1179441"
+         }
+        ],
+        "shown": true
+       }
+      ],
+      "priority": 2.041
+     }
+    ]
+   },
+   "prose": {
+    "concepts": [
+     "Q4130"
     ]
    }
   },
@@ -387,6 +1511,24 @@
          }
         },
         "priority": 1.041
+       },
+       {
+        "statement": "Q405-8c4d68c1-43ab-7947-1900-3310e2f87cac",
+        "pid": "P361",
+        "item": "Q18589965",
+        "rank": "normal",
+        "provenance": "none",
+        "image": {
+         "file": "Lagrange points Earth vs Moon.jpg",
+         "kind": "photo",
+         "aspect": 1.1671,
+         "megapixels": 0.2,
+         "credit": {
+          "artist": "No machine-readable author provided. Vulpecula assumed (based on copyright claims).",
+          "license": "Public domain"
+         }
+        },
+        "priority": 0.735
        },
        {
         "statement": "Q405-fc76e94c-4f8b-739c-85ef-9f84cb7d6440",
@@ -697,213 +1839,6 @@
     "sheet": [
      {
       "primitive": "fact",
-      "pid": "P2067",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-13a99111-4718-a11c-1644-a5e0bc11483b",
-        "pid": "P2067",
-        "amount": 73.4767,
-        "unit": "Q613726",
-        "rank": "normal",
-        "provenance": "sourced",
-        "shown": true
-       }
-      ],
-      "priority": 2.918
-     },
-     {
-      "primitive": "fact",
-      "pid": "P1096",
-      "form": "variants",
-      "statements": [
-       {
-        "statement": "Q405-4417bc00-4dab-5212-6be9-2ab2222cc2a7",
-        "pid": "P1096",
-        "amount": 0.054908,
-        "unit": null,
-        "rank": "normal",
-        "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P585",
-          "year": 1850
-         }
-        ],
-        "shown": true
-       },
-       {
-        "statement": "Q405-5d0f9ed3-4cce-520d-eb0e-092e7df88587",
-        "pid": "P1096",
-        "amount": 0.0567,
-        "unit": null,
-        "rank": "preferred",
-        "provenance": "imported",
-        "shown": true
-       }
-      ],
-      "priority": 2.918
-     },
-     {
-      "primitive": "fact",
-      "pid": "P4501",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-8426DDCA-8940-4C49-B4F6-D6DE3983DDFB",
-        "pid": "P4501",
-        "amount": 0.136,
-        "unit": null,
-        "rank": "normal",
-        "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P1013",
-          "item": "Q1411145"
-         }
-        ],
-        "shown": true
-       }
-      ],
-      "priority": 2.714
-     },
-     {
-      "primitive": "fact",
-      "pid": "P2146",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-5bce72a1-48c7-83b1-2f6a-8b7cdfe9e271",
-        "pid": "P2146",
-        "amount": 27.321661,
-        "unit": "Q573",
-        "rank": "normal",
-        "provenance": "sourced",
-        "shown": true
-       }
-      ],
-      "priority": 2.714
-     },
-     {
-      "primitive": "fact",
-      "pid": "P2054",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-e24b8852-416d-b3be-2617-dc0e84952a7b",
-        "pid": "P2054",
-        "amount": 3.344,
-        "unit": "Q13147228",
-        "rank": "normal",
-        "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P515",
-          "item": "Q11438"
-         }
-        ],
-        "shown": true
-       }
-      ],
-      "priority": 2.061
-     },
-     {
-      "primitive": "fact",
-      "pid": "P2583",
-      "form": "variants",
-      "statements": [
-       {
-        "statement": "Q405-e5f38993-42d8-a410-f26b-36518c8fe3f7",
-        "pid": "P2583",
-        "amount": 385000.5,
-        "unit": "Q828224",
-        "rank": "preferred",
-        "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P4934",
-          "item": "Q4130"
-         }
-        ],
-        "shown": true
-       },
-       {
-        "statement": "Q405-715e12f3-42c8-93c2-4aa8-0a06cd36113d",
-        "pid": "P2583",
-        "amount": 356565.0,
-        "unit": "Q828224",
-        "rank": "normal",
-        "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P585",
-          "year": 2018
-         },
-         {
-          "pid": "P1013",
-          "item": "Q1349468"
-         }
-        ],
-        "shown": true
-       },
-       {
-        "statement": "Q405-8a7a3fbc-4689-8509-6694-6e0425683a1a",
-        "pid": "P2583",
-        "amount": 406464.0,
-        "unit": "Q828224",
-        "rank": "normal",
-        "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P585",
-          "year": 2018
-         },
-         {
-          "pid": "P1013",
-          "item": "Q1179441"
-         }
-        ],
-        "shown": true
-       }
-      ],
-      "priority": 2.041
-     },
-     {
-      "primitive": "fact",
-      "pid": "P1215",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-202d7046-4064-7f9f-6f5e-37807895aa74",
-        "pid": "P1215",
-        "amount": -12.74,
-        "unit": null,
-        "rank": "normal",
-        "provenance": "sourced",
-        "shown": true
-       }
-      ],
-      "priority": 2.02
-     },
-     {
-      "primitive": "fact",
-      "pid": "P2233",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-d17fe47a-465b-b99c-d4bb-30ac8de0dd3a",
-        "pid": "P2233",
-        "amount": 384400.0,
-        "unit": "Q828224",
-        "rank": "normal",
-        "provenance": "none",
-        "shown": true
-       }
-      ],
-      "priority": 1.959
-     },
-     {
-      "primitive": "fact",
       "pid": "P138",
       "form": "value",
       "statements": [
@@ -925,272 +1860,6 @@
        }
       ],
       "priority": 1.959
-     },
-     {
-      "primitive": "fact",
-      "pid": "P2076",
-      "form": "range",
-      "statements": [
-       {
-        "statement": "Q405-e0b1953e-46a7-cbf5-1d2e-2986ddc1eea8",
-        "pid": "P2076",
-        "amount": 390.0,
-        "unit": "Q11579",
-        "rank": "normal",
-        "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P1480",
-          "item": "Q10578722"
-         }
-        ],
-        "shown": true
-       },
-       {
-        "statement": "Q405-ec9fb884-4c0f-53d7-2326-505d9f1016b2",
-        "pid": "P2076",
-        "amount": 95.0,
-        "unit": "Q11579",
-        "rank": "normal",
-        "provenance": "none",
-        "qualifiers": [
-         {
-          "pid": "P1480",
-          "item": "Q10585806"
-         }
-        ],
-        "shown": true
-       }
-      ],
-      "priority": 1.939
-     },
-     {
-      "primitive": "fact",
-      "pid": "P2045",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-38ac2119-4b99-fd90-e87e-b41a8e30ffa2",
-        "pid": "P2045",
-        "amount": 5.145,
-        "unit": "Q28390",
-        "rank": "normal",
-        "provenance": "imported",
-        "qualifiers": [
-         {
-          "pid": "P2210",
-          "item": "Q79852"
-         }
-        ],
-        "shown": true
-       }
-      ],
-      "priority": 1.755
-     },
-     {
-      "primitive": "fact",
-      "pid": "P2386",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-46525552-4598-5333-1cd4-496dddaa0fc2",
-        "pid": "P2386",
-        "amount": 3476.2,
-        "unit": "Q828224",
-        "rank": "normal",
-        "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P518",
-          "item": "Q23538"
-         }
-        ],
-        "shown": true
-       }
-      ],
-      "priority": 1.735
-     },
-     {
-      "primitive": "fact",
-      "pid": "P7015",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-1169a613-4b5c-0dac-be5a-169eacf38ec1",
-        "pid": "P7015",
-        "amount": 1.62,
-        "unit": "Q1051665",
-        "rank": "normal",
-        "provenance": "sourced",
-        "shown": true
-       }
-      ],
-      "priority": 1.653
-     },
-     {
-      "primitive": "fact",
-      "pid": "P5348",
-      "form": "range",
-      "statements": [
-       {
-        "statement": "Q405-3e47a8a5-4609-f89b-c84d-0604b63f2a60",
-        "pid": "P5348",
-        "amount": 29.3,
-        "unit": "Q209426",
-        "rank": "normal",
-        "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P1480",
-          "item": "Q10585806"
-         }
-        ],
-        "shown": true
-       },
-       {
-        "statement": "Q405-d672cb78-407c-89de-d240-b74277692a60",
-        "pid": "P5348",
-        "amount": 34.1,
-        "unit": "Q209426",
-        "rank": "preferred",
-        "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P1480",
-          "item": "Q10578722"
-         }
-        ],
-        "shown": true
-       }
-      ],
-      "priority": 1.626
-     },
-     {
-      "primitive": "fact",
-      "pid": "P2046",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-6095b598-4782-eddc-d2aa-f5d86f5de81e",
-        "pid": "P2046",
-        "amount": 37930000.0,
-        "unit": "Q712226",
-        "rank": "normal",
-        "provenance": "sourced",
-        "qualifiers": [
-         {
-          "pid": "P459",
-          "item": "Q1379273"
-         }
-        ],
-        "shown": true
-       }
-      ],
-      "priority": 1.367
-     },
-     {
-      "primitive": "fact",
-      "pid": "P2120",
-      "form": "variants",
-      "statements": [
-       {
-        "statement": "Q405-b9e73f2a-4b12-e158-6a38-4a1e9ca452f7",
-        "pid": "P2120",
-        "amount": 1738.14,
-        "unit": "Q828224",
-        "rank": "normal",
-        "provenance": "imported",
-        "qualifiers": [
-         {
-          "pid": "P518",
-          "item": "Q23538"
-         }
-        ],
-        "shown": true
-       },
-       {
-        "statement": "Q405-e97956a1-4f71-0951-f036-48f4db1c4022",
-        "pid": "P2120",
-        "amount": 1737.1,
-        "unit": "Q828224",
-        "rank": "normal",
-        "provenance": "imported",
-        "qualifiers": [
-         {
-          "pid": "P518",
-          "item": "Q2796622"
-         }
-        ],
-        "shown": true
-       },
-       {
-        "statement": "Q405-80aad16d-4d7e-8ec1-b6bb-4d7354e00ea9",
-        "pid": "P2120",
-        "amount": 1735.97,
-        "unit": "Q828224",
-        "rank": "normal",
-        "provenance": "none",
-        "qualifiers": [
-         {
-          "pid": "P518",
-          "item": "Q183273"
-         }
-        ],
-        "shown": true
-       }
-      ],
-      "priority": 1.347
-     },
-     {
-      "primitive": "fact",
-      "pid": "P2234",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-58c07c5d-4583-c848-6997-a81ca3f72dfd",
-        "pid": "P2234",
-        "amount": 21968000000.0,
-        "unit": "Q25517",
-        "rank": "normal",
-        "provenance": "none",
-        "shown": true
-       }
-      ],
-      "priority": 0.816
-     },
-     {
-      "primitive": "fact",
-      "pid": "P2244",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-b7211dc6-4322-fa31-dc0e-d97b1d419f34",
-        "pid": "P2244",
-        "amount": 363300.0,
-        "unit": "Q828224",
-        "rank": "normal",
-        "provenance": "none",
-        "shown": true
-       }
-      ],
-      "priority": 0.571
-     },
-     {
-      "primitive": "fact",
-      "pid": "P2243",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-010e561f-4a80-182f-d181-0748f6553851",
-        "pid": "P2243",
-        "amount": 405500.0,
-        "unit": "Q828224",
-        "rank": "normal",
-        "provenance": "none",
-        "shown": true
-       }
-      ],
-      "priority": 0.571
      },
      {
       "primitive": "fact",
@@ -1268,23 +1937,6 @@
      },
      {
       "primitive": "fact",
-      "pid": "P4341",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-8af852c5-4056-63bf-70da-7171204d92a3",
-        "pid": "P4341",
-        "amount": 29.530589,
-        "unit": "Q573",
-        "rank": "normal",
-        "provenance": "none",
-        "shown": true
-       }
-      ],
-      "priority": 0.041
-     },
-     {
-      "primitive": "fact",
       "pid": "P3872",
       "form": "value",
       "statements": [
@@ -1336,24 +1988,6 @@
      },
      {
       "primitive": "fact",
-      "pid": "P1299",
-      "form": "value",
-      "statements": [
-       {
-        "statement": "Q405-ad0d60f2-402c-4de1-246d-546a61c7bf24",
-        "pid": "P1299",
-        "item": "Q782683",
-        "rank": "normal",
-        "provenance": "none",
-        "image": null,
-        "class": true,
-        "shown": true
-       }
-      ],
-      "priority": 0.041
-     },
-     {
-      "primitive": "fact",
       "pid": "P1542",
       "form": "value",
       "statements": [
@@ -1372,14 +2006,15 @@
      },
      {
       "primitive": "fact",
-      "pid": "P1102",
+      "pid": "P625",
       "form": "value",
       "statements": [
        {
-        "statement": "Q405-2c4655c1-4117-45c2-4161-c03451ee42c5",
-        "pid": "P1102",
-        "amount": 0.00125,
-        "unit": null,
+        "statement": "Q405-2af50ee1-4054-2751-bcd5-c6c0912f7b16",
+        "pid": "P625",
+        "lat": 0.0,
+        "lon": 0.0,
+        "globe": "Q405",
         "rank": "normal",
         "provenance": "none",
         "shown": true
@@ -1413,21 +2048,32 @@
      },
      {
       "primitive": "fact",
-      "pid": "P522",
+      "pid": "P276",
       "form": "value",
       "statements": [
        {
-        "statement": "Q405-9ca436b0-4f53-4ea8-3cce-235b6b33fa3f",
-        "pid": "P522",
-        "item": "Q218056",
+        "statement": "Q405-e88d8133-4e05-dde1-3c5f-d5da7365ed04",
+        "pid": "P276",
+        "item": "Q7879772",
         "rank": "normal",
         "provenance": "none",
-        "qualifiers": [
-         {
-          "pid": "P805",
-          "item": "Q210539"
-         }
-        ],
+        "image": null,
+        "shown": true
+       }
+      ],
+      "priority": 0.041
+     },
+     {
+      "primitive": "fact",
+      "pid": "P1299",
+      "form": "value",
+      "statements": [
+       {
+        "statement": "Q405-ad0d60f2-402c-4de1-246d-546a61c7bf24",
+        "pid": "P1299",
+        "item": "Q782683",
+        "rank": "normal",
+        "provenance": "none",
         "image": null,
         "class": true,
         "shown": true
@@ -1568,49 +2214,6 @@
          "megapixels": 0.14,
          "credit": {
           "artist": "Unknown authorUnknown author",
-          "license": "Public domain"
-         }
-        },
-        "shown": true
-       },
-       {
-        "statement": "Q405-811538f6-4156-6068-c76d-c14483e7452b",
-        "pid": "P1343",
-        "item": "Q105085344",
-        "rank": "normal",
-        "provenance": "none",
-        "qualifiers": [
-         {
-          "pid": "P1810",
-          "string": "Luna"
-         },
-         {
-          "pid": "P2699",
-          "string": "https://sfdictionary.com/view/353/luna"
-         }
-        ],
-        "image": null,
-        "shown": true
-       },
-       {
-        "statement": "Q405-8F919EAF-2C81-43DF-9CC4-2A3B7956B1C0",
-        "pid": "P1343",
-        "item": "Q1547546",
-        "rank": "normal",
-        "provenance": "none",
-        "qualifiers": [
-         {
-          "pid": "P805",
-          "item": "Q113559766"
-         }
-        ],
-        "image": {
-         "file": "Zedler-titel.png",
-         "kind": "photo",
-         "aspect": 1.9081,
-         "megapixels": 0.07,
-         "credit": {
-          "artist": "",
           "license": "Public domain"
          }
         },
@@ -1782,7 +2385,7 @@
           "license": "Public domain"
          }
         },
-        "shown": false
+        "shown": true
        },
        {
         "statement": "Q405-6BFDD620-EA3A-43E8-9F6A-33947106626F",
@@ -1806,7 +2409,7 @@
           "license": "Public domain"
          }
         },
-        "shown": false
+        "shown": true
        },
        {
         "statement": "Q405-77E35444-A33B-4BF4-8C6D-7C568A7AE411",
@@ -1871,6 +2474,49 @@
          "credit": {
           "artist": "Patrick-Emil Zörner (Paddy)",
           "license": "CC BY-SA 2.0 de"
+         }
+        },
+        "shown": false
+       },
+       {
+        "statement": "Q405-811538f6-4156-6068-c76d-c14483e7452b",
+        "pid": "P1343",
+        "item": "Q105085344",
+        "rank": "normal",
+        "provenance": "none",
+        "qualifiers": [
+         {
+          "pid": "P1810",
+          "string": "Luna"
+         },
+         {
+          "pid": "P2699",
+          "string": "https://sfdictionary.com/view/353/luna"
+         }
+        ],
+        "image": null,
+        "shown": false
+       },
+       {
+        "statement": "Q405-8F919EAF-2C81-43DF-9CC4-2A3B7956B1C0",
+        "pid": "P1343",
+        "item": "Q1547546",
+        "rank": "normal",
+        "provenance": "none",
+        "qualifiers": [
+         {
+          "pid": "P805",
+          "item": "Q113559766"
+         }
+        ],
+        "image": {
+         "file": "Zedler-titel.png",
+         "kind": "photo",
+         "aspect": 1.9081,
+         "megapixels": 0.07,
+         "credit": {
+          "artist": "",
+          "license": "Public domain"
          }
         },
         "shown": false
@@ -2677,6 +3323,161 @@
         "statement": "Q405-ddec9b17-493b-dc73-0d56-45ef17d68cc1"
        },
        {
+        "pid": "P3106",
+        "string": "science/moon",
+        "statement": "Q405-DB3FFF02-9F12-4846-89E2-D25701CD76FA"
+       },
+       {
+        "pid": "P268",
+        "string": "119358377",
+        "statement": "q405-08A26655-C353-47CF-9D36-B587ADB688C9"
+       },
+       {
+        "pid": "P672",
+        "string": "G01.060.075.730.700.200.500",
+        "statement": "Q405-20c529ce-487a-94f7-a3a5-acd57359c165"
+       },
+       {
+        "pid": "P950",
+        "string": "XX456648",
+        "statement": "Q405-2387a6dc-4b04-2e8f-787d-4f22f37f7427"
+       },
+       {
+        "pid": "P269",
+        "string": "027282414",
+        "statement": "q405-45773725-0DC5-4EE2-88DC-9AD586CDA38D"
+       },
+       {
+        "pid": "P998",
+        "string": "World/Deutsch/Wissenschaft/Naturwissenschaften/Astronomie/Sonnensystem/Planeten/Erde/Mond/",
+        "statement": "Q405-3a2d5629-44b9-1006-9b62-948413770ffe"
+       },
+       {
+        "pid": "P998",
+        "string": "World/Español/Ciencia_y_tecnología/Astronomía/Sistema_Solar/Planetas/Tierra/Luna/",
+        "statement": "Q405-4760183f-4b8b-e271-655e-80b087832fb1"
+       },
+       {
+        "pid": "P998",
+        "string": "World/Japanese/科学/自然科学/天文学/太陽系/月/",
+        "statement": "Q405-526a6cbd-47de-0106-3736-7d7ce2784215"
+       },
+       {
+        "pid": "P691",
+        "string": "ph117905",
+        "statement": "Q405-5ee767ed-4296-cad5-a9a0-77b7ec4dabd7"
+       },
+       {
+        "pid": "P1004",
+        "string": "73cba8a4-cacb-45b9-8e02-654f716e2e7a",
+        "statement": "Q405-670aa688-de78-4461-9446-de5495d88931"
+       },
+       {
+        "pid": "P646",
+        "string": "/m/04wv_",
+        "statement": "Q405-840D8E82-96D2-404C-A302-474913504FCC"
+       },
+       {
+        "pid": "P2612",
+        "string": "Moon",
+        "statement": "Q405-3F439A83-F323-4B83-9E23-7676A5DB204E"
+       },
+       {
+        "pid": "P1667",
+        "string": "7030645",
+        "statement": "Q405-68147548-4319-5900-4ba3-2a86fe636c3c"
+       },
+       {
+        "pid": "P1296",
+        "string": "0120438",
+        "statement": "Q405-7E541E13-9251-4C33-BC85-AC670060B6E9"
+       },
+       {
+        "pid": "P1245",
+        "string": "5730",
+        "statement": "Q405-81B1F73E-16FC-47ED-9DF9-07AB4EAF5592"
+       },
+       {
+        "pid": "P508",
+        "string": "9292",
+        "statement": "q405-A917C3DA-37CF-40AD-A6D9-DBE8B19169BA"
+       },
+       {
+        "pid": "P486",
+        "string": "D016081",
+        "statement": "Q405-aee1c53d-46b6-53be-3cf8-c8224150ad8e"
+       },
+       {
+        "pid": "P1417",
+        "string": "place/Moon",
+        "statement": "Q405-82A02734-D068-443B-8C17-AFE583031483"
+       },
+       {
+        "pid": "P4342",
+        "string": "Månen",
+        "statement": "Q405-1662E594-B580-45DB-A873-961200C2CD65"
+       },
+       {
+        "pid": "P4212",
+        "string": "pcrtZSukuWlnHA",
+        "statement": "Q405-1AAD1FDF-AC86-48BF-9B44-583651B5B7C4"
+       },
+       {
+        "pid": "P2163",
+        "string": "1240375",
+        "statement": "Q405-7044048f-4ff4-8b55-fd32-56872c1ba6ba"
+       },
+       {
+        "pid": "P998",
+        "string": "Science/Astronomy/Solar_System/Planets/Earth/Moon/",
+        "statement": "Q405-AD49E992-3629-49F5-9A85-8B16A4475F61"
+       },
+       {
+        "pid": "P4839",
+        "string": "Entity[\"PlanetaryMoon\", \"Moon\"]",
+        "statement": "Q405-169bce68-4446-e9a9-dbf8-50044024cc01"
+       },
+       {
+        "pid": "P3180",
+        "string": "g1261",
+        "statement": "Q405-5BB68A90-69D8-483A-BB02-47830F2FF486"
+       },
+       {
+        "pid": "P5551",
+        "string": "lune",
+        "statement": "Q405-0B9AAD97-D333-4508-9225-9AE18EB9F4FB"
+       },
+       {
+        "pid": "P3553",
+        "string": "19577524",
+        "statement": "Q405-581E9657-9DCE-4259-BF4B-53E4B7948F00"
+       },
+       {
+        "pid": "P1368",
+        "string": "000055659",
+        "statement": "Q405-c75854da-43a5-1919-dd94-edb82e982c6f"
+       },
+       {
+        "pid": "P5019",
+        "string": "mond-20",
+        "statement": "Q405-38889a65-467b-301b-8889-aac0c1b1a46b"
+       },
+       {
+        "pid": "P5421",
+        "string": "89162",
+        "statement": "Q405-259FBC58-62AF-4BDA-8BE3-E6895B6D29E4"
+       },
+       {
+        "pid": "P1375",
+        "string": "000229177",
+        "statement": "Q405-cc1a3c54-47e9-10a6-3e0c-f3de21a43680"
+       },
+       {
+        "pid": "P3219",
+        "string": "lune",
+        "statement": "Q405-7bd88b42-4bba-67f9-dee4-5a0b16416b8f"
+       },
+       {
         "pid": "P8814",
         "string": "09381255-n",
         "statement": "Q405-8FC8FEFB-1937-4B25-99A0-A923F2E6510B"
@@ -2930,161 +3731,6 @@
         "pid": "P13613",
         "string": "146123",
         "statement": "Q405-935efee5-4688-a6b6-5ce5-f3ddc2053a5a"
-       },
-       {
-        "pid": "P3106",
-        "string": "science/moon",
-        "statement": "Q405-DB3FFF02-9F12-4846-89E2-D25701CD76FA"
-       },
-       {
-        "pid": "P268",
-        "string": "119358377",
-        "statement": "q405-08A26655-C353-47CF-9D36-B587ADB688C9"
-       },
-       {
-        "pid": "P672",
-        "string": "G01.060.075.730.700.200.500",
-        "statement": "Q405-20c529ce-487a-94f7-a3a5-acd57359c165"
-       },
-       {
-        "pid": "P950",
-        "string": "XX456648",
-        "statement": "Q405-2387a6dc-4b04-2e8f-787d-4f22f37f7427"
-       },
-       {
-        "pid": "P269",
-        "string": "027282414",
-        "statement": "q405-45773725-0DC5-4EE2-88DC-9AD586CDA38D"
-       },
-       {
-        "pid": "P998",
-        "string": "World/Deutsch/Wissenschaft/Naturwissenschaften/Astronomie/Sonnensystem/Planeten/Erde/Mond/",
-        "statement": "Q405-3a2d5629-44b9-1006-9b62-948413770ffe"
-       },
-       {
-        "pid": "P998",
-        "string": "World/Español/Ciencia_y_tecnología/Astronomía/Sistema_Solar/Planetas/Tierra/Luna/",
-        "statement": "Q405-4760183f-4b8b-e271-655e-80b087832fb1"
-       },
-       {
-        "pid": "P998",
-        "string": "World/Japanese/科学/自然科学/天文学/太陽系/月/",
-        "statement": "Q405-526a6cbd-47de-0106-3736-7d7ce2784215"
-       },
-       {
-        "pid": "P691",
-        "string": "ph117905",
-        "statement": "Q405-5ee767ed-4296-cad5-a9a0-77b7ec4dabd7"
-       },
-       {
-        "pid": "P1004",
-        "string": "73cba8a4-cacb-45b9-8e02-654f716e2e7a",
-        "statement": "Q405-670aa688-de78-4461-9446-de5495d88931"
-       },
-       {
-        "pid": "P646",
-        "string": "/m/04wv_",
-        "statement": "Q405-840D8E82-96D2-404C-A302-474913504FCC"
-       },
-       {
-        "pid": "P2612",
-        "string": "Moon",
-        "statement": "Q405-3F439A83-F323-4B83-9E23-7676A5DB204E"
-       },
-       {
-        "pid": "P1667",
-        "string": "7030645",
-        "statement": "Q405-68147548-4319-5900-4ba3-2a86fe636c3c"
-       },
-       {
-        "pid": "P1296",
-        "string": "0120438",
-        "statement": "Q405-7E541E13-9251-4C33-BC85-AC670060B6E9"
-       },
-       {
-        "pid": "P1245",
-        "string": "5730",
-        "statement": "Q405-81B1F73E-16FC-47ED-9DF9-07AB4EAF5592"
-       },
-       {
-        "pid": "P508",
-        "string": "9292",
-        "statement": "q405-A917C3DA-37CF-40AD-A6D9-DBE8B19169BA"
-       },
-       {
-        "pid": "P486",
-        "string": "D016081",
-        "statement": "Q405-aee1c53d-46b6-53be-3cf8-c8224150ad8e"
-       },
-       {
-        "pid": "P1417",
-        "string": "place/Moon",
-        "statement": "Q405-82A02734-D068-443B-8C17-AFE583031483"
-       },
-       {
-        "pid": "P4342",
-        "string": "Månen",
-        "statement": "Q405-1662E594-B580-45DB-A873-961200C2CD65"
-       },
-       {
-        "pid": "P4212",
-        "string": "pcrtZSukuWlnHA",
-        "statement": "Q405-1AAD1FDF-AC86-48BF-9B44-583651B5B7C4"
-       },
-       {
-        "pid": "P2163",
-        "string": "1240375",
-        "statement": "Q405-7044048f-4ff4-8b55-fd32-56872c1ba6ba"
-       },
-       {
-        "pid": "P998",
-        "string": "Science/Astronomy/Solar_System/Planets/Earth/Moon/",
-        "statement": "Q405-AD49E992-3629-49F5-9A85-8B16A4475F61"
-       },
-       {
-        "pid": "P4839",
-        "string": "Entity[\"PlanetaryMoon\", \"Moon\"]",
-        "statement": "Q405-169bce68-4446-e9a9-dbf8-50044024cc01"
-       },
-       {
-        "pid": "P3180",
-        "string": "g1261",
-        "statement": "Q405-5BB68A90-69D8-483A-BB02-47830F2FF486"
-       },
-       {
-        "pid": "P5551",
-        "string": "lune",
-        "statement": "Q405-0B9AAD97-D333-4508-9225-9AE18EB9F4FB"
-       },
-       {
-        "pid": "P3553",
-        "string": "19577524",
-        "statement": "Q405-581E9657-9DCE-4259-BF4B-53E4B7948F00"
-       },
-       {
-        "pid": "P1368",
-        "string": "000055659",
-        "statement": "Q405-c75854da-43a5-1919-dd94-edb82e982c6f"
-       },
-       {
-        "pid": "P5019",
-        "string": "mond-20",
-        "statement": "Q405-38889a65-467b-301b-8889-aac0c1b1a46b"
-       },
-       {
-        "pid": "P5421",
-        "string": "89162",
-        "statement": "Q405-259FBC58-62AF-4BDA-8BE3-E6895B6D29E4"
-       },
-       {
-        "pid": "P1375",
-        "string": "000229177",
-        "statement": "Q405-cc1a3c54-47e9-10a6-3e0c-f3de21a43680"
-       },
-       {
-        "pid": "P3219",
-        "string": "lune",
-        "statement": "Q405-7bd88b42-4bba-67f9-dee4-5a0b16416b8f"
        }
       ]
      }
