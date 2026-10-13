@@ -54,9 +54,11 @@ id = "media"
 when = { type = "CommonsMedia" }
 make = "media"
 
+# A map of the Earth for a coordinate on the Earth. A coordinate on
+# another globe (the Moon) is a row, until a map of that globe exists.
 [[block]]
 id = "coordinate"
-when = { type = "GlobeCoordinate" }
+when = { type = "GlobeCoordinate", globe = "Q2" }   # Earth
 make = "map"
 
 # A role decides before the datatype: review scores are cards, whatever

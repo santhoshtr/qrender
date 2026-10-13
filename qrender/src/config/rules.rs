@@ -128,6 +128,8 @@ pub struct GroupWhen {
     pub mostly_pictured: Option<bool>,
     /// The values make a series: dated by distinct years.
     pub distinct_years: Option<bool>,
+    /// The coordinates are on this globe (Q2: the Earth).
+    pub globe: Option<content::Qid>,
 }
 
 /// Values of an item property that ended are history: a group of their own.

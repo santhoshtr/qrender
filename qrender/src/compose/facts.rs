@@ -100,6 +100,14 @@ impl<'c, 'a> GroupFacts<'c, 'a> {
     pub fn distinct_years(&self) -> bool {
         dated_years(self.statements).is_some()
     }
+
+    /// The globe of a coordinate value; None for other values.
+    pub fn globe(&self) -> Option<content::Qid> {
+        match self.statements[0].value {
+            content::Value::GlobeCoordinate { globe, .. } => Some(globe),
+            _ => None,
+        }
+    }
 }
 
 impl When<GroupFacts<'_, '_>> for GroupWhen {
@@ -115,6 +123,7 @@ impl When<GroupFacts<'_, '_>> for GroupWhen {
                 .mostly_pictured
                 .is_none_or(|b| f.mostly_pictured() == b)
             && self.distinct_years.is_none_or(|b| f.distinct_years() == b)
+            && self.globe.is_none_or(|g| f.globe() == Some(g))
     }
 }
 
@@ -256,6 +265,9 @@ mod tests {
         assert_eq!(group_rule(block, media, none.clone(), false), "media");
         let point = json!([{"pid": "P625", "value": {"type": "GlobeCoordinate", "lat": 1.0, "lon": 2.0, "globe": "Q2"}}]);
         assert_eq!(group_rule(block, point, none.clone(), false), "coordinate");
+        // On the Moon: no Earth map, a row.
+        let moon = json!([{"pid": "P625", "value": {"type": "GlobeCoordinate", "lat": 0.0, "lon": 0.0, "globe": "Q405"}}]);
+        assert_eq!(group_rule(block, moon, none.clone(), false), "row");
         let series = json!([
             dated("P1082", 1.0, 2000),
             dated("P1082", 2.0, 2010),
