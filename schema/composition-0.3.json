@@ -105,6 +105,19 @@
           "type": "object"
         },
         {
+          "$ref": "#/$defs/Pictures",
+          "properties": {
+            "primitive": {
+              "const": "pictures",
+              "type": "string"
+            }
+          },
+          "required": [
+            "primitive"
+          ],
+          "type": "object"
+        },
+        {
           "$ref": "#/$defs/Map",
           "properties": {
             "primitive": {
@@ -2060,6 +2073,20 @@
       ],
       "type": "object"
     },
+    "Pictures": {
+      "properties": {
+        "pictures": {
+          "items": {
+            "$ref": "#/$defs/Media"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "pictures"
+      ],
+      "type": "object"
+    },
     "Pid": {
       "pattern": "^P[1-9][0-9]*$",
       "type": "string"
@@ -2116,28 +2143,37 @@
     },
     "Primitive": {
       "description": "The kinds of composition block.",
-      "enum": [
-        "title",
-        "kind",
-        "prose",
-        "media",
-        "map",
-        "fact",
-        "series",
-        "scale",
-        "peers",
-        "network",
-        "succession",
-        "credits",
-        "score",
-        "works",
-        "time",
-        "absent",
-        "provenance",
-        "sitelinks",
-        "identifiers"
-      ],
-      "type": "string"
+      "oneOf": [
+        {
+          "enum": [
+            "title",
+            "kind",
+            "prose",
+            "media",
+            "map",
+            "fact",
+            "series",
+            "scale",
+            "peers",
+            "network",
+            "succession",
+            "credits",
+            "score",
+            "works",
+            "time",
+            "absent",
+            "provenance",
+            "sitelinks",
+            "identifiers"
+          ],
+          "type": "string"
+        },
+        {
+          "const": "pictures",
+          "description": "Single pictures that follow each other in a slot: one run.",
+          "type": "string"
+        }
+      ]
     },
     "Prose": {
       "properties": {

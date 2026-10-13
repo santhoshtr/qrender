@@ -10,14 +10,14 @@
 use askama::Template;
 
 use super::design::{SCRIPTS, STYLESHEET, TOKENS};
-use super::ui::{Arg, Group, Ref, Shown, Ui};
+use super::ui::{Arg, Ref, Shown, Ui};
 use crate::localize::format::Part;
 use crate::localize::{Label, SpreadView, View};
 use crate::primitives::fact::Fact;
 use crate::primitives::media::Media;
 use crate::primitives::{
-    absent, credits, fact, identifiers, kind, map, media, network, peers, prose, provenance, scale,
-    score, series, sitelinks, succession, time, title, works,
+    absent, credits, fact, identifiers, kind, map, media, network, peers, pictures, prose,
+    provenance, scale, score, series, sitelinks, succession, time, title, works,
 };
 use crate::schema::{Block, Credit};
 use crate::vocab::Slot;
@@ -212,6 +212,7 @@ impl<'v> Ui<'v> {
             Block::Kind(b) => render(kind::Html { ui: self, b }),
             Block::Prose(b) => render(prose::Html { ui: self, b }),
             Block::Media(b) => self.media(b),
+            Block::Pictures(b) => render(pictures::Html { ui: self, b }),
             Block::Map(b) => render(map::Html { ui: self, b }),
             Block::Fact(b) => render(fact::Html { ui: self, b }),
             Block::Series(b) => render(series::Html { ui: self, b }),

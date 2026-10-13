@@ -148,6 +148,15 @@ impl<'a> Composer<'a> {
                 .spreads
                 .iter()
                 .filter_map(|s| built.shift_remove(s.id.as_str()))
+                .map(|mut spread| {
+                    spread.slots = std::mem::take(&mut spread.slots)
+                        .into_iter()
+                        .map(|(slot, blocks)| {
+                            (slot, crate::primitives::pictures::group(slot, blocks))
+                        })
+                        .collect();
+                    spread
+                })
                 .collect(),
             dropped: layout
                 .spreads

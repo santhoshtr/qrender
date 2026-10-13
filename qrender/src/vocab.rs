@@ -101,6 +101,8 @@ pub enum Primitive {
     Kind,
     Prose,
     Media,
+    /// Single pictures that follow each other in a slot: one run.
+    Pictures,
     Map,
     Fact,
     Series,

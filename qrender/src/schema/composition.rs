@@ -8,8 +8,8 @@ use serde::Serialize;
 
 use super::StatementRef;
 use crate::primitives::{
-    absent, credits, fact, identifiers, kind, map, media, network, peers, prose, provenance, scale,
-    score, series, sitelinks, succession, time, title, works,
+    absent, credits, fact, identifiers, kind, map, media, network, peers, pictures, prose,
+    provenance, scale, score, series, sitelinks, succession, time, title, works,
 };
 use crate::vocab::{Dimension, Primitive, Slot, SpreadKind, Template};
 
@@ -90,6 +90,7 @@ pub enum Block {
     Kind(kind::Kind),
     Prose(prose::Prose),
     Media(media::Media),
+    Pictures(pictures::Pictures),
     Map(map::Map),
     Fact(fact::Fact),
     Series(series::Series),
@@ -117,6 +118,7 @@ impl Block {
             Self::Kind(_) => Primitive::Kind,
             Self::Prose(_) => Primitive::Prose,
             Self::Media(_) => Primitive::Media,
+            Self::Pictures(_) => Primitive::Pictures,
             Self::Map(_) => Primitive::Map,
             Self::Fact(_) => Primitive::Fact,
             Self::Series(_) => Primitive::Series,

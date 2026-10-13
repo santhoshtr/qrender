@@ -17,9 +17,7 @@ use crate::primitives::media::Media;
 use crate::primitives::provenance;
 use crate::primitives::succession::Succession;
 use crate::primitives::works::{Work, Works};
-use crate::schema::{
-    Block, Credit, MediaKind, Picture, Provenance, QualifierShown, StatementRef, ValueShown,
-};
+use crate::schema::{Credit, Picture, Provenance, QualifierShown, StatementRef, ValueShown};
 use crate::vocab::Slot;
 
 pub const FILEPATH: &str = "https://commons.wikimedia.org/wiki/Special:FilePath/";
@@ -330,12 +328,6 @@ impl<'v> Ui<'v> {
     }
 }
 
-/// The blocks of a slot, with consecutive pictures in one run.
-pub enum Group<'b> {
-    Run(Vec<&'b Media>),
-    One(&'b Block),
-}
-
 /// A row of the provenance legend.
 pub struct LegendRow {
     pub kind: &'static str,
@@ -396,29 +388,6 @@ impl<'v> Ui<'v> {
     }
 
     // ---------------------------------------------------------------- slots
-
-    /// Single pictures that follow each other in a slot form one run. Not
-    /// in the slots that are a run or one picture already.
-    pub fn groups<'b>(&self, slot: impl Arg<Slot>, blocks: &'b [Block]) -> Vec<Group<'b>> {
-        let grouping = !matches!(
-            slot.get(),
-            Slot::Run | Slot::Feature | Slot::Band | Slot::Hero
-        );
-        let mut out = Vec::new();
-        for block in blocks {
-            match block {
-                Block::Media(m) if grouping && m.picture.kind != MediaKind::Audio => {
-                    if let Some(Group::Run(run)) = out.last_mut() {
-                        run.push(m);
-                    } else {
-                        out.push(Group::Run(vec![m]));
-                    }
-                }
-                _ => out.push(Group::One(block)),
-            }
-        }
-        out
-    }
 
     /// The slots that are a definition list of rows.
     pub fn is_sheet(&self, slot: impl Arg<Slot>) -> bool {

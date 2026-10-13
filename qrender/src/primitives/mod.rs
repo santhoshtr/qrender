@@ -12,6 +12,7 @@ pub mod map;
 pub mod media;
 pub mod network;
 pub mod peers;
+pub mod pictures;
 pub mod prose;
 pub mod provenance;
 pub mod scale;
