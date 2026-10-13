@@ -237,7 +237,14 @@ mod tests {
         let layouts = &config.layouts;
         assert_eq!(
             layouts.class_layouts.keys().collect::<Vec<_>>(),
-            ["settlement", "person", "film", "astronomical", "generic"]
+            [
+                "settlement",
+                "person",
+                "film",
+                "astronomical",
+                "country",
+                "generic"
+            ]
         );
         let settlement = &layouts.class_layouts["settlement"];
         assert_eq!(settlement.spreads[0].kind, SpreadKind::Identity);

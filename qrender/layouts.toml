@@ -553,6 +553,65 @@ id = "evidence"
 concept = "Q121769"    # reference
 kind = "evidence"
 
+# ----------------------------------------------------------------- country
+
+[class_layouts.country]
+match_p31 = [
+  "Q6256",      # country
+  "Q3624078",   # sovereign state
+]
+
+[[class_layouts.country.spreads]]
+id = "identity"
+kind = "identity"
+
+[[class_layouts.country.spreads]]
+id = "government"
+dimension = "people"
+concept = "Q7188"      # government
+prose = ["Q7188", "Q7163"]   # government, politics
+kind = "facts"
+pids = [
+  "P6",     # head of government
+  "P35",    # head of state
+  "P1313",  # office held by head of government
+  "P1906",  # office held by head of state
+  "P122",   # basic form of government
+  "P194",   # legislative body
+  "P208",   # executive body
+  "P209",   # highest judicial authority
+  "P36",    # capital
+]
+
+[[class_layouts.country.spreads]]
+id = "relations"
+dimension = "people"
+concept = "Q930933"    # relation
+kind = "facts"
+pictured = true
+
+[[class_layouts.country.spreads]]
+id = "history"
+dimension = "time"
+concept = "Q309"       # history
+prose = ["Q309"]
+kind = "history"
+
+[[class_layouts.country.spreads]]
+id = "media"
+dimension = "media"
+concept = "Q131765"    # multimedia
+kind = "media"
+
+[[class_layouts.country.spreads]]
+id = "more"
+kind = "more"
+
+[[class_layouts.country.spreads]]
+id = "evidence"
+concept = "Q121769"    # reference
+kind = "evidence"
+
 # ----------------------------------------------------------------- generic
 # For an item no class layout matches: the head, then the pictured relations,
 # then the rest.
