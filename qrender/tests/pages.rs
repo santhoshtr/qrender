@@ -40,7 +40,11 @@ fn view(page: &str) -> View {
     let content: Content =
         serde_json::from_str(&read(format!("fixtures/content/{qid}.json"))).unwrap();
     let text: Text = serde_json::from_str(&read(format!("fixtures/text/{page}.json"))).unwrap();
-    qrender::localize(&qrender::compose(&content, Config::embedded()), &text)
+    qrender::localize(
+        &qrender::compose(&content, Config::embedded()),
+        &text,
+        Config::embedded(),
+    )
 }
 
 fn select(s: &str) -> Selector {

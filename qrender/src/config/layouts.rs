@@ -24,6 +24,9 @@ pub struct Layouts {
     /// "... of topic" properties, and the spread that takes each one.
     pub topics: IndexMap<Pid, String>,
     pub range_ends: IndexMap<Qid, RangeEnd>,
+    /// Article section titles that are apparatus, by wiki language.
+    #[serde(default)]
+    pub apparatus: IndexMap<String, Vec<String>>,
     pub provenance: Provenance,
 }
 

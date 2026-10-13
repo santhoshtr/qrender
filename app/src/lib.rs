@@ -52,6 +52,7 @@ impl Service {
         Ok(qrender::localize(
             &qrender::compose(&content, self.config),
             &text,
+            self.config,
         ))
     }
 }

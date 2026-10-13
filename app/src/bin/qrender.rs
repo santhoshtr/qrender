@@ -187,7 +187,11 @@ async fn fetch(item: &Live) -> Result<(Content, Text)> {
 }
 
 fn view(content: &Content, text: &Text) -> View {
-    qrender::localize(&qrender::compose(content, Config::embedded()), text)
+    qrender::localize(
+        &qrender::compose(content, Config::embedded()),
+        text,
+        Config::embedded(),
+    )
 }
 
 /// A JSON file of one contract.

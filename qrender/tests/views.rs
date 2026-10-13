@@ -32,7 +32,7 @@ fn views() {
         let content: Content = read(&format!("fixtures/content/{qid}.json"));
         let text: Text = read(&format!("fixtures/text/{page}.json"));
         let composition = qrender::compose(&content, Config::embedded());
-        let view = qrender::localize(&composition, &text);
+        let view = qrender::localize(&composition, &text, Config::embedded());
         // The composition inside the view is in its own snapshot; here only
         // what the language adds.
         let mut json = serde_json::to_value(&view).unwrap();

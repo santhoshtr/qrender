@@ -43,7 +43,7 @@ async fn nairobi_from_recorded_responses() {
         // The parser error message of the lead is left out.
         assert!(article.paragraphs.iter().all(|p| !p.contains("Cite error")));
         assert!(!article.concept_sections.is_empty());
-        let view = qrender::localize(&composition, &text);
+        let view = qrender::localize(&composition, &text, Config::embedded());
         insta::assert_snapshot!(format!("q3870.{lang}.md"), markdown::page(&view));
     }
 }

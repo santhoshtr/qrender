@@ -91,7 +91,7 @@ fn fixtures_validate() {
             qid,
             &serde_json::to_value(&composition).unwrap(),
         );
-        let view = qrender::localize(&composition, &text);
+        let view = qrender::localize(&composition, &text, Config::embedded());
         validate(&view_schema, page, &serde_json::to_value(&view).unwrap());
     }
 }

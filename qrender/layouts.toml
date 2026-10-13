@@ -784,6 +784,22 @@ P2633 = "location"       # geography of topic
 P9241 = "demography"     # demographics of topic
 P8744 = "economy"        # economy of topic
 
+# Article sections that are apparatus (notes, references, links), by the
+# language of the wiki. They are not listed with the article's sections.
+# The titles differ in each wiki, so a community lists its own.
+[apparatus]
+en = [
+  "See also", "Notes", "Explanatory notes", "Footnotes", "References",
+  "Citations", "Sources", "Works cited", "Bibliography", "Further reading",
+  "External links",
+]
+ml = [
+  "ഇതും കാണുക", "ഇതുംകൂടി കാണുക",  # see also
+  "കുറിപ്പുകൾ",                    # notes
+  "അവലംബം", "പരാമർശങ്ങൾ",          # references
+  "പുറത്തേക്കുള്ള കണ്ണികൾ",          # external links
+]
+
 # Qualifier values that mark the two ends of a range.
 [range_ends]
 Q10585806 = "min"        # minimum

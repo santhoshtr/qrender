@@ -23,6 +23,7 @@ pub use view::{
 };
 
 use crate::compose::picture::media_kind;
+use crate::config::Config;
 use crate::schema::{
     Block, COMPOSITION_SCHEMA, Composition, Credit, MediaKind, Picture, PictureFacts, Spread,
     round_to,
@@ -46,23 +47,25 @@ const COVERED: [&str; 4] = ["item", "pid", "unit", "class"];
 /// reference URL, imported from Wikimedia project.
 const PROVENANCE: [&str; 3] = ["P248", "P854", "P143"];
 
-pub fn localize(composition: &Composition, text: &Text) -> View {
-    Localizer::new(composition, text).view()
+pub fn localize(composition: &Composition, text: &Text, config: &Config) -> View {
+    Localizer::new(composition, text, config).view()
 }
 
 struct Localizer<'a> {
     composition: &'a Composition,
     text: &'a Text,
+    config: &'a Config,
     lang: &'a Lang,
     /// The composition as JSON, to walk it by the shape of its data.
     json: Value,
 }
 
 impl<'a> Localizer<'a> {
-    fn new(composition: &'a Composition, text: &'a Text) -> Self {
+    fn new(composition: &'a Composition, text: &'a Text, config: &'a Config) -> Self {
         Self {
             composition,
             text,
+            config,
             lang: &text.lang,
             json: serde_json::to_value(composition).expect("a composition serializes"),
         }
@@ -308,10 +311,21 @@ impl<'a> Localizer<'a> {
             return Vec::new();
         };
         let used: BTreeSet<&String> = article.concept_sections.values().flatten().collect();
+        // Notes, references, links: not sections to read.
+        let apparatus: Vec<String> = self
+            .config
+            .layouts
+            .apparatus
+            .get(source)
+            .into_iter()
+            .flatten()
+            .map(|t| t.to_lowercase())
+            .collect();
         article
             .sections
             .iter()
             .filter(|s| !used.contains(&s.anchor))
+            .filter(|s| !apparatus.contains(&s.title.trim().to_lowercase()))
             .map(|s| section_link(article, source, &s.anchor))
             .collect()
     }
