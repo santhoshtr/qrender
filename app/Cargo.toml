@@ -9,4 +9,5 @@ edition.workspace = true
 clap = { version = "4", features = ["derive"] }
 content = { path = "../content" }
 qrender = { path = "../qrender" }
+serde.workspace = true
 serde_json.workspace = true

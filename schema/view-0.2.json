@@ -1,0 +1,3539 @@
+{
+  "$defs": {
+    "Absent": {
+      "properties": {
+        "class": {
+          "$ref": "#/$defs/Qid"
+        },
+        "datatype": {
+          "description": "The datatype of the property, as Wikibase names it (\"wikibase-item\").",
+          "type": "string"
+        },
+        "peers": {
+          "format": "uint",
+          "minimum": 0,
+          "type": "integer"
+        },
+        "peers_with_it": {
+          "format": "uint32",
+          "minimum": 0,
+          "type": "integer"
+        },
+        "pid": {
+          "$ref": "#/$defs/Pid"
+        }
+      },
+      "required": [
+        "pid",
+        "peers_with_it",
+        "peers",
+        "class",
+        "datatype"
+      ],
+      "type": "object"
+    },
+    "Age": {
+      "properties": {
+        "pid": {
+          "$ref": "#/$defs/Pid",
+          "description": "The property that names an age (P3629)."
+        },
+        "years": {
+          "format": "int64",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "pid",
+        "years"
+      ],
+      "type": "object"
+    },
+    "Article": {
+      "properties": {
+        "host": {
+          "type": "string"
+        },
+        "lang": {
+          "$ref": "#/$defs/Lang"
+        },
+        "local": {
+          "description": "The article is in the page language.",
+          "type": "boolean"
+        },
+        "more": {
+          "description": "The other paragraphs of the lead.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "paragraphs": {
+          "description": "The first paragraph, cleaned (HTML: `a`, `b`, `i`, ruby glosses).",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "lang",
+        "local",
+        "host",
+        "url",
+        "paragraphs",
+        "more"
+      ],
+      "type": "object"
+    },
+    "Block": {
+      "description": "A block: one primitive, from its own module.",
+      "oneOf": [
+        {
+          "$ref": "#/$defs/Title",
+          "properties": {
+            "primitive": {
+              "const": "title",
+              "type": "string"
+            }
+          },
+          "required": [
+            "primitive"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/Kind",
+          "properties": {
+            "primitive": {
+              "const": "kind",
+              "type": "string"
+            }
+          },
+          "required": [
+            "primitive"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/Prose",
+          "properties": {
+            "primitive": {
+              "const": "prose",
+              "type": "string"
+            }
+          },
+          "required": [
+            "primitive"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/Media",
+          "properties": {
+            "primitive": {
+              "const": "media",
+              "type": "string"
+            }
+          },
+          "required": [
+            "primitive"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/Map",
+          "properties": {
+            "primitive": {
+              "const": "map",
+              "type": "string"
+            }
+          },
+          "required": [
+            "primitive"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/Fact",
+          "properties": {
+            "primitive": {
+              "const": "fact",
+              "type": "string"
+            }
+          },
+          "required": [
+            "primitive"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/Series",
+          "properties": {
+            "primitive": {
+              "const": "series",
+              "type": "string"
+            }
+          },
+          "required": [
+            "primitive"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/Scale",
+          "properties": {
+            "primitive": {
+              "const": "scale",
+              "type": "string"
+            }
+          },
+          "required": [
+            "primitive"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/Peers",
+          "properties": {
+            "primitive": {
+              "const": "peers",
+              "type": "string"
+            }
+          },
+          "required": [
+            "primitive"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/Network",
+          "properties": {
+            "primitive": {
+              "const": "network",
+              "type": "string"
+            }
+          },
+          "required": [
+            "primitive"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/Gallery",
+          "description": "The single values of a spread: a network block in its gallery form.",
+          "properties": {
+            "primitive": {
+              "const": "network",
+              "type": "string"
+            }
+          },
+          "required": [
+            "primitive"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/Succession",
+          "properties": {
+            "primitive": {
+              "const": "succession",
+              "type": "string"
+            }
+          },
+          "required": [
+            "primitive"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/Credits",
+          "properties": {
+            "primitive": {
+              "const": "credits",
+              "type": "string"
+            }
+          },
+          "required": [
+            "primitive"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/Score",
+          "properties": {
+            "primitive": {
+              "const": "score",
+              "type": "string"
+            }
+          },
+          "required": [
+            "primitive"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/Works",
+          "properties": {
+            "primitive": {
+              "const": "works",
+              "type": "string"
+            }
+          },
+          "required": [
+            "primitive"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/Time",
+          "properties": {
+            "primitive": {
+              "const": "time",
+              "type": "string"
+            }
+          },
+          "required": [
+            "primitive"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/Absent",
+          "properties": {
+            "primitive": {
+              "const": "absent",
+              "type": "string"
+            }
+          },
+          "required": [
+            "primitive"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/Provenance2",
+          "properties": {
+            "primitive": {
+              "const": "provenance",
+              "type": "string"
+            }
+          },
+          "required": [
+            "primitive"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/Sitelinks",
+          "properties": {
+            "primitive": {
+              "const": "sitelinks",
+              "type": "string"
+            }
+          },
+          "required": [
+            "primitive"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/Identifiers",
+          "properties": {
+            "primitive": {
+              "const": "identifiers",
+              "type": "string"
+            }
+          },
+          "required": [
+            "primitive"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "ChainLink": {
+      "properties": {
+        "pid": {
+          "$ref": "#/$defs/Pid"
+        },
+        "values": {
+          "items": {
+            "$ref": "#/$defs/StatementRef"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "pid",
+        "values"
+      ],
+      "type": "object"
+    },
+    "Container": {
+      "properties": {
+        "item": {
+          "$ref": "#/$defs/Qid"
+        },
+        "pid": {
+          "$ref": "#/$defs/Pid"
+        }
+      },
+      "required": [
+        "pid",
+        "item"
+      ],
+      "type": "object"
+    },
+    "ContainerMode": {
+      "description": "How the item is compared with its container.",
+      "oneOf": [
+        {
+          "const": "scale",
+          "description": "The item against a parent body or taxon.",
+          "type": "string"
+        },
+        {
+          "const": "share",
+          "description": "The item as a part of a whole (a city of its country).",
+          "type": "string"
+        }
+      ]
+    },
+    "Count": {
+      "properties": {
+        "amount": {
+          "format": "double",
+          "type": "number"
+        },
+        "pid": {
+          "$ref": "#/$defs/Pid"
+        }
+      },
+      "required": [
+        "pid",
+        "amount"
+      ],
+      "type": "object"
+    },
+    "Coverage": {
+      "properties": {
+        "have": {
+          "format": "uint",
+          "minimum": 0,
+          "type": "integer"
+        },
+        "total": {
+          "format": "uint",
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "have",
+        "total"
+      ],
+      "type": "object"
+    },
+    "Credit": {
+      "properties": {
+        "artist": {
+          "type": "string"
+        },
+        "license": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "artist",
+        "license"
+      ],
+      "type": "object"
+    },
+    "Credits": {
+      "properties": {
+        "pids": {
+          "description": "The crew properties that have values, in the spread's order.",
+          "items": {
+            "$ref": "#/$defs/Pid"
+          },
+          "type": "array"
+        },
+        "priority": {
+          "format": "double",
+          "type": "number"
+        },
+        "rule": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "values": {
+          "items": {
+            "$ref": "#/$defs/Person"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "pids",
+        "values",
+        "priority"
+      ],
+      "type": "object"
+    },
+    "Description": {
+      "properties": {
+        "fallback": {
+          "type": "boolean"
+        },
+        "lang": {
+          "$ref": "#/$defs/Lang"
+        },
+        "text": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "text",
+        "lang"
+      ],
+      "type": "object"
+    },
+    "Dir": {
+      "enum": [
+        "ltr",
+        "rtl"
+      ],
+      "type": "string"
+    },
+    "EntityId": {
+      "pattern": "^[QP][1-9][0-9]*$",
+      "type": "string"
+    },
+    "Fact": {
+      "properties": {
+        "age": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Age"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The age at death, from the dates of birth and death."
+        },
+        "form": {
+          "$ref": "#/$defs/FactForm"
+        },
+        "former": {
+          "description": "The values ended: history, not the present.",
+          "type": "boolean"
+        },
+        "pid": {
+          "$ref": "#/$defs/Pid"
+        },
+        "priority": {
+          "format": "double",
+          "type": "number"
+        },
+        "rule": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "statements": {
+          "description": "The first `list_shown` are shown; the rest are behind \"+N\".",
+          "items": {
+            "$ref": "#/$defs/StatementRef"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "pid",
+        "form",
+        "statements",
+        "priority"
+      ],
+      "type": "object"
+    },
+    "FactForm": {
+      "oneOf": [
+        {
+          "const": "value",
+          "description": "One value, or a few.",
+          "type": "string"
+        },
+        {
+          "const": "range",
+          "description": "Two quantities that are the minimum and the maximum.",
+          "type": "string"
+        },
+        {
+          "const": "variants",
+          "description": "Quantities that differ by a qualifier (equatorial, polar radius).",
+          "type": "string"
+        },
+        {
+          "const": "list",
+          "description": "Many values, one per line.",
+          "type": "string"
+        }
+      ]
+    },
+    "Gallery": {
+      "properties": {
+        "priority": {
+          "format": "double",
+          "type": "number"
+        },
+        "role": {
+          "$ref": "#/$defs/GalleryRole"
+        },
+        "rule": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "values": {
+          "items": {
+            "$ref": "#/$defs/GalleryValue"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "role",
+        "values",
+        "priority"
+      ],
+      "type": "object"
+    },
+    "GalleryRole": {
+      "enum": [
+        "gallery"
+      ],
+      "type": "string"
+    },
+    "GalleryValue": {
+      "anyOf": [
+        {
+          "description": "An item. None for \"unknown value\".",
+          "properties": {
+            "item": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Qid"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "item"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "amount": {
+              "format": "double",
+              "type": "number"
+            },
+            "unit": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Qid"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "amount",
+            "unit"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "precision": {
+              "format": "uint8",
+              "maximum": 255,
+              "minimum": 0,
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "time": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "time",
+            "precision"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "lang": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "text",
+            "lang"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "file": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "file"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "globe": {
+              "$ref": "#/$defs/Qid"
+            },
+            "lat": {
+              "format": "double",
+              "type": "number"
+            },
+            "lon": {
+              "format": "double",
+              "type": "number"
+            }
+          },
+          "required": [
+            "lat",
+            "lon",
+            "globe"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "url"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "string": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "string"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "\"Unknown value\" of a property that is not an item property.",
+          "properties": {
+            "some_value": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "some_value"
+          ],
+          "type": "object"
+        }
+      ],
+      "description": "A small value: it joins the gallery of its spread.",
+      "properties": {
+        "class": {
+          "description": "The value is a class: its picture would show an example only.",
+          "type": "boolean"
+        },
+        "described": {
+          "description": "The value's description is shown under it (a work).",
+          "type": "boolean"
+        },
+        "image": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Picture"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The picture of an item value. None for a class value."
+        },
+        "pid": {
+          "$ref": "#/$defs/Pid"
+        },
+        "priority": {
+          "description": "The priority of its property.",
+          "format": "double",
+          "type": "number"
+        },
+        "provenance": {
+          "$ref": "#/$defs/Provenance"
+        },
+        "qualifiers": {
+          "items": {
+            "$ref": "#/$defs/QualifierShown"
+          },
+          "type": "array"
+        },
+        "rank": {
+          "$ref": "#/$defs/Rank"
+        },
+        "shown": {
+          "description": "False when the value is behind \"+N\".",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "statement": {
+          "$ref": "#/$defs/StatementId"
+        }
+      },
+      "required": [
+        "statement",
+        "pid",
+        "rank",
+        "provenance",
+        "priority"
+      ],
+      "type": "object"
+    },
+    "Identifier": {
+      "properties": {
+        "pid": {
+          "$ref": "#/$defs/Pid"
+        },
+        "statement": {
+          "$ref": "#/$defs/StatementId"
+        },
+        "string": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "pid",
+        "string",
+        "statement"
+      ],
+      "type": "object"
+    },
+    "Identifiers": {
+      "properties": {
+        "values": {
+          "items": {
+            "$ref": "#/$defs/Identifier"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "values"
+      ],
+      "type": "object"
+    },
+    "ItemRef": {
+      "properties": {
+        "item": {
+          "$ref": "#/$defs/Qid"
+        }
+      },
+      "required": [
+        "item"
+      ],
+      "type": "object"
+    },
+    "Kind": {
+      "properties": {
+        "chain": {
+          "items": {
+            "$ref": "#/$defs/ChainLink"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "chain"
+      ],
+      "type": "object"
+    },
+    "Label": {
+      "properties": {
+        "add": {
+          "description": "Where a reader adds the label in the page language.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "description": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Description"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "For the item itself and for the values whose description is shown."
+        },
+        "fallback": {
+          "description": "The label is not in the page language (a `mul` label is not a\nfallback).",
+          "type": "boolean"
+        },
+        "href": {
+          "description": "The page of the entity on Wikidata.",
+          "type": "string"
+        },
+        "lang": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Lang"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The language of the text; None when there is no label at all."
+        },
+        "text": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "text",
+        "lang",
+        "href"
+      ],
+      "type": "object"
+    },
+    "Lang": {
+      "pattern": "^[a-z]{2,8}(-[a-z0-9]{1,8})*$",
+      "type": "string"
+    },
+    "Link": {
+      "properties": {
+        "href": {
+          "type": "string"
+        },
+        "lang": {
+          "$ref": "#/$defs/Lang"
+        },
+        "text": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "text",
+        "lang",
+        "href"
+      ],
+      "type": "object"
+    },
+    "Map": {
+      "anyOf": [
+        {
+          "description": "An item. None for \"unknown value\".",
+          "properties": {
+            "item": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Qid"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "item"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "amount": {
+              "format": "double",
+              "type": "number"
+            },
+            "unit": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Qid"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "amount",
+            "unit"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "precision": {
+              "format": "uint8",
+              "maximum": 255,
+              "minimum": 0,
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "time": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "time",
+            "precision"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "lang": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "text",
+            "lang"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "file": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "file"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "globe": {
+              "$ref": "#/$defs/Qid"
+            },
+            "lat": {
+              "format": "double",
+              "type": "number"
+            },
+            "lon": {
+              "format": "double",
+              "type": "number"
+            }
+          },
+          "required": [
+            "lat",
+            "lon",
+            "globe"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "url"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "string": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "string"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "\"Unknown value\" of a property that is not an item property.",
+          "properties": {
+            "some_value": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "some_value"
+          ],
+          "type": "object"
+        }
+      ],
+      "description": "A statement as the composition shows it.",
+      "properties": {
+        "class": {
+          "description": "The value is a class: its picture would show an example only.",
+          "type": "boolean"
+        },
+        "described": {
+          "description": "The value's description is shown under it (a work).",
+          "type": "boolean"
+        },
+        "extent_m": {
+          "description": "The side of a square with the item's area, in metres.",
+          "format": "int64",
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "image": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Picture"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The picture of an item value. None for a class value."
+        },
+        "markers": {
+          "items": {
+            "$ref": "#/$defs/Marker"
+          },
+          "type": "array"
+        },
+        "pid": {
+          "$ref": "#/$defs/Pid"
+        },
+        "provenance": {
+          "$ref": "#/$defs/Provenance"
+        },
+        "qualifiers": {
+          "items": {
+            "$ref": "#/$defs/QualifierShown"
+          },
+          "type": "array"
+        },
+        "rank": {
+          "$ref": "#/$defs/Rank"
+        },
+        "rule": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "shown": {
+          "description": "False when the value is behind \"+N\".",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "statement": {
+          "$ref": "#/$defs/StatementId"
+        }
+      },
+      "required": [
+        "statement",
+        "pid",
+        "rank",
+        "provenance"
+      ],
+      "type": "object"
+    },
+    "Mark": {
+      "description": "A point (`year`) or a span (`start`, `end`; either can be unknown). The\npositions are fractions of the item's own time span.",
+      "properties": {
+        "end": {
+          "format": "int64",
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "end_pos": {
+          "format": "double",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "item": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Qid"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "precision": {
+          "format": "uint8",
+          "maximum": 255,
+          "minimum": 0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "provenance": {
+          "$ref": "#/$defs/Provenance"
+        },
+        "start": {
+          "format": "int64",
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "start_pos": {
+          "format": "double",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "statement": {
+          "$ref": "#/$defs/StatementId"
+        },
+        "time": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "year": {
+          "format": "int64",
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "year_pos": {
+          "format": "double",
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "statement",
+        "provenance"
+      ],
+      "type": "object"
+    },
+    "Marker": {
+      "anyOf": [
+        {
+          "description": "An item. None for \"unknown value\".",
+          "properties": {
+            "item": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Qid"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "item"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "amount": {
+              "format": "double",
+              "type": "number"
+            },
+            "unit": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Qid"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "amount",
+            "unit"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "precision": {
+              "format": "uint8",
+              "maximum": 255,
+              "minimum": 0,
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "time": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "time",
+            "precision"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "lang": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "text",
+            "lang"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "file": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "file"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "globe": {
+              "$ref": "#/$defs/Qid"
+            },
+            "lat": {
+              "format": "double",
+              "type": "number"
+            },
+            "lon": {
+              "format": "double",
+              "type": "number"
+            }
+          },
+          "required": [
+            "lat",
+            "lon",
+            "globe"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "url"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "string": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "string"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "\"Unknown value\" of a property that is not an item property.",
+          "properties": {
+            "some_value": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "some_value"
+          ],
+          "type": "object"
+        }
+      ],
+      "description": "A statement value, by the keys its kind uses.",
+      "properties": {
+        "pid": {
+          "$ref": "#/$defs/Pid"
+        },
+        "provenance": {
+          "$ref": "#/$defs/Provenance"
+        },
+        "statement": {
+          "$ref": "#/$defs/StatementId"
+        }
+      },
+      "required": [
+        "pid",
+        "statement",
+        "provenance"
+      ],
+      "type": "object"
+    },
+    "Measure": {
+      "properties": {
+        "amount": {
+          "format": "double",
+          "type": "number"
+        },
+        "pid": {
+          "$ref": "#/$defs/Pid"
+        },
+        "provenance": {
+          "$ref": "#/$defs/Provenance"
+        },
+        "ratio": {
+          "description": "The item's amount as a share of the container's.",
+          "format": "double",
+          "type": "number"
+        },
+        "statement": {
+          "$ref": "#/$defs/StatementId"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Qid"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The SI unit of both amounts. None for a count."
+        },
+        "whole": {
+          "format": "double",
+          "type": "number"
+        }
+      },
+      "required": [
+        "pid",
+        "ratio",
+        "amount",
+        "whole",
+        "unit",
+        "statement",
+        "provenance"
+      ],
+      "type": "object"
+    },
+    "Media": {
+      "anyOf": [
+        {
+          "description": "An item. None for \"unknown value\".",
+          "properties": {
+            "item": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Qid"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "item"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "amount": {
+              "format": "double",
+              "type": "number"
+            },
+            "unit": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Qid"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "amount",
+            "unit"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "precision": {
+              "format": "uint8",
+              "maximum": 255,
+              "minimum": 0,
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "time": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "time",
+            "precision"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "lang": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "text",
+            "lang"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "file": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "file"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "globe": {
+              "$ref": "#/$defs/Qid"
+            },
+            "lat": {
+              "format": "double",
+              "type": "number"
+            },
+            "lon": {
+              "format": "double",
+              "type": "number"
+            }
+          },
+          "required": [
+            "lat",
+            "lon",
+            "globe"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "url"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "string": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "string"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "\"Unknown value\" of a property that is not an item property.",
+          "properties": {
+            "some_value": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "some_value"
+          ],
+          "type": "object"
+        }
+      ],
+      "description": "A statement as the composition shows it.",
+      "properties": {
+        "aspect": {
+          "description": "Width / height, rounded to 4 places.",
+          "format": "double",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "assessed": {
+          "description": "Commons assessments: \"Quality images\", ...",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "bytes": {
+          "description": "Size and URL, for the kinds that play: audio, video, 3D.",
+          "format": "uint64",
+          "minimum": 0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "class": {
+          "description": "The value is a class: its picture would show an example only.",
+          "type": "boolean"
+        },
+        "credit": {
+          "$ref": "#/$defs/Credit"
+        },
+        "described": {
+          "description": "The value's description is shown under it (a work).",
+          "type": "boolean"
+        },
+        "image": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Picture"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The picture of an item value. None for a class value."
+        },
+        "kind": {
+          "$ref": "#/$defs/MediaKind"
+        },
+        "megapixels": {
+          "format": "double",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "pid": {
+          "$ref": "#/$defs/Pid"
+        },
+        "provenance": {
+          "$ref": "#/$defs/Provenance"
+        },
+        "qualifiers": {
+          "items": {
+            "$ref": "#/$defs/QualifierShown"
+          },
+          "type": "array"
+        },
+        "rank": {
+          "$ref": "#/$defs/Rank"
+        },
+        "role": {
+          "$ref": "#/$defs/MediaRole"
+        },
+        "rule": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "shown": {
+          "description": "False when the value is behind \"+N\".",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "statement": {
+          "$ref": "#/$defs/StatementId"
+        },
+        "url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "role",
+        "statement",
+        "pid",
+        "rank",
+        "provenance",
+        "kind",
+        "credit"
+      ],
+      "type": "object"
+    },
+    "MediaKind": {
+      "description": "The kind of a media file, from its name.",
+      "oneOf": [
+        {
+          "enum": [
+            "photo",
+            "audio",
+            "video",
+            "model3d"
+          ],
+          "type": "string"
+        },
+        {
+          "const": "drawing",
+          "description": "Shown whole, never cropped: SVG files and logos.",
+          "type": "string"
+        }
+      ]
+    },
+    "MediaRole": {
+      "description": "Where the file is shown: the design system gives each role its frame.",
+      "oneOf": [
+        {
+          "enum": [
+            "audio"
+          ],
+          "type": "string"
+        },
+        {
+          "const": "identity",
+          "description": "The head picture of the page.",
+          "type": "string"
+        },
+        {
+          "const": "banner",
+          "description": "The page banner, across the head.",
+          "type": "string"
+        },
+        {
+          "const": "feature",
+          "description": "The best photograph of the media spread.",
+          "type": "string"
+        },
+        {
+          "const": "run",
+          "description": "One of the media spread's run of pictures.",
+          "type": "string"
+        },
+        {
+          "const": "stack",
+          "description": "A file of a facts spread.",
+          "type": "string"
+        }
+      ]
+    },
+    "Member": {
+      "properties": {
+        "amount": {
+          "format": "double",
+          "type": "number"
+        },
+        "fraction": {
+          "description": "A share of the largest amount.",
+          "format": "double",
+          "type": "number"
+        },
+        "item": {
+          "$ref": "#/$defs/Qid"
+        },
+        "self": {
+          "type": "boolean"
+        },
+        "shown": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "item",
+        "amount",
+        "fraction",
+        "self",
+        "shown"
+      ],
+      "type": "object"
+    },
+    "Network": {
+      "properties": {
+        "pid": {
+          "$ref": "#/$defs/Pid"
+        },
+        "priority": {
+          "format": "double",
+          "type": "number"
+        },
+        "rule": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "values": {
+          "items": {
+            "$ref": "#/$defs/StatementRef"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "pid",
+        "values",
+        "priority"
+      ],
+      "type": "object"
+    },
+    "PageImage": {
+      "description": "A picture (or a sound, a video, a 3D model): intrinsic facts only.",
+      "properties": {
+        "aspect": {
+          "description": "Width / height, rounded to 4 places.",
+          "format": "double",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "assessed": {
+          "description": "Commons assessments: \"Quality images\", ...",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "bytes": {
+          "description": "Size and URL, for the kinds that play: audio, video, 3D.",
+          "format": "uint64",
+          "minimum": 0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "credit": {
+          "$ref": "#/$defs/Credit"
+        },
+        "file": {
+          "type": "string"
+        },
+        "from": {
+          "description": "The wiki of the article the picture comes from.",
+          "type": "string"
+        },
+        "kind": {
+          "$ref": "#/$defs/MediaKind"
+        },
+        "megapixels": {
+          "format": "double",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "file",
+        "kind",
+        "credit",
+        "from"
+      ],
+      "type": "object"
+    },
+    "Peers": {
+      "properties": {
+        "class": {
+          "$ref": "#/$defs/Qid",
+          "description": "The class of the peer set."
+        },
+        "container": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Qid"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The container that the peer set shares, when it has one."
+        },
+        "members": {
+          "items": {
+            "$ref": "#/$defs/Member"
+          },
+          "type": "array"
+        },
+        "of": {
+          "format": "uint",
+          "minimum": 0,
+          "type": "integer"
+        },
+        "pid": {
+          "$ref": "#/$defs/Pid"
+        },
+        "rank": {
+          "description": "The item's place, from the largest.",
+          "format": "uint",
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "pid",
+        "class",
+        "rank",
+        "of",
+        "members"
+      ],
+      "type": "object"
+    },
+    "Person": {
+      "anyOf": [
+        {
+          "description": "An item. None for \"unknown value\".",
+          "properties": {
+            "item": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Qid"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "item"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "amount": {
+              "format": "double",
+              "type": "number"
+            },
+            "unit": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Qid"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "amount",
+            "unit"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "precision": {
+              "format": "uint8",
+              "maximum": 255,
+              "minimum": 0,
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "time": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "time",
+            "precision"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "lang": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "text",
+            "lang"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "file": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "file"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "globe": {
+              "$ref": "#/$defs/Qid"
+            },
+            "lat": {
+              "format": "double",
+              "type": "number"
+            },
+            "lon": {
+              "format": "double",
+              "type": "number"
+            }
+          },
+          "required": [
+            "lat",
+            "lon",
+            "globe"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "url"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "string": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "string"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "\"Unknown value\" of a property that is not an item property.",
+          "properties": {
+            "some_value": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "some_value"
+          ],
+          "type": "object"
+        }
+      ],
+      "description": "A statement as the composition shows it.",
+      "properties": {
+        "class": {
+          "description": "The value is a class: its picture would show an example only.",
+          "type": "boolean"
+        },
+        "described": {
+          "description": "The value's description is shown under it (a work).",
+          "type": "boolean"
+        },
+        "image": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Picture"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The picture of an item value. None for a class value."
+        },
+        "pid": {
+          "$ref": "#/$defs/Pid"
+        },
+        "pids": {
+          "description": "Every role of the person.",
+          "items": {
+            "$ref": "#/$defs/Pid"
+          },
+          "type": "array"
+        },
+        "provenance": {
+          "$ref": "#/$defs/Provenance"
+        },
+        "qualifiers": {
+          "items": {
+            "$ref": "#/$defs/QualifierShown"
+          },
+          "type": "array"
+        },
+        "rank": {
+          "$ref": "#/$defs/Rank"
+        },
+        "shown": {
+          "description": "False when the value is behind \"+N\".",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "statement": {
+          "$ref": "#/$defs/StatementId"
+        }
+      },
+      "required": [
+        "statement",
+        "pid",
+        "rank",
+        "provenance",
+        "pids"
+      ],
+      "type": "object"
+    },
+    "Picture": {
+      "description": "A picture (or a sound, a video, a 3D model): intrinsic facts only.",
+      "properties": {
+        "aspect": {
+          "description": "Width / height, rounded to 4 places.",
+          "format": "double",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "assessed": {
+          "description": "Commons assessments: \"Quality images\", ...",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "bytes": {
+          "description": "Size and URL, for the kinds that play: audio, video, 3D.",
+          "format": "uint64",
+          "minimum": 0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "credit": {
+          "$ref": "#/$defs/Credit"
+        },
+        "file": {
+          "type": "string"
+        },
+        "kind": {
+          "$ref": "#/$defs/MediaKind"
+        },
+        "megapixels": {
+          "format": "double",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "file",
+        "kind",
+        "credit"
+      ],
+      "type": "object"
+    },
+    "Pid": {
+      "pattern": "^P[1-9][0-9]*$",
+      "type": "string"
+    },
+    "Point": {
+      "properties": {
+        "amount": {
+          "format": "double",
+          "type": "number"
+        },
+        "fraction": {
+          "description": "The amount as a share of the largest amount of the series.",
+          "format": "double",
+          "type": "number"
+        },
+        "labelled": {
+          "description": "The point carries its number (a file series only).",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Provenance"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "statement": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/StatementId"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "year": {
+          "format": "int64",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "year",
+        "amount",
+        "fraction"
+      ],
+      "type": "object"
+    },
+    "Primitive": {
+      "description": "The kinds of composition block.",
+      "enum": [
+        "title",
+        "kind",
+        "prose",
+        "media",
+        "map",
+        "fact",
+        "series",
+        "scale",
+        "peers",
+        "network",
+        "succession",
+        "credits",
+        "score",
+        "works",
+        "time",
+        "absent",
+        "provenance",
+        "sitelinks",
+        "identifiers"
+      ],
+      "type": "string"
+    },
+    "Project": {
+      "properties": {
+        "count": {
+          "format": "uint",
+          "minimum": 0,
+          "type": "integer"
+        },
+        "local": {
+          "description": "The project has a page in the page language.",
+          "type": "boolean"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "count",
+        "local"
+      ],
+      "type": "object"
+    },
+    "Prose": {
+      "properties": {
+        "languages": {
+          "description": "The number of Wikipedias with an article about the item.",
+          "format": "uint",
+          "minimum": 0,
+          "type": "integer"
+        },
+        "source": {
+          "$ref": "#/$defs/ProseSource"
+        }
+      },
+      "required": [
+        "source",
+        "languages"
+      ],
+      "type": "object"
+    },
+    "ProseConcepts": {
+      "description": "The concepts whose article sections give the spread its prose.",
+      "properties": {
+        "concepts": {
+          "items": {
+            "$ref": "#/$defs/Qid"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "concepts"
+      ],
+      "type": "object"
+    },
+    "ProseSource": {
+      "enum": [
+        "lead"
+      ],
+      "type": "string"
+    },
+    "Provenance": {
+      "description": "Is a statement backed by a source?",
+      "oneOf": [
+        {
+          "const": "sourced",
+          "description": "At least one reference with a real source.",
+          "type": "string"
+        },
+        {
+          "const": "imported",
+          "description": "References only to a Wikimedia project or a guess (P143 and similar).",
+          "type": "string"
+        },
+        {
+          "const": "none",
+          "description": "No reference.",
+          "type": "string"
+        }
+      ]
+    },
+    "Provenance2": {
+      "properties": {
+        "imported": {
+          "format": "uint",
+          "minimum": 0,
+          "type": "integer"
+        },
+        "none": {
+          "format": "uint",
+          "minimum": 0,
+          "type": "integer"
+        },
+        "sourced": {
+          "format": "uint",
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "sourced",
+        "imported",
+        "none"
+      ],
+      "type": "object"
+    },
+    "Qid": {
+      "pattern": "^Q[1-9][0-9]*$",
+      "type": "string"
+    },
+    "QualifierShown": {
+      "anyOf": [
+        {
+          "properties": {
+            "item": {
+              "$ref": "#/$defs/EntityId"
+            }
+          },
+          "required": [
+            "item"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "A date qualifier shows its year.",
+          "properties": {
+            "year": {
+              "format": "int64",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "year"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "lang": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "text",
+            "lang"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "amount": {
+              "format": "double",
+              "type": "number"
+            }
+          },
+          "required": [
+            "amount"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "string": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "string"
+          ],
+          "type": "object"
+        }
+      ],
+      "description": "A qualifier as the composition shows it. \"Unknown value\" qualifiers are\nnot shown, so they have no form here.",
+      "properties": {
+        "pid": {
+          "$ref": "#/$defs/Pid"
+        }
+      },
+      "required": [
+        "pid"
+      ],
+      "type": "object"
+    },
+    "Rank": {
+      "description": "Deprecated statements are dropped when the content is fetched.",
+      "enum": [
+        "preferred",
+        "normal"
+      ],
+      "type": "string"
+    },
+    "Scale": {
+      "properties": {
+        "container": {
+          "$ref": "#/$defs/Container"
+        },
+        "measures": {
+          "items": {
+            "$ref": "#/$defs/Measure"
+          },
+          "type": "array"
+        },
+        "mode": {
+          "$ref": "#/$defs/ContainerMode"
+        }
+      },
+      "required": [
+        "mode",
+        "container",
+        "measures"
+      ],
+      "type": "object"
+    },
+    "Score": {
+      "properties": {
+        "pid": {
+          "$ref": "#/$defs/Pid"
+        },
+        "priority": {
+          "format": "double",
+          "type": "number"
+        },
+        "rule": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "values": {
+          "items": {
+            "$ref": "#/$defs/ScoreValue"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "pid",
+        "values",
+        "priority"
+      ],
+      "type": "object"
+    },
+    "ScoreSource": {
+      "properties": {
+        "image": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Picture"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The logo of the source."
+        },
+        "item": {
+          "$ref": "#/$defs/Qid"
+        }
+      },
+      "required": [
+        "item"
+      ],
+      "type": "object"
+    },
+    "ScoreValue": {
+      "properties": {
+        "count": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Count"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "method": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ItemRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "pid": {
+          "$ref": "#/$defs/Pid"
+        },
+        "provenance": {
+          "$ref": "#/$defs/Provenance"
+        },
+        "source": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ScoreSource"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "statement": {
+          "$ref": "#/$defs/StatementId"
+        },
+        "string": {
+          "description": "The score as Wikidata has it: \"94%\", \"7.9/10\".",
+          "type": "string"
+        },
+        "year": {
+          "format": "int64",
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "statement",
+        "pid",
+        "string",
+        "provenance"
+      ],
+      "type": "object"
+    },
+    "SectionProse": {
+      "properties": {
+        "href": {
+          "type": "string"
+        },
+        "html": {
+          "description": "Cleaned HTML, as the lead.",
+          "type": "string"
+        },
+        "lang": {
+          "$ref": "#/$defs/Lang"
+        },
+        "local": {
+          "type": "boolean"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "html",
+        "lang",
+        "local",
+        "title",
+        "href"
+      ],
+      "type": "object"
+    },
+    "Series": {
+      "properties": {
+        "pid": {
+          "$ref": "#/$defs/Pid"
+        },
+        "points": {
+          "items": {
+            "$ref": "#/$defs/Point"
+          },
+          "type": "array"
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Provenance"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "rule": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Source"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "statement": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/StatementId"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The statement of the data file (a file series only)."
+        }
+      },
+      "required": [
+        "pid",
+        "points"
+      ],
+      "type": "object"
+    },
+    "Silence": {
+      "properties": {
+        "needs": {
+          "format": "uint",
+          "minimum": 0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "points": {
+          "format": "uint",
+          "minimum": 0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "primitive": {
+          "$ref": "#/$defs/Primitive"
+        },
+        "reason": {
+          "$ref": "#/$defs/SilenceReason"
+        }
+      },
+      "required": [
+        "primitive",
+        "reason"
+      ],
+      "type": "object"
+    },
+    "SilenceReason": {
+      "enum": [
+        "no_comparable_quantity",
+        "below_threshold"
+      ],
+      "type": "string"
+    },
+    "Sitelinks": {
+      "properties": {
+        "families": {
+          "additionalProperties": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "description": "Family (\"wikipedia\", \"wikiquote\", ...) -> language codes, sorted.",
+          "type": "object"
+        }
+      },
+      "required": [
+        "families"
+      ],
+      "type": "object"
+    },
+    "Source": {
+      "description": "The Commons data file of a series.",
+      "properties": {
+        "file": {
+          "type": "string"
+        },
+        "license": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "file",
+        "license"
+      ],
+      "type": "object"
+    },
+    "SpreadKind": {
+      "description": "How the composer builds a spread.",
+      "oneOf": [
+        {
+          "const": "identity",
+          "description": "The page head: title and description, banner, lead, picture, kinds.",
+          "type": "string"
+        },
+        {
+          "const": "facts",
+          "description": "The listed properties, each by the shape of its data and its role.",
+          "type": "string"
+        },
+        {
+          "const": "scale",
+          "description": "Share of the container, peers, series of the listed properties.",
+          "type": "string"
+        },
+        {
+          "const": "history",
+          "description": "A time axis of events and history spans.",
+          "type": "string"
+        },
+        {
+          "const": "media",
+          "description": "The Commons files that no spread took.",
+          "type": "string"
+        },
+        {
+          "const": "more",
+          "description": "Everything left, collapsed.",
+          "type": "string"
+        },
+        {
+          "const": "evidence",
+          "description": "Web presence, curation, sources, identifiers, provenance.",
+          "type": "string"
+        }
+      ]
+    },
+    "SpreadView": {
+      "properties": {
+        "concept": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Qid"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "kind": {
+          "$ref": "#/$defs/SpreadKind"
+        },
+        "prose": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProseConcepts"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "prose_links": {
+          "description": "The article sections of the spread.",
+          "items": {
+            "$ref": "#/$defs/Link"
+          },
+          "type": "array"
+        },
+        "prose_text": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SectionProse"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The first paragraph of the article section of the spread."
+        },
+        "silent": {
+          "description": "Primitives that had too little data, with the reason.",
+          "items": {
+            "$ref": "#/$defs/Silence"
+          },
+          "type": "array"
+        },
+        "slots": {
+          "additionalProperties": false,
+          "description": "In reading order.",
+          "properties": {
+            "absent": {
+              "items": {
+                "$ref": "#/$defs/Block"
+              },
+              "type": "array"
+            },
+            "audio": {
+              "items": {
+                "$ref": "#/$defs/Block"
+              },
+              "type": "array"
+            },
+            "axis": {
+              "items": {
+                "$ref": "#/$defs/Block"
+              },
+              "type": "array"
+            },
+            "band": {
+              "items": {
+                "$ref": "#/$defs/Block"
+              },
+              "type": "array"
+            },
+            "feature": {
+              "items": {
+                "$ref": "#/$defs/Block"
+              },
+              "type": "array"
+            },
+            "gallery": {
+              "items": {
+                "$ref": "#/$defs/Block"
+              },
+              "type": "array"
+            },
+            "head": {
+              "items": {
+                "$ref": "#/$defs/Block"
+              },
+              "type": "array"
+            },
+            "hero": {
+              "items": {
+                "$ref": "#/$defs/Block"
+              },
+              "type": "array"
+            },
+            "identifiers": {
+              "items": {
+                "$ref": "#/$defs/Block"
+              },
+              "type": "array"
+            },
+            "kind": {
+              "items": {
+                "$ref": "#/$defs/Block"
+              },
+              "type": "array"
+            },
+            "lead": {
+              "items": {
+                "$ref": "#/$defs/Block"
+              },
+              "type": "array"
+            },
+            "projects": {
+              "items": {
+                "$ref": "#/$defs/Block"
+              },
+              "type": "array"
+            },
+            "run": {
+              "items": {
+                "$ref": "#/$defs/Block"
+              },
+              "type": "array"
+            },
+            "sheet": {
+              "items": {
+                "$ref": "#/$defs/Block"
+              },
+              "type": "array"
+            },
+            "stack": {
+              "items": {
+                "$ref": "#/$defs/Block"
+              },
+              "type": "array"
+            },
+            "summary": {
+              "items": {
+                "$ref": "#/$defs/Block"
+              },
+              "type": "array"
+            },
+            "web": {
+              "items": {
+                "$ref": "#/$defs/Block"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        },
+        "template": {
+          "$ref": "#/$defs/Template"
+        },
+        "title": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Label"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The label of the spread's concept."
+        },
+        "topics": {
+          "description": "The \"... of topic\" items of this spread.",
+          "items": {
+            "$ref": "#/$defs/StatementRef"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "template",
+        "slots",
+        "title",
+        "prose_text",
+        "prose_links"
+      ],
+      "type": "object"
+    },
+    "StatementId": {
+      "pattern": "^[QqPp][0-9]+[-$][0-9A-Fa-f-]+$",
+      "type": "string"
+    },
+    "StatementRef": {
+      "anyOf": [
+        {
+          "description": "An item. None for \"unknown value\".",
+          "properties": {
+            "item": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Qid"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "item"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "amount": {
+              "format": "double",
+              "type": "number"
+            },
+            "unit": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Qid"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "amount",
+            "unit"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "precision": {
+              "format": "uint8",
+              "maximum": 255,
+              "minimum": 0,
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "time": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "time",
+            "precision"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "lang": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "text",
+            "lang"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "file": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "file"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "globe": {
+              "$ref": "#/$defs/Qid"
+            },
+            "lat": {
+              "format": "double",
+              "type": "number"
+            },
+            "lon": {
+              "format": "double",
+              "type": "number"
+            }
+          },
+          "required": [
+            "lat",
+            "lon",
+            "globe"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "url"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "string": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "string"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "\"Unknown value\" of a property that is not an item property.",
+          "properties": {
+            "some_value": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "some_value"
+          ],
+          "type": "object"
+        }
+      ],
+      "description": "A statement as the composition shows it.",
+      "properties": {
+        "class": {
+          "description": "The value is a class: its picture would show an example only.",
+          "type": "boolean"
+        },
+        "described": {
+          "description": "The value's description is shown under it (a work).",
+          "type": "boolean"
+        },
+        "image": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Picture"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The picture of an item value. None for a class value."
+        },
+        "pid": {
+          "$ref": "#/$defs/Pid"
+        },
+        "provenance": {
+          "$ref": "#/$defs/Provenance"
+        },
+        "qualifiers": {
+          "items": {
+            "$ref": "#/$defs/QualifierShown"
+          },
+          "type": "array"
+        },
+        "rank": {
+          "$ref": "#/$defs/Rank"
+        },
+        "shown": {
+          "description": "False when the value is behind \"+N\".",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "statement": {
+          "$ref": "#/$defs/StatementId"
+        }
+      },
+      "required": [
+        "statement",
+        "pid",
+        "rank",
+        "provenance"
+      ],
+      "type": "object"
+    },
+    "Succession": {
+      "properties": {
+        "before": {
+          "items": {
+            "$ref": "#/$defs/StatementRef"
+          },
+          "type": "array"
+        },
+        "holder": {
+          "$ref": "#/$defs/StatementRef"
+        },
+        "office": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/StatementRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "pid": {
+          "$ref": "#/$defs/Pid"
+        },
+        "priority": {
+          "format": "double",
+          "type": "number"
+        },
+        "rule": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "pid",
+        "holder",
+        "before",
+        "priority"
+      ],
+      "type": "object"
+    },
+    "Template": {
+      "description": "A named arrangement of slots, defined by the design system.",
+      "enum": [
+        "identity",
+        "lead-beside",
+        "hero-plus-stack",
+        "columns",
+        "axis",
+        "feature-run",
+        "sheet",
+        "collapsed"
+      ],
+      "type": "string"
+    },
+    "Time": {
+      "properties": {
+        "from": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "to": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "tracks": {
+          "description": "One track for each property, the earliest first.",
+          "items": {
+            "$ref": "#/$defs/Track"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "from",
+        "to",
+        "tracks"
+      ],
+      "type": "object"
+    },
+    "Title": {
+      "properties": {
+        "item": {
+          "$ref": "#/$defs/Qid"
+        }
+      },
+      "required": [
+        "item"
+      ],
+      "type": "object"
+    },
+    "Track": {
+      "properties": {
+        "marks": {
+          "items": {
+            "$ref": "#/$defs/Mark"
+          },
+          "type": "array"
+        },
+        "pid": {
+          "$ref": "#/$defs/Pid"
+        }
+      },
+      "required": [
+        "pid",
+        "marks"
+      ],
+      "type": "object"
+    },
+    "Work": {
+      "properties": {
+        "image": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Picture"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "item": {
+          "$ref": "#/$defs/Qid"
+        },
+        "via": {
+          "description": "The properties by which this work points to the item.",
+          "items": {
+            "$ref": "#/$defs/Pid"
+          },
+          "type": "array"
+        },
+        "year": {
+          "format": "int64",
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "item",
+        "via",
+        "year",
+        "image"
+      ],
+      "type": "object"
+    },
+    "Works": {
+      "properties": {
+        "form": {
+          "$ref": "#/$defs/WorksForm"
+        },
+        "pids": {
+          "description": "The properties of the works that point to the item.",
+          "items": {
+            "$ref": "#/$defs/Pid"
+          },
+          "type": "array"
+        },
+        "priority": {
+          "format": "double",
+          "type": "number"
+        },
+        "shown_count": {
+          "format": "uint",
+          "minimum": 0,
+          "type": "integer"
+        },
+        "values": {
+          "items": {
+            "$ref": "#/$defs/Work"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "pids",
+        "form",
+        "values",
+        "shown_count",
+        "priority"
+      ],
+      "type": "object"
+    },
+    "WorksForm": {
+      "enum": [
+        "run",
+        "list"
+      ],
+      "type": "string"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "composition": {
+      "type": "string"
+    },
+    "coverage": {
+      "$ref": "#/$defs/Coverage",
+      "description": "Labels in the page language (or `mul`), over what the reader sees."
+    },
+    "design": {
+      "type": "string"
+    },
+    "dir": {
+      "$ref": "#/$defs/Dir"
+    },
+    "labels": {
+      "additionalProperties": false,
+      "description": "The label of every item and property that the page shows.",
+      "patternProperties": {
+        "^[QP][1-9][0-9]*$": {
+          "$ref": "#/$defs/Label"
+        }
+      },
+      "type": "object"
+    },
+    "lang": {
+      "$ref": "#/$defs/Lang",
+      "description": "The language of the page (a Wikimedia code)."
+    },
+    "lead": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Article"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "The lead of the article, in the page language or the fallback."
+    },
+    "locale": {
+      "description": "The BCP 47 locale for `Intl`, from `lang`.",
+      "type": "string"
+    },
+    "messages": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "description": "The interface messages of the page language.",
+      "type": "object"
+    },
+    "page_images": {
+      "additionalProperties": false,
+      "description": "Pictures from articles, for item values that have no picture.",
+      "patternProperties": {
+        "^Q[1-9][0-9]*$": {
+          "$ref": "#/$defs/PageImage"
+        }
+      },
+      "type": "object"
+    },
+    "page_title": {
+      "type": "string"
+    },
+    "projects": {
+      "description": "The projects with a page about the item, the most first.",
+      "items": {
+        "$ref": "#/$defs/Project"
+      },
+      "type": "array"
+    },
+    "qid": {
+      "$ref": "#/$defs/Qid"
+    },
+    "schema": {
+      "type": "string"
+    },
+    "spreads": {
+      "description": "The spreads that have something to show.",
+      "items": {
+        "$ref": "#/$defs/SpreadView"
+      },
+      "type": "array"
+    },
+    "unmatched_sections": {
+      "description": "The article sections that no spread matched.",
+      "items": {
+        "$ref": "#/$defs/Link"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema",
+    "composition",
+    "design",
+    "qid",
+    "lang",
+    "locale",
+    "dir",
+    "page_title",
+    "labels",
+    "page_images",
+    "messages",
+    "lead",
+    "coverage",
+    "projects",
+    "spreads",
+    "unmatched_sections"
+  ],
+  "title": "View",
+  "type": "object"
+}

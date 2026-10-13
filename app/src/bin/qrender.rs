@@ -5,7 +5,7 @@ use std::path::PathBuf;
 use std::process::ExitCode;
 
 use clap::{Parser, Subcommand};
-use content::Content;
+use content::{Content, Text};
 use qrender::config::Config;
 
 #[derive(Parser)]
@@ -23,6 +23,15 @@ enum Command {
         #[arg(long)]
         content: PathBuf,
     },
+    /// Content and text JSON -> the localized view JSON, on standard output.
+    View {
+        /// A content file (content/0.1).
+        #[arg(long)]
+        content: PathBuf,
+        /// A text file of one language (text/0.1).
+        #[arg(long)]
+        text: PathBuf,
+    },
 }
 
 fn main() -> ExitCode {
@@ -38,13 +47,23 @@ fn main() -> ExitCode {
 fn run(cli: Cli) -> Result<(), Box<dyn std::error::Error>> {
     match cli.command {
         Command::Compose { content } => {
-            let text = std::fs::read_to_string(&content)
-                .map_err(|e| format!("{}: {e}", content.display()))?;
-            let content: Content =
-                serde_json::from_str(&text).map_err(|e| format!("{}: {e}", content.display()))?;
+            let content: Content = read(&content)?;
             let composition = qrender::compose(&content, Config::embedded());
             println!("{}", serde_json::to_string_pretty(&composition)?);
         }
+        Command::View { content, text } => {
+            let content: Content = read(&content)?;
+            let text: Text = read(&text)?;
+            let composition = qrender::compose(&content, Config::embedded());
+            let view = qrender::localize(&composition, &text);
+            println!("{}", serde_json::to_string_pretty(&view)?);
+        }
     }
     Ok(())
+}
+
+/// A JSON file of one contract.
+fn read<T: serde::de::DeserializeOwned>(path: &PathBuf) -> Result<T, String> {
+    let json = std::fs::read_to_string(path).map_err(|e| format!("{}: {e}", path.display()))?;
+    serde_json::from_str(&json).map_err(|e| format!("{}: {e}", path.display()))
 }

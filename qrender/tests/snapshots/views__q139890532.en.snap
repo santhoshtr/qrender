@@ -1,0 +1,189 @@
+---
+source: qrender/tests/views.rs
+expression: json
+---
+{
+  "composition": "composition/0.3",
+  "coverage": {
+    "have": 9,
+    "total": 9
+  },
+  "design": "design/0.2",
+  "dir": "ltr",
+  "labels": {
+    "P131": {
+      "href": "https://www.wikidata.org/wiki/Property:P131",
+      "lang": "en",
+      "text": "located in the administrative territorial entity"
+    },
+    "P143": {
+      "href": "https://www.wikidata.org/wiki/Property:P143",
+      "lang": "en",
+      "text": "imported from Wikimedia project"
+    },
+    "P17": {
+      "href": "https://www.wikidata.org/wiki/Property:P17",
+      "lang": "en",
+      "text": "country"
+    },
+    "P248": {
+      "href": "https://www.wikidata.org/wiki/Property:P248",
+      "lang": "en",
+      "text": "stated in"
+    },
+    "P281": {
+      "href": "https://www.wikidata.org/wiki/Property:P281",
+      "lang": "en",
+      "text": "postal code"
+    },
+    "P31": {
+      "href": "https://www.wikidata.org/wiki/Property:P31",
+      "lang": "en",
+      "text": "instance of"
+    },
+    "P3629": {
+      "href": "https://www.wikidata.org/wiki/Property:P3629",
+      "lang": "en",
+      "text": "age of subject at event"
+    },
+    "P625": {
+      "href": "https://www.wikidata.org/wiki/Property:P625",
+      "lang": "en",
+      "text": "coordinate location"
+    },
+    "P854": {
+      "href": "https://www.wikidata.org/wiki/Property:P854",
+      "lang": "en",
+      "text": "reference URL"
+    },
+    "Q139890532": {
+      "description": {
+        "lang": "en",
+        "text": "Hamlet in Kasaragod district, Kerala, India"
+      },
+      "href": "https://www.wikidata.org/wiki/Q139890532",
+      "lang": "en",
+      "text": "Kokkachal"
+    },
+    "Q1419703": {
+      "href": "https://www.wikidata.org/wiki/Q1419703",
+      "lang": "en",
+      "text": "Kasaragod district"
+    },
+    "Q532": {
+      "href": "https://www.wikidata.org/wiki/Q532",
+      "lang": "en",
+      "text": "village"
+    },
+    "Q668": {
+      "href": "https://www.wikidata.org/wiki/Q668",
+      "lang": "en",
+      "text": "India"
+    }
+  },
+  "lang": "en",
+  "lead": {
+    "host": "en.wikipedia.org",
+    "lang": "en",
+    "local": true,
+    "more": [],
+    "paragraphs": [
+      "<b>Kokkachal</b> (കൊക്കച്ചാൽ, <a href=\"https://en.wikipedia.org/wiki/Help:IPA/Malayalam\">&#91;ko̞kːɐt͡ʃːaːl&#93;</a>; also spelled <b>Kokkechal</b>) is a small locality and settlement situated in the <a href=\"https://en.wikipedia.org/wiki/Kasaragod_district\">Kasaragod district</a> in the Indian state of <a href=\"https://en.wikipedia.org/wiki/Kerala\">Kerala</a>. It falls under the administration of the <a href=\"https://en.wikipedia.org/wiki/Manjeshwaram_taluk\">Manjeshwaram taluk</a> near the northern border of the state."
+    ],
+    "url": "https://en.wikipedia.org/wiki/Kokkachal"
+  },
+  "locale": "en",
+  "messages": {
+    "qrender-add-label": "Add a label in your language",
+    "qrender-age": "aged $1",
+    "qrender-bce": "$1 BCE",
+    "qrender-close": "Close",
+    "qrender-credit": "Credit",
+    "qrender-edit": "Edit",
+    "qrender-search": "Search Wikipedia",
+    "qrender-some-value": "unknown value"
+  },
+  "page_images": {},
+  "page_title": "Kokkachal",
+  "projects": [
+    {
+      "count": 3,
+      "local": true,
+      "name": "wikipedia"
+    }
+  ],
+  "qid": "Q139890532",
+  "schema": "view/0.2",
+  "spreads": [
+    {
+      "id": "identity",
+      "prose_links": [],
+      "prose_text": null,
+      "title": null
+    },
+    {
+      "id": "location",
+      "prose_links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Kokkachal#Geography",
+          "lang": "en",
+          "text": "Geography"
+        }
+      ],
+      "prose_text": {
+        "href": "https://en.wikipedia.org/wiki/Kokkachal#Geography",
+        "html": "Kokkachal is situated along the rural routes connecting <a href=\"https://en.wikipedia.org/wiki/Bandiyod\">Bandiyod</a> (approximately 6.5&#160;km away) and Dharmathadukka. Geographically, it sits close to the border of the Puthige and Mangalpady local government jurisdictions. The landscape is characterized by the typical midland topography of Northern Malabar, with seasonal streams feeding into larger coastal river systems.",
+        "lang": "en",
+        "local": true,
+        "title": "Geography"
+      },
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q2221906",
+        "lang": "en",
+        "text": "geographic location"
+      }
+    },
+    {
+      "id": "names",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q82799",
+        "lang": "en",
+        "text": "name"
+      }
+    },
+    {
+      "id": "evidence",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q121769",
+        "lang": "en",
+        "text": "reference"
+      }
+    }
+  ],
+  "unmatched_sections": [
+    {
+      "href": "https://en.wikipedia.org/wiki/Kokkachal#Education_and_Institutions",
+      "lang": "en",
+      "text": "Education and Institutions"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Kokkachal#Transport",
+      "lang": "en",
+      "text": "Transport"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Kokkachal#See_also",
+      "lang": "en",
+      "text": "See also"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Kokkachal#References",
+      "lang": "en",
+      "text": "References"
+    }
+  ]
+}

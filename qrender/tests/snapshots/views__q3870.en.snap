@@ -1,0 +1,1230 @@
+---
+source: qrender/tests/views.rs
+expression: json
+---
+{
+  "composition": "composition/0.3",
+  "coverage": {
+    "have": 63,
+    "total": 63
+  },
+  "design": "design/0.2",
+  "dir": "ltr",
+  "labels": {
+    "P10": {
+      "href": "https://www.wikidata.org/wiki/Property:P10",
+      "lang": "en",
+      "text": "video"
+    },
+    "P10291": {
+      "href": "https://www.wikidata.org/wiki/Property:P10291",
+      "lang": "en",
+      "text": "Wikisimpsons article ID"
+    },
+    "P1036": {
+      "href": "https://www.wikidata.org/wiki/Property:P1036",
+      "lang": "en",
+      "text": "Dewey Decimal Classification"
+    },
+    "P10397": {
+      "href": "https://www.wikidata.org/wiki/Property:P10397",
+      "lang": "en",
+      "text": "SBN place ID"
+    },
+    "P10730": {
+      "href": "https://www.wikidata.org/wiki/Property:P10730",
+      "lang": "en",
+      "text": "Data Commons ID"
+    },
+    "P1082": {
+      "href": "https://www.wikidata.org/wiki/Property:P1082",
+      "lang": "en",
+      "text": "population"
+    },
+    "P10832": {
+      "href": "https://www.wikidata.org/wiki/Property:P10832",
+      "lang": "en",
+      "text": "WorldCat Entities ID"
+    },
+    "P12086": {
+      "href": "https://www.wikidata.org/wiki/Property:P12086",
+      "lang": "en",
+      "text": "WikiKids ID"
+    },
+    "P1225": {
+      "href": "https://www.wikidata.org/wiki/Property:P1225",
+      "lang": "en",
+      "text": "U.S. National Archives Identifier"
+    },
+    "P12385": {
+      "href": "https://www.wikidata.org/wiki/Property:P12385",
+      "lang": "en",
+      "text": "Gran Enciclopèdia Catalana ID"
+    },
+    "P1245": {
+      "href": "https://www.wikidata.org/wiki/Property:P1245",
+      "lang": "en",
+      "text": "OmegaWiki Defined Meaning"
+    },
+    "P12749": {
+      "href": "https://www.wikidata.org/wiki/Property:P12749",
+      "lang": "en",
+      "text": "SNARC ID"
+    },
+    "P12800": {
+      "href": "https://www.wikidata.org/wiki/Property:P12800",
+      "lang": "en",
+      "text": "Vikidia article ID"
+    },
+    "P1281": {
+      "href": "https://www.wikidata.org/wiki/Property:P1281",
+      "lang": "en",
+      "text": "WOEID"
+    },
+    "P1296": {
+      "href": "https://www.wikidata.org/wiki/Property:P1296",
+      "lang": "en",
+      "text": "Gran Enciclopèdia Catalana ID (former scheme)"
+    },
+    "P131": {
+      "href": "https://www.wikidata.org/wiki/Property:P131",
+      "lang": "en",
+      "text": "located in the administrative territorial entity"
+    },
+    "P1343": {
+      "href": "https://www.wikidata.org/wiki/Property:P1343",
+      "lang": "en",
+      "text": "described by source"
+    },
+    "P13591": {
+      "href": "https://www.wikidata.org/wiki/Property:P13591",
+      "lang": "en",
+      "text": "‎Yale LUX ID"
+    },
+    "P1376": {
+      "href": "https://www.wikidata.org/wiki/Property:P1376",
+      "lang": "en",
+      "text": "capital of"
+    },
+    "P13772": {
+      "href": "https://www.wikidata.org/wiki/Property:P13772",
+      "lang": "en",
+      "text": "Harper's tag"
+    },
+    "P1417": {
+      "href": "https://www.wikidata.org/wiki/Property:P1417",
+      "lang": "en",
+      "text": "Encyclopædia Britannica Online ID"
+    },
+    "P143": {
+      "href": "https://www.wikidata.org/wiki/Property:P143",
+      "lang": "en",
+      "text": "imported from Wikimedia project"
+    },
+    "P1448": {
+      "href": "https://www.wikidata.org/wiki/Property:P1448",
+      "lang": "en",
+      "text": "official name"
+    },
+    "P1464": {
+      "href": "https://www.wikidata.org/wiki/Property:P1464",
+      "lang": "en",
+      "text": "category for people born here"
+    },
+    "P1465": {
+      "href": "https://www.wikidata.org/wiki/Property:P1465",
+      "lang": "en",
+      "text": "category for people who died here"
+    },
+    "P1549": {
+      "href": "https://www.wikidata.org/wiki/Property:P1549",
+      "lang": "en",
+      "text": "demonym"
+    },
+    "P1566": {
+      "href": "https://www.wikidata.org/wiki/Property:P1566",
+      "lang": "en",
+      "text": "GeoNames ID"
+    },
+    "P1617": {
+      "href": "https://www.wikidata.org/wiki/Property:P1617",
+      "lang": "en",
+      "text": "BBC Things ID"
+    },
+    "P1667": {
+      "href": "https://www.wikidata.org/wiki/Property:P1667",
+      "lang": "en",
+      "text": "Getty Thesaurus of Geographic Names ID"
+    },
+    "P17": {
+      "href": "https://www.wikidata.org/wiki/Property:P17",
+      "lang": "en",
+      "text": "country"
+    },
+    "P1705": {
+      "href": "https://www.wikidata.org/wiki/Property:P1705",
+      "lang": "en",
+      "text": "native label"
+    },
+    "P1792": {
+      "href": "https://www.wikidata.org/wiki/Property:P1792",
+      "lang": "en",
+      "text": "category of associated people"
+    },
+    "P18": {
+      "href": "https://www.wikidata.org/wiki/Property:P18",
+      "lang": "en",
+      "text": "image"
+    },
+    "P1871": {
+      "href": "https://www.wikidata.org/wiki/Property:P1871",
+      "lang": "en",
+      "text": "CERL Thesaurus ID"
+    },
+    "P190": {
+      "href": "https://www.wikidata.org/wiki/Property:P190",
+      "lang": "en",
+      "text": "twinned administrative body"
+    },
+    "P1937": {
+      "href": "https://www.wikidata.org/wiki/Property:P1937",
+      "lang": "en",
+      "text": "UN/LOCODE"
+    },
+    "P1997": {
+      "href": "https://www.wikidata.org/wiki/Property:P1997",
+      "lang": "en",
+      "text": "Facebook location ID"
+    },
+    "P2002": {
+      "href": "https://www.wikidata.org/wiki/Property:P2002",
+      "lang": "en",
+      "text": "X (Twitter) username"
+    },
+    "P2003": {
+      "href": "https://www.wikidata.org/wiki/Property:P2003",
+      "lang": "en",
+      "text": "Instagram username"
+    },
+    "P2013": {
+      "href": "https://www.wikidata.org/wiki/Property:P2013",
+      "lang": "en",
+      "text": "Facebook username"
+    },
+    "P2044": {
+      "href": "https://www.wikidata.org/wiki/Property:P2044",
+      "lang": "en",
+      "text": "elevation above sea level"
+    },
+    "P2046": {
+      "href": "https://www.wikidata.org/wiki/Property:P2046",
+      "lang": "en",
+      "text": "area"
+    },
+    "P213": {
+      "href": "https://www.wikidata.org/wiki/Property:P213",
+      "lang": "en",
+      "text": "ISNI"
+    },
+    "P214": {
+      "href": "https://www.wikidata.org/wiki/Property:P214",
+      "lang": "en",
+      "text": "VIAF cluster ID"
+    },
+    "P2163": {
+      "href": "https://www.wikidata.org/wiki/Property:P2163",
+      "lang": "en",
+      "text": "FAST ID"
+    },
+    "P2184": {
+      "href": "https://www.wikidata.org/wiki/Property:P2184",
+      "lang": "en",
+      "text": "history of topic"
+    },
+    "P227": {
+      "href": "https://www.wikidata.org/wiki/Property:P227",
+      "lang": "en",
+      "text": "GND ID"
+    },
+    "P2326": {
+      "href": "https://www.wikidata.org/wiki/Property:P2326",
+      "lang": "en",
+      "text": "GNS Unique Feature ID"
+    },
+    "P2347": {
+      "href": "https://www.wikidata.org/wiki/Property:P2347",
+      "lang": "en",
+      "text": "YSO ID"
+    },
+    "P242": {
+      "href": "https://www.wikidata.org/wiki/Property:P242",
+      "lang": "en",
+      "text": "locator map image"
+    },
+    "P244": {
+      "href": "https://www.wikidata.org/wiki/Property:P244",
+      "lang": "en",
+      "text": "Library of Congress Authorities ID"
+    },
+    "P248": {
+      "href": "https://www.wikidata.org/wiki/Property:P248",
+      "lang": "en",
+      "text": "stated in"
+    },
+    "P2572": {
+      "href": "https://www.wikidata.org/wiki/Property:P2572",
+      "lang": "en",
+      "text": "hashtag"
+    },
+    "P2581": {
+      "href": "https://www.wikidata.org/wiki/Property:P2581",
+      "lang": "en",
+      "text": "BabelNet ID"
+    },
+    "P268": {
+      "href": "https://www.wikidata.org/wiki/Property:P268",
+      "lang": "en",
+      "text": "Bibliothèque nationale de France ID"
+    },
+    "P269": {
+      "href": "https://www.wikidata.org/wiki/Property:P269",
+      "lang": "en",
+      "text": "IdRef ID"
+    },
+    "P2716": {
+      "href": "https://www.wikidata.org/wiki/Property:P2716",
+      "lang": "en",
+      "text": "montage image"
+    },
+    "P281": {
+      "href": "https://www.wikidata.org/wiki/Property:P281",
+      "lang": "en",
+      "text": "postal code"
+    },
+    "P2924": {
+      "href": "https://www.wikidata.org/wiki/Property:P2924",
+      "lang": "en",
+      "text": "Great Russian Encyclopedia Online ID (2017)"
+    },
+    "P2936": {
+      "href": "https://www.wikidata.org/wiki/Property:P2936",
+      "lang": "en",
+      "text": "language used"
+    },
+    "P300": {
+      "href": "https://www.wikidata.org/wiki/Property:P300",
+      "lang": "en",
+      "text": "ISO 3166-2 code"
+    },
+    "P31": {
+      "href": "https://www.wikidata.org/wiki/Property:P31",
+      "lang": "en",
+      "text": "instance of"
+    },
+    "P3134": {
+      "href": "https://www.wikidata.org/wiki/Property:P3134",
+      "lang": "en",
+      "text": "Tripadvisor ID"
+    },
+    "P3219": {
+      "href": "https://www.wikidata.org/wiki/Property:P3219",
+      "lang": "en",
+      "text": "Encyclopædia Universalis ID"
+    },
+    "P3365": {
+      "href": "https://www.wikidata.org/wiki/Property:P3365",
+      "lang": "en",
+      "text": "Treccani ID"
+    },
+    "P3417": {
+      "href": "https://www.wikidata.org/wiki/Property:P3417",
+      "lang": "en",
+      "text": "Quora topic ID"
+    },
+    "P3451": {
+      "href": "https://www.wikidata.org/wiki/Property:P3451",
+      "lang": "en",
+      "text": "nighttime view"
+    },
+    "P349": {
+      "href": "https://www.wikidata.org/wiki/Property:P349",
+      "lang": "en",
+      "text": "NDL Authority ID"
+    },
+    "P361": {
+      "href": "https://www.wikidata.org/wiki/Property:P361",
+      "lang": "en",
+      "text": "part of"
+    },
+    "P3629": {
+      "href": "https://www.wikidata.org/wiki/Property:P3629",
+      "lang": "en",
+      "text": "age of subject at event"
+    },
+    "P373": {
+      "href": "https://www.wikidata.org/wiki/Property:P373",
+      "lang": "en",
+      "text": "Commons category"
+    },
+    "P3749": {
+      "href": "https://www.wikidata.org/wiki/Property:P3749",
+      "lang": "en",
+      "text": "Google Maps Customer ID"
+    },
+    "P3984": {
+      "href": "https://www.wikidata.org/wiki/Property:P3984",
+      "lang": "en",
+      "text": "subreddit"
+    },
+    "P402": {
+      "href": "https://www.wikidata.org/wiki/Property:P402",
+      "lang": "en",
+      "text": "OpenStreetMap relation ID"
+    },
+    "P407": {
+      "href": "https://www.wikidata.org/wiki/Property:P407",
+      "lang": "en",
+      "text": "language of work or name"
+    },
+    "P41": {
+      "href": "https://www.wikidata.org/wiki/Property:P41",
+      "lang": "en",
+      "text": "flag image"
+    },
+    "P4223": {
+      "href": "https://www.wikidata.org/wiki/Property:P4223",
+      "lang": "en",
+      "text": "Treccani's Enciclopedia Italiana ID"
+    },
+    "P4342": {
+      "href": "https://www.wikidata.org/wiki/Property:P4342",
+      "lang": "en",
+      "text": "Great Norwegian Encyclopedia ID"
+    },
+    "P443": {
+      "href": "https://www.wikidata.org/wiki/Property:P443",
+      "lang": "en",
+      "text": "pronunciation audio"
+    },
+    "P4527": {
+      "href": "https://www.wikidata.org/wiki/Property:P4527",
+      "lang": "en",
+      "text": "UK Parliament thesaurus ID"
+    },
+    "P473": {
+      "href": "https://www.wikidata.org/wiki/Property:P473",
+      "lang": "en",
+      "text": "local dialing code"
+    },
+    "P5008": {
+      "href": "https://www.wikidata.org/wiki/Property:P5008",
+      "lang": "en",
+      "text": "on focus list of Wikimedia project"
+    },
+    "P5063": {
+      "href": "https://www.wikidata.org/wiki/Property:P5063",
+      "lang": "en",
+      "text": "Interlingual Index ID"
+    },
+    "P518": {
+      "href": "https://www.wikidata.org/wiki/Property:P518",
+      "lang": "en",
+      "text": "applies to part"
+    },
+    "P5184": {
+      "href": "https://www.wikidata.org/wiki/Property:P5184",
+      "lang": "en",
+      "text": "Daum Encyclopedia ID"
+    },
+    "P5337": {
+      "href": "https://www.wikidata.org/wiki/Property:P5337",
+      "lang": "en",
+      "text": "Google News topics ID"
+    },
+    "P5573": {
+      "href": "https://www.wikidata.org/wiki/Property:P5573",
+      "lang": "en",
+      "text": "archINFORM location ID"
+    },
+    "P571": {
+      "href": "https://www.wikidata.org/wiki/Property:P571",
+      "lang": "en",
+      "text": "inception"
+    },
+    "P580": {
+      "href": "https://www.wikidata.org/wiki/Property:P580",
+      "lang": "en",
+      "text": "start time"
+    },
+    "P582": {
+      "href": "https://www.wikidata.org/wiki/Property:P582",
+      "lang": "en",
+      "text": "end time"
+    },
+    "P5843": {
+      "href": "https://www.wikidata.org/wiki/Property:P5843",
+      "lang": "en",
+      "text": "Gynopedia ID"
+    },
+    "P585": {
+      "href": "https://www.wikidata.org/wiki/Property:P585",
+      "lang": "en",
+      "text": "point in time"
+    },
+    "P5905": {
+      "href": "https://www.wikidata.org/wiki/Property:P5905",
+      "lang": "en",
+      "text": "Comic Vine ID"
+    },
+    "P6": {
+      "href": "https://www.wikidata.org/wiki/Property:P6",
+      "lang": "en",
+      "text": "head of government"
+    },
+    "P6200": {
+      "href": "https://www.wikidata.org/wiki/Property:P6200",
+      "lang": "en",
+      "text": "BBC News topic ID"
+    },
+    "P625": {
+      "href": "https://www.wikidata.org/wiki/Property:P625",
+      "lang": "en",
+      "text": "coordinate location"
+    },
+    "P6404": {
+      "href": "https://www.wikidata.org/wiki/Property:P6404",
+      "lang": "en",
+      "text": "Treccani's Dizionario di Storia ID"
+    },
+    "P646": {
+      "href": "https://www.wikidata.org/wiki/Property:P646",
+      "lang": "en",
+      "text": "Freebase ID"
+    },
+    "P6621": {
+      "href": "https://www.wikidata.org/wiki/Property:P6621",
+      "lang": "en",
+      "text": "Le Figaro tag ID"
+    },
+    "P6706": {
+      "href": "https://www.wikidata.org/wiki/Property:P6706",
+      "lang": "en",
+      "text": "De Agostini ID"
+    },
+    "P6723": {
+      "href": "https://www.wikidata.org/wiki/Property:P6723",
+      "lang": "en",
+      "text": "BlackPast.org ID"
+    },
+    "P6766": {
+      "href": "https://www.wikidata.org/wiki/Property:P6766",
+      "lang": "en",
+      "text": "Who's on First ID"
+    },
+    "P691": {
+      "href": "https://www.wikidata.org/wiki/Property:P691",
+      "lang": "en",
+      "text": "NL CR AUT ID"
+    },
+    "P7197": {
+      "href": "https://www.wikidata.org/wiki/Property:P7197",
+      "lang": "en",
+      "text": "OpenWeatherMap city ID"
+    },
+    "P7305": {
+      "href": "https://www.wikidata.org/wiki/Property:P7305",
+      "lang": "en",
+      "text": "Online PWN Encyclopedia ID"
+    },
+    "P7471": {
+      "href": "https://www.wikidata.org/wiki/Property:P7471",
+      "lang": "en",
+      "text": "iNaturalist place ID"
+    },
+    "P7502": {
+      "href": "https://www.wikidata.org/wiki/Property:P7502",
+      "lang": "en",
+      "text": "Golden ID (archived)"
+    },
+    "P7506": {
+      "href": "https://www.wikidata.org/wiki/Property:P7506",
+      "lang": "en",
+      "text": "Naver Encyclopedia ID (pre-August 2026)"
+    },
+    "P7867": {
+      "href": "https://www.wikidata.org/wiki/Property:P7867",
+      "lang": "en",
+      "text": "category for maps or plans"
+    },
+    "P805": {
+      "href": "https://www.wikidata.org/wiki/Property:P805",
+      "lang": "en",
+      "text": "statement is subject of"
+    },
+    "P8119": {
+      "href": "https://www.wikidata.org/wiki/Property:P8119",
+      "lang": "en",
+      "text": "HASC"
+    },
+    "P8168": {
+      "href": "https://www.wikidata.org/wiki/Property:P8168",
+      "lang": "en",
+      "text": "FactGrid item ID"
+    },
+    "P8179": {
+      "href": "https://www.wikidata.org/wiki/Property:P8179",
+      "lang": "en",
+      "text": "Canadiana Name Authority ID"
+    },
+    "P8189": {
+      "href": "https://www.wikidata.org/wiki/Property:P8189",
+      "lang": "en",
+      "text": "J9U entity ID"
+    },
+    "P8313": {
+      "href": "https://www.wikidata.org/wiki/Property:P8313",
+      "lang": "en",
+      "text": "Lex ID"
+    },
+    "P8349": {
+      "href": "https://www.wikidata.org/wiki/Property:P8349",
+      "lang": "en",
+      "text": "Proleksis enciklopedija ID"
+    },
+    "P8402": {
+      "href": "https://www.wikidata.org/wiki/Property:P8402",
+      "lang": "en",
+      "text": "open data portal"
+    },
+    "P8408": {
+      "href": "https://www.wikidata.org/wiki/Property:P8408",
+      "lang": "en",
+      "text": "KBpedia ID"
+    },
+    "P8424": {
+      "href": "https://www.wikidata.org/wiki/Property:P8424",
+      "lang": "en",
+      "text": "OpenHistoricalMap relation ID"
+    },
+    "P8519": {
+      "href": "https://www.wikidata.org/wiki/Property:P8519",
+      "lang": "en",
+      "text": "RKD thesaurus ID"
+    },
+    "P854": {
+      "href": "https://www.wikidata.org/wiki/Property:P854",
+      "lang": "en",
+      "text": "reference URL"
+    },
+    "P856": {
+      "href": "https://www.wikidata.org/wiki/Property:P856",
+      "lang": "en",
+      "text": "official website"
+    },
+    "P8592": {
+      "href": "https://www.wikidata.org/wiki/Property:P8592",
+      "lang": "en",
+      "text": "aerial view"
+    },
+    "P8744": {
+      "href": "https://www.wikidata.org/wiki/Property:P8744",
+      "lang": "en",
+      "text": "economy of topic"
+    },
+    "P8814": {
+      "href": "https://www.wikidata.org/wiki/Property:P8814",
+      "lang": "en",
+      "text": "WordNet 3.1 Synset ID"
+    },
+    "P8989": {
+      "href": "https://www.wikidata.org/wiki/Property:P8989",
+      "lang": "en",
+      "text": "category for the view of the item"
+    },
+    "P901": {
+      "href": "https://www.wikidata.org/wiki/Property:P901",
+      "lang": "en",
+      "text": "FIPS 10-4 (countries and regions)"
+    },
+    "P910": {
+      "href": "https://www.wikidata.org/wiki/Property:P910",
+      "lang": "en",
+      "text": "topic's main category"
+    },
+    "P9100": {
+      "href": "https://www.wikidata.org/wiki/Property:P9100",
+      "lang": "en",
+      "text": "GitHub topic"
+    },
+    "P9322": {
+      "href": "https://www.wikidata.org/wiki/Property:P9322",
+      "lang": "en",
+      "text": "SVKKL authority ID"
+    },
+    "P9346": {
+      "href": "https://www.wikidata.org/wiki/Property:P9346",
+      "lang": "en",
+      "text": "France 24 topic ID (French)"
+    },
+    "P935": {
+      "href": "https://www.wikidata.org/wiki/Property:P935",
+      "lang": "en",
+      "text": "Commons gallery"
+    },
+    "P94": {
+      "href": "https://www.wikidata.org/wiki/Property:P94",
+      "lang": "en",
+      "text": "coat of arms image"
+    },
+    "P948": {
+      "href": "https://www.wikidata.org/wiki/Property:P948",
+      "lang": "en",
+      "text": "page banner"
+    },
+    "P9495": {
+      "href": "https://www.wikidata.org/wiki/Property:P9495",
+      "lang": "en",
+      "text": "National Historical Museums of Sweden ID"
+    },
+    "P950": {
+      "href": "https://www.wikidata.org/wiki/Property:P950",
+      "lang": "en",
+      "text": "National Library of Spain SpMaBN ID"
+    },
+    "P982": {
+      "href": "https://www.wikidata.org/wiki/Property:P982",
+      "lang": "en",
+      "text": "MusicBrainz area ID"
+    },
+    "P9957": {
+      "href": "https://www.wikidata.org/wiki/Property:P9957",
+      "lang": "en",
+      "text": "museum-digital place ID"
+    },
+    "P998": {
+      "href": "https://www.wikidata.org/wiki/Property:P998",
+      "lang": "en",
+      "text": "Curlie ID"
+    },
+    "Q104596219": {
+      "href": "https://www.wikidata.org/wiki/Q104596219",
+      "lang": "en",
+      "text": "Category:Views of Nairobi"
+    },
+    "Q106020188": {
+      "href": "https://www.wikidata.org/wiki/Q106020188",
+      "lang": "en",
+      "text": "economy of Nairobi"
+    },
+    "Q1061480": {
+      "href": "https://www.wikidata.org/wiki/Q1061480",
+      "lang": "en",
+      "text": "Nairobi Province"
+    },
+    "Q114": {
+      "href": "https://www.wikidata.org/wiki/Q114",
+      "lang": "en",
+      "text": "Kenya"
+    },
+    "Q11573": {
+      "href": "https://www.wikidata.org/wiki/Q11573",
+      "lang": "en",
+      "text": "metre"
+    },
+    "Q14206200": {
+      "href": "https://www.wikidata.org/wiki/Q14206200",
+      "lang": "en",
+      "text": "Southern Rift Valley"
+    },
+    "Q1549591": {
+      "href": "https://www.wikidata.org/wiki/Q1549591",
+      "lang": "en",
+      "text": "big city"
+    },
+    "Q16554": {
+      "href": "https://www.wikidata.org/wiki/Q16554",
+      "lang": "en",
+      "text": "Denver"
+    },
+    "Q182852": {
+      "href": "https://www.wikidata.org/wiki/Q182852",
+      "lang": "en",
+      "text": "Kunming"
+    },
+    "Q1860": {
+      "href": "https://www.wikidata.org/wiki/Q1860",
+      "lang": "en",
+      "text": "English"
+    },
+    "Q214485": {
+      "href": "https://www.wikidata.org/wiki/Q214485",
+      "lang": "en",
+      "text": "Kisumu"
+    },
+    "Q225641": {
+      "href": "https://www.wikidata.org/wiki/Q225641",
+      "lang": "en",
+      "text": "Mombasa"
+    },
+    "Q239421": {
+      "href": "https://www.wikidata.org/wiki/Q239421",
+      "lang": "mul",
+      "text": "Nakuru"
+    },
+    "Q25343": {
+      "href": "https://www.wikidata.org/wiki/Q25343",
+      "lang": "en",
+      "text": "square metre"
+    },
+    "Q2538511": {
+      "href": "https://www.wikidata.org/wiki/Q2538511",
+      "lang": "en",
+      "text": "Kenya Colony"
+    },
+    "Q28967580": {
+      "href": "https://www.wikidata.org/wiki/Q28967580",
+      "lang": "en",
+      "text": "Sakaja Johnson"
+    },
+    "Q322149": {
+      "href": "https://www.wikidata.org/wiki/Q322149",
+      "lang": "en",
+      "text": "Eldoret"
+    },
+    "Q3335223": {
+      "href": "https://www.wikidata.org/wiki/Q3335223",
+      "lang": "en",
+      "text": "Nairobi City County"
+    },
+    "Q35787": {
+      "href": "https://www.wikidata.org/wiki/Q35787",
+      "lang": "en",
+      "text": "Maasai"
+    },
+    "Q362865": {
+      "href": "https://www.wikidata.org/wiki/Q362865",
+      "lang": "en",
+      "text": "Pingxiang"
+    },
+    "Q3870": {
+      "description": {
+        "lang": "en",
+        "text": "capital city of Kenya"
+      },
+      "href": "https://www.wikidata.org/wiki/Q3870",
+      "lang": "en",
+      "text": "Nairobi"
+    },
+    "Q3976641": {
+      "href": "https://www.wikidata.org/wiki/Q3976641",
+      "lang": "en",
+      "text": "administrative territorial entity of Kenya"
+    },
+    "Q41087": {
+      "href": "https://www.wikidata.org/wiki/Q41087",
+      "lang": "en",
+      "text": "Raleigh"
+    },
+    "Q47088290": {
+      "href": "https://www.wikidata.org/wiki/Q47088290",
+      "lang": "en",
+      "text": "masculine singular"
+    },
+    "Q47088293": {
+      "href": "https://www.wikidata.org/wiki/Q47088293",
+      "lang": "en",
+      "text": "feminine singular"
+    },
+    "Q5460604": {
+      "href": "https://www.wikidata.org/wiki/Q5460604",
+      "lang": "en",
+      "text": "Wikipedia:List of articles all languages should have"
+    },
+    "Q6173448": {
+      "href": "https://www.wikidata.org/wiki/Q6173448",
+      "lang": "en",
+      "text": "Wikipedia:Vital articles/Level/4"
+    },
+    "Q693093": {
+      "href": "https://www.wikidata.org/wiki/Q693093",
+      "lang": "en",
+      "text": "Machakos"
+    },
+    "Q7119121": {
+      "href": "https://www.wikidata.org/wiki/Q7119121",
+      "lang": "en",
+      "text": "Category:People from Nairobi"
+    },
+    "Q712226": {
+      "href": "https://www.wikidata.org/wiki/Q712226",
+      "lang": "en",
+      "text": "square kilometre"
+    },
+    "Q7805834": {
+      "href": "https://www.wikidata.org/wiki/Q7805834",
+      "lang": "en",
+      "text": "timeline of Nairobi history"
+    },
+    "Q7838": {
+      "href": "https://www.wikidata.org/wiki/Q7838",
+      "lang": "en",
+      "text": "Swahili"
+    },
+    "Q8064728": {
+      "href": "https://www.wikidata.org/wiki/Q8064728",
+      "lang": "en",
+      "text": "Category:Births in Nairobi"
+    },
+    "Q84054802": {
+      "href": "https://www.wikidata.org/wiki/Q84054802",
+      "lang": "en",
+      "text": "Category:Maps of Nairobi"
+    },
+    "Q84643330": {
+      "href": "https://www.wikidata.org/wiki/Q84643330",
+      "lang": "en",
+      "text": "1911 Encyclopædia Britannica/Nairobi"
+    },
+    "Q867541": {
+      "href": "https://www.wikidata.org/wiki/Q867541",
+      "lang": "en",
+      "text": "Encyclopædia Britannica 11th edition"
+    },
+    "Q8678": {
+      "href": "https://www.wikidata.org/wiki/Q8678",
+      "lang": "en",
+      "text": "Rio de Janeiro"
+    },
+    "Q8795825": {
+      "href": "https://www.wikidata.org/wiki/Q8795825",
+      "lang": "en",
+      "text": "Category:Nairobi"
+    },
+    "Q926713": {
+      "href": "https://www.wikidata.org/wiki/Q926713",
+      "lang": "en",
+      "text": "Parintins"
+    },
+    "Q964130": {
+      "href": "https://www.wikidata.org/wiki/Q964130",
+      "lang": "en",
+      "text": "Colonia Tovar"
+    },
+    "Q9688722": {
+      "href": "https://www.wikidata.org/wiki/Q9688722",
+      "lang": "en",
+      "text": "Category:Deaths in Nairobi"
+    },
+    "Q97130876": {
+      "href": "https://www.wikidata.org/wiki/Q97130876",
+      "lang": "en",
+      "text": "Nairobi open data"
+    }
+  },
+  "lang": "en",
+  "lead": {
+    "host": "en.wikipedia.org",
+    "lang": "en",
+    "local": true,
+    "more": [
+      "Nicknamed the \"Green City under the Sun\", Nairobi is uniquely notable for being the only capital city in the world that hosts a <a href=\"https://en.wikipedia.org/wiki/Nairobi_National_Park\">national park</a> within its boundaries. Its name originates from the <a href=\"https://en.wikipedia.org/wiki/Maasai_language\">Maasai</a> phrase <i>Enkare Nyirobi</i>, meaning \"place of cool waters\".",
+      "As the national capital, Nairobi is home to the <a href=\"https://en.wikipedia.org/wiki/Parliament_Buildings_(Kenya)\">Kenyan Parliament Buildings</a>, the <a href=\"https://en.wikipedia.org/wiki/State_House,_Nairobi\">State House</a> and the <a href=\"https://en.wikipedia.org/wiki/Supreme_Court_of_Kenya\">Supreme Court Building</a>. It is the major financial and economic hub of <a href=\"https://en.wikipedia.org/wiki/East_Africa\">East Africa</a>, hosting thousands of Kenyan businesses and international companies and organisations, including the <a href=\"https://en.wikipedia.org/wiki/United_Nations_Environment_Programme\">United Nations Environment Programme</a> (UN Environment) and the <a href=\"https://en.wikipedia.org/wiki/United_Nations_Office_at_Nairobi\">United Nations Office at Nairobi</a> (UNON). The <a href=\"https://en.wikipedia.org/wiki/Nairobi_Securities_Exchange\">Nairobi Securities Exchange</a> (NSE) is one of the largest <a href=\"https://en.wikipedia.org/wiki/Stock_exchange\">stock exchanges</a> in Africa and the second-oldest exchange on the continent. It is Africa's fourth-largest stock exchange by trading volume, capable of processing 10 million trades a day. Nairobi is considered a <a href=\"https://en.wikipedia.org/wiki/Global_city\">global city</a> and was ranked as a \"Beta World City\" by the <a href=\"https://en.wikipedia.org/wiki/Globalization_and_World_Cities_Research_Network\">Globalisation and World Cities Research Network</a> as of 2024.",
+      "Nairobi was founded in 1898 by colonial authorities in <a href=\"https://en.wikipedia.org/wiki/British_East_Africa\">British East Africa</a>, as a rail depot on the <a href=\"https://en.wikipedia.org/wiki/Uganda\">Uganda</a>–<a href=\"https://en.wikipedia.org/wiki/Rail_transport_in_Kenya\">Kenya Railway.</a> The authorities favoured it as an ideal resting place due to its <a href=\"https://en.wikipedia.org/wiki/Montane_ecosystems\">high elevation</a>, <a href=\"https://en.wikipedia.org/wiki/Temperate_climate\">temperate climate</a>, and adequate water supply. The town quickly grew to replace <a href=\"https://en.wikipedia.org/wiki/Mombasa\">Mombasa</a> as the capital of Kenya in 1907.",
+      "After independence in 1963, Nairobi became the capital of the <a href=\"https://en.wikipedia.org/wiki/Kenya\">Republic of Kenya</a>. During Kenya's early period, the city became a centre for the <a href=\"https://en.wikipedia.org/wiki/Coffee\">coffee</a>, <a href=\"https://en.wikipedia.org/wiki/Tea\">tea</a> and <a href=\"https://en.wikipedia.org/wiki/Sisal\">sisal</a> industries. Successive post-independence governments have built and turned Nairobi into a modern metropolitan city with a diverse population and a growing economy.",
+      "Cite error: There are &lt;ref&#160;group&#61;lower-alpha&gt; tags&#160;or &#123;&#123;efn&#125;&#125; templates on this page, but the references will not show without a &#123;&#123;reflist&#124;group&#61;lower-alpha&#125;&#125; template&#160;or &#123;&#123;notelist&#125;&#125; template (see the <a href=\"https://en.wikipedia.org/wiki/Help:Cite_errors/Cite_error_group_refs_without_references\">help page</a>)."
+    ],
+    "paragraphs": [
+      "<b>Nairobi</b> (<a href=\"https://en.wikipedia.org/wiki/Help:IPA/English\">/naɪˈroʊbi/</a>&#32;<a href=\"https://en.wikipedia.org/wiki/File:Swa-nairobi.ogg\">ⓘ</a> <a href=\"https://en.wikipedia.org/wiki/Help:Pronunciation_respelling_key\"><i>ny-ROH-bee</i></a>) (<i>Jiji kuu la Nairobi</i>, in <a href=\"https://en.wikipedia.org/wiki/Swahili_language\">Swahili</a>),  is the <a href=\"https://en.wikipedia.org/wiki/Capital_city\">capital</a> and largest city of <a href=\"https://en.wikipedia.org/wiki/Kenya\">Kenya</a>, located in the south-central part of the country. As of 2026, it has a population of 5.6 million and a metropolitan population of 15.95 million, making it the <a href=\"https://en.wikipedia.org/wiki/List_of_cities_in_Africa_by_population\">8th most populous city</a> in <a href=\"https://en.wikipedia.org/wiki/Africa\">Africa</a> and the 4th most populous metropolitan area. The city goes beyond its borders and has expanded into neighbouring counties, making it the 4th largest metropolitan area in Africa."
+    ],
+    "url": "https://en.wikipedia.org/wiki/Nairobi"
+  },
+  "locale": "en",
+  "messages": {
+    "qrender-add-label": "Add a label in your language",
+    "qrender-age": "aged $1",
+    "qrender-bce": "$1 BCE",
+    "qrender-close": "Close",
+    "qrender-credit": "Credit",
+    "qrender-edit": "Edit",
+    "qrender-search": "Search Wikipedia",
+    "qrender-some-value": "unknown value"
+  },
+  "page_images": {
+    "Q1061480": {
+      "aspect": 1.5056,
+      "credit": {
+        "artist": "Jorge Láscar",
+        "license": "CC BY-SA 2.0"
+      },
+      "file": "Nairobi city hall.jpg",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q2538511": {
+      "aspect": 2.0,
+      "credit": {
+        "artist": "Oren neu dag",
+        "license": "CC BY-SA 3.0"
+      },
+      "file": "Flag of Kenya (1921–1963).svg",
+      "from": "en.wikipedia.org",
+      "kind": "drawing"
+    }
+  },
+  "page_title": "Nairobi",
+  "projects": [
+    {
+      "count": 210,
+      "local": true,
+      "name": "wikipedia"
+    },
+    {
+      "count": 19,
+      "local": true,
+      "name": "wikivoyage"
+    },
+    {
+      "count": 5,
+      "local": true,
+      "name": "wikinews"
+    },
+    {
+      "count": 3,
+      "local": false,
+      "name": "wikiquote"
+    }
+  ],
+  "qid": "Q3870",
+  "schema": "view/0.2",
+  "spreads": [
+    {
+      "id": "identity",
+      "prose_links": [],
+      "prose_text": null,
+      "title": null
+    },
+    {
+      "id": "location",
+      "prose_links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Nairobi#Geography",
+          "lang": "en",
+          "text": "Geography"
+        }
+      ],
+      "prose_text": {
+        "href": "https://en.wikipedia.org/wiki/Nairobi#Geography",
+        "html": "Nairobi is situated at 1°09′S 36°39′E&#xfeff; / &#xfeff;1.150°S 36.650°E&#xfeff; / -1.150; 36.650&#xfeff; (Nairobi, Kenya) and 1°27′S 37°06′E&#xfeff; / &#xfeff;1.450°S 37.100°E&#xfeff; / -1.450; 37.100&#xfeff; (Nairobi, Kenya) and occupies 696 square kilometres (270&#160;sq&#160;mi).",
+        "lang": "en",
+        "local": true,
+        "title": "Geography"
+      },
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q2221906",
+        "lang": "en",
+        "text": "geographic location"
+      }
+    },
+    {
+      "id": "names",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q82799",
+        "lang": "en",
+        "text": "name"
+      }
+    },
+    {
+      "id": "government",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q7188",
+        "lang": "en",
+        "text": "government"
+      }
+    },
+    {
+      "id": "demography",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q37732",
+        "lang": "en",
+        "text": "demography"
+      }
+    },
+    {
+      "id": "economy",
+      "prose_links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Nairobi#Economy",
+          "lang": "en",
+          "text": "Economy"
+        }
+      ],
+      "prose_text": {
+        "href": "https://en.wikipedia.org/wiki/Nairobi#Economy",
+        "html": "Nairobi is home to the <a href=\"https://en.wikipedia.org/wiki/Nairobi_Securities_Exchange\">Nairobi Securities Exchange</a> (NSE), one of Africa's largest <a href=\"https://en.wikipedia.org/wiki/Stock_exchange\">stock exchanges</a>. The NSE was officially recognised as an overseas stock exchange by the <a href=\"https://en.wikipedia.org/wiki/London_Stock_Exchange\">London Stock Exchange</a> in 1953. The exchange is Africa's fourth largest in terms of trading volumes, and fifth largest in terms of Market Capitalization as a percentage of GDP.",
+        "lang": "en",
+        "local": true,
+        "title": "Economy"
+      },
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q159810",
+        "lang": "en",
+        "text": "economy"
+      }
+    },
+    {
+      "id": "connections",
+      "prose_links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Nairobi#Twin_towns_and_sister_cities",
+          "lang": "en",
+          "text": "Twin towns and sister cities"
+        }
+      ],
+      "prose_text": {
+        "href": "https://en.wikipedia.org/wiki/Nairobi#Twin_towns_and_sister_cities",
+        "html": "Nairobi is <a href=\"https://en.wikipedia.org/wiki/Sister_city\">twinned</a> with:",
+        "lang": "en",
+        "local": true,
+        "title": "Twin towns and sister cities"
+      },
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q930933",
+        "lang": "en",
+        "text": "relation"
+      }
+    },
+    {
+      "id": "history",
+      "prose_links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Nairobi#History",
+          "lang": "en",
+          "text": "History"
+        }
+      ],
+      "prose_text": {
+        "href": "https://en.wikipedia.org/wiki/Nairobi#History",
+        "html": "The site of Nairobi was originally a swamp land occupied by a <a href=\"https://en.wikipedia.org/wiki/Pastoralism\">pastoralist</a> people, the <a href=\"https://en.wikipedia.org/wiki/Maasai_people\">Maasai</a>, the long-distance trader community, <a href=\"https://en.wikipedia.org/wiki/Kamba_people\">Akamba People</a>, as well as the <a href=\"https://en.wikipedia.org/wiki/Agriculturalist\">agriculturalist</a> <a href=\"https://en.wikipedia.org/wiki/Kikuyu_people\">Kikuyu people</a>. The name Nairobi comes from the <a href=\"https://en.wikipedia.org/wiki/Maasai_language\">Maasai</a> expression meaning 'cool waters'. referring to the cold water stream which flowed through the area. With the arrival of the <a href=\"https://en.wikipedia.org/wiki/Uganda_Railway\">Uganda Railway</a>, the site was identified by <a href=\"https://en.wikipedia.org/wiki/George_Whitehouse\">Sir George Whitehouse</a> for a store depot, shunting ground and camping ground for the <a href=\"https://en.wikipedia.org/wiki/Indians_in_Kenya\">Indian</a> labourers working on the railway.",
+        "lang": "en",
+        "local": true,
+        "title": "History"
+      },
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q309",
+        "lang": "en",
+        "text": "history"
+      }
+    },
+    {
+      "id": "media",
+      "prose_links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Nairobi#Culture",
+          "lang": "en",
+          "text": "Culture"
+        }
+      ],
+      "prose_text": {
+        "href": "https://en.wikipedia.org/wiki/Nairobi#Culture",
+        "html": "Nairobi is diverse in African cultures. As a cosmopolitan African city, it hosts all the diverse tribes that make up Kenya, and hosts a large immigrant population from other African countries.",
+        "lang": "en",
+        "local": true,
+        "title": "Culture"
+      },
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q131765",
+        "lang": "en",
+        "text": "multimedia"
+      }
+    },
+    {
+      "id": "more",
+      "prose_links": [],
+      "prose_text": null,
+      "title": null
+    },
+    {
+      "id": "evidence",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q121769",
+        "lang": "en",
+        "text": "reference"
+      }
+    }
+  ],
+  "unmatched_sections": [
+    {
+      "href": "https://en.wikipedia.org/wiki/Nairobi#Parks_and_gardens",
+      "lang": "en",
+      "text": "Parks and gardens"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Nairobi#Political_divisions",
+      "lang": "en",
+      "text": "Political divisions"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Nairobi#Demographics",
+      "lang": "en",
+      "text": "Demographics"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Nairobi#Sports",
+      "lang": "en",
+      "text": "Sports"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Nairobi#Places_of_worship",
+      "lang": "en",
+      "text": "Places of worship"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Nairobi#Infrastructure",
+      "lang": "en",
+      "text": "Infrastructure"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Nairobi#Crime_and_law_enforcement",
+      "lang": "en",
+      "text": "Crime and law enforcement"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Nairobi#Media",
+      "lang": "en",
+      "text": "Media"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Nairobi#Notable_people",
+      "lang": "en",
+      "text": "Notable people"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Nairobi#Pop_culture",
+      "lang": "en",
+      "text": "Pop culture"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Nairobi#Notes",
+      "lang": "en",
+      "text": "Notes"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Nairobi#References",
+      "lang": "en",
+      "text": "References"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Nairobi#External_links",
+      "lang": "en",
+      "text": "External links"
+    }
+  ]
+}

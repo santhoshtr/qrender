@@ -1,0 +1,2424 @@
+---
+source: qrender/tests/views.rs
+expression: json
+---
+{
+  "composition": "composition/0.3",
+  "coverage": {
+    "have": 71,
+    "total": 173
+  },
+  "design": "design/0.2",
+  "dir": "ltr",
+  "labels": {
+    "P10": {
+      "href": "https://www.wikidata.org/wiki/Property:P10",
+      "lang": "ml",
+      "text": "വീഡിയോ"
+    },
+    "P1004": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1004",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1004",
+      "lang": "en",
+      "text": "MusicBrainz place ID"
+    },
+    "P1013": {
+      "href": "https://www.wikidata.org/wiki/Property:P1013",
+      "lang": "ml",
+      "text": "ഉപയോഗിച്ച മാനദണ്ഡം"
+    },
+    "P10135": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P10135",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P10135",
+      "lang": "en",
+      "text": "recording date"
+    },
+    "P10227": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P10227",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P10227",
+      "lang": "en",
+      "text": "National Library of Ireland ID"
+    },
+    "P10234": {
+      "href": "https://www.wikidata.org/wiki/Property:P10234",
+      "lang": "mul",
+      "text": "Der Spiegel topic ID"
+    },
+    "P1036": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1036",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1036",
+      "lang": "en",
+      "text": "Dewey Decimal Classification"
+    },
+    "P10376": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P10376",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P10376",
+      "lang": "en",
+      "text": "ScienceDirect topic ID"
+    },
+    "P10381": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P10381",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P10381",
+      "lang": "en",
+      "text": "VerbaAlpina ID"
+    },
+    "P1051": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1051",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1051",
+      "lang": "en",
+      "text": "PSH ID"
+    },
+    "P10565": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P10565",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P10565",
+      "lang": "en",
+      "text": "Encyclopedia of China (Third Edition) old ID (2021)"
+    },
+    "P10757": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P10757",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P10757",
+      "lang": "en",
+      "text": "Personality Database profile ID"
+    },
+    "P10883": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P10883",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P10883",
+      "lang": "en",
+      "text": "The Encyclopedia of Fantasy ID"
+    },
+    "P10916": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P10916",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P10916",
+      "lang": "en",
+      "text": "Süddeutsche Zeitung topic ID"
+    },
+    "P1096": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1096",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1096",
+      "lang": "en",
+      "text": "orbital eccentricity"
+    },
+    "P1102": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1102",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1102",
+      "lang": "en",
+      "text": "flattening"
+    },
+    "P1151": {
+      "href": "https://www.wikidata.org/wiki/Property:P1151",
+      "lang": "ml",
+      "text": "വിക്കിപീഡിയയിലെ ഈ വിഷയത്തിന്റെ കവാടം"
+    },
+    "P11514": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P11514",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P11514",
+      "lang": "en",
+      "text": "Great Russian Encyclopedia portal ID"
+    },
+    "P11924": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P11924",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P11924",
+      "lang": "en",
+      "text": "IMDb keyword"
+    },
+    "P12143": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P12143",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P12143",
+      "lang": "en",
+      "text": "Gaming Wiki Network article ID"
+    },
+    "P1215": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1215",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1215",
+      "lang": "en",
+      "text": "apparent magnitude"
+    },
+    "P1225": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1225",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1225",
+      "lang": "en",
+      "text": "U.S. National Archives Identifier"
+    },
+    "P12385": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P12385",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P12385",
+      "lang": "en",
+      "text": "Gran Enciclopèdia Catalana ID"
+    },
+    "P1245": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1245",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1245",
+      "lang": "en",
+      "text": "OmegaWiki Defined Meaning"
+    },
+    "P12596": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P12596",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P12596",
+      "lang": "en",
+      "text": "museum-digital tag ID"
+    },
+    "P12721": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P12721",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P12721",
+      "lang": "en",
+      "text": "Lille norske leksikon ID"
+    },
+    "P12800": {
+      "href": "https://www.wikidata.org/wiki/Property:P12800",
+      "lang": "ml",
+      "text": "விக்கிடியா கட்டுரை இனங்காட்டி"
+    },
+    "P1296": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1296",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1296",
+      "lang": "en",
+      "text": "Gran Enciclopèdia Catalana ID (former scheme)"
+    },
+    "P1299": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1299",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1299",
+      "lang": "en",
+      "text": "depicted by"
+    },
+    "P13300": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P13300",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P13300",
+      "lang": "en",
+      "text": "New York Post topic ID"
+    },
+    "P1343": {
+      "href": "https://www.wikidata.org/wiki/Property:P1343",
+      "lang": "ml",
+      "text": "ഇതേപ്പറ്റി വിവരിച്ചിട്ടുള്ള ഇടങ്ങൾ"
+    },
+    "P13591": {
+      "href": "https://www.wikidata.org/wiki/Property:P13591",
+      "lang": "mul",
+      "text": "‎Yale LUX ID"
+    },
+    "P13613": {
+      "href": "https://www.wikidata.org/wiki/Property:P13613",
+      "lang": "mul",
+      "text": "Enciclopedia Galega Universal ID"
+    },
+    "P1368": {
+      "href": "https://www.wikidata.org/wiki/Property:P1368",
+      "lang": "mul",
+      "text": "LNB ID"
+    },
+    "P1375": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1375",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1375",
+      "lang": "en",
+      "text": "NSK (VIAF) ID"
+    },
+    "P13772": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P13772",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P13772",
+      "lang": "en",
+      "text": "Harper's tag"
+    },
+    "P138": {
+      "href": "https://www.wikidata.org/wiki/Property:P138",
+      "lang": "ml",
+      "text": "പേര് വന്ന വഴി"
+    },
+    "P1417": {
+      "href": "https://www.wikidata.org/wiki/Property:P1417",
+      "lang": "ml",
+      "text": "ഓൺലൈൻ ബ്രിട്ടാനിക്കയിലേക്കുള്ള കണ്ണി"
+    },
+    "P14225": {
+      "href": "https://www.wikidata.org/wiki/Property:P14225",
+      "lang": "mul",
+      "text": "NSK ID"
+    },
+    "P1424": {
+      "href": "https://www.wikidata.org/wiki/Property:P1424",
+      "lang": "ml",
+      "text": "വിഷയത്തിന്റെ പ്രധാന ഫലകം"
+    },
+    "P14269": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P14269",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P14269",
+      "lang": "en",
+      "text": "Anarâš aavis topic ID"
+    },
+    "P143": {
+      "href": "https://www.wikidata.org/wiki/Property:P143",
+      "lang": "ml",
+      "text": "ഇറക്കുമതി സ്രോതസ്"
+    },
+    "P14470": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P14470",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P14470",
+      "lang": "en",
+      "text": "‎Giant Bomb Wiki ID"
+    },
+    "P14541": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P14541",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P14541",
+      "lang": "en",
+      "text": "Encyclopedia of China (Third Edition) ID (2026)"
+    },
+    "P1480": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1480",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1480",
+      "lang": "en",
+      "text": "sourcing circumstances"
+    },
+    "P1542": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1542",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1542",
+      "lang": "en",
+      "text": "has effect"
+    },
+    "P1552": {
+      "href": "https://www.wikidata.org/wiki/Property:P1552",
+      "lang": "ml",
+      "text": "സ്വഭാവം"
+    },
+    "P1589": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1589",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1589",
+      "lang": "en",
+      "text": "lowest point"
+    },
+    "P1617": {
+      "href": "https://www.wikidata.org/wiki/Property:P1617",
+      "lang": "ml",
+      "text": "ബിബിസി കാര്യങ്ങളുടെ തിരിച്ചറിയല്‍ രേഖ"
+    },
+    "P1667": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1667",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1667",
+      "lang": "en",
+      "text": "Getty Thesaurus of Geographic Names ID"
+    },
+    "P18": {
+      "href": "https://www.wikidata.org/wiki/Property:P18",
+      "lang": "ml",
+      "text": "ചിത്രം"
+    },
+    "P1810": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1810",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1810",
+      "lang": "en",
+      "text": "subject named as"
+    },
+    "P1889": {
+      "href": "https://www.wikidata.org/wiki/Property:P1889",
+      "lang": "ml",
+      "text": "ഇതിൽ നിന്നും വ്യത്യസ്തം"
+    },
+    "P2045": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2045",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2045",
+      "lang": "en",
+      "text": "orbital inclination"
+    },
+    "P2046": {
+      "href": "https://www.wikidata.org/wiki/Property:P2046",
+      "lang": "ml",
+      "text": "വിസ്തീർണ്ണം"
+    },
+    "P2054": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2054",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2054",
+      "lang": "en",
+      "text": "density"
+    },
+    "P2067": {
+      "href": "https://www.wikidata.org/wiki/Property:P2067",
+      "lang": "ml",
+      "text": "ഭാരം/തൂക്കം"
+    },
+    "P2076": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2076",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2076",
+      "lang": "en",
+      "text": "temperature"
+    },
+    "P2096": {
+      "href": "https://www.wikidata.org/wiki/Property:P2096",
+      "lang": "ml",
+      "text": "മീഡിയയുടെ സൂചന"
+    },
+    "P2120": {
+      "href": "https://www.wikidata.org/wiki/Property:P2120",
+      "lang": "mul",
+      "text": "radius"
+    },
+    "P214": {
+      "href": "https://www.wikidata.org/wiki/Property:P214",
+      "lang": "ml",
+      "text": "വി.ഐ.എ.എഫ്. തിരിച്ചറിയലുപാധി"
+    },
+    "P2146": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2146",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2146",
+      "lang": "en",
+      "text": "orbital period"
+    },
+    "P2163": {
+      "href": "https://www.wikidata.org/wiki/Property:P2163",
+      "lang": "mul",
+      "text": "FAST ID"
+    },
+    "P2184": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2184",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2184",
+      "lang": "en",
+      "text": "history of topic"
+    },
+    "P2210": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2210",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2210",
+      "lang": "en",
+      "text": "relative to"
+    },
+    "P2233": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2233",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2233",
+      "lang": "en",
+      "text": "semi-major axis of an orbit"
+    },
+    "P2234": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2234",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2234",
+      "lang": "en",
+      "text": "volume as quantity"
+    },
+    "P2243": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2243",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2243",
+      "lang": "en",
+      "text": "apoapsis"
+    },
+    "P2244": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2244",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2244",
+      "lang": "en",
+      "text": "periapsis"
+    },
+    "P227": {
+      "href": "https://www.wikidata.org/wiki/Property:P227",
+      "lang": "ml",
+      "text": "ജി.എൻ.ഡി. തിരിച്ചറിയലുപാധി"
+    },
+    "P2347": {
+      "href": "https://www.wikidata.org/wiki/Property:P2347",
+      "lang": "mul",
+      "text": "YSO ID"
+    },
+    "P2348": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2348",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2348",
+      "lang": "en",
+      "text": "time period"
+    },
+    "P2386": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2386",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2386",
+      "lang": "en",
+      "text": "diameter"
+    },
+    "P244": {
+      "href": "https://www.wikidata.org/wiki/Property:P244",
+      "lang": "mul",
+      "text": "Library of Congress Authorities ID"
+    },
+    "P248": {
+      "href": "https://www.wikidata.org/wiki/Property:P248",
+      "lang": "ml",
+      "text": "ഇവിടെ പറയുന്നു"
+    },
+    "P2579": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2579",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2579",
+      "lang": "en",
+      "text": "studied by"
+    },
+    "P2581": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2581",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2581",
+      "lang": "en",
+      "text": "BabelNet ID"
+    },
+    "P2583": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2583",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2583",
+      "lang": "en",
+      "text": "distance from Earth"
+    },
+    "P2612": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2612",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2612",
+      "lang": "en",
+      "text": "TED topic ID"
+    },
+    "P2671": {
+      "href": "https://www.wikidata.org/wiki/Property:P2671",
+      "lang": "ml",
+      "text": "ഗൂഗിള്‍ നോളജ് ഗ്രാഫ് ഐഡി"
+    },
+    "P268": {
+      "href": "https://www.wikidata.org/wiki/Property:P268",
+      "lang": "ml",
+      "text": "ഫ്രഞ്ച് ദേശീയ ഗ്രന്ഥശാല തിരിച്ചറിയല്‍ സംഖ്യ"
+    },
+    "P269": {
+      "href": "https://www.wikidata.org/wiki/Property:P269",
+      "lang": "mul",
+      "text": "IdRef ID"
+    },
+    "P2699": {
+      "href": "https://www.wikidata.org/wiki/Property:P2699",
+      "lang": "ml",
+      "text": "യു.ആർ.എൽ."
+    },
+    "P276": {
+      "href": "https://www.wikidata.org/wiki/Property:P276",
+      "lang": "ml",
+      "text": "സ്ഥാനം"
+    },
+    "P2956": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2956",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2956",
+      "lang": "en",
+      "text": "NAIF ID"
+    },
+    "P2959": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2959",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2959",
+      "lang": "en",
+      "text": "permanent duplicated item"
+    },
+    "P31": {
+      "href": "https://www.wikidata.org/wiki/Property:P31",
+      "lang": "ml",
+      "text": "തരം"
+    },
+    "P3106": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P3106",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P3106",
+      "lang": "en",
+      "text": "The Guardian topic ID"
+    },
+    "P3180": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P3180",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P3180",
+      "lang": "en",
+      "text": "Visual Novel Database ID"
+    },
+    "P3219": {
+      "href": "https://www.wikidata.org/wiki/Property:P3219",
+      "lang": "mul",
+      "text": "Encyclopædia Universalis ID"
+    },
+    "P3417": {
+      "href": "https://www.wikidata.org/wiki/Property:P3417",
+      "lang": "ml",
+      "text": "ക്വാറ ടോപിക് ഐ.ഡി."
+    },
+    "P3451": {
+      "href": "https://www.wikidata.org/wiki/Property:P3451",
+      "lang": "ml",
+      "text": "രാത്രികാല കാഴ്ച"
+    },
+    "P349": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P349",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P349",
+      "lang": "en",
+      "text": "NDL Authority ID"
+    },
+    "P3553": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P3553",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P3553",
+      "lang": "en",
+      "text": "Zhihu topic ID"
+    },
+    "P361": {
+      "href": "https://www.wikidata.org/wiki/Property:P361",
+      "lang": "ml",
+      "text": "ഇതിന്റെ ഭാഗം"
+    },
+    "P3629": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P3629",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P3629",
+      "lang": "en",
+      "text": "age of subject at event"
+    },
+    "P366": {
+      "href": "https://www.wikidata.org/wiki/Property:P366",
+      "lang": "ml",
+      "text": "ഉപയോഗം"
+    },
+    "P367": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P367",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P367",
+      "lang": "en",
+      "text": "astronomic symbol image"
+    },
+    "P373": {
+      "href": "https://www.wikidata.org/wiki/Property:P373",
+      "lang": "ml",
+      "text": "കോമൺസ് വർഗ്ഗം"
+    },
+    "P376": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P376",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P376",
+      "lang": "en",
+      "text": "located on astronomical body"
+    },
+    "P3872": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P3872",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P3872",
+      "lang": "en",
+      "text": "patronage"
+    },
+    "P3916": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P3916",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P3916",
+      "lang": "en",
+      "text": "UNESCO Thesaurus ID"
+    },
+    "P397": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P397",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P397",
+      "lang": "en",
+      "text": "parent astronomical body"
+    },
+    "P398": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P398",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P398",
+      "lang": "en",
+      "text": "child astronomical body"
+    },
+    "P3984": {
+      "href": "https://www.wikidata.org/wiki/Property:P3984",
+      "lang": "mul",
+      "text": "subreddit"
+    },
+    "P407": {
+      "href": "https://www.wikidata.org/wiki/Property:P407",
+      "lang": "ml",
+      "text": "കൃതിയുടെ അല്ലെങ്കിൽ പേരിന്റെ ഭാഷ"
+    },
+    "P4212": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4212",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P4212",
+      "lang": "en",
+      "text": "PACTOLS thesaurus ID"
+    },
+    "P4341": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4341",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P4341",
+      "lang": "en",
+      "text": "synodic period"
+    },
+    "P4342": {
+      "href": "https://www.wikidata.org/wiki/Property:P4342",
+      "lang": "mul",
+      "text": "Store norske leksikon-ID"
+    },
+    "P443": {
+      "href": "https://www.wikidata.org/wiki/Property:P443",
+      "lang": "ml",
+      "text": "ഉച്ചാരണ ശബ്ദം"
+    },
+    "P4466": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4466",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P4466",
+      "lang": "en",
+      "text": "Unified Astronomy Thesaurus ID"
+    },
+    "P4501": {
+      "href": "https://www.wikidata.org/wiki/Property:P4501",
+      "lang": "mul",
+      "text": "albedo"
+    },
+    "P459": {
+      "href": "https://www.wikidata.org/wiki/Property:P459",
+      "lang": "ml",
+      "text": "നിർണ്ണയ രീതി"
+    },
+    "P4640": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4640",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P4640",
+      "lang": "en",
+      "text": "spherical panorama image"
+    },
+    "P4801": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4801",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P4801",
+      "lang": "en",
+      "text": "LC and MARC vocabularies ID"
+    },
+    "P4839": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4839",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P4839",
+      "lang": "en",
+      "text": "Wolfram Language entity code"
+    },
+    "P486": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P486",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P486",
+      "lang": "en",
+      "text": "MeSH descriptor ID"
+    },
+    "P487": {
+      "href": "https://www.wikidata.org/wiki/Property:P487",
+      "lang": "ml",
+      "text": "യൂണിക്കോഡ് അക്ഷരം"
+    },
+    "P4896": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4896",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P4896",
+      "lang": "en",
+      "text": "3D model"
+    },
+    "P490": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P490",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P490",
+      "lang": "en",
+      "text": "provisional designation"
+    },
+    "P4934": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4934",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P4934",
+      "lang": "en",
+      "text": "calculated from"
+    },
+    "P5008": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5008",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P5008",
+      "lang": "en",
+      "text": "on focus list of Wikimedia project"
+    },
+    "P5019": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5019",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P5019",
+      "lang": "en",
+      "text": "Brockhaus Enzyklopädie online ID"
+    },
+    "P5063": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5063",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P5063",
+      "lang": "en",
+      "text": "Interlingual Index ID"
+    },
+    "P508": {
+      "href": "https://www.wikidata.org/wiki/Property:P508",
+      "lang": "ml",
+      "text": "BNCF പദാവലി"
+    },
+    "P5102": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5102",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P5102",
+      "lang": "en",
+      "text": "nature of statement"
+    },
+    "P5125": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5125",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P5125",
+      "lang": "en",
+      "text": "Wikimedia outline"
+    },
+    "P515": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P515",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P515",
+      "lang": "en",
+      "text": "state of matter"
+    },
+    "P5160": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5160",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P5160",
+      "lang": "en",
+      "text": "Thesaurus for Graphic Materials ID"
+    },
+    "P518": {
+      "href": "https://www.wikidata.org/wiki/Property:P518",
+      "lang": "ml",
+      "text": "ബാധകമാകുന്ന ഭാഗം"
+    },
+    "P522": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P522",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P522",
+      "lang": "en",
+      "text": "type of orbit"
+    },
+    "P5247": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5247",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P5247",
+      "lang": "en",
+      "text": "Giant Bomb ID (former scheme)"
+    },
+    "P527": {
+      "href": "https://www.wikidata.org/wiki/Property:P527",
+      "lang": "ml",
+      "text": "ഇത് ഭാഗമായി"
+    },
+    "P5337": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5337",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P5337",
+      "lang": "en",
+      "text": "Google News topics ID"
+    },
+    "P5348": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5348",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P5348",
+      "lang": "en",
+      "text": "angular diameter"
+    },
+    "P5395": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5395",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P5395",
+      "lang": "en",
+      "text": "Canadian Encyclopedia article ID"
+    },
+    "P5421": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5421",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P5421",
+      "lang": "en",
+      "text": "Trading Card Database name ID"
+    },
+    "P5551": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5551",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P5551",
+      "lang": "en",
+      "text": "Courrier international topic ID"
+    },
+    "P571": {
+      "href": "https://www.wikidata.org/wiki/Property:P571",
+      "lang": "ml",
+      "text": "ഉത്പത്തി"
+    },
+    "P5748": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5748",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P5748",
+      "lang": "en",
+      "text": "Basisklassifikation"
+    },
+    "P575": {
+      "href": "https://www.wikidata.org/wiki/Property:P575",
+      "lang": "ml",
+      "text": "കണ്ടെത്തിയ തീയതി"
+    },
+    "P580": {
+      "href": "https://www.wikidata.org/wiki/Property:P580",
+      "lang": "ml",
+      "text": "പ്രാരംഭത്തീയതി"
+    },
+    "P585": {
+      "href": "https://www.wikidata.org/wiki/Property:P585",
+      "lang": "ml",
+      "text": "പ്രാബല്യത്തീയതി"
+    },
+    "P5905": {
+      "href": "https://www.wikidata.org/wiki/Property:P5905",
+      "lang": "mul",
+      "text": "Comic Vine ID"
+    },
+    "P6058": {
+      "href": "https://www.wikidata.org/wiki/Property:P6058",
+      "lang": "mul",
+      "text": "Larousse ID"
+    },
+    "P61": {
+      "href": "https://www.wikidata.org/wiki/Property:P61",
+      "lang": "ml",
+      "text": "കണ്ടുപിടിച്ചയാൾ"
+    },
+    "P610": {
+      "href": "https://www.wikidata.org/wiki/Property:P610",
+      "lang": "ml",
+      "text": "ഏറ്റവും ഉയരം കൂടിയ സ്ഥാനം"
+    },
+    "P6104": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P6104",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P6104",
+      "lang": "en",
+      "text": "maintained by WikiProject"
+    },
+    "P6200": {
+      "href": "https://www.wikidata.org/wiki/Property:P6200",
+      "lang": "mul",
+      "text": "BBC News topic ID"
+    },
+    "P625": {
+      "href": "https://www.wikidata.org/wiki/Property:P625",
+      "lang": "ml",
+      "text": "ഭൗമനിർദ്ദേശാങ്കങ്ങൾ"
+    },
+    "P6262": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P6262",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P6262",
+      "lang": "en",
+      "text": "Fandom article ID"
+    },
+    "P6265": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P6265",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P6265",
+      "lang": "en",
+      "text": "Mindat locality ID"
+    },
+    "P6293": {
+      "href": "https://www.wikidata.org/wiki/Property:P6293",
+      "lang": "mul",
+      "text": "YSA ID"
+    },
+    "P6296": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P6296",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P6296",
+      "lang": "en",
+      "text": "bgm.tv character ID"
+    },
+    "P6385": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P6385",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P6385",
+      "lang": "en",
+      "text": "Krugosvet article (archived)"
+    },
+    "P646": {
+      "href": "https://www.wikidata.org/wiki/Property:P646",
+      "lang": "ml",
+      "text": "ഫ്രീബേസ് ഐ.ഡി."
+    },
+    "P6573": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P6573",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P6573",
+      "lang": "en",
+      "text": "Klexikon article ID"
+    },
+    "P672": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P672",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P672",
+      "lang": "en",
+      "text": "MeSH tree code"
+    },
+    "P6781": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P6781",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P6781",
+      "lang": "en",
+      "text": "ProofWiki ID"
+    },
+    "P6839": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P6839",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P6839",
+      "lang": "en",
+      "text": "TV Tropes ID"
+    },
+    "P6900": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P6900",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P6900",
+      "lang": "en",
+      "text": "NicoNicoPedia word article ID"
+    },
+    "P691": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P691",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P691",
+      "lang": "en",
+      "text": "NL CR AUT ID"
+    },
+    "P7015": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P7015",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P7015",
+      "lang": "en",
+      "text": "surface gravity"
+    },
+    "P7033": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P7033",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P7033",
+      "lang": "en",
+      "text": "Australian Educational Vocabulary ID"
+    },
+    "P708": {
+      "href": "https://www.wikidata.org/wiki/Property:P708",
+      "lang": "ml",
+      "text": "രൂപത"
+    },
+    "P7305": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P7305",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P7305",
+      "lang": "en",
+      "text": "Online PWN Encyclopedia ID"
+    },
+    "P7562": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P7562",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P7562",
+      "lang": "en",
+      "text": "UVL group ID"
+    },
+    "P805": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P805",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P805",
+      "lang": "en",
+      "text": "statement is subject of"
+    },
+    "P8069": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8069",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8069",
+      "lang": "en",
+      "text": "ToposText person ID"
+    },
+    "P8168": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8168",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8168",
+      "lang": "en",
+      "text": "FactGrid item ID"
+    },
+    "P8189": {
+      "href": "https://www.wikidata.org/wiki/Property:P8189",
+      "lang": "mul",
+      "text": "J9U ID"
+    },
+    "P8248": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8248",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8248",
+      "lang": "en",
+      "text": "Colon Classification"
+    },
+    "P8309": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8309",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8309",
+      "lang": "en",
+      "text": "Yle topic ID"
+    },
+    "P8313": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8313",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8313",
+      "lang": "en",
+      "text": "Lex ID"
+    },
+    "P8419": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8419",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8419",
+      "lang": "en",
+      "text": "Archive of Our Own tag"
+    },
+    "P854": {
+      "href": "https://www.wikidata.org/wiki/Property:P854",
+      "lang": "ml",
+      "text": "അവലംബ യൂ.ആർ.എൽ."
+    },
+    "P8590": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8590",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8590",
+      "lang": "en",
+      "text": "Jewish Encyclopedia ID"
+    },
+    "P8814": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8814",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8814",
+      "lang": "en",
+      "text": "WordNet 3.1 Synset ID"
+    },
+    "P8885": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8885",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8885",
+      "lang": "en",
+      "text": "Namuwiki ID"
+    },
+    "P8895": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8895",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8895",
+      "lang": "en",
+      "text": "All the Tropes article ID"
+    },
+    "P9084": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9084",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9084",
+      "lang": "en",
+      "text": "ABC News topic ID"
+    },
+    "P910": {
+      "href": "https://www.wikidata.org/wiki/Property:P910",
+      "lang": "ml",
+      "text": "വിഷയത്തിന്റെ പ്രധാന വർഗ്ഗം"
+    },
+    "P9198": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9198",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9198",
+      "lang": "en",
+      "text": "Encyclopédie berbère article ID"
+    },
+    "P9223": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9223",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9223",
+      "lang": "en",
+      "text": "Provenio UUID"
+    },
+    "P9318": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9318",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9318",
+      "lang": "en",
+      "text": "Ávvir topic ID"
+    },
+    "P9322": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9322",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9322",
+      "lang": "en",
+      "text": "SVKKL authority ID"
+    },
+    "P9346": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9346",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9346",
+      "lang": "en",
+      "text": "France 24 topic ID (French)"
+    },
+    "P935": {
+      "href": "https://www.wikidata.org/wiki/Property:P935",
+      "lang": "ml",
+      "text": "വിക്കിമീഡിയയിലെ ചിത്രശാല"
+    },
+    "P9475": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9475",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9475",
+      "lang": "en",
+      "text": "Encyclopedia of Korean Culture ID"
+    },
+    "P948": {
+      "href": "https://www.wikidata.org/wiki/Property:P948",
+      "lang": "ml",
+      "text": "പേജ് ബാനർ"
+    },
+    "P9495": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9495",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9495",
+      "lang": "en",
+      "text": "National Historical Museums of Sweden ID"
+    },
+    "P950": {
+      "href": "https://www.wikidata.org/wiki/Property:P950",
+      "lang": "mul",
+      "text": "National Library of Spain SpMaBN ID"
+    },
+    "P9736": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9736",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9736",
+      "lang": "en",
+      "text": "MANTO ID"
+    },
+    "P9807": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9807",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9807",
+      "lang": "en",
+      "text": "SNK ID"
+    },
+    "P989": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P989",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P989",
+      "lang": "en",
+      "text": "spoken text audio"
+    },
+    "P9937": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9937",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9937",
+      "lang": "en",
+      "text": "Postimees topic ID"
+    },
+    "P998": {
+      "href": "https://www.wikidata.org/wiki/Property:P998",
+      "lang": "mul",
+      "text": "Curlie ID"
+    },
+    "Q1037499": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1037499",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1037499",
+      "lang": "en",
+      "text": "lunar soil"
+    },
+    "Q1037706": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1037706",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1037706",
+      "lang": "en",
+      "text": "magnetic field of the Moon"
+    },
+    "Q105085344": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q105085344",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q105085344",
+      "lang": "en",
+      "text": "Historical Dictionary of Science Fiction"
+    },
+    "Q1051665": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1051665",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1051665",
+      "lang": "en",
+      "text": "metre per square second"
+    },
+    "Q10578722": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q10578722",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q10578722",
+      "lang": "en",
+      "text": "maximum"
+    },
+    "Q10585806": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q10585806",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q10585806",
+      "lang": "en",
+      "text": "minimum"
+    },
+    "Q1064739": {
+      "href": "https://www.wikidata.org/wiki/Q1064739",
+      "lang": "ml",
+      "text": "ചാന്ദ്രപര്യവേഷണം"
+    },
+    "Q106727050": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q106727050",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q106727050",
+      "lang": "en",
+      "text": "Metropolitan Museum of Art Tagging Vocabulary"
+    },
+    "Q1086783": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1086783",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1086783",
+      "lang": "en",
+      "text": "regular moon"
+    },
+    "Q109645860": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q109645860",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q109645860",
+      "lang": "en",
+      "text": "planetary moon"
+    },
+    "Q110305386": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q110305386",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q110305386",
+      "lang": null,
+      "text": "Q110305386"
+    },
+    "Q112789753": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q112789753",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q112789753",
+      "lang": null,
+      "text": "Q112789753"
+    },
+    "Q1130706": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1130706",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1130706",
+      "lang": "en",
+      "text": "moonquake"
+    },
+    "Q113559766": {
+      "href": "https://www.wikidata.org/wiki/Q113559766",
+      "lang": "mul",
+      "text": "Zedler:Mond-Regenbogen"
+    },
+    "Q11438": {
+      "href": "https://www.wikidata.org/wiki/Q11438",
+      "lang": "ml",
+      "text": "ഖരം"
+    },
+    "Q115507": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q115507",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q115507",
+      "lang": "en",
+      "text": "atmosphere of the Moon"
+    },
+    "Q11570": {
+      "href": "https://www.wikidata.org/wiki/Q11570",
+      "lang": "ml",
+      "text": "കിലോഗ്രാം"
+    },
+    "Q11573": {
+      "href": "https://www.wikidata.org/wiki/Q11573",
+      "lang": "ml",
+      "text": "മീറ്റർ"
+    },
+    "Q11579": {
+      "href": "https://www.wikidata.org/wiki/Q11579",
+      "lang": "ml",
+      "text": "കെൽവിൻ"
+    },
+    "Q1179441": {
+      "href": "https://www.wikidata.org/wiki/Q1179441",
+      "lang": "ml",
+      "text": "അപഭൂ"
+    },
+    "Q120359061": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q120359061",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q120359061",
+      "lang": "en",
+      "text": "1911 Encyclopædia Britannica/Moon"
+    },
+    "Q12046612": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q12046612",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q12046612",
+      "lang": "en",
+      "text": "geological features on the Moon"
+    },
+    "Q123955442": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q123955442",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q123955442",
+      "lang": "en",
+      "text": "Domestic Encyclopædia (1802)/Moon"
+    },
+    "Q124012912": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q124012912",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q124012912",
+      "lang": "en",
+      "text": "The New Student's Reference Work/Moon"
+    },
+    "Q126181255": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q126181255",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q126181255",
+      "lang": "en",
+      "text": "selenology"
+    },
+    "Q126820151": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q126820151",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q126820151",
+      "lang": null,
+      "text": "Q126820151"
+    },
+    "Q131430844": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q131430844",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q131430844",
+      "lang": null,
+      "text": "Q131430844"
+    },
+    "Q13147228": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q13147228",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q13147228",
+      "lang": "en",
+      "text": "gram per cubic centimetre"
+    },
+    "Q13476345": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q13476345",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q13476345",
+      "lang": "en",
+      "text": "WikiProject Moon"
+    },
+    "Q1349468": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1349468",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1349468",
+      "lang": "en",
+      "text": "perigee"
+    },
+    "Q1379273": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1379273",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1379273",
+      "lang": "en",
+      "text": "surface area"
+    },
+    "Q1411145": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1411145",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1411145",
+      "lang": "en",
+      "text": "radiance"
+    },
+    "Q14334116": {
+      "href": "https://www.wikidata.org/wiki/Q14334116",
+      "lang": "mul",
+      "text": "Template:GeoTemplate/moon"
+    },
+    "Q14615839": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q14615839",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q14615839",
+      "lang": "en",
+      "text": "Portal:Moon"
+    },
+    "Q15034": {
+      "href": "https://www.wikidata.org/wiki/Q15034",
+      "lang": "ml",
+      "text": "മിമസ്"
+    },
+    "Q15037": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15037",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q15037",
+      "lang": "en",
+      "text": "Hyperion"
+    },
+    "Q15040": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15040",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q15040",
+      "lang": "en",
+      "text": "Dione"
+    },
+    "Q15047": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15047",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q15047",
+      "lang": "en",
+      "text": "Tethys"
+    },
+    "Q15050": {
+      "href": "https://www.wikidata.org/wiki/Q15050",
+      "lang": "ml",
+      "text": "റിയ"
+    },
+    "Q1547546": {
+      "href": "https://www.wikidata.org/wiki/Q1547546",
+      "lang": "mul",
+      "text": "Zedler, Großes vollständiges Universallexicon aller Wissenschaften und Künste"
+    },
+    "Q15629": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15629",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q15629",
+      "lang": "en",
+      "text": "Bianca"
+    },
+    "Q15633": {
+      "href": "https://www.wikidata.org/wiki/Q15633",
+      "lang": "ml",
+      "text": "ക്രസീഡിയ"
+    },
+    "Q15637": {
+      "href": "https://www.wikidata.org/wiki/Q15637",
+      "lang": "ml",
+      "text": "ഡെസ്ഡിമോണ"
+    },
+    "Q15643": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15643",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q15643",
+      "lang": "en",
+      "text": "Juliet"
+    },
+    "Q15644": {
+      "href": "https://www.wikidata.org/wiki/Q15644",
+      "lang": "ml",
+      "text": "പോർഷ്യ"
+    },
+    "Q15646": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15646",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q15646",
+      "lang": "en",
+      "text": "Rosalind"
+    },
+    "Q15655": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15655",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q15655",
+      "lang": "en",
+      "text": "Cupid"
+    },
+    "Q15658": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15658",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q15658",
+      "lang": "en",
+      "text": "Belinda"
+    },
+    "Q15660": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15660",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q15660",
+      "lang": "en",
+      "text": "Perdita"
+    },
+    "Q15662": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15662",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q15662",
+      "lang": "en",
+      "text": "Puck"
+    },
+    "Q15667": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15667",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q15667",
+      "lang": "en",
+      "text": "Mab"
+    },
+    "Q16081": {
+      "href": "https://www.wikidata.org/wiki/Q16081",
+      "lang": "ml",
+      "text": "പ്രോതിയസ്"
+    },
+    "Q16082057": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q16082057",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q16082057",
+      "lang": "en",
+      "text": "The New Student's Reference Work"
+    },
+    "Q16755": {
+      "href": "https://www.wikidata.org/wiki/Q16755",
+      "lang": "ml",
+      "text": "മെറ്റിസ്"
+    },
+    "Q16757": {
+      "href": "https://www.wikidata.org/wiki/Q16757",
+      "lang": "ml",
+      "text": "അഡ്രാസ്റ്റിയ"
+    },
+    "Q16765": {
+      "href": "https://www.wikidata.org/wiki/Q16765",
+      "lang": "ml",
+      "text": "തീബ്"
+    },
+    "Q17491583": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17491583",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q17491583",
+      "lang": "en",
+      "text": "Księżyc"
+    },
+    "Q1768721": {
+      "href": "https://www.wikidata.org/wiki/Q1768721",
+      "lang": "mul",
+      "text": "Gǔjīn Túshū Jíchéng"
+    },
+    "Q17705": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17705",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q17705",
+      "lang": "en",
+      "text": "Pan"
+    },
+    "Q17706": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17706",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q17706",
+      "lang": "en",
+      "text": "Daphnis"
+    },
+    "Q17707": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17707",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q17707",
+      "lang": "en",
+      "text": "Atlas"
+    },
+    "Q17739": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17739",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q17739",
+      "lang": "en",
+      "text": "Prometheus"
+    },
+    "Q17746": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17746",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q17746",
+      "lang": "en",
+      "text": "Pandora"
+    },
+    "Q17751": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17751",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q17751",
+      "lang": "en",
+      "text": "Epimetheus"
+    },
+    "Q17754": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17754",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q17754",
+      "lang": "en",
+      "text": "Janus"
+    },
+    "Q17762": {
+      "href": "https://www.wikidata.org/wiki/Q17762",
+      "lang": "mul",
+      "text": "Aegaeon"
+    },
+    "Q17782": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17782",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q17782",
+      "lang": "en",
+      "text": "Methone"
+    },
+    "Q17788": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17788",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q17788",
+      "lang": "en",
+      "text": "Anthe"
+    },
+    "Q17850": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17850",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q17850",
+      "lang": "en",
+      "text": "Pallene"
+    },
+    "Q17857": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17857",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q17857",
+      "lang": "en",
+      "text": "Telesto"
+    },
+    "Q17869": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17869",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q17869",
+      "lang": "en",
+      "text": "Calypso"
+    },
+    "Q17875": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17875",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q17875",
+      "lang": "en",
+      "text": "Helene"
+    },
+    "Q17882": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17882",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q17882",
+      "lang": "en",
+      "text": "Polydeuces"
+    },
+    "Q17958": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17958",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q17958",
+      "lang": "en",
+      "text": "Iapetus"
+    },
+    "Q183273": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q183273",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q183273",
+      "lang": "en",
+      "text": "geographical pole"
+    },
+    "Q18356771": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q18356771",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q18356771",
+      "lang": "en",
+      "text": "Selenean summit"
+    },
+    "Q18589965": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q18589965",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q18589965",
+      "lang": "en",
+      "text": "Earth–Moon system"
+    },
+    "Q1860": {
+      "href": "https://www.wikidata.org/wiki/Q1860",
+      "lang": "ml",
+      "text": "ഇംഗ്ലീഷ്"
+    },
+    "Q18603603": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q18603603",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q18603603",
+      "lang": "en",
+      "text": "hypothetically"
+    },
+    "Q188": {
+      "href": "https://www.wikidata.org/wiki/Q188",
+      "lang": "ml",
+      "text": "ജർമ്മൻ ഭാഷ"
+    },
+    "Q19180675": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q19180675",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q19180675",
+      "lang": "en",
+      "text": "Small Brockhaus and Efron Encyclopedic Dictionary"
+    },
+    "Q19219752": {
+      "href": "https://www.wikidata.org/wiki/Q19219752",
+      "lang": "mul",
+      "text": "Meyers Konversations-Lexikon, 4. Auflage (1885–1890)"
+    },
+    "Q2": {
+      "href": "https://www.wikidata.org/wiki/Q2",
+      "lang": "ml",
+      "text": "ഭൂമി"
+    },
+    "Q20078554": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q20078554",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q20078554",
+      "lang": "en",
+      "text": "Great Soviet Encyclopedia (1926–1947)"
+    },
+    "Q2041543": {
+      "href": "https://www.wikidata.org/wiki/Q2041543",
+      "lang": "mul",
+      "text": "Ottův slovník naučný"
+    },
+    "Q209426": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q209426",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q209426",
+      "lang": "en",
+      "text": "arcminute"
+    },
+    "Q210448": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q210448",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q210448",
+      "lang": "en",
+      "text": "lunar orbit"
+    },
+    "Q210539": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q210539",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q210539",
+      "lang": "en",
+      "text": "orbit of the Moon"
+    },
+    "Q21400693": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q21400693",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q21400693",
+      "lang": null,
+      "text": "Q21400693"
+    },
+    "Q21400694": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q21400694",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q21400694",
+      "lang": null,
+      "text": "Q21400694"
+    },
+    "Q21400695": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q21400695",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q21400695",
+      "lang": null,
+      "text": "Q21400695"
+    },
+    "Q21400699": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q21400699",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q21400699",
+      "lang": null,
+      "text": "Q21400699"
+    },
+    "Q218056": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q218056",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q218056",
+      "lang": "en",
+      "text": "high Earth orbit"
+    },
+    "Q221656": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q221656",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q221656",
+      "lang": "en",
+      "text": "brightness"
+    },
+    "Q23538": {
+      "href": "https://www.wikidata.org/wiki/Q23538",
+      "lang": "ml",
+      "text": "ഭൂമദ്ധ്യരേഖ"
+    },
+    "Q23860555": {
+      "href": "https://www.wikidata.org/wiki/Q23860555",
+      "lang": "mul",
+      "text": "Měsíc"
+    },
+    "Q25343": {
+      "href": "https://www.wikidata.org/wiki/Q25343",
+      "lang": "ml",
+      "text": "ചതുരശ്ര മീറ്റർ"
+    },
+    "Q25517": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q25517",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q25517",
+      "lang": "en",
+      "text": "cubic metre"
+    },
+    "Q2657718": {
+      "href": "https://www.wikidata.org/wiki/Q2657718",
+      "lang": "ml",
+      "text": "അമേരിക്കൻ സോവിയറ്റ് വിജ്ഞാനകോശം"
+    },
+    "Q2796622": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q2796622",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q2796622",
+      "lang": "en",
+      "text": "mean"
+    },
+    "Q28390": {
+      "href": "https://www.wikidata.org/wiki/Q28390",
+      "lang": "ml",
+      "text": "ഡിഗ്രി"
+    },
+    "Q28455496": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q28455496",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q28455496",
+      "lang": "en",
+      "text": "outline of the Moon"
+    },
+    "Q29098442": {
+      "href": "https://www.wikidata.org/wiki/Q29098442",
+      "lang": "ml",
+      "text": "ഡീപ് സ്പേസ് ഗേയ്റ്റ്‌വേ"
+    },
+    "Q3123": {
+      "href": "https://www.wikidata.org/wiki/Q3123",
+      "lang": "ml",
+      "text": "അയോ"
+    },
+    "Q3134": {
+      "href": "https://www.wikidata.org/wiki/Q3134",
+      "lang": "ml",
+      "text": "കാലിസ്റ്റോ"
+    },
+    "Q3143": {
+      "href": "https://www.wikidata.org/wiki/Q3143",
+      "lang": "ml",
+      "text": "യൂറോപ്പ"
+    },
+    "Q3169": {
+      "href": "https://www.wikidata.org/wiki/Q3169",
+      "lang": "ml",
+      "text": "ഗാനിമേഡ്"
+    },
+    "Q3181656": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3181656",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q3181656",
+      "lang": "en",
+      "text": "The Nuttall Encyclopædia"
+    },
+    "Q325065": {
+      "href": "https://www.wikidata.org/wiki/Q325065",
+      "lang": "ml",
+      "text": "ചന്ദ്രയാൻ-2"
+    },
+    "Q3257": {
+      "href": "https://www.wikidata.org/wiki/Q3257",
+      "lang": "ml",
+      "text": "അമാൽത്തിയ"
+    },
+    "Q3303": {
+      "href": "https://www.wikidata.org/wiki/Q3303",
+      "lang": "ml",
+      "text": "എൻസിലാഡസ്"
+    },
+    "Q331778": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q331778",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q331778",
+      "lang": "en",
+      "text": "Lunar Reconnaissance Orbiter"
+    },
+    "Q3322": {
+      "href": "https://www.wikidata.org/wiki/Q3322",
+      "lang": "ml",
+      "text": "ടൈറ്റാനിയ"
+    },
+    "Q3332": {
+      "href": "https://www.wikidata.org/wiki/Q3332",
+      "lang": "ml",
+      "text": "ഒബെറോൺ"
+    },
+    "Q3338": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3338",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q3338",
+      "lang": "en",
+      "text": "Umbriel"
+    },
+    "Q3343": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3343",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q3343",
+      "lang": "en",
+      "text": "Ariel"
+    },
+    "Q3352": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3352",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q3352",
+      "lang": "en",
+      "text": "Miranda"
+    },
+    "Q367737": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q367737",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q367737",
+      "lang": "en",
+      "text": "colonization of the Moon"
+    },
+    "Q37178": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q37178",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q37178",
+      "lang": "en",
+      "text": "Proto-Indo-European"
+    },
+    "Q405": {
+      "description": {
+        "lang": "ml",
+        "text": "ഭൂമിയുടെ ഒരേയൊരു പ്രകൃതിദത്ത ഉപഗ്രഹമാണ് ചന്ദ്രൻ"
+      },
+      "href": "https://www.wikidata.org/wiki/Q405",
+      "lang": "ml",
+      "text": "ചന്ദ്രൻ"
+    },
+    "Q4086271": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q4086271",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q4086271",
+      "lang": "en",
+      "text": "Bible Encyclopedia of Archimandrite Nicephorus"
+    },
+    "Q4130": {
+      "href": "https://www.wikidata.org/wiki/Q4130",
+      "lang": "ml",
+      "text": "ഭ്രമണപഥം"
+    },
+    "Q4173137": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q4173137",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q4173137",
+      "lang": "en",
+      "text": "Jewish Encyclopedia of Brockhaus and Efron"
+    },
+    "Q426778": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q426778",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q426778",
+      "lang": "en",
+      "text": "Diocese of Orlando"
+    },
+    "Q4532138": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q4532138",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q4532138",
+      "lang": "en",
+      "text": "Granat Encyclopedic Dictionary"
+    },
+    "Q500909": {
+      "href": "https://www.wikidata.org/wiki/Q500909",
+      "lang": "mul",
+      "text": "Montes Pyrenaeus"
+    },
+    "Q5460604": {
+      "href": "https://www.wikidata.org/wiki/Q5460604",
+      "lang": "ml",
+      "text": "വിക്കിപീഡിയ:സുപ്രധാന ലേഖനങ്ങൾ"
+    },
+    "Q5612289": {
+      "href": "https://www.wikidata.org/wiki/Q5612289",
+      "lang": "ml",
+      "text": "വർഗ്ഗം:ചന്ദ്രൻ"
+    },
+    "Q56441911": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q56441911",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q56441911",
+      "lang": "en",
+      "text": "The Domestic Encyclopædia; Or, A Dictionary Of Facts, And Useful Knowledge"
+    },
+    "Q5727902": {
+      "href": "https://www.wikidata.org/wiki/Q5727902",
+      "lang": "ml",
+      "text": "സിർക"
+    },
+    "Q573": {
+      "href": "https://www.wikidata.org/wiki/Q573",
+      "lang": "ml",
+      "text": "ദിവസം"
+    },
+    "Q598608": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q598608",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q598608",
+      "lang": "en",
+      "text": "Antoniadi"
+    },
+    "Q602358": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q602358",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q602358",
+      "lang": "en",
+      "text": "Brockhaus and Efron Encyclopedic Dictionary"
+    },
+    "Q613726": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q613726",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q613726",
+      "lang": "en",
+      "text": "yottagram"
+    },
+    "Q61704160": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q61704160",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q61704160",
+      "lang": "en",
+      "text": "all-time"
+    },
+    "Q6173448": {
+      "href": "https://www.wikidata.org/wiki/Q6173448",
+      "lang": "ml",
+      "text": "വിക്കിപീഡിയ:സുപ്രധാന ലേഖനങ്ങൾ/നില/4"
+    },
+    "Q7102486": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q7102486",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q7102486",
+      "lang": "en",
+      "text": "origin of the Moon"
+    },
+    "Q712226": {
+      "href": "https://www.wikidata.org/wiki/Q712226",
+      "lang": "ml",
+      "text": "ചതുരശ്ര കിലോമീറ്റർ"
+    },
+    "Q782683": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q782683",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q782683",
+      "lang": "en",
+      "text": "the Moon in fiction"
+    },
+    "Q7879772": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q7879772",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q7879772",
+      "lang": "en",
+      "text": "inner Solar System"
+    },
+    "Q7976": {
+      "href": "https://www.wikidata.org/wiki/Q7976",
+      "lang": "ml",
+      "text": "അമേരിക്കൻ ഇംഗ്ലീഷ്"
+    },
+    "Q79852": {
+      "href": "https://www.wikidata.org/wiki/Q79852",
+      "lang": "ml",
+      "text": "ക്രാന്തിവൃത്തം"
+    },
+    "Q8070793": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q8070793",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q8070793",
+      "lang": "en",
+      "text": "Template:The Moon"
+    },
+    "Q828224": {
+      "href": "https://www.wikidata.org/wiki/Q828224",
+      "lang": "ml",
+      "text": "കിലോമീറ്റർ"
+    },
+    "Q85160256": {
+      "href": "https://www.wikidata.org/wiki/Q85160256",
+      "lang": "mul",
+      "text": "CAPSTONE"
+    },
+    "Q85793519": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q85793519",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q85793519",
+      "lang": "en",
+      "text": "planetary-mass moon"
+    },
+    "Q867541": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q867541",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q867541",
+      "lang": "en",
+      "text": "Encyclopædia Britannica 11th edition"
+    },
+    "Q8785": {
+      "href": "https://www.wikidata.org/wiki/Q8785",
+      "lang": "ml",
+      "text": "അർമേനിയൻ ഭാഷ"
+    },
+    "Q9027": {
+      "href": "https://www.wikidata.org/wiki/Q9027",
+      "lang": "ml",
+      "text": "സ്വീഡിഷ് ഭാഷ"
+    },
+    "Q96593883": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q96593883",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q96593883",
+      "lang": null,
+      "text": "Q96593883"
+    }
+  },
+  "lang": "ml",
+  "lead": {
+    "host": "ml.wikipedia.org",
+    "lang": "ml",
+    "local": true,
+    "more": [
+      "<a href=\"https://ml.wikipedia.org/wiki/%E0%B4%AD%E0%B5%82%E0%B4%AE%E0%B4%BF\">ഭൂമിയുടെ</a> ഒരേയൊരു പ്രകൃതിദത്ത <a href=\"https://ml.wikipedia.org/wiki/%E0%B4%89%E0%B4%AA%E0%B4%97%E0%B5%8D%E0%B4%B0%E0%B4%B9%E0%B4%82\">ഉപഗ്രഹമാണ്</a> <b>ചന്ദ്രൻ</b>. ഇംഗ്ലീഷ്: <i>Moon</i>, <i>Luna</i>. ഭൂമിയിൽ നിന്ന്‌ ശരാശരി 3,84,403 <a href=\"https://ml.wikipedia.org/wiki/%E0%B4%95%E0%B4%BF%E0%B4%B2%E0%B5%8B%E0%B4%AE%E0%B5%80%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B5%BC\">കിലോമീറ്റർ</a> ദൂരെയാണ് ചന്ദ്രൻ സ്ഥിതി ചെയ്യുന്നത്‌; ഭൂമിയുടെ വ്യാസത്തിന്റെ ഏകദേശം മുപ്പത് മടങ്ങ് വരും ഈ ദൂരം. ഭൂമിയും ചന്ദ്രനുമടങ്ങുന്ന വ്യൂഹത്തിന്റെ പിണ്ഡ കേന്ദ്രം ഭൂമിയുടെ വ്യാസാർദ്ധത്തിന്റെ ഏകദേശം നാലിലൊന്നു വരുന്ന 1,700 കി.മീ ആഴത്തിൽ ഭൂമിയുടെ ഉപരിതലത്തിനു താഴെ സ്ഥിതിചെയ്യുന്നു. ഭൂമിക്ക് ചുറ്റും ഒരു തവണ പ്രദക്ഷിണം ചെയ്യാൻ ചന്ദ്രന് 27.3 ദിവസങ്ങൾ വേണം.",
+      "3,474 കി.മീ. ആണ് ചന്ദ്രന്റെ വ്യാസം, ഇത് ഭൂമിയുടെ വ്യാസത്തിൽ നാലിലൊന്നിനെക്കാൾ അല്പം കൂടുതലാണ്. അതിനാൽ തന്നെ ചന്ദ്രന്റെ ഉപരിതല വിസ്തീർണ്ണം ഭൂമിയുടേതിന്റെ പത്തിലൊന്നിലും കുറവാണ് (ഇത് ഏകദേശം ഭൂമിയുടെ കരഭാഗങ്ങളുടെ മൊത്തം വിസ്തീർണ്ണത്തിന്റെ നാലിലൊന്ന് വരും – <a href=\"https://ml.wikipedia.org/wiki/%E0%B4%B1%E0%B4%B7%E0%B5%8D%E0%B4%AF\">റഷ്യ</a>, <a href=\"https://ml.wikipedia.org/wiki/%E0%B4%95%E0%B4%BE%E0%B4%A8%E0%B4%A1\">കാനഡ</a>, <a href=\"https://ml.wikipedia.org/wiki/%E0%B4%85%E0%B4%AE%E0%B5%87%E0%B4%B0%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%BB_%E0%B4%90%E0%B4%95%E0%B5%8D%E0%B4%AF%E0%B4%A8%E0%B4%BE%E0%B4%9F%E0%B5%81%E0%B4%95%E0%B5%BE\">അമേരിക്കൻ ഐക്യനാടുകൾ</a> എന്നിവ ചേർന്നാലുള്ളത്ര വിസ്തീർണ്ണം). ഉപരിതലത്തിലെ <a href=\"https://ml.wikipedia.org/wiki/%E0%B4%97%E0%B5%81%E0%B4%B0%E0%B5%81%E0%B4%A4%E0%B5%8D%E0%B4%B5%E0%B4%BE%E0%B4%95%E0%B5%BC%E0%B4%B7%E0%B4%A3%E0%B4%82\">ഗുരുത്വാകർഷണശക്തി</a> ഭൂമിയുടെ ഉപരിതലത്തിൽ അനുഭവപ്പെടുന്നതിന്റെ പതിനേഴ് ശതമാനമാണ്. ചന്ദ്രന്റെ ഉപരിതലത്തിൽ തട്ടി പ്രതിഫലിക്കുന്ന സൂര്യപ്രകാശം ഭൂമിയിലെത്താൻ ഏകദേശം 1.3 സെക്കന്റുകൾ എടുക്കുന്നു. <a href=\"https://ml.wikipedia.org/wiki/%E0%B4%B8%E0%B5%97%E0%B4%B0%E0%B4%AF%E0%B5%82%E0%B4%A5%E0%B4%82\">സൗരയൂഥത്തിലെ</a> 8 <a href=\"https://ml.wikipedia.org/wiki/%E0%B4%97%E0%B5%8D%E0%B4%B0%E0%B4%B9%E0%B4%82\">ഗ്രഹങ്ങളുടെ</a> സ്വാഭാവിക ഉപഗ്രഹങ്ങളിൽ വലിപ്പം കൊണ്ട്‌ ചന്ദ്രൻ അഞ്ചാം സ്ഥാനത്താണ്‌. ഭാരം കൊണ്ടും വ്യാസം കൊണ്ടും ഈ സ്ഥാനം ചന്ദ്രനു തന്നെ.",
+      "ആദ്യമായി ചന്ദ്രോപരിതലം സ്പർശിച്ച മനുഷ്യനിർമിത വസ്തു ലൂണ 2 ആണ്‌. <a href=\"https://ml.wikipedia.org/wiki/1959\">1959-ൽ</a> ഈ വാഹനം ചന്ദ്രോപരിതലത്തിൽ വന്നിടിച്ച്‌ തകരുകയാണുണ്ടായത്‌. ഇതേ വർഷം തന്നെ മറ്റൊരു മനുഷ്യ നിർമിത ശൂന്യാകാശയാനമായ ലൂണ 3 ചന്ദ്രന്റെ ഭൂമിക്ക്‌ അഭിമുഖമല്ലാത്ത മറുവശത്തിന്റെ ചിത്രം എടുക്കുന്നതിൽ വിജയിച്ചു. വിജയകരവും അപകടരഹിതവുമായി ചന്ദ്രോപരിതലത്തിൽ ഇറങ്ങിയ യാനം എന്ന ബഹുമതി <a href=\"https://ml.wikipedia.org/wiki/1966\">1966-ൽ</a> ചന്ദ്രനിലിറങ്ങിയ ലൂണ 9-ന്‌ അവകാശപ്പെട്ടതാണ്‌. മനുഷ്യനെ വഹിച്ചു കൊണ്ടുള്ള ആദ്യത്തെ ചന്ദ്രയാത്ര അപ്പോളോ 8 എന്ന യാനം നിർവഹിച്ചെങ്കിലും ആദ്യമായി മനുഷ്യൻ ചന്ദ്രനിൽ വിജയകരമായി കാലു കുത്തിയത്‌ 1969-ൽ <a href=\"https://ml.wikipedia.org/wiki/%E0%B4%85%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B5%8B%E0%B4%B3%E0%B5%8B_11\">അപ്പോളോ 11</a> എന്ന ശൂന്യാകാശയാനത്തിലാണ്‌. ഭൂമിക്ക്‌ പുറത്ത്‌ മനുഷ്യൻ ചെന്നെത്തിയിട്ടുള്ള ഒരേയൊരു ശൂന്യാകാശഗോളം ചന്ദ്രനാണ്‌.",
+      "ഉദ്ധരിച്ചതിൽ പിഴവ്: &lt;ref&gt; റ്റാഗുകൾ \"nb\" സംഘത്തിൽ ഉണ്ട്, പക്ഷേ ബന്ധപ്പെട്ട &lt;references group=\"nb\"/&gt; റ്റാഗ് കണ്ടെത്താനായില്ല"
+    ],
+    "paragraphs": [
+      "<a href=\"https://ml.wikipedia.org/wiki/%E0%B4%85%E0%B4%AE%E0%B5%8B%E0%B4%A3%E0%B4%BF%E0%B4%AF\">അമോണിയ</a>\n<a href=\"https://ml.wikipedia.org/wiki/%E0%B4%95%E0%B4%BE%E0%B5%BC%E0%B4%AC%E0%B5%BA_%E0%B4%A1%E0%B4%AF%E0%B5%8B%E0%B4%95%E0%B5%8D%E0%B4%B8%E0%B5%88%E0%B4%A1%E0%B5%8D\">കാർബൺ ഡയോക്സൈഡ്</a>"
+    ],
+    "url": "https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB"
+  },
+  "locale": "ml",
+  "messages": {
+    "qrender-add-label": "Add a label in your language",
+    "qrender-age": "aged $1",
+    "qrender-bce": "$1 BCE",
+    "qrender-close": "Close",
+    "qrender-credit": "Credit",
+    "qrender-edit": "Edit",
+    "qrender-search": "Search Wikipedia",
+    "qrender-some-value": "unknown value"
+  },
+  "page_images": {
+    "Q1037706": {
+      "aspect": 1.0155,
+      "credit": {
+        "artist": "Mark A. Wieczorek",
+        "license": "CC BY 4.0"
+      },
+      "file": "Magnetic field strength of the Moon (linear and logarthmic scales).png",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q7102486": {
+      "aspect": 0.975,
+      "credit": {
+        "artist": "NASA, Apollo 16",
+        "license": "Public domain"
+      },
+      "file": "Cara-oculta-luna.jpg",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q7879772": {
+      "aspect": 1.7778,
+      "credit": {
+        "artist": "Omarius257",
+        "license": "CC BY-SA 4.0"
+      },
+      "file": "Solar System True Color EN.png",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    }
+  },
+  "page_title": "ചന്ദ്രൻ",
+  "projects": [
+    {
+      "count": 295,
+      "local": true,
+      "name": "wikipedia"
+    },
+    {
+      "count": 33,
+      "local": false,
+      "name": "wikiquote"
+    },
+    {
+      "count": 11,
+      "local": false,
+      "name": "wikivoyage"
+    },
+    {
+      "count": 10,
+      "local": false,
+      "name": "wikinews"
+    },
+    {
+      "count": 5,
+      "local": false,
+      "name": "wikibooks"
+    },
+    {
+      "count": 2,
+      "local": false,
+      "name": "wikisource"
+    },
+    {
+      "count": 1,
+      "local": false,
+      "name": "wikiversity"
+    }
+  ],
+  "qid": "Q405",
+  "schema": "view/0.2",
+  "spreads": [
+    {
+      "id": "identity",
+      "prose_links": [],
+      "prose_text": null,
+      "title": null
+    },
+    {
+      "id": "physical",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q4373292",
+        "lang": "ml",
+        "text": "ഭൗതികഗുണങ്ങൾ"
+      }
+    },
+    {
+      "id": "orbit",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q4130",
+        "lang": "ml",
+        "text": "ഭ്രമണപഥം"
+      }
+    },
+    {
+      "id": "relations",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "fallback": true,
+        "href": "https://www.wikidata.org/wiki/Q930933",
+        "lang": "en",
+        "text": "relation"
+      }
+    },
+    {
+      "id": "history",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q309",
+        "lang": "ml",
+        "text": "ചരിത്രം"
+      }
+    },
+    {
+      "id": "media",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q131765",
+        "lang": "ml",
+        "text": "മൾട്ടിമീഡിയ"
+      }
+    },
+    {
+      "id": "more",
+      "prose_links": [],
+      "prose_text": null,
+      "title": null
+    },
+    {
+      "id": "evidence",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q121769",
+        "lang": "ml",
+        "text": "അവലംബം"
+      }
+    }
+  ],
+  "unmatched_sections": [
+    {
+      "href": "https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB#ചരിത്രം_(history)",
+      "lang": "ml",
+      "text": "ചരിത്രം (history)"
+    },
+    {
+      "href": "https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB#ചന്ദ്രോപരിതലം",
+      "lang": "ml",
+      "text": "ചന്ദ്രോപരിതലം"
+    },
+    {
+      "href": "https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB#ഭ്രമണപഥവും_ഭൂമിയുമായുള്ള_ബന്ധവും",
+      "lang": "ml",
+      "text": "ഭ്രമണപഥവും ഭൂമിയുമായുള്ള ബന്ധവും"
+    },
+    {
+      "href": "https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB#ഉത്പത്തിയും_ഭൂഗർഭശാസ്ത്രപരമായ_പരിണാമവും",
+      "lang": "ml",
+      "text": "ഉത്പത്തിയും ഭൂഗർഭശാസ്ത്രപരമായ പരിണാമവും"
+    },
+    {
+      "href": "https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB#ഭൗതിക_സ്വഭാവവിശേഷങ്ങൾ",
+      "lang": "ml",
+      "text": "ഭൗതിക  സ്വഭാവവിശേഷങ്ങൾ"
+    },
+    {
+      "href": "https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB#ഗ്രഹണം",
+      "lang": "ml",
+      "text": "ഗ്രഹണം"
+    },
+    {
+      "href": "https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB#നിരീക്ഷണം",
+      "lang": "ml",
+      "text": "നിരീക്ഷണം"
+    },
+    {
+      "href": "https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB#ചാന്ദ്രപര്യവേഷണങ്ങൾ",
+      "lang": "ml",
+      "text": "ചാന്ദ്രപര്യവേഷണങ്ങൾ"
+    },
+    {
+      "href": "https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB#ഇതുംകൂടി_കാണുക",
+      "lang": "ml",
+      "text": "ഇതുംകൂടി കാണുക"
+    },
+    {
+      "href": "https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB#കുറിപ്പുകൾ",
+      "lang": "ml",
+      "text": "കുറിപ്പുകൾ"
+    }
+  ]
+}

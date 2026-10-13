@@ -1,0 +1,192 @@
+---
+source: qrender/tests/views.rs
+expression: json
+---
+{
+  "composition": "composition/0.3",
+  "coverage": {
+    "have": 9,
+    "total": 9
+  },
+  "design": "design/0.2",
+  "dir": "ltr",
+  "labels": {
+    "P131": {
+      "href": "https://www.wikidata.org/wiki/Property:P131",
+      "lang": "ml",
+      "text": "സ്ഥിതിചെയ്യുന്ന ഭരണസ്ഥലം"
+    },
+    "P143": {
+      "href": "https://www.wikidata.org/wiki/Property:P143",
+      "lang": "ml",
+      "text": "ഇറക്കുമതി സ്രോതസ്"
+    },
+    "P17": {
+      "href": "https://www.wikidata.org/wiki/Property:P17",
+      "lang": "ml",
+      "text": "രാജ്യം"
+    },
+    "P248": {
+      "href": "https://www.wikidata.org/wiki/Property:P248",
+      "lang": "ml",
+      "text": "ഇവിടെ പറയുന്നു"
+    },
+    "P281": {
+      "href": "https://www.wikidata.org/wiki/Property:P281",
+      "lang": "ml",
+      "text": "പോസ്റ്റൽ കോഡ്"
+    },
+    "P31": {
+      "href": "https://www.wikidata.org/wiki/Property:P31",
+      "lang": "ml",
+      "text": "തരം"
+    },
+    "P3629": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P3629",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P3629",
+      "lang": "en",
+      "text": "age of subject at event"
+    },
+    "P625": {
+      "href": "https://www.wikidata.org/wiki/Property:P625",
+      "lang": "ml",
+      "text": "ഭൗമനിർദ്ദേശാങ്കങ്ങൾ"
+    },
+    "P854": {
+      "href": "https://www.wikidata.org/wiki/Property:P854",
+      "lang": "ml",
+      "text": "അവലംബ യൂ.ആർ.എൽ."
+    },
+    "Q139890532": {
+      "description": {
+        "lang": "ml",
+        "text": "കേരളത്തിലെ കാസർഗോഡ് ജില്ലയിലെ പ്രദേശം, ഇന്ത്യ"
+      },
+      "href": "https://www.wikidata.org/wiki/Q139890532",
+      "lang": "ml",
+      "text": "കൊക്കച്ചാൽ"
+    },
+    "Q1419703": {
+      "href": "https://www.wikidata.org/wiki/Q1419703",
+      "lang": "ml",
+      "text": "കാസർഗോഡ് ജില്ല"
+    },
+    "Q532": {
+      "href": "https://www.wikidata.org/wiki/Q532",
+      "lang": "ml",
+      "text": "ഗ്രാമം"
+    },
+    "Q668": {
+      "href": "https://www.wikidata.org/wiki/Q668",
+      "lang": "ml",
+      "text": "ഇന്ത്യ"
+    }
+  },
+  "lang": "ml",
+  "lead": {
+    "host": "ml.wikipedia.org",
+    "lang": "ml",
+    "local": true,
+    "more": [],
+    "paragraphs": [
+      "ഇന്ത്യൻ സംസ്ഥാനമായ കേരളത്തിലെ <a href=\"https://ml.wikipedia.org/wiki/%E0%B4%95%E0%B4%BE%E0%B4%B8%E0%B5%BC%E0%B4%97%E0%B5%8B%E0%B4%A1%E0%B5%8D_%E0%B4%9C%E0%B4%BF%E0%B4%B2%E0%B5%8D%E0%B4%B2\">കാസർഗോഡ് ജില്ലയിൽ</a> സ്ഥിതിചെയ്യുന്ന ഒരു ചെറിയ പ്രദേശവും വാസസ്ഥലവുമാണ് <b>കൊക്കച്ചാൽ</b>. സംസ്ഥാനത്തിന്റെ വടക്കൻ അതിർത്തിക്കടുത്തുള്ള മഞ്ചേശ്വരം താലൂക്കിന്റെ ഭരണത്തിൻ കീഴിലാണ് ഇത് സ്ഥിതിചെയ്യുന്നത്."
+    ],
+    "url": "https://ml.wikipedia.org/wiki/%E0%B4%95%E0%B5%8A%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%BE%E0%B5%BD"
+  },
+  "locale": "ml",
+  "messages": {
+    "qrender-add-label": "Add a label in your language",
+    "qrender-age": "aged $1",
+    "qrender-bce": "$1 BCE",
+    "qrender-close": "Close",
+    "qrender-credit": "Credit",
+    "qrender-edit": "Edit",
+    "qrender-search": "Search Wikipedia",
+    "qrender-some-value": "unknown value"
+  },
+  "page_images": {},
+  "page_title": "കൊക്കച്ചാൽ",
+  "projects": [
+    {
+      "count": 3,
+      "local": true,
+      "name": "wikipedia"
+    }
+  ],
+  "qid": "Q139890532",
+  "schema": "view/0.2",
+  "spreads": [
+    {
+      "id": "identity",
+      "prose_links": [],
+      "prose_text": null,
+      "title": null
+    },
+    {
+      "id": "location",
+      "prose_links": [
+        {
+          "href": "https://ml.wikipedia.org/wiki/%E0%B4%95%E0%B5%8A%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%BE%E0%B5%BD#ഭൂമിശാസ്ത്രം",
+          "lang": "ml",
+          "text": "ഭൂമിശാസ്ത്രം"
+        }
+      ],
+      "prose_text": {
+        "href": "https://ml.wikipedia.org/wiki/%E0%B4%95%E0%B5%8A%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%BE%E0%B5%BD#ഭൂമിശാസ്ത്രം",
+        "html": "ബന്തിയോടിനെ <a href=\"https://ml.wikipedia.org/wiki/%E0%B4%A7%E0%B5%BC%E0%B4%AE%E0%B5%8D%E0%B4%AE%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%9F%E0%B5%8D%E0%B4%95\">ധർമ്മത്തടുക്കയുമായി</a> ബന്ധിപ്പിക്കുന്ന ഗ്രാമീണ റൂട്ടുകളിലായാണ് കൊക്കച്ചാൽ സ്ഥിതി ചെയ്യുന്നത്.. ഭൂമിശാസ്ത്രപരമായി, ഇത് പുത്തിഗെ, മംഗൽപാടി തദ്ദേശ സ്വയംഭരണ അധികാരപരിധികളുടെ അതിർത്തിയോട് ചേർന്നാണ് സ്ഥിതി ചെയ്യുന്നത്. വടക്കൻ മലബാറിന്റെ സാധാരണ മധ്യപ്രദേശ ഭൂപ്രകൃതിയാണ് ഈ ഭൂപ്രകൃതിയുടെ സവിശേഷത, സീസണൽ അരുവികൾ വലിയ തീരദേശ നദീ സംവിധാനങ്ങളിലേക്ക് ഒഴുകുന്നു.",
+        "lang": "ml",
+        "local": true,
+        "title": "ഭൂമിശാസ്ത്രം"
+      },
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q2221906",
+        "lang": "ml",
+        "text": "ഭൂസ്ഥാനം"
+      }
+    },
+    {
+      "id": "names",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "fallback": true,
+        "href": "https://www.wikidata.org/wiki/Q82799",
+        "lang": "en",
+        "text": "name"
+      }
+    },
+    {
+      "id": "evidence",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q121769",
+        "lang": "ml",
+        "text": "അവലംബം"
+      }
+    }
+  ],
+  "unmatched_sections": [
+    {
+      "href": "https://ml.wikipedia.org/wiki/%E0%B4%95%E0%B5%8A%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%BE%E0%B5%BD#വിദ്യാഭ്യാസവും_സ്ഥാപനങ്ങളും",
+      "lang": "ml",
+      "text": "വിദ്യാഭ്യാസവും സ്ഥാപനങ്ങളും"
+    },
+    {
+      "href": "https://ml.wikipedia.org/wiki/%E0%B4%95%E0%B5%8A%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%BE%E0%B5%BD#ഗതാഗതം",
+      "lang": "ml",
+      "text": "ഗതാഗതം"
+    },
+    {
+      "href": "https://ml.wikipedia.org/wiki/%E0%B4%95%E0%B5%8A%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%BE%E0%B5%BD#ഇതും_കാണുക",
+      "lang": "ml",
+      "text": "ഇതും കാണുക"
+    },
+    {
+      "href": "https://ml.wikipedia.org/wiki/%E0%B4%95%E0%B5%8A%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%BE%E0%B5%BD#പരാമർശങ്ങൾ",
+      "lang": "ml",
+      "text": "പരാമർശങ്ങൾ"
+    }
+  ]
+}

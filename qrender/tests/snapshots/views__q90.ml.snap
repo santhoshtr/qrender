@@ -1,0 +1,4766 @@
+---
+source: qrender/tests/views.rs
+expression: json
+---
+{
+  "composition": "composition/0.3",
+  "coverage": {
+    "have": 163,
+    "total": 340
+  },
+  "design": "design/0.2",
+  "dir": "ltr",
+  "labels": {
+    "P10046": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P10046",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P10046",
+      "lang": "en",
+      "text": "Apple Maps \"auid\" identifier"
+    },
+    "P10077": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P10077",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P10077",
+      "lang": "en",
+      "text": "Spanish Cultural Heritage thesauri ID"
+    },
+    "P1015": {
+      "href": "https://www.wikidata.org/wiki/Property:P1015",
+      "lang": "mul",
+      "text": "NORAF ID"
+    },
+    "P1017": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1017",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1017",
+      "lang": "en",
+      "text": "Vatican Library ID (former scheme)"
+    },
+    "P102": {
+      "href": "https://www.wikidata.org/wiki/Property:P102",
+      "lang": "ml",
+      "text": "രാഷ്ട്രീയ പാർട്ടി"
+    },
+    "P10227": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P10227",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P10227",
+      "lang": "en",
+      "text": "National Library of Ireland ID"
+    },
+    "P10234": {
+      "href": "https://www.wikidata.org/wiki/Property:P10234",
+      "lang": "mul",
+      "text": "Der Spiegel topic ID"
+    },
+    "P10280": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P10280",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P10280",
+      "lang": "en",
+      "text": "category for honorary citizens of entity"
+    },
+    "P10291": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P10291",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P10291",
+      "lang": "en",
+      "text": "Wikisimpsons article ID"
+    },
+    "P10311": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P10311",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P10311",
+      "lang": "en",
+      "text": "official jobs URL"
+    },
+    "P10321": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P10321",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P10321",
+      "lang": "en",
+      "text": "Urban Electric Transit city ID"
+    },
+    "P10326": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P10326",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P10326",
+      "lang": "en",
+      "text": "ICPSR Geographic Names Thesaurus ID"
+    },
+    "P1036": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1036",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1036",
+      "lang": "en",
+      "text": "Dewey Decimal Classification"
+    },
+    "P10376": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P10376",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P10376",
+      "lang": "en",
+      "text": "ScienceDirect topic ID"
+    },
+    "P10397": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P10397",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P10397",
+      "lang": "en",
+      "text": "SBN place ID"
+    },
+    "P1048": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1048",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1048",
+      "lang": "en",
+      "text": "NCL ID"
+    },
+    "P10480": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P10480",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P10480",
+      "lang": "en",
+      "text": "symogih.org ID"
+    },
+    "P10730": {
+      "href": "https://www.wikidata.org/wiki/Property:P10730",
+      "lang": "mul",
+      "text": "Data Commons ID"
+    },
+    "P1082": {
+      "href": "https://www.wikidata.org/wiki/Property:P1082",
+      "lang": "ml",
+      "text": "ജനസംഖ്യ"
+    },
+    "P10832": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P10832",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P10832",
+      "lang": "en",
+      "text": "WorldCat Entities ID"
+    },
+    "P10883": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P10883",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P10883",
+      "lang": "en",
+      "text": "The Encyclopedia of Fantasy ID"
+    },
+    "P10916": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P10916",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P10916",
+      "lang": "en",
+      "text": "Süddeutsche Zeitung topic ID"
+    },
+    "P11012": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P11012",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P11012",
+      "lang": "en",
+      "text": "EU Knowledge Graph item ID"
+    },
+    "P11054": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P11054",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P11054",
+      "lang": "en",
+      "text": "grammatical number"
+    },
+    "P11137": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P11137",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P11137",
+      "lang": "en",
+      "text": "Reddit topic ID (obsolete)"
+    },
+    "P11245": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P11245",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P11245",
+      "lang": "en",
+      "text": "YouTube handle"
+    },
+    "P11266": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P11266",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P11266",
+      "lang": "en",
+      "text": "contact page URL"
+    },
+    "P11386": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P11386",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P11386",
+      "lang": "en",
+      "text": "Listal ID"
+    },
+    "P11408": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P11408",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P11408",
+      "lang": "en",
+      "text": "Pixiv Encyclopedia ID"
+    },
+    "P11493": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P11493",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P11493",
+      "lang": "en",
+      "text": "Biblissima authority ID"
+    },
+    "P11496": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P11496",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P11496",
+      "lang": "en",
+      "text": "CiNii Research ID"
+    },
+    "P1151": {
+      "href": "https://www.wikidata.org/wiki/Property:P1151",
+      "lang": "ml",
+      "text": "വിക്കിപീഡിയയിലെ ഈ വിഷയത്തിന്റെ കവാടം"
+    },
+    "P11620": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P11620",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P11620",
+      "lang": "en",
+      "text": "Hungarian National Namespace place ID (new)"
+    },
+    "P11662": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P11662",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P11662",
+      "lang": "en",
+      "text": "IATE entry ID"
+    },
+    "P11693": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P11693",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P11693",
+      "lang": "en",
+      "text": "OpenStreetMap node ID"
+    },
+    "P11762": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P11762",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P11762",
+      "lang": "en",
+      "text": "Britannica Kids kids level article ID"
+    },
+    "P11764": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P11764",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P11764",
+      "lang": "en",
+      "text": "Britannica Kids students level article ID"
+    },
+    "P11765": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P11765",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P11765",
+      "lang": "en",
+      "text": "Britannica Kids scholars level article ID"
+    },
+    "P11946": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P11946",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P11946",
+      "lang": "en",
+      "text": "Mythoskop ID"
+    },
+    "P11947": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P11947",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P11947",
+      "lang": "en",
+      "text": "Lemmy community ID"
+    },
+    "P12036": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P12036",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P12036",
+      "lang": "en",
+      "text": "NHK ONE  News topic ID"
+    },
+    "P12062": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P12062",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P12062",
+      "lang": "en",
+      "text": "Pinakes city ID"
+    },
+    "P12086": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P12086",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P12086",
+      "lang": "en",
+      "text": "WikiKids ID"
+    },
+    "P12187": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P12187",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P12187",
+      "lang": "en",
+      "text": "Thesaurus Linguae Aegyptiae ID"
+    },
+    "P1225": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1225",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1225",
+      "lang": "en",
+      "text": "U.S. National Archives Identifier"
+    },
+    "P12361": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P12361",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P12361",
+      "lang": "en",
+      "text": "Bluesky handle"
+    },
+    "P12385": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P12385",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P12385",
+      "lang": "en",
+      "text": "Gran Enciclopèdia Catalana ID"
+    },
+    "P1245": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1245",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1245",
+      "lang": "en",
+      "text": "OmegaWiki Defined Meaning"
+    },
+    "P1248": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1248",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1248",
+      "lang": "en",
+      "text": "KulturNav-ID"
+    },
+    "P1249": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1249",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1249",
+      "lang": "en",
+      "text": "time of earliest written record"
+    },
+    "P12546": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P12546",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P12546",
+      "lang": "en",
+      "text": "Instagram numeric ID"
+    },
+    "P12749": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P12749",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P12749",
+      "lang": "en",
+      "text": "SNARC ID"
+    },
+    "P12800": {
+      "href": "https://www.wikidata.org/wiki/Property:P12800",
+      "lang": "ml",
+      "text": "விக்கிடியா கட்டுரை இனங்காட்டி"
+    },
+    "P12874": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P12874",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P12874",
+      "lang": "en",
+      "text": "Valencian Library ID"
+    },
+    "P1296": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1296",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1296",
+      "lang": "en",
+      "text": "Gran Enciclopèdia Catalana ID (former scheme)"
+    },
+    "P1299": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1299",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1299",
+      "lang": "en",
+      "text": "depicted by"
+    },
+    "P13044": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P13044",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P13044",
+      "lang": "en",
+      "text": "characteristic of"
+    },
+    "P13059": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P13059",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P13059",
+      "lang": "en",
+      "text": "Babelio subject ID"
+    },
+    "P13061": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P13061",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P13061",
+      "lang": "en",
+      "text": "World Historical Gazetteer place ID"
+    },
+    "P131": {
+      "href": "https://www.wikidata.org/wiki/Property:P131",
+      "lang": "ml",
+      "text": "സ്ഥിതിചെയ്യുന്ന ഭരണസ്ഥലം"
+    },
+    "P1313": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1313",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1313",
+      "lang": "en",
+      "text": "office held by the head of government"
+    },
+    "P13141": {
+      "href": "https://www.wikidata.org/wiki/Property:P13141",
+      "lang": "mul",
+      "text": "El Moudjahid topic ID"
+    },
+    "P13160": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P13160",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P13160",
+      "lang": "en",
+      "text": "Radio Algeria topic ID (Arabic)"
+    },
+    "P13161": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P13161",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P13161",
+      "lang": "en",
+      "text": "Radio Algeria topic ID (French)"
+    },
+    "P13279": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P13279",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P13279",
+      "lang": "en",
+      "text": "Dictionary of Late Antiquity ID"
+    },
+    "P1332": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1332",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1332",
+      "lang": "en",
+      "text": "coordinates of northernmost point"
+    },
+    "P1333": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1333",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1333",
+      "lang": "en",
+      "text": "coordinates of southernmost point"
+    },
+    "P13337": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P13337",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P13337",
+      "lang": "en",
+      "text": "domain name"
+    },
+    "P1334": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1334",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1334",
+      "lang": "en",
+      "text": "coordinates of easternmost point"
+    },
+    "P1335": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1335",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1335",
+      "lang": "en",
+      "text": "coordinates of westernmost point"
+    },
+    "P1343": {
+      "href": "https://www.wikidata.org/wiki/Property:P1343",
+      "lang": "ml",
+      "text": "ഇതേപ്പറ്റി വിവരിച്ചിട്ടുള്ള ഇടങ്ങൾ"
+    },
+    "P13526": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P13526",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P13526",
+      "lang": "en",
+      "text": "Euronews topic ID"
+    },
+    "P13591": {
+      "href": "https://www.wikidata.org/wiki/Property:P13591",
+      "lang": "mul",
+      "text": "‎Yale LUX ID"
+    },
+    "P1365": {
+      "href": "https://www.wikidata.org/wiki/Property:P1365",
+      "lang": "ml",
+      "text": "മുൻഗാമി"
+    },
+    "P1368": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1368",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1368",
+      "lang": "en",
+      "text": "National Library of Latvia ID"
+    },
+    "P13750": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P13750",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P13750",
+      "lang": "en",
+      "text": "Arab Encyclopedia concept ID"
+    },
+    "P1376": {
+      "href": "https://www.wikidata.org/wiki/Property:P1376",
+      "lang": "ml",
+      "text": "എന്തിന്റെ തലസ്ഥാനം"
+    },
+    "P13772": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P13772",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P13772",
+      "lang": "en",
+      "text": "Harper's tag"
+    },
+    "P138": {
+      "href": "https://www.wikidata.org/wiki/Property:P138",
+      "lang": "ml",
+      "text": "പേര് വന്ന വഴി"
+    },
+    "P13835": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P13835",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P13835",
+      "lang": "en",
+      "text": "Kulturenvanteri taxonomy ID"
+    },
+    "P1417": {
+      "href": "https://www.wikidata.org/wiki/Property:P1417",
+      "lang": "ml",
+      "text": "ഓൺലൈൻ ബ്രിട്ടാനിക്കയിലേക്കുള്ള കണ്ണി"
+    },
+    "P1424": {
+      "href": "https://www.wikidata.org/wiki/Property:P1424",
+      "lang": "ml",
+      "text": "വിഷയത്തിന്റെ പ്രധാന ഫലകം"
+    },
+    "P14269": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P14269",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P14269",
+      "lang": "en",
+      "text": "Anarâš aavis topic ID"
+    },
+    "P143": {
+      "href": "https://www.wikidata.org/wiki/Property:P143",
+      "lang": "ml",
+      "text": "ഇറക്കുമതി സ്രോതസ്"
+    },
+    "P1438": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1438",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1438",
+      "lang": "en",
+      "text": "Jewish Encyclopedia ID (Russian)"
+    },
+    "P14470": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P14470",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P14470",
+      "lang": "en",
+      "text": "‎Giant Bomb Wiki ID"
+    },
+    "P1448": {
+      "href": "https://www.wikidata.org/wiki/Property:P1448",
+      "lang": "ml",
+      "text": "ഔദ്യോഗിക നാമം"
+    },
+    "P1449": {
+      "href": "https://www.wikidata.org/wiki/Property:P1449",
+      "lang": "ml",
+      "text": "കളിപ്പേര്"
+    },
+    "P1451": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1451",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1451",
+      "lang": "en",
+      "text": "motto text"
+    },
+    "P1454": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1454",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1454",
+      "lang": "en",
+      "text": "legal form"
+    },
+    "P1456": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1456",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1456",
+      "lang": "en",
+      "text": "list of monuments"
+    },
+    "P14586": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P14586",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P14586",
+      "lang": "en",
+      "text": "KSW place ID"
+    },
+    "P1464": {
+      "href": "https://www.wikidata.org/wiki/Property:P1464",
+      "lang": "ml",
+      "text": "ഇവിടെ ജനിച്ചവർക്കുള്ള വിഭാഗം"
+    },
+    "P1465": {
+      "href": "https://www.wikidata.org/wiki/Property:P1465",
+      "lang": "ml",
+      "text": "ഈ സ്ഥലത്തുവച്ചു മരണമടഞ്ഞവർ"
+    },
+    "P1482": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1482",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1482",
+      "lang": "en",
+      "text": "Stack Exchange tag"
+    },
+    "P150": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P150",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P150",
+      "lang": "en",
+      "text": "contains the administrative territorial entity"
+    },
+    "P1534": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1534",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1534",
+      "lang": "en",
+      "text": "end cause"
+    },
+    "P1539": {
+      "href": "https://www.wikidata.org/wiki/Property:P1539",
+      "lang": "ml",
+      "text": "സ്ത്രീജനസംഖ്യ"
+    },
+    "P154": {
+      "href": "https://www.wikidata.org/wiki/Property:P154",
+      "lang": "ml",
+      "text": "ലോഗോയുടെ ചിത്രം"
+    },
+    "P1540": {
+      "href": "https://www.wikidata.org/wiki/Property:P1540",
+      "lang": "ml",
+      "text": "പുരുഷജനസംഖ്യ"
+    },
+    "P1546": {
+      "href": "https://www.wikidata.org/wiki/Property:P1546",
+      "lang": "mul",
+      "text": "motto"
+    },
+    "P1549": {
+      "href": "https://www.wikidata.org/wiki/Property:P1549",
+      "lang": "ml",
+      "text": "നിവാസി"
+    },
+    "P1552": {
+      "href": "https://www.wikidata.org/wiki/Property:P1552",
+      "lang": "ml",
+      "text": "സ്വഭാവം"
+    },
+    "P1566": {
+      "href": "https://www.wikidata.org/wiki/Property:P1566",
+      "lang": "mul",
+      "text": "GeoNames ID"
+    },
+    "P1617": {
+      "href": "https://www.wikidata.org/wiki/Property:P1617",
+      "lang": "ml",
+      "text": "ബിബിസി കാര്യങ്ങളുടെ തിരിച്ചറിയല്‍ രേഖ"
+    },
+    "P163": {
+      "href": "https://www.wikidata.org/wiki/Property:P163",
+      "lang": "ml",
+      "text": "പതാക"
+    },
+    "P166": {
+      "href": "https://www.wikidata.org/wiki/Property:P166",
+      "lang": "ml",
+      "text": "ലഭിച്ച പുരസ്കാരങ്ങൾ"
+    },
+    "P1667": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1667",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1667",
+      "lang": "en",
+      "text": "Getty Thesaurus of Geographic Names ID"
+    },
+    "P17": {
+      "href": "https://www.wikidata.org/wiki/Property:P17",
+      "lang": "ml",
+      "text": "രാജ്യം"
+    },
+    "P1705": {
+      "href": "https://www.wikidata.org/wiki/Property:P1705",
+      "lang": "ml",
+      "text": "തദ്ദേശനാമം"
+    },
+    "P1740": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1740",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1740",
+      "lang": "en",
+      "text": "category for films shot at this location"
+    },
+    "P1766": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1766",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1766",
+      "lang": "en",
+      "text": "place name sign"
+    },
+    "P1791": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1791",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1791",
+      "lang": "en",
+      "text": "category for people buried here"
+    },
+    "P1792": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1792",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1792",
+      "lang": "en",
+      "text": "category of associated people"
+    },
+    "P18": {
+      "href": "https://www.wikidata.org/wiki/Property:P18",
+      "lang": "ml",
+      "text": "ചിത്രം"
+    },
+    "P180": {
+      "href": "https://www.wikidata.org/wiki/Property:P180",
+      "lang": "ml",
+      "text": "സൃഷ്ടിയിലുള്ളത്"
+    },
+    "P1810": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1810",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1810",
+      "lang": "en",
+      "text": "subject named as"
+    },
+    "P1813": {
+      "href": "https://www.wikidata.org/wiki/Property:P1813",
+      "lang": "ml",
+      "text": "ഹ്രസ്വ നാമം"
+    },
+    "P1830": {
+      "href": "https://www.wikidata.org/wiki/Property:P1830",
+      "lang": "ml",
+      "text": "ഉടമ"
+    },
+    "P1871": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1871",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1871",
+      "lang": "en",
+      "text": "CERL Thesaurus ID"
+    },
+    "P1889": {
+      "href": "https://www.wikidata.org/wiki/Property:P1889",
+      "lang": "ml",
+      "text": "ഇതിൽ നിന്നും വ്യത്യസ്തം"
+    },
+    "P1890": {
+      "href": "https://www.wikidata.org/wiki/Property:P1890",
+      "lang": "mul",
+      "text": "CCAB ID"
+    },
+    "P190": {
+      "href": "https://www.wikidata.org/wiki/Property:P190",
+      "lang": "ml",
+      "text": "സഹോദര നഗരം"
+    },
+    "P1937": {
+      "href": "https://www.wikidata.org/wiki/Property:P1937",
+      "lang": "mul",
+      "text": "UN/LOCODE"
+    },
+    "P194": {
+      "href": "https://www.wikidata.org/wiki/Property:P194",
+      "lang": "ml",
+      "text": "ഭരണവിഭാഗം"
+    },
+    "P1943": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1943",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1943",
+      "lang": "en",
+      "text": "location map"
+    },
+    "P1968": {
+      "href": "https://www.wikidata.org/wiki/Property:P1968",
+      "lang": "mul",
+      "text": "Foursquare ID"
+    },
+    "P1997": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1997",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1997",
+      "lang": "en",
+      "text": "Facebook location ID"
+    },
+    "P2002": {
+      "href": "https://www.wikidata.org/wiki/Property:P2002",
+      "lang": "ml",
+      "text": "ട്വിറ്റർ ഉപയോക്തൃനാമം"
+    },
+    "P2003": {
+      "href": "https://www.wikidata.org/wiki/Property:P2003",
+      "lang": "ml",
+      "text": "ഇൻസ്റ്റഗ്രാം ഉപയോക്തൃനാമം"
+    },
+    "P2013": {
+      "href": "https://www.wikidata.org/wiki/Property:P2013",
+      "lang": "ml",
+      "text": "ഫേസ്‌ബുക്ക് ഐ.ഡി."
+    },
+    "P2041": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2041",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2041",
+      "lang": "en",
+      "text": "National Gallery of Victoria artist ID"
+    },
+    "P2044": {
+      "href": "https://www.wikidata.org/wiki/Property:P2044",
+      "lang": "ml",
+      "text": "സമുദ്രനിരപ്പിൽ നിന്നുമുള്ള ഉയരം"
+    },
+    "P2046": {
+      "href": "https://www.wikidata.org/wiki/Property:P2046",
+      "lang": "ml",
+      "text": "വിസ്തീർണ്ണം"
+    },
+    "P206": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P206",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P206",
+      "lang": "en",
+      "text": "located in or next to body of water"
+    },
+    "P2096": {
+      "href": "https://www.wikidata.org/wiki/Property:P2096",
+      "lang": "ml",
+      "text": "മീഡിയയുടെ സൂചന"
+    },
+    "P213": {
+      "href": "https://www.wikidata.org/wiki/Property:P213",
+      "lang": "ml",
+      "text": "ഐ.എസ്.എൻ.ഐ. (ഐ.എസ്.ഒ. 27729)"
+    },
+    "P214": {
+      "href": "https://www.wikidata.org/wiki/Property:P214",
+      "lang": "ml",
+      "text": "വി.ഐ.എ.എഫ്. തിരിച്ചറിയലുപാധി"
+    },
+    "P2163": {
+      "href": "https://www.wikidata.org/wiki/Property:P2163",
+      "lang": "mul",
+      "text": "FAST ID"
+    },
+    "P2184": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2184",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2184",
+      "lang": "en",
+      "text": "history of topic"
+    },
+    "P2241": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2241",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2241",
+      "lang": "en",
+      "text": "reason for deprecated rank"
+    },
+    "P227": {
+      "href": "https://www.wikidata.org/wiki/Property:P227",
+      "lang": "ml",
+      "text": "ജി.എൻ.ഡി. തിരിച്ചറിയലുപാധി"
+    },
+    "P2326": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2326",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2326",
+      "lang": "en",
+      "text": "GNS Unique Feature ID"
+    },
+    "P2347": {
+      "href": "https://www.wikidata.org/wiki/Property:P2347",
+      "lang": "mul",
+      "text": "YSO ID"
+    },
+    "P237": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P237",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P237",
+      "lang": "en",
+      "text": "coat of arms"
+    },
+    "P238": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P238",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P238",
+      "lang": "en",
+      "text": "IATA airport code"
+    },
+    "P2397": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2397",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2397",
+      "lang": "en",
+      "text": "YouTube channel ID"
+    },
+    "P242": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P242",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P242",
+      "lang": "en",
+      "text": "locator map image"
+    },
+    "P244": {
+      "href": "https://www.wikidata.org/wiki/Property:P244",
+      "lang": "mul",
+      "text": "Library of Congress Authorities ID"
+    },
+    "P2441": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2441",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2441",
+      "lang": "en",
+      "text": "literal translation"
+    },
+    "P248": {
+      "href": "https://www.wikidata.org/wiki/Property:P248",
+      "lang": "ml",
+      "text": "ഇവിടെ പറയുന്നു"
+    },
+    "P2503": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2503",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2503",
+      "lang": "en",
+      "text": "Historical Gazetteer (GOV) ID"
+    },
+    "P2572": {
+      "href": "https://www.wikidata.org/wiki/Property:P2572",
+      "lang": "ml",
+      "text": "ഹാഷ് ടാഗ്"
+    },
+    "P2581": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2581",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2581",
+      "lang": "en",
+      "text": "BabelNet ID"
+    },
+    "P2586": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2586",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2586",
+      "lang": "en",
+      "text": "INSEE department code"
+    },
+    "P2633": {
+      "href": "https://www.wikidata.org/wiki/Property:P2633",
+      "lang": "ml",
+      "text": "വിഷയത്തിന്റെ ഭൂമിശാസ്ത്രം"
+    },
+    "P2670": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2670",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2670",
+      "lang": "en",
+      "text": "has part(s) of the class"
+    },
+    "P268": {
+      "href": "https://www.wikidata.org/wiki/Property:P268",
+      "lang": "ml",
+      "text": "ഫ്രഞ്ച് ദേശീയ ഗ്രന്ഥശാല തിരിച്ചറിയല്‍ സംഖ്യ"
+    },
+    "P269": {
+      "href": "https://www.wikidata.org/wiki/Property:P269",
+      "lang": "mul",
+      "text": "IdRef ID"
+    },
+    "P271": {
+      "href": "https://www.wikidata.org/wiki/Property:P271",
+      "lang": "mul",
+      "text": "NACSIS-CAT"
+    },
+    "P2716": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2716",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2716",
+      "lang": "en",
+      "text": "montage image"
+    },
+    "P2769": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2769",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2769",
+      "lang": "en",
+      "text": "budget"
+    },
+    "P281": {
+      "href": "https://www.wikidata.org/wiki/Property:P281",
+      "lang": "ml",
+      "text": "പോസ്റ്റൽ കോഡ്"
+    },
+    "P2868": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2868",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2868",
+      "lang": "en",
+      "text": "subject has role"
+    },
+    "P2892": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2892",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2892",
+      "lang": "en",
+      "text": "UMLS CUI"
+    },
+    "P2924": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2924",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2924",
+      "lang": "en",
+      "text": "Great Russian Encyclopedia Online ID (2017)"
+    },
+    "P2936": {
+      "href": "https://www.wikidata.org/wiki/Property:P2936",
+      "lang": "ml",
+      "text": "ഉപയോഗിക്കുന്ന ഭാഷ"
+    },
+    "P2950": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2950",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2950",
+      "lang": "en",
+      "text": "Nomisma ID"
+    },
+    "P2966": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2966",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2966",
+      "lang": "en",
+      "text": "National Library of Wales Authority ID"
+    },
+    "P30": {
+      "href": "https://www.wikidata.org/wiki/Property:P30",
+      "lang": "ml",
+      "text": "വൻകര"
+    },
+    "P300": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P300",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P300",
+      "lang": "en",
+      "text": "ISO 3166-2 code"
+    },
+    "P3065": {
+      "href": "https://www.wikidata.org/wiki/Property:P3065",
+      "lang": "mul",
+      "text": "RERO ID"
+    },
+    "P3086": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P3086",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P3086",
+      "lang": "en",
+      "text": "speed limit"
+    },
+    "P31": {
+      "href": "https://www.wikidata.org/wiki/Property:P31",
+      "lang": "ml",
+      "text": "തരം"
+    },
+    "P3106": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P3106",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P3106",
+      "lang": "en",
+      "text": "The Guardian topic ID"
+    },
+    "P3134": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P3134",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P3134",
+      "lang": "en",
+      "text": "Tripadvisor ID"
+    },
+    "P3206": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P3206",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P3206",
+      "lang": "en",
+      "text": "data.gouv.fr organisation ID"
+    },
+    "P3218": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P3218",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P3218",
+      "lang": "en",
+      "text": "Auñamendi ID"
+    },
+    "P3219": {
+      "href": "https://www.wikidata.org/wiki/Property:P3219",
+      "lang": "mul",
+      "text": "Encyclopædia Universalis ID"
+    },
+    "P3222": {
+      "href": "https://www.wikidata.org/wiki/Property:P3222",
+      "lang": "mul",
+      "text": "NE.se ID"
+    },
+    "P3365": {
+      "href": "https://www.wikidata.org/wiki/Property:P3365",
+      "lang": "mul",
+      "text": "Treccani ID"
+    },
+    "P3403": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P3403",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P3403",
+      "lang": "en",
+      "text": "coextensive with"
+    },
+    "P3415": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P3415",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P3415",
+      "lang": "en",
+      "text": "start period"
+    },
+    "P3417": {
+      "href": "https://www.wikidata.org/wiki/Property:P3417",
+      "lang": "ml",
+      "text": "ക്വാറ ടോപിക് ഐ.ഡി."
+    },
+    "P3430": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P3430",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P3430",
+      "lang": "en",
+      "text": "SNAC ARK ID"
+    },
+    "P3451": {
+      "href": "https://www.wikidata.org/wiki/Property:P3451",
+      "lang": "ml",
+      "text": "രാത്രികാല കാഴ്ച"
+    },
+    "P349": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P349",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P349",
+      "lang": "en",
+      "text": "NDL Authority ID"
+    },
+    "P3500": {
+      "href": "https://www.wikidata.org/wiki/Property:P3500",
+      "lang": "mul",
+      "text": "Ringgold ID"
+    },
+    "P3553": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P3553",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P3553",
+      "lang": "en",
+      "text": "Zhihu topic ID"
+    },
+    "P361": {
+      "href": "https://www.wikidata.org/wiki/Property:P361",
+      "lang": "ml",
+      "text": "ഇതിന്റെ ഭാഗം"
+    },
+    "P3629": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P3629",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P3629",
+      "lang": "en",
+      "text": "age of subject at event"
+    },
+    "P37": {
+      "href": "https://www.wikidata.org/wiki/Property:P37",
+      "lang": "ml",
+      "text": "ഔദ്യോഗിക ഭാഷ"
+    },
+    "P373": {
+      "href": "https://www.wikidata.org/wiki/Property:P373",
+      "lang": "ml",
+      "text": "കോമൺസ് വർഗ്ഗം"
+    },
+    "P374": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P374",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P374",
+      "lang": "en",
+      "text": "Insee municipality code"
+    },
+    "P3740": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P3740",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P3740",
+      "lang": "en",
+      "text": "number of works"
+    },
+    "P3744": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P3744",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P3744",
+      "lang": "en",
+      "text": "number of subscribers"
+    },
+    "P3749": {
+      "href": "https://www.wikidata.org/wiki/Property:P3749",
+      "lang": "mul",
+      "text": "Google Maps CID"
+    },
+    "P3788": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P3788",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P3788",
+      "lang": "en",
+      "text": "BNMM authority ID"
+    },
+    "P3831": {
+      "href": "https://www.wikidata.org/wiki/Property:P3831",
+      "lang": "ml",
+      "text": "പങ്ക്"
+    },
+    "P3847": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P3847",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P3847",
+      "lang": "en",
+      "text": "Open Library subject ID"
+    },
+    "P3896": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P3896",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P3896",
+      "lang": "en",
+      "text": "geoshape"
+    },
+    "P395": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P395",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P395",
+      "lang": "en",
+      "text": "vehicle registration plate code"
+    },
+    "P396": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P396",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P396",
+      "lang": "en",
+      "text": "SBN author ID"
+    },
+    "P3984": {
+      "href": "https://www.wikidata.org/wiki/Property:P3984",
+      "lang": "mul",
+      "text": "subreddit"
+    },
+    "P4004": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4004",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P4004",
+      "lang": "en",
+      "text": "escutcheon image"
+    },
+    "P402": {
+      "href": "https://www.wikidata.org/wiki/Property:P402",
+      "lang": "ml",
+      "text": "ഓപ്പൺസ്ട്രീറ്റ്മാപ്പ് റിലേഷൻ ഐഡി"
+    },
+    "P4058": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4058",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P4058",
+      "lang": "en",
+      "text": "FINESS ID"
+    },
+    "P407": {
+      "href": "https://www.wikidata.org/wiki/Property:P407",
+      "lang": "ml",
+      "text": "കൃതിയുടെ അല്ലെങ്കിൽ പേരിന്റെ ഭാഷ"
+    },
+    "P409": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P409",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P409",
+      "lang": "en",
+      "text": "Libraries Australia ID"
+    },
+    "P41": {
+      "href": "https://www.wikidata.org/wiki/Property:P41",
+      "lang": "ml",
+      "text": "പതാകയുടെ ചിത്രം"
+    },
+    "P417": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P417",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P417",
+      "lang": "en",
+      "text": "patron saint"
+    },
+    "P4173": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4173",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P4173",
+      "lang": "en",
+      "text": "Instagram location ID"
+    },
+    "P4179": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4179",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P4179",
+      "lang": "en",
+      "text": "tabular population"
+    },
+    "P4212": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4212",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P4212",
+      "lang": "en",
+      "text": "PACTOLS thesaurus ID"
+    },
+    "P4223": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4223",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P4223",
+      "lang": "en",
+      "text": "Treccani's Enciclopedia Italiana ID"
+    },
+    "P4264": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4264",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P4264",
+      "lang": "en",
+      "text": "LinkedIn company or organization ID"
+    },
+    "P4272": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4272",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P4272",
+      "lang": "en",
+      "text": "DPLA subject term"
+    },
+    "P4291": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4291",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P4291",
+      "lang": "en",
+      "text": "panoramic view"
+    },
+    "P4342": {
+      "href": "https://www.wikidata.org/wiki/Property:P4342",
+      "lang": "mul",
+      "text": "Store norske leksikon-ID"
+    },
+    "P443": {
+      "href": "https://www.wikidata.org/wiki/Property:P443",
+      "lang": "ml",
+      "text": "ഉച്ചാരണ ശബ്ദം"
+    },
+    "P4440": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4440",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P4440",
+      "lang": "en",
+      "text": "Biblioteca Nacional de México ID"
+    },
+    "P4527": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4527",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P4527",
+      "lang": "en",
+      "text": "UK Parliament thesaurus ID"
+    },
+    "P459": {
+      "href": "https://www.wikidata.org/wiki/Property:P459",
+      "lang": "ml",
+      "text": "നിർണ്ണയ രീതി"
+    },
+    "P4619": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4619",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P4619",
+      "lang": "en",
+      "text": "National Library of Brazil ID"
+    },
+    "P463": {
+      "href": "https://www.wikidata.org/wiki/Property:P463",
+      "lang": "ml",
+      "text": "എവിടെയെല്ലാം അംഗമാണ്"
+    },
+    "P4640": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4640",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P4640",
+      "lang": "en",
+      "text": "spherical panorama image"
+    },
+    "P4672": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4672",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P4672",
+      "lang": "en",
+      "text": "Early Modern Letters Online location ID"
+    },
+    "P47": {
+      "href": "https://www.wikidata.org/wiki/Property:P47",
+      "lang": "ml",
+      "text": "അതിർത്തി പങ്കിടുന്നത്"
+    },
+    "P473": {
+      "href": "https://www.wikidata.org/wiki/Property:P473",
+      "lang": "ml",
+      "text": "പ്രാദേശിക ഡയലിംഗ് കോഡ്"
+    },
+    "P4813": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4813",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P4813",
+      "lang": "en",
+      "text": "PARES ID"
+    },
+    "P486": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P486",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P486",
+      "lang": "en",
+      "text": "MeSH descriptor ID"
+    },
+    "P5008": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5008",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P5008",
+      "lang": "en",
+      "text": "on focus list of Wikimedia project"
+    },
+    "P5019": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5019",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P5019",
+      "lang": "en",
+      "text": "Brockhaus Enzyklopädie online ID"
+    },
+    "P5023": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5023",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P5023",
+      "lang": "en",
+      "text": "activity policy in this place"
+    },
+    "P5063": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5063",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P5063",
+      "lang": "en",
+      "text": "Interlingual Index ID"
+    },
+    "P5102": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5102",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P5102",
+      "lang": "en",
+      "text": "nature of statement"
+    },
+    "P518": {
+      "href": "https://www.wikidata.org/wiki/Property:P518",
+      "lang": "ml",
+      "text": "ബാധകമാകുന്ന ഭാഗം"
+    },
+    "P5185": {
+      "href": "https://www.wikidata.org/wiki/Property:P5185",
+      "lang": "ml",
+      "text": "വ്യാകരണപരമായ ലിംഗഭേദം"
+    },
+    "P5247": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5247",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P5247",
+      "lang": "en",
+      "text": "Giant Bomb ID (former scheme)"
+    },
+    "P5432": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5432",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P5432",
+      "lang": "en",
+      "text": "setlist.fm venue ID"
+    },
+    "P5436": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5436",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P5436",
+      "lang": "en",
+      "text": "number of viewers/listeners"
+    },
+    "P5551": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5551",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P5551",
+      "lang": "en",
+      "text": "Courrier international topic ID"
+    },
+    "P5573": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5573",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P5573",
+      "lang": "en",
+      "text": "archINFORM location ID"
+    },
+    "P571": {
+      "href": "https://www.wikidata.org/wiki/Property:P571",
+      "lang": "ml",
+      "text": "ഉത്പത്തി"
+    },
+    "P5737": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5737",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P5737",
+      "lang": "en",
+      "text": "Moegirlpedia ID"
+    },
+    "P577": {
+      "href": "https://www.wikidata.org/wiki/Property:P577",
+      "lang": "ml",
+      "text": "പ്രസിദ്ധീകരിച്ച തീയതി"
+    },
+    "P5785": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5785",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P5785",
+      "lang": "en",
+      "text": "EU Participant Identification Code"
+    },
+    "P580": {
+      "href": "https://www.wikidata.org/wiki/Property:P580",
+      "lang": "ml",
+      "text": "പ്രാരംഭത്തീയതി"
+    },
+    "P582": {
+      "href": "https://www.wikidata.org/wiki/Property:P582",
+      "lang": "ml",
+      "text": "സമാപനത്തീയതി"
+    },
+    "P5843": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5843",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P5843",
+      "lang": "en",
+      "text": "Gynopedia ID"
+    },
+    "P585": {
+      "href": "https://www.wikidata.org/wiki/Property:P585",
+      "lang": "ml",
+      "text": "പ്രാബല്യത്തീയതി"
+    },
+    "P5905": {
+      "href": "https://www.wikidata.org/wiki/Property:P5905",
+      "lang": "mul",
+      "text": "Comic Vine ID"
+    },
+    "P5982": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5982",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P5982",
+      "lang": "en",
+      "text": "annual number of weddings"
+    },
+    "P6": {
+      "href": "https://www.wikidata.org/wiki/Property:P6",
+      "lang": "ml",
+      "text": "ഭരണാധികാരി"
+    },
+    "P605": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P605",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P605",
+      "lang": "en",
+      "text": "NUTS code"
+    },
+    "P6058": {
+      "href": "https://www.wikidata.org/wiki/Property:P6058",
+      "lang": "mul",
+      "text": "Larousse ID"
+    },
+    "P610": {
+      "href": "https://www.wikidata.org/wiki/Property:P610",
+      "lang": "ml",
+      "text": "ഏറ്റവും ഉയരം കൂടിയ സ്ഥാനം"
+    },
+    "P6104": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P6104",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P6104",
+      "lang": "en",
+      "text": "maintained by WikiProject"
+    },
+    "P6200": {
+      "href": "https://www.wikidata.org/wiki/Property:P6200",
+      "lang": "mul",
+      "text": "BBC News topic ID"
+    },
+    "P625": {
+      "href": "https://www.wikidata.org/wiki/Property:P625",
+      "lang": "ml",
+      "text": "ഭൗമനിർദ്ദേശാങ്കങ്ങൾ"
+    },
+    "P6262": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P6262",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P6262",
+      "lang": "en",
+      "text": "Fandom article ID"
+    },
+    "P6293": {
+      "href": "https://www.wikidata.org/wiki/Property:P6293",
+      "lang": "mul",
+      "text": "YSA ID"
+    },
+    "P6385": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P6385",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P6385",
+      "lang": "en",
+      "text": "Krugosvet article (archived)"
+    },
+    "P6404": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P6404",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P6404",
+      "lang": "en",
+      "text": "Treccani's Dizionario di Storia ID"
+    },
+    "P646": {
+      "href": "https://www.wikidata.org/wiki/Property:P646",
+      "lang": "ml",
+      "text": "ഫ്രീബേസ് ഐ.ഡി."
+    },
+    "P648": {
+      "href": "https://www.wikidata.org/wiki/Property:P648",
+      "lang": "ml",
+      "text": "ഓപ്പണ്‍ ലൈബ്രറി"
+    },
+    "P6552": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P6552",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P6552",
+      "lang": "en",
+      "text": "X (Twitter) numeric user ID"
+    },
+    "P6573": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P6573",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P6573",
+      "lang": "en",
+      "text": "Klexikon article ID"
+    },
+    "P6698": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P6698",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P6698",
+      "lang": "en",
+      "text": "Japan Search name ID"
+    },
+    "P6706": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P6706",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P6706",
+      "lang": "en",
+      "text": "De Agostini ID"
+    },
+    "P672": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P672",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P672",
+      "lang": "en",
+      "text": "MeSH tree code"
+    },
+    "P6766": {
+      "href": "https://www.wikidata.org/wiki/Property:P6766",
+      "lang": "mul",
+      "text": "Who's on First ID"
+    },
+    "P6773": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P6773",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P6773",
+      "lang": "en",
+      "text": "HAL structure ID"
+    },
+    "P6821": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P6821",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P6821",
+      "lang": "en",
+      "text": "Alvin ID"
+    },
+    "P6839": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P6839",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P6839",
+      "lang": "en",
+      "text": "TV Tropes ID"
+    },
+    "P6900": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P6900",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P6900",
+      "lang": "en",
+      "text": "NicoNicoPedia ID"
+    },
+    "P691": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P691",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P691",
+      "lang": "en",
+      "text": "NL CR AUT ID"
+    },
+    "P6987": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P6987",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P6987",
+      "lang": "en",
+      "text": "Hungarian National Namespace place ID (old)"
+    },
+    "P708": {
+      "href": "https://www.wikidata.org/wiki/Property:P708",
+      "lang": "ml",
+      "text": "രൂപത"
+    },
+    "P7085": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P7085",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P7085",
+      "lang": "en",
+      "text": "TikTok username"
+    },
+    "P7108": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P7108",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P7108",
+      "lang": "en",
+      "text": "location of the point of view"
+    },
+    "P7185": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P7185",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P7185",
+      "lang": "en",
+      "text": "eska.pl topic ID"
+    },
+    "P7197": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P7197",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P7197",
+      "lang": "en",
+      "text": "OpenWeatherMap city ID"
+    },
+    "P7284": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P7284",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P7284",
+      "lang": "en",
+      "text": "The Independent topic ID"
+    },
+    "P7305": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P7305",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P7305",
+      "lang": "en",
+      "text": "Online PWN Encyclopedia ID"
+    },
+    "P7452": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P7452",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P7452",
+      "lang": "en",
+      "text": "reason for preferred rank"
+    },
+    "P7471": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P7471",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P7471",
+      "lang": "en",
+      "text": "iNaturalist place ID"
+    },
+    "P7502": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P7502",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P7502",
+      "lang": "en",
+      "text": "Golden ID (archived)"
+    },
+    "P7522": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P7522",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P7522",
+      "lang": "en",
+      "text": "SK cinema authority ID"
+    },
+    "P7562": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P7562",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P7562",
+      "lang": "en",
+      "text": "UVL group ID"
+    },
+    "P7607": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P7607",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P7607",
+      "lang": "en",
+      "text": "WikiTree category or space"
+    },
+    "P7666": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P7666",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P7666",
+      "lang": "en",
+      "text": "article ID in the Lithuanian Universal Encyclopedia Online"
+    },
+    "P7704": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P7704",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P7704",
+      "lang": "en",
+      "text": "Europeana entity"
+    },
+    "P7783": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P7783",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P7783",
+      "lang": "en",
+      "text": "J-GLOBAL ID"
+    },
+    "P7846": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P7846",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P7846",
+      "lang": "en",
+      "text": "Beta maṣāḥǝft ID"
+    },
+    "P7850": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P7850",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P7850",
+      "lang": "en",
+      "text": "Joconde location ID"
+    },
+    "P7867": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P7867",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P7867",
+      "lang": "en",
+      "text": "category for maps or plans"
+    },
+    "P7870": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P7870",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P7870",
+      "lang": "en",
+      "text": "Analysis & Policy Observatory term ID"
+    },
+    "P793": {
+      "href": "https://www.wikidata.org/wiki/Property:P793",
+      "lang": "ml",
+      "text": "പ്രധാനപ്പെട്ട സംഭവം"
+    },
+    "P7960": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P7960",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P7960",
+      "lang": "en",
+      "text": "Joconde discovery ID"
+    },
+    "P797": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P797",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P797",
+      "lang": "en",
+      "text": "authority"
+    },
+    "P805": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P805",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P805",
+      "lang": "en",
+      "text": "statement is subject of"
+    },
+    "P8119": {
+      "href": "https://www.wikidata.org/wiki/Property:P8119",
+      "lang": "mul",
+      "text": "HASC"
+    },
+    "P8136": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8136",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8136",
+      "lang": "en",
+      "text": "Il Sole 24 Ore topic ID"
+    },
+    "P8138": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8138",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8138",
+      "lang": "en",
+      "text": "located in the statistical territorial entity"
+    },
+    "P8168": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8168",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8168",
+      "lang": "en",
+      "text": "FactGrid item ID"
+    },
+    "P8179": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8179",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8179",
+      "lang": "en",
+      "text": "Canadiana Name Authority ID"
+    },
+    "P8189": {
+      "href": "https://www.wikidata.org/wiki/Property:P8189",
+      "lang": "mul",
+      "text": "J9U ID"
+    },
+    "P8217": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8217",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8217",
+      "lang": "en",
+      "text": "iDAI.gazetteer ID"
+    },
+    "P8309": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8309",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8309",
+      "lang": "en",
+      "text": "Yle topic ID"
+    },
+    "P8313": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8313",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8313",
+      "lang": "en",
+      "text": "Lex ID"
+    },
+    "P8400": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8400",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8400",
+      "lang": "en",
+      "text": "House Divided ID"
+    },
+    "P8402": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8402",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8402",
+      "lang": "en",
+      "text": "open data portal"
+    },
+    "P8406": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8406",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8406",
+      "lang": "en",
+      "text": "Grove Art Online ID"
+    },
+    "P8408": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8408",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8408",
+      "lang": "en",
+      "text": "KBpedia ID"
+    },
+    "P8419": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8419",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8419",
+      "lang": "en",
+      "text": "Archive of Our Own tag"
+    },
+    "P8422": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8422",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8422",
+      "lang": "en",
+      "text": "EHESS ID of a French commune"
+    },
+    "P8519": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8519",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8519",
+      "lang": "en",
+      "text": "RKD thesaurus ID"
+    },
+    "P854": {
+      "href": "https://www.wikidata.org/wiki/Property:P854",
+      "lang": "ml",
+      "text": "അവലംബ യൂ.ആർ.എൽ."
+    },
+    "P856": {
+      "href": "https://www.wikidata.org/wiki/Property:P856",
+      "lang": "ml",
+      "text": "ഔദ്യോഗിക വെബ്‌സൈറ്റ്"
+    },
+    "P8590": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8590",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8590",
+      "lang": "en",
+      "text": "Jewish Encyclopedia ID"
+    },
+    "P8592": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8592",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8592",
+      "lang": "en",
+      "text": "aerial view"
+    },
+    "P8593": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8593",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8593",
+      "lang": "en",
+      "text": "Hikr waypoint ID"
+    },
+    "P8630": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8630",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8630",
+      "lang": "en",
+      "text": "Thomas Jefferson Encyclopedia ID"
+    },
+    "P868": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P868",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P868",
+      "lang": "en",
+      "text": "foods traditionally associated"
+    },
+    "P8687": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8687",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8687",
+      "lang": "en",
+      "text": "social media followers"
+    },
+    "P8714": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8714",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8714",
+      "lang": "en",
+      "text": "GADM ID"
+    },
+    "P8744": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8744",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8744",
+      "lang": "en",
+      "text": "economy of topic"
+    },
+    "P8798": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8798",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8798",
+      "lang": "en",
+      "text": "for color scheme"
+    },
+    "P8814": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8814",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8814",
+      "lang": "en",
+      "text": "WordNet 3.1 Synset ID"
+    },
+    "P8885": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8885",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8885",
+      "lang": "en",
+      "text": "Namuwiki ID"
+    },
+    "P8899": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8899",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8899",
+      "lang": "en",
+      "text": "Swedish National Library Arken ID"
+    },
+    "P8974": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8974",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P8974",
+      "lang": "en",
+      "text": "SPAP ID"
+    },
+    "P898": {
+      "href": "https://www.wikidata.org/wiki/Property:P898",
+      "lang": "ml",
+      "text": "ഉച്ചാരണം (IPA)"
+    },
+    "P902": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P902",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P902",
+      "lang": "en",
+      "text": "HDS ID"
+    },
+    "P9037": {
+      "href": "https://www.wikidata.org/wiki/Property:P9037",
+      "lang": "mul",
+      "text": "BHCL-UUID"
+    },
+    "P910": {
+      "href": "https://www.wikidata.org/wiki/Property:P910",
+      "lang": "ml",
+      "text": "വിഷയത്തിന്റെ പ്രധാന വർഗ്ഗം"
+    },
+    "P9100": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9100",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9100",
+      "lang": "en",
+      "text": "GitHub topic"
+    },
+    "P9223": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9223",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9223",
+      "lang": "en",
+      "text": "Provenio UUID"
+    },
+    "P9226": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9226",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9226",
+      "lang": "en",
+      "text": "ARAE ID"
+    },
+    "P9241": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9241",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9241",
+      "lang": "en",
+      "text": "demographics of topic"
+    },
+    "P9272": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9272",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9272",
+      "lang": "en",
+      "text": "DeCS ID"
+    },
+    "P9293": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9293",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9293",
+      "lang": "en",
+      "text": "AIATSIS Place Thesaurus ID"
+    },
+    "P9314": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9314",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9314",
+      "lang": "en",
+      "text": "Latin Place Names ID"
+    },
+    "P9318": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9318",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9318",
+      "lang": "en",
+      "text": "Ávvir topic ID"
+    },
+    "P9322": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9322",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9322",
+      "lang": "en",
+      "text": "SVKKL authority ID"
+    },
+    "P9346": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9346",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9346",
+      "lang": "en",
+      "text": "France 24 topic ID (French)"
+    },
+    "P935": {
+      "href": "https://www.wikidata.org/wiki/Property:P935",
+      "lang": "ml",
+      "text": "വിക്കിമീഡിയയിലെ ചിത്രശാല"
+    },
+    "P9368": {
+      "href": "https://www.wikidata.org/wiki/Property:P9368",
+      "lang": "mul",
+      "text": "CNA topic ID"
+    },
+    "P9371": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9371",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9371",
+      "lang": "en",
+      "text": "FranceArchives agent ID"
+    },
+    "P94": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P94",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P94",
+      "lang": "en",
+      "text": "coat of arms image"
+    },
+    "P9466": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9466",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9466",
+      "lang": "en",
+      "text": "Gyldendals Teaterleksikon ID"
+    },
+    "P948": {
+      "href": "https://www.wikidata.org/wiki/Property:P948",
+      "lang": "ml",
+      "text": "പേജ് ബാനർ"
+    },
+    "P9482": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9482",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9482",
+      "lang": "en",
+      "text": "Catalogue of the General State Archives ID"
+    },
+    "P949": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P949",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P949",
+      "lang": "en",
+      "text": "National Library of Israel ID (old)"
+    },
+    "P9495": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9495",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9495",
+      "lang": "en",
+      "text": "National Historical Museums of Sweden ID"
+    },
+    "P950": {
+      "href": "https://www.wikidata.org/wiki/Property:P950",
+      "lang": "mul",
+      "text": "National Library of Spain SpMaBN ID"
+    },
+    "P9545": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9545",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9545",
+      "lang": "en",
+      "text": "Encyclopedia of China (Second Edition) ID"
+    },
+    "P9611": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9611",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9611",
+      "lang": "en",
+      "text": "district heating grid"
+    },
+    "P9629": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9629",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9629",
+      "lang": "en",
+      "text": "Armeniapedia ID"
+    },
+    "P9734": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9734",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9734",
+      "lang": "en",
+      "text": "Treccani's Enciclopedia Dantesca ID"
+    },
+    "P9757": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9757",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9757",
+      "lang": "en",
+      "text": "Schoenberg Database of Manuscripts place ID"
+    },
+    "P9809": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9809",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9809",
+      "lang": "en",
+      "text": "Enciclopedia dell'Arte Antica ID"
+    },
+    "P982": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P982",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P982",
+      "lang": "en",
+      "text": "MusicBrainz area ID"
+    },
+    "P9826": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9826",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9826",
+      "lang": "en",
+      "text": "Great Encyclopedia of Cyril and Methodius entry ID"
+    },
+    "P9850": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9850",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9850",
+      "lang": "en",
+      "text": "Enciclopedia dell'Arte Medievale ID"
+    },
+    "P9885": {
+      "href": "https://www.wikidata.org/wiki/Property:P9885",
+      "lang": "mul",
+      "text": "Bing ID"
+    },
+    "P9957": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9957",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9957",
+      "lang": "en",
+      "text": "museum-digital place ID"
+    },
+    "P9964": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9964",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9964",
+      "lang": "en",
+      "text": "Kalliope-Verbund (GND) ID"
+    },
+    "P998": {
+      "href": "https://www.wikidata.org/wiki/Property:P998",
+      "lang": "mul",
+      "text": "Curlie ID"
+    },
+    "P9983": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P9983",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P9983",
+      "lang": "en",
+      "text": "Enciclopedia dei ragazzi ID"
+    },
+    "P9984": {
+      "href": "https://www.wikidata.org/wiki/Property:P9984",
+      "lang": "mul",
+      "text": "CANTIC ID"
+    },
+    "Q101608434": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q101608434",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q101608434",
+      "lang": "en",
+      "text": "dark-on-light color scheme"
+    },
+    "Q101625": {
+      "href": "https://www.wikidata.org/wiki/Q101625",
+      "lang": "ml",
+      "text": "മരാക്കേഷ്"
+    },
+    "Q1018504": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1018504",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1018504",
+      "lang": "en",
+      "text": "Paris"
+    },
+    "Q1032646": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1032646",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1032646",
+      "lang": "en",
+      "text": "Canal de l'Ourcq"
+    },
+    "Q104197": {
+      "href": "https://www.wikidata.org/wiki/Q104197",
+      "lang": "mul",
+      "text": "Paris"
+    },
+    "Q1052584": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1052584",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1052584",
+      "lang": "en",
+      "text": "Rally for the Republic"
+    },
+    "Q105687036": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q105687036",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q105687036",
+      "lang": "en",
+      "text": "réseau de chaleur urbain CPCU"
+    },
+    "Q105740844": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q105740844",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q105740844",
+      "lang": "en",
+      "text": "Parisians"
+    },
+    "Q106577": {
+      "href": "https://www.wikidata.org/wiki/Q106577",
+      "lang": "ml",
+      "text": "ന്യൂസ്ട്രിയ"
+    },
+    "Q1066984": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1066984",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1066984",
+      "lang": "en",
+      "text": "financial center"
+    },
+    "Q107994593": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q107994593",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q107994593",
+      "lang": "en",
+      "text": "1922 Encyclopædia Britannica/Paris"
+    },
+    "Q1081225": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1081225",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1081225",
+      "lang": "en",
+      "text": "Paris metropolitan area"
+    },
+    "Q10816832": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q10816832",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q10816832",
+      "lang": "en",
+      "text": "WikiProject France"
+    },
+    "Q108178728": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q108178728",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q108178728",
+      "lang": "en",
+      "text": "national capital"
+    },
+    "Q1082222": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1082222",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1082222",
+      "lang": "en",
+      "text": "Paris unité urbaine"
+    },
+    "Q10855271": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q10855271",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q10855271",
+      "lang": "en",
+      "text": "Knight of the Legion of Honour"
+    },
+    "Q10858397": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q10858397",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q10858397",
+      "lang": "en",
+      "text": "WikiProject European Union"
+    },
+    "Q108921672": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q108921672",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q108921672",
+      "lang": "en",
+      "text": "Paris attraction area"
+    },
+    "Q109513493": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q109513493",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q109513493",
+      "lang": "en",
+      "text": "Paris"
+    },
+    "Q10981622": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q10981622",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q10981622",
+      "lang": "en",
+      "text": "Paris"
+    },
+    "Q110786": {
+      "href": "https://www.wikidata.org/wiki/Q110786",
+      "lang": "ml",
+      "text": "ഏകവചനം"
+    },
+    "Q11150178": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q11150178",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q11150178",
+      "lang": "en",
+      "text": "WikiProject French communes"
+    },
+    "Q11418818": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q11418818",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q11418818",
+      "lang": "en",
+      "text": "commercial capital city"
+    },
+    "Q1142326": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1142326",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1142326",
+      "lang": "en",
+      "text": "Seine"
+    },
+    "Q11446": {
+      "href": "https://www.wikidata.org/wiki/Q11446",
+      "lang": "ml",
+      "text": "കപ്പൽ"
+    },
+    "Q11573": {
+      "href": "https://www.wikidata.org/wiki/Q11573",
+      "lang": "ml",
+      "text": "മീറ്റർ"
+    },
+    "Q118213226": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q118213226",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q118213226",
+      "lang": "en",
+      "text": "Paris"
+    },
+    "Q1187811": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1187811",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1187811",
+      "lang": "en",
+      "text": "college town"
+    },
+    "Q1200957": {
+      "href": "https://www.wikidata.org/wiki/Q1200957",
+      "lang": "ml",
+      "text": "വിനോദസഞ്ചാര സ്ഥലം"
+    },
+    "Q120297794": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q120297794",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q120297794",
+      "lang": null,
+      "text": "Q120297794"
+    },
+    "Q1236807": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1236807",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1236807",
+      "lang": "en",
+      "text": "URL redirection"
+    },
+    "Q123694075": {
+      "href": "https://www.wikidata.org/wiki/Q123694075",
+      "lang": "mul",
+      "text": "NADD Wikidata project"
+    },
+    "Q12371988": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q12371988",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q12371988",
+      "lang": "en",
+      "text": "mayor of Paris"
+    },
+    "Q1242250": {
+      "href": "https://www.wikidata.org/wiki/Q1242250",
+      "lang": "ml",
+      "text": "റോമൻ കത്തോലിക്ക അതിരൂപത, പാരീസ്"
+    },
+    "Q124881945": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q124881945",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q124881945",
+      "lang": "en",
+      "text": "Paris Department"
+    },
+    "Q12503205": {
+      "href": "https://www.wikidata.org/wiki/Q12503205",
+      "lang": "mul",
+      "text": "Paris"
+    },
+    "Q1251239": {
+      "href": "https://www.wikidata.org/wiki/Q1251239",
+      "lang": "mul",
+      "text": "Jacques de Flesselles"
+    },
+    "Q12522114": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q12522114",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q12522114",
+      "lang": "en",
+      "text": "geography of Paris"
+    },
+    "Q12543": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q12543",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q12543",
+      "lang": "en",
+      "text": "Hauts-de-Seine"
+    },
+    "Q12761": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q12761",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q12761",
+      "lang": "en",
+      "text": "Seine-Saint-Denis"
+    },
+    "Q12788": {
+      "href": "https://www.wikidata.org/wiki/Q12788",
+      "lang": "mul",
+      "text": "Val-de-Marne"
+    },
+    "Q128903909": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q128903909",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q128903909",
+      "lang": "en",
+      "text": "Genadendal Music Archive"
+    },
+    "Q1297": {
+      "href": "https://www.wikidata.org/wiki/Q1297",
+      "lang": "ml",
+      "text": "ഷിക്കാഗോ"
+    },
+    "Q13107162": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q13107162",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q13107162",
+      "lang": "en",
+      "text": "Paris"
+    },
+    "Q131575588": {
+      "href": "https://www.wikidata.org/wiki/Q131575588",
+      "lang": "mul",
+      "text": "Saint-Denis"
+    },
+    "Q131861025": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q131861025",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q131861025",
+      "lang": "en",
+      "text": "Paris"
+    },
+    "Q133132": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q133132",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q133132",
+      "lang": "en",
+      "text": "Paris Commune"
+    },
+    "Q134445478": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q134445478",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q134445478",
+      "lang": "en",
+      "text": "cultural capital"
+    },
+    "Q135104": {
+      "href": "https://www.wikidata.org/wiki/Q135104",
+      "lang": "mul",
+      "text": "Le Kremlin-Bicêtre"
+    },
+    "Q135265": {
+      "href": "https://www.wikidata.org/wiki/Q135265",
+      "lang": "mul",
+      "text": "Issy-les-Moulineaux"
+    },
+    "Q1358886": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1358886",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1358886",
+      "lang": "en",
+      "text": "Grand Synagogue of Paris"
+    },
+    "Q135952871": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q135952871",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q135952871",
+      "lang": "en",
+      "text": "Paris"
+    },
+    "Q137412662": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q137412662",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q137412662",
+      "lang": "en",
+      "text": "Paris"
+    },
+    "Q137654208": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q137654208",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q137654208",
+      "lang": "en",
+      "text": "Meyer’s Universum, Neunzehnter Band"
+    },
+    "Q137654687": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q137654687",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q137654687",
+      "lang": "en",
+      "text": "Paris"
+    },
+    "Q137757464": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q137757464",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q137757464",
+      "lang": "en",
+      "text": "Meyer’s Universum, Zwanzigster Band"
+    },
+    "Q137757709": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q137757709",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q137757709",
+      "lang": "en",
+      "text": "Das neue Paris"
+    },
+    "Q13917": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q13917",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q13917",
+      "lang": "en",
+      "text": "Île-de-France"
+    },
+    "Q1403319": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1403319",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1403319",
+      "lang": "en",
+      "text": "list of monuments and sites in Paris"
+    },
+    "Q142": {
+      "href": "https://www.wikidata.org/wiki/Q142",
+      "lang": "ml",
+      "text": "ഫ്രാൻസ്"
+    },
+    "Q1422929": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1422929",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1422929",
+      "lang": "en",
+      "text": "primate city"
+    },
+    "Q1431547": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1431547",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1431547",
+      "lang": "en",
+      "text": "Saint-Jacques Tower"
+    },
+    "Q1435786": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1435786",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1435786",
+      "lang": "en",
+      "text": "fontaine de Jarente"
+    },
+    "Q1440664": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1440664",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1440664",
+      "lang": "en",
+      "text": "highest point of Paris"
+    },
+    "Q146246": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q146246",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q146246",
+      "lang": "en",
+      "text": "Franciaf"
+    },
+    "Q1465786": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1465786",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1465786",
+      "lang": "en",
+      "text": "Prévôt des marchands de Paris"
+    },
+    "Q146786": {
+      "href": "https://www.wikidata.org/wiki/Q146786",
+      "lang": "ml",
+      "text": "ബഹുവചനം"
+    },
+    "Q1471": {
+      "href": "https://www.wikidata.org/wiki/Q1471",
+      "lang": "ml",
+      "text": "സീൻ നദി"
+    },
+    "Q1489": {
+      "href": "https://www.wikidata.org/wiki/Q1489",
+      "lang": "ml",
+      "text": "മെക്സിക്കോ സിറ്റി"
+    },
+    "Q1490": {
+      "href": "https://www.wikidata.org/wiki/Q1490",
+      "lang": "ml",
+      "text": "ടോക്കിയോ"
+    },
+    "Q150": {
+      "href": "https://www.wikidata.org/wiki/Q150",
+      "lang": "ml",
+      "text": "ഫ്രഞ്ച് ഭാഷ"
+    },
+    "Q1524643": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1524643",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1524643",
+      "lang": "en",
+      "text": "Belleville funicular tramway"
+    },
+    "Q1549591": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1549591",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1549591",
+      "lang": "en",
+      "text": "big city"
+    },
+    "Q158119": {
+      "href": "https://www.wikidata.org/wiki/Q158119",
+      "lang": "ml",
+      "text": "റാമല്ല"
+    },
+    "Q15884832": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15884832",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q15884832",
+      "lang": "en",
+      "text": "WikiProject Paris"
+    },
+    "Q15921385": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15921385",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q15921385",
+      "lang": "en",
+      "text": "La Famille"
+    },
+    "Q15921401": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15921401",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q15921401",
+      "lang": "en",
+      "text": "La Fraternité"
+    },
+    "Q15987490": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15987490",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q15987490",
+      "lang": "en",
+      "text": "1922 Encyclopædia Britannica"
+    },
+    "Q161741": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q161741",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q161741",
+      "lang": "en",
+      "text": "1st arrondissement of Paris"
+    },
+    "Q1628773": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1628773",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1628773",
+      "lang": "en",
+      "text": "Paris"
+    },
+    "Q163948": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q163948",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q163948",
+      "lang": "en",
+      "text": "10ᵗʰ arrondissement of Paris"
+    },
+    "Q166640": {
+      "href": "https://www.wikidata.org/wiki/Q166640",
+      "lang": "mul",
+      "text": "Levallois-Perret"
+    },
+    "Q16665915": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q16665915",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q16665915",
+      "lang": "en",
+      "text": "Grand Paris"
+    },
+    "Q1684642": {
+      "href": "https://www.wikidata.org/wiki/Q1684642",
+      "lang": "mul",
+      "text": "Jean-Baptiste Fleuriot-Lescot"
+    },
+    "Q1685102": {
+      "href": "https://www.wikidata.org/wiki/Q1685102",
+      "lang": "mul",
+      "text": "Jean-Nicolas Pache"
+    },
+    "Q1685301": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1685301",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1685301",
+      "lang": "en",
+      "text": "Jean Sylvain Bailly"
+    },
+    "Q1685859": {
+      "href": "https://www.wikidata.org/wiki/Q1685859",
+      "lang": "mul",
+      "text": "Jean Tiberi"
+    },
+    "Q169293": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q169293",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q169293",
+      "lang": "en",
+      "text": "11th arrondissement of Paris"
+    },
+    "Q170972": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q170972",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q170972",
+      "lang": "en",
+      "text": "Socialist Party"
+    },
+    "Q171689": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q171689",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q171689",
+      "lang": "en",
+      "text": "12th arrondissement of Paris"
+    },
+    "Q172455": {
+      "href": "https://www.wikidata.org/wiki/Q172455",
+      "lang": "mul",
+      "text": "Boulogne-Billancourt"
+    },
+    "Q17276569": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17276569",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q17276569",
+      "lang": "en",
+      "text": "Jean-Baptiste de La Michodière"
+    },
+    "Q174844": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q174844",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q174844",
+      "lang": "en",
+      "text": "megacity"
+    },
+    "Q175129": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q175129",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q175129",
+      "lang": "en",
+      "text": "13th arrondissement of Paris"
+    },
+    "Q175999": {
+      "href": "https://www.wikidata.org/wiki/Q175999",
+      "lang": "mul",
+      "text": "Le Pré-Saint-Gervais"
+    },
+    "Q1775415": {
+      "href": "https://www.wikidata.org/wiki/Q1775415",
+      "lang": "ml",
+      "text": "സ്ത്രീലിംഗം"
+    },
+    "Q1775461": {
+      "href": "https://www.wikidata.org/wiki/Q1775461",
+      "lang": "ml",
+      "text": "നപുംസകം"
+    },
+    "Q178513": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q178513",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q178513",
+      "lang": "en",
+      "text": "Paris Bourse"
+    },
+    "Q179023": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q179023",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q179023",
+      "lang": "en",
+      "text": "French colonial empire"
+    },
+    "Q180154": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q180154",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q180154",
+      "lang": "en",
+      "text": "kilometre per hour"
+    },
+    "Q18086668": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q18086668",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q18086668",
+      "lang": "en",
+      "text": "Pavillon d'Armenonville"
+    },
+    "Q18102": {
+      "href": "https://www.wikidata.org/wiki/Q18102",
+      "lang": "mul",
+      "text": "Saint-Mandé"
+    },
+    "Q18220037": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q18220037",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q18220037",
+      "lang": "en",
+      "text": "Template:Paris"
+    },
+    "Q1860": {
+      "href": "https://www.wikidata.org/wiki/Q1860",
+      "lang": "ml",
+      "text": "ഇംഗ്ലീഷ്"
+    },
+    "Q18668319": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q18668319",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q18668319",
+      "lang": "en",
+      "text": "Category:Maps of Paris"
+    },
+    "Q187153": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q187153",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q187153",
+      "lang": "en",
+      "text": "14th arrondissement of Paris"
+    },
+    "Q189153": {
+      "href": "https://www.wikidata.org/wiki/Q189153",
+      "lang": "mul",
+      "text": "Saint-Cloud"
+    },
+    "Q1899": {
+      "href": "https://www.wikidata.org/wiki/Q1899",
+      "lang": "ml",
+      "text": "കീവ്"
+    },
+    "Q191066": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q191066",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q191066",
+      "lang": "en",
+      "text": "15th arrondissement of Paris"
+    },
+    "Q19180675": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q19180675",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q19180675",
+      "lang": "en",
+      "text": "Small Brockhaus and Efron Encyclopedic Dictionary"
+    },
+    "Q1925366": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1925366",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1925366",
+      "lang": "en",
+      "text": "coat of arms of Paris"
+    },
+    "Q193370": {
+      "href": "https://www.wikidata.org/wiki/Q193370",
+      "lang": "mul",
+      "text": "Montreuil"
+    },
+    "Q193431": {
+      "href": "https://www.wikidata.org/wiki/Q193431",
+      "lang": "mul",
+      "text": "Parc des Princes"
+    },
+    "Q193819": {
+      "href": "https://www.wikidata.org/wiki/Q193819",
+      "lang": "mul",
+      "text": "Vincennes"
+    },
+    "Q193877": {
+      "href": "https://www.wikidata.org/wiki/Q193877",
+      "lang": "mul",
+      "text": "Ivry-sur-Seine"
+    },
+    "Q193899": {
+      "href": "https://www.wikidata.org/wiki/Q193899",
+      "lang": "mul",
+      "text": "Fontenay-sous-Bois"
+    },
+    "Q193929": {
+      "href": "https://www.wikidata.org/wiki/Q193929",
+      "lang": "mul",
+      "text": "Suresnes"
+    },
+    "Q194420": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q194420",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q194420",
+      "lang": "en",
+      "text": "16th arrondissement of Paris"
+    },
+    "Q19689": {
+      "href": "https://www.wikidata.org/wiki/Q19689",
+      "lang": "ml",
+      "text": "ടിറാന"
+    },
+    "Q197297": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q197297",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q197297",
+      "lang": "en",
+      "text": "17th arrondissement of Paris"
+    },
+    "Q19832938": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q19832938",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q19832938",
+      "lang": "en",
+      "text": "hôtel Dodun"
+    },
+    "Q1986521": {
+      "href": "https://www.wikidata.org/wiki/Q1986521",
+      "lang": "mul",
+      "text": "Nicolas Chambon"
+    },
+    "Q200126": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q200126",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q200126",
+      "lang": "en",
+      "text": "18th arrondissement of Paris"
+    },
+    "Q200250": {
+      "href": "https://www.wikidata.org/wiki/Q200250",
+      "lang": "ml",
+      "text": "മെട്രോപോളിസ്"
+    },
+    "Q201610": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q201610",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q201610",
+      "lang": "en",
+      "text": "status quo"
+    },
+    "Q201982": {
+      "href": "https://www.wikidata.org/wiki/Q201982",
+      "lang": "mul",
+      "text": "Clichy"
+    },
+    "Q2041543": {
+      "href": "https://www.wikidata.org/wiki/Q2041543",
+      "lang": "mul",
+      "text": "Ottův slovník naučný"
+    },
+    "Q204622": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q204622",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q204622",
+      "lang": "en",
+      "text": "19th arrondissement of Paris"
+    },
+    "Q205632": {
+      "href": "https://www.wikidata.org/wiki/Q205632",
+      "lang": "mul",
+      "text": "Aubervilliers"
+    },
+    "Q20709367": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q20709367",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q20709367",
+      "lang": "en",
+      "text": "Paris"
+    },
+    "Q20712325": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q20712325",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q20712325",
+      "lang": "en",
+      "text": "Paris"
+    },
+    "Q207162": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q207162",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q207162",
+      "lang": "en",
+      "text": "Bourbon Restoration in France"
+    },
+    "Q207776": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q207776",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q207776",
+      "lang": "en",
+      "text": "Girondists"
+    },
+    "Q208511": {
+      "href": "https://www.wikidata.org/wiki/Q208511",
+      "lang": "ml",
+      "text": "ആഗോള നഗരം"
+    },
+    "Q208889": {
+      "href": "https://www.wikidata.org/wiki/Q208889",
+      "lang": "mul",
+      "text": "Saint-Ouen-sur-Seine"
+    },
+    "Q208943": {
+      "href": "https://www.wikidata.org/wiki/Q208943",
+      "lang": "mul",
+      "text": "Bagnolet"
+    },
+    "Q209086": {
+      "href": "https://www.wikidata.org/wiki/Q209086",
+      "lang": "mul",
+      "text": "Pantin"
+    },
+    "Q209239": {
+      "href": "https://www.wikidata.org/wiki/Q209239",
+      "lang": "mul",
+      "text": "Columba"
+    },
+    "Q209549": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q209549",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q209549",
+      "lang": "en",
+      "text": "2nd arrondissement of Paris"
+    },
+    "Q20991871": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q20991871",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q20991871",
+      "lang": null,
+      "text": "Q20991871"
+    },
+    "Q20991872": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q20991872",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q20991872",
+      "lang": null,
+      "text": "Q20991872"
+    },
+    "Q20991873": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q20991873",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q20991873",
+      "lang": null,
+      "text": "Q20991873"
+    },
+    "Q2105": {
+      "href": "https://www.wikidata.org/wiki/Q2105",
+      "lang": "mul",
+      "text": "Jacques Chirac"
+    },
+    "Q210720": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q210720",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q210720",
+      "lang": "en",
+      "text": "20th arrondissement of Paris"
+    },
+    "Q21129738": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q21129738",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q21129738",
+      "lang": "en",
+      "text": "Parisian cuisine"
+    },
+    "Q211568": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q211568",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q211568",
+      "lang": "en",
+      "text": "fleur-de-lis"
+    },
+    "Q212274": {
+      "href": "https://www.wikidata.org/wiki/Q212274",
+      "lang": "mul",
+      "text": "Nogent-sur-Marne"
+    },
+    "Q212429": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q212429",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q212429",
+      "lang": "en",
+      "text": "metropolitan France"
+    },
+    "Q212793": {
+      "href": "https://www.wikidata.org/wiki/Q212793",
+      "lang": "mul",
+      "text": "Charenton-le-Pont"
+    },
+    "Q21479779": {
+      "href": "https://www.wikidata.org/wiki/Q21479779",
+      "lang": "ml",
+      "text": "2015 നവംബറിലെ പാരീസ് ആക്രമണം"
+    },
+    "Q220": {
+      "href": "https://www.wikidata.org/wiki/Q220",
+      "lang": "ml",
+      "text": "റോം"
+    },
+    "Q22134091": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q22134091",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q22134091",
+      "lang": "en",
+      "text": "Paris"
+    },
+    "Q2219239": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q2219239",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q2219239",
+      "lang": "en",
+      "text": "Paris"
+    },
+    "Q2220917": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q2220917",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q2220917",
+      "lang": "en",
+      "text": "Paris"
+    },
+    "Q223140": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q223140",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q223140",
+      "lang": "en",
+      "text": "3rd arrondissement of Paris"
+    },
+    "Q2240381": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q2240381",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q2240381",
+      "lang": "en",
+      "text": "fashion capital"
+    },
+    "Q2246902": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q2246902",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q2246902",
+      "lang": "en",
+      "text": "demographics of Paris"
+    },
+    "Q22923920": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q22923920",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q22923920",
+      "lang": "en",
+      "text": "territorial collectivity of France with special status"
+    },
+    "Q22927616": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q22927616",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q22927616",
+      "lang": "en",
+      "text": "commune of France with specific status"
+    },
+    "Q230127": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q230127",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q230127",
+      "lang": "en",
+      "text": "4th arrondissement of Paris"
+    },
+    "Q23020118": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q23020118",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q23020118",
+      "lang": "en",
+      "text": "Moderate Republicans"
+    },
+    "Q234728": {
+      "href": "https://www.wikidata.org/wiki/Q234728",
+      "lang": "mul",
+      "text": "Vanves"
+    },
+    "Q234743": {
+      "href": "https://www.wikidata.org/wiki/Q234743",
+      "lang": "mul",
+      "text": "Puteaux"
+    },
+    "Q235863": {
+      "href": "https://www.wikidata.org/wiki/Q235863",
+      "lang": "ml",
+      "text": "ജെനിവീവ്"
+    },
+    "Q23860467": {
+      "href": "https://www.wikidata.org/wiki/Q23860467",
+      "lang": "mul",
+      "text": "Paříž"
+    },
+    "Q238723": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q238723",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q238723",
+      "lang": "en",
+      "text": "5th arrondissement of Paris"
+    },
+    "Q241021": {
+      "href": "https://www.wikidata.org/wiki/Q241021",
+      "lang": "mul",
+      "text": "Montrouge"
+    },
+    "Q243": {
+      "href": "https://www.wikidata.org/wiki/Q243",
+      "lang": "ml",
+      "text": "ഈഫൽ ഗോപുരം"
+    },
+    "Q245546": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q245546",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q245546",
+      "lang": "en",
+      "text": "6th arrondissement of Paris"
+    },
+    "Q24575431": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q24575431",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q24575431",
+      "lang": "en",
+      "text": "Alexander II"
+    },
+    "Q2482095": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q2482095",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q2482095",
+      "lang": "en",
+      "text": "fluctuat nec mergitur"
+    },
+    "Q25343": {
+      "href": "https://www.wikidata.org/wiki/Q25343",
+      "lang": "ml",
+      "text": "ചതുരശ്ര മീറ്റർ"
+    },
+    "Q253721": {
+      "href": "https://www.wikidata.org/wiki/Q253721",
+      "lang": "mul",
+      "text": "Malakoff"
+    },
+    "Q25415904": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q25415904",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q25415904",
+      "lang": null,
+      "text": "Q25415904"
+    },
+    "Q256004": {
+      "href": "https://www.wikidata.org/wiki/Q256004",
+      "lang": "mul",
+      "text": "Les Lilas"
+    },
+    "Q256294": {
+      "href": "https://www.wikidata.org/wiki/Q256294",
+      "lang": "mul",
+      "text": "Bertrand Delanoë"
+    },
+    "Q25907009": {
+      "href": "https://www.wikidata.org/wiki/Q25907009",
+      "lang": "mul",
+      "text": "Paris"
+    },
+    "Q259463": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q259463",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q259463",
+      "lang": "en",
+      "text": "7th arrondissement of Paris"
+    },
+    "Q2596877": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q2596877",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q2596877",
+      "lang": "en",
+      "text": "René Boucher"
+    },
+    "Q270230": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q270230",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q270230",
+      "lang": "en",
+      "text": "8th arrondissement of Paris"
+    },
+    "Q2727598": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q2727598",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q2727598",
+      "lang": "en",
+      "text": "Croix de guerre 1914–1918"
+    },
+    "Q274327": {
+      "href": "https://www.wikidata.org/wiki/Q274327",
+      "lang": "mul",
+      "text": "Saint-Maurice"
+    },
+    "Q2748708": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q2748708",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q2748708",
+      "lang": "en",
+      "text": "German military administration in occupied France during World War II"
+    },
+    "Q275118": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q275118",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q275118",
+      "lang": "en",
+      "text": "9th arrondissement of Paris"
+    },
+    "Q28378282": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q28378282",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q28378282",
+      "lang": "en",
+      "text": "verified account or profile"
+    },
+    "Q2851133": {
+      "href": "https://www.wikidata.org/wiki/Q2851133",
+      "lang": "mul",
+      "text": "Anne Hidalgo"
+    },
+    "Q2853511": {
+      "href": "https://www.wikidata.org/wiki/Q2853511",
+      "lang": "mul",
+      "text": "Antoine-Louis Lefebvre de Caumartin"
+    },
+    "Q2861746": {
+      "href": "https://www.wikidata.org/wiki/Q2861746",
+      "lang": "mul",
+      "text": "Armand-Jérôme Bignon"
+    },
+    "Q2863958": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q2863958",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q2863958",
+      "lang": "en",
+      "text": "arrondissement of Paris"
+    },
+    "Q289303": {
+      "href": "https://www.wikidata.org/wiki/Q289303",
+      "lang": "mul",
+      "text": "Étienne Arago"
+    },
+    "Q28962312": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q28962312",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q28962312",
+      "lang": "en",
+      "text": "often"
+    },
+    "Q2990283": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q2990283",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q2990283",
+      "lang": "en",
+      "text": "Companion of the Liberation"
+    },
+    "Q302556": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q302556",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q302556",
+      "lang": "en",
+      "text": "The Catholic Encyclopedia"
+    },
+    "Q30278109": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q30278109",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q30278109",
+      "lang": "en",
+      "text": "lowest point"
+    },
+    "Q30621726": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q30621726",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q30621726",
+      "lang": "en",
+      "text": "Paris"
+    },
+    "Q3131449": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3131449",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q3131449",
+      "lang": "en",
+      "text": "Henri Lefèvre d'Ormesson"
+    },
+    "Q3164528": {
+      "href": "https://www.wikidata.org/wiki/Q3164528",
+      "lang": "mul",
+      "text": "Jean-Baptiste de Pontcarré de Viarmes"
+    },
+    "Q316838": {
+      "href": "https://www.wikidata.org/wiki/Q316838",
+      "lang": "mul",
+      "text": "Regesta Imperii"
+    },
+    "Q3181341": {
+      "href": "https://www.wikidata.org/wiki/Q3181341",
+      "lang": "ml",
+      "text": "പാരിസ്"
+    },
+    "Q3181656": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3181656",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q3181656",
+      "lang": "en",
+      "text": "The Nuttall Encyclopædia"
+    },
+    "Q3212678": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3212678",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q3212678",
+      "lang": "en",
+      "text": "La Sainte Catherine"
+    },
+    "Q3252156": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3252156",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q3252156",
+      "lang": "en",
+      "text": "list of historic monuments in Paris"
+    },
+    "Q3260385": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3260385",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q3260385",
+      "lang": "en",
+      "text": "Louis-Basile de Bernage"
+    },
+    "Q3262481": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3262481",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q3262481",
+      "lang": "en",
+      "text": "Louis Le Peletier de Morfontaine"
+    },
+    "Q326503": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q326503",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q326503",
+      "lang": "en",
+      "text": "The Sleepers"
+    },
+    "Q3278478": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3278478",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q3278478",
+      "lang": "en",
+      "text": "municipality of Paris"
+    },
+    "Q3305306": {
+      "href": "https://www.wikidata.org/wiki/Q3305306",
+      "lang": "ml",
+      "text": "പാരിസ്"
+    },
+    "Q3365565": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3365565",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q3365565",
+      "lang": "en",
+      "text": "Paris dialect"
+    },
+    "Q3393392": {
+      "href": "https://www.wikidata.org/wiki/Q3393392",
+      "lang": "mul",
+      "text": "highest point"
+    },
+    "Q3411287": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3411287",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q3411287",
+      "lang": "en",
+      "text": "pyramid of bois de Vincennes"
+    },
+    "Q34600": {
+      "href": "https://www.wikidata.org/wiki/Q34600",
+      "lang": "ml",
+      "text": "ക്യോട്ടോ"
+    },
+    "Q3485979": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3485979",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q3485979",
+      "lang": "en",
+      "text": "Siege of Paris"
+    },
+    "Q3485984": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3485984",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q3485984",
+      "lang": "en",
+      "text": "Siege of Paris"
+    },
+    "Q369234": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q369234",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q369234",
+      "lang": "en",
+      "text": "Hôtel de Chalon-Luxembourg"
+    },
+    "Q3725832": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3725832",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q3725832",
+      "lang": "en",
+      "text": "Henry IV at the Battle of Ivry, 14 March 1590"
+    },
+    "Q3837491": {
+      "href": "https://www.wikidata.org/wiki/Q3837491",
+      "lang": "mul",
+      "text": "La Lutte de Jacob avec l’Ange"
+    },
+    "Q386991": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q386991",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q386991",
+      "lang": "en",
+      "text": "Torreón"
+    },
+    "Q397": {
+      "href": "https://www.wikidata.org/wiki/Q397",
+      "lang": "ml",
+      "text": "ലാറ്റിൻ"
+    },
+    "Q39825": {
+      "href": "https://www.wikidata.org/wiki/Q39825",
+      "lang": "ml",
+      "text": "കാനേഷുമാരി"
+    },
+    "Q40269": {
+      "href": "https://www.wikidata.org/wiki/Q40269",
+      "lang": "mul",
+      "text": "Porto Alegre"
+    },
+    "Q4114391": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q4114391",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q4114391",
+      "lang": "en",
+      "text": "Sytin Military Encyclopedia"
+    },
+    "Q4173137": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q4173137",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q4173137",
+      "lang": "en",
+      "text": "Jewish Encyclopedia of Brockhaus and Efron"
+    },
+    "Q46": {
+      "href": "https://www.wikidata.org/wiki/Q46",
+      "lang": "ml",
+      "text": "യൂറോപ്പ്"
+    },
+    "Q4676786": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q4676786",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q4676786",
+      "lang": "en",
+      "text": "deliberate murder"
+    },
+    "Q47088290": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088290",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q47088290",
+      "lang": "en",
+      "text": "masculine singular"
+    },
+    "Q47088292": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088292",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q47088292",
+      "lang": "en",
+      "text": "masculine plural"
+    },
+    "Q47088293": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088293",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q47088293",
+      "lang": "en",
+      "text": "feminine singular"
+    },
+    "Q47088295": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088295",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q47088295",
+      "lang": "en",
+      "text": "feminine plural"
+    },
+    "Q48268": {
+      "href": "https://www.wikidata.org/wiki/Q48268",
+      "lang": "ml",
+      "text": "ഇന്റർനാഷണൽ യൂണിയൻ ഫോർ ദ കൺസർവേഷൻ ഓഫ് നേച്ചർ ആൻഡ് നാച്ചുറൽ റിസോഴ്‌സ്"
+    },
+    "Q484170": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q484170",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q484170",
+      "lang": "en",
+      "text": "commune of France"
+    },
+    "Q485087": {
+      "href": "https://www.wikidata.org/wiki/Q485087",
+      "lang": "mul",
+      "text": "C40 Cities"
+    },
+    "Q48849482": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q48849482",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q48849482",
+      "lang": "en",
+      "text": "Paris"
+    },
+    "Q48958": {
+      "href": "https://www.wikidata.org/wiki/Q48958",
+      "lang": "mul",
+      "text": "Neuilly-sur-Seine"
+    },
+    "Q4916": {
+      "href": "https://www.wikidata.org/wiki/Q4916",
+      "lang": "ml",
+      "text": "യൂറോ"
+    },
+    "Q499327": {
+      "href": "https://www.wikidata.org/wiki/Q499327",
+      "lang": "ml",
+      "text": "പുല്ലിംഗം"
+    },
+    "Q51929311": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q51929311",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q51929311",
+      "lang": "en",
+      "text": "largest city"
+    },
+    "Q5286412": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q5286412",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q5286412",
+      "lang": "en",
+      "text": "do not feed the animals"
+    },
+    "Q5333743": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q5333743",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q5333743",
+      "lang": "en",
+      "text": "economy of Paris"
+    },
+    "Q537720": {
+      "href": "https://www.wikidata.org/wiki/Q537720",
+      "lang": "mul",
+      "text": "Accor Arena"
+    },
+    "Q538772": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q538772",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q538772",
+      "lang": "en",
+      "text": "Paris"
+    },
+    "Q5460604": {
+      "href": "https://www.wikidata.org/wiki/Q5460604",
+      "lang": "ml",
+      "text": "വിക്കിപീഡിയ:സുപ്രധാന ലേഖനങ്ങൾ"
+    },
+    "Q5497514": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q5497514",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q5497514",
+      "lang": "en",
+      "text": "WikiProject Cities"
+    },
+    "Q5626403": {
+      "href": "https://www.wikidata.org/wiki/Q5626403",
+      "lang": "ml",
+      "text": "വർഗ്ഗം:പാരിസ്"
+    },
+    "Q570116": {
+      "href": "https://www.wikidata.org/wiki/Q570116",
+      "lang": "ml",
+      "text": "വിനോദസഞ്ചാര കേന്ദ്രം"
+    },
+    "Q576584": {
+      "href": "https://www.wikidata.org/wiki/Q576584",
+      "lang": "ml",
+      "text": "പാരിസ്"
+    },
+    "Q58296": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q58296",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q58296",
+      "lang": "en",
+      "text": "French First Republic"
+    },
+    "Q58326": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q58326",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q58326",
+      "lang": "en",
+      "text": "French Second Republic"
+    },
+    "Q601266": {
+      "href": "https://www.wikidata.org/wiki/Q601266",
+      "lang": "mul",
+      "text": "Louis-Antoine Garnier-Pagès"
+    },
+    "Q602358": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q602358",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q602358",
+      "lang": "en",
+      "text": "Brockhaus and Efron Encyclopedic Dictionary"
+    },
+    "Q609134": {
+      "href": "https://www.wikidata.org/wiki/Q609134",
+      "lang": "mul",
+      "text": "Joinville-le-Pont"
+    },
+    "Q61": {
+      "href": "https://www.wikidata.org/wiki/Q61",
+      "lang": "ml",
+      "text": "വാഷിങ്ടൺ ഡി.സി"
+    },
+    "Q612": {
+      "href": "https://www.wikidata.org/wiki/Q612",
+      "lang": "ml",
+      "text": "ദുബായ്"
+    },
+    "Q6173448": {
+      "href": "https://www.wikidata.org/wiki/Q6173448",
+      "lang": "ml",
+      "text": "വിക്കിപീഡിയ:സുപ്രധാന ലേഖനങ്ങൾ/നില/4"
+    },
+    "Q62": {
+      "href": "https://www.wikidata.org/wiki/Q62",
+      "lang": "ml",
+      "text": "സാൻ ഫ്രാൻസിസ്കോ"
+    },
+    "Q64": {
+      "href": "https://www.wikidata.org/wiki/Q64",
+      "lang": "ml",
+      "text": "ബെർലിൻ"
+    },
+    "Q640102": {
+      "href": "https://www.wikidata.org/wiki/Q640102",
+      "lang": "mul",
+      "text": "Gentilly"
+    },
+    "Q64281962": {
+      "href": "https://www.wikidata.org/wiki/Q64281962",
+      "lang": "mul",
+      "text": "Emmanuel Grégoire"
+    },
+    "Q64436": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q64436",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q64436",
+      "lang": "en",
+      "text": "Arc de Triomphe"
+    },
+    "Q6465": {
+      "href": "https://www.wikidata.org/wiki/Q6465",
+      "lang": "ml",
+      "text": "ഫ്രാൻസിലെ വകുപ്പ്"
+    },
+    "Q6534": {
+      "href": "https://www.wikidata.org/wiki/Q6534",
+      "lang": "ml",
+      "text": "ഫ്രഞ്ച് വിപ്ലവം"
+    },
+    "Q656": {
+      "href": "https://www.wikidata.org/wiki/Q656",
+      "lang": "ml",
+      "text": "സെന്റ് പീറ്റേഴ്സ്ബർഗ്"
+    },
+    "Q656015": {
+      "href": "https://www.wikidata.org/wiki/Q656015",
+      "lang": "mul",
+      "text": "Philibert Borie"
+    },
+    "Q656902": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q656902",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q656902",
+      "lang": "en",
+      "text": "Parisii"
+    },
+    "Q6581072": {
+      "href": "https://www.wikidata.org/wiki/Q6581072",
+      "lang": "ml",
+      "text": "സ്ത്രീ"
+    },
+    "Q6581097": {
+      "href": "https://www.wikidata.org/wiki/Q6581097",
+      "lang": "ml",
+      "text": "പുരുഷൻ"
+    },
+    "Q659058": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q659058",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q659058",
+      "lang": "en",
+      "text": "flag of Paris"
+    },
+    "Q670499": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q670499",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q670499",
+      "lang": "en",
+      "text": "Stade Jean-Bouin"
+    },
+    "Q67652870": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q67652870",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q67652870",
+      "lang": "en",
+      "text": "World Tourism Cities Federation"
+    },
+    "Q677730": {
+      "href": "https://www.wikidata.org/wiki/Q677730",
+      "lang": "mul",
+      "text": "Armand Marrast"
+    },
+    "Q679388": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q679388",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q679388",
+      "lang": "en",
+      "text": "municipal arrondissement of Paris"
+    },
+    "Q690489": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q690489",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q690489",
+      "lang": "en",
+      "text": "Siege of Paris"
+    },
+    "Q6907702": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q6907702",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q6907702",
+      "lang": "en",
+      "text": "WikiProject World Heritage Sites"
+    },
+    "Q69808": {
+      "href": "https://www.wikidata.org/wiki/Q69808",
+      "lang": "ml",
+      "text": "വിഷി ഫ്രാൻസ്"
+    },
+    "Q69829": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q69829",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q69829",
+      "lang": "en",
+      "text": "French Fourth Republic"
+    },
+    "Q7016": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q7016",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q7016",
+      "lang": "en",
+      "text": "17th century"
+    },
+    "Q70972": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q70972",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q70972",
+      "lang": "en",
+      "text": "Kingdom of France"
+    },
+    "Q71084": {
+      "href": "https://www.wikidata.org/wiki/Q71084",
+      "lang": "mul",
+      "text": "Premier Empire"
+    },
+    "Q71092": {
+      "href": "https://www.wikidata.org/wiki/Q71092",
+      "lang": "mul",
+      "text": "Second Empire"
+    },
+    "Q712226": {
+      "href": "https://www.wikidata.org/wiki/Q712226",
+      "lang": "ml",
+      "text": "ചതുരശ്ര കിലോമീറ്റർ"
+    },
+    "Q7137161": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q7137161",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q7137161",
+      "lang": "en",
+      "text": "Paris"
+    },
+    "Q7137164": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q7137164",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q7137164",
+      "lang": "en",
+      "text": "Paris"
+    },
+    "Q7137165": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q7137165",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q7137165",
+      "lang": "en",
+      "text": "Paris"
+    },
+    "Q7137172": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q7137172",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q7137172",
+      "lang": "en",
+      "text": "Paris"
+    },
+    "Q7137175": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q7137175",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q7137175",
+      "lang": "en",
+      "text": "Paris"
+    },
+    "Q7137193": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q7137193",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q7137193",
+      "lang": "en",
+      "text": "Paris"
+    },
+    "Q7137363": {
+      "href": "https://www.wikidata.org/wiki/Q7137363",
+      "lang": "mul",
+      "text": "Paris Township"
+    },
+    "Q71536244": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q71536244",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q71536244",
+      "lang": "en",
+      "text": "currently valid value"
+    },
+    "Q775994": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q775994",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q775994",
+      "lang": "en",
+      "text": "Council of Paris"
+    },
+    "Q796919": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q796919",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q796919",
+      "lang": "en",
+      "text": "resignation"
+    },
+    "Q7977477": {
+      "href": "https://www.wikidata.org/wiki/Q7977477",
+      "lang": "ml",
+      "text": "Category:Burials in Paris by place"
+    },
+    "Q7981358": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q7981358",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q7981358",
+      "lang": "en",
+      "text": "Category:Honorary citizens of Paris"
+    },
+    "Q79917": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q79917",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q79917",
+      "lang": "en",
+      "text": "Paris"
+    },
+    "Q8088": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q8088",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q8088",
+      "lang": "en",
+      "text": "1900 Summer Olympics"
+    },
+    "Q810526": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q810526",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q810526",
+      "lang": "en",
+      "text": "Bassin de la Villette"
+    },
+    "Q8132": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q8132",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q8132",
+      "lang": "en",
+      "text": "1924 Summer Olympics"
+    },
+    "Q820122": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q820122",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q820122",
+      "lang": "en",
+      "text": "The Mountain"
+    },
+    "Q8253667": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q8253667",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q8253667",
+      "lang": "en",
+      "text": "Portal:Paris"
+    },
+    "Q830149": {
+      "href": "https://www.wikidata.org/wiki/Q830149",
+      "lang": "ml",
+      "text": "പാരിസ്, ടെക്സാസ്"
+    },
+    "Q845625": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q845625",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q845625",
+      "lang": "en",
+      "text": "history of Paris"
+    },
+    "Q8458184": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q8458184",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q8458184",
+      "lang": "en",
+      "text": "Category:Films shot in Paris"
+    },
+    "Q84641281": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q84641281",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q84641281",
+      "lang": "en",
+      "text": "1911 Encyclopædia Britannica/Paris"
+    },
+    "Q85": {
+      "href": "https://www.wikidata.org/wiki/Q85",
+      "lang": "ml",
+      "text": "കെയ്റോ"
+    },
+    "Q860172": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q860172",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q860172",
+      "lang": "en",
+      "text": "Canal Saint-Martin"
+    },
+    "Q867541": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q867541",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q867541",
+      "lang": "en",
+      "text": "Encyclopædia Britannica 11th edition"
+    },
+    "Q8684": {
+      "href": "https://www.wikidata.org/wiki/Q8684",
+      "lang": "ml",
+      "text": "സോൾ"
+    },
+    "Q88521107": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q88521107",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q88521107",
+      "lang": "en",
+      "text": "zone de défense et de sécurité de Paris"
+    },
+    "Q8964470": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q8964470",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q8964470",
+      "lang": "en",
+      "text": "Category:People from Paris"
+    },
+    "Q90": {
+      "description": {
+        "lang": "ml",
+        "text": "ഫ്രാന്‍സിലെ നഗരം"
+      },
+      "href": "https://www.wikidata.org/wiki/Q90",
+      "lang": "ml",
+      "text": "പാരിസ്"
+    },
+    "Q91013007": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q91013007",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q91013007",
+      "lang": "en",
+      "text": "mainly"
+    },
+    "Q9226347": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q9226347",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q9226347",
+      "lang": "en",
+      "text": "Category:Births in Paris"
+    },
+    "Q934294": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q934294",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q934294",
+      "lang": "en",
+      "text": "Paris"
+    },
+    "Q9383972": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q9383972",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q9383972",
+      "lang": "en",
+      "text": "League of Historical Cities"
+    },
+    "Q947901": {
+      "href": "https://www.wikidata.org/wiki/Q947901",
+      "lang": "mul",
+      "text": "Jérôme Pétion de Villeneuve"
+    },
+    "Q956": {
+      "href": "https://www.wikidata.org/wiki/Q956",
+      "lang": "ml",
+      "text": "ബെയ്‌ജിങ്ങ്‌"
+    },
+    "Q959708": {
+      "href": "https://www.wikidata.org/wiki/Q959708",
+      "lang": "mul",
+      "text": "Jules Ferry"
+    },
+    "Q960025": {
+      "href": "https://www.wikidata.org/wiki/Q960025",
+      "lang": "ml",
+      "text": "പാരിസ്"
+    },
+    "Q96746729": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q96746729",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q96746729",
+      "lang": "en",
+      "text": "Paris Centre"
+    },
+    "Q97064103": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q97064103",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q97064103",
+      "lang": "en",
+      "text": "opendata.paris.fr"
+    },
+    "Q974043": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q974043",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q974043",
+      "lang": "en",
+      "text": "Paris"
+    },
+    "Q984459": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q984459",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q984459",
+      "lang": "en",
+      "text": "Paris"
+    },
+    "Q9846779": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q9846779",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q9846779",
+      "lang": "en",
+      "text": "Category:Deaths in Paris"
+    },
+    "Q99223443": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q99223443",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q99223443",
+      "lang": "en",
+      "text": "Catholic Encyclopedia (1913)/Paris"
+    },
+    "Q994": {
+      "href": "https://www.wikidata.org/wiki/Q994",
+      "lang": "ml",
+      "text": "റ്റ്ബിലിസി"
+    },
+    "Q995653": {
+      "href": "https://www.wikidata.org/wiki/Q995653",
+      "lang": "ml",
+      "text": "ഒളിമ്പിക്സ് 2024 (പാരീസ്)"
+    }
+  },
+  "lang": "ml",
+  "lead": {
+    "host": "ml.wikipedia.org",
+    "lang": "ml",
+    "local": true,
+    "more": [
+      "ലോകത്തിലെ ഏറ്റവും പ്രശസ്തമായ വിനോദസഞ്ചാര കേന്ദ്രമാണ് പാരിസ്. വർഷംതോറും ഏകദേശം 3 കോടി വിദേശ വിനോദസഞ്ചാരികളാണ് ഇവിടെയെത്തുന്നത്.",
+      "1900, 1924 എന്നീ വർഷങ്ങളിലെ <a href=\"https://ml.wikipedia.org/wiki/%E0%B4%92%E0%B4%B3%E0%B4%BF%E0%B4%AE%E0%B5%8D%E0%B4%AA%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%B8%E0%B5%8D\">ഒളിമ്പിക്സ്</a> മൽസരങ്ങൾ ഇവിടെയാണ്‌ നടത്തപ്പെട്ടത്"
+    ],
+    "paragraphs": [
+      "<a href=\"https://ml.wikipedia.org/wiki/%E0%B4%AB%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B5%BB%E0%B4%B8%E0%B5%8D\">ഫ്രാൻസിന്റെ</a> തലസ്ഥാന നഗരമാണ് <b>പാരിസ്</b>. ഫ്രഞ്ചു ഉച്ചാരണം പാരി(paʁi ). വടക്കൻ ഫ്രാൻസിലെ <a href=\"https://ml.wikipedia.org/wiki/%E0%B4%B8%E0%B5%80%E0%B5%BB_%E0%B4%A8%E0%B4%A6%E0%B4%BF\">സീൻ നദിയുടെ</a>(സെയിൻ എന്നും പറയും) തീരത്ത് ഇൽ-ഡി-ഫ്രാൻസ് പ്രദേശത്തിന്റെ ഹൃദയഭാഗത്തായാണ് ഈ നഗരം സ്ഥിതി ചെയ്യുന്നത്.  പ്രണയത്തിന്റേയും കലാസാഹിത്യങ്ങളുടേയും കേന്ദ്രസ്ഥാനമായി  പാരിസ് അറിയപ്പെടുന്നു.  പാരിസ് നഗരത്തിന്റെ ഭൂമിശാസ്ത്രപരമായ ഭരണപരിധിക്ക്  <a href=\"https://ml.wikipedia.org/wiki/1860\">1860ന്</a> ശേഷം കാര്യമായ മാറ്റം വന്നിട്ടില്ല. പാരിസ് നഗരത്തിന്റെ വിസ്തീർണം 105.4 ചതുരശ്ര കിലോമീറ്ററാണ്. 2014 ജനവരിയിലെ  കണക്കു പ്രകാരം  പാരിസ് നഗരത്തിലെ ജനസംഖ്യ 2,241,246 ആണ്..    ബൃഹദ് പാരിസ് നഗരത്തിന്റെ  വിസ്തീർണം 2844 ചതുരശ്രകിലോമീറ്റർ;ജനസംഖ്യ 12,005,077   അതിനുമപ്പുറം വ്യാപിച്ചു കിടക്കുന്ന പരിസരപ്രദേശങ്ങൾ കൂടി ഉൾക്കൊള്ളുന്ന  മെട്രോപോലിറ്റൻ പാരിസ്   <a href=\"https://ml.wikipedia.org/wiki/%E0%B4%AF%E0%B5%82%E0%B4%B1%E0%B5%8B%E0%B4%AA%E0%B5%8D\">യൂറോപ്പിലെ</a> ഏറ്റവും ജനസംഖ്യയുള്ള മെട്രോപൊളിറ്റൻ പ്രദേശങ്ങളിലൊന്നാണ്. \nഇന്ന് ലോകത്തിലെ ഒരു പ്രധാന <a href=\"https://ml.wikipedia.org/wiki/%E0%B4%B5%E0%B5%8D%E0%B4%AF%E0%B4%BE%E0%B4%AA%E0%B4%BE%E0%B4%B0%E0%B4%82\">വ്യാപാര</a>, <a href=\"https://ml.wikipedia.org/wiki/%E0%B4%B8%E0%B4%82%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%B0%E0%B4%82\">സാംസ്കാരിക</a> കേന്ദ്രമാണ് പാരിസ്. <a href=\"https://ml.wikipedia.org/wiki/%E0%B4%B0%E0%B4%BE%E0%B4%B7%E0%B5%8D%E0%B4%9F%E0%B5%8D%E0%B4%B0%E0%B5%80%E0%B4%AF%E0%B4%82\">രാഷ്ട്രീയം</a>, <a href=\"https://ml.wikipedia.org/wiki/%E0%B4%B5%E0%B4%BF%E0%B4%A6%E0%B5%8D%E0%B4%AF%E0%B4%BE%E0%B4%AD%E0%B5%8D%E0%B4%AF%E0%B4%BE%E0%B4%B8%E0%B4%82\">വിദ്യാഭ്യാസം</a>, <a href=\"https://ml.wikipedia.org/wiki/%E0%B4%B5%E0%B4%BF%E0%B4%A8%E0%B5%8B%E0%B4%A6%E0%B4%82\">വിനോദം</a>, വാർത്താമാദ്ധ്യമം, <a href=\"https://ml.wikipedia.org/wiki/%E0%B4%AB%E0%B4%BE%E0%B4%B7%E0%B5%BB\">ഫാഷൻ</a>, <a href=\"https://ml.wikipedia.org/wiki/%E0%B4%B6%E0%B4%BE%E0%B4%B8%E0%B5%8D%E0%B4%A4%E0%B5%8D%E0%B4%B0%E0%B4%82\">ശാസ്ത്രം</a> എന്നീ രംഗങ്ങളിൽ പാരിസ് ചെലുത്തുന്ന സ്വാധീനം അതിനെ ലോകത്തിലെ ഏറ്റവും പ്രധാനപ്പെട്ട ആഗോള നഗരങ്ങളിലൊന്നാക്കിയിരിക്കുന്നു. ഫോർച്ചുൺ മാസിക പുറത്തിറക്കിയ ഫോർച്ചുൺ ഗ്ലോബൽ 500 പട്ടികയിലുള്ള 36 കമ്പനികൾ പാരിസ് പ്രദേശം ആസ്ഥാനമാക്കി പ്രവർത്തിക്കുന്നു. <a href=\"https://ml.wikipedia.org/wiki/%E0%B4%AF%E0%B5%81%E0%B4%A8%E0%B5%86%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8B\">യുനെസ്കോ</a>, ഒഇസിഡി, ഐസിസി തുടങ്ങിയ അന്താരാഷ്ട്ര സംഘടനകളും പാരിസ് കേന്ദ്രമാക്കി പ്രവർത്തിക്കുന്നുണ്ട്."
+    ],
+    "url": "https://ml.wikipedia.org/wiki/%E0%B4%AA%E0%B4%BE%E0%B4%B0%E0%B4%BF%E0%B4%B8%E0%B5%8D"
+  },
+  "locale": "ml",
+  "messages": {
+    "qrender-add-label": "Add a label in your language",
+    "qrender-age": "aged $1",
+    "qrender-bce": "$1 BCE",
+    "qrender-close": "Close",
+    "qrender-credit": "Credit",
+    "qrender-edit": "Edit",
+    "qrender-search": "Search Wikipedia",
+    "qrender-some-value": "unknown value"
+  },
+  "page_images": {
+    "Q10981622": {
+      "aspect": 0.8778,
+      "credit": {
+        "artist": "User:Nyttend",
+        "license": "Public domain"
+      },
+      "file": "OHMap-doton-Paris.png",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q1142326": {
+      "aspect": 1.0723,
+      "credit": {
+        "artist": "Gundan",
+        "license": "CC BY-SA 4.0"
+      },
+      "file": "Département de la Seine avant-après 1860.png",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q12522114": {
+      "aspect": 1.1921,
+      "credit": {
+        "artist": "Copernicus Sentinel-2, ESA",
+        "license": "CC BY-SA 3.0 igo"
+      },
+      "file": "Paris by Sentinel-2.jpg",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q1403319": {
+      "aspect": 1.4147,
+      "credit": {
+        "artist": "Tripomatic.com",
+        "license": "CC BY-SA 3.0"
+      },
+      "file": "Paris printable tourist attractions map.jpg",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q146246": {
+      "aspect": 1.5644,
+      "credit": {
+        "artist": "No machine-readable author provided. Roke~commonswiki assumed (based on copyright claims).",
+        "license": "CC BY-SA 3.0"
+      },
+      "file": "Franks expansion.gif",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q207162": {
+      "aspect": 1.5,
+      "credit": {
+        "artist": "Sodacan",
+        "license": "CC BY-SA 4.0"
+      },
+      "file": "Royal flag of France during the Bourbon Restoration.svg",
+      "from": "en.wikipedia.org",
+      "kind": "drawing"
+    },
+    "Q212429": {
+      "aspect": 0.9288,
+      "credit": {
+        "artist": "",
+        "license": "Public domain"
+      },
+      "file": "Fr-map.png",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q22134091": {
+      "aspect": 1.5,
+      "credit": {
+        "artist": "U.S. Army Corps of Engineers from USA",
+        "license": "Public domain"
+      },
+      "file": "Ice rescue at Corps' M.J. Kirwan Dam (5281899788).jpg",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q2219239": {
+      "aspect": 0.7782,
+      "credit": {
+        "artist": "AEtheEditor",
+        "license": "CC0"
+      },
+      "file": "WI; Grant County Map; Town of Paris.png",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q2220917": {
+      "aspect": 2.049,
+      "credit": {
+        "artist": "AEtheEditor",
+        "license": "CC0"
+      },
+      "file": "WI; Kenosha County Map; Town of Paris.png",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q2482095": {
+      "aspect": 0.707,
+      "credit": {
+        "artist": "RaphaëlMignon",
+        "license": "CC BY 4.0"
+      },
+      "file": "Armoiries de la ville de Paris (1949).svg",
+      "from": "en.wikipedia.org",
+      "kind": "drawing"
+    },
+    "Q2863958": {
+      "aspect": 1.3729,
+      "credit": {
+        "artist": "Tschubby",
+        "license": "CC BY-SA 3.0"
+      },
+      "file": "Locator map of Departement Paris 2019.png",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q3252156": {
+      "aspect": 1.5056,
+      "credit": {
+        "artist": "Kimberly Vardeman .",
+        "license": "CC BY 2.0"
+      },
+      "file": "Pavillon de Flore from Tuileries, Paris October 2011 001.jpg",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q48849482": {
+      "aspect": 1.1964,
+      "credit": {
+        "artist": "Designed and published by the Kansas Department of Transportation.",
+        "license": "Public domain"
+      },
+      "file": "Map of Lincoln Co, Ks, USA.png",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q538772": {
+      "aspect": 1.3332,
+      "credit": {
+        "artist": "Mr. Matté (if there is an issue with this image, contact me using this image's Commons talk page , my Commons user talk page , or my English Wikipedia user talk page ; I'll know about it a lot faster)",
+        "license": "CC BY-SA 4.0"
+      },
+      "file": "NY 12 nb starting descent to New Hartford, July 2023.jpg",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q58326": {
+      "aspect": 1.5,
+      "credit": {
+        "artist": "https://commons.wikimedia.org/wiki/File:Flag_of_France.svg , https://diffusion.shom.fr/pro/downloadable/download/sample/sample_id/73/ , https://www.gouvernement.fr/charte/charte-graphique-les-fondamentaux/les-couleurs , User:Anomie , User:MSGJ , User:SKopp",
+        "license": "PD"
+      },
+      "file": "Flag of France.svg",
+      "from": "en.wikipedia.org",
+      "kind": "drawing"
+    },
+    "Q71092": {
+      "aspect": 1.5,
+      "credit": {
+        "artist": "https://commons.wikimedia.org/wiki/File:Flag_of_France.svg , https://diffusion.shom.fr/pro/downloadable/download/sample/sample_id/73/ , https://www.gouvernement.fr/charte/charte-graphique-les-fondamentaux/les-couleurs , User:Anomie , User:MSGJ , User:SKopp",
+        "license": "PD"
+      },
+      "file": "Flag of France.svg",
+      "from": "en.wikipedia.org",
+      "kind": "drawing"
+    },
+    "Q845625": {
+      "aspect": 1.4888,
+      "credit": {
+        "artist": "Limbourg Brothers",
+        "license": "Public domain"
+      },
+      "file": "Palais de la Cite.jpg",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    }
+  },
+  "page_title": "പാരിസ്",
+  "projects": [
+    {
+      "count": 290,
+      "local": true,
+      "name": "wikipedia"
+    },
+    {
+      "count": 28,
+      "local": false,
+      "name": "wikiquote"
+    },
+    {
+      "count": 25,
+      "local": false,
+      "name": "wikivoyage"
+    },
+    {
+      "count": 21,
+      "local": false,
+      "name": "wikinews"
+    },
+    {
+      "count": 1,
+      "local": false,
+      "name": "wikisource"
+    }
+  ],
+  "qid": "Q90",
+  "schema": "view/0.2",
+  "spreads": [
+    {
+      "id": "identity",
+      "prose_links": [],
+      "prose_text": null,
+      "title": null
+    },
+    {
+      "id": "location",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q2221906",
+        "lang": "ml",
+        "text": "ഭൂസ്ഥാനം"
+      }
+    },
+    {
+      "id": "names",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "fallback": true,
+        "href": "https://www.wikidata.org/wiki/Q82799",
+        "lang": "en",
+        "text": "name"
+      }
+    },
+    {
+      "id": "government",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q7188",
+        "lang": "ml",
+        "text": "സർക്കാർ"
+      }
+    },
+    {
+      "id": "demography",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q37732",
+        "lang": "ml",
+        "text": "ജനസംഖ്യാപഠനം"
+      }
+    },
+    {
+      "id": "economy",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q159810",
+        "lang": "ml",
+        "text": "സമ്പദ്ഘടന"
+      }
+    },
+    {
+      "id": "connections",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "fallback": true,
+        "href": "https://www.wikidata.org/wiki/Q930933",
+        "lang": "en",
+        "text": "relation"
+      }
+    },
+    {
+      "id": "history",
+      "prose_links": [
+        {
+          "href": "https://ml.wikipedia.org/wiki/%E0%B4%AA%E0%B4%BE%E0%B4%B0%E0%B4%BF%E0%B4%B8%E0%B5%8D#ചരിത്രം",
+          "lang": "ml",
+          "text": "ചരിത്രം"
+        }
+      ],
+      "prose_text": {
+        "href": "https://ml.wikipedia.org/wiki/%E0%B4%AA%E0%B4%BE%E0%B4%B0%E0%B4%BF%E0%B4%B8%E0%B5%8D#ചരിത്രം",
+        "html": "ക്രിസ്തുവിന് മുമ്പ് മൂന്നാം ശതകത്തിൽ പാരിസി എന്ന ഗാൾ  വംശജർ സെയിൻ നദിയിലെ ഇന്ന് ഇൽ ഡിലാസിറ്റി എന്നറിയപ്പെടുന്ന കൊച്ചു ദ്വീപിൽ  താമസമുറപ്പിച്ചതായും ആ ജനപഥം പിന്നീട്  പാരിസ് എന്ന പേരിലറിയപ്പെട്ടതായും പറയപ്പെടുന്നു",
+        "lang": "ml",
+        "local": true,
+        "title": "ചരിത്രം"
+      },
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q309",
+        "lang": "ml",
+        "text": "ചരിത്രം"
+      }
+    },
+    {
+      "id": "media",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q131765",
+        "lang": "ml",
+        "text": "മൾട്ടിമീഡിയ"
+      }
+    },
+    {
+      "id": "more",
+      "prose_links": [],
+      "prose_text": null,
+      "title": null
+    },
+    {
+      "id": "evidence",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q121769",
+        "lang": "ml",
+        "text": "അവലംബം"
+      }
+    }
+  ],
+  "unmatched_sections": [
+    {
+      "href": "https://ml.wikipedia.org/wiki/%E0%B4%AA%E0%B4%BE%E0%B4%B0%E0%B4%BF%E0%B4%B8%E0%B5%8D#നഗരം_ഇന്ന്",
+      "lang": "ml",
+      "text": "നഗരം ഇന്ന്"
+    },
+    {
+      "href": "https://ml.wikipedia.org/wiki/%E0%B4%AA%E0%B4%BE%E0%B4%B0%E0%B4%BF%E0%B4%B8%E0%B5%8D#ചിത്രശാല",
+      "lang": "ml",
+      "text": "ചിത്രശാല"
+    }
+  ]
+}

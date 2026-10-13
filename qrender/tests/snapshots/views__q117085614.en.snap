@@ -1,0 +1,2214 @@
+---
+source: qrender/tests/views.rs
+expression: json
+---
+{
+  "composition": "composition/0.3",
+  "coverage": {
+    "have": 254,
+    "total": 255
+  },
+  "design": "design/0.2",
+  "dir": "ltr",
+  "labels": {
+    "P10045": {
+      "href": "https://www.wikidata.org/wiki/Property:P10045",
+      "lang": "en",
+      "text": "Vokrug.tv show ID"
+    },
+    "P10100": {
+      "href": "https://www.wikidata.org/wiki/Property:P10100",
+      "lang": "en",
+      "text": "SensCritique work ID"
+    },
+    "P10167": {
+      "href": "https://www.wikidata.org/wiki/Property:P10167",
+      "lang": "en",
+      "text": "Kinobaza film ID"
+    },
+    "P10255": {
+      "href": "https://www.wikidata.org/wiki/Property:P10255",
+      "lang": "en",
+      "text": "oKino.ua film ID"
+    },
+    "P10267": {
+      "href": "https://www.wikidata.org/wiki/Property:P10267",
+      "lang": "en",
+      "text": "Kinofilms.ua film ID"
+    },
+    "P10269": {
+      "href": "https://www.wikidata.org/wiki/Property:P10269",
+      "lang": "en",
+      "text": "kino-teatr.ru film ID"
+    },
+    "P10303": {
+      "href": "https://www.wikidata.org/wiki/Property:P10303",
+      "lang": "en",
+      "text": "Film.ru film ID"
+    },
+    "P1040": {
+      "href": "https://www.wikidata.org/wiki/Property:P1040",
+      "lang": "en",
+      "text": "film editor"
+    },
+    "P10454": {
+      "href": "https://www.wikidata.org/wiki/Property:P10454",
+      "lang": "en",
+      "text": "CineCartaz film ID"
+    },
+    "P10821": {
+      "href": "https://www.wikidata.org/wiki/Property:P10821",
+      "lang": "en",
+      "text": "Kino.mail.ru film ID"
+    },
+    "P11346": {
+      "href": "https://www.wikidata.org/wiki/Property:P11346",
+      "lang": "en",
+      "text": "Cinematografo.it film ID (new)"
+    },
+    "P11460": {
+      "href": "https://www.wikidata.org/wiki/Property:P11460",
+      "lang": "en",
+      "text": "Plex media key"
+    },
+    "P11598": {
+      "href": "https://www.wikidata.org/wiki/Property:P11598",
+      "lang": "en",
+      "text": "Rate Your Music film ID"
+    },
+    "P12096": {
+      "href": "https://www.wikidata.org/wiki/Property:P12096",
+      "lang": "en",
+      "text": "Kinobox film ID"
+    },
+    "P12196": {
+      "href": "https://www.wikidata.org/wiki/Property:P12196",
+      "lang": "en",
+      "text": "TheTVDB movie ID"
+    },
+    "P12241": {
+      "href": "https://www.wikidata.org/wiki/Property:P12241",
+      "lang": "en",
+      "text": "Schnittberichte.com title ID"
+    },
+    "P12320": {
+      "href": "https://www.wikidata.org/wiki/Property:P12320",
+      "lang": "en",
+      "text": "Moviebuff ID"
+    },
+    "P12492": {
+      "href": "https://www.wikidata.org/wiki/Property:P12492",
+      "lang": "en",
+      "text": "Trakt.tv film ID"
+    },
+    "P12546": {
+      "href": "https://www.wikidata.org/wiki/Property:P12546",
+      "lang": "en",
+      "text": "Instagram numeric ID"
+    },
+    "P1258": {
+      "href": "https://www.wikidata.org/wiki/Property:P1258",
+      "lang": "en",
+      "text": "Rotten Tomatoes ID"
+    },
+    "P1265": {
+      "href": "https://www.wikidata.org/wiki/Property:P1265",
+      "lang": "en",
+      "text": "AlloCiné film ID"
+    },
+    "P12683": {
+      "href": "https://www.wikidata.org/wiki/Property:P12683",
+      "lang": "en",
+      "text": "FilmVandaag ID"
+    },
+    "P127": {
+      "href": "https://www.wikidata.org/wiki/Property:P127",
+      "lang": "en",
+      "text": "owned by"
+    },
+    "P12879": {
+      "href": "https://www.wikidata.org/wiki/Property:P12879",
+      "lang": "en",
+      "text": "Filmová databáze film ID"
+    },
+    "P1346": {
+      "href": "https://www.wikidata.org/wiki/Property:P1346",
+      "lang": "en",
+      "text": "winner"
+    },
+    "P13460": {
+      "href": "https://www.wikidata.org/wiki/Property:P13460",
+      "lang": "en",
+      "text": "Shazoo tag ID"
+    },
+    "P136": {
+      "href": "https://www.wikidata.org/wiki/Property:P136",
+      "lang": "en",
+      "text": "genre"
+    },
+    "P13888": {
+      "href": "https://www.wikidata.org/wiki/Property:P13888",
+      "lang": "en",
+      "text": "‎Does the Dog Die? media ID"
+    },
+    "P13904": {
+      "href": "https://www.wikidata.org/wiki/Property:P13904",
+      "lang": "en",
+      "text": "‎Filmarks ID"
+    },
+    "P13992": {
+      "href": "https://www.wikidata.org/wiki/Property:P13992",
+      "lang": "en",
+      "text": "‎Blu-ray.com ID"
+    },
+    "P1411": {
+      "href": "https://www.wikidata.org/wiki/Property:P1411",
+      "lang": "en",
+      "text": "nominated for"
+    },
+    "P1417": {
+      "href": "https://www.wikidata.org/wiki/Property:P1417",
+      "lang": "en",
+      "text": "Encyclopædia Britannica Online ID"
+    },
+    "P143": {
+      "href": "https://www.wikidata.org/wiki/Property:P143",
+      "lang": "en",
+      "text": "imported from Wikimedia project"
+    },
+    "P144": {
+      "href": "https://www.wikidata.org/wiki/Property:P144",
+      "lang": "en",
+      "text": "based on"
+    },
+    "P14671": {
+      "href": "https://www.wikidata.org/wiki/Property:P14671",
+      "lang": "en",
+      "text": "‎MPA certificate number"
+    },
+    "P14710": {
+      "href": "https://www.wikidata.org/wiki/Property:P14710",
+      "lang": "en",
+      "text": "Lithuanian movie register ID"
+    },
+    "P1476": {
+      "href": "https://www.wikidata.org/wiki/Property:P1476",
+      "lang": "en",
+      "text": "title"
+    },
+    "P14801": {
+      "href": "https://www.wikidata.org/wiki/Property:P14801",
+      "lang": "en",
+      "text": "‎BBFC release ID"
+    },
+    "P14821": {
+      "href": "https://www.wikidata.org/wiki/Property:P14821",
+      "lang": "en",
+      "text": "IMCDB work ID"
+    },
+    "P154": {
+      "href": "https://www.wikidata.org/wiki/Property:P154",
+      "lang": "en",
+      "text": "logo image"
+    },
+    "P1552": {
+      "href": "https://www.wikidata.org/wiki/Property:P1552",
+      "lang": "en",
+      "text": "has characteristic"
+    },
+    "P1562": {
+      "href": "https://www.wikidata.org/wiki/Property:P1562",
+      "lang": "en",
+      "text": "AllMovie title ID"
+    },
+    "P161": {
+      "href": "https://www.wikidata.org/wiki/Property:P161",
+      "lang": "en",
+      "text": "cast member"
+    },
+    "P162": {
+      "href": "https://www.wikidata.org/wiki/Property:P162",
+      "lang": "en",
+      "text": "producer"
+    },
+    "P1638": {
+      "href": "https://www.wikidata.org/wiki/Property:P1638",
+      "lang": "en",
+      "text": "working title"
+    },
+    "P1651": {
+      "href": "https://www.wikidata.org/wiki/Property:P1651",
+      "lang": "en",
+      "text": "YouTube video ID"
+    },
+    "P1657": {
+      "href": "https://www.wikidata.org/wiki/Property:P1657",
+      "lang": "en",
+      "text": "MPA film rating"
+    },
+    "P166": {
+      "href": "https://www.wikidata.org/wiki/Property:P166",
+      "lang": "en",
+      "text": "award received"
+    },
+    "P17": {
+      "href": "https://www.wikidata.org/wiki/Property:P17",
+      "lang": "en",
+      "text": "country"
+    },
+    "P1712": {
+      "href": "https://www.wikidata.org/wiki/Property:P1712",
+      "lang": "en",
+      "text": "Metacritic ID"
+    },
+    "P18": {
+      "href": "https://www.wikidata.org/wiki/Property:P18",
+      "lang": "en",
+      "text": "image"
+    },
+    "P1877": {
+      "href": "https://www.wikidata.org/wiki/Property:P1877",
+      "lang": "en",
+      "text": "after a work by"
+    },
+    "P1932": {
+      "href": "https://www.wikidata.org/wiki/Property:P1932",
+      "lang": "en",
+      "text": "object named as"
+    },
+    "P1970": {
+      "href": "https://www.wikidata.org/wiki/Property:P1970",
+      "lang": "en",
+      "text": "MovieMeter film ID"
+    },
+    "P1981": {
+      "href": "https://www.wikidata.org/wiki/Property:P1981",
+      "lang": "en",
+      "text": "FSK film rating"
+    },
+    "P2002": {
+      "href": "https://www.wikidata.org/wiki/Property:P2002",
+      "lang": "en",
+      "text": "X (Twitter) username"
+    },
+    "P2003": {
+      "href": "https://www.wikidata.org/wiki/Property:P2003",
+      "lang": "en",
+      "text": "Instagram username"
+    },
+    "P2043": {
+      "href": "https://www.wikidata.org/wiki/Property:P2043",
+      "lang": "en",
+      "text": "length"
+    },
+    "P2047": {
+      "href": "https://www.wikidata.org/wiki/Property:P2047",
+      "lang": "en",
+      "text": "duration"
+    },
+    "P2061": {
+      "href": "https://www.wikidata.org/wiki/Property:P2061",
+      "lang": "en",
+      "text": "aspect ratio (W:H)"
+    },
+    "P2130": {
+      "href": "https://www.wikidata.org/wiki/Property:P2130",
+      "lang": "en",
+      "text": "capital cost"
+    },
+    "P214": {
+      "href": "https://www.wikidata.org/wiki/Property:P214",
+      "lang": "en",
+      "text": "VIAF cluster ID"
+    },
+    "P2142": {
+      "href": "https://www.wikidata.org/wiki/Property:P2142",
+      "lang": "en",
+      "text": "box office"
+    },
+    "P2334": {
+      "href": "https://www.wikidata.org/wiki/Property:P2334",
+      "lang": "en",
+      "text": "Swedish Film Database ID"
+    },
+    "P2346": {
+      "href": "https://www.wikidata.org/wiki/Property:P2346",
+      "lang": "en",
+      "text": "Elonet movie ID"
+    },
+    "P2363": {
+      "href": "https://www.wikidata.org/wiki/Property:P2363",
+      "lang": "en",
+      "text": "NMHH film rating"
+    },
+    "P2408": {
+      "href": "https://www.wikidata.org/wiki/Property:P2408",
+      "lang": "en",
+      "text": "set in period"
+    },
+    "P2453": {
+      "href": "https://www.wikidata.org/wiki/Property:P2453",
+      "lang": "en",
+      "text": "nominee"
+    },
+    "P2465": {
+      "href": "https://www.wikidata.org/wiki/Property:P2465",
+      "lang": "en",
+      "text": "Allcinema film ID"
+    },
+    "P248": {
+      "href": "https://www.wikidata.org/wiki/Property:P248",
+      "lang": "en",
+      "text": "stated in"
+    },
+    "P2529": {
+      "href": "https://www.wikidata.org/wiki/Property:P2529",
+      "lang": "en",
+      "text": "ČSFD film ID"
+    },
+    "P2603": {
+      "href": "https://www.wikidata.org/wiki/Property:P2603",
+      "lang": "en",
+      "text": "Kinopoisk film ID"
+    },
+    "P2629": {
+      "href": "https://www.wikidata.org/wiki/Property:P2629",
+      "lang": "en",
+      "text": "BBFC rating"
+    },
+    "P2637": {
+      "href": "https://www.wikidata.org/wiki/Property:P2637",
+      "lang": "en",
+      "text": "RARS rating"
+    },
+    "P2671": {
+      "href": "https://www.wikidata.org/wiki/Property:P2671",
+      "lang": "en",
+      "text": "Google Knowledge Graph ID"
+    },
+    "P2676": {
+      "href": "https://www.wikidata.org/wiki/Property:P2676",
+      "lang": "en",
+      "text": "rating certificate ID"
+    },
+    "P2684": {
+      "href": "https://www.wikidata.org/wiki/Property:P2684",
+      "lang": "en",
+      "text": "Kijkwijzer rating"
+    },
+    "P2704": {
+      "href": "https://www.wikidata.org/wiki/Property:P2704",
+      "lang": "en",
+      "text": "EIDR content ID"
+    },
+    "P272": {
+      "href": "https://www.wikidata.org/wiki/Property:P272",
+      "lang": "en",
+      "text": "production company"
+    },
+    "P2755": {
+      "href": "https://www.wikidata.org/wiki/Property:P2755",
+      "lang": "en",
+      "text": "exploitation mark number"
+    },
+    "P2756": {
+      "href": "https://www.wikidata.org/wiki/Property:P2756",
+      "lang": "en",
+      "text": "EIRIN film rating"
+    },
+    "P2758": {
+      "href": "https://www.wikidata.org/wiki/Property:P2758",
+      "lang": "en",
+      "text": "CNC film rating (France)"
+    },
+    "P276": {
+      "href": "https://www.wikidata.org/wiki/Property:P276",
+      "lang": "en",
+      "text": "location"
+    },
+    "P291": {
+      "href": "https://www.wikidata.org/wiki/Property:P291",
+      "lang": "en",
+      "text": "place of publication"
+    },
+    "P3092": {
+      "href": "https://www.wikidata.org/wiki/Property:P3092",
+      "lang": "en",
+      "text": "film crew member"
+    },
+    "P31": {
+      "href": "https://www.wikidata.org/wiki/Property:P31",
+      "lang": "en",
+      "text": "instance of"
+    },
+    "P3106": {
+      "href": "https://www.wikidata.org/wiki/Property:P3106",
+      "lang": "en",
+      "text": "The Guardian topic ID"
+    },
+    "P3107": {
+      "href": "https://www.wikidata.org/wiki/Property:P3107",
+      "lang": "en",
+      "text": "LdiF ID"
+    },
+    "P3135": {
+      "href": "https://www.wikidata.org/wiki/Property:P3135",
+      "lang": "en",
+      "text": "elCinema film ID"
+    },
+    "P3138": {
+      "href": "https://www.wikidata.org/wiki/Property:P3138",
+      "lang": "en",
+      "text": "OFDb film ID"
+    },
+    "P3156": {
+      "href": "https://www.wikidata.org/wiki/Property:P3156",
+      "lang": "en",
+      "text": "Australian Classification"
+    },
+    "P3212": {
+      "href": "https://www.wikidata.org/wiki/Property:P3212",
+      "lang": "en",
+      "text": "ISAN"
+    },
+    "P3216": {
+      "href": "https://www.wikidata.org/wiki/Property:P3216",
+      "lang": "en",
+      "text": "ClassInd rating"
+    },
+    "P3302": {
+      "href": "https://www.wikidata.org/wiki/Property:P3302",
+      "lang": "en",
+      "text": "OMDb film ID"
+    },
+    "P3306": {
+      "href": "https://www.wikidata.org/wiki/Property:P3306",
+      "lang": "en",
+      "text": "ICAA rating"
+    },
+    "P3428": {
+      "href": "https://www.wikidata.org/wiki/Property:P3428",
+      "lang": "en",
+      "text": "INCAA film rating"
+    },
+    "P344": {
+      "href": "https://www.wikidata.org/wiki/Property:P344",
+      "lang": "en",
+      "text": "director of photography"
+    },
+    "P345": {
+      "href": "https://www.wikidata.org/wiki/Property:P345",
+      "lang": "en",
+      "text": "IMDb ID"
+    },
+    "P3629": {
+      "href": "https://www.wikidata.org/wiki/Property:P3629",
+      "lang": "en",
+      "text": "age of subject at event"
+    },
+    "P364": {
+      "href": "https://www.wikidata.org/wiki/Property:P364",
+      "lang": "en",
+      "text": "original language of film or TV show"
+    },
+    "P3650": {
+      "href": "https://www.wikidata.org/wiki/Property:P3650",
+      "lang": "en",
+      "text": "JMK film rating"
+    },
+    "P373": {
+      "href": "https://www.wikidata.org/wiki/Property:P373",
+      "lang": "en",
+      "text": "Commons category"
+    },
+    "P3803": {
+      "href": "https://www.wikidata.org/wiki/Property:P3803",
+      "lang": "en",
+      "text": "film format"
+    },
+    "P3808": {
+      "href": "https://www.wikidata.org/wiki/Property:P3808",
+      "lang": "en",
+      "text": "The Numbers movie ID"
+    },
+    "P3818": {
+      "href": "https://www.wikidata.org/wiki/Property:P3818",
+      "lang": "en",
+      "text": "KMRB film rating"
+    },
+    "P3831": {
+      "href": "https://www.wikidata.org/wiki/Property:P3831",
+      "lang": "en",
+      "text": "object of statement has role"
+    },
+    "P3834": {
+      "href": "https://www.wikidata.org/wiki/Property:P3834",
+      "lang": "en",
+      "text": "RTC film rating"
+    },
+    "P406": {
+      "href": "https://www.wikidata.org/wiki/Property:P406",
+      "lang": "en",
+      "text": "soundtrack release"
+    },
+    "P407": {
+      "href": "https://www.wikidata.org/wiki/Property:P407",
+      "lang": "en",
+      "text": "language of work or name"
+    },
+    "P4082": {
+      "href": "https://www.wikidata.org/wiki/Property:P4082",
+      "lang": "en",
+      "text": "captured with"
+    },
+    "P4437": {
+      "href": "https://www.wikidata.org/wiki/Property:P4437",
+      "lang": "en",
+      "text": "FPB rating"
+    },
+    "P444": {
+      "href": "https://www.wikidata.org/wiki/Property:P444",
+      "lang": "en",
+      "text": "review score"
+    },
+    "P4529": {
+      "href": "https://www.wikidata.org/wiki/Property:P4529",
+      "lang": "en",
+      "text": "Douban film ID"
+    },
+    "P453": {
+      "href": "https://www.wikidata.org/wiki/Property:P453",
+      "lang": "en",
+      "text": "character role"
+    },
+    "P462": {
+      "href": "https://www.wikidata.org/wiki/Property:P462",
+      "lang": "en",
+      "text": "color"
+    },
+    "P4632": {
+      "href": "https://www.wikidata.org/wiki/Property:P4632",
+      "lang": "en",
+      "text": "Bechdel Test Movie List ID"
+    },
+    "P4633": {
+      "href": "https://www.wikidata.org/wiki/Property:P4633",
+      "lang": "en",
+      "text": "name of the character role"
+    },
+    "P4665": {
+      "href": "https://www.wikidata.org/wiki/Property:P4665",
+      "lang": "en",
+      "text": "CineMagia title ID"
+    },
+    "P4780": {
+      "href": "https://www.wikidata.org/wiki/Property:P4780",
+      "lang": "en",
+      "text": "MYmovies audiovisual work ID"
+    },
+    "P4783": {
+      "href": "https://www.wikidata.org/wiki/Property:P4783",
+      "lang": "en",
+      "text": "Movieplayer film ID"
+    },
+    "P480": {
+      "href": "https://www.wikidata.org/wiki/Property:P480",
+      "lang": "en",
+      "text": "FilmAffinity film ID"
+    },
+    "P4947": {
+      "href": "https://www.wikidata.org/wiki/Property:P4947",
+      "lang": "en",
+      "text": "TMDB movie ID"
+    },
+    "P495": {
+      "href": "https://www.wikidata.org/wiki/Property:P495",
+      "lang": "en",
+      "text": "country of origin"
+    },
+    "P5032": {
+      "href": "https://www.wikidata.org/wiki/Property:P5032",
+      "lang": "en",
+      "text": "Filmweb.pl film ID"
+    },
+    "P5099": {
+      "href": "https://www.wikidata.org/wiki/Property:P5099",
+      "lang": "en",
+      "text": "Il mondo dei doppiatori ID"
+    },
+    "P5128": {
+      "href": "https://www.wikidata.org/wiki/Property:P5128",
+      "lang": "en",
+      "text": "ICAA film catalogue ID"
+    },
+    "P5150": {
+      "href": "https://www.wikidata.org/wiki/Property:P5150",
+      "lang": "en",
+      "text": "IGAC rating"
+    },
+    "P518": {
+      "href": "https://www.wikidata.org/wiki/Property:P518",
+      "lang": "en",
+      "text": "applies to part"
+    },
+    "P5201": {
+      "href": "https://www.wikidata.org/wiki/Property:P5201",
+      "lang": "en",
+      "text": "IMDA rating"
+    },
+    "P5233": {
+      "href": "https://www.wikidata.org/wiki/Property:P5233",
+      "lang": "en",
+      "text": "Filmow ID"
+    },
+    "P5253": {
+      "href": "https://www.wikidata.org/wiki/Property:P5253",
+      "lang": "en",
+      "text": "FilmTv.it movie ID"
+    },
+    "P5311": {
+      "href": "https://www.wikidata.org/wiki/Property:P5311",
+      "lang": "en",
+      "text": "Kino-teatr.ua film ID"
+    },
+    "P5318": {
+      "href": "https://www.wikidata.org/wiki/Property:P5318",
+      "lang": "en",
+      "text": "César Award film ID"
+    },
+    "P5327": {
+      "href": "https://www.wikidata.org/wiki/Property:P5327",
+      "lang": "en",
+      "text": "fernsehserien.de ID"
+    },
+    "P57": {
+      "href": "https://www.wikidata.org/wiki/Property:P57",
+      "lang": "en",
+      "text": "director"
+    },
+    "P577": {
+      "href": "https://www.wikidata.org/wiki/Property:P577",
+      "lang": "en",
+      "text": "publication date"
+    },
+    "P5786": {
+      "href": "https://www.wikidata.org/wiki/Property:P5786",
+      "lang": "en",
+      "text": "Moviepilot.de film ID"
+    },
+    "P58": {
+      "href": "https://www.wikidata.org/wiki/Property:P58",
+      "lang": "en",
+      "text": "screenwriter"
+    },
+    "P585": {
+      "href": "https://www.wikidata.org/wiki/Property:P585",
+      "lang": "en",
+      "text": "point in time"
+    },
+    "P5865": {
+      "href": "https://www.wikidata.org/wiki/Property:P5865",
+      "lang": "en",
+      "text": "IGN film ID"
+    },
+    "P5990": {
+      "href": "https://www.wikidata.org/wiki/Property:P5990",
+      "lang": "en",
+      "text": "Movies Anywhere ID"
+    },
+    "P6127": {
+      "href": "https://www.wikidata.org/wiki/Property:P6127",
+      "lang": "en",
+      "text": "Letterboxd film ID"
+    },
+    "P6166": {
+      "href": "https://www.wikidata.org/wiki/Property:P6166",
+      "lang": "en",
+      "text": "quotes work"
+    },
+    "P6256": {
+      "href": "https://www.wikidata.org/wiki/Property:P6256",
+      "lang": "en",
+      "text": "SinemaTürk film ID"
+    },
+    "P6262": {
+      "href": "https://www.wikidata.org/wiki/Property:P6262",
+      "lang": "en",
+      "text": "Fandom article ID"
+    },
+    "P6359": {
+      "href": "https://www.wikidata.org/wiki/Property:P6359",
+      "lang": "en",
+      "text": "Crew United title ID"
+    },
+    "P6383": {
+      "href": "https://www.wikidata.org/wiki/Property:P6383",
+      "lang": "en",
+      "text": "TV Spielfilm film ID"
+    },
+    "P6452": {
+      "href": "https://www.wikidata.org/wiki/Property:P6452",
+      "lang": "en",
+      "text": "CBFC rating"
+    },
+    "P6658": {
+      "href": "https://www.wikidata.org/wiki/Property:P6658",
+      "lang": "en",
+      "text": "RCQ classification"
+    },
+    "P6839": {
+      "href": "https://www.wikidata.org/wiki/Property:P6839",
+      "lang": "en",
+      "text": "TV Tropes ID"
+    },
+    "P6932": {
+      "href": "https://www.wikidata.org/wiki/Property:P6932",
+      "lang": "en",
+      "text": "RogerEbert.com film ID"
+    },
+    "P6992": {
+      "href": "https://www.wikidata.org/wiki/Property:P6992",
+      "lang": "en",
+      "text": "IMFDB ID"
+    },
+    "P7091": {
+      "href": "https://www.wikidata.org/wiki/Property:P7091",
+      "lang": "en",
+      "text": "Common Sense Media ID"
+    },
+    "P7118": {
+      "href": "https://www.wikidata.org/wiki/Property:P7118",
+      "lang": "en",
+      "text": "Academy Collection film ID"
+    },
+    "P7132": {
+      "href": "https://www.wikidata.org/wiki/Property:P7132",
+      "lang": "en",
+      "text": "ComingSoon.it film ID"
+    },
+    "P7222": {
+      "href": "https://www.wikidata.org/wiki/Property:P7222",
+      "lang": "en",
+      "text": "Eiga.com movie ID"
+    },
+    "P7285": {
+      "href": "https://www.wikidata.org/wiki/Property:P7285",
+      "lang": "en",
+      "text": "Writers Guild of America project ID"
+    },
+    "P7293": {
+      "href": "https://www.wikidata.org/wiki/Property:P7293",
+      "lang": "en",
+      "text": "National Library of Poland MMS ID"
+    },
+    "P7299": {
+      "href": "https://www.wikidata.org/wiki/Property:P7299",
+      "lang": "en",
+      "text": "MUBI film numeric ID"
+    },
+    "P7327": {
+      "href": "https://www.wikidata.org/wiki/Property:P7327",
+      "lang": "en",
+      "text": "OFLC classification"
+    },
+    "P7334": {
+      "href": "https://www.wikidata.org/wiki/Property:P7334",
+      "lang": "en",
+      "text": "Fandango video ID"
+    },
+    "P7367": {
+      "href": "https://www.wikidata.org/wiki/Property:P7367",
+      "lang": "en",
+      "text": "content descriptor"
+    },
+    "P7452": {
+      "href": "https://www.wikidata.org/wiki/Property:P7452",
+      "lang": "en",
+      "text": "reason for preferred rank"
+    },
+    "P750": {
+      "href": "https://www.wikidata.org/wiki/Property:P750",
+      "lang": "en",
+      "text": "distributed by"
+    },
+    "P7573": {
+      "href": "https://www.wikidata.org/wiki/Property:P7573",
+      "lang": "en",
+      "text": "IFCO rating"
+    },
+    "P7777": {
+      "href": "https://www.wikidata.org/wiki/Property:P7777",
+      "lang": "en",
+      "text": "AdoroCinema film ID"
+    },
+    "P7887": {
+      "href": "https://www.wikidata.org/wiki/Property:P7887",
+      "lang": "en",
+      "text": "number of reviews/ratings"
+    },
+    "P793": {
+      "href": "https://www.wikidata.org/wiki/Property:P793",
+      "lang": "en",
+      "text": "significant event"
+    },
+    "P7978": {
+      "href": "https://www.wikidata.org/wiki/Property:P7978",
+      "lang": "en",
+      "text": "Decine21 film ID"
+    },
+    "P8013": {
+      "href": "https://www.wikidata.org/wiki/Property:P8013",
+      "lang": "en",
+      "text": "Trakt.tv ID"
+    },
+    "P805": {
+      "href": "https://www.wikidata.org/wiki/Property:P805",
+      "lang": "en",
+      "text": "statement is subject of"
+    },
+    "P8055": {
+      "href": "https://www.wikidata.org/wiki/Property:P8055",
+      "lang": "en",
+      "text": "Amazon Prime Video ID"
+    },
+    "P813": {
+      "href": "https://www.wikidata.org/wiki/Property:P813",
+      "lang": "en",
+      "text": "retrieved"
+    },
+    "P8298": {
+      "href": "https://www.wikidata.org/wiki/Property:P8298",
+      "lang": "en",
+      "text": "HBO Max ID"
+    },
+    "P8531": {
+      "href": "https://www.wikidata.org/wiki/Property:P8531",
+      "lang": "en",
+      "text": "Filmstarts title ID"
+    },
+    "P854": {
+      "href": "https://www.wikidata.org/wiki/Property:P854",
+      "lang": "en",
+      "text": "reference URL"
+    },
+    "P856": {
+      "href": "https://www.wikidata.org/wiki/Property:P856",
+      "lang": "en",
+      "text": "official website"
+    },
+    "P86": {
+      "href": "https://www.wikidata.org/wiki/Property:P86",
+      "lang": "en",
+      "text": "composer"
+    },
+    "P8680": {
+      "href": "https://www.wikidata.org/wiki/Property:P8680",
+      "lang": "en",
+      "text": "FVLB work ID"
+    },
+    "P8847": {
+      "href": "https://www.wikidata.org/wiki/Property:P8847",
+      "lang": "en",
+      "text": "Kinorium movie ID"
+    },
+    "P905": {
+      "href": "https://www.wikidata.org/wiki/Property:P905",
+      "lang": "en",
+      "text": "PORT film ID"
+    },
+    "P915": {
+      "href": "https://www.wikidata.org/wiki/Property:P915",
+      "lang": "en",
+      "text": "filming location"
+    },
+    "P9203": {
+      "href": "https://www.wikidata.org/wiki/Property:P9203",
+      "lang": "en",
+      "text": "CineFAN.ro title ID"
+    },
+    "P9205": {
+      "href": "https://www.wikidata.org/wiki/Property:P9205",
+      "lang": "en",
+      "text": "Sinemalar title ID"
+    },
+    "P9586": {
+      "href": "https://www.wikidata.org/wiki/Property:P9586",
+      "lang": "en",
+      "text": "Apple TV movie ID"
+    },
+    "P973": {
+      "href": "https://www.wikidata.org/wiki/Property:P973",
+      "lang": "en",
+      "text": "described at URL"
+    },
+    "P9821": {
+      "href": "https://www.wikidata.org/wiki/Property:P9821",
+      "lang": "en",
+      "text": "Unconsenting Media ID"
+    },
+    "Q1011564": {
+      "href": "https://www.wikidata.org/wiki/Q1011564",
+      "lang": "en",
+      "text": "Golden Globe Award for Best Actress in a Motion Picture – Musical or Comedy"
+    },
+    "Q101979266": {
+      "href": "https://www.wikidata.org/wiki/Q101979266",
+      "lang": "en",
+      "text": "Strong language"
+    },
+    "Q101979422": {
+      "href": "https://www.wikidata.org/wiki/Q101979422",
+      "lang": "en",
+      "text": "Violence"
+    },
+    "Q102174580": {
+      "href": "https://www.wikidata.org/wiki/Q102174580",
+      "lang": "en",
+      "text": "Sex references"
+    },
+    "Q102427": {
+      "href": "https://www.wikidata.org/wiki/Q102427",
+      "lang": "en",
+      "text": "Academy Award for Best Picture"
+    },
+    "Q103360": {
+      "href": "https://www.wikidata.org/wiki/Q103360",
+      "lang": "en",
+      "text": "Academy Award for Best Director"
+    },
+    "Q103916": {
+      "href": "https://www.wikidata.org/wiki/Q103916",
+      "lang": "en",
+      "text": "Academy Award for Best Actor"
+    },
+    "Q1041": {
+      "href": "https://www.wikidata.org/wiki/Q1041",
+      "lang": "en",
+      "text": "Senegal"
+    },
+    "Q105584": {
+      "href": "https://www.wikidata.org/wiki/Q105584",
+      "lang": "en",
+      "text": "Rotten Tomatoes"
+    },
+    "Q105639382": {
+      "href": "https://www.wikidata.org/wiki/Q105639382",
+      "lang": "en",
+      "text": "Sexual violence"
+    },
+    "Q105759907": {
+      "href": "https://www.wikidata.org/wiki/Q105759907",
+      "lang": "en",
+      "text": "film reel"
+    },
+    "Q106291": {
+      "href": "https://www.wikidata.org/wiki/Q106291",
+      "lang": "en",
+      "text": "Academy Award for Best Supporting Actor"
+    },
+    "Q106301": {
+      "href": "https://www.wikidata.org/wiki/Q106301",
+      "lang": "en",
+      "text": "Academy Award for Best Supporting Actress"
+    },
+    "Q106515043": {
+      "href": "https://www.wikidata.org/wiki/Q106515043",
+      "lang": "en",
+      "text": "Metascore"
+    },
+    "Q107218751": {
+      "href": "https://www.wikidata.org/wiki/Q107218751",
+      "lang": "en",
+      "text": "weighted average"
+    },
+    "Q107258": {
+      "href": "https://www.wikidata.org/wiki/Q107258",
+      "lang": "en",
+      "text": "Academy Award for Best Writing, Adapted Screenplay"
+    },
+    "Q108403393": {
+      "href": "https://www.wikidata.org/wiki/Q108403393",
+      "lang": "en",
+      "text": "Tomatometer score"
+    },
+    "Q108878608": {
+      "href": "https://www.wikidata.org/wiki/Q108878608",
+      "lang": "en",
+      "text": "Coarse language"
+    },
+    "Q109297503": {
+      "href": "https://www.wikidata.org/wiki/Q109297503",
+      "lang": "en",
+      "text": "Dijon"
+    },
+    "Q109564878": {
+      "href": "https://www.wikidata.org/wiki/Q109564878",
+      "lang": "en",
+      "text": "John Hoogenakker"
+    },
+    "Q1097348": {
+      "href": "https://www.wikidata.org/wiki/Q1097348",
+      "lang": "en",
+      "text": "InterCom"
+    },
+    "Q109942993": {
+      "href": "https://www.wikidata.org/wiki/Q109942993",
+      "lang": "en",
+      "text": "Andy Jurgensen"
+    },
+    "Q110393717": {
+      "href": "https://www.wikidata.org/wiki/Q110393717",
+      "lang": "en",
+      "text": "Michael Bauman"
+    },
+    "Q1122565": {
+      "href": "https://www.wikidata.org/wiki/Q1122565",
+      "lang": "en",
+      "text": "Grauman's Chinese Theatre"
+    },
+    "Q11424": {
+      "href": "https://www.wikidata.org/wiki/Q11424",
+      "lang": "en",
+      "text": "film"
+    },
+    "Q1151457": {
+      "href": "https://www.wikidata.org/wiki/Q1151457",
+      "lang": "en",
+      "text": "D. W. Moffett"
+    },
+    "Q11573": {
+      "href": "https://www.wikidata.org/wiki/Q11573",
+      "lang": "en",
+      "text": "metre"
+    },
+    "Q11574": {
+      "href": "https://www.wikidata.org/wiki/Q11574",
+      "lang": "en",
+      "text": "second"
+    },
+    "Q116907460": {
+      "href": "https://www.wikidata.org/wiki/Q116907460",
+      "lang": "en",
+      "text": "Anthony Carlino"
+    },
+    "Q116907469": {
+      "href": "https://www.wikidata.org/wiki/Q116907469",
+      "lang": "en",
+      "text": "Florencia Martin"
+    },
+    "Q117085614": {
+      "description": {
+        "lang": "en",
+        "text": "2025 film directed by Paul Thomas Anderson"
+      },
+      "href": "https://www.wikidata.org/wiki/Q117085614",
+      "lang": "en",
+      "text": "One Battle After Another"
+    },
+    "Q117501801": {
+      "href": "https://www.wikidata.org/wiki/Q117501801",
+      "lang": "en",
+      "text": "Violence (MPA)"
+    },
+    "Q121597885": {
+      "href": "https://www.wikidata.org/wiki/Q121597885",
+      "lang": "en",
+      "text": "Drug use"
+    },
+    "Q122783389": {
+      "href": "https://www.wikidata.org/wiki/Q122783389",
+      "lang": "en",
+      "text": "Jon Beavers"
+    },
+    "Q123985313": {
+      "href": "https://www.wikidata.org/wiki/Q123985313",
+      "lang": "en",
+      "text": "Pervasive language"
+    },
+    "Q123986363": {
+      "href": "https://www.wikidata.org/wiki/Q123986363",
+      "lang": "en",
+      "text": "Sexual content"
+    },
+    "Q125156936": {
+      "href": "https://www.wikidata.org/wiki/Q125156936",
+      "lang": "en",
+      "text": "Chase Infiniti"
+    },
+    "Q1288447": {
+      "href": "https://www.wikidata.org/wiki/Q1288447",
+      "lang": "en",
+      "text": "Kevin Tighe"
+    },
+    "Q130232": {
+      "href": "https://www.wikidata.org/wiki/Q130232",
+      "lang": "en",
+      "text": "drama film"
+    },
+    "Q131520": {
+      "href": "https://www.wikidata.org/wiki/Q131520",
+      "lang": "en",
+      "text": "Academy Award for Best Cinematography"
+    },
+    "Q1321005": {
+      "href": "https://www.wikidata.org/wiki/Q1321005",
+      "lang": "en",
+      "text": "Wood Harris"
+    },
+    "Q133596666": {
+      "href": "https://www.wikidata.org/wiki/Q133596666",
+      "lang": "mul",
+      "text": "Paul Grimstad"
+    },
+    "Q136488200": {
+      "href": "https://www.wikidata.org/wiki/Q136488200",
+      "lang": "en",
+      "text": "One Battle After Another (Original Motion Picture Soundtrack)"
+    },
+    "Q137423654": {
+      "href": "https://www.wikidata.org/wiki/Q137423654",
+      "lang": "en",
+      "text": "Academy Award for Achievement in Casting"
+    },
+    "Q137550600": {
+      "href": "https://www.wikidata.org/wiki/Q137550600",
+      "lang": "en",
+      "text": "Bob Ferguson"
+    },
+    "Q137855674": {
+      "href": "https://www.wikidata.org/wiki/Q137855674",
+      "lang": "en",
+      "text": "Cassandra Kulukundis"
+    },
+    "Q137972416": {
+      "href": "https://www.wikidata.org/wiki/Q137972416",
+      "lang": "en",
+      "text": "Tony Villaflor"
+    },
+    "Q1383069": {
+      "href": "https://www.wikidata.org/wiki/Q1383069",
+      "lang": "en",
+      "text": "16:9"
+    },
+    "Q138479019": {
+      "href": "https://www.wikidata.org/wiki/Q138479019",
+      "lang": "en",
+      "text": "Beaumonte VistaVision camera"
+    },
+    "Q140267252": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/en/Q140267252",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q140267252",
+      "lang": null,
+      "text": "Q140267252"
+    },
+    "Q142": {
+      "href": "https://www.wikidata.org/wiki/Q142",
+      "lang": "en",
+      "text": "France"
+    },
+    "Q1422140": {
+      "href": "https://www.wikidata.org/wiki/Q1422140",
+      "lang": "en",
+      "text": "Golden Globe Award for Best Original Score"
+    },
+    "Q145": {
+      "href": "https://www.wikidata.org/wiki/Q145",
+      "lang": "en",
+      "text": "United Kingdom"
+    },
+    "Q150248": {
+      "href": "https://www.wikidata.org/wiki/Q150248",
+      "lang": "en",
+      "text": "Metacritic"
+    },
+    "Q15500658": {
+      "href": "https://www.wikidata.org/wiki/Q15500658",
+      "lang": "en",
+      "text": "Jim Downey"
+    },
+    "Q157443": {
+      "href": "https://www.wikidata.org/wiki/Q157443",
+      "lang": "en",
+      "text": "comedy film"
+    },
+    "Q16": {
+      "href": "https://www.wikidata.org/wiki/Q16",
+      "lang": "en",
+      "text": "Canada"
+    },
+    "Q16242195": {
+      "href": "https://www.wikidata.org/wiki/Q16242195",
+      "lang": "en",
+      "text": "José Antonio Garcia"
+    },
+    "Q16726249": {
+      "href": "https://www.wikidata.org/wiki/Q16726249",
+      "lang": "en",
+      "text": "Alana Haim"
+    },
+    "Q16875334": {
+      "href": "https://www.wikidata.org/wiki/Q16875334",
+      "lang": "en",
+      "text": "Christopher Scarabosio"
+    },
+    "Q1753999": {
+      "description": {
+        "lang": "en",
+        "text": "1971 song performed by Gil Scott-Heron"
+      },
+      "href": "https://www.wikidata.org/wiki/Q1753999",
+      "lang": "en",
+      "text": "The Revolution Will Not Be Televised"
+    },
+    "Q17748520": {
+      "href": "https://www.wikidata.org/wiki/Q17748520",
+      "lang": "en",
+      "text": "Amanda Award for Best Foreign Feature Film"
+    },
+    "Q1788758": {
+      "href": "https://www.wikidata.org/wiki/Q1788758",
+      "lang": "en",
+      "text": "VistaVision"
+    },
+    "Q18013": {
+      "href": "https://www.wikidata.org/wiki/Q18013",
+      "lang": "en",
+      "text": "Sacramento"
+    },
+    "Q181883": {
+      "href": "https://www.wikidata.org/wiki/Q181883",
+      "lang": "en",
+      "text": "Golden Globe Award for Best Actor – Motion Picture Musical or Comedy"
+    },
+    "Q1860": {
+      "href": "https://www.wikidata.org/wiki/Q1860",
+      "lang": "en",
+      "text": "English"
+    },
+    "Q18665344": {
+      "href": "https://www.wikidata.org/wiki/Q18665344",
+      "lang": "en",
+      "text": "R"
+    },
+    "Q18709181": {
+      "href": "https://www.wikidata.org/wiki/Q18709181",
+      "lang": "en",
+      "text": "Letterboxd"
+    },
+    "Q188473": {
+      "href": "https://www.wikidata.org/wiki/Q188473",
+      "lang": "en",
+      "text": "action film"
+    },
+    "Q188575": {
+      "href": "https://www.wikidata.org/wiki/Q188575",
+      "lang": "en",
+      "text": "IMAX"
+    },
+    "Q191": {
+      "href": "https://www.wikidata.org/wiki/Q191",
+      "lang": "en",
+      "text": "Estonia"
+    },
+    "Q193668": {
+      "href": "https://www.wikidata.org/wiki/Q193668",
+      "lang": "en",
+      "text": "Benicio del Toro"
+    },
+    "Q20": {
+      "href": "https://www.wikidata.org/wiki/Q20",
+      "lang": "en",
+      "text": "Norway"
+    },
+    "Q204854": {
+      "href": "https://www.wikidata.org/wiki/Q204854",
+      "lang": "en",
+      "text": "premiere"
+    },
+    "Q2049424": {
+      "href": "https://www.wikidata.org/wiki/Q2049424",
+      "lang": "en",
+      "text": "Borrego Springs"
+    },
+    "Q20644797": {
+      "href": "https://www.wikidata.org/wiki/Q20644797",
+      "lang": "en",
+      "text": "FSK 16"
+    },
+    "Q20657093": {
+      "href": "https://www.wikidata.org/wiki/Q20657093",
+      "lang": "en",
+      "text": "Junglepussy"
+    },
+    "Q20970431": {
+      "href": "https://www.wikidata.org/wiki/Q20970431",
+      "lang": "en",
+      "text": "3:2"
+    },
+    "Q21037379": {
+      "href": "https://www.wikidata.org/wiki/Q21037379",
+      "lang": "en",
+      "text": "1.85:1"
+    },
+    "Q211": {
+      "href": "https://www.wikidata.org/wiki/Q211",
+      "lang": "en",
+      "text": "Latvia"
+    },
+    "Q213": {
+      "href": "https://www.wikidata.org/wiki/Q213",
+      "lang": "en",
+      "text": "Czech Republic"
+    },
+    "Q21571490": {
+      "href": "https://www.wikidata.org/wiki/Q21571490",
+      "lang": "en",
+      "text": "Category V"
+    },
+    "Q218": {
+      "href": "https://www.wikidata.org/wiki/Q218",
+      "lang": "en",
+      "text": "Romania"
+    },
+    "Q219": {
+      "href": "https://www.wikidata.org/wiki/Q219",
+      "lang": "en",
+      "text": "Bulgaria"
+    },
+    "Q22006653": {
+      "href": "https://www.wikidata.org/wiki/Q22006653",
+      "lang": "en",
+      "text": "color"
+    },
+    "Q224081": {
+      "href": "https://www.wikidata.org/wiki/Q224081",
+      "lang": "en",
+      "text": "Giovanni Ribisi"
+    },
+    "Q224754": {
+      "href": "https://www.wikidata.org/wiki/Q224754",
+      "lang": "en",
+      "text": "Tony Goldwyn"
+    },
+    "Q228": {
+      "href": "https://www.wikidata.org/wiki/Q228",
+      "lang": "en",
+      "text": "Andorra"
+    },
+    "Q22987783": {
+      "href": "https://www.wikidata.org/wiki/Q22987783",
+      "lang": "en",
+      "text": "10:7"
+    },
+    "Q23308564": {
+      "href": "https://www.wikidata.org/wiki/Q23308564",
+      "lang": "en",
+      "text": "18+"
+    },
+    "Q235141": {
+      "href": "https://www.wikidata.org/wiki/Q235141",
+      "lang": "en",
+      "text": "Regina Hall"
+    },
+    "Q23649984": {
+      "href": "https://www.wikidata.org/wiki/Q23649984",
+      "lang": "en",
+      "text": "16"
+    },
+    "Q23790279": {
+      "href": "https://www.wikidata.org/wiki/Q23790279",
+      "lang": "en",
+      "text": "PG12"
+    },
+    "Q23817729": {
+      "href": "https://www.wikidata.org/wiki/Q23817729",
+      "lang": "en",
+      "text": "no age restriction"
+    },
+    "Q23817739": {
+      "href": "https://www.wikidata.org/wiki/Q23817739",
+      "lang": "en",
+      "text": "warning"
+    },
+    "Q2484376": {
+      "href": "https://www.wikidata.org/wiki/Q2484376",
+      "lang": "en",
+      "text": "thriller film"
+    },
+    "Q25132": {
+      "href": "https://www.wikidata.org/wiki/Q25132",
+      "lang": "en",
+      "text": "Paul Thomas Anderson"
+    },
+    "Q2518956": {
+      "href": "https://www.wikidata.org/wiki/Q2518956",
+      "lang": "en",
+      "text": "Super 35"
+    },
+    "Q26225765": {
+      "href": "https://www.wikidata.org/wiki/Q26225765",
+      "lang": "en",
+      "text": "theatrical version"
+    },
+    "Q26678735": {
+      "href": "https://www.wikidata.org/wiki/Q26678735",
+      "lang": "en",
+      "text": "16"
+    },
+    "Q26708077": {
+      "href": "https://www.wikidata.org/wiki/Q26708077",
+      "lang": "en",
+      "text": "M"
+    },
+    "Q27": {
+      "href": "https://www.wikidata.org/wiki/Q27",
+      "lang": "en",
+      "text": "Ireland"
+    },
+    "Q27253947": {
+      "href": "https://www.wikidata.org/wiki/Q27253947",
+      "lang": "en",
+      "text": "Not recommended for minors under 16"
+    },
+    "Q2738674": {
+      "description": {
+        "lang": "en",
+        "text": "novel by Thomas Pynchon"
+      },
+      "href": "https://www.wikidata.org/wiki/Q2738674",
+      "lang": "en",
+      "text": "Vineland"
+    },
+    "Q277751": {
+      "href": "https://www.wikidata.org/wiki/Q277751",
+      "lang": "en",
+      "text": "Academy Award for Best Production Design"
+    },
+    "Q27925241": {
+      "href": "https://www.wikidata.org/wiki/Q27925241",
+      "lang": "en",
+      "text": "+16"
+    },
+    "Q28": {
+      "href": "https://www.wikidata.org/wiki/Q28",
+      "lang": "en",
+      "text": "Hungary"
+    },
+    "Q28032030": {
+      "href": "https://www.wikidata.org/wiki/Q28032030",
+      "lang": "en",
+      "text": "Adam Somner"
+    },
+    "Q281939": {
+      "href": "https://www.wikidata.org/wiki/Q281939",
+      "lang": "en",
+      "text": "Academy Award for Best Film Editing"
+    },
+    "Q286410": {
+      "href": "https://www.wikidata.org/wiki/Q286410",
+      "lang": "en",
+      "text": "Jonny Greenwood"
+    },
+    "Q2867219": {
+      "href": "https://www.wikidata.org/wiki/Q2867219",
+      "lang": "en",
+      "text": "production assistant"
+    },
+    "Q28732987": {
+      "href": "https://www.wikidata.org/wiki/Q28732987",
+      "lang": "en",
+      "text": "free from 16 years"
+    },
+    "Q28951021": {
+      "href": "https://www.wikidata.org/wiki/Q28951021",
+      "lang": "en",
+      "text": "15"
+    },
+    "Q28980118": {
+      "href": "https://www.wikidata.org/wiki/Q28980118",
+      "lang": "en",
+      "text": "B15"
+    },
+    "Q29": {
+      "href": "https://www.wikidata.org/wiki/Q29",
+      "lang": "en",
+      "text": "Spain"
+    },
+    "Q30": {
+      "href": "https://www.wikidata.org/wiki/Q30",
+      "lang": "en",
+      "text": "United States"
+    },
+    "Q30302737": {
+      "href": "https://www.wikidata.org/wiki/Q30302737",
+      "lang": "en",
+      "text": "1.90:1"
+    },
+    "Q31": {
+      "href": "https://www.wikidata.org/wiki/Q31",
+      "lang": "en",
+      "text": "Belgium"
+    },
+    "Q33": {
+      "href": "https://www.wikidata.org/wiki/Q33",
+      "lang": "en",
+      "text": "Finland"
+    },
+    "Q34": {
+      "href": "https://www.wikidata.org/wiki/Q34",
+      "lang": "en",
+      "text": "Sweden"
+    },
+    "Q34653": {
+      "href": "https://www.wikidata.org/wiki/Q34653",
+      "lang": "en",
+      "text": "1990s"
+    },
+    "Q3497183": {
+      "href": "https://www.wikidata.org/wiki/Q3497183",
+      "lang": "en",
+      "text": "Starletta DuPois"
+    },
+    "Q35155": {
+      "description": {
+        "lang": "en",
+        "text": "American novelist (born 1937)"
+      },
+      "href": "https://www.wikidata.org/wiki/Q35155",
+      "lang": "en",
+      "text": "Thomas Pynchon"
+    },
+    "Q37": {
+      "href": "https://www.wikidata.org/wiki/Q37",
+      "lang": "en",
+      "text": "Lithuania"
+    },
+    "Q37312": {
+      "href": "https://www.wikidata.org/wiki/Q37312",
+      "lang": "en",
+      "text": "IMDb"
+    },
+    "Q38": {
+      "href": "https://www.wikidata.org/wiki/Q38",
+      "lang": "en",
+      "text": "Italy"
+    },
+    "Q38111": {
+      "href": "https://www.wikidata.org/wiki/Q38111",
+      "lang": "en",
+      "text": "Leonardo DiCaprio"
+    },
+    "Q40": {
+      "href": "https://www.wikidata.org/wiki/Q40",
+      "lang": "en",
+      "text": "Austria"
+    },
+    "Q408": {
+      "href": "https://www.wikidata.org/wiki/Q408",
+      "lang": "en",
+      "text": "Australia"
+    },
+    "Q42012505": {
+      "href": "https://www.wikidata.org/wiki/Q42012505",
+      "lang": "en",
+      "text": "16"
+    },
+    "Q44221": {
+      "href": "https://www.wikidata.org/wiki/Q44221",
+      "lang": "en",
+      "text": "Sean Penn"
+    },
+    "Q4550895": {
+      "href": "https://www.wikidata.org/wiki/Q4550895",
+      "lang": "en",
+      "text": "15 certificate"
+    },
+    "Q47770": {
+      "href": "https://www.wikidata.org/wiki/Q47770",
+      "lang": "en",
+      "text": "Blu-ray Disc"
+    },
+    "Q488651": {
+      "href": "https://www.wikidata.org/wiki/Q488651",
+      "lang": "en",
+      "text": "Academy Award for Best Original Score"
+    },
+    "Q488702": {
+      "href": "https://www.wikidata.org/wiki/Q488702",
+      "lang": "en",
+      "text": "Eureka"
+    },
+    "Q4917": {
+      "href": "https://www.wikidata.org/wiki/Q4917",
+      "lang": "en",
+      "text": "United States dollar"
+    },
+    "Q49240": {
+      "href": "https://www.wikidata.org/wiki/Q49240",
+      "lang": "en",
+      "text": "Stockton"
+    },
+    "Q52382311": {
+      "href": "https://www.wikidata.org/wiki/Q52382311",
+      "lang": "en",
+      "text": "M18"
+    },
+    "Q52692414": {
+      "href": "https://www.wikidata.org/wiki/Q52692414",
+      "lang": "en",
+      "text": "M/16"
+    },
+    "Q5294": {
+      "href": "https://www.wikidata.org/wiki/Q5294",
+      "lang": "en",
+      "text": "DVD"
+    },
+    "Q534495": {
+      "href": "https://www.wikidata.org/wiki/Q534495",
+      "lang": "en",
+      "text": "2020s"
+    },
+    "Q5434188": {
+      "href": "https://www.wikidata.org/wiki/Q5434188",
+      "lang": "en",
+      "text": "Fantastic Fest"
+    },
+    "Q56902855": {
+      "href": "https://www.wikidata.org/wiki/Q56902855",
+      "lang": "en",
+      "text": "A certificate"
+    },
+    "Q5778924": {
+      "href": "https://www.wikidata.org/wiki/Q5778924",
+      "lang": "en",
+      "text": "black comedy film"
+    },
+    "Q586356": {
+      "href": "https://www.wikidata.org/wiki/Q586356",
+      "lang": "en",
+      "text": "Golden Globe Award for Best Director"
+    },
+    "Q60229347": {
+      "href": "https://www.wikidata.org/wiki/Q60229347",
+      "lang": "en",
+      "text": "Veronica J. Valentini"
+    },
+    "Q6204042": {
+      "href": "https://www.wikidata.org/wiki/Q6204042",
+      "lang": "en",
+      "text": "JoAnne Sellar"
+    },
+    "Q62371961": {
+      "href": "https://www.wikidata.org/wiki/Q62371961",
+      "lang": "en",
+      "text": "13+"
+    },
+    "Q6464680": {
+      "href": "https://www.wikidata.org/wiki/Q6464680",
+      "lang": "en",
+      "text": "La Purisima Mission"
+    },
+    "Q668": {
+      "href": "https://www.wikidata.org/wiki/Q668",
+      "lang": "en",
+      "text": "India"
+    },
+    "Q66812927": {
+      "href": "https://www.wikidata.org/wiki/Q66812927",
+      "lang": "en",
+      "text": "R16"
+    },
+    "Q670282": {
+      "href": "https://www.wikidata.org/wiki/Q670282",
+      "lang": "en",
+      "text": "Golden Globe Award for Best Motion Picture – Musical or Comedy"
+    },
+    "Q68181753": {
+      "href": "https://www.wikidata.org/wiki/Q68181753",
+      "lang": "en",
+      "text": "Offensive language"
+    },
+    "Q68181937": {
+      "href": "https://www.wikidata.org/wiki/Q68181937",
+      "lang": "en",
+      "text": "Violence"
+    },
+    "Q68182045": {
+      "href": "https://www.wikidata.org/wiki/Q68182045",
+      "lang": "en",
+      "text": "Violence"
+    },
+    "Q68182093": {
+      "href": "https://www.wikidata.org/wiki/Q68182093",
+      "lang": "en",
+      "text": "Coarse language"
+    },
+    "Q68182330": {
+      "href": "https://www.wikidata.org/wiki/Q68182330",
+      "lang": "en",
+      "text": "Mature themes"
+    },
+    "Q6927": {
+      "href": "https://www.wikidata.org/wiki/Q6927",
+      "lang": "en",
+      "text": "20th century"
+    },
+    "Q6939": {
+      "href": "https://www.wikidata.org/wiki/Q6939",
+      "lang": "en",
+      "text": "21st century"
+    },
+    "Q69569595": {
+      "href": "https://www.wikidata.org/wiki/Q69569595",
+      "lang": "en",
+      "text": "Sexual references"
+    },
+    "Q69821989": {
+      "href": "https://www.wikidata.org/wiki/Q69821989",
+      "lang": "en",
+      "text": "Sexual material"
+    },
+    "Q71536040": {
+      "href": "https://www.wikidata.org/wiki/Q71536040",
+      "lang": "en",
+      "text": "most precise value"
+    },
+    "Q723685": {
+      "href": "https://www.wikidata.org/wiki/Q723685",
+      "lang": "en",
+      "text": "video on demand"
+    },
+    "Q723830": {
+      "href": "https://www.wikidata.org/wiki/Q723830",
+      "lang": "en",
+      "text": "Golden Globe Award for Best Supporting Actor – Motion Picture"
+    },
+    "Q7413623": {
+      "href": "https://www.wikidata.org/wiki/Q7413623",
+      "lang": "en",
+      "text": "Otay Mesa Detention Center"
+    },
+    "Q74434535": {
+      "href": "https://www.wikidata.org/wiki/Q74434535",
+      "lang": "en",
+      "text": "15A"
+    },
+    "Q7708542": {
+      "href": "https://www.wikidata.org/wiki/Q7708542",
+      "lang": "en",
+      "text": "Teyana Taylor"
+    },
+    "Q7936468": {
+      "href": "https://www.wikidata.org/wiki/Q7936468",
+      "lang": "en",
+      "text": "Vista Theatre"
+    },
+    "Q8016302": {
+      "href": "https://www.wikidata.org/wiki/Q8016302",
+      "lang": "en",
+      "text": "Warner Bros. Pictures"
+    },
+    "Q822907": {
+      "href": "https://www.wikidata.org/wiki/Q822907",
+      "lang": "en",
+      "text": "Golden Globe Award for Best Supporting Actress – Motion Picture"
+    },
+    "Q830079": {
+      "href": "https://www.wikidata.org/wiki/Q830079",
+      "lang": "en",
+      "text": "Academy Award for Best Sound"
+    },
+    "Q849124": {
+      "href": "https://www.wikidata.org/wiki/Q849124",
+      "lang": "en",
+      "text": "Golden Globe Award for Best Screenplay"
+    },
+    "Q85315079": {
+      "href": "https://www.wikidata.org/wiki/Q85315079",
+      "lang": "en",
+      "text": "98th Academy Awards"
+    },
+    "Q881": {
+      "href": "https://www.wikidata.org/wiki/Q881",
+      "lang": "en",
+      "text": "Vietnam"
+    },
+    "Q904209": {
+      "href": "https://www.wikidata.org/wiki/Q904209",
+      "lang": "en",
+      "text": "Eric Schweig"
+    },
+    "Q95652740": {
+      "href": "https://www.wikidata.org/wiki/Q95652740",
+      "lang": "en",
+      "text": "Sara Murphy"
+    },
+    "Q959790": {
+      "href": "https://www.wikidata.org/wiki/Q959790",
+      "lang": "en",
+      "text": "crime film"
+    },
+    "Q98034423": {
+      "href": "https://www.wikidata.org/wiki/Q98034423",
+      "lang": "en",
+      "text": "Violence"
+    },
+    "Q98042270": {
+      "href": "https://www.wikidata.org/wiki/Q98042270",
+      "lang": "en",
+      "text": "Coarse language"
+    }
+  },
+  "lang": "en",
+  "lead": {
+    "host": "en.wikipedia.org",
+    "lang": "en",
+    "local": true,
+    "more": [
+      "Anderson had wanted to adapt <i>Vineland</i> since the early 2000s, and eventually incorporated his own stories into the narrative while writing the screenplay. <a href=\"https://en.wikipedia.org/wiki/Principal_photography\">Principal photography</a> took place in <a href=\"https://en.wikipedia.org/wiki/California\">California</a> from January to June 2024 using <a href=\"https://en.wikipedia.org/wiki/VistaVision\">VistaVision</a>, becoming one of the first films to use the format since the 1960s. Following its premiere on September 8, 2025, <i>One Battle After Another</i> was released in the United States by <a href=\"https://en.wikipedia.org/wiki/Warner_Bros._Pictures\">Warner Bros. Pictures</a> on September 26. With a budget of $130–175&#160;million, it is the most expensive film of Anderson's career and the highest-grossing at over $213&#160;million worldwide.",
+      "<i>One Battle After Another</i> received acclaim and <a href=\"https://en.wikipedia.org/wiki/List_of_accolades_received_by_One_Battle_After_Another\">numerous accolades</a>. At the <a href=\"https://en.wikipedia.org/wiki/98th_Academy_Awards\">98th Academy Awards</a>, it was nominated for 13 awards and won <a href=\"https://en.wikipedia.org/wiki/Academy_Award_for_Best_Picture\">Best Picture</a>, <a href=\"https://en.wikipedia.org/wiki/Academy_Award_for_Best_Director\">Best Director</a>, <a href=\"https://en.wikipedia.org/wiki/Academy_Award_for_Best_Supporting_Actor\">Best Supporting Actor</a> (Penn), <a href=\"https://en.wikipedia.org/wiki/Academy_Award_for_Best_Adapted_Screenplay\">Best Adapted Screenplay</a>, <a href=\"https://en.wikipedia.org/wiki/Academy_Award_for_Best_Film_Editing\">Best Film Editing</a>, and the inaugural <a href=\"https://en.wikipedia.org/wiki/Academy_Award_for_Achievement_in_Casting\">Best Casting</a> award. It also received one win from a record seven nominations at the <a href=\"https://en.wikipedia.org/wiki/32nd_Actor_Awards\">32nd Actor Awards</a>; three wins at the <a href=\"https://en.wikipedia.org/wiki/31st_Critics%27_Choice_Awards\">31st Critics' Choice Awards</a>, including <a href=\"https://en.wikipedia.org/wiki/Critics%27_Choice_Movie_Award_for_Best_Picture\">Best Picture</a>; four wins at the <a href=\"https://en.wikipedia.org/wiki/83rd_Golden_Globes\">83rd Golden Globes</a>, including <a href=\"https://en.wikipedia.org/wiki/Golden_Globe_Award_for_Best_Motion_Picture_%E2%80%93_Musical_or_Comedy\">Best Motion Picture – Musical or Comedy</a>; and six wins at the <a href=\"https://en.wikipedia.org/wiki/79th_British_Academy_Film_Awards\">79th British Academy Film Awards</a>, including <a href=\"https://en.wikipedia.org/wiki/BAFTA_Award_for_Best_Film\">Best Film</a>. The film was listed by the <a href=\"https://en.wikipedia.org/wiki/American_Film_Institute\">American Film Institute</a> as one of the top ten films of 2025 and won five awards from the <a href=\"https://en.wikipedia.org/wiki/National_Board_of_Review\">National Board of Review</a>, including <a href=\"https://en.wikipedia.org/wiki/National_Board_of_Review_Award_for_Best_Film\">Best Film</a>.",
+      "Cite error: There are &lt;ref&#160;group&#61;lower-alpha&gt; tags&#160;or &#123;&#123;efn&#125;&#125; templates on this page, but the references will not show without a &#123;&#123;reflist&#124;group&#61;lower-alpha&#125;&#125; template&#160;or &#123;&#123;notelist&#125;&#125; template (see the <a href=\"https://en.wikipedia.org/wiki/Help:Cite_errors/Cite_error_group_refs_without_references\">help page</a>)."
+    ],
+    "paragraphs": [
+      "<i><b>One Battle After Another</b></i> is a 2025 American <a href=\"https://en.wikipedia.org/wiki/Action_comedy\">action-comedy</a> <a href=\"https://en.wikipedia.org/wiki/Thriller_film\">thriller film</a> written, directed, and produced by <a href=\"https://en.wikipedia.org/wiki/Paul_Thomas_Anderson\">Paul Thomas Anderson</a>. Inspired by the 1990 novel <i><a href=\"https://en.wikipedia.org/wiki/Vineland\">Vineland</a></i> by <a href=\"https://en.wikipedia.org/wiki/Thomas_Pynchon\">Thomas Pynchon</a>, the film's <a href=\"https://en.wikipedia.org/wiki/Ensemble_cast\">ensemble cast</a> includes <a href=\"https://en.wikipedia.org/wiki/Leonardo_DiCaprio\">Leonardo DiCaprio</a>, <a href=\"https://en.wikipedia.org/wiki/Sean_Penn\">Sean Penn</a>, <a href=\"https://en.wikipedia.org/wiki/Benicio_del_Toro\">Benicio del Toro</a>, <a href=\"https://en.wikipedia.org/wiki/Regina_Hall\">Regina Hall</a>, <a href=\"https://en.wikipedia.org/wiki/Teyana_Taylor\">Teyana Taylor</a>, and <a href=\"https://en.wikipedia.org/wiki/Chase_Infiniti\">Chase Infiniti</a>, in her film debut. The film follows a drug using washed-up former <a href=\"https://en.wikipedia.org/wiki/Revolutionary\">revolutionary</a> who is thrust back into the conflict when an amoral tenacious <a href=\"https://en.wikipedia.org/wiki/Counterterrorist\">counterterrorist</a> agent resurfaces after sixteen years to bring them to justice to cover his past sins."
+    ],
+    "url": "https://en.wikipedia.org/wiki/One_Battle_After_Another"
+  },
+  "locale": "en",
+  "messages": {
+    "qrender-add-label": "Add a label in your language",
+    "qrender-age": "aged $1",
+    "qrender-bce": "$1 BCE",
+    "qrender-close": "Close",
+    "qrender-credit": "Credit",
+    "qrender-edit": "Edit",
+    "qrender-search": "Search Wikipedia",
+    "qrender-some-value": "unknown value"
+  },
+  "page_images": {
+    "Q1011564": {
+      "aspect": 0.7542,
+      "credit": {
+        "artist": "Bryan Berlin",
+        "license": "CC BY-SA 4.0"
+      },
+      "file": "Rose Byrne Blue Moon-21 (cropped).jpg",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q103916": {
+      "aspect": 0.75,
+      "credit": {
+        "artist": "Kevin Paul",
+        "license": "CC BY 4.0"
+      },
+      "file": "Michael B Jordan - Sinners (cropped).jpg",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q133596666": {
+      "aspect": 1.4993,
+      "credit": {
+        "artist": "Alex Nelson",
+        "license": "CC BY-SA 4.0"
+      },
+      "file": "Paul Grimstad.jpg",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q138479019": {
+      "aspect": 0.7205,
+      "credit": {
+        "artist": "[Hollywood, Calif.], [ASC Holding Corp.]",
+        "license": "Public domain"
+      },
+      "file": "Mitchell Camera Corporation 666 West Harvard Street Glendale California ad detail, from- American cinematographer. (Vol. 31, 1950) (IA americancinemato31unse) (page 13 crop).jpg",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q1422140": {
+      "aspect": 0.6653,
+      "credit": {
+        "artist": "PhilipRomano",
+        "license": "CC BY-SA 4.0"
+      },
+      "file": "LudwigGoransson-byPhilipRomano.jpg",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q181883": {
+      "aspect": 0.7489,
+      "credit": {
+        "artist": "Amy Martin Photography",
+        "license": "CC BY 4.0"
+      },
+      "file": "Timothée Chalamet 2025 2 (cropped).jpg",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q20657093": {
+      "aspect": 0.75,
+      "credit": {
+        "artist": "Acr135",
+        "license": "CC BY-SA 4.0"
+      },
+      "file": "Junglepussy.jpg",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q281939": {
+      "aspect": 1.5464,
+      "credit": {
+        "artist": "Steve Crook",
+        "license": "CC BY-SA 3.0"
+      },
+      "file": "ThelmaSchoonmaker.jpg",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q534495": {
+      "aspect": 1.4981,
+      "credit": {
+        "artist": "Gustavo Basso",
+        "license": "CC BY-SA 4.0"
+      },
+      "file": "Covid-19 SP - Santo Andre's hospital at peak of pandemic.jpg",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q586356": {
+      "aspect": 0.7494,
+      "credit": {
+        "artist": "Raph_PH",
+        "license": "CC BY 4.0"
+      },
+      "file": "Paul Thomas Anderson - BFI Southbank.jpg",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q6927": {
+      "aspect": 1.0,
+      "credit": {
+        "artist": "NASA/Bill Anders",
+        "license": "Public domain"
+      },
+      "file": "NASA-Apollo8-Dec24-Earthrise.jpg",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q6939": {
+      "aspect": 1.3333,
+      "credit": {
+        "artist": "Erik Pitti",
+        "license": "CC BY 2.0"
+      },
+      "file": "Steve Jobs at WWDC 2008.jpg",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q723830": {
+      "aspect": 0.8048,
+      "credit": {
+        "artist": "Harald Krichel",
+        "license": "CC BY-SA 4.0"
+      },
+      "file": "Stellan Skarsgård-9707 (cropped).jpg",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q822907": {
+      "aspect": 0.7503,
+      "credit": {
+        "artist": "VOA",
+        "license": "Public domain"
+      },
+      "file": "Teyana Taylor (cropped).jpg",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q849124": {
+      "aspect": 0.7494,
+      "credit": {
+        "artist": "Raph_PH",
+        "license": "CC BY 4.0"
+      },
+      "file": "Paul Thomas Anderson - BFI Southbank.jpg",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    }
+  },
+  "page_title": "One Battle After Another",
+  "projects": [
+    {
+      "count": 51,
+      "local": true,
+      "name": "wikipedia"
+    },
+    {
+      "count": 1,
+      "local": true,
+      "name": "wikiquote"
+    }
+  ],
+  "qid": "Q117085614",
+  "schema": "view/0.2",
+  "spreads": [
+    {
+      "id": "identity",
+      "prose_links": [],
+      "prose_text": null,
+      "title": null
+    },
+    {
+      "id": "story",
+      "prose_links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/One_Battle_After_Another#Plot",
+          "lang": "en",
+          "text": "Plot"
+        }
+      ],
+      "prose_text": {
+        "href": "https://en.wikipedia.org/wiki/One_Battle_After_Another#Plot",
+        "html": "\"Ghetto\" Pat Calhoun and Perfidia Beverly Hills are lovers and members of a <a href=\"https://en.wikipedia.org/wiki/Far-left_politics\">far-left</a> <a href=\"https://en.wikipedia.org/wiki/Militant\">militant</a> <a href=\"https://en.wikipedia.org/wiki/Revolutionary\">revolutionary</a> group, the French 75. While breaking out <a href=\"https://en.wikipedia.org/wiki/Illegal_immigration_to_the_United_States\">detained immigrants</a> from <a href=\"https://en.wikipedia.org/wiki/Otay_Mesa_Detention_Center\">Otay Mesa Detention Center</a>, Perfidia sexually humiliates the <a href=\"https://en.wikipedia.org/wiki/Commanding_officer\">commanding officer</a>, Steven J. Lockjaw, who becomes obsessed with her sexually. Later, when Lockjaw catches Perfidia planting a bomb, he lets her go after she agrees to his demand to meet him for sex. Soon after, Perfidia becomes pregnant.",
+        "lang": "en",
+        "local": true,
+        "title": "Plot"
+      },
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q1758354",
+        "lang": "en",
+        "text": "plot"
+      }
+    },
+    {
+      "id": "cast",
+      "prose_links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/One_Battle_After_Another#Cast",
+          "lang": "en",
+          "text": "Cast"
+        }
+      ],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q15267437",
+        "lang": "en",
+        "text": "cast"
+      }
+    },
+    {
+      "id": "credits",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q506702",
+        "lang": "en",
+        "text": "film crew"
+      }
+    },
+    {
+      "id": "production",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q932586",
+        "lang": "en",
+        "text": "film production"
+      }
+    },
+    {
+      "id": "release",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q115668531",
+        "lang": "en",
+        "text": "film release"
+      }
+    },
+    {
+      "id": "reception",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q4482",
+        "lang": "en",
+        "text": "film criticism"
+      }
+    },
+    {
+      "id": "ratings",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q14775294",
+        "lang": "en",
+        "text": "motion picture rating system"
+      }
+    },
+    {
+      "id": "media",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q131765",
+        "lang": "en",
+        "text": "multimedia"
+      }
+    },
+    {
+      "id": "evidence",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q121769",
+        "lang": "en",
+        "text": "reference"
+      }
+    }
+  ],
+  "unmatched_sections": [
+    {
+      "href": "https://en.wikipedia.org/wiki/One_Battle_After_Another#Production",
+      "lang": "en",
+      "text": "Production"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/One_Battle_After_Another#Marketing",
+      "lang": "en",
+      "text": "Marketing"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/One_Battle_After_Another#Release",
+      "lang": "en",
+      "text": "Release"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/One_Battle_After_Another#Reception",
+      "lang": "en",
+      "text": "Reception"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/One_Battle_After_Another#See_also",
+      "lang": "en",
+      "text": "See also"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/One_Battle_After_Another#Notes",
+      "lang": "en",
+      "text": "Notes"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/One_Battle_After_Another#References",
+      "lang": "en",
+      "text": "References"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/One_Battle_After_Another#External_links",
+      "lang": "en",
+      "text": "External links"
+    }
+  ]
+}

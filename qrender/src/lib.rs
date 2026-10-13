@@ -4,6 +4,7 @@
 
 pub mod compose;
 pub mod config;
+pub mod localize;
 pub mod primitives;
 pub mod schema;
 pub mod vocab;
@@ -13,6 +14,8 @@ use content::Content;
 
 use crate::config::Config;
 use crate::schema::Composition;
+
+pub use localize::localize;
 
 /// The composition of an item: the same for every language.
 pub fn compose(content: &Content, config: &Config) -> Composition {

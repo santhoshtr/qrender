@@ -8,6 +8,8 @@ edition.workspace = true
 [dependencies]
 content = { path = "../content" }
 indexmap.workspace = true
+lol_html = "3"
+percent-encoding.workspace = true
 schemars.workspace = true
 serde.workspace = true
 serde_json.workspace = true

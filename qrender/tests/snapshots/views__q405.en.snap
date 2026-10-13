@@ -1,0 +1,2012 @@
+---
+source: qrender/tests/views.rs
+expression: json
+---
+{
+  "composition": "composition/0.3",
+  "coverage": {
+    "have": 173,
+    "total": 173
+  },
+  "design": "design/0.2",
+  "dir": "ltr",
+  "labels": {
+    "P10": {
+      "href": "https://www.wikidata.org/wiki/Property:P10",
+      "lang": "en",
+      "text": "video"
+    },
+    "P1004": {
+      "href": "https://www.wikidata.org/wiki/Property:P1004",
+      "lang": "en",
+      "text": "MusicBrainz place ID"
+    },
+    "P1013": {
+      "href": "https://www.wikidata.org/wiki/Property:P1013",
+      "lang": "en",
+      "text": "criterion used"
+    },
+    "P10135": {
+      "href": "https://www.wikidata.org/wiki/Property:P10135",
+      "lang": "en",
+      "text": "recording date"
+    },
+    "P10227": {
+      "href": "https://www.wikidata.org/wiki/Property:P10227",
+      "lang": "en",
+      "text": "National Library of Ireland ID"
+    },
+    "P10234": {
+      "href": "https://www.wikidata.org/wiki/Property:P10234",
+      "lang": "en",
+      "text": "Der Spiegel topic ID"
+    },
+    "P1036": {
+      "href": "https://www.wikidata.org/wiki/Property:P1036",
+      "lang": "en",
+      "text": "Dewey Decimal Classification"
+    },
+    "P10376": {
+      "href": "https://www.wikidata.org/wiki/Property:P10376",
+      "lang": "en",
+      "text": "ScienceDirect topic ID"
+    },
+    "P10381": {
+      "href": "https://www.wikidata.org/wiki/Property:P10381",
+      "lang": "en",
+      "text": "VerbaAlpina ID"
+    },
+    "P1051": {
+      "href": "https://www.wikidata.org/wiki/Property:P1051",
+      "lang": "en",
+      "text": "PSH ID"
+    },
+    "P10565": {
+      "href": "https://www.wikidata.org/wiki/Property:P10565",
+      "lang": "en",
+      "text": "Encyclopedia of China (Third Edition) old ID (2021)"
+    },
+    "P10757": {
+      "href": "https://www.wikidata.org/wiki/Property:P10757",
+      "lang": "en",
+      "text": "Personality Database profile ID"
+    },
+    "P10883": {
+      "href": "https://www.wikidata.org/wiki/Property:P10883",
+      "lang": "en",
+      "text": "The Encyclopedia of Fantasy ID"
+    },
+    "P10916": {
+      "href": "https://www.wikidata.org/wiki/Property:P10916",
+      "lang": "en",
+      "text": "Süddeutsche Zeitung topic ID"
+    },
+    "P1096": {
+      "href": "https://www.wikidata.org/wiki/Property:P1096",
+      "lang": "en",
+      "text": "orbital eccentricity"
+    },
+    "P1102": {
+      "href": "https://www.wikidata.org/wiki/Property:P1102",
+      "lang": "en",
+      "text": "flattening"
+    },
+    "P1151": {
+      "href": "https://www.wikidata.org/wiki/Property:P1151",
+      "lang": "en",
+      "text": "topic's main Wikimedia portal"
+    },
+    "P11514": {
+      "href": "https://www.wikidata.org/wiki/Property:P11514",
+      "lang": "en",
+      "text": "Great Russian Encyclopedia portal ID"
+    },
+    "P11924": {
+      "href": "https://www.wikidata.org/wiki/Property:P11924",
+      "lang": "en",
+      "text": "IMDb keyword"
+    },
+    "P12143": {
+      "href": "https://www.wikidata.org/wiki/Property:P12143",
+      "lang": "en",
+      "text": "Gaming Wiki Network article ID"
+    },
+    "P1215": {
+      "href": "https://www.wikidata.org/wiki/Property:P1215",
+      "lang": "en",
+      "text": "apparent magnitude"
+    },
+    "P1225": {
+      "href": "https://www.wikidata.org/wiki/Property:P1225",
+      "lang": "en",
+      "text": "U.S. National Archives Identifier"
+    },
+    "P12385": {
+      "href": "https://www.wikidata.org/wiki/Property:P12385",
+      "lang": "en",
+      "text": "Gran Enciclopèdia Catalana ID"
+    },
+    "P1245": {
+      "href": "https://www.wikidata.org/wiki/Property:P1245",
+      "lang": "en",
+      "text": "OmegaWiki Defined Meaning"
+    },
+    "P12596": {
+      "href": "https://www.wikidata.org/wiki/Property:P12596",
+      "lang": "en",
+      "text": "museum-digital tag ID"
+    },
+    "P12721": {
+      "href": "https://www.wikidata.org/wiki/Property:P12721",
+      "lang": "en",
+      "text": "Lille norske leksikon ID"
+    },
+    "P12800": {
+      "href": "https://www.wikidata.org/wiki/Property:P12800",
+      "lang": "en",
+      "text": "Vikidia article ID"
+    },
+    "P1296": {
+      "href": "https://www.wikidata.org/wiki/Property:P1296",
+      "lang": "en",
+      "text": "Gran Enciclopèdia Catalana ID (former scheme)"
+    },
+    "P1299": {
+      "href": "https://www.wikidata.org/wiki/Property:P1299",
+      "lang": "en",
+      "text": "depicted by"
+    },
+    "P13300": {
+      "href": "https://www.wikidata.org/wiki/Property:P13300",
+      "lang": "en",
+      "text": "New York Post topic ID"
+    },
+    "P1343": {
+      "href": "https://www.wikidata.org/wiki/Property:P1343",
+      "lang": "en",
+      "text": "described by source"
+    },
+    "P13591": {
+      "href": "https://www.wikidata.org/wiki/Property:P13591",
+      "lang": "en",
+      "text": "‎Yale LUX ID"
+    },
+    "P13613": {
+      "href": "https://www.wikidata.org/wiki/Property:P13613",
+      "lang": "en",
+      "text": "Enciclopedia Galega Universal ID"
+    },
+    "P1368": {
+      "href": "https://www.wikidata.org/wiki/Property:P1368",
+      "lang": "en",
+      "text": "National Library of Latvia ID"
+    },
+    "P1375": {
+      "href": "https://www.wikidata.org/wiki/Property:P1375",
+      "lang": "en",
+      "text": "NSK (VIAF) ID"
+    },
+    "P13772": {
+      "href": "https://www.wikidata.org/wiki/Property:P13772",
+      "lang": "en",
+      "text": "Harper's tag"
+    },
+    "P138": {
+      "href": "https://www.wikidata.org/wiki/Property:P138",
+      "lang": "en",
+      "text": "named after"
+    },
+    "P1417": {
+      "href": "https://www.wikidata.org/wiki/Property:P1417",
+      "lang": "en",
+      "text": "Encyclopædia Britannica Online ID"
+    },
+    "P14225": {
+      "href": "https://www.wikidata.org/wiki/Property:P14225",
+      "lang": "en",
+      "text": "NSK ID"
+    },
+    "P1424": {
+      "href": "https://www.wikidata.org/wiki/Property:P1424",
+      "lang": "en",
+      "text": "topic has template"
+    },
+    "P14269": {
+      "href": "https://www.wikidata.org/wiki/Property:P14269",
+      "lang": "en",
+      "text": "Anarâš aavis topic ID"
+    },
+    "P143": {
+      "href": "https://www.wikidata.org/wiki/Property:P143",
+      "lang": "en",
+      "text": "imported from Wikimedia project"
+    },
+    "P14470": {
+      "href": "https://www.wikidata.org/wiki/Property:P14470",
+      "lang": "en",
+      "text": "‎Giant Bomb Wiki ID"
+    },
+    "P14541": {
+      "href": "https://www.wikidata.org/wiki/Property:P14541",
+      "lang": "en",
+      "text": "Encyclopedia of China (Third Edition) ID (2026)"
+    },
+    "P1480": {
+      "href": "https://www.wikidata.org/wiki/Property:P1480",
+      "lang": "en",
+      "text": "sourcing circumstances"
+    },
+    "P1542": {
+      "href": "https://www.wikidata.org/wiki/Property:P1542",
+      "lang": "en",
+      "text": "has effect"
+    },
+    "P1552": {
+      "href": "https://www.wikidata.org/wiki/Property:P1552",
+      "lang": "en",
+      "text": "has characteristic"
+    },
+    "P1589": {
+      "href": "https://www.wikidata.org/wiki/Property:P1589",
+      "lang": "en",
+      "text": "lowest point"
+    },
+    "P1617": {
+      "href": "https://www.wikidata.org/wiki/Property:P1617",
+      "lang": "en",
+      "text": "BBC Things ID"
+    },
+    "P1667": {
+      "href": "https://www.wikidata.org/wiki/Property:P1667",
+      "lang": "en",
+      "text": "Getty Thesaurus of Geographic Names ID"
+    },
+    "P18": {
+      "href": "https://www.wikidata.org/wiki/Property:P18",
+      "lang": "en",
+      "text": "image"
+    },
+    "P1810": {
+      "href": "https://www.wikidata.org/wiki/Property:P1810",
+      "lang": "en",
+      "text": "subject named as"
+    },
+    "P1889": {
+      "href": "https://www.wikidata.org/wiki/Property:P1889",
+      "lang": "en",
+      "text": "different from"
+    },
+    "P2045": {
+      "href": "https://www.wikidata.org/wiki/Property:P2045",
+      "lang": "en",
+      "text": "orbital inclination"
+    },
+    "P2046": {
+      "href": "https://www.wikidata.org/wiki/Property:P2046",
+      "lang": "en",
+      "text": "area"
+    },
+    "P2054": {
+      "href": "https://www.wikidata.org/wiki/Property:P2054",
+      "lang": "en",
+      "text": "density"
+    },
+    "P2067": {
+      "href": "https://www.wikidata.org/wiki/Property:P2067",
+      "lang": "en",
+      "text": "mass"
+    },
+    "P2076": {
+      "href": "https://www.wikidata.org/wiki/Property:P2076",
+      "lang": "en",
+      "text": "temperature"
+    },
+    "P2096": {
+      "href": "https://www.wikidata.org/wiki/Property:P2096",
+      "lang": "en",
+      "text": "media legend"
+    },
+    "P2120": {
+      "href": "https://www.wikidata.org/wiki/Property:P2120",
+      "lang": "en",
+      "text": "radius"
+    },
+    "P214": {
+      "href": "https://www.wikidata.org/wiki/Property:P214",
+      "lang": "en",
+      "text": "VIAF cluster ID"
+    },
+    "P2146": {
+      "href": "https://www.wikidata.org/wiki/Property:P2146",
+      "lang": "en",
+      "text": "orbital period"
+    },
+    "P2163": {
+      "href": "https://www.wikidata.org/wiki/Property:P2163",
+      "lang": "en",
+      "text": "FAST ID"
+    },
+    "P2184": {
+      "href": "https://www.wikidata.org/wiki/Property:P2184",
+      "lang": "en",
+      "text": "history of topic"
+    },
+    "P2210": {
+      "href": "https://www.wikidata.org/wiki/Property:P2210",
+      "lang": "en",
+      "text": "relative to"
+    },
+    "P2233": {
+      "href": "https://www.wikidata.org/wiki/Property:P2233",
+      "lang": "en",
+      "text": "semi-major axis of an orbit"
+    },
+    "P2234": {
+      "href": "https://www.wikidata.org/wiki/Property:P2234",
+      "lang": "en",
+      "text": "volume as quantity"
+    },
+    "P2243": {
+      "href": "https://www.wikidata.org/wiki/Property:P2243",
+      "lang": "en",
+      "text": "apoapsis"
+    },
+    "P2244": {
+      "href": "https://www.wikidata.org/wiki/Property:P2244",
+      "lang": "en",
+      "text": "periapsis"
+    },
+    "P227": {
+      "href": "https://www.wikidata.org/wiki/Property:P227",
+      "lang": "en",
+      "text": "GND ID"
+    },
+    "P2347": {
+      "href": "https://www.wikidata.org/wiki/Property:P2347",
+      "lang": "en",
+      "text": "YSO ID"
+    },
+    "P2348": {
+      "href": "https://www.wikidata.org/wiki/Property:P2348",
+      "lang": "en",
+      "text": "time period"
+    },
+    "P2386": {
+      "href": "https://www.wikidata.org/wiki/Property:P2386",
+      "lang": "en",
+      "text": "diameter"
+    },
+    "P244": {
+      "href": "https://www.wikidata.org/wiki/Property:P244",
+      "lang": "en",
+      "text": "Library of Congress Authorities ID"
+    },
+    "P248": {
+      "href": "https://www.wikidata.org/wiki/Property:P248",
+      "lang": "en",
+      "text": "stated in"
+    },
+    "P2579": {
+      "href": "https://www.wikidata.org/wiki/Property:P2579",
+      "lang": "en",
+      "text": "studied by"
+    },
+    "P2581": {
+      "href": "https://www.wikidata.org/wiki/Property:P2581",
+      "lang": "en",
+      "text": "BabelNet ID"
+    },
+    "P2583": {
+      "href": "https://www.wikidata.org/wiki/Property:P2583",
+      "lang": "en",
+      "text": "distance from Earth"
+    },
+    "P2612": {
+      "href": "https://www.wikidata.org/wiki/Property:P2612",
+      "lang": "en",
+      "text": "TED topic ID"
+    },
+    "P2671": {
+      "href": "https://www.wikidata.org/wiki/Property:P2671",
+      "lang": "en",
+      "text": "Google Knowledge Graph ID"
+    },
+    "P268": {
+      "href": "https://www.wikidata.org/wiki/Property:P268",
+      "lang": "en",
+      "text": "Bibliothèque nationale de France ID"
+    },
+    "P269": {
+      "href": "https://www.wikidata.org/wiki/Property:P269",
+      "lang": "en",
+      "text": "IdRef ID"
+    },
+    "P2699": {
+      "href": "https://www.wikidata.org/wiki/Property:P2699",
+      "lang": "en",
+      "text": "URL"
+    },
+    "P276": {
+      "href": "https://www.wikidata.org/wiki/Property:P276",
+      "lang": "en",
+      "text": "location"
+    },
+    "P2956": {
+      "href": "https://www.wikidata.org/wiki/Property:P2956",
+      "lang": "en",
+      "text": "NAIF ID"
+    },
+    "P2959": {
+      "href": "https://www.wikidata.org/wiki/Property:P2959",
+      "lang": "en",
+      "text": "permanent duplicated item"
+    },
+    "P31": {
+      "href": "https://www.wikidata.org/wiki/Property:P31",
+      "lang": "en",
+      "text": "instance of"
+    },
+    "P3106": {
+      "href": "https://www.wikidata.org/wiki/Property:P3106",
+      "lang": "en",
+      "text": "The Guardian topic ID"
+    },
+    "P3180": {
+      "href": "https://www.wikidata.org/wiki/Property:P3180",
+      "lang": "en",
+      "text": "Visual Novel Database ID"
+    },
+    "P3219": {
+      "href": "https://www.wikidata.org/wiki/Property:P3219",
+      "lang": "en",
+      "text": "Encyclopædia Universalis ID"
+    },
+    "P3417": {
+      "href": "https://www.wikidata.org/wiki/Property:P3417",
+      "lang": "en",
+      "text": "Quora topic ID"
+    },
+    "P3451": {
+      "href": "https://www.wikidata.org/wiki/Property:P3451",
+      "lang": "en",
+      "text": "nighttime view"
+    },
+    "P349": {
+      "href": "https://www.wikidata.org/wiki/Property:P349",
+      "lang": "en",
+      "text": "NDL Authority ID"
+    },
+    "P3553": {
+      "href": "https://www.wikidata.org/wiki/Property:P3553",
+      "lang": "en",
+      "text": "Zhihu topic ID"
+    },
+    "P361": {
+      "href": "https://www.wikidata.org/wiki/Property:P361",
+      "lang": "en",
+      "text": "part of"
+    },
+    "P3629": {
+      "href": "https://www.wikidata.org/wiki/Property:P3629",
+      "lang": "en",
+      "text": "age of subject at event"
+    },
+    "P366": {
+      "href": "https://www.wikidata.org/wiki/Property:P366",
+      "lang": "en",
+      "text": "has use"
+    },
+    "P367": {
+      "href": "https://www.wikidata.org/wiki/Property:P367",
+      "lang": "en",
+      "text": "astronomic symbol image"
+    },
+    "P373": {
+      "href": "https://www.wikidata.org/wiki/Property:P373",
+      "lang": "en",
+      "text": "Commons category"
+    },
+    "P376": {
+      "href": "https://www.wikidata.org/wiki/Property:P376",
+      "lang": "en",
+      "text": "located on astronomical body"
+    },
+    "P3872": {
+      "href": "https://www.wikidata.org/wiki/Property:P3872",
+      "lang": "en",
+      "text": "patronage"
+    },
+    "P3916": {
+      "href": "https://www.wikidata.org/wiki/Property:P3916",
+      "lang": "en",
+      "text": "UNESCO Thesaurus ID"
+    },
+    "P397": {
+      "href": "https://www.wikidata.org/wiki/Property:P397",
+      "lang": "en",
+      "text": "parent astronomical body"
+    },
+    "P398": {
+      "href": "https://www.wikidata.org/wiki/Property:P398",
+      "lang": "en",
+      "text": "child astronomical body"
+    },
+    "P3984": {
+      "href": "https://www.wikidata.org/wiki/Property:P3984",
+      "lang": "en",
+      "text": "subreddit"
+    },
+    "P407": {
+      "href": "https://www.wikidata.org/wiki/Property:P407",
+      "lang": "en",
+      "text": "language of work or name"
+    },
+    "P4212": {
+      "href": "https://www.wikidata.org/wiki/Property:P4212",
+      "lang": "en",
+      "text": "PACTOLS thesaurus ID"
+    },
+    "P4341": {
+      "href": "https://www.wikidata.org/wiki/Property:P4341",
+      "lang": "en",
+      "text": "synodic period"
+    },
+    "P4342": {
+      "href": "https://www.wikidata.org/wiki/Property:P4342",
+      "lang": "en",
+      "text": "Great Norwegian Encyclopedia ID"
+    },
+    "P443": {
+      "href": "https://www.wikidata.org/wiki/Property:P443",
+      "lang": "en",
+      "text": "pronunciation audio"
+    },
+    "P4466": {
+      "href": "https://www.wikidata.org/wiki/Property:P4466",
+      "lang": "en",
+      "text": "Unified Astronomy Thesaurus ID"
+    },
+    "P4501": {
+      "href": "https://www.wikidata.org/wiki/Property:P4501",
+      "lang": "en",
+      "text": "albedo"
+    },
+    "P459": {
+      "href": "https://www.wikidata.org/wiki/Property:P459",
+      "lang": "en",
+      "text": "determination method or standard"
+    },
+    "P4640": {
+      "href": "https://www.wikidata.org/wiki/Property:P4640",
+      "lang": "en",
+      "text": "spherical panorama image"
+    },
+    "P4801": {
+      "href": "https://www.wikidata.org/wiki/Property:P4801",
+      "lang": "en",
+      "text": "LC and MARC vocabularies ID"
+    },
+    "P4839": {
+      "href": "https://www.wikidata.org/wiki/Property:P4839",
+      "lang": "en",
+      "text": "Wolfram Language entity code"
+    },
+    "P486": {
+      "href": "https://www.wikidata.org/wiki/Property:P486",
+      "lang": "en",
+      "text": "MeSH descriptor ID"
+    },
+    "P487": {
+      "href": "https://www.wikidata.org/wiki/Property:P487",
+      "lang": "en",
+      "text": "Unicode character"
+    },
+    "P4896": {
+      "href": "https://www.wikidata.org/wiki/Property:P4896",
+      "lang": "en",
+      "text": "3D model"
+    },
+    "P490": {
+      "href": "https://www.wikidata.org/wiki/Property:P490",
+      "lang": "en",
+      "text": "provisional designation"
+    },
+    "P4934": {
+      "href": "https://www.wikidata.org/wiki/Property:P4934",
+      "lang": "en",
+      "text": "calculated from"
+    },
+    "P5008": {
+      "href": "https://www.wikidata.org/wiki/Property:P5008",
+      "lang": "en",
+      "text": "on focus list of Wikimedia project"
+    },
+    "P5019": {
+      "href": "https://www.wikidata.org/wiki/Property:P5019",
+      "lang": "en",
+      "text": "Brockhaus Enzyklopädie online ID"
+    },
+    "P5063": {
+      "href": "https://www.wikidata.org/wiki/Property:P5063",
+      "lang": "en",
+      "text": "Interlingual Index ID"
+    },
+    "P508": {
+      "href": "https://www.wikidata.org/wiki/Property:P508",
+      "lang": "en",
+      "text": "BNCF Thesaurus ID"
+    },
+    "P5102": {
+      "href": "https://www.wikidata.org/wiki/Property:P5102",
+      "lang": "en",
+      "text": "nature of statement"
+    },
+    "P5125": {
+      "href": "https://www.wikidata.org/wiki/Property:P5125",
+      "lang": "en",
+      "text": "Wikimedia outline"
+    },
+    "P515": {
+      "href": "https://www.wikidata.org/wiki/Property:P515",
+      "lang": "en",
+      "text": "state of matter"
+    },
+    "P5160": {
+      "href": "https://www.wikidata.org/wiki/Property:P5160",
+      "lang": "en",
+      "text": "Thesaurus for Graphic Materials ID"
+    },
+    "P518": {
+      "href": "https://www.wikidata.org/wiki/Property:P518",
+      "lang": "en",
+      "text": "applies to part"
+    },
+    "P522": {
+      "href": "https://www.wikidata.org/wiki/Property:P522",
+      "lang": "en",
+      "text": "type of orbit"
+    },
+    "P5247": {
+      "href": "https://www.wikidata.org/wiki/Property:P5247",
+      "lang": "en",
+      "text": "Giant Bomb ID (former scheme)"
+    },
+    "P527": {
+      "href": "https://www.wikidata.org/wiki/Property:P527",
+      "lang": "en",
+      "text": "has part(s)"
+    },
+    "P5337": {
+      "href": "https://www.wikidata.org/wiki/Property:P5337",
+      "lang": "en",
+      "text": "Google News topics ID"
+    },
+    "P5348": {
+      "href": "https://www.wikidata.org/wiki/Property:P5348",
+      "lang": "en",
+      "text": "angular diameter"
+    },
+    "P5395": {
+      "href": "https://www.wikidata.org/wiki/Property:P5395",
+      "lang": "en",
+      "text": "Canadian Encyclopedia article ID"
+    },
+    "P5421": {
+      "href": "https://www.wikidata.org/wiki/Property:P5421",
+      "lang": "en",
+      "text": "Trading Card Database name ID"
+    },
+    "P5551": {
+      "href": "https://www.wikidata.org/wiki/Property:P5551",
+      "lang": "en",
+      "text": "Courrier international topic ID"
+    },
+    "P571": {
+      "href": "https://www.wikidata.org/wiki/Property:P571",
+      "lang": "en",
+      "text": "inception"
+    },
+    "P5748": {
+      "href": "https://www.wikidata.org/wiki/Property:P5748",
+      "lang": "en",
+      "text": "Basisklassifikation"
+    },
+    "P575": {
+      "href": "https://www.wikidata.org/wiki/Property:P575",
+      "lang": "en",
+      "text": "time of discovery or invention"
+    },
+    "P580": {
+      "href": "https://www.wikidata.org/wiki/Property:P580",
+      "lang": "en",
+      "text": "start time"
+    },
+    "P585": {
+      "href": "https://www.wikidata.org/wiki/Property:P585",
+      "lang": "en",
+      "text": "point in time"
+    },
+    "P5905": {
+      "href": "https://www.wikidata.org/wiki/Property:P5905",
+      "lang": "en",
+      "text": "Comic Vine ID"
+    },
+    "P6058": {
+      "href": "https://www.wikidata.org/wiki/Property:P6058",
+      "lang": "en",
+      "text": "Larousse ID"
+    },
+    "P61": {
+      "href": "https://www.wikidata.org/wiki/Property:P61",
+      "lang": "en",
+      "text": "discoverer or inventor"
+    },
+    "P610": {
+      "href": "https://www.wikidata.org/wiki/Property:P610",
+      "lang": "en",
+      "text": "highest point"
+    },
+    "P6104": {
+      "href": "https://www.wikidata.org/wiki/Property:P6104",
+      "lang": "en",
+      "text": "maintained by WikiProject"
+    },
+    "P6200": {
+      "href": "https://www.wikidata.org/wiki/Property:P6200",
+      "lang": "en",
+      "text": "BBC News topic ID"
+    },
+    "P625": {
+      "href": "https://www.wikidata.org/wiki/Property:P625",
+      "lang": "en",
+      "text": "coordinate location"
+    },
+    "P6262": {
+      "href": "https://www.wikidata.org/wiki/Property:P6262",
+      "lang": "en",
+      "text": "Fandom article ID"
+    },
+    "P6265": {
+      "href": "https://www.wikidata.org/wiki/Property:P6265",
+      "lang": "en",
+      "text": "Mindat locality ID"
+    },
+    "P6293": {
+      "href": "https://www.wikidata.org/wiki/Property:P6293",
+      "lang": "en",
+      "text": "YSA ID"
+    },
+    "P6296": {
+      "href": "https://www.wikidata.org/wiki/Property:P6296",
+      "lang": "en",
+      "text": "bgm.tv character ID"
+    },
+    "P6385": {
+      "href": "https://www.wikidata.org/wiki/Property:P6385",
+      "lang": "en",
+      "text": "Krugosvet article (archived)"
+    },
+    "P646": {
+      "href": "https://www.wikidata.org/wiki/Property:P646",
+      "lang": "en",
+      "text": "Freebase ID"
+    },
+    "P6573": {
+      "href": "https://www.wikidata.org/wiki/Property:P6573",
+      "lang": "en",
+      "text": "Klexikon article ID"
+    },
+    "P672": {
+      "href": "https://www.wikidata.org/wiki/Property:P672",
+      "lang": "en",
+      "text": "MeSH tree code"
+    },
+    "P6781": {
+      "href": "https://www.wikidata.org/wiki/Property:P6781",
+      "lang": "en",
+      "text": "ProofWiki ID"
+    },
+    "P6839": {
+      "href": "https://www.wikidata.org/wiki/Property:P6839",
+      "lang": "en",
+      "text": "TV Tropes ID"
+    },
+    "P6900": {
+      "href": "https://www.wikidata.org/wiki/Property:P6900",
+      "lang": "en",
+      "text": "NicoNicoPedia word article ID"
+    },
+    "P691": {
+      "href": "https://www.wikidata.org/wiki/Property:P691",
+      "lang": "en",
+      "text": "NL CR AUT ID"
+    },
+    "P7015": {
+      "href": "https://www.wikidata.org/wiki/Property:P7015",
+      "lang": "en",
+      "text": "surface gravity"
+    },
+    "P7033": {
+      "href": "https://www.wikidata.org/wiki/Property:P7033",
+      "lang": "en",
+      "text": "Australian Educational Vocabulary ID"
+    },
+    "P708": {
+      "href": "https://www.wikidata.org/wiki/Property:P708",
+      "lang": "en",
+      "text": "diocese"
+    },
+    "P7305": {
+      "href": "https://www.wikidata.org/wiki/Property:P7305",
+      "lang": "en",
+      "text": "Online PWN Encyclopedia ID"
+    },
+    "P7562": {
+      "href": "https://www.wikidata.org/wiki/Property:P7562",
+      "lang": "en",
+      "text": "UVL group ID"
+    },
+    "P805": {
+      "href": "https://www.wikidata.org/wiki/Property:P805",
+      "lang": "en",
+      "text": "statement is subject of"
+    },
+    "P8069": {
+      "href": "https://www.wikidata.org/wiki/Property:P8069",
+      "lang": "en",
+      "text": "ToposText person ID"
+    },
+    "P8168": {
+      "href": "https://www.wikidata.org/wiki/Property:P8168",
+      "lang": "en",
+      "text": "FactGrid item ID"
+    },
+    "P8189": {
+      "href": "https://www.wikidata.org/wiki/Property:P8189",
+      "lang": "en",
+      "text": "J9U entity ID"
+    },
+    "P8248": {
+      "href": "https://www.wikidata.org/wiki/Property:P8248",
+      "lang": "en",
+      "text": "Colon Classification"
+    },
+    "P8309": {
+      "href": "https://www.wikidata.org/wiki/Property:P8309",
+      "lang": "en",
+      "text": "Yle topic ID"
+    },
+    "P8313": {
+      "href": "https://www.wikidata.org/wiki/Property:P8313",
+      "lang": "en",
+      "text": "Lex ID"
+    },
+    "P8419": {
+      "href": "https://www.wikidata.org/wiki/Property:P8419",
+      "lang": "en",
+      "text": "Archive of Our Own tag"
+    },
+    "P854": {
+      "href": "https://www.wikidata.org/wiki/Property:P854",
+      "lang": "en",
+      "text": "reference URL"
+    },
+    "P8590": {
+      "href": "https://www.wikidata.org/wiki/Property:P8590",
+      "lang": "en",
+      "text": "Jewish Encyclopedia ID"
+    },
+    "P8814": {
+      "href": "https://www.wikidata.org/wiki/Property:P8814",
+      "lang": "en",
+      "text": "WordNet 3.1 Synset ID"
+    },
+    "P8885": {
+      "href": "https://www.wikidata.org/wiki/Property:P8885",
+      "lang": "en",
+      "text": "Namuwiki ID"
+    },
+    "P8895": {
+      "href": "https://www.wikidata.org/wiki/Property:P8895",
+      "lang": "en",
+      "text": "All the Tropes article ID"
+    },
+    "P9084": {
+      "href": "https://www.wikidata.org/wiki/Property:P9084",
+      "lang": "en",
+      "text": "ABC News topic ID"
+    },
+    "P910": {
+      "href": "https://www.wikidata.org/wiki/Property:P910",
+      "lang": "en",
+      "text": "topic's main category"
+    },
+    "P9198": {
+      "href": "https://www.wikidata.org/wiki/Property:P9198",
+      "lang": "en",
+      "text": "Encyclopédie berbère article ID"
+    },
+    "P9223": {
+      "href": "https://www.wikidata.org/wiki/Property:P9223",
+      "lang": "en",
+      "text": "Provenio UUID"
+    },
+    "P9318": {
+      "href": "https://www.wikidata.org/wiki/Property:P9318",
+      "lang": "en",
+      "text": "Ávvir topic ID"
+    },
+    "P9322": {
+      "href": "https://www.wikidata.org/wiki/Property:P9322",
+      "lang": "en",
+      "text": "SVKKL authority ID"
+    },
+    "P9346": {
+      "href": "https://www.wikidata.org/wiki/Property:P9346",
+      "lang": "en",
+      "text": "France 24 topic ID (French)"
+    },
+    "P935": {
+      "href": "https://www.wikidata.org/wiki/Property:P935",
+      "lang": "en",
+      "text": "Commons gallery"
+    },
+    "P9475": {
+      "href": "https://www.wikidata.org/wiki/Property:P9475",
+      "lang": "en",
+      "text": "Encyclopedia of Korean Culture ID"
+    },
+    "P948": {
+      "href": "https://www.wikidata.org/wiki/Property:P948",
+      "lang": "en",
+      "text": "page banner"
+    },
+    "P9495": {
+      "href": "https://www.wikidata.org/wiki/Property:P9495",
+      "lang": "en",
+      "text": "National Historical Museums of Sweden ID"
+    },
+    "P950": {
+      "href": "https://www.wikidata.org/wiki/Property:P950",
+      "lang": "en",
+      "text": "National Library of Spain SpMaBN ID"
+    },
+    "P9736": {
+      "href": "https://www.wikidata.org/wiki/Property:P9736",
+      "lang": "en",
+      "text": "MANTO ID"
+    },
+    "P9807": {
+      "href": "https://www.wikidata.org/wiki/Property:P9807",
+      "lang": "en",
+      "text": "SNK ID"
+    },
+    "P989": {
+      "href": "https://www.wikidata.org/wiki/Property:P989",
+      "lang": "en",
+      "text": "spoken text audio"
+    },
+    "P9937": {
+      "href": "https://www.wikidata.org/wiki/Property:P9937",
+      "lang": "en",
+      "text": "Postimees topic ID"
+    },
+    "P998": {
+      "href": "https://www.wikidata.org/wiki/Property:P998",
+      "lang": "en",
+      "text": "Curlie ID"
+    },
+    "Q1037499": {
+      "href": "https://www.wikidata.org/wiki/Q1037499",
+      "lang": "en",
+      "text": "lunar soil"
+    },
+    "Q1037706": {
+      "href": "https://www.wikidata.org/wiki/Q1037706",
+      "lang": "en",
+      "text": "magnetic field of the Moon"
+    },
+    "Q105085344": {
+      "href": "https://www.wikidata.org/wiki/Q105085344",
+      "lang": "en",
+      "text": "Historical Dictionary of Science Fiction"
+    },
+    "Q1051665": {
+      "href": "https://www.wikidata.org/wiki/Q1051665",
+      "lang": "en",
+      "text": "metre per square second"
+    },
+    "Q10578722": {
+      "href": "https://www.wikidata.org/wiki/Q10578722",
+      "lang": "en",
+      "text": "maximum"
+    },
+    "Q10585806": {
+      "href": "https://www.wikidata.org/wiki/Q10585806",
+      "lang": "en",
+      "text": "minimum"
+    },
+    "Q1064739": {
+      "href": "https://www.wikidata.org/wiki/Q1064739",
+      "lang": "en",
+      "text": "exploration of the Moon"
+    },
+    "Q106727050": {
+      "href": "https://www.wikidata.org/wiki/Q106727050",
+      "lang": "en",
+      "text": "Metropolitan Museum of Art Tagging Vocabulary"
+    },
+    "Q1086783": {
+      "href": "https://www.wikidata.org/wiki/Q1086783",
+      "lang": "en",
+      "text": "regular moon"
+    },
+    "Q109645860": {
+      "href": "https://www.wikidata.org/wiki/Q109645860",
+      "lang": "en",
+      "text": "planetary moon"
+    },
+    "Q110305386": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/en/Q110305386",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q110305386",
+      "lang": null,
+      "text": "Q110305386"
+    },
+    "Q112789753": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/en/Q112789753",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q112789753",
+      "lang": null,
+      "text": "Q112789753"
+    },
+    "Q1130706": {
+      "href": "https://www.wikidata.org/wiki/Q1130706",
+      "lang": "en",
+      "text": "moonquake"
+    },
+    "Q113559766": {
+      "href": "https://www.wikidata.org/wiki/Q113559766",
+      "lang": "mul",
+      "text": "Zedler:Mond-Regenbogen"
+    },
+    "Q11438": {
+      "href": "https://www.wikidata.org/wiki/Q11438",
+      "lang": "en",
+      "text": "solid"
+    },
+    "Q115507": {
+      "href": "https://www.wikidata.org/wiki/Q115507",
+      "lang": "en",
+      "text": "atmosphere of the Moon"
+    },
+    "Q11570": {
+      "href": "https://www.wikidata.org/wiki/Q11570",
+      "lang": "en",
+      "text": "kilogram"
+    },
+    "Q11573": {
+      "href": "https://www.wikidata.org/wiki/Q11573",
+      "lang": "en",
+      "text": "metre"
+    },
+    "Q11579": {
+      "href": "https://www.wikidata.org/wiki/Q11579",
+      "lang": "en",
+      "text": "kelvin"
+    },
+    "Q1179441": {
+      "href": "https://www.wikidata.org/wiki/Q1179441",
+      "lang": "en",
+      "text": "apogee"
+    },
+    "Q120359061": {
+      "href": "https://www.wikidata.org/wiki/Q120359061",
+      "lang": "en",
+      "text": "1911 Encyclopædia Britannica/Moon"
+    },
+    "Q12046612": {
+      "href": "https://www.wikidata.org/wiki/Q12046612",
+      "lang": "en",
+      "text": "geological features on the Moon"
+    },
+    "Q123955442": {
+      "href": "https://www.wikidata.org/wiki/Q123955442",
+      "lang": "en",
+      "text": "Domestic Encyclopædia (1802)/Moon"
+    },
+    "Q124012912": {
+      "href": "https://www.wikidata.org/wiki/Q124012912",
+      "lang": "en",
+      "text": "The New Student's Reference Work/Moon"
+    },
+    "Q126181255": {
+      "href": "https://www.wikidata.org/wiki/Q126181255",
+      "lang": "en",
+      "text": "selenology"
+    },
+    "Q126820151": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/en/Q126820151",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q126820151",
+      "lang": null,
+      "text": "Q126820151"
+    },
+    "Q131430844": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/en/Q131430844",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q131430844",
+      "lang": null,
+      "text": "Q131430844"
+    },
+    "Q13147228": {
+      "href": "https://www.wikidata.org/wiki/Q13147228",
+      "lang": "en",
+      "text": "gram per cubic centimetre"
+    },
+    "Q13476345": {
+      "href": "https://www.wikidata.org/wiki/Q13476345",
+      "lang": "en",
+      "text": "WikiProject Moon"
+    },
+    "Q1349468": {
+      "href": "https://www.wikidata.org/wiki/Q1349468",
+      "lang": "en",
+      "text": "perigee"
+    },
+    "Q1379273": {
+      "href": "https://www.wikidata.org/wiki/Q1379273",
+      "lang": "en",
+      "text": "surface area"
+    },
+    "Q1411145": {
+      "href": "https://www.wikidata.org/wiki/Q1411145",
+      "lang": "en",
+      "text": "radiance"
+    },
+    "Q14334116": {
+      "href": "https://www.wikidata.org/wiki/Q14334116",
+      "lang": "en",
+      "text": "Template:GeoTemplate/moon"
+    },
+    "Q14615839": {
+      "href": "https://www.wikidata.org/wiki/Q14615839",
+      "lang": "en",
+      "text": "Portal:Moon"
+    },
+    "Q15034": {
+      "href": "https://www.wikidata.org/wiki/Q15034",
+      "lang": "en",
+      "text": "Mimas"
+    },
+    "Q15037": {
+      "href": "https://www.wikidata.org/wiki/Q15037",
+      "lang": "en",
+      "text": "Hyperion"
+    },
+    "Q15040": {
+      "href": "https://www.wikidata.org/wiki/Q15040",
+      "lang": "en",
+      "text": "Dione"
+    },
+    "Q15047": {
+      "href": "https://www.wikidata.org/wiki/Q15047",
+      "lang": "en",
+      "text": "Tethys"
+    },
+    "Q15050": {
+      "href": "https://www.wikidata.org/wiki/Q15050",
+      "lang": "en",
+      "text": "Rhea"
+    },
+    "Q1547546": {
+      "href": "https://www.wikidata.org/wiki/Q1547546",
+      "lang": "en",
+      "text": "Zedler, Großes vollständiges Universallexicon aller Wissenschaften und Künste"
+    },
+    "Q15629": {
+      "href": "https://www.wikidata.org/wiki/Q15629",
+      "lang": "en",
+      "text": "Bianca"
+    },
+    "Q15633": {
+      "href": "https://www.wikidata.org/wiki/Q15633",
+      "lang": "en",
+      "text": "Cressida"
+    },
+    "Q15637": {
+      "href": "https://www.wikidata.org/wiki/Q15637",
+      "lang": "en",
+      "text": "Desdemona"
+    },
+    "Q15643": {
+      "href": "https://www.wikidata.org/wiki/Q15643",
+      "lang": "en",
+      "text": "Juliet"
+    },
+    "Q15644": {
+      "href": "https://www.wikidata.org/wiki/Q15644",
+      "lang": "en",
+      "text": "Portia"
+    },
+    "Q15646": {
+      "href": "https://www.wikidata.org/wiki/Q15646",
+      "lang": "en",
+      "text": "Rosalind"
+    },
+    "Q15655": {
+      "href": "https://www.wikidata.org/wiki/Q15655",
+      "lang": "en",
+      "text": "Cupid"
+    },
+    "Q15658": {
+      "href": "https://www.wikidata.org/wiki/Q15658",
+      "lang": "en",
+      "text": "Belinda"
+    },
+    "Q15660": {
+      "href": "https://www.wikidata.org/wiki/Q15660",
+      "lang": "en",
+      "text": "Perdita"
+    },
+    "Q15662": {
+      "href": "https://www.wikidata.org/wiki/Q15662",
+      "lang": "en",
+      "text": "Puck"
+    },
+    "Q15667": {
+      "href": "https://www.wikidata.org/wiki/Q15667",
+      "lang": "en",
+      "text": "Mab"
+    },
+    "Q16081": {
+      "href": "https://www.wikidata.org/wiki/Q16081",
+      "lang": "en",
+      "text": "Proteus"
+    },
+    "Q16082057": {
+      "href": "https://www.wikidata.org/wiki/Q16082057",
+      "lang": "en",
+      "text": "The New Student's Reference Work"
+    },
+    "Q16755": {
+      "href": "https://www.wikidata.org/wiki/Q16755",
+      "lang": "en",
+      "text": "Metis"
+    },
+    "Q16757": {
+      "href": "https://www.wikidata.org/wiki/Q16757",
+      "lang": "en",
+      "text": "Adrastea"
+    },
+    "Q16765": {
+      "href": "https://www.wikidata.org/wiki/Q16765",
+      "lang": "en",
+      "text": "Thebe"
+    },
+    "Q17491583": {
+      "href": "https://www.wikidata.org/wiki/Q17491583",
+      "lang": "en",
+      "text": "Księżyc"
+    },
+    "Q1768721": {
+      "href": "https://www.wikidata.org/wiki/Q1768721",
+      "lang": "en",
+      "text": "Gujin Tushu Jicheng"
+    },
+    "Q17705": {
+      "href": "https://www.wikidata.org/wiki/Q17705",
+      "lang": "en",
+      "text": "Pan"
+    },
+    "Q17706": {
+      "href": "https://www.wikidata.org/wiki/Q17706",
+      "lang": "en",
+      "text": "Daphnis"
+    },
+    "Q17707": {
+      "href": "https://www.wikidata.org/wiki/Q17707",
+      "lang": "en",
+      "text": "Atlas"
+    },
+    "Q17739": {
+      "href": "https://www.wikidata.org/wiki/Q17739",
+      "lang": "en",
+      "text": "Prometheus"
+    },
+    "Q17746": {
+      "href": "https://www.wikidata.org/wiki/Q17746",
+      "lang": "en",
+      "text": "Pandora"
+    },
+    "Q17751": {
+      "href": "https://www.wikidata.org/wiki/Q17751",
+      "lang": "en",
+      "text": "Epimetheus"
+    },
+    "Q17754": {
+      "href": "https://www.wikidata.org/wiki/Q17754",
+      "lang": "en",
+      "text": "Janus"
+    },
+    "Q17762": {
+      "href": "https://www.wikidata.org/wiki/Q17762",
+      "lang": "en",
+      "text": "Aegaeon"
+    },
+    "Q17782": {
+      "href": "https://www.wikidata.org/wiki/Q17782",
+      "lang": "en",
+      "text": "Methone"
+    },
+    "Q17788": {
+      "href": "https://www.wikidata.org/wiki/Q17788",
+      "lang": "en",
+      "text": "Anthe"
+    },
+    "Q17850": {
+      "href": "https://www.wikidata.org/wiki/Q17850",
+      "lang": "en",
+      "text": "Pallene"
+    },
+    "Q17857": {
+      "href": "https://www.wikidata.org/wiki/Q17857",
+      "lang": "en",
+      "text": "Telesto"
+    },
+    "Q17869": {
+      "href": "https://www.wikidata.org/wiki/Q17869",
+      "lang": "en",
+      "text": "Calypso"
+    },
+    "Q17875": {
+      "href": "https://www.wikidata.org/wiki/Q17875",
+      "lang": "en",
+      "text": "Helene"
+    },
+    "Q17882": {
+      "href": "https://www.wikidata.org/wiki/Q17882",
+      "lang": "en",
+      "text": "Polydeuces"
+    },
+    "Q17958": {
+      "href": "https://www.wikidata.org/wiki/Q17958",
+      "lang": "en",
+      "text": "Iapetus"
+    },
+    "Q183273": {
+      "href": "https://www.wikidata.org/wiki/Q183273",
+      "lang": "en",
+      "text": "geographical pole"
+    },
+    "Q18356771": {
+      "href": "https://www.wikidata.org/wiki/Q18356771",
+      "lang": "en",
+      "text": "Selenean summit"
+    },
+    "Q18589965": {
+      "href": "https://www.wikidata.org/wiki/Q18589965",
+      "lang": "en",
+      "text": "Earth–Moon system"
+    },
+    "Q1860": {
+      "href": "https://www.wikidata.org/wiki/Q1860",
+      "lang": "en",
+      "text": "English"
+    },
+    "Q18603603": {
+      "href": "https://www.wikidata.org/wiki/Q18603603",
+      "lang": "en",
+      "text": "hypothetically"
+    },
+    "Q188": {
+      "href": "https://www.wikidata.org/wiki/Q188",
+      "lang": "en",
+      "text": "German"
+    },
+    "Q19180675": {
+      "href": "https://www.wikidata.org/wiki/Q19180675",
+      "lang": "en",
+      "text": "Small Brockhaus and Efron Encyclopedic Dictionary"
+    },
+    "Q19219752": {
+      "href": "https://www.wikidata.org/wiki/Q19219752",
+      "lang": "en",
+      "text": "Meyers Konversations-Lexikon, 4th edition (1885–1890)"
+    },
+    "Q2": {
+      "href": "https://www.wikidata.org/wiki/Q2",
+      "lang": "en",
+      "text": "Earth"
+    },
+    "Q20078554": {
+      "href": "https://www.wikidata.org/wiki/Q20078554",
+      "lang": "en",
+      "text": "Great Soviet Encyclopedia (1926–1947)"
+    },
+    "Q2041543": {
+      "href": "https://www.wikidata.org/wiki/Q2041543",
+      "lang": "en",
+      "text": "Otto's encyclopedia"
+    },
+    "Q209426": {
+      "href": "https://www.wikidata.org/wiki/Q209426",
+      "lang": "en",
+      "text": "arcminute"
+    },
+    "Q210448": {
+      "href": "https://www.wikidata.org/wiki/Q210448",
+      "lang": "en",
+      "text": "lunar orbit"
+    },
+    "Q210539": {
+      "href": "https://www.wikidata.org/wiki/Q210539",
+      "lang": "en",
+      "text": "orbit of the Moon"
+    },
+    "Q21400693": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/en/Q21400693",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q21400693",
+      "lang": null,
+      "text": "Q21400693"
+    },
+    "Q21400694": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/en/Q21400694",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q21400694",
+      "lang": null,
+      "text": "Q21400694"
+    },
+    "Q21400695": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/en/Q21400695",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q21400695",
+      "lang": null,
+      "text": "Q21400695"
+    },
+    "Q21400699": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/en/Q21400699",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q21400699",
+      "lang": null,
+      "text": "Q21400699"
+    },
+    "Q218056": {
+      "href": "https://www.wikidata.org/wiki/Q218056",
+      "lang": "en",
+      "text": "high Earth orbit"
+    },
+    "Q221656": {
+      "href": "https://www.wikidata.org/wiki/Q221656",
+      "lang": "en",
+      "text": "brightness"
+    },
+    "Q23538": {
+      "href": "https://www.wikidata.org/wiki/Q23538",
+      "lang": "en",
+      "text": "equator"
+    },
+    "Q23860555": {
+      "href": "https://www.wikidata.org/wiki/Q23860555",
+      "lang": "mul",
+      "text": "Měsíc"
+    },
+    "Q25343": {
+      "href": "https://www.wikidata.org/wiki/Q25343",
+      "lang": "en",
+      "text": "square metre"
+    },
+    "Q25517": {
+      "href": "https://www.wikidata.org/wiki/Q25517",
+      "lang": "en",
+      "text": "cubic metre"
+    },
+    "Q2657718": {
+      "href": "https://www.wikidata.org/wiki/Q2657718",
+      "lang": "en",
+      "text": "Armenian Soviet Encyclopedia"
+    },
+    "Q2796622": {
+      "href": "https://www.wikidata.org/wiki/Q2796622",
+      "lang": "en",
+      "text": "mean"
+    },
+    "Q28390": {
+      "href": "https://www.wikidata.org/wiki/Q28390",
+      "lang": "en",
+      "text": "degree"
+    },
+    "Q28455496": {
+      "href": "https://www.wikidata.org/wiki/Q28455496",
+      "lang": "en",
+      "text": "outline of the Moon"
+    },
+    "Q29098442": {
+      "href": "https://www.wikidata.org/wiki/Q29098442",
+      "lang": "en",
+      "text": "Lunar Gateway"
+    },
+    "Q3123": {
+      "href": "https://www.wikidata.org/wiki/Q3123",
+      "lang": "en",
+      "text": "Io"
+    },
+    "Q3134": {
+      "href": "https://www.wikidata.org/wiki/Q3134",
+      "lang": "en",
+      "text": "Callisto"
+    },
+    "Q3143": {
+      "href": "https://www.wikidata.org/wiki/Q3143",
+      "lang": "en",
+      "text": "Europa"
+    },
+    "Q3169": {
+      "href": "https://www.wikidata.org/wiki/Q3169",
+      "lang": "en",
+      "text": "Ganymede"
+    },
+    "Q3181656": {
+      "href": "https://www.wikidata.org/wiki/Q3181656",
+      "lang": "en",
+      "text": "The Nuttall Encyclopædia"
+    },
+    "Q325065": {
+      "href": "https://www.wikidata.org/wiki/Q325065",
+      "lang": "en",
+      "text": "Chandrayaan-2"
+    },
+    "Q3257": {
+      "href": "https://www.wikidata.org/wiki/Q3257",
+      "lang": "en",
+      "text": "Amalthea"
+    },
+    "Q3303": {
+      "href": "https://www.wikidata.org/wiki/Q3303",
+      "lang": "en",
+      "text": "Enceladus"
+    },
+    "Q331778": {
+      "href": "https://www.wikidata.org/wiki/Q331778",
+      "lang": "en",
+      "text": "Lunar Reconnaissance Orbiter"
+    },
+    "Q3322": {
+      "href": "https://www.wikidata.org/wiki/Q3322",
+      "lang": "en",
+      "text": "Titania"
+    },
+    "Q3332": {
+      "href": "https://www.wikidata.org/wiki/Q3332",
+      "lang": "en",
+      "text": "Oberon"
+    },
+    "Q3338": {
+      "href": "https://www.wikidata.org/wiki/Q3338",
+      "lang": "en",
+      "text": "Umbriel"
+    },
+    "Q3343": {
+      "href": "https://www.wikidata.org/wiki/Q3343",
+      "lang": "en",
+      "text": "Ariel"
+    },
+    "Q3352": {
+      "href": "https://www.wikidata.org/wiki/Q3352",
+      "lang": "en",
+      "text": "Miranda"
+    },
+    "Q367737": {
+      "href": "https://www.wikidata.org/wiki/Q367737",
+      "lang": "en",
+      "text": "colonization of the Moon"
+    },
+    "Q37178": {
+      "href": "https://www.wikidata.org/wiki/Q37178",
+      "lang": "en",
+      "text": "Proto-Indo-European"
+    },
+    "Q405": {
+      "description": {
+        "lang": "en",
+        "text": "Earth's only natural satellite"
+      },
+      "href": "https://www.wikidata.org/wiki/Q405",
+      "lang": "en",
+      "text": "Moon"
+    },
+    "Q4086271": {
+      "href": "https://www.wikidata.org/wiki/Q4086271",
+      "lang": "en",
+      "text": "Bible Encyclopedia of Archimandrite Nicephorus"
+    },
+    "Q4130": {
+      "href": "https://www.wikidata.org/wiki/Q4130",
+      "lang": "en",
+      "text": "orbit"
+    },
+    "Q4173137": {
+      "href": "https://www.wikidata.org/wiki/Q4173137",
+      "lang": "en",
+      "text": "Jewish Encyclopedia of Brockhaus and Efron"
+    },
+    "Q426778": {
+      "href": "https://www.wikidata.org/wiki/Q426778",
+      "lang": "en",
+      "text": "Diocese of Orlando"
+    },
+    "Q4532138": {
+      "href": "https://www.wikidata.org/wiki/Q4532138",
+      "lang": "en",
+      "text": "Granat Encyclopedic Dictionary"
+    },
+    "Q500909": {
+      "href": "https://www.wikidata.org/wiki/Q500909",
+      "lang": "en",
+      "text": "Montes Pyrenaeus"
+    },
+    "Q5460604": {
+      "href": "https://www.wikidata.org/wiki/Q5460604",
+      "lang": "en",
+      "text": "Wikipedia:List of articles all languages should have"
+    },
+    "Q5612289": {
+      "href": "https://www.wikidata.org/wiki/Q5612289",
+      "lang": "en",
+      "text": "Category:Moon"
+    },
+    "Q56441911": {
+      "href": "https://www.wikidata.org/wiki/Q56441911",
+      "lang": "en",
+      "text": "The Domestic Encyclopædia; Or, A Dictionary Of Facts, And Useful Knowledge"
+    },
+    "Q5727902": {
+      "href": "https://www.wikidata.org/wiki/Q5727902",
+      "lang": "en",
+      "text": "circa"
+    },
+    "Q573": {
+      "href": "https://www.wikidata.org/wiki/Q573",
+      "lang": "en",
+      "text": "day"
+    },
+    "Q598608": {
+      "href": "https://www.wikidata.org/wiki/Q598608",
+      "lang": "en",
+      "text": "Antoniadi"
+    },
+    "Q602358": {
+      "href": "https://www.wikidata.org/wiki/Q602358",
+      "lang": "en",
+      "text": "Brockhaus and Efron Encyclopedic Dictionary"
+    },
+    "Q613726": {
+      "href": "https://www.wikidata.org/wiki/Q613726",
+      "lang": "en",
+      "text": "yottagram"
+    },
+    "Q61704160": {
+      "href": "https://www.wikidata.org/wiki/Q61704160",
+      "lang": "en",
+      "text": "all-time"
+    },
+    "Q6173448": {
+      "href": "https://www.wikidata.org/wiki/Q6173448",
+      "lang": "en",
+      "text": "Wikipedia:Vital articles/Level/4"
+    },
+    "Q7102486": {
+      "href": "https://www.wikidata.org/wiki/Q7102486",
+      "lang": "en",
+      "text": "origin of the Moon"
+    },
+    "Q712226": {
+      "href": "https://www.wikidata.org/wiki/Q712226",
+      "lang": "en",
+      "text": "square kilometre"
+    },
+    "Q782683": {
+      "href": "https://www.wikidata.org/wiki/Q782683",
+      "lang": "en",
+      "text": "the Moon in fiction"
+    },
+    "Q7879772": {
+      "href": "https://www.wikidata.org/wiki/Q7879772",
+      "lang": "en",
+      "text": "inner Solar System"
+    },
+    "Q7976": {
+      "href": "https://www.wikidata.org/wiki/Q7976",
+      "lang": "en",
+      "text": "American English"
+    },
+    "Q79852": {
+      "href": "https://www.wikidata.org/wiki/Q79852",
+      "lang": "en",
+      "text": "ecliptic"
+    },
+    "Q8070793": {
+      "href": "https://www.wikidata.org/wiki/Q8070793",
+      "lang": "en",
+      "text": "Template:The Moon"
+    },
+    "Q828224": {
+      "href": "https://www.wikidata.org/wiki/Q828224",
+      "lang": "en",
+      "text": "kilometre"
+    },
+    "Q85160256": {
+      "href": "https://www.wikidata.org/wiki/Q85160256",
+      "lang": "en",
+      "text": "CAPSTONE"
+    },
+    "Q85793519": {
+      "href": "https://www.wikidata.org/wiki/Q85793519",
+      "lang": "en",
+      "text": "planetary-mass moon"
+    },
+    "Q867541": {
+      "href": "https://www.wikidata.org/wiki/Q867541",
+      "lang": "en",
+      "text": "Encyclopædia Britannica 11th edition"
+    },
+    "Q8785": {
+      "href": "https://www.wikidata.org/wiki/Q8785",
+      "lang": "en",
+      "text": "Armenian"
+    },
+    "Q9027": {
+      "href": "https://www.wikidata.org/wiki/Q9027",
+      "lang": "en",
+      "text": "Swedish"
+    },
+    "Q96593883": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/en/Q96593883",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q96593883",
+      "lang": null,
+      "text": "Q96593883"
+    }
+  },
+  "lang": "en",
+  "lead": {
+    "host": "en.wikipedia.org",
+    "lang": "en",
+    "local": true,
+    "more": [
+      "In <a href=\"https://en.wikipedia.org/wiki/Geophysical_definition_of_planet\">geophysical terms</a>, the Moon is a <a href=\"https://en.wikipedia.org/wiki/Planetary-mass_object\">planetary-mass object</a> or <a href=\"https://en.wikipedia.org/wiki/Satellite_planet\">satellite planet</a>. Its mass is 1.2% that of the Earth, and its diameter is 3,474&#160;km (2,159&#160;mi), roughly one-quarter of Earth's (about as wide as the <a href=\"https://en.wikipedia.org/wiki/Contiguous_United_States\">contiguous United States</a>). Within the <a href=\"https://en.wikipedia.org/wiki/Solar_System\">Solar System</a>, it is <a href=\"https://en.wikipedia.org/wiki/List_of_Solar_System_objects_by_size\">larger and more massive</a> than any known <a href=\"https://en.wikipedia.org/wiki/Dwarf_planet\">dwarf planet</a>, and the fifth-largest and fifth–most massive moon, as well as the largest and most massive in relation to its <a href=\"https://en.wikipedia.org/wiki/Primary_body\">parent planet</a>. Its <a href=\"https://en.wikipedia.org/wiki/Surface_gravity\">surface gravity</a> is about one-sixth of Earth's, about half that of <a href=\"https://en.wikipedia.org/wiki/Mars\">Mars</a>, and the second-highest among all moons in the Solar System after <a href=\"https://en.wikipedia.org/wiki/Jupiter\">Jupiter</a>'s moon <a href=\"https://en.wikipedia.org/wiki/Io_(moon)\">Io</a>. The body of the Moon is <a href=\"https://en.wikipedia.org/wiki/Planetary_differentiation\">differentiated</a> and <a href=\"https://en.wikipedia.org/wiki/Terrestrial_planet\">terrestrial</a>, with only a minuscule <a href=\"https://en.wikipedia.org/wiki/Hydrosphere\">hydrosphere</a>, <a href=\"https://en.wikipedia.org/wiki/Atmosphere_of_the_Moon\">atmosphere</a>, and <a href=\"https://en.wikipedia.org/wiki/Magnetic_field_of_the_Moon\">magnetic field</a>. The <a href=\"https://en.wikipedia.org/wiki/Lunar_surface\">lunar surface</a> is covered in <a href=\"https://en.wikipedia.org/wiki/Lunar_regolith\">regolith dust</a>, which mainly consists of the fine <a href=\"https://en.wikipedia.org/wiki/Ejecta_blanket\">material ejected</a> from the <a href=\"https://en.wikipedia.org/wiki/Lunar_crust\">lunar crust</a> by <a href=\"https://en.wikipedia.org/wiki/Impact_event\">impact events</a>. The lunar crust is marked by <a href=\"https://en.wikipedia.org/wiki/Impact_crater\">impact craters</a>; some younger ones feature bright <a href=\"https://en.wikipedia.org/wiki/Ray_system\">ray-like streaks</a>. The Moon was volcanically active until 1.2 billion years ago, surfacing lava mostly on the thinner near side of the Moon, filling ancient craters, which through cooling formed the today prominently visible dark plains of <a href=\"https://en.wikipedia.org/wiki/Basalt\">basalt</a> called <a href=\"https://en.wikipedia.org/wiki/Lunar_mare\">maria</a> ('seas'). The <a href=\"https://en.wikipedia.org/wiki/Origin_of_the_Moon\">origin of the Moon</a> is not clear, although it is thought to have been formed out of material from Earth that was ejected by <a href=\"https://en.wikipedia.org/wiki/Giant-impact_hypothesis\">a giant impact</a> of a <a href=\"https://en.wikipedia.org/wiki/Theia_(planet)\">Mars-sized body</a>. Studies based on lunar <a href=\"https://en.wikipedia.org/wiki/Zircon\">zircon</a> dating have placed the Moon's formation at 4.51&#160;billion years ago, not long after <a href=\"https://en.wikipedia.org/wiki/Age_of_Earth\">Earth's formation</a>; more recent studies on the crystallization of the <a href=\"https://en.wikipedia.org/wiki/Lunar_magma_ocean\">lunar magma ocean</a> suggested that the Moon might instead formed 4.35&#160;billion years ago, late in the <a href=\"https://en.wikipedia.org/wiki/Formation_and_evolution_of_the_Solar_System\">history of the Solar System</a>.",
+      "From a distance, the day and night phases of the lunar day are visible as the <a href=\"https://en.wikipedia.org/wiki/Lunar_phases\">lunar phases</a>, and when the Moon passes through <a href=\"https://en.wikipedia.org/wiki/Earth%27s_shadow\">Earth's shadow</a> a <a href=\"https://en.wikipedia.org/wiki/Lunar_eclipse\">lunar eclipse</a> is observable. The Moon's <a href=\"https://en.wikipedia.org/wiki/Apparent_size\">apparent size</a> in Earth's sky is about the same as that of the Sun, which causes it to cover the Sun completely during a total <a href=\"https://en.wikipedia.org/wiki/Solar_eclipse\">solar eclipse</a>. The Moon is the <a href=\"https://en.wikipedia.org/wiki/List_of_brightest_natural_objects_in_the_sky\">brightest celestial object</a> in Earth's <a href=\"https://en.wikipedia.org/wiki/Night_sky\">night sky</a> because of its large apparent size, while the <a href=\"https://en.wikipedia.org/wiki/Reflectance\">reflectance</a> (albedo) of its surface is comparable to that of <a href=\"https://en.wikipedia.org/wiki/Asphalt_concrete\">asphalt</a>. About 59% of the surface of the Moon is visible from Earth owing to the different angles at which the Moon can appear in Earth's sky (<a href=\"https://en.wikipedia.org/wiki/Libration\">libration</a>), making parts of the <a href=\"https://en.wikipedia.org/wiki/Far_side_of_the_Moon\">far side of the Moon</a> visible.",
+      "The Moon has been an important source of inspiration and knowledge in human history, having been crucial to <a href=\"https://en.wikipedia.org/wiki/Cosmography\">cosmography</a>, <a href=\"https://en.wikipedia.org/wiki/Mythology\">mythology</a>, <a href=\"https://en.wikipedia.org/wiki/Lunar_deity\">religion</a>, art, <a href=\"https://en.wikipedia.org/wiki/Lunar_calendar\">time keeping</a>, <a href=\"https://en.wikipedia.org/wiki/Natural_science\">natural science</a> and <a href=\"https://en.wikipedia.org/wiki/Spaceflight\">spaceflight</a>. The <a href=\"https://en.wikipedia.org/wiki/Timeline_of_Solar_System_exploration\">first spaceflights</a> to an extraterrestrial body were to the Moon, starting in 1959 with the <a href=\"https://en.wikipedia.org/wiki/Flyby_(spaceflight)\">flyby</a> of <i><a href=\"https://en.wikipedia.org/wiki/Luna_1\">Luna 1</a></i> (sent by the <a href=\"https://en.wikipedia.org/wiki/Soviet_Union\">Soviet Union</a>), and the <a href=\"https://en.wikipedia.org/wiki/Impactor_(spacecraft)\">intentional impact</a> of <i><a href=\"https://en.wikipedia.org/wiki/Luna_2\">Luna 2</a></i>, followed in 1966 by the first <a href=\"https://en.wikipedia.org/wiki/Soft_landing\">soft landing</a> (by <i><a href=\"https://en.wikipedia.org/wiki/Luna_9\">Luna 9</a></i>) and <a href=\"https://en.wikipedia.org/wiki/Orbital_insertion\">orbital insertion</a> (by <i><a href=\"https://en.wikipedia.org/wiki/Luna_10\">Luna 10</a></i>). Humans first arrived in orbit with <a href=\"https://en.wikipedia.org/wiki/Apollo_8\">Apollo 8</a> (sent by the <a href=\"https://en.wikipedia.org/wiki/United_States\">United States</a>) on December 24, 1968, and then on the surface with <a href=\"https://en.wikipedia.org/wiki/Apollo_11\">Apollo 11</a> on July 20, 1969, making the Moon the only celestial body beyond Earth that humans have visited. By 1972, six Apollo missions had landed <a href=\"https://en.wikipedia.org/wiki/List_of_people_who_have_flown_to_the_Moon\">twelve people</a> on the Moon and stayed up to three days. Renewed robotic <a href=\"https://en.wikipedia.org/wiki/Exploration_of_the_Moon\">exploration of the Moon</a>, in particular to confirm the presence of <a href=\"https://en.wikipedia.org/wiki/Lunar_water\">water on the Moon</a>, has fueled plans to return humans to the Moon. These plans include the <a href=\"https://en.wikipedia.org/wiki/Artemis_program\">Artemis program</a>, which included the <a href=\"https://en.wikipedia.org/wiki/Artemis_II\">Artemis II</a> crewed lunar flyby in 2026.",
+      "Cite error: There are &lt;ref&#160;group&#61;lower-alpha&gt; tags&#160;or &#123;&#123;efn&#125;&#125; templates on this page, but the references will not show without a &#123;&#123;reflist&#124;group&#61;lower-alpha&#125;&#125; template&#160;or &#123;&#123;notelist&#125;&#125; template (see the <a href=\"https://en.wikipedia.org/wiki/Help:Cite_errors/Cite_error_group_refs_without_references\">help page</a>)."
+    ],
+    "paragraphs": [
+      "The <b>Moon</b> is the only <a href=\"https://en.wikipedia.org/wiki/Natural_satellite\">natural satellite</a> of <a href=\"https://en.wikipedia.org/wiki/Earth\">Earth</a>. It <a href=\"https://en.wikipedia.org/wiki/Orbit_of_the_Moon\">orbits</a> Earth in an <a href=\"https://en.wikipedia.org/wiki/Elliptic_curve\">elliptical</a> path, at a <a href=\"https://en.wikipedia.org/wiki/Lunar_distance\">distance </a> that varies over the year, averaging around 378,000 kilometers (235,000&#160;mi). It <a href=\"https://en.wikipedia.org/wiki/Orbital_period\">completes an orbit</a> (<a href=\"https://en.wikipedia.org/wiki/Lunar_month\">lunar month</a>) in relation to Earth and the <a href=\"https://en.wikipedia.org/wiki/Sun\">Sun</a> (<a href=\"https://en.wikipedia.org/wiki/Lunation\">synodically</a>) every 29.5 days. The Moon and Earth are bound by <a href=\"https://en.wikipedia.org/wiki/Gravitational\">gravitational</a> attraction, which is stronger on the sides facing each other. The resulting <a href=\"https://en.wikipedia.org/wiki/Tidal_force\">tidal forces</a> are the main driver of Earth's <a href=\"https://en.wikipedia.org/wiki/Tide\">tides</a>, and have pulled the Moon to always face Earth with the same <a href=\"https://en.wikipedia.org/wiki/Near_side_of_the_Moon\">near side</a>. This <a href=\"https://en.wikipedia.org/wiki/Tidal_locking\">tidal locking</a> effectively synchronizes the Moon's <a href=\"https://en.wikipedia.org/wiki/Rotation_period_(astronomy)\">rotation period</a> (<a href=\"https://en.wikipedia.org/wiki/Lunar_day\">lunar day</a>) to its orbital period (lunar month)."
+    ],
+    "url": "https://en.wikipedia.org/wiki/Moon"
+  },
+  "locale": "en",
+  "messages": {
+    "qrender-add-label": "Add a label in your language",
+    "qrender-age": "aged $1",
+    "qrender-bce": "$1 BCE",
+    "qrender-close": "Close",
+    "qrender-credit": "Credit",
+    "qrender-edit": "Edit",
+    "qrender-search": "Search Wikipedia",
+    "qrender-some-value": "unknown value"
+  },
+  "page_images": {
+    "Q1037706": {
+      "aspect": 1.0155,
+      "credit": {
+        "artist": "Mark A. Wieczorek",
+        "license": "CC BY 4.0"
+      },
+      "file": "Magnetic field strength of the Moon (linear and logarthmic scales).png",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q7102486": {
+      "aspect": 0.975,
+      "credit": {
+        "artist": "NASA, Apollo 16",
+        "license": "Public domain"
+      },
+      "file": "Cara-oculta-luna.jpg",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q7879772": {
+      "aspect": 1.7778,
+      "credit": {
+        "artist": "Omarius257",
+        "license": "CC BY-SA 4.0"
+      },
+      "file": "Solar System True Color EN.png",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    }
+  },
+  "page_title": "Moon",
+  "projects": [
+    {
+      "count": 295,
+      "local": true,
+      "name": "wikipedia"
+    },
+    {
+      "count": 33,
+      "local": true,
+      "name": "wikiquote"
+    },
+    {
+      "count": 11,
+      "local": true,
+      "name": "wikivoyage"
+    },
+    {
+      "count": 10,
+      "local": true,
+      "name": "wikinews"
+    },
+    {
+      "count": 5,
+      "local": true,
+      "name": "wikibooks"
+    },
+    {
+      "count": 2,
+      "local": true,
+      "name": "wikisource"
+    },
+    {
+      "count": 1,
+      "local": false,
+      "name": "wikiversity"
+    }
+  ],
+  "qid": "Q405",
+  "schema": "view/0.2",
+  "spreads": [
+    {
+      "id": "identity",
+      "prose_links": [],
+      "prose_text": null,
+      "title": null
+    },
+    {
+      "id": "physical",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q4373292",
+        "lang": "en",
+        "text": "physical property"
+      }
+    },
+    {
+      "id": "orbit",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q4130",
+        "lang": "en",
+        "text": "orbit"
+      }
+    },
+    {
+      "id": "relations",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q930933",
+        "lang": "en",
+        "text": "relation"
+      }
+    },
+    {
+      "id": "history",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q309",
+        "lang": "en",
+        "text": "history"
+      }
+    },
+    {
+      "id": "media",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q131765",
+        "lang": "en",
+        "text": "multimedia"
+      }
+    },
+    {
+      "id": "more",
+      "prose_links": [],
+      "prose_text": null,
+      "title": null
+    },
+    {
+      "id": "evidence",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q121769",
+        "lang": "en",
+        "text": "reference"
+      }
+    }
+  ],
+  "unmatched_sections": [
+    {
+      "href": "https://en.wikipedia.org/wiki/Moon#Names_and_etymology",
+      "lang": "en",
+      "text": "Names and etymology"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Moon#Natural_history",
+      "lang": "en",
+      "text": "Natural history"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Moon#Physical_characteristics",
+      "lang": "en",
+      "text": "Physical characteristics"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Moon#Earth–Moon_system",
+      "lang": "en",
+      "text": "Earth–Moon system"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Moon#Observation",
+      "lang": "en",
+      "text": "Observation"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Moon#History_of_scientific_understanding_and_exploration",
+      "lang": "en",
+      "text": "History of scientific understanding and exploration"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Moon#Human_interaction_and_presence",
+      "lang": "en",
+      "text": "Human interaction and presence"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Moon#In_culture_and_life",
+      "lang": "en",
+      "text": "In culture and life"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Moon#See_also",
+      "lang": "en",
+      "text": "See also"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Moon#Explanatory_notes",
+      "lang": "en",
+      "text": "Explanatory notes"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Moon#References",
+      "lang": "en",
+      "text": "References"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Moon#Further_reading",
+      "lang": "en",
+      "text": "Further reading"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Moon#External_links",
+      "lang": "en",
+      "text": "External links"
+    }
+  ]
+}
