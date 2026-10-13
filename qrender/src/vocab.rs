@@ -4,10 +4,11 @@
 //! Templates and slots belong to the design system: the composer can only
 //! name what the CSS has.
 
+use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
 
 /// How the composer builds a spread.
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, JsonSchema, Deserialize)]
 #[serde(rename_all = "kebab-case")]
 pub enum SpreadKind {
     /// The page head: title and description, banner, lead, picture, kinds.
@@ -27,7 +28,7 @@ pub enum SpreadKind {
 }
 
 /// What a property is for, when its datatype does not say.
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, JsonSchema, Deserialize)]
 #[serde(rename_all = "snake_case")]
 pub enum Role {
     Event,
@@ -60,7 +61,7 @@ impl RoleSet {
 }
 
 /// The kinds of composition block.
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, JsonSchema, Deserialize)]
 #[serde(rename_all = "kebab-case")]
 pub enum Primitive {
     Title,
@@ -85,7 +86,7 @@ pub enum Primitive {
 }
 
 /// A named arrangement of slots, defined by the design system.
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, JsonSchema, Deserialize)]
 #[serde(rename_all = "kebab-case")]
 pub enum Template {
     Identity,
@@ -99,7 +100,7 @@ pub enum Template {
 }
 
 /// A named place in a template.
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, JsonSchema, Deserialize)]
 #[serde(rename_all = "kebab-case")]
 pub enum Slot {
     Head,
@@ -122,7 +123,7 @@ pub enum Slot {
 }
 
 /// How the item is compared with its container.
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, JsonSchema, Deserialize)]
 #[serde(rename_all = "kebab-case")]
 pub enum ContainerMode {
     /// The item against a parent body or taxon.
@@ -132,7 +133,7 @@ pub enum ContainerMode {
 }
 
 /// The end of a range that a qualifier value marks.
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, JsonSchema, Deserialize)]
 #[serde(rename_all = "kebab-case")]
 pub enum RangeEnd {
     Min,

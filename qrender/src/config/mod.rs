@@ -85,6 +85,9 @@ fn role_index(layouts: &Layouts) -> HashMap<Pid, RoleSet> {
     for pid in layouts.roles.office.keys() {
         index.entry(*pid).or_default().insert(Role::Office);
     }
+    for pid in layouts.roles.tabular.keys() {
+        index.entry(*pid).or_default().insert(Role::Tabular);
+    }
     index
 }
 
@@ -100,8 +103,10 @@ fn validate(layouts: &Layouts, rules: &Rules) -> Vec<String> {
         errors.push("lead: no primitives".into());
     }
 
-    if layouts.roles.lists.contains_key(&Role::Office) {
-        errors.push("roles: office is a table of holder -> office, not a list".into());
+    for table in [Role::Office, Role::Tabular] {
+        if layouts.roles.lists.contains_key(&table) {
+            errors.push(format!("roles: {table:?} is a table, not a list"));
+        }
     }
     match layouts.class_layouts.get("generic") {
         None => errors.push("class_layouts: no generic layout".into()),
@@ -231,6 +236,8 @@ mod tests {
             "head of government -> office held by head of government"
         );
         assert!(config.layouts.roles.list(Role::ExtremePoint).len() == 4);
+        assert!(config.roles(pid("P4179")).has(Role::Tabular));
+        assert_eq!(config.layouts.roles.tabular[&pid("P4179")], pid("P1082"));
     }
 
     fn invalid(layouts: &str, rules: &str) -> String {

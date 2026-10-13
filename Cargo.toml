@@ -1,6 +1,6 @@
 [workspace]
 resolver = "3"
-members = ["content", "qrender"]
+members = ["app", "content", "qrender"]
 exclude = ["legacy", "prototype"]
 
 [workspace.package]
@@ -11,6 +11,7 @@ edition = "2024"
 [workspace.dependencies]
 indexmap = { version = "2", features = ["serde"] }
 percent-encoding = "2"
+schemars = { version = "1", features = ["indexmap2"] }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 thiserror = "2"

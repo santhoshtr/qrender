@@ -1,0 +1,12 @@
+[package]
+name = "app"
+description = "The qrender command line and, later, the server"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+content = { path = "../content" }
+qrender = { path = "../qrender" }
+serde_json.workspace = true

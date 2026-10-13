@@ -54,11 +54,14 @@ pub struct SpreadSpec {
     pub pictured: bool,
 }
 
-/// The property lists of each role, and the office table.
+/// The property lists of each role, and the two tables.
 #[derive(Debug, Deserialize)]
 pub struct Roles {
     /// Holder property -> the property that names the office.
     pub office: IndexMap<Pid, Pid>,
+    /// Commons data property -> the property whose dated statements it
+    /// replaces.
+    pub tabular: IndexMap<Pid, Pid>,
     #[serde(flatten)]
     pub lists: IndexMap<Role, Vec<Pid>>,
 }

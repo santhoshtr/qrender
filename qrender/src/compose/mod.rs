@@ -6,23 +6,27 @@
 //! the derived facts: pure functions of the content that the rules and the
 //! primitives use.
 
+pub mod blocks;
 pub mod facts;
 pub mod picture;
+pub mod place;
+pub mod spreads;
 
 use std::collections::HashSet;
 
 use content::{Content, Pid, Qid, Rank, Statement, StatementId};
 use indexmap::IndexMap;
 
-use crate::config::{ClassLayout, Config};
-use crate::schema::{Provenance, QualifierShown, StatementRef, ValueShown, round_to};
-use crate::vocab::Role;
+use crate::config::{ClassLayout, Config, SpreadSpec};
+use crate::schema::{
+    Block, COMPOSITION_SCHEMA, Composition, DESIGN, ProseConcepts, Provenance, QualifierShown,
+    Silence, Spread, StatementRef, ValueShown, round_to,
+};
+use crate::vocab::{Role, Slot, SpreadKind, Template};
+use crate::wikidata::{END_TIME, START_TIME};
 
 /// "No year": sorts before every real year.
 const NO_YEAR: i64 = -1_000_000;
-
-const START: &str = "P580"; // start time
-const END: &str = "P582"; // end time
 
 pub struct Composer<'a> {
     pub content: &'a Content,
@@ -105,24 +109,92 @@ impl<'a> Composer<'a> {
         self.by_pid.get(&pid).map_or(&[], Vec::as_slice)
     }
 
+    /// Every property of the item, with its statements, in content order.
+    pub fn properties(&self) -> impl Iterator<Item = (Pid, &[&'a Statement])> {
+        self.by_pid.iter().map(|(p, s)| (*p, s.as_slice()))
+    }
+
+    // ---------------------------------------------------------------- page
+
+    /// The composition of the item. Every spread of the class layout, in
+    /// its order; "evidence" and "more" are built last, because they take
+    /// what the other spreads left.
+    pub fn compose(mut self) -> Composition {
+        let layout = self.layout;
+        let mut order: Vec<&SpreadSpec> = layout.spreads.iter().collect();
+        order.sort_by_key(|s| match s.kind {
+            SpreadKind::Evidence => 1,
+            SpreadKind::More => 2,
+            _ => 0,
+        });
+        let mut built: IndexMap<&str, Spread> = IndexMap::new();
+        for spec in order {
+            if let Some(spread) = spreads::build(&mut self, spec) {
+                built.insert(&spec.id, spread);
+            }
+        }
+        Composition {
+            schema: COMPOSITION_SCHEMA,
+            design: DESIGN,
+            qid: self.content.qid,
+            class_layout: self.layout_name.to_string(),
+            spreads: layout
+                .spreads
+                .iter()
+                .filter_map(|s| built.shift_remove(s.id.as_str()))
+                .collect(),
+            unshown: self.unclaimed().iter().map(|s| s.id.clone()).collect(),
+        }
+    }
+
+    /// A spread with its slots. The "... of topic" statements of this
+    /// spread are claimed here, as its topics.
+    pub fn spread(
+        &mut self,
+        spec: &SpreadSpec,
+        slots: IndexMap<Slot, Vec<Block>>,
+        template: Template,
+        silent: Vec<Silence>,
+    ) -> Spread {
+        let mut topics = Vec::new();
+        for (pid, spread) in &self.config.layouts.topics {
+            if *spread == spec.id {
+                let statements = self.free(*pid);
+                for s in self.take(statements) {
+                    topics.push(self.statement(s));
+                }
+            }
+        }
+        Spread {
+            id: spec.id.clone(),
+            kind: spec.kind,
+            concept: spec.concept,
+            template,
+            slots,
+            prose: (!spec.prose.is_empty()).then(|| ProseConcepts {
+                concepts: spec.prose.clone(),
+            }),
+            topics,
+            silent,
+        }
+    }
+
     // -------------------------------------------------------- derived facts
 
     /// The statement has ended (it has an end time qualifier).
     pub fn ended(statement: &Statement) -> bool {
-        let end = pid(END);
-        statement.qualifiers.iter().any(|q| q.pid == end)
+        statement.qualifiers.iter().any(|q| q.pid == *END_TIME)
     }
 
     /// The statements in "current first" order: preferred rank first, then
     /// the ones that have not ended, then the latest start. The sort is
     /// stable, so equal statements keep their content order.
     pub fn current(&self, mut statements: Vec<&'a Statement>) -> Vec<&'a Statement> {
-        let start = pid(START);
         statements.sort_by_key(|s| {
             (
                 s.rank != Rank::Preferred,
                 Self::ended(s),
-                -qualifier_year(s, start).unwrap_or(NO_YEAR),
+                -qualifier_year(s, *START_TIME).unwrap_or(NO_YEAR),
             )
         });
         statements
@@ -211,8 +283,7 @@ pub fn qualifier_year(statement: &Statement, qualifier: Pid) -> Option<i64> {
         .and_then(|q| q.value.year())
 }
 
-/// A property id that the code names. Only for the few properties that
-/// are Wikidata's own structure (start time, end time, point in time).
+#[cfg(test)]
 pub(crate) fn pid(id: &str) -> Pid {
     id.parse().expect("a property id in the code")
 }

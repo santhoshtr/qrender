@@ -1,0 +1,193 @@
+---
+source: qrender/tests/compositions.rs
+expression: composition
+---
+{
+  "schema": "composition/0.3",
+  "design": "design/0.2",
+  "qid": "Q139890532",
+  "class_layout": "settlement",
+  "spreads": [
+    {
+      "id": "identity",
+      "kind": "identity",
+      "template": "identity",
+      "slots": {
+        "head": [
+          {
+            "primitive": "title",
+            "item": "Q139890532"
+          }
+        ],
+        "lead": [
+          {
+            "primitive": "prose",
+            "source": "lead",
+            "languages": 3
+          }
+        ],
+        "kind": [
+          {
+            "primitive": "kind",
+            "chain": [
+              {
+                "pid": "P31",
+                "values": [
+                  {
+                    "statement": "Q139890532-6e4e2314-426f-970e-f527-2a2d233539c0",
+                    "pid": "P31",
+                    "item": "Q532",
+                    "rank": "normal",
+                    "provenance": "none",
+                    "class": true,
+                    "shown": true
+                  }
+                ]
+              },
+              {
+                "pid": "P17",
+                "values": [
+                  {
+                    "statement": "Q139890532-42ec4f16-4b40-d4b3-6860-a45f174953d2",
+                    "pid": "P17",
+                    "item": "Q668",
+                    "rank": "normal",
+                    "provenance": "none",
+                    "image": {
+                      "file": "India-locator-map-blank.svg",
+                      "kind": "drawing",
+                      "aspect": 0.857,
+                      "megapixels": 2.58,
+                      "credit": {
+                        "artist": "",
+                        "license": "CC BY-SA 3.0"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "location",
+      "kind": "facts",
+      "concept": "Q2221906",
+      "template": "hero-plus-stack",
+      "slots": {
+        "hero": [
+          {
+            "primitive": "map",
+            "statement": "Q139890532-8b12df07-47e4-b4f5-52d1-4f57a49d0909",
+            "pid": "P625",
+            "lat": 12.656889,
+            "lon": 74.963924,
+            "globe": "Q2",
+            "rank": "normal",
+            "provenance": "none",
+            "rule": "coordinate"
+          }
+        ],
+        "gallery": [
+          {
+            "primitive": "network",
+            "role": "gallery",
+            "values": [
+              {
+                "statement": "Q139890532-f3afeba0-427d-dfb4-a02a-1e58a98af09a",
+                "pid": "P131",
+                "item": "Q1419703",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Kasaragod-map.svg",
+                  "kind": "drawing",
+                  "aspect": 0.6922,
+                  "megapixels": 5.27,
+                  "credit": {
+                    "artist": "Rajeshodayanchal at ml.wikipedia",
+                    "license": "CC BY-SA 3.0"
+                  }
+                },
+                "priority": 0.0
+              }
+            ],
+            "priority": 0.0,
+            "rule": "single"
+          }
+        ]
+      },
+      "prose": {
+        "concepts": [
+          "Q1071",
+          "Q7937"
+        ]
+      }
+    },
+    {
+      "id": "names",
+      "kind": "facts",
+      "concept": "Q82799",
+      "template": "columns",
+      "slots": {
+        "sheet": [
+          {
+            "primitive": "fact",
+            "pid": "P281",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q139890532-36d5bae9-4d5a-a948-c7c6-dc4c3a8e63bc",
+                "pid": "P281",
+                "string": "671322",
+                "rank": "normal",
+                "provenance": "none",
+                "shown": true
+              }
+            ],
+            "priority": 0.0,
+            "rule": "row"
+          }
+        ]
+      }
+    },
+    {
+      "id": "evidence",
+      "kind": "evidence",
+      "concept": "Q121769",
+      "template": "sheet",
+      "slots": {
+        "summary": [
+          {
+            "primitive": "provenance",
+            "sourced": 0,
+            "imported": 0,
+            "none": 5
+          }
+        ],
+        "sheet": [],
+        "projects": [
+          {
+            "primitive": "sitelinks",
+            "families": {
+              "wikipedia": [
+                "en",
+                "ml",
+                "ur"
+              ]
+            }
+          }
+        ],
+        "identifiers": [
+          {
+            "primitive": "identifiers",
+            "values": []
+          }
+        ]
+      }
+    }
+  ],
+  "unshown": []
+}

@@ -4,10 +4,11 @@
 //! one place.
 
 use content::{EntityId, Pid, Qid, QualifierValue, Rank, StatementId, Value};
+use schemars::JsonSchema;
 use serde::Serialize;
 
 /// Is a statement backed by a source?
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, JsonSchema)]
 #[serde(rename_all = "lowercase")]
 pub enum Provenance {
     /// At least one reference with a real source.
@@ -19,7 +20,7 @@ pub enum Provenance {
 }
 
 /// A statement as the composition shows it.
-#[derive(Debug, Clone, PartialEq, Serialize)]
+#[derive(Debug, Clone, PartialEq, Serialize, JsonSchema)]
 pub struct StatementRef {
     pub statement: StatementId,
     pub pid: Pid,
@@ -44,7 +45,7 @@ pub struct StatementRef {
 }
 
 /// A statement value, by the keys its kind uses.
-#[derive(Debug, Clone, PartialEq, Serialize)]
+#[derive(Debug, Clone, PartialEq, Serialize, JsonSchema)]
 #[serde(untagged)]
 pub enum ValueShown {
     /// An item. None for "unknown value".
@@ -123,14 +124,14 @@ impl From<&Value> for ValueShown {
 
 /// A qualifier as the composition shows it. "Unknown value" qualifiers are
 /// not shown, so they have no form here.
-#[derive(Debug, Clone, PartialEq, Serialize)]
+#[derive(Debug, Clone, PartialEq, Serialize, JsonSchema)]
 pub struct QualifierShown {
     pub pid: Pid,
     #[serde(flatten)]
     pub value: QualifierPart,
 }
 
-#[derive(Debug, Clone, PartialEq, Serialize)]
+#[derive(Debug, Clone, PartialEq, Serialize, JsonSchema)]
 #[serde(untagged)]
 pub enum QualifierPart {
     Item {
@@ -174,7 +175,7 @@ impl QualifierShown {
 }
 
 /// The kind of a media file, from its name.
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, JsonSchema)]
 #[serde(rename_all = "lowercase")]
 pub enum MediaKind {
     Photo,
@@ -186,9 +187,17 @@ pub enum MediaKind {
 }
 
 /// A picture (or a sound, a video, a 3D model): intrinsic facts only.
-#[derive(Debug, Clone, PartialEq, Serialize)]
+#[derive(Debug, Clone, PartialEq, Serialize, JsonSchema)]
 pub struct Picture {
     pub file: String,
+    #[serde(flatten)]
+    pub facts: PictureFacts,
+}
+
+/// What a picture is: everything but its file name. A media block shows
+/// these beside the statement that holds the file.
+#[derive(Debug, Clone, PartialEq, Serialize, JsonSchema)]
+pub struct PictureFacts {
     pub kind: MediaKind,
     /// Width / height, rounded to 4 places.
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -206,7 +215,7 @@ pub struct Picture {
     pub credit: Credit,
 }
 
-#[derive(Debug, Clone, PartialEq, Serialize)]
+#[derive(Debug, Clone, PartialEq, Serialize, JsonSchema)]
 pub struct Credit {
     pub artist: String,
     pub license: String,

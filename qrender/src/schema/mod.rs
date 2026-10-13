@@ -1,9 +1,14 @@
 //! The composition schema: the data contract between the composer and the
 //! localize step.
 
+pub mod composition;
 pub mod value;
 
+pub use composition::{
+    Block, COMPOSITION_SCHEMA, Composition, DESIGN, ProseConcepts, Silence, SilenceReason, Spread,
+};
+
 pub use value::{
-    Credit, MediaKind, Picture, Provenance, QualifierPart, QualifierShown, StatementRef,
-    ValueShown, round_to,
+    Credit, MediaKind, Picture, PictureFacts, Provenance, QualifierPart, QualifierShown,
+    StatementRef, ValueShown, round_to,
 };

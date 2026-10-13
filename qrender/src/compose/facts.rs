@@ -10,11 +10,10 @@ use std::collections::HashSet;
 
 use content::{Datatype, Pid, Statement};
 
-use super::{Composer, pid, qualifier_year};
+use super::{Composer, qualifier_year};
 use crate::config::rules::{BlockMake, GroupWhen, PlacementWhen, PropertyWhen, TemplateWhen, When};
 use crate::vocab::{Primitive, Role, RoleSet};
-
-const POINT_IN_TIME: &str = "P585";
+use crate::wikidata::POINT_IN_TIME;
 
 // ------------------------------------------------------------- property
 
@@ -122,10 +121,9 @@ impl When<GroupFacts<'_, '_>> for GroupWhen {
 /// The year of each statement (its point in time qualifier), when there
 /// are at least three statements, each has a year, and no two share one.
 pub fn dated_years(statements: &[&Statement]) -> Option<Vec<i64>> {
-    let point_in_time = pid(POINT_IN_TIME);
     let years: Vec<i64> = statements
         .iter()
-        .map(|s| qualifier_year(s, point_in_time).filter(|y| *y != 0))
+        .map(|s| qualifier_year(s, *POINT_IN_TIME).filter(|y| *y != 0))
         .collect::<Option<_>>()?;
     let distinct: HashSet<_> = years.iter().collect();
     (years.len() >= 3 && distinct.len() == years.len()).then_some(years)
@@ -137,7 +135,8 @@ pub fn dated_years(statements: &[&Statement]) -> Option<Vec<i64>> {
 pub struct PlacementFacts {
     /// The block rule that made the block, when a block rule made it.
     pub make: Option<BlockMake>,
-    pub primitive: Primitive,
+    /// None for a single value: it is not a block.
+    pub primitive: Option<Primitive>,
     /// The block is an audio file.
     pub audio: bool,
 }
@@ -145,7 +144,7 @@ pub struct PlacementFacts {
 impl When<PlacementFacts> for PlacementWhen {
     fn holds(&self, f: &PlacementFacts) -> bool {
         self.make.is_none_or(|m| f.make == Some(m))
-            && self.primitive.is_none_or(|p| f.primitive == p)
+            && self.primitive.is_none_or(|p| f.primitive == Some(p))
             && self.audio.is_none_or(|b| f.audio == b)
     }
 }
@@ -171,6 +170,7 @@ mod tests {
     use serde_json::{Value, json};
 
     use super::*;
+    use crate::compose::pid;
     use crate::compose::test_content::{content, item};
     use crate::config::Config;
     use crate::config::rules::{Order, PropertyMake, Row, SplitMake, first};
@@ -338,7 +338,7 @@ mod tests {
             &rules().placement,
             &PlacementFacts {
                 make,
-                primitive,
+                primitive: Some(primitive),
                 audio,
             },
         );

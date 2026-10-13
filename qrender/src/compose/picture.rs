@@ -4,7 +4,7 @@
 use content::{Statement, Value};
 
 use super::Composer;
-use crate::schema::{Credit, MediaKind, Picture, round_to};
+use crate::schema::{Credit, MediaKind, Picture, PictureFacts, round_to};
 
 const AUDIO: [&str; 6] = [".ogg", ".oga", ".wav", ".mp3", ".flac", ".opus"];
 const VIDEO: [&str; 3] = [".webm", ".ogv", ".mp4"];
@@ -45,17 +45,19 @@ impl Composer<'_> {
         );
         Picture {
             file: file.to_string(),
-            kind,
-            aspect: size.map(|(w, h)| round_to(w / h, 4)),
-            megapixels: size.map(|(w, h)| round_to(w * h / 1e6, 2)),
-            bytes: info.filter(|i| plays && i.bytes > 0).map(|i| i.bytes),
-            url: info
-                .filter(|i| plays && !i.url.is_empty())
-                .map(|i| i.url.clone()),
-            assessed: info.map(|i| i.assessments.clone()).unwrap_or_default(),
-            credit: Credit {
-                artist: info.map(|i| i.artist.clone()).unwrap_or_default(),
-                license: info.map(|i| i.license.clone()).unwrap_or_default(),
+            facts: PictureFacts {
+                kind,
+                aspect: size.map(|(w, h)| round_to(w / h, 4)),
+                megapixels: size.map(|(w, h)| round_to(w * h / 1e6, 2)),
+                bytes: info.filter(|i| plays && i.bytes > 0).map(|i| i.bytes),
+                url: info
+                    .filter(|i| plays && !i.url.is_empty())
+                    .map(|i| i.url.clone()),
+                assessed: info.map(|i| i.assessments.clone()).unwrap_or_default(),
+                credit: Credit {
+                    artist: info.map(|i| i.artist.clone()).unwrap_or_default(),
+                    license: info.map(|i| i.license.clone()).unwrap_or_default(),
+                },
             },
         }
     }
@@ -87,11 +89,12 @@ impl Composer<'_> {
         };
         let media = &self.config.layouts.media;
         let picture = self.picture(file, false);
-        let megapixels = picture.megapixels.unwrap_or(0.0);
-        if picture.kind != MediaKind::Photo || megapixels < media.min_megapixels {
+        let megapixels = picture.facts.megapixels.unwrap_or(0.0);
+        if picture.facts.kind != MediaKind::Photo || megapixels < media.min_megapixels {
             return None;
         }
         let assessed: u32 = picture
+            .facts
             .assessed
             .iter()
             .filter_map(|a| media.assessments.get(a))
@@ -140,14 +143,26 @@ mod tests {
         );
         let k = Composer::new(&c, Config::embedded());
         let logo = k.picture("Logo.png", true);
-        assert_eq!(logo.kind, MediaKind::Drawing);
-        assert_eq!((logo.aspect, logo.megapixels), (Some(4.0), Some(0.04)));
-        assert_eq!(logo.bytes, None, "a still picture carries no size");
+        assert_eq!(logo.facts.kind, MediaKind::Drawing);
+        assert_eq!(
+            (logo.facts.aspect, logo.facts.megapixels),
+            (Some(4.0), Some(0.04))
+        );
+        assert_eq!(logo.facts.bytes, None, "a still picture carries no size");
         let clip = k.picture("Clip.webm", false);
-        assert_eq!((clip.kind, clip.bytes), (MediaKind::Video, Some(5000000)));
-        assert_eq!(k.picture("View.jpg", false).assessed, ["Quality images"]);
+        assert_eq!(
+            (clip.facts.kind, clip.facts.bytes),
+            (MediaKind::Video, Some(5000000))
+        );
+        assert_eq!(
+            k.picture("View.jpg", false).facts.assessed,
+            ["Quality images"]
+        );
         let unknown = k.picture("Missing.jpg", false);
-        assert_eq!((unknown.aspect, unknown.credit.artist.as_str()), (None, ""));
+        assert_eq!(
+            (unknown.facts.aspect, unknown.facts.credit.artist.as_str()),
+            (None, "")
+        );
     }
 
     #[test]

@@ -643,10 +643,6 @@ relation = [
   "P108",   # employer
   "P69",    # educated at
 ]
-# A Commons data file that holds a series.
-tabular = [
-  "P4179",  # tabular population
-]
 # Points that mark the extent of the item: markers on its map.
 extreme_point = ["P1332", "P1333", "P1334", "P1335"]
 # Accounts, codes and URLs: the item on the web. They go to evidence.
@@ -668,6 +664,12 @@ web = [
   "P973",   # described at URL
   "P1581",  # official blog URL
 ]
+
+# A Commons data file that holds a series, and the property of the dated
+# statements that the file replaces. The current value of that property
+# stays as a fact; the file's series shows the dated ones.
+[roles.tabular]
+P4179 = "P1082"  # tabular population -> population
 
 # An office holder and the property that names the office: a succession
 # block, with the office as its title.

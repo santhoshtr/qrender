@@ -4,5 +4,17 @@
 
 pub mod compose;
 pub mod config;
+pub mod primitives;
 pub mod schema;
 pub mod vocab;
+pub mod wikidata;
+
+use content::Content;
+
+use crate::config::Config;
+use crate::schema::Composition;
+
+/// The composition of an item: the same for every language.
+pub fn compose(content: &Content, config: &Config) -> Composition {
+    compose::Composer::new(content, config).compose()
+}
