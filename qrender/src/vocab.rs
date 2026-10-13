@@ -27,6 +27,39 @@ pub enum SpreadKind {
     Evidence,
 }
 
+/// The dimension of the data of a spread. The design system gives each
+/// one its colour; colour means nothing else.
+#[derive(Debug, Clone, Copy, Default, PartialEq, Eq, Hash, Serialize, Deserialize, JsonSchema)]
+#[serde(rename_all = "kebab-case")]
+pub enum Dimension {
+    Place,
+    Measures,
+    People,
+    Time,
+    Names,
+    Recognition,
+    Media,
+    /// The page head, the rest, the evidence: no colour of their own.
+    #[default]
+    Neutral,
+}
+
+impl Dimension {
+    /// The name the design system uses (`data-dimension`).
+    pub fn name(self) -> &'static str {
+        match self {
+            Self::Place => "place",
+            Self::Measures => "measures",
+            Self::People => "people",
+            Self::Time => "time",
+            Self::Names => "names",
+            Self::Recognition => "recognition",
+            Self::Media => "media",
+            Self::Neutral => "neutral",
+        }
+    }
+}
+
 /// What a property is for, when its datatype does not say.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, JsonSchema, Deserialize)]
 #[serde(rename_all = "snake_case")]

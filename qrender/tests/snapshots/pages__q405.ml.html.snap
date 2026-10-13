@@ -23,7 +23,7 @@ expression: html
     </header>
     <main class="page">
             <section class="spread t-identity"
-             data-spread="identity"><div data-slot="head">
+             data-spread="identity" data-dimension="neutral"><div data-slot="head">
         <div class="title"><h1>ചന്ദ്രൻ</h1>
         <p>
             ഭൂമിയുടെ ഒരേയൊരു പ്രകൃതിദത്ത ഉപഗ്രഹമാണ് ചന്ദ്രൻ
@@ -75,7 +75,7 @@ expression: html
            aria-label="Add a label in your language">+</a></span></span><a href="https://www.wikidata.org/wiki/Q2">ഭൂമി</a></div></div>
 </div></section>
             <section class="spread t-columns"
-             data-spread="physical"><h2>ഭൗതികഗുണങ്ങൾ</h2><div data-slot="hero">
+             data-spread="physical" data-dimension="measures"><h2>ഭൗതികഗുണങ്ങൾ</h2><div data-slot="hero">
         <div class="block scale">
     <h3><span class="fb-group"><span class="fb"
       lang="en">parent astronomical body</span><a class="add-label"
@@ -218,7 +218,7 @@ expression: html
     <span class="tools"></span>
 </div></dl></section>
             <section class="spread t-columns"
-             data-spread="orbit"><h2>ഭ്രമണപഥം</h2><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt><span class="fb-group"><span class="fb"
+             data-spread="orbit" data-dimension="measures"><h2>ഭ്രമണപഥം</h2><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt><span class="fb-group"><span class="fb"
       lang="en">type of orbit</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/P522"
            aria-label="Add a label in your language">+</a></span></dt><dd><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q218056"><span class="fb" lang="en">high Earth orbit</span></a><a class="add-label"
@@ -306,7 +306,7 @@ expression: html
     <span class="tools"></span>
 </div></dl></section>
             <section class="spread t-columns"
-             data-spread="relations"><h2><span class="fb" lang="en">relation</span></h2><div data-slot="stack">
+             data-spread="relations" data-dimension="place"><h2><span class="fb" lang="en">relation</span></h2><div data-slot="stack">
         <div class="block set">
     <h3><span class="fb-group"><span class="fb"
       lang="en">child astronomical body</span><a class="add-label"
@@ -500,11 +500,11 @@ expression: html
        href="https://www.wikidata.org/wiki/Q405#P1589"
        aria-label="Edit">✎</a></span></figure></div></div></div></section>
             <section class="spread t-axis"
-             data-spread="history"><h2>ചരിത്രം</h2><p class="prose-links"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q7102486"><span class="fb" lang="en">origin of the Moon</span></a><a class="add-label"
+             data-spread="history" data-dimension="time"><h2>ചരിത്രം</h2><p class="prose-links"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q7102486"><span class="fb" lang="en">origin of the Moon</span></a><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q7102486"
            aria-label="Add a label in your language">+</a></span></p></section>
             <section class="spread t-feature-run"
-             data-spread="media"><h2>മൾട്ടിമീഡിയ</h2><div data-slot="feature">
+             data-spread="media" data-dimension="media"><h2>മൾട്ടിമീഡിയ</h2><div data-slot="feature">
         <div class="feature"> <figure class="m k-photo" style="--a:1.5">
         <a href="https://commons.wikimedia.org/wiki/File:Solar_eclipse_taken_from_Artemis_II_-_April_2026.jpg">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Solar%20eclipse%20taken%20from%20Artemis%20II%20-%20April%202026.jpg?width=960"
@@ -600,7 +600,7 @@ expression: html
        href="https://www.wikidata.org/wiki/Q405#P443"
        aria-label="Edit">✎</a></h3><audio controls preload="none" src="https://commons.wikimedia.org/wiki/Special:FilePath/En-us-moon.ogg"></audio><span class="note"><a href="https://www.wikidata.org/wiki/Q7976">അമേരിക്കൻ ഇംഗ്ലീഷ്</a></span></div>
 </div></section>
-            <section class="spread t-collapsed" data-spread="more">
+            <section class="spread t-collapsed" data-spread="more" data-dimension="neutral">
         <details>
             <summary>+11</summary><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>പേര് വന്ന വഴി</dt><dd><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q221656"><span class="fb" lang="en">brightness</span></a><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q221656"
@@ -725,7 +725,7 @@ expression: html
 </div></dl></details>
     </section>
             <section class="spread t-sheet"
-             data-spread="evidence"><h2>അവലംബം</h2><div data-slot="summary">
+             data-spread="evidence" data-dimension="neutral"><h2>അവലംബം</h2><div data-slot="summary">
         <div class="block">
     <div class="stack-bar"><span class="p-sourced" style="--n:18"></span>
 <span class="p-imported" style="--n:11"></span>
@@ -1334,7 +1334,7 @@ expression: html
            aria-label="Add a label in your language">+</a></span>
     </dd>
 </div></dl></section>
-            <section class="spread t-sheet" data-spread="evidence">
+            <section class="spread t-sheet" data-spread="evidence" data-dimension="neutral">
                 <p class="prose-links"><a href="https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB#ചരിത്രം_(history)">ചരിത്രം (history)</a> · <a href="https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB#ചന്ദ്രോപരിതലം">ചന്ദ്രോപരിതലം</a> · <a href="https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB#ഭ്രമണപഥവും_ഭൂമിയുമായുള്ള_ബന്ധവും">ഭ്രമണപഥവും ഭൂമിയുമായുള്ള ബന്ധവും</a> · <a href="https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB#ഉത്പത്തിയും_ഭൂഗർഭശാസ്ത്രപരമായ_പരിണാമവും">ഉത്പത്തിയും ഭൂഗർഭശാസ്ത്രപരമായ പരിണാമവും</a> · <a href="https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB#ഭൗതിക_സ്വഭാവവിശേഷങ്ങൾ">ഭൗതിക  സ്വഭാവവിശേഷങ്ങൾ</a> · <a href="https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB#ഗ്രഹണം">ഗ്രഹണം</a> · <a href="https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB#നിരീക്ഷണം">നിരീക്ഷണം</a> · <a href="https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB#ചാന്ദ്രപര്യവേഷണങ്ങൾ">ചാന്ദ്രപര്യവേഷണങ്ങൾ</a> · <a href="https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB#ഇതുംകൂടി_കാണുക">ഇതുംകൂടി കാണുക</a> · <a href="https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB#കുറിപ്പുകൾ">കുറിപ്പുകൾ</a></p>
             </section>
         <p class="provenance-note">Composed by rule from Wikidata item <a href="https://www.wikidata.org/wiki/Q405">Q405</a> (composition/0.3, view/0.2, design/0.2). The lead paragraph, the section paragraphs and the section links come from Wikipedia. Pictures come from Wikimedia Commons; a W on a picture marks one from an article, not from Wikidata; a W on a value marks a statement whose only reference is a Wikipedia.</p>

@@ -11,6 +11,7 @@ expression: composition
     {
       "id": "identity",
       "kind": "identity",
+      "dimension": "neutral",
       "template": "identity",
       "slots": {
         "head": [
@@ -76,6 +77,7 @@ expression: composition
     {
       "id": "story",
       "kind": "facts",
+      "dimension": "time",
       "concept": "Q1758354",
       "template": "columns",
       "slots": {
@@ -270,6 +272,7 @@ expression: composition
     {
       "id": "cast",
       "kind": "facts",
+      "dimension": "people",
       "concept": "Q15267437",
       "template": "columns",
       "slots": {
@@ -679,6 +682,7 @@ expression: composition
     {
       "id": "credits",
       "kind": "facts",
+      "dimension": "people",
       "concept": "Q506702",
       "template": "columns",
       "slots": {
@@ -826,6 +830,7 @@ expression: composition
     {
       "id": "production",
       "kind": "facts",
+      "dimension": "place",
       "concept": "Q932586",
       "template": "columns",
       "slots": {
@@ -1274,6 +1279,7 @@ expression: composition
     {
       "id": "release",
       "kind": "facts",
+      "dimension": "time",
       "concept": "Q115668531",
       "template": "columns",
       "slots": {
@@ -1629,6 +1635,7 @@ expression: composition
     {
       "id": "reception",
       "kind": "facts",
+      "dimension": "recognition",
       "concept": "Q4482",
       "template": "columns",
       "slots": {
@@ -2284,6 +2291,7 @@ expression: composition
     {
       "id": "ratings",
       "kind": "facts",
+      "dimension": "recognition",
       "concept": "Q14775294",
       "template": "columns",
       "slots": {
@@ -2825,6 +2833,7 @@ expression: composition
     {
       "id": "media",
       "kind": "media",
+      "dimension": "media",
       "concept": "Q131765",
       "template": "feature-run",
       "slots": {
@@ -2851,6 +2860,7 @@ expression: composition
     {
       "id": "evidence",
       "kind": "evidence",
+      "dimension": "neutral",
       "concept": "Q121769",
       "template": "sheet",
       "slots": {

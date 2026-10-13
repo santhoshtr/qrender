@@ -23,7 +23,7 @@ expression: html
     </header>
     <main class="page">
             <section class="spread t-identity"
-             data-spread="identity"><div data-slot="head">
+             data-spread="identity" data-dimension="neutral"><div data-slot="head">
         <div class="title"><h1>One Battle After Another</h1>
         <p>
             2025 film directed by Paul Thomas Anderson
@@ -52,7 +52,7 @@ expression: html
             <span class="k">instance of</span><a href="https://www.wikidata.org/wiki/Q11424">film</a></div></div>
 </div></section>
             <section class="spread t-columns"
-             data-spread="story"><h2>plot</h2><div class="prose-slot" lang="en"><p>"Ghetto" Pat Calhoun and Perfidia Beverly Hills are lovers and members of a <a href="https://en.wikipedia.org/wiki/Far-left_politics">far-left</a> <a href="https://en.wikipedia.org/wiki/Militant">militant</a> <a href="https://en.wikipedia.org/wiki/Revolutionary">revolutionary</a> group, the French 75. While breaking out <a href="https://en.wikipedia.org/wiki/Illegal_immigration_to_the_United_States">detained immigrants</a> from <a href="https://en.wikipedia.org/wiki/Otay_Mesa_Detention_Center">Otay Mesa Detention Center</a>, Perfidia sexually humiliates the <a href="https://en.wikipedia.org/wiki/Commanding_officer">commanding officer</a>, Steven J. Lockjaw, who becomes obsessed with her sexually. Later, when Lockjaw catches Perfidia planting a bomb, he lets her go after she agrees to his demand to meet him for sex. Soon after, Perfidia becomes pregnant.</p><a class="read" href="https://en.wikipedia.org/wiki/One_Battle_After_Another#Plot">Plot ↗</a></div><div data-slot="gallery"><div class="block set"><div class="run"><figure class="m k-photo"
+             data-spread="story" data-dimension="time"><h2>plot</h2><div class="prose-slot" lang="en"><p>"Ghetto" Pat Calhoun and Perfidia Beverly Hills are lovers and members of a <a href="https://en.wikipedia.org/wiki/Far-left_politics">far-left</a> <a href="https://en.wikipedia.org/wiki/Militant">militant</a> <a href="https://en.wikipedia.org/wiki/Revolutionary">revolutionary</a> group, the French 75. While breaking out <a href="https://en.wikipedia.org/wiki/Illegal_immigration_to_the_United_States">detained immigrants</a> from <a href="https://en.wikipedia.org/wiki/Otay_Mesa_Detention_Center">Otay Mesa Detention Center</a>, Perfidia sexually humiliates the <a href="https://en.wikipedia.org/wiki/Commanding_officer">commanding officer</a>, Steven J. Lockjaw, who becomes obsessed with her sexually. Later, when Lockjaw catches Perfidia planting a bomb, he lets her go after she agrees to his demand to meet him for sex. Soon after, Perfidia becomes pregnant.</p><a class="read" href="https://en.wikipedia.org/wiki/One_Battle_After_Another#Plot">Plot ↗</a></div><div data-slot="gallery"><div class="block set"><div class="run"><figure class="m k-photo"
         style="--a:0.6912">
     <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Thomas%20Pynchon%2C%20high%20school%20yearbook%20editor%2C%201953.jpg?width=960"
          srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Thomas%20Pynchon%2C%20high%20school%20yearbook%20editor%2C%201953.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Thomas%20Pynchon%2C%20high%20school%20yearbook%20editor%2C%201953.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Thomas%20Pynchon%2C%20high%20school%20yearbook%20editor%2C%201953.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Thomas%20Pynchon%2C%20high%20school%20yearbook%20editor%2C%201953.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Thomas%20Pynchon%2C%20high%20school%20yearbook%20editor%2C%201953.jpg?width=1920 1920w"
@@ -134,7 +134,7 @@ expression: html
         </span>
 </div></dl></section>
             <section class="spread t-columns"
-             data-spread="cast"><h2>cast</h2><div data-slot="stack">
+             data-spread="cast" data-dimension="people"><h2>cast</h2><div data-slot="stack">
         <div class="block set">
     <h3>cast member <span class="note">19</span></h3><div class="run scroll" tabindex="0" role="group" aria-label="cast member"><figure class="m k-photo"
         style="--a:0.8141">
@@ -381,7 +381,7 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
     </dialog></div>
 </div><p class="prose-links"><a href="https://en.wikipedia.org/wiki/One_Battle_After_Another#Cast">Cast</a></p></section>
             <section class="spread t-columns"
-             data-spread="credits"><h2>film crew</h2><div data-slot="stack">
+             data-spread="credits" data-dimension="people"><h2>film crew</h2><div data-slot="stack">
         <div class="block set"><div class="run scroll" tabindex="0" role="group" aria-label="director, screenwriter, producer, composer, director of photography, film editor, film crew member"><figure class="m k-photo"
         style="--a:0.7504">
     <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Paul%20Thomas%20Anderson%202022%20%282%29%20%28cropped%29.jpg?width=960"
@@ -471,7 +471,7 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
 </figure></div></div>
 </div></section>
             <section class="spread t-columns"
-             data-spread="production"><h2>film production</h2><div data-slot="stack">
+             data-spread="production" data-dimension="place"><h2>film production</h2><div data-slot="stack">
         <div class="block set">
     <h3>filming location <span class="note">6</span></h3><div class="run scroll" tabindex="0" role="group" aria-label="filming location"><figure class="m k-photo"
         style="--a:1.4985">
@@ -689,7 +689,7 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
     <span class="tools"></span>
 </div></dl></section>
             <section class="spread t-columns"
-             data-spread="release"><h2>film release</h2><div data-slot="gallery"><div class="block set"><div class="run"><figure class="m k-photo"
+             data-spread="release" data-dimension="time"><h2>film release</h2><div data-slot="gallery"><div class="block set"><div class="run"><figure class="m k-photo"
         style="--a:1.5">
     <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Gate%204%20Warner%20Bros.%20Studios.jpg?width=960"
          srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Gate%204%20Warner%20Bros.%20Studios.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Gate%204%20Warner%20Bros.%20Studios.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Gate%204%20Warner%20Bros.%20Studios.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Gate%204%20Warner%20Bros.%20Studios.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Gate%204%20Warner%20Bros.%20Studios.jpg?width=1920 1920w"
@@ -787,7 +787,7 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
     <span class="tools"></span>
 </div></dl></section>
             <section class="spread t-columns"
-             data-spread="reception"><h2>film criticism</h2><div data-slot="stack">
+             data-spread="reception" data-dimension="recognition"><h2>film criticism</h2><div data-slot="stack">
         <div class="block scores"><div class="card"><img class="logo"
                      src="https://commons.wikimedia.org/wiki/Special:FilePath/Letterboxd-Logo-H-Pos-RGB.svg?width=240"
                      alt="Letterboxd"
@@ -995,7 +995,7 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
     <span class="tools"></span>
 </div></dl></section>
             <section class="spread t-columns"
-             data-spread="ratings"><h2>motion picture rating system</h2><div data-slot="gallery"><div class="block set"><div class="run"><figure class="m k-drawing"
+             data-spread="ratings" data-dimension="recognition"><h2>motion picture rating system</h2><div data-slot="gallery"><div class="block set"><div class="run"><figure class="m k-drawing"
         style="--a:1.2457">
     <img src="https://commons.wikimedia.org/wiki/Special:FilePath/MPA%20R%20RATING.svg?width=960"
          srcset="https://commons.wikimedia.org/wiki/Special:FilePath/MPA%20R%20RATING.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/MPA%20R%20RATING.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/MPA%20R%20RATING.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/MPA%20R%20RATING.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/MPA%20R%20RATING.svg?width=1920 1920w"
@@ -1268,7 +1268,7 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
         </span>
 </div></dl></section>
             <section class="spread t-feature-run"
-             data-spread="media"><h2>multimedia</h2><div data-slot="run">
+             data-spread="media" data-dimension="media"><h2>multimedia</h2><div data-slot="run">
         <div class="run"> <figure class="m k-drawing" style="--a:1.831">
         <a href="https://commons.wikimedia.org/wiki/File:One_Battle_After_Another_logo.svg">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/One%20Battle%20After%20Another%20logo.svg?width=960"
@@ -1286,7 +1286,7 @@ Derivative work:  Logovectorizer · Public domain</span><a class="edit"
        aria-label="Edit">✎</a></span></figure> </div>
 </div></section>
             <section class="spread t-sheet"
-             data-spread="evidence"><h2>reference</h2><div data-slot="summary">
+             data-spread="evidence" data-dimension="neutral"><h2>reference</h2><div data-slot="summary">
         <div class="block">
     <div class="stack-bar"><span class="p-sourced" style="--n:125"></span>
 <span class="p-none" style="--n:10"></span>
@@ -1348,7 +1348,7 @@ Derivative work:  Logovectorizer · Public domain</span><a class="edit"
         <div class="dialog-body"><div class="idlist"><div><span>Academy Collection film ID</span><span>W1577207</span></div><div><span>AdoroCinema film ID</span><span>311364</span></div><div><span>Allcinema film ID</span><span>400953</span></div><div><span>AllMovie title ID</span><span>am598895</span></div><div><span>AlloCiné film ID</span><span>311364</span></div><div><span>Amazon Prime Video ID</span><span>B0FR6PZZ2C</span></div><div><span>Apple TV movie ID</span><span>umc.cmc.66y1fmjq8p3jni6jntoj53id7</span></div><div><span>Bechdel Test Movie List ID</span><span>11887</span></div><div><span>CineCartaz film ID</span><span>414147</span></div><div><span>CineFAN.ro title ID</span><span>10646-one-battle-after-another-2025</span></div><div><span>CineMagia title ID</span><span>3322169</span></div><div><span>Cinematografo.it film ID (new)</span><span>una-battaglia-dopo-laltra-isstsg9r</span></div><div><span>ComingSoon.it film ID</span><span>66964</span></div><div><span>Common Sense Media ID</span><span>107445</span></div><div><span>Crew United title ID</span><span>358908</span></div><div><span>César Award film ID</span><span>46813</span></div><div><span>Decine21 film ID</span><span>49518</span></div><div><span>Douban film ID</span><span>36176155</span></div><div><span>EIDR content ID</span><span>10.5240/211D-FF57-B1C0-05D5-93ED-F</span></div><div><span>Eiga.com movie ID</span><span>104106</span></div><div><span>elCinema film ID</span><span>2093308</span></div><div><span>Elonet movie ID</span><span>1653971</span></div><div><span>Encyclopædia Britannica Online ID</span><span>topic/One-Battle-After-Another</span></div><div><span>exploitation mark number</span><span>165146</span></div><div><span>Fandango video ID</span><span>4597040</span></div><div><span>Fandom article ID</span><span>warnerbros:One_Battle_After_Another</span></div><div><span>fernsehserien.de ID</span><span>filme/one-battle-after-another</span></div><div><span>Film.ru film ID</span><span>bitva-za-bitvoy</span></div><div><span>FilmAffinity film ID</span><span>910030</span></div><div><span>Filmová databáze film ID</span><span>196269</span></div><div><span>Filmow ID</span><span>t368869</span></div><div><span>Filmstarts title ID</span><span>311364</span></div><div><span>FilmTv.it movie ID</span><span>251744</span></div><div><span>FilmVandaag ID</span><span>film/143439</span></div><div><span>Filmweb.pl film ID</span><span>10059894</span></div><div><span>FVLB work ID</span><span>225116</span></div><div><span>Google Knowledge Graph ID</span><span>/g/11tms1fbgr</span></div><div><span>HBO Max ID</span><span>movie/bebe611d-8178-481a-a4f2-de743b5b135a</span></div><div><span>ICAA film catalogue ID</span><span>44725</span></div><div><span>IGN film ID</span><span>one-battle-after-another</span></div><div><span>Il mondo dei doppiatori ID</span><span>film1/unabattagliadopolaltra</span></div><div><span>IMCDB work ID</span><span>30144839</span></div><div><span>IMDb ID</span><span>tt30144839</span></div><div><span>IMFDB ID</span><span>One_Battle_After_Another</span></div><div><span>ISAN</span><span>0000-0007-7E2D-0000-Z-0000-0000-6</span></div><div><span>kino-teatr.ru film ID</span><span>193473</span></div><div><span>Kino-teatr.ua film ID</span><span>55427</span></div><div><span>Kino.mail.ru film ID</span><span>939925</span></div><div><span>Kinobaza film ID</span><span>one-battle-after-another</span></div><div><span>Kinobox film ID</span><span>3029855</span></div><div><span>Kinofilms.ua film ID</span><span>movie/954426</span></div><div><span>Kinopoisk film ID</span><span>5437094</span></div><div><span>Kinorium movie ID</span><span>10867004</span></div><div><span>LdiF ID</span><span>624998</span></div><div><span>Letterboxd film ID</span><span>one-battle-after-another</span></div><div><span>Lithuanian movie register ID</span><span>FRL03203</span></div><div><span>Metacritic ID</span><span>movie/one-battle-after-another</span></div><div><span>Moviebuff ID</span><span>one-battle-after-another</span></div><div><span>MovieMeter film ID</span><span>1170755</span></div><div><span>Moviepilot.de film ID</span><span>one-battle-after-another</span></div><div><span>Movieplayer film ID</span><span>63959</span></div><div><span>Movies Anywhere ID</span><span>one-battle-after-another-2025</span></div><div><span>MUBI film numeric ID</span><span>363407</span></div><div><span>MYmovies audiovisual work ID</span><span>117029</span></div><div><span>National Library of Poland MMS ID</span><span>9815199968805606</span></div><div><span>OFDb film ID</span><span>396242</span></div><div><span>oKino.ua film ID</span><span>619765</span></div><div><span>OMDb film ID</span><span>288781</span></div><div><span>Plex media key</span><span>6562d1dbf8acedbdfebce1d1</span></div><div><span>PORT film ID</span><span>262145</span></div><div><span>Rate Your Music film ID</span><span>one-battle-after-another</span></div><div><span>RogerEbert.com film ID</span><span>one-battle-after-another-movie-review-2025</span></div><div><span>Rotten Tomatoes ID</span><span>m/one_battle_after_another</span></div><div><span>Schnittberichte.com title ID</span><span>94412</span></div><div><span>SensCritique work ID</span><span>72691307</span></div><div><span>Shazoo tag ID</span><span>23830</span></div><div><span>Sinemalar title ID</span><span>279375</span></div><div><span>SinemaTürk film ID</span><span>76092</span></div><div><span>Swedish Film Database ID</span><span>728206</span></div><div><span>The Guardian topic ID</span><span>film/one-battle-after-another</span></div><div><span>The Numbers movie ID</span><span>One-Battle-After-Another-(2025)</span></div><div><span>TheTVDB movie ID</span><span>355416</span></div><div><span>TMDB movie ID</span><span>1054867</span></div><div><span>Trakt.tv film ID</span><span>848797</span></div><div><span>Trakt.tv ID</span><span>movies/one-battle-after-another-2025</span></div><div><span>TV Spielfilm film ID</span><span>12710300</span></div><div><span>TV Tropes ID</span><span>Film/OneBattleAfterAnother</span></div><div><span>Unconsenting Media ID</span><span>15536</span></div><div><span>VIAF cluster ID</span><span>2005176725915424980003</span></div><div><span>Vokrug.tv show ID</span><span>17431603321</span></div><div><span>Writers Guild of America project ID</span><span>1265934</span></div><div><span>YouTube video ID</span><span>Uye8x9ilHAY</span></div><div><span>ČSFD film ID</span><span>1476388</span></div><div><span>‎BBFC release ID</span><span>one-battle-after-another-q29sbgvjdglvbjpwwc0xmdi5mdix</span></div><div><span>‎Blu-ray.com ID</span><span>1797896</span></div><div><span>‎Does the Dog Die? media ID</span><span>1537151</span></div><div><span>‎Filmarks ID</span><span>movies/121982</span></div><div><span>‎MPA certificate number</span><span>55553</span></div></div></div>
     </dialog>
 </div></section>
-            <section class="spread t-sheet" data-spread="evidence">
+            <section class="spread t-sheet" data-spread="evidence" data-dimension="neutral">
                 <p class="prose-links"><a href="https://en.wikipedia.org/wiki/One_Battle_After_Another#Production">Production</a> · <a href="https://en.wikipedia.org/wiki/One_Battle_After_Another#Marketing">Marketing</a> · <a href="https://en.wikipedia.org/wiki/One_Battle_After_Another#Release">Release</a> · <a href="https://en.wikipedia.org/wiki/One_Battle_After_Another#Reception">Reception</a> · <a href="https://en.wikipedia.org/wiki/One_Battle_After_Another#See_also">See also</a> · <a href="https://en.wikipedia.org/wiki/One_Battle_After_Another#Notes">Notes</a> · <a href="https://en.wikipedia.org/wiki/One_Battle_After_Another#References">References</a> · <a href="https://en.wikipedia.org/wiki/One_Battle_After_Another#External_links">External links</a></p>
             </section>
         <p class="provenance-note">Composed by rule from Wikidata item <a href="https://www.wikidata.org/wiki/Q117085614">Q117085614</a> (composition/0.3, view/0.2, design/0.2). The lead paragraph, the section paragraphs and the section links come from Wikipedia. Pictures come from Wikimedia Commons; a W on a picture marks one from an article, not from Wikidata; a W on a value marks a statement whose only reference is a Wikipedia.</p>

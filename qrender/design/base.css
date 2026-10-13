@@ -65,21 +65,17 @@ a {
 /* Spread colours: one for each dimension of the data, shared by the class
    layouts. Only the option-* colours are categorical in Codex; red and
    maroon are not used, because red means "destructive". */
-[data-spread='location'], [data-spread='connections'] { --ink: var( --color-option-green ); --soft: var( --background-color-option-green ); }
-[data-spread='demography'], [data-spread='economy'], [data-spread='physical'], [data-spread='orbit'] { --ink: var( --color-option-blue ); --soft: var( --background-color-option-blue ); }
-[data-spread='government'], [data-spread='work'], [data-spread='relations'] { --ink: var( --color-option-purple ); --soft: var( --background-color-option-purple ); }
-[data-spread='history'], [data-spread='life'] { --ink: var( --color-option-orange ); --soft: var( --background-color-option-orange ); }
-[data-spread='names'], [data-spread='family'] { --ink: var( --color-option-pink ); --soft: var( --background-color-option-pink ); }
-[data-spread='education'], [data-spread='awards'] { --ink: var( --color-option-yellow ); --soft: var( --background-color-option-yellow ); }
-[data-spread='media'] { --ink: var( --color-option-lime ); --soft: var( --background-color-option-lime ); }
-[data-spread='evidence'], [data-spread='identity'], [data-spread='more'] { --ink: var( --color-subtle ); --soft: var( --background-color-neutral-subtle ); }
+[data-dimension='place'] { --ink: var( --color-option-green ); --soft: var( --background-color-option-green ); }
+[data-dimension='measures'] { --ink: var( --color-option-blue ); --soft: var( --background-color-option-blue ); }
+[data-dimension='people'] { --ink: var( --color-option-purple ); --soft: var( --background-color-option-purple ); }
+[data-dimension='time'] { --ink: var( --color-option-orange ); --soft: var( --background-color-option-orange ); }
+[data-dimension='names'] { --ink: var( --color-option-pink ); --soft: var( --background-color-option-pink ); }
+[data-dimension='recognition'] { --ink: var( --color-option-yellow ); --soft: var( --background-color-option-yellow ); }
+[data-dimension='media'] { --ink: var( --color-option-lime ); --soft: var( --background-color-option-lime ); }
+[data-dimension='neutral'] { --ink: var( --color-subtle ); --soft: var( --background-color-neutral-subtle ); }
 
 /* A spread with a colour has a tinted band behind its title. */
-.spread:is( [data-spread='location'], [data-spread='connections'], [data-spread='demography'],
-	[data-spread='economy'], [data-spread='government'], [data-spread='work'], [data-spread='relations'],
-	[data-spread='history'], [data-spread='life'], [data-spread='names'], [data-spread='family'],
-	[data-spread='education'], [data-spread='awards'], [data-spread='media'], [data-spread='physical'],
-	[data-spread='orbit'] ) > h2 {
+.spread:not( [data-dimension='neutral'] ) > h2 {
 	background: linear-gradient( to right, var( --soft ), transparent 60% );
 	padding-inline: var( --spacing-75 );
 	border-start-start-radius: var( --radius );

@@ -23,7 +23,7 @@ expression: html
     </header>
     <main class="page">
             <section class="spread t-identity"
-             data-spread="identity"><div data-slot="head">
+             data-spread="identity" data-dimension="neutral"><div data-slot="head">
         <div class="title"><h1>નૈરોબી</h1>
         <p>
             <span class="fb" lang="en">capital city of Kenya</span>
@@ -70,7 +70,7 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
             <span class="k">દેશ</span><a href="https://www.wikidata.org/wiki/Q114">કેન્યા</a></div></div>
 </div></section>
             <section class="spread t-hero-plus-stack"
-             data-spread="location"><h2><span class="fb" lang="en">geographic location</span></h2><div class="prose-slot" lang="en"><p>Nairobi is situated at 1°09′S 36°39′E&#xfeff; / &#xfeff;1.150°S 36.650°E&#xfeff; / -1.150; 36.650&#xfeff; (Nairobi, Kenya) and 1°27′S 37°06′E&#xfeff; / &#xfeff;1.450°S 37.100°E&#xfeff; / -1.450; 37.100&#xfeff; (Nairobi, Kenya) and occupies 696 square kilometres (270&#160;sq&#160;mi).</p><a class="read" href="https://en.wikipedia.org/wiki/Nairobi#Geography">Geography ↗</a></div><div data-slot="hero">
+             data-spread="location" data-dimension="place"><h2><span class="fb" lang="en">geographic location</span></h2><div class="prose-slot" lang="en"><p>Nairobi is situated at 1°09′S 36°39′E&#xfeff; / &#xfeff;1.150°S 36.650°E&#xfeff; / -1.150; 36.650&#xfeff; (Nairobi, Kenya) and 1°27′S 37°06′E&#xfeff; / &#xfeff;1.450°S 37.100°E&#xfeff; / -1.450; 37.100&#xfeff; (Nairobi, Kenya) and occupies 696 square kilometres (270&#160;sq&#160;mi).</p><a class="read" href="https://en.wikipedia.org/wiki/Nairobi#Geography">Geography ↗</a></div><div data-slot="hero">
         <figure class="map">
         <img src="https://maps.wikimedia.org/img/osm-intl,11,-1.286388888,36.817222222,800x500@2x.png" alt="">
         <span class="pin"></span><figcaption>સ્થળના અક્ષાંસ રેખાંશ -1.28639, 36.8172 <span class="prov-imported" title="આયાત કર્યું">W</span></figcaption><span class="tools"><a class="edit"
@@ -125,7 +125,7 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
         </span>
 </div></dl></section>
             <section class="spread t-columns"
-             data-spread="names"><h2>નામ</h2><div data-slot="stack">
+             data-spread="names" data-dimension="names"><h2>નામ</h2><div data-slot="stack">
         <div class="block"><h3>ઉચ્ચાર ધ્વનિ<span class="prov-none" title="—"></span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P443"
        aria-label="Edit">✎</a></h3><audio controls preload="none" src="https://commons.wikimedia.org/wiki/Special:FilePath/Swa-nairobi.ogg"></audio><span class="note"><a href="https://www.wikidata.org/wiki/Q7838">સ્વાહિલી</a></span></div>
@@ -246,7 +246,7 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
         </span>
 </div></dl></section>
             <section class="spread t-lead-beside"
-             data-spread="government"><h2>સરકાર</h2><div data-slot="hero">
+             data-spread="government" data-dimension="people"><h2>સરકાર</h2><div data-slot="hero">
         <div class="block succession">
     <h3>સરકારના વડા</h3>
 <figure class="m k-photo"
@@ -319,7 +319,7 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
     <span class="tools"></span>
 </div></dl></section>
             <section class="spread t-columns"
-             data-spread="demography"><h2>વસ્તી-વિષયક માહિતીઓ</h2><div data-slot="hero">
+             data-spread="demography" data-dimension="measures"><h2>વસ્તી-વિષયક માહિતીઓ</h2><div data-slot="hero">
         <div class="block scale">
     <h3>દેશ: <a href="https://www.wikidata.org/wiki/Q114">કેન્યા</a></h3>
     <div class="bars"><div class="bar self"><span class="name">વસ્તી / જનસંખ્યા</span><span class="track"><span style="--f:0.114405"></span></span><span class="val"><data value="0.114405" data-f="percent">11 %</data></span></div><div class="bar self"><span class="name">ક્ષેત્રફળ</span><span class="track"><span style="--f:0.001197"></span></span><span class="val"><data value="0.001197" data-f="percent">0.12 %</data></span></div></div>
@@ -364,7 +364,7 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
     <span class="tools"></span>
 </div></dl></section>
             <section class="spread t-columns"
-             data-spread="economy"><h2><span class="fb" lang="en">economy</span></h2><div class="prose-slot" lang="en"><p>Nairobi is home to the <a href="https://www.wikidata.org/wiki/Q2384385">Nairobi Securities Exchange</a> (NSE), one of Africa's largest <a href="https://www.wikidata.org/wiki/Q11691">stock exchanges</a>. The NSE was officially recognised as an overseas stock exchange by the <a href="https://www.wikidata.org/wiki/Q171240">London Stock Exchange</a> in 1953. The exchange is Africa's fourth largest in terms of trading volumes, and fifth largest in terms of Market Capitalization as a percentage of GDP.</p><a class="read" href="https://en.wikipedia.org/wiki/Nairobi#Economy">Economy ↗</a></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt><span class="fb-group"><span class="fb"
+             data-spread="economy" data-dimension="measures"><h2><span class="fb" lang="en">economy</span></h2><div class="prose-slot" lang="en"><p>Nairobi is home to the <a href="https://www.wikidata.org/wiki/Q2384385">Nairobi Securities Exchange</a> (NSE), one of Africa's largest <a href="https://www.wikidata.org/wiki/Q11691">stock exchanges</a>. The NSE was officially recognised as an overseas stock exchange by the <a href="https://www.wikidata.org/wiki/Q171240">London Stock Exchange</a> in 1953. The exchange is Africa's fourth largest in terms of trading volumes, and fifth largest in terms of Market Capitalization as a percentage of GDP.</p><a class="read" href="https://en.wikipedia.org/wiki/Nairobi#Economy">Economy ↗</a></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt><span class="fb-group"><span class="fb"
       lang="en">economy of topic</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P8744"
            aria-label="Add a label in your language">+</a></span></dt><dd><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q106020188"><span class="fb" lang="en">economy of Nairobi</span></a><a class="add-label"
@@ -378,7 +378,7 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
         </span>
 </div></dl></section>
             <section class="spread t-columns"
-             data-spread="connections"><h2><span class="fb" lang="en">relation</span></h2><div class="prose-slot" lang="en"><p>Nairobi is <a href="https://www.wikidata.org/wiki/Q184711">twinned</a> with:</p><a class="read" href="https://en.wikipedia.org/wiki/Nairobi#Twin_towns_and_sister_cities">Twin towns and sister cities ↗</a></div><div data-slot="stack">
+             data-spread="connections" data-dimension="place"><h2><span class="fb" lang="en">relation</span></h2><div class="prose-slot" lang="en"><p>Nairobi is <a href="https://www.wikidata.org/wiki/Q184711">twinned</a> with:</p><a class="read" href="https://en.wikipedia.org/wiki/Nairobi#Twin_towns_and_sister_cities">Twin towns and sister cities ↗</a></div><div data-slot="stack">
         <div class="block set">
     <h3>જોડકું શહેર <span class="note">7</span></h3><div class="run scroll" tabindex="0" role="group" aria-label="જોડકું શહેર"><figure class="m k-photo"
         style="--a:1.7778">
@@ -476,11 +476,11 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
        aria-label="Edit">✎</a></span></figure></div></div>
 </div></section>
             <section class="spread t-axis"
-             data-spread="history"><h2>ઈતિહાસ</h2><div class="prose-slot" lang="en"><p>The site of Nairobi was originally a swamp land occupied by a <a href="https://www.wikidata.org/wiki/Q9056738">pastoralist</a> people, the <a href="https://www.wikidata.org/wiki/Q163022">Maasai</a>, the long-distance trader community, <a href="https://www.wikidata.org/wiki/Q1143929">Akamba People</a>, as well as the <a href="https://www.wikidata.org/wiki/Q1781198">agriculturalist</a> <a href="https://www.wikidata.org/wiki/Q203178">Kikuyu people</a>. The name Nairobi comes from the <a href="https://www.wikidata.org/wiki/Q35787">Maasai</a> expression meaning 'cool waters'. referring to the cold water stream which flowed through the area. With the arrival of the <a href="https://www.wikidata.org/wiki/Q500115">Uganda Railway</a>, the site was identified by <a href="https://www.wikidata.org/wiki/Q56665460">Sir George Whitehouse</a> for a store depot, shunting ground and camping ground for the <a href="https://www.wikidata.org/wiki/Q6024095">Indian</a> labourers working on the railway.</p><a class="read" href="https://en.wikipedia.org/wiki/Nairobi#History">History ↗</a></div><p class="prose-links"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q7805834"><span class="fb" lang="en">timeline of Nairobi history</span></a><a class="add-label"
+             data-spread="history" data-dimension="time"><h2>ઈતિહાસ</h2><div class="prose-slot" lang="en"><p>The site of Nairobi was originally a swamp land occupied by a <a href="https://www.wikidata.org/wiki/Q9056738">pastoralist</a> people, the <a href="https://www.wikidata.org/wiki/Q163022">Maasai</a>, the long-distance trader community, <a href="https://www.wikidata.org/wiki/Q1143929">Akamba People</a>, as well as the <a href="https://www.wikidata.org/wiki/Q1781198">agriculturalist</a> <a href="https://www.wikidata.org/wiki/Q203178">Kikuyu people</a>. The name Nairobi comes from the <a href="https://www.wikidata.org/wiki/Q35787">Maasai</a> expression meaning 'cool waters'. referring to the cold water stream which flowed through the area. With the arrival of the <a href="https://www.wikidata.org/wiki/Q500115">Uganda Railway</a>, the site was identified by <a href="https://www.wikidata.org/wiki/Q56665460">Sir George Whitehouse</a> for a store depot, shunting ground and camping ground for the <a href="https://www.wikidata.org/wiki/Q6024095">Indian</a> labourers working on the railway.</p><a class="read" href="https://en.wikipedia.org/wiki/Nairobi#History">History ↗</a></div><p class="prose-links"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q7805834"><span class="fb" lang="en">timeline of Nairobi history</span></a><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q7805834"
            aria-label="Add a label in your language">+</a></span></p></section>
             <section class="spread t-feature-run"
-             data-spread="media"><h2><span class="fb" lang="en">multimedia</span></h2><div class="prose-slot" lang="en"><p>Nairobi is diverse in African cultures. As a cosmopolitan African city, it hosts all the diverse tribes that make up Kenya, and hosts a large immigrant population from other African countries.</p><a class="read" href="https://en.wikipedia.org/wiki/Nairobi#Culture">Culture ↗</a></div><div data-slot="feature">
+             data-spread="media" data-dimension="media"><h2><span class="fb" lang="en">multimedia</span></h2><div class="prose-slot" lang="en"><p>Nairobi is diverse in African cultures. As a cosmopolitan African city, it hosts all the diverse tribes that make up Kenya, and hosts a large immigrant population from other African countries.</p><a class="read" href="https://en.wikipedia.org/wiki/Nairobi#Culture">Culture ↗</a></div><div data-slot="feature">
         <div class="feature"> <figure class="m k-photo" style="--a:1">
         <a href="https://commons.wikimedia.org/wiki/File:Nairobi_economic_capital_of_africa.jpg">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=960"
@@ -535,7 +535,7 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P10"
        aria-label="Edit">✎</a></span></figure> </div>
 </div></section>
-            <section class="spread t-collapsed" data-spread="more">
+            <section class="spread t-collapsed" data-spread="more" data-dimension="neutral">
         <details>
             <summary>+1</summary><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>સ્થાપન દિવસ / રચના દિવસ</dt><dd><time datetime="1899"
       data-p="9">1899</time></dd>
@@ -548,7 +548,7 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
 </div></dl></details>
     </section>
             <section class="spread t-sheet"
-             data-spread="evidence"><h2><span class="fb" lang="en">reference</span></h2><div data-slot="summary">
+             data-spread="evidence" data-dimension="neutral"><h2><span class="fb" lang="en">reference</span></h2><div data-slot="summary">
         <div class="block">
     <div class="stack-bar"><span class="p-sourced" style="--n:9"></span>
 <span class="p-imported" style="--n:12"></span>
@@ -895,7 +895,7 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
            aria-label="Add a label in your language">+</a></span></span><span>E39PBJccgHVhXJcjCxQ6cXJxDq</span></div><div><span>YSO ID</span><span>110125</span></div><div><span>એન. ડી. એલ. ઓળખ</span><span>00628843</span></div><div><span>એલ. સી. સી. એન. ઓળખ</span><span>n79011090</span></div><div><span>જીએનડી ઓળખ</span><span>4041172-2</span></div><div><span>ફ્રીબેઝ આઈડી</span><span>/m/05d49</span></div><div><span>‎Yale LUX ID</span><span>place/2594dec6-5ad7-4c29-9b82-864ef69905b3</span></div></div></div>
     </dialog>
 </div></section>
-            <section class="spread t-sheet" data-spread="evidence">
+            <section class="spread t-sheet" data-spread="evidence" data-dimension="neutral">
                 <p class="prose-links"><a href="https://en.wikipedia.org/wiki/Nairobi#Parks_and_gardens">Parks and gardens</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Political_divisions">Political divisions</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Demographics">Demographics</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Sports">Sports</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Places_of_worship">Places of worship</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Infrastructure">Infrastructure</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Crime_and_law_enforcement">Crime and law enforcement</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Media">Media</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Notable_people">Notable people</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Pop_culture">Pop culture</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#Notes">Notes</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#References">References</a> · <a href="https://en.wikipedia.org/wiki/Nairobi#External_links">External links</a></p>
             </section>
         <p class="provenance-note">Composed by rule from Wikidata item <a href="https://www.wikidata.org/wiki/Q3870">Q3870</a> (composition/0.3, view/0.2, design/0.2). The lead paragraph, the section paragraphs and the section links come from Wikipedia. Pictures come from Wikimedia Commons; a W on a picture marks one from an article, not from Wikidata; a W on a value marks a statement whose only reference is a Wikipedia.</p>

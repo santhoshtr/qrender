@@ -11,6 +11,7 @@ expression: composition
     {
       "id": "identity",
       "kind": "identity",
+      "dimension": "neutral",
       "template": "identity",
       "slots": {
         "head": [
@@ -76,6 +77,7 @@ expression: composition
     {
       "id": "life",
       "kind": "facts",
+      "dimension": "time",
       "concept": "Q36279",
       "template": "columns",
       "slots": {
@@ -450,6 +452,7 @@ expression: composition
     {
       "id": "family",
       "kind": "facts",
+      "dimension": "people",
       "concept": "Q8436",
       "template": "columns",
       "slots": {
@@ -706,6 +709,7 @@ expression: composition
     {
       "id": "education",
       "kind": "facts",
+      "dimension": "recognition",
       "concept": "Q8434",
       "template": "columns",
       "slots": {
@@ -841,6 +845,7 @@ expression: composition
     {
       "id": "work",
       "kind": "facts",
+      "dimension": "people",
       "concept": "Q12737077",
       "template": "columns",
       "slots": {
@@ -1296,6 +1301,7 @@ expression: composition
     {
       "id": "awards",
       "kind": "facts",
+      "dimension": "recognition",
       "concept": "Q618779",
       "template": "columns",
       "slots": {
@@ -2731,6 +2737,7 @@ expression: composition
     {
       "id": "names",
       "kind": "facts",
+      "dimension": "names",
       "concept": "Q82799",
       "template": "columns",
       "slots": {
@@ -2830,6 +2837,7 @@ expression: composition
     {
       "id": "media",
       "kind": "media",
+      "dimension": "media",
       "concept": "Q131765",
       "template": "feature-run",
       "slots": {
@@ -2928,6 +2936,7 @@ expression: composition
     {
       "id": "more",
       "kind": "more",
+      "dimension": "neutral",
       "template": "collapsed",
       "slots": {
         "sheet": [
@@ -3173,6 +3182,7 @@ expression: composition
     {
       "id": "evidence",
       "kind": "evidence",
+      "dimension": "neutral",
       "concept": "Q121769",
       "template": "sheet",
       "slots": {

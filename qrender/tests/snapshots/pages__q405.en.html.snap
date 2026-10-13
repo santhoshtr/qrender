@@ -23,7 +23,7 @@ expression: html
     </header>
     <main class="page">
             <section class="spread t-identity"
-             data-spread="identity"><div data-slot="head">
+             data-spread="identity" data-dimension="neutral"><div data-slot="head">
         <div class="title"><h1>Moon</h1>
         <p>
             Earth&#39;s only natural satellite
@@ -65,7 +65,7 @@ expression: html
             <span class="k">parent astronomical body</span><a href="https://www.wikidata.org/wiki/Q2">Earth</a></div></div>
 </div></section>
             <section class="spread t-columns"
-             data-spread="physical"><h2>physical property</h2><div data-slot="hero">
+             data-spread="physical" data-dimension="measures"><h2>physical property</h2><div data-slot="hero">
         <div class="block scale">
     <h3>parent astronomical body: <a href="https://www.wikidata.org/wiki/Q2">Earth</a></h3>
     <div class="bars"><div class="bar self"><span class="name">area</span><span class="track"><span style="--f:0.074363"></span></span><span class="val"><data value="0.074363" data-f="percent">7.4 %</data></span></div><div class="bar self"><span class="name">mass</span><span class="track"><span style="--f:0.012303"></span></span><span class="val"><data value="0.012303" data-f="percent">1.2 %</data></span></div><div class="bar self"><span class="name">radius</span><span class="track"><span style="--f:0.273266"></span></span><span class="val"><data value="0.273266" data-f="percent">27 %</data></span></div><div class="bar self"><span class="name">diameter</span><span class="track"><span style="--f:0.272814"></span></span><span class="val"><data value="0.272814" data-f="percent">27 %</data></span></div></div>
@@ -149,7 +149,7 @@ expression: html
     <span class="tools"></span>
 </div></dl></section>
             <section class="spread t-columns"
-             data-spread="orbit"><h2>orbit</h2><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>type of orbit</dt><dd><a href="https://www.wikidata.org/wiki/Q218056">high Earth orbit</a> <span class="note"><a href="https://www.wikidata.org/wiki/Q210539">orbit of the Moon</a></span></dd>
+             data-spread="orbit" data-dimension="measures"><h2>orbit</h2><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>type of orbit</dt><dd><a href="https://www.wikidata.org/wiki/Q218056">high Earth orbit</a> <span class="note"><a href="https://www.wikidata.org/wiki/Q210539">orbit of the Moon</a></span></dd>
     <span class="tools">
             <span class="prov-none" title="—"></span>
             <a class="edit"
@@ -204,7 +204,7 @@ expression: html
     <span class="tools"></span>
 </div></dl></section>
             <section class="spread t-columns"
-             data-spread="relations"><h2>relation</h2><div data-slot="stack">
+             data-spread="relations" data-dimension="place"><h2>relation</h2><div data-slot="stack">
         <div class="block set">
     <h3>child astronomical body <span class="note">4</span></h3><div class="run scroll" tabindex="0" role="group" aria-label="child astronomical body"><figure class="m k-photo"
         style="--a:1.5017">
@@ -373,9 +373,9 @@ expression: html
        href="https://www.wikidata.org/wiki/Q405#P1589"
        aria-label="Edit">✎</a></span></figure></div></div></div></section>
             <section class="spread t-axis"
-             data-spread="history"><h2>history</h2><p class="prose-links"><a href="https://www.wikidata.org/wiki/Q7102486">origin of the Moon</a></p></section>
+             data-spread="history" data-dimension="time"><h2>history</h2><p class="prose-links"><a href="https://www.wikidata.org/wiki/Q7102486">origin of the Moon</a></p></section>
             <section class="spread t-feature-run"
-             data-spread="media"><h2>multimedia</h2><div data-slot="feature">
+             data-spread="media" data-dimension="media"><h2>multimedia</h2><div data-slot="feature">
         <div class="feature"> <figure class="m k-photo" style="--a:1.5">
         <a href="https://commons.wikimedia.org/wiki/File:Solar_eclipse_taken_from_Artemis_II_-_April_2026.jpg">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Solar%20eclipse%20taken%20from%20Artemis%20II%20-%20April%202026.jpg?width=960"
@@ -459,7 +459,7 @@ expression: html
        href="https://www.wikidata.org/wiki/Q405#P443"
        aria-label="Edit">✎</a></h3><audio controls preload="none" src="https://commons.wikimedia.org/wiki/Special:FilePath/En-us-moon.ogg"></audio><span class="note"><a href="https://www.wikidata.org/wiki/Q7976">American English</a></span></div>
 </div></section>
-            <section class="spread t-collapsed" data-spread="more">
+            <section class="spread t-collapsed" data-spread="more" data-dimension="neutral">
         <details>
             <summary>+11</summary><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>named after</dt><dd><a href="https://www.wikidata.org/wiki/Q221656">brightness</a> <span class="note"><a href="https://www.wikidata.org/wiki/Q37178">Proto-Indo-European</a></span></dd>
     <span class="tools">
@@ -550,7 +550,7 @@ expression: html
 </div></dl></details>
     </section>
             <section class="spread t-sheet"
-             data-spread="evidence"><h2>reference</h2><div data-slot="summary">
+             data-spread="evidence" data-dimension="neutral"><h2>reference</h2><div data-slot="summary">
         <div class="block">
     <div class="stack-bar"><span class="p-sourced" style="--n:18"></span>
 <span class="p-imported" style="--n:11"></span>
@@ -804,7 +804,7 @@ expression: html
         — 44 / 49 regular moon
     </dd>
 </div></dl></section>
-            <section class="spread t-sheet" data-spread="evidence">
+            <section class="spread t-sheet" data-spread="evidence" data-dimension="neutral">
                 <p class="prose-links"><a href="https://en.wikipedia.org/wiki/Moon#Names_and_etymology">Names and etymology</a> · <a href="https://en.wikipedia.org/wiki/Moon#Natural_history">Natural history</a> · <a href="https://en.wikipedia.org/wiki/Moon#Physical_characteristics">Physical characteristics</a> · <a href="https://en.wikipedia.org/wiki/Moon#Earth–Moon_system">Earth–Moon system</a> · <a href="https://en.wikipedia.org/wiki/Moon#Observation">Observation</a> · <a href="https://en.wikipedia.org/wiki/Moon#History_of_scientific_understanding_and_exploration">History of scientific understanding and exploration</a> · <a href="https://en.wikipedia.org/wiki/Moon#Human_interaction_and_presence">Human interaction and presence</a> · <a href="https://en.wikipedia.org/wiki/Moon#In_culture_and_life">In culture and life</a> · <a href="https://en.wikipedia.org/wiki/Moon#See_also">See also</a> · <a href="https://en.wikipedia.org/wiki/Moon#Explanatory_notes">Explanatory notes</a> · <a href="https://en.wikipedia.org/wiki/Moon#References">References</a> · <a href="https://en.wikipedia.org/wiki/Moon#Further_reading">Further reading</a> · <a href="https://en.wikipedia.org/wiki/Moon#External_links">External links</a></p>
             </section>
         <p class="provenance-note">Composed by rule from Wikidata item <a href="https://www.wikidata.org/wiki/Q405">Q405</a> (composition/0.3, view/0.2, design/0.2). The lead paragraph, the section paragraphs and the section links come from Wikipedia. Pictures come from Wikimedia Commons; a W on a picture marks one from an article, not from Wikidata; a W on a value marks a statement whose only reference is a Wikipedia.</p>

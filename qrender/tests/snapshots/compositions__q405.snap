@@ -11,6 +11,7 @@ expression: composition
     {
       "id": "identity",
       "kind": "identity",
+      "dimension": "neutral",
       "template": "identity",
       "slots": {
         "head": [
@@ -151,6 +152,7 @@ expression: composition
     {
       "id": "physical",
       "kind": "scale",
+      "dimension": "measures",
       "concept": "Q4373292",
       "template": "columns",
       "slots": {
@@ -1102,6 +1104,7 @@ expression: composition
     {
       "id": "orbit",
       "kind": "facts",
+      "dimension": "measures",
       "concept": "Q4130",
       "template": "columns",
       "slots": {
@@ -1350,6 +1353,7 @@ expression: composition
     {
       "id": "relations",
       "kind": "facts",
+      "dimension": "place",
       "concept": "Q930933",
       "template": "columns",
       "slots": {
@@ -1617,6 +1621,7 @@ expression: composition
     {
       "id": "history",
       "kind": "history",
+      "dimension": "time",
       "concept": "Q309",
       "template": "axis",
       "slots": {},
@@ -1646,6 +1651,7 @@ expression: composition
     {
       "id": "media",
       "kind": "media",
+      "dimension": "media",
       "concept": "Q131765",
       "template": "feature-run",
       "slots": {
@@ -1855,6 +1861,7 @@ expression: composition
     {
       "id": "more",
       "kind": "more",
+      "dimension": "neutral",
       "template": "collapsed",
       "slots": {
         "sheet": [
@@ -2099,6 +2106,7 @@ expression: composition
     {
       "id": "evidence",
       "kind": "evidence",
+      "dimension": "neutral",
       "concept": "Q121769",
       "template": "sheet",
       "slots": {

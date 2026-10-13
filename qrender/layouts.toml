@@ -40,6 +40,7 @@ kind = "identity"
 
 [[class_layouts.settlement.spreads]]
 id = "location"
+dimension = "place"
 concept = "Q2221906"   # geographic location
 prose = ["Q1071", "Q7937"]   # geography, climate
 kind = "facts"
@@ -62,6 +63,7 @@ pids = [
 
 [[class_layouts.settlement.spreads]]
 id = "names"
+dimension = "names"
 concept = "Q82799"     # name
 kind = "facts"
 pids = [
@@ -87,6 +89,7 @@ pids = [
 
 [[class_layouts.settlement.spreads]]
 id = "government"
+dimension = "people"
 concept = "Q7188"      # government
 prose = ["Q7188", "Q7163"]   # government, politics
 kind = "facts"
@@ -106,6 +109,7 @@ pids = [
 
 [[class_layouts.settlement.spreads]]
 id = "demography"
+dimension = "measures"
 concept = "Q37732"     # demography
 prose = ["Q37732"]
 kind = "scale"
@@ -122,6 +126,7 @@ pids = [
 
 [[class_layouts.settlement.spreads]]
 id = "economy"
+dimension = "measures"
 concept = "Q159810"    # economy
 prose = ["Q159810"]
 kind = "facts"
@@ -135,6 +140,7 @@ pids = [
 
 [[class_layouts.settlement.spreads]]
 id = "connections"
+dimension = "place"
 concept = "Q930933"    # relation
 prose = ["Q184711"]    # twin town
 kind = "facts"
@@ -147,6 +153,7 @@ pids = [
 
 [[class_layouts.settlement.spreads]]
 id = "history"
+dimension = "time"
 concept = "Q309"       # history
 prose = ["Q309"]
 kind = "history"
@@ -154,6 +161,7 @@ pids = ["P2184"]       # history of topic
 
 [[class_layouts.settlement.spreads]]
 id = "media"
+dimension = "media"
 concept = "Q131765"    # multimedia
 prose = ["Q11042"]     # culture
 kind = "media"
@@ -180,6 +188,7 @@ kind = "identity"
 
 [[class_layouts.person.spreads]]
 id = "life"
+dimension = "time"
 concept = "Q36279"     # biography
 prose = ["Q36279"]
 kind = "facts"
@@ -202,6 +211,7 @@ pids = [
 
 [[class_layouts.person.spreads]]
 id = "family"
+dimension = "people"
 concept = "Q8436"      # family
 prose = ["Q8436"]
 kind = "facts"
@@ -219,6 +229,7 @@ pids = [
 
 [[class_layouts.person.spreads]]
 id = "education"
+dimension = "recognition"
 concept = "Q8434"      # education
 prose = ["Q8434"]
 kind = "facts"
@@ -234,6 +245,7 @@ pids = [
 
 [[class_layouts.person.spreads]]
 id = "work"
+dimension = "people"
 concept = "Q12737077"  # occupation
 prose = ["Q12737077"]
 kind = "facts"
@@ -263,6 +275,7 @@ reverse = [
 
 [[class_layouts.person.spreads]]
 id = "awards"
+dimension = "recognition"
 concept = "Q618779"    # award
 prose = ["Q618779"]
 kind = "facts"
@@ -273,6 +286,7 @@ pids = [
 
 [[class_layouts.person.spreads]]
 id = "names"
+dimension = "names"
 concept = "Q82799"     # name
 kind = "facts"
 pids = [
@@ -290,6 +304,7 @@ pids = [
 
 [[class_layouts.person.spreads]]
 id = "media"
+dimension = "media"
 concept = "Q131765"    # multimedia
 kind = "media"
 
@@ -313,6 +328,7 @@ kind = "identity"
 
 [[class_layouts.film.spreads]]
 id = "story"
+dimension = "time"
 concept = "Q1758354"   # plot
 prose = ["Q1758354"]
 kind = "facts"
@@ -328,6 +344,7 @@ pids = [
 
 [[class_layouts.film.spreads]]
 id = "cast"
+dimension = "people"
 concept = "Q15267437"  # cast
 prose = ["Q15267437"]
 kind = "facts"
@@ -338,6 +355,7 @@ pids = [
 
 [[class_layouts.film.spreads]]
 id = "credits"
+dimension = "people"
 concept = "Q506702"    # film crew
 prose = ["Q506702"]
 kind = "facts"
@@ -355,6 +373,7 @@ pids = [                 # role "crew": one block, by person
 
 [[class_layouts.film.spreads]]
 id = "production"
+dimension = "place"
 concept = "Q932586"    # film production
 prose = ["Q932586"]
 kind = "facts"
@@ -374,6 +393,7 @@ pids = [
 
 [[class_layouts.film.spreads]]
 id = "release"
+dimension = "time"
 concept = "Q115668531" # film release
 prose = ["Q115668531"]
 kind = "facts"
@@ -389,6 +409,7 @@ pids = [
 
 [[class_layouts.film.spreads]]
 id = "reception"
+dimension = "recognition"
 concept = "Q4482"      # film criticism
 prose = ["Q4482", "Q618779"]   # film criticism, award
 kind = "facts"
@@ -400,6 +421,7 @@ pids = [
 
 [[class_layouts.film.spreads]]
 id = "ratings"
+dimension = "recognition"
 concept = "Q14775294"  # motion picture rating system
 kind = "facts"
 pids = [
@@ -429,6 +451,7 @@ pids = [
 
 [[class_layouts.film.spreads]]
 id = "media"
+dimension = "media"
 concept = "Q131765"    # multimedia
 kind = "media"
 
@@ -464,6 +487,7 @@ kind = "identity"
 
 [[class_layouts.astronomical.spreads]]
 id = "physical"
+dimension = "measures"
 concept = "Q4373292"   # physical property
 prose = ["Q4373292"]
 kind = "scale"
@@ -484,6 +508,7 @@ pids = [
 
 [[class_layouts.astronomical.spreads]]
 id = "orbit"
+dimension = "measures"
 concept = "Q4130"      # orbit
 prose = ["Q4130"]
 kind = "facts"
@@ -501,18 +526,21 @@ pids = [
 
 [[class_layouts.astronomical.spreads]]
 id = "relations"
+dimension = "place"
 concept = "Q930933"    # relation
 kind = "facts"
 pictured = true        # also any item property whose values are mostly pictured
 
 [[class_layouts.astronomical.spreads]]
 id = "history"
+dimension = "time"
 concept = "Q309"       # history
 prose = ["Q309"]
 kind = "history"
 
 [[class_layouts.astronomical.spreads]]
 id = "media"
+dimension = "media"
 concept = "Q131765"    # multimedia
 kind = "media"
 
@@ -538,24 +566,28 @@ kind = "identity"
 
 [[class_layouts.generic.spreads]]
 id = "location"
+dimension = "place"
 concept = "Q2221906"   # geographic location
 kind = "facts"
 pids = ["P625", "P131", "P17", "P276", "P361", "P242"]
 
 [[class_layouts.generic.spreads]]
 id = "relations"
+dimension = "people"
 concept = "Q930933"    # relation
 kind = "facts"
 pictured = true        # also any item property whose values are mostly pictured
 
 [[class_layouts.generic.spreads]]
 id = "history"
+dimension = "time"
 concept = "Q309"       # history
 prose = ["Q309"]
 kind = "history"
 
 [[class_layouts.generic.spreads]]
 id = "media"
+dimension = "media"
 concept = "Q131765"    # multimedia
 kind = "media"
 

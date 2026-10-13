@@ -427,6 +427,28 @@
       ],
       "type": "object"
     },
+    "Dimension": {
+      "description": "The dimension of the data of a spread. The design system gives each\none its colour; colour means nothing else.",
+      "oneOf": [
+        {
+          "enum": [
+            "place",
+            "measures",
+            "people",
+            "time",
+            "names",
+            "recognition",
+            "media"
+          ],
+          "type": "string"
+        },
+        {
+          "const": "neutral",
+          "description": "The page head, the rest, the evidence: no colour of their own.",
+          "type": "string"
+        }
+      ]
+    },
     "Dropped": {
       "description": "A spread with nothing to show. `silent`: the silences of its\nprimitives; empty when its properties have no statements.",
       "properties": {
@@ -2562,6 +2584,9 @@
             }
           ]
         },
+        "dimension": {
+          "$ref": "#/$defs/Dimension"
+        },
         "id": {
           "type": "string"
         },
@@ -2708,6 +2733,7 @@
       "required": [
         "id",
         "kind",
+        "dimension",
         "template",
         "slots"
       ],

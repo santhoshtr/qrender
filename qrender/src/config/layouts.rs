@@ -5,7 +5,7 @@ use content::{Pid, Qid};
 use indexmap::IndexMap;
 use serde::Deserialize;
 
-use crate::vocab::{ContainerMode, RangeEnd, Role, SpreadKind};
+use crate::vocab::{ContainerMode, Dimension, RangeEnd, Role, SpreadKind};
 
 #[derive(Debug, Deserialize)]
 #[serde(deny_unknown_fields)]
@@ -39,6 +39,9 @@ pub struct ClassLayout {
 pub struct SpreadSpec {
     pub id: String,
     pub kind: SpreadKind,
+    /// The dimension of the spread's data: its colour.
+    #[serde(default)]
+    pub dimension: Dimension,
     /// The item whose label titles the spread.
     pub concept: Option<Qid>,
     /// Items whose label or alias names an article section for the spread.

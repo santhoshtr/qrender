@@ -23,7 +23,7 @@ expression: html
     </header>
     <main class="page">
             <section class="spread t-identity"
-             data-spread="identity"><div data-slot="head">
+             data-spread="identity" data-dimension="neutral"><div data-slot="head">
         <div class="title"><h1>Nelson Mandela</h1>
         <p>
             <span class="fb" lang="en">President of South Africa and anti-apartheid activist (1918–2013)</span>
@@ -52,7 +52,7 @@ expression: html
             <span class="k">ಉದಾರ್ಮೆಗ್</span><a href="https://www.wikidata.org/wiki/Q5">ಮಾನವೆ</a></div></div>
 </div></section>
             <section class="spread t-columns"
-             data-spread="life"><h2><span class="fb" lang="en">biography</span></h2><div data-slot="gallery"><div class="block set"><div class="run"><figure class="m k-photo"
+             data-spread="life" data-dimension="time"><h2><span class="fb" lang="en">biography</span></h2><div data-slot="gallery"><div class="block set"><div class="run"><figure class="m k-photo"
         style="--a:1.3333">
     <img src="https://commons.wikimedia.org/wiki/Special:FilePath/N2%20between%20Mbashee%20Bridge%20%26%20Qunu.jpg?width=960"
          srcset="https://commons.wikimedia.org/wiki/Special:FilePath/N2%20between%20Mbashee%20Bridge%20%26%20Qunu.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/N2%20between%20Mbashee%20Bridge%20%26%20Qunu.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/N2%20between%20Mbashee%20Bridge%20%26%20Qunu.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/N2%20between%20Mbashee%20Bridge%20%26%20Qunu.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/N2%20between%20Mbashee%20Bridge%20%26%20Qunu.jpg?width=1920 1920w"
@@ -258,7 +258,7 @@ expression: html
     <span class="tools"></span>
 </div></dl></section>
             <section class="spread t-columns"
-             data-spread="family"><h2><span class="fb" lang="en">family</span></h2><div data-slot="stack">
+             data-spread="family" data-dimension="people"><h2><span class="fb" lang="en">family</span></h2><div data-slot="stack">
         <div class="block set">
     <h3>ಕಂಡನಿ/ಬುಡೆದಿ <span class="note">3</span></h3><div class="run scroll" tabindex="0" role="group" aria-label="ಕಂಡನಿ/ಬುಡೆದಿ"><figure class="m k-photo"
         style="--a:1.35">
@@ -412,7 +412,7 @@ expression: html
         </span>
 </div></dl></section>
             <section class="spread t-columns"
-             data-spread="education"><h2><span class="fb" lang="en">education</span></h2><div data-slot="stack">
+             data-spread="education" data-dimension="recognition"><h2><span class="fb" lang="en">education</span></h2><div data-slot="stack">
         <div class="block set">
     <h3>ಓದ್‍ನೆ <span class="note">4</span></h3><div class="run scroll" tabindex="0" role="group" aria-label="ಓದ್‍ನೆ"><figure class="m k-photo"
         style="--a:1.6366">
@@ -493,7 +493,7 @@ expression: html
         </span>
 </div></dl></section>
             <section class="spread t-columns"
-             data-spread="work"><h2><span class="fb" lang="en">occupation</span></h2><div data-slot="stack">
+             data-spread="work" data-dimension="people"><h2><span class="fb" lang="en">occupation</span></h2><div data-slot="stack">
         <div class="block set">
     <h3>
         <span><span class="fb-group"><span class="fb"
@@ -790,7 +790,7 @@ expression: html
         </span>
 </div></dl></section>
             <section class="spread t-columns"
-             data-spread="awards"><h2><span class="fb" lang="en">award</span></h2><dl class="sheet" data-slot="sheet"><div class="row r-list"><dt><span class="fb-group"><span class="fb"
+             data-spread="awards" data-dimension="recognition"><h2><span class="fb" lang="en">award</span></h2><dl class="sheet" data-slot="sheet"><div class="row r-list"><dt><span class="fb-group"><span class="fb"
       lang="en">award received</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/P166"
            aria-label="Add a label in your language">+</a></span></dt><dd><span class="v"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q6905532"><span class="fb" lang="en">Atatürk International Peace Prize</span></a><a class="add-label"
@@ -1382,7 +1382,7 @@ expression: html
     <span class="tools"></span>
 </div></dl></section>
             <section class="spread t-columns"
-             data-spread="names"><h2><span class="fb" lang="en">name</span></h2><div data-slot="gallery"><div class="block set"><div class="run"><figure class="m k-drawing" style="--a:2.5">
+             data-spread="names" data-dimension="names"><h2><span class="fb" lang="en">name</span></h2><div data-slot="gallery"><div class="block set"><div class="run"><figure class="m k-drawing" style="--a:2.5">
         <a href="https://commons.wikimedia.org/wiki/File:Nelson_Mandela_Signature.svg">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%20Signature.svg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%20Signature.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%20Signature.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%20Signature.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%20Signature.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%20Signature.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
@@ -1439,7 +1439,7 @@ expression: html
         </span>
 </div></dl></section>
             <section class="spread t-feature-run"
-             data-spread="media"><h2><span class="fb" lang="en">multimedia</span></h2><div data-slot="run">
+             data-spread="media" data-dimension="media"><h2><span class="fb" lang="en">multimedia</span></h2><div data-slot="run">
         <div class="run"> <figure class="m k-photo" style="--a:1.3333">
         <a href="https://commons.wikimedia.org/wiki/File:Star_Walk_Campus_R%C3%BCtli_Berlin_Neuk%C3%B6lln_Nelson_Mandela.jpg">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Star%20Walk%20Campus%20R%C3%BCtli%20Berlin%20Neuk%C3%B6lln%20Nelson%20Mandela.jpg?width=960"
@@ -1509,7 +1509,7 @@ expression: html
        href="https://www.wikidata.org/wiki/Q8023#P990"
        aria-label="Edit">✎</a></h3><audio controls preload="none" src="https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%20voice.ogg"></audio><span class="note"><a href="https://www.wikidata.org/wiki/Q1860">ಇಂಗ್ಲಿಷ್ ಪಾತೆರೊ</a></span></div>
 </div></section>
-            <section class="spread t-collapsed" data-spread="more">
+            <section class="spread t-collapsed" data-spread="more" data-dimension="neutral">
         <details>
             <summary>+11</summary><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt><span class="fb-group"><span class="fb"
       lang="en">copyright representative</span><a class="add-label"
@@ -1639,7 +1639,7 @@ expression: html
 </div></dl></details>
     </section>
             <section class="spread t-sheet"
-             data-spread="evidence"><h2><span class="fb" lang="en">reference</span></h2><div data-slot="summary">
+             data-spread="evidence" data-dimension="neutral"><h2><span class="fb" lang="en">reference</span></h2><div data-slot="summary">
         <div class="block">
     <div class="stack-bar"><span class="p-sourced" style="--n:62"></span>
 <span class="p-imported" style="--n:29"></span>
@@ -2530,7 +2530,7 @@ expression: html
            aria-label="Add a label in your language">+</a></span></span><span>88927</span></div><div><span>‎Yale LUX ID</span><span>person/8faaf68e-102d-48c2-b828-ad1bb7bac693</span></div><div><span>대한민국 국립중앙도서관 ID</span><span>KAC199617580</span></div></div></div>
     </dialog>
 </div></section>
-            <section class="spread t-sheet" data-spread="evidence">
+            <section class="spread t-sheet" data-spread="evidence" data-dimension="neutral">
                 <p class="prose-links"><a href="https://en.wikipedia.org/wiki/Nelson_Mandela#Early_life">Early life</a> · <a href="https://en.wikipedia.org/wiki/Nelson_Mandela#Early_revolutionary_activity">Early revolutionary activity</a> · <a href="https://en.wikipedia.org/wiki/Nelson_Mandela#Imprisonment">Imprisonment</a> · <a href="https://en.wikipedia.org/wiki/Nelson_Mandela#Negotiations_to_end_apartheid">Negotiations to end apartheid</a> · <a href="https://en.wikipedia.org/wiki/Nelson_Mandela#Presidency_of_South_Africa_(1994–1999)">Presidency of South Africa (1994–1999)</a> · <a href="https://en.wikipedia.org/wiki/Nelson_Mandela#Post-presidency_and_final_years_(1999–2013)">Post-presidency and final years (1999–2013)</a> · <a href="https://en.wikipedia.org/wiki/Nelson_Mandela#Political_positions">Political positions</a> · <a href="https://en.wikipedia.org/wiki/Nelson_Mandela#Personal_life">Personal life</a> · <a href="https://en.wikipedia.org/wiki/Nelson_Mandela#Legacy">Legacy</a> · <a href="https://en.wikipedia.org/wiki/Nelson_Mandela#See_also">See also</a> · <a href="https://en.wikipedia.org/wiki/Nelson_Mandela#References">References</a> · <a href="https://en.wikipedia.org/wiki/Nelson_Mandela#External_links">External links</a></p>
             </section>
         <p class="provenance-note">Composed by rule from Wikidata item <a href="https://www.wikidata.org/wiki/Q8023">Q8023</a> (composition/0.3, view/0.2, design/0.2). The lead paragraph, the section paragraphs and the section links come from Wikipedia. Pictures come from Wikimedia Commons; a W on a picture marks one from an article, not from Wikidata; a W on a value marks a statement whose only reference is a Wikipedia.</p>

@@ -185,6 +185,7 @@ impl<'a> Composer<'a> {
         Spread {
             id: spec.id.clone(),
             kind: spec.kind,
+            dimension: spec.dimension,
             concept: spec.concept,
             template,
             slots,

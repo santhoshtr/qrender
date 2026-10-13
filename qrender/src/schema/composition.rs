@@ -11,7 +11,7 @@ use crate::primitives::{
     absent, credits, fact, identifiers, kind, map, media, network, peers, prose, provenance, scale,
     score, series, sitelinks, succession, time, title, works,
 };
-use crate::vocab::{Primitive, Slot, SpreadKind, Template};
+use crate::vocab::{Dimension, Primitive, Slot, SpreadKind, Template};
 
 pub const COMPOSITION_SCHEMA: &str = "composition/0.3";
 pub const DESIGN: &str = "design/0.2";
@@ -34,6 +34,7 @@ pub struct Composition {
 pub struct Spread {
     pub id: String,
     pub kind: SpreadKind,
+    pub dimension: Dimension,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub concept: Option<Qid>,
     pub template: Template,

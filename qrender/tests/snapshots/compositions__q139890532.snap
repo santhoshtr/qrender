@@ -11,6 +11,7 @@ expression: composition
     {
       "id": "identity",
       "kind": "identity",
+      "dimension": "neutral",
       "template": "identity",
       "slots": {
         "head": [
@@ -74,6 +75,7 @@ expression: composition
     {
       "id": "location",
       "kind": "facts",
+      "dimension": "place",
       "concept": "Q2221906",
       "template": "hero-plus-stack",
       "slots": {
@@ -129,6 +131,7 @@ expression: composition
     {
       "id": "names",
       "kind": "facts",
+      "dimension": "names",
       "concept": "Q82799",
       "template": "columns",
       "slots": {
@@ -156,6 +159,7 @@ expression: composition
     {
       "id": "evidence",
       "kind": "evidence",
+      "dimension": "neutral",
       "concept": "Q121769",
       "template": "sheet",
       "slots": {

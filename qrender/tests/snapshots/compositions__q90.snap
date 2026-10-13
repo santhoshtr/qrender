@@ -11,6 +11,7 @@ expression: composition
     {
       "id": "identity",
       "kind": "identity",
+      "dimension": "neutral",
       "template": "identity",
       "slots": {
         "head": [
@@ -326,6 +327,7 @@ expression: composition
     {
       "id": "location",
       "kind": "facts",
+      "dimension": "place",
       "concept": "Q2221906",
       "template": "hero-plus-stack",
       "slots": {
@@ -1946,6 +1948,7 @@ expression: composition
     {
       "id": "names",
       "kind": "facts",
+      "dimension": "names",
       "concept": "Q82799",
       "template": "columns",
       "slots": {
@@ -3248,6 +3251,7 @@ expression: composition
     {
       "id": "government",
       "kind": "facts",
+      "dimension": "people",
       "concept": "Q7188",
       "template": "lead-beside",
       "slots": {
@@ -4373,6 +4377,7 @@ expression: composition
     {
       "id": "demography",
       "kind": "scale",
+      "dimension": "measures",
       "concept": "Q37732",
       "template": "columns",
       "slots": {
@@ -4926,6 +4931,7 @@ expression: composition
     {
       "id": "economy",
       "kind": "facts",
+      "dimension": "measures",
       "concept": "Q159810",
       "template": "columns",
       "slots": {
@@ -5309,6 +5315,7 @@ expression: composition
     {
       "id": "connections",
       "kind": "facts",
+      "dimension": "place",
       "concept": "Q930933",
       "template": "columns",
       "slots": {
@@ -5897,6 +5904,7 @@ expression: composition
     {
       "id": "history",
       "kind": "history",
+      "dimension": "time",
       "concept": "Q309",
       "template": "axis",
       "slots": {
@@ -6174,6 +6182,7 @@ expression: composition
     {
       "id": "media",
       "kind": "media",
+      "dimension": "media",
       "concept": "Q131765",
       "template": "feature-run",
       "slots": {
@@ -6458,6 +6467,7 @@ expression: composition
     {
       "id": "more",
       "kind": "more",
+      "dimension": "neutral",
       "template": "collapsed",
       "slots": {
         "sheet": [
@@ -6675,6 +6685,7 @@ expression: composition
     {
       "id": "evidence",
       "kind": "evidence",
+      "dimension": "neutral",
       "concept": "Q121769",
       "template": "sheet",
       "slots": {

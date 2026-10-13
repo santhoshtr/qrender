@@ -23,7 +23,7 @@ expression: html
     </header>
     <main class="page">
             <section class="spread t-identity"
-             data-spread="identity"><div data-slot="head">
+             data-spread="identity" data-dimension="neutral"><div data-slot="head">
         <div class="title"><h1>പാരിസ്</h1>
         <p>
             ഫ്രാന്‍സിലെ നഗരം
@@ -73,7 +73,7 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
             <span class="k">രാജ്യം</span><a href="https://www.wikidata.org/wiki/Q142">ഫ്രാൻസ്</a></div></div>
 </div></section>
             <section class="spread t-hero-plus-stack"
-             data-spread="location"><h2>ഭൂസ്ഥാനം</h2><div data-slot="hero">
+             data-spread="location" data-dimension="place"><h2>ഭൂസ്ഥാനം</h2><div data-slot="hero">
         <figure class="map">
         <img src="https://maps.wikimedia.org/img/osm-intl,11,48.856666666,2.352222222,800x500@2x.png" alt="">
         <span class="pin"></span><span class="marker"
@@ -932,7 +932,7 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q12522114"
            aria-label="Add a label in your language">+</a></span></p></section>
             <section class="spread t-columns"
-             data-spread="names"><h2><span class="fb" lang="en">name</span></h2><div data-slot="stack">
+             data-spread="names" data-dimension="names"><h2><span class="fb" lang="en">name</span></h2><div data-slot="stack">
         <div class="block"><h3>ഉച്ചാരണ ശബ്ദം<span class="prov-none" title="—"></span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P443"
        aria-label="Edit">✎</a></h3><audio controls preload="none" src="https://commons.wikimedia.org/wiki/Special:FilePath/LL-Q150%20%28fra%29-Visiteuse%20Journ%C3%A9e%202%20-%2026%20%28Madehub%29-Paris.wav"></audio><span class="note"><a href="https://www.wikidata.org/wiki/Q150">ഫ്രഞ്ച് ഭാഷ</a></span></div>
@@ -1514,7 +1514,7 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
         </span>
 </div></dl></section>
             <section class="spread t-lead-beside"
-             data-spread="government"><h2>സർക്കാർ</h2><div data-slot="hero">
+             data-spread="government" data-dimension="people"><h2>സർക്കാർ</h2><div data-slot="hero">
         <div class="block succession">
     <h3><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q12371988"><span class="fb" lang="en">mayor of Paris</span></a><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q12371988"
@@ -2065,7 +2065,7 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
     <span class="tools"></span>
 </div></dl></section>
             <section class="spread t-columns"
-             data-spread="demography"><h2>ജനസംഖ്യാപഠനം</h2><div data-slot="hero">
+             data-spread="demography" data-dimension="measures"><h2>ജനസംഖ്യാപഠനം</h2><div data-slot="hero">
         <div class="block scale">
     <h3>രാജ്യം: <a href="https://www.wikidata.org/wiki/Q142">ഫ്രാൻസ്</a></h3>
     <div class="bars"><div class="bar self"><span class="name">ജനസംഖ്യ</span><span class="track"><span style="--f:0.030665"></span></span><span class="val"><data value="0.030665" data-f="percent">3.1 %</data></span></div><div class="bar self"><span class="name">വിസ്തീർണ്ണം</span><span class="track"><span style="--f:0.000164"></span></span><span class="val"><data value="0.000164" data-f="percent">0.016 %</data></span></div></div>
@@ -2141,7 +2141,7 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q2246902"
            aria-label="Add a label in your language">+</a></span></p></section>
             <section class="spread t-columns"
-             data-spread="economy"><h2>സമ്പദ്ഘടന</h2><div data-slot="stack">
+             data-spread="economy" data-dimension="measures"><h2>സമ്പദ്ഘടന</h2><div data-slot="stack">
         <div class="block set">
     <h3>ഉടമ <span class="note">19</span></h3><div class="run scroll" tabindex="0" role="group" aria-label="ഉടമ"><figure class="m k-photo"
         style="--a:0.6714">
@@ -2449,7 +2449,7 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
         </span>
 </div></dl></section>
             <section class="spread t-columns"
-             data-spread="connections"><h2><span class="fb" lang="en">relation</span></h2><div data-slot="stack">
+             data-spread="connections" data-dimension="place"><h2><span class="fb" lang="en">relation</span></h2><div data-slot="stack">
         <div class="block set">
     <h3>സഹോദര നഗരം <span class="note">20</span></h3><div class="run scroll" tabindex="0" role="group" aria-label="സഹോദര നഗരം"><figure class="m k-photo"
         style="--a:1.5">
@@ -2790,7 +2790,7 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
     <span class="tools"></span>
 </div></dl></section>
             <section class="spread t-axis"
-             data-spread="history"><h2>ചരിത്രം</h2><div class="prose-slot" lang="ml"><p>ക്രിസ്തുവിന് മുമ്പ് മൂന്നാം ശതകത്തിൽ പാരിസി എന്ന ഗാൾ  വംശജർ സെയിൻ നദിയിലെ ഇന്ന് ഇൽ ഡിലാസിറ്റി എന്നറിയപ്പെടുന്ന കൊച്ചു ദ്വീപിൽ  താമസമുറപ്പിച്ചതായും ആ ജനപഥം പിന്നീട്  പാരിസ് എന്ന പേരിലറിയപ്പെട്ടതായും പറയപ്പെടുന്നു</p><a class="read" href="https://ml.wikipedia.org/wiki/%E0%B4%AA%E0%B4%BE%E0%B4%B0%E0%B4%BF%E0%B4%B8%E0%B5%8D#ചരിത്രം">ചരിത്രം ↗</a></div><div data-slot="axis">
+             data-spread="history" data-dimension="time"><h2>ചരിത്രം</h2><div class="prose-slot" lang="ml"><p>ക്രിസ്തുവിന് മുമ്പ് മൂന്നാം ശതകത്തിൽ പാരിസി എന്ന ഗാൾ  വംശജർ സെയിൻ നദിയിലെ ഇന്ന് ഇൽ ഡിലാസിറ്റി എന്നറിയപ്പെടുന്ന കൊച്ചു ദ്വീപിൽ  താമസമുറപ്പിച്ചതായും ആ ജനപഥം പിന്നീട്  പാരിസ് എന്ന പേരിലറിയപ്പെട്ടതായും പറയപ്പെടുന്നു</p><a class="read" href="https://ml.wikipedia.org/wiki/%E0%B4%AA%E0%B4%BE%E0%B4%B0%E0%B4%BF%E0%B4%B8%E0%B5%8D#ചരിത്രം">ചരിത്രം ↗</a></div><div data-slot="axis">
         <div class="axis">
     <div class="ends"><span>300 BCE</span><span>2024</span></div><div class="track">
             <span class="track-name">ഉത്പത്തി</span>
@@ -2893,7 +2893,7 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q845625"
            aria-label="Add a label in your language">+</a></span></p></section>
             <section class="spread t-feature-run"
-             data-spread="media"><h2>മൾട്ടിമീഡിയ</h2><div data-slot="feature">
+             data-spread="media" data-dimension="media"><h2>മൾട്ടിമീഡിയ</h2><div data-slot="feature">
         <div class="feature"> <figure class="m k-photo" style="--a:3.1679">
         <a href="https://commons.wikimedia.org/wiki/File:Paris_Night.jpg">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20Night.jpg?width=960"
@@ -3052,7 +3052,7 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P4004"
        aria-label="Edit">✎</a></span></figure> </div>
 </div></section>
-            <section class="spread t-collapsed" data-spread="more">
+            <section class="spread t-collapsed" data-spread="more" data-dimension="neutral">
         <details>
             <summary>+8</summary><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt><span class="fb-group"><span class="fb"
       lang="en">office held by the head of government</span><a class="add-label"
@@ -3161,7 +3161,7 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
 </div></dl></details>
     </section>
             <section class="spread t-sheet"
-             data-spread="evidence"><h2>അവലംബം</h2><div data-slot="summary">
+             data-spread="evidence" data-dimension="neutral"><h2>അവലംബം</h2><div data-slot="summary">
         <div class="block">
     <div class="stack-bar"><span class="p-sourced" style="--n:78"></span>
 <span class="p-imported" style="--n:20"></span>
@@ -4473,7 +4473,7 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            aria-label="Add a label in your language">+</a></span></span><span>Locations/Paris</span></div><div><span>‎Yale LUX ID</span><span>concept/13e96ee2-4db0-46c6-a7bc-e9fa4ad77202</span></div></div></div>
     </dialog>
 </div></section>
-            <section class="spread t-sheet" data-spread="evidence">
+            <section class="spread t-sheet" data-spread="evidence" data-dimension="neutral">
                 <p class="prose-links"><a href="https://ml.wikipedia.org/wiki/%E0%B4%AA%E0%B4%BE%E0%B4%B0%E0%B4%BF%E0%B4%B8%E0%B5%8D#നഗരം_ഇന്ന്">നഗരം ഇന്ന്</a> · <a href="https://ml.wikipedia.org/wiki/%E0%B4%AA%E0%B4%BE%E0%B4%B0%E0%B4%BF%E0%B4%B8%E0%B5%8D#ചിത്രശാല">ചിത്രശാല</a></p>
             </section>
         <p class="provenance-note">Composed by rule from Wikidata item <a href="https://www.wikidata.org/wiki/Q90">Q90</a> (composition/0.3, view/0.2, design/0.2). The lead paragraph, the section paragraphs and the section links come from Wikipedia. Pictures come from Wikimedia Commons; a W on a picture marks one from an article, not from Wikidata; a W on a value marks a statement whose only reference is a Wikipedia.</p>

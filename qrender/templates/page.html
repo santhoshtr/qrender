@@ -28,7 +28,7 @@
             {{ ui.spread(s)|safe }}
         {%- endfor %}
         {%- if !view.unmatched_sections.is_empty() %}
-            <section class="spread t-sheet" data-spread="evidence">
+            <section class="spread t-sheet" data-spread="evidence" data-dimension="neutral">
                 <p class="prose-links">
                     {%- for l in view.unmatched_sections -%}{%- if !loop.first %} · {% endif %}<a href="{{ l.href }}">{{ l.text }}</a>{%- endfor -%}
                 </p>
