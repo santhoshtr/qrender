@@ -2052,6 +2052,151 @@ expression: composition
           },
           {
             "primitive": "series",
+            "pid": "P2250",
+            "points": [
+              {
+                "year": 1999,
+                "amount": 62.179,
+                "statement": "Q668-104D1694-F4D9-48FF-A3CD-EC5503FF7D57",
+                "provenance": "sourced"
+              },
+              {
+                "year": 2000,
+                "amount": 62.582,
+                "statement": "Q668-1C5F21B7-2CC3-47DF-9D39-933692D06923",
+                "provenance": "sourced"
+              },
+              {
+                "year": 2001,
+                "amount": 62.977,
+                "statement": "Q668-61BF38F2-039D-4A92-963F-B5CF4662495E",
+                "provenance": "sourced"
+              },
+              {
+                "year": 2002,
+                "amount": 63.368,
+                "statement": "Q668-4408B52A-11F7-4139-9EEA-B077CDB6A94D",
+                "provenance": "sourced"
+              },
+              {
+                "year": 2003,
+                "amount": 63.759,
+                "statement": "Q668-470A3DA5-0962-4748-B2D9-1400464F3D3C",
+                "provenance": "sourced"
+              },
+              {
+                "year": 2004,
+                "amount": 64.154,
+                "statement": "Q668-F78A9772-E9EE-42F3-B37F-FEB27A54234E",
+                "provenance": "sourced"
+              },
+              {
+                "year": 2005,
+                "amount": 64.556,
+                "statement": "Q668-97EF5CE2-9CC7-4A2A-8D24-09D2A6E05D14",
+                "provenance": "sourced"
+              },
+              {
+                "year": 2006,
+                "amount": 64.966,
+                "statement": "Q668-EEEF5EA4-612E-4644-B9AA-1FBE3C357C67",
+                "provenance": "sourced"
+              },
+              {
+                "year": 2007,
+                "amount": 65.383,
+                "statement": "Q668-BCB6DD68-D812-4E25-B59B-9EA23CC509DD",
+                "provenance": "sourced"
+              },
+              {
+                "year": 2008,
+                "amount": 65.802,
+                "statement": "Q668-FD00D08F-8089-45F0-921A-1992AFBAD1FA",
+                "provenance": "sourced"
+              },
+              {
+                "year": 2009,
+                "amount": 66.219,
+                "statement": "Q668-076A8518-B7E5-4A7C-B344-8FA9E4734467",
+                "provenance": "sourced"
+              },
+              {
+                "year": 2010,
+                "amount": 66.625,
+                "statement": "Q668-5A90A520-FC9F-4CA2-90F5-0C1F8372D1FB",
+                "provenance": "sourced"
+              },
+              {
+                "year": 2011,
+                "amount": 67.013,
+                "statement": "Q668-3AAA572E-81A5-4A4A-B62D-F1F9744E3CA4",
+                "provenance": "sourced"
+              },
+              {
+                "year": 2012,
+                "amount": 67.377,
+                "statement": "Q668-71E2BFBC-070E-4156-880C-C190CFD4461E",
+                "provenance": "sourced"
+              },
+              {
+                "year": 2013,
+                "amount": 67.714,
+                "statement": "Q668-2B7DF929-4D7A-45E3-A37A-7565B3058304",
+                "provenance": "sourced"
+              },
+              {
+                "year": 2014,
+                "amount": 68.021,
+                "statement": "Q668-F6ABEE69-91D3-42B5-88EA-BAA900BC7DCD",
+                "provenance": "sourced"
+              },
+              {
+                "year": 2015,
+                "amount": 68.302,
+                "statement": "Q668-BA39A71E-2CFA-43CE-B894-468952E94152",
+                "provenance": "sourced"
+              },
+              {
+                "year": 2016,
+                "amount": 68.56,
+                "statement": "Q668-B07FFCEE-3668-45FE-9E96-4AD0474D2FD2",
+                "provenance": "sourced"
+              },
+              {
+                "year": 2019,
+                "amount": 71.0,
+                "statement": "Q668-AAA3375C-EF77-43ED-8CD5-63BF5B90F761",
+                "provenance": "sourced"
+              },
+              {
+                "year": 2020,
+                "amount": 70.0,
+                "statement": "Q668-DE2FCAAF-0786-4704-84BB-A521F5F59E7F",
+                "provenance": "sourced"
+              },
+              {
+                "year": 2021,
+                "amount": 70.03,
+                "statement": "Q668-601d5da3-4c52-6ca0-1d27-f48491f91181",
+                "provenance": "sourced"
+              },
+              {
+                "year": 2021,
+                "amount": 67.0,
+                "other": true,
+                "statement": "Q668-AACD6E38-B502-4186-B571-F4CAA3FBBA1B",
+                "provenance": "sourced"
+              },
+              {
+                "year": 2022,
+                "amount": 68.0,
+                "statement": "Q668-B9531B33-C5D0-4A48-9F50-6C88903B76B2",
+                "provenance": "sourced"
+              }
+            ]
+          },
+          {
+            "primitive": "series",
             "pid": "P6897",
             "points": [
               {
@@ -2124,360 +2269,6 @@ expression: composition
               }
             ],
             "priority": 1.0,
-            "measured": true
-          },
-          {
-            "primitive": "fact",
-            "pid": "P2250",
-            "form": "variants",
-            "statements": [
-              {
-                "statement": "Q668-B9531B33-C5D0-4A48-9F50-6C88903B76B2",
-                "pid": "P2250",
-                "amount": 68.0,
-                "unit": "Q577",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2022
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q668-601d5da3-4c52-6ca0-1d27-f48491f91181",
-                "pid": "P2250",
-                "amount": 70.03,
-                "unit": "Q577",
-                "rank": "preferred",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2021
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q668-AACD6E38-B502-4186-B571-F4CAA3FBBA1B",
-                "pid": "P2250",
-                "amount": 67.0,
-                "unit": "Q577",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2021
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q668-DE2FCAAF-0786-4704-84BB-A521F5F59E7F",
-                "pid": "P2250",
-                "amount": 70.0,
-                "unit": "Q577",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2020
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q668-AAA3375C-EF77-43ED-8CD5-63BF5B90F761",
-                "pid": "P2250",
-                "amount": 71.0,
-                "unit": "Q577",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2019
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q668-B07FFCEE-3668-45FE-9E96-4AD0474D2FD2",
-                "pid": "P2250",
-                "amount": 68.56,
-                "unit": "Q577",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2016
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q668-BA39A71E-2CFA-43CE-B894-468952E94152",
-                "pid": "P2250",
-                "amount": 68.302,
-                "unit": "Q577",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2015
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-F6ABEE69-91D3-42B5-88EA-BAA900BC7DCD",
-                "pid": "P2250",
-                "amount": 68.021,
-                "unit": "Q577",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2014
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-2B7DF929-4D7A-45E3-A37A-7565B3058304",
-                "pid": "P2250",
-                "amount": 67.714,
-                "unit": "Q577",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2013
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-71E2BFBC-070E-4156-880C-C190CFD4461E",
-                "pid": "P2250",
-                "amount": 67.377,
-                "unit": "Q577",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2012
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-3AAA572E-81A5-4A4A-B62D-F1F9744E3CA4",
-                "pid": "P2250",
-                "amount": 67.013,
-                "unit": "Q577",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2011
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-5A90A520-FC9F-4CA2-90F5-0C1F8372D1FB",
-                "pid": "P2250",
-                "amount": 66.625,
-                "unit": "Q577",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2010
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-076A8518-B7E5-4A7C-B344-8FA9E4734467",
-                "pid": "P2250",
-                "amount": 66.219,
-                "unit": "Q577",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2009
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-FD00D08F-8089-45F0-921A-1992AFBAD1FA",
-                "pid": "P2250",
-                "amount": 65.802,
-                "unit": "Q577",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2008
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-BCB6DD68-D812-4E25-B59B-9EA23CC509DD",
-                "pid": "P2250",
-                "amount": 65.383,
-                "unit": "Q577",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2007
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-EEEF5EA4-612E-4644-B9AA-1FBE3C357C67",
-                "pid": "P2250",
-                "amount": 64.966,
-                "unit": "Q577",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2006
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-97EF5CE2-9CC7-4A2A-8D24-09D2A6E05D14",
-                "pid": "P2250",
-                "amount": 64.556,
-                "unit": "Q577",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2005
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-F78A9772-E9EE-42F3-B37F-FEB27A54234E",
-                "pid": "P2250",
-                "amount": 64.154,
-                "unit": "Q577",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2004
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-470A3DA5-0962-4748-B2D9-1400464F3D3C",
-                "pid": "P2250",
-                "amount": 63.759,
-                "unit": "Q577",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2003
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-4408B52A-11F7-4139-9EEA-B077CDB6A94D",
-                "pid": "P2250",
-                "amount": 63.368,
-                "unit": "Q577",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2002
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-61BF38F2-039D-4A92-963F-B5CF4662495E",
-                "pid": "P2250",
-                "amount": 62.977,
-                "unit": "Q577",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2001
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-1C5F21B7-2CC3-47DF-9D39-933692D06923",
-                "pid": "P2250",
-                "amount": 62.582,
-                "unit": "Q577",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2000
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-104D1694-F4D9-48FF-A3CD-EC5503FF7D57",
-                "pid": "P2250",
-                "amount": 62.179,
-                "unit": "Q577",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 1999
-                  }
-                ],
-                "shown": false
-              }
-            ],
-            "priority": 4.585,
             "measured": true
           },
           {

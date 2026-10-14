@@ -5,8 +5,8 @@ expression: json
 {
   "composition": "composition/0.3",
   "coverage": {
-    "have": 1296,
-    "total": 1296
+    "have": 1295,
+    "total": 1295
   },
   "design": "design/0.2",
   "dir": "ltr",
@@ -6436,11 +6436,6 @@ expression: json
       "lang": "en",
       "text": "Hinduri"
     },
-    "Q577": {
-      "href": "https://www.wikidata.org/wiki/Q577",
-      "lang": "en",
-      "text": "year"
-    },
     "Q58635": {
       "href": "https://www.wikidata.org/wiki/Q58635",
       "lang": "en",
@@ -8262,6 +8257,7 @@ expression: json
     "qrender-credit": "Credit",
     "qrender-edit": "Edit",
     "qrender-footer": "Composed by rule from Wikidata item $1 ($2). The lead paragraph, the section paragraphs and the section links come from Wikipedia. Pictures come from Wikimedia Commons; a W on a picture marks one from an article, not from Wikidata; a W on a value marks a statement whose only reference is a Wikipedia.",
+    "qrender-other-value": "other value",
     "qrender-search": "Search Wikipedia",
     "qrender-some-value": "unknown value"
   },

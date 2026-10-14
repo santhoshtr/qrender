@@ -2315,6 +2315,10 @@
           "format": "double",
           "type": "number"
         },
+        "other": {
+          "description": "Another value of the year, from another source: the point of the\nyear is its preferred value.",
+          "type": "boolean"
+        },
         "provenance": {
           "anyOf": [
             {

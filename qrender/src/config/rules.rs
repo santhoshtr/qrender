@@ -126,8 +126,9 @@ pub struct GroupWhen {
     pub few: Option<bool>,
     /// At least `run_pictured` of the values have a picture.
     pub mostly_pictured: Option<bool>,
-    /// The values make a series: dated by distinct years.
-    pub distinct_years: Option<bool>,
+    /// The values make a series: dated, in two years or more; a year with
+    /// two values has one preferred value.
+    pub series: Option<bool>,
     /// The coordinates are on this globe (Q2: the Earth).
     pub globe: Option<content::Qid>,
 }

@@ -17,7 +17,7 @@
             <thead><tr><th scope="col">{{ ui.text(ui.point_in_time(), false)|safe }}</th><th scope="col">{{ ui.text(&property, false)|safe }}</th></tr></thead>
             <tbody>
                 {%- for p in b.points -%}
-                    <tr data-year="{{ p.year }}" data-amount="{{ p.amount }}"><th scope="row">{{ ui.year(p.year) }}</th><td>{{ ui.part(ui.number(p.amount))|safe }}</td></tr>
+                    <tr data-year="{{ p.year }}" data-amount="{{ p.amount }}"{% if p.other %} data-other{% endif %}><th scope="row">{{ ui.year(p.year) }}</th><td>{{ ui.part(ui.number(p.amount))|safe }}{% if p.other %} <span class="note">{{ ui.msg("qrender-other-value") }}</span>{% endif %}</td></tr>
                 {%- endfor -%}
             </tbody>
         </table>

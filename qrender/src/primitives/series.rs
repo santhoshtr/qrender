@@ -7,7 +7,7 @@ use schemars::JsonSchema;
 use serde::Serialize;
 
 use crate::compose::Composer;
-use crate::compose::facts::dated_years;
+use crate::compose::facts::series_points;
 use crate::schema::Provenance;
 
 #[derive(Debug, Clone, Serialize, JsonSchema)]
@@ -50,6 +50,10 @@ pub struct Source {
 pub struct Point {
     pub year: i64,
     pub amount: f64,
+    /// Another value of the year, from another source: the point of the
+    /// year is its preferred value.
+    #[serde(skip_serializing_if = "std::ops::Not::not")]
+    pub other: bool,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub statement: Option<StatementId>,
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -64,26 +68,20 @@ pub fn dated(
     statements: &[&Statement],
     rule: Option<&str>,
 ) -> Option<Series> {
-    let years = dated_years(statements)?;
-    let amounts: Vec<f64> = statements
-        .iter()
-        .map(|s| match s.value {
-            Value::Quantity { amount, .. } => Some(amount),
+    let mut points: Vec<_> = series_points(statements)?
+        .into_iter()
+        .map(|p| match p.statement.value {
+            Value::Quantity { amount, .. } => Some(Point {
+                year: p.year,
+                amount,
+                other: p.other,
+                statement: Some(p.statement.id.clone()),
+                provenance: Some(c.provenance(p.statement)),
+            }),
             _ => None,
         })
         .collect::<Option<_>>()?;
-    let mut points: Vec<_> = years
-        .into_iter()
-        .zip(amounts)
-        .zip(statements)
-        .map(|((year, amount), s)| Point {
-            year,
-            amount,
-            statement: Some(s.id.clone()),
-            provenance: Some(c.provenance(s)),
-        })
-        .collect();
-    points.sort_by_key(|p| p.year);
+    points.sort_by_key(|p| (p.year, p.other));
     Some(Series {
         pid,
         statement: None,
@@ -137,6 +135,7 @@ pub fn tabular(c: &Composer, pid: Pid, statement: &Statement) -> Option<Series> 
             .map(|&(year, amount)| Point {
                 year,
                 amount,
+                other: false,
                 statement: None,
                 provenance: None,
             })
@@ -168,11 +167,16 @@ pub fn markdown(b: &Series, md: &mut crate::render::markdown::Markdown) {
         .points
         .iter()
         .map(|p| {
-            format!(
+            let point = format!(
                 "{}: {}",
                 md.view.year(p.year),
                 crate::localize::format::number(p.amount)
-            )
+            );
+            if p.other {
+                format!("{point} ({})", md.view.msg("qrender-other-value"))
+            } else {
+                point
+            }
         })
         .collect();
     let mut value = points.join("; ");

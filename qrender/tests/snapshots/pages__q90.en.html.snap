@@ -3292,8 +3292,14 @@ if ( 'customElements' in window && 'IntersectionObserver' in window ) {
 
 		async draw() {
 			const box = this.querySelector( '.chart' );
-			const points = [ ...this.querySelectorAll( 'tr[data-year]' ) ]
-				.map( ( row ) => [ Number( row.dataset.year ), Number( row.dataset.amount ) ] );
+			const rows = [ ...this.querySelectorAll( 'tr[data-year]' ) ];
+			const point = ( row ) => [ Number( row.dataset.year ), Number( row.dataset.amount ) ];
+			// The line goes through one value of each year; the other values
+			// of a year (other sources) are marks off the line.
+			const points = rows.filter( ( row ) => !( 'other' in row.dataset ) ).map( point );
+			const others = rows.filter( ( row ) => 'other' in row.dataset ).map( point );
+			const otherNote = rows.find( ( row ) => 'other' in row.dataset )
+				?.querySelector( '.note' )?.textContent ?? '';
 			if ( !box || !points.length ) {
 				return;
 			}
@@ -3333,7 +3339,16 @@ if ( 'customElements' in window && 'IntersectionObserver' in window ) {
 				grid: { left: 8, right: 16, top: 24, bottom: 8, containLabel: true },
 				tooltip: {
 					trigger: 'axis',
-					formatter: ( [ p ] ) => `${ year.format( p.value[ 0 ] ) }: ${ exact.format( p.value[ 1 ] ) }`
+					// Each series gives its nearest point: only the values of
+					// the year of the line's point.
+					formatter: ( params ) => {
+						const at = params[ 0 ].value[ 0 ];
+						const values = params
+							.filter( ( p ) => p.value[ 0 ] === at )
+							.map( ( p ) => exact.format( p.value[ 1 ] ) +
+								( p.seriesIndex ? ` (${ otherNote })` : '' ) );
+						return `${ year.format( at ) }: ${ values.join( ' · ' ) }`;
+					}
 				},
 				xAxis: {
 					type: 'value',
@@ -3371,6 +3386,12 @@ if ( 'customElements' in window && 'IntersectionObserver' in window ) {
 						color: subtle,
 						formatter: ( p ) => short.format( p.value[ 1 ] )
 					}
+				}, {
+					type: 'scatter',
+					data: others,
+					color: token( '--ink' ),
+					symbol: 'emptyCircle',
+					symbolSize: 7
 				} ]
 			} );
 			this.classList.add( 'drawn' );

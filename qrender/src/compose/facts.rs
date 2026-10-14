@@ -6,9 +6,9 @@
 //! To add a predicate: a field in the `When` type of its table
 //! (`config/rules.rs`), a method here, and one line in `holds`.
 
-use std::collections::HashSet;
+use std::collections::HashMap;
 
-use content::{Datatype, Pid, Statement};
+use content::{Datatype, Pid, Qualifier, Rank, Statement};
 
 use super::{Composer, qualifier_year};
 use crate::config::rules::{BlockMake, GroupWhen, PlacementWhen, PropertyWhen, TemplateWhen, When};
@@ -96,9 +96,9 @@ impl<'c, 'a> GroupFacts<'c, 'a> {
         pictured as f64 >= share * self.statements.len() as f64
     }
 
-    /// The values make a series: each is dated, by distinct years.
-    pub fn distinct_years(&self) -> bool {
-        dated_years(self.statements).is_some()
+    /// The values make a series (`series_points`).
+    pub fn series(&self) -> bool {
+        series_points(self.statements).is_some()
     }
 
     /// The globe of a coordinate value; None for other values.
@@ -122,22 +122,83 @@ impl When<GroupFacts<'_, '_>> for GroupWhen {
             && self
                 .mostly_pictured
                 .is_none_or(|b| f.mostly_pictured() == b)
-            && self.distinct_years.is_none_or(|b| f.distinct_years() == b)
+            && self.series.is_none_or(|b| f.series() == b)
             && self.globe.is_none_or(|g| f.globe() == Some(g))
     }
 }
 
-/// The year of each statement (its point in time qualifier), when there
-/// are at least two statements, each has a year, and no two share one. Two
-/// points are a series: the chart shows that the data is scarce and asks
-/// for more.
-pub fn dated_years(statements: &[&Statement]) -> Option<Vec<i64>> {
+/// A point of a series: a statement and its year.
+#[derive(Debug)]
+pub struct DatedPoint<'s> {
+    pub year: i64,
+    pub statement: &'s Statement,
+    /// Another value of a year whose preferred value is the point.
+    pub other: bool,
+}
+
+/// The points of a series, in the order of the statements. Each statement
+/// has a year (its point in time qualifier), in two years or more: two
+/// points are a series, and the chart shows that the data is scarce and
+/// asks for more.
+///
+/// A year with more than one value (from two sources) has one point when
+/// exactly one of its values has preferred rank; its other values are
+/// marked `other`. Values that differ by another qualifier (by sex, by
+/// place) are not one measurement: they make no series.
+pub fn series_points<'s>(statements: &[&'s Statement]) -> Option<Vec<DatedPoint<'s>>> {
     let years: Vec<i64> = statements
         .iter()
         .map(|s| qualifier_year(s, *POINT_IN_TIME).filter(|y| *y != 0))
         .collect::<Option<_>>()?;
-    let distinct: HashSet<_> = years.iter().collect();
-    (years.len() >= 2 && distinct.len() == years.len()).then_some(years)
+    let mut by_year: HashMap<i64, Vec<usize>> = HashMap::new();
+    for (i, year) in years.iter().enumerate() {
+        by_year.entry(*year).or_default().push(i);
+    }
+    if by_year.len() < 2 {
+        return None;
+    }
+    let mut other = vec![false; statements.len()];
+    for same in by_year.values().filter(|same| same.len() > 1) {
+        let preferred: Vec<usize> = same
+            .iter()
+            .copied()
+            .filter(|&i| statements[i].rank == Rank::Preferred)
+            .collect();
+        let measure = other_qualifiers(statements[same[0]]);
+        let one_measure = same
+            .iter()
+            .all(|&i| other_qualifiers(statements[i]) == measure);
+        let [point] = preferred[..] else {
+            return None;
+        };
+        if !one_measure {
+            return None;
+        }
+        for &i in same {
+            other[i] = i != point;
+        }
+    }
+    Some(
+        statements
+            .iter()
+            .zip(years)
+            .zip(other)
+            .map(|((statement, year), other)| DatedPoint {
+                year,
+                statement,
+                other,
+            })
+            .collect(),
+    )
+}
+
+/// The qualifiers of a statement other than its point in time.
+fn other_qualifiers(statement: &Statement) -> Vec<&Qualifier> {
+    statement
+        .qualifiers
+        .iter()
+        .filter(|q| q.pid != *POINT_IN_TIME)
+        .collect()
 }
 
 // ------------------------------------------------------------ placement
@@ -418,8 +479,61 @@ mod tests {
             json!({}),
         );
         let sts: Vec<_> = c.statements.iter().collect();
-        assert_eq!(dated_years(&sts), Some(vec![2010, 2000, 2020]));
-        assert_eq!(dated_years(&sts[..2]), Some(vec![2010, 2000]));
-        assert_eq!(dated_years(&sts[..1]), None, "one point");
+        let years = |sts: &[&Statement]| {
+            series_points(sts).map(|ps| ps.iter().map(|p| (p.year, p.other)).collect::<Vec<_>>())
+        };
+        assert_eq!(
+            years(&sts),
+            Some(vec![(2010, false), (2000, false), (2020, false)])
+        );
+        assert_eq!(years(&sts[..2]), Some(vec![(2010, false), (2000, false)]));
+        assert_eq!(years(&sts[..1]), None, "one point");
+    }
+
+    #[test]
+    fn series_with_two_values_in_a_year() {
+        let preferred = |mut v: Value| {
+            v["rank"] = json!("preferred");
+            v
+        };
+        let sex = |mut v: Value, q: &str| {
+            v["qualifiers"]
+                .as_array_mut()
+                .unwrap()
+                .push(json!({"pid": "P21", "value": {"type": "entity", "entity": q}}));
+            v
+        };
+        let years = |values: Value| {
+            let c = content(values, json!({}));
+            let sts: Vec<_> = c.statements.iter().collect();
+            series_points(&sts).map(|ps| ps.iter().map(|p| (p.year, p.other)).collect::<Vec<_>>())
+        };
+        // Two sources for 2021: the preferred value is the point.
+        assert_eq!(
+            years(json!([
+                dated("P2250", 66.0, 2019),
+                preferred(dated("P2250", 70.03, 2021)),
+                dated("P2250", 67.0, 2021)
+            ])),
+            Some(vec![(2019, false), (2021, false), (2021, true)])
+        );
+        // No preferred value: no point for the year, no series.
+        assert_eq!(
+            years(json!([
+                dated("P2250", 66.0, 2019),
+                dated("P2250", 70.03, 2021),
+                dated("P2250", 67.0, 2021)
+            ])),
+            None
+        );
+        // Values by sex are two measurements, not two sources.
+        assert_eq!(
+            years(json!([
+                dated("P1082", 1.0, 2011),
+                preferred(sex(dated("P1082", 2.0, 2021), "Q6581072")),
+                sex(dated("P1082", 3.0, 2021), "Q6581097")
+            ])),
+            None
+        );
     }
 }
