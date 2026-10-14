@@ -1,0 +1,40 @@
+/* names: the names of the item in many languages (the qr-names element).
+   The rows are the rows of the fact sheet. */
+
+qr-names {
+	& select { align-self: start; }
+
+	& .groups {
+		display: grid;
+		gap: var( --spacing-100 );
+	}
+
+	& .name-group > h4 {
+		margin: 0;
+		font-size: var( --font-size-small );
+		font-weight: var( --font-weight-semi-bold );
+	}
+
+	& dl {
+		margin: 0;
+		font-size: var( --font-size-small );
+	}
+
+	& .fallback dd { font-weight: var( --font-weight-normal ); }
+
+	/* Without the script: every group, in a box that scrolls. The fallback
+	   rows only in the first group, so the list has each value once. */
+	&:not( :defined ) {
+		& .groups {
+			max-block-size: 360px;
+			overflow: auto;
+		}
+
+		& .name-group + .name-group .fallback { display: none; }
+	}
+
+	/* With the script: one group; the choice names its language. */
+	&:defined .name-group > h4 { display: none; }
+
+	& .name-group[hidden] { display: none; }
+}

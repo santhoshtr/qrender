@@ -1954,6 +1954,575 @@ expression: composition
       "slots": {
         "stack": [
           {
+            "primitive": "names",
+            "pids": [
+              "P1448",
+              "P1705",
+              "P1449",
+              "P1549",
+              "P1451"
+            ],
+            "values": [
+              {
+                "statement": "Q90-4d19d5e2-425e-a2d9-2179-07a7b9916970",
+                "pid": "P1448",
+                "text": "Paris",
+                "lang": "fr",
+                "rank": "normal",
+                "provenance": "sourced"
+              },
+              {
+                "statement": "Q90-d2f543cb-4732-12e8-3cd7-c199c08114a7",
+                "pid": "P1705",
+                "text": "Paris",
+                "lang": "fr",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P443",
+                    "file": "LL-Q150 (fra)-Ash Crow-Paris.wav"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-6a3e19ac-4286-8a60-e267-f8c27650590a",
+                "pid": "P1449",
+                "text": "Ville-Lumière",
+                "lang": "fr",
+                "rank": "preferred",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q90-450d37f2-41cb-2e59-f03b-664e8c1fa313",
+                "pid": "P1449",
+                "text": "The City of Light",
+                "lang": "en",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q90-c11f0724-4533-fae9-d4b4-c5e2f0b85730",
+                "pid": "P1449",
+                "text": "La Ciudad de la Luz",
+                "lang": "es",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q90-a388265e-42af-0903-c8bf-ccb1a5d5c693",
+                "pid": "P1449",
+                "text": "The City of Love",
+                "lang": "en",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q90-273b5bbf-4402-dcde-4b65-db2dead5dc00",
+                "pid": "P1549",
+                "text": "Pariserinnen",
+                "lang": "de",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088295"
+                  },
+                  {
+                    "pid": "P805",
+                    "item": "Q105740844"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-36BD7D6E-FA6C-4285-93FB-CC2247F5D39A",
+                "pid": "P1549",
+                "text": "parisina",
+                "lang": "ast",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088293"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-398F0A9E-8244-4B76-BA1F-8DB1CC70D6C9",
+                "pid": "P1549",
+                "text": "parisinos",
+                "lang": "ast",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088292"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-41dec4ba-41c5-4124-32de-dd71c652a0b1",
+                "pid": "P1549",
+                "text": "Pariserin",
+                "lang": "de",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088293"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-45eed427-438f-9b13-27b1-b220373572b2",
+                "pid": "P1549",
+                "text": "Parižan",
+                "lang": "sl",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088290"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-4be0abbf-48bc-a25f-372e-84a9bfa9d628",
+                "pid": "P1549",
+                "text": "Parisien",
+                "lang": "fr",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P5185",
+                    "item": "Q499327"
+                  },
+                  {
+                    "pid": "P11054",
+                    "item": "Q110786"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-4df07f7a-41e5-0622-a009-e48ec65b26f4",
+                "pid": "P1549",
+                "text": "Paräisserin",
+                "lang": "lb",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q6581072"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-5942D168-D9A6-42C9-B3D5-035DA65323C9",
+                "pid": "P1549",
+                "text": "parigini",
+                "lang": "it",
+                "rank": "normal",
+                "provenance": "imported",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088292"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-5e90cb1b-4a00-92ef-dbe5-c7acf604960d",
+                "pid": "P1549",
+                "text": "parisenc",
+                "lang": "ca",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q6581097"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-b0f0d3e8-4835-2c41-1945-95d355a208bd",
+                "pid": "P1549",
+                "text": "Parižanka",
+                "lang": "sl",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088293"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-65bf4800-45a2-0342-ce86-5bf56685fef2",
+                "pid": "P1549",
+                "text": "Paräisser",
+                "lang": "lb",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q6581097"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-78096eb4-4cba-d714-8e12-61d8d23080ab",
+                "pid": "P1549",
+                "text": "paryżanin",
+                "lang": "pl",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088290"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-80d7cf81-4888-93a3-aa22-a482d1f5d15a",
+                "pid": "P1549",
+                "text": "Parizano",
+                "lang": "eo",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q90-832fd929-4954-c40d-1c2f-4ab3f3de8286",
+                "pid": "P1549",
+                "text": "парижанка",
+                "lang": "uk",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088293"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-854a4475-4f15-5e8f-8bc9-4d2a73e6a32a",
+                "pid": "P1549",
+                "text": "Parisians",
+                "lang": "en",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P805",
+                    "item": "Q105740844"
+                  },
+                  {
+                    "pid": "P11054",
+                    "item": "Q146786"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-8a3f95f1-4226-b389-453d-4fadec9d4a4f",
+                "pid": "P1549",
+                "text": "Pariser",
+                "lang": "de",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088290"
+                  },
+                  {
+                    "pid": "P518",
+                    "item": "Q47088292"
+                  },
+                  {
+                    "pid": "P805",
+                    "item": "Q105740844"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-95A7F0F7-27E9-46D7-A3FD-682CCB8A4055",
+                "pid": "P1549",
+                "text": "parisines",
+                "lang": "ast",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088295"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-d1e370e6-4912-82a0-dc3d-25bea84030a5",
+                "pid": "P1549",
+                "text": "парижанка",
+                "lang": "ru",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q1775415"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-db92e522-4b34-6234-2ace-a1ebc20c6e3a",
+                "pid": "P1549",
+                "text": "parisenca",
+                "lang": "ca",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q6581072"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-e22c37d3-420e-f4d6-53f3-50dfea46067d",
+                "pid": "P1549",
+                "text": "Parisienne",
+                "lang": "fr",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P407",
+                    "item": "Q150"
+                  },
+                  {
+                    "pid": "P518",
+                    "item": "Q47088293"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-e64bf97c-4e1e-0347-333e-fbb3acc2b5db",
+                "pid": "P1549",
+                "text": "პარიზელი",
+                "lang": "ka",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q110786"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-f1c7ca7f-4f82-f227-079d-3b492a8ae88c",
+                "pid": "P1549",
+                "text": "Parizian",
+                "lang": "br",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088290"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-013bd595-4a61-c502-4b09-70fe7c022143",
+                "pid": "P1549",
+                "text": "პარიზელები",
+                "lang": "ka",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q146786"
+                  },
+                  {
+                    "pid": "P805",
+                    "item": "Q105740844"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-017E1012-E490-499D-9E34-7CB537F1EA11",
+                "pid": "P1549",
+                "text": "parisín",
+                "lang": "ast",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088290"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-0951d808-484c-6260-ddd5-d99fc6439358",
+                "pid": "P1549",
+                "text": "парижанин",
+                "lang": "ru",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q499327"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-0c0f93cc-4119-7ffd-fed7-cf19b2190f6f",
+                "pid": "P1549",
+                "text": "парижанин",
+                "lang": "uk",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088290"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-0eba62ba-4f08-92d1-2cd3-49e94c5368bb",
+                "pid": "P1549",
+                "text": "Parisian",
+                "lang": "en",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P11054",
+                    "item": "Q110786"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-1774d3ab-4883-e39c-d956-b4eb6b627d61",
+                "pid": "P1549",
+                "text": "парижане",
+                "lang": "ru",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q146786"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-2401b27f-4b8c-71f2-cad1-1bf91af77240",
+                "pid": "P1549",
+                "text": "párizsi",
+                "lang": "hu",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q90-F565B5D9-79C0-48CB-A617-50DBCEFD7076",
+                "pid": "P1549",
+                "text": "parisino",
+                "lang": "ast",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q1775461"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-fc60e657-4f4a-15f4-439b-46a13b339bc0",
+                "pid": "P1549",
+                "text": "paryżanka",
+                "lang": "pl",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088293"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-fcb7aded-4536-c4ef-b224-546e5473a370",
+                "pid": "P1549",
+                "text": "Parizianez",
+                "lang": "br",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088293"
+                  }
+                ]
+              },
+              {
+                "statement": "Q90-3720426d-4556-7572-59d7-a2478ddbf38b",
+                "pid": "P1451",
+                "text": "Fluctuat nec mergitur",
+                "lang": "la",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1853
+                  },
+                  {
+                    "pid": "P2441",
+                    "text": "Tossed by the waves but never sunk",
+                    "lang": "en"
+                  },
+                  {
+                    "pid": "P2441",
+                    "text": "Il est battu par les flots, mais ne sombre pas",
+                    "lang": "fr"
+                  },
+                  {
+                    "pid": "P2441",
+                    "text": "Його хитає, але він не тоне",
+                    "lang": "uk"
+                  },
+                  {
+                    "pid": "P2441",
+                    "text": "흔들릴지언정 가라앉지 않는다",
+                    "lang": "ko"
+                  },
+                  {
+                    "pid": "P2441",
+                    "text": "Es schwankt hin und her, aber geht nicht unter",
+                    "lang": "de"
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "primitive": "media",
             "role": "stack",
             "statement": "Q90-061A1B22-1527-4623-A102-CA7468659B73",
@@ -2212,598 +2781,6 @@ expression: composition
         "sheet": [
           {
             "primitive": "fact",
-            "pid": "P1448",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q90-4d19d5e2-425e-a2d9-2179-07a7b9916970",
-                "pid": "P1448",
-                "text": "Paris",
-                "lang": "fr",
-                "rank": "normal",
-                "provenance": "sourced",
-                "shown": true
-              }
-            ],
-            "priority": 2.6,
-            "rule": "row"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P1705",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q90-d2f543cb-4732-12e8-3cd7-c199c08114a7",
-                "pid": "P1705",
-                "text": "Paris",
-                "lang": "fr",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P443",
-                    "string": "http://commons.wikimedia.org/wiki/Special:FilePath/LL-Q150%20%28fra%29-Ash%20Crow-Paris.wav"
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 0.8,
-            "rule": "row"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P1449",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q90-450d37f2-41cb-2e59-f03b-664e8c1fa313",
-                "pid": "P1449",
-                "text": "The City of Light",
-                "lang": "en",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              },
-              {
-                "statement": "Q90-c11f0724-4533-fae9-d4b4-c5e2f0b85730",
-                "pid": "P1449",
-                "text": "La Ciudad de la Luz",
-                "lang": "es",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              },
-              {
-                "statement": "Q90-6a3e19ac-4286-8a60-e267-f8c27650590a",
-                "pid": "P1449",
-                "text": "Ville-Lumière",
-                "lang": "fr",
-                "rank": "preferred",
-                "provenance": "none",
-                "shown": true
-              },
-              {
-                "statement": "Q90-a388265e-42af-0903-c8bf-ccb1a5d5c693",
-                "pid": "P1449",
-                "text": "The City of Love",
-                "lang": "en",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.4,
-            "rule": "row"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P1549",
-            "form": "list",
-            "statements": [
-              {
-                "statement": "Q90-273b5bbf-4402-dcde-4b65-db2dead5dc00",
-                "pid": "P1549",
-                "text": "Pariserinnen",
-                "lang": "de",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088295"
-                  },
-                  {
-                    "pid": "P805",
-                    "item": "Q105740844"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q90-36BD7D6E-FA6C-4285-93FB-CC2247F5D39A",
-                "pid": "P1549",
-                "text": "parisina",
-                "lang": "ast",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088293"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q90-398F0A9E-8244-4B76-BA1F-8DB1CC70D6C9",
-                "pid": "P1549",
-                "text": "parisinos",
-                "lang": "ast",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088292"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q90-41dec4ba-41c5-4124-32de-dd71c652a0b1",
-                "pid": "P1549",
-                "text": "Pariserin",
-                "lang": "de",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088293"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q90-45eed427-438f-9b13-27b1-b220373572b2",
-                "pid": "P1549",
-                "text": "Parižan",
-                "lang": "sl",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088290"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q90-4be0abbf-48bc-a25f-372e-84a9bfa9d628",
-                "pid": "P1549",
-                "text": "Parisien",
-                "lang": "fr",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P5185",
-                    "item": "Q499327"
-                  },
-                  {
-                    "pid": "P11054",
-                    "item": "Q110786"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q90-4df07f7a-41e5-0622-a009-e48ec65b26f4",
-                "pid": "P1549",
-                "text": "Paräisserin",
-                "lang": "lb",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q6581072"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q90-5942D168-D9A6-42C9-B3D5-035DA65323C9",
-                "pid": "P1549",
-                "text": "parigini",
-                "lang": "it",
-                "rank": "normal",
-                "provenance": "imported",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088292"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q90-5e90cb1b-4a00-92ef-dbe5-c7acf604960d",
-                "pid": "P1549",
-                "text": "parisenc",
-                "lang": "ca",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q6581097"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q90-b0f0d3e8-4835-2c41-1945-95d355a208bd",
-                "pid": "P1549",
-                "text": "Parižanka",
-                "lang": "sl",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088293"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q90-65bf4800-45a2-0342-ce86-5bf56685fef2",
-                "pid": "P1549",
-                "text": "Paräisser",
-                "lang": "lb",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q6581097"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q90-78096eb4-4cba-d714-8e12-61d8d23080ab",
-                "pid": "P1549",
-                "text": "paryżanin",
-                "lang": "pl",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088290"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q90-80d7cf81-4888-93a3-aa22-a482d1f5d15a",
-                "pid": "P1549",
-                "text": "Parizano",
-                "lang": "eo",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q90-832fd929-4954-c40d-1c2f-4ab3f3de8286",
-                "pid": "P1549",
-                "text": "парижанка",
-                "lang": "uk",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088293"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q90-854a4475-4f15-5e8f-8bc9-4d2a73e6a32a",
-                "pid": "P1549",
-                "text": "Parisians",
-                "lang": "en",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P805",
-                    "item": "Q105740844"
-                  },
-                  {
-                    "pid": "P11054",
-                    "item": "Q146786"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q90-8a3f95f1-4226-b389-453d-4fadec9d4a4f",
-                "pid": "P1549",
-                "text": "Pariser",
-                "lang": "de",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088290"
-                  },
-                  {
-                    "pid": "P518",
-                    "item": "Q47088292"
-                  },
-                  {
-                    "pid": "P805",
-                    "item": "Q105740844"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q90-95A7F0F7-27E9-46D7-A3FD-682CCB8A4055",
-                "pid": "P1549",
-                "text": "parisines",
-                "lang": "ast",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088295"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q90-d1e370e6-4912-82a0-dc3d-25bea84030a5",
-                "pid": "P1549",
-                "text": "парижанка",
-                "lang": "ru",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q1775415"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q90-db92e522-4b34-6234-2ace-a1ebc20c6e3a",
-                "pid": "P1549",
-                "text": "parisenca",
-                "lang": "ca",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q6581072"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q90-e22c37d3-420e-f4d6-53f3-50dfea46067d",
-                "pid": "P1549",
-                "text": "Parisienne",
-                "lang": "fr",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P407",
-                    "item": "Q150"
-                  },
-                  {
-                    "pid": "P518",
-                    "item": "Q47088293"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q90-e64bf97c-4e1e-0347-333e-fbb3acc2b5db",
-                "pid": "P1549",
-                "text": "პარიზელი",
-                "lang": "ka",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q110786"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q90-f1c7ca7f-4f82-f227-079d-3b492a8ae88c",
-                "pid": "P1549",
-                "text": "Parizian",
-                "lang": "br",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088290"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q90-013bd595-4a61-c502-4b09-70fe7c022143",
-                "pid": "P1549",
-                "text": "პარიზელები",
-                "lang": "ka",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q146786"
-                  },
-                  {
-                    "pid": "P805",
-                    "item": "Q105740844"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q90-017E1012-E490-499D-9E34-7CB537F1EA11",
-                "pid": "P1549",
-                "text": "parisín",
-                "lang": "ast",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088290"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q90-0951d808-484c-6260-ddd5-d99fc6439358",
-                "pid": "P1549",
-                "text": "парижанин",
-                "lang": "ru",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q499327"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q90-0c0f93cc-4119-7ffd-fed7-cf19b2190f6f",
-                "pid": "P1549",
-                "text": "парижанин",
-                "lang": "uk",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088290"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q90-0eba62ba-4f08-92d1-2cd3-49e94c5368bb",
-                "pid": "P1549",
-                "text": "Parisian",
-                "lang": "en",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P11054",
-                    "item": "Q110786"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q90-1774d3ab-4883-e39c-d956-b4eb6b627d61",
-                "pid": "P1549",
-                "text": "парижане",
-                "lang": "ru",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q146786"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q90-2401b27f-4b8c-71f2-cad1-1bf91af77240",
-                "pid": "P1549",
-                "text": "párizsi",
-                "lang": "hu",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q90-F565B5D9-79C0-48CB-A617-50DBCEFD7076",
-                "pid": "P1549",
-                "text": "parisino",
-                "lang": "ast",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q1775461"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q90-fc60e657-4f4a-15f4-439b-46a13b339bc0",
-                "pid": "P1549",
-                "text": "paryżanka",
-                "lang": "pl",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088293"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q90-fcb7aded-4536-c4ef-b224-546e5473a370",
-                "pid": "P1549",
-                "text": "Parizianez",
-                "lang": "br",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088293"
-                  }
-                ],
-                "shown": false
-              }
-            ],
-            "priority": 4.122,
-            "rule": "row"
-          },
-          {
-            "primitive": "fact",
             "pid": "P138",
             "form": "value",
             "statements": [
@@ -2819,55 +2796,6 @@ expression: composition
             ],
             "priority": 0.4,
             "rule": "few-pictures"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P1451",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q90-3720426d-4556-7572-59d7-a2478ddbf38b",
-                "pid": "P1451",
-                "text": "Fluctuat nec mergitur",
-                "lang": "la",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1853
-                  },
-                  {
-                    "pid": "P2441",
-                    "text": "Tossed by the waves but never sunk",
-                    "lang": "en"
-                  },
-                  {
-                    "pid": "P2441",
-                    "text": "Il est battu par les flots, mais ne sombre pas",
-                    "lang": "fr"
-                  },
-                  {
-                    "pid": "P2441",
-                    "text": "Його хитає, але він не тоне",
-                    "lang": "uk"
-                  },
-                  {
-                    "pid": "P2441",
-                    "text": "흔들릴지언정 가라앉지 않는다",
-                    "lang": "ko"
-                  },
-                  {
-                    "pid": "P2441",
-                    "text": "Es schwankt hin und her, aber geht nicht unter",
-                    "lang": "de"
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 1.4,
-            "rule": "row"
           },
           {
             "primitive": "fact",

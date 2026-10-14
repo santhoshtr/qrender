@@ -151,7 +151,14 @@ pub enum QualifierPart {
     String {
         string: String,
     },
+    /// A Commons file (a pronunciation audio).
+    File {
+        file: String,
+    },
 }
+
+/// The URL of a Commons file in a qualifier value.
+const COMMONS_FILE: &str = "commons.wikimedia.org/wiki/Special:FilePath/";
 
 impl QualifierShown {
     pub fn new(pid: Pid, value: &QualifierValue) -> Option<Self> {
@@ -166,6 +173,12 @@ impl QualifierShown {
                 lang: lang.clone(),
             },
             QualifierValue::Amount { amount } => QualifierPart::Amount { amount: *amount },
+            // A Commons file (pronunciation audio) comes as its URL.
+            QualifierValue::String { string } if string.contains(COMMONS_FILE) => {
+                QualifierPart::File {
+                    file: content::model::file_name(string),
+                }
+            }
             QualifierValue::String { string } => QualifierPart::String {
                 string: string.clone(),
             },
@@ -286,5 +299,21 @@ mod tests {
             r#"{"pid":"P582","year":-300}"#
         );
         assert_eq!(QualifierShown::new(p582, &QualifierValue::SomeValue), None);
+        // A Commons file comes as its URL: the file, decoded.
+        let p443: Pid = "P443".parse().unwrap();
+        let audio = QualifierShown::new(
+            p443,
+            &QualifierValue::String {
+                string:
+                    "http://commons.wikimedia.org/wiki/Special:FilePath/LL-Q1571%20%28mar%29-A.wav"
+                        .into(),
+            },
+        );
+        assert_eq!(
+            audio.map(|q| q.value),
+            Some(QualifierPart::File {
+                file: "LL-Q1571 (mar)-A.wav".into()
+            })
+        );
     }
 }

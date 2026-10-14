@@ -238,6 +238,112 @@ expression: composition
       "slots": {
         "stack": [
           {
+            "primitive": "names",
+            "pids": [
+              "P1448",
+              "P1705",
+              "P1549"
+            ],
+            "values": [
+              {
+                "statement": "Q3870-132c8bfc-44a0-5ef1-2cbd-907b9ef9cb74",
+                "pid": "P1448",
+                "text": "Nairobi",
+                "lang": "sw",
+                "rank": "normal",
+                "provenance": "imported"
+              },
+              {
+                "statement": "Q3870-c572491d-4fb1-c157-4976-600ee2d998bc",
+                "pid": "P1705",
+                "text": "Nairobi",
+                "lang": "sw",
+                "rank": "normal",
+                "provenance": "imported"
+              },
+              {
+                "statement": "Q3870-2A76A56E-703F-4562-9A87-DB5B65E78EAF",
+                "pid": "P1549",
+                "text": "Nairobien",
+                "lang": "fr",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088290"
+                  }
+                ]
+              },
+              {
+                "statement": "Q3870-5E3EAF33-5202-4DCB-A88E-E8DDB5A7C1E6",
+                "pid": "P1549",
+                "text": "Nairobienne",
+                "lang": "fr",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088293"
+                  }
+                ]
+              },
+              {
+                "statement": "Q3870-71D162BA-6706-463C-90B7-B52EA1CB0DEA",
+                "pid": "P1549",
+                "text": "Nairobian",
+                "lang": "en",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q3870-76fd8080-4403-1e12-6c5d-62a5b99a2b63",
+                "pid": "P1549",
+                "text": "nairobienne",
+                "lang": "fr",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088293"
+                  }
+                ]
+              },
+              {
+                "statement": "Q3870-9d1b3086-492e-b6bb-c1a5-50aff87441f5",
+                "pid": "P1549",
+                "text": "Monairobi",
+                "lang": "tn",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q3870-a8b1df5d-45a5-16c4-cb62-9a9b1e20d9ba",
+                "pid": "P1549",
+                "text": "nairobien",
+                "lang": "fr",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088290"
+                  }
+                ]
+              },
+              {
+                "statement": "Q3870-c7780e89-49b8-b287-262a-0695d03be1de",
+                "pid": "P1549",
+                "text": "Najrobiano",
+                "lang": "eo",
+                "rank": "normal",
+                "provenance": "none"
+              }
+            ]
+          },
+          {
             "primitive": "media",
             "role": "stack",
             "statement": "Q3870-440fc8f6-4adc-ce59-334d-45729b509d61",
@@ -298,138 +404,6 @@ expression: composition
           }
         ],
         "sheet": [
-          {
-            "primitive": "fact",
-            "pid": "P1448",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q3870-132c8bfc-44a0-5ef1-2cbd-907b9ef9cb74",
-                "pid": "P1448",
-                "text": "Nairobi",
-                "lang": "sw",
-                "rank": "normal",
-                "provenance": "imported",
-                "shown": true
-              }
-            ],
-            "priority": 1.0,
-            "rule": "row"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P1705",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q3870-c572491d-4fb1-c157-4976-600ee2d998bc",
-                "pid": "P1705",
-                "text": "Nairobi",
-                "lang": "sw",
-                "rank": "normal",
-                "provenance": "imported",
-                "shown": true
-              }
-            ],
-            "priority": 1.0,
-            "rule": "row"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P1549",
-            "form": "list",
-            "statements": [
-              {
-                "statement": "Q3870-2A76A56E-703F-4562-9A87-DB5B65E78EAF",
-                "pid": "P1549",
-                "text": "Nairobien",
-                "lang": "fr",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088290"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q3870-5E3EAF33-5202-4DCB-A88E-E8DDB5A7C1E6",
-                "pid": "P1549",
-                "text": "Nairobienne",
-                "lang": "fr",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088293"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q3870-71D162BA-6706-463C-90B7-B52EA1CB0DEA",
-                "pid": "P1549",
-                "text": "Nairobian",
-                "lang": "en",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              },
-              {
-                "statement": "Q3870-76fd8080-4403-1e12-6c5d-62a5b99a2b63",
-                "pid": "P1549",
-                "text": "nairobienne",
-                "lang": "fr",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088293"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q3870-9d1b3086-492e-b6bb-c1a5-50aff87441f5",
-                "pid": "P1549",
-                "text": "Monairobi",
-                "lang": "tn",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              },
-              {
-                "statement": "Q3870-a8b1df5d-45a5-16c4-cb62-9a9b1e20d9ba",
-                "pid": "P1549",
-                "text": "nairobien",
-                "lang": "fr",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088290"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q3870-c7780e89-49b8-b287-262a-0695d03be1de",
-                "pid": "P1549",
-                "text": "Najrobiano",
-                "lang": "eo",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              }
-            ],
-            "priority": 2.989,
-            "rule": "row"
-          },
           {
             "primitive": "fact",
             "pid": "P281",

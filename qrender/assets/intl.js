@@ -1,9 +1,26 @@
-// Progressive enhancement only: numbers and dates in the formats of the
-// page locale, by the browser's Intl. The server writes a neutral text
+// Progressive enhancement only: numbers, dates and language names in the
+// formats of the page locale, by the browser's Intl. The server writes a neutral text
 // (digits without grouping, ISO dates); without this script it stays,
 // correct but not localized.
 ( () => {
 	const locale = document.documentElement.dataset.locale || document.documentElement.lang;
+	// The name of a language in the page locale, for its code
+	// (data-lang-name). A code that the browser does not know stays.
+	try {
+		const languages = new Intl.DisplayNames( locale, { type: 'language', fallback: 'none' } );
+		for ( const el of document.querySelectorAll( '[data-lang-name]' ) ) {
+			try {
+				const name = languages.of( el.dataset.langName );
+				if ( name ) {
+					el.textContent = name;
+				}
+			} catch ( e ) {
+				// Not a language code: the code stays.
+			}
+		}
+	} catch ( e ) {
+		// No Intl.DisplayNames: the codes stay.
+	}
 	let number, percent;
 	try {
 		number = new Intl.NumberFormat( locale, { maximumFractionDigits: 20 } );

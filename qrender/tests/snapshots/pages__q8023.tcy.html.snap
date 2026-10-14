@@ -1042,7 +1042,7 @@ expression: html
        aria-label="Edit">✎</a>
     </span><span class="v"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q127240561"><span class="fb" lang="en">Freedom of the Royal Borough of Greenwich</span></a><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/Q127240561"
-           aria-label="Add a label in your language">+</a></span> <span class="note">2012 · <span lang="en">reaffirmed</span> <span class="note">en</span></span>
+           aria-label="Add a label in your language">+</a></span> <span class="note">2012 · <span lang="en">reaffirmed</span> <span class="note" data-lang-name="en">en</span></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P166"
        aria-label="Edit">✎</a>
@@ -1154,7 +1154,7 @@ expression: html
            href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/Q35637"
            aria-label="Add a label in your language">+</a></span> <span class="note">1993 · <span class="fb-group"><a href="https://www.wikidata.org/wiki/Q151813"><span class="fb" lang="en">F. W. de Klerk</span></a><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/Q151813"
-           aria-label="Add a label in your language">+</a></span> · <span class="fb" lang="en">prize money</span>: <data value="3350000" data-f="number">3350000</data> · <span lang="en">for their work for the peaceful termination of the apartheid regime, and for laying the foundations for a new democratic South Africa</span> <span class="note">en</span> · <span lang="nn">for  arbeidet med å få til en fredelig avslutning av apartheid-regimet, og skape et fundament for et nytt, demokratisk Sør-Afrika</span> <span class="note">nn</span></span>
+           aria-label="Add a label in your language">+</a></span> · <span class="fb" lang="en">prize money</span>: <data value="3350000" data-f="number">3350000</data> · <span lang="en">for their work for the peaceful termination of the apartheid regime, and for laying the foundations for a new democratic South Africa</span> <span class="note" data-lang-name="en">en</span> · <span lang="nn">for  arbeidet med å få til en fredelig avslutning av apartheid-regimet, og skape et fundament for et nytt, demokratisk Sør-Afrika</span> <span class="note" data-lang-name="nn">nn</span></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P166"
        aria-label="Edit">✎</a>
@@ -1184,7 +1184,7 @@ expression: html
        aria-label="Edit">✎</a>
     </span><span class="v"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q15280138"><span class="fb" lang="en">Honorary Companion of the Order of Australia</span></a><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/Q15280138"
-           aria-label="Add a label in your language">+</a></span> <span class="note">1999 · Mr Nelson MANDELA · <span lang="en">For service to Australian-South African relations and his outstanding leadership to bring multiracial democracy to South Africa.</span> <span class="note">en</span></span>
+           aria-label="Add a label in your language">+</a></span> <span class="note">1999 · Mr Nelson MANDELA · <span lang="en">For service to Australian-South African relations and his outstanding leadership to bring multiracial democracy to South Africa.</span> <span class="note" data-lang-name="en">en</span></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P166"
        aria-label="Edit">✎</a>
@@ -1410,7 +1410,39 @@ expression: html
 </div></dl></section>
             <section class="spread t-columns"
              data-spread="names"
-             data-dimension="names"><h2><span class="fb" lang="en">name</span></h2><div data-slot="gallery"><div class="block set"><div class="run"><figure class="m k-drawing" style="--a:2.5">
+             data-dimension="names"><h2><span class="fb" lang="en">name</span></h2><div data-slot="stack">
+        <qr-names class="block names">
+<select class="name-choice"
+        hidden
+        aria-label="Language"><option value="tcy" data-lang-name="tcy">tcy</option><option value="xh" data-lang-name="xh">xh</option></select>
+<div class="groups">
+        <section class="name-group" data-lang="tcy">
+            <h4 data-lang-name="tcy">tcy</h4>
+            <dl>
+            </dl>
+        </section>
+        <section class="name-group" data-lang="xh">
+            <h4 data-lang-name="xh">xh</h4>
+            <dl>
+                    <div class="row">
+                        <dt><span class="fb-group"><span class="fb"
+      lang="en">name in native language</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/P1559"
+           aria-label="Add a label in your language">+</a></span></dt>
+                        <dd><span lang="xh">Nelson Rolihlahla Mandela</span><span class="prov-imported" title="ಆಮದು ಮಲ್ತ್‌ನೆ">W</span></dd>
+                    </div>
+                    <div class="row">
+                        <dt><span class="fb-group"><span class="fb"
+      lang="en">birth name</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/P1477"
+           aria-label="Add a label in your language">+</a></span></dt>
+                        <dd><span lang="xh">Rolihllahla Mandela</span><span class="prov-none" title="—"></span></dd>
+                    </div>
+            </dl>
+        </section>
+</div>
+</qr-names>
+    </div><div data-slot="gallery"><div class="block set"><div class="run"><figure class="m k-drawing" style="--a:2.5">
         <a href="https://commons.wikimedia.org/wiki/File:Nelson_Mandela_Signature.svg">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%20Signature.svg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%20Signature.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%20Signature.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%20Signature.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%20Signature.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%20Signature.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
@@ -1427,28 +1459,6 @@ expression: html
        href="https://www.wikidata.org/wiki/Q8023#P109"
        aria-label="Edit">✎</a></span>
     </figure></div></div></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt><span class="fb-group"><span class="fb"
-      lang="en">name in native language</span><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/P1559"
-           aria-label="Add a label in your language">+</a></span></dt>
-<dd><span lang="xh">Nelson Rolihlahla Mandela</span> <span class="note">xh</span></dd>
-<span class="tools">
-        <span class="prov-imported" title="ಆಮದು ಮಲ್ತ್‌ನೆ">W</span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q8023#P1559"
-       aria-label="Edit">✎</a>
-    </span>
-</div><div class="row r-value"><dt><span class="fb-group"><span class="fb"
-      lang="en">birth name</span><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/P1477"
-           aria-label="Add a label in your language">+</a></span></dt>
-<dd><span lang="xh">Rolihllahla Mandela</span> <span class="note">xh</span></dd>
-<span class="tools">
-        <span class="prov-none" title="—"></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q8023#P1477"
-       aria-label="Edit">✎</a>
-    </span>
-</div><div class="row r-value"><dt><span class="fb-group"><span class="fb"
       lang="en">given name</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/P735"
            aria-label="Add a label in your language">+</a></span></dt>
@@ -2628,12 +2638,29 @@ if ( !( 'commandForElement' in HTMLButtonElement.prototype ) ) {
 		}
 	} );
 }
-// Progressive enhancement only: numbers and dates in the formats of the
-// page locale, by the browser's Intl. The server writes a neutral text
+// Progressive enhancement only: numbers, dates and language names in the
+// formats of the page locale, by the browser's Intl. The server writes a neutral text
 // (digits without grouping, ISO dates); without this script it stays,
 // correct but not localized.
 ( () => {
 	const locale = document.documentElement.dataset.locale || document.documentElement.lang;
+	// The name of a language in the page locale, for its code
+	// (data-lang-name). A code that the browser does not know stays.
+	try {
+		const languages = new Intl.DisplayNames( locale, { type: 'language', fallback: 'none' } );
+		for ( const el of document.querySelectorAll( '[data-lang-name]' ) ) {
+			try {
+				const name = languages.of( el.dataset.langName );
+				if ( name ) {
+					el.textContent = name;
+				}
+			} catch ( e ) {
+				// Not a language code: the code stays.
+			}
+		}
+	} catch ( e ) {
+		// No Intl.DisplayNames: the codes stay.
+	}
 	let number, percent;
 	try {
 		number = new Intl.NumberFormat( locale, { maximumFractionDigits: 20 } );
@@ -2671,6 +2698,60 @@ if ( !( 'commandForElement' in HTMLButtonElement.prototype ) ) {
 		}
 	}
 } )();
+// Progressive enhancement only: a play link (a.play) of an audio file
+// plays the file in the page; a second click stops it. One sound plays at
+// a time. Without this script the link opens the file, and the browser
+// plays it.
+( () => {
+	let sound, link;
+	const stop = () => {
+		sound.pause();
+		link.classList.remove( 'playing' );
+		sound = link = null;
+	};
+	document.addEventListener( 'click', ( event ) => {
+		const a = event.target.closest( 'a.play' );
+		if ( !a ) {
+			return;
+		}
+		event.preventDefault();
+		const again = link === a;
+		if ( sound ) {
+			stop();
+		}
+		if ( again ) {
+			return;
+		}
+		sound = new Audio( a.href );
+		link = a;
+		a.classList.add( 'playing' );
+		sound.addEventListener( 'ended', () => link === a && stop() );
+		sound.play().catch( () => {
+			window.location.href = a.href;
+		} );
+	} );
+} )();
+// The qr-names element: the names of the item in many languages, as one
+// choice of language and the group of that language. Progressive
+// enhancement only: the server renders every group, the page language
+// first; this script shows the choice and one group, and decides nothing.
+if ( 'customElements' in window ) {
+	customElements.define( 'qr-names', class extends HTMLElement {
+		connectedCallback() {
+			const choice = this.querySelector( '.name-choice' );
+			const groups = [ ...this.querySelectorAll( '.name-group' ) ];
+			if ( !choice || groups.length < 2 ) {
+				return;
+			}
+			const show = ( lang ) => groups.forEach( ( group ) => {
+				group.hidden = group.dataset.lang !== lang;
+			} );
+			choice.hidden = false;
+			show( choice.value );
+			choice.addEventListener( 'change', () => show( choice.value ) );
+		}
+	} );
+}
 </script>
 </body>
 </html>

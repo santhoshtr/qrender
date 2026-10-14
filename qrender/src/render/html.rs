@@ -16,7 +16,7 @@ use crate::localize::{Label, SpreadView, View};
 use crate::primitives::fact::Fact;
 use crate::primitives::media::Media;
 use crate::primitives::{
-    absent, credits, fact, identifiers, kind, map, media, network, peers, pictures, prose,
+    absent, credits, fact, identifiers, kind, map, media, names, network, peers, pictures, prose,
     provenance, scale, score, series, sitelinks, sounds, split, succession, time, title, works,
 };
 use crate::schema::{Block, Credit};
@@ -220,6 +220,7 @@ impl<'v> Ui<'v> {
             Block::Media(b) => self.media(b),
             Block::Pictures(b) => render(pictures::Html { ui: self, b }),
             Block::Sounds(b) => render(sounds::Html { ui: self, b }),
+            Block::Names(b) => render(names::Html { ui: self, b }),
             Block::Map(b) => render(map::Html { ui: self, b }),
             Block::Fact(b) => render(fact::Html { ui: self, b }),
             Block::Series(b) => render(series::Html { ui: self, b }),

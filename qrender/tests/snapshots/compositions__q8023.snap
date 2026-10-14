@@ -2741,6 +2741,33 @@ expression: composition
       "concept": "Q82799",
       "template": "columns",
       "slots": {
+        "stack": [
+          {
+            "primitive": "names",
+            "pids": [
+              "P1559",
+              "P1477"
+            ],
+            "values": [
+              {
+                "statement": "Q8023-290d7eae-4b2e-ea2f-1743-b08cf3ff22a7",
+                "pid": "P1559",
+                "text": "Nelson Rolihlahla Mandela",
+                "lang": "xh",
+                "rank": "normal",
+                "provenance": "imported"
+              },
+              {
+                "statement": "Q8023-86947537-C344-4490-B596-7DF28323840F",
+                "pid": "P1477",
+                "text": "Rolihllahla Mandela",
+                "lang": "xh",
+                "rank": "normal",
+                "provenance": "none"
+              }
+            ]
+          }
+        ],
         "gallery": [
           {
             "primitive": "media",
@@ -2761,42 +2788,6 @@ expression: composition
           }
         ],
         "sheet": [
-          {
-            "primitive": "fact",
-            "pid": "P1559",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q8023-290d7eae-4b2e-ea2f-1743-b08cf3ff22a7",
-                "pid": "P1559",
-                "text": "Nelson Rolihlahla Mandela",
-                "lang": "xh",
-                "rank": "normal",
-                "provenance": "imported",
-                "shown": true
-              }
-            ],
-            "priority": 0.0,
-            "rule": "row"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P1477",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q8023-86947537-C344-4490-B596-7DF28323840F",
-                "pid": "P1477",
-                "text": "Rolihllahla Mandela",
-                "lang": "xh",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.0,
-            "rule": "row"
-          },
           {
             "primitive": "fact",
             "pid": "P735",

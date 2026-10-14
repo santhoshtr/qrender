@@ -12,7 +12,7 @@ use content::{EntityId, Pid};
 use crate::localize::format::Part;
 use crate::localize::{Label, SpreadView, View};
 use crate::primitives::{
-    absent, credits, fact, identifiers, kind, map, media, network, peers, pictures, prose,
+    absent, credits, fact, identifiers, kind, map, media, names, network, peers, pictures, prose,
     provenance, scale, score, series, sitelinks, sounds, split, succession, time, title, works,
 };
 use crate::schema::{Block, Provenance, StatementRef};
@@ -72,6 +72,7 @@ impl Markdown<'_> {
             Block::Media(b) => media::markdown(b, self),
             Block::Pictures(b) => pictures::markdown(b, self),
             Block::Sounds(b) => sounds::markdown(b, self),
+            Block::Names(b) => names::markdown(b, self),
             Block::Map(b) => map::markdown(b, self),
             Block::Fact(b) => fact::markdown(b, self),
             Block::Series(b) => series::markdown(b, self),
@@ -181,6 +182,9 @@ impl Markdown<'_> {
             Part::Link { text, href } => format!("[{text}]({href})"),
             Part::Qualified { pid, value } => {
                 format!("{}: {}", self.property(*pid), self.part(value))
+            }
+            Part::File { pid, file, .. } => {
+                format!("{}: <{}{file}>", self.property(*pid), super::ui::FILEPATH)
             }
         }
     }

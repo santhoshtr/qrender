@@ -197,6 +197,19 @@
           "type": "object"
         },
         {
+          "$ref": "#/$defs/Names",
+          "properties": {
+            "primitive": {
+              "const": "names",
+              "type": "string"
+            }
+          },
+          "required": [
+            "primitive"
+          ],
+          "type": "object"
+        },
+        {
           "$ref": "#/$defs/Map",
           "properties": {
             "primitive": {
@@ -1985,6 +1998,29 @@
       ],
       "type": "object"
     },
+    "Names": {
+      "properties": {
+        "pids": {
+          "description": "The properties, in the order of the spread.",
+          "items": {
+            "$ref": "#/$defs/Pid"
+          },
+          "type": "array"
+        },
+        "values": {
+          "description": "Every value, by property; the preferred values of a property first.",
+          "items": {
+            "$ref": "#/$defs/StatementRef"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "pids",
+        "values"
+      ],
+      "type": "object"
+    },
     "Network": {
       "properties": {
         "pid": {
@@ -2499,6 +2535,11 @@
           "type": "string"
         },
         {
+          "const": "names",
+          "description": "The names of the item in many languages: one choice of language.",
+          "type": "string"
+        },
+        {
           "const": "split",
           "description": "The parts of one whole, as a bar for each year.",
           "type": "string"
@@ -2676,6 +2717,18 @@
           },
           "required": [
             "string"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "A Commons file (a pronunciation audio).",
+          "properties": {
+            "file": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "file"
           ],
           "type": "object"
         }

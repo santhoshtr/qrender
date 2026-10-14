@@ -420,6 +420,22 @@ dialog {
 	}
 }
 
+/* A play link of an audio file (play.js): a small round button. */
+.play {
+	display: inline-grid;
+	place-items: center;
+	inline-size: 22px;
+	block-size: 22px;
+	border-radius: 50%;
+	background-color: var( --background-color-neutral-subtle );
+	color: var( --color-progressive );
+	font-size: 10px;
+	text-decoration: none;
+
+	&:hover { background-color: var( --background-color-interactive ); }
+	&.playing { background-color: var( --color-progressive ); color: var( --color-inverted ); }
+}
+
 /* The colour key of a part (--c): a split, the lines of a chart. */
 .key {
 	display: inline-block;

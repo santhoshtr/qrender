@@ -934,12 +934,29 @@ if ( !( 'commandForElement' in HTMLButtonElement.prototype ) ) {
 		}
 	} );
 }
-// Progressive enhancement only: numbers and dates in the formats of the
-// page locale, by the browser's Intl. The server writes a neutral text
+// Progressive enhancement only: numbers, dates and language names in the
+// formats of the page locale, by the browser's Intl. The server writes a neutral text
 // (digits without grouping, ISO dates); without this script it stays,
 // correct but not localized.
 ( () => {
 	const locale = document.documentElement.dataset.locale || document.documentElement.lang;
+	// The name of a language in the page locale, for its code
+	// (data-lang-name). A code that the browser does not know stays.
+	try {
+		const languages = new Intl.DisplayNames( locale, { type: 'language', fallback: 'none' } );
+		for ( const el of document.querySelectorAll( '[data-lang-name]' ) ) {
+			try {
+				const name = languages.of( el.dataset.langName );
+				if ( name ) {
+					el.textContent = name;
+				}
+			} catch ( e ) {
+				// Not a language code: the code stays.
+			}
+		}
+	} catch ( e ) {
+		// No Intl.DisplayNames: the codes stay.
+	}
 	let number, percent;
 	try {
 		number = new Intl.NumberFormat( locale, { maximumFractionDigits: 20 } );
@@ -976,6 +993,39 @@ if ( !( 'commandForElement' in HTMLButtonElement.prototype ) ) {
 			// The neutral text stays.
 		}
 	}
+} )();
+// Progressive enhancement only: a play link (a.play) of an audio file
+// plays the file in the page; a second click stops it. One sound plays at
+// a time. Without this script the link opens the file, and the browser
+// plays it.
+( () => {
+	let sound, link;
+	const stop = () => {
+		sound.pause();
+		link.classList.remove( 'playing' );
+		sound = link = null;
+	};
+	document.addEventListener( 'click', ( event ) => {
+		const a = event.target.closest( 'a.play' );
+		if ( !a ) {
+			return;
+		}
+		event.preventDefault();
+		const again = link === a;
+		if ( sound ) {
+			stop();
+		}
+		if ( again ) {
+			return;
+		}
+		sound = new Audio( a.href );
+		link = a;
+		a.classList.add( 'playing' );
+		sound.addEventListener( 'ended', () => link === a && stop() );
+		sound.play().catch( () => {
+			window.location.href = a.href;
+		} );
+	} );
 } )();
 // The qr-sounds element: the recordings of one property (the
 // pronunciations of the name) as one player with a choice of language.

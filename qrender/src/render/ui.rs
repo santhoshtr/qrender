@@ -14,6 +14,7 @@ use crate::primitives::credits::{Credits, Person};
 use crate::primitives::identifiers::{Identifier, Identifiers};
 use crate::primitives::map::Map;
 use crate::primitives::media::Media;
+use crate::primitives::names::{self, Names};
 use crate::primitives::provenance;
 use crate::primitives::succession::Succession;
 use crate::primitives::works::{Work, Works};
@@ -199,6 +200,11 @@ impl<'v> Ui<'v> {
 
     pub fn edit(&self, pid: impl Arg<Pid>) -> String {
         edit_url(self.view.qid, pid.get())
+    }
+
+    /// The groups of languages of the names, for the page language.
+    pub fn name_groups<'a>(&'a self, b: &'a Names) -> Vec<names::Group<'a>> {
+        names::groups(b, self.view.lang.as_str())
     }
 
     /// The label of "point in time" (P585): the heading of the dates of a
@@ -557,6 +563,7 @@ impl<'v> Ui<'v> {
             Part::Qualified { pid, value } => {
                 format!("{}: {}", self.property(*pid).text, self.part_text(value))
             }
+            Part::File { pid, file, .. } => format!("{}: {file}", self.property(*pid).text),
         }
     }
 

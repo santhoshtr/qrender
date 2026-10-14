@@ -143,6 +143,1421 @@ expression: composition
       }
     },
     {
+      "id": "names",
+      "kind": "facts",
+      "dimension": "names",
+      "concept": "Q82799",
+      "template": "columns",
+      "slots": {
+        "stack": [
+          {
+            "primitive": "names",
+            "pids": [
+              "P1448",
+              "P1813",
+              "P2561",
+              "P1705",
+              "P1549",
+              "P1451"
+            ],
+            "values": [
+              {
+                "statement": "Q668-000deb51-4cca-aaec-2a51-e5ad59890978",
+                "pid": "P1448",
+                "text": "भारत गणराज्य",
+                "lang": "hi",
+                "rank": "preferred",
+                "provenance": "imported"
+              },
+              {
+                "statement": "Q668-e41d6ce5-419d-797f-4108-196506be29ac",
+                "pid": "P1448",
+                "text": "Republic of India",
+                "lang": "en",
+                "rank": "preferred",
+                "provenance": "imported",
+                "qualifiers": [
+                  {
+                    "pid": "P805",
+                    "item": "Q3087336"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-002A8E68-3F8D-472E-85ED-A27A078FF105",
+                "pid": "P1448",
+                "text": "India",
+                "lang": "en",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-23c4d33c-4a92-8d98-60cb-84795de9c676",
+                "pid": "P1448",
+                "text": "Indická republika",
+                "lang": "sk",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-52F05F22-ABEE-4E4F-AAF6-DBBB6F75AC6D",
+                "pid": "P1448",
+                "text": "République de l’Inde",
+                "lang": "fr",
+                "rank": "normal",
+                "provenance": "sourced"
+              },
+              {
+                "statement": "Q668-7adf0dc9-4d22-cd41-a44a-7b6784bf1f09",
+                "pid": "P1448",
+                "text": "ꠀꠝ ꠝꠣꠘꠥꠅꠞ ꠄꠘ꠆ꠒꠤꠀ",
+                "lang": "syl",
+                "rank": "normal",
+                "provenance": "imported",
+                "qualifiers": [
+                  {
+                    "pid": "P898",
+                    "string": "am manuɔɾ enɖia"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-8020A9A4-A5E3-4755-BAF9-C7CB4B967B5B",
+                "pid": "P1448",
+                "text": "Republic of Bharat",
+                "lang": "en",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P805",
+                    "item": "Q3087336"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-8DF37E54-08B1-4217-8EB1-C3699FE53B43",
+                "pid": "P1448",
+                "text": "جمہوریہ ہندوستان",
+                "lang": "ur",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-b7738573-49fa-bd05-c44e-351256a41bda",
+                "pid": "P1448",
+                "text": "भारतगनराज्ज",
+                "lang": "mag",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-0626ae98-4ae6-8416-2a6e-ec9809122f1b",
+                "pid": "P1813",
+                "text": "ꠁꠘ꠆ꠖ",
+                "lang": "syl",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P898",
+                    "string": "ind̪"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-0c6c7d79-407c-4e9a-f8af-cbb4db9c6557",
+                "pid": "P1813",
+                "text": "Inde",
+                "lang": "fr",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-8b305a5f-42a5-dcf8-b11e-69a84c0c26c4",
+                "pid": "P1813",
+                "text": "भारत",
+                "lang": "mag",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-a59fec69-4747-5b0c-3bbc-2d076c398b1e",
+                "pid": "P1813",
+                "text": "हिंद",
+                "lang": "hi",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-cbf38e27-4bb9-1e4f-5f36-0589ed1092da",
+                "pid": "P1813",
+                "text": "India",
+                "lang": "en",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-1703C36F-12BB-443E-A9B9-755D42D86A7D",
+                "pid": "P2561",
+                "text": "भारत",
+                "lang": "pi",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-CF554155-DFA3-4CB8-9173-54CF047744EE",
+                "pid": "P2561",
+                "text": "Inde",
+                "lang": "fr",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-D6E9B0F1-5A3F-4352-8BAF-7A4B1B78DCE4",
+                "pid": "P2561",
+                "text": "भारत",
+                "lang": "mag",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-dd109fa1-47db-1cd3-10e3-f031a3705d22",
+                "pid": "P2561",
+                "text": "ꠄꠘ꠆ꠒꠤꠀ",
+                "lang": "syl",
+                "rank": "normal",
+                "provenance": "imported",
+                "qualifiers": [
+                  {
+                    "pid": "P898",
+                    "string": "enɖia"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-e0839940-4061-639d-c92a-e554b1d7b9c1",
+                "pid": "P2561",
+                "text": "Bharat",
+                "lang": "en",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-53f72d08-4118-3a20-3559-c8b7ec7bec25",
+                "pid": "P2561",
+                "text": "ᱥᱤᱧᱚᱛ",
+                "lang": "sat",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-ef088865-4806-3fda-2265-39db2ea1d979",
+                "pid": "P2561",
+                "text": "ভারত",
+                "lang": "bn",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-F07C0D82-1EC3-491F-86DF-9D55F6AFD569",
+                "pid": "P2561",
+                "text": "ভারত",
+                "lang": "as",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-F3B68078-2021-448B-81F3-65B1C9767E49",
+                "pid": "P2561",
+                "text": "بھارت",
+                "lang": "ur",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-60054418-4845-4840-b091-7abc3c135b44",
+                "pid": "P2561",
+                "text": "India",
+                "lang": "en",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-657F9074-3BE4-4620-B6C5-924C57E0E3C2",
+                "pid": "P2561",
+                "text": "இந்தியா",
+                "lang": "ta",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P443",
+                    "file": "LL-Q5885 (tam)-Sriveenkat-இந்தியா.wav"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-9F918771-ABBF-4583-8943-44BD4BC7A45D",
+                "pid": "P2561",
+                "text": "भारत",
+                "lang": "mr",
+                "rank": "normal",
+                "provenance": "imported",
+                "qualifiers": [
+                  {
+                    "pid": "P443",
+                    "file": "LL-Q1571 (mar)-Vj18081991-भारत.wav"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-ADBBD8B3-A538-4EA7-B25A-796CF61E5327",
+                "pid": "P2561",
+                "text": "भारत",
+                "lang": "hi",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-46c14efe-4080-04d1-994a-b6e6eef390a9",
+                "pid": "P2561",
+                "text": "ہِندوستان",
+                "lang": "ks",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-10B9633F-CFBB-436E-9DCB-FBCA7F2CB5ED",
+                "pid": "P1705",
+                "text": "இந்தியா",
+                "lang": "ta",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P443",
+                    "file": "LL-Q5885 (tam)-Sriveenkat-இந்தியா.wav"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-1788a566-4bf3-29e3-384b-7e859fc470bf",
+                "pid": "P1705",
+                "text": "ভারত",
+                "lang": "bn",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-D6FE638C-68C1-4A40-8BD8-6016E699ED15",
+                "pid": "P1705",
+                "text": "भारत",
+                "lang": "pi",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-5840f565-46c0-8cd0-75cf-a39f30428cc3",
+                "pid": "P1705",
+                "text": "ꠄꠘ꠆ꠒꠤꠀ",
+                "lang": "syl",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P898",
+                    "string": "enɖia"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-5EA83902-666A-4C61-AD8A-B72594D7208C",
+                "pid": "P1705",
+                "text": "ہندوستان",
+                "lang": "ur",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-901B90F6-8CE2-4ACE-9BC9-5A88946207D2",
+                "pid": "P1705",
+                "text": "بھارت",
+                "lang": "ur",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-ED66346A-CFDE-48CA-8416-ADBAAC0962E7",
+                "pid": "P1705",
+                "text": "भारत",
+                "lang": "hi",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-a50bbd13-4052-8ec1-4349-1f2441d6b33f",
+                "pid": "P1705",
+                "text": "ভারত",
+                "lang": "as",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-AACB8D0C-9171-4E4C-B461-00BB7EB713C5",
+                "pid": "P1705",
+                "text": "भारत",
+                "lang": "mr",
+                "rank": "normal",
+                "provenance": "imported",
+                "qualifiers": [
+                  {
+                    "pid": "P443",
+                    "file": "LL-Q1571 (mar)-Vj18081991-भारत.wav"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-c91197d9-4eba-b990-1a13-2e7007d1228b",
+                "pid": "P1705",
+                "text": "भारत",
+                "lang": "mag",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-042AB78A-0BB9-4C7C-80F2-2C346C8E134C",
+                "pid": "P1549",
+                "text": "indiani",
+                "lang": "vec",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088292"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-0A20388E-9D1C-4539-BCDF-91D6D8F0C225",
+                "pid": "P1549",
+                "text": "Inderin",
+                "lang": "de",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q1775415"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-27119b37-443a-32ce-8a03-f13c6f31546e",
+                "pid": "P1549",
+                "text": "indios",
+                "lang": "es",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088292"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-321e13a0-4f0e-ec0d-c56d-324e3fad4071",
+                "pid": "P1549",
+                "text": "Indies",
+                "lang": "af",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-324b31f0-4e7e-bb38-5330-85e82421c789",
+                "pid": "P1549",
+                "text": "ชาวอินเดีย",
+                "lang": "th",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-351A8A56-7E57-4E2F-BA0A-740345FD606B",
+                "pid": "P1549",
+                "text": "barati",
+                "lang": "lfn",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-12A2A7CC-EDC6-4D7C-AB5C-6A71D8FE0278",
+                "pid": "P1549",
+                "text": "indiano",
+                "lang": "it",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088290"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-14642A85-BFA4-4068-A973-4DB37EA7E369",
+                "pid": "P1549",
+                "text": "indian",
+                "lang": "vec",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088290"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-14662DFC-A9BB-4C88-806A-A4F0CA3BA776",
+                "pid": "P1549",
+                "text": "هنديات",
+                "lang": "ary",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088295"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-1627D713-BE12-4DB4-9DBB-F1D3F3F22F48",
+                "pid": "P1549",
+                "text": "هنديون",
+                "lang": "ar",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q146786"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-162D8032-9589-4202-B841-C4D644C3F1B4",
+                "pid": "P1549",
+                "text": "indiana",
+                "lang": "it",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088293"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-1a6f569f-46c8-db08-2af1-c7238c353b72",
+                "pid": "P1549",
+                "text": "Baratano",
+                "lang": "eo",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-1eab50b2-4998-575a-5c8e-01a490e1f664",
+                "pid": "P1549",
+                "text": "भारतीय",
+                "lang": "hi",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-222bcb51-45e6-4049-e1f8-64fd729a2d9e",
+                "pid": "P1549",
+                "text": "ભારતીય",
+                "lang": "gu",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-3765f0a4-49ad-ff1c-0898-cfda0bdb5b34",
+                "pid": "P1549",
+                "text": "ভারতীয়",
+                "lang": "bn",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-37f3e70f-44d2-25cb-d346-a5577fe8bcb1",
+                "pid": "P1549",
+                "text": "Indian",
+                "lang": "en",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-3BA09FB2-38CA-4DC5-8105-E8D1B170127C",
+                "pid": "P1549",
+                "text": "Indiano",
+                "lang": "io",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-42c275b5-4a41-f0dd-0a9b-23f785d80e95",
+                "pid": "P1549",
+                "text": "indisch",
+                "lang": "de",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-42d31b23-987a-4bb5-a0a4-ec35dee69963",
+                "pid": "P1549",
+                "text": "Indiach",
+                "lang": "ga",
+                "rank": "normal",
+                "provenance": "sourced"
+              },
+              {
+                "statement": "Q668-46E34679-B0BD-4DA0-869A-7ABDD95D218B",
+                "pid": "P1549",
+                "text": "indieni",
+                "lang": "ro",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q146786"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-49fcfd11-4864-4b7c-8a3a-02f591ec1394",
+                "pid": "P1549",
+                "text": "インド人",
+                "lang": "ja",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-4f9eff4f-49af-877c-dc2d-21cdf3b1c6ff",
+                "pid": "P1549",
+                "text": "indi",
+                "lang": "ca",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088290"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-514E7825-AAE8-4191-819A-EEFD4E38A46F",
+                "pid": "P1549",
+                "text": "Inder",
+                "lang": "de",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q499327"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-d8153eb3-4560-2cee-8dc1-b7c970a1dcea",
+                "pid": "P1549",
+                "text": "indiano",
+                "lang": "pt",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-DAAB9BA6-5A59-4D8D-9441-A7BB117791AE",
+                "pid": "P1549",
+                "text": "Lindänan",
+                "lang": "vo",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-97415D07-2640-49BF-9A7F-04013D1D7779",
+                "pid": "P1549",
+                "text": "הודי",
+                "lang": "he",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q499327"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-99a294f7-4908-b3b8-bd38-01a5fbf439eb",
+                "pid": "P1549",
+                "text": "индиец",
+                "lang": "ru",
+                "rank": "normal",
+                "provenance": "sourced"
+              },
+              {
+                "statement": "Q668-9bdc54b1-4c33-0e97-40b3-407047ae78c1",
+                "pid": "P1549",
+                "text": "indiai",
+                "lang": "hu",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-9C5A4B3E-01F3-45E8-98F2-9076C356D09C",
+                "pid": "P1549",
+                "text": "indian",
+                "lang": "lfn",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-9ef77efc-488e-a295-0159-9dfaf419c757",
+                "pid": "P1549",
+                "text": "Indien",
+                "lang": "fr",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088290"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-e1ba5fc3-400e-67b3-bdeb-1b93abe858e9",
+                "pid": "P1549",
+                "text": "ഭാരതം",
+                "lang": "ml",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-e83e5804-40e8-f218-90d2-7dec2986a8ff",
+                "pid": "P1549",
+                "text": "印度人",
+                "lang": "zh",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-E8E01665-7CD9-4A4E-AFF5-1F628894ED0E",
+                "pid": "P1549",
+                "text": "Indienne",
+                "lang": "fr",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088293"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-EAE47B93-FBF5-4383-B914-4E2C73AB0857",
+                "pid": "P1549",
+                "text": "הודית",
+                "lang": "he",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q1775415"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-7DFC6196-E7B7-4920-B886-86BFA09DFA6A",
+                "pid": "P1549",
+                "text": "india",
+                "lang": "ast",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088293"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-573d24e8-4b70-af7a-d9b4-92012683e6e2",
+                "pid": "P1549",
+                "text": "Indiaas",
+                "lang": "nl",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-59024123-4512-76f3-8a2a-656f3f3cc4ce",
+                "pid": "P1549",
+                "text": "india",
+                "lang": "es",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088293"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-5dd9c4a8-408d-4b5e-419d-cc4bfb5d6cbf",
+                "pid": "P1549",
+                "text": "ਭਾਰਤੀ",
+                "lang": "pa",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-82D4601C-6378-488B-B132-9AB0B21E66CA",
+                "pid": "P1549",
+                "text": "هنود",
+                "lang": "ary",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088292"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-91764a6d-4635-43d0-ecc6-fce8a3d07602",
+                "pid": "P1549",
+                "text": "indio",
+                "lang": "es",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088290"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-efceec12-45ac-e2b8-b858-25badae46d16",
+                "pid": "P1549",
+                "text": "índia",
+                "lang": "ca",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088293"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-F43E0CD1-0A36-4734-B5EE-A86FB3881C30",
+                "pid": "P1549",
+                "text": "indiancă",
+                "lang": "ro",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q1775415"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-f43e52d5-4960-e1a8-1894-c42f98f61106",
+                "pid": "P1549",
+                "text": "индийский",
+                "lang": "ru",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-F4ED704A-F3EB-4631-89C5-A9CBBE951B53",
+                "pid": "P1549",
+                "text": "indiani",
+                "lang": "it",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088292"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-F52E3E31-E234-4946-81D9-20DC7C9931FD",
+                "pid": "P1549",
+                "text": "هندية",
+                "lang": "ary",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088293"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-FD2E6FCD-F0DE-4C4C-9230-7FB14AAB9146",
+                "pid": "P1549",
+                "text": "هندية",
+                "lang": "ar",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q1775415"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-ff36c845-4c64-38d6-507f-9e8616dc7d63",
+                "pid": "P1549",
+                "text": "indija",
+                "lang": "lv",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-6b1edd98-48d8-3846-6978-b04ca3ffe9e1",
+                "pid": "P1549",
+                "text": "Indijanac",
+                "lang": "hr",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-6d6baa26-4540-11b1-76ef-170e22292aaf",
+                "pid": "P1549",
+                "text": "Indijka",
+                "lang": "sl",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088293"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-729F492D-E906-41AE-88C8-C2CD8D171D28",
+                "pid": "P1549",
+                "text": "هندي",
+                "lang": "ary",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088290"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-a2022680-4a4a-f5a1-c383-9aa39458644c",
+                "pid": "P1549",
+                "text": "indias",
+                "lang": "es",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088295"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-A90695B0-FA0A-48DA-8D10-474FF66D102B",
+                "pid": "P1549",
+                "text": "indiana",
+                "lang": "vec",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088293"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-aae59f6b-4c6d-1174-995d-463b0adeb015",
+                "pid": "P1549",
+                "text": "هندي",
+                "lang": "ar",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q499327"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-B14ED070-3101-4ACB-9C5B-F7ABC9B2ED4C",
+                "pid": "P1549",
+                "text": "indiane",
+                "lang": "vec",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088295"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-c07ff394-4469-2d79-ba45-fb6cc952da2d",
+                "pid": "P1549",
+                "text": "индианка",
+                "lang": "ru",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-c756d6bd-4ce1-d1d5-a38f-e098380249f5",
+                "pid": "P1549",
+                "text": "indisk",
+                "lang": "ss",
+                "rank": "normal",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-c8016668-4a18-b16a-95c3-e40ac9f74fc6",
+                "pid": "P1549",
+                "text": "Indijec",
+                "lang": "sl",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088290"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-CB472295-506F-4438-8B01-510AEB0C98A0",
+                "pid": "P1549",
+                "text": "indiu",
+                "lang": "ast",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088290"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-CD347D41-7DB2-4618-9E6F-E73B3A29DD47",
+                "pid": "P1549",
+                "text": "indian",
+                "lang": "ro",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q499327"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-D0013A27-9E14-4227-AA58-A223F20682CD",
+                "pid": "P1549",
+                "text": "indiane",
+                "lang": "it",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q47088295"
+                  }
+                ]
+              },
+              {
+                "statement": "Q668-f7cb7ece-4c30-2787-5b76-66b659185bf3",
+                "pid": "P1451",
+                "text": "सत्यमेव जयते",
+                "lang": "sa",
+                "rank": "preferred",
+                "provenance": "none"
+              },
+              {
+                "statement": "Q668-B82BCC32-36E7-4FD8-AAFB-D6567C449F39",
+                "pid": "P1451",
+                "text": "!Incredible India",
+                "lang": "en",
+                "rank": "normal",
+                "provenance": "imported",
+                "qualifiers": [
+                  {
+                    "pid": "P3831",
+                    "item": "Q96036107"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "primitive": "sounds",
+            "pid": "P443",
+            "sounds": [
+              {
+                "role": "stack",
+                "statement": "Q668-68362c16-40ee-253f-7789-748b4bd61c02",
+                "pid": "P443",
+                "file": "De-Indien.ogg",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P407",
+                    "item": "Q188"
+                  },
+                  {
+                    "pid": "P898",
+                    "string": "ˈɪndi̯ən"
+                  },
+                  {
+                    "pid": "P5168",
+                    "text": "Indien",
+                    "lang": "de"
+                  }
+                ],
+                "kind": "audio",
+                "bytes": 16010,
+                "url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/De-Indien.ogg",
+                "credit": {
+                  "artist": "Jeuwre",
+                  "license": "CC BY-SA 4.0"
+                },
+                "rule": "media",
+                "language": "Q188"
+              },
+              {
+                "role": "stack",
+                "statement": "Q668-82dc22f2-2d96-40ac-a905-b08d1c672039",
+                "pid": "P443",
+                "file": "LL-Q7913 (ron)-KlaudiuMihaila-India.wav",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P407",
+                    "item": "Q7913"
+                  }
+                ],
+                "kind": "audio",
+                "bytes": 93938,
+                "url": "https://upload.wikimedia.org/wikipedia/commons/6/66/LL-Q7913_%28ron%29-KlaudiuMihaila-India.wav",
+                "credit": {
+                  "artist": "Speaker: KlaudiuMihaila\nRecorder: KlaudiuMihaila",
+                  "license": "CC BY-SA 4.0"
+                },
+                "rule": "media",
+                "language": "Q7913"
+              },
+              {
+                "role": "stack",
+                "statement": "Q668-C80FE8FD-5517-4D79-A139-31C30FD1959C",
+                "pid": "P443",
+                "file": "Lb-Indien.ogg",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P407",
+                    "item": "Q9051"
+                  }
+                ],
+                "kind": "audio",
+                "bytes": 10107,
+                "url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Lb-Indien.ogg",
+                "credit": {
+                  "artist": "Lëtzebuerger Online Dictionnaire (INDIEN1-2019-04-30)",
+                  "license": "CC0"
+                },
+                "rule": "media",
+                "language": "Q9051"
+              },
+              {
+                "role": "stack",
+                "statement": "Q668-d1ece5fb-8331-44a3-9470-7796278faecd",
+                "pid": "P443",
+                "file": "LL-Q652 (ita)-Francyskus-India.wav",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P407",
+                    "item": "Q652"
+                  }
+                ],
+                "kind": "audio",
+                "bytes": 93228,
+                "url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/LL-Q652_%28ita%29-Francyskus-India.wav",
+                "credit": {
+                  "artist": "Speaker: Francyskus\nRecorder: Francyskus",
+                  "license": "CC BY-SA 4.0"
+                },
+                "rule": "media",
+                "language": "Q652"
+              },
+              {
+                "role": "stack",
+                "statement": "Q668-3671D2D2-A01D-407F-8AB3-8C890C5D61F6",
+                "pid": "P443",
+                "file": "LL-Q33573 (kin)-Adygrafix250-Ubuhinde.wav",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P407",
+                    "item": "Q33573"
+                  }
+                ],
+                "kind": "audio",
+                "bytes": 104236,
+                "url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/LL-Q33573_%28kin%29-Adygrafix250-Ubuhinde.wav",
+                "credit": {
+                  "artist": "Speaker: Adygrafix250\nRecorder: Adygrafix250",
+                  "license": "CC0"
+                },
+                "rule": "media",
+                "language": "Q33573"
+              }
+            ]
+          }
+        ],
+        "gallery": [
+          {
+            "primitive": "media",
+            "role": "stack",
+            "statement": "q668-8F5A4D6D-A089-4A17-BCDE-A9563013C0F3",
+            "pid": "P94",
+            "file": "Emblem of India.svg",
+            "rank": "normal",
+            "provenance": "none",
+            "kind": "drawing",
+            "aspect": 0.6271,
+            "megapixels": 0.48,
+            "credit": {
+              "artist": "Government of India",
+              "license": "Public domain"
+            },
+            "rule": "media"
+          },
+          {
+            "primitive": "media",
+            "role": "stack",
+            "statement": "q668-6F20E83B-ECF1-4D2E-84FE-EFCF9D7EB02B",
+            "pid": "P41",
+            "file": "Flag of India.svg",
+            "rank": "preferred",
+            "provenance": "none",
+            "qualifiers": [
+              {
+                "pid": "P580",
+                "year": 1946
+              }
+            ],
+            "kind": "drawing",
+            "aspect": 1.5,
+            "megapixels": 0.54,
+            "credit": {
+              "artist": "Government of India",
+              "license": "Public domain"
+            },
+            "rule": "media"
+          },
+          {
+            "primitive": "media",
+            "role": "stack",
+            "statement": "Q668-18ec9f09-4e85-1703-0dd4-3cab9c278dff",
+            "pid": "P41",
+            "file": "British Raj Red Ensign.svg",
+            "rank": "normal",
+            "provenance": "none",
+            "qualifiers": [
+              {
+                "pid": "P580",
+                "year": 1858
+              },
+              {
+                "pid": "P582",
+                "year": 1947
+              }
+            ],
+            "kind": "drawing",
+            "aspect": 2.0,
+            "megapixels": 0.18,
+            "credit": {
+              "artist": "Barryob",
+              "license": "Public domain"
+            },
+            "rule": "media"
+          },
+          {
+            "primitive": "network",
+            "role": "gallery",
+            "values": [
+              {
+                "statement": "q668-57822B6A-1895-4AC2-9C1C-97D998E6A609",
+                "pid": "P163",
+                "item": "Q41673",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Flag of India.svg",
+                  "kind": "drawing",
+                  "aspect": 1.5,
+                  "megapixels": 0.54,
+                  "credit": {
+                    "artist": "Government of India",
+                    "license": "Public domain"
+                  }
+                },
+                "priority": 0.286
+              },
+              {
+                "statement": "Q668-5b4f12c6-47e1-f597-f9b1-e2328900766a",
+                "pid": "P138",
+                "item": "Q7348",
+                "rank": "preferred",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P5168",
+                    "text": "India",
+                    "lang": "en"
+                  }
+                ],
+                "image": {
+                  "file": "Indus near Skardu.jpg",
+                  "kind": "photo",
+                  "aspect": 1.5553,
+                  "megapixels": 1.05,
+                  "credit": {
+                    "artist": "Kogo",
+                    "license": "GFDL"
+                  }
+                },
+                "priority": 0.0
+              },
+              {
+                "statement": "Q668-cc071067-46ba-e984-1ed9-12e337324cb0",
+                "pid": "P138",
+                "item": "Q1377025",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P5168",
+                    "text": "भारत",
+                    "lang": "hi"
+                  },
+                  {
+                    "pid": "P5168",
+                    "text": "ভারত",
+                    "lang": "bn"
+                  },
+                  {
+                    "pid": "P5168",
+                    "text": "भारतम्",
+                    "lang": "sa"
+                  }
+                ],
+                "image": {
+                  "file": "Raja Ravi Varma - Mahabharata - Bharata.jpg",
+                  "kind": "photo",
+                  "aspect": 0.7086,
+                  "megapixels": 0.33,
+                  "credit": {
+                    "artist": "Raja Ravi Varma",
+                    "license": "Public domain"
+                  }
+                },
+                "priority": 0.0
+              },
+              {
+                "statement": "Q668-0bef4e3f-45e9-9c4e-74ca-a187e20f3bd3",
+                "pid": "P1546",
+                "item": "Q680277",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Satyameva Jayate-Deva.svg",
+                  "kind": "drawing",
+                  "aspect": 4.9844,
+                  "megapixels": 0.08,
+                  "credit": {
+                    "artist": "This file is created by Sbb1413. All files created by him are released under the {{CC-BY 4.0}} license unless otherwise noted. Derived works are released under the same license as original.",
+                    "license": "CC0"
+                  }
+                },
+                "priority": 0.0
+              },
+              {
+                "statement": "Q668-9F3C132B-1931-4E46-80D2-BF7E3972B091",
+                "pid": "P237",
+                "item": "Q171869",
+                "rank": "normal",
+                "provenance": "imported",
+                "image": {
+                  "file": "Emblem of India.svg",
+                  "kind": "drawing",
+                  "aspect": 0.6271,
+                  "megapixels": 0.48,
+                  "credit": {
+                    "artist": "Government of India",
+                    "license": "Public domain"
+                  }
+                },
+                "priority": 0.0
+              }
+            ],
+            "priority": 0.286,
+            "rule": "single"
+          }
+        ]
+      }
+    },
+    {
       "id": "government",
       "kind": "facts",
       "dimension": "people",
@@ -7294,24 +8709,6 @@ expression: composition
                 "priority": 2.0
               },
               {
-                "statement": "q668-57822B6A-1895-4AC2-9C1C-97D998E6A609",
-                "pid": "P163",
-                "item": "Q41673",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "Flag of India.svg",
-                  "kind": "drawing",
-                  "aspect": 1.5,
-                  "megapixels": 0.54,
-                  "credit": {
-                    "artist": "Government of India",
-                    "license": "Public domain"
-                  }
-                },
-                "priority": 0.286
-              },
-              {
                 "statement": "Q668-f4f9a2b3-47df-5960-e58e-5e46464ddc65",
                 "pid": "P155",
                 "item": "Q129286",
@@ -7328,24 +8725,6 @@ expression: composition
                   }
                 },
                 "priority": 0.286
-              },
-              {
-                "statement": "Q668-0bef4e3f-45e9-9c4e-74ca-a187e20f3bd3",
-                "pid": "P1546",
-                "item": "Q680277",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "Satyameva Jayate-Deva.svg",
-                  "kind": "drawing",
-                  "aspect": 4.9844,
-                  "megapixels": 0.08,
-                  "credit": {
-                    "artist": "This file is created by Sbb1413. All files created by him are released under the {{CC-BY 4.0}} license unless otherwise noted. Derived works are released under the same license as original.",
-                    "license": "CC0"
-                  }
-                },
-                "priority": 0.0
               },
               {
                 "statement": "Q668-19e572c7-4b59-0a3f-8d83-f67e7f3254ac",
@@ -7446,86 +8825,8 @@ expression: composition
                 "priority": 0.0
               },
               {
-                "statement": "Q668-5b4f12c6-47e1-f597-f9b1-e2328900766a",
-                "pid": "P138",
-                "item": "Q7348",
-                "rank": "preferred",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P5168",
-                    "text": "India",
-                    "lang": "en"
-                  }
-                ],
-                "image": {
-                  "file": "Indus near Skardu.jpg",
-                  "kind": "photo",
-                  "aspect": 1.5553,
-                  "megapixels": 1.05,
-                  "credit": {
-                    "artist": "Kogo",
-                    "license": "GFDL"
-                  }
-                },
-                "priority": 0.0
-              },
-              {
-                "statement": "Q668-cc071067-46ba-e984-1ed9-12e337324cb0",
-                "pid": "P138",
-                "item": "Q1377025",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P5168",
-                    "text": "भारत",
-                    "lang": "hi"
-                  },
-                  {
-                    "pid": "P5168",
-                    "text": "ভারত",
-                    "lang": "bn"
-                  },
-                  {
-                    "pid": "P5168",
-                    "text": "भारतम्",
-                    "lang": "sa"
-                  }
-                ],
-                "image": {
-                  "file": "Raja Ravi Varma - Mahabharata - Bharata.jpg",
-                  "kind": "photo",
-                  "aspect": 0.7086,
-                  "megapixels": 0.33,
-                  "credit": {
-                    "artist": "Raja Ravi Varma",
-                    "license": "Public domain"
-                  }
-                },
-                "priority": 0.0
-              },
-              {
                 "statement": "Q668-ff5d2fa5-4286-426b-dd92-8da61a7879e7",
                 "pid": "P2238",
-                "item": "Q171869",
-                "rank": "normal",
-                "provenance": "imported",
-                "image": {
-                  "file": "Emblem of India.svg",
-                  "kind": "drawing",
-                  "aspect": 0.6271,
-                  "megapixels": 0.48,
-                  "credit": {
-                    "artist": "Government of India",
-                    "license": "Public domain"
-                  }
-                },
-                "priority": 0.0
-              },
-              {
-                "statement": "Q668-9F3C132B-1931-4E46-80D2-BF7E3972B091",
-                "pid": "P237",
                 "item": "Q171869",
                 "rank": "normal",
                 "provenance": "imported",
@@ -7903,28 +9204,6 @@ expression: composition
           {
             "primitive": "media",
             "role": "run",
-            "statement": "q668-6F20E83B-ECF1-4D2E-84FE-EFCF9D7EB02B",
-            "pid": "P41",
-            "file": "Flag of India.svg",
-            "rank": "preferred",
-            "provenance": "none",
-            "qualifiers": [
-              {
-                "pid": "P580",
-                "year": 1946
-              }
-            ],
-            "kind": "drawing",
-            "aspect": 1.5,
-            "megapixels": 0.54,
-            "credit": {
-              "artist": "Government of India",
-              "license": "Public domain"
-            }
-          },
-          {
-            "primitive": "media",
-            "role": "run",
             "statement": "Q668-ac8517a1-4723-eaba-1e49-3b6c45b56a6c",
             "pid": "P242",
             "file": "LocationIndia.svg",
@@ -7951,22 +9230,6 @@ expression: composition
           {
             "primitive": "media",
             "role": "run",
-            "statement": "q668-8F5A4D6D-A089-4A17-BCDE-A9563013C0F3",
-            "pid": "P94",
-            "file": "Emblem of India.svg",
-            "rank": "normal",
-            "provenance": "none",
-            "kind": "drawing",
-            "aspect": 0.6271,
-            "megapixels": 0.48,
-            "credit": {
-              "artist": "Government of India",
-              "license": "Public domain"
-            }
-          },
-          {
-            "primitive": "media",
-            "role": "run",
             "statement": "Q668-C2DE00F3-E552-4FDB-B39F-2DB3EC564932",
             "pid": "P242",
             "file": "India (orthographic projection).svg",
@@ -7985,159 +9248,6 @@ expression: composition
               "artist": "Ssolbergj (talk)",
               "license": "CC BY-SA 3.0"
             }
-          },
-          {
-            "primitive": "media",
-            "role": "run",
-            "statement": "Q668-18ec9f09-4e85-1703-0dd4-3cab9c278dff",
-            "pid": "P41",
-            "file": "British Raj Red Ensign.svg",
-            "rank": "normal",
-            "provenance": "none",
-            "qualifiers": [
-              {
-                "pid": "P580",
-                "year": 1858
-              },
-              {
-                "pid": "P582",
-                "year": 1947
-              }
-            ],
-            "kind": "drawing",
-            "aspect": 2.0,
-            "megapixels": 0.18,
-            "credit": {
-              "artist": "Barryob",
-              "license": "Public domain"
-            }
-          }
-        ],
-        "audio": [
-          {
-            "primitive": "sounds",
-            "pid": "P443",
-            "sounds": [
-              {
-                "role": "audio",
-                "statement": "Q668-68362c16-40ee-253f-7789-748b4bd61c02",
-                "pid": "P443",
-                "file": "De-Indien.ogg",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P407",
-                    "item": "Q188"
-                  },
-                  {
-                    "pid": "P898",
-                    "string": "ˈɪndi̯ən"
-                  },
-                  {
-                    "pid": "P5168",
-                    "text": "Indien",
-                    "lang": "de"
-                  }
-                ],
-                "kind": "audio",
-                "bytes": 16010,
-                "url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/De-Indien.ogg",
-                "credit": {
-                  "artist": "Jeuwre",
-                  "license": "CC BY-SA 4.0"
-                },
-                "language": "Q188"
-              },
-              {
-                "role": "audio",
-                "statement": "Q668-82dc22f2-2d96-40ac-a905-b08d1c672039",
-                "pid": "P443",
-                "file": "LL-Q7913 (ron)-KlaudiuMihaila-India.wav",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P407",
-                    "item": "Q7913"
-                  }
-                ],
-                "kind": "audio",
-                "bytes": 93938,
-                "url": "https://upload.wikimedia.org/wikipedia/commons/6/66/LL-Q7913_%28ron%29-KlaudiuMihaila-India.wav",
-                "credit": {
-                  "artist": "Speaker: KlaudiuMihaila\nRecorder: KlaudiuMihaila",
-                  "license": "CC BY-SA 4.0"
-                },
-                "language": "Q7913"
-              },
-              {
-                "role": "audio",
-                "statement": "Q668-C80FE8FD-5517-4D79-A139-31C30FD1959C",
-                "pid": "P443",
-                "file": "Lb-Indien.ogg",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P407",
-                    "item": "Q9051"
-                  }
-                ],
-                "kind": "audio",
-                "bytes": 10107,
-                "url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Lb-Indien.ogg",
-                "credit": {
-                  "artist": "Lëtzebuerger Online Dictionnaire (INDIEN1-2019-04-30)",
-                  "license": "CC0"
-                },
-                "language": "Q9051"
-              },
-              {
-                "role": "audio",
-                "statement": "Q668-d1ece5fb-8331-44a3-9470-7796278faecd",
-                "pid": "P443",
-                "file": "LL-Q652 (ita)-Francyskus-India.wav",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P407",
-                    "item": "Q652"
-                  }
-                ],
-                "kind": "audio",
-                "bytes": 93228,
-                "url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/LL-Q652_%28ita%29-Francyskus-India.wav",
-                "credit": {
-                  "artist": "Speaker: Francyskus\nRecorder: Francyskus",
-                  "license": "CC BY-SA 4.0"
-                },
-                "language": "Q652"
-              },
-              {
-                "role": "audio",
-                "statement": "Q668-3671D2D2-A01D-407F-8AB3-8C890C5D61F6",
-                "pid": "P443",
-                "file": "LL-Q33573 (kin)-Adygrafix250-Ubuhinde.wav",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P407",
-                    "item": "Q33573"
-                  }
-                ],
-                "kind": "audio",
-                "bytes": 104236,
-                "url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/LL-Q33573_%28kin%29-Adygrafix250-Ubuhinde.wav",
-                "credit": {
-                  "artist": "Speaker: Adygrafix250\nRecorder: Adygrafix250",
-                  "license": "CC0"
-                },
-                "language": "Q33573"
-              }
-            ]
           }
         ]
       }
@@ -12237,874 +13347,6 @@ expression: composition
           },
           {
             "primitive": "fact",
-            "pid": "P1705",
-            "form": "list",
-            "statements": [
-              {
-                "statement": "Q668-10B9633F-CFBB-436E-9DCB-FBCA7F2CB5ED",
-                "pid": "P1705",
-                "text": "இந்தியா",
-                "lang": "ta",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P443",
-                    "string": "http://commons.wikimedia.org/wiki/Special:FilePath/LL-Q5885%20%28tam%29-Sriveenkat-%E0%AE%87%E0%AE%A8%E0%AF%8D%E0%AE%A4%E0%AE%BF%E0%AE%AF%E0%AE%BE.wav"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q668-1788a566-4bf3-29e3-384b-7e859fc470bf",
-                "pid": "P1705",
-                "text": "ভারত",
-                "lang": "bn",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              },
-              {
-                "statement": "Q668-D6FE638C-68C1-4A40-8BD8-6016E699ED15",
-                "pid": "P1705",
-                "text": "भारत",
-                "lang": "pi",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              },
-              {
-                "statement": "Q668-5840f565-46c0-8cd0-75cf-a39f30428cc3",
-                "pid": "P1705",
-                "text": "ꠄꠘ꠆ꠒꠤꠀ",
-                "lang": "syl",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P898",
-                    "string": "enɖia"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q668-5EA83902-666A-4C61-AD8A-B72594D7208C",
-                "pid": "P1705",
-                "text": "ہندوستان",
-                "lang": "ur",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              },
-              {
-                "statement": "Q668-901B90F6-8CE2-4ACE-9BC9-5A88946207D2",
-                "pid": "P1705",
-                "text": "بھارت",
-                "lang": "ur",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              },
-              {
-                "statement": "Q668-ED66346A-CFDE-48CA-8416-ADBAAC0962E7",
-                "pid": "P1705",
-                "text": "भारत",
-                "lang": "hi",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q668-a50bbd13-4052-8ec1-4349-1f2441d6b33f",
-                "pid": "P1705",
-                "text": "ভারত",
-                "lang": "as",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q668-AACB8D0C-9171-4E4C-B461-00BB7EB713C5",
-                "pid": "P1705",
-                "text": "भारत",
-                "lang": "mr",
-                "rank": "normal",
-                "provenance": "imported",
-                "qualifiers": [
-                  {
-                    "pid": "P443",
-                    "string": "http://commons.wikimedia.org/wiki/Special:FilePath/LL-Q1571%20%28mar%29-Vj18081991-%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4.wav"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-c91197d9-4eba-b990-1a13-2e7007d1228b",
-                "pid": "P1705",
-                "text": "भारत",
-                "lang": "mag",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              }
-            ],
-            "priority": 2.728
-          },
-          {
-            "primitive": "fact",
-            "pid": "P1549",
-            "form": "list",
-            "statements": [
-              {
-                "statement": "Q668-042AB78A-0BB9-4C7C-80F2-2C346C8E134C",
-                "pid": "P1549",
-                "text": "indiani",
-                "lang": "vec",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088292"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q668-0A20388E-9D1C-4539-BCDF-91D6D8F0C225",
-                "pid": "P1549",
-                "text": "Inderin",
-                "lang": "de",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q1775415"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q668-27119b37-443a-32ce-8a03-f13c6f31546e",
-                "pid": "P1549",
-                "text": "indios",
-                "lang": "es",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088292"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q668-321e13a0-4f0e-ec0d-c56d-324e3fad4071",
-                "pid": "P1549",
-                "text": "Indies",
-                "lang": "af",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              },
-              {
-                "statement": "Q668-324b31f0-4e7e-bb38-5330-85e82421c789",
-                "pid": "P1549",
-                "text": "ชาวอินเดีย",
-                "lang": "th",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              },
-              {
-                "statement": "Q668-351A8A56-7E57-4E2F-BA0A-740345FD606B",
-                "pid": "P1549",
-                "text": "barati",
-                "lang": "lfn",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              },
-              {
-                "statement": "Q668-12A2A7CC-EDC6-4D7C-AB5C-6A71D8FE0278",
-                "pid": "P1549",
-                "text": "indiano",
-                "lang": "it",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088290"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-14642A85-BFA4-4068-A973-4DB37EA7E369",
-                "pid": "P1549",
-                "text": "indian",
-                "lang": "vec",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088290"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-14662DFC-A9BB-4C88-806A-A4F0CA3BA776",
-                "pid": "P1549",
-                "text": "هنديات",
-                "lang": "ary",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088295"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-1627D713-BE12-4DB4-9DBB-F1D3F3F22F48",
-                "pid": "P1549",
-                "text": "هنديون",
-                "lang": "ar",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q146786"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-162D8032-9589-4202-B841-C4D644C3F1B4",
-                "pid": "P1549",
-                "text": "indiana",
-                "lang": "it",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088293"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-1a6f569f-46c8-db08-2af1-c7238c353b72",
-                "pid": "P1549",
-                "text": "Baratano",
-                "lang": "eo",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q668-1eab50b2-4998-575a-5c8e-01a490e1f664",
-                "pid": "P1549",
-                "text": "भारतीय",
-                "lang": "hi",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q668-222bcb51-45e6-4049-e1f8-64fd729a2d9e",
-                "pid": "P1549",
-                "text": "ભારતીય",
-                "lang": "gu",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q668-3765f0a4-49ad-ff1c-0898-cfda0bdb5b34",
-                "pid": "P1549",
-                "text": "ভারতীয়",
-                "lang": "bn",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q668-37f3e70f-44d2-25cb-d346-a5577fe8bcb1",
-                "pid": "P1549",
-                "text": "Indian",
-                "lang": "en",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q668-3BA09FB2-38CA-4DC5-8105-E8D1B170127C",
-                "pid": "P1549",
-                "text": "Indiano",
-                "lang": "io",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q668-42c275b5-4a41-f0dd-0a9b-23f785d80e95",
-                "pid": "P1549",
-                "text": "indisch",
-                "lang": "de",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q668-42d31b23-987a-4bb5-a0a4-ec35dee69963",
-                "pid": "P1549",
-                "text": "Indiach",
-                "lang": "ga",
-                "rank": "normal",
-                "provenance": "sourced",
-                "shown": false
-              },
-              {
-                "statement": "Q668-46E34679-B0BD-4DA0-869A-7ABDD95D218B",
-                "pid": "P1549",
-                "text": "indieni",
-                "lang": "ro",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q146786"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-49fcfd11-4864-4b7c-8a3a-02f591ec1394",
-                "pid": "P1549",
-                "text": "インド人",
-                "lang": "ja",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q668-4f9eff4f-49af-877c-dc2d-21cdf3b1c6ff",
-                "pid": "P1549",
-                "text": "indi",
-                "lang": "ca",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088290"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-514E7825-AAE8-4191-819A-EEFD4E38A46F",
-                "pid": "P1549",
-                "text": "Inder",
-                "lang": "de",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q499327"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-d8153eb3-4560-2cee-8dc1-b7c970a1dcea",
-                "pid": "P1549",
-                "text": "indiano",
-                "lang": "pt",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q668-DAAB9BA6-5A59-4D8D-9441-A7BB117791AE",
-                "pid": "P1549",
-                "text": "Lindänan",
-                "lang": "vo",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q668-97415D07-2640-49BF-9A7F-04013D1D7779",
-                "pid": "P1549",
-                "text": "הודי",
-                "lang": "he",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q499327"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-99a294f7-4908-b3b8-bd38-01a5fbf439eb",
-                "pid": "P1549",
-                "text": "индиец",
-                "lang": "ru",
-                "rank": "normal",
-                "provenance": "sourced",
-                "shown": false
-              },
-              {
-                "statement": "Q668-9bdc54b1-4c33-0e97-40b3-407047ae78c1",
-                "pid": "P1549",
-                "text": "indiai",
-                "lang": "hu",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q668-9C5A4B3E-01F3-45E8-98F2-9076C356D09C",
-                "pid": "P1549",
-                "text": "indian",
-                "lang": "lfn",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q668-9ef77efc-488e-a295-0159-9dfaf419c757",
-                "pid": "P1549",
-                "text": "Indien",
-                "lang": "fr",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088290"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-e1ba5fc3-400e-67b3-bdeb-1b93abe858e9",
-                "pid": "P1549",
-                "text": "ഭാരതം",
-                "lang": "ml",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q668-e83e5804-40e8-f218-90d2-7dec2986a8ff",
-                "pid": "P1549",
-                "text": "印度人",
-                "lang": "zh",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q668-E8E01665-7CD9-4A4E-AFF5-1F628894ED0E",
-                "pid": "P1549",
-                "text": "Indienne",
-                "lang": "fr",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088293"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-EAE47B93-FBF5-4383-B914-4E2C73AB0857",
-                "pid": "P1549",
-                "text": "הודית",
-                "lang": "he",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q1775415"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-7DFC6196-E7B7-4920-B886-86BFA09DFA6A",
-                "pid": "P1549",
-                "text": "india",
-                "lang": "ast",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088293"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-573d24e8-4b70-af7a-d9b4-92012683e6e2",
-                "pid": "P1549",
-                "text": "Indiaas",
-                "lang": "nl",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q668-59024123-4512-76f3-8a2a-656f3f3cc4ce",
-                "pid": "P1549",
-                "text": "india",
-                "lang": "es",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088293"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-5dd9c4a8-408d-4b5e-419d-cc4bfb5d6cbf",
-                "pid": "P1549",
-                "text": "ਭਾਰਤੀ",
-                "lang": "pa",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q668-82D4601C-6378-488B-B132-9AB0B21E66CA",
-                "pid": "P1549",
-                "text": "هنود",
-                "lang": "ary",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088292"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-91764a6d-4635-43d0-ecc6-fce8a3d07602",
-                "pid": "P1549",
-                "text": "indio",
-                "lang": "es",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088290"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-efceec12-45ac-e2b8-b858-25badae46d16",
-                "pid": "P1549",
-                "text": "índia",
-                "lang": "ca",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088293"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-F43E0CD1-0A36-4734-B5EE-A86FB3881C30",
-                "pid": "P1549",
-                "text": "indiancă",
-                "lang": "ro",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q1775415"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-f43e52d5-4960-e1a8-1894-c42f98f61106",
-                "pid": "P1549",
-                "text": "индийский",
-                "lang": "ru",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q668-F4ED704A-F3EB-4631-89C5-A9CBBE951B53",
-                "pid": "P1549",
-                "text": "indiani",
-                "lang": "it",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088292"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-F52E3E31-E234-4946-81D9-20DC7C9931FD",
-                "pid": "P1549",
-                "text": "هندية",
-                "lang": "ary",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088293"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-FD2E6FCD-F0DE-4C4C-9230-7FB14AAB9146",
-                "pid": "P1549",
-                "text": "هندية",
-                "lang": "ar",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q1775415"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-ff36c845-4c64-38d6-507f-9e8616dc7d63",
-                "pid": "P1549",
-                "text": "indija",
-                "lang": "lv",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q668-6b1edd98-48d8-3846-6978-b04ca3ffe9e1",
-                "pid": "P1549",
-                "text": "Indijanac",
-                "lang": "hr",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q668-6d6baa26-4540-11b1-76ef-170e22292aaf",
-                "pid": "P1549",
-                "text": "Indijka",
-                "lang": "sl",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088293"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-729F492D-E906-41AE-88C8-C2CD8D171D28",
-                "pid": "P1549",
-                "text": "هندي",
-                "lang": "ary",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088290"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-a2022680-4a4a-f5a1-c383-9aa39458644c",
-                "pid": "P1549",
-                "text": "indias",
-                "lang": "es",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088295"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-A90695B0-FA0A-48DA-8D10-474FF66D102B",
-                "pid": "P1549",
-                "text": "indiana",
-                "lang": "vec",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088293"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-aae59f6b-4c6d-1174-995d-463b0adeb015",
-                "pid": "P1549",
-                "text": "هندي",
-                "lang": "ar",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q499327"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-B14ED070-3101-4ACB-9C5B-F7ABC9B2ED4C",
-                "pid": "P1549",
-                "text": "indiane",
-                "lang": "vec",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088295"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-c07ff394-4469-2d79-ba45-fb6cc952da2d",
-                "pid": "P1549",
-                "text": "индианка",
-                "lang": "ru",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q668-c756d6bd-4ce1-d1d5-a38f-e098380249f5",
-                "pid": "P1549",
-                "text": "indisk",
-                "lang": "ss",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q668-c8016668-4a18-b16a-95c3-e40ac9f74fc6",
-                "pid": "P1549",
-                "text": "Indijec",
-                "lang": "sl",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088290"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-CB472295-506F-4438-8B01-510AEB0C98A0",
-                "pid": "P1549",
-                "text": "indiu",
-                "lang": "ast",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088290"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-CD347D41-7DB2-4618-9E6F-E73B3A29DD47",
-                "pid": "P1549",
-                "text": "indian",
-                "lang": "ro",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q499327"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-D0013A27-9E14-4227-AA58-A223F20682CD",
-                "pid": "P1549",
-                "text": "indiane",
-                "lang": "it",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q47088295"
-                  }
-                ],
-                "shown": false
-              }
-            ],
-            "priority": 2.322
-          },
-          {
-            "primitive": "fact",
             "pid": "P2852",
             "form": "value",
             "statements": [
@@ -13261,11 +13503,11 @@ expression: composition
                 "qualifiers": [
                   {
                     "pid": "P51",
-                    "string": "http://commons.wikimedia.org/wiki/Special:FilePath/Jana%20Gana%20Mana%20instrumental.ogg"
+                    "file": "Jana Gana Mana instrumental.ogg"
                   },
                   {
                     "pid": "P51",
-                    "string": "http://commons.wikimedia.org/wiki/Special:FilePath/Jana%20gana%20mana%20vocal.ogg"
+                    "file": "Jana gana mana vocal.ogg"
                   }
                 ],
                 "shown": true
@@ -15597,113 +15839,6 @@ expression: composition
           },
           {
             "primitive": "fact",
-            "pid": "P1448",
-            "form": "list",
-            "statements": [
-              {
-                "statement": "Q668-000deb51-4cca-aaec-2a51-e5ad59890978",
-                "pid": "P1448",
-                "text": "भारत गणराज्य",
-                "lang": "hi",
-                "rank": "preferred",
-                "provenance": "imported",
-                "shown": true
-              },
-              {
-                "statement": "Q668-002A8E68-3F8D-472E-85ED-A27A078FF105",
-                "pid": "P1448",
-                "text": "India",
-                "lang": "en",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              },
-              {
-                "statement": "Q668-23c4d33c-4a92-8d98-60cb-84795de9c676",
-                "pid": "P1448",
-                "text": "Indická republika",
-                "lang": "sk",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              },
-              {
-                "statement": "Q668-52F05F22-ABEE-4E4F-AAF6-DBBB6F75AC6D",
-                "pid": "P1448",
-                "text": "République de l’Inde",
-                "lang": "fr",
-                "rank": "normal",
-                "provenance": "sourced",
-                "shown": true
-              },
-              {
-                "statement": "Q668-e41d6ce5-419d-797f-4108-196506be29ac",
-                "pid": "P1448",
-                "text": "Republic of India",
-                "lang": "en",
-                "rank": "preferred",
-                "provenance": "imported",
-                "qualifiers": [
-                  {
-                    "pid": "P805",
-                    "item": "Q3087336"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q668-7adf0dc9-4d22-cd41-a44a-7b6784bf1f09",
-                "pid": "P1448",
-                "text": "ꠀꠝ ꠝꠣꠘꠥꠅꠞ ꠄꠘ꠆ꠒꠤꠀ",
-                "lang": "syl",
-                "rank": "normal",
-                "provenance": "imported",
-                "qualifiers": [
-                  {
-                    "pid": "P898",
-                    "string": "am manuɔɾ enɖia"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q668-8020A9A4-A5E3-4755-BAF9-C7CB4B967B5B",
-                "pid": "P1448",
-                "text": "Republic of Bharat",
-                "lang": "en",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P805",
-                    "item": "Q3087336"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-8DF37E54-08B1-4217-8EB1-C3699FE53B43",
-                "pid": "P1448",
-                "text": "جمہوریہ ہندوستان",
-                "lang": "ur",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q668-b7738573-49fa-bd05-c44e-351256a41bda",
-                "pid": "P1448",
-                "text": "भारतगनराज्ज",
-                "lang": "mag",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              }
-            ],
-            "priority": 1.0
-          },
-          {
-            "primitive": "fact",
             "pid": "P2573",
             "form": "value",
             "statements": [
@@ -15759,158 +15894,6 @@ expression: composition
               "max": 100.0,
               "at": 0.04
             }
-          },
-          {
-            "primitive": "fact",
-            "pid": "P2561",
-            "form": "list",
-            "statements": [
-              {
-                "statement": "Q668-1703C36F-12BB-443E-A9B9-755D42D86A7D",
-                "pid": "P2561",
-                "text": "भारत",
-                "lang": "pi",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              },
-              {
-                "statement": "Q668-CF554155-DFA3-4CB8-9173-54CF047744EE",
-                "pid": "P2561",
-                "text": "Inde",
-                "lang": "fr",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              },
-              {
-                "statement": "Q668-D6E9B0F1-5A3F-4352-8BAF-7A4B1B78DCE4",
-                "pid": "P2561",
-                "text": "भारत",
-                "lang": "mag",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              },
-              {
-                "statement": "Q668-dd109fa1-47db-1cd3-10e3-f031a3705d22",
-                "pid": "P2561",
-                "text": "ꠄꠘ꠆ꠒꠤꠀ",
-                "lang": "syl",
-                "rank": "normal",
-                "provenance": "imported",
-                "qualifiers": [
-                  {
-                    "pid": "P898",
-                    "string": "enɖia"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q668-e0839940-4061-639d-c92a-e554b1d7b9c1",
-                "pid": "P2561",
-                "text": "Bharat",
-                "lang": "en",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              },
-              {
-                "statement": "Q668-53f72d08-4118-3a20-3559-c8b7ec7bec25",
-                "pid": "P2561",
-                "text": "ᱥᱤᱧᱚᱛ",
-                "lang": "sat",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              },
-              {
-                "statement": "Q668-ef088865-4806-3fda-2265-39db2ea1d979",
-                "pid": "P2561",
-                "text": "ভারত",
-                "lang": "bn",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q668-F07C0D82-1EC3-491F-86DF-9D55F6AFD569",
-                "pid": "P2561",
-                "text": "ভারত",
-                "lang": "as",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q668-F3B68078-2021-448B-81F3-65B1C9767E49",
-                "pid": "P2561",
-                "text": "بھارت",
-                "lang": "ur",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q668-60054418-4845-4840-b091-7abc3c135b44",
-                "pid": "P2561",
-                "text": "India",
-                "lang": "en",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q668-657F9074-3BE4-4620-B6C5-924C57E0E3C2",
-                "pid": "P2561",
-                "text": "இந்தியா",
-                "lang": "ta",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P443",
-                    "string": "http://commons.wikimedia.org/wiki/Special:FilePath/LL-Q5885%20%28tam%29-Sriveenkat-%E0%AE%87%E0%AE%A8%E0%AF%8D%E0%AE%A4%E0%AE%BF%E0%AE%AF%E0%AE%BE.wav"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-9F918771-ABBF-4583-8943-44BD4BC7A45D",
-                "pid": "P2561",
-                "text": "भारत",
-                "lang": "mr",
-                "rank": "normal",
-                "provenance": "imported",
-                "qualifiers": [
-                  {
-                    "pid": "P443",
-                    "string": "http://commons.wikimedia.org/wiki/Special:FilePath/LL-Q1571%20%28mar%29-Vj18081991-%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4.wav"
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q668-ADBBD8B3-A538-4EA7-B25A-796CF61E5327",
-                "pid": "P2561",
-                "text": "भारत",
-                "lang": "hi",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "Q668-46c14efe-4080-04d1-994a-b6e6eef390a9",
-                "pid": "P2561",
-                "text": "ہِندوستان",
-                "lang": "ks",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              }
-            ],
-            "priority": 1.0
           },
           {
             "primitive": "fact",
@@ -16121,65 +16104,6 @@ expression: composition
               }
             ],
             "priority": 0.571
-          },
-          {
-            "primitive": "fact",
-            "pid": "P1813",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-0626ae98-4ae6-8416-2a6e-ec9809122f1b",
-                "pid": "P1813",
-                "text": "ꠁꠘ꠆ꠖ",
-                "lang": "syl",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P898",
-                    "string": "ind̪"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q668-0c6c7d79-407c-4e9a-f8af-cbb4db9c6557",
-                "pid": "P1813",
-                "text": "Inde",
-                "lang": "fr",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              },
-              {
-                "statement": "Q668-8b305a5f-42a5-dcf8-b11e-69a84c0c26c4",
-                "pid": "P1813",
-                "text": "भारत",
-                "lang": "mag",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              },
-              {
-                "statement": "Q668-a59fec69-4747-5b0c-3bbc-2d076c398b1e",
-                "pid": "P1813",
-                "text": "हिंद",
-                "lang": "hi",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              },
-              {
-                "statement": "Q668-cbf38e27-4bb9-1e4f-5f36-0589ed1092da",
-                "pid": "P1813",
-                "text": "India",
-                "lang": "en",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.286
           },
           {
             "primitive": "fact",
@@ -16651,38 +16575,6 @@ expression: composition
                 "globe": "Q2",
                 "rank": "normal",
                 "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P1451",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-f7cb7ece-4c30-2787-5b76-66b659185bf3",
-                "pid": "P1451",
-                "text": "सत्यमेव जयते",
-                "lang": "sa",
-                "rank": "preferred",
-                "provenance": "none",
-                "shown": true
-              },
-              {
-                "statement": "Q668-B82BCC32-36E7-4FD8-AAFB-D6567C449F39",
-                "pid": "P1451",
-                "text": "!Incredible India",
-                "lang": "en",
-                "rank": "normal",
-                "provenance": "imported",
-                "qualifiers": [
-                  {
-                    "pid": "P3831",
-                    "item": "Q96036107"
-                  }
-                ],
                 "shown": true
               }
             ],

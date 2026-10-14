@@ -104,6 +104,8 @@ pub enum Primitive {
     Pictures,
     /// The recordings of one property (pronunciations): one player.
     Sounds,
+    /// The names of the item in many languages: one choice of language.
+    Names,
     Map,
     Fact,
     Series,
@@ -126,13 +128,14 @@ pub enum Primitive {
 impl Primitive {
     /// Every primitive, in the order of their CSS in the stylesheet and of
     /// their scripts in a page.
-    pub const ALL: [Primitive; 22] = [
+    pub const ALL: [Primitive; 23] = [
         Self::Title,
         Self::Kind,
         Self::Prose,
         Self::Media,
         Self::Pictures,
         Self::Sounds,
+        Self::Names,
         Self::Map,
         Self::Fact,
         Self::Series,

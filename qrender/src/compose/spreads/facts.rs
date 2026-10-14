@@ -9,7 +9,7 @@ use crate::compose::facts::PropertyFacts;
 use crate::config::SpreadSpec;
 use crate::config::rules::{PropertyMake, first};
 use crate::primitives::fact::Age;
-use crate::primitives::{credits, split, succession, works};
+use crate::primitives::{credits, names, split, succession, works};
 use crate::schema::Block;
 use crate::vocab::Role;
 use crate::wikidata::{AGE, DATE_OF_BIRTH, DATE_OF_DEATH, INSTANCE_OF};
@@ -20,6 +20,10 @@ pub fn build<'a>(c: &mut Composer<'a>, spec: &'a SpreadSpec) -> super::Built {
     let thresholds = &config.layouts.thresholds;
     let mut made = Vec::new();
     for pid in &pids {
+        // The names in many languages, at the place of the first.
+        if let Some(block) = names::at(c, *pid, spec, &pids) {
+            made.push(Made::Block { make: None, block });
+        }
         // A split, at the place of its first part; its parts' other
         // statements go on below.
         if let Some(block) = split::at(c, *pid, &pids) {

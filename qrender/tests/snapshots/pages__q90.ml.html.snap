@@ -943,7 +943,332 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
             <section class="spread t-columns"
              data-spread="names"
              data-dimension="names"><h2><span class="fb" lang="en">name</span></h2><div data-slot="stack">
-        <div class="block">
+        <qr-names class="block names">
+<select class="name-choice"
+        hidden
+        aria-label="Language"><option value="ml" data-lang-name="ml">ml</option><option value="en" data-lang-name="en">en</option><option value="fr" data-lang-name="fr">fr</option><option value="ast" data-lang-name="ast">ast</option><option value="br" data-lang-name="br">br</option><option value="ca" data-lang-name="ca">ca</option><option value="de" data-lang-name="de">de</option><option value="eo" data-lang-name="eo">eo</option><option value="es" data-lang-name="es">es</option><option value="hu" data-lang-name="hu">hu</option><option value="it" data-lang-name="it">it</option><option value="ka" data-lang-name="ka">ka</option><option value="la" data-lang-name="la">la</option><option value="lb" data-lang-name="lb">lb</option><option value="pl" data-lang-name="pl">pl</option><option value="ru" data-lang-name="ru">ru</option><option value="sl" data-lang-name="sl">sl</option><option value="uk" data-lang-name="uk">uk</option></select>
+<div class="groups">
+        <section class="name-group" data-lang="ml">
+            <h4 data-lang-name="ml">ml</h4>
+            <dl>
+                    <div class="row fallback">
+                        <dt>കളിപ്പേര്</dt>
+                        <dd><span lang="en" class="fb">The City of Light</span><span class="prov-none" title="—"></span><br><span lang="en" class="fb">The City of Love</span><span class="prov-none" title="—"></span>
+                                <span class="note" data-lang-name="en">en</span><a class="add-label" href="https://www.wikidata.org/wiki/Q90#P1449" aria-label="Add it in this language">+</a></dd>
+                    </div>
+                    <div class="row fallback">
+                        <dt>നിവാസി</dt>
+                        <dd><span lang="en" class="fb">Parisians</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q105740844"><span class="fb" lang="en">Parisians</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q105740844"
+           aria-label="Add a label in your language">+</a></span> · <a href="https://www.wikidata.org/wiki/Q146786">ബഹുവചനം</a></span><span class="prov-none" title="—"></span><br><span lang="en" class="fb">Parisian</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q110786">ഏകവചനം</a></span><span class="prov-none" title="—"></span>
+                                <span class="note" data-lang-name="en">en</span><a class="add-label" href="https://www.wikidata.org/wiki/Q90#P1549" aria-label="Add it in this language">+</a></dd>
+                    </div>
+            </dl>
+        </section>
+        <section class="name-group" data-lang="en">
+            <h4 data-lang-name="en">en</h4>
+            <dl>
+                    <div class="row">
+                        <dt>കളിപ്പേര്</dt>
+                        <dd><span lang="en">The City of Light</span><span class="prov-none" title="—"></span><br><span lang="en">The City of Love</span><span class="prov-none" title="—"></span></dd>
+                    </div>
+                    <div class="row">
+                        <dt>നിവാസി</dt>
+                        <dd><span lang="en">Parisians</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q105740844"><span class="fb" lang="en">Parisians</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q105740844"
+           aria-label="Add a label in your language">+</a></span> · <a href="https://www.wikidata.org/wiki/Q146786">ബഹുവചനം</a></span><span class="prov-none" title="—"></span><br><span lang="en">Parisian</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q110786">ഏകവചനം</a></span><span class="prov-none" title="—"></span></dd>
+                    </div>
+            </dl>
+        </section>
+        <section class="name-group" data-lang="fr">
+            <h4 data-lang-name="fr">fr</h4>
+            <dl>
+                    <div class="row">
+                        <dt>ഔദ്യോഗിക നാമം</dt>
+                        <dd><span lang="fr">Paris</span></dd>
+                    </div>
+                    <div class="row">
+                        <dt>തദ്ദേശനാമം</dt>
+                        <dd><span lang="fr">Paris</span> <span class="note"><a class="play"
+   href="https://commons.wikimedia.org/wiki/Special:FilePath/LL-Q150%20%28fra%29-Ash%20Crow-Paris.wav"
+   aria-label="ഉച്ചാരണ ശബ്ദം">▶</a></span><span class="prov-none" title="—"></span></dd>
+                    </div>
+                    <div class="row">
+                        <dt>കളിപ്പേര്</dt>
+                        <dd><span lang="fr">Ville-Lumière</span><span class="prov-none" title="—"></span></dd>
+                    </div>
+                    <div class="row">
+                        <dt>നിവാസി</dt>
+                        <dd><span lang="fr">Parisien</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q499327">പുല്ലിംഗം</a> · <a href="https://www.wikidata.org/wiki/Q110786">ഏകവചനം</a></span><br><span lang="fr">Parisienne</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q150">ഫ്രഞ്ച് ഭാഷ</a> · <span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088293"><span class="fb" lang="en">feminine singular</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088293"
+           aria-label="Add a label in your language">+</a></span></span></dd>
+                    </div>
+            </dl>
+        </section>
+        <section class="name-group" data-lang="ast">
+            <h4 data-lang-name="ast">ast</h4>
+            <dl>
+                    <div class="row fallback">
+                        <dt>കളിപ്പേര്</dt>
+                        <dd><span lang="en" class="fb">The City of Light</span><span class="prov-none" title="—"></span><br><span lang="en" class="fb">The City of Love</span><span class="prov-none" title="—"></span>
+                                <span class="note" data-lang-name="en">en</span><a class="add-label" href="https://www.wikidata.org/wiki/Q90#P1449" aria-label="Add it in this language">+</a></dd>
+                    </div>
+                    <div class="row">
+                        <dt>നിവാസി</dt>
+                        <dd><span lang="ast">parisina</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088293"><span class="fb" lang="en">feminine singular</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088293"
+           aria-label="Add a label in your language">+</a></span></span><br><span lang="ast">parisinos</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088292"><span class="fb" lang="en">masculine plural</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088292"
+           aria-label="Add a label in your language">+</a></span></span><br><span lang="ast">parisines</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088295"><span class="fb" lang="en">feminine plural</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088295"
+           aria-label="Add a label in your language">+</a></span></span><br><span lang="ast">parisín</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088290"><span class="fb" lang="en">masculine singular</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088290"
+           aria-label="Add a label in your language">+</a></span></span><br><span lang="ast">parisino</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q1775461">നപുംസകം</a></span></dd>
+                    </div>
+            </dl>
+        </section>
+        <section class="name-group" data-lang="br">
+            <h4 data-lang-name="br">br</h4>
+            <dl>
+                    <div class="row fallback">
+                        <dt>കളിപ്പേര്</dt>
+                        <dd><span lang="en" class="fb">The City of Light</span><span class="prov-none" title="—"></span><br><span lang="en" class="fb">The City of Love</span><span class="prov-none" title="—"></span>
+                                <span class="note" data-lang-name="en">en</span><a class="add-label" href="https://www.wikidata.org/wiki/Q90#P1449" aria-label="Add it in this language">+</a></dd>
+                    </div>
+                    <div class="row">
+                        <dt>നിവാസി</dt>
+                        <dd><span lang="br">Parizian</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088290"><span class="fb" lang="en">masculine singular</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088290"
+           aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span><br><span lang="br">Parizianez</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088293"><span class="fb" lang="en">feminine singular</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088293"
+           aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span></dd>
+                    </div>
+            </dl>
+        </section>
+        <section class="name-group" data-lang="ca">
+            <h4 data-lang-name="ca">ca</h4>
+            <dl>
+                    <div class="row fallback">
+                        <dt>കളിപ്പേര്</dt>
+                        <dd><span lang="en" class="fb">The City of Light</span><span class="prov-none" title="—"></span><br><span lang="en" class="fb">The City of Love</span><span class="prov-none" title="—"></span>
+                                <span class="note" data-lang-name="en">en</span><a class="add-label" href="https://www.wikidata.org/wiki/Q90#P1449" aria-label="Add it in this language">+</a></dd>
+                    </div>
+                    <div class="row">
+                        <dt>നിവാസി</dt>
+                        <dd><span lang="ca">parisenc</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q6581097">പുരുഷൻ</a></span><span class="prov-none" title="—"></span><br><span lang="ca">parisenca</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q6581072">സ്ത്രീ</a></span><span class="prov-none" title="—"></span></dd>
+                    </div>
+            </dl>
+        </section>
+        <section class="name-group" data-lang="de">
+            <h4 data-lang-name="de">de</h4>
+            <dl>
+                    <div class="row fallback">
+                        <dt>കളിപ്പേര്</dt>
+                        <dd><span lang="en" class="fb">The City of Light</span><span class="prov-none" title="—"></span><br><span lang="en" class="fb">The City of Love</span><span class="prov-none" title="—"></span>
+                                <span class="note" data-lang-name="en">en</span><a class="add-label" href="https://www.wikidata.org/wiki/Q90#P1449" aria-label="Add it in this language">+</a></dd>
+                    </div>
+                    <div class="row">
+                        <dt>നിവാസി</dt>
+                        <dd><span lang="de">Pariserinnen</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088295"><span class="fb" lang="en">feminine plural</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088295"
+           aria-label="Add a label in your language">+</a></span> · <span class="fb-group"><a href="https://www.wikidata.org/wiki/Q105740844"><span class="fb" lang="en">Parisians</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q105740844"
+           aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span><br><span lang="de">Pariserin</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088293"><span class="fb" lang="en">feminine singular</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088293"
+           aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span><br><span lang="de">Pariser</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088290"><span class="fb" lang="en">masculine singular</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088290"
+           aria-label="Add a label in your language">+</a></span> · <span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088292"><span class="fb" lang="en">masculine plural</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088292"
+           aria-label="Add a label in your language">+</a></span> · <span class="fb-group"><a href="https://www.wikidata.org/wiki/Q105740844"><span class="fb" lang="en">Parisians</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q105740844"
+           aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span></dd>
+                    </div>
+            </dl>
+        </section>
+        <section class="name-group" data-lang="eo">
+            <h4 data-lang-name="eo">eo</h4>
+            <dl>
+                    <div class="row fallback">
+                        <dt>കളിപ്പേര്</dt>
+                        <dd><span lang="en" class="fb">The City of Light</span><span class="prov-none" title="—"></span><br><span lang="en" class="fb">The City of Love</span><span class="prov-none" title="—"></span>
+                                <span class="note" data-lang-name="en">en</span><a class="add-label" href="https://www.wikidata.org/wiki/Q90#P1449" aria-label="Add it in this language">+</a></dd>
+                    </div>
+                    <div class="row">
+                        <dt>നിവാസി</dt>
+                        <dd><span lang="eo">Parizano</span><span class="prov-none" title="—"></span></dd>
+                    </div>
+            </dl>
+        </section>
+        <section class="name-group" data-lang="es">
+            <h4 data-lang-name="es">es</h4>
+            <dl>
+                    <div class="row">
+                        <dt>കളിപ്പേര്</dt>
+                        <dd><span lang="es">La Ciudad de la Luz</span><span class="prov-none" title="—"></span></dd>
+                    </div>
+                    <div class="row fallback">
+                        <dt>നിവാസി</dt>
+                        <dd><span lang="en" class="fb">Parisians</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q105740844"><span class="fb" lang="en">Parisians</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q105740844"
+           aria-label="Add a label in your language">+</a></span> · <a href="https://www.wikidata.org/wiki/Q146786">ബഹുവചനം</a></span><span class="prov-none" title="—"></span><br><span lang="en" class="fb">Parisian</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q110786">ഏകവചനം</a></span><span class="prov-none" title="—"></span>
+                                <span class="note" data-lang-name="en">en</span><a class="add-label" href="https://www.wikidata.org/wiki/Q90#P1549" aria-label="Add it in this language">+</a></dd>
+                    </div>
+            </dl>
+        </section>
+        <section class="name-group" data-lang="hu">
+            <h4 data-lang-name="hu">hu</h4>
+            <dl>
+                    <div class="row fallback">
+                        <dt>കളിപ്പേര്</dt>
+                        <dd><span lang="en" class="fb">The City of Light</span><span class="prov-none" title="—"></span><br><span lang="en" class="fb">The City of Love</span><span class="prov-none" title="—"></span>
+                                <span class="note" data-lang-name="en">en</span><a class="add-label" href="https://www.wikidata.org/wiki/Q90#P1449" aria-label="Add it in this language">+</a></dd>
+                    </div>
+                    <div class="row">
+                        <dt>നിവാസി</dt>
+                        <dd><span lang="hu">párizsi</span><span class="prov-none" title="—"></span></dd>
+                    </div>
+            </dl>
+        </section>
+        <section class="name-group" data-lang="it">
+            <h4 data-lang-name="it">it</h4>
+            <dl>
+                    <div class="row fallback">
+                        <dt>കളിപ്പേര്</dt>
+                        <dd><span lang="en" class="fb">The City of Light</span><span class="prov-none" title="—"></span><br><span lang="en" class="fb">The City of Love</span><span class="prov-none" title="—"></span>
+                                <span class="note" data-lang-name="en">en</span><a class="add-label" href="https://www.wikidata.org/wiki/Q90#P1449" aria-label="Add it in this language">+</a></dd>
+                    </div>
+                    <div class="row">
+                        <dt>നിവാസി</dt>
+                        <dd><span lang="it">parigini</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088292"><span class="fb" lang="en">masculine plural</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088292"
+           aria-label="Add a label in your language">+</a></span></span><span class="prov-imported" title="ഇറക്കുമതി സ്രോതസ്">W</span></dd>
+                    </div>
+            </dl>
+        </section>
+        <section class="name-group" data-lang="ka">
+            <h4 data-lang-name="ka">ka</h4>
+            <dl>
+                    <div class="row fallback">
+                        <dt>കളിപ്പേര്</dt>
+                        <dd><span lang="en" class="fb">The City of Light</span><span class="prov-none" title="—"></span><br><span lang="en" class="fb">The City of Love</span><span class="prov-none" title="—"></span>
+                                <span class="note" data-lang-name="en">en</span><a class="add-label" href="https://www.wikidata.org/wiki/Q90#P1449" aria-label="Add it in this language">+</a></dd>
+                    </div>
+                    <div class="row">
+                        <dt>നിവാസി</dt>
+                        <dd><span lang="ka">პარიზელი</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q110786">ഏകവചനം</a></span><span class="prov-none" title="—"></span><br><span lang="ka">პარიზელები</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q146786">ബഹുവചനം</a> · <span class="fb-group"><a href="https://www.wikidata.org/wiki/Q105740844"><span class="fb" lang="en">Parisians</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q105740844"
+           aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span></dd>
+                    </div>
+            </dl>
+        </section>
+        <section class="name-group" data-lang="la">
+            <h4 data-lang-name="la">la</h4>
+            <dl>
+                    <div class="row fallback">
+                        <dt>കളിപ്പേര്</dt>
+                        <dd><span lang="en" class="fb">The City of Light</span><span class="prov-none" title="—"></span><br><span lang="en" class="fb">The City of Love</span><span class="prov-none" title="—"></span>
+                                <span class="note" data-lang-name="en">en</span><a class="add-label" href="https://www.wikidata.org/wiki/Q90#P1449" aria-label="Add it in this language">+</a></dd>
+                    </div>
+                    <div class="row fallback">
+                        <dt>നിവാസി</dt>
+                        <dd><span lang="en" class="fb">Parisians</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q105740844"><span class="fb" lang="en">Parisians</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q105740844"
+           aria-label="Add a label in your language">+</a></span> · <a href="https://www.wikidata.org/wiki/Q146786">ബഹുവചനം</a></span><span class="prov-none" title="—"></span><br><span lang="en" class="fb">Parisian</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q110786">ഏകവചനം</a></span><span class="prov-none" title="—"></span>
+                                <span class="note" data-lang-name="en">en</span><a class="add-label" href="https://www.wikidata.org/wiki/Q90#P1549" aria-label="Add it in this language">+</a></dd>
+                    </div>
+                    <div class="row">
+                        <dt><span class="fb-group"><span class="fb"
+      lang="en">motto text</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/P1451"
+           aria-label="Add a label in your language">+</a></span></dt>
+                        <dd><span lang="la">Fluctuat nec mergitur</span> <span class="note">1853 – · <span lang="en">Tossed by the waves but never sunk</span> <span class="note" data-lang-name="en">en</span> · <span lang="fr">Il est battu par les flots, mais ne sombre pas</span> <span class="note" data-lang-name="fr">fr</span> · <span lang="uk">Його хитає, але він не тоне</span> <span class="note" data-lang-name="uk">uk</span> · <span lang="ko">흔들릴지언정 가라앉지 않는다</span> <span class="note" data-lang-name="ko">ko</span> · <span lang="de">Es schwankt hin und her, aber geht nicht unter</span> <span class="note" data-lang-name="de">de</span></span></dd>
+                    </div>
+            </dl>
+        </section>
+        <section class="name-group" data-lang="lb">
+            <h4 data-lang-name="lb">lb</h4>
+            <dl>
+                    <div class="row fallback">
+                        <dt>കളിപ്പേര്</dt>
+                        <dd><span lang="en" class="fb">The City of Light</span><span class="prov-none" title="—"></span><br><span lang="en" class="fb">The City of Love</span><span class="prov-none" title="—"></span>
+                                <span class="note" data-lang-name="en">en</span><a class="add-label" href="https://www.wikidata.org/wiki/Q90#P1449" aria-label="Add it in this language">+</a></dd>
+                    </div>
+                    <div class="row">
+                        <dt>നിവാസി</dt>
+                        <dd><span lang="lb">Paräisserin</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q6581072">സ്ത്രീ</a></span><span class="prov-none" title="—"></span><br><span lang="lb">Paräisser</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q6581097">പുരുഷൻ</a></span><span class="prov-none" title="—"></span></dd>
+                    </div>
+            </dl>
+        </section>
+        <section class="name-group" data-lang="pl">
+            <h4 data-lang-name="pl">pl</h4>
+            <dl>
+                    <div class="row fallback">
+                        <dt>കളിപ്പേര്</dt>
+                        <dd><span lang="en" class="fb">The City of Light</span><span class="prov-none" title="—"></span><br><span lang="en" class="fb">The City of Love</span><span class="prov-none" title="—"></span>
+                                <span class="note" data-lang-name="en">en</span><a class="add-label" href="https://www.wikidata.org/wiki/Q90#P1449" aria-label="Add it in this language">+</a></dd>
+                    </div>
+                    <div class="row">
+                        <dt>നിവാസി</dt>
+                        <dd><span lang="pl">paryżanin</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088290"><span class="fb" lang="en">masculine singular</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088290"
+           aria-label="Add a label in your language">+</a></span></span><br><span lang="pl">paryżanka</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088293"><span class="fb" lang="en">feminine singular</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088293"
+           aria-label="Add a label in your language">+</a></span></span></dd>
+                    </div>
+            </dl>
+        </section>
+        <section class="name-group" data-lang="ru">
+            <h4 data-lang-name="ru">ru</h4>
+            <dl>
+                    <div class="row fallback">
+                        <dt>കളിപ്പേര്</dt>
+                        <dd><span lang="en" class="fb">The City of Light</span><span class="prov-none" title="—"></span><br><span lang="en" class="fb">The City of Love</span><span class="prov-none" title="—"></span>
+                                <span class="note" data-lang-name="en">en</span><a class="add-label" href="https://www.wikidata.org/wiki/Q90#P1449" aria-label="Add it in this language">+</a></dd>
+                    </div>
+                    <div class="row">
+                        <dt>നിവാസി</dt>
+                        <dd><span lang="ru">парижанка</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q1775415">സ്ത്രീലിംഗം</a></span><span class="prov-none" title="—"></span><br><span lang="ru">парижанин</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q499327">പുല്ലിംഗം</a></span><span class="prov-none" title="—"></span><br><span lang="ru">парижане</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q146786">ബഹുവചനം</a></span><span class="prov-none" title="—"></span></dd>
+                    </div>
+            </dl>
+        </section>
+        <section class="name-group" data-lang="sl">
+            <h4 data-lang-name="sl">sl</h4>
+            <dl>
+                    <div class="row fallback">
+                        <dt>കളിപ്പേര്</dt>
+                        <dd><span lang="en" class="fb">The City of Light</span><span class="prov-none" title="—"></span><br><span lang="en" class="fb">The City of Love</span><span class="prov-none" title="—"></span>
+                                <span class="note" data-lang-name="en">en</span><a class="add-label" href="https://www.wikidata.org/wiki/Q90#P1449" aria-label="Add it in this language">+</a></dd>
+                    </div>
+                    <div class="row">
+                        <dt>നിവാസി</dt>
+                        <dd><span lang="sl">Parižan</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088290"><span class="fb" lang="en">masculine singular</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088290"
+           aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span><br><span lang="sl">Parižanka</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088293"><span class="fb" lang="en">feminine singular</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088293"
+           aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span></dd>
+                    </div>
+            </dl>
+        </section>
+        <section class="name-group" data-lang="uk">
+            <h4 data-lang-name="uk">uk</h4>
+            <dl>
+                    <div class="row fallback">
+                        <dt>കളിപ്പേര്</dt>
+                        <dd><span lang="en" class="fb">The City of Light</span><span class="prov-none" title="—"></span><br><span lang="en" class="fb">The City of Love</span><span class="prov-none" title="—"></span>
+                                <span class="note" data-lang-name="en">en</span><a class="add-label" href="https://www.wikidata.org/wiki/Q90#P1449" aria-label="Add it in this language">+</a></dd>
+                    </div>
+                    <div class="row">
+                        <dt>നിവാസി</dt>
+                        <dd><span lang="uk">парижанка</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088293"><span class="fb" lang="en">feminine singular</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088293"
+           aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span><br><span lang="uk">парижанин</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088290"><span class="fb" lang="en">masculine singular</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088290"
+           aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span></dd>
+                    </div>
+            </dl>
+        </section>
+</div>
+</qr-names><div class="block">
         <h3>ഉച്ചാരണ ശബ്ദം<span class="prov-none" title="—"></span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P443"
        aria-label="Edit">✎</a></h3>
@@ -1058,262 +1383,7 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
             popovertarget="p45"
             aria-label="Credit">i</button><span id="p45" popover class="pop">RaphaëlMignon · CC BY 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P237"
-       aria-label="Edit">✎</a></span></figure></div></div></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>ഔദ്യോഗിക നാമം</dt>
-<dd><span lang="fr">Paris</span> <span class="note">fr</span></dd>
-<span class="tools">
-        
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1448"
-       aria-label="Edit">✎</a>
-    </span>
-</div><div class="row r-value"><dt>തദ്ദേശനാമം</dt>
-<dd><span lang="fr">Paris</span> <span class="note">fr</span> <span class="note">http://commons.wikimedia.org/wiki/Special:FilePath/LL-Q150%20%28fra%29-Ash%20Crow-Paris.wav</span></dd>
-<span class="tools">
-        <span class="prov-none" title="—"></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1705"
-       aria-label="Edit">✎</a>
-    </span>
-</div><div class="row r-value"><dt>കളിപ്പേര്</dt>
-<dd><span class="v"><span lang="en">The City of Light</span> <span class="note">en</span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1449"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="es">La Ciudad de la Luz</span> <span class="note">es</span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1449"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="fr">Ville-Lumière</span> <span class="note">fr</span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1449"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="en">The City of Love</span> <span class="note">en</span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1449"
-       aria-label="Edit">✎</a>
-    </span></dd>
-<span class="tools"></span>
-</div><div class="row r-list"><dt>നിവാസി</dt>
-<dd><span class="v"><span lang="de">Pariserinnen</span> <span class="note">de</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088295"><span class="fb" lang="en">feminine plural</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088295"
-           aria-label="Add a label in your language">+</a></span> · <span class="fb-group"><a href="https://www.wikidata.org/wiki/Q105740844"><span class="fb" lang="en">Parisians</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q105740844"
-           aria-label="Add a label in your language">+</a></span></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="ast">parisina</span> <span class="note">ast</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088293"><span class="fb" lang="en">feminine singular</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088293"
-           aria-label="Add a label in your language">+</a></span></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="ast">parisinos</span> <span class="note">ast</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088292"><span class="fb" lang="en">masculine plural</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088292"
-           aria-label="Add a label in your language">+</a></span></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="de">Pariserin</span> <span class="note">de</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088293"><span class="fb" lang="en">feminine singular</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088293"
-           aria-label="Add a label in your language">+</a></span></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="sl">Parižan</span> <span class="note">sl</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088290"><span class="fb" lang="en">masculine singular</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088290"
-           aria-label="Add a label in your language">+</a></span></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="fr">Parisien</span> <span class="note">fr</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q499327">പുല്ലിംഗം</a> · <a href="https://www.wikidata.org/wiki/Q110786">ഏകവചനം</a></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><button class="more" type="button" command="show-modal" commandfor="d46">+26</button><dialog id="d46" closedby="any">
-        <header>
-            <h2>നിവാസി</h2>
-            <button type="button"
-                    command="close"
-                    commandfor="d46"
-                    aria-label="Close">×</button>
-        </header>
-        <div class="dialog-body"><span class="v"><span lang="de">Pariserinnen</span> <span class="note">de</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088295"><span class="fb" lang="en">feminine plural</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088295"
-           aria-label="Add a label in your language">+</a></span> · <span class="fb-group"><a href="https://www.wikidata.org/wiki/Q105740844"><span class="fb" lang="en">Parisians</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q105740844"
-           aria-label="Add a label in your language">+</a></span></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="ast">parisina</span> <span class="note">ast</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088293"><span class="fb" lang="en">feminine singular</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088293"
-           aria-label="Add a label in your language">+</a></span></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="ast">parisinos</span> <span class="note">ast</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088292"><span class="fb" lang="en">masculine plural</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088292"
-           aria-label="Add a label in your language">+</a></span></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="de">Pariserin</span> <span class="note">de</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088293"><span class="fb" lang="en">feminine singular</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088293"
-           aria-label="Add a label in your language">+</a></span></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="sl">Parižan</span> <span class="note">sl</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088290"><span class="fb" lang="en">masculine singular</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088290"
-           aria-label="Add a label in your language">+</a></span></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="fr">Parisien</span> <span class="note">fr</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q499327">പുല്ലിംഗം</a> · <a href="https://www.wikidata.org/wiki/Q110786">ഏകവചനം</a></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="lb">Paräisserin</span> <span class="note">lb</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q6581072">സ്ത്രീ</a></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="it">parigini</span> <span class="note">it</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088292"><span class="fb" lang="en">masculine plural</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088292"
-           aria-label="Add a label in your language">+</a></span></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="ca">parisenc</span> <span class="note">ca</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q6581097">പുരുഷൻ</a></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="sl">Parižanka</span> <span class="note">sl</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088293"><span class="fb" lang="en">feminine singular</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088293"
-           aria-label="Add a label in your language">+</a></span></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="lb">Paräisser</span> <span class="note">lb</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q6581097">പുരുഷൻ</a></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="pl">paryżanin</span> <span class="note">pl</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088290"><span class="fb" lang="en">masculine singular</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088290"
-           aria-label="Add a label in your language">+</a></span></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="eo">Parizano</span> <span class="note">eo</span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="uk">парижанка</span> <span class="note">uk</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088293"><span class="fb" lang="en">feminine singular</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088293"
-           aria-label="Add a label in your language">+</a></span></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="en">Parisians</span> <span class="note">en</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q105740844"><span class="fb" lang="en">Parisians</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q105740844"
-           aria-label="Add a label in your language">+</a></span> · <a href="https://www.wikidata.org/wiki/Q146786">ബഹുവചനം</a></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="de">Pariser</span> <span class="note">de</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088290"><span class="fb" lang="en">masculine singular</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088290"
-           aria-label="Add a label in your language">+</a></span> · <span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088292"><span class="fb" lang="en">masculine plural</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088292"
-           aria-label="Add a label in your language">+</a></span> · <span class="fb-group"><a href="https://www.wikidata.org/wiki/Q105740844"><span class="fb" lang="en">Parisians</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q105740844"
-           aria-label="Add a label in your language">+</a></span></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="ast">parisines</span> <span class="note">ast</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088295"><span class="fb" lang="en">feminine plural</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088295"
-           aria-label="Add a label in your language">+</a></span></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="ru">парижанка</span> <span class="note">ru</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q1775415">സ്ത്രീലിംഗം</a></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="ca">parisenca</span> <span class="note">ca</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q6581072">സ്ത്രീ</a></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="fr">Parisienne</span> <span class="note">fr</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q150">ഫ്രഞ്ച് ഭാഷ</a> · <span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088293"><span class="fb" lang="en">feminine singular</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088293"
-           aria-label="Add a label in your language">+</a></span></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="ka">პარიზელი</span> <span class="note">ka</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q110786">ഏകവചനം</a></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="br">Parizian</span> <span class="note">br</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088290"><span class="fb" lang="en">masculine singular</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088290"
-           aria-label="Add a label in your language">+</a></span></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="ka">პარიზელები</span> <span class="note">ka</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q146786">ബഹുവചനം</a> · <span class="fb-group"><a href="https://www.wikidata.org/wiki/Q105740844"><span class="fb" lang="en">Parisians</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q105740844"
-           aria-label="Add a label in your language">+</a></span></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="ast">parisín</span> <span class="note">ast</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088290"><span class="fb" lang="en">masculine singular</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088290"
-           aria-label="Add a label in your language">+</a></span></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="ru">парижанин</span> <span class="note">ru</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q499327">പുല്ലിംഗം</a></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="uk">парижанин</span> <span class="note">uk</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088290"><span class="fb" lang="en">masculine singular</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088290"
-           aria-label="Add a label in your language">+</a></span></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="en">Parisian</span> <span class="note">en</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q110786">ഏകവചനം</a></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="ru">парижане</span> <span class="note">ru</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q146786">ബഹുവചനം</a></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="hu">párizsi</span> <span class="note">hu</span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="ast">parisino</span> <span class="note">ast</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q1775461">നപുംസകം</a></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="pl">paryżanka</span> <span class="note">pl</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088293"><span class="fb" lang="en">feminine singular</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088293"
-           aria-label="Add a label in your language">+</a></span></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="br">Parizianez</span> <span class="note">br</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47088293"><span class="fb" lang="en">feminine singular</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47088293"
-           aria-label="Add a label in your language">+</a></span></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1549"
-       aria-label="Edit">✎</a>
-    </span></div>
-    </dialog></dd>
-<span class="tools"></span>
-</div><div class="row r-value"><dt>പേര് വന്ന വഴി</dt>
+       aria-label="Edit">✎</a></span></figure></div></div></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>പേര് വന്ന വഴി</dt>
 <dd><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q656902"><span class="fb" lang="en">Parisii</span></a><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q656902"
            aria-label="Add a label in your language">+</a></span></dd>
@@ -1321,17 +1391,6 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
         <span class="prov-none" title="—"></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P138"
-       aria-label="Edit">✎</a>
-    </span>
-</div><div class="row r-value"><dt><span class="fb-group"><span class="fb"
-      lang="en">motto text</span><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/P1451"
-           aria-label="Add a label in your language">+</a></span></dt>
-<dd><span lang="la">Fluctuat nec mergitur</span> <span class="note">la</span> <span class="note">1853 – · <span lang="en">Tossed by the waves but never sunk</span> <span class="note">en</span> · <span lang="fr">Il est battu par les flots, mais ne sombre pas</span> <span class="note">fr</span> · <span lang="uk">Його хитає, але він не тоне</span> <span class="note">uk</span> · <span lang="ko">흔들릴지언정 가라앉지 않는다</span> <span class="note">ko</span> · <span lang="de">Es schwankt hin und her, aber geht nicht unter</span> <span class="note">de</span></span></dd>
-<span class="tools">
-        
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1451"
        aria-label="Edit">✎</a>
     </span>
 </div><div class="row r-value"><dt>motto</dt>
@@ -1381,12 +1440,12 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P281"
        aria-label="Edit">✎</a>
-    </span><button class="more" type="button" command="show-modal" commandfor="d47">+16</button><dialog id="d47" closedby="any">
+    </span><button class="more" type="button" command="show-modal" commandfor="d46">+16</button><dialog id="d46" closedby="any">
         <header>
             <h2>പോസ്റ്റൽ കോഡ്</h2>
             <button type="button"
                     command="close"
-                    commandfor="d47"
+                    commandfor="d46"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><span class="v">75016 <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q194420"><span class="fb" lang="en">16th arrondissement of Paris</span></a><a class="add-label"
@@ -1559,8 +1618,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><span>ഭരണാധികാരി</span><b><a href="https://www.wikidata.org/wiki/Q64281962">Emmanuel Grégoire</a></b><span>2026 –</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p48"
-            aria-label="Credit">i</button><span id="p48" popover class="pop">Jacques Paquier · CC BY 2.0</span><a class="edit"
+            popovertarget="p47"
+            aria-label="Credit">i</button><span id="p47" popover class="pop">Jacques Paquier · CC BY 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P6"
        aria-label="Edit">✎</a></span></figure><div class="before"><span class="v"><a href="https://www.wikidata.org/wiki/Q2851133">Anne Hidalgo</a> <span class="note">2014 – 2026 · <span class="fb-group"><a href="https://www.wikidata.org/wiki/Q170972"><span class="fb" lang="en">Socialist Party</span></a><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q170972"
@@ -1596,12 +1655,12 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P6"
        aria-label="Edit">✎</a>
-    </span><button class="more" type="button" command="show-modal" commandfor="d49">+17</button><dialog id="d49" closedby="any">
+    </span><button class="more" type="button" command="show-modal" commandfor="d48">+17</button><dialog id="d48" closedby="any">
         <header>
             <h2>mayor of Paris</h2>
             <button type="button"
                     command="close"
-                    commandfor="d49"
+                    commandfor="d48"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><span class="v"><a href="https://www.wikidata.org/wiki/Q2851133">Anne Hidalgo</a> <span class="note">2014 – 2026 · <span class="fb-group"><a href="https://www.wikidata.org/wiki/Q170972"><span class="fb" lang="en">Socialist Party</span></a><a class="add-label"
@@ -1744,8 +1803,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q142">ഫ്രാൻസ്</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p50"
-            aria-label="Credit">i</button><span id="p50" popover class="pop">Pierre Blaché from Paris, France · CC0</span><a class="edit"
+            popovertarget="p49"
+            aria-label="Credit">i</button><span id="p49" popover class="pop">Pierre Blaché from Paris, France · CC0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1376"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.9486">
@@ -1759,8 +1818,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q16665915"
            aria-label="Add a label in your language">+</a></span></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p51"
-            aria-label="Credit">i</button><span id="p51" popover class="pop">NASA · Public domain</span><a class="edit"
+            popovertarget="p50"
+            aria-label="Credit">i</button><span id="p50" popover class="pop">NASA · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1376"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.4114">
@@ -1774,8 +1833,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q13917"
            aria-label="Add a label in your language">+</a></span></b><span class="prov-imported" title="ഇറക്കുമതി സ്രോതസ്">W</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p52"
-            aria-label="Credit">i</button><span id="p52" popover class="pop">David McSpadden from Daly City, United States · CC BY 2.0</span><a class="edit"
+            popovertarget="p51"
+            aria-label="Credit">i</button><span id="p51" popover class="pop">David McSpadden from Daly City, United States · CC BY 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1376"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1">
@@ -1789,8 +1848,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q69829"
            aria-label="Add a label in your language">+</a></span></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p53"
-            aria-label="Credit">i</button><span id="p53" popover class="pop">VoodooIsland at English Wikipedia · Public domain</span><a class="edit"
+            popovertarget="p52"
+            aria-label="Credit">i</button><span id="p52" popover class="pop">VoodooIsland at English Wikipedia · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1376"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.4292">
@@ -1804,8 +1863,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q133132"
            aria-label="Add a label in your language">+</a></span></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p54"
-            aria-label="Credit">i</button><span id="p54" popover class="pop">Anonyme, photographe · CC0</span><a class="edit"
+            popovertarget="p53"
+            aria-label="Credit">i</button><span id="p53" popover class="pop">Anonyme, photographe · CC0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1376"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.0097">
@@ -1817,8 +1876,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q106577">ന്യൂസ്ട്രിയ</a></b><span class="prov-imported" title="ഇറക്കുമതി സ്രോതസ്">W</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p55"
-            aria-label="Credit">i</button><span id="p55" popover class="pop">Kairom13 · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p54"
+            aria-label="Credit">i</button><span id="p54" popover class="pop">Kairom13 · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1376"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3772">
@@ -1832,8 +1891,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q70972"
            aria-label="Add a label in your language">+</a></span></b><span class="prov-imported" title="ഇറക്കുമതി സ്രോതസ്">W</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p56"
-            aria-label="Credit">i</button><span id="p56" popover class="pop">Pierre Patel · Public domain</span><a class="edit"
+            popovertarget="p55"
+            aria-label="Credit">i</button><span id="p55" popover class="pop">Pierre Patel · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1376"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:0.9525">
@@ -1847,8 +1906,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q58296"
            aria-label="Add a label in your language">+</a></span></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p57"
-            aria-label="Credit">i</button><span id="p57" popover class="pop">BrightRaven · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p56"
+            aria-label="Credit">i</button><span id="p56" popover class="pop">BrightRaven · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1376"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.4056">
@@ -1860,8 +1919,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q69808">വിഷി ഫ്രാൻസ്</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p58"
-            aria-label="Credit">i</button><span id="p58" popover class="pop">Unknown authorUnknown author · Public domain</span><a class="edit"
+            popovertarget="p57"
+            aria-label="Credit">i</button><span id="p57" popover class="pop">Unknown authorUnknown author · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1376"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:1.5">
@@ -1873,8 +1932,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q71092">Second Empire</a></b><span class="from" title="en.wikipedia.org">W</span><span class="prov-imported" title="ഇറക്കുമതി സ്രോതസ്">W</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p59"
-            aria-label="Credit">i</button><span id="p59" popover class="pop">https://commons.wikimedia.org/wiki/File:Flag_of_France.svg , https://diffusion.shom.fr/pro/downloadable/download/sample/sample_id/73/ , https://www.gouvernement.fr/charte/charte-graphique-les-fondamentaux/les-couleurs , User:Anomie , User:MSGJ , User:SKopp · PD</span><a class="edit"
+            popovertarget="p58"
+            aria-label="Credit">i</button><span id="p58" popover class="pop">https://commons.wikimedia.org/wiki/File:Flag_of_France.svg , https://diffusion.shom.fr/pro/downloadable/download/sample/sample_id/73/ , https://www.gouvernement.fr/charte/charte-graphique-les-fondamentaux/les-couleurs , User:Anomie , User:MSGJ , User:SKopp · PD</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1376"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3729">
@@ -1888,8 +1947,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q2863958"
            aria-label="Add a label in your language">+</a></span></b><span class="from" title="en.wikipedia.org">W</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p60"
-            aria-label="Credit">i</button><span id="p60" popover class="pop">Tschubby · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p59"
+            aria-label="Credit">i</button><span id="p59" popover class="pop">Tschubby · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1376"
        aria-label="Edit">✎</a></span></figure><figure class="m k-empty" style="--a:1.333">
     <figcaption><b><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q88521107"><span class="fb" lang="en">zone de défense et de sécurité de Paris</span></a><a class="add-label"
@@ -1903,12 +1962,12 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
        aria-label="Edit">✎</a>
         
     </span>
-</figure></div><button class="more" type="button" command="show-modal" commandfor="d61">+5</button><dialog id="d61" closedby="any">
+</figure></div><button class="more" type="button" command="show-modal" commandfor="d60">+5</button><dialog id="d60" closedby="any">
         <header>
             <h2>എന്തിന്റെ തലസ്ഥാനം</h2>
             <button type="button"
                     command="close"
-                    commandfor="d61"
+                    commandfor="d60"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><span class="v"><a href="https://www.wikidata.org/wiki/Q142">ഫ്രാൻസ്</a>
@@ -2019,8 +2078,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q775994"
            aria-label="Add a label in your language">+</a></span></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p62"
-            aria-label="Credit">i</button><span id="p62" popover class="pop">Zigsfy · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p61"
+            aria-label="Credit">i</button><span id="p61" popover class="pop">Zigsfy · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P194"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.6546">
@@ -2037,8 +2096,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3278478"
            aria-label="Add a label in your language">+</a></span></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p63"
-            aria-label="Credit">i</button><span id="p63" popover class="pop">Juan Enrique Gilardi from Mar del Plata, Argentina · CC BY-SA 2.0</span><a class="edit"
+            popovertarget="p62"
+            aria-label="Credit">i</button><span id="p62" popover class="pop">Juan Enrique Gilardi from Mar del Plata, Argentina · CC BY-SA 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P797"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.7528">
@@ -2050,8 +2109,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><span>രൂപത</span><b><a href="https://www.wikidata.org/wiki/Q1242250">റോമൻ കത്തോലിക്ക അതിരൂപത, പാരീസ്</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p64"
-            aria-label="Credit">i</button><span id="p64" popover class="pop">Sanchezn · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p63"
+            aria-label="Credit">i</button><span id="p63" popover class="pop">Sanchezn · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P708"
        aria-label="Edit">✎</a></span></figure></div></div></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt><span class="fb-group"><span class="fb"
       lang="en">legal form</span><a class="add-label"
@@ -2224,8 +2283,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q3837491">La Lutte de Jacob avec l’Ange</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p65"
-            aria-label="Credit">i</button><span id="p65" popover class="pop">Gleb Simonov · Public domain</span><a class="edit"
+            popovertarget="p64"
+            aria-label="Credit">i</button><span id="p64" popover class="pop">Gleb Simonov · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1830"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.5006">
@@ -2239,8 +2298,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3212678"
            aria-label="Add a label in your language">+</a></span></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p66"
-            aria-label="Credit">i</button><span id="p66" popover class="pop">Remi Jouan · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p65"
+            aria-label="Credit">i</button><span id="p65" popover class="pop">Remi Jouan · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1830"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.4905">
@@ -2254,8 +2313,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q326503"
            aria-label="Add a label in your language">+</a></span></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p67"
-            aria-label="Credit">i</button><span id="p67" popover class="pop">Public domain</span><a class="edit"
+            popovertarget="p66"
+            aria-label="Credit">i</button><span id="p66" popover class="pop">Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1830"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.4234">
@@ -2269,8 +2328,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q670499"
            aria-label="Add a label in your language">+</a></span></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p68"
-            aria-label="Credit">i</button><span id="p68" popover class="pop">Arne Müseler · CC BY-SA 3.0 de</span><a class="edit"
+            popovertarget="p67"
+            aria-label="Credit">i</button><span id="p67" popover class="pop">Arne Müseler · CC BY-SA 3.0 de</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1830"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.4838">
@@ -2284,8 +2343,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1524643"
            aria-label="Add a label in your language">+</a></span></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p69"
-            aria-label="Credit">i</button><span id="p69" popover class="pop">Scanné par Claude_villetaneuse · Public domain</span><a class="edit"
+            popovertarget="p68"
+            aria-label="Credit">i</button><span id="p68" popover class="pop">Scanné par Claude_villetaneuse · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1830"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.6668">
@@ -2299,8 +2358,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15921401"
            aria-label="Add a label in your language">+</a></span></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p70"
-            aria-label="Credit">i</button><span id="p70" popover class="pop">Coyau · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p69"
+            aria-label="Credit">i</button><span id="p69" popover class="pop">Coyau · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1830"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.622">
@@ -2314,8 +2373,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q24575431"
            aria-label="Add a label in your language">+</a></span></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p71"
-            aria-label="Credit">i</button><span id="p71" popover class="pop">Mbzt · CC BY 3.0</span><a class="edit"
+            popovertarget="p70"
+            aria-label="Credit">i</button><span id="p70" popover class="pop">Mbzt · CC BY 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1830"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.4981">
@@ -2329,8 +2388,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q18086668"
            aria-label="Add a label in your language">+</a></span></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p72"
-            aria-label="Credit">i</button><span id="p72" popover class="pop">Remi Jouan · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p71"
+            aria-label="Credit">i</button><span id="p71" popover class="pop">Remi Jouan · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1830"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.623">
@@ -2344,8 +2403,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q15921385"
            aria-label="Add a label in your language">+</a></span></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p73"
-            aria-label="Credit">i</button><span id="p73" popover class="pop">Coyau · Public domain</span><a class="edit"
+            popovertarget="p72"
+            aria-label="Credit">i</button><span id="p72" popover class="pop">Coyau · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1830"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.75">
@@ -2359,8 +2418,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q369234"
            aria-label="Add a label in your language">+</a></span></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p74"
-            aria-label="Credit">i</button><span id="p74" popover class="pop">Siren-Com · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p73"
+            aria-label="Credit">i</button><span id="p73" popover class="pop">Siren-Com · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1830"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.75">
@@ -2374,8 +2433,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1358886"
            aria-label="Add a label in your language">+</a></span></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p75"
-            aria-label="Credit">i</button><span id="p75" popover class="pop">Oliver H · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p74"
+            aria-label="Credit">i</button><span id="p74" popover class="pop">Oliver H · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1830"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.8957">
@@ -2387,15 +2446,15 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q193431">Parc des Princes</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p76"
-            aria-label="Credit">i</button><span id="p76" popover class="pop">Валерий Дед · CC BY 3.0</span><a class="edit"
+            popovertarget="p75"
+            aria-label="Credit">i</button><span id="p75" popover class="pop">Валерий Дед · CC BY 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1830"
-       aria-label="Edit">✎</a></span></figure></div><button class="more" type="button" command="show-modal" commandfor="d77">+7</button><dialog id="d77" closedby="any">
+       aria-label="Edit">✎</a></span></figure></div><button class="more" type="button" command="show-modal" commandfor="d76">+7</button><dialog id="d76" closedby="any">
         <header>
             <h2>ഉടമ</h2>
             <button type="button"
                     command="close"
-                    commandfor="d77"
+                    commandfor="d76"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><span class="v"><a href="https://www.wikidata.org/wiki/Q3837491">La Lutte de Jacob avec l’Ange</a>
@@ -2534,8 +2593,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q220">റോം</a></b><span>1956 –</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p78"
-            aria-label="Credit">i</button><span id="p78" popover class="pop">Bert Kaufmann from Roermond, Netherlands · CC BY-SA 2.0</span><a class="edit"
+            popovertarget="p77"
+            aria-label="Credit">i</button><span id="p77" popover class="pop">Bert Kaufmann from Roermond, Netherlands · CC BY-SA 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.4998">
@@ -2547,8 +2606,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q994">റ്റ്ബിലിസി</a></b><span>1997 –</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p79"
-            aria-label="Credit">i</button><span id="p79" popover class="pop">Alexey Komarov · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p78"
+            aria-label="Credit">i</button><span id="p78" popover class="pop">Alexey Komarov · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.7067">
@@ -2560,8 +2619,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q62">സാൻ ഫ്രാൻസിസ്കോ</a></b><span>1996 –</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p80"
-            aria-label="Credit">i</button><span id="p80" popover class="pop">Lightandtruth · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p79"
+            aria-label="Credit">i</button><span id="p79" popover class="pop">Lightandtruth · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.5048">
@@ -2573,8 +2632,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q1899">കീവ്</a></b><span>1992 –</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p81"
-            aria-label="Credit">i</button><span id="p81" popover class="pop">Francisco Anzola · CC BY 3.0</span><a class="edit"
+            popovertarget="p80"
+            aria-label="Credit">i</button><span id="p80" popover class="pop">Francisco Anzola · CC BY 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.5101">
@@ -2586,8 +2645,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q656">സെന്റ് പീറ്റേഴ്സ്ബർഗ്</a></b><span>1991 –</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p82"
-            aria-label="Credit">i</button><span id="p82" popover class="pop">Florstein (Telegram:WikiPhoto.Space) · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p81"
+            aria-label="Credit">i</button><span id="p81" popover class="pop">Florstein (Telegram:WikiPhoto.Space) · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.9548">
@@ -2599,8 +2658,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q64">ബെർലിൻ</a></b><span>1987 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p83"
-            aria-label="Credit">i</button><span id="p83" popover class="pop">Thomas Wolf, www.foto-tw.de · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p82"
+            aria-label="Credit">i</button><span id="p82" popover class="pop">Thomas Wolf, www.foto-tw.de · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.8299">
@@ -2612,8 +2671,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q1490">ടോക്കിയോ</a></b><span>1982 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p84"
-            aria-label="Credit">i</button><span id="p84" popover class="pop">Morio · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p83"
+            aria-label="Credit">i</button><span id="p83" popover class="pop">Morio · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.5">
@@ -2625,8 +2684,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q34600">ക്യോട്ടോ</a></b><span>1958 –</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p85"
-            aria-label="Credit">i</button><span id="p85" popover class="pop">Basile Morin · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p84"
+            aria-label="Credit">i</button><span id="p84" popover class="pop">Basile Morin · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.4997">
@@ -2638,8 +2697,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q1489">മെക്സിക്കോ സിറ്റി</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p86"
-            aria-label="Credit">i</button><span id="p86" popover class="pop">Gobierno CDMX · CC0</span><a class="edit"
+            popovertarget="p85"
+            aria-label="Credit">i</button><span id="p85" popover class="pop">Gobierno CDMX · CC0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:2.4184">
@@ -2651,8 +2710,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q612">ദുബായ്</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p87"
-            aria-label="Credit">i</button><span id="p87" popover class="pop">Tim Reckmann from Hamm, Deutschland · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p86"
+            aria-label="Credit">i</button><span id="p86" popover class="pop">Tim Reckmann from Hamm, Deutschland · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3333">
@@ -2664,8 +2723,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q158119">റാമല്ല</a></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p88"
-            aria-label="Credit">i</button><span id="p88" popover class="pop">أمين · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p87"
+            aria-label="Credit">i</button><span id="p87" popover class="pop">أمين · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.5601">
@@ -2677,15 +2736,15 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q101625">മരാക്കേഷ്</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p89"
-            aria-label="Credit">i</button><span id="p89" popover class="pop">Donar Reiskoffer · CC BY 3.0</span><a class="edit"
+            popovertarget="p88"
+            aria-label="Credit">i</button><span id="p88" popover class="pop">Donar Reiskoffer · CC BY 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P190"
-       aria-label="Edit">✎</a></span></figure></div><button class="more" type="button" command="show-modal" commandfor="d90">+8</button><dialog id="d90" closedby="any">
+       aria-label="Edit">✎</a></span></figure></div><button class="more" type="button" command="show-modal" commandfor="d89">+8</button><dialog id="d89" closedby="any">
         <header>
             <h2>സഹോദര നഗരം</h2>
             <button type="button"
                     command="close"
-                    commandfor="d90"
+                    commandfor="d89"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><span class="v"><a href="https://www.wikidata.org/wiki/Q220">റോം</a> <span class="note">1956 –</span>
@@ -2782,8 +2841,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q48268">ഇന്റർനാഷണൽ യൂണിയൻ ഫോർ ദ കൺസർവേഷൻ ഓഫ് നേച്ചർ ആൻഡ് നാച്ചുറൽ റിസോഴ്‌സ്</a></b><span>2022 –</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p91"
-            aria-label="Credit">i</button><span id="p91" popover class="pop">Erich Iseli · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p90"
+            aria-label="Credit">i</button><span id="p90" popover class="pop">Erich Iseli · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P463"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:1">
@@ -2795,8 +2854,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q485087">C40 Cities</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p92"
-            aria-label="Credit">i</button><span id="p92" popover class="pop">Dsamuels100 · CC0</span><a class="edit"
+            popovertarget="p91"
+            aria-label="Credit">i</button><span id="p91" popover class="pop">Dsamuels100 · CC0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P463"
        aria-label="Edit">✎</a></span></figure><figure class="m k-empty" style="--a:1.333">
     <figcaption><b><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q67652870"><span class="fb" lang="en">World Tourism Cities Federation</span></a><a class="add-label"
@@ -2838,8 +2897,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3725832"
            aria-label="Add a label in your language">+</a></span></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p93"
-            aria-label="Credit">i</button><span id="p93" popover class="pop">Peter Paul Rubens · Public domain</span><a class="edit"
+            popovertarget="p92"
+            aria-label="Credit">i</button><span id="p92" popover class="pop">Peter Paul Rubens · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1299"
        aria-label="Edit">✎</a></span></figure></div></div></div><dl class="sheet" data-slot="sheet"><div class="row r-list"><dt>ലഭിച്ച പുരസ്കാരങ്ങൾ</dt>
 <dd><span class="v"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q2990283"><span class="fb" lang="en">Companion of the Liberation</span></a><a class="add-label"
@@ -2981,8 +3040,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
                 <span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p94"
-            aria-label="Credit">i</button><span id="p94" popover class="pop">Benh LIEU SONG · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p93"
+            aria-label="Credit">i</button><span id="p93" popover class="pop">Benh LIEU SONG · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P3451"
        aria-label="Edit">✎</a></span>
     </figure> </div>
@@ -2999,8 +3058,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p95"
-            aria-label="Credit">i</button><span id="p95" popover class="pop">Institut national de l&#39;information géographique et forestière · Licence Ouverte</span><a class="edit"
+            popovertarget="p94"
+            aria-label="Credit">i</button><span id="p94" popover class="pop">Institut national de l&#39;information géographique et forestière · Licence Ouverte</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P8592"
        aria-label="Edit">✎</a></span>
     </figure><figure class="m k-photo" style="--a:2">
@@ -3015,8 +3074,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p96"
-            aria-label="Credit">i</button><span id="p96" popover class="pop">Alexandre Duret-Lutz from Paris, France · CC BY-SA 2.0</span><a class="edit"
+            popovertarget="p95"
+            aria-label="Credit">i</button><span id="p95" popover class="pop">Alexandre Duret-Lutz from Paris, France · CC BY-SA 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P4640"
        aria-label="Edit">✎</a></span>
     </figure><figure class="m k-photo" style="--a:6.5703">
@@ -3031,8 +3090,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p97"
-            aria-label="Credit">i</button><span id="p97" popover class="pop">Matism · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p96"
+            aria-label="Credit">i</button><span id="p96" popover class="pop">Matism · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P4291"
        aria-label="Edit">✎</a></span>
     </figure><figure class="m k-photo" style="--a:1.5056">
@@ -3044,8 +3103,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
                 <span>രാത്രികാല കാഴ്ച</span><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p98"
-            aria-label="Credit">i</button><span id="p98" popover class="pop">Getfunky · CC BY 2.0</span><a class="edit"
+            popovertarget="p97"
+            aria-label="Credit">i</button><span id="p97" popover class="pop">Getfunky · CC BY 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P3451"
        aria-label="Edit">✎</a></span>
     </figure><figure class="m k-photo" style="--a:2.3805">
@@ -3060,8 +3119,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p99"
-            aria-label="Credit">i</button><span id="p99" popover class="pop">Chabe01 · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p98"
+            aria-label="Credit">i</button><span id="p98" popover class="pop">Chabe01 · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1766"
        aria-label="Edit">✎</a></span>
     </figure><figure class="m k-photo" style="--a:1.3793">
@@ -3076,8 +3135,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p100"
-            aria-label="Credit">i</button><span id="p100" popover class="pop">ThePromenader · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p99"
+            aria-label="Credit">i</button><span id="p99" popover class="pop">ThePromenader · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1943"
        aria-label="Edit">✎</a></span>
     </figure><figure class="m k-photo" style="--a:0.667">
@@ -3092,8 +3151,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p101"
-            aria-label="Credit">i</button><span id="p101" popover class="pop">Paris 16 (talk) 06:14, 14 February 2011 (UTC) · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p100"
+            aria-label="Credit">i</button><span id="p100" popover class="pop">Paris 16 (talk) 06:14, 14 February 2011 (UTC) · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P2716"
        aria-label="Edit">✎</a></span>
     </figure><figure class="m k-drawing" style="--a:0.9883">
@@ -3105,8 +3164,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
                 <span>ലോഗോയുടെ ചിത്രം</span><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p102"
-            aria-label="Credit">i</button><span id="p102" popover class="pop">Unknown authorUnknown author · Public domain</span><a class="edit"
+            popovertarget="p101"
+            aria-label="Credit">i</button><span id="p101" popover class="pop">Unknown authorUnknown author · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P154"
        aria-label="Edit">✎</a></span>
     </figure><figure class="m k-drawing" style="--a:3.6056">
@@ -3118,8 +3177,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
                 <span>ലോഗോയുടെ ചിത്രം</span><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p103"
-            aria-label="Credit">i</button><span id="p103" popover class="pop">Unknown authorUnknown author · Public domain</span><a class="edit"
+            popovertarget="p102"
+            aria-label="Credit">i</button><span id="p102" popover class="pop">Unknown authorUnknown author · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P154"
        aria-label="Edit">✎</a></span>
     </figure><figure class="m k-drawing" style="--a:0.9076">
@@ -3134,8 +3193,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p104"
-            aria-label="Credit">i</button><span id="p104" popover class="pop">RaphaëlMignon · CC BY 4.0</span><a class="edit"
+            popovertarget="p103"
+            aria-label="Credit">i</button><span id="p103" popover class="pop">RaphaëlMignon · CC BY 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P4004"
        aria-label="Edit">✎</a></span>
     </figure> </div>
@@ -3202,7 +3261,7 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
            aria-label="Add a label in your language">+</a></span></dt>
 <dd><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q679388"><span class="fb" lang="en">municipal arrondissement of Paris</span></a><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q679388"
-           aria-label="Add a label in your language">+</a></span> <span class="note"><span lang="fr">Arrt</span> <span class="note">fr</span></span></dd>
+           aria-label="Add a label in your language">+</a></span> <span class="note"><span lang="fr">Arrt</span> <span class="note" data-lang-name="fr">fr</span></span></dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
         <a class="edit"
@@ -3486,12 +3545,12 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1343"
        aria-label="Edit">✎</a>
-    </span><button class="more" type="button" command="show-modal" commandfor="d105">+6</button><dialog id="d105" closedby="any">
+    </span><button class="more" type="button" command="show-modal" commandfor="d104">+6</button><dialog id="d104" closedby="any">
         <header>
             <h2>ഇതേപ്പറ്റി വിവരിച്ചിട്ടുള്ള ഇടങ്ങൾ</h2>
             <button type="button"
                     command="close"
-                    commandfor="d105"
+                    commandfor="d104"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><span class="v"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q602358"><span class="fb" lang="en">Brockhaus and Efron Encyclopedic Dictionary</span></a><a class="add-label"
@@ -3683,12 +3742,12 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1889"
        aria-label="Edit">✎</a>
-    </span><button class="more" type="button" command="show-modal" commandfor="d106">+31</button><dialog id="d106" closedby="any">
+    </span><button class="more" type="button" command="show-modal" commandfor="d105">+31</button><dialog id="d105" closedby="any">
         <header>
             <h2>ഇതിൽ നിന്നും വ്യത്യസ്തം</h2>
             <button type="button"
                     command="close"
-                    commandfor="d106"
+                    commandfor="d105"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><span class="v"><a href="https://www.wikidata.org/wiki/Q104197">Paris</a>
@@ -4006,12 +4065,12 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
     <div><span class="chip">wikipedia <b>290</b> ✓</span><span class="chip">wikiquote <b>28</b></span><span class="chip">wikivoyage <b>25</b></span><span class="chip">wikinews <b>21</b></span><span class="chip">wikisource <b>1</b></span></div>
 </div>
     </div><div data-slot="identifiers">
-        <button class="more" type="button" command="show-modal" commandfor="d107"># 260</button><dialog id="d107" closedby="any">
+        <button class="more" type="button" command="show-modal" commandfor="d106"># 260</button><dialog id="d106" closedby="any">
         <header>
             <h2>260</h2>
             <button type="button"
                     command="close"
-                    commandfor="d107"
+                    commandfor="d106"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><div class="idlist"><div><span><span class="fb-group"><span class="fb"
@@ -4631,12 +4690,29 @@ if ( !( 'commandForElement' in HTMLButtonElement.prototype ) ) {
 		}
 	} );
 }
-// Progressive enhancement only: numbers and dates in the formats of the
-// page locale, by the browser's Intl. The server writes a neutral text
+// Progressive enhancement only: numbers, dates and language names in the
+// formats of the page locale, by the browser's Intl. The server writes a neutral text
 // (digits without grouping, ISO dates); without this script it stays,
 // correct but not localized.
 ( () => {
 	const locale = document.documentElement.dataset.locale || document.documentElement.lang;
+	// The name of a language in the page locale, for its code
+	// (data-lang-name). A code that the browser does not know stays.
+	try {
+		const languages = new Intl.DisplayNames( locale, { type: 'language', fallback: 'none' } );
+		for ( const el of document.querySelectorAll( '[data-lang-name]' ) ) {
+			try {
+				const name = languages.of( el.dataset.langName );
+				if ( name ) {
+					el.textContent = name;
+				}
+			} catch ( e ) {
+				// Not a language code: the code stays.
+			}
+		}
+	} catch ( e ) {
+		// No Intl.DisplayNames: the codes stay.
+	}
 	let number, percent;
 	try {
 		number = new Intl.NumberFormat( locale, { maximumFractionDigits: 20 } );
@@ -4674,6 +4750,60 @@ if ( !( 'commandForElement' in HTMLButtonElement.prototype ) ) {
 		}
 	}
 } )();
+// Progressive enhancement only: a play link (a.play) of an audio file
+// plays the file in the page; a second click stops it. One sound plays at
+// a time. Without this script the link opens the file, and the browser
+// plays it.
+( () => {
+	let sound, link;
+	const stop = () => {
+		sound.pause();
+		link.classList.remove( 'playing' );
+		sound = link = null;
+	};
+	document.addEventListener( 'click', ( event ) => {
+		const a = event.target.closest( 'a.play' );
+		if ( !a ) {
+			return;
+		}
+		event.preventDefault();
+		const again = link === a;
+		if ( sound ) {
+			stop();
+		}
+		if ( again ) {
+			return;
+		}
+		sound = new Audio( a.href );
+		link = a;
+		a.classList.add( 'playing' );
+		sound.addEventListener( 'ended', () => link === a && stop() );
+		sound.play().catch( () => {
+			window.location.href = a.href;
+		} );
+	} );
+} )();
+// The qr-names element: the names of the item in many languages, as one
+// choice of language and the group of that language. Progressive
+// enhancement only: the server renders every group, the page language
+// first; this script shows the choice and one group, and decides nothing.
+if ( 'customElements' in window ) {
+	customElements.define( 'qr-names', class extends HTMLElement {
+		connectedCallback() {
+			const choice = this.querySelector( '.name-choice' );
+			const groups = [ ...this.querySelectorAll( '.name-group' ) ];
+			if ( !choice || groups.length < 2 ) {
+				return;
+			}
+			const show = ( lang ) => groups.forEach( ( group ) => {
+				group.hidden = group.dataset.lang !== lang;
+			} );
+			choice.hidden = false;
+			show( choice.value );
+			choice.addEventListener( 'change', () => show( choice.value ) );
+		}
+	} );
+}
 // The qr-chart element: the points of a series (the columns of its table)
 // as a line chart, a line for each column, drawn by ECharts. Progressive enhancement only: the server
 // renders the table, and without this script or without ECharts the table

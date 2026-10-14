@@ -13,8 +13,8 @@ use std::sync::LazyLock;
 pub use crate::schema::DESIGN;
 
 use crate::primitives::{
-    fact, identifiers, kind, map, prose, provenance, scale, score, series, sitelinks, sounds,
-    split, succession, time, title,
+    fact, identifiers, kind, map, names, prose, provenance, scale, score, series, sitelinks,
+    sounds, split, succession, time, title,
 };
 use crate::vocab::Primitive;
 
@@ -35,9 +35,10 @@ const BASE: [&str; 6] = [
 ];
 
 /// The scripts of every page: progressive enhancement only.
-pub const PAGE_SCRIPTS: [&str; 2] = [
+pub const PAGE_SCRIPTS: [&str; 3] = [
     include_str!("../../assets/invokers.js"),
     include_str!("../../assets/intl.js"),
+    include_str!("../../assets/play.js"),
 ];
 
 /// The CSS and the JavaScript of a primitive, from its module.
@@ -61,6 +62,10 @@ pub fn assets(primitive: Primitive) -> Assets {
         Primitive::Sounds => Assets {
             css: Some(sounds::CSS),
             js: Some(sounds::JS),
+        },
+        Primitive::Names => Assets {
+            css: Some(names::CSS),
+            js: Some(names::JS),
         },
         Primitive::Map => css(map::CSS),
         Primitive::Split => css(split::CSS),

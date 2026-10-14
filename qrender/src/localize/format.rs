@@ -10,7 +10,8 @@ use content::{EntityId, Pid, Qid};
 
 use super::View;
 use super::messages::format;
-use crate::schema::{QualifierPart, QualifierShown, ValueShown};
+use crate::compose::picture::media_kind;
+use crate::schema::{MediaKind, QualifierPart, QualifierShown, ValueShown};
 use crate::wikidata::{END_TIME, START_TIME};
 
 const WIKIDATA: &str = "https://www.wikidata.org/wiki/";
@@ -47,6 +48,13 @@ pub enum Part {
     Qualified {
         pid: Pid,
         value: Box<Part>,
+    },
+    /// A Commons file of a qualifier: an audio file plays, another file
+    /// links to its page.
+    File {
+        pid: Pid,
+        file: String,
+        audio: bool,
     },
 }
 
@@ -129,6 +137,11 @@ impl View {
                     value: Box::new(number_part(*amount, None)),
                 },
                 QualifierPart::String { string } => self.text(string),
+                QualifierPart::File { file } => Part::File {
+                    pid: q.pid,
+                    file: file.clone(),
+                    audio: media_kind(file) == MediaKind::Audio,
+                },
             });
         }
         parts

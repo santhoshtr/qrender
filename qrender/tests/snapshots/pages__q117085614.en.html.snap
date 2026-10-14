@@ -784,7 +784,7 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
        aria-label="Edit">✎</a>
     </span>
 </div><div class="row r-value"><dt>title</dt>
-<dd><span lang="en">One Battle After Another</span> <span class="note">en</span></dd>
+<dd><span lang="en">One Battle After Another</span> <span class="note" data-lang-name="en">en</span></dd>
 <span class="tools">
         
         <a class="edit"
@@ -792,19 +792,19 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
        aria-label="Edit">✎</a>
     </span>
 </div><div class="row r-value"><dt>working title</dt>
-<dd><span class="v"><span lang="en">Untitled Paul Thomas Anderson Event Film</span> <span class="note">en</span>
+<dd><span class="v"><span lang="en">Untitled Paul Thomas Anderson Event Film</span> <span class="note" data-lang-name="en">en</span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P1638"
        aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="en">BC Project</span> <span class="note">en</span>
+    </span><span class="v"><span lang="en">BC Project</span> <span class="note" data-lang-name="en">en</span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P1638"
        aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="en">Desert Highway</span> <span class="note">en</span>
+    </span><span class="v"><span lang="en">Desert Highway</span> <span class="note" data-lang-name="en">en</span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P1638"
        aria-label="Edit">✎</a>
-    </span><span class="v"><span lang="en">The Battle of Baktan Cross</span> <span class="note">en</span>
+    </span><span class="v"><span lang="en">The Battle of Baktan Cross</span> <span class="note" data-lang-name="en">en</span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P1638"
        aria-label="Edit">✎</a>
@@ -1330,7 +1330,7 @@ Derivative work:  Logovectorizer · Public domain</span><a class="edit"
 <p class="note">en: 254 / 255</p>
 </div>
     </div><dl class="sheet" data-slot="web"><div class="row r-value"><dt>official website</dt>
-<dd><a href="https://www.onebattleafteranothermovie.com/">https://www.onebattleafteranothermovie.com/</a> <span class="note"><a href="https://www.wikidata.org/wiki/Q1860">English</a> · 2025 · <span lang="en">One Battle After Another | Official Movie Site</span> <span class="note">en</span></span></dd>
+<dd><a href="https://www.onebattleafteranothermovie.com/">https://www.onebattleafteranothermovie.com/</a> <span class="note"><a href="https://www.wikidata.org/wiki/Q1860">English</a> · 2025 · <span lang="en">One Battle After Another | Official Movie Site</span> <span class="note" data-lang-name="en">en</span></span></dd>
 <span class="tools">
         
         <a class="edit"
@@ -1414,12 +1414,29 @@ if ( !( 'commandForElement' in HTMLButtonElement.prototype ) ) {
 		}
 	} );
 }
-// Progressive enhancement only: numbers and dates in the formats of the
-// page locale, by the browser's Intl. The server writes a neutral text
+// Progressive enhancement only: numbers, dates and language names in the
+// formats of the page locale, by the browser's Intl. The server writes a neutral text
 // (digits without grouping, ISO dates); without this script it stays,
 // correct but not localized.
 ( () => {
 	const locale = document.documentElement.dataset.locale || document.documentElement.lang;
+	// The name of a language in the page locale, for its code
+	// (data-lang-name). A code that the browser does not know stays.
+	try {
+		const languages = new Intl.DisplayNames( locale, { type: 'language', fallback: 'none' } );
+		for ( const el of document.querySelectorAll( '[data-lang-name]' ) ) {
+			try {
+				const name = languages.of( el.dataset.langName );
+				if ( name ) {
+					el.textContent = name;
+				}
+			} catch ( e ) {
+				// Not a language code: the code stays.
+			}
+		}
+	} catch ( e ) {
+		// No Intl.DisplayNames: the codes stay.
+	}
 	let number, percent;
 	try {
 		number = new Intl.NumberFormat( locale, { maximumFractionDigits: 20 } );
@@ -1456,6 +1473,39 @@ if ( !( 'commandForElement' in HTMLButtonElement.prototype ) ) {
 			// The neutral text stays.
 		}
 	}
+} )();
+// Progressive enhancement only: a play link (a.play) of an audio file
+// plays the file in the page; a second click stops it. One sound plays at
+// a time. Without this script the link opens the file, and the browser
+// plays it.
+( () => {
+	let sound, link;
+	const stop = () => {
+		sound.pause();
+		link.classList.remove( 'playing' );
+		sound = link = null;
+	};
+	document.addEventListener( 'click', ( event ) => {
+		const a = event.target.closest( 'a.play' );
+		if ( !a ) {
+			return;
+		}
+		event.preventDefault();
+		const again = link === a;
+		if ( sound ) {
+			stop();
+		}
+		if ( again ) {
+			return;
+		}
+		sound = new Audio( a.href );
+		link = a;
+		a.classList.add( 'playing' );
+		sound.addEventListener( 'ended', () => link === a && stop() );
+		sound.play().catch( () => {
+			window.location.href = a.href;
+		} );
+	} );
 } )();
 </script>
 </body>

@@ -10,6 +10,7 @@ pub mod identifiers;
 pub mod kind;
 pub mod map;
 pub mod media;
+pub mod names;
 pub mod network;
 pub mod peers;
 pub mod pictures;

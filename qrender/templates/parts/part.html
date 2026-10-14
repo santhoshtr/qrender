@@ -17,9 +17,19 @@
 {%- if let Some(d) = datetime -%}<time datetime="{{ d }}"
       data-p="{{ precision }}">{{ text }}</time>{%- else -%}{{ text }}{%- endif -%}
 {%- when Part::Text with { text, lang } -%}
-{%- if let Some(lang) = lang -%}<span lang="{{ lang }}">{{ text }}</span> <span class="note">{{ lang }}</span>{%- else -%}{{ text }}{%- endif -%}
+{%- if let Some(lang) = lang -%}<span lang="{{ lang }}">{{ text }}</span> <span class="note" data-lang-name="{{ lang }}">{{ lang }}</span>{%- else -%}{{ text }}{%- endif -%}
 {%- when Part::Link with { text, href } -%}
 <a href="{{ href }}">{{ text }}</a>
+{%- when Part::File with { pid, file, audio } -%}
+{#- An audio file plays: a link to the file, which the browser plays
+    without JavaScript; play.js plays it in the page. -#}
+{%- if *audio -%}
+<a class="play"
+   href="{{ ui.file(file) }}"
+   aria-label="{{ ui.property(pid).text }}">▶</a>
+{%- else -%}
+<a href="{{ ui.commons_page(file) }}">{{ file }}</a>
+{%- endif -%}
 {%- when Part::Qualified with { pid, value } -%}
 {{ ui.text(ui.property(pid), false)|safe }}: {{ ui.part(value.as_ref())|safe }}
 {%- endmatch -%}

@@ -566,6 +566,29 @@ id = "identity"
 kind = "identity"
 
 [[class_layouts.country.spreads]]
+id = "names"
+dimension = "names"
+concept = "Q82799"     # name
+kind = "facts"
+pids = [
+  "P1448",  # official name
+  "P1813",  # short name
+  "P2561",  # name
+  "P1705",  # native label
+  "P1549",  # demonym
+  "P1449",  # nickname
+  "P138",   # named after
+  "P1451",  # motto text
+  "P1546",  # motto
+  "P237",   # coat of arms
+  "P163",   # flag
+  "P94",    # coat of arms image
+  "P41",    # flag image
+  "P443",   # pronunciation audio
+  "P898",   # IPA transcription
+]
+
+[[class_layouts.country.spreads]]
 id = "government"
 dimension = "people"
 concept = "Q7188"      # government

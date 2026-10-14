@@ -1,0 +1,42 @@
+{%- import "macros.html" as m -%}
+{#- The names of the item in many languages: a group for each language,
+    the page language first. The qr-names element (names.js) shows the
+    choice and the group of the chosen language; without it, every group
+    is shown, and the fallback rows only in the first. The name of a
+    language comes from intl.js (data-lang-name); without it, the code. -#}
+{%- let groups = ui.name_groups(b) -%}
+<qr-names class="block names">
+<select class="name-choice"
+        hidden
+        aria-label="{{ ui.msg("qrender-language") }}">
+    {%- for g in groups.iter() -%}
+        <option value="{{ g.lang }}" data-lang-name="{{ g.lang }}">{{ g.lang }}</option>
+    {%- endfor -%}
+</select>
+<div class="groups">
+    {%- for g in groups.iter() %}
+        <section class="name-group" data-lang="{{ g.lang }}">
+            <h4 data-lang-name="{{ g.lang }}">{{ g.lang }}</h4>
+            <dl>
+                {%- for r in g.rows.iter() %}
+                    <div class="row{% if r.fallback.is_some() %} fallback{% endif %}">
+                        <dt>{{ ui.text(ui.property(r.pid), true)|safe }}</dt>
+                        <dd>
+                            {%- for t in r.values.iter() -%}
+                                {%- if !loop.first %}<br>{% endif -%}
+                                <span lang="{{ t.lang }}"{% if r.fallback.is_some() %} class="fb"{% endif %}>{{ t.text }}</span>
+                                {%- let note = ui.qualifiers(t.statement.qualifiers.as_slice()) -%}
+                                {%- if !note.is_empty() %} <span class="note">{{ ui.note(note.as_slice())|safe }}</span>{% endif -%}
+                                {%- call m::prov(ui, t.statement.provenance) %}{% endcall -%}
+                            {%- endfor -%}
+                            {%- if let Some(lang) = r.fallback %}
+                                <span class="note" data-lang-name="{{ lang }}">{{ lang }}</span><a class="add-label" href="{{ ui.edit(r.pid) }}" aria-label="{{ ui.msg("qrender-add-value") }}">+</a>
+                            {%- endif -%}
+                        </dd>
+                    </div>
+                {%- endfor %}
+            </dl>
+        </section>
+    {%- endfor %}
+</div>
+</qr-names>
