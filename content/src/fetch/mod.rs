@@ -173,7 +173,17 @@ impl<S: Store> Fetcher<S> {
             .collect();
         let targets: Vec<Qid> = std::iter::once(qid).chain(container.qid).collect();
 
-        let (references, quantities, peers, value_classes, reverse, logos, sitelinks, tables) = futures::try_join!(
+        let (
+            references,
+            quantities,
+            peers,
+            value_classes,
+            reverse,
+            logos,
+            sitelinks,
+            tables,
+            ranges,
+        ) = futures::try_join!(
             sparql::references(http, qid),
             sparql::quantities(http, &targets, &quantity_pids),
             self.peers(&statements, &classes, &container, &quantity_pids),
@@ -184,6 +194,7 @@ impl<S: Store> Fetcher<S> {
             try_join_all(tabular_urls.iter().map(|url| async move {
                 Ok::<_, FetchError>((url.clone(), commons::table(http, url).await?))
             })),
+            wikidata::ranges(http, &quantity_pids),
         )?;
 
         let mut media: Vec<String> = statements
@@ -224,6 +235,7 @@ impl<S: Store> Fetcher<S> {
                 .filter_map(|(url, t)| Some((url, t?)))
                 .collect(),
             logos,
+            ranges,
         })
     }
 

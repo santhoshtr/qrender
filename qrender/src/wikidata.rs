@@ -28,3 +28,7 @@ properties! {
     AREA = "P2046", "area";
     LANGUAGE = "P407", "language of work or name";
 }
+
+/// Percent (Q11229): the unit of a proportion.
+pub static PERCENT: LazyLock<content::Qid> =
+    LazyLock::new(|| "Q11229".parse().expect("an item id"));

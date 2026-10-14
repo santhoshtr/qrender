@@ -830,6 +830,23 @@ parts = [
   "P6498",  # illiterate population
 ]
 
+# ---------------------------------------------------------------- indexes
+# A value on a scale (Gini coefficient 35.7 of 0 to 100): in its row, a
+# marker on a track from the lowest to the highest value. The scale is the
+# range constraint of the property on Wikidata; a range here is for a
+# property without one. Only the properties listed: a range constraint
+# can be a sanity bound, not a scale (suicide rate: 0 to 400; total
+# fertility rate: 0 to 100). A percentage with the range 0 to 100 is a
+# proportion and needs no entry.
+[indexes]
+P1125 = {}                        # Gini coefficient (0 to 100)
+P11547 = { min = 0, max = 100 }   # Happy Planet Index score
+P1081 = {}                        # Human Development Index (0 to 1)
+P11593 = {}                       # Inequality-adjusted Human Development Index (0 to 1)
+P8328 = {}                        # Democracy Index (0 to 10)
+P8476 = {}                        # BTI Governance Index (0 to 10)
+P8477 = {}                        # BTI Status Index (0 to 10)
+
 # ------------------------------------------------------------- thresholds
 [thresholds]
 time_points = 4          # fewer distinct years than this: no time axis

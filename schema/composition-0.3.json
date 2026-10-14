@@ -556,6 +556,17 @@
           "description": "The values ended: history, not the present.",
           "type": "boolean"
         },
+        "gauge": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Gauge"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "One value on a scale: a proportion or an index."
+        },
         "measured": {
           "description": "The values are measurements dated by point in time: the description\nof the property says what the number is (\"per 1,000 population\").",
           "type": "boolean"
@@ -855,6 +866,48 @@
         "priority"
       ],
       "type": "object"
+    },
+    "Gauge": {
+      "description": "A value on a scale from `min` to `max`.",
+      "properties": {
+        "at": {
+          "description": "Where the value is: 0 at `min`, 1 at `max`; rounded to 4 places.",
+          "format": "double",
+          "type": "number"
+        },
+        "kind": {
+          "$ref": "#/$defs/GaugeKind"
+        },
+        "max": {
+          "format": "double",
+          "type": "number"
+        },
+        "min": {
+          "format": "double",
+          "type": "number"
+        }
+      },
+      "required": [
+        "kind",
+        "min",
+        "max",
+        "at"
+      ],
+      "type": "object"
+    },
+    "GaugeKind": {
+      "oneOf": [
+        {
+          "const": "proportion",
+          "description": "A part of a whole (a percentage, 0 to 100): a filled bar.",
+          "type": "string"
+        },
+        {
+          "const": "index",
+          "description": "A position on a scale (Gini coefficient, 0 to 100): a marker.",
+          "type": "string"
+        }
+      ]
     },
     "Identifier": {
       "properties": {

@@ -2844,6 +2844,12 @@ expression: composition
             ],
             "priority": 1.0,
             "measured": true,
+            "gauge": {
+              "kind": "index",
+              "min": 0.0,
+              "max": 100.0,
+              "at": 0.357
+            },
             "rule": "row"
           },
           {
@@ -2869,6 +2875,12 @@ expression: composition
             ],
             "priority": 1.0,
             "measured": true,
+            "gauge": {
+              "kind": "index",
+              "min": 0.0,
+              "max": 100.0,
+              "at": 0.364
+            },
             "rule": "row"
           }
         ]
@@ -15740,7 +15752,13 @@ expression: composition
               }
             ],
             "priority": 1.0,
-            "measured": true
+            "measured": true,
+            "gauge": {
+              "kind": "proportion",
+              "min": 0.0,
+              "max": 100.0,
+              "at": 0.04
+            }
           },
           {
             "primitive": "fact",
@@ -16612,7 +16630,13 @@ expression: composition
                 "shown": true
               }
             ],
-            "priority": 0.0
+            "priority": 0.0,
+            "gauge": {
+              "kind": "proportion",
+              "min": 0.0,
+              "max": 100.0,
+              "at": 0.095
+            }
           },
           {
             "primitive": "fact",

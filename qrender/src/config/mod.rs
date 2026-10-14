@@ -166,6 +166,15 @@ fn validate(layouts: &Layouts, rules: &Rules) -> Vec<String> {
         }
     }
     splits(&layouts.splits, &mut errors);
+    for (pid, index) in &layouts.indexes {
+        match (index.min, index.max) {
+            (None, None) => {}
+            (Some(min), Some(max)) if min < max => {}
+            _ => errors.push(format!(
+                "indexes.{pid}: give min and max, with min below max, or none"
+            )),
+        }
+    }
     let t = &layouts.thresholds;
     for (name, share) in [("run_pictured", t.run_pictured), ("absence", t.absence)] {
         if !(0.0..=1.0).contains(&share) {
@@ -350,6 +359,9 @@ mod tests {
         assert!(invalid(&layouts, RULES).contains("P1539 is a part of another split"));
         let layouts = LAYOUTS.replacen("  \"P1540\",  # male population\n]", "]", 1);
         assert!(invalid(&layouts, RULES).contains("splits.sex: 1 parts"));
+        // An index range with one end.
+        let layouts = LAYOUTS.replacen("{ min = 0, max = 100 }", "{ min = 0 }", 1);
+        assert!(invalid(&layouts, RULES).contains("indexes.P11547: give min and max"));
     }
 
     #[test]

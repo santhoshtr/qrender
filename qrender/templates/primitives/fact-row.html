@@ -24,6 +24,14 @@
             {{ ui.part(s.part)|safe }}
             {%- if !s.note.is_empty() %} <span class="note">{{ ui.note(s.note.as_slice())|safe }}</span>{% endif -%}
             {%- if let Some(age) = b.age %} <span class="note">{{ ui.age(age.years) }}</span>{% endif -%}
+            {%- if let Some(g) = b.gauge %}
+                {%- let index = g.kind.name() == "index" %}
+                <span class="gauge g-{{ g.kind.name() }}" style="--at: {{ ui.css_number(g.at) }}">
+                    {%- if index %}<span class="end">{{ ui.part(ui.number(g.min))|safe }}</span>{% endif -%}
+                    <span class="track" aria-hidden="true"><span></span></span>
+                    {%- if index %}<span class="end">{{ ui.part(ui.number(g.max))|safe }}</span>{% endif -%}
+                </span>
+            {%- endif -%}
             {%- if let Some(d) = s.description %}<span class="desc">
                 {% call m::description(d) %}
                 {% endcall %}

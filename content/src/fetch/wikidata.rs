@@ -1,5 +1,5 @@
 //! wbgetentities on Wikidata: sitelinks, labels and descriptions,
-//! concept names, property datatypes.
+//! concept names, property datatypes, range constraints.
 
 use futures::future::try_join_all;
 use indexmap::IndexMap;
@@ -8,6 +8,7 @@ use serde_json::Value as Json;
 use super::FetchError;
 use super::http::{Http, Service};
 use crate::id::{EntityId, Lang, Pid, Qid};
+use crate::model::Range;
 use crate::text::{Concept, LangText, Term};
 
 const API: &str = "https://www.wikidata.org/w/api.php";
@@ -154,6 +155,45 @@ pub async fn datatypes(http: &Http, pids: &[Pid]) -> Result<IndexMap<Pid, String
         for pid in batch {
             if let Some(t) = all[pid.to_string()]["datatype"].as_str() {
                 out.insert(*pid, t.to_string());
+            }
+        }
+    }
+    Ok(out)
+}
+
+/// Property constraint (P2302): range constraint (Q21510860), with its
+/// minimum value (P2313) and maximum value (P2312).
+const CONSTRAINT: &str = "P2302";
+const RANGE_CONSTRAINT: &str = "Q21510860";
+const MINIMUM: &str = "P2313";
+const MAXIMUM: &str = "P2312";
+
+/// The range constraint of each property that has one with both ends.
+pub async fn ranges(http: &Http, pids: &[Pid]) -> Result<IndexMap<Pid, Range>, FetchError> {
+    let mut out = IndexMap::new();
+    for batch in pids.chunks(BATCH) {
+        let ids: Vec<String> = batch.iter().map(ToString::to_string).collect();
+        let all = entities(http, &ids, "claims", None).await?;
+        for pid in batch {
+            let constraints = all[pid.to_string()]["claims"][CONSTRAINT].as_array();
+            let range = constraints.into_iter().flatten().find_map(|c| {
+                if c["mainsnak"]["datavalue"]["value"]["id"] != RANGE_CONSTRAINT {
+                    return None;
+                }
+                let end = |p: &str| -> Option<f64> {
+                    c["qualifiers"][p][0]["datavalue"]["value"]["amount"]
+                        .as_str()?
+                        .trim_start_matches('+')
+                        .parse()
+                        .ok()
+                };
+                Some(Range {
+                    min: end(MINIMUM)?,
+                    max: end(MAXIMUM)?,
+                })
+            });
+            if let Some(range) = range {
+                out.insert(*pid, range);
             }
         }
     }

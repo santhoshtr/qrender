@@ -37,3 +37,46 @@
 		& dd { font-weight: var( --font-weight-normal ); color: var( --color-subtle ); }
 	}
 }
+
+/* ---------- a value on a scale ---------- */
+
+/* Under the value of a row. A proportion fills the track from the start;
+   an index has a marker at its place, with the ends of the scale. The
+   colour is the dimension of the spread. */
+.gauge {
+	display: flex;
+	align-items: center;
+	gap: var( --spacing-50 );
+	max-inline-size: 240px;
+	margin-block-start: var( --spacing-25 );
+	font-size: var( --font-size-x-small );
+	font-weight: var( --font-weight-normal );
+	color: var( --color-subtle );
+
+	& .track {
+		position: relative;
+		flex: 1;
+		block-size: 6px;
+		border-radius: 3px;
+		background-color: var( --soft );
+
+		& > span {
+			position: absolute;
+			background-color: var( --ink );
+		}
+	}
+
+	&.g-proportion .track > span {
+		inset-block: 0;
+		inset-inline-start: 0;
+		inline-size: calc( var( --at ) * 100% );
+		border-radius: 3px;
+	}
+
+	&.g-index .track > span {
+		inset-block: -4px;
+		inset-inline-start: calc( var( --at ) * 100% - 2px );
+		inline-size: 4px;
+		border-radius: 2px;
+	}
+}

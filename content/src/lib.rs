@@ -19,7 +19,7 @@ pub mod text;
 pub use id::{EntityId, IdError, Lang, Pid, Qid, StatementId};
 pub use model::{
     CONTENT_SCHEMA, Cell, CommonsFile, Container, Content, Datatype, NormalQuantity, Peers,
-    Qualifier, QualifierValue, QuantityRecord, Rank, ReverseWork, Statement, Table, Value,
+    Qualifier, QualifierValue, QuantityRecord, Range, Rank, ReverseWork, Statement, Table, Value,
     ValueError, ValueImage,
 };
 pub use settings::{LayoutMatch, Settings};

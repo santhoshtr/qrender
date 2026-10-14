@@ -17,6 +17,10 @@ pub struct Layouts {
     /// Properties whose values in one year divide one whole.
     #[serde(default)]
     pub splits: Vec<SplitSpec>,
+    /// Indexes: a value on a scale. The range of the scale is the range
+    /// constraint of the property, or the one given here.
+    #[serde(default)]
+    pub indexes: IndexMap<Pid, IndexSpec>,
     pub thresholds: Thresholds,
     /// The container properties, in order of preference, and how the item
     /// is compared with the container.
@@ -72,6 +76,15 @@ pub struct SplitSpec {
     /// The item whose label titles the split.
     pub concept: Qid,
     pub parts: Vec<Pid>,
+}
+
+/// An index property. A range here is for a property without a range
+/// constraint on Wikidata; both ends or none.
+#[derive(Debug, Default, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct IndexSpec {
+    pub min: Option<f64>,
+    pub max: Option<f64>,
 }
 
 /// The property lists of each role, and the two tables.

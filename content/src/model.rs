@@ -46,6 +46,18 @@ pub struct Content {
     /// The logo (P154) of qualifier values that are shown by their logo.
     #[serde(default)]
     pub logos: IndexMap<Qid, String>,
+    /// The range constraint of each quantity property of the item that has
+    /// one: the values a property allows. A range can be the scale of an
+    /// index (0 to 1) or only a sanity bound (0 to 400).
+    #[serde(default, skip_serializing_if = "IndexMap::is_empty")]
+    pub ranges: IndexMap<Pid, Range>,
+}
+
+/// The lowest and the highest value that a property allows.
+#[derive(Debug, Clone, Copy, PartialEq, Serialize, Deserialize)]
+pub struct Range {
+    pub min: f64,
+    pub max: f64,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
