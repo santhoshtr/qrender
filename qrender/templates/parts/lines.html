@@ -1,9 +1,9 @@
 {%- import "macros.html" as m -%}
-{#- Values one per line: the ones the composer marked as shown, and all of
-    them in a dialog. -#}
+{#- Values one per line: the ones the composer marked as shown; all of
+    them, with their pictures and qualifiers, in a dialog. -#}
 {%- for s in values.iter() -%}{%- if s.shown -%}{{ ui.line(s)|safe }}{%- endif -%}{%- endfor -%}
 {%- let rest = ui.hidden(values) -%}
 {%- if rest > 0 -%}
     {%- let n = ui.id() -%}
-    {% call m::more(n, rest) %}{% endcall %}{% call m::dialog(ui, n, heading) %}{%- for s in values.iter() -%}{{ ui.line(s)|safe }}{%- endfor -%}{% endcall %}
+    {% call m::more(n, rest) %}{% endcall %}{% call m::dialog(ui, n, heading) %}{{ ui.rows(all)|safe }}{% endcall %}
 {%- endif -%}

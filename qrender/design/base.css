@@ -694,6 +694,9 @@ dialog {
 		& > .desc,
 		& > .note { flex-basis: 100%; }
 	}
+
+	/* No value has a picture: no picture column. */
+	&.text-rows li { grid-template-columns: minmax( 0, 1fr ); }
 }
 
 /* The picture of the item itself needs no property name. */

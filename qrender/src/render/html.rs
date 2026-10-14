@@ -113,6 +113,9 @@ struct LineHtml<'a> {
 struct LinesHtml<'a> {
     ui: &'a Ui<'a>,
     values: &'a [Shown<'a>],
+    /// The values of the dialog: all of them, and more when the block has
+    /// more (the holder now, for the holders before).
+    all: &'a [Shown<'a>],
     heading: &'a str,
 }
 
@@ -175,9 +178,15 @@ impl<'v> Ui<'v> {
     }
 
     pub fn lines(&self, values: &[Shown], heading: impl Ref<str>) -> String {
+        self.lines_with(values, values, heading)
+    }
+
+    /// Lines of `values`, with `all` in the dialog.
+    pub fn lines_with(&self, values: &[Shown], all: &[Shown], heading: impl Ref<str>) -> String {
         render(LinesHtml {
             ui: self,
             values,
+            all,
             heading: heading.r(),
         })
     }

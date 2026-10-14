@@ -388,6 +388,19 @@ impl<'v> Ui<'v> {
         statements.iter().map(|s| self.value(s)).collect()
     }
 
+    /// Some value of the list has a picture.
+    pub fn any_image(&self, values: &[Shown]) -> bool {
+        values.iter().any(|s| s.image.is_some())
+    }
+
+    /// Every holder of an office: the holder now, then the holders before.
+    pub fn holders<'a>(&'a self, b: &'a Succession) -> Vec<Shown<'a>> {
+        std::iter::once(&b.holder)
+            .chain(&b.before)
+            .map(|s| self.value(s))
+            .collect()
+    }
+
     pub fn persons<'a>(&'a self, credits: &'a Credits) -> Vec<Shown<'a>> {
         credits.values.iter().map(|p| self.person(p)).collect()
     }
