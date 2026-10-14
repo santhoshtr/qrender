@@ -588,6 +588,32 @@ pids = [
   "P898",   # IPA transcription
 ]
 
+# The id of the settlement's spread: "geography of topic" (P2633) links
+# here. The map takes the coordinate and the extreme points.
+[[class_layouts.country.spreads]]
+id = "location"
+dimension = "place"
+concept = "Q1071"      # geography
+prose = ["Q1071"]      # geography
+kind = "facts"
+pids = [
+  "P625",   # coordinate location
+  "P1332",  # coordinates of northernmost point
+  "P1333",  # coordinates of southernmost point
+  "P1334",  # coordinates of easternmost point
+  "P1335",  # coordinates of westernmost point
+  "P3896",  # geoshape
+  "P11832", # satellite imagery
+  "P2046",  # area
+  "P2927",  # water as percent of area
+  "P5141",  # coastline
+  "P30",    # continent
+  "P47",    # shares border with
+  "P206",   # located in or next to body of water
+  "P610",   # highest point
+  "P1589",  # lowest point
+]
+
 [[class_layouts.country.spreads]]
 id = "government"
 dimension = "people"

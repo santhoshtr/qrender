@@ -1557,6 +1557,559 @@ expression: composition
       }
     },
     {
+      "id": "location",
+      "kind": "facts",
+      "dimension": "place",
+      "concept": "Q1071",
+      "template": "hero-plus-stack",
+      "slots": {
+        "hero": [
+          {
+            "primitive": "map",
+            "statement": "q668-A160C75B-2538-4306-8C2E-C5D5B97E2F29",
+            "pid": "P625",
+            "lat": 22.8,
+            "lon": 83.0,
+            "globe": "Q2",
+            "rank": "normal",
+            "provenance": "none",
+            "extent_m": 1813081,
+            "markers": [
+              {
+                "pid": "P1332",
+                "lat": 35.674521,
+                "lon": 76.844485,
+                "globe": "Q2",
+                "statement": "Q668-F2275CC9-EAAB-4344-8550-337B09F40D8C",
+                "provenance": "none"
+              },
+              {
+                "pid": "P1333",
+                "lat": 6.74678,
+                "lon": 93.8426,
+                "globe": "Q2",
+                "statement": "Q668-52eaf08f-4ee9-03d9-7d62-a4c5d9ea1a78",
+                "provenance": "none"
+              },
+              {
+                "pid": "P1334",
+                "lat": 28.01168,
+                "lon": 97.39564,
+                "globe": "Q2",
+                "statement": "Q668-a9397fe0-4eb4-c8af-7d9a-351faebefbd0",
+                "provenance": "none"
+              },
+              {
+                "pid": "P1335",
+                "lat": 23.6261,
+                "lon": 68.1941,
+                "globe": "Q2",
+                "statement": "Q668-e8580804-4875-3537-88cc-a21c04efea72",
+                "provenance": "none"
+              }
+            ],
+            "rule": "coordinate"
+          }
+        ],
+        "stack": [
+          {
+            "primitive": "network",
+            "pid": "P47",
+            "values": [
+              {
+                "statement": "Q668-5ff2bc16-491d-b88b-4977-46adc3c847ef",
+                "pid": "P47",
+                "item": "Q252",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P805",
+                    "item": "Q17351772"
+                  }
+                ],
+                "image": {
+                  "file": "Indonesian Culture.jpg",
+                  "kind": "photo",
+                  "aspect": 0.6543,
+                  "megapixels": 4.18,
+                  "credit": {
+                    "artist": "Tari_Pendet.jpg: Christopher Michel from San Francisco, USA\nGaruda Pancasila.jpg : Gunkarta\nBorobudur-Nothwest-view.jpg: Gunkarta\nTMII Rumah Gadang West Sumatra.JPG : Gunkarta\nSate Hati Kambing.JPG: Gunkarta\nPapuan Dance from Yapen.jpg: Gunkarta\nCOLLECTIE TROPENMUSEUM Papieren wajangpop voorstellende Arjuna (kinderspeelgoed) TMnr 809-46c.jpg :Tropenmuseum\nCOLLECTIE TROPENMUSEUM Metallofoon met zes toetsen onderdeel van gamelan Semar Pagulingan TMnr 1340-34.jpg :Tropenmuseum\nCOLLECTIE TROPENMUSEUM Kris zonder schede TMnr A-3443.jpg:Tropenmuseum\nCOLLECTIE TROPENMUSEUM Langwerpige houten plank versierd met uitgesneden en beschilderde motieven TMnr 4117-38.jpg:Tropenmuseum\nCOLLECTIE TROPENMUSEUM Katoenen wikkelrok met geometrisch patroon TMnr 5713-2.jpg:Tropenmuseum\nMeuseujid Raya Bayturrahman.JPG:Si Gam Acèh\nAngklung.jpg:Original uploader was M0ffia at nl.wikipedia\nNasi Kuning.jpg:miss_yasmina\nBamboofabric.gif:Peggy Reeves Sanday\nderivative work: Gunkarta",
+                    "license": "CC BY 2.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "q668-6C69721F-EFD9-45D3-92F8-29570CE50D01",
+                "pid": "P47",
+                "item": "Q836",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P805",
+                    "item": "Q2749165"
+                  }
+                ],
+                "image": {
+                  "file": "@HaNgryBam.jpg",
+                  "kind": "photo",
+                  "aspect": 1.5,
+                  "megapixels": 24.0,
+                  "credit": {
+                    "artist": "Wine Su11",
+                    "license": "CC BY-SA 4.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "q668-0DC6B6EF-C66E-4F77-B87B-CFD84E815E80",
+                "pid": "P47",
+                "item": "Q837",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P805",
+                    "item": "Q3088768"
+                  }
+                ],
+                "image": {
+                  "file": "Satellite image of Nepal in October 2002.jpg",
+                  "kind": "photo",
+                  "aspect": 1.7385,
+                  "megapixels": 6.05,
+                  "credit": {
+                    "artist": "Jacques Descloitres, MODIS Rapid Response Team, NASA/GSFC",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q668-12653b28-4714-5866-d3d0-bb6bad2ec189",
+                "pid": "P47",
+                "item": "Q854",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P805",
+                    "item": "Q17351774"
+                  }
+                ],
+                "image": {
+                  "file": "Topography Sri Lanka.jpg",
+                  "kind": "photo",
+                  "aspect": 0.5769,
+                  "megapixels": 15.6,
+                  "credit": {
+                    "artist": "National Aeronautics & Space Administration",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "q668-8738C55E-4BD2-44B5-8153-C9F8B86ACC37",
+                "pid": "P47",
+                "item": "Q148",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P805",
+                    "item": "Q1992790"
+                  }
+                ],
+                "image": {
+                  "file": "Badaling China Great-Wall-of-China-01.jpg",
+                  "kind": "photo",
+                  "aspect": 1.5612,
+                  "megapixels": 11.21,
+                  "assessed": [
+                    "Featured pictures on Wikimedia Commons",
+                    "Quality images"
+                  ],
+                  "credit": {
+                    "artist": "CEphoto, Uwe Aranas",
+                    "license": "CC BY-SA 3.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q668-929a66bc-44bd-3a52-ebda-5bc680d17270",
+                "pid": "P47",
+                "item": "Q889",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P805",
+                    "item": "Q1413732"
+                  },
+                  {
+                    "pid": "P1310",
+                    "item": "Q3250182"
+                  },
+                  {
+                    "pid": "P3680",
+                    "item": "Q2767140"
+                  }
+                ],
+                "image": {
+                  "file": "Afghanistan - Location Map (2013) - AFG - UNOCHA.svg",
+                  "kind": "drawing",
+                  "aspect": 1.0,
+                  "megapixels": 0.06,
+                  "credit": {
+                    "artist": "UN Office for the Coordination of Humanitarian Affairs (OCHA)",
+                    "license": "CC BY 3.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "q668-B3325A51-367D-48FE-A1A5-5E13297F9538",
+                "pid": "P47",
+                "item": "Q843",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P805",
+                    "item": "Q2635466"
+                  }
+                ],
+                "image": {
+                  "file": "Blue Hour at Pakistan Monument.jpg",
+                  "kind": "photo",
+                  "aspect": 1.5,
+                  "megapixels": 24.0,
+                  "assessed": [
+                    "Featured pictures on Wikimedia Commons",
+                    "Quality images"
+                  ],
+                  "credit": {
+                    "artist": "Muhammad Ashar",
+                    "license": "CC BY-SA 4.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "q668-92B995F0-D78C-4054-B1C7-99EA77D5A754",
+                "pid": "P47",
+                "item": "Q902",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P805",
+                    "item": "Q2399139"
+                  }
+                ],
+                "shown": true
+              },
+              {
+                "statement": "q668-CD527911-6B34-4541-8D1B-168C5AB3D9A9",
+                "pid": "P47",
+                "item": "Q917",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P805",
+                    "item": "Q2749121"
+                  }
+                ],
+                "shown": true
+              }
+            ],
+            "priority": 0.286,
+            "rule": "set"
+          },
+          {
+            "primitive": "network",
+            "pid": "P206",
+            "values": [
+              {
+                "statement": "Q668-46e8853c-40b3-25d4-c253-42da20ea134f",
+                "pid": "P206",
+                "item": "Q38684",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "India satellite image.png",
+                  "kind": "photo",
+                  "aspect": 1.351,
+                  "megapixels": 1.21,
+                  "credit": {
+                    "artist": "Mgiganteus",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q668-27372b7e-4224-8db3-03af-18c8caa96368",
+                "pid": "P206",
+                "item": "Q1239",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Indian Ocean-CIA WFB Map.png",
+                  "kind": "photo",
+                  "aspect": 1.0,
+                  "megapixels": 0.11,
+                  "credit": {
+                    "artist": "United States Central Intelligence Agency",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q668-d13268e9-477a-d762-bd1d-fd4d8e608372",
+                "pid": "P206",
+                "item": "Q58705",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Arabian Sea - n22e70.jpg",
+                  "kind": "photo",
+                  "aspect": 1.5314,
+                  "megapixels": 0.3,
+                  "credit": {
+                    "artist": "Arjun Sinh Jadeja",
+                    "license": "CC BY-SA 4.0"
+                  }
+                },
+                "shown": true
+              }
+            ],
+            "priority": 0.0,
+            "rule": "set"
+          }
+        ],
+        "gallery": [
+          {
+            "primitive": "network",
+            "role": "gallery",
+            "values": [
+              {
+                "statement": "q668-EFFE083D-8F92-4223-8E36-28CB7E71DA16",
+                "pid": "P30",
+                "item": "Q48",
+                "rank": "normal",
+                "provenance": "sourced",
+                "image": {
+                  "file": "Asia satellite orthographic.jpg",
+                  "kind": "photo",
+                  "aspect": 0.9618,
+                  "megapixels": 3.7,
+                  "credit": {
+                    "artist": "",
+                    "license": "Public domain"
+                  }
+                },
+                "priority": 3.0
+              },
+              {
+                "statement": "Q668-19e572c7-4b59-0a3f-8d83-f67e7f3254ac",
+                "pid": "P610",
+                "item": "Q82019",
+                "rank": "preferred",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P1310",
+                    "item": "Q2767140"
+                  }
+                ],
+                "image": {
+                  "file": "Kangchenjunga, India.jpg",
+                  "kind": "photo",
+                  "aspect": 1.4993,
+                  "megapixels": 0.7,
+                  "credit": {
+                    "artist": "My Discovery",
+                    "license": "CC BY 2.0"
+                  }
+                },
+                "priority": 0.0
+              },
+              {
+                "statement": "Q668-bd8f2e93-415a-1f27-d512-cdda8e4cb6e4",
+                "pid": "P610",
+                "item": "Q43512",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P805",
+                    "item": "Q1413732"
+                  },
+                  {
+                    "pid": "P1310",
+                    "item": "Q3250182"
+                  },
+                  {
+                    "pid": "P3680",
+                    "item": "Q2767140"
+                  }
+                ],
+                "image": {
+                  "file": "Chogori.jpg",
+                  "kind": "photo",
+                  "aspect": 1.3333,
+                  "megapixels": 12.0,
+                  "credit": {
+                    "artist": "Zacharie Grossen",
+                    "license": "CC BY-SA 4.0"
+                  }
+                },
+                "priority": 0.0
+              },
+              {
+                "statement": "Q668-9a5d19cf-452e-f505-4225-9d88188dfa54",
+                "pid": "P1589",
+                "item": "Q1435109",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P2044",
+                    "amount": -2.0
+                  }
+                ],
+                "image": {
+                  "file": "Kerala Kuttanad1.jpg",
+                  "kind": "photo",
+                  "aspect": 1.5496,
+                  "megapixels": 4.23,
+                  "credit": {
+                    "artist": "Sourav Niyogi",
+                    "license": "CC BY-SA 3.0"
+                  }
+                },
+                "priority": 0.0
+              }
+            ],
+            "priority": 3.0,
+            "rule": "single"
+          }
+        ],
+        "sheet": [
+          {
+            "primitive": "fact",
+            "pid": "P3896",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q668-d9c9035d-42eb-6f89-aa21-0b2715850ae7",
+                "pid": "P3896",
+                "string": "http://commons.wikimedia.org/data/main/Data:India.map",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P1310",
+                    "item": "Q2767140"
+                  }
+                ],
+                "shown": true
+              },
+              {
+                "statement": "Q668-b4601f8c-4bc0-e38f-2724-db6c6d3c9320",
+                "pid": "P3896",
+                "string": "http://commons.wikimedia.org/data/main/Data:India+outline.map",
+                "rank": "preferred",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P1310",
+                    "item": "Q936190"
+                  },
+                  {
+                    "pid": "P1310",
+                    "item": "Q3250182"
+                  },
+                  {
+                    "pid": "P3680",
+                    "item": "Q2767140"
+                  }
+                ],
+                "shown": true
+              }
+            ],
+            "priority": 0.0,
+            "rule": "row"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P2046",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q668-a9fed68d-4ffe-0fa8-8635-8317013c62a9",
+                "pid": "P2046",
+                "amount": 3287263.0,
+                "unit": "Q712226",
+                "rank": "normal",
+                "provenance": "none",
+                "shown": true
+              }
+            ],
+            "priority": 0.571,
+            "rule": "row"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P2927",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q668-886a0348-4ebf-a99e-b83d-2252e3f19db1",
+                "pid": "P2927",
+                "amount": 9.5,
+                "unit": "Q11229",
+                "rank": "normal",
+                "provenance": "none",
+                "shown": true
+              }
+            ],
+            "priority": 0.0,
+            "gauge": {
+              "kind": "proportion",
+              "min": 0.0,
+              "max": 100.0,
+              "at": 0.095
+            },
+            "rule": "row"
+          }
+        ]
+      },
+      "prose": {
+        "concepts": [
+          "Q1071"
+        ]
+      },
+      "topics": [
+        {
+          "statement": "Q668-c93b12bb-4c8f-ad10-01c5-d79642fdb5fe",
+          "pid": "P2633",
+          "item": "Q838671",
+          "rank": "normal",
+          "provenance": "none",
+          "class": true
+        }
+      ]
+    },
+    {
       "id": "government",
       "kind": "facts",
       "dimension": "people",
@@ -8772,288 +9325,6 @@ expression: composition
             ],
             "priority": 0.0,
             "rule": "set"
-          },
-          {
-            "primitive": "network",
-            "pid": "P206",
-            "values": [
-              {
-                "statement": "Q668-46e8853c-40b3-25d4-c253-42da20ea134f",
-                "pid": "P206",
-                "item": "Q38684",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "India satellite image.png",
-                  "kind": "photo",
-                  "aspect": 1.351,
-                  "megapixels": 1.21,
-                  "credit": {
-                    "artist": "Mgiganteus",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q668-27372b7e-4224-8db3-03af-18c8caa96368",
-                "pid": "P206",
-                "item": "Q1239",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "Indian Ocean-CIA WFB Map.png",
-                  "kind": "photo",
-                  "aspect": 1.0,
-                  "megapixels": 0.11,
-                  "credit": {
-                    "artist": "United States Central Intelligence Agency",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q668-d13268e9-477a-d762-bd1d-fd4d8e608372",
-                "pid": "P206",
-                "item": "Q58705",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "Arabian Sea - n22e70.jpg",
-                  "kind": "photo",
-                  "aspect": 1.5314,
-                  "megapixels": 0.3,
-                  "credit": {
-                    "artist": "Arjun Sinh Jadeja",
-                    "license": "CC BY-SA 4.0"
-                  }
-                },
-                "shown": true
-              }
-            ],
-            "priority": 0.0,
-            "rule": "set"
-          },
-          {
-            "primitive": "network",
-            "pid": "P47",
-            "values": [
-              {
-                "statement": "Q668-5ff2bc16-491d-b88b-4977-46adc3c847ef",
-                "pid": "P47",
-                "item": "Q252",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P805",
-                    "item": "Q17351772"
-                  }
-                ],
-                "image": {
-                  "file": "Indonesian Culture.jpg",
-                  "kind": "photo",
-                  "aspect": 0.6543,
-                  "megapixels": 4.18,
-                  "credit": {
-                    "artist": "Tari_Pendet.jpg: Christopher Michel from San Francisco, USA\nGaruda Pancasila.jpg : Gunkarta\nBorobudur-Nothwest-view.jpg: Gunkarta\nTMII Rumah Gadang West Sumatra.JPG : Gunkarta\nSate Hati Kambing.JPG: Gunkarta\nPapuan Dance from Yapen.jpg: Gunkarta\nCOLLECTIE TROPENMUSEUM Papieren wajangpop voorstellende Arjuna (kinderspeelgoed) TMnr 809-46c.jpg :Tropenmuseum\nCOLLECTIE TROPENMUSEUM Metallofoon met zes toetsen onderdeel van gamelan Semar Pagulingan TMnr 1340-34.jpg :Tropenmuseum\nCOLLECTIE TROPENMUSEUM Kris zonder schede TMnr A-3443.jpg:Tropenmuseum\nCOLLECTIE TROPENMUSEUM Langwerpige houten plank versierd met uitgesneden en beschilderde motieven TMnr 4117-38.jpg:Tropenmuseum\nCOLLECTIE TROPENMUSEUM Katoenen wikkelrok met geometrisch patroon TMnr 5713-2.jpg:Tropenmuseum\nMeuseujid Raya Bayturrahman.JPG:Si Gam Acèh\nAngklung.jpg:Original uploader was M0ffia at nl.wikipedia\nNasi Kuning.jpg:miss_yasmina\nBamboofabric.gif:Peggy Reeves Sanday\nderivative work: Gunkarta",
-                    "license": "CC BY 2.0"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "q668-6C69721F-EFD9-45D3-92F8-29570CE50D01",
-                "pid": "P47",
-                "item": "Q836",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P805",
-                    "item": "Q2749165"
-                  }
-                ],
-                "image": {
-                  "file": "@HaNgryBam.jpg",
-                  "kind": "photo",
-                  "aspect": 1.5,
-                  "megapixels": 24.0,
-                  "credit": {
-                    "artist": "Wine Su11",
-                    "license": "CC BY-SA 4.0"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "q668-0DC6B6EF-C66E-4F77-B87B-CFD84E815E80",
-                "pid": "P47",
-                "item": "Q837",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P805",
-                    "item": "Q3088768"
-                  }
-                ],
-                "image": {
-                  "file": "Satellite image of Nepal in October 2002.jpg",
-                  "kind": "photo",
-                  "aspect": 1.7385,
-                  "megapixels": 6.05,
-                  "credit": {
-                    "artist": "Jacques Descloitres, MODIS Rapid Response Team, NASA/GSFC",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q668-12653b28-4714-5866-d3d0-bb6bad2ec189",
-                "pid": "P47",
-                "item": "Q854",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P805",
-                    "item": "Q17351774"
-                  }
-                ],
-                "image": {
-                  "file": "Topography Sri Lanka.jpg",
-                  "kind": "photo",
-                  "aspect": 0.5769,
-                  "megapixels": 15.6,
-                  "credit": {
-                    "artist": "National Aeronautics & Space Administration",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "q668-8738C55E-4BD2-44B5-8153-C9F8B86ACC37",
-                "pid": "P47",
-                "item": "Q148",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P805",
-                    "item": "Q1992790"
-                  }
-                ],
-                "image": {
-                  "file": "Badaling China Great-Wall-of-China-01.jpg",
-                  "kind": "photo",
-                  "aspect": 1.5612,
-                  "megapixels": 11.21,
-                  "assessed": [
-                    "Featured pictures on Wikimedia Commons",
-                    "Quality images"
-                  ],
-                  "credit": {
-                    "artist": "CEphoto, Uwe Aranas",
-                    "license": "CC BY-SA 3.0"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q668-929a66bc-44bd-3a52-ebda-5bc680d17270",
-                "pid": "P47",
-                "item": "Q889",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P805",
-                    "item": "Q1413732"
-                  },
-                  {
-                    "pid": "P1310",
-                    "item": "Q3250182"
-                  },
-                  {
-                    "pid": "P3680",
-                    "item": "Q2767140"
-                  }
-                ],
-                "image": {
-                  "file": "Afghanistan - Location Map (2013) - AFG - UNOCHA.svg",
-                  "kind": "drawing",
-                  "aspect": 1.0,
-                  "megapixels": 0.06,
-                  "credit": {
-                    "artist": "UN Office for the Coordination of Humanitarian Affairs (OCHA)",
-                    "license": "CC BY 3.0"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "q668-B3325A51-367D-48FE-A1A5-5E13297F9538",
-                "pid": "P47",
-                "item": "Q843",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P805",
-                    "item": "Q2635466"
-                  }
-                ],
-                "image": {
-                  "file": "Blue Hour at Pakistan Monument.jpg",
-                  "kind": "photo",
-                  "aspect": 1.5,
-                  "megapixels": 24.0,
-                  "assessed": [
-                    "Featured pictures on Wikimedia Commons",
-                    "Quality images"
-                  ],
-                  "credit": {
-                    "artist": "Muhammad Ashar",
-                    "license": "CC BY-SA 4.0"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "q668-92B995F0-D78C-4054-B1C7-99EA77D5A754",
-                "pid": "P47",
-                "item": "Q902",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P805",
-                    "item": "Q2399139"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "q668-CD527911-6B34-4541-8D1B-168C5AB3D9A9",
-                "pid": "P47",
-                "item": "Q917",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P805",
-                    "item": "Q2749121"
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 0.286,
-            "rule": "set"
           }
         ],
         "gallery": [
@@ -9061,24 +9332,6 @@ expression: composition
             "primitive": "network",
             "role": "gallery",
             "values": [
-              {
-                "statement": "q668-EFFE083D-8F92-4223-8E36-28CB7E71DA16",
-                "pid": "P30",
-                "item": "Q48",
-                "rank": "normal",
-                "provenance": "sourced",
-                "image": {
-                  "file": "Asia satellite orthographic.jpg",
-                  "kind": "photo",
-                  "aspect": 0.9618,
-                  "megapixels": 3.7,
-                  "credit": {
-                    "artist": "",
-                    "license": "Public domain"
-                  }
-                },
-                "priority": 3.0
-              },
               {
                 "statement": "Q668-f4f9a2b3-47df-5960-e58e-5e46464ddc65",
                 "pid": "P155",
@@ -9096,86 +9349,6 @@ expression: composition
                   }
                 },
                 "priority": 0.286
-              },
-              {
-                "statement": "Q668-19e572c7-4b59-0a3f-8d83-f67e7f3254ac",
-                "pid": "P610",
-                "item": "Q82019",
-                "rank": "preferred",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P1310",
-                    "item": "Q2767140"
-                  }
-                ],
-                "image": {
-                  "file": "Kangchenjunga, India.jpg",
-                  "kind": "photo",
-                  "aspect": 1.4993,
-                  "megapixels": 0.7,
-                  "credit": {
-                    "artist": "My Discovery",
-                    "license": "CC BY 2.0"
-                  }
-                },
-                "priority": 0.0
-              },
-              {
-                "statement": "Q668-bd8f2e93-415a-1f27-d512-cdda8e4cb6e4",
-                "pid": "P610",
-                "item": "Q43512",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P805",
-                    "item": "Q1413732"
-                  },
-                  {
-                    "pid": "P1310",
-                    "item": "Q3250182"
-                  },
-                  {
-                    "pid": "P3680",
-                    "item": "Q2767140"
-                  }
-                ],
-                "image": {
-                  "file": "Chogori.jpg",
-                  "kind": "photo",
-                  "aspect": 1.3333,
-                  "megapixels": 12.0,
-                  "credit": {
-                    "artist": "Zacharie Grossen",
-                    "license": "CC BY-SA 4.0"
-                  }
-                },
-                "priority": 0.0
-              },
-              {
-                "statement": "Q668-9a5d19cf-452e-f505-4225-9d88188dfa54",
-                "pid": "P1589",
-                "item": "Q1435109",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P2044",
-                    "amount": -2.0
-                  }
-                ],
-                "image": {
-                  "file": "Kerala Kuttanad1.jpg",
-                  "kind": "photo",
-                  "aspect": 1.5496,
-                  "megapixels": 4.23,
-                  "credit": {
-                    "artist": "Sourav Niyogi",
-                    "license": "CC BY-SA 3.0"
-                  }
-                },
-                "priority": 0.0
               },
               {
                 "statement": "Q668-ff5d2fa5-4286-426b-dd92-8da61a7879e7",
@@ -9249,7 +9422,7 @@ expression: composition
                 "priority": 0.0
               }
             ],
-            "priority": 3.0,
+            "priority": 0.286,
             "rule": "single"
           }
         ],
@@ -16323,24 +16496,6 @@ expression: composition
           },
           {
             "primitive": "fact",
-            "pid": "P625",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "q668-A160C75B-2538-4306-8C2E-C5D5B97E2F29",
-                "pid": "P625",
-                "lat": 22.8,
-                "lon": 83.0,
-                "globe": "Q2",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.857
-          },
-          {
-            "primitive": "fact",
             "pid": "P13939",
             "form": "value",
             "statements": [
@@ -16354,23 +16509,6 @@ expression: composition
               }
             ],
             "priority": 0.857
-          },
-          {
-            "primitive": "fact",
-            "pid": "P2046",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-a9fed68d-4ffe-0fa8-8635-8317013c62a9",
-                "pid": "P2046",
-                "amount": 3287263.0,
-                "unit": "Q712226",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.571
           },
           {
             "primitive": "fact",
@@ -16442,24 +16580,6 @@ expression: composition
           },
           {
             "primitive": "fact",
-            "pid": "P1333",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-52eaf08f-4ee9-03d9-7d62-a4c5d9ea1a78",
-                "pid": "P1333",
-                "lat": 6.74678,
-                "lon": 93.8426,
-                "globe": "Q2",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
             "pid": "P3238",
             "form": "value",
             "statements": [
@@ -16515,68 +16635,6 @@ expression: composition
           },
           {
             "primitive": "fact",
-            "pid": "P3896",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-d9c9035d-42eb-6f89-aa21-0b2715850ae7",
-                "pid": "P3896",
-                "string": "http://commons.wikimedia.org/data/main/Data:India.map",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P1310",
-                    "item": "Q2767140"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q668-b4601f8c-4bc0-e38f-2724-db6c6d3c9320",
-                "pid": "P3896",
-                "string": "http://commons.wikimedia.org/data/main/Data:India+outline.map",
-                "rank": "preferred",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P1310",
-                    "item": "Q936190"
-                  },
-                  {
-                    "pid": "P1310",
-                    "item": "Q3250182"
-                  },
-                  {
-                    "pid": "P3680",
-                    "item": "Q2767140"
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P1335",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-e8580804-4875-3537-88cc-a21c04efea72",
-                "pid": "P1335",
-                "lat": 23.6261,
-                "lon": 68.1941,
-                "globe": "Q2",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
             "pid": "P2579",
             "form": "value",
             "statements": [
@@ -16620,47 +16678,6 @@ expression: composition
                 "rank": "normal",
                 "provenance": "imported",
                 "class": true,
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P2927",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-886a0348-4ebf-a99e-b83d-2252e3f19db1",
-                "pid": "P2927",
-                "amount": 9.5,
-                "unit": "Q11229",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.0,
-            "gauge": {
-              "kind": "proportion",
-              "min": 0.0,
-              "max": 100.0,
-              "at": 0.095
-            }
-          },
-          {
-            "primitive": "fact",
-            "pid": "P1332",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-F2275CC9-EAAB-4344-8550-337B09F40D8C",
-                "pid": "P1332",
-                "lat": 35.674521,
-                "lon": 76.844485,
-                "globe": "Q2",
-                "rank": "normal",
-                "provenance": "none",
                 "shown": true
               }
             ],
@@ -16726,41 +16743,6 @@ expression: composition
                 "item": "Q4903358",
                 "rank": "normal",
                 "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P1334",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-a9397fe0-4eb4-c8af-7d9a-351faebefbd0",
-                "pid": "P1334",
-                "lat": 28.01168,
-                "lon": 97.39564,
-                "globe": "Q2",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P2633",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-c93b12bb-4c8f-ad10-01c5-d79642fdb5fe",
-                "pid": "P2633",
-                "item": "Q838671",
-                "rank": "normal",
-                "provenance": "none",
-                "class": true,
                 "shown": true
               }
             ],
