@@ -35,11 +35,19 @@ make = "values"
 
 # ---------------------------------------------------------------- split
 # Values of an item property that ended are history: a group of their own.
-# Not for the `relation` role: an ended marriage is part of a life.
+# Not for the `relation` role: an ended marriage is part of a life. The
+# split table is for item and media properties.
 
 [[split]]
 id = "former-values"
 when = { type = "WikibaseItem", relation = false }
+make = "split-ended"
+
+# The files of a media property that ended (the flags before the current
+# one) are earlier: a group of their own, shown behind "+N".
+[[split]]
+id = "former-media"
+when = { type = "CommonsMedia" }
 make = "split-ended"
 
 [[split]]
@@ -48,6 +56,11 @@ make = "together"
 
 # ---------------------------------------------------------------- block
 # The block of one group of values.
+
+[[block]]
+id = "earlier"
+when = { type = "CommonsMedia", former = true }
+make = "earlier"
 
 [[block]]
 id = "media"

@@ -1234,6 +1234,32 @@ expression: composition
             ]
           },
           {
+            "primitive": "earlier",
+            "pid": "P41",
+            "values": [
+              {
+                "statement": "Q668-18ec9f09-4e85-1703-0dd4-3cab9c278dff",
+                "pid": "P41",
+                "file": "British Raj Red Ensign.svg",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1858
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1947
+                  }
+                ]
+              }
+            ],
+            "from": 1858,
+            "to": 1947,
+            "rule": "earlier"
+          },
+          {
             "primitive": "sounds",
             "pid": "P443",
             "sounds": [
@@ -1401,33 +1427,6 @@ expression: composition
             "megapixels": 0.54,
             "credit": {
               "artist": "Government of India",
-              "license": "Public domain"
-            },
-            "rule": "media"
-          },
-          {
-            "primitive": "media",
-            "role": "stack",
-            "statement": "Q668-18ec9f09-4e85-1703-0dd4-3cab9c278dff",
-            "pid": "P41",
-            "file": "British Raj Red Ensign.svg",
-            "rank": "normal",
-            "provenance": "none",
-            "qualifiers": [
-              {
-                "pid": "P580",
-                "year": 1858
-              },
-              {
-                "pid": "P582",
-                "year": 1947
-              }
-            ],
-            "kind": "drawing",
-            "aspect": 2.0,
-            "megapixels": 0.18,
-            "credit": {
-              "artist": "Barryob",
               "license": "Public domain"
             },
             "rule": "media"

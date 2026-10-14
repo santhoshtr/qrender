@@ -1,0 +1,23 @@
+{%- import "macros.html" as m -%}
+{#- The earlier files of a property (the flags before the current one):
+    the years they cover, and all of them in a dialog, the oldest first. -#}
+{%- let title = ui.property(b.pid) -%}
+<div class="block earlier">
+    <h3>{{ ui.text(&title, true)|safe }} <span class="note">{{ ui.msg("qrender-earlier") }} · {{ ui.when(b.span()) }}</span></h3>
+    {%- let n = ui.id() -%}
+    {% call m::more(n, b.values.len()) %}{% endcall %}
+    {% call m::dialog(ui, n, title.text) %}
+    <div class="earlier-files">
+        {%- for s in b.values.iter() %}
+            {%- let file = ui.statement_file(s) -%}
+            {%- let v = ui.value(s) %}
+            <figure>
+                <a href="{{ ui.commons_page(file) }}"><img src="{{ ui.src(file, 240) }}"
+     alt="{{ title.text }}"
+     loading="lazy"></a>
+                <figcaption class="note">{{ ui.note(v.note.as_slice())|safe }}</figcaption>
+            </figure>
+        {%- endfor %}
+    </div>
+    {% endcall %}
+</div>

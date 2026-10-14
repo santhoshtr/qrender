@@ -144,6 +144,19 @@
           "type": "object"
         },
         {
+          "$ref": "#/$defs/Earlier",
+          "properties": {
+            "primitive": {
+              "const": "earlier",
+              "type": "string"
+            }
+          },
+          "required": [
+            "primitive"
+          ],
+          "type": "object"
+        },
+        {
           "$ref": "#/$defs/Sounds",
           "properties": {
             "primitive": {
@@ -542,6 +555,46 @@
       },
       "required": [
         "id"
+      ],
+      "type": "object"
+    },
+    "Earlier": {
+      "properties": {
+        "from": {
+          "description": "The first start time and the last end time of the files.",
+          "format": "int64",
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "pid": {
+          "$ref": "#/$defs/Pid"
+        },
+        "rule": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "to": {
+          "format": "int64",
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "values": {
+          "description": "The oldest first.",
+          "items": {
+            "$ref": "#/$defs/StatementRef"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "pid",
+        "values"
       ],
       "type": "object"
     },
@@ -2454,6 +2507,11 @@
         {
           "const": "pictures",
           "description": "Single pictures that follow each other in a slot: one run.",
+          "type": "string"
+        },
+        {
+          "const": "earlier",
+          "description": "The files of a property that ended: one block, a dialog of files.",
           "type": "string"
         },
         {

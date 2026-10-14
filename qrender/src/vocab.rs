@@ -103,6 +103,8 @@ pub enum Primitive {
     Media,
     /// Single pictures that follow each other in a slot: one run.
     Pictures,
+    /// The files of a property that ended: one block, a dialog of files.
+    Earlier,
     /// The recordings of one property (pronunciations): one player.
     Sounds,
     /// The names of the item in many languages: one choice of language.
@@ -130,12 +132,13 @@ pub enum Primitive {
 impl Primitive {
     /// Every primitive, in the order of their CSS in the stylesheet and of
     /// their scripts in a page.
-    pub const ALL: [Primitive; 23] = [
+    pub const ALL: [Primitive; 24] = [
         Self::Title,
         Self::Kind,
         Self::Prose,
         Self::Media,
         Self::Pictures,
+        Self::Earlier,
         Self::Sounds,
         Self::Names,
         Self::Map,

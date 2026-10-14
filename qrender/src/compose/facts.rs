@@ -329,7 +329,12 @@ mod tests {
         let block = &rules().block;
         let none = json!({});
         let media = json!([{"pid": "P18", "value": {"type": "CommonsMedia", "file": "A.jpg"}}]);
-        assert_eq!(group_rule(block, media, none.clone(), false), "media");
+        assert_eq!(
+            group_rule(block, media.clone(), none.clone(), false),
+            "media"
+        );
+        // Files that ended (the flags before): earlier.
+        assert_eq!(group_rule(block, media, none.clone(), true), "earlier");
         let point = json!([{"pid": "P625", "value": {"type": "GlobeCoordinate", "lat": 1.0, "lon": 2.0, "globe": "Q2"}}]);
         assert_eq!(group_rule(block, point, none.clone(), false), "coordinate");
         // On the Moon: no Earth map, a row.

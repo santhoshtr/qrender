@@ -209,6 +209,14 @@ impl<'v> Ui<'v> {
         names::groups(b, self.view.lang.as_str())
     }
 
+    /// The file of a media statement.
+    pub fn statement_file<'a>(&self, s: &'a StatementRef) -> &'a str {
+        match &s.value {
+            ValueShown::File { file } => file,
+            _ => "",
+        }
+    }
+
     /// The date of an event: a year, or a span ("1947 – 1975").
     pub fn when(&self, w: impl Arg<When>) -> String {
         let w = w.get();

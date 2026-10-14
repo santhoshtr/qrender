@@ -10,7 +10,7 @@ use crate::config::rules::{BlockMake, SplitMake, first};
 use crate::primitives::fact::FactForm;
 use crate::primitives::media::MediaRole;
 use crate::primitives::network::GalleryValue;
-use crate::primitives::{fact, map, media, network, score, series};
+use crate::primitives::{earlier, fact, map, media, network, score, series};
 use crate::schema::Block;
 
 /// What the rules made of a group of values. Short-lived: placement
@@ -39,8 +39,10 @@ impl<'a> Composer<'a> {
     ) -> Vec<Made> {
         let rules = &self.config.rules;
         let mut groups = vec![(statements, false)];
-        if groups[0].0[0].value.datatype() == Datatype::WikibaseItem {
-            // Item values: current first, and the ones that ended apart.
+        let datatype = groups[0].0[0].value.datatype();
+        if matches!(datatype, Datatype::WikibaseItem | Datatype::CommonsMedia) {
+            // Item and media values: current first, and the ones that ended
+            // apart.
             let current = self.current(groups.remove(0).0);
             let split = first(&rules.split, &GroupFacts::new(self, pid, &current, false));
             groups = match split.make {
@@ -105,6 +107,7 @@ impl<'a> Composer<'a> {
                 Some(series) => Block::Series(series),
                 None => return Vec::new(),
             },
+            BlockMake::Earlier => Block::Earlier(earlier::build(self, pid, group, rule)),
             BlockMake::FormerList => Block::Fact(fact::Fact {
                 former: true,
                 ..fact::build(self, pid, group, Some(FactForm::List), rule)

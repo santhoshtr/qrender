@@ -2550,40 +2550,6 @@ expression: composition
           {
             "primitive": "media",
             "role": "stack",
-            "statement": "q90-BD645EF4-354E-4D03-B431-EEDA3FF7A731",
-            "pid": "P94",
-            "file": "Grandes Armes de Paris.svg",
-            "rank": "normal",
-            "provenance": "imported",
-            "qualifiers": [
-              {
-                "pid": "P2096",
-                "text": "Großes Wappen der Stadt Paris",
-                "lang": "de"
-              },
-              {
-                "pid": "P2096",
-                "text": "Greater coat of arms of the City of Paris",
-                "lang": "en"
-              },
-              {
-                "pid": "P2096",
-                "text": "Armoiries de la Ville de Paris",
-                "lang": "fr"
-              }
-            ],
-            "kind": "drawing",
-            "aspect": 0.8418,
-            "megapixels": 1.18,
-            "credit": {
-              "artist": "Bluebear2",
-              "license": "CC BY-SA 3.0"
-            },
-            "rule": "media"
-          },
-          {
-            "primitive": "media",
-            "role": "stack",
             "statement": "Q90-74e64fb7-4a2f-bbe8-ab0d-a0badd327342",
             "pid": "P94",
             "file": "Armoiries de la ville de Paris (1949).svg",
@@ -2650,34 +2616,34 @@ expression: composition
           {
             "primitive": "media",
             "role": "stack",
-            "statement": "Q90-A33187EB-992E-43E1-8D2F-E37A01AA2174",
-            "pid": "P41",
-            "file": "Flag of Paris with coat of arms.svg",
+            "statement": "q90-BD645EF4-354E-4D03-B431-EEDA3FF7A731",
+            "pid": "P94",
+            "file": "Grandes Armes de Paris.svg",
             "rank": "normal",
-            "provenance": "none",
+            "provenance": "imported",
             "qualifiers": [
               {
                 "pid": "P2096",
-                "text": "Flagge der Stadt Paris",
+                "text": "Großes Wappen der Stadt Paris",
                 "lang": "de"
               },
               {
                 "pid": "P2096",
-                "text": "Flag of the City of Paris",
+                "text": "Greater coat of arms of the City of Paris",
                 "lang": "en"
               },
               {
                 "pid": "P2096",
-                "text": "Drapeau de la Ville de Paris",
+                "text": "Armoiries de la Ville de Paris",
                 "lang": "fr"
               }
             ],
             "kind": "drawing",
-            "aspect": 1.5,
-            "megapixels": 0.96,
+            "aspect": 0.8418,
+            "megapixels": 1.18,
             "credit": {
-              "artist": "Invitatious (me)",
-              "license": "Public domain"
+              "artist": "Bluebear2",
+              "license": "CC BY-SA 3.0"
             },
             "rule": "media"
           },
@@ -2712,6 +2678,40 @@ expression: composition
             "credit": {
               "artist": "RaphaëlMignon",
               "license": "CC BY 4.0"
+            },
+            "rule": "media"
+          },
+          {
+            "primitive": "media",
+            "role": "stack",
+            "statement": "Q90-A33187EB-992E-43E1-8D2F-E37A01AA2174",
+            "pid": "P41",
+            "file": "Flag of Paris with coat of arms.svg",
+            "rank": "normal",
+            "provenance": "none",
+            "qualifiers": [
+              {
+                "pid": "P2096",
+                "text": "Flagge der Stadt Paris",
+                "lang": "de"
+              },
+              {
+                "pid": "P2096",
+                "text": "Flag of the City of Paris",
+                "lang": "en"
+              },
+              {
+                "pid": "P2096",
+                "text": "Drapeau de la Ville de Paris",
+                "lang": "fr"
+              }
+            ],
+            "kind": "drawing",
+            "aspect": 1.5,
+            "megapixels": 0.96,
+            "credit": {
+              "artist": "Invitatious (me)",
+              "license": "Public domain"
             },
             "rule": "media"
           },

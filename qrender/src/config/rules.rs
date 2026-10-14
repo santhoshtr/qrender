@@ -170,6 +170,8 @@ pub enum BlockMake {
     Series,
     /// A list of values that ended, marked as former.
     FormerList,
+    /// Media files that ended (earlier flags): one block, a dialog of files.
+    Earlier,
     /// A list of item values (few have pictures).
     ItemList,
     /// Each value joins the gallery of the spread.

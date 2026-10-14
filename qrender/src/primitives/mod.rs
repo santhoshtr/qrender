@@ -5,6 +5,7 @@
 
 pub mod absent;
 pub mod credits;
+pub mod earlier;
 pub mod fact;
 pub mod identifiers;
 pub mod kind;

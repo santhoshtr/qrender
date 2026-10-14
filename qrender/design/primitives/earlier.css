@@ -1,0 +1,23 @@
+/* earlier: the earlier files of a property, all of them in a dialog. */
+
+.earlier-files {
+	/* A grid of its own, not in the columns of a list dialog. */
+	column-span: all;
+	display: grid;
+	grid-template-columns: repeat( auto-fill, minmax( 120px, 1fr ) );
+	gap: var( --spacing-100 );
+
+	& figure {
+		display: grid;
+		gap: var( --spacing-25 );
+		margin: 0;
+	}
+
+	/* A flag or a logo is shown whole. */
+	& img {
+		display: block;
+		inline-size: 100%;
+		block-size: 80px;
+		object-fit: contain;
+	}
+}
