@@ -60,10 +60,13 @@ pub fn build<'a>(c: &mut Composer<'a>, spec: &'a SpreadSpec) -> super::Built {
                 }
             }
             PropertyMake::Succession => {
-                let office = config.layouts.roles.office[pid];
-                if let Some(block) =
-                    succession::build(c, *pid, office, thresholds.succession_shown, id)
-                {
+                let offices = &config.layouts.roles.office;
+                let pairs: Vec<_> = pids
+                    .iter()
+                    .filter_map(|p| Some((*p, *offices.get(p)?)))
+                    .collect();
+                let roles = succession::same_office(c, (*pid, offices[pid]), &pairs);
+                if let Some(block) = succession::build(c, &roles, thresholds.succession_shown, id) {
                     made.push(Made::Block {
                         make: None,
                         block: Block::Succession(block),

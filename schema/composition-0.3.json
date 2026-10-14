@@ -3444,7 +3444,7 @@
         },
         {
           "const": "history",
-          "description": "A time axis of events and history spans.",
+          "description": "The timeline of the significant events.",
           "type": "string"
         },
         {
@@ -3691,8 +3691,12 @@
             }
           ]
         },
-        "pid": {
-          "$ref": "#/$defs/Pid"
+        "pids": {
+          "description": "The holder properties: the roles of the holder (head of government,\nhead of state).",
+          "items": {
+            "$ref": "#/$defs/Pid"
+          },
+          "type": "array"
         },
         "priority": {
           "format": "double",
@@ -3706,7 +3710,7 @@
         }
       },
       "required": [
-        "pid",
+        "pids",
         "holder",
         "before",
         "priority"

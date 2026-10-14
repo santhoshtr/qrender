@@ -1567,7 +1567,9 @@ expression: composition
         "hero": [
           {
             "primitive": "succession",
-            "pid": "P6",
+            "pids": [
+              "P6"
+            ],
             "office": {
               "statement": "Q668-b3a99fca-4b98-3532-ab4e-5141bbb99090",
               "pid": "P1313",
@@ -2097,7 +2099,9 @@ expression: composition
         "stack": [
           {
             "primitive": "succession",
-            "pid": "P35",
+            "pids": [
+              "P35"
+            ],
             "office": {
               "statement": "Q668-385d80af-4ae2-333d-214a-408370b64dc8",
               "pid": "P1906",

@@ -404,7 +404,21 @@ impl<'v> Ui<'v> {
     pub fn succession_title(&self, b: &Succession) -> String {
         match b.office.as_ref().map(|o| &o.value) {
             Some(ValueShown::Item { item: Some(q) }) => self.item(*q).text,
-            _ => self.property(b.pid).text,
+            _ => self.property(b.pids[0]).text,
+        }
+    }
+
+    /// The roles of a holder, as one label: "head of government · head of
+    /// state".
+    pub fn roles(&self, pids: &[Pid]) -> Label {
+        let labels: Vec<Label> = pids.iter().map(|p| self.property(*p)).collect();
+        Label {
+            text: labels
+                .iter()
+                .map(|l| l.text.as_str())
+                .collect::<Vec<_>>()
+                .join(" · "),
+            ..labels[0].clone()
         }
     }
 

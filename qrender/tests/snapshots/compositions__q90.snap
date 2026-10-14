@@ -3186,7 +3186,9 @@ expression: composition
         "hero": [
           {
             "primitive": "succession",
-            "pid": "P6",
+            "pids": [
+              "P6"
+            ],
             "office": {
               "statement": "Q90-9bcd3bad-4b34-a564-c106-ce0efe08dc97",
               "pid": "P1313",
