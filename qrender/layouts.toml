@@ -629,14 +629,26 @@ pids = [
 ]
 
 [[class_layouts.country.spreads]]
-id = "development"
+id = "economy"
 dimension = "measures"
-concept = "Q4810841"   # socioeconomic development
+concept = "Q159810"    # economy
 prose = ["Q159810"]    # economy
 kind = "facts"
 pids = [
+  "P38",    # currency
+  "P1304",  # central bank
   "P2131",  # nominal GDP
   "P2132",  # nominal GDP per capita
+  "P4010",  # GDP (PPP)
+  "P2299",  # PPP GDP per capita
+]
+
+[[class_layouts.country.spreads]]
+id = "development"
+dimension = "measures"
+concept = "Q4810841"   # socioeconomic development
+kind = "facts"
+pids = [
   "P1081",  # Human Development Index
   "P11593", # Inequality-adjusted Human Development Index
   "P1125",  # Gini coefficient

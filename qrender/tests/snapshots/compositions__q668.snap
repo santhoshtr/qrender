@@ -3774,10 +3774,10 @@ expression: composition
       ]
     },
     {
-      "id": "development",
+      "id": "economy",
       "kind": "facts",
       "dimension": "measures",
-      "concept": "Q4810841",
+      "concept": "Q159810",
       "template": "columns",
       "slots": {
         "stack": [
@@ -3803,7 +3803,79 @@ expression: composition
               }
             ],
             "rule": "series"
-          },
+          }
+        ],
+        "gallery": [
+          {
+            "primitive": "network",
+            "role": "gallery",
+            "values": [
+              {
+                "statement": "q668-F80305E3-3ACE-40BA-8BF3-A186BFEEC218",
+                "pid": "P38",
+                "item": "Q80524",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Banknote of india.jpg",
+                  "kind": "photo",
+                  "aspect": 1.0645,
+                  "megapixels": 0.17,
+                  "credit": {
+                    "artist": "Reserve bank of India, Adithya pergade (talk) 16:06, 25 June 2018 (UTC)",
+                    "license": "GODL-India"
+                  }
+                },
+                "priority": 2.0
+              },
+              {
+                "statement": "Q668-eee95d59-4fd1-8706-ee5d-cdb4ea4d1938",
+                "pid": "P1304",
+                "item": "Q944085",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Reserve Bank of India logo.svg",
+                  "kind": "drawing",
+                  "aspect": 2.8706,
+                  "megapixels": 0.08,
+                  "credit": {
+                    "artist": "Government of the United Kingdom, Government of India & Swapnil1101",
+                    "license": "Public domain"
+                  }
+                },
+                "priority": 0.0
+              }
+            ],
+            "priority": 2.0,
+            "rule": "single"
+          }
+        ]
+      },
+      "prose": {
+        "concepts": [
+          "Q159810"
+        ]
+      },
+      "topics": [
+        {
+          "statement": "Q668-19D02C76-21D8-4419-B0EB-352A2977741E",
+          "pid": "P8744",
+          "item": "Q233623",
+          "rank": "normal",
+          "provenance": "none",
+          "class": true
+        }
+      ]
+    },
+    {
+      "id": "development",
+      "kind": "facts",
+      "dimension": "measures",
+      "concept": "Q4810841",
+      "template": "columns",
+      "slots": {
+        "stack": [
           {
             "primitive": "series",
             "lines": [
@@ -4301,11 +4373,6 @@ expression: composition
             },
             "rule": "row"
           }
-        ]
-      },
-      "prose": {
-        "concepts": [
-          "Q159810"
         ]
       }
     },
@@ -8697,24 +8764,6 @@ expression: composition
                 "priority": 3.0
               },
               {
-                "statement": "q668-F80305E3-3ACE-40BA-8BF3-A186BFEEC218",
-                "pid": "P38",
-                "item": "Q80524",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "Banknote of india.jpg",
-                  "kind": "photo",
-                  "aspect": 1.0645,
-                  "megapixels": 0.17,
-                  "credit": {
-                    "artist": "Reserve bank of India, Adithya pergade (talk) 16:06, 25 June 2018 (UTC)",
-                    "license": "GODL-India"
-                  }
-                },
-                "priority": 2.0
-              },
-              {
                 "statement": "Q668-f4f9a2b3-47df-5960-e58e-5e46464ddc65",
                 "pid": "P155",
                 "item": "Q129286",
@@ -8808,24 +8857,6 @@ expression: composition
                   "credit": {
                     "artist": "Sourav Niyogi",
                     "license": "CC BY-SA 3.0"
-                  }
-                },
-                "priority": 0.0
-              },
-              {
-                "statement": "Q668-eee95d59-4fd1-8706-ee5d-cdb4ea4d1938",
-                "pid": "P1304",
-                "item": "Q944085",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "Reserve Bank of India logo.svg",
-                  "kind": "drawing",
-                  "aspect": 2.8706,
-                  "megapixels": 0.08,
-                  "credit": {
-                    "artist": "Government of the United Kingdom, Government of India & Swapnil1101",
-                    "license": "Public domain"
                   }
                 },
                 "priority": 0.0
@@ -16246,23 +16277,6 @@ expression: composition
             ],
             "priority": 0.0,
             "measured": true
-          },
-          {
-            "primitive": "fact",
-            "pid": "P8744",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-19D02C76-21D8-4419-B0EB-352A2977741E",
-                "pid": "P8744",
-                "item": "Q233623",
-                "rank": "normal",
-                "provenance": "none",
-                "class": true,
-                "shown": true
-              }
-            ],
-            "priority": 0.0
           },
           {
             "primitive": "fact",

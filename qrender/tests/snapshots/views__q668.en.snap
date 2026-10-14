@@ -5,8 +5,8 @@ expression: json
 {
   "composition": "composition/0.3",
   "coverage": {
-    "have": 1293,
-    "total": 1293
+    "have": 1291,
+    "total": 1291
   },
   "design": "design/0.2",
   "dir": "ltr",
@@ -10986,7 +10986,7 @@ expression: json
       }
     },
     {
-      "id": "development",
+      "id": "economy",
       "prose_links": [
         {
           "href": "https://en.wikipedia.org/wiki/India#Economy",
@@ -11001,6 +11001,16 @@ expression: json
         "local": true,
         "title": "Economy"
       },
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q159810",
+        "lang": "en",
+        "text": "economy"
+      }
+    },
+    {
+      "id": "development",
+      "prose_links": [],
+      "prose_text": null,
       "title": {
         "href": "https://www.wikidata.org/wiki/Q4810841",
         "lang": "en",
