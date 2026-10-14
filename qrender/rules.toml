@@ -38,6 +38,13 @@ make = "values"
 # Not for the `relation` role: an ended marriage is part of a life. The
 # split table is for item and media properties.
 
+# Holidays stay one list in the order of the year: a holiday that ended
+# is in it, with its years (Germany's June 17, 1954 – 1990).
+[[split]]
+id = "calendar-together"
+when = { role = "calendar" }
+make = "together"
+
 [[split]]
 id = "former-values"
 when = { type = "WikibaseItem", relation = false }

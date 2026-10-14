@@ -10,10 +10,10 @@ use std::collections::{HashMap, HashSet};
 
 use content::{Datatype, Pid, Qualifier, Rank, Statement};
 
-use super::{Composer, qualifier_year};
+use super::{Composer, measurement_year};
 use crate::config::rules::{BlockMake, GroupWhen, PlacementWhen, PropertyWhen, TemplateWhen, When};
 use crate::vocab::{Primitive, Role, RoleSet};
-use crate::wikidata::POINT_IN_TIME;
+use crate::wikidata::{END_TIME, POINT_IN_TIME, START_TIME};
 
 // ------------------------------------------------------------- property
 
@@ -148,8 +148,8 @@ pub fn series_points<'s>(
     (years.len() >= 2).then_some(points)
 }
 
-/// The statements as points, in their order, when each has a year (its
-/// point in time qualifier).
+/// The statements as points, in their order, when each has a year
+/// (`measurement_year`: its point in time, else its start or end time).
 ///
 /// A year with more than one value (from two sources) has one point: the
 /// value with preferred rank; else the value with the most references to a
@@ -159,7 +159,7 @@ pub fn series_points<'s>(
 pub fn dated_points<'s>(c: &Composer, statements: &[&'s Statement]) -> Option<Vec<DatedPoint<'s>>> {
     let years: Vec<i64> = statements
         .iter()
-        .map(|s| qualifier_year(s, *POINT_IN_TIME).filter(|y| *y != 0))
+        .map(|s| measurement_year(s).filter(|y| *y != 0))
         .collect::<Option<_>>()?;
     let mut by_year: HashMap<i64, Vec<usize>> = HashMap::new();
     for (i, year) in years.iter().enumerate() {
@@ -200,12 +200,12 @@ pub fn dated_points<'s>(c: &Composer, statements: &[&'s Statement]) -> Option<Ve
     )
 }
 
-/// The qualifiers of a statement other than its point in time.
+/// The qualifiers of a statement other than its dates.
 fn other_qualifiers(statement: &Statement) -> Vec<&Qualifier> {
     statement
         .qualifiers
         .iter()
-        .filter(|q| q.pid != *POINT_IN_TIME)
+        .filter(|q| ![*POINT_IN_TIME, *START_TIME, *END_TIME].contains(&q.pid))
         .collect()
 }
 
@@ -322,10 +322,21 @@ mod tests {
             "together"
         );
         assert_eq!(
-            group_rule(split, json!([dated("P1082", 1.0, 2000)]), none, false),
+            group_rule(
+                split,
+                json!([dated("P1082", 1.0, 2000)]),
+                none.clone(),
+                false
+            ),
             "together"
         );
-        assert_eq!(rules().split[0].make, SplitMake::SplitEnded);
+        // Holidays (the calendar role) stay one list.
+        assert_eq!(
+            group_rule(split, json!([item("P832", "Q2")]), none, false),
+            "calendar-together"
+        );
+        let former = rules().split.iter().find(|r| r.id == "former-values");
+        assert_eq!(former.map(|r| r.make), Some(SplitMake::SplitEnded));
     }
 
     #[test]
@@ -556,6 +567,21 @@ mod tests {
                 dated("P2250", 67.0, 2021)
             ])),
             Some(vec![(2019, false), (2021, false), (2021, true)])
+        );
+        // Dated by a start time, not a point in time (a minimum wage, a
+        // Gini coefficient of a survey period): the start year.
+        let from = |p: &str, amount: f64, year: u32| {
+            json!({"pid": p, "value": {"type": "Quantity", "amount": amount},
+                   "qualifiers": [{"pid": "P580", "value": {"type": "time",
+                                   "time": format!("{year}-01-01T00:00:00Z")}}]})
+        };
+        assert_eq!(
+            years(json!([
+                dated("P1125", 28.0, 1998),
+                from("P1125", 29.9, 2001),
+                dated("P1125", 30.2, 2004)
+            ])),
+            Some(vec![(1998, false), (2001, false), (2004, false)])
         );
         // Values by sex are two measurements, not two sources.
         assert_eq!(

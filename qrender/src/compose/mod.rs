@@ -23,7 +23,7 @@ use crate::schema::{
     QualifierShown, Silence, Spread, StatementRef, ValueShown, round_to,
 };
 use crate::vocab::{Role, Slot, SpreadKind, Template};
-use crate::wikidata::{END_TIME, START_TIME};
+use crate::wikidata::{END_TIME, POINT_IN_TIME, START_TIME};
 
 /// "No year": sorts before every real year.
 const NO_YEAR: i64 = -1_000_000;
@@ -321,6 +321,14 @@ impl<'a> Composer<'a> {
             shown: None,
         }
     }
+}
+
+/// The year of a measurement: its point in time; else its start time (a
+/// value that holds from then: a minimum wage); else its end time.
+pub fn measurement_year(statement: &Statement) -> Option<i64> {
+    qualifier_year(statement, *POINT_IN_TIME)
+        .or_else(|| qualifier_year(statement, *START_TIME))
+        .or_else(|| qualifier_year(statement, *END_TIME))
 }
 
 /// The year of the first qualifier of a property, when it is a date.

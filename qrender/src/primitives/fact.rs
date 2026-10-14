@@ -6,11 +6,11 @@ use content::{Datatype, EntityId, Pid, QualifierValue, Range, Statement, Value};
 use schemars::JsonSchema;
 use serde::Serialize;
 
-use crate::compose::{Composer, qualifier_year};
+use crate::compose::{Composer, measurement_year};
 use crate::primitives::mark_shown;
 use crate::schema::{StatementRef, round_to};
 use crate::vocab::RangeEnd;
-use crate::wikidata::{PERCENT, POINT_IN_TIME};
+use crate::wikidata::PERCENT;
 
 #[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct Fact {
@@ -133,13 +133,11 @@ pub fn build(
     } else if statements[0].value.datatype() == Datatype::Quantity {
         // Measurements by their point in time, the newest first; the
         // undated after them.
-        statements.sort_by_key(|s| std::cmp::Reverse(qualifier_year(s, *POINT_IN_TIME)));
+        statements.sort_by_key(|s| std::cmp::Reverse(measurement_year(s)));
     }
     let statements = statements.as_slice();
     let measured = statements[0].value.datatype() == Datatype::Quantity
-        && statements
-            .iter()
-            .any(|s| qualifier_year(s, *POINT_IN_TIME).is_some());
+        && statements.iter().any(|s| measurement_year(s).is_some());
     let values = statements.iter().map(|s| c.statement(s));
     Fact {
         pid,

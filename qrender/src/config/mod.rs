@@ -316,7 +316,7 @@ mod tests {
             pid("P1313"),
             "head of government -> office held by head of government"
         );
-        assert!(config.layouts.roles.list(Role::ExtremePoint).len() == 4);
+        assert!(config.layouts.roles.list(Role::ExtremePoint).len() == 5);
         assert!(config.roles(pid("P4179")).has(Role::Tabular));
         assert_eq!(config.layouts.roles.tabular[&pid("P4179")], pid("P1082"));
     }

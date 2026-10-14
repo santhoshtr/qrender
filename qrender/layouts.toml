@@ -612,6 +612,13 @@ pids = [
   "P206",   # located in or next to body of water
   "P610",   # highest point
   "P1589",  # lowest point
+  "P5140",  # coordinates of geographic center
+  "P706",   # located in/on physical feature
+  "P4614",  # drainage basin
+  "P421",   # located in time zone
+  "P6591",  # maximum temperature record
+  "P7422",  # minimum temperature record
+  "P5203",  # topographic map
 ]
 
 [[class_layouts.country.spreads]]
@@ -630,6 +637,8 @@ pids = [
   "P208",   # executive body
   "P209",   # highest judicial authority
   "P36",    # capital
+  "P1410",  # number of seats in assembly
+  "P2769",  # budget
 ]
 
 # Births and deaths are next to each other: their charts are siblings.
@@ -652,6 +661,9 @@ pids = [
   "P6897",  # literacy rate
   "P6499",  # literate population
   "P6498",  # illiterate population
+  "P13564", # third-gender population
+  "P3270",  # compulsory education (minimum age)
+  "P3001",  # retirement age
 ]
 
 [[class_layouts.country.spreads]]
@@ -670,6 +682,8 @@ pids = [
   "P3529",  # median income
   "P1198",  # unemployment rate
   "P2855",  # VAT rate
+  "P6794",  # minimum wage
+  "P8843",  # poverty incidence
 ]
 
 [[class_layouts.country.spreads]]
@@ -691,6 +705,20 @@ pids = [
   "P2997",  # age of majority
   "P2573",  # number of out-of-school children
   "P140",   # religion or worldview
+]
+
+[[class_layouts.country.spreads]]
+id = "culture"
+dimension = "people"
+concept = "Q11042"     # culture
+prose = ["Q11042"]     # culture
+kind = "facts"
+pids = [
+  "P832",   # public holiday
+  "P37",    # official language
+  "P2936",  # language used
+  "P172",   # ethnic group
+  "P2596",  # culture
 ]
 
 [[class_layouts.country.spreads]]
@@ -836,8 +864,9 @@ relation = [
   "P108",   # employer
   "P69",    # educated at
 ]
-# Points that mark the extent of the item: markers on its map.
-extreme_point = ["P1332", "P1333", "P1334", "P1335"]
+# Points that mark the extent of the item, and its geographic centre:
+# markers on its map.
+extreme_point = ["P1332", "P1333", "P1334", "P1335", "P5140"]
 # Accounts, codes and URLs: the item on the web. They go to evidence.
 web = [
   "P856",   # official website
