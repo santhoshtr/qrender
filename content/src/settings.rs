@@ -18,6 +18,9 @@ pub struct Settings {
     pub qualifier_logos: Vec<Pid>,
     /// The items whose labels and aliases name spreads and their sections.
     pub concepts: Vec<Qid>,
+    /// Properties whose item values are events on a timeline: their own
+    /// dates are fetched.
+    pub timeline: Vec<Pid>,
 }
 
 #[derive(Debug, Clone, Serialize)]
@@ -64,6 +67,6 @@ mod tests {
         assert_ne!(a.fingerprint(), b.fingerprint());
         // FNV-1a of the JSON of the settings: fixed, so a key from one
         // build is valid in the next.
-        assert_eq!(a.fingerprint(), 0x5408_19ee_08ae_dbf8);
+        assert_eq!(a.fingerprint(), 0x22ef_a0d5_2ddb_1827);
     }
 }

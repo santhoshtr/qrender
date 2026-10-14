@@ -1625,7 +1625,7 @@ expression: composition
       "kind": "history",
       "dimension": "time",
       "concept": "Q309",
-      "template": "axis",
+      "template": "columns",
       "slots": {},
       "prose": {
         "concepts": [
@@ -1639,14 +1639,6 @@ expression: composition
           "item": "Q7102486",
           "rank": "normal",
           "provenance": "none"
-        }
-      ],
-      "silent": [
-        {
-          "primitive": "time",
-          "reason": "below_threshold",
-          "points": 1,
-          "needs": 4
         }
       ]
     },

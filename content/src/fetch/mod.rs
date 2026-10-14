@@ -55,7 +55,7 @@ pub enum FetchError {
 /// The version of the fetcher. Raise it when a change of the fetcher
 /// changes what it fetches (a new field, a new request): it is part of
 /// every cache key, so the parts that an older fetcher stored are not read.
-pub const FETCH_VERSION: u32 = 1;
+pub const FETCH_VERSION: u32 = 2;
 
 /// Seconds a cached part lives: content and text change with edits;
 /// a peer set changes slowly and many items share it.
@@ -184,6 +184,12 @@ impl<S: Store> Fetcher<S> {
             .collect();
         let targets: Vec<Qid> = std::iter::once(qid).chain(container.qid).collect();
 
+        let event_items: Vec<Qid> = unique(
+            statements
+                .iter()
+                .filter(|s| self.settings.timeline.contains(&s.pid))
+                .filter_map(|s| s.value.item()),
+        );
         let (
             references,
             quantities,
@@ -194,6 +200,7 @@ impl<S: Store> Fetcher<S> {
             sitelinks,
             tables,
             ranges,
+            event_dates,
         ) = futures::try_join!(
             sparql::references(http, qid),
             sparql::quantities(http, &targets, &quantity_pids),
@@ -206,6 +213,7 @@ impl<S: Store> Fetcher<S> {
                 Ok::<_, FetchError>((url.clone(), commons::table(http, url).await?))
             })),
             wikidata::ranges(http, &quantity_pids),
+            sparql::event_dates(http, &event_items),
         )?;
 
         let mut media: Vec<String> = statements
@@ -247,6 +255,7 @@ impl<S: Store> Fetcher<S> {
                 .collect(),
             logos,
             ranges,
+            event_dates,
         })
     }
 

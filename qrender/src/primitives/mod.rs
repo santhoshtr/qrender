@@ -23,7 +23,7 @@ pub mod sitelinks;
 pub mod sounds;
 pub mod split;
 pub mod succession;
-pub mod time;
+pub mod timeline;
 pub mod title;
 pub mod works;
 

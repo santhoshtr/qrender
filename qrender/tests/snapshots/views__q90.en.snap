@@ -5,8 +5,8 @@ expression: json
 {
   "composition": "composition/0.3",
   "coverage": {
-    "have": 344,
-    "total": 344
+    "have": 355,
+    "total": 355
   },
   "design": "design/0.2",
   "dir": "ltr",
@@ -2129,6 +2129,10 @@ expression: json
       "text": "Paris"
     },
     "Q133132": {
+      "description": {
+        "lang": "en",
+        "text": "revolutionary city council of Paris in 1871"
+      },
       "href": "https://www.wikidata.org/wiki/Q133132",
       "lang": "en",
       "text": "Paris Commune"
@@ -2660,6 +2664,10 @@ expression: json
       "text": "Charenton-le-Pont"
     },
     "Q21479779": {
+      "description": {
+        "lang": "en",
+        "text": "series of terrorist attacks in Paris, France, Europe, on November 13, 2015"
+      },
       "href": "https://www.wikidata.org/wiki/Q21479779",
       "lang": "en",
       "text": "November 2015 Paris attacks"
@@ -2826,6 +2834,11 @@ expression: json
       "lang": "en",
       "text": "8th arrondissement of Paris"
     },
+    "Q270273": {
+      "href": "https://www.wikidata.org/wiki/Q270273",
+      "lang": "en",
+      "text": "Lutetia"
+    },
     "Q2727598": {
       "href": "https://www.wikidata.org/wiki/Q2727598",
       "lang": "en",
@@ -2986,13 +2999,102 @@ expression: json
       "lang": "en",
       "text": "Kyoto"
     },
+    "Q3485975": {
+      "description": {
+        "lang": "en",
+        "text": "1360 siege during the Hundred Years' War, penultimate action of the Edwardian Phase of the Hundred Years' War"
+      },
+      "href": "https://www.wikidata.org/wiki/Q3485975",
+      "lang": "en",
+      "text": "Siege of Paris"
+    },
+    "Q3485976": {
+      "description": {
+        "lang": "en",
+        "text": "1370 siege"
+      },
+      "href": "https://www.wikidata.org/wiki/Q3485976",
+      "lang": "en",
+      "text": "Siege of Paris"
+    },
+    "Q3485977": {
+      "description": {
+        "lang": "en",
+        "text": "1358 siege"
+      },
+      "href": "https://www.wikidata.org/wiki/Q3485977",
+      "lang": "en",
+      "text": "Siege of Paris"
+    },
+    "Q3485978": {
+      "description": {
+        "lang": "en",
+        "text": "1420 siege"
+      },
+      "href": "https://www.wikidata.org/wiki/Q3485978",
+      "lang": "en",
+      "text": "Siege of Paris"
+    },
     "Q3485979": {
+      "description": {
+        "lang": "en",
+        "text": "1435 part of the Hundred Years' War"
+      },
       "href": "https://www.wikidata.org/wiki/Q3485979",
       "lang": "en",
       "text": "Siege of Paris"
     },
+    "Q3485982": {
+      "description": {
+        "lang": "en",
+        "text": "1429 Joan D' Arc's Siege"
+      },
+      "href": "https://www.wikidata.org/wiki/Q3485982",
+      "lang": "en",
+      "text": "Siege of Paris"
+    },
+    "Q3485983": {
+      "description": {
+        "lang": "en",
+        "text": "856 siege"
+      },
+      "href": "https://www.wikidata.org/wiki/Q3485983",
+      "lang": "en",
+      "text": "Siege of Paris"
+    },
     "Q3485984": {
+      "description": {
+        "lang": "en",
+        "text": "1590 diege of the French Wars of Religion"
+      },
       "href": "https://www.wikidata.org/wiki/Q3485984",
+      "lang": "en",
+      "text": "Siege of Paris"
+    },
+    "Q3485985": {
+      "description": {
+        "lang": "en",
+        "text": "861 siege"
+      },
+      "href": "https://www.wikidata.org/wiki/Q3485985",
+      "lang": "en",
+      "text": "Siege of Paris"
+    },
+    "Q3485986": {
+      "description": {
+        "lang": "en",
+        "text": "845 first siege of the Vikings to the capital of the kingdom of the West Franks"
+      },
+      "href": "https://www.wikidata.org/wiki/Q3485986",
+      "lang": "en",
+      "text": "Siege of Paris"
+    },
+    "Q3485987": {
+      "description": {
+        "lang": "en",
+        "text": "978 siege"
+      },
+      "href": "https://www.wikidata.org/wiki/Q3485987",
       "lang": "en",
       "text": "Siege of Paris"
     },
@@ -3232,6 +3334,10 @@ expression: json
       "text": "department of France"
     },
     "Q6534": {
+      "description": {
+        "lang": "en",
+        "text": "A period of political and societal change in France from 1789 to 1799"
+      },
       "href": "https://www.wikidata.org/wiki/Q6534",
       "lang": "en",
       "text": "French Revolution"
@@ -3287,6 +3393,10 @@ expression: json
       "text": "municipal arrondissement of Paris"
     },
     "Q690489": {
+      "description": {
+        "lang": "en",
+        "text": "1870 siege during the Franco-Prussian War"
+      },
       "href": "https://www.wikidata.org/wiki/Q690489",
       "lang": "en",
       "text": "Siege of Paris"
@@ -3397,6 +3507,10 @@ expression: json
       "text": "Paris"
     },
     "Q8088": {
+      "description": {
+        "lang": "en",
+        "text": "Games of the II Olympiad, celebrated in Paris (France) in 1900"
+      },
       "href": "https://www.wikidata.org/wiki/Q8088",
       "lang": "en",
       "text": "1900 Summer Olympics"
@@ -3407,9 +3521,22 @@ expression: json
       "text": "Bassin de la Villette"
     },
     "Q8132": {
+      "description": {
+        "lang": "en",
+        "text": "Games of the VIII Olympiad, in Paris, France"
+      },
       "href": "https://www.wikidata.org/wiki/Q8132",
       "lang": "en",
       "text": "1924 Summer Olympics"
+    },
+    "Q815192": {
+      "description": {
+        "lang": "en",
+        "text": "885 raid on the Seine in the Kingdom of West Franks"
+      },
+      "href": "https://www.wikidata.org/wiki/Q815192",
+      "lang": "en",
+      "text": "Siege of Paris"
     },
     "Q820122": {
       "href": "https://www.wikidata.org/wiki/Q820122",
@@ -3556,6 +3683,10 @@ expression: json
       "text": "Tbilisi"
     },
     "Q995653": {
+      "description": {
+        "lang": "en",
+        "text": "games of the XXXIII Olympiad, in Paris, France"
+      },
       "href": "https://www.wikidata.org/wiki/Q995653",
       "lang": "en",
       "text": "2024 Summer Olympics"

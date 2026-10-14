@@ -1,8 +1,9 @@
 /* columns: blocks without a shape of their own, side by side. */
 
 /* A set of pictures in a stack of columns takes the whole width of the
-   stack: pictures need width, and text blocks flow in the columns under it. */
-.t-columns > [data-slot='stack'] > :is( .set, .scores ) { column-span: all; }
+   stack: pictures need width, and text blocks flow in the columns under it.
+   A timeline too: a row for each event, across the page. */
+.t-columns > [data-slot='stack'] > :is( .set, .scores, .timeline ) { column-span: all; }
 
 /* Blocks without a shape of their own stand side by side. Without a hero,
    the stack takes the whole width. */

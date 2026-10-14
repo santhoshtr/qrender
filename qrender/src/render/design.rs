@@ -14,7 +14,7 @@ pub use crate::schema::DESIGN;
 
 use crate::primitives::{
     fact, identifiers, kind, map, names, prose, provenance, scale, score, series, sitelinks,
-    sounds, split, succession, time, title,
+    sounds, split, succession, timeline, title,
 };
 use crate::vocab::Primitive;
 
@@ -77,7 +77,7 @@ pub fn assets(primitive: Primitive) -> Assets {
         Primitive::Scale => css(scale::CSS),
         Primitive::Succession => css(succession::CSS),
         Primitive::Score => css(score::CSS),
-        Primitive::Time => css(time::CSS),
+        Primitive::Timeline => css(timeline::CSS),
         Primitive::Provenance => css(provenance::CSS),
         Primitive::Sitelinks => css(sitelinks::CSS),
         Primitive::Identifiers => css(identifiers::CSS),

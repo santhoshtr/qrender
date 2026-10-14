@@ -6,7 +6,7 @@ expression: json
   "composition": "composition/0.3",
   "coverage": {
     "have": 163,
-    "total": 344
+    "total": 355
   },
   "design": "design/0.2",
   "dir": "ltr",
@@ -2700,6 +2700,11 @@ expression: json
     },
     "Q133132": {
       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q133132",
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "revolutionary city council of Paris in 1871"
+      },
       "fallback": true,
       "href": "https://www.wikidata.org/wiki/Q133132",
       "lang": "en",
@@ -3352,6 +3357,11 @@ expression: json
       "text": "Charenton-le-Pont"
     },
     "Q21479779": {
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "series of terrorist attacks in Paris, France, Europe, on November 13, 2015"
+      },
       "href": "https://www.wikidata.org/wiki/Q21479779",
       "lang": "ml",
       "text": "2015 നവംബറിലെ പാരീസ് ആക്രമണം"
@@ -3554,6 +3564,13 @@ expression: json
       "lang": "en",
       "text": "8th arrondissement of Paris"
     },
+    "Q270273": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q270273",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q270273",
+      "lang": "en",
+      "text": "Lutetia"
+    },
     "Q2727598": {
       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q2727598",
       "fallback": true,
@@ -3754,17 +3771,135 @@ expression: json
       "lang": "ml",
       "text": "ക്യോട്ടോ"
     },
+    "Q3485975": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3485975",
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "1360 siege during the Hundred Years' War, penultimate action of the Edwardian Phase of the Hundred Years' War"
+      },
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q3485975",
+      "lang": "en",
+      "text": "Siege of Paris"
+    },
+    "Q3485976": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3485976",
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "1370 siege"
+      },
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q3485976",
+      "lang": "en",
+      "text": "Siege of Paris"
+    },
+    "Q3485977": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3485977",
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "1358 siege"
+      },
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q3485977",
+      "lang": "en",
+      "text": "Siege of Paris"
+    },
+    "Q3485978": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3485978",
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "1420 siege"
+      },
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q3485978",
+      "lang": "en",
+      "text": "Siege of Paris"
+    },
     "Q3485979": {
       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3485979",
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "1435 part of the Hundred Years' War"
+      },
       "fallback": true,
       "href": "https://www.wikidata.org/wiki/Q3485979",
       "lang": "en",
       "text": "Siege of Paris"
     },
+    "Q3485982": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3485982",
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "1429 Joan D' Arc's Siege"
+      },
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q3485982",
+      "lang": "en",
+      "text": "Siege of Paris"
+    },
+    "Q3485983": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3485983",
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "856 siege"
+      },
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q3485983",
+      "lang": "en",
+      "text": "Siege of Paris"
+    },
     "Q3485984": {
       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3485984",
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "1590 diege of the French Wars of Religion"
+      },
       "fallback": true,
       "href": "https://www.wikidata.org/wiki/Q3485984",
+      "lang": "en",
+      "text": "Siege of Paris"
+    },
+    "Q3485985": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3485985",
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "861 siege"
+      },
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q3485985",
+      "lang": "en",
+      "text": "Siege of Paris"
+    },
+    "Q3485986": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3485986",
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "845 first siege of the Vikings to the capital of the kingdom of the West Franks"
+      },
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q3485986",
+      "lang": "en",
+      "text": "Siege of Paris"
+    },
+    "Q3485987": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3485987",
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "978 siege"
+      },
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q3485987",
       "lang": "en",
       "text": "Siege of Paris"
     },
@@ -4048,6 +4183,11 @@ expression: json
       "text": "ഫ്രാൻസിലെ വകുപ്പ്"
     },
     "Q6534": {
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "A period of political and societal change in France from 1789 to 1799"
+      },
       "href": "https://www.wikidata.org/wiki/Q6534",
       "lang": "ml",
       "text": "ഫ്രഞ്ച് വിപ്ലവം"
@@ -4114,6 +4254,11 @@ expression: json
     },
     "Q690489": {
       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q690489",
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "1870 siege during the Franco-Prussian War"
+      },
       "fallback": true,
       "href": "https://www.wikidata.org/wiki/Q690489",
       "lang": "en",
@@ -4256,6 +4401,11 @@ expression: json
     },
     "Q8088": {
       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q8088",
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "Games of the II Olympiad, celebrated in Paris (France) in 1900"
+      },
       "fallback": true,
       "href": "https://www.wikidata.org/wiki/Q8088",
       "lang": "en",
@@ -4270,10 +4420,27 @@ expression: json
     },
     "Q8132": {
       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q8132",
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "Games of the VIII Olympiad, in Paris, France"
+      },
       "fallback": true,
       "href": "https://www.wikidata.org/wiki/Q8132",
       "lang": "en",
       "text": "1924 Summer Olympics"
+    },
+    "Q815192": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q815192",
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "885 raid on the Seine in the Kingdom of West Franks"
+      },
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q815192",
+      "lang": "en",
+      "text": "Siege of Paris"
     },
     "Q820122": {
       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q820122",
@@ -4458,6 +4625,11 @@ expression: json
       "text": "റ്റ്ബിലിസി"
     },
     "Q995653": {
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "games of the XXXIII Olympiad, in Paris, France"
+      },
       "href": "https://www.wikidata.org/wiki/Q995653",
       "lang": "ml",
       "text": "ഒളിമ്പിക്സ് 2024 (പാരീസ്)"

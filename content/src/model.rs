@@ -51,6 +51,23 @@ pub struct Content {
     /// index (0 to 1) or only a sanity bound (0 to 400).
     #[serde(default, skip_serializing_if = "IndexMap::is_empty")]
     pub ranges: IndexMap<Pid, Range>,
+    /// The own dates of the event items of timeline properties (the
+    /// significant events): a timeline places an event by them when its
+    /// statement has no date.
+    #[serde(default, skip_serializing_if = "IndexMap::is_empty")]
+    pub event_dates: IndexMap<Qid, EventDates>,
+}
+
+/// The dates of an event item, as Wikidata times: its point in time
+/// (P585), start time (P580), end time (P582).
+#[derive(Debug, Clone, Default, PartialEq, Serialize, Deserialize)]
+pub struct EventDates {
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub point_in_time: Option<String>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub start_time: Option<String>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub end_time: Option<String>,
 }
 
 /// The lowest and the highest value that a property allows.

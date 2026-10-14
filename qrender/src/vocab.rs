@@ -17,7 +17,7 @@ pub enum SpreadKind {
     Facts,
     /// Share of the container, peers, series of the listed properties.
     Scale,
-    /// A time axis of events and history spans.
+    /// The timeline of the significant events.
     History,
     /// The Commons files that no spread took.
     Media,
@@ -64,8 +64,9 @@ impl Dimension {
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, JsonSchema, Deserialize)]
 #[serde(rename_all = "snake_case")]
 pub enum Role {
-    Event,
-    HistorySpan,
+    /// Events that are items of their own (significant events): a timeline
+    /// in the history spread, with their pictures and descriptions.
+    Timeline,
     Crew,
     Score,
     Described,
@@ -118,7 +119,8 @@ pub enum Primitive {
     Credits,
     Score,
     Works,
-    Time,
+    /// Events that are items of their own, as a vertical list.
+    Timeline,
     Absent,
     Provenance,
     Sitelinks,
@@ -147,7 +149,7 @@ impl Primitive {
         Self::Credits,
         Self::Score,
         Self::Works,
-        Self::Time,
+        Self::Timeline,
         Self::Absent,
         Self::Provenance,
         Self::Sitelinks,
@@ -163,7 +165,6 @@ pub enum Template {
     LeadBeside,
     HeroPlusStack,
     Columns,
-    Axis,
     FeatureRun,
     Sheet,
     Collapsed,
@@ -181,7 +182,6 @@ pub enum Slot {
     Stack,
     Gallery,
     Sheet,
-    Axis,
     Feature,
     Run,
     Audio,
@@ -200,7 +200,6 @@ impl Template {
             Self::LeadBeside => "lead-beside",
             Self::HeroPlusStack => "hero-plus-stack",
             Self::Columns => "columns",
-            Self::Axis => "axis",
             Self::FeatureRun => "feature-run",
             Self::Sheet => "sheet",
             Self::Collapsed => "collapsed",
@@ -220,7 +219,6 @@ impl Slot {
             Self::Stack => "stack",
             Self::Gallery => "gallery",
             Self::Sheet => "sheet",
-            Self::Axis => "axis",
             Self::Feature => "feature",
             Self::Run => "run",
             Self::Audio => "audio",
@@ -294,8 +292,8 @@ mod tests {
     fn role_set() {
         let mut roles = RoleSet::default();
         roles.insert(Role::Office);
-        roles.insert(Role::Event);
-        assert!(roles.has(Role::Office) && roles.has(Role::Event));
+        roles.insert(Role::Timeline);
+        assert!(roles.has(Role::Office) && roles.has(Role::Timeline));
         assert!(!roles.has(Role::Relation));
     }
 }

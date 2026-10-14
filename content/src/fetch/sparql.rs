@@ -8,8 +8,8 @@ use super::FetchError;
 use super::http::{Http, Service};
 use crate::id::{Pid, Qid, StatementId};
 use crate::model::{
-    NormalQuantity, Qualifier, QualifierValue, QuantityRecord, Rank, ReverseWork, Statement, Value,
-    ValueImage, file_name, year_of,
+    EventDates, NormalQuantity, Qualifier, QualifierValue, QuantityRecord, Rank, ReverseWork,
+    Statement, Value, ValueImage, file_name, year_of,
 };
 
 const ENDPOINT: &str = "https://query.wikidata.org/sparql";
@@ -445,5 +445,45 @@ pub async fn logos(http: &Http, qids: &[Qid]) -> Result<IndexMap<Qid, String>, F
             out.entry(item).or_insert_with(|| file_name(logo));
         }
     }
+    Ok(out)
+}
+
+/// The own dates of event items: point in time (P585), start time (P580),
+/// end time (P582); the first value of each. Items without a date are not
+/// in the map.
+pub async fn event_dates(
+    http: &Http,
+    qids: &[Qid],
+) -> Result<IndexMap<Qid, EventDates>, FetchError> {
+    if qids.is_empty() {
+        return Ok(IndexMap::new());
+    }
+    let rows = query(
+        http,
+        &format!(
+            "SELECT ?item ?point ?start ?end WHERE {{ VALUES ?item {{ {} }} \
+             OPTIONAL {{ ?item wdt:P585 ?point }} OPTIONAL {{ ?item wdt:P580 ?start }} \
+             OPTIONAL {{ ?item wdt:P582 ?end }} }}",
+            values(qids)
+        ),
+    )
+    .await?;
+    let mut out: IndexMap<Qid, EventDates> = IndexMap::new();
+    for r in &rows {
+        let Some(item) = r.qid("item") else {
+            continue;
+        };
+        let dates = out.entry(item).or_default();
+        for (key, date) in [
+            ("point", &mut dates.point_in_time),
+            ("start", &mut dates.start_time),
+            ("end", &mut dates.end_time),
+        ] {
+            if date.is_none() {
+                *date = r.get(key).map(str::to_string);
+            }
+        }
+    }
+    out.retain(|_, d| *d != EventDates::default());
     Ok(out)
 }

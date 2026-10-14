@@ -5722,259 +5722,366 @@ expression: composition
       "kind": "history",
       "dimension": "time",
       "concept": "Q309",
-      "template": "axis",
+      "template": "columns",
       "slots": {
-        "axis": [
+        "stack": [
           {
-            "primitive": "time",
-            "from": -300,
-            "to": 2024,
-            "tracks": [
+            "primitive": "timeline",
+            "pid": "P793",
+            "events": [
               {
-                "pid": "P571",
-                "marks": [
-                  {
-                    "year": -300,
-                    "year_pos": 0.0,
-                    "statement": "q90-63e796de-4ece-2cbf-f9e7-37debb6be6e7",
-                    "time": "-0300-01-01T00:00:00Z",
-                    "precision": 7,
-                    "provenance": "sourced"
-                  }
-                ]
-              },
-              {
-                "pid": "P17",
-                "marks": [
-                  {
-                    "start": 508,
-                    "end": 843,
-                    "start_pos": 0.3477,
-                    "end_pos": 0.4918,
-                    "statement": "Q90-fb1872f4-4ab5-62e3-be9c-0126eacedfb3",
-                    "item": "Q146246",
-                    "provenance": "none"
-                  },
-                  {
-                    "start": 987,
-                    "end": 1792,
-                    "start_pos": 0.5538,
-                    "end_pos": 0.9002,
-                    "statement": "Q90-f787ce92-408f-5888-505f-93657a95b767",
-                    "item": "Q70972",
-                    "provenance": "none"
-                  },
-                  {
-                    "start": 1792,
-                    "end": 1804,
-                    "start_pos": 0.9002,
-                    "end_pos": 0.9053,
-                    "statement": "Q90-7d24448d-42b3-142b-8922-acf8d6e7a4cc",
-                    "item": "Q58296",
-                    "provenance": "none"
-                  },
-                  {
-                    "start": 1804,
-                    "end": 1815,
-                    "start_pos": 0.9053,
-                    "end_pos": 0.9101,
-                    "statement": "Q90-b055505b-45f1-cf01-cdf2-9b59559dd097",
-                    "item": "Q71084",
-                    "provenance": "none"
-                  },
-                  {
-                    "start": 1815,
-                    "end": 1940,
-                    "start_pos": 0.9101,
-                    "end_pos": 0.9639,
-                    "statement": "Q90-ed0db841-4c68-7560-3657-60d9c21fd71b",
-                    "item": "Q142",
-                    "provenance": "sourced"
-                  },
-                  {
-                    "start": 1940,
-                    "end": 1944,
-                    "start_pos": 0.9639,
-                    "end_pos": 0.9656,
-                    "statement": "Q90-465cecb2-438c-cb1d-b1e7-a26278c3949c",
-                    "item": "Q2748708",
-                    "provenance": "none"
-                  },
-                  {
-                    "start": 1944,
-                    "start_pos": 0.9656,
-                    "statement": "q90-928E3271-01F6-4D33-A032-65D1F2DB03CD",
-                    "item": "Q142",
-                    "provenance": "sourced"
-                  }
-                ]
-              },
-              {
+                "statement": "Q90-D346A1CB-2B0E-4150-A730-57DB425B742B",
                 "pid": "P793",
-                "marks": [
-                  {
-                    "year": 1435,
-                    "year_pos": 0.7466,
-                    "statement": "Q90-A085D0F8-FB1D-4C66-9B53-28C864BCC5E2",
-                    "item": "Q3485979",
-                    "provenance": "none"
-                  },
-                  {
-                    "year": 1590,
-                    "year_pos": 0.8133,
-                    "statement": "Q90-BCAD4BDD-B9C1-4D46-B3EF-D543B5820B18",
-                    "item": "Q3485984",
-                    "provenance": "none"
-                  },
-                  {
-                    "year": 1789,
-                    "year_pos": 0.8989,
-                    "statement": "Q90-dc4e87c9-40c6-41bb-d30a-2e1ff7b8c0bb",
-                    "item": "Q6534",
-                    "provenance": "none"
-                  },
-                  {
-                    "year": 1870,
-                    "year_pos": 0.9337,
-                    "statement": "Q90-C6DDA61F-3C8E-4C7A-A003-ECB35202C4BA",
-                    "item": "Q690489",
-                    "provenance": "none"
-                  },
-                  {
-                    "year": 1871,
-                    "year_pos": 0.9342,
-                    "statement": "Q90-CC4E0E48-4266-40D3-A59B-6EA92CE2AD91",
-                    "item": "Q133132",
-                    "provenance": "none"
-                  },
-                  {
-                    "year": 1900,
-                    "year_pos": 0.9466,
-                    "statement": "Q90-93b7b2e8-4209-dece-b3cd-80d5df70c3ab",
-                    "item": "Q8088",
-                    "provenance": "none"
-                  },
-                  {
-                    "year": 1924,
-                    "year_pos": 0.957,
-                    "statement": "Q90-c69b610a-422b-8524-4ca9-0f64e7078b45",
-                    "item": "Q8132",
-                    "provenance": "none"
-                  },
-                  {
-                    "year": 2015,
-                    "year_pos": 0.9961,
-                    "statement": "Q90-7abe064e-41a9-5645-9993-a0af2d916793",
-                    "item": "Q21479779",
-                    "provenance": "none"
-                  },
-                  {
-                    "year": 2024,
-                    "year_pos": 1.0,
-                    "statement": "Q90-b56063d5-49b7-8992-f122-2abedecb4154",
-                    "item": "Q995653",
-                    "provenance": "none"
+                "item": "Q3485986",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Viking Siege of Paris.jpg",
+                  "kind": "photo",
+                  "aspect": 1.2678,
+                  "megapixels": 7.18,
+                  "credit": {
+                    "artist": "Unknown authorUnknown author",
+                    "license": "Public domain"
                   }
-                ]
+                },
+                "described": true,
+                "when": {
+                  "year": 845,
+                  "own": true
+                }
               },
               {
-                "pid": "P1376",
-                "marks": [
-                  {
-                    "start": 1790,
-                    "end": 1967,
-                    "start_pos": 0.8993,
-                    "end_pos": 0.9755,
-                    "statement": "Q90-37269166-2B12-4189-8B99-AFFA9F47EF53",
-                    "item": "Q1142326",
-                    "provenance": "sourced"
-                  },
-                  {
-                    "start": 1804,
-                    "end": 1815,
-                    "start_pos": 0.9053,
-                    "end_pos": 0.9101,
-                    "statement": "Q90-bd7c5fe2-4ff8-262d-2467-0c718356e35d",
-                    "item": "Q71084",
-                    "provenance": "none"
-                  },
-                  {
-                    "start": 1968,
-                    "end": 2018,
-                    "start_pos": 0.9759,
-                    "end_pos": 0.9974,
-                    "statement": "Q90-b725eadc-4cd1-8f80-ecf9-f23a2ae1aa19",
-                    "item": "Q124881945",
-                    "provenance": "sourced"
-                  }
-                ]
+                "statement": "Q90-EEBB0E42-45F1-411C-96D7-988A185A3F78",
+                "pid": "P793",
+                "item": "Q3485983",
+                "rank": "normal",
+                "provenance": "none",
+                "described": true,
+                "when": {
+                  "year": 856,
+                  "own": true
+                }
               },
               {
-                "pid": "P131",
-                "marks": [
-                  {
-                    "start": 1790,
-                    "end": 1967,
-                    "start_pos": 0.8993,
-                    "end_pos": 0.9755,
-                    "statement": "Q90-32cbf37c-47d3-0c91-13aa-c5a1d3651c8b",
-                    "item": "Q1142326",
-                    "provenance": "sourced"
-                  },
-                  {
-                    "end": 1790,
-                    "end_pos": 0.8993,
-                    "statement": "Q90-aab66cc7-4592-d978-5620-7d0e01603e05",
-                    "item": "Q70972",
-                    "provenance": "none"
-                  },
-                  {
-                    "start": 1800,
-                    "end": 1960,
-                    "start_pos": 0.9036,
-                    "end_pos": 0.9725,
-                    "statement": "Q90-7CFF4649-B221-4803-9DBE-08CD3436DF05",
-                    "item": "Q2863958",
-                    "provenance": "imported"
-                  },
-                  {
-                    "start": 1960,
-                    "end": 2015,
-                    "start_pos": 0.9725,
-                    "end_pos": 0.9961,
-                    "statement": "Q90-6dac5f8a-4bf3-54ec-71e3-05d6c0fe54df",
-                    "item": "Q13917",
-                    "provenance": "none"
-                  },
-                  {
-                    "start": 1968,
-                    "end": 2018,
-                    "start_pos": 0.9759,
-                    "end_pos": 0.9974,
-                    "statement": "Q90-021a1f6d-4f77-56b9-d970-7ef20fb7b2a5",
-                    "item": "Q124881945",
-                    "provenance": "sourced"
-                  },
-                  {
-                    "start": 2016,
-                    "start_pos": 0.9966,
-                    "statement": "Q90-43ee1e91-43eb-bd4b-f5af-c588ba34a3e7",
-                    "item": "Q16665915",
-                    "provenance": "none"
-                  }
-                ]
+                "statement": "Q90-A0BD29B4-4E49-4C56-9242-DA7B67B42444",
+                "pid": "P793",
+                "item": "Q3485985",
+                "rank": "normal",
+                "provenance": "none",
+                "described": true,
+                "when": {
+                  "year": 861,
+                  "own": true
+                }
               },
               {
-                "pid": "P1365",
-                "marks": [
-                  {
-                    "start": 2019,
-                    "start_pos": 0.9978,
-                    "statement": "Q90-83dc531b-4e08-50e0-d69d-3e5c1e7a4f47",
-                    "item": "Q124881945",
-                    "provenance": "sourced"
+                "statement": "Q90-ADCAF4DA-25DD-4A15-90D5-1C8F144359AA",
+                "pid": "P793",
+                "item": "Q815192",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Siege of Paris (885–886).jpeg",
+                  "kind": "photo",
+                  "aspect": 1.1739,
+                  "megapixels": 0.42,
+                  "credit": {
+                    "artist": "Jean Victor Schnetz",
+                    "license": "Public domain"
                   }
-                ]
+                },
+                "described": true,
+                "when": {
+                  "start": 885,
+                  "end": 886,
+                  "own": true
+                }
+              },
+              {
+                "statement": "Q90-B711484F-48B5-4B42-BA39-5F1068E6F2A6",
+                "pid": "P793",
+                "item": "Q3485987",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Othon II siezing Paris in 978 (A. Bélin).png",
+                  "kind": "photo",
+                  "aspect": 0.7471,
+                  "megapixels": 0.78,
+                  "credit": {
+                    "artist": "A. Bélin",
+                    "license": "Public domain"
+                  }
+                },
+                "described": true,
+                "when": {
+                  "year": 978,
+                  "own": true
+                }
+              },
+              {
+                "statement": "Q90-B770045A-62A5-4CCE-B3CA-C9A76B2710DD",
+                "pid": "P793",
+                "item": "Q3485977",
+                "rank": "normal",
+                "provenance": "none",
+                "described": true,
+                "when": {
+                  "start": 1358,
+                  "end": 1358,
+                  "own": true
+                }
+              },
+              {
+                "statement": "Q90-38DDDE68-F062-4CCD-816D-496407293254",
+                "pid": "P793",
+                "item": "Q3485975",
+                "rank": "normal",
+                "provenance": "none",
+                "described": true,
+                "when": {
+                  "start": 1360,
+                  "end": 1360,
+                  "own": true
+                }
+              },
+              {
+                "statement": "Q90-CD88C11A-6E16-42A1-97A0-90F56A8065AF",
+                "pid": "P793",
+                "item": "Q3485976",
+                "rank": "normal",
+                "provenance": "none",
+                "described": true,
+                "when": {
+                  "start": 1370,
+                  "end": 1370,
+                  "own": true
+                }
+              },
+              {
+                "statement": "Q90-769A069F-88AF-4316-BDC9-7CD1DD292C99",
+                "pid": "P793",
+                "item": "Q3485978",
+                "rank": "normal",
+                "provenance": "none",
+                "described": true,
+                "when": {
+                  "year": 1420,
+                  "own": true
+                }
+              },
+              {
+                "statement": "Q90-CF88DCDF-8F1A-4C5C-8146-68B86DAC67E3",
+                "pid": "P793",
+                "item": "Q3485982",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Le siège de Paris en 1429 par Jeanne d'Arc - Martial.jpg",
+                  "kind": "photo",
+                  "aspect": 1.3953,
+                  "megapixels": 2.02,
+                  "credit": {
+                    "artist": "AnonymousUnknown author",
+                    "license": "Public domain"
+                  }
+                },
+                "described": true,
+                "when": {
+                  "start": 1429,
+                  "end": 1429,
+                  "own": true
+                }
+              },
+              {
+                "statement": "Q90-A085D0F8-FB1D-4C66-9B53-28C864BCC5E2",
+                "pid": "P793",
+                "item": "Q3485979",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "1436 Entrée Paris.jpg",
+                  "kind": "photo",
+                  "aspect": 0.8082,
+                  "megapixels": 5.83,
+                  "credit": {
+                    "artist": "Jean-Simon Berthélémy",
+                    "license": "Public domain"
+                  }
+                },
+                "described": true,
+                "when": {
+                  "year": 1435
+                }
+              },
+              {
+                "statement": "Q90-BCAD4BDD-B9C1-4D46-B3EF-D543B5820B18",
+                "pid": "P793",
+                "item": "Q3485984",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Henri IV assiégeant Paris.jpg",
+                  "kind": "photo",
+                  "aspect": 1.2822,
+                  "megapixels": 4.03,
+                  "credit": {
+                    "artist": "Unknown authorUnknown author",
+                    "license": "Public domain"
+                  }
+                },
+                "described": true,
+                "when": {
+                  "year": 1590
+                }
+              },
+              {
+                "statement": "Q90-dc4e87c9-40c6-41bb-d30a-2e1ff7b8c0bb",
+                "pid": "P793",
+                "item": "Q6534",
+                "rank": "preferred",
+                "provenance": "none",
+                "image": {
+                  "file": "LouisXVIExecutionBig.jpg",
+                  "kind": "photo",
+                  "aspect": 1.3616,
+                  "megapixels": 19.83,
+                  "credit": {
+                    "artist": "Isidore Stanislas Helman / After Charles Monnet",
+                    "license": "Public domain"
+                  }
+                },
+                "described": true,
+                "when": {
+                  "year": 1789
+                }
+              },
+              {
+                "statement": "Q90-C6DDA61F-3C8E-4C7A-A003-ECB35202C4BA",
+                "pid": "P793",
+                "item": "Q690489",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Siege of Paris.jpg",
+                  "kind": "photo",
+                  "aspect": 1.2939,
+                  "megapixels": 1.51,
+                  "credit": {
+                    "artist": "Jean-Louis-Ernest Meissonier",
+                    "license": "Public domain"
+                  }
+                },
+                "described": true,
+                "when": {
+                  "year": 1870
+                }
+              },
+              {
+                "statement": "Q90-CC4E0E48-4266-40D3-A59B-6EA92CE2AD91",
+                "pid": "P793",
+                "item": "Q133132",
+                "rank": "preferred",
+                "provenance": "none",
+                "image": {
+                  "file": "Barricade de la rue de Flandre ( Salle de la Marseillaise), 18 mars 1871. PH4142-167(1).jpg",
+                  "kind": "photo",
+                  "aspect": 1.4292,
+                  "megapixels": 11.17,
+                  "credit": {
+                    "artist": "Anonyme, photographe",
+                    "license": "CC0"
+                  }
+                },
+                "described": true,
+                "when": {
+                  "year": 1871
+                }
+              },
+              {
+                "statement": "Q90-93b7b2e8-4209-dece-b3cd-80d5df70c3ab",
+                "pid": "P793",
+                "item": "Q8088",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "JOParis 1900.jpg",
+                  "kind": "drawing",
+                  "aspect": 0.6653,
+                  "megapixels": 0.37,
+                  "credit": {
+                    "artist": "Unknown authorUnknown author",
+                    "license": "Public domain"
+                  }
+                },
+                "described": true,
+                "when": {
+                  "year": 1900
+                }
+              },
+              {
+                "statement": "Q90-c69b610a-422b-8524-4ca9-0f64e7078b45",
+                "pid": "P793",
+                "item": "Q8132",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Affiche des jeux olympiques de Paris de 1924.jpg",
+                  "kind": "photo",
+                  "aspect": 0.75,
+                  "megapixels": 5.95,
+                  "credit": {
+                    "artist": "Tangopaso",
+                    "license": "Public domain"
+                  }
+                },
+                "described": true,
+                "when": {
+                  "year": 1924
+                }
+              },
+              {
+                "statement": "Q90-7abe064e-41a9-5645-9993-a0af2d916793",
+                "pid": "P793",
+                "item": "Q21479779",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Paris Shootings - The day after (22593744177).jpg",
+                  "kind": "photo",
+                  "aspect": 1.5,
+                  "megapixels": 7.96,
+                  "credit": {
+                    "artist": "Maya-Anaïs Yataghène from Paris, France",
+                    "license": "CC BY 2.0"
+                  }
+                },
+                "described": true,
+                "when": {
+                  "year": 2015
+                }
+              },
+              {
+                "statement": "Q90-b56063d5-49b7-8992-f122-2abedecb4154",
+                "pid": "P793",
+                "item": "Q995653",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "2024 Summer Olympics text logo.svg",
+                  "kind": "drawing",
+                  "aspect": 2.2857,
+                  "megapixels": 0.11,
+                  "credit": {
+                    "artist": "Unknown authorUnknown author",
+                    "license": "Public domain"
+                  }
+                },
+                "described": true,
+                "when": {
+                  "year": 2024
+                }
               }
             ]
           }
@@ -6287,6 +6394,220 @@ expression: composition
       "template": "collapsed",
       "slots": {
         "sheet": [
+          {
+            "primitive": "fact",
+            "pid": "P571",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "q90-63e796de-4ece-2cbf-f9e7-37debb6be6e7",
+                "pid": "P571",
+                "time": "-0300-01-01T00:00:00Z",
+                "precision": 7,
+                "rank": "normal",
+                "provenance": "sourced",
+                "shown": true
+              }
+            ],
+            "priority": 3.0
+          },
+          {
+            "primitive": "fact",
+            "pid": "P17",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q90-465cecb2-438c-cb1d-b1e7-a26278c3949c",
+                "pid": "P17",
+                "item": "Q2748708",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1940
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1944
+                  }
+                ],
+                "class": true,
+                "shown": true
+              },
+              {
+                "statement": "Q90-7d24448d-42b3-142b-8922-acf8d6e7a4cc",
+                "pid": "P17",
+                "item": "Q58296",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1792
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1804
+                  }
+                ],
+                "image": {
+                  "file": "France Departement 1801.svg",
+                  "kind": "drawing",
+                  "aspect": 0.9525,
+                  "megapixels": 1.9,
+                  "credit": {
+                    "artist": "BrightRaven",
+                    "license": "CC BY-SA 3.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q90-b055505b-45f1-cf01-cdf2-9b59559dd097",
+                "pid": "P17",
+                "item": "Q71084",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1804
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1815
+                  }
+                ],
+                "image": {
+                  "file": "Jean-Louis-Ernest Meissonier-Campagne de France.jpg",
+                  "kind": "photo",
+                  "aspect": 1.538,
+                  "megapixels": 3.0,
+                  "credit": {
+                    "artist": "Jean-Louis-Ernest Meissonier",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q90-ed0db841-4c68-7560-3657-60d9c21fd71b",
+                "pid": "P17",
+                "item": "Q142",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1815
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1940
+                  }
+                ],
+                "image": {
+                  "file": "Paris from the Arc de Triomphe, 17 October 2019.jpg",
+                  "kind": "photo",
+                  "aspect": 1.7776,
+                  "megapixels": 18.11,
+                  "credit": {
+                    "artist": "Pierre Blaché from Paris, France",
+                    "license": "CC0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q90-f787ce92-408f-5888-505f-93657a95b767",
+                "pid": "P17",
+                "item": "Q70972",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 987
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1792
+                  }
+                ],
+                "image": {
+                  "file": "Chateau de Versailles 1668 Pierre Patel.jpg",
+                  "kind": "photo",
+                  "aspect": 1.3772,
+                  "megapixels": 5.96,
+                  "credit": {
+                    "artist": "Pierre Patel",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q90-fb1872f4-4ab5-62e3-be9c-0126eacedfb3",
+                "pid": "P17",
+                "item": "Q146246",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 508
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 843
+                  }
+                ],
+                "shown": true
+              }
+            ],
+            "priority": 3.0
+          },
+          {
+            "primitive": "fact",
+            "pid": "P1365",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q90-49C9FA19-36E9-42D1-BC63-FA9E65CFC47B",
+                "pid": "P1365",
+                "item": "Q270273",
+                "rank": "normal",
+                "provenance": "sourced",
+                "image": {
+                  "file": "Plan de Paris Lutece2 BNF07710745.png",
+                  "kind": "photo",
+                  "aspect": 1.2198,
+                  "megapixels": 3.35,
+                  "credit": {
+                    "artist": "Nicolas de La Mare / Antoine Coquart",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q90-83dc531b-4e08-50e0-d69d-3e5c1e7a4f47",
+                "pid": "P1365",
+                "item": "Q124881945",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 2019
+                  }
+                ],
+                "shown": true
+              }
+            ],
+            "priority": 2.785
+          },
           {
             "primitive": "fact",
             "pid": "P1313",

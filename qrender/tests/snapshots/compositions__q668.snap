@@ -8985,8 +8985,62 @@ expression: composition
       "kind": "history",
       "dimension": "time",
       "concept": "Q309",
-      "template": "axis",
-      "slots": {},
+      "template": "columns",
+      "slots": {
+        "stack": [
+          {
+            "primitive": "timeline",
+            "pid": "P793",
+            "events": [
+              {
+                "statement": "Q668-8d66d8d7-460f-b414-8921-1f2eda23acd5",
+                "pid": "P793",
+                "item": "Q124728912",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "PM Nehru addresses the nation from the Red Fort on 15 August 1947 (cropped).jpg",
+                  "kind": "photo",
+                  "aspect": 2.0506,
+                  "megapixels": 0.23,
+                  "credit": {
+                    "artist": "Unknown authorUnknown author",
+                    "license": "Public domain"
+                  }
+                },
+                "described": true,
+                "when": {
+                  "year": 1947
+                }
+              },
+              {
+                "statement": "Q668-227b88bc-46f3-9050-0674-868a634742a9",
+                "pid": "P793",
+                "item": "Q3519674",
+                "rank": "normal",
+                "provenance": "none",
+                "described": true,
+                "when": {
+                  "start": 1947,
+                  "end": 1975
+                }
+              },
+              {
+                "statement": "Q668-179a78bd-496a-e534-a75b-fc742d9ee6a4",
+                "pid": "P793",
+                "item": "Q2726232",
+                "rank": "normal",
+                "provenance": "none",
+                "described": true,
+                "when": {
+                  "start": 1975,
+                  "end": 1977
+                }
+              }
+            ]
+          }
+        ]
+      },
       "prose": {
         "concepts": [
           "Q309"
@@ -9000,14 +9054,6 @@ expression: composition
           "rank": "normal",
           "provenance": "none",
           "class": true
-        }
-      ],
-      "silent": [
-        {
-          "primitive": "time",
-          "reason": "below_threshold",
-          "points": 3,
-          "needs": 4
         }
       ]
     },
@@ -16138,74 +16184,6 @@ expression: composition
                     "item": "Q6581097"
                   }
                 ],
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P793",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-179a78bd-496a-e534-a75b-fc742d9ee6a4",
-                "pid": "P793",
-                "item": "Q2726232",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1975
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 1977
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q668-227b88bc-46f3-9050-0674-868a634742a9",
-                "pid": "P793",
-                "item": "Q3519674",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1947
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 1975
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q668-8d66d8d7-460f-b414-8921-1f2eda23acd5",
-                "pid": "P793",
-                "item": "Q124728912",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 1947
-                  }
-                ],
-                "image": {
-                  "file": "PM Nehru addresses the nation from the Red Fort on 15 August 1947 (cropped).jpg",
-                  "kind": "photo",
-                  "aspect": 2.0506,
-                  "megapixels": 0.23,
-                  "credit": {
-                    "artist": "Unknown authorUnknown author",
-                    "license": "Public domain"
-                  }
-                },
                 "shown": true
               }
             ],

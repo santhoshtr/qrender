@@ -126,8 +126,14 @@ impl<'a> Localizer<'a> {
                 .composition
                 .spreads
                 .iter()
-                .filter(|s| !s.slots.is_empty() || !s.topics.is_empty())
                 .map(|s| self.spread(s))
+                // A spread without blocks stays for its topics or its
+                // prose (a history without significant events).
+                .filter(|v| {
+                    !v.spread.slots.is_empty()
+                        || !v.spread.topics.is_empty()
+                        || v.prose_text.is_some()
+                })
                 .collect(),
             unmatched_sections: self.unmatched_sections(),
             labels,

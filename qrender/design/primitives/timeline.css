@@ -1,0 +1,80 @@
+/* timeline: events that are items of their own, the oldest first. Each
+   event is a row: its date, its picture, its text. A line in the colour
+   of the dimension runs through the dates, with a dot at each event. */
+
+.timeline {
+	--when: 7rem;
+	--pic: 96px;
+
+	& ol {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	& li {
+		position: relative;
+		display: grid;
+		grid-template-columns: var( --when ) var( --pic ) minmax( 0, 1fr );
+		gap: var( --spacing-150 );
+		align-items: start;
+		padding-block: var( --spacing-75 );
+
+		/* The line, between the date and the picture. */
+		&::before {
+			content: '';
+			position: absolute;
+			inset-block: 0;
+			inset-inline-start: calc( var( --when ) + var( --spacing-75 ) - 1px );
+			border-inline-start: 2px solid var( --soft );
+		}
+	}
+
+	& .when {
+		position: relative;
+		text-align: end;
+		font-weight: var( --font-weight-semi-bold );
+		font-variant-numeric: tabular-nums;
+		color: var( --ink );
+
+		/* The dot of the event, on the line. */
+		&::after {
+			content: '';
+			position: absolute;
+			inset-block-start: 0.45em;
+			inset-inline-end: calc( -1 * var( --spacing-75 ) - 5px );
+			inline-size: 10px;
+			block-size: 10px;
+			border-radius: 50%;
+			background-color: var( --ink );
+		}
+	}
+
+	/* The same box with or without a picture: the rows line up. */
+	& .pic {
+		inline-size: var( --pic );
+		block-size: 64px;
+		border-radius: 4px;
+		overflow: hidden;
+		background-color: var( --soft );
+
+		& img {
+			display: block;
+			inline-size: 100%;
+			block-size: 100%;
+			object-fit: cover;
+		}
+
+		/* Maps and drawings are shown whole. */
+		& img.k-drawing { object-fit: contain; }
+	}
+
+	& .what { font-weight: var( --font-weight-semi-bold ); }
+
+	@media ( max-width: 600px ) {
+		--when: 4.5rem;
+		--pic: 64px;
+
+		& .pic { block-size: 48px; }
+	}
+}

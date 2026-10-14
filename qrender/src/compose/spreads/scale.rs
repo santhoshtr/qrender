@@ -22,8 +22,6 @@ pub fn build<'a>(c: &mut Composer<'a>, spec: &'a SpreadSpec) -> super::Built {
         None => silent.push(Silence {
             primitive: Primitive::Scale,
             reason: SilenceReason::NoComparableQuantity,
-            points: None,
-            needs: None,
         }),
     }
     // The peer lineups do not depend on the spread's properties (as in v3).

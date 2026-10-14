@@ -1,35 +1,32 @@
-//! A history spread: the time axis. Below its threshold the spread stays,
-//! empty, with the reason, when there is a dated point or a topic for it.
+//! A history spread: the timeline of the events that are items of their
+//! own (significant events). Without one, the spread stays when it has a
+//! topic ("history of India") or prose concepts: the view keeps it when
+//! the article has the section.
 
 use indexmap::IndexMap;
 
 use crate::compose::Composer;
 use crate::config::SpreadSpec;
-use crate::primitives::time;
-use crate::schema::{Block, Silence, SilenceReason};
-use crate::vocab::{Primitive, Slot, Template};
+use crate::primitives::timeline;
+use crate::schema::Block;
+use crate::vocab::{Slot, Template};
 
 pub fn build(c: &mut Composer, spec: &SpreadSpec) -> super::Built {
-    match time::build(c) {
-        Ok(axis) => {
-            let slots = IndexMap::from([(Slot::Axis, vec![Block::Time(axis)])]);
-            Ok(c.spread(spec, slots, Template::Axis, Vec::new()))
-        }
-        Err(points) => {
-            let topics = &c.config.layouts.topics;
-            let has_topic = c
-                .properties()
-                .any(|(p, _)| topics.get(&p).is_some_and(|s| *s == spec.id));
-            let silence = Silence {
-                primitive: Primitive::Time,
-                reason: SilenceReason::BelowThreshold,
-                points: Some(points),
-                needs: Some(c.config.layouts.thresholds.time_points),
-            };
-            if points == 0 && !has_topic {
-                return Err(vec![silence]);
-            }
-            Ok(c.spread(spec, IndexMap::new(), Template::Axis, vec![silence]))
+    let timelines: Vec<Block> = timeline::build(c)
+        .into_iter()
+        .map(Block::Timeline)
+        .collect();
+    let mut slots = IndexMap::new();
+    if !timelines.is_empty() {
+        slots.insert(Slot::Stack, timelines);
+    } else {
+        let topics = &c.config.layouts.topics;
+        let has_topic = c
+            .properties()
+            .any(|(p, _)| topics.get(&p).is_some_and(|s| *s == spec.id));
+        if !has_topic && spec.prose.is_empty() {
+            return Err(Vec::new());
         }
     }
+    Ok(c.spread(spec, slots, Template::Columns, Vec::new()))
 }

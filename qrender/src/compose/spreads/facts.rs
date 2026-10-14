@@ -104,6 +104,8 @@ fn properties(c: &Composer, spec: &SpreadSpec) -> Vec<Pid> {
     let skip = |p: &Pid| {
         layouts.evidence.pids.contains(p)
             || layouts.roles.list(Role::Web).contains(p)
+            // Events of their own: the timeline of the history spread.
+            || layouts.roles.list(Role::Timeline).contains(p)
             || layouts.topics.contains_key(p)
             || *p == *INSTANCE_OF
     };

@@ -17,7 +17,7 @@
 #   identity  the page head: title and description, banner, lead beside the picture, kinds
 #   facts     the properties listed, each by the shape of its data
 #   scale     share of the container, peers, series of the properties listed
-#   history   a time axis of events and history spans (property roles)
+#   history   the timeline of the significant events (property role)
 #   media     the Commons files no spread took
 #   more      everything left, collapsed
 #   evidence  web presence, curation, sources, identifiers, provenance
@@ -176,8 +176,8 @@ concept = "Q121769"    # reference
 kind = "evidence"
 
 # ------------------------------------------------------------------ person
-# A person has no time axis: a life is told by its spreads, and the dates
-# live in the life spread.
+# A person has no history spread: a life is told by its spreads, and the
+# dates live in the life spread.
 
 [class_layouts.person]
 match_p31 = ["Q5"]     # human
@@ -728,21 +728,11 @@ kind = "evidence"
 # data: the strategy document's property-to-role mapping.
 
 [roles]
-# Events of the item's own history: they go on the time axis.
-event = [
-  "P571",   # inception
-  "P576",   # dissolved, abolished or demolished date
-  "P1619",  # date of official opening
+# Events that are items of their own: the timeline of the history spread,
+# a row for each event with its picture and description, by date (the
+# statement's, else the event item's own).
+timeline = [
   "P793",   # significant event
-  "P1365",  # replaces
-  "P1366",  # replaced by
-]
-# Relations whose spans change what the item is: its former countries, the
-# states it was the capital of. Their dated spans go on the time axis.
-history_span = [
-  "P17",    # country
-  "P1376",  # capital of
-  "P131",   # located in the administrative territorial entity
 ]
 # The people who made a work. A spread shows them as one block, each person
 # once, with every role they had (a director who also wrote and produced).
@@ -872,7 +862,6 @@ P8477 = {}                        # BTI Status Index (0 to 10)
 
 # ------------------------------------------------------------- thresholds
 [thresholds]
-time_points = 4          # fewer distinct years than this: no time axis
 peers = 5                # fewer peers with a value than this: no peer lineup
 run_pictured = 0.5       # a set of values is pictured when half have pictures
 set_max = 12             # pictures shown in a set before "+N"

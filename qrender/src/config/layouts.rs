@@ -108,8 +108,6 @@ impl Roles {
 #[derive(Debug, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct Thresholds {
-    /// Fewer distinct years than this: no time axis.
-    pub time_points: usize,
     /// Fewer peers with a value than this: no peer lineup.
     pub peers: usize,
     /// A set of values is pictured when this share of them has pictures.

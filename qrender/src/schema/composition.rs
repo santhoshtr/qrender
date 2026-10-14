@@ -9,7 +9,7 @@ use serde::Serialize;
 use super::StatementRef;
 use crate::primitives::{
     absent, credits, fact, identifiers, kind, map, media, names, network, peers, pictures, prose,
-    provenance, scale, score, series, sitelinks, sounds, split, succession, time, title, works,
+    provenance, scale, score, series, sitelinks, sounds, split, succession, timeline, title, works,
 };
 use crate::vocab::{Dimension, Primitive, Slot, SpreadKind, Template};
 
@@ -69,17 +69,12 @@ pub struct ProseConcepts {
 pub struct Silence {
     pub primitive: Primitive,
     pub reason: SilenceReason,
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub points: Option<usize>,
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub needs: Option<usize>,
 }
 
 #[derive(Debug, Clone, Copy, Serialize, JsonSchema)]
 #[serde(rename_all = "snake_case")]
 pub enum SilenceReason {
     NoComparableQuantity,
-    BelowThreshold,
 }
 
 /// A block: one primitive, from its own module.
@@ -107,7 +102,7 @@ pub enum Block {
     Credits(credits::Credits),
     Score(score::Score),
     Works(works::Works),
-    Time(time::Time),
+    Timeline(timeline::Timeline),
     Absent(absent::Absent),
     Provenance(provenance::Provenance),
     Sitelinks(sitelinks::Sitelinks),
@@ -135,7 +130,7 @@ impl Block {
             Self::Credits(_) => Primitive::Credits,
             Self::Score(_) => Primitive::Score,
             Self::Works(_) => Primitive::Works,
-            Self::Time(_) => Primitive::Time,
+            Self::Timeline(_) => Primitive::Timeline,
             Self::Absent(_) => Primitive::Absent,
             Self::Provenance(_) => Primitive::Provenance,
             Self::Sitelinks(_) => Primitive::Sitelinks,

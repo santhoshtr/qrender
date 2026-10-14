@@ -98,6 +98,7 @@ impl Config {
             containers: layouts.containers.keys().copied().collect(),
             qualifier_logos: layouts.media.qualifier_logos.clone(),
             concepts,
+            timeline: layouts.roles.list(Role::Timeline).to_vec(),
         }
     }
 
@@ -329,9 +330,9 @@ mod tests {
         assert!(invalid(LAYOUTS, &bad_rule).contains("rules.toml"));
         let bad_predicate = RULES.replacen("few = true", "fewer = true", 1);
         assert!(invalid(LAYOUTS, &bad_predicate).contains("rules.toml"));
-        let bad_role = LAYOUTS.replacen("event = [", "events = [", 1);
+        let bad_role = LAYOUTS.replacen("timeline = [", "timelines = [", 1);
         assert!(invalid(&bad_role, RULES).contains("layouts.toml"));
-        let bad_pid = LAYOUTS.replacen("\"P571\",", "\"571\",", 1);
+        let bad_pid = LAYOUTS.replacen("\"P1082\",", "\"1082\",", 1);
         assert!(invalid(&bad_pid, RULES).contains("layouts.toml"));
     }
 

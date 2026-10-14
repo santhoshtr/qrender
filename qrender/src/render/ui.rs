@@ -17,6 +17,7 @@ use crate::primitives::media::Media;
 use crate::primitives::names::{self, Names};
 use crate::primitives::provenance;
 use crate::primitives::succession::Succession;
+use crate::primitives::timeline::When;
 use crate::primitives::works::{Work, Works};
 use crate::schema::{Credit, Picture, Provenance, QualifierShown, StatementRef, ValueShown};
 use crate::vocab::Slot;
@@ -61,6 +62,7 @@ arg!(
     Qid,
     Pid,
     Slot,
+    When,
     Option<f64>,
     Option<Provenance>
 );
@@ -205,6 +207,18 @@ impl<'v> Ui<'v> {
     /// The groups of languages of the names, for the page language.
     pub fn name_groups<'a>(&'a self, b: &'a Names) -> Vec<names::Group<'a>> {
         names::groups(b, self.view.lang.as_str())
+    }
+
+    /// The date of an event: a year, or a span ("1947 – 1975").
+    pub fn when(&self, w: impl Arg<When>) -> String {
+        let w = w.get();
+        let year = |y: Option<i64>| y.map(|y| self.view.year(y)).unwrap_or_default();
+        match w.single() {
+            Some(y) => self.view.year(y),
+            None => format!("{} – {}", year(w.start), year(w.end))
+                .trim()
+                .to_string(),
+        }
     }
 
     /// The label of "point in time" (P585): the heading of the dates of a
