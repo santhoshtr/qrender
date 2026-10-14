@@ -25,6 +25,11 @@
        href="{{ href }}"
        aria-label="{{ ui.msg("qrender-edit") }}">✎</a>
 {%- endmacro -%}
+{#- The last card of a strip of pictures: it opens the dialog of all the
+    values. No count: the heading has it. -#}
+{%- macro view_all(ui, n) -%}
+    <button class="view-all" type="button" command="show-modal" commandfor="d{{ n }}">{{ ui.msg("qrender-view-all") }}</button>
+{%- endmacro -%}
 {%- macro more(n, rest) -%}
     <button class="more" type="button" command="show-modal" commandfor="d{{ n }}">+{{ rest }}</button>
 {%- endmacro -%}

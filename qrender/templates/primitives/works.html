@@ -1,5 +1,6 @@
 {%- import "macros.html" as m -%}
-{#- Works by the item: pictures, or a list when most have no picture. -#}
+{#- Works by the item: a row of pictures with "View all", or a list when
+    most have no picture. -#}
 {%- let values = ui.works(b) -%}
 {%- let heading = ui.heading(b.pids.as_slice()) -%}
 {%- let rest = ui.hidden(values.as_slice()) -%}
@@ -14,7 +15,12 @@
             {%- if rest > 0 -%}{%- let n = ui.id() -%}{% call m::more(n, rest) %}{% endcall %}{% call m::dialog(ui, n, heading) %}{%- for s in values.iter() -%}{{ ui.line(s)|safe }}{%- endfor -%}{% endcall %}{%- endif -%}
         </div>
     {%- else -%}
-        {%- call m::scroller(heading) -%}{%- for s in values.iter() -%}{%- if s.shown -%}{{ ui.figure(s)|safe }}{%- endif -%}{%- endfor -%}{%- endcall -%}
-        {%- if rest > 0 -%}{%- let n = ui.id() -%}{% call m::more(n, rest) %}{% endcall %}{% call m::dialog(ui, n, heading) %}{%- for s in values.iter() -%}{{ ui.line(s)|safe }}{%- endfor -%}{% endcall %}{%- endif -%}
+        {%- let all = ui.view_all(values.len()) -%}
+        {%- let n = ui.id() -%}
+        {%- call m::scroller(heading) -%}
+        {%- for s in values.iter() -%}{%- if s.shown -%}{{ ui.figure(s)|safe }}{%- endif -%}{%- endfor -%}
+        {%- if all %}{% call m::view_all(ui, n) %}{% endcall %}{% endif -%}
+        {%- endcall -%}
+        {%- if all %}{% call m::dialog(ui, n, heading) %}{{ ui.rows(values.as_slice())|safe }}{% endcall %}{% endif -%}
     {%- endif -%}
 </div>

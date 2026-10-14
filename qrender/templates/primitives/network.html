@@ -1,11 +1,16 @@
 {%- import "macros.html" as m -%}
-{#- The pictured values of one property: one row that scrolls, all of them
-    in a dialog. -#}
+{#- The pictured values of one property: one row of pictures, cut at its
+    end, with "View all" as its last card; all of them, with their
+    qualifiers, in its dialog. -#}
 {%- let values = ui.values(b.values.as_slice()) -%}
 {%- let title = ui.property(b.pid) -%}
+{%- let all = ui.view_all(values.len()) -%}
+{%- let n = ui.id() -%}
 <div class="block set">
     <h3>{{ ui.text(&title, true)|safe }} <span class="note">{{ values.len() }}</span></h3>
-    {%- call m::scroller(title.text) -%}{%- for s in values.iter() -%}{%- if s.shown -%}{{ ui.figure(s)|safe }}{%- endif -%}{%- endfor -%}{%- endcall -%}
-    {%- let rest = ui.hidden(values.as_slice()) -%}
-    {%- if rest > 0 -%}{%- let n = ui.id() -%}{% call m::more(n, rest) %}{% endcall %}{% call m::dialog(ui, n, title.text) %}{%- for s in values.iter() -%}{{ ui.line(s)|safe }}{%- endfor -%}{% endcall %}{%- endif -%}
+    {%- call m::scroller(title.text) -%}
+    {%- for s in values.iter() -%}{%- if s.shown -%}{{ ui.figure(s)|safe }}{%- endif -%}{%- endfor -%}
+    {%- if all %}{% call m::view_all(ui, n) %}{% endcall %}{% endif -%}
+    {%- endcall -%}
+    {%- if all %}{% call m::dialog(ui, n, title.text) %}{{ ui.rows(values.as_slice())|safe }}{% endcall %}{% endif -%}
 </div>

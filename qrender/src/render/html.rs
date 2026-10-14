@@ -117,6 +117,13 @@ struct LinesHtml<'a> {
 }
 
 #[derive(Template)]
+#[template(path = "parts/rows.html")]
+struct RowsHtml<'a> {
+    ui: &'a Ui<'a>,
+    values: &'a [Shown<'a>],
+}
+
+#[derive(Template)]
 #[template(path = "parts/figure.html")]
 struct FigureHtml<'a> {
     ui: &'a Ui<'a>,
@@ -173,6 +180,11 @@ impl<'v> Ui<'v> {
             values,
             heading: heading.r(),
         })
+    }
+
+    /// All the values of a pictured list, as rows: its dialog.
+    pub fn rows(&self, values: &[Shown]) -> String {
+        render(RowsHtml { ui: self, values })
     }
 
     pub fn figure<'a>(&self, s: impl Ref<Shown<'a>>) -> String {

@@ -1,0 +1,34 @@
+{%- import "macros.html" as m -%}
+{#- All the values of a pictured list, in its dialog: a row for each, with
+    its picture (or an empty box: the rows line up), its title, its
+    description and its qualifiers. The pictures load when the dialog
+    opens. -#}
+<ul class="pic-rows">
+    {%- for s in values.iter() %}
+        <li>
+            <span class="thumb">
+                {%- if let Some(image) = s.image -%}
+                    <img src="{{ ui.src(&image.picture.file, 160) }}"
+                         alt=""
+                         loading="lazy">
+                {%- endif -%}
+            </span>
+            <span class="text">
+                <b>{{ ui.part(s.part)|safe }}</b>
+                {%- if let Some(image) = s.image -%}{%- if let Some(from) = image.from %}<span class="from" title="{{ from }}">W</span>{% endif -%}{%- endif -%}
+                {%- call m::prov(ui, s.provenance) %}{% endcall -%}
+                {%- if let Some(e) = s.edit %}
+                    {% call m::edit(ui, e) %}
+                    {% endcall %}
+                {% endif -%}
+                {%- if let Some(d) = s.description %}
+                    <span class="desc">
+                        {% call m::description(d) %}
+                        {% endcall %}
+                    </span>
+                {% endif -%}
+                {%- if !s.note.is_empty() %}<span class="note">{{ ui.note(s.note.as_slice())|safe }}</span>{% endif -%}
+            </span>
+        </li>
+    {%- endfor %}
+</ul>

@@ -138,11 +138,13 @@ a {
 .v > .edit,
 .block > h3 > .edit,
 .split li > .edit,
-.series .line > .edit { opacity: 0; }
+.series .line > .edit,
+.pic-rows .text > .edit { opacity: 0; }
 .v:is( :hover, :focus-within ) > .edit,
 .block > h3:is( :hover, :focus-within ) > .edit,
 .split li:is( :hover, :focus-within ) > .edit,
-.series .line:is( :hover, :focus-within ) > .edit { opacity: 1; }
+.series .line:is( :hover, :focus-within ) > .edit,
+.pic-rows li:is( :hover, :focus-within ) .text > .edit { opacity: 1; }
 
 .edit,
 .info {
@@ -597,30 +599,100 @@ dialog {
 
 /* The values of one property have equal importance: they take one row, not
    many. Each picture has the row height and its own width (height ×
-   aspect); the row scrolls and snaps to each picture. A picture cut at the
-   edge shows that there is more. */
+   aspect); the row is cut at its end, as many pictures as fit. "View all",
+   the last card, opens the dialog of all the values. */
 .run.scroll {
+	position: relative;
 	flex-wrap: nowrap;
-	overflow-x: auto;
-	overscroll-behavior-x: contain;
-	scroll-snap-type: x mandatory;
-	scroll-padding-inline: 0;
-	scrollbar-width: thin;
-	padding-block-end: var( --spacing-25 );
+	overflow: hidden;
 
 	& > .m {
 		flex: none;
 		inline-size: calc( var( --a ) * var( --h ) );
-		scroll-snap-align: start;
 	}
 
 	& > .m.k-drawing { inline-size: calc( var( --box ) * var( --h ) ); }
 
 	&::after { content: none; }
+}
 
-	&:focus-visible {
-		outline: 2px solid var( --color-progressive );
-		outline-offset: 2px;
+/* "View all": a small card at the end of the row, over the picture that the
+   end cuts, with a fade before it. The card is a translucent, blurred
+   layer over that picture: no sudden white, and square, so that no part of
+   the picture shows at its corners. */
+.view-all {
+	--veil: color-mix( in srgb, var( --background-color-base ) 78%, transparent );
+
+	position: absolute;
+	inset-block: 0;
+	inset-inline-end: 0;
+	inline-size: 7rem;
+	padding: 0 var( --spacing-75 );
+	border: 0;
+	background-color: var( --veil );
+	backdrop-filter: blur( 8px );
+	color: var( --color-progressive );
+	font: inherit;
+	font-size: var( --font-size-small );
+	font-weight: var( --font-weight-semi-bold );
+	cursor: pointer;
+
+	&::before {
+		content: '';
+		position: absolute;
+		inset-block: 0;
+		inset-inline-end: 100%;
+		inline-size: var( --spacing-200 );
+		background: linear-gradient( to left, var( --veil ), transparent );
+	}
+
+	&:dir( rtl )::before { background: linear-gradient( to right, var( --veil ), transparent ); }
+
+	&:hover { --veil: color-mix( in srgb, var( --background-color-interactive ) 85%, transparent ); }
+}
+
+/* All the values of a pictured list, in its dialog: a row for each, with a
+   picture of one size (the rows line up), its title, its description and
+   its qualifiers. */
+.pic-rows {
+	column-span: all;
+	display: grid;
+	grid-template-columns: repeat( auto-fill, minmax( 280px, 1fr ) );
+	gap: var( --spacing-75 ) var( --spacing-200 );
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	& li {
+		display: grid;
+		grid-template-columns: 64px minmax( 0, 1fr );
+		gap: var( --spacing-75 );
+		align-items: start;
+	}
+
+	& .thumb {
+		inline-size: 64px;
+		block-size: 48px;
+		border-radius: 4px;
+		overflow: hidden;
+		background-color: var( --background-color-neutral-subtle );
+
+		& img {
+			display: block;
+			inline-size: 100%;
+			block-size: 100%;
+			object-fit: cover;
+		}
+	}
+
+	& .text {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 0 var( --spacing-25 );
+
+		& > .desc,
+		& > .note { flex-basis: 100%; }
 	}
 }
 

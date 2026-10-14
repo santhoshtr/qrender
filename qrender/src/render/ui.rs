@@ -23,6 +23,9 @@ use crate::schema::{Credit, Picture, Provenance, QualifierShown, StatementRef, V
 use crate::vocab::Slot;
 use crate::wikidata::POINT_IN_TIME;
 
+/// The values of a strip of pictures from which it has "View all".
+const VIEW_ALL_MIN: usize = 3;
+
 pub const FILEPATH: &str = "https://commons.wikimedia.org/wiki/Special:FilePath/";
 pub const WIKIPEDIA_LOGO: &str =
     "https://commons.wikimedia.org/wiki/Special:FilePath/Wikipedia-logo-v2.svg?width=60";
@@ -59,6 +62,7 @@ arg!(
     i64,
     u64,
     u32,
+    usize,
     Qid,
     Pid,
     Slot,
@@ -207,6 +211,12 @@ impl<'v> Ui<'v> {
     /// The groups of languages of the names, for the page language.
     pub fn name_groups<'a>(&'a self, b: &'a Names) -> Vec<names::Group<'a>> {
         names::groups(b, self.view.lang.as_str())
+    }
+
+    /// A strip of this many pictures has the "View all" card: its dialog
+    /// shows every value with its qualifiers, more than the strip.
+    pub fn view_all(&self, count: impl Arg<usize>) -> bool {
+        count.get() >= VIEW_ALL_MIN
     }
 
     /// The file of a media statement.
