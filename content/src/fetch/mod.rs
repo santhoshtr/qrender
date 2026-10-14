@@ -52,6 +52,11 @@ pub enum FetchError {
     NoItem(Qid),
 }
 
+/// The version of the fetcher. Raise it when a change of the fetcher
+/// changes what it fetches (a new field, a new request): it is part of
+/// every cache key, so the parts that an older fetcher stored are not read.
+pub const FETCH_VERSION: u32 = 1;
+
 /// Seconds a cached part lives: content and text change with edits;
 /// a peer set changes slowly and many items share it.
 pub const DAY: u64 = 24 * 60 * 60;
@@ -109,11 +114,17 @@ impl<S: Store> Fetcher<S> {
         }
     }
 
+    /// The part of every cache key that says what made the part: the
+    /// version of the fetcher and the fingerprint of its settings.
+    fn made_by(&self) -> String {
+        format!("f{FETCH_VERSION}.{:016x}", self.settings.fingerprint())
+    }
+
     /// The content of an item, from the store or fetched.
     pub async fn content(&self, qid: Qid) -> Result<Content, FetchError> {
         cached(
             &self.store,
-            &format!("{CONTENT_SCHEMA}:{qid}"),
+            &format!("{CONTENT_SCHEMA}:{}:{qid}", self.made_by()),
             DAY,
             self.fetch_content(qid),
         )
@@ -122,7 +133,7 @@ impl<S: Store> Fetcher<S> {
 
     /// The text of an item in one language, from the store or fetched.
     pub async fn text(&self, content: &Content, lang: &Lang) -> Result<Text, FetchError> {
-        let key = format!("{TEXT_SCHEMA}:{}:{lang}", content.qid);
+        let key = format!("{TEXT_SCHEMA}:{}:{}:{lang}", self.made_by(), content.qid);
         cached(&self.store, &key, DAY, self.fetch_text(content, lang)).await
     }
 
@@ -283,7 +294,8 @@ impl<S: Store> Fetcher<S> {
         let mut sorted = classes.to_vec();
         sorted.sort();
         let key = format!(
-            "peers/0.1:{}:{}:{}",
+            "peers/0.1:{}:{}:{}:{}",
+            self.made_by(),
             sorted
                 .iter()
                 .map(ToString::to_string)

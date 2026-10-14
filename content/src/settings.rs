@@ -4,9 +4,11 @@
 //! that title the spreads. The `qrender` crate fills it from its layouts,
 //! so this crate does not depend on `qrender`.
 
+use serde::Serialize;
+
 use crate::id::{Pid, Qid};
 
-#[derive(Debug, Clone, Default)]
+#[derive(Debug, Clone, Default, Serialize)]
 pub struct Settings {
     /// In match order; the last one matches every item.
     pub layouts: Vec<LayoutMatch>,
@@ -18,7 +20,7 @@ pub struct Settings {
     pub concepts: Vec<Qid>,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize)]
 pub struct LayoutMatch {
     pub name: String,
     /// P31 values that choose this layout; empty matches every item.
@@ -28,11 +30,40 @@ pub struct LayoutMatch {
 }
 
 impl Settings {
+    /// A hash of the settings: part of the cache keys, so that a change of
+    /// the configuration (a new concept, a new layout) does not read the
+    /// parts fetched with the old one. FNV-1a, 64 bit: the same across
+    /// Rust releases, so a key made by one build is valid for the next.
+    pub fn fingerprint(&self) -> u64 {
+        let json = serde_json::to_string(self).expect("settings serialize");
+        json.bytes().fold(0xcbf2_9ce4_8422_2325, |hash: u64, byte| {
+            (hash ^ u64::from(byte)).wrapping_mul(0x0100_0000_01b3)
+        })
+    }
+
     /// The first layout whose classes the item has; else the last one.
     pub fn layout(&self, classes: &[Qid]) -> Option<&LayoutMatch> {
         self.layouts
             .iter()
             .find(|l| l.match_p31.iter().any(|c| classes.contains(c)))
             .or_else(|| self.layouts.iter().find(|l| l.match_p31.is_empty()))
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn fingerprint_follows_the_settings() {
+        let a = Settings::default();
+        let mut b = Settings::default();
+        assert_eq!(a.fingerprint(), b.fingerprint());
+        // A new concept (a split title) is a new fingerprint.
+        b.concepts.push("Q290".parse().unwrap());
+        assert_ne!(a.fingerprint(), b.fingerprint());
+        // FNV-1a of the JSON of the settings: fixed, so a key from one
+        // build is valid in the next.
+        assert_eq!(a.fingerprint(), 0x5408_19ee_08ae_dbf8);
     }
 }
