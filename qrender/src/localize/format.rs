@@ -137,6 +137,17 @@ impl View {
                     value: Box::new(number_part(*amount, None)),
                 },
                 QualifierPart::String { string } => self.text(string),
+                // The page of the lexeme, at the sense or the form.
+                QualifierPart::Lexeme { lexeme } => Part::Qualified {
+                    pid: q.pid,
+                    value: Box::new(Part::Link {
+                        text: lexeme.clone(),
+                        href: format!(
+                            "{WIKIDATA}Lexeme:{}#{lexeme}",
+                            lexeme.split('-').next().unwrap_or(lexeme)
+                        ),
+                    }),
+                },
                 QualifierPart::File { file } => Part::File {
                     pid: q.pid,
                     file: file.clone(),

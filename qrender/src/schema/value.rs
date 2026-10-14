@@ -155,10 +155,16 @@ pub enum QualifierPart {
     File {
         file: String,
     },
+    /// A Wikidata lexeme, sense or form ("L32470-S1").
+    Lexeme {
+        lexeme: String,
+    },
 }
 
 /// The URL of a Commons file in a qualifier value.
 const COMMONS_FILE: &str = "commons.wikimedia.org/wiki/Special:FilePath/";
+/// The URL of a lexeme, a sense or a form in a qualifier value.
+const LEXEME: &str = "www.wikidata.org/entity/L";
 
 impl QualifierShown {
     pub fn new(pid: Pid, value: &QualifierValue) -> Option<Self> {
@@ -179,6 +185,10 @@ impl QualifierShown {
                     file: content::model::file_name(string),
                 }
             }
+            // A lexeme sense (P7018) comes as its URL.
+            QualifierValue::String { string } if string.contains(LEXEME) => QualifierPart::Lexeme {
+                lexeme: string.rsplit('/').next().unwrap_or(string).to_string(),
+            },
             QualifierValue::String { string } => QualifierPart::String {
                 string: string.clone(),
             },
@@ -313,6 +323,19 @@ mod tests {
             audio.map(|q| q.value),
             Some(QualifierPart::File {
                 file: "LL-Q1571 (mar)-A.wav".into()
+            })
+        );
+        // A lexeme sense comes as its URL: its id.
+        let sense = QualifierShown::new(
+            "P7018".parse().unwrap(),
+            &QualifierValue::String {
+                string: "http://www.wikidata.org/entity/L32470-S1".into(),
+            },
+        );
+        assert_eq!(
+            sense.map(|q| q.value),
+            Some(QualifierPart::Lexeme {
+                lexeme: "L32470-S1".into()
             })
         );
     }

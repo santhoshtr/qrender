@@ -2922,6 +2922,18 @@
             "file"
           ],
           "type": "object"
+        },
+        {
+          "description": "A Wikidata lexeme, sense or form (\"L32470-S1\").",
+          "properties": {
+            "lexeme": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "lexeme"
+          ],
+          "type": "object"
         }
       ],
       "description": "A qualifier as the composition shows it. \"Unknown value\" qualifiers are\nnot shown, so they have no form here.",
