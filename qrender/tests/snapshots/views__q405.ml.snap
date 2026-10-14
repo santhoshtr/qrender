@@ -105,6 +105,11 @@ expression: json
     },
     "P1096": {
       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P1096",
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "amount of the deviation of an orbit from a perfect circle"
+      },
       "fallback": true,
       "href": "https://www.wikidata.org/wiki/Property:P1096",
       "lang": "en",
@@ -496,6 +501,11 @@ expression: json
     },
     "P2583": {
       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2583",
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "estimated distance to astronomical objects"
+      },
       "fallback": true,
       "href": "https://www.wikidata.org/wiki/Property:P2583",
       "lang": "en",

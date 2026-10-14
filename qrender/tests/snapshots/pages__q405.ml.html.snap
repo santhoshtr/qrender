@@ -5,7 +5,7 @@ expression: html
 <!DOCTYPE html>
 <html lang="ml"
       dir="ltr"
-      data-locale="ml">
+      data-locale="ml" data-design="design/0.2">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -287,7 +287,10 @@ expression: html
 </div><div class="row r-variants"><dt><span class="fb-group"><span class="fb"
       lang="en">orbital eccentricity</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/P1096"
-           aria-label="Add a label in your language">+</a></span></dt><dd><data value="0.054908" data-f="number">0.054908</data> <span class="note">1850</span><br><data value="0.0567" data-f="number">0.0567</data> <span class="note"></span></dd>
+           aria-label="Add a label in your language">+</a></span><span class="desc">
+        <span class="fb" lang="en">amount of the deviation of an orbit from a perfect circle</span>
+        </span>
+    </dt><dd><data value="0.054908" data-f="number">0.054908</data> <span class="note">1850</span><br><data value="0.0567" data-f="number">0.0567</data> <span class="note"></span></dd>
     <span class="tools"></span>
 </div><div class="row r-value"><dt><span class="fb-group"><span class="fb"
       lang="en">orbital inclination</span><a class="add-label"
@@ -302,9 +305,12 @@ expression: html
 </div><div class="row r-variants"><dt><span class="fb-group"><span class="fb"
       lang="en">distance from Earth</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/P2583"
-           aria-label="Add a label in your language">+</a></span></dt><dd><data value="385000.5" data-f="number">385000</data> <span class="note">കിലോമീറ്റർ</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q4130">ഭ്രമണപഥം</a></span><br><data value="356565" data-f="number">356565</data> <span class="note">കിലോമീറ്റർ</span> <span class="note">2018 · <span class="fb-group"><a href="https://www.wikidata.org/wiki/Q1349468"><span class="fb" lang="en">perigee</span></a><a class="add-label"
+           aria-label="Add a label in your language">+</a></span><span class="desc">
+        <span class="fb" lang="en">estimated distance to astronomical objects</span>
+        </span>
+    </dt><dd><data value="356565" data-f="number">356565</data> <span class="note">കിലോമീറ്റർ</span> <span class="note">2018 · <span class="fb-group"><a href="https://www.wikidata.org/wiki/Q1349468"><span class="fb" lang="en">perigee</span></a><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1349468"
-           aria-label="Add a label in your language">+</a></span></span><br><data value="406464" data-f="number">406464</data> <span class="note">കിലോമീറ്റർ</span> <span class="note">2018 · <a href="https://www.wikidata.org/wiki/Q1179441">അപഭൂ</a></span></dd>
+           aria-label="Add a label in your language">+</a></span></span><br><data value="406464" data-f="number">406464</data> <span class="note">കിലോമീറ്റർ</span> <span class="note">2018 · <a href="https://www.wikidata.org/wiki/Q1179441">അപഭൂ</a></span><br><data value="385000.5" data-f="number">385000</data> <span class="note">കിലോമീറ്റർ</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q4130">ഭ്രമണപഥം</a></span></dd>
     <span class="tools"></span>
 </div></dl></section>
             <section class="spread t-columns"

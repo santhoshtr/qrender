@@ -128,14 +128,16 @@ impl When<GroupFacts<'_, '_>> for GroupWhen {
 }
 
 /// The year of each statement (its point in time qualifier), when there
-/// are at least three statements, each has a year, and no two share one.
+/// are at least two statements, each has a year, and no two share one. Two
+/// points are a series: the chart shows that the data is scarce and asks
+/// for more.
 pub fn dated_years(statements: &[&Statement]) -> Option<Vec<i64>> {
     let years: Vec<i64> = statements
         .iter()
         .map(|s| qualifier_year(s, *POINT_IN_TIME).filter(|y| *y != 0))
         .collect::<Option<_>>()?;
     let distinct: HashSet<_> = years.iter().collect();
-    (years.len() >= 3 && distinct.len() == years.len()).then_some(years)
+    (years.len() >= 2 && distinct.len() == years.len()).then_some(years)
 }
 
 // ------------------------------------------------------------ placement
@@ -281,13 +283,18 @@ mod tests {
             dated("P1082", 3.0, 2020)
         ]);
         assert_eq!(group_rule(block, colliding, none.clone(), false), "row");
-        // Not a series role: rows, even with distinct years.
-        let area = json!([
-            dated("P2046", 1.0, 2000),
-            dated("P2046", 2.0, 2010),
-            dated("P2046", 3.0, 2020)
-        ]);
-        assert_eq!(group_rule(block, area, none.clone(), false), "row");
+        // Any dated quantity is a series, from two points.
+        let rate = json!([dated("P8763", 17.0, 2019), dated("P8763", 16.4, 2021)]);
+        assert_eq!(group_rule(block, rate, none.clone(), false), "series");
+        assert_eq!(
+            group_rule(
+                block,
+                json!([dated("P8763", 17.0, 2019)]),
+                none.clone(),
+                false
+            ),
+            "row"
+        );
         assert_eq!(
             group_rule(block, json!([pictured("P17", "Q2")]), none.clone(), true),
             "former"
@@ -412,6 +419,7 @@ mod tests {
         );
         let sts: Vec<_> = c.statements.iter().collect();
         assert_eq!(dated_years(&sts), Some(vec![2010, 2000, 2020]));
-        assert_eq!(dated_years(&sts[..2]), None, "fewer than three");
+        assert_eq!(dated_years(&sts[..2]), Some(vec![2010, 2000]));
+        assert_eq!(dated_years(&sts[..1]), None, "one point");
     }
 }

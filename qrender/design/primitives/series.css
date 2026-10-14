@@ -1,49 +1,59 @@
-/* series */
+/* series: measurements over time (the qr-chart element). A box of one
+   block size holds the table of the points; when the script draws the
+   chart, the chart takes the same box, so the page does not move. */
 
-.columns {
-	display: flex;
-	align-items: flex-end;
-	gap: var( --spacing-100 );
-	block-size: 160px;
+qr-chart {
+	& .desc { margin: 0; }
 
-	& > div {
-		flex: 1;
-		block-size: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-		align-items: center;
-		gap: 2px;
-		font-size: var( --font-size-x-small );
-		font-variant-numeric: tabular-nums;
-	}
-
-	& .col {
-		inline-size: 100%;
-		max-inline-size: 64px;
-		block-size: calc( var( --f ) * 100% );
-		background-color: var( --ink );
-		border-start-start-radius: 4px;
-		border-start-end-radius: 4px;
-	}
-
-	/* A long series: thin columns, labels only on the ends and the peak.
-	   The labels are out of the flow, on the top and bottom edges of the
-	   chart, so that each column has the same height for its bar and a
-	   label does not cover the bars next to it. Horizontally each label
-	   keeps its static place: the centre of its column. */
-	&.dense {
+	& .chart {
 		position: relative;
-		gap: 1px;
-		padding-block: 16px;
+		block-size: 200px;
+		overflow: auto;
+	}
 
-		& > div { font-size: 10px; white-space: nowrap; }
-		& > div > :not( .col ) { position: absolute; }
-		& > div > :first-child { inset-block-start: 0; }
-		& > div > .note { inset-block-end: 0; font-size: 10px; }
+	& table {
+		inline-size: 100%;
+		border-collapse: collapse;
+		font-size: var( --font-size-small );
+		font-variant-numeric: tabular-nums;
 
-		/* The labels of the first and the last column stay inside the chart. */
-		& > div:first-child > :not( .col ) { inset-inline-start: 0; }
-		& > div:last-child > :not( .col ) { inset-inline-end: 0; }
+		& th,
+		& td {
+			padding-block: var( --spacing-25 );
+			padding-inline: 0 var( --spacing-50 );
+			text-align: start;
+			font-weight: var( --font-weight-normal );
+		}
+
+		& thead th {
+			position: sticky;
+			inset-block-start: 0;
+			background-color: var( --background-color-base );
+			color: var( --color-subtle );
+		}
+
+		& tbody tr + tr { border-block-start: var( --border-width-base ) solid var( --border-color-subtle ); }
+	}
+
+	& .plot {
+		position: absolute;
+		inset: 0;
+	}
+
+	/* The chart is drawn: the table stays for screen readers only. Its
+	   wrapper is hidden, not the table: a table box keeps the height of
+	   its rows, and in the columns of a stack that height takes the place
+	   of the other blocks. */
+	&.drawn {
+		& .chart { overflow: visible; }
+
+		& .data {
+			position: absolute;
+			inline-size: 1px;
+			block-size: 1px;
+			overflow: hidden;
+			clip-path: inset( 50% );
+			white-space: nowrap;
+		}
 	}
 }

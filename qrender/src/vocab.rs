@@ -66,7 +66,6 @@ impl Dimension {
 pub enum Role {
     Event,
     HistorySpan,
-    Series,
     Crew,
     Score,
     Described,

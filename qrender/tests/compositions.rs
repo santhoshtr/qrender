@@ -7,7 +7,15 @@ use std::path::Path;
 use content::Content;
 use qrender::config::Config;
 
-const ITEMS: [&str; 6] = ["q3870", "q90", "q8023", "q117085614", "q405", "q139890532"];
+const ITEMS: [&str; 7] = [
+    "q3870",
+    "q90",
+    "q8023",
+    "q117085614",
+    "q405",
+    "q139890532",
+    "q668",
+];
 
 #[test]
 fn compositions() {

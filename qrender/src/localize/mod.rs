@@ -14,7 +14,7 @@ pub mod view;
 
 use std::collections::{BTreeMap, BTreeSet};
 
-use content::{EntityId, Lang, Qid, Text};
+use content::{EntityId, Lang, Pid, Qid, Text};
 use serde_json::Value;
 
 pub use view::{
@@ -28,7 +28,7 @@ use crate::schema::{
     Block, COMPOSITION_SCHEMA, Composition, Credit, MediaKind, Picture, PictureFacts, Spread,
     round_to,
 };
-use crate::wikidata::AGE;
+use crate::wikidata::{AGE, POINT_IN_TIME};
 use article::{Links, article_url};
 use format::entity_url;
 
@@ -73,7 +73,11 @@ impl<'a> Localizer<'a> {
 
     fn view(&self) -> View {
         let qid = self.composition.qid;
-        let mut ids = BTreeSet::from([EntityId::Item(qid), EntityId::Property(*AGE)]);
+        let mut ids = BTreeSet::from([
+            EntityId::Item(qid),
+            EntityId::Property(*AGE),
+            EntityId::Property(*POINT_IN_TIME),
+        ]);
         ids.extend(
             PROVENANCE
                 .iter()
@@ -83,13 +87,16 @@ impl<'a> Localizer<'a> {
         let mut described = BTreeSet::from([qid]);
         let mut unpictured = BTreeSet::new();
         walk_values(&self.json, &mut described, &mut unpictured);
+        let measured = self.measured();
         let labels: BTreeMap<_, _> = ids
             .iter()
             .map(|id| {
                 let mut label = self.label(*id);
-                if let EntityId::Item(q) = id
-                    && described.contains(q)
-                {
+                let shown = match id {
+                    EntityId::Item(q) => described.contains(q),
+                    EntityId::Property(p) => measured.contains(p),
+                };
+                if shown {
                     label.description = self.description(*id);
                 }
                 (*id, label)
@@ -144,6 +151,21 @@ impl<'a> Localizer<'a> {
             href: entity_url(id),
             description: None,
         }
+    }
+
+    /// The properties of measurements (series, dated rows): their
+    /// description says what the number is.
+    fn measured(&self) -> BTreeSet<Pid> {
+        self.composition
+            .spreads
+            .iter()
+            .flat_map(|s| s.slots.values().flatten())
+            .filter_map(|b| match b {
+                Block::Series(s) => Some(s.pid),
+                Block::Fact(f) if f.measured => Some(f.pid),
+                _ => None,
+            })
+            .collect()
     }
 
     fn description(&self, id: EntityId) -> Option<Description> {

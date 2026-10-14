@@ -266,10 +266,7 @@ mod tests {
         let pid = |s: &str| s.parse::<Pid>().unwrap();
         assert!(config.roles(pid("P6")).has(Role::Office));
         assert!(config.roles(pid("P26")).has(Role::Relation));
-        // A property can have more than one role.
-        let p1082 = config.roles(pid("P1082"));
-        assert!(p1082.has(Role::Series));
-        assert!(!config.roles(pid("P31")).has(Role::Series));
+        assert!(!config.roles(pid("P31")).has(Role::Relation));
         assert_eq!(
             config.layouts.roles.office[&pid("P6")],
             pid("P1313"),

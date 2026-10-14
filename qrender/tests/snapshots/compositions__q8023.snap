@@ -3281,25 +3281,6 @@ expression: composition
             "form": "variants",
             "statements": [
               {
-                "statement": "Q8023-2fdd72bb-a9de-443f-8760-fa79f0d3b385",
-                "pid": "P8687",
-                "amount": 1579070.0,
-                "unit": null,
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2022
-                  },
-                  {
-                    "pid": "P6552",
-                    "amount": 15762708.0
-                  }
-                ],
-                "shown": true
-              },
-              {
                 "statement": "Q8023-a71ebd38-bdba-4a99-a151-916466a44d60",
                 "pid": "P8687",
                 "amount": 1569148.0,
@@ -3317,9 +3298,29 @@ expression: composition
                   }
                 ],
                 "shown": true
+              },
+              {
+                "statement": "Q8023-2fdd72bb-a9de-443f-8760-fa79f0d3b385",
+                "pid": "P8687",
+                "amount": 1579070.0,
+                "unit": null,
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P585",
+                    "year": 2022
+                  },
+                  {
+                    "pid": "P6552",
+                    "amount": 15762708.0
+                  }
+                ],
+                "shown": true
               }
             ],
-            "priority": 0.0
+            "priority": 0.0,
+            "measured": true
           }
         ],
         "sheet": [

@@ -1,17 +1,27 @@
 {%- import "macros.html" as m -%}
-{#- Measurements over time, as columns. With many points, only the ends
-    and the peak carry numbers. -#}
-<div class="block"><h3>{{ ui.text(ui.property(b.pid), true)|safe }}{% call m::prov(ui, b.provenance) %}{% endcall %}
-    {%- if b.statement.is_some() %}
-        {% call m::edit(ui, ui.edit(b.pid)) %}
-        {% endcall %}
-    {% endif -%}
+{#- Measurements over time. The table is the content; the qr-chart element
+    (chart.js) draws a line chart from the data of its rows. -#}
+{%- let property = ui.property(b.pid) -%}
+<qr-chart class="block series"><h3>{{ ui.text(&property, true)|safe }}{% call m::prov(ui, b.provenance) %}{% endcall %}
+    {% call m::edit(ui, ui.edit(b.pid)) %}
+    {% endcall %}
     </h3>
-    <div class="columns{% if b.points.len() > 12 %} dense{% endif %}">
-        {%- for p in b.points -%}
-            {%- let n = ui.number(p.amount) -%}
-            <div title="{{ ui.year(p.year) }}: {{ ui.part_text(n) }}"><span>{% if p.labelled != Some(false) %}{{ ui.part(n)|safe }}{% endif %}</span><span class="col" style="--f:{{ ui.css_number(p.fraction) }}"></span><span class="note">{% if p.labelled != Some(false) %}{{ ui.year(p.year) }}{% endif %}</span></div>
-        {%- endfor -%}
+    {%- if let Some(d) = property.description %}<p class="desc">
+        {% call m::description(d) %}
+        {% endcall %}
+        </p>
+    {% endif -%}
+    <div class="chart">
+        <div class="data">
+        <table>
+            <thead><tr><th scope="col">{{ ui.text(ui.point_in_time(), false)|safe }}</th><th scope="col">{{ ui.text(&property, false)|safe }}</th></tr></thead>
+            <tbody>
+                {%- for p in b.points -%}
+                    <tr data-year="{{ p.year }}" data-amount="{{ p.amount }}"><th scope="row">{{ ui.year(p.year) }}</th><td>{{ ui.part(ui.number(p.amount))|safe }}</td></tr>
+                {%- endfor -%}
+            </tbody>
+        </table>
+        </div>
     </div>
     {%- if let Some(source) = b.source %}<p class="note"><a href="{{ ui.commons_data(&source.file) }}">{{ source.file }}</a></p>{% endif -%}
-</div>
+</qr-chart>

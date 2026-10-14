@@ -21,7 +21,7 @@ use axum::response::{Html, IntoResponse, Response};
 use axum::routing::get;
 use content::fetch::{FetchError, Mode};
 use content::{Lang, Qid};
-use qrender::render::design::{DESIGN, STYLESHEET, TOKENS};
+use qrender::render::design::{DESIGN, ECHARTS, STYLESHEET, TOKENS};
 use qrender::render::html::{self, Styles};
 use qrender::render::markdown;
 
@@ -75,14 +75,15 @@ async fn design(Path((version, file)): Path<(String, String)>) -> Response {
     if version != design_version() {
         return StatusCode::NOT_FOUND.into_response();
     }
-    let body = match file.as_str() {
-        "page.css" => STYLESHEET.as_str(),
-        "tokens.css" => TOKENS,
+    let (body, content_type) = match file.as_str() {
+        "page.css" => (STYLESHEET.as_str(), "text/css; charset=utf-8"),
+        "tokens.css" => (TOKENS, "text/css; charset=utf-8"),
+        "echarts.js" => (ECHARTS, "text/javascript; charset=utf-8"),
         _ => return StatusCode::NOT_FOUND.into_response(),
     };
     (
         [
-            (header::CONTENT_TYPE, "text/css; charset=utf-8"),
+            (header::CONTENT_TYPE, content_type),
             (header::CACHE_CONTROL, ASSET_CACHE),
         ],
         body,

@@ -5,7 +5,8 @@
 //! every primitive. The stylesheet is one file, served at a URL with its
 //! version and cached by every page: `base.css`, the template partials, then
 //! the CSS of each primitive in the order of `Primitive::ALL`. A page gets
-//! the scripts of the primitives it shows.
+//! the scripts of the primitives it shows. A library that a script loads
+//! (ECharts) is served by the same route, not put in the page.
 
 use std::sync::LazyLock;
 
@@ -18,6 +19,10 @@ use crate::primitives::{
 use crate::vocab::Primitive;
 
 pub const TOKENS: &str = include_str!("../../design/tokens.css");
+
+/// Apache ECharts (the "common" build), for the qr-chart element. The
+/// server serves it by the design route; `chart.js` loads it.
+pub const ECHARTS: &str = include_str!("../../assets/vendor/echarts/echarts.common.min.js");
 
 /// The CSS of the page grid and of the templates (the design system's own).
 const BASE: [&str; 6] = [
@@ -59,7 +64,10 @@ pub fn assets(primitive: Primitive) -> Assets {
         },
         Primitive::Map => css(map::CSS),
         Primitive::Fact => css(fact::CSS),
-        Primitive::Series => css(series::CSS),
+        Primitive::Series => Assets {
+            css: Some(series::CSS),
+            js: Some(series::JS),
+        },
         Primitive::Scale => css(scale::CSS),
         Primitive::Succession => css(succession::CSS),
         Primitive::Score => css(score::CSS),

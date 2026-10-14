@@ -68,9 +68,11 @@ id = "score"
 when = { role = "score" }
 make = "score"
 
+# Quantities dated by point in time, in two or more distinct years: a
+# series. A measurement is a series by the shape of its data.
 [[block]]
 id = "series"
-when = { type = "Quantity", role = "series", distinct_years = true }
+when = { type = "Quantity", distinct_years = true }
 make = "series"
 
 [[block]]

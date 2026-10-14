@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ view.lang }}"
       dir="{{ view.dir.name() }}"
-      data-locale="{{ view.locale }}">
+      data-locale="{{ view.locale }}"
+      {%- match styles -%}
+      {%- when Styles::Linked with (base) %} data-design="{{ base }}"
+      {%- when Styles::Inline -%}
+      {%- endmatch %}>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">

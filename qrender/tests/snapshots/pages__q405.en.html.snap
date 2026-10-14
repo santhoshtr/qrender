@@ -5,7 +5,7 @@ expression: html
 <!DOCTYPE html>
 <html lang="en"
       dir="ltr"
-      data-locale="en">
+      data-locale="en" data-design="design/0.2">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -193,7 +193,10 @@ expression: html
        href="https://www.wikidata.org/wiki/Q405#P2244"
        aria-label="Edit">✎</a>
         </span>
-</div><div class="row r-variants"><dt>orbital eccentricity</dt><dd><data value="0.054908" data-f="number">0.054908</data> <span class="note">1850</span><br><data value="0.0567" data-f="number">0.0567</data> <span class="note"></span></dd>
+</div><div class="row r-variants"><dt>orbital eccentricity<span class="desc">
+        amount of the deviation of an orbit from a perfect circle
+        </span>
+    </dt><dd><data value="0.054908" data-f="number">0.054908</data> <span class="note">1850</span><br><data value="0.0567" data-f="number">0.0567</data> <span class="note"></span></dd>
     <span class="tools"></span>
 </div><div class="row r-value"><dt>orbital inclination</dt><dd><data value="5.145" data-f="number">5.145</data> <span class="note">degree</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q79852">ecliptic</a></span></dd>
     <span class="tools">
@@ -202,7 +205,10 @@ expression: html
        href="https://www.wikidata.org/wiki/Q405#P2045"
        aria-label="Edit">✎</a>
         </span>
-</div><div class="row r-variants"><dt>distance from Earth</dt><dd><data value="385000.5" data-f="number">385000</data> <span class="note">kilometre</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q4130">orbit</a></span><br><data value="356565" data-f="number">356565</data> <span class="note">kilometre</span> <span class="note">2018 · <a href="https://www.wikidata.org/wiki/Q1349468">perigee</a></span><br><data value="406464" data-f="number">406464</data> <span class="note">kilometre</span> <span class="note">2018 · <a href="https://www.wikidata.org/wiki/Q1179441">apogee</a></span></dd>
+</div><div class="row r-variants"><dt>distance from Earth<span class="desc">
+        estimated distance to astronomical objects
+        </span>
+    </dt><dd><data value="356565" data-f="number">356565</data> <span class="note">kilometre</span> <span class="note">2018 · <a href="https://www.wikidata.org/wiki/Q1349468">perigee</a></span><br><data value="406464" data-f="number">406464</data> <span class="note">kilometre</span> <span class="note">2018 · <a href="https://www.wikidata.org/wiki/Q1179441">apogee</a></span><br><data value="385000.5" data-f="number">385000</data> <span class="note">kilometre</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q4130">orbit</a></span></dd>
     <span class="tools"></span>
 </div></dl></section>
             <section class="spread t-columns"

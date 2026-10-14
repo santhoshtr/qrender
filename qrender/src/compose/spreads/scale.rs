@@ -9,7 +9,7 @@ use crate::compose::blocks::Made;
 use crate::config::SpreadSpec;
 use crate::primitives::{fact, peers, scale, series};
 use crate::schema::{Block, Silence, SilenceReason};
-use crate::vocab::{Primitive, Role, Slot, Template};
+use crate::vocab::{Primitive, Slot, Template};
 
 pub fn build<'a>(c: &mut Composer<'a>, spec: &'a SpreadSpec) -> super::Built {
     let pids = &spec.pids;
@@ -58,8 +58,7 @@ pub fn build<'a>(c: &mut Composer<'a>, spec: &'a SpreadSpec) -> super::Built {
     });
     for p in pids {
         let free = c.free(*p);
-        if c.has_role(*p, Role::Series)
-            && !free.is_empty()
+        if !free.is_empty()
             && let Some(block) = series::dated(c, *p, &free, None)
         {
             c.take(free);

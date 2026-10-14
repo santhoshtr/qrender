@@ -6,10 +6,11 @@ use content::{Datatype, EntityId, Pid, QualifierValue, Statement};
 use schemars::JsonSchema;
 use serde::Serialize;
 
-use crate::compose::Composer;
+use crate::compose::{Composer, qualifier_year};
 use crate::primitives::mark_shown;
 use crate::schema::StatementRef;
 use crate::vocab::RangeEnd;
+use crate::wikidata::POINT_IN_TIME;
 
 #[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct Fact {
@@ -21,6 +22,10 @@ pub struct Fact {
     /// The values ended: history, not the present.
     #[serde(skip_serializing_if = "std::ops::Not::not")]
     pub former: bool,
+    /// The values are measurements dated by point in time: the description
+    /// of the property says what the number is ("per 1,000 population").
+    #[serde(skip_serializing_if = "std::ops::Not::not")]
+    pub measured: bool,
     /// The age at death, from the dates of birth and death.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub age: Option<Age>,
@@ -93,8 +98,16 @@ pub fn build(
     if form == FactForm::Range {
         // The minimum first, whatever the order of the data.
         statements.sort_by_key(|s| end(c, s) != Some(RangeEnd::Min));
+    } else if statements[0].value.datatype() == Datatype::Quantity {
+        // Measurements by their point in time, the newest first; the
+        // undated after them.
+        statements.sort_by_key(|s| std::cmp::Reverse(qualifier_year(s, *POINT_IN_TIME)));
     }
     let statements = statements.as_slice();
+    let measured = statements[0].value.datatype() == Datatype::Quantity
+        && statements
+            .iter()
+            .any(|s| qualifier_year(s, *POINT_IN_TIME).is_some());
     let values = statements.iter().map(|s| c.statement(s));
     Fact {
         pid,
@@ -102,6 +115,7 @@ pub fn build(
         statements: mark_shown(values, c.config.layouts.thresholds.row_shown),
         priority: c.priority(pid, statements),
         former: false,
+        measured,
         age: None,
         rule: rule.map(str::to_string),
     }
@@ -149,7 +163,7 @@ pub fn markdown(b: &Fact, md: &mut crate::render::markdown::Markdown) {
     let key = if b.former {
         format!("{} (former)", md.property(b.pid))
     } else {
-        md.property(b.pid)
+        md.described_property(b.pid)
     };
     md.items(&key, &values);
 }

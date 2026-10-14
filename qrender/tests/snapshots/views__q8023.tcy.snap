@@ -2025,6 +2025,11 @@ expression: json
     },
     "P8687": {
       "add": "https://www.wikidata.org/wiki/Special:SetLabel/tcy/P8687",
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "number of subscribers on a particular social media website (use as main statement only; see P3744 instead for qualifier). Qualify with \"point in time\" and property for account. For Twitter, use numeric id."
+      },
       "fallback": true,
       "href": "https://www.wikidata.org/wiki/Property:P8687",
       "lang": "en",

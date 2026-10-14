@@ -1254,6 +1254,7 @@ expression: composition
               }
             ],
             "priority": 2.918,
+            "measured": true,
             "rule": "row"
           },
           {
@@ -1285,21 +1286,6 @@ expression: composition
             "pid": "P2583",
             "form": "variants",
             "statements": [
-              {
-                "statement": "Q405-e5f38993-42d8-a410-f26b-36518c8fe3f7",
-                "pid": "P2583",
-                "amount": 385000.5,
-                "unit": "Q828224",
-                "rank": "preferred",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P4934",
-                    "item": "Q4130"
-                  }
-                ],
-                "shown": true
-              },
               {
                 "statement": "Q405-715e12f3-42c8-93c2-4aa8-0a06cd36113d",
                 "pid": "P2583",
@@ -1337,9 +1323,25 @@ expression: composition
                   }
                 ],
                 "shown": true
+              },
+              {
+                "statement": "Q405-e5f38993-42d8-a410-f26b-36518c8fe3f7",
+                "pid": "P2583",
+                "amount": 385000.5,
+                "unit": "Q828224",
+                "rank": "preferred",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P4934",
+                    "item": "Q4130"
+                  }
+                ],
+                "shown": true
               }
             ],
             "priority": 2.041,
+            "measured": true,
             "rule": "row"
           }
         ]

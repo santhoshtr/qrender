@@ -19,6 +19,7 @@ use crate::primitives::succession::Succession;
 use crate::primitives::works::{Work, Works};
 use crate::schema::{Credit, Picture, Provenance, QualifierShown, StatementRef, ValueShown};
 use crate::vocab::Slot;
+use crate::wikidata::POINT_IN_TIME;
 
 pub const FILEPATH: &str = "https://commons.wikimedia.org/wiki/Special:FilePath/";
 pub const WIKIPEDIA_LOGO: &str =
@@ -198,6 +199,12 @@ impl<'v> Ui<'v> {
 
     pub fn edit(&self, pid: impl Arg<Pid>) -> String {
         edit_url(self.view.qid, pid.get())
+    }
+
+    /// The label of "point in time" (P585): the heading of the dates of a
+    /// series.
+    pub fn point_in_time(&self) -> Label {
+        self.property(*POINT_IN_TIME)
     }
 
     /// The words for an imported statement: the label of P143.

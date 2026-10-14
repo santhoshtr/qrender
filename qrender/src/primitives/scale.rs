@@ -52,6 +52,10 @@ pub struct Measure {
 pub fn build(c: &Composer, spread_pids: &[Pid]) -> Option<Scale> {
     let container = &c.content.container;
     let (pid, item) = (container.pid?, container.qid?);
+    // A country is its own country (P17): it is not its container.
+    if item == c.content.qid {
+        return None;
+    }
     let mode = *c.config.layouts.containers.get(&pid)?;
     let quantities = &c.content.quantities;
     let mine = &quantities.get(&c.content.qid)?.values;

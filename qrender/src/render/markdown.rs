@@ -147,6 +147,22 @@ impl Markdown<'_> {
         self.label(EntityId::Property(pid))
     }
 
+    /// A property and its description, when the view has it (the property
+    /// of measurements): "birth rate (the total number of live births per
+    /// 1,000 population)".
+    pub fn described_property(&self, pid: Pid) -> String {
+        let label = self.property(pid);
+        match self
+            .view
+            .labels
+            .get(&EntityId::Property(pid))
+            .and_then(|l| l.description.as_ref())
+        {
+            Some(d) => format!("{label} ({})", d.text),
+            None => label,
+        }
+    }
+
     pub fn part(&self, p: &Part) -> String {
         match p {
             Part::Entity(id) => self.label(*id),

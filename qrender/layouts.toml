@@ -583,6 +583,46 @@ pids = [
   "P36",    # capital
 ]
 
+# Births and deaths are next to each other: their charts are siblings.
+[[class_layouts.country.spreads]]
+id = "demography"
+dimension = "measures"
+concept = "Q37732"     # demography
+prose = ["Q37732"]
+kind = "scale"
+pids = [
+  "P1082",  # population
+  "P1539",  # female population
+  "P1540",  # male population
+  "P6343",  # urban population
+  "P6344",  # rural population
+  "P8763",  # birth rate
+  "P10091", # death rate
+  "P4841",  # total fertility rate
+  "P2250",  # life expectancy
+  "P6897",  # literacy rate
+  "P6499",  # literate population
+  "P6498",  # illiterate population
+]
+
+[[class_layouts.country.spreads]]
+id = "development"
+dimension = "measures"
+concept = "Q4810841"   # socioeconomic development
+prose = ["Q159810"]    # economy
+kind = "facts"
+pids = [
+  "P2131",  # nominal GDP
+  "P2132",  # nominal GDP per capita
+  "P1081",  # Human Development Index
+  "P11593", # Inequality-adjusted Human Development Index
+  "P1125",  # Gini coefficient
+  "P8476",  # BTI Governance Index
+  "P8477",  # BTI Status Index
+  "P8328",  # Democracy Index
+  "P11547", # Happy Planet Index score
+]
+
 [[class_layouts.country.spreads]]
 id = "relations"
 dimension = "people"
@@ -680,15 +720,6 @@ history_span = [
   "P17",    # country
   "P1376",  # capital of
   "P131",   # located in the administrative territorial entity
-]
-# Measurements dated by point in time: a series, never events.
-series = [
-  "P1082",  # population
-  "P1539",  # female population
-  "P1540",  # male population
-  "P2131",  # nominal GDP
-  "P2132",  # nominal GDP per capita
-  "P2769",  # budget
 ]
 # The people who made a work. A spread shows them as one block, each person
 # once, with every role they had (a director who also wrote and produced).

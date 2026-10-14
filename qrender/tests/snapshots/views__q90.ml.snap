@@ -130,6 +130,10 @@ expression: json
       "text": "Data Commons ID"
     },
     "P1082": {
+      "description": {
+        "lang": "ml",
+        "text": "താമസിക്കുന്ന ആൾക്കാരുടെ എണ്ണം"
+      },
       "href": "https://www.wikidata.org/wiki/Property:P1082",
       "lang": "ml",
       "text": "ജനസംഖ്യ"
@@ -649,6 +653,10 @@ expression: json
       "text": "end cause"
     },
     "P1539": {
+      "description": {
+        "lang": "ml",
+        "text": "ഒരു ആവാസവ്യവസ്ഥയിലെ സ്ത്രീകളുടെ എണ്ണം"
+      },
       "href": "https://www.wikidata.org/wiki/Property:P1539",
       "lang": "ml",
       "text": "സ്ത്രീജനസംഖ്യ"
@@ -659,6 +667,11 @@ expression: json
       "text": "ലോഗോയുടെ ചിത്രം"
     },
     "P1540": {
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "number of male people inhabiting the place; number of male people of subject"
+      },
       "href": "https://www.wikidata.org/wiki/Property:P1540",
       "lang": "ml",
       "text": "പുരുഷജനസംഖ്യ"
@@ -1018,6 +1031,11 @@ expression: json
     },
     "P2769": {
       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P2769",
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "assigned monetary amount for a project (for the estimated cost of a film, also commonly referred to as budget, use P2130)"
+      },
       "fallback": true,
       "href": "https://www.wikidata.org/wiki/Property:P2769",
       "lang": "en",
@@ -1335,6 +1353,11 @@ expression: json
     },
     "P4179": {
       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P4179",
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "same as population (P1082); used when there is data for many different points in time"
+      },
       "fallback": true,
       "href": "https://www.wikidata.org/wiki/Property:P4179",
       "lang": "en",
@@ -1587,6 +1610,11 @@ expression: json
     },
     "P5982": {
       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P5982",
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "number of marriages per year in a location"
+      },
       "fallback": true,
       "href": "https://www.wikidata.org/wiki/Property:P5982",
       "lang": "en",
@@ -2068,6 +2096,11 @@ expression: json
     },
     "P8687": {
       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/P8687",
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "number of subscribers on a particular social media website (use as main statement only; see P3744 instead for qualifier). Qualify with \"point in time\" and property for account. For Twitter, use numeric id."
+      },
       "fallback": true,
       "href": "https://www.wikidata.org/wiki/Property:P8687",
       "lang": "en",

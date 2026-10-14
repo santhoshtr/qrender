@@ -1,5 +1,6 @@
-//! Series: measurements of one property over time, as columns. From
-//! statements dated by distinct years, or from a Commons data file.
+//! Series: measurements of one property over time, as a line chart. From
+//! statements dated by distinct years, or from a Commons data file. The
+//! page has the points as a table; `chart.js` draws the chart from it.
 
 use content::{Cell, Pid, Statement, StatementId, Value};
 use schemars::JsonSchema;
@@ -7,10 +8,7 @@ use serde::Serialize;
 
 use crate::compose::Composer;
 use crate::compose::facts::dated_years;
-use crate::schema::{Provenance, round_to};
-
-/// With more points than this, only the ends and the peak carry numbers.
-const LABELLED_MAX: usize = 12;
+use crate::schema::Provenance;
 
 #[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct Series {
@@ -38,6 +36,9 @@ pub struct Html<'a> {
 /// The CSS of this primitive (design/primitives/series.css).
 pub const CSS: &str = include_str!("../../design/primitives/series.css");
 
+/// The script of this primitive: the qr-chart element (assets/chart.js).
+pub const JS: &str = include_str!("../../assets/chart.js");
+
 /// The Commons data file of a series.
 #[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct Source {
@@ -49,15 +50,10 @@ pub struct Source {
 pub struct Point {
     pub year: i64,
     pub amount: f64,
-    /// The amount as a share of the largest amount of the series.
-    pub fraction: f64,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub statement: Option<StatementId>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub provenance: Option<Provenance>,
-    /// The point carries its number (a file series only).
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub labelled: Option<bool>,
 }
 
 /// Dated quantity statements of one property, when their years are
@@ -76,7 +72,6 @@ pub fn dated(
             _ => None,
         })
         .collect::<Option<_>>()?;
-    let top = amounts.iter().copied().fold(f64::MIN, f64::max);
     let mut points: Vec<_> = years
         .into_iter()
         .zip(amounts)
@@ -84,10 +79,8 @@ pub fn dated(
         .map(|((year, amount), s)| Point {
             year,
             amount,
-            fraction: share(amount, top),
             statement: Some(s.id.clone()),
             provenance: Some(c.provenance(s)),
-            labelled: None,
         })
         .collect();
     points.sort_by_key(|p| p.year);
@@ -131,14 +124,6 @@ pub fn tabular(c: &Composer, pid: Pid, statement: &Statement) -> Option<Series> 
         return None;
     }
     points.sort_by(|a, b| a.partial_cmp(b).expect("no NaN in a data file"));
-    let top = points.iter().map(|p| p.1).fold(f64::MIN, f64::max);
-    // The first point with the largest amount.
-    let peak = points
-        .iter()
-        .copied()
-        .reduce(|best, p| if p.1 > best.1 { p } else { best })?;
-    let ends = [points[0], points[points.len() - 1], peak];
-    let few = points.len() <= LABELLED_MAX;
     Some(Series {
         pid,
         statement: Some(statement.id.clone()),
@@ -152,22 +137,12 @@ pub fn tabular(c: &Composer, pid: Pid, statement: &Statement) -> Option<Series> 
             .map(|&(year, amount)| Point {
                 year,
                 amount,
-                fraction: share(amount, top),
                 statement: None,
                 provenance: None,
-                labelled: Some(few || ends.contains(&(year, amount))),
             })
             .collect(),
         rule: None,
     })
-}
-
-fn share(amount: f64, top: f64) -> f64 {
-    if top == 0.0 {
-        0.0
-    } else {
-        round_to(amount / top, 4)
-    }
 }
 
 /// The year of a cell: its first four characters ("1793", "1793-01-01").
@@ -204,5 +179,5 @@ pub fn markdown(b: &Series, md: &mut crate::render::markdown::Markdown) {
     if let Some(source) = &b.source {
         value.push_str(&format!(" (source: {})", source.file));
     }
-    md.item(&md.property(b.pid), &value);
+    md.item(&md.described_property(b.pid), &value);
 }

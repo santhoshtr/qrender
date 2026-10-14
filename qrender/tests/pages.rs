@@ -11,7 +11,7 @@ use qrender::render::html::{self, Styles};
 use qrender::render::markdown;
 use scraper::{Html, Selector};
 
-const PAGES: [&str; 10] = [
+const PAGES: [&str; 12] = [
     "q3870.en",
     "q3870.gu",
     "q90.en",
@@ -22,6 +22,8 @@ const PAGES: [&str; 10] = [
     "q405.ml",
     "q139890532.en",
     "q139890532.ml",
+    "q668.en",
+    "q668.ml",
 ];
 
 /// Hosts a page may load from: Commons (its pages and its media server)
@@ -99,9 +101,14 @@ fn html_pages() {
         assert_eq!(ids.len(), count, "{page}: duplicate ids");
 
         // A primitive's script is on the page when its element is.
-        let element = doc.select(&select("qr-sounds")).count() > 0;
-        let script = html.contains("customElements.define( 'qr-sounds'");
-        assert_eq!(element, script, "{page}: qr-sounds element {element}, script {script}");
+        for name in ["qr-sounds", "qr-chart"] {
+            let element = doc.select(&select(name)).count() > 0;
+            let script = html.contains(&format!("customElements.define( '{name}'"));
+            assert_eq!(
+                element, script,
+                "{page}: {name} element {element}, script {script}"
+            );
+        }
 
         insta::assert_snapshot!(format!("{page}.html"), html);
     }
