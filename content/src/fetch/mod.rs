@@ -55,7 +55,7 @@ pub enum FetchError {
 /// The version of the fetcher. Raise it when a change of the fetcher
 /// changes what it fetches (a new field, a new request): it is part of
 /// every cache key, so the parts that an older fetcher stored are not read.
-pub const FETCH_VERSION: u32 = 2;
+pub const FETCH_VERSION: u32 = 3;
 
 /// Seconds a cached part lives: content and text change with edits;
 /// a peer set changes slowly and many items share it.
@@ -190,6 +190,12 @@ impl<S: Store> Fetcher<S> {
                 .filter(|s| self.settings.timeline.contains(&s.pid))
                 .filter_map(|s| s.value.item()),
         );
+        let holidays: Vec<Qid> = unique(
+            statements
+                .iter()
+                .filter(|s| self.settings.calendar.contains(&s.pid))
+                .filter_map(|s| s.value.item()),
+        );
         let (
             references,
             quantities,
@@ -201,6 +207,7 @@ impl<S: Store> Fetcher<S> {
             tables,
             ranges,
             event_dates,
+            holiday_days,
         ) = futures::try_join!(
             sparql::references(http, qid),
             sparql::quantities(http, &targets, &quantity_pids),
@@ -214,6 +221,7 @@ impl<S: Store> Fetcher<S> {
             })),
             wikidata::ranges(http, &quantity_pids),
             sparql::event_dates(http, &event_items),
+            sparql::holiday_days(http, &holidays),
         )?;
 
         let mut media: Vec<String> = statements
@@ -256,6 +264,7 @@ impl<S: Store> Fetcher<S> {
             logos,
             ranges,
             event_dates,
+            holiday_days,
         })
     }
 
@@ -471,6 +480,8 @@ fn identifiers(content: &Content) -> BTreeSet<EntityId> {
     if let Some(q) = content.container.qid {
         ids.insert(q.into());
     }
+    // The days of holidays: their labels are dates ("July 4").
+    ids.extend(content.holiday_days.values().map(|d| EntityId::Item(d.day)));
     for record in content.quantities.values() {
         ids.extend(record.values.values().map(|v| EntityId::Item(v.unit)));
     }

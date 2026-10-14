@@ -21,6 +21,8 @@ pub struct Settings {
     /// Properties whose item values are events on a timeline: their own
     /// dates are fetched.
     pub timeline: Vec<Pid>,
+    /// Properties whose item values are holidays: their days are fetched.
+    pub calendar: Vec<Pid>,
 }
 
 #[derive(Debug, Clone, Serialize)]
@@ -67,6 +69,6 @@ mod tests {
         assert_ne!(a.fingerprint(), b.fingerprint());
         // FNV-1a of the JSON of the settings: fixed, so a key from one
         // build is valid in the next.
-        assert_eq!(a.fingerprint(), 0x22ef_a0d5_2ddb_1827);
+        assert_eq!(a.fingerprint(), 0xd0b0_e116_dab5_4633);
     }
 }

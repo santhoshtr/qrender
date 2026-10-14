@@ -67,6 +67,9 @@ pub enum Role {
     /// Events that are items of their own (significant events): a timeline
     /// in the history spread, with their pictures and descriptions.
     Timeline,
+    /// Holidays (public holiday): a list in the order of the year, the day
+    /// of each as its date.
+    Calendar,
     Crew,
     Score,
     Described,

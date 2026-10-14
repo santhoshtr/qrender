@@ -8,8 +8,8 @@ use super::FetchError;
 use super::http::{Http, Service};
 use crate::id::{Pid, Qid, StatementId};
 use crate::model::{
-    EventDates, NormalQuantity, Qualifier, QualifierValue, QuantityRecord, Rank, ReverseWork,
-    Statement, Value, ValueImage, file_name, year_of,
+    EventDates, HolidayDay, NormalQuantity, Qualifier, QualifierValue, QuantityRecord, Rank,
+    ReverseWork, Statement, Value, ValueImage, file_name, year_of,
 };
 
 const ENDPOINT: &str = "https://query.wikidata.org/sparql";
@@ -485,5 +485,39 @@ pub async fn event_dates(
         }
     }
     out.retain(|_, d| *d != EventDates::default());
+    Ok(out)
+}
+
+/// The day of each holiday item (P837), with its month: "part of" (P361)
+/// of a calendar day, else "month of the year" (P2922) of a rule. The
+/// first day of each holiday.
+pub async fn holiday_days(
+    http: &Http,
+    qids: &[Qid],
+) -> Result<IndexMap<Qid, HolidayDay>, FetchError> {
+    if qids.is_empty() {
+        return Ok(IndexMap::new());
+    }
+    let rows = query(
+        http,
+        &format!(
+            "SELECT ?item ?day ?part ?month WHERE {{ VALUES ?item {{ {} }} \
+             ?item wdt:P837 ?day . OPTIONAL {{ ?day wdt:P361 ?part }} \
+             OPTIONAL {{ ?day wdt:P2922 ?month }} }}",
+            values(qids)
+        ),
+    )
+    .await?;
+    let mut out = IndexMap::new();
+    for r in &rows {
+        if let (Some(item), Some(day)) = (r.qid("item"), r.qid("day")) {
+            let rule = r.qid("month");
+            out.entry(item).or_insert(HolidayDay {
+                day,
+                month: rule.or(r.qid("part")),
+                fixed: rule.is_none(),
+            });
+        }
+    }
     Ok(out)
 }

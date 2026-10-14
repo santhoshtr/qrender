@@ -18,9 +18,9 @@ pub mod text;
 
 pub use id::{EntityId, IdError, Lang, Pid, Qid, StatementId};
 pub use model::{
-    CONTENT_SCHEMA, Cell, CommonsFile, Container, Content, Datatype, EventDates, NormalQuantity,
-    Peers, Qualifier, QualifierValue, QuantityRecord, Range, Rank, ReverseWork, Statement, Table,
-    Value, ValueError, ValueImage,
+    CONTENT_SCHEMA, Cell, CommonsFile, Container, Content, Datatype, EventDates, HolidayDay,
+    NormalQuantity, Peers, Qualifier, QualifierValue, QuantityRecord, Range, Rank, ReverseWork,
+    Statement, Table, Value, ValueError, ValueImage,
 };
 pub use settings::{LayoutMatch, Settings};
 pub use text::{Article, Concept, LangText, PageImage, Section, TEXT_SCHEMA, Term, Text};

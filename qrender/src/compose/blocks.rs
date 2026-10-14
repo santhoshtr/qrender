@@ -10,7 +10,7 @@ use crate::config::rules::{BlockMake, SplitMake, first};
 use crate::primitives::fact::FactForm;
 use crate::primitives::media::MediaRole;
 use crate::primitives::network::GalleryValue;
-use crate::primitives::{earlier, fact, map, media, network, score, series};
+use crate::primitives::{earlier, fact, map, media, network, score, series, timeline};
 use crate::schema::Block;
 
 /// What the rules made of a group of values. Short-lived: placement
@@ -108,6 +108,7 @@ impl<'a> Composer<'a> {
                 None => return Vec::new(),
             },
             BlockMake::Earlier => Block::Earlier(earlier::build(self, pid, group, rule)),
+            BlockMake::Calendar => Block::Timeline(timeline::calendar(self, pid, group, rule)),
             BlockMake::FormerList => Block::Fact(fact::Fact {
                 former: true,
                 ..fact::build(self, pid, group, Some(FactForm::List), rule)

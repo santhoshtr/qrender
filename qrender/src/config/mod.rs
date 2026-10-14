@@ -99,6 +99,7 @@ impl Config {
             qualifier_logos: layouts.media.qualifier_logos.clone(),
             concepts,
             timeline: layouts.roles.list(Role::Timeline).to_vec(),
+            calendar: layouts.roles.list(Role::Calendar).to_vec(),
         }
     }
 

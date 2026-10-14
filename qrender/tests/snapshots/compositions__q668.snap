@@ -7470,9 +7470,9 @@ expression: composition
             "rule": "set"
           },
           {
-            "primitive": "network",
+            "primitive": "timeline",
             "pid": "P832",
-            "values": [
+            "events": [
               {
                 "statement": "Q668-1297e123-460c-3a7a-5ffa-6cf6e2b8ab1e",
                 "pid": "P832",
@@ -7489,7 +7489,18 @@ expression: composition
                     "license": "CC BY 3.0 br"
                   }
                 },
-                "shown": true
+                "described": true,
+                "day": "Q2282"
+              },
+              {
+                "statement": "Q668-b64947f2-4196-826f-30d1-4eebca46b8e1",
+                "pid": "P832",
+                "item": "Q47499",
+                "rank": "normal",
+                "provenance": "none",
+                "class": true,
+                "described": true,
+                "day": "Q2544"
               },
               {
                 "statement": "Q668-7c675c52-4c82-1ee5-0943-2522e2290952",
@@ -7507,7 +7518,8 @@ expression: composition
                     "license": "CC BY 2.0"
                   }
                 },
-                "shown": true
+                "described": true,
+                "day": "Q2774"
               },
               {
                 "statement": "Q668-abb2b22b-45e0-1a78-4aa4-15d8f3867ecc",
@@ -7525,20 +7537,11 @@ expression: composition
                     "license": "Public domain"
                   }
                 },
-                "shown": true
-              },
-              {
-                "statement": "Q668-b64947f2-4196-826f-30d1-4eebca46b8e1",
-                "pid": "P832",
-                "item": "Q47499",
-                "rank": "normal",
-                "provenance": "none",
-                "class": true,
-                "shown": true
+                "described": true,
+                "day": "Q2932"
               }
             ],
-            "priority": 0.0,
-            "rule": "set"
+            "rule": "calendar"
           },
           {
             "primitive": "network",

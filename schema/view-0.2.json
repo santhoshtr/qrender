@@ -821,6 +821,17 @@
           "description": "The value is a class: its picture would show an example only.",
           "type": "boolean"
         },
+        "day": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Qid"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The day of a holiday (\"July 4\"): its label is the date."
+        },
         "described": {
           "description": "The value's description is shown under it (a work).",
           "type": "boolean"
@@ -4086,7 +4097,7 @@
     "Timeline": {
       "properties": {
         "events": {
-          "description": "The oldest first; the events without a date last.",
+          "description": "Events: the oldest first, the undated last. Holidays: in the order\nof the year.",
           "items": {
             "$ref": "#/$defs/Event"
           },
@@ -4094,6 +4105,12 @@
         },
         "pid": {
           "$ref": "#/$defs/Pid"
+        },
+        "rule": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "required": [

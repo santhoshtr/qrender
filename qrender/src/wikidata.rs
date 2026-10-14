@@ -32,3 +32,13 @@ properties! {
 /// Percent (Q11229): the unit of a proportion.
 pub static PERCENT: LazyLock<content::Qid> =
     LazyLock::new(|| "Q11229".parse().expect("an item id"));
+
+/// The months of the Gregorian calendar, January (Q108) to December (Q126):
+/// the order of the days of holidays.
+pub static MONTHS: LazyLock<[content::Qid; 12]> = LazyLock::new(|| {
+    [
+        "Q108", "Q109", "Q110", "Q118", "Q119", "Q120", "Q121", "Q122", "Q123", "Q124", "Q125",
+        "Q126",
+    ]
+    .map(|q| q.parse().expect("an item id"))
+});

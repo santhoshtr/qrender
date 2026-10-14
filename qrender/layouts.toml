@@ -734,6 +734,11 @@ kind = "evidence"
 timeline = [
   "P793",   # significant event
 ]
+# Holidays: a list in the order of the year, a row for each with its day
+# ("July 4", "fourth Thursday in November") as its date.
+calendar = [
+  "P832",   # public holiday
+]
 # The people who made a work. A spread shows them as one block, each person
 # once, with every role they had (a director who also wrote and produced).
 crew = [

@@ -9,7 +9,8 @@
             {%- let s = ui.value(&e.statement) %}
             <li>
                 <span class="when">
-                    {%- if let Some(w) = e.when %}{{ ui.when(w) }}{% endif -%}
+                    {%- if let Some(day) = e.day %}{{ ui.text(ui.item(day), false)|safe }}
+                    {%- else if let Some(w) = e.when %}{{ ui.when(w) }}{% endif -%}
                 </span>
                 <span class="pic">
                     {%- if let Some(i) = s.image %}

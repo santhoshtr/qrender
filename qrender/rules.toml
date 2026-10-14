@@ -84,6 +84,12 @@ make = "score"
 # Quantities dated by point in time, in two or more years: a series. A
 # measurement is a series by the shape of its data. A year with two values
 # (two sources) needs one preferred value.
+# Holidays: a list in the order of the year, their day as the date.
+[[block]]
+id = "calendar"
+when = { role = "calendar" }
+make = "calendar"
+
 [[block]]
 id = "series"
 when = { type = "Quantity", series = true }

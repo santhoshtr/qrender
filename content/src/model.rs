@@ -56,6 +56,23 @@ pub struct Content {
     /// statement has no date.
     #[serde(default, skip_serializing_if = "IndexMap::is_empty")]
     pub event_dates: IndexMap<Qid, EventDates>,
+    /// The day of each holiday item of calendar properties (the public
+    /// holidays): the label of the day is its date, its month orders it.
+    #[serde(default, skip_serializing_if = "IndexMap::is_empty")]
+    pub holiday_days: IndexMap<Qid, HolidayDay>,
+}
+
+/// The day of a holiday: its "day in year for periodic occurrence" (P837),
+/// a calendar day ("July 4") or a rule ("fourth Thursday in November").
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+pub struct HolidayDay {
+    pub day: Qid,
+    /// The month of the day: "part of" (P361) of a calendar day, "month of
+    /// the year" (P2922) of a rule.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub month: Option<Qid>,
+    /// A calendar day, not a rule.
+    pub fixed: bool,
 }
 
 /// The dates of an event item, as Wikidata times: its point in time

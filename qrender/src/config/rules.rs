@@ -172,6 +172,8 @@ pub enum BlockMake {
     FormerList,
     /// Media files that ended (earlier flags): one block, a dialog of files.
     Earlier,
+    /// Holidays in the order of the year (the calendar role).
+    Calendar,
     /// A list of item values (few have pictures).
     ItemList,
     /// Each value joins the gallery of the spread.

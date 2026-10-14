@@ -38,7 +38,16 @@ const SET_LABEL: &str = "https://www.wikidata.org/wiki/Special:SetLabel";
 const FALLBACK: &str = "en";
 
 /// Keys of the composition whose values are identifiers to label.
-const LABELLED: [&str; 7] = ["item", "pid", "unit", "class", "container", "via", "pids"];
+const LABELLED: [&str; 8] = [
+    "item",
+    "pid",
+    "unit",
+    "class",
+    "container",
+    "via",
+    "pids",
+    "day",
+];
 
 /// Keys whose identifiers the coverage counts: what a reader sees.
 const COVERED: [&str; 4] = ["item", "pid", "unit", "class"];
