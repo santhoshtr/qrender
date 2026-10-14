@@ -173,6 +173,15 @@ impl<'v> Ui<'v> {
         render(NoteHtml { ui: self, parts })
     }
 
+    /// The values of one property, joined by ", ".
+    pub fn values_of(&self, parts: &[Part]) -> String {
+        parts
+            .iter()
+            .map(|p| self.part(p))
+            .collect::<Vec<_>>()
+            .join(", ")
+    }
+
     pub fn line<'a>(&self, s: impl Ref<Shown<'a>>) -> String {
         render(LineHtml { ui: self, s: s.r() })
     }

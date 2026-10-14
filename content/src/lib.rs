@@ -10,6 +10,7 @@
 pub mod cache;
 #[cfg(feature = "fetch")]
 pub mod fetch;
+pub mod geo;
 pub mod html;
 pub mod id;
 pub mod model;
@@ -20,7 +21,7 @@ pub use id::{EntityId, IdError, Lang, Pid, Qid, StatementId};
 pub use model::{
     CONTENT_SCHEMA, Cell, CommonsFile, Container, Content, Datatype, EventDates, HolidayDay,
     NormalQuantity, Peers, Qualifier, QualifierValue, QuantityRecord, Range, Rank, ReverseWork,
-    Statement, Table, Value, ValueError, ValueImage,
+    Shape, Statement, Table, Value, ValueError, ValueImage,
 };
 pub use settings::{LayoutMatch, Settings};
 pub use text::{Article, Concept, LangText, PageImage, Section, TEXT_SCHEMA, Term, Text};

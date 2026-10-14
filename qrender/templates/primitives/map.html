@@ -1,10 +1,28 @@
 {%- import "macros.html" as m -%}
-{#- A map with the item at its centre and its extreme points as markers.
-    The zoom and the marker places are computed for this frame (render/map.rs). -#}
+{#- A map of the item: its coordinate, its extreme points as markers, and
+    the outlines of its geoshapes. The zoom and the places are computed for
+    this frame (render/map.rs). Under a map with shapes: a line for each
+    shape, with its qualifiers (whose view it is: a disputed border has
+    two) and its credit. -#}
 {%- if let Some(f) = ui.map(b) -%}
+    {%- if !b.shapes.is_empty() %}<div class="map-shapes">{% endif -%}
     <figure class="map">
         <img src="{{ f.tile }}" alt="">
-        <span class="pin"></span>
+        {%- if !f.outlines.is_empty() %}
+            <svg class="outlines"
+                 viewBox="0 0 100 100"
+                 preserveAspectRatio="none"
+                 aria-hidden="true">
+                {%- for (d, main) in f.outlines.iter() -%}
+                    <path class="{% if *main %}main{% else %}other{% endif %}" d="{{ d }}" />
+                {%- endfor -%}
+            </svg>
+        {%- endif -%}
+        {%- if let Some((left, top)) = f.pin -%}
+            <span class="pin"
+                  style="left:{{ ui.percent_css(left) }}%;
+                         top:{{ ui.percent_css(top) }}%"></span>
+        {%- endif -%}
         {%- for (left, top, mk) in f.markers -%}
             <span class="marker"
                   style="left:{{ ui.percent_css(left) }}%;
@@ -12,4 +30,22 @@
                   title="{{ ui.property(mk.pid).text }}"></span>
         {%- endfor -%}
         <figcaption>{{ ui.text(ui.property(b.statement.pid), true)|safe }} {{ ui.coordinate(f.lat, f.lon) }} {% call m::prov(ui, b.statement.provenance) %}{% endcall %}</figcaption><span class="tools">{% call m::edit(ui, ui.edit(b.statement.pid)) %}{% endcall %}</span></figure>
+    {%- if !b.shapes.is_empty() %}
+        <ul>
+            {%- for s in b.shapes.iter() %}
+                {%- let groups = ui.labelled(s.statement.qualifiers.as_slice()) %}
+                <li>
+                    <span class="line{% if loop.first %} main{% endif %}"></span>
+                    {%- for (label, parts) in groups.iter() -%}
+                        {{ ui.text(label, false)|safe }}: {{ ui.values_of(parts.as_slice())|safe }} ·
+                    {% endfor -%}
+                    <a href="{{ ui.commons_data(&s.title) }}">{{ s.title }}</a> · {{ s.license }}
+                    {%- call m::prov(ui, s.statement.provenance) %}{% endcall %}
+                    {% call m::edit(ui, ui.edit(s.statement.pid)) %}
+                    {% endcall %}
+                </li>
+            {%- endfor %}
+        </ul>
+        </div>
+    {%- endif -%}
 {%- endif -%}

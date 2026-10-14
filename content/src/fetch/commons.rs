@@ -5,13 +5,17 @@ use indexmap::IndexMap;
 
 use super::FetchError;
 use super::http::{Http, Service};
+use crate::geo;
 use crate::html::{decode_entities, strip_tags};
-use crate::model::{Cell, CommonsFile, Table};
+use crate::model::{Cell, CommonsFile, Shape, Table};
 
 const API: &str = "https://commons.wikimedia.org/w/api.php";
 const BATCH: usize = 50;
 /// Rows of a data file that a series can use.
 const MAX_ROWS: usize = 1000;
+/// The points of the outline of a geoshape at most: enough for a map on a
+/// page.
+const SHAPE_POINTS: usize = 1500;
 const ASSESSMENTS: [&str; 3] = [
     "Featured pictures on Wikimedia Commons",
     "Quality images",
@@ -105,9 +109,12 @@ pub async fn files(
     Ok(out)
 }
 
-/// A Commons data file (a .tab page), from the URL that a TabularData
-/// value holds: its fields, rows, licence and description.
-pub async fn table(http: &Http, url: &str) -> Result<Option<Table>, FetchError> {
+/// A Commons data page ("Data:India.map"), from the URL that a value
+/// holds: its title and its JSON.
+async fn data_page(
+    http: &Http,
+    url: &str,
+) -> Result<Option<(String, serde_json::Value)>, FetchError> {
     let Some(path) = url.rsplit_once("/data/main/").map(|(_, p)| p) else {
         return Ok(None);
     };
@@ -134,7 +141,15 @@ pub async fn table(http: &Http, url: &str) -> Result<Option<Table>, FetchError> 
     else {
         return Ok(None);
     };
-    let doc: serde_json::Value = serde_json::from_str(content)?;
+    Ok(Some((title, serde_json::from_str(content)?)))
+}
+
+/// A Commons data file (a .tab page), from the URL that a TabularData
+/// value holds: its fields, rows, licence and description.
+pub async fn table(http: &Http, url: &str) -> Result<Option<Table>, FetchError> {
+    let Some((title, doc)) = data_page(http, url).await? else {
+        return Ok(None);
+    };
     let fields = doc["schema"]["fields"]
         .as_array()
         .into_iter()
@@ -160,5 +175,24 @@ pub async fn table(http: &Http, url: &str) -> Result<Option<Table>, FetchError> 
         rows,
         license: doc["license"].as_str().unwrap_or_default().to_string(),
         description: serde_json::from_value(doc["description"].clone()).unwrap_or_default(),
+    }))
+}
+
+/// The outline of a geoshape (a .map page), from the URL that a GeoShape
+/// value holds: simplified to `SHAPE_POINTS` points, with its box, licence
+/// and sources. None for a page without lines.
+pub async fn shape(http: &Http, url: &str) -> Result<Option<Shape>, FetchError> {
+    let Some((title, doc)) = data_page(http, url).await? else {
+        return Ok(None);
+    };
+    let Some((lines, bbox)) = geo::outline(geo::lines(&doc["data"]), SHAPE_POINTS) else {
+        return Ok(None);
+    };
+    Ok(Some(Shape {
+        title,
+        lines,
+        bbox,
+        license: doc["license"].as_str().unwrap_or_default().to_string(),
+        sources: doc["sources"].as_str().unwrap_or_default().to_string(),
     }))
 }

@@ -125,37 +125,59 @@ impl View {
             if q.pid == *START_TIME || q.pid == *END_TIME {
                 continue;
             }
-            parts.push(match &q.value {
-                QualifierPart::Item { item } => Part::Entity(*item),
-                QualifierPart::Year { year } => self.text(&self.year(*year)),
-                QualifierPart::Text { text, lang } => Part::Text {
-                    text: text.clone(),
-                    lang: Some(lang.clone()),
-                },
-                QualifierPart::Amount { amount } => Part::Qualified {
-                    pid: q.pid,
-                    value: Box::new(number_part(*amount, None)),
-                },
-                QualifierPart::String { string } => self.text(string),
-                // The page of the lexeme, at the sense or the form.
-                QualifierPart::Lexeme { lexeme } => Part::Qualified {
-                    pid: q.pid,
-                    value: Box::new(Part::Link {
-                        text: lexeme.clone(),
-                        href: format!(
-                            "{WIKIDATA}Lexeme:{}#{lexeme}",
-                            lexeme.split('-').next().unwrap_or(lexeme)
-                        ),
-                    }),
-                },
-                QualifierPart::File { file } => Part::File {
-                    pid: q.pid,
-                    file: file.clone(),
-                    audio: media_kind(file) == MediaKind::Audio,
-                },
-            });
+            parts.push(self.qualifier_part(q));
         }
         parts
+    }
+
+    /// One qualifier as a part.
+    fn qualifier_part(&self, q: &QualifierShown) -> Part {
+        match &q.value {
+            QualifierPart::Item { item } => Part::Entity(*item),
+            QualifierPart::Year { year } => self.text(&self.year(*year)),
+            QualifierPart::Text { text, lang } => Part::Text {
+                text: text.clone(),
+                lang: Some(lang.clone()),
+            },
+            QualifierPart::Amount { amount } => Part::Qualified {
+                pid: q.pid,
+                value: Box::new(number_part(*amount, None)),
+            },
+            QualifierPart::String { string } => self.text(string),
+            // The page of the lexeme, at the sense or the form.
+            QualifierPart::Lexeme { lexeme } => Part::Qualified {
+                pid: q.pid,
+                value: Box::new(Part::Link {
+                    text: lexeme.clone(),
+                    href: format!(
+                        "{WIKIDATA}Lexeme:{}#{lexeme}",
+                        lexeme.split('-').next().unwrap_or(lexeme)
+                    ),
+                }),
+            },
+            QualifierPart::File { file } => Part::File {
+                pid: q.pid,
+                file: file.clone(),
+                audio: media_kind(file) == MediaKind::Audio,
+            },
+        }
+    }
+
+    /// The qualifiers grouped by property, in their order: for a note that
+    /// must name each property ("statement disputed by: A, B").
+    pub fn labelled_note(&self, qualifiers: &[QualifierShown]) -> Vec<(Pid, Vec<Part>)> {
+        let mut out: Vec<(Pid, Vec<Part>)> = Vec::new();
+        for q in qualifiers {
+            let part = match self.qualifier_part(q) {
+                Part::Qualified { value, .. } => *value,
+                part => part,
+            };
+            match out.iter_mut().find(|(pid, _)| *pid == q.pid) {
+                Some((_, parts)) => parts.push(part),
+                None => out.push((q.pid, vec![part])),
+            }
+        }
+        out
     }
 
     /// A date by its Wikidata precision: a year (9 or less), a month (10),

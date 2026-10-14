@@ -200,6 +200,16 @@ impl<'v> Ui<'v> {
         self.view.note(qualifiers)
     }
 
+    /// Qualifiers grouped by property, each with its label: "statement
+    /// disputed by: A, B".
+    pub fn labelled(&self, qualifiers: &[QualifierShown]) -> Vec<(Label, Vec<Part>)> {
+        self.view
+            .labelled_note(qualifiers)
+            .into_iter()
+            .map(|(pid, parts)| (self.property(pid), parts))
+            .collect()
+    }
+
     pub fn year(&self, year: impl Arg<i64>) -> String {
         self.view.year(year.get())
     }

@@ -55,7 +55,7 @@ pub enum FetchError {
 /// The version of the fetcher. Raise it when a change of the fetcher
 /// changes what it fetches (a new field, a new request): it is part of
 /// every cache key, so the parts that an older fetcher stored are not read.
-pub const FETCH_VERSION: u32 = 3;
+pub const FETCH_VERSION: u32 = 4;
 
 /// Seconds a cached part lives: content and text change with edits;
 /// a peer set changes slowly and many items share it.
@@ -190,6 +190,13 @@ impl<S: Store> Fetcher<S> {
                 .filter(|s| self.settings.timeline.contains(&s.pid))
                 .filter_map(|s| s.value.item()),
         );
+        let shape_urls: Vec<String> = statements
+            .iter()
+            .filter_map(|s| match &s.value {
+                Value::GeoShape { page } => Some(page.clone()),
+                _ => None,
+            })
+            .collect();
         let holidays: Vec<Qid> = unique(
             statements
                 .iter()
@@ -208,6 +215,7 @@ impl<S: Store> Fetcher<S> {
             ranges,
             event_dates,
             holiday_days,
+            shapes,
         ) = futures::try_join!(
             sparql::references(http, qid),
             sparql::quantities(http, &targets, &quantity_pids),
@@ -222,6 +230,9 @@ impl<S: Store> Fetcher<S> {
             wikidata::ranges(http, &quantity_pids),
             sparql::event_dates(http, &event_items),
             sparql::holiday_days(http, &holidays),
+            try_join_all(shape_urls.iter().map(|url| async move {
+                Ok::<_, FetchError>((url.clone(), commons::shape(http, url).await?))
+            })),
         )?;
 
         let mut media: Vec<String> = statements
@@ -265,6 +276,10 @@ impl<S: Store> Fetcher<S> {
             ranges,
             event_dates,
             holiday_days,
+            shapes: shapes
+                .into_iter()
+                .filter_map(|(url, s)| Some((url, s?)))
+                .collect(),
         })
     }
 

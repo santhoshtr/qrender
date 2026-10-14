@@ -12,11 +12,29 @@
 
 	& img { display: block; inline-size: 100%; block-size: 100%; object-fit: cover; }
 
+	/* The outlines of the shapes: the preferred one solid with a light fill,
+	   the others dashed. The line keeps its width when the frame scales. */
+	& .outlines {
+		position: absolute;
+		inset: 0;
+		inline-size: 100%;
+		block-size: 100%;
+
+		& path {
+			fill: none;
+			fill-rule: evenodd;
+			stroke: var( --ink );
+			stroke-width: 2;
+			vector-effect: non-scaling-stroke;
+		}
+
+		& .main { fill: color-mix( in srgb, var( --ink ) 12%, transparent ); }
+		& .other { stroke-dasharray: 6 4; }
+	}
+
 	/* Physical left and top: a map does not flip with the text direction. */
 	& .pin {
 		position: absolute;
-		left: 50%;
-		top: 50%;
 		inline-size: 16px;
 		block-size: 16px;
 		translate: -50% -50%;
@@ -45,5 +63,33 @@
 		padding: 2px var( --spacing-50 );
 		border-radius: 4px;
 		font-size: var( --font-size-x-small );
+	}
+}
+
+/* A map with shapes, and a line for each shape under it: the sample of its
+   outline, its qualifiers (whose view it is) and its credit. */
+.map-shapes {
+	display: grid;
+	gap: var( --spacing-50 );
+
+	& ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-size: var( --font-size-x-small );
+		color: var( --color-subtle );
+	}
+
+	& li > .edit { opacity: 0; }
+	& li:is( :hover, :focus-within ) > .edit { opacity: 1; }
+
+	& .line {
+		display: inline-block;
+		inline-size: 24px;
+		margin-inline-end: var( --spacing-50 );
+		vertical-align: middle;
+		border-block-start: 2px dashed var( --ink );
+
+		&.main { border-block-start-style: solid; }
 	}
 }

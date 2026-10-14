@@ -1478,6 +1478,13 @@
             "null"
           ]
         },
+        "shapes": {
+          "description": "The geoshapes of the item, the preferred first: outlines on the\nmap. Two shapes can be two views of a disputed border; their\nqualifiers say whose.",
+          "items": {
+            "$ref": "#/$defs/MapShape"
+          },
+          "type": "array"
+        },
         "shown": {
           "description": "False when the value is behind \"+N\".",
           "type": [
@@ -1494,6 +1501,245 @@
         "pid",
         "rank",
         "provenance"
+      ],
+      "type": "object"
+    },
+    "MapShape": {
+      "anyOf": [
+        {
+          "description": "An item. None for \"unknown value\".",
+          "properties": {
+            "item": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Qid"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "item"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "amount": {
+              "format": "double",
+              "type": "number"
+            },
+            "unit": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Qid"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "amount",
+            "unit"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "precision": {
+              "format": "uint8",
+              "maximum": 255,
+              "minimum": 0,
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "time": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "time",
+            "precision"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "lang": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "text",
+            "lang"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "file": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "file"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "globe": {
+              "$ref": "#/$defs/Qid"
+            },
+            "lat": {
+              "format": "double",
+              "type": "number"
+            },
+            "lon": {
+              "format": "double",
+              "type": "number"
+            }
+          },
+          "required": [
+            "lat",
+            "lon",
+            "globe"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "url"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "string": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "string"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "\"Unknown value\" of a property that is not an item property.",
+          "properties": {
+            "some_value": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "some_value"
+          ],
+          "type": "object"
+        }
+      ],
+      "description": "A statement as the composition shows it.",
+      "properties": {
+        "bbox": {
+          "description": "West, south, east, north.",
+          "items": {
+            "format": "double",
+            "type": "number"
+          },
+          "maxItems": 4,
+          "minItems": 4,
+          "type": "array"
+        },
+        "class": {
+          "description": "The value is a class: its picture would show an example only.",
+          "type": "boolean"
+        },
+        "described": {
+          "description": "The value's description is shown under it (a work).",
+          "type": "boolean"
+        },
+        "image": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Picture"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The picture of an item value. None for a class value."
+        },
+        "license": {
+          "type": "string"
+        },
+        "lines": {
+          "description": "The outline: longitude, latitude (`content::Shape`).",
+          "items": {
+            "items": {
+              "items": {
+                "format": "double",
+                "type": "number"
+              },
+              "maxItems": 2,
+              "minItems": 2,
+              "type": "array"
+            },
+            "type": "array"
+          },
+          "type": "array"
+        },
+        "pid": {
+          "$ref": "#/$defs/Pid"
+        },
+        "provenance": {
+          "$ref": "#/$defs/Provenance"
+        },
+        "qualifiers": {
+          "items": {
+            "$ref": "#/$defs/QualifierShown"
+          },
+          "type": "array"
+        },
+        "rank": {
+          "$ref": "#/$defs/Rank"
+        },
+        "shown": {
+          "description": "False when the value is behind \"+N\".",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "statement": {
+          "$ref": "#/$defs/StatementId"
+        },
+        "title": {
+          "description": "The Commons page: \"Data:India.map\".",
+          "type": "string"
+        }
+      },
+      "required": [
+        "statement",
+        "pid",
+        "rank",
+        "provenance",
+        "title",
+        "lines",
+        "bbox",
+        "license"
       ],
       "type": "object"
     },

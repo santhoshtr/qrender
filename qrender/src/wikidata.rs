@@ -27,6 +27,7 @@ properties! {
     AGE = "P3629", "age of subject at event";
     AREA = "P2046", "area";
     LANGUAGE = "P407", "language of work or name";
+    GEOSHAPE = "P3896", "geoshape";
 }
 
 /// Percent (Q11229): the unit of a proportion.

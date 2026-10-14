@@ -60,6 +60,27 @@ pub struct Content {
     /// holidays): the label of the day is its date, its month orders it.
     #[serde(default, skip_serializing_if = "IndexMap::is_empty")]
     pub holiday_days: IndexMap<Qid, HolidayDay>,
+    /// The outlines of geoshapes (Commons .map pages), by the URL that a
+    /// GeoShape value holds.
+    #[serde(default, skip_serializing_if = "IndexMap::is_empty")]
+    pub shapes: IndexMap<String, Shape>,
+}
+
+/// The outline of a geoshape, simplified for a map on a page, and what its
+/// credit needs.
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+pub struct Shape {
+    /// The Commons page: "Data:India.map".
+    pub title: String,
+    /// The rings of its polygons and its lines: longitude, latitude.
+    pub lines: Vec<Vec<[f64; 2]>>,
+    /// West, south, east, north. East is above 180 when the shape crosses
+    /// the antimeridian; its longitudes are then continuous.
+    pub bbox: [f64; 4],
+    pub license: String,
+    /// The sources, as wikitext.
+    #[serde(default, skip_serializing_if = "String::is_empty")]
+    pub sources: String,
 }
 
 /// The day of a holiday: its "day in year for periodic occurrence" (P837),
