@@ -249,6 +249,20 @@ impl<'a> Composer<'a> {
         }
     }
 
+    /// The number of references of a statement to a real source (not only
+    /// "imported from Wikimedia project").
+    pub fn sources(&self, statement: &Statement) -> usize {
+        let not_a_source = &self.config.layouts.provenance.not_a_source;
+        self.content
+            .references
+            .get(&statement.id)
+            .map_or(0, |sets| {
+                sets.iter()
+                    .filter(|set| set.iter().any(|p| !not_a_source.contains(p)))
+                    .count()
+            })
+    }
+
     /// How much a property matters: how many peers have it, and how many of
     /// its statements are sourced.
     pub fn priority(&self, pid: Pid, statements: &[&Statement]) -> f64 {

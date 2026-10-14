@@ -148,7 +148,7 @@ pub fn lines(c: &Composer, concept: Qid, parts: &[(Pid, Vec<&Statement>)]) -> Op
 }
 
 fn line(c: &Composer, pid: Pid, statements: &[&Statement]) -> Option<Line> {
-    let mut points: Vec<_> = series_points(statements)?
+    let mut points: Vec<_> = series_points(c, statements)?
         .into_iter()
         .map(|p| match p.statement.value {
             Value::Quantity { amount, .. } => Some(Point {

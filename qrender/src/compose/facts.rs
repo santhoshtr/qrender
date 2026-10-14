@@ -98,7 +98,7 @@ impl<'c, 'a> GroupFacts<'c, 'a> {
 
     /// The values make a series (`series_points`).
     pub fn series(&self) -> bool {
-        series_points(self.statements).is_some()
+        series_points(self.composer, self.statements).is_some()
     }
 
     /// The globe of a coordinate value; None for other values.
@@ -139,8 +139,11 @@ pub struct DatedPoint<'s> {
 /// The points of a series: `dated_points` in two years or more. Two points
 /// are a series: the chart shows that the data is scarce and asks for
 /// more.
-pub fn series_points<'s>(statements: &[&'s Statement]) -> Option<Vec<DatedPoint<'s>>> {
-    let points = dated_points(statements)?;
+pub fn series_points<'s>(
+    c: &Composer,
+    statements: &[&'s Statement],
+) -> Option<Vec<DatedPoint<'s>>> {
+    let points = dated_points(c, statements)?;
     let years: HashSet<i64> = points.iter().map(|p| p.year).collect();
     (years.len() >= 2).then_some(points)
 }
@@ -148,11 +151,12 @@ pub fn series_points<'s>(statements: &[&'s Statement]) -> Option<Vec<DatedPoint<
 /// The statements as points, in their order, when each has a year (its
 /// point in time qualifier).
 ///
-/// A year with more than one value (from two sources) has one point when
-/// exactly one of its values has preferred rank; its other values are
-/// marked `other`. Values that differ by another qualifier (by sex, by
+/// A year with more than one value (from two sources) has one point: the
+/// value with preferred rank; else the value with the most references to a
+/// real source; else the first in the order of the data. Its other values
+/// are marked `other`. Values that differ by another qualifier (by sex, by
 /// place) are not one measurement: they make no points.
-pub fn dated_points<'s>(statements: &[&'s Statement]) -> Option<Vec<DatedPoint<'s>>> {
+pub fn dated_points<'s>(c: &Composer, statements: &[&'s Statement]) -> Option<Vec<DatedPoint<'s>>> {
     let years: Vec<i64> = statements
         .iter()
         .map(|s| qualifier_year(s, *POINT_IN_TIME).filter(|y| *y != 0))
@@ -163,21 +167,21 @@ pub fn dated_points<'s>(statements: &[&'s Statement]) -> Option<Vec<DatedPoint<'
     }
     let mut other = vec![false; statements.len()];
     for same in by_year.values().filter(|same| same.len() > 1) {
-        let preferred: Vec<usize> = same
-            .iter()
-            .copied()
-            .filter(|&i| statements[i].rank == Rank::Preferred)
-            .collect();
         let measure = other_qualifiers(statements[same[0]]);
-        let one_measure = same
+        if !same
             .iter()
-            .all(|&i| other_qualifiers(statements[i]) == measure);
-        let [point] = preferred[..] else {
-            return None;
-        };
-        if !one_measure {
+            .all(|&i| other_qualifiers(statements[i]) == measure)
+        {
             return None;
         }
+        // The last of the largest keys: the first index wins a tie.
+        let point = same.iter().copied().max_by_key(|&i| {
+            (
+                statements[i].rank == Rank::Preferred,
+                c.sources(statements[i]),
+                std::cmp::Reverse(i),
+            )
+        })?;
         for &i in same {
             other[i] = i != point;
         }
@@ -346,13 +350,14 @@ mod tests {
             dated("P1082", 3.0, 2020)
         ]);
         assert_eq!(group_rule(block, series, none.clone(), false), "series");
-        // Two values with the same year are not a series: rows.
+        // Two values in one year (two sources): still a series; one of them
+        // is the point, the other an "other value" (`dated_points`).
         let colliding = json!([
             dated("P1082", 1.0, 2000),
             dated("P1082", 2.0, 2000),
             dated("P1082", 3.0, 2020)
         ]);
-        assert_eq!(group_rule(block, colliding, none.clone(), false), "row");
+        assert_eq!(group_rule(block, colliding, none.clone(), false), "series");
         // Any dated quantity is a series, from two points.
         let rate = json!([dated("P8763", 17.0, 2019), dated("P8763", 16.4, 2021)]);
         assert_eq!(group_rule(block, rate, none.clone(), false), "series");
@@ -488,8 +493,10 @@ mod tests {
             json!({}),
         );
         let sts: Vec<_> = c.statements.iter().collect();
+        let k = Composer::new(&c, Config::embedded());
         let years = |sts: &[&Statement]| {
-            series_points(sts).map(|ps| ps.iter().map(|p| (p.year, p.other)).collect::<Vec<_>>())
+            series_points(&k, sts)
+                .map(|ps| ps.iter().map(|p| (p.year, p.other)).collect::<Vec<_>>())
         };
         assert_eq!(
             years(&sts),
@@ -512,11 +519,14 @@ mod tests {
                 .push(json!({"pid": "P21", "value": {"type": "entity", "entity": q}}));
             v
         };
-        let years = |values: Value| {
-            let c = content(values, json!({}));
+        let years_with = |values: Value, extra: Value| {
+            let c = content(values, extra);
+            let k = Composer::new(&c, Config::embedded());
             let sts: Vec<_> = c.statements.iter().collect();
-            series_points(&sts).map(|ps| ps.iter().map(|p| (p.year, p.other)).collect::<Vec<_>>())
+            series_points(&k, &sts)
+                .map(|ps| ps.iter().map(|p| (p.year, p.other)).collect::<Vec<_>>())
         };
+        let years = |values: Value| years_with(values, json!({}));
         // Two sources for 2021: the preferred value is the point.
         assert_eq!(
             years(json!([
@@ -526,14 +536,26 @@ mod tests {
             ])),
             Some(vec![(2019, false), (2021, false), (2021, true)])
         );
-        // No preferred value: no point for the year, no series.
+        // No preferred value: the value with a real source is the point.
+        assert_eq!(
+            years_with(
+                json!([
+                    dated("P2250", 66.0, 2019),
+                    dated("P2250", 70.03, 2021),
+                    dated("P2250", 67.0, 2021)
+                ]),
+                json!({"references": {"Q1-0000-0002": [["P248"]]}})
+            ),
+            Some(vec![(2019, false), (2021, true), (2021, false)])
+        );
+        // An equal tie: the first in the order of the data.
         assert_eq!(
             years(json!([
                 dated("P2250", 66.0, 2019),
                 dated("P2250", 70.03, 2021),
                 dated("P2250", 67.0, 2021)
             ])),
-            None
+            Some(vec![(2019, false), (2021, false), (2021, true)])
         );
         // Values by sex are two measurements, not two sources.
         assert_eq!(
