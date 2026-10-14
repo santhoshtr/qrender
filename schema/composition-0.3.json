@@ -49,6 +49,32 @@
       ],
       "type": "object"
     },
+    "Bar": {
+      "properties": {
+        "shares": {
+          "description": "In the order of `pids`.",
+          "items": {
+            "$ref": "#/$defs/Share"
+          },
+          "type": "array"
+        },
+        "total": {
+          "description": "The sum of the parts.",
+          "format": "double",
+          "type": "number"
+        },
+        "year": {
+          "format": "int64",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "year",
+        "total",
+        "shares"
+      ],
+      "type": "object"
+    },
     "Block": {
       "description": "A block: one primitive, from its own module.",
       "oneOf": [
@@ -161,6 +187,19 @@
           "properties": {
             "primitive": {
               "const": "series",
+              "type": "string"
+            }
+          },
+          "required": [
+            "primitive"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/Split",
+          "properties": {
+            "primitive": {
+              "const": "split",
               "type": "string"
             }
           },
@@ -872,6 +911,25 @@
       },
       "required": [
         "chain"
+      ],
+      "type": "object"
+    },
+    "Line": {
+      "description": "The points of one property, by year.",
+      "properties": {
+        "pid": {
+          "$ref": "#/$defs/Pid"
+        },
+        "points": {
+          "items": {
+            "$ref": "#/$defs/Point"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "pid",
+        "points"
       ],
       "type": "object"
     },
@@ -2185,6 +2243,11 @@
           "const": "sounds",
           "description": "The recordings of one property (pronunciations): one player.",
           "type": "string"
+        },
+        {
+          "const": "split",
+          "description": "The parts of one whole, as a bar for each year.",
+          "type": "string"
         }
       ]
     },
@@ -2496,12 +2559,20 @@
     },
     "Series": {
       "properties": {
-        "pid": {
-          "$ref": "#/$defs/Pid"
+        "concept": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Qid"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The split whose parts are the lines; None for one property."
         },
-        "points": {
+        "lines": {
           "items": {
-            "$ref": "#/$defs/Point"
+            "$ref": "#/$defs/Line"
           },
           "type": "array"
         },
@@ -2544,8 +2615,40 @@
         }
       },
       "required": [
-        "pid",
-        "points"
+        "lines"
+      ],
+      "type": "object"
+    },
+    "Share": {
+      "properties": {
+        "amount": {
+          "format": "double",
+          "type": "number"
+        },
+        "provenance": {
+          "$ref": "#/$defs/Provenance"
+        },
+        "qualifiers": {
+          "description": "The qualifiers but the point in time (the year of the bar): the\nparts of a part (\"female population: 328875190\").",
+          "items": {
+            "$ref": "#/$defs/QualifierShown"
+          },
+          "type": "array"
+        },
+        "share": {
+          "description": "The amount as a share of the total, rounded to 4 places.",
+          "format": "double",
+          "type": "number"
+        },
+        "statement": {
+          "$ref": "#/$defs/StatementId"
+        }
+      },
+      "required": [
+        "amount",
+        "share",
+        "statement",
+        "provenance"
       ],
       "type": "object"
     },
@@ -2904,6 +3007,37 @@
       "required": [
         "file",
         "license"
+      ],
+      "type": "object"
+    },
+    "Split": {
+      "properties": {
+        "bars": {
+          "description": "One bar for each year, the oldest first.",
+          "items": {
+            "$ref": "#/$defs/Bar"
+          },
+          "type": "array"
+        },
+        "concept": {
+          "$ref": "#/$defs/Qid"
+        },
+        "id": {
+          "type": "string"
+        },
+        "pids": {
+          "description": "The parts, in the order of the configuration (the order of their\ncolours).",
+          "items": {
+            "$ref": "#/$defs/Pid"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "concept",
+        "pids",
+        "bars"
       ],
       "type": "object"
     },

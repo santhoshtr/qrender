@@ -17,7 +17,7 @@ use crate::primitives::fact::Fact;
 use crate::primitives::media::Media;
 use crate::primitives::{
     absent, credits, fact, identifiers, kind, map, media, network, peers, pictures, prose,
-    provenance, scale, score, series, sitelinks, sounds, succession, time, title, works,
+    provenance, scale, score, series, sitelinks, sounds, split, succession, time, title, works,
 };
 use crate::schema::{Block, Credit};
 use crate::vocab::Slot;
@@ -223,6 +223,7 @@ impl<'v> Ui<'v> {
             Block::Map(b) => render(map::Html { ui: self, b }),
             Block::Fact(b) => render(fact::Html { ui: self, b }),
             Block::Series(b) => render(series::Html { ui: self, b }),
+            Block::Split(b) => render(split::Html { ui: self, b }),
             Block::Scale(b) => render(scale::Html { ui: self, b }),
             Block::Peers(b) => render(peers::Html { ui: self, b }),
             Block::Network(b) => render(network::Html { ui: self, b }),

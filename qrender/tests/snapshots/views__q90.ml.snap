@@ -5,8 +5,8 @@ expression: json
 {
   "composition": "composition/0.3",
   "coverage": {
-    "have": 165,
-    "total": 346
+    "have": 163,
+    "total": 344
   },
   "design": "design/0.2",
   "dir": "ltr",
@@ -653,10 +653,6 @@ expression: json
       "text": "end cause"
     },
     "P1539": {
-      "description": {
-        "lang": "ml",
-        "text": "ഒരു ആവാസവ്യവസ്ഥയിലെ സ്ത്രീകളുടെ എണ്ണം"
-      },
       "href": "https://www.wikidata.org/wiki/Property:P1539",
       "lang": "ml",
       "text": "സ്ത്രീജനസംഖ്യ"
@@ -667,11 +663,6 @@ expression: json
       "text": "ലോഗോയുടെ ചിത്രം"
     },
     "P1540": {
-      "description": {
-        "fallback": true,
-        "lang": "en",
-        "text": "number of male people inhabiting the place; number of male people of subject"
-      },
       "href": "https://www.wikidata.org/wiki/Property:P1540",
       "lang": "ml",
       "text": "പുരുഷജനസംഖ്യ"
@@ -3629,6 +3620,11 @@ expression: json
       "href": "https://www.wikidata.org/wiki/Q28962312",
       "lang": "en",
       "text": "often"
+    },
+    "Q290": {
+      "href": "https://www.wikidata.org/wiki/Q290",
+      "lang": "ml",
+      "text": "ലിംഗഭേദം"
     },
     "Q2990283": {
       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q2990283",

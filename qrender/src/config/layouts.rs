@@ -14,6 +14,9 @@ pub struct Layouts {
     /// the item is its layout. `generic` matches every item.
     pub class_layouts: IndexMap<String, ClassLayout>,
     pub roles: Roles,
+    /// Properties whose values in one year divide one whole.
+    #[serde(default)]
+    pub splits: Vec<SplitSpec>,
     pub thresholds: Thresholds,
     /// The container properties, in order of preference, and how the item
     /// is compared with the container.
@@ -58,6 +61,17 @@ pub struct SpreadSpec {
     /// Also take any item property whose values are mostly pictured.
     #[serde(default)]
     pub pictured: bool,
+}
+
+/// A split: the parts of one whole, in the order they are shown. The
+/// whole is the sum of the parts.
+#[derive(Debug, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct SplitSpec {
+    pub id: String,
+    /// The item whose label titles the split.
+    pub concept: Qid,
+    pub parts: Vec<Pid>,
 }
 
 /// The property lists of each role, and the two tables.

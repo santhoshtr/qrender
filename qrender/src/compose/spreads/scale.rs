@@ -7,7 +7,7 @@ use indexmap::IndexMap;
 use crate::compose::Composer;
 use crate::compose::blocks::Made;
 use crate::config::SpreadSpec;
-use crate::primitives::{fact, peers, scale, series};
+use crate::primitives::{fact, peers, scale, series, split};
 use crate::schema::{Block, Silence, SilenceReason};
 use crate::vocab::{Primitive, Slot, Template};
 
@@ -57,6 +57,11 @@ pub fn build<'a>(c: &mut Composer<'a>, spec: &'a SpreadSpec) -> super::Built {
         Some(series)
     });
     for p in pids {
+        // A split, at the place of its first part; its parts' other
+        // statements go on below.
+        if let Some(block) = split::at(c, *p, pids) {
+            stack.push(block);
+        }
         let free = c.free(*p);
         if !free.is_empty()
             && let Some(block) = series::dated(c, *p, &free, None)

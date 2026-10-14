@@ -20,6 +20,7 @@ pub mod score;
 pub mod series;
 pub mod sitelinks;
 pub mod sounds;
+pub mod split;
 pub mod succession;
 pub mod time;
 pub mod title;

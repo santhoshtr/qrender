@@ -1,5 +1,5 @@
-// The qr-chart element: the points of a series (the rows of its table) as
-// a line chart, drawn by ECharts. Progressive enhancement only: the server
+// The qr-chart element: the points of a series (the columns of its table)
+// as a line chart, a line for each column, drawn by ECharts. Progressive enhancement only: the server
 // renders the table, and without this script or without ECharts the table
 // stays. The script reads the rows and decides nothing. ECharts loads
 // once, when the first chart comes near the viewport, so it does not block
@@ -40,15 +40,24 @@ if ( 'customElements' in window && 'IntersectionObserver' in window ) {
 
 		async draw() {
 			const box = this.querySelector( '.chart' );
-			const rows = [ ...this.querySelectorAll( 'tr[data-year]' ) ];
-			const point = ( row ) => [ Number( row.dataset.year ), Number( row.dataset.amount ) ];
-			// The line goes through one value of each year; the other values
-			// of a year (other sources) are marks off the line.
-			const points = rows.filter( ( row ) => !( 'other' in row.dataset ) ).map( point );
-			const others = rows.filter( ( row ) => 'other' in row.dataset ).map( point );
-			const otherNote = rows.find( ( row ) => 'other' in row.dataset )
-				?.querySelector( '.note' )?.textContent ?? '';
-			if ( !box || !points.length ) {
+			const rows = [ ...this.querySelectorAll( 'tbody tr[data-year]' ) ];
+			const names = [ ...this.querySelectorAll( 'thead th' ) ].slice( 1 )
+				.map( ( th ) => th.textContent.trim() );
+			// A line goes through one value of each year; the other values of
+			// a year (other sources) are marks off the line.
+			const lines = names.map( ( name, i ) => {
+				const cells = rows.map( ( row ) => [ Number( row.dataset.year ), row.cells[ i + 1 ] ] );
+				return {
+					name,
+					points: cells.filter( ( [ , td ] ) => td && 'amount' in td.dataset )
+						.map( ( [ y, td ] ) => [ y, Number( td.dataset.amount ) ] ),
+					others: cells.flatMap( ( [ y, td ] ) => td ?
+						[ ...td.querySelectorAll( '[data-other]' ) ].map( ( o ) => [ y, Number( o.dataset.other ) ] ) :
+						[] )
+				};
+			} );
+			const otherNote = this.querySelector( '[data-other] .note' )?.textContent ?? '';
+			if ( !box || !lines.some( ( l ) => l.points.length ) ) {
 				return;
 			}
 			let lib;
@@ -69,8 +78,14 @@ if ( 'customElements' in window && 'IntersectionObserver' in window ) {
 			const token = ( name ) => style.getPropertyValue( name ).trim();
 			const subtle = token( '--color-subtle' );
 			const rtl = getComputedStyle( box ).direction === 'rtl';
-			const few = points.length <= 6;
-			const years = points.map( ( [ y ] ) => y );
+			const single = lines.length === 1;
+			// One line: the colour of the dimension. Lines of a split: the
+			// colours of the parts, as in their key.
+			const colour = ( i ) => token( single ? '--ink' : `--part-${ i + 1 }` );
+			const years = [ ...new Set( lines.flatMap( ( l ) => l.points.map( ( [ y ] ) => y ) ) ) ]
+				.sort( ( a, b ) => a - b );
+			const few = years.length <= 6;
+			const html = lib.format.encodeHTML;
 			const pad = ( min, max ) => Math.max( 0.5, ( max - min ) * 0.1 );
 
 			const plot = document.createElement( 'div' );
@@ -88,14 +103,18 @@ if ( 'customElements' in window && 'IntersectionObserver' in window ) {
 				tooltip: {
 					trigger: 'axis',
 					// Each series gives its nearest point: only the values of
-					// the year of the line's point.
+					// the year of a line's point. Series 2i is line i, 2i + 1
+					// its other values.
 					formatter: ( params ) => {
-						const at = params[ 0 ].value[ 0 ];
-						const values = params
-							.filter( ( p ) => p.value[ 0 ] === at )
-							.map( ( p ) => exact.format( p.value[ 1 ] ) +
-								( p.seriesIndex ? ` (${ otherNote })` : '' ) );
-						return `${ year.format( at ) }: ${ values.join( ' · ' ) }`;
+						const at = ( params.find( ( p ) => p.seriesIndex % 2 === 0 ) ?? params[ 0 ] ).value[ 0 ];
+						const value = ( p ) => exact.format( p.value[ 1 ] ) +
+							( p.seriesIndex % 2 ? ` (${ html( otherNote ) })` : '' );
+						const of = params.filter( ( p ) => p.value[ 0 ] === at );
+						if ( single ) {
+							return `${ year.format( at ) }: ${ of.map( value ).join( ' · ' ) }`;
+						}
+						return [ year.format( at ), ...of.map( ( p ) =>
+							`${ p.marker }${ html( p.seriesName ) }: ${ value( p ) }` ) ].join( '<br>' );
 					}
 				},
 				xAxis: {
@@ -123,24 +142,28 @@ if ( 'customElements' in window && 'IntersectionObserver' in window ) {
 					splitLine: { lineStyle: { color: token( '--border-color-subtle' ) } },
 					axisLabel: { color: subtle, formatter: ( v ) => short.format( v ) }
 				},
-				series: [ {
+				series: lines.flatMap( ( l, i ) => [ {
 					type: 'line',
-					data: points,
-					color: token( '--ink' ),
+					name: l.name,
+					data: l.points,
+					color: colour( i ),
 					symbolSize: 6,
-					showSymbol: points.length <= 24,
+					showSymbol: l.points.length <= 24,
 					label: {
-						show: few,
+						// The numbers on the points of one short line; with
+						// lines, they would cover each other.
+						show: single && few,
 						color: subtle,
 						formatter: ( p ) => short.format( p.value[ 1 ] )
 					}
 				}, {
 					type: 'scatter',
-					data: others,
-					color: token( '--ink' ),
+					name: l.name,
+					data: l.others,
+					color: colour( i ),
 					symbol: 'emptyCircle',
 					symbolSize: 7
-				} ]
+				} ] )
 			} );
 			this.classList.add( 'drawn' );
 			new ResizeObserver( () => chart.resize() ).observe( box );

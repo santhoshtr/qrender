@@ -4415,225 +4415,270 @@ expression: composition
         "stack": [
           {
             "primitive": "series",
-            "pid": "P4179",
+            "lines": [
+              {
+                "pid": "P4179",
+                "points": [
+                  {
+                    "year": 1793,
+                    "amount": 640504.0
+                  },
+                  {
+                    "year": 1797,
+                    "amount": 551347.0
+                  },
+                  {
+                    "year": 1801,
+                    "amount": 547756.0
+                  },
+                  {
+                    "year": 1807,
+                    "amount": 580609.0
+                  },
+                  {
+                    "year": 1811,
+                    "amount": 622636.0
+                  },
+                  {
+                    "year": 1817,
+                    "amount": 713966.0
+                  },
+                  {
+                    "year": 1831,
+                    "amount": 785862.0
+                  },
+                  {
+                    "year": 1836,
+                    "amount": 909126.0
+                  },
+                  {
+                    "year": 1841,
+                    "amount": 935261.0
+                  },
+                  {
+                    "year": 1846,
+                    "amount": 1053897.0
+                  },
+                  {
+                    "year": 1851,
+                    "amount": 1053262.0
+                  },
+                  {
+                    "year": 1856,
+                    "amount": 1174346.0
+                  },
+                  {
+                    "year": 1861,
+                    "amount": 1696141.0
+                  },
+                  {
+                    "year": 1866,
+                    "amount": 1825274.0
+                  },
+                  {
+                    "year": 1872,
+                    "amount": 1851792.0
+                  },
+                  {
+                    "year": 1876,
+                    "amount": 1988806.0
+                  },
+                  {
+                    "year": 1881,
+                    "amount": 2269023.0
+                  },
+                  {
+                    "year": 1886,
+                    "amount": 2344550.0
+                  },
+                  {
+                    "year": 1891,
+                    "amount": 2447957.0
+                  },
+                  {
+                    "year": 1896,
+                    "amount": 2536834.0
+                  },
+                  {
+                    "year": 1901,
+                    "amount": 2714068.0
+                  },
+                  {
+                    "year": 1906,
+                    "amount": 2763393.0
+                  },
+                  {
+                    "year": 1911,
+                    "amount": 2888110.0
+                  },
+                  {
+                    "year": 1921,
+                    "amount": 2906472.0
+                  },
+                  {
+                    "year": 1926,
+                    "amount": 2871429.0
+                  },
+                  {
+                    "year": 1931,
+                    "amount": 2891020.0
+                  },
+                  {
+                    "year": 1936,
+                    "amount": 2829746.0
+                  },
+                  {
+                    "year": 1946,
+                    "amount": 2725374.0
+                  },
+                  {
+                    "year": 1954,
+                    "amount": 2850189.0
+                  },
+                  {
+                    "year": 1962,
+                    "amount": 2790091.0
+                  },
+                  {
+                    "year": 1968,
+                    "amount": 2590771.0
+                  },
+                  {
+                    "year": 1975,
+                    "amount": 2299830.0
+                  },
+                  {
+                    "year": 1982,
+                    "amount": 2176243.0
+                  },
+                  {
+                    "year": 1990,
+                    "amount": 2152423.0
+                  },
+                  {
+                    "year": 1999,
+                    "amount": 2125246.0
+                  },
+                  {
+                    "year": 2006,
+                    "amount": 2181371.0
+                  },
+                  {
+                    "year": 2007,
+                    "amount": 2193030.0
+                  },
+                  {
+                    "year": 2008,
+                    "amount": 2211297.0
+                  },
+                  {
+                    "year": 2009,
+                    "amount": 2234105.0
+                  },
+                  {
+                    "year": 2010,
+                    "amount": 2243833.0
+                  },
+                  {
+                    "year": 2011,
+                    "amount": 2249975.0
+                  },
+                  {
+                    "year": 2012,
+                    "amount": 2240621.0
+                  },
+                  {
+                    "year": 2013,
+                    "amount": 2229621.0
+                  },
+                  {
+                    "year": 2014,
+                    "amount": 2220445.0
+                  },
+                  {
+                    "year": 2015,
+                    "amount": 2206488.0
+                  },
+                  {
+                    "year": 2016,
+                    "amount": 2190327.0
+                  },
+                  {
+                    "year": 2017,
+                    "amount": 2187526.0
+                  },
+                  {
+                    "year": 2018,
+                    "amount": 2175601.0
+                  },
+                  {
+                    "year": 2019,
+                    "amount": 2165423.0
+                  },
+                  {
+                    "year": 2020,
+                    "amount": 2145906.0
+                  },
+                  {
+                    "year": 2021,
+                    "amount": 2133111.0
+                  },
+                  {
+                    "year": 2022,
+                    "amount": 2113705.0
+                  },
+                  {
+                    "year": 2023,
+                    "amount": 2103778.0
+                  }
+                ]
+              }
+            ],
             "statement": "Q90-1f81519d-49ff-ec93-b5d9-9821a7b903b2",
             "provenance": "none",
             "source": {
               "file": "Data:Population – Paris – – INSEE 75.tab",
               "license": "CC0-1.0"
-            },
-            "points": [
-              {
-                "year": 1793,
-                "amount": 640504.0
-              },
-              {
-                "year": 1797,
-                "amount": 551347.0
-              },
-              {
-                "year": 1801,
-                "amount": 547756.0
-              },
-              {
-                "year": 1807,
-                "amount": 580609.0
-              },
-              {
-                "year": 1811,
-                "amount": 622636.0
-              },
-              {
-                "year": 1817,
-                "amount": 713966.0
-              },
-              {
-                "year": 1831,
-                "amount": 785862.0
-              },
-              {
-                "year": 1836,
-                "amount": 909126.0
-              },
-              {
-                "year": 1841,
-                "amount": 935261.0
-              },
-              {
-                "year": 1846,
-                "amount": 1053897.0
-              },
-              {
-                "year": 1851,
-                "amount": 1053262.0
-              },
-              {
-                "year": 1856,
-                "amount": 1174346.0
-              },
-              {
-                "year": 1861,
-                "amount": 1696141.0
-              },
-              {
-                "year": 1866,
-                "amount": 1825274.0
-              },
-              {
-                "year": 1872,
-                "amount": 1851792.0
-              },
-              {
-                "year": 1876,
-                "amount": 1988806.0
-              },
-              {
-                "year": 1881,
-                "amount": 2269023.0
-              },
-              {
-                "year": 1886,
-                "amount": 2344550.0
-              },
-              {
-                "year": 1891,
-                "amount": 2447957.0
-              },
-              {
-                "year": 1896,
-                "amount": 2536834.0
-              },
-              {
-                "year": 1901,
-                "amount": 2714068.0
-              },
-              {
-                "year": 1906,
-                "amount": 2763393.0
-              },
-              {
-                "year": 1911,
-                "amount": 2888110.0
-              },
-              {
-                "year": 1921,
-                "amount": 2906472.0
-              },
-              {
-                "year": 1926,
-                "amount": 2871429.0
-              },
-              {
-                "year": 1931,
-                "amount": 2891020.0
-              },
-              {
-                "year": 1936,
-                "amount": 2829746.0
-              },
-              {
-                "year": 1946,
-                "amount": 2725374.0
-              },
-              {
-                "year": 1954,
-                "amount": 2850189.0
-              },
-              {
-                "year": 1962,
-                "amount": 2790091.0
-              },
-              {
-                "year": 1968,
-                "amount": 2590771.0
-              },
-              {
-                "year": 1975,
-                "amount": 2299830.0
-              },
-              {
-                "year": 1982,
-                "amount": 2176243.0
-              },
-              {
-                "year": 1990,
-                "amount": 2152423.0
-              },
-              {
-                "year": 1999,
-                "amount": 2125246.0
-              },
-              {
-                "year": 2006,
-                "amount": 2181371.0
-              },
-              {
-                "year": 2007,
-                "amount": 2193030.0
-              },
-              {
-                "year": 2008,
-                "amount": 2211297.0
-              },
-              {
-                "year": 2009,
-                "amount": 2234105.0
-              },
-              {
-                "year": 2010,
-                "amount": 2243833.0
-              },
-              {
-                "year": 2011,
-                "amount": 2249975.0
-              },
-              {
-                "year": 2012,
-                "amount": 2240621.0
-              },
-              {
-                "year": 2013,
-                "amount": 2229621.0
-              },
-              {
-                "year": 2014,
-                "amount": 2220445.0
-              },
-              {
-                "year": 2015,
-                "amount": 2206488.0
-              },
-              {
-                "year": 2016,
-                "amount": 2190327.0
-              },
+            }
+          },
+          {
+            "primitive": "split",
+            "id": "sex",
+            "concept": "Q290",
+            "pids": [
+              "P1539",
+              "P1540"
+            ],
+            "bars": [
               {
                 "year": 2017,
-                "amount": 2187526.0
-              },
-              {
-                "year": 2018,
-                "amount": 2175601.0
-              },
-              {
-                "year": 2019,
-                "amount": 2165423.0
-              },
-              {
-                "year": 2020,
-                "amount": 2145906.0
-              },
-              {
-                "year": 2021,
-                "amount": 2133111.0
-              },
-              {
-                "year": 2022,
-                "amount": 2113705.0
-              },
-              {
-                "year": 2023,
-                "amount": 2103778.0
+                "total": 2187526.0,
+                "shares": [
+                  {
+                    "amount": 1158623.0,
+                    "share": 0.5296,
+                    "statement": "Q90-7FD36793-007E-4D6A-A1E2-3643DFE73701",
+                    "provenance": "sourced",
+                    "qualifiers": [
+                      {
+                        "pid": "P459",
+                        "item": "Q39825"
+                      }
+                    ]
+                  },
+                  {
+                    "amount": 1028903.0,
+                    "share": 0.4704,
+                    "statement": "Q90-C65F7652-7D6B-4E55-AA3E-8DCF87653E01",
+                    "provenance": "sourced",
+                    "qualifiers": [
+                      {
+                        "pid": "P459",
+                        "item": "Q39825"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -4683,62 +4728,6 @@ expression: composition
               }
             ],
             "priority": 2.6
-          },
-          {
-            "primitive": "fact",
-            "pid": "P1539",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q90-7FD36793-007E-4D6A-A1E2-3643DFE73701",
-                "pid": "P1539",
-                "amount": 1158623.0,
-                "unit": null,
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P459",
-                    "item": "Q39825"
-                  },
-                  {
-                    "pid": "P585",
-                    "year": 2017
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 1.4,
-            "measured": true
-          },
-          {
-            "primitive": "fact",
-            "pid": "P1540",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q90-C65F7652-7D6B-4E55-AA3E-8DCF87653E01",
-                "pid": "P1540",
-                "amount": 1028903.0,
-                "unit": null,
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P459",
-                    "item": "Q39825"
-                  },
-                  {
-                    "pid": "P585",
-                    "year": 2017
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 1.4,
-            "measured": true
           },
           {
             "primitive": "fact",

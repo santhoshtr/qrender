@@ -26,6 +26,18 @@
 	--feature-max: 560px;
 	--ink: var( --color-subtle );
 	--soft: var( --background-color-neutral-subtle );
+
+	/* The parts of one whole (the segments of a split, the lines of its
+	   chart), in their order: the categorical family of Codex, the
+	   saturated grade. No red or maroon: they are the destructive colours.
+	   A label always names the part; colour alone does not separate the
+	   parts in dark mode. */
+	--part-1: var( --border-color-option-blue );
+	--part-2: var( --border-color-option-orange );
+	--part-3: var( --border-color-option-purple );
+	--part-4: var( --border-color-option-yellow );
+	--part-5: var( --border-color-option-pink );
+	--part-6: var( --border-color-option-green );
 }
 
 *,
@@ -124,9 +136,13 @@ a {
 }
 
 .v > .edit,
-.block > h3 > .edit { opacity: 0; }
+.block > h3 > .edit,
+.split li > .edit,
+.series .line > .edit { opacity: 0; }
 .v:is( :hover, :focus-within ) > .edit,
-.block > h3:is( :hover, :focus-within ) > .edit { opacity: 1; }
+.block > h3:is( :hover, :focus-within ) > .edit,
+.split li:is( :hover, :focus-within ) > .edit,
+.series .line:is( :hover, :focus-within ) > .edit { opacity: 1; }
 
 .edit,
 .info {
@@ -402,6 +418,16 @@ dialog {
 		font-size: var( --font-size-small );
 		font-weight: var( --font-weight-semi-bold );
 	}
+}
+
+/* The colour key of a part (--c): a split, the lines of a chart. */
+.key {
+	display: inline-block;
+	inline-size: 10px;
+	block-size: 10px;
+	margin-inline-end: var( --spacing-25 );
+	border-radius: 2px;
+	background-color: var( --c );
 }
 
 /* The description of a value: a quiet second line. */

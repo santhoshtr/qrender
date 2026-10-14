@@ -799,6 +799,37 @@ P4179 = "P1082"  # tabular population -> population
 P6 = "P1313"     # head of government -> office held by head of government
 P35 = "P1906"    # head of state -> office held by head of state
 
+# ----------------------------------------------------------------- splits
+# Properties whose values in one year divide one whole. The whole is the
+# sum of the parts, so the shares add up to 100 %. A split is one chart
+# with a line for each part when every part is a series, else a bar for
+# each year that every part has. The concept titles it; the parts are in
+# the order of their colours.
+
+[[splits]]
+id = "sex"
+concept = "Q290"       # sex
+parts = [
+  "P1539",  # female population
+  "P1540",  # male population
+]
+
+[[splits]]
+id = "urbanization"
+concept = "Q161078"    # urbanization
+parts = [
+  "P6343",  # urban population
+  "P6344",  # rural population
+]
+
+[[splits]]
+id = "literacy"
+concept = "Q8236"      # literacy
+parts = [
+  "P6499",  # literate population
+  "P6498",  # illiterate population
+]
+
 # ------------------------------------------------------------- thresholds
 [thresholds]
 time_points = 4          # fewer distinct years than this: no time axis

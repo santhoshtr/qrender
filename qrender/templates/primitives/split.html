@@ -1,0 +1,31 @@
+{%- import "macros.html" as m -%}
+{#- The parts of one whole. For each year: a bar of 100 %, a segment for
+    each part in the colour of its place, and a key that names each part
+    with its share and its amount. The key is the content; the bar only
+    shows it (aria-hidden). -#}
+<div class="block split">
+    <h3>{{ ui.text(ui.item(b.concept), true)|safe }}</h3>
+    {%- for bar in b.bars.iter() %}
+        <div class="year">
+            <p class="note">{{ ui.year(bar.year) }}</p>
+            <div class="bar" aria-hidden="true">
+                {%- for s in bar.shares.iter() -%}
+                    <span style="--c: var( --part-{{ loop.index }} ); --share: {{ ui.share(s.share) }}"></span>
+                {%- endfor -%}
+            </div>
+            <ul>
+                {%- for s in bar.shares.iter() %}
+                    {%- let pid = b.pids[loop.index0] %}
+                    <li>
+                        <span class="key" style="--c: var( --part-{{ loop.index }} )"></span>{{ ui.text(ui.property(pid), true)|safe }} <b>{{ ui.part(ui.percent(s.share))|safe }}</b> · {{ ui.part(ui.number(s.amount))|safe }}
+                        {%- call m::prov(ui, s.provenance) %}
+                        {% endcall %}
+                        {% call m::edit(ui, ui.edit(pid)) %}
+                        {% endcall %}
+                        {%- if !s.qualifiers.is_empty() %}<span class="note">{{ ui.note(ui.qualifiers(s.qualifiers.as_slice()).as_slice())|safe }}</span>{% endif %}
+                    </li>
+                {%- endfor %}
+            </ul>
+        </div>
+    {%- endfor %}
+</div>

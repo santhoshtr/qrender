@@ -88,7 +88,7 @@ impl<'a> Localizer<'a> {
         let mut unpictured = BTreeSet::new();
         walk_values(&self.json, &mut described, &mut unpictured);
         let measured = self.measured();
-        let labels: BTreeMap<_, _> = ids
+        let mut labels: BTreeMap<_, _> = ids
             .iter()
             .map(|id| {
                 let mut label = self.label(*id);
@@ -102,6 +102,9 @@ impl<'a> Localizer<'a> {
                 (*id, label)
             })
             .collect();
+        for qid in self.block_concepts() {
+            labels.insert(EntityId::Item(qid), self.concept(qid));
+        }
         View {
             schema: VIEW_SCHEMA,
             composition: COMPOSITION_SCHEMA,
@@ -156,16 +159,32 @@ impl<'a> Localizer<'a> {
     /// The properties of measurements (series, dated rows): their
     /// description says what the number is.
     fn measured(&self) -> BTreeSet<Pid> {
+        self.blocks()
+            .flat_map(|b| match b {
+                Block::Series(s) => s.lines.iter().map(|l| l.pid).collect(),
+                Block::Fact(f) if f.measured => vec![f.pid],
+                _ => Vec::new(),
+            })
+            .collect()
+    }
+
+    /// The concepts that title a block (a split): labelled as the titles
+    /// of spreads are, from the concepts of the text.
+    fn block_concepts(&self) -> BTreeSet<Qid> {
+        self.blocks()
+            .filter_map(|b| match b {
+                Block::Series(s) => s.concept,
+                Block::Split(s) => Some(s.concept),
+                _ => None,
+            })
+            .collect()
+    }
+
+    fn blocks(&self) -> impl Iterator<Item = &'a Block> {
         self.composition
             .spreads
             .iter()
             .flat_map(|s| s.slots.values().flatten())
-            .filter_map(|b| match b {
-                Block::Series(s) => Some(s.pid),
-                Block::Fact(f) if f.measured => Some(f.pid),
-                _ => None,
-            })
-            .collect()
     }
 
     fn description(&self, id: EntityId) -> Option<Description> {

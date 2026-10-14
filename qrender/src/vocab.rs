@@ -107,6 +107,8 @@ pub enum Primitive {
     Map,
     Fact,
     Series,
+    /// The parts of one whole, as a bar for each year.
+    Split,
     Scale,
     Peers,
     Network,
@@ -124,7 +126,7 @@ pub enum Primitive {
 impl Primitive {
     /// Every primitive, in the order of their CSS in the stylesheet and of
     /// their scripts in a page.
-    pub const ALL: [Primitive; 21] = [
+    pub const ALL: [Primitive; 22] = [
         Self::Title,
         Self::Kind,
         Self::Prose,
@@ -134,6 +136,7 @@ impl Primitive {
         Self::Map,
         Self::Fact,
         Self::Series,
+        Self::Split,
         Self::Scale,
         Self::Peers,
         Self::Network,

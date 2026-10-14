@@ -5,8 +5,8 @@ expression: json
 {
   "composition": "composition/0.3",
   "coverage": {
-    "have": 346,
-    "total": 346
+    "have": 344,
+    "total": 344
   },
   "design": "design/0.2",
   "dir": "ltr",
@@ -501,10 +501,6 @@ expression: json
       "text": "end cause"
     },
     "P1539": {
-      "description": {
-        "lang": "en",
-        "text": "number of female people inhabiting the place; number of female people of subject"
-      },
       "href": "https://www.wikidata.org/wiki/Property:P1539",
       "lang": "en",
       "text": "female population"
@@ -515,10 +511,6 @@ expression: json
       "text": "logo image"
     },
     "P1540": {
-      "description": {
-        "lang": "en",
-        "text": "number of male people inhabiting the place; number of male people of subject"
-      },
       "href": "https://www.wikidata.org/wiki/Property:P1540",
       "lang": "en",
       "text": "male population"
@@ -2888,6 +2880,11 @@ expression: json
       "href": "https://www.wikidata.org/wiki/Q28962312",
       "lang": "en",
       "text": "often"
+    },
+    "Q290": {
+      "href": "https://www.wikidata.org/wiki/Q290",
+      "lang": "en",
+      "text": "sex"
     },
     "Q2990283": {
       "href": "https://www.wikidata.org/wiki/Q2990283",

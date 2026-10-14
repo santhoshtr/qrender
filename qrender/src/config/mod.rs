@@ -9,13 +9,17 @@ use std::sync::LazyLock;
 
 use content::Pid;
 
-pub use layouts::{ClassLayout, Layouts, SpreadSpec, Thresholds};
+pub use layouts::{ClassLayout, Layouts, SplitSpec, SpreadSpec, Thresholds};
 pub use rules::Rules;
 
 use crate::vocab::{Role, RoleSet, SpreadKind};
 use rules::Row;
 
 const LAYOUTS: &str = include_str!("../../layouts.toml");
+
+/// The parts of a split at most: the categorical colours of the design
+/// system (`--part-1` to `--part-6`).
+pub const PARTS_MAX: usize = 6;
 const RULES: &str = include_str!("../../rules.toml");
 
 #[derive(Debug, thiserror::Error)]
@@ -72,6 +76,7 @@ impl Config {
             .values()
             .flat_map(|l| &l.spreads)
             .flat_map(|s| s.concept.iter().chain(&s.prose))
+            .chain(layouts.splits.iter().map(|s| &s.concept))
             .copied()
             .collect();
         concepts.sort();
@@ -160,6 +165,7 @@ fn validate(layouts: &Layouts, rules: &Rules) -> Vec<String> {
             ));
         }
     }
+    splits(&layouts.splits, &mut errors);
     let t = &layouts.thresholds;
     for (name, share) in [("run_pictured", t.run_pictured), ("absence", t.absence)] {
         if !(0.0..=1.0).contains(&share) {
@@ -186,6 +192,33 @@ fn table<R: Row>(name: &str, rows: &[R], errors: &mut Vec<String>) {
             last.id()
         )),
         Some(_) => {}
+    }
+}
+
+/// A split has 2 to `PARTS_MAX` parts (the categorical colours of the
+/// design system); a property is a part of one split only; ids are unique.
+fn splits(splits: &[SplitSpec], errors: &mut Vec<String>) {
+    let mut ids = HashSet::new();
+    let mut parts = HashSet::new();
+    for split in splits {
+        if !ids.insert(split.id.as_str()) {
+            errors.push(format!("splits: id {:?} twice", split.id));
+        }
+        if !(2..=PARTS_MAX).contains(&split.parts.len()) {
+            errors.push(format!(
+                "splits.{}: {} parts; a split has 2 to {PARTS_MAX}",
+                split.id,
+                split.parts.len()
+            ));
+        }
+        for pid in &split.parts {
+            if !parts.insert(*pid) {
+                errors.push(format!(
+                    "splits.{}: {pid} is a part of another split",
+                    split.id
+                ));
+            }
+        }
     }
 }
 
@@ -308,6 +341,15 @@ mod tests {
     fn layouts_are_checked() {
         let layouts = LAYOUTS.replacen("P2184 = \"history\"", "P2184 = \"histories\"", 1);
         assert!(invalid(&layouts, RULES).contains("\"histories\", which no layout has"));
+        // A part of two splits; a split of one part.
+        let layouts = LAYOUTS.replacen(
+            "\"P6344\",  # rural population\n]",
+            "\"P1539\",  # rural population\n]",
+            1,
+        );
+        assert!(invalid(&layouts, RULES).contains("P1539 is a part of another split"));
+        let layouts = LAYOUTS.replacen("  \"P1540\",  # male population\n]", "]", 1);
+        assert!(invalid(&layouts, RULES).contains("splits.sex: 1 parts"));
     }
 
     #[test]

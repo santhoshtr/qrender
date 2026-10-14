@@ -1,0 +1,39 @@
+/* split: the parts of one whole, a bar of 100 % for each year. A segment
+   grows by its share, so the bar is full when the rounded shares do not
+   add up to exactly 1. The bar follows the direction of the page. */
+
+.split {
+	& .year {
+		display: grid;
+		gap: var( --spacing-25 );
+	}
+
+	& .year > .note { margin: 0; }
+
+	& .bar {
+		display: flex;
+		gap: 2px;
+		block-size: 20px;
+		border-radius: 4px;
+		overflow: hidden;
+
+		& > span {
+			flex: var( --share ) 1 0;
+			background-color: var( --c );
+		}
+	}
+
+	& ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var( --spacing-25 ) var( --spacing-100 );
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-size: var( --font-size-small );
+		font-variant-numeric: tabular-nums;
+	}
+
+	/* The parts of a part (by sex): a second line. */
+	& li > .note { display: block; }
+}

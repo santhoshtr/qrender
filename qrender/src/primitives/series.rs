@@ -1,8 +1,10 @@
-//! Series: measurements of one property over time, as a line chart. From
-//! statements dated by distinct years, or from a Commons data file. The
-//! page has the points as a table; `chart.js` draws the chart from it.
+//! Series: measurements over time, as a line chart. One line from
+//! statements dated by year, or from a Commons data file; or one line for
+//! each part of a split, when every part is a series. The page has the
+//! points as a table, a column for each line; `chart.js` draws the chart
+//! from it.
 
-use content::{Cell, Pid, Statement, StatementId, Value};
+use content::{Cell, Pid, Qid, Statement, StatementId, Value};
 use schemars::JsonSchema;
 use serde::Serialize;
 
@@ -12,7 +14,10 @@ use crate::schema::Provenance;
 
 #[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct Series {
-    pub pid: Pid,
+    /// The split whose parts are the lines; None for one property.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub concept: Option<Qid>,
+    pub lines: Vec<Line>,
     /// The statement of the data file (a file series only).
     #[serde(skip_serializing_if = "Option::is_none")]
     pub statement: Option<StatementId>,
@@ -20,9 +25,57 @@ pub struct Series {
     pub provenance: Option<Provenance>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub source: Option<Source>,
-    pub points: Vec<Point>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub rule: Option<String>,
+}
+
+/// The points of one property, by year.
+#[derive(Debug, Clone, Serialize, JsonSchema)]
+pub struct Line {
+    pub pid: Pid,
+    pub points: Vec<Point>,
+}
+
+/// A row of the table: a year, and a cell for each line.
+pub struct TableRow<'a> {
+    pub year: i64,
+    pub cells: Vec<TableCell<'a>>,
+}
+
+/// The point of a line in one year, and the other values of that year.
+pub struct TableCell<'a> {
+    pub point: Option<&'a Point>,
+    pub others: Vec<&'a Point>,
+}
+
+impl Series {
+    /// The rows of the table: every year of every line, the oldest first.
+    pub fn rows(&self) -> Vec<TableRow<'_>> {
+        let mut years: Vec<i64> = self
+            .lines
+            .iter()
+            .flat_map(|l| l.points.iter().map(|p| p.year))
+            .collect();
+        years.sort_unstable();
+        years.dedup();
+        years
+            .into_iter()
+            .map(|year| TableRow {
+                year,
+                cells: self
+                    .lines
+                    .iter()
+                    .map(|l| {
+                        let of_year = l.points.iter().filter(|p| p.year == year);
+                        TableCell {
+                            point: of_year.clone().find(|p| !p.other),
+                            others: of_year.filter(|p| p.other).collect(),
+                        }
+                    })
+                    .collect(),
+            })
+            .collect()
+    }
 }
 
 /// HTML: the template binding. The markup is templates/primitives/series.html.
@@ -60,14 +113,41 @@ pub struct Point {
     pub provenance: Option<Provenance>,
 }
 
-/// Dated quantity statements of one property, when their years are
-/// distinct (`dated_years`).
+/// Dated quantity statements of one property, when they make a series
+/// (`series_points`).
 pub fn dated(
     c: &Composer,
     pid: Pid,
     statements: &[&Statement],
     rule: Option<&str>,
 ) -> Option<Series> {
+    Some(Series {
+        concept: None,
+        lines: vec![line(c, pid, statements)?],
+        statement: None,
+        provenance: None,
+        source: None,
+        rule: rule.map(str::to_string),
+    })
+}
+
+/// The parts of a split as one chart, a line for each part, when the
+/// statements of every part make a series.
+pub fn lines(c: &Composer, concept: Qid, parts: &[(Pid, Vec<&Statement>)]) -> Option<Series> {
+    Some(Series {
+        concept: Some(concept),
+        lines: parts
+            .iter()
+            .map(|(pid, statements)| line(c, *pid, statements))
+            .collect::<Option<_>>()?,
+        statement: None,
+        provenance: None,
+        source: None,
+        rule: None,
+    })
+}
+
+fn line(c: &Composer, pid: Pid, statements: &[&Statement]) -> Option<Line> {
     let mut points: Vec<_> = series_points(statements)?
         .into_iter()
         .map(|p| match p.statement.value {
@@ -82,14 +162,7 @@ pub fn dated(
         })
         .collect::<Option<_>>()?;
     points.sort_by_key(|p| (p.year, p.other));
-    Some(Series {
-        pid,
-        statement: None,
-        provenance: None,
-        source: None,
-        points,
-        rule: rule.map(str::to_string),
-    })
+    Some(Line { pid, points })
 }
 
 /// A series from a Commons data file: the first column whose name has
@@ -123,23 +196,26 @@ pub fn tabular(c: &Composer, pid: Pid, statement: &Statement) -> Option<Series> 
     }
     points.sort_by(|a, b| a.partial_cmp(b).expect("no NaN in a data file"));
     Some(Series {
-        pid,
+        concept: None,
+        lines: vec![Line {
+            pid,
+            points: points
+                .iter()
+                .map(|&(year, amount)| Point {
+                    year,
+                    amount,
+                    other: false,
+                    statement: None,
+                    provenance: None,
+                })
+                .collect(),
+        }],
         statement: Some(statement.id.clone()),
         provenance: Some(c.provenance(statement)),
         source: Some(Source {
             file: table.title.clone(),
             license: table.license.clone(),
         }),
-        points: points
-            .iter()
-            .map(|&(year, amount)| Point {
-                year,
-                amount,
-                other: false,
-                statement: None,
-                provenance: None,
-            })
-            .collect(),
         rule: None,
     })
 }
@@ -161,10 +237,28 @@ fn number(cell: &Cell) -> Option<f64> {
     }
 }
 
-/// Markdown: every point, "year: amount".
+/// Markdown: every point, "year: amount"; with lines, one sub-item for
+/// each line, under the concept.
 pub fn markdown(b: &Series, md: &mut crate::render::markdown::Markdown) {
-    let points: Vec<String> = b
-        .points
+    if let Some(concept) = b.concept {
+        let lines: Vec<String> = b
+            .lines
+            .iter()
+            .map(|l| format!("{}: {}", md.described_property(l.pid), points(l, md)))
+            .collect();
+        md.items(&md.label(content::EntityId::Item(concept)), &lines);
+        return;
+    }
+    let line = &b.lines[0];
+    let mut value = points(line, md);
+    if let Some(source) = &b.source {
+        value.push_str(&format!(" (source: {})", source.file));
+    }
+    md.item(&md.described_property(line.pid), &value);
+}
+
+fn points(line: &Line, md: &crate::render::markdown::Markdown) -> String {
+    line.points
         .iter()
         .map(|p| {
             let point = format!(
@@ -178,10 +272,6 @@ pub fn markdown(b: &Series, md: &mut crate::render::markdown::Markdown) {
                 point
             }
         })
-        .collect();
-    let mut value = points.join("; ");
-    if let Some(source) = &b.source {
-        value.push_str(&format!(" (source: {})", source.file));
-    }
-    md.item(&md.described_property(b.pid), &value);
+        .collect::<Vec<_>>()
+        .join("; ")
 }

@@ -743,25 +743,29 @@ expression: composition
           },
           {
             "primitive": "series",
-            "pid": "P1082",
-            "points": [
+            "lines": [
               {
-                "year": 2009,
-                "amount": 3138369.0,
-                "statement": "Q3870-9F5EDA05-CE52-4CB9-9D54-69297C507F4B",
-                "provenance": "imported"
-              },
-              {
-                "year": 2010,
-                "amount": 3240155.0,
-                "statement": "Q3870-53d14d3e-4db5-3a52-7493-5f03d6b0f8bc",
-                "provenance": "sourced"
-              },
-              {
-                "year": 2016,
-                "amount": 5545000.0,
-                "statement": "Q3870-7194a63a-4237-d601-f3ec-7f65c52b5d2f",
-                "provenance": "sourced"
+                "pid": "P1082",
+                "points": [
+                  {
+                    "year": 2009,
+                    "amount": 3138369.0,
+                    "statement": "Q3870-9F5EDA05-CE52-4CB9-9D54-69297C507F4B",
+                    "provenance": "imported"
+                  },
+                  {
+                    "year": 2010,
+                    "amount": 3240155.0,
+                    "statement": "Q3870-53d14d3e-4db5-3a52-7493-5f03d6b0f8bc",
+                    "provenance": "sourced"
+                  },
+                  {
+                    "year": 2016,
+                    "amount": 5545000.0,
+                    "statement": "Q3870-7194a63a-4237-d601-f3ec-7f65c52b5d2f",
+                    "provenance": "sourced"
+                  }
+                ]
               }
             ]
           }

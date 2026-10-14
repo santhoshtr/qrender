@@ -6,7 +6,7 @@
 //! To add a predicate: a field in the `When` type of its table
 //! (`config/rules.rs`), a method here, and one line in `holds`.
 
-use std::collections::HashMap;
+use std::collections::{HashMap, HashSet};
 
 use content::{Datatype, Pid, Qualifier, Rank, Statement};
 
@@ -136,16 +136,23 @@ pub struct DatedPoint<'s> {
     pub other: bool,
 }
 
-/// The points of a series, in the order of the statements. Each statement
-/// has a year (its point in time qualifier), in two years or more: two
-/// points are a series, and the chart shows that the data is scarce and
-/// asks for more.
+/// The points of a series: `dated_points` in two years or more. Two points
+/// are a series: the chart shows that the data is scarce and asks for
+/// more.
+pub fn series_points<'s>(statements: &[&'s Statement]) -> Option<Vec<DatedPoint<'s>>> {
+    let points = dated_points(statements)?;
+    let years: HashSet<i64> = points.iter().map(|p| p.year).collect();
+    (years.len() >= 2).then_some(points)
+}
+
+/// The statements as points, in their order, when each has a year (its
+/// point in time qualifier).
 ///
 /// A year with more than one value (from two sources) has one point when
 /// exactly one of its values has preferred rank; its other values are
 /// marked `other`. Values that differ by another qualifier (by sex, by
-/// place) are not one measurement: they make no series.
-pub fn series_points<'s>(statements: &[&'s Statement]) -> Option<Vec<DatedPoint<'s>>> {
+/// place) are not one measurement: they make no points.
+pub fn dated_points<'s>(statements: &[&'s Statement]) -> Option<Vec<DatedPoint<'s>>> {
     let years: Vec<i64> = statements
         .iter()
         .map(|s| qualifier_year(s, *POINT_IN_TIME).filter(|y| *y != 0))
@@ -153,9 +160,6 @@ pub fn series_points<'s>(statements: &[&'s Statement]) -> Option<Vec<DatedPoint<
     let mut by_year: HashMap<i64, Vec<usize>> = HashMap::new();
     for (i, year) in years.iter().enumerate() {
         by_year.entry(*year).or_default().push(i);
-    }
-    if by_year.len() < 2 {
-        return None;
     }
     let mut other = vec![false; statements.len()];
     for same in by_year.values().filter(|same| same.len() > 1) {
