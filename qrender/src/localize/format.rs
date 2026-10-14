@@ -6,7 +6,7 @@
 //! The renderers call these functions; they are the one place for the
 //! text of a value.
 
-use content::{EntityId, Qid};
+use content::{EntityId, Pid, Qid};
 
 use super::View;
 use super::messages::format;
@@ -41,6 +41,12 @@ pub enum Part {
     Link {
         text: String,
         href: String,
+    },
+    /// A value with the label of its property: a quantity qualifier
+    /// ("female population: 328875190"), whose number alone says nothing.
+    Qualified {
+        pid: Pid,
+        value: Box<Part>,
     },
 }
 
@@ -118,7 +124,10 @@ impl View {
                     text: text.clone(),
                     lang: Some(lang.clone()),
                 },
-                QualifierPart::Amount { amount } => number_part(*amount, None),
+                QualifierPart::Amount { amount } => Part::Qualified {
+                    pid: q.pid,
+                    value: Box::new(number_part(*amount, None)),
+                },
                 QualifierPart::String { string } => self.text(string),
             });
         }

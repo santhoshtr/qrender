@@ -178,6 +178,9 @@ impl Markdown<'_> {
             Part::Text { text, lang: None } => text.clone(),
             Part::Link { text, href } if text == href => format!("<{href}>"),
             Part::Link { text, href } => format!("[{text}]({href})"),
+            Part::Qualified { pid, value } => {
+                format!("{}: {}", self.property(*pid), self.part(value))
+            }
         }
     }
 

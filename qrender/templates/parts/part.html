@@ -1,6 +1,7 @@
 {%- import "macros.html" as m -%}
-{#- One value: an entity link, a number, a date, a text, a link. A number
-    and a date carry their raw value for the browser's Intl. -#}
+{#- One value: an entity link, a number, a date, a text, a link, a value
+    with the label of its property. A number and a date carry their raw
+    value for the browser's Intl. -#}
 {%- match p -%}
 {%- when Part::Entity with (id) -%}
 {%- let l = ui.label(id) -%}
@@ -19,4 +20,6 @@
 {%- if let Some(lang) = lang -%}<span lang="{{ lang }}">{{ text }}</span> <span class="note">{{ lang }}</span>{%- else -%}{{ text }}{%- endif -%}
 {%- when Part::Link with { text, href } -%}
 <a href="{{ href }}">{{ text }}</a>
+{%- when Part::Qualified with { pid, value } -%}
+{{ ui.text(ui.property(pid), false)|safe }}: {{ ui.part(value.as_ref())|safe }}
 {%- endmatch -%}

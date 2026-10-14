@@ -554,6 +554,9 @@ impl<'v> Ui<'v> {
             | Part::Time { text, .. }
             | Part::Text { text, .. }
             | Part::Link { text, .. } => text.clone(),
+            Part::Qualified { pid, value } => {
+                format!("{}: {}", self.property(*pid).text, self.part_text(value))
+            }
         }
     }
 
