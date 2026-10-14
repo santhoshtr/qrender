@@ -10,6 +10,6 @@
     <div data-slot="{{ name }}">
         {% if ui.wraps(slot) %}<div class="{{ name }}"> {% endif %}
         {%- for b in blocks -%}{{ ui.block(b)|safe }}{%- endfor -%}
-{% if ui.wraps(slot) %} </div>{% endif %}
-</div>
+        {% if ui.wraps(slot) %} </div>{% endif %}
+    </div>
 {%- endif -%}

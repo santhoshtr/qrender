@@ -9,8 +9,10 @@
         {% call m::description(d) %}
         {% endcall %}
         </span>
-    {% endif -%}{%- endif -%}
-</dt><dd>
+    {% endif -%}
+{%- endif -%}
+</dt>
+<dd>
     {%- if form == "range" -%}
         {{ ui.part(ui.number(ui.amount(first)))|safe }} – {{ ui.part(ui.part_at(values.as_slice(), 1))|safe }}
     {%- else if form == "variants" -%}
@@ -29,13 +31,13 @@
             {% endif -%}
         {%- endfor -%}
     {%- endif -%}
-    </dd>
-    <span class="tools">
-        {%- if single %}
-            {% call m::prov(ui, first.provenance) %}
-            {% endcall %}
-            {% call m::edit(ui, ui.edit(first.pid)) %}
-            {% endcall %}
-        {% endif -%}
-    </span>
+</dd>
+<span class="tools">
+    {%- if single %}
+        {% call m::prov(ui, first.provenance) %}
+        {% endcall %}
+        {% call m::edit(ui, ui.edit(first.pid)) %}
+        {% endcall %}
+    {% endif -%}
+</span>
 </div>

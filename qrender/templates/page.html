@@ -3,21 +3,22 @@
       dir="{{ view.dir.name() }}"
       data-locale="{{ view.locale }}"
       {%- match styles -%}
-      {%- when Styles::Linked with (base) %} data-design="{{ base }}"
+      {%- when Styles::Linked with (base) %}
+      data-design="{{ base }}"
       {%- when Styles::Inline -%}
       {%- endmatch %}>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ view.page_title }}</title>
-        {% match styles -%}
-        {%- when Styles::Inline -%}
-        <style>{{ tokens|safe }}</style>
-        <style>{{ stylesheet|safe }}</style>
-        {%- when Styles::Linked with (base) -%}
-        <link rel="stylesheet" href="{{ base }}/tokens.css">
-        <link rel="stylesheet" href="{{ base }}/page.css">
-    {%- endmatch %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ view.page_title }}</title>
+    {% match styles -%}
+    {%- when Styles::Inline -%}
+    <style>{{ tokens|safe }}</style>
+    <style>{{ stylesheet|safe }}</style>
+    {%- when Styles::Linked with (base) -%}
+    <link rel="stylesheet" href="{{ base }}/tokens.css">
+    <link rel="stylesheet" href="{{ base }}/page.css">
+{%- endmatch %}
 </head>
 <body>
     <header class="chrome">
@@ -32,7 +33,9 @@
             {{ ui.spread(s)|safe }}
         {%- endfor %}
         {%- if !view.unmatched_sections.is_empty() %}
-            <section class="spread t-sheet" data-spread="evidence" data-dimension="neutral">
+            <section class="spread t-sheet"
+                     data-spread="evidence"
+                     data-dimension="neutral">
                 <p class="prose-links">
                     {%- for l in view.unmatched_sections -%}{%- if !loop.first %} · {% endif %}<a href="{{ l.href }}">{{ l.text }}</a>{%- endfor -%}
                 </p>
