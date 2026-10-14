@@ -293,10 +293,17 @@ impl<'a> Composer<'a> {
         self.classes.contains(&item)
     }
 
+    /// The value is a class whose picture would show an example only. Not
+    /// for a property whose classes are shown by their symbol (the symbol
+    /// role: a religion).
+    pub fn is_class_value(&self, pid: Pid, item: Qid) -> bool {
+        self.is_class(item) && !self.has_role(pid, Role::Symbol)
+    }
+
     /// A statement as the composition shows it.
     pub fn statement(&self, statement: &Statement) -> StatementRef {
         let item = statement.value.item();
-        let class = item.is_some_and(|q| self.is_class(q));
+        let class = item.is_some_and(|q| self.is_class_value(statement.pid, q));
         StatementRef {
             statement: statement.id.clone(),
             pid: statement.pid,

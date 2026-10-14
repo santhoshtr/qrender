@@ -66,7 +66,7 @@ impl Composer<'_> {
     /// "lawyer" shows one lawyer, not the person the statement is about.
     pub fn picture_of(&self, statement: &Statement) -> Option<Picture> {
         let item = statement.value.item()?;
-        if self.is_class(item) {
+        if self.is_class_value(statement.pid, item) {
             return None;
         }
         let image = statement.value_image.as_ref()?;
@@ -75,7 +75,11 @@ impl Composer<'_> {
 
     /// The statement's value has a picture.
     pub fn is_pictured(&self, statement: &Statement) -> bool {
-        statement.value_image.is_some() && !statement.value.item().is_some_and(|q| self.is_class(q))
+        statement.value_image.is_some()
+            && !statement
+                .value
+                .item()
+                .is_some_and(|q| self.is_class_value(statement.pid, q))
     }
 
     /// How good a media statement is as the feature picture of the page,

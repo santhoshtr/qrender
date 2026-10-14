@@ -70,6 +70,9 @@ pub enum Role {
     /// Holidays (public holiday): a list in the order of the year, the day
     /// of each as its date.
     Calendar,
+    /// Values that are classes with a picture that stands for them (the
+    /// symbol of a religion): pictured, not shown as an example.
+    Symbol,
     Crew,
     Score,
     Described,

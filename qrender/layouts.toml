@@ -641,6 +641,9 @@ pids = [
   "P2132",  # nominal GDP per capita
   "P4010",  # GDP (PPP)
   "P2299",  # PPP GDP per capita
+  "P3529",  # median income
+  "P1198",  # unemployment rate
+  "P2855",  # VAT rate
 ]
 
 [[class_layouts.country.spreads]]
@@ -656,6 +659,12 @@ pids = [
   "P8477",  # BTI Status Index
   "P8328",  # Democracy Index
   "P11547", # Happy Planet Index score
+  "P3864",  # suicide rate
+  "P3000",  # marriageable age
+  "P3271",  # compulsory education (maximum age)
+  "P2997",  # age of majority
+  "P2573",  # number of out-of-school children
+  "P140",   # religion or worldview
 ]
 
 [[class_layouts.country.spreads]]
@@ -750,6 +759,12 @@ timeline = [
 # ("July 4", "fourth Thursday in November") as its date.
 calendar = [
   "P832",   # public holiday
+]
+# Values that are classes, with a picture that stands for them: the symbol
+# of a religion. Their pictures are shown, as for other values; the
+# picture of another class (a "city") would show an example only.
+symbol = [
+  "P140",   # religion or worldview
 ]
 # The people who made a work. A spread shows them as one block, each person
 # once, with every role they had (a director who also wrote and produced).

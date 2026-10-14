@@ -3850,6 +3850,57 @@ expression: composition
             "priority": 2.0,
             "rule": "single"
           }
+        ],
+        "sheet": [
+          {
+            "primitive": "fact",
+            "pid": "P1198",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q668-1BAB39E9-74CD-4A0E-A4BE-B0547DA13D64",
+                "pid": "P1198",
+                "amount": 4.0,
+                "unit": "Q11229",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P585",
+                    "year": 2014
+                  }
+                ],
+                "shown": true
+              }
+            ],
+            "priority": 1.0,
+            "measured": true,
+            "gauge": {
+              "kind": "proportion",
+              "min": 0.0,
+              "max": 100.0,
+              "at": 0.04
+            },
+            "rule": "row"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P2855",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q668-70f86811-477c-5e36-6c3a-93d24c2542ed",
+                "pid": "P2855",
+                "amount": 5.5,
+                "unit": "Q11229",
+                "rank": "normal",
+                "provenance": "none",
+                "shown": true
+              }
+            ],
+            "priority": 0.0,
+            "rule": "row"
+          }
         ]
       },
       "prose": {
@@ -4308,6 +4359,142 @@ expression: composition
               }
             ],
             "rule": "series"
+          },
+          {
+            "primitive": "network",
+            "pid": "P140",
+            "values": [
+              {
+                "statement": "Q668-645283bc-454a-c1d3-763d-c6b0452bb2c9",
+                "pid": "P140",
+                "item": "Q9316",
+                "rank": "normal",
+                "provenance": "sourced",
+                "image": {
+                  "file": "Sikh pilgrim at the Golden Temple (Harmandir Sahib) in Amritsar, India.jpg",
+                  "kind": "photo",
+                  "aspect": 1.504,
+                  "megapixels": 6.02,
+                  "assessed": [
+                    "Featured pictures on Wikimedia Commons",
+                    "Quality images"
+                  ],
+                  "credit": {
+                    "artist": "Paulrudd",
+                    "license": "CC BY-SA 4.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q668-7a2f3e9a-4b68-2186-2ee9-11033ca3794d",
+                "pid": "P140",
+                "item": "Q9232",
+                "rank": "normal",
+                "provenance": "sourced",
+                "image": {
+                  "file": "Shravanbelgola Gomateshvara feet prayer1.jpg",
+                  "kind": "photo",
+                  "aspect": 1.3333,
+                  "megapixels": 3.15,
+                  "credit": {
+                    "artist": "Matthew Logelin",
+                    "license": "CC BY 2.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q668-7FA8B8A0-0A1B-4835-973C-9386B61BD339",
+                "pid": "P140",
+                "item": "Q9089",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P1107",
+                    "amount": 0.805
+                  }
+                ],
+                "image": {
+                  "file": "A Hindu wedding ritual in progress b.jpg",
+                  "kind": "photo",
+                  "aspect": 1.3333,
+                  "megapixels": 7.99,
+                  "credit": {
+                    "artist": "Alicia Nijdam",
+                    "license": "CC BY 2.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q668-972155f8-44cf-c51e-ef8b-9f1361f8c626",
+                "pid": "P140",
+                "item": "Q5043",
+                "rank": "normal",
+                "provenance": "sourced",
+                "image": {
+                  "file": "Jerusalem Holy-Sepulchre Jesus-Detail-01.png",
+                  "kind": "photo",
+                  "aspect": 1.0113,
+                  "megapixels": 2.03,
+                  "credit": {
+                    "artist": "Berthold Werner",
+                    "license": "CC BY-SA 3.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q668-c804854a-414e-e2f1-f53c-074b66e31e50",
+                "pid": "P140",
+                "item": "Q748",
+                "rank": "normal",
+                "provenance": "sourced",
+                "image": {
+                  "file": "Large Gautama Buddha statue in Buddha Park of Ravangla, Sikkim.jpg",
+                  "kind": "photo",
+                  "aspect": 0.6649,
+                  "megapixels": 21.65,
+                  "assessed": [
+                    "Featured pictures on Wikimedia Commons",
+                    "Quality images"
+                  ],
+                  "credit": {
+                    "artist": "Subhrajyoti07",
+                    "license": "CC BY-SA 4.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q668-f00b4628-4f8d-4494-fb2e-44b526553f5d",
+                "pid": "P140",
+                "item": "Q432",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P1107",
+                    "amount": 0.134
+                  }
+                ],
+                "image": {
+                  "file": "Mosque.jpg",
+                  "kind": "photo",
+                  "aspect": 1.3333,
+                  "megapixels": 0.31,
+                  "credit": {
+                    "artist": "Antonio Melina/Agência Brasil",
+                    "license": "CC BY 3.0 br"
+                  }
+                },
+                "shown": true
+              }
+            ],
+            "priority": 3.95,
+            "rule": "set"
           }
         ],
         "sheet": [
@@ -4371,6 +4558,135 @@ expression: composition
               "max": 100.0,
               "at": 0.364
             },
+            "rule": "row"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P3864",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q668-6b98f891-49b2-b855-ad91-3c0dfc74eb85",
+                "pid": "P3864",
+                "amount": 12.9,
+                "unit": null,
+                "rank": "normal",
+                "provenance": "imported",
+                "qualifiers": [
+                  {
+                    "pid": "P585",
+                    "year": 2019
+                  }
+                ],
+                "shown": true
+              }
+            ],
+            "priority": 0.0,
+            "measured": true,
+            "rule": "row"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P3000",
+            "form": "variants",
+            "statements": [
+              {
+                "statement": "Q668-013D7294-C814-471B-BF53-7BA64E0A236F",
+                "pid": "P3000",
+                "amount": 18.0,
+                "unit": "Q24564698",
+                "rank": "normal",
+                "provenance": "imported",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q6581072"
+                  }
+                ],
+                "shown": true
+              },
+              {
+                "statement": "Q668-1492BE9F-7879-4796-A13E-D9FEE9C5945E",
+                "pid": "P3000",
+                "amount": 21.0,
+                "unit": "Q24564698",
+                "rank": "normal",
+                "provenance": "imported",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q6581097"
+                  }
+                ],
+                "shown": true
+              }
+            ],
+            "priority": 0.0,
+            "rule": "row"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P3271",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q668-BF635D01-D5C3-4E69-8BEE-1B3AFD4E102E",
+                "pid": "P3271",
+                "amount": 14.0,
+                "unit": "Q24564698",
+                "rank": "normal",
+                "provenance": "imported",
+                "shown": true
+              }
+            ],
+            "priority": 0.0,
+            "rule": "row"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P2997",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q668-DE6CA9C9-6185-4302-82DC-2F14689FFEAF",
+                "pid": "P2997",
+                "amount": 18.0,
+                "unit": "Q24564698",
+                "rank": "normal",
+                "provenance": "imported",
+                "shown": true
+              }
+            ],
+            "priority": 0.0,
+            "rule": "row"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P2573",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q668-1ED21967-1F37-4213-A6D0-510538267218",
+                "pid": "P2573",
+                "amount": 60824152.0,
+                "unit": null,
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P459",
+                    "item": "Q47005776"
+                  },
+                  {
+                    "pid": "P585",
+                    "year": 2013
+                  }
+                ],
+                "shown": true
+              }
+            ],
+            "priority": 1.0,
+            "measured": true,
             "rule": "row"
           }
         ]
@@ -9342,80 +9658,6 @@ expression: composition
       "template": "collapsed",
       "slots": {
         "sheet": [
-          {
-            "primitive": "fact",
-            "pid": "P140",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-645283bc-454a-c1d3-763d-c6b0452bb2c9",
-                "pid": "P140",
-                "item": "Q9316",
-                "rank": "normal",
-                "provenance": "sourced",
-                "class": true,
-                "shown": true
-              },
-              {
-                "statement": "Q668-7a2f3e9a-4b68-2186-2ee9-11033ca3794d",
-                "pid": "P140",
-                "item": "Q9232",
-                "rank": "normal",
-                "provenance": "sourced",
-                "class": true,
-                "shown": true
-              },
-              {
-                "statement": "Q668-7FA8B8A0-0A1B-4835-973C-9386B61BD339",
-                "pid": "P140",
-                "item": "Q9089",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P1107",
-                    "amount": 0.805
-                  }
-                ],
-                "class": true,
-                "shown": true
-              },
-              {
-                "statement": "Q668-972155f8-44cf-c51e-ef8b-9f1361f8c626",
-                "pid": "P140",
-                "item": "Q5043",
-                "rank": "normal",
-                "provenance": "sourced",
-                "class": true,
-                "shown": true
-              },
-              {
-                "statement": "Q668-c804854a-414e-e2f1-f53c-074b66e31e50",
-                "pid": "P140",
-                "item": "Q748",
-                "rank": "normal",
-                "provenance": "sourced",
-                "class": true,
-                "shown": true
-              },
-              {
-                "statement": "Q668-f00b4628-4f8d-4494-fb2e-44b526553f5d",
-                "pid": "P140",
-                "item": "Q432",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P1107",
-                    "amount": 0.134
-                  }
-                ],
-                "class": true,
-                "shown": true
-              }
-            ],
-            "priority": 3.95
-          },
           {
             "primitive": "fact",
             "pid": "P37",
@@ -15922,64 +16164,6 @@ expression: composition
           },
           {
             "primitive": "fact",
-            "pid": "P2573",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-1ED21967-1F37-4213-A6D0-510538267218",
-                "pid": "P2573",
-                "amount": 60824152.0,
-                "unit": null,
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P459",
-                    "item": "Q47005776"
-                  },
-                  {
-                    "pid": "P585",
-                    "year": 2013
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 1.0,
-            "measured": true
-          },
-          {
-            "primitive": "fact",
-            "pid": "P1198",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-1BAB39E9-74CD-4A0E-A4BE-B0547DA13D64",
-                "pid": "P1198",
-                "amount": 4.0,
-                "unit": "Q11229",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2014
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 1.0,
-            "measured": true,
-            "gauge": {
-              "kind": "proportion",
-              "min": 0.0,
-              "max": 100.0,
-              "at": 0.04
-            }
-          },
-          {
-            "primitive": "fact",
             "pid": "P78",
             "form": "list",
             "statements": [
@@ -16190,44 +16374,6 @@ expression: composition
           },
           {
             "primitive": "fact",
-            "pid": "P3000",
-            "form": "variants",
-            "statements": [
-              {
-                "statement": "Q668-013D7294-C814-471B-BF53-7BA64E0A236F",
-                "pid": "P3000",
-                "amount": 18.0,
-                "unit": "Q24564698",
-                "rank": "normal",
-                "provenance": "imported",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q6581072"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q668-1492BE9F-7879-4796-A13E-D9FEE9C5945E",
-                "pid": "P3000",
-                "amount": 21.0,
-                "unit": "Q24564698",
-                "rank": "normal",
-                "provenance": "imported",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q6581097"
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
             "pid": "P2258",
             "form": "value",
             "statements": [
@@ -16413,23 +16559,6 @@ expression: composition
           },
           {
             "primitive": "fact",
-            "pid": "P2997",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-DE6CA9C9-6185-4302-82DC-2F14689FFEAF",
-                "pid": "P2997",
-                "amount": 18.0,
-                "unit": "Q24564698",
-                "rank": "normal",
-                "provenance": "imported",
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
             "pid": "P1335",
             "form": "value",
             "statements": [
@@ -16462,47 +16591,6 @@ expression: composition
               }
             ],
             "priority": 0.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P2855",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-70f86811-477c-5e36-6c3a-93d24c2542ed",
-                "pid": "P2855",
-                "amount": 5.5,
-                "unit": "Q11229",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P3864",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-6b98f891-49b2-b855-ad91-3c0dfc74eb85",
-                "pid": "P3864",
-                "amount": 12.9,
-                "unit": null,
-                "rank": "normal",
-                "provenance": "imported",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2019
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 0.0,
-            "measured": true
           },
           {
             "primitive": "fact",
@@ -16656,23 +16744,6 @@ expression: composition
                 "globe": "Q2",
                 "rank": "normal",
                 "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P3271",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-BF635D01-D5C3-4E69-8BEE-1B3AFD4E102E",
-                "pid": "P3271",
-                "amount": 14.0,
-                "unit": "Q24564698",
-                "rank": "normal",
-                "provenance": "imported",
                 "shown": true
               }
             ],
