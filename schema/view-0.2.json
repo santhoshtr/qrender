@@ -3191,6 +3191,28 @@
             "lexeme"
           ],
           "type": "object"
+        },
+        {
+          "description": "A coordinate (the place of a lowest point).",
+          "properties": {
+            "globe": {
+              "$ref": "#/$defs/Qid"
+            },
+            "lat": {
+              "format": "double",
+              "type": "number"
+            },
+            "lon": {
+              "format": "double",
+              "type": "number"
+            }
+          },
+          "required": [
+            "lat",
+            "lon",
+            "globe"
+          ],
+          "type": "object"
         }
       ],
       "description": "A qualifier as the composition shows it. \"Unknown value\" qualifiers are\nnot shown, so they have no form here.",

@@ -185,6 +185,7 @@ impl Markdown<'_> {
             Part::Qualified { pid, value } => {
                 format!("{}: {}", self.property(*pid), self.part(value))
             }
+            Part::Coordinate { text, .. } => text.clone(),
             Part::File { pid, file, .. } => {
                 format!("{}: <{}{file}>", self.property(*pid), super::ui::FILEPATH)
             }

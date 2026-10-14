@@ -15597,7 +15597,23 @@ India Map siteCensus - Population map. · CC BY-SA 3.0</span><a class="edit"
       lang="en">coordinates of geographic center</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/P5140"
            aria-label="Add a label in your language">+</a></span></dt>
-<dd>20.5937, 78.9629</dd>
+<dd><button class="pin-link"
+            type="button"
+            command="show-modal"
+            commandfor="d110"
+            aria-label="Show on a map">📍</button>20.5937, 78.9629<dialog id="d110" closedby="any">
+        <header>
+            <h2>20.5937, 78.9629</h2>
+            <button type="button"
+                    command="close"
+                    commandfor="d110"
+                    aria-label="Close">×</button>
+        </header>
+        <div class="dialog-body"><figure class="map point">
+        <img src="https://maps.wikimedia.org/img/osm-intl,9,20.5937,78.9629,800x500@2x.png" alt="" loading="lazy">
+        <span class="pin" style="left:50%; top:50%"></span>
+    </figure></div>
+    </dialog></dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
         <a class="edit"
@@ -15760,12 +15776,12 @@ India Map siteCensus - Population map. · CC BY-SA 3.0</span><a class="edit"
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P1343"
        aria-label="Edit">✎</a>
-    </span><button class="more" type="button" command="show-modal" commandfor="d110">+4</button><dialog id="d110" closedby="any">
+    </span><button class="more" type="button" command="show-modal" commandfor="d111">+4</button><dialog id="d111" closedby="any">
         <header>
             <h2>ഇതേപ്പറ്റി വിവരിച്ചിട്ടുള്ള ഇടങ്ങൾ</h2>
             <button type="button"
                     command="close"
-                    commandfor="d110"
+                    commandfor="d111"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -16133,12 +16149,12 @@ India Map siteCensus - Population map. · CC BY-SA 3.0</span><a class="edit"
     <div><span class="chip">wikipedia <b>313</b> ✓</span><span class="chip">wikiquote <b>32</b> ✓</span><span class="chip">wikinews <b>31</b></span><span class="chip">wikivoyage <b>26</b></span></div>
 </div>
     </div><div data-slot="identifiers">
-        <button class="more" type="button" command="show-modal" commandfor="d111"># 281</button><dialog id="d111" closedby="any">
+        <button class="more" type="button" command="show-modal" commandfor="d112"># 281</button><dialog id="d112" closedby="any">
         <header>
             <h2>281</h2>
             <button type="button"
                     command="close"
-                    commandfor="d111"
+                    commandfor="d112"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><div class="idlist"><div><span><span class="fb-group"><span class="fb"

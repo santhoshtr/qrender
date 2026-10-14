@@ -159,6 +159,12 @@ pub enum QualifierPart {
     Lexeme {
         lexeme: String,
     },
+    /// A coordinate (the place of a lowest point).
+    Coordinate {
+        lat: f64,
+        lon: f64,
+        globe: Qid,
+    },
 }
 
 /// The URL of a Commons file in a qualifier value.
@@ -183,6 +189,15 @@ impl QualifierShown {
             QualifierValue::String { string } if string.contains(COMMONS_FILE) => {
                 QualifierPart::File {
                     file: content::model::file_name(string),
+                }
+            }
+            // A coordinate comes as "Point(lon lat)".
+            QualifierValue::String { string } if string.contains("Point(") => {
+                match content::model::coordinate(string) {
+                    Some((lat, lon, globe)) => QualifierPart::Coordinate { lat, lon, globe },
+                    None => QualifierPart::String {
+                        string: string.clone(),
+                    },
                 }
             }
             // A lexeme sense (P7018) comes as its URL.
@@ -336,6 +351,21 @@ mod tests {
             sense.map(|q| q.value),
             Some(QualifierPart::Lexeme {
                 lexeme: "L32470-S1".into()
+            })
+        );
+        // A coordinate comes as "Point(lon lat)": latitude first.
+        let place = QualifierShown::new(
+            "P625".parse().unwrap(),
+            &QualifierValue::String {
+                string: "Point(-116.834722 36.239722)".into(),
+            },
+        );
+        assert_eq!(
+            place.map(|q| q.value),
+            Some(QualifierPart::Coordinate {
+                lat: 36.239722,
+                lon: -116.834722,
+                globe: "Q2".parse().unwrap()
             })
         );
     }

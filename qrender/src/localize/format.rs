@@ -49,6 +49,13 @@ pub enum Part {
         pid: Pid,
         value: Box<Part>,
     },
+    /// A coordinate. On the Earth, a pin opens a map of it.
+    Coordinate {
+        lat: f64,
+        lon: f64,
+        earth: bool,
+        text: String,
+    },
     /// A Commons file of a qualifier: an audio file plays, another file
     /// links to its page.
     File {
@@ -94,7 +101,7 @@ impl View {
                 text: text.clone(),
                 lang: Some(lang.clone()),
             },
-            ValueShown::Coordinate { lat, lon, .. } => self.text(&coordinate(*lat, *lon)),
+            ValueShown::Coordinate { lat, lon, globe } => coordinate_part(*lat, *lon, *globe),
             ValueShown::Url { url } => Part::Link {
                 text: url.clone(),
                 href: url.clone(),
@@ -155,6 +162,7 @@ impl View {
                     ),
                 }),
             },
+            QualifierPart::Coordinate { lat, lon, globe } => coordinate_part(*lat, *lon, *globe),
             QualifierPart::File { file } => Part::File {
                 pid: q.pid,
                 file: file.clone(),
@@ -273,6 +281,16 @@ pub fn percent(ratio: f64) -> Part {
 /// "lat, lon" with six significant digits each.
 pub fn coordinate(lat: f64, lon: f64) -> String {
     format!("{}, {}", significant(lat, 6), significant(lon, 6))
+}
+
+/// A coordinate as a part; on the Earth (Q2) it has a map.
+fn coordinate_part(lat: f64, lon: f64, globe: Qid) -> Part {
+    Part::Coordinate {
+        lat,
+        lon,
+        earth: globe.number() == 2,
+        text: coordinate(lat, lon),
+    }
 }
 
 /// Where a statement is edited on Wikidata: the item page, at the property.

@@ -462,8 +462,8 @@ pub fn file_name(url: &str) -> String {
 }
 
 /// "Point(lon lat)", with "<http://www.wikidata.org/entity/Q405> " before it
-/// when the globe is not the Earth.
-fn coordinate(raw: &str) -> Option<(f64, f64, Qid)> {
+/// when the globe is not the Earth: latitude, longitude, globe.
+pub fn coordinate(raw: &str) -> Option<(f64, f64, Qid)> {
     let globe = match raw.find(ENTITY) {
         Some(start) => {
             let id = &raw[start + ENTITY.len()..];

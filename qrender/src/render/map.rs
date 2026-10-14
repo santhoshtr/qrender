@@ -121,6 +121,17 @@ pub fn frame(map: &Map) -> Option<Frame<'_>> {
     })
 }
 
+/// The zoom of the map of a coordinate pin: the point with its region (the
+/// roads and the places around it), to say where it is.
+const POINT_ZOOM: i32 = 9;
+
+/// The map of one point, centred on it: the map of a coordinate pin.
+pub fn point_tile(lat: f64, lon: f64) -> String {
+    format!(
+        "https://maps.wikimedia.org/img/osm-intl,{POINT_ZOOM},{lat},{lon},{WIDTH}x{HEIGHT}@2x.png"
+    )
+}
+
 /// The latitude and the longitude (from -180 to 180) of Web Mercator pixel
 /// coordinates at a zoom.
 fn unmercator(x: f64, y: f64, zoom: i32) -> (f64, f64) {

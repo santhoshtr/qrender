@@ -237,6 +237,11 @@ impl<'v> Ui<'v> {
         }
     }
 
+    /// A map of a point: the tile, centred on it (render/map.rs).
+    pub fn point_tile(&self, lat: impl Arg<f64>, lon: impl Arg<f64>) -> String {
+        super::map::point_tile(lat.get(), lon.get())
+    }
+
     /// The date of an event: a year, or a span ("1947 – 1975").
     pub fn when(&self, w: impl Arg<When>) -> String {
         let w = w.get();
@@ -633,6 +638,7 @@ impl<'v> Ui<'v> {
                 format!("{}: {}", self.property(*pid).text, self.part_text(value))
             }
             Part::File { pid, file, .. } => format!("{}: {file}", self.property(*pid).text),
+            Part::Coordinate { text, .. } => text.clone(),
         }
     }
 
