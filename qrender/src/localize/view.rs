@@ -8,7 +8,7 @@ use schemars::JsonSchema;
 use serde::Serialize;
 
 use super::locale::Dir;
-use crate::schema::{Picture, Spread};
+use crate::schema::{Picture, Spread, StatementRef};
 
 pub const VIEW_SCHEMA: &str = "view/0.2";
 
@@ -40,6 +40,9 @@ pub struct View {
     pub spreads: Vec<SpreadView>,
     /// The article sections that no spread matched.
     pub unmatched_sections: Vec<Link>,
+    /// The values that the page does not show: not of the best rank.
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub set_aside: Vec<StatementRef>,
 }
 
 #[derive(Debug, Clone, Serialize, JsonSchema)]

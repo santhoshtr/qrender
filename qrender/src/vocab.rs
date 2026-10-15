@@ -89,6 +89,9 @@ pub enum Role {
     /// The name of the item's gallery on Commons: a link to it, in the
     /// media spread.
     CommonsGallery,
+    /// Values that are often near duplicates: the page shows the values
+    /// of the best rank, the others are set aside.
+    BestRank,
 }
 
 /// The roles of one property.

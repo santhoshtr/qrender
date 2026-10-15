@@ -145,6 +145,7 @@ impl<'a> Localizer<'a> {
                 })
                 .collect(),
             unmatched_sections: self.unmatched_sections(),
+            set_aside: self.composition.set_aside.clone(),
             labels,
         }
     }

@@ -4761,6 +4761,13 @@
     "schema": {
       "type": "string"
     },
+    "set_aside": {
+      "description": "The values that the page does not show: not of the best rank.",
+      "items": {
+        "$ref": "#/$defs/StatementRef"
+      },
+      "type": "array"
+    },
     "spreads": {
       "description": "The spreads that have something to show.",
       "items": {

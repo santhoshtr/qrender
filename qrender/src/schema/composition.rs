@@ -27,6 +27,11 @@ pub struct Composition {
     /// The spreads of the class layout that have nothing to show, and why.
     #[serde(skip_serializing_if = "Vec::is_empty")]
     pub dropped: Vec<Dropped>,
+    /// The values of best-rank properties that are not of the best rank
+    /// (a locator map that has a preferred one): in the data, not on the
+    /// page.
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub set_aside: Vec<StatementRef>,
     /// Statements that no spread shows. Always empty: a test checks it.
     pub unshown: Vec<StatementId>,
 }

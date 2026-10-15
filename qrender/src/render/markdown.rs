@@ -26,6 +26,20 @@ pub fn page(view: &View) -> String {
     for spread in &view.spreads {
         md.spread(spread);
     }
+    if !view.set_aside.is_empty() {
+        md.heading(2, "Set aside (not of the best rank)");
+        let mut pids: Vec<_> = view.set_aside.iter().map(|s| s.pid).collect();
+        pids.dedup();
+        for pid in pids {
+            let values: Vec<String> = view
+                .set_aside
+                .iter()
+                .filter(|s| s.pid == pid)
+                .map(|s| md.value(s))
+                .collect();
+            md.items(&md.property(pid), &values);
+        }
+    }
     if !view.unmatched_sections.is_empty() {
         let links: Vec<_> = view
             .unmatched_sections

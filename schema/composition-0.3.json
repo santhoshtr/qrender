@@ -4422,6 +4422,13 @@
     "schema": {
       "type": "string"
     },
+    "set_aside": {
+      "description": "The values of best-rank properties that are not of the best rank\n(a locator map that has a preferred one): in the data, not on the\npage.",
+      "items": {
+        "$ref": "#/$defs/StatementRef"
+      },
+      "type": "array"
+    },
     "spreads": {
       "items": {
         "$ref": "#/$defs/Spread"

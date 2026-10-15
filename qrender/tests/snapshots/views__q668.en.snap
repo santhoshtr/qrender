@@ -5,8 +5,8 @@ expression: json
 {
   "composition": "composition/0.3",
   "coverage": {
-    "have": 1291,
-    "total": 1291
+    "have": 1287,
+    "total": 1287
   },
   "design": "design/0.2",
   "dir": "ltr",
@@ -10950,6 +10950,77 @@ expression: json
   ],
   "qid": "Q668",
   "schema": "view/0.2",
+  "set_aside": [
+    {
+      "file": "India montage (2025).jpg",
+      "pid": "P2716",
+      "provenance": "none",
+      "rank": "normal",
+      "statement": "Q668-7aef660e-4cb6-f885-ec14-a4a652773a2a"
+    },
+    {
+      "file": "India on the globe (India centered).svg",
+      "pid": "P242",
+      "provenance": "none",
+      "rank": "normal",
+      "statement": "Q668-a04fae91-4541-c5f8-2832-e479ec6f052c"
+    },
+    {
+      "file": "India in the world (de-facto) (W3).svg",
+      "pid": "P242",
+      "provenance": "none",
+      "rank": "normal",
+      "statement": "Q668-ac773baa-4fb1-53ff-8bd3-def4ba1370d7"
+    },
+    {
+      "file": "LocationIndia.svg",
+      "pid": "P242",
+      "provenance": "none",
+      "qualifiers": [
+        {
+          "item": "Q40426579",
+          "pid": "P195"
+        },
+        {
+          "item": "Q4218095",
+          "pid": "P2061"
+        }
+      ],
+      "rank": "normal",
+      "statement": "Q668-ac8517a1-4723-eaba-1e49-3b6c45b56a6c"
+    },
+    {
+      "file": "Physical Map of India.jpg",
+      "pid": "P1944",
+      "provenance": "none",
+      "rank": "normal",
+      "statement": "Q668-4c9a1f93-4e21-15c2-2263-a6eb274123b5"
+    },
+    {
+      "file": "India Geographic Map.jpg",
+      "pid": "P1944",
+      "provenance": "none",
+      "rank": "normal",
+      "statement": "Q668-5f104342-4d78-1578-4a9d-086146bb6314"
+    },
+    {
+      "image": {
+        "aspect": 0.857,
+        "credit": {
+          "artist": "Nichalp at English Wikipedia",
+          "license": "CC BY 2.5"
+        },
+        "file": "IST-Mirzapur.svg",
+        "kind": "drawing",
+        "megapixels": 2.58
+      },
+      "item": "Q604055",
+      "pid": "P421",
+      "provenance": "none",
+      "rank": "normal",
+      "statement": "Q668-cc2c994e-40ee-7ba2-e57d-ffb469eaa6b2"
+    }
+  ],
   "spreads": [
     {
       "id": "identity",

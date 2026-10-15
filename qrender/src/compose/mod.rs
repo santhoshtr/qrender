@@ -123,6 +123,7 @@ impl<'a> Composer<'a> {
     /// what the other spreads left.
     pub fn compose(mut self) -> Composition {
         let layout = self.layout;
+        let set_aside = self.set_aside();
         let mut order: Vec<&SpreadSpec> = layout.spreads.iter().collect();
         order.sort_by_key(|s| match s.kind {
             SpreadKind::Evidence => 1,
@@ -175,8 +176,29 @@ impl<'a> Composer<'a> {
                     })
                 })
                 .collect(),
+            set_aside,
             unshown: self.unclaimed().iter().map(|s| s.id.clone()).collect(),
         }
+    }
+
+    /// Claims the values of the best-rank properties that are not of the
+    /// best rank: the normal values of a property that has a preferred one.
+    fn set_aside(&mut self) -> Vec<StatementRef> {
+        let mut out = Vec::new();
+        for pid in self.config.layouts.roles.list(Role::BestRank) {
+            let statements = self.statements_of(*pid);
+            if statements.iter().any(|s| s.rank == Rank::Preferred) {
+                let normal: Vec<_> = statements
+                    .iter()
+                    .copied()
+                    .filter(|s| s.rank != Rank::Preferred)
+                    .collect();
+                for s in self.take(normal) {
+                    out.push(self.statement(s));
+                }
+            }
+        }
+        out
     }
 
     /// A spread with its slots. The "... of topic" statements of this

@@ -6931,38 +6931,6 @@ expression: composition
                   }
                 },
                 "priority": 0.0
-              },
-              {
-                "statement": "Q668-cc2c994e-40ee-7ba2-e57d-ffb469eaa6b2",
-                "pid": "P421",
-                "item": "Q604055",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "IST-Mirzapur.svg",
-                  "kind": "drawing",
-                  "aspect": 0.857,
-                  "megapixels": 2.58,
-                  "credit": {
-                    "artist": "Nichalp at English Wikipedia",
-                    "license": "CC BY 2.5"
-                  }
-                },
-                "priority": 0.0
-              },
-              {
-                "statement": "Q668-433f712a-4661-adb7-1070-3aa2e392fb9a",
-                "pid": "P421",
-                "item": "Q4806291",
-                "rank": "preferred",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P7452",
-                    "item": "Q71536040"
-                  }
-                ],
-                "priority": 0.0
               }
             ],
             "priority": 3.0,
@@ -7027,6 +6995,29 @@ expression: composition
               }
             ],
             "priority": 1.0,
+            "rule": "few-pictures"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P421",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q668-433f712a-4661-adb7-1070-3aa2e392fb9a",
+                "pid": "P421",
+                "item": "Q4806291",
+                "rank": "preferred",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P7452",
+                    "item": "Q71536040"
+                  }
+                ],
+                "shown": true
+              }
+            ],
+            "priority": 0.0,
             "rule": "few-pictures"
           },
           {
@@ -18973,40 +18964,6 @@ expression: composition
           {
             "primitive": "media",
             "role": "stack",
-            "statement": "Q668-4c9a1f93-4e21-15c2-2263-a6eb274123b5",
-            "pid": "P1944",
-            "file": "Physical Map of India.jpg",
-            "rank": "normal",
-            "provenance": "none",
-            "kind": "photo",
-            "aspect": 0.9524,
-            "megapixels": 23.43,
-            "credit": {
-              "artist": "Vigneshdm1990",
-              "license": "CC BY-SA 4.0"
-            },
-            "rule": "media"
-          },
-          {
-            "primitive": "media",
-            "role": "stack",
-            "statement": "Q668-5f104342-4d78-1578-4a9d-086146bb6314",
-            "pid": "P1944",
-            "file": "India Geographic Map.jpg",
-            "rank": "normal",
-            "provenance": "none",
-            "kind": "photo",
-            "aspect": 1.0375,
-            "megapixels": 2.0,
-            "credit": {
-              "artist": "mukesh Suthar palari",
-              "license": "CC BY-SA 3.0"
-            },
-            "rule": "media"
-          },
-          {
-            "primitive": "media",
-            "role": "stack",
             "statement": "Q668-365aa476-4857-e04e-b7a1-0db87c88c9c7",
             "pid": "P1943",
             "file": "India-states-numbered.svg",
@@ -19040,67 +18997,6 @@ expression: composition
             "megapixels": 0.29,
             "credit": {
               "artist": "Ssolbergj (talk)",
-              "license": "CC BY-SA 3.0"
-            },
-            "rule": "media"
-          },
-          {
-            "primitive": "media",
-            "role": "stack",
-            "statement": "Q668-a04fae91-4541-c5f8-2832-e479ec6f052c",
-            "pid": "P242",
-            "file": "India on the globe (India centered).svg",
-            "rank": "normal",
-            "provenance": "none",
-            "kind": "drawing",
-            "aspect": 1.0,
-            "megapixels": 0.63,
-            "credit": {
-              "artist": "Addicted04",
-              "license": "CC BY-SA 3.0"
-            },
-            "rule": "media"
-          },
-          {
-            "primitive": "media",
-            "role": "stack",
-            "statement": "Q668-ac773baa-4fb1-53ff-8bd3-def4ba1370d7",
-            "pid": "P242",
-            "file": "India in the world (de-facto) (W3).svg",
-            "rank": "normal",
-            "provenance": "none",
-            "kind": "drawing",
-            "aspect": 1.6366,
-            "megapixels": 6.21,
-            "credit": {
-              "artist": "TUBS",
-              "license": "CC BY-SA 3.0"
-            },
-            "rule": "media"
-          },
-          {
-            "primitive": "media",
-            "role": "stack",
-            "statement": "Q668-ac8517a1-4723-eaba-1e49-3b6c45b56a6c",
-            "pid": "P242",
-            "file": "LocationIndia.svg",
-            "rank": "normal",
-            "provenance": "none",
-            "qualifiers": [
-              {
-                "pid": "P195",
-                "item": "Q40426579"
-              },
-              {
-                "pid": "P2061",
-                "item": "Q4218095"
-              }
-            ],
-            "kind": "drawing",
-            "aspect": 2.0,
-            "megapixels": 0.5,
-            "credit": {
-              "artist": "B1mbo",
               "license": "CC BY-SA 3.0"
             },
             "rule": "media"
@@ -19185,22 +19081,6 @@ expression: composition
             "megapixels": 2.46,
             "credit": {
               "artist": "This photograph is created by Sbb1413. All photographs created by him are released under the {{CC-BY 4.0}} license unless otherwise noted. Derived works are released under the same license as original.",
-              "license": "CC BY-SA 4.0"
-            }
-          },
-          {
-            "primitive": "media",
-            "role": "run",
-            "statement": "Q668-7aef660e-4cb6-f885-ec14-a4a652773a2a",
-            "pid": "P2716",
-            "file": "India montage (2025).jpg",
-            "rank": "normal",
-            "provenance": "none",
-            "kind": "photo",
-            "aspect": 0.6316,
-            "megapixels": 0.57,
-            "credit": {
-              "artist": "Gpkp",
               "license": "CC BY-SA 4.0"
             }
           }
@@ -24339,6 +24219,77 @@ expression: composition
             ]
           }
         ]
+      }
+    }
+  ],
+  "set_aside": [
+    {
+      "statement": "Q668-7aef660e-4cb6-f885-ec14-a4a652773a2a",
+      "pid": "P2716",
+      "file": "India montage (2025).jpg",
+      "rank": "normal",
+      "provenance": "none"
+    },
+    {
+      "statement": "Q668-a04fae91-4541-c5f8-2832-e479ec6f052c",
+      "pid": "P242",
+      "file": "India on the globe (India centered).svg",
+      "rank": "normal",
+      "provenance": "none"
+    },
+    {
+      "statement": "Q668-ac773baa-4fb1-53ff-8bd3-def4ba1370d7",
+      "pid": "P242",
+      "file": "India in the world (de-facto) (W3).svg",
+      "rank": "normal",
+      "provenance": "none"
+    },
+    {
+      "statement": "Q668-ac8517a1-4723-eaba-1e49-3b6c45b56a6c",
+      "pid": "P242",
+      "file": "LocationIndia.svg",
+      "rank": "normal",
+      "provenance": "none",
+      "qualifiers": [
+        {
+          "pid": "P195",
+          "item": "Q40426579"
+        },
+        {
+          "pid": "P2061",
+          "item": "Q4218095"
+        }
+      ]
+    },
+    {
+      "statement": "Q668-4c9a1f93-4e21-15c2-2263-a6eb274123b5",
+      "pid": "P1944",
+      "file": "Physical Map of India.jpg",
+      "rank": "normal",
+      "provenance": "none"
+    },
+    {
+      "statement": "Q668-5f104342-4d78-1578-4a9d-086146bb6314",
+      "pid": "P1944",
+      "file": "India Geographic Map.jpg",
+      "rank": "normal",
+      "provenance": "none"
+    },
+    {
+      "statement": "Q668-cc2c994e-40ee-7ba2-e57d-ffb469eaa6b2",
+      "pid": "P421",
+      "item": "Q604055",
+      "rank": "normal",
+      "provenance": "none",
+      "image": {
+        "file": "IST-Mirzapur.svg",
+        "kind": "drawing",
+        "aspect": 0.857,
+        "megapixels": 2.58,
+        "credit": {
+          "artist": "Nichalp at English Wikipedia",
+          "license": "CC BY 2.5"
+        }
       }
     }
   ],

@@ -927,6 +927,18 @@ commons_category = [
 commons_gallery = [
   "P935",   # Commons gallery
 ]
+# Properties whose values are often near duplicates (another drawing of
+# the same map). The page shows the values of the best rank: the preferred
+# values, if there are any; else all. The other values are set aside: in
+# the data, not on the page.
+best_rank = [
+  "P2716",  # collage image
+  "P242",   # locator map image
+  "P1944",  # relief location map
+  "P1621",  # detail map
+  "P1766",  # place name sign
+  "P421",   # located in time zone
+]
 
 # A Commons data file that holds a series, and the property of the dated
 # statements that the file replaces. The current value of that property
