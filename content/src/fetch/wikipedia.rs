@@ -10,7 +10,7 @@ use serde_json::Value as Json;
 
 use super::FetchError;
 use super::http::{Http, Service};
-use crate::html::strip_tags;
+use crate::html::{strip_tags, wiki_target};
 use crate::id::{Lang, Qid};
 use crate::text::{Article, Concept, PageImage, Section};
 
@@ -21,8 +21,10 @@ static TABLE: LazyLock<Regex> = LazyLock::new(|| Regex::new(r"(?s)<table.*?</tab
 static REFERENCE: LazyLock<Regex> =
     LazyLock::new(|| Regex::new(r#"(?s)<sup[^>]*class="[^"]*reference[^"]*".*?</sup>"#).unwrap());
 static STYLE: LazyLock<Regex> = LazyLock::new(|| Regex::new(r"(?s)<style.*?</style>").unwrap());
-static PARAGRAPH: LazyLock<Regex> = LazyLock::new(|| Regex::new(r"(?s)<p>(.*?)</p>").unwrap());
-static LINK: LazyLock<Regex> = LazyLock::new(|| Regex::new(r##"href="/wiki/([^"#?]+)"##).unwrap());
+/// A paragraph: `<p>` (legacy parser) or `<p id="…">` (Parsoid).
+static PARAGRAPH: LazyLock<Regex> =
+    LazyLock::new(|| Regex::new(r"(?s)<p(\s[^>]*)?>(.*?)</p>").unwrap());
+static HREF: LazyLock<Regex> = LazyLock::new(|| Regex::new(r#"href="([^"]*)""#).unwrap());
 
 fn api(host: &str) -> String {
     format!("https://{host}/w/api.php")
@@ -41,14 +43,19 @@ async fn parse(http: &Http, host: &str, params: &[(&str, &str)]) -> Result<Json,
 }
 
 /// The paragraphs of rendered HTML: tables, styles and reference marks
-/// removed; empty paragraphs and parser error messages left out.
+/// removed; empty paragraphs and parser error messages left out. Parsoid
+/// marks a paragraph of templates only as empty (`mw-empty-elt`).
 fn paragraphs(html: &str) -> Vec<String> {
     let html = TABLE.replace_all(html, "");
     let html = REFERENCE.replace_all(&html, "");
     let html = STYLE.replace_all(&html, "");
     PARAGRAPH
         .captures_iter(&html)
-        .map(|c| c[1].to_string())
+        .filter(|c| {
+            !c.get(1)
+                .is_some_and(|a| a.as_str().contains("mw-empty-elt"))
+        })
+        .map(|c| c[2].to_string())
         .filter(|p| !strip_tags(p).trim().is_empty())
         // "Cite error: ..." and other messages of the wiki parser.
         .filter(|p| !p.contains("class=\"error") && !p.contains("mw-ext-cite-error"))
@@ -178,7 +185,10 @@ async fn links(
 ) -> Result<IndexMap<String, Qid>, FetchError> {
     let mut titles: Vec<String> = paragraphs
         .iter()
-        .flat_map(|p| LINK.captures_iter(p).map(|c| c[1].to_string()))
+        .flat_map(|p| {
+            HREF.captures_iter(p)
+                .filter_map(|c| Some(wiki_target(c.get(1)?.as_str(), host)?.to_string()))
+        })
         .map(|t| {
             percent_encoding::percent_decode_str(&t)
                 .decode_utf8_lossy()
@@ -296,5 +306,25 @@ mod tests {
             "<style>.x{}</style><p>Second.</p>"
         );
         assert_eq!(paragraphs(html), ["Nairobi is a city.", "Second."]);
+    }
+
+    #[test]
+    fn parsoid_paragraphs() {
+        let html = concat!(
+            "<p class=\"mw-empty-elt\" id=\"mwCA\"><span typeof=\"mw:Transclusion\"></span>",
+            "<link rel=\"mw:PageProp/Category\" href=\"./Category:X\"/></p>\n",
+            "<p id=\"mwTQ\"><b id=\"mwTg\">Kenya</b>,<sup about=\"#mwt91\" ",
+            "class=\"mw-ref reference\" id=\"cite_ref-12\"><a href=\"#cite_note-12\">",
+            "<span class=\"mw-reflink-text\">[a]</span></a></sup> is a ",
+            "<a rel=\"mw:WikiLink\" href=\"https://en.wikipedia.org/wiki/Country\">country</a>.</p>",
+            "<pre>not a paragraph</pre>"
+        );
+        assert_eq!(
+            paragraphs(html),
+            [concat!(
+                "<b id=\"mwTg\">Kenya</b>, is a <a rel=\"mw:WikiLink\" ",
+                "href=\"https://en.wikipedia.org/wiki/Country\">country</a>."
+            )]
+        );
     }
 }

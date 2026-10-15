@@ -88,10 +88,10 @@ fn clean(el: &mut Element, links: &Links) {
 }
 
 fn link(el: &mut Element, links: &Links) {
+    let host = format!("{}.wikipedia.org", links.source);
     let target = el
         .get_attribute("href")
-        .and_then(|h| Some(h.strip_prefix("/wiki/")?.split('#').next()?.to_string()))
-        .filter(|t| !t.is_empty());
+        .and_then(|h| Some(content::html::wiki_target(&h, &host)?.to_string()));
     let Some(target) = target else {
         // Not a link to an article: the text stays, the link goes.
         el.remove_and_keep_content();
@@ -165,6 +165,21 @@ mod tests {
         assert_eq!(
             rewrite(html, &l),
             r#"<a href="https://en.wikipedia.org/wiki/Nairobi_River">river</a> and <b>bold</b>"#
+        );
+    }
+
+    #[test]
+    fn parsoid_links() {
+        let (items, labels) = (IndexMap::new(), IndexMap::new());
+        let l = links(&items, &labels, "en", "en");
+        let html = concat!(
+            r#"<a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/East_Africa" id="mwX">East Africa</a>, "#,
+            r#"<a rel="mw:WikiLink/Interwiki" href="https://fr.wikipedia.org/wiki/Kenya">fr</a>, "#,
+            r#"<a rel="mw:WikiLink" href="./Nyeri_County?action=edit&amp;redlink=1" class="new">Nyeri</a>"#
+        );
+        assert_eq!(
+            rewrite(html, &l),
+            r#"<a href="https://en.wikipedia.org/wiki/East_Africa">East Africa</a>, fr, Nyeri"#
         );
     }
 

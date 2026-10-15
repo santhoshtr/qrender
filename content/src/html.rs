@@ -58,6 +58,30 @@ pub fn strip_tags(html: &str) -> String {
     out
 }
 
+/// The article that a link in the article HTML of `host` points to: its
+/// title as the address has it (percent-encoded, with underscores). The
+/// legacy parser writes "/wiki/Title"; Parsoid writes
+/// "https://{host}/wiki/Title", and "./Title" for some links. None for a
+/// link to another host, a red link (it has a query) and a link in the
+/// page.
+pub fn wiki_target<'a>(href: &'a str, host: &str) -> Option<&'a str> {
+    let path = match href
+        .strip_prefix("https:")
+        .unwrap_or(href)
+        .strip_prefix("//")
+    {
+        Some(rest) => rest.strip_prefix(host)?.strip_prefix("/wiki/")?,
+        None => href
+            .strip_prefix("/wiki/")
+            .or_else(|| href.strip_prefix("./"))?,
+    };
+    if path.contains('?') {
+        return None;
+    }
+    let title = path.split('#').next()?;
+    (!title.is_empty()).then_some(title)
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -68,5 +92,27 @@ mod tests {
             decode_entities(&strip_tags("<b>R&amp;D</b> &lt;x&gt;")),
             "R&D <x>"
         );
+    }
+
+    #[test]
+    fn links_to_articles_of_one_wiki() {
+        let host = "en.wikipedia.org";
+        for href in [
+            "/wiki/Nairobi",
+            "./Nairobi",
+            "https://en.wikipedia.org/wiki/Nairobi#History",
+            "//en.wikipedia.org/wiki/Nairobi",
+        ] {
+            assert_eq!(wiki_target(href, host), Some("Nairobi"), "{href}");
+        }
+        for href in [
+            "https://fr.wikipedia.org/wiki/Nairobi",
+            "./Nairobi_County?action=edit&redlink=1",
+            "#cite_note-1",
+            "https://www.knbs.or.ke/",
+            "/w/index.php?title=X",
+        ] {
+            assert_eq!(wiki_target(href, host), None, "{href}");
+        }
     }
 }
