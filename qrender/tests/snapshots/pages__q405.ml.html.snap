@@ -804,34 +804,26 @@ expression: html
             <section class="spread t-columns"
              data-spread="web"
              data-dimension="neutral"><h2><span class="title"><span class="fb" lang="en">web presence</span></span></h2><div data-slot="stack">
-        <div class="block links"><div class="card">
-            <span class="mark" aria-hidden="true"><span class="hash">#</span></span>
-            <span class="property">subreddit</span><span class="address">moon</span><span class="note">2008 – · <a href="https://www.wikidata.org/wiki/Q1860">ഇംഗ്ലീഷ്</a> · The Moon Subreddit</span>
+        <dl class="sheet links"><div class="row">
+            <dt>subreddit</dt>
+            <dd><span class="link">moon <span class="note">2008 – · <a href="https://www.wikidata.org/wiki/Q1860">ഇംഗ്ലീഷ്</a></span><span class="prov-none" title="—"></span>
+                    </span></dd>
             <span class="tools">
-                <span class="prov-none" title="—"></span>
                 <a class="edit"
        href="https://www.wikidata.org/wiki/Q405#P3984"
        aria-label="Edit">✎</a>
             </span>
-        </div><div class="card">
-            <span class="mark" aria-hidden="true"><span class="hash">#</span></span>
-            <span class="property">ക്വാറ ടോപിക് ഐ.ഡി.</span><span class="address">The-Moon-12</span>
+        </div><div class="row">
+            <dt>ക്വാറ ടോപിക് ഐ.ഡി.</dt>
+            <dd><span class="link">The-Moon-12<span class="prov-none" title="—"></span>
+                    </span><span class="link">The-Moon-astronomy<span class="prov-none" title="—"></span>
+                    </span></dd>
             <span class="tools">
-                <span class="prov-none" title="—"></span>
                 <a class="edit"
        href="https://www.wikidata.org/wiki/Q405#P3417"
        aria-label="Edit">✎</a>
             </span>
-        </div><div class="card">
-            <span class="mark" aria-hidden="true"><span class="hash">#</span></span>
-            <span class="property">ക്വാറ ടോപിക് ഐ.ഡി.</span><span class="address">The-Moon-astronomy</span>
-            <span class="tools">
-                <span class="prov-none" title="—"></span>
-                <a class="edit"
-       href="https://www.wikidata.org/wiki/Q405#P3417"
-       aria-label="Edit">✎</a>
-            </span>
-        </div></div>
+        </div></dl>
     </div></section>
             <section class="spread t-collapsed"
              data-spread="more"

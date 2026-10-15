@@ -1,42 +1,48 @@
 {%- import "macros.html" as m -%}
-{#- The item's sites and accounts, a card each. The logo of the platform
-    names it at a glance in every language; without one, an item value
-    has its own picture, a site a globe, any other value (a hashtag) a
-    "#". -#}
-<div class="block links">
-    {%- for card in b.cards -%}
-        <div class="card">
-            <span class="mark" aria-hidden="true">
-                {%- if let Some(logo) = card.logo -%}
-                    <img src="{{ ui.src(&logo.file, 120) }}" alt="" loading="lazy">
-                {%- else if let Some(image) = card.statement.image -%}
-                    <img src="{{ ui.src(&image.file, 120) }}" alt="" loading="lazy">
-                {%- else if ui.is_site(card) -%}
-                    <svg viewBox="0 0 20 20" width="20" height="20"><circle cx="10" cy="10" r="8.5" fill="none" stroke="currentColor" stroke-width="1.5"/><ellipse cx="10" cy="10" rx="3.5" ry="8.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M1.5 10h17" stroke="currentColor" stroke-width="1.5"/></svg>
-                {%- else -%}
-                    <span class="hash">#</span>
+{#- The item's sites and accounts: a row for each property, as in the fact
+    sheet, its addresses side by side. The icon of the site names it at a
+    glance in every language: once for the row when all its addresses are
+    on one site, else for each address. An item value (an open data
+    portal) has its own picture. -#}
+<dl class="sheet links">
+    {%- for row in ui.link_rows(b) -%}
+        <div class="row">
+            <dt>{{ ui.text(ui.property(row.pid), false)|safe }}</dt>
+            <dd>
+                {%- if let Some(icon) = row.icon -%}
+                    <img class="favicon" src="{{ icon }}" alt="" width="16" height="16" loading="lazy">
                 {%- endif -%}
-            </span>
-            <span class="property">{{ ui.text(ui.property(card.statement.pid), false)|safe }}</span>
-            {%- match card.href -%}
-            {%- when Some with (href) -%}
-                <a class="address" href="{{ href }}">{{ card.text() }}</a>
-            {%- when None -%}
-                <span class="address">{{ ui.part(ui.value_part(&card.statement.value))|safe }}</span>
-            {%- endmatch -%}
-            {%- let note = ui.qualifiers(card.statement.qualifiers.as_slice()) -%}
-            {%- if !note.is_empty() %}<span class="note">{{ ui.note(note.as_slice())|safe }}</span>{% endif -%}
-            {%- if let Some(f) = card.followers %}
-                <span class="followers" title="{{ ui.property(f.pid).text }}">{{ ui.part(ui.number(f.amount))|safe }}
-                    {%- if let Some(year) = f.year %} <span class="note">{{ ui.year(year) }}</span>{% endif -%}
-                </span>
-            {%- endif %}
+                {%- for (card, icon) in row.cards -%}
+                    <span class="link">
+                        {%- if let Some(icon) = icon -%}
+                            <img class="favicon" src="{{ icon }}" alt="" width="16" height="16" loading="lazy">
+                        {%- else if row.icon.is_none() -%}
+                            {%- if let Some(image) = card.statement.image -%}
+                                <img class="favicon" src="{{ ui.src(&image.file, 60) }}" alt="" width="16" height="16" loading="lazy">
+                            {%- endif -%}
+                        {%- endif -%}
+                        {%- match card.href -%}
+                        {%- when Some with (href) -%}
+                            <a href="{{ href }}">{{ card.text() }}</a>
+                        {%- when None -%}
+                            {{ ui.part(ui.value_part(&card.statement.value))|safe }}
+                        {%- endmatch -%}
+                        {%- if let Some(f) = card.followers %}
+                            <span class="followers" title="{{ ui.property(f.pid).text }}">{{ ui.part(ui.number(f.amount))|safe }}
+                                {%- if let Some(year) = f.year %} {{ ui.year(year) }}{% endif -%}
+                            </span>
+                        {%- endif -%}
+                        {%- let note = ui.link_note(card) -%}
+                        {%- if !note.is_empty() %} <span class="note">{{ ui.note(note.as_slice())|safe }}</span>{% endif -%}
+                        {% call m::prov(ui, card.statement.provenance) %}
+                        {% endcall %}
+                    </span>
+                {%- endfor -%}
+            </dd>
             <span class="tools">
-                {% call m::prov(ui, card.statement.provenance) %}
-                {% endcall %}
-                {% call m::edit(ui, ui.edit(card.statement.pid)) %}
+                {% call m::edit(ui, ui.edit(row.pid)) %}
                 {% endcall %}
             </span>
         </div>
     {%- endfor -%}
-</div>
+</dl>

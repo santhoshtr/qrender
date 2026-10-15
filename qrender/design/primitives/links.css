@@ -1,55 +1,36 @@
 /* links */
 
-/* The item's sites and accounts: a card each, the mark of the platform
-   first. The cards are a row that wraps. */
+/* The item's sites and accounts: rows of the fact sheet (`.row`), the
+   addresses of a row in one line that wraps, each with the icon of its
+   site. Inline, so that an icon stays with its address. */
 .links {
-	display: flex;
-	flex-direction: row;  /* a block is a column; the cards are a row */
-	flex-wrap: wrap;
-	gap: var( --gap );
+	& .row { grid-template-columns: minmax( 0, 14rem ) minmax( 0, 1fr ) auto; }
 
-	& .card {
-		position: relative;
-		flex: 1 1 180px;
-		max-inline-size: 260px;
-		display: flex;
-		flex-direction: column;
-		align-items: start;
-		gap: var( --spacing-25 );
-		padding: var( --spacing-75 ) var( --spacing-100 );
-		border: 1px solid var( --border-color-muted );
-		border-radius: var( --radius );
-		background-color: var( --background-color-base );
+	/* On a narrow page the label is above its addresses. */
+	@container page ( width < 760px ) {
+		& .row { grid-template-columns: minmax( 0, 1fr ) auto; }
+		& dt { grid-column: 1 / -1; }
 	}
 
-	& .mark {
-		display: flex;
-		align-items: center;
-		block-size: 28px;
+	& .link { margin-inline-end: var( --spacing-75 ); }
+
+	& .favicon {
+		inline-size: 16px;
+		block-size: 16px;
+		margin-inline-end: var( --spacing-25 );
+		object-fit: contain;
+		vertical-align: -3px;
+	}
+
+	/* The count of followers: a pill, apart from the note. */
+	& .followers {
+		display: inline-block;
+		padding: 0 var( --spacing-50 );
+		border-radius: 999px;
+		background-color: var( --background-color-neutral );
+		font-size: var( --font-size-x-small );
+		font-weight: var( --font-weight-normal );
 		color: var( --color-subtle );
-
-		& img {
-			block-size: 28px;
-			max-inline-size: 120px;
-			object-fit: contain;
-			object-position: left;
-		}
+		font-variant-numeric: tabular-nums;
 	}
-
-	& .hash {
-		font-size: 1.5rem;
-		font-weight: var( --font-weight-bold );
-	}
-
-	& .property {
-		color: var( --color-subtle );
-		font-size: var( --font-size-small );
-	}
-
-	& .address {
-		font-weight: var( --font-weight-bold );
-		overflow-wrap: anywhere;
-	}
-
-	& .followers { font-variant-numeric: tabular-nums; }
 }

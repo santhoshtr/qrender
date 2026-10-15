@@ -9,7 +9,8 @@ use qrender::config::Config;
 use qrender::localize::View;
 use qrender::render::html::{self, Styles};
 use qrender::render::markdown;
-use scraper::{Html, Selector};
+use qrender::render::ui::FAVICONS;
+use scraper::{CaseSensitivity, Html, Selector};
 
 const PAGES: [&str; 12] = [
     "q3870.en",
@@ -79,12 +80,18 @@ fn html_pages() {
                 "{page}: no single target #{id}"
             );
         }
-        // Pictures, sounds and videos only from Wikimedia hosts.
+        // Pictures, sounds and videos only from Wikimedia hosts, and the
+        // icons of the sites in the web spread from their Toolforge
+        // service.
         for el in doc.select(&select("img[src], video[src], video[poster], audio[src]")) {
+            let favicon = el
+                .value()
+                .has_class("favicon", CaseSensitivity::CaseSensitive);
             for attr in ["src", "poster"] {
                 if let Some(url) = el.attr(attr) {
                     assert!(
-                        HOSTS.iter().any(|h| url.starts_with(h)),
+                        HOSTS.iter().any(|h| url.starts_with(h))
+                            || (favicon && url.starts_with(FAVICONS)),
                         "{page}: {attr} {url}"
                     );
                 }

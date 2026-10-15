@@ -12,6 +12,7 @@ use crate::localize::format::{Part, coordinate, edit_url, number_part, percent};
 use crate::localize::{Description, Label, SpreadView, View};
 use crate::primitives::credits::{Credits, Person};
 use crate::primitives::identifiers::{Identifier, Identifiers};
+use crate::primitives::links::{Card, Links};
 use crate::primitives::map::Map;
 use crate::primitives::media::Media;
 use crate::primitives::names::{self, Names};
@@ -19,7 +20,9 @@ use crate::primitives::provenance;
 use crate::primitives::succession::Succession;
 use crate::primitives::timeline::When;
 use crate::primitives::works::{Work, Works};
-use crate::schema::{Credit, Picture, Provenance, QualifierShown, StatementRef, ValueShown};
+use crate::schema::{
+    Credit, Picture, Provenance, QualifierPart, QualifierShown, StatementRef, ValueShown,
+};
 use crate::vocab::Slot;
 use crate::wikidata::POINT_IN_TIME;
 
@@ -29,6 +32,10 @@ const VIEW_ALL_MIN: usize = 3;
 pub const FILEPATH: &str = "https://commons.wikimedia.org/wiki/Special:FilePath/";
 pub const WIKIPEDIA_LOGO: &str =
     "https://commons.wikimedia.org/wiki/Special:FilePath/Wikipedia-logo-v2.svg?width=60";
+
+/// The icons of the sites in the web spread: a Toolforge service, so the
+/// sites do not see the readers.
+pub const FAVICONS: &str = "https://favicons.toolforge.org/favicon";
 
 /// The thumbnail widths that Wikimedia renders in advance.
 const STANDARD_WIDTHS: [u32; 5] = [330, 500, 960, 1280, 1920];
@@ -600,13 +607,54 @@ impl<'v> Ui<'v> {
         }
     }
 
-    /// A site (a URL, or an item such as an open data portal), not an
-    /// account: its card has a globe.
-    pub fn is_site(&self, card: &crate::primitives::links::Card) -> bool {
-        matches!(
-            card.statement.value,
-            ValueShown::Url { .. } | ValueShown::Item { .. }
-        )
+    /// The links of the web spread, a row for each property, in order. A
+    /// row whose addresses are all on one site has the icon of the site
+    /// once; otherwise each address has its own.
+    pub fn link_rows<'a>(&self, b: &'a Links) -> Vec<LinkRow<'a>> {
+        let mut rows: Vec<LinkRow> = Vec::new();
+        for card in &b.cards {
+            match rows.last_mut() {
+                Some(row) if row.pid == card.statement.pid => row.cards.push((card, None)),
+                _ => rows.push(LinkRow {
+                    pid: card.statement.pid,
+                    icon: None,
+                    cards: vec![(card, None)],
+                }),
+            }
+        }
+        for row in &mut rows {
+            let domains: Vec<Option<&str>> = row
+                .cards
+                .iter()
+                .map(|(c, _)| c.href.as_deref().and_then(domain))
+                .collect();
+            if domains.iter().all(|d| d.is_some() && *d == domains[0]) {
+                row.icon = domains[0].map(favicon);
+            } else {
+                for ((_, icon), d) in row.cards.iter_mut().zip(domains) {
+                    *icon = d.map(favicon);
+                }
+            }
+        }
+        rows
+    }
+
+    /// The note of a link: its languages, roles and dates; not its counts
+    /// and codes (subscribers, a numeric account id), which the data has.
+    pub fn link_note(&self, card: &Card) -> Vec<Part> {
+        let qualifiers: Vec<QualifierShown> = card
+            .statement
+            .qualifiers
+            .iter()
+            .filter(|q| {
+                matches!(
+                    q.value,
+                    QualifierPart::Item { .. } | QualifierPart::Year { .. }
+                )
+            })
+            .cloned()
+            .collect();
+        self.qualifiers(&qualifiers)
     }
 
     /// The recording in the page language: the choice starts at it.
@@ -724,4 +772,30 @@ pub fn escape(s: &str) -> String {
 
 fn quote(s: &str) -> String {
     utf8_percent_encode(s, PATH).to_string()
+}
+
+/// A row of the web spread: the links of one property.
+pub struct LinkRow<'a> {
+    pub pid: Pid,
+    /// The icon of the one site of all the links of the row.
+    pub icon: Option<String>,
+    /// Each link, with its own icon when the row has none.
+    pub cards: Vec<(&'a Card, Option<String>)>,
+}
+
+/// The host of an address: "https://www.x.com/usagov" gives "www.x.com".
+fn domain(href: &str) -> Option<&str> {
+    let rest = href.split_once("://")?.1;
+    let host = rest.split(['/', '?', '#']).next()?;
+    let host = host.rsplit_once('@').map_or(host, |(_, h)| h);
+    let host = host.split(':').next()?;
+    (!host.is_empty()).then_some(host)
+}
+
+/// The icon of a site (128 px; it shows at 16 px).
+fn favicon(domain: &str) -> String {
+    format!(
+        "{FAVICONS}?url={}",
+        utf8_percent_encode(domain, PATH)
+    )
 }
