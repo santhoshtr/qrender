@@ -1406,7 +1406,23 @@ expression: composition
               "artist": "Government of India",
               "license": "Public domain"
             },
-            "rule": "media"
+            "subject": {
+              "statement": "Q668-9F3C132B-1931-4E46-80D2-BF7E3972B091",
+              "pid": "P237",
+              "item": "Q171869",
+              "rank": "normal",
+              "provenance": "imported",
+              "image": {
+                "file": "Emblem of India.svg",
+                "kind": "drawing",
+                "aspect": 0.6271,
+                "megapixels": 0.48,
+                "credit": {
+                  "artist": "Government of India",
+                  "license": "Public domain"
+                }
+              }
+            }
           },
           {
             "primitive": "media",
@@ -1429,30 +1445,28 @@ expression: composition
               "artist": "Government of India",
               "license": "Public domain"
             },
-            "rule": "media"
+            "subject": {
+              "statement": "q668-57822B6A-1895-4AC2-9C1C-97D998E6A609",
+              "pid": "P163",
+              "item": "Q41673",
+              "rank": "normal",
+              "provenance": "none",
+              "image": {
+                "file": "Flag of India.svg",
+                "kind": "drawing",
+                "aspect": 1.5,
+                "megapixels": 0.54,
+                "credit": {
+                  "artist": "Government of India",
+                  "license": "Public domain"
+                }
+              }
+            }
           },
           {
             "primitive": "network",
             "role": "gallery",
             "values": [
-              {
-                "statement": "q668-57822B6A-1895-4AC2-9C1C-97D998E6A609",
-                "pid": "P163",
-                "item": "Q41673",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "Flag of India.svg",
-                  "kind": "drawing",
-                  "aspect": 1.5,
-                  "megapixels": 0.54,
-                  "credit": {
-                    "artist": "Government of India",
-                    "license": "Public domain"
-                  }
-                },
-                "priority": 0.286
-              },
               {
                 "statement": "Q668-5b4f12c6-47e1-f597-f9b1-e2328900766a",
                 "pid": "P138",
@@ -1530,27 +1544,9 @@ expression: composition
                   }
                 },
                 "priority": 0.0
-              },
-              {
-                "statement": "Q668-9F3C132B-1931-4E46-80D2-BF7E3972B091",
-                "pid": "P237",
-                "item": "Q171869",
-                "rank": "normal",
-                "provenance": "imported",
-                "image": {
-                  "file": "Emblem of India.svg",
-                  "kind": "drawing",
-                  "aspect": 0.6271,
-                  "megapixels": 0.48,
-                  "credit": {
-                    "artist": "Government of India",
-                    "license": "Public domain"
-                  }
-                },
-                "priority": 0.0
               }
             ],
-            "priority": 0.286,
+            "priority": 0.0,
             "rule": "single"
           }
         ]

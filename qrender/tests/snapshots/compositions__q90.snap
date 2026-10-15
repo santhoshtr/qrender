@@ -2679,41 +2679,23 @@ expression: composition
               "artist": "RaphaëlMignon",
               "license": "CC BY 4.0"
             },
-            "rule": "media"
-          },
-          {
-            "primitive": "media",
-            "role": "stack",
-            "statement": "q90-BD645EF4-354E-4D03-B431-EEDA3FF7A731",
-            "pid": "P94",
-            "file": "Grandes Armes de Paris.svg",
-            "rank": "normal",
-            "provenance": "imported",
-            "qualifiers": [
-              {
-                "pid": "P2096",
-                "text": "Großes Wappen der Stadt Paris",
-                "lang": "de"
-              },
-              {
-                "pid": "P2096",
-                "text": "Greater coat of arms of the City of Paris",
-                "lang": "en"
-              },
-              {
-                "pid": "P2096",
-                "text": "Armoiries de la Ville de Paris",
-                "lang": "fr"
+            "subject": {
+              "statement": "Q90-e98e2fd4-4c55-2f66-781f-245ce8947198",
+              "pid": "P237",
+              "item": "Q1925366",
+              "rank": "normal",
+              "provenance": "none",
+              "image": {
+                "file": "Armoiries de la ville de Paris (1949).svg",
+                "kind": "drawing",
+                "aspect": 0.707,
+                "megapixels": 0.89,
+                "credit": {
+                  "artist": "RaphaëlMignon",
+                  "license": "CC BY 4.0"
+                }
               }
-            ],
-            "kind": "drawing",
-            "aspect": 0.8418,
-            "megapixels": 1.18,
-            "credit": {
-              "artist": "Bluebear2",
-              "license": "CC BY-SA 3.0"
-            },
-            "rule": "media"
+            }
           },
           {
             "primitive": "media",
@@ -2746,6 +2728,56 @@ expression: composition
             "credit": {
               "artist": "RaphaëlMignon",
               "license": "CC BY 4.0"
+            },
+            "subject": {
+              "statement": "q90-E0F76EAC-5FDE-4B0C-9C36-7905D29E1490",
+              "pid": "P163",
+              "item": "Q659058",
+              "rank": "normal",
+              "provenance": "none",
+              "image": {
+                "file": "Flag of Paris with coat of arms.svg",
+                "kind": "drawing",
+                "aspect": 1.5,
+                "megapixels": 0.96,
+                "credit": {
+                  "artist": "Invitatious (me)",
+                  "license": "Public domain"
+                }
+              }
+            }
+          },
+          {
+            "primitive": "media",
+            "role": "stack",
+            "statement": "q90-BD645EF4-354E-4D03-B431-EEDA3FF7A731",
+            "pid": "P94",
+            "file": "Grandes Armes de Paris.svg",
+            "rank": "normal",
+            "provenance": "imported",
+            "qualifiers": [
+              {
+                "pid": "P2096",
+                "text": "Großes Wappen der Stadt Paris",
+                "lang": "de"
+              },
+              {
+                "pid": "P2096",
+                "text": "Greater coat of arms of the City of Paris",
+                "lang": "en"
+              },
+              {
+                "pid": "P2096",
+                "text": "Armoiries de la Ville de Paris",
+                "lang": "fr"
+              }
+            ],
+            "kind": "drawing",
+            "aspect": 0.8418,
+            "megapixels": 1.18,
+            "credit": {
+              "artist": "Bluebear2",
+              "license": "CC BY-SA 3.0"
             },
             "rule": "media"
           },
@@ -2788,24 +2820,6 @@ expression: composition
             "role": "gallery",
             "values": [
               {
-                "statement": "q90-E0F76EAC-5FDE-4B0C-9C36-7905D29E1490",
-                "pid": "P163",
-                "item": "Q659058",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "Flag of Paris with coat of arms.svg",
-                  "kind": "drawing",
-                  "aspect": 1.5,
-                  "megapixels": 0.96,
-                  "credit": {
-                    "artist": "Invitatious (me)",
-                    "license": "Public domain"
-                  }
-                },
-                "priority": 0.8
-              },
-              {
                 "statement": "Q90-26813aa6-420d-c957-ad8d-367f02935b51",
                 "pid": "P417",
                 "item": "Q235863",
@@ -2822,24 +2836,6 @@ expression: composition
                   }
                 },
                 "priority": 0.8
-              },
-              {
-                "statement": "Q90-e98e2fd4-4c55-2f66-781f-245ce8947198",
-                "pid": "P237",
-                "item": "Q1925366",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "Armoiries de la ville de Paris (1949).svg",
-                  "kind": "drawing",
-                  "aspect": 0.707,
-                  "megapixels": 0.89,
-                  "credit": {
-                    "artist": "RaphaëlMignon",
-                    "license": "CC BY 4.0"
-                  }
-                },
-                "priority": 0.4
               }
             ],
             "priority": 0.8,

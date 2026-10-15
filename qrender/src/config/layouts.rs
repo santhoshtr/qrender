@@ -93,6 +93,10 @@ pub struct IndexSpec {
 pub struct Roles {
     /// Holder property -> the property that names the office.
     pub office: IndexMap<Pid, Pid>,
+    /// Item property -> the property of the file that pictures its value
+    /// (flag -> flag image).
+    #[serde(default)]
+    pub picture: IndexMap<Pid, Pid>,
     /// Commons data property -> the property whose dated statements it
     /// replaces.
     pub tabular: IndexMap<Pid, Pid>,

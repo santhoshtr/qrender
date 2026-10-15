@@ -994,6 +994,12 @@ P4179 = "P1082"  # tabular population -> population
 P6 = "P1313"     # head of government -> office held by head of government
 P35 = "P1906"    # head of state -> office held by head of state
 
+# An item property and the property of the file that pictures its value:
+# one picture of the file, titled by the item ("flag: flag of Germany").
+[roles.picture]
+P163 = "P41"     # flag -> flag image
+P237 = "P94"     # coat of arms -> coat of arms image
+
 # ----------------------------------------------------------------- splits
 # Properties whose values in one year divide one whole. The whole is the
 # sum of the parts, so the shares add up to 100 %. A split is one chart

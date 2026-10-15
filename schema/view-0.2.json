@@ -2539,6 +2539,17 @@
         "statement": {
           "$ref": "#/$defs/StatementId"
         },
+        "subject": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/StatementRef"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The item that the file pictures, from the item property of the file\nproperty (the flag of Germany, for the flag image): the title."
+        },
         "url": {
           "type": [
             "string",
@@ -4049,6 +4060,17 @@
         },
         "statement": {
           "$ref": "#/$defs/StatementId"
+        },
+        "subject": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/StatementRef"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The item that the file pictures, from the item property of the file\nproperty (the flag of Germany, for the flag image): the title."
         },
         "url": {
           "type": [

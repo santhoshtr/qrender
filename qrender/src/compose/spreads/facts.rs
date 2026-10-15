@@ -7,9 +7,9 @@ use crate::compose::Composer;
 use crate::compose::blocks::Made;
 use crate::compose::facts::PropertyFacts;
 use crate::config::SpreadSpec;
-use crate::config::rules::{PropertyMake, first};
+use crate::config::rules::{BlockMake, PropertyMake, first};
 use crate::primitives::fact::Age;
-use crate::primitives::{credits, names, split, succession, works};
+use crate::primitives::{credits, media, names, split, succession, works};
 use crate::schema::Block;
 use crate::vocab::Role;
 use crate::wikidata::{AGE, DATE_OF_BIRTH, DATE_OF_DEATH, INSTANCE_OF};
@@ -28,6 +28,14 @@ pub fn build<'a>(c: &mut Composer<'a>, spec: &'a SpreadSpec) -> super::Built {
         // statements go on below.
         if let Some(block) = split::at(c, *pid, &pids) {
             made.push(Made::Block { make: None, block });
+        }
+        // An item and the file that pictures it (flag, flag image): one
+        // picture, placed as the file would be.
+        if let Some(block) = media::pictured_at(c, *pid) {
+            made.push(Made::Block {
+                make: Some(BlockMake::Media),
+                block,
+            });
         }
         let rule = first(&config.rules.property, &PropertyFacts::new(c, *pid));
         let id = Some(rule.id.as_str());

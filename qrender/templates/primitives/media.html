@@ -1,5 +1,7 @@
 {%- import "macros.html" as m -%}
-{#- A Commons file of the item: a picture, a sound, a video. -#}
+{#- A Commons file of the item: a picture, a sound, a video. A file that
+    pictures an item value (the flag image of the flag) is titled by the
+    item. -#}
 {%- let file = ui.media_file(b) -%}
 {%- let kind = b.picture.kind.name() -%}
 {%- let role = b.role.name() -%}
@@ -42,7 +44,12 @@
         </a>
         {%- if role != "identity" && role != "banner" -%}
             <figcaption>
+                {%- match b.subject -%}
+                {%- when Some with (subject) -%}
+                <span>{{ ui.text(ui.property(subject.pid), true)|safe }}</span> {{ ui.part(ui.value_part(&subject.value))|safe }}
+                {%- when None -%}
                 <span>{{ ui.text(ui.property(b.statement.pid), true)|safe }}</span>
+                {%- endmatch -%}
                 {%- if !b.picture.assessed.is_empty() %}
                     <span class="assessed" title="{{ b.picture.assessed|join(", ") }}">★</span>
                 {% endif -%}
