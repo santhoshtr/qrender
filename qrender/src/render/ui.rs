@@ -794,8 +794,5 @@ fn domain(href: &str) -> Option<&str> {
 
 /// The icon of a site (128 px; it shows at 16 px).
 fn favicon(domain: &str) -> String {
-    format!(
-        "{FAVICONS}?url={}",
-        utf8_percent_encode(domain, PATH)
-    )
+    format!("{FAVICONS}?url={}", utf8_percent_encode(domain, PATH))
 }

@@ -21,7 +21,7 @@ use crate::primitives::{
     timeline, title, works,
 };
 use crate::schema::{Block, Credit};
-use crate::vocab::Slot;
+use crate::vocab::{self, Slot};
 
 /// How the page gets its stylesheets.
 pub enum Styles<'a> {
@@ -135,6 +135,13 @@ struct FigureHtml<'a> {
 }
 
 #[derive(Template)]
+#[template(path = "parts/toc.html")]
+struct TocHtml<'a> {
+    ui: &'a Ui<'a>,
+    entries: Vec<(&'a str, &'a Label, &'static str)>,
+}
+
+#[derive(Template)]
 #[template(path = "parts/credit.html")]
 struct CreditHtml<'a> {
     ui: &'a Ui<'a>,
@@ -145,6 +152,40 @@ struct CreditHtml<'a> {
 impl<'v> Ui<'v> {
     pub fn spread(&self, s: &SpreadView) -> String {
         render(SpreadHtml { ui: self, s })
+    }
+
+    /// The contents of the page: the spreads that have a title. Empty
+    /// when none has.
+    pub fn toc(&self) -> String {
+        let entries: Vec<_> = self
+            .view
+            .spreads
+            .iter()
+            .filter(|s| !matches!(s.spread.template, vocab::Template::Identity))
+            .filter_map(|s| {
+                Some((
+                    s.spread.id.as_str(),
+                    s.title.as_ref()?,
+                    s.spread.dimension.name(),
+                ))
+            })
+            .collect();
+        if entries.is_empty() {
+            return String::new();
+        }
+        render(TocHtml { ui: self, entries })
+    }
+
+    /// The contents go after this slot of the head: after the banner, or
+    /// after the title when there is no banner.
+    pub fn toc_after(&self, s: &SpreadView, slot: impl Arg<Slot>) -> bool {
+        let slots = &s.spread.slots;
+        matches!(s.spread.template, vocab::Template::Identity)
+            && match slot.get() {
+                Slot::Band => true,
+                Slot::Head => !slots.contains_key(&Slot::Band),
+                _ => false,
+            }
     }
 
     pub fn slot(&self, slot: impl Arg<Slot>, blocks: &[Block]) -> String {

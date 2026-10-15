@@ -1,0 +1,9 @@
+{#- The contents of the page: a link to each spread with a title, in the
+    order of the page, underlined in the colour of its dimension. -#}
+<nav class="toc" aria-label="{{ ui.msg("qrender-contents") }}">
+    <ul>
+        {%- for (id, title, dimension) in entries -%}
+            <li data-dimension="{{ dimension }}"><a href="#{{ id }}">{{ ui.text(title, false)|safe }}</a></li>
+        {%- endfor -%}
+    </ul>
+</nav>

@@ -23,7 +23,7 @@ expression: html
         </div>
     </header>
     <main class="page">
-            <section class="spread t-identity"
+            <section class="spread t-identity" id="identity"
              data-spread="identity"
              data-dimension="neutral"><div data-slot="head">
         <div class="title"><h1>Kokkachal</h1>
@@ -31,7 +31,9 @@ expression: html
             Hamlet in Kasaragod district, Kerala, India
         </p>
     </div>
-    </div><div data-slot="lead">
+    </div><nav class="toc" aria-label="Contents">
+    <ul><li data-dimension="place"><a href="#location">geography</a></li><li data-dimension="names"><a href="#names">name</a></li><li data-dimension="neutral"><a href="#evidence">reference</a></li></ul>
+</nav><div data-slot="lead">
         <div class="lead" lang="en"><p><b>Kokkachal</b> (കൊക്കച്ചാൽ, <a href="https://en.wikipedia.org/wiki/Help:IPA/Malayalam">&#91;ko̞kːɐt͡ʃːaːl&#93;</a>; also spelled <b>Kokkechal</b>) is a small locality and settlement situated in the <a href="https://en.wikipedia.org/wiki/Kasaragod_district">Kasaragod district</a> in the Indian state of <a href="https://en.wikipedia.org/wiki/Kerala">Kerala</a>. It falls under the administration of the <a href="https://en.wikipedia.org/wiki/Manjeshwaram_taluk">Manjeshwaram taluk</a> near the northern border of the state.</p><p class="source">
         <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Wikipedia-logo-v2.svg?width=60" alt="" width="18">
         <a href="https://en.wikipedia.org/wiki/Kokkachal">en.wikipedia.org</a> · 3
@@ -42,7 +44,7 @@ expression: html
             <span class="k">instance of</span><a href="https://www.wikidata.org/wiki/Q532">village</a></div><div>
             <span class="k">country</span><a href="https://www.wikidata.org/wiki/Q668">India</a></div></div>
     </div></section>
-            <section class="spread t-hero-plus-stack"
+            <section class="spread t-hero-plus-stack" id="location"
              data-spread="location"
              data-dimension="place"><h2><span class="title">geography</span></h2><div class="prose-slot" lang="en"><p>Kokkachal is situated along the rural routes connecting <a href="https://en.wikipedia.org/wiki/Bandiyod">Bandiyod</a> (approximately 6.5&#160;km away) and Dharmathadukka. Geographically, it sits close to the border of the Puthige and Mangalpady local government jurisdictions. The landscape is characterized by the typical midland topography of Northern Malabar, with seasonal streams feeding into larger coastal river systems.</p><a class="read" href="https://en.wikipedia.org/wiki/Kokkachal#Geography">Geography ↗</a></div><div data-slot="hero">
         <figure class="map">
@@ -65,7 +67,7 @@ expression: html
             aria-label="Credit">i</button><span id="p1" popover class="pop">Rajeshodayanchal at ml.wikipedia · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q139890532#P131"
        aria-label="Edit">✎</a></span></figure></div></div></div></section>
-            <section class="spread t-columns"
+            <section class="spread t-columns" id="names"
              data-spread="names"
              data-dimension="names"><h2><span class="title">name</span></h2><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>postal code</dt>
 <dd>671322</dd>
@@ -76,7 +78,7 @@ expression: html
        aria-label="Edit">✎</a>
     </span>
 </div></dl></section>
-            <section class="spread t-sheet"
+            <section class="spread t-sheet" id="evidence"
              data-spread="evidence"
              data-dimension="neutral"><h2><span class="title">reference</span></h2><div data-slot="summary">
         <div class="block">

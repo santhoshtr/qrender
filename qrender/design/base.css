@@ -295,6 +295,8 @@ dialog {
 
 .spread {
 	grid-column: 1 / -1;
+	/* A link from the contents leaves some space above the title. */
+	scroll-margin-block-start: var( --spacing-100 );
 	display: grid;
 	grid-template-columns: subgrid;
 	row-gap: var( --gap );

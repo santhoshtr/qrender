@@ -23,7 +23,7 @@ expression: html
         </div>
     </header>
     <main class="page">
-            <section class="spread t-identity"
+            <section class="spread t-identity" id="identity"
              data-spread="identity"
              data-dimension="neutral"><div data-slot="head">
         <div class="title"><h1>Moon</h1>
@@ -44,7 +44,9 @@ expression: html
        href="https://www.wikidata.org/wiki/Q405#P948"
        aria-label="Edit">✎</a></span>
     </figure> </div>
-    </div><div data-slot="lead">
+    </div><nav class="toc" aria-label="Contents">
+    <ul><li data-dimension="measures"><a href="#physical">physical property</a></li><li data-dimension="measures"><a href="#orbit">orbit</a></li><li data-dimension="place"><a href="#relations">relation</a></li><li data-dimension="time"><a href="#history">history</a></li><li data-dimension="media"><a href="#media">multimedia</a></li><li data-dimension="neutral"><a href="#web">web presence</a></li><li data-dimension="neutral"><a href="#evidence">reference</a></li></ul>
+</nav><div data-slot="lead">
         <div class="lead" lang="en"><p>The <b>Moon</b> is the only <a href="https://en.wikipedia.org/wiki/Natural_satellite">natural satellite</a> of <a href="https://en.wikipedia.org/wiki/Earth">Earth</a>. It <a href="https://en.wikipedia.org/wiki/Orbit_of_the_Moon">orbits</a> Earth in an <a href="https://en.wikipedia.org/wiki/Elliptic_curve">elliptical</a> path, at a <a href="https://en.wikipedia.org/wiki/Lunar_distance">distance </a> that varies over the year, averaging around 378,000 kilometers (235,000&#160;mi). It <a href="https://en.wikipedia.org/wiki/Orbital_period">completes an orbit</a> (<a href="https://en.wikipedia.org/wiki/Lunar_month">lunar month</a>) in relation to Earth and the <a href="https://en.wikipedia.org/wiki/Sun">Sun</a> (<a href="https://en.wikipedia.org/wiki/Lunation">synodically</a>) every 29.5 days. The Moon and Earth are bound by <a href="https://en.wikipedia.org/wiki/Gravitational">gravitational</a> attraction, which is stronger on the sides facing each other. The resulting <a href="https://en.wikipedia.org/wiki/Tidal_force">tidal forces</a> are the main driver of Earth's <a href="https://en.wikipedia.org/wiki/Tide">tides</a>, and have pulled the Moon to always face Earth with the same <a href="https://en.wikipedia.org/wiki/Near_side_of_the_Moon">near side</a>. This <a href="https://en.wikipedia.org/wiki/Tidal_locking">tidal locking</a> effectively synchronizes the Moon's <a href="https://en.wikipedia.org/wiki/Rotation_period_(astronomy)">rotation period</a> (<a href="https://en.wikipedia.org/wiki/Lunar_day">lunar day</a>) to its orbital period (lunar month).</p><details><summary>¶ +4</summary><p>In <a href="https://en.wikipedia.org/wiki/Geophysical_definition_of_planet">geophysical terms</a>, the Moon is a <a href="https://en.wikipedia.org/wiki/Planetary-mass_object">planetary-mass object</a> or <a href="https://en.wikipedia.org/wiki/Satellite_planet">satellite planet</a>. Its mass is 1.2% that of the Earth, and its diameter is 3,474&#160;km (2,159&#160;mi), roughly one-quarter of Earth's (about as wide as the <a href="https://en.wikipedia.org/wiki/Contiguous_United_States">contiguous United States</a>). Within the <a href="https://en.wikipedia.org/wiki/Solar_System">Solar System</a>, it is <a href="https://en.wikipedia.org/wiki/List_of_Solar_System_objects_by_size">larger and more massive</a> than any known <a href="https://en.wikipedia.org/wiki/Dwarf_planet">dwarf planet</a>, and the fifth-largest and fifth–most massive moon, as well as the largest and most massive in relation to its <a href="https://en.wikipedia.org/wiki/Primary_body">parent planet</a>. Its <a href="https://en.wikipedia.org/wiki/Surface_gravity">surface gravity</a> is about one-sixth of Earth's, about half that of <a href="https://en.wikipedia.org/wiki/Mars">Mars</a>, and the second-highest among all moons in the Solar System after <a href="https://en.wikipedia.org/wiki/Jupiter">Jupiter</a>'s moon <a href="https://en.wikipedia.org/wiki/Io_(moon)">Io</a>. The body of the Moon is <a href="https://en.wikipedia.org/wiki/Planetary_differentiation">differentiated</a> and <a href="https://en.wikipedia.org/wiki/Terrestrial_planet">terrestrial</a>, with only a minuscule <a href="https://en.wikipedia.org/wiki/Hydrosphere">hydrosphere</a>, <a href="https://en.wikipedia.org/wiki/Atmosphere_of_the_Moon">atmosphere</a>, and <a href="https://en.wikipedia.org/wiki/Magnetic_field_of_the_Moon">magnetic field</a>. The <a href="https://en.wikipedia.org/wiki/Lunar_surface">lunar surface</a> is covered in <a href="https://en.wikipedia.org/wiki/Lunar_regolith">regolith dust</a>, which mainly consists of the fine <a href="https://en.wikipedia.org/wiki/Ejecta_blanket">material ejected</a> from the <a href="https://en.wikipedia.org/wiki/Lunar_crust">lunar crust</a> by <a href="https://en.wikipedia.org/wiki/Impact_event">impact events</a>. The lunar crust is marked by <a href="https://en.wikipedia.org/wiki/Impact_crater">impact craters</a>; some younger ones feature bright <a href="https://en.wikipedia.org/wiki/Ray_system">ray-like streaks</a>. The Moon was volcanically active until 1.2 billion years ago, surfacing lava mostly on the thinner near side of the Moon, filling ancient craters, which through cooling formed the today prominently visible dark plains of <a href="https://en.wikipedia.org/wiki/Basalt">basalt</a> called <a href="https://en.wikipedia.org/wiki/Lunar_mare">maria</a> ('seas'). The <a href="https://en.wikipedia.org/wiki/Origin_of_the_Moon">origin of the Moon</a> is not clear, although it is thought to have been formed out of material from Earth that was ejected by <a href="https://en.wikipedia.org/wiki/Giant-impact_hypothesis">a giant impact</a> of a <a href="https://en.wikipedia.org/wiki/Theia_(planet)">Mars-sized body</a>. Studies based on lunar <a href="https://en.wikipedia.org/wiki/Zircon">zircon</a> dating have placed the Moon's formation at 4.51&#160;billion years ago, not long after <a href="https://en.wikipedia.org/wiki/Age_of_Earth">Earth's formation</a>; more recent studies on the crystallization of the <a href="https://en.wikipedia.org/wiki/Lunar_magma_ocean">lunar magma ocean</a> suggested that the Moon might instead formed 4.35&#160;billion years ago, late in the <a href="https://en.wikipedia.org/wiki/Formation_and_evolution_of_the_Solar_System">history of the Solar System</a>.</p><p>From a distance, the day and night phases of the lunar day are visible as the <a href="https://en.wikipedia.org/wiki/Lunar_phases">lunar phases</a>, and when the Moon passes through <a href="https://en.wikipedia.org/wiki/Earth%27s_shadow">Earth's shadow</a> a <a href="https://en.wikipedia.org/wiki/Lunar_eclipse">lunar eclipse</a> is observable. The Moon's <a href="https://en.wikipedia.org/wiki/Apparent_size">apparent size</a> in Earth's sky is about the same as that of the Sun, which causes it to cover the Sun completely during a total <a href="https://en.wikipedia.org/wiki/Solar_eclipse">solar eclipse</a>. The Moon is the <a href="https://en.wikipedia.org/wiki/List_of_brightest_natural_objects_in_the_sky">brightest celestial object</a> in Earth's <a href="https://en.wikipedia.org/wiki/Night_sky">night sky</a> because of its large apparent size, while the <a href="https://en.wikipedia.org/wiki/Reflectance">reflectance</a> (albedo) of its surface is comparable to that of <a href="https://en.wikipedia.org/wiki/Asphalt_concrete">asphalt</a>. About 59% of the surface of the Moon is visible from Earth owing to the different angles at which the Moon can appear in Earth's sky (<a href="https://en.wikipedia.org/wiki/Libration">libration</a>), making parts of the <a href="https://en.wikipedia.org/wiki/Far_side_of_the_Moon">far side of the Moon</a> visible.</p><p>The Moon has been an important source of inspiration and knowledge in human history, having been crucial to <a href="https://en.wikipedia.org/wiki/Cosmography">cosmography</a>, <a href="https://en.wikipedia.org/wiki/Mythology">mythology</a>, <a href="https://en.wikipedia.org/wiki/Lunar_deity">religion</a>, art, <a href="https://en.wikipedia.org/wiki/Lunar_calendar">time keeping</a>, <a href="https://en.wikipedia.org/wiki/Natural_science">natural science</a> and <a href="https://en.wikipedia.org/wiki/Spaceflight">spaceflight</a>. The <a href="https://en.wikipedia.org/wiki/Timeline_of_Solar_System_exploration">first spaceflights</a> to an extraterrestrial body were to the Moon, starting in 1959 with the <a href="https://en.wikipedia.org/wiki/Flyby_(spaceflight)">flyby</a> of <i><a href="https://en.wikipedia.org/wiki/Luna_1">Luna 1</a></i> (sent by the <a href="https://en.wikipedia.org/wiki/Soviet_Union">Soviet Union</a>), and the <a href="https://en.wikipedia.org/wiki/Impactor_(spacecraft)">intentional impact</a> of <i><a href="https://en.wikipedia.org/wiki/Luna_2">Luna 2</a></i>, followed in 1966 by the first <a href="https://en.wikipedia.org/wiki/Soft_landing">soft landing</a> (by <i><a href="https://en.wikipedia.org/wiki/Luna_9">Luna 9</a></i>) and <a href="https://en.wikipedia.org/wiki/Orbital_insertion">orbital insertion</a> (by <i><a href="https://en.wikipedia.org/wiki/Luna_10">Luna 10</a></i>). Humans first arrived in orbit with <a href="https://en.wikipedia.org/wiki/Apollo_8">Apollo 8</a> (sent by the <a href="https://en.wikipedia.org/wiki/United_States">United States</a>) on December 24, 1968, and then on the surface with <a href="https://en.wikipedia.org/wiki/Apollo_11">Apollo 11</a> on July 20, 1969, making the Moon the only celestial body beyond Earth that humans have visited. By 1972, six Apollo missions had landed <a href="https://en.wikipedia.org/wiki/List_of_people_who_have_flown_to_the_Moon">twelve people</a> on the Moon and stayed up to three days. Renewed robotic <a href="https://en.wikipedia.org/wiki/Exploration_of_the_Moon">exploration of the Moon</a>, in particular to confirm the presence of <a href="https://en.wikipedia.org/wiki/Lunar_water">water on the Moon</a>, has fueled plans to return humans to the Moon. These plans include the <a href="https://en.wikipedia.org/wiki/Artemis_program">Artemis program</a>, which included the <a href="https://en.wikipedia.org/wiki/Artemis_II">Artemis II</a> crewed lunar flyby in 2026.</p><p>Cite error: There are &lt;ref&#160;group&#61;lower-alpha&gt; tags&#160;or &#123;&#123;efn&#125;&#125; templates on this page, but the references will not show without a &#123;&#123;reflist&#124;group&#61;lower-alpha&#125;&#125; template&#160;or &#123;&#123;notelist&#125;&#125; template (see the <a href="https://en.wikipedia.org/wiki/Help:Cite_errors/Cite_error_group_refs_without_references">help page</a>).</p></details><p class="source">
         <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Wikipedia-logo-v2.svg?width=60" alt="" width="18">
         <a href="https://en.wikipedia.org/wiki/Moon">en.wikipedia.org</a> · 295
@@ -68,7 +70,7 @@ expression: html
             <span class="k">instance of</span><a href="https://www.wikidata.org/wiki/Q85793519">planetary-mass moon</a>, <a href="https://www.wikidata.org/wiki/Q109645860">planetary moon</a>, <a href="https://www.wikidata.org/wiki/Q1086783">regular moon</a></div><div>
             <span class="k">parent astronomical body</span><a href="https://www.wikidata.org/wiki/Q2">Earth</a></div></div>
     </div></section>
-            <section class="spread t-columns"
+            <section class="spread t-columns" id="physical"
              data-spread="physical"
              data-dimension="measures"><h2><span class="title">physical property</span></h2><div data-slot="hero">
         <div class="block scale">
@@ -165,7 +167,7 @@ expression: html
 <dd><data value="29.3" data-f="number">29.3</data> – <data value="34.1" data-f="number">34.1</data> <span class="note">arcminute</span></dd>
 <span class="tools"></span>
 </div></dl></section>
-            <section class="spread t-columns"
+            <section class="spread t-columns" id="orbit"
              data-spread="orbit"
              data-dimension="measures"><h2><span class="title">orbit</span></h2><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>type of orbit</dt>
 <dd><a href="https://www.wikidata.org/wiki/Q218056">high Earth orbit</a> <span class="note"><a href="https://www.wikidata.org/wiki/Q210539">orbit of the Moon</a></span></dd>
@@ -236,7 +238,7 @@ expression: html
 <dd><data value="356565" data-f="number">356565</data> <span class="note">kilometre</span> <span class="note">2018 · <a href="https://www.wikidata.org/wiki/Q1349468">perigee</a></span><br><data value="406464" data-f="number">406464</data> <span class="note">kilometre</span> <span class="note">2018 · <a href="https://www.wikidata.org/wiki/Q1179441">apogee</a></span><br><data value="385000.5" data-f="number">385000</data> <span class="note">kilometre</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q4130">orbit</a></span></dd>
 <span class="tools"></span>
 </div></dl></section>
-            <section class="spread t-columns"
+            <section class="spread t-columns" id="relations"
              data-spread="relations"
              data-dimension="place"><h2><span class="title">relation</span></h2><div data-slot="stack">
         <div class="block set">
@@ -510,10 +512,10 @@ expression: html
             aria-label="Credit">i</button><span id="p15" popover class="pop">Clementine space probe · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q405#P1589"
        aria-label="Edit">✎</a></span></figure></div></div></div></section>
-            <section class="spread t-columns"
+            <section class="spread t-columns" id="history"
              data-spread="history"
              data-dimension="time"><h2><span class="title">history</span></h2><p class="prose-links"><a href="https://www.wikidata.org/wiki/Q7102486">origin of the Moon</a></p></section>
-            <section class="spread t-feature-run"
+            <section class="spread t-feature-run" id="media"
              data-spread="media"
              data-dimension="media"><h2><span class="title">multimedia</span></h2><div data-slot="feature">
         <div class="feature"> <figure class="m k-photo" style="--a:1.5">
@@ -652,7 +654,7 @@ expression: html
        aria-label="Edit">✎</a>
     </span>
 </div></dl></section>
-            <section class="spread t-columns"
+            <section class="spread t-columns" id="web"
              data-spread="web"
              data-dimension="neutral"><h2><span class="title">web presence</span></h2><div data-slot="stack">
         <dl class="sheet links"><div class="row">
@@ -676,7 +678,7 @@ expression: html
             </span>
         </div></dl>
     </div></section>
-            <section class="spread t-collapsed"
+            <section class="spread t-collapsed" id="more"
              data-spread="more"
              data-dimension="neutral">
         <details>
@@ -779,7 +781,7 @@ expression: html
     </span>
 </div></dl></details>
     </section>
-            <section class="spread t-sheet"
+            <section class="spread t-sheet" id="evidence"
              data-spread="evidence"
              data-dimension="neutral"><h2><span class="title">reference</span></h2><div data-slot="summary">
         <div class="block">
