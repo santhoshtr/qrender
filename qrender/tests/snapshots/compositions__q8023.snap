@@ -1168,6 +1168,24 @@ expression: composition
           {
             "primitive": "fact",
             "pid": "P39",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q8023-C8AE1D1E-E74E-463D-BFAE-D0A9548D05AC",
+                "pid": "P39",
+                "item": "Q16744266",
+                "rank": "normal",
+                "provenance": "none",
+                "class": true,
+                "shown": true
+              }
+            ],
+            "priority": 0.0,
+            "rule": "few-pictures"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P39",
             "form": "list",
             "statements": [
               {
@@ -1236,24 +1254,6 @@ expression: composition
             "priority": 0.0,
             "former": true,
             "rule": "former"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P39",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q8023-C8AE1D1E-E74E-463D-BFAE-D0A9548D05AC",
-                "pid": "P39",
-                "item": "Q16744266",
-                "rank": "normal",
-                "provenance": "none",
-                "class": true,
-                "shown": true
-              }
-            ],
-            "priority": 0.0,
-            "rule": "few-pictures"
           },
           {
             "primitive": "fact",

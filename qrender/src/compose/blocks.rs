@@ -42,13 +42,13 @@ impl<'a> Composer<'a> {
         let datatype = groups[0].0[0].value.datatype();
         if matches!(datatype, Datatype::WikibaseItem | Datatype::CommonsMedia) {
             // Item and media values: current first, and the ones that ended
-            // apart.
+            // apart, after them.
             let current = self.current(groups.remove(0).0);
             let split = first(&rules.split, &GroupFacts::new(self, pid, &current, false));
             groups = match split.make {
                 SplitMake::SplitEnded => {
                     let (ended, rest) = current.into_iter().partition(|s| Self::ended(s));
-                    vec![(ended, true), (rest, false)]
+                    vec![(rest, false), (ended, true)]
                 }
                 SplitMake::Together => vec![(current, false)],
             };

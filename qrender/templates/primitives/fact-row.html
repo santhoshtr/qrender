@@ -5,6 +5,7 @@
 {%- let form = b.form.name() -%}
 {%- let single = b.statements.len() == 1 && form != "list" -%}
 <div class="row r-{{ form }}{% if b.former %} former{% endif %}"><dt>{{ ui.text(ui.property(b.pid), true)|safe }}
+    {%- if b.former %} <span class="mark">{{ ui.msg("qrender-former") }}</span>{% endif -%}
     {%- if b.measured -%}{%- if let Some(d) = ui.property(b.pid).description %}<span class="desc">
         {% call m::description(d) %}
         {% endcall %}

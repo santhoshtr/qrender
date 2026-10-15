@@ -30,7 +30,12 @@
 	}
 
 	/* A value that has ended: shown, but quieter than the current ones. */
-	&.former dd { font-weight: var( --font-weight-normal ); color: var( --color-subtle ); }
+	&.former {
+		/* The word "former" after the label. */
+		& .mark { font-size: var( --font-size-x-small ); font-style: italic; }
+
+		& dd { font-weight: var( --font-weight-normal ); color: var( --color-subtle ); }
+	}
 
 	&.absent {
 		& dt { font-style: italic; }

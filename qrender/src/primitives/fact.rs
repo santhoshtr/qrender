@@ -244,7 +244,7 @@ pub fn markdown(b: &Fact, md: &mut crate::render::markdown::Markdown) {
         ));
     }
     let key = if b.former {
-        format!("{} (former)", md.property(b.pid))
+        format!("{} ({})", md.property(b.pid), md.view.msg("qrender-former"))
     } else {
         md.described_property(b.pid)
     };
