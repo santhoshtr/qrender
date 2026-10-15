@@ -657,8 +657,12 @@ pids = [
   "P208",   # executive body
   "P209",   # highest judicial authority
   "P36",    # capital
+  "P150",   # contains the administrative territorial entity
   "P1410",  # number of seats in assembly
   "P2769",  # budget
+  "P457",   # foundational text
+  "P92",    # main regulatory text
+  "P2238",  # official symbol
 ]
 
 # Births and deaths are next to each other: their charts are siblings.
@@ -704,6 +708,7 @@ pids = [
   "P2855",  # VAT rate
   "P6794",  # minimum wage
   "P8843",  # poverty incidence
+  "P13574", # most populous urban area
 ]
 
 [[class_layouts.country.spreads]]
@@ -759,6 +764,8 @@ pids = [
   "P2936",  # language used
   "P172",   # ethnic group
   "P2596",  # culture
+  "P417",   # patron saint
+  "P485",   # archives at
 ]
 
 [[class_layouts.country.spreads]]
@@ -934,6 +941,7 @@ extreme_point = ["P1332", "P1333", "P1334", "P1335", "P5140"]
 # Sites and accounts: the item on the web, as cards in the web spread.
 web = [
   "P856",   # official website
+  "P78",    # top-level Internet domain
   "P2002",  # X username
   "P2013",  # Facebook username
   "P2003",  # Instagram username
