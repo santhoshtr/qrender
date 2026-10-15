@@ -309,8 +309,10 @@ dialog {
 		padding-block-end: var( --spacing-50 );
 
 		/* Wikidata labels are lower case by convention. The first letter is
-		   raised for display; in a script without case this does nothing. */
-		&::first-letter { text-transform: uppercase; }
+		   raised for display; in a script without case this does nothing.
+		   On the title, not on the heading: a flex container has no first
+		   letter. */
+		& > .title::first-letter { text-transform: uppercase; }
 		border-block-end: 2px solid var( --ink );
 		font-family: var( --font-family-serif );
 		font-size: var( --font-size-xx-large );

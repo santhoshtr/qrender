@@ -80,7 +80,7 @@ expression: html
     </div></section>
             <section class="spread t-columns"
              data-spread="physical"
-             data-dimension="measures"><h2>ഭൗതികഗുണങ്ങൾ</h2><div data-slot="hero">
+             data-dimension="measures"><h2><span class="title">ഭൗതികഗുണങ്ങൾ</span></h2><div data-slot="hero">
         <div class="block scale">
     <h3><span class="fb-group"><span class="fb"
       lang="en">parent astronomical body</span><a class="add-label"
@@ -236,7 +236,7 @@ expression: html
 </div></dl></section>
             <section class="spread t-columns"
              data-spread="orbit"
-             data-dimension="measures"><h2>ഭ്രമണപഥം</h2><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt><span class="fb-group"><span class="fb"
+             data-dimension="measures"><h2><span class="title">ഭ്രമണപഥം</span></h2><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt><span class="fb-group"><span class="fb"
       lang="en">type of orbit</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/P522"
            aria-label="Add a label in your language">+</a></span></dt>
@@ -340,7 +340,7 @@ expression: html
 </div></dl></section>
             <section class="spread t-columns"
              data-spread="relations"
-             data-dimension="place"><h2><span class="fb" lang="en">relation</span></h2><div data-slot="stack">
+             data-dimension="place"><h2><span class="title"><span class="fb" lang="en">relation</span></span></h2><div data-slot="stack">
         <div class="block set">
     <h3><span class="fb-group"><span class="fb"
       lang="en">child astronomical body</span><a class="add-label"
@@ -647,12 +647,12 @@ expression: html
        aria-label="Edit">✎</a></span></figure></div></div></div></section>
             <section class="spread t-columns"
              data-spread="history"
-             data-dimension="time"><h2>ചരിത്രം</h2><p class="prose-links"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q7102486"><span class="fb" lang="en">origin of the Moon</span></a><a class="add-label"
+             data-dimension="time"><h2><span class="title">ചരിത്രം</span></h2><p class="prose-links"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q7102486"><span class="fb" lang="en">origin of the Moon</span></a><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q7102486"
            aria-label="Add a label in your language">+</a></span></p></section>
             <section class="spread t-feature-run"
              data-spread="media"
-             data-dimension="media"><h2>മൾട്ടിമീഡിയ</h2><div data-slot="feature">
+             data-dimension="media"><h2><span class="title">മൾട്ടിമീഡിയ</span></h2><div data-slot="feature">
         <div class="feature"> <figure class="m k-photo" style="--a:1.5">
         <a href="https://commons.wikimedia.org/wiki/File:Solar_eclipse_taken_from_Artemis_II_-_April_2026.jpg">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Solar%20eclipse%20taken%20from%20Artemis%20II%20-%20April%202026.jpg?width=960"
@@ -803,7 +803,7 @@ expression: html
 </div></dl></section>
             <section class="spread t-columns"
              data-spread="web"
-             data-dimension="neutral"><h2><span class="fb" lang="en">web presence</span></h2><div data-slot="stack">
+             data-dimension="neutral"><h2><span class="title"><span class="fb" lang="en">web presence</span></span></h2><div data-slot="stack">
         <div class="block links"><div class="card">
             <span class="mark" aria-hidden="true"><span class="hash">#</span></span>
             <span class="property">subreddit</span><span class="address">moon</span><span class="note">2008 – · <a href="https://www.wikidata.org/wiki/Q1860">ഇംഗ്ലീഷ്</a> · The Moon Subreddit</span>
@@ -972,7 +972,7 @@ expression: html
     </section>
             <section class="spread t-sheet"
              data-spread="evidence"
-             data-dimension="neutral"><h2>അവലംബം</h2><div data-slot="summary">
+             data-dimension="neutral"><h2><span class="title">അവലംബം</span></h2><div data-slot="summary">
         <div class="block">
     <div class="stack-bar"><span class="p-sourced" style="--n:18"></span>
 <span class="p-imported" style="--n:11"></span>

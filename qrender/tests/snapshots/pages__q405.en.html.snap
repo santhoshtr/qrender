@@ -70,7 +70,7 @@ expression: html
     </div></section>
             <section class="spread t-columns"
              data-spread="physical"
-             data-dimension="measures"><h2>physical property</h2><div data-slot="hero">
+             data-dimension="measures"><h2><span class="title">physical property</span></h2><div data-slot="hero">
         <div class="block scale">
     <h3>parent astronomical body: <a href="https://www.wikidata.org/wiki/Q2">Earth</a></h3>
     <div class="bars"><div class="bar self"><span class="name">area</span><span class="track"><span style="--f:0.074363"></span></span><span class="val"><data value="0.074363" data-f="percent">7.4 %</data></span></div><div class="bar self"><span class="name">mass</span><span class="track"><span style="--f:0.012303"></span></span><span class="val"><data value="0.012303" data-f="percent">1.2 %</data></span></div><div class="bar self"><span class="name">radius</span><span class="track"><span style="--f:0.273266"></span></span><span class="val"><data value="0.273266" data-f="percent">27 %</data></span></div><div class="bar self"><span class="name">diameter</span><span class="track"><span style="--f:0.272814"></span></span><span class="val"><data value="0.272814" data-f="percent">27 %</data></span></div></div>
@@ -167,7 +167,7 @@ expression: html
 </div></dl></section>
             <section class="spread t-columns"
              data-spread="orbit"
-             data-dimension="measures"><h2>orbit</h2><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>type of orbit</dt>
+             data-dimension="measures"><h2><span class="title">orbit</span></h2><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>type of orbit</dt>
 <dd><a href="https://www.wikidata.org/wiki/Q218056">high Earth orbit</a> <span class="note"><a href="https://www.wikidata.org/wiki/Q210539">orbit of the Moon</a></span></dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
@@ -238,7 +238,7 @@ expression: html
 </div></dl></section>
             <section class="spread t-columns"
              data-spread="relations"
-             data-dimension="place"><h2>relation</h2><div data-slot="stack">
+             data-dimension="place"><h2><span class="title">relation</span></h2><div data-slot="stack">
         <div class="block set">
     <h3>child astronomical body <span class="note">4</span></h3><div class="run scroll" tabindex="0" role="group" aria-label="child astronomical body"><figure class="m k-photo"
         style="--a:1.5017">
@@ -512,10 +512,10 @@ expression: html
        aria-label="Edit">✎</a></span></figure></div></div></div></section>
             <section class="spread t-columns"
              data-spread="history"
-             data-dimension="time"><h2>history</h2><p class="prose-links"><a href="https://www.wikidata.org/wiki/Q7102486">origin of the Moon</a></p></section>
+             data-dimension="time"><h2><span class="title">history</span></h2><p class="prose-links"><a href="https://www.wikidata.org/wiki/Q7102486">origin of the Moon</a></p></section>
             <section class="spread t-feature-run"
              data-spread="media"
-             data-dimension="media"><h2>multimedia</h2><div data-slot="feature">
+             data-dimension="media"><h2><span class="title">multimedia</span></h2><div data-slot="feature">
         <div class="feature"> <figure class="m k-photo" style="--a:1.5">
         <a href="https://commons.wikimedia.org/wiki/File:Solar_eclipse_taken_from_Artemis_II_-_April_2026.jpg">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Solar%20eclipse%20taken%20from%20Artemis%20II%20-%20April%202026.jpg?width=960"
@@ -654,7 +654,7 @@ expression: html
 </div></dl></section>
             <section class="spread t-columns"
              data-spread="web"
-             data-dimension="neutral"><h2>web presence</h2><div data-slot="stack">
+             data-dimension="neutral"><h2><span class="title">web presence</span></h2><div data-slot="stack">
         <div class="block links"><div class="card">
             <span class="mark" aria-hidden="true"><span class="hash">#</span></span>
             <span class="property">subreddit</span><span class="address">moon</span><span class="note">2008 – · <a href="https://www.wikidata.org/wiki/Q1860">English</a> · The Moon Subreddit</span>
@@ -789,7 +789,7 @@ expression: html
     </section>
             <section class="spread t-sheet"
              data-spread="evidence"
-             data-dimension="neutral"><h2>reference</h2><div data-slot="summary">
+             data-dimension="neutral"><h2><span class="title">reference</span></h2><div data-slot="summary">
         <div class="block">
     <div class="stack-bar"><span class="p-sourced" style="--n:18"></span>
 <span class="p-imported" style="--n:11"></span>
