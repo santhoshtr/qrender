@@ -135,6 +135,13 @@ struct FigureHtml<'a> {
 }
 
 #[derive(Template)]
+#[template(path = "parts/about.html")]
+struct AboutHtml<'a> {
+    ui: &'a Ui<'a>,
+    l: &'a Label,
+}
+
+#[derive(Template)]
 #[template(path = "parts/toc.html")]
 struct TocHtml<'a> {
     ui: &'a Ui<'a>,
@@ -194,6 +201,12 @@ impl<'v> Ui<'v> {
             slot: slot.get(),
             blocks,
         })
+    }
+
+    /// The description of a property behind an (i) button; nothing when
+    /// it has none.
+    pub fn about(&self, l: impl Ref<Label>) -> String {
+        render(AboutHtml { ui: self, l: l.r() })
     }
 
     /// A label; with `add`, a fallback has the action to add it.

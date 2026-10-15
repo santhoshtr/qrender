@@ -1,0 +1,13 @@
+{%- import "macros.html" as m -%}
+{#- The description of a property, behind an (i) button after its label:
+    it says what a number is ("per 1,000 population"), but it is often
+    written for editors, so it is not in the text of the page. -#}
+{%- if let Some(d) = l.description -%}
+    {%- let n = ui.id() %}
+    <button class="info"
+            type="button"
+            popovertarget="p{{ n }}"
+            aria-label="{{ ui.msg("qrender-description") }}">i</button><span id="p{{ n }}" popover class="pop">
+        {%- call m::description(d) %}{% endcall -%}
+    </span>
+{%- endif -%}

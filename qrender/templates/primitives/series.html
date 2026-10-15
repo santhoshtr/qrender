@@ -12,26 +12,17 @@
         {%- let property = ui.property(line.pid) -%}
         <p class="desc line">
             <span class="key" style="--c: var( --part-{{ loop.index }} )"></span>{{ ui.text(&property, true)|safe }}
-            {%- if let Some(d) = property.description %}:
-                {% call m::description(d) %}
-                {% endcall %}
-            {%- endif %}
+            {{- ui.about(&property)|safe }}
             {% call m::edit(ui, ui.edit(line.pid)) %}
             {% endcall %}
         </p>
     {%- endfor -%}
 {%- else -%}
     {%- let property = ui.property(b.lines[0].pid) -%}
-    <h3>{{ ui.text(&property, true)|safe }}{% call m::prov(ui, b.provenance) %}{% endcall %}
+    <h3>{{ ui.text(&property, true)|safe }}{{ ui.about(&property)|safe }}{% call m::prov(ui, b.provenance) %}{% endcall %}
     {% call m::edit(ui, ui.edit(b.lines[0].pid)) %}
     {% endcall %}
     </h3>
-    {%- if let Some(d) = property.description %}
-        <p class="desc">
-            {% call m::description(d) %}
-            {% endcall %}
-        </p>
-    {% endif -%}
 {%- endif %}
 <div class="chart">
     <div class="data">

@@ -178,7 +178,8 @@ a {
 	& > :is( .edit, .info ) { background-color: rgba( 255, 255, 255, 0.85 ); color: #202122; }
 }
 
-/* The credit of a picture: a popover, opened by its (i) button. */
+/* The credit of a picture or the description of a property: a popover,
+   opened by its (i) button. */
 .pop {
 	margin: 0;
 	max-inline-size: 320px;
@@ -188,6 +189,8 @@ a {
 	background-color: var( --background-color-base );
 	color: var( --color-base );
 	font-size: var( --font-size-x-small );
+	/* Not the weight of a heading that it is in. */
+	font-weight: var( --font-weight-normal );
 	box-shadow: 0 2px 8px var( --box-shadow-color-alpha-base );
 	inset: auto;
 	position-area: block-end span-inline-start;
