@@ -589,6 +589,7 @@ kind = "identity"
 id = "names"
 dimension = "names"
 concept = "Q82799"     # name
+prose = ["Q35245"]     # etymology
 kind = "facts"
 pids = [
   "P1448",  # official name
@@ -686,7 +687,7 @@ pids = [
 id = "demography"
 dimension = "measures"
 concept = "Q37732"     # demography
-prose = ["Q37732"]
+prose = ["Q37732", "Q2725376"]   # demography, demographics
 kind = "scale"
 pids = [
   "P1082",  # population
@@ -772,7 +773,7 @@ pids = [
 id = "culture"
 dimension = "people"
 concept = "Q11042"     # culture
-prose = ["Q11042"]     # culture
+prose = ["Q11042", "Q115161035"]   # culture, culture and society
 kind = "facts"
 pids = [
   "P832",   # public holiday
@@ -1170,7 +1171,7 @@ P8744 = "economy"        # economy of topic
 en = [
   "See also", "Notes", "Explanatory notes", "Footnotes", "References",
   "Citations", "Sources", "Works cited", "Bibliography", "Further reading",
-  "External links",
+  "Sources and further reading", "External links",
 ]
 ml = [
   "ഇതും കാണുക", "ഇതുംകൂടി കാണുക",  # see also
