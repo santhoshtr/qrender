@@ -672,6 +672,7 @@ dialog {
 	list-style: none;
 
 	& li {
+		position: relative;
 		display: grid;
 		grid-template-columns: 64px minmax( 0, 1fr );
 		gap: var( --spacing-75 );
@@ -693,14 +694,17 @@ dialog {
 		}
 	}
 
+	/* Inline: a long title wraps with its marks. The edit action is in
+	   the corner of the row, out of the text, so it takes no line. */
 	& .text {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: baseline;
-		gap: 0 var( --spacing-25 );
-
 		& > .desc,
-		& > .note { flex-basis: 100%; }
+		& > .note { display: block; }
+
+		& > .edit {
+			position: absolute;
+			inset-block-start: 0;
+			inset-inline-end: 0;
+		}
 	}
 
 	/* No value has a picture: no picture column. */

@@ -4818,7 +4818,7 @@ expression: composition
           {
             "primitive": "network",
             "pid": "P1830",
-            "form": "strip",
+            "form": "rows",
             "values": [
               {
                 "statement": "Q90-4A25474A-6FF3-4DD2-9C6A-844B2127C5DD",
@@ -4836,6 +4836,7 @@ expression: composition
                     "license": "Public domain"
                   }
                 },
+                "described": true,
                 "shown": true
               },
               {
@@ -4854,6 +4855,7 @@ expression: composition
                     "license": "CC BY-SA 3.0"
                   }
                 },
+                "described": true,
                 "shown": true
               },
               {
@@ -4872,6 +4874,7 @@ expression: composition
                     "license": "Public domain"
                   }
                 },
+                "described": true,
                 "shown": true
               },
               {
@@ -4890,6 +4893,7 @@ expression: composition
                     "license": "CC BY-SA 3.0 de"
                   }
                 },
+                "described": true,
                 "shown": true
               },
               {
@@ -4908,6 +4912,7 @@ expression: composition
                     "license": "Public domain"
                   }
                 },
+                "described": true,
                 "shown": true
               },
               {
@@ -4929,6 +4934,7 @@ expression: composition
                     "license": "CC BY-SA 3.0"
                   }
                 },
+                "described": true,
                 "shown": true
               },
               {
@@ -4947,6 +4953,7 @@ expression: composition
                     "license": "CC BY 3.0"
                   }
                 },
+                "described": true,
                 "shown": true
               },
               {
@@ -4965,6 +4972,7 @@ expression: composition
                     "license": "CC BY-SA 3.0"
                   }
                 },
+                "described": true,
                 "shown": true
               },
               {
@@ -4983,7 +4991,8 @@ expression: composition
                     "license": "Public domain"
                   }
                 },
-                "shown": true
+                "described": true,
+                "shown": false
               },
               {
                 "statement": "Q90-C548D32F-AF99-40E8-AB32-AF107B62B91C",
@@ -5001,7 +5010,8 @@ expression: composition
                     "license": "CC BY-SA 3.0"
                   }
                 },
-                "shown": true
+                "described": true,
+                "shown": false
               },
               {
                 "statement": "Q90-CA2C0624-4C92-4715-872E-0274781D1420",
@@ -5019,7 +5029,8 @@ expression: composition
                     "license": "CC BY-SA 4.0"
                   }
                 },
-                "shown": true
+                "described": true,
+                "shown": false
               },
               {
                 "statement": "Q90-D5BA6E75-6FF3-4C1B-A2F3-0015870918EE",
@@ -5037,7 +5048,8 @@ expression: composition
                     "license": "CC BY 3.0"
                   }
                 },
-                "shown": true
+                "described": true,
+                "shown": false
               },
               {
                 "statement": "Q90-D70C3C86-1F54-447C-98F8-5265FA4E751E",
@@ -5055,6 +5067,7 @@ expression: composition
                     "license": "CC BY-SA 4.0"
                   }
                 },
+                "described": true,
                 "shown": false
               },
               {
@@ -5073,6 +5086,7 @@ expression: composition
                     "license": "CC BY-SA 2.0"
                   }
                 },
+                "described": true,
                 "shown": false
               },
               {
@@ -5091,6 +5105,7 @@ expression: composition
                     "license": "CC BY-SA 3.0"
                   }
                 },
+                "described": true,
                 "shown": false
               },
               {
@@ -5114,6 +5129,7 @@ expression: composition
                     "license": "Public domain"
                   }
                 },
+                "described": true,
                 "shown": false
               },
               {
@@ -5132,6 +5148,7 @@ expression: composition
                     "license": "CC BY-SA 3.0"
                   }
                 },
+                "described": true,
                 "shown": false
               },
               {
@@ -5150,6 +5167,7 @@ expression: composition
                     "license": "CC BY-SA 3.0"
                   }
                 },
+                "described": true,
                 "shown": false
               },
               {
@@ -5158,11 +5176,12 @@ expression: composition
                 "item": "Q178513",
                 "rank": "normal",
                 "provenance": "none",
+                "described": true,
                 "shown": false
               }
             ],
             "priority": 0.4,
-            "rule": "set"
+            "rule": "described-set"
           }
         ],
         "sheet": [

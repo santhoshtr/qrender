@@ -131,13 +131,13 @@ impl<'a> Composer<'a> {
                     .collect();
             }
             BlockMake::Score => Block::Score(score::build(self, pid, group, rule)),
-            BlockMake::Network | BlockMake::LinkedSet => {
+            BlockMake::Network | BlockMake::Rows => {
                 let order = first(
                     &self.config.rules.order,
                     &GroupFacts::new(self, pid, group, false),
                 );
                 let (form, shown) = match make {
-                    BlockMake::LinkedSet => (NetworkForm::Rows, thresholds.linked_shown),
+                    BlockMake::Rows => (NetworkForm::Rows, thresholds.rows_shown),
                     _ => (NetworkForm::Strip, thresholds.set_max),
                 };
                 Block::Network(network::build(

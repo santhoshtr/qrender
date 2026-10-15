@@ -123,7 +123,15 @@ make = "single"
 [[block]]
 id = "linked-set"
 when = { type = "WikibaseItem", linked = true }
-make = "linked-set"
+make = "rows"
+
+# A set whose values are known by their descriptions (the buildings that
+# a country owns): rows with the descriptions. One or two values are
+# small values (above).
+[[block]]
+id = "described-set"
+when = { type = "WikibaseItem", role = "described" }
+make = "rows"
 
 [[block]]
 id = "set"

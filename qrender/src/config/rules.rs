@@ -184,9 +184,9 @@ pub enum BlockMake {
     Single,
     /// A set of pictured values.
     Network,
-    /// A set whose qualifiers matter: a row for each value, with its
-    /// picture and its qualifiers.
-    LinkedSet,
+    /// A set whose qualifiers or descriptions matter: a row for each
+    /// value, with its picture, its description and its qualifiers.
+    Rows,
     Score,
     /// A row of the fact sheet.
     Fact,
