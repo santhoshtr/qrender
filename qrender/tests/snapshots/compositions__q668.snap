@@ -114,28 +114,6 @@ expression: composition
                     "shown": true
                   }
                 ]
-              },
-              {
-                "pid": "P17",
-                "values": [
-                  {
-                    "statement": "Q668-7912e556-4f1a-94bc-9592-d3259f69c167",
-                    "pid": "P17",
-                    "item": "Q668",
-                    "rank": "normal",
-                    "provenance": "none",
-                    "image": {
-                      "file": "India-locator-map-blank.svg",
-                      "kind": "drawing",
-                      "aspect": 0.857,
-                      "megapixels": 2.58,
-                      "credit": {
-                        "artist": "",
-                        "license": "CC BY-SA 3.0"
-                      }
-                    }
-                  }
-                ]
               }
             ]
           }
@@ -18900,6 +18878,24 @@ expression: composition
             "role": "gallery",
             "values": [
               {
+                "statement": "Q668-7912e556-4f1a-94bc-9592-d3259f69c167",
+                "pid": "P17",
+                "item": "Q668",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "India-locator-map-blank.svg",
+                  "kind": "drawing",
+                  "aspect": 0.857,
+                  "megapixels": 2.58,
+                  "credit": {
+                    "artist": "",
+                    "license": "CC BY-SA 3.0"
+                  }
+                },
+                "priority": 0.857
+              },
+              {
                 "statement": "Q668-f4f9a2b3-47df-5960-e58e-5e46464ddc65",
                 "pid": "P155",
                 "item": "Q129286",
@@ -18918,7 +18914,7 @@ expression: composition
                 "priority": 0.286
               }
             ],
-            "priority": 0.286,
+            "priority": 0.857,
             "rule": "single"
           }
         ]

@@ -33,7 +33,9 @@ pub struct ChainLink {
 }
 
 /// The classes (current first, the first `chain_max` shown) and the
-/// current value of the container property. Claims both.
+/// current value of the container property. Claims both. A container that
+/// is the item itself (the country of a country) says nothing here: it
+/// goes on with the other statements.
 pub fn build(c: &mut Composer) -> Kind {
     let mut chain = Vec::new();
     let classes = c.current(c.free(*INSTANCE_OF));
@@ -46,7 +48,9 @@ pub fn build(c: &mut Composer) -> Kind {
         });
     }
     let container = &c.content.container;
-    if let (Some(pid), Some(qid)) = (container.pid, container.qid) {
+    if let (Some(pid), Some(qid)) = (container.pid, container.qid)
+        && qid != c.content.qid
+    {
         let now: Vec<_> = c
             .free(pid)
             .into_iter()
@@ -68,4 +72,28 @@ pub fn markdown(b: &Kind, md: &mut crate::render::markdown::Markdown) {
         md.item(&md.property(link.pid), &values.join(", "));
     }
     md.end();
+}
+
+#[cfg(test)]
+mod tests {
+    use serde_json::json;
+
+    use super::*;
+    use crate::compose::test_content::{content, item};
+    use crate::config::Config;
+
+    #[test]
+    fn a_container_that_is_the_item_is_not_shown() {
+        // The country (P17) of a country is the country itself.
+        let c = content(
+            json!([item("P31", "Q6256"), item("P17", "Q1")]),
+            json!({"container": {"pid": "P17", "qid": "Q1"}}),
+        );
+        let mut k = Composer::new(&c, Config::embedded());
+        let kind = build(&mut k);
+        assert_eq!(kind.chain.len(), 1);
+        assert_eq!(kind.chain[0].pid, *INSTANCE_OF);
+        // Not claimed: it goes on with the other statements.
+        assert_eq!(k.unclaimed().len(), 1);
+    }
 }
