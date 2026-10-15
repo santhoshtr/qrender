@@ -2,7 +2,8 @@
 {#- Measurements over time. The table is the content, a column for each
     line; the qr-chart element (chart.js) draws a line chart from the data
     of its cells. One line: the title is its property. The lines of a
-    split: the title is the concept, and a key names each line. -#}
+    split: the title is the concept, and a key names each line. A value
+    apart (a year by sex among years without) is in the table only. -#}
 {%- let rows = b.rows() -%}
 <qr-chart class="block series">
 {%- if let Some(concept) = b.concept -%}
@@ -50,6 +51,7 @@
                             <td{% if let Some(p) = cell.point %} data-amount="{{ p.amount }}"{% endif %}>
                                 {%- if let Some(p) = cell.point %}{{ ui.part(ui.number(p.amount))|safe }}{% endif -%}
                                 {%- for o in cell.others.iter() %} <span data-other="{{ o.amount }}">{{ ui.part(ui.number(o.amount))|safe }} <span class="note">{{ ui.msg("qrender-other-value") }}</span></span>{% endfor -%}
+                                {%- for a in cell.apart.iter() %} <span class="apart">{{ ui.part(ui.number(a.amount))|safe }} <span class="note">{{ ui.note(ui.qualifiers(a.qualifiers.as_slice()).as_slice())|safe }}</span></span>{% endfor -%}
                             </td>
                         {%- endfor -%}
                     </tr>

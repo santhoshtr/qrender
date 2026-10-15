@@ -9,8 +9,8 @@ use schemars::JsonSchema;
 use serde::Serialize;
 
 use crate::compose::Composer;
-use crate::compose::facts::series_points;
-use crate::schema::Provenance;
+use crate::compose::facts::{other_qualifiers, series_points};
+use crate::schema::{Provenance, QualifierShown};
 
 #[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct Series {
@@ -42,10 +42,12 @@ pub struct TableRow<'a> {
     pub cells: Vec<TableCell<'a>>,
 }
 
-/// The point of a line in one year, and the other values of that year.
+/// The point of a line in one year, the other values of that year, and
+/// its values apart (not on the line).
 pub struct TableCell<'a> {
     pub point: Option<&'a Point>,
     pub others: Vec<&'a Point>,
+    pub apart: Vec<&'a Point>,
 }
 
 impl Series {
@@ -68,8 +70,9 @@ impl Series {
                     .map(|l| {
                         let of_year = l.points.iter().filter(|p| p.year == year);
                         TableCell {
-                            point: of_year.clone().find(|p| !p.other),
-                            others: of_year.filter(|p| p.other).collect(),
+                            point: of_year.clone().find(|p| !p.other && !p.apart),
+                            others: of_year.clone().filter(|p| p.other).collect(),
+                            apart: of_year.filter(|p| p.apart).collect(),
                         }
                     })
                     .collect(),
@@ -107,6 +110,14 @@ pub struct Point {
     /// year is its preferred value.
     #[serde(skip_serializing_if = "std::ops::Not::not")]
     pub other: bool,
+    /// A value of a year whose values differ by another qualifier (by sex),
+    /// not of the measurement of most values: in the table, not on the
+    /// line. The gap shows editors the data to fix.
+    #[serde(skip_serializing_if = "std::ops::Not::not")]
+    pub apart: bool,
+    /// The qualifiers of a value apart, other than its dates.
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub qualifiers: Vec<QualifierShown>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub statement: Option<StatementId>,
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -155,13 +166,22 @@ fn line(c: &Composer, pid: Pid, statements: &[&Statement]) -> Option<Line> {
                 year: p.year,
                 amount,
                 other: p.other,
+                apart: p.apart,
+                qualifiers: if p.apart {
+                    other_qualifiers(p.statement)
+                        .into_iter()
+                        .filter_map(|q| QualifierShown::new(q.pid, &q.value))
+                        .collect()
+                } else {
+                    Vec::new()
+                },
                 statement: Some(p.statement.id.clone()),
                 provenance: Some(c.provenance(p.statement)),
             }),
             _ => None,
         })
         .collect::<Option<_>>()?;
-    points.sort_by_key(|p| (p.year, p.other));
+    points.sort_by_key(|p| (p.year, p.apart, p.other));
     Some(Line { pid, points })
 }
 
@@ -205,6 +225,8 @@ pub fn tabular(c: &Composer, pid: Pid, statement: &Statement) -> Option<Series> 
                     year,
                     amount,
                     other: false,
+                    apart: false,
+                    qualifiers: Vec::new(),
                     statement: None,
                     provenance: None,
                 })
@@ -268,6 +290,8 @@ fn points(line: &Line, md: &crate::render::markdown::Markdown) -> String {
             );
             if p.other {
                 format!("{point} ({})", md.view.msg("qrender-other-value"))
+            } else if p.apart {
+                format!("{point} ({})", md.note(&md.view.note(&p.qualifiers)))
             } else {
                 point
             }

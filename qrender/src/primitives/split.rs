@@ -103,7 +103,7 @@ fn bars<'a>(
             Some(
                 dated_points(c, statements)?
                     .into_iter()
-                    .filter(|p| !p.other)
+                    .filter(|p| !p.other && !p.apart)
                     .map(|p| (p.year, p.statement))
                     .collect(),
             )

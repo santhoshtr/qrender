@@ -2710,6 +2710,10 @@
           "format": "double",
           "type": "number"
         },
+        "apart": {
+          "description": "A value of a year whose values differ by another qualifier (by sex),\nnot of the measurement of most values: in the table, not on the\nline. The gap shows editors the data to fix.",
+          "type": "boolean"
+        },
         "other": {
           "description": "Another value of the year, from another source: the point of the\nyear is its preferred value.",
           "type": "boolean"
@@ -2723,6 +2727,13 @@
               "type": "null"
             }
           ]
+        },
+        "qualifiers": {
+          "description": "The qualifiers of a value apart, other than its dates.",
+          "items": {
+            "$ref": "#/$defs/QualifierShown"
+          },
+          "type": "array"
         },
         "statement": {
           "anyOf": [

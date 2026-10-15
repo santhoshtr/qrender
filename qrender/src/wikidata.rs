@@ -28,6 +28,7 @@ properties! {
     AREA = "P2046", "area";
     LANGUAGE = "P407", "language of work or name";
     GEOSHAPE = "P3896", "geoshape";
+    PREFERRED_REASON = "P7452", "reason for preferred rank";
 }
 
 /// Percent (Q11229): the unit of a proportion.

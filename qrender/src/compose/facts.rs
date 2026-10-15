@@ -13,7 +13,7 @@ use content::{Datatype, Pid, Qualifier, Rank, Statement};
 use super::{Composer, measurement_year};
 use crate::config::rules::{BlockMake, GroupWhen, PlacementWhen, PropertyWhen, TemplateWhen, When};
 use crate::vocab::{Primitive, Role, RoleSet};
-use crate::wikidata::{END_TIME, POINT_IN_TIME, START_TIME};
+use crate::wikidata::{END_TIME, POINT_IN_TIME, PREFERRED_REASON, START_TIME};
 
 // ------------------------------------------------------------- property
 
@@ -134,17 +134,21 @@ pub struct DatedPoint<'s> {
     pub statement: &'s Statement,
     /// Another value of a year whose preferred value is the point.
     pub other: bool,
+    /// A value of a year whose values differ by another qualifier (by
+    /// sex), with qualifiers that most values of the property do not
+    /// have: not a point of the series.
+    pub apart: bool,
 }
 
-/// The points of a series: `dated_points` in two years or more. Two points
-/// are a series: the chart shows that the data is scarce and asks for
-/// more.
+/// The points of a series: `dated_points` in two years or more (values
+/// apart do not count). Two points are a series: the chart shows that the
+/// data is scarce and asks for more.
 pub fn series_points<'s>(
     c: &Composer,
     statements: &[&'s Statement],
 ) -> Option<Vec<DatedPoint<'s>>> {
     let points = dated_points(c, statements)?;
-    let years: HashSet<i64> = points.iter().map(|p| p.year).collect();
+    let years: HashSet<i64> = points.iter().filter(|p| !p.apart).map(|p| p.year).collect();
     (years.len() >= 2).then_some(points)
 }
 
@@ -155,24 +159,36 @@ pub fn series_points<'s>(
 /// value with preferred rank; else the value with the most references to a
 /// real source; else the first in the order of the data. Its other values
 /// are marked `other`. Values that differ by another qualifier (by sex, by
-/// place) are not one measurement: they make no points.
+/// place) are not one measurement. In such a year, the values with the
+/// other qualifiers of more than half of the values are the measurement;
+/// the rest are marked `apart`. Without such a majority: no points.
 pub fn dated_points<'s>(c: &Composer, statements: &[&'s Statement]) -> Option<Vec<DatedPoint<'s>>> {
     let years: Vec<i64> = statements
         .iter()
         .map(|s| measurement_year(s).filter(|y| *y != 0))
         .collect::<Option<_>>()?;
+    let measures: Vec<Vec<&Qualifier>> = statements.iter().map(|s| other_qualifiers(s)).collect();
+    // The other qualifiers of more than half of the values.
+    let main = measures
+        .iter()
+        .find(|m| 2 * measures.iter().filter(|n| n == m).count() > measures.len());
     let mut by_year: HashMap<i64, Vec<usize>> = HashMap::new();
     for (i, year) in years.iter().enumerate() {
         by_year.entry(*year).or_default().push(i);
     }
     let mut other = vec![false; statements.len()];
+    let mut apart = vec![false; statements.len()];
     for same in by_year.values().filter(|same| same.len() > 1) {
-        let measure = other_qualifiers(statements[same[0]]);
-        if !same
-            .iter()
-            .all(|&i| other_qualifiers(statements[i]) == measure)
-        {
-            return None;
+        let mut same = same.clone();
+        if !same.iter().all(|&i| measures[i] == measures[same[0]]) {
+            let main = main?;
+            for &i in &same {
+                apart[i] = measures[i] != *main;
+            }
+            same.retain(|&i| !apart[i]);
+            if same.len() < 2 {
+                continue;
+            }
         }
         // The last of the largest keys: the first index wins a tie.
         let point = same.iter().copied().max_by_key(|&i| {
@@ -182,7 +198,7 @@ pub fn dated_points<'s>(c: &Composer, statements: &[&'s Statement]) -> Option<Ve
                 std::cmp::Reverse(i),
             )
         })?;
-        for &i in same {
+        for &i in &same {
             other[i] = i != point;
         }
     }
@@ -190,22 +206,24 @@ pub fn dated_points<'s>(c: &Composer, statements: &[&'s Statement]) -> Option<Ve
         statements
             .iter()
             .zip(years)
-            .zip(other)
-            .map(|((statement, year), other)| DatedPoint {
+            .zip(other.into_iter().zip(apart))
+            .map(|((statement, year), (other, apart))| DatedPoint {
                 year,
                 statement,
                 other,
+                apart,
             })
             .collect(),
     )
 }
 
-/// The qualifiers of a statement other than its dates.
-fn other_qualifiers(statement: &Statement) -> Vec<&Qualifier> {
+/// The qualifiers of a statement other than its dates and the reason for
+/// its rank: the qualifiers of what it measures.
+pub(crate) fn other_qualifiers(statement: &Statement) -> Vec<&Qualifier> {
     statement
         .qualifiers
         .iter()
-        .filter(|q| ![*POINT_IN_TIME, *START_TIME, *END_TIME].contains(&q.pid))
+        .filter(|q| ![*POINT_IN_TIME, *START_TIME, *END_TIME, *PREFERRED_REASON].contains(&q.pid))
         .collect()
 }
 
@@ -583,7 +601,8 @@ mod tests {
             ])),
             Some(vec![(1998, false), (2001, false), (2004, false)])
         );
-        // Values by sex are two measurements, not two sources.
+        // Values by sex are two measurements, not two sources. Without a
+        // measurement of most values: no series.
         assert_eq!(
             years(json!([
                 dated("P1082", 1.0, 2011),
@@ -591,6 +610,37 @@ mod tests {
                 sex(dated("P1082", 3.0, 2021), "Q6581097")
             ])),
             None
+        );
+        // Germany's life expectancy: one year by sex among years without
+        // it. The values of that year are apart; the series goes on. The
+        // reason for a preferred rank is not a measurement.
+        let apart = |values: Value| {
+            let c = content(values, json!({}));
+            let k = Composer::new(&c, Config::embedded());
+            let sts: Vec<_> = c.statements.iter().collect();
+            series_points(&k, &sts)
+                .map(|ps| ps.iter().map(|p| (p.year, p.apart)).collect::<Vec<_>>())
+        };
+        let mut recent = preferred(dated("P2250", 81.9, 2024));
+        recent["qualifiers"]
+            .as_array_mut()
+            .unwrap()
+            .push(json!({"pid": "P7452", "value": {"type": "entity", "entity": "Q71533355"}}));
+        assert_eq!(
+            apart(json!([
+                dated("P2250", 80.6, 2016),
+                sex(dated("P2250", 83.3, 2017), "Q6581072"),
+                sex(dated("P2250", 78.5, 2017), "Q6581097"),
+                dated("P2250", 81.0, 2019),
+                recent
+            ])),
+            Some(vec![
+                (2016, false),
+                (2017, true),
+                (2017, true),
+                (2019, false),
+                (2024, false)
+            ])
         );
     }
 }
