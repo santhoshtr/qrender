@@ -451,7 +451,7 @@ mod tests {
         );
         assert_eq!(
             group_rule(order, json!([item("P47", "Q2")]), none, false),
-            "pictured"
+            "significance"
         );
         assert_eq!(rules().order[0].order, Order::References);
     }

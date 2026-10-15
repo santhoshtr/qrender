@@ -82,8 +82,18 @@ pub fn build(
                 s.value.item().map_or(u64::MAX, |q| q.number()),
             )
         }),
-        // Pictured first; the sort is stable, so the rest keeps its order.
-        Order::Pictured => sorted.sort_by_key(|s| !c.is_pictured(s)),
+        // The most known first, then pictured; the sort is stable, so the
+        // rest keeps its order.
+        Order::Significance => sorted.sort_by_key(|s| {
+            let known = s
+                .value
+                .item()
+                .and_then(|q| c.content.value_sitelinks.get(&q));
+            (
+                std::cmp::Reverse(known.copied().unwrap_or(0)),
+                !c.is_pictured(s),
+            )
+        }),
     }
     Network {
         pid,
@@ -118,5 +128,44 @@ pub fn markdown(b: &Network, md: &mut crate::render::markdown::Markdown) {
 pub fn gallery_markdown(b: &Gallery, md: &mut crate::render::markdown::Markdown) {
     for v in &b.values {
         md.item(&md.property(v.statement.pid), &md.value(&v.statement));
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use serde_json::json;
+
+    use super::*;
+    use crate::compose::test_content::{content, item};
+    use crate::config::Config;
+
+    #[test]
+    fn the_most_known_first() {
+        // Member of: a small body first in the data, the UN after it.
+        let c = content(
+            json!([
+                item("P463", "Q7172"),
+                item("P463", "Q1065"),
+                item("P463", "Q8475")
+            ]),
+            json!({"value_sitelinks": {"Q1065": 250, "Q7172": 60}}),
+        );
+        let k = Composer::new(&c, Config::embedded());
+        let statements: Vec<&Statement> = c.statements.iter().collect();
+        let set = build(
+            &k,
+            "P463".parse().unwrap(),
+            &statements,
+            Order::Significance,
+            5,
+            None,
+        );
+        let order: Vec<String> = set
+            .values
+            .iter()
+            .map(|v| v.value.item().unwrap().to_string())
+            .collect();
+        // Without a count, the value keeps its place after the known ones.
+        assert_eq!(order, ["Q1065", "Q7172", "Q8475"]);
     }
 }

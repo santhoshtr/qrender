@@ -59,7 +59,7 @@ pub enum FetchError {
 /// The version of the fetcher. Raise it when a change of the fetcher
 /// changes what it fetches (a new field, a new request): it is part of
 /// every cache key, so the parts that an older fetcher stored are not read.
-pub const FETCH_VERSION: u32 = 8;
+pub const FETCH_VERSION: u32 = 9;
 
 /// Seconds a cached part lives: content and text change with edits;
 /// a peer set changes slowly and many items share it.
@@ -262,6 +262,7 @@ impl<S: Store> Fetcher<S> {
             quantities,
             peers,
             value_classes,
+            value_sitelinks,
             reverse,
             logos,
             sitelinks,
@@ -278,6 +279,7 @@ impl<S: Store> Fetcher<S> {
             sparql::quantities(http, &targets, &quantity_pids),
             self.peers(&statements, &classes, &container, &quantity_pids),
             sparql::classes_among(http, &value_items),
+            sparql::sitelink_counts(http, &value_items),
             sparql::reverse(http, qid, &reverse_pids),
             sparql::logos(http, &logo_items),
             wikidata::sitelinks(http, qid),
@@ -324,6 +326,7 @@ impl<S: Store> Fetcher<S> {
             peers,
             commons,
             value_classes,
+            value_sitelinks,
             sitelinks,
             class_layout: layout
                 .map(|l| l.name.clone())

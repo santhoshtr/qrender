@@ -201,8 +201,9 @@ pub enum Order {
     /// More references first (a stand-in for billing), then pictured
     /// values, then the item number.
     References,
-    /// Pictured values first; else the order stays.
-    Pictured,
+    /// The most known values first (more sitelinks), then pictured
+    /// values; else the order stays.
+    Significance,
 }
 
 // ------------------------------------------------- lead, slot, template

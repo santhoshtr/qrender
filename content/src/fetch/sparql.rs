@@ -377,6 +377,31 @@ pub async fn classes_among(http: &Http, qids: &[Qid]) -> Result<Vec<Qid>, FetchE
     Ok(out)
 }
 
+/// The number of sitelinks of each item: the wikis that have a page about
+/// it, a measure of how widely it is known. Items without a sitelink are
+/// not in the map.
+pub async fn sitelink_counts(http: &Http, qids: &[Qid]) -> Result<IndexMap<Qid, u32>, FetchError> {
+    let mut out = IndexMap::new();
+    for chunk in qids.chunks(200) {
+        let rows = query(
+            http,
+            &format!(
+                "SELECT ?v ?n WHERE {{ VALUES ?v {{ {} }} ?v wikibase:sitelinks ?n . }}",
+                values(chunk)
+            ),
+        )
+        .await?;
+        for r in &rows {
+            if let (Some(q), Some(n)) = (r.qid("v"), r.get("n").and_then(|n| n.parse().ok()))
+                && n > 0
+            {
+                out.insert(q, n);
+            }
+        }
+    }
+    Ok(out)
+}
+
 /// Statements on other items that point to this one by one of `pids`: the
 /// works of a person. Each with its picture and its earliest publication
 /// or inception year.

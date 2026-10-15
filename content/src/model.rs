@@ -36,6 +36,10 @@ pub struct Content {
     pub commons: IndexMap<String, CommonsFile>,
     /// Value items that are classes (they have P279): never pictured.
     pub value_classes: Vec<Qid>,
+    /// The number of sitelinks of each item value: how widely it is known.
+    /// A set of values puts the most known first.
+    #[serde(default, skip_serializing_if = "IndexMap::is_empty")]
+    pub value_sitelinks: IndexMap<Qid, u32>,
     /// Site id ("enwiki") to page title.
     pub sitelinks: IndexMap<String, String>,
     pub class_layout: String,
