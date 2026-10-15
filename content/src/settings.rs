@@ -29,6 +29,10 @@ pub struct Settings {
     /// The platform of a web property (X username: X): its logo is
     /// fetched.
     pub platforms: Vec<(Pid, Qid)>,
+    /// An item property and the property of its words (motto, motto
+    /// text): the names of the item values are fetched, to match them with
+    /// the texts.
+    pub texts: Vec<(Pid, Pid)>,
 }
 
 #[derive(Debug, Clone, Serialize)]
@@ -75,6 +79,6 @@ mod tests {
         assert_ne!(a.fingerprint(), b.fingerprint());
         // FNV-1a of the JSON of the settings: fixed, so a key from one
         // build is valid in the next.
-        assert_eq!(a.fingerprint(), 0x6ce7_fb9b_3dfb_d2d5);
+        assert_eq!(a.fingerprint(), 0xd5b2_378e_0bb2_46cb);
     }
 }

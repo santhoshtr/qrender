@@ -8,7 +8,8 @@ use schemars::JsonSchema;
 use serde::Serialize;
 
 /// Is a statement backed by a source?
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, JsonSchema)]
+/// In order: the best first.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Serialize, JsonSchema)]
 #[serde(rename_all = "lowercase")]
 pub enum Provenance {
     /// At least one reference with a real source.
@@ -30,6 +31,10 @@ pub struct StatementRef {
     pub provenance: Provenance,
     #[serde(skip_serializing_if = "Vec::is_empty")]
     pub qualifiers: Vec<QualifierShown>,
+    /// The text statements whose words this item value shows (motto text
+    /// with its motto): their words and qualifiers are in `qualifiers`.
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub texts: Vec<StatementId>,
     /// The picture of an item value. None for a class value.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub image: Option<Picture>,

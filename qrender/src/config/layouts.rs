@@ -97,6 +97,10 @@ pub struct Roles {
     /// (flag -> flag image).
     #[serde(default)]
     pub picture: IndexMap<Pid, Pid>,
+    /// Item property -> the property of its words (motto -> motto text):
+    /// a text that names an item value is shown with it.
+    #[serde(default)]
+    pub text: IndexMap<Pid, Pid>,
     /// Commons data property -> the property whose dated statements it
     /// replaces.
     pub tabular: IndexMap<Pid, Pid>,

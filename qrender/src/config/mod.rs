@@ -108,6 +108,7 @@ impl Config {
                 .iter()
                 .map(|(p, q)| (*p, *q))
                 .collect(),
+            texts: layouts.roles.text.iter().map(|(i, t)| (*i, *t)).collect(),
         }
     }
 

@@ -14,7 +14,7 @@ pub mod spreads;
 
 use std::collections::HashSet;
 
-use content::{Content, Pid, Qid, Rank, Statement, StatementId, Value};
+use content::{Content, Pid, Qid, QualifierValue, Rank, Statement, StatementId, Value};
 use indexmap::IndexMap;
 
 use crate::config::{ClassLayout, Config, SpreadSpec};
@@ -43,6 +43,9 @@ pub struct Composer<'a> {
     /// Properties that name the office of a holder property.
     offices: HashSet<Pid>,
     peer_count: usize,
+    /// The texts shown with an item value: item statement -> the text
+    /// statements whose words name its item (motto -> motto text).
+    texts: IndexMap<&'a StatementId, Vec<&'a Statement>>,
 }
 
 impl<'a> Composer<'a> {
@@ -66,6 +69,7 @@ impl<'a> Composer<'a> {
             classes: content.value_classes.iter().copied().collect(),
             offices: config.layouts.roles.office.values().copied().collect(),
             peer_count: content.peers.as_ref().map_or(0, |p| p.members.len()),
+            texts: IndexMap::new(),
         }
     }
 
@@ -124,6 +128,7 @@ impl<'a> Composer<'a> {
     pub fn compose(mut self) -> Composition {
         let layout = self.layout;
         let set_aside = self.set_aside();
+        self.join_texts();
         let mut order: Vec<&SpreadSpec> = layout.spreads.iter().collect();
         order.sort_by_key(|s| match s.kind {
             SpreadKind::Evidence => 1,
@@ -199,6 +204,24 @@ impl<'a> Composer<'a> {
             }
         }
         out
+    }
+
+    /// Claims each text that names an item value of its paired property
+    /// (motto text, motto), and joins it to the first statement with that
+    /// item: the value shows the words.
+    fn join_texts(&mut self) {
+        for (item_pid, text_pid) in &self.config.layouts.roles.text {
+            let items = self.free(*item_pid);
+            for text in self.free(*text_pid) {
+                let Some(q) = self.content.text_items.get(&text.id) else {
+                    continue;
+                };
+                if let Some(item) = items.iter().find(|s| s.value.item() == Some(*q)) {
+                    self.take([text]);
+                    self.texts.entry(&item.id).or_default().push(text);
+                }
+            }
+        }
     }
 
     /// A spread with its slots. The "... of topic" statements of this
@@ -346,20 +369,44 @@ impl<'a> Composer<'a> {
     }
 
     /// A statement as the composition shows it.
+    /// An item value with joined texts has their words and their
+    /// qualifiers, and the best provenance of them all.
     pub fn statement(&self, statement: &Statement) -> StatementRef {
         let item = statement.value.item();
         let class = item.is_some_and(|q| self.is_class_value(statement.pid, q));
+        let texts = self.texts.get(&statement.id).map_or(&[][..], Vec::as_slice);
+        let words = texts.iter().filter_map(|t| match &t.value {
+            Value::Monolingualtext { text, lang } => QualifierShown::new(
+                t.pid,
+                &QualifierValue::Text {
+                    text: text.clone(),
+                    lang: lang.clone(),
+                },
+            ),
+            _ => None,
+        });
+        let others = std::iter::once(statement)
+            .chain(texts.iter().copied())
+            .flat_map(|s| &s.qualifiers)
+            .filter_map(|q| QualifierShown::new(q.pid, &q.value));
+        let mut qualifiers: Vec<QualifierShown> = Vec::new();
+        for q in words.chain(others) {
+            if !qualifiers.contains(&q) {
+                qualifiers.push(q);
+            }
+        }
         StatementRef {
             statement: statement.id.clone(),
             pid: statement.pid,
             value: self.value(statement),
             rank: statement.rank,
-            provenance: self.provenance(statement),
-            qualifiers: statement
-                .qualifiers
-                .iter()
-                .filter_map(|q| QualifierShown::new(q.pid, &q.value))
-                .collect(),
+            provenance: std::iter::once(statement)
+                .chain(texts.iter().copied())
+                .map(|s| self.provenance(s))
+                .min()
+                .expect("one statement at least"),
+            qualifiers,
+            texts: texts.iter().map(|t| t.id.clone()).collect(),
             image: self.picture_of(statement),
             class,
             described: item.is_some() && !class && self.has_role(statement.pid, Role::Described),
@@ -576,5 +623,39 @@ mod tests {
         assert!(lawyer.class && lawyer.image.is_none());
         // A work (role "described") carries its description.
         assert!(k.statement(&c.statements[2]).described);
+    }
+
+    #[test]
+    fn a_motto_and_its_text_are_one_value() {
+        let c = content(
+            json!([
+                {"pid": "P1546", "value": {"type": "WikibaseItem", "item": "Q191587"},
+                 "qualifiers": [{"pid": "P5102", "value": {"type": "entity", "entity": "Q712144"}}]},
+                {"pid": "P1451", "value": {"type": "Monolingualtext", "text": "E Pluribus Unum", "lang": "la"},
+                 "qualifiers": [{"pid": "P5102", "value": {"type": "entity", "entity": "Q712144"}},
+                                {"pid": "P2441", "value": {"type": "text", "text": "Out of many, one", "lang": "en"}}]},
+                {"pid": "P1451", "value": {"type": "Monolingualtext", "text": "All within your reach", "lang": "en"}},
+            ]),
+            json!({"text_items": {"Q1-0000-0001": "Q191587"},
+                   "references": {"Q1-0000-0001": [["P143"]]}}),
+        );
+        let mut k = Composer::new(&c, config());
+        k.join_texts();
+        // The matched text is claimed; the other text stays.
+        assert_eq!(k.free(pid("P1451")).len(), 1);
+        let motto = serde_json::to_value(k.statement(&c.statements[0])).unwrap();
+        assert_eq!(
+            motto,
+            json!({
+                "statement": "Q1-0000-0000", "pid": "P1546", "item": "Q191587", "rank": "normal",
+                // The best provenance of the two.
+                "provenance": "imported",
+                // The words first; a qualifier of both statements once.
+                "qualifiers": [{"pid": "P1451", "text": "E Pluribus Unum", "lang": "la"},
+                               {"pid": "P5102", "item": "Q712144"},
+                               {"pid": "P2441", "text": "Out of many, one", "lang": "en"}],
+                "texts": ["Q1-0000-0001"],
+            })
+        );
     }
 }

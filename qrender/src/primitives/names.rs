@@ -234,6 +234,7 @@ mod tests {
             rank: Rank::Normal,
             provenance: crate::schema::Provenance::None,
             qualifiers: Vec::new(),
+            texts: Vec::new(),
             image: None,
             class: false,
             described: false,

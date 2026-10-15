@@ -13,10 +13,11 @@ use std::collections::BTreeSet;
 use std::future::Future;
 
 use futures::future::try_join_all;
+use indexmap::IndexMap;
 use serde::Serialize;
 use serde::de::DeserializeOwned;
 
-use crate::id::{EntityId, Lang, Pid, Qid};
+use crate::id::{EntityId, Lang, Pid, Qid, StatementId};
 use crate::model::{
     CONTENT_SCHEMA, Container, Content, Datatype, Peers, QualifierValue, Rank, Statement, Value,
 };
@@ -58,7 +59,7 @@ pub enum FetchError {
 /// The version of the fetcher. Raise it when a change of the fetcher
 /// changes what it fetches (a new field, a new request): it is part of
 /// every cache key, so the parts that an older fetcher stored are not read.
-pub const FETCH_VERSION: u32 = 6;
+pub const FETCH_VERSION: u32 = 7;
 
 /// Seconds a cached part lives: content and text change with edits;
 /// a peer set changes slowly and many items share it.
@@ -232,6 +233,30 @@ impl<S: Store> Fetcher<S> {
                     _ => None,
                 }),
         );
+        // The texts of the paired properties (motto text), and the item
+        // values of their partners (motto): the names of these items, in the
+        // languages of the texts and in `mul`.
+        let texts: Vec<&Statement> = statements
+            .iter()
+            .filter(|s| self.settings.texts.iter().any(|(_, t)| *t == s.pid))
+            .collect();
+        let named_items: Vec<Qid> = unique(
+            statements
+                .iter()
+                .filter(|s| self.settings.texts.iter().any(|(i, _)| *i == s.pid))
+                .filter_map(|s| s.value.item()),
+        );
+        let name_langs: Vec<Lang> = texts
+            .iter()
+            .filter_map(|s| match &s.value {
+                Value::Monolingualtext { lang, .. } => Some(lang.as_str()),
+                _ => None,
+            })
+            .chain((!texts.is_empty()).then_some("mul"))
+            .filter_map(|l| l.parse().ok())
+            .collect::<BTreeSet<Lang>>()
+            .into_iter()
+            .collect();
         let (
             references,
             quantities,
@@ -247,6 +272,7 @@ impl<S: Store> Fetcher<S> {
             shapes,
             language_codes,
             formatters,
+            item_names,
         ) = futures::try_join!(
             sparql::references(http, qid),
             sparql::quantities(http, &targets, &quantity_pids),
@@ -266,7 +292,9 @@ impl<S: Store> Fetcher<S> {
             })),
             sparql::language_codes(http, &languages),
             sparql::formatters(http, &web_pids),
+            sparql::names(http, &named_items, &name_langs),
         )?;
+        let text_items = text_items(&statements, &self.settings.texts, &item_names);
 
         let mut media: Vec<String> = statements
             .iter()
@@ -315,6 +343,7 @@ impl<S: Store> Fetcher<S> {
                 .collect(),
             language_codes,
             formatters,
+            text_items,
         })
     }
 
@@ -547,7 +576,77 @@ fn identifiers(content: &Content) -> BTreeSet<EntityId> {
     ids
 }
 
+/// Each text statement of a pair whose words name an item value of its
+/// partner property: a label or an alias of the item in the language of
+/// the words or in `mul`, without regard to case. The first such item.
+fn text_items(
+    statements: &[Statement],
+    pairs: &[(Pid, Pid)],
+    names: &IndexMap<Qid, Vec<(String, String)>>,
+) -> IndexMap<StatementId, Qid> {
+    let mut out = IndexMap::new();
+    for (item_pid, text_pid) in pairs {
+        let items: Vec<Qid> = statements
+            .iter()
+            .filter(|s| s.pid == *item_pid)
+            .filter_map(|s| s.value.item())
+            .collect();
+        for s in statements.iter().filter(|s| s.pid == *text_pid) {
+            let Value::Monolingualtext { text, lang } = &s.value else {
+                continue;
+            };
+            let words = text.to_lowercase();
+            let named = |q: &Qid| {
+                names.get(q).is_some_and(|names| {
+                    names
+                        .iter()
+                        .any(|(l, name)| (l == lang || l == "mul") && name.to_lowercase() == words)
+                })
+            };
+            if let Some(q) = items.iter().find(|q| named(q)) {
+                out.insert(s.id.clone(), *q);
+            }
+        }
+    }
+    out
+}
+
 fn unique<T: Ord + Copy>(items: impl IntoIterator<Item = T>) -> Vec<T> {
     let set: BTreeSet<T> = items.into_iter().collect();
     set.into_iter().collect()
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn a_text_names_an_item_in_its_language() {
+        let statements: Vec<Statement> = serde_json::from_value(serde_json::json!([
+            {"id": "Q30-1", "pid": "P1546", "rank": "normal",
+             "value": {"type": "WikibaseItem", "item": "Q191587"}},
+            {"id": "Q30-2", "pid": "P1451", "rank": "normal",
+             "value": {"type": "Monolingualtext", "text": "E Pluribus Unum", "lang": "la"}},
+            // A label in another language is not a match.
+            {"id": "Q30-3", "pid": "P1451", "rank": "normal",
+             "value": {"type": "Monolingualtext", "text": "Out of many, one", "lang": "fr"}},
+            {"id": "Q30-4", "pid": "P1451", "rank": "normal",
+             "value": {"type": "Monolingualtext", "text": "All within your reach", "lang": "en"}}
+        ]))
+        .unwrap();
+        let names = IndexMap::from([(
+            "Q191587".parse().unwrap(),
+            vec![
+                ("mul".to_string(), "E pluribus unum".to_string()),
+                ("en".to_string(), "Out of many, one".to_string()),
+            ],
+        )]);
+        let pairs = [("P1546".parse().unwrap(), "P1451".parse().unwrap())];
+        let found = text_items(&statements, &pairs, &names);
+        let found: Vec<(&str, String)> = found
+            .iter()
+            .map(|(s, q)| (s.as_str(), q.to_string()))
+            .collect();
+        assert_eq!(found, [("Q30-2", "Q191587".to_string())]);
+    }
 }

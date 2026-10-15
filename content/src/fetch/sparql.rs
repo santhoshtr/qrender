@@ -582,3 +582,40 @@ pub async fn formatters(http: &Http, pids: &[Pid]) -> Result<IndexMap<Pid, Strin
     }
     Ok(out)
 }
+
+/// The labels and the aliases of each item in some languages: (language,
+/// name). Every language is a validated `Lang`.
+pub async fn names(
+    http: &Http,
+    qids: &[Qid],
+    langs: &[Lang],
+) -> Result<IndexMap<Qid, Vec<(String, String)>>, FetchError> {
+    if qids.is_empty() || langs.is_empty() {
+        return Ok(IndexMap::new());
+    }
+    let langs = langs
+        .iter()
+        .map(|l| format!("\"{l}\""))
+        .collect::<Vec<_>>()
+        .join(", ");
+    let rows = query(
+        http,
+        &format!(
+            "SELECT ?item ?name WHERE {{ VALUES ?item {{ {} }}
+                ?item rdfs:label|skos:altLabel ?name . FILTER(LANG(?name) IN ({langs})) }}",
+            values(qids)
+        ),
+    )
+    .await?;
+    let mut out: IndexMap<Qid, Vec<(String, String)>> = IndexMap::new();
+    for r in &rows {
+        let (Some(item), Some(name), Some(lang)) = (r.qid("item"), r.get("name"), r.lang("name"))
+        else {
+            continue;
+        };
+        out.entry(item)
+            .or_default()
+            .push((lang.to_string(), name.to_string()));
+    }
+    Ok(out)
+}

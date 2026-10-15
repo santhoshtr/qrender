@@ -218,7 +218,7 @@ impl Markdown<'_> {
     /// A statement: its value, its qualifiers, and its provenance in words.
     pub fn value(&self, s: &StatementRef) -> String {
         let mut out = self.part(&self.view.part(&s.value));
-        let note = self.view.note(&s.qualifiers);
+        let note = self.view.value_note(s);
         if !note.is_empty() {
             out.push_str(&format!(" ({})", self.note(&note)));
         }

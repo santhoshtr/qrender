@@ -2027,8 +2027,7 @@ expression: composition
               "P1448",
               "P1705",
               "P1449",
-              "P1549",
-              "P1451"
+              "P1549"
             ],
             "values": [
               {
@@ -2548,45 +2547,6 @@ expression: composition
                     "item": "Q47088293"
                   }
                 ]
-              },
-              {
-                "statement": "Q90-3720426d-4556-7572-59d7-a2478ddbf38b",
-                "pid": "P1451",
-                "text": "Fluctuat nec mergitur",
-                "lang": "la",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1853
-                  },
-                  {
-                    "pid": "P2441",
-                    "text": "Tossed by the waves but never sunk",
-                    "lang": "en"
-                  },
-                  {
-                    "pid": "P2441",
-                    "text": "Il est battu par les flots, mais ne sombre pas",
-                    "lang": "fr"
-                  },
-                  {
-                    "pid": "P2441",
-                    "text": "Його хитає, але він не тоне",
-                    "lang": "uk"
-                  },
-                  {
-                    "pid": "P2441",
-                    "text": "흔들릴지언정 가라앉지 않는다",
-                    "lang": "ko"
-                  },
-                  {
-                    "pid": "P2441",
-                    "text": "Es schwankt hin und her, aber geht nicht unter",
-                    "lang": "de"
-                  }
-                ]
               }
             ]
           },
@@ -2874,6 +2834,11 @@ expression: composition
                 "provenance": "sourced",
                 "qualifiers": [
                   {
+                    "pid": "P1451",
+                    "text": "Fluctuat nec mergitur",
+                    "lang": "la"
+                  },
+                  {
                     "pid": "P407",
                     "item": "Q397"
                   },
@@ -2884,7 +2849,35 @@ expression: composition
                   {
                     "pid": "P898",
                     "string": "ˈflʊk.tu.at neːk ˈmɛr.ɡi.tur"
+                  },
+                  {
+                    "pid": "P2441",
+                    "text": "Tossed by the waves but never sunk",
+                    "lang": "en"
+                  },
+                  {
+                    "pid": "P2441",
+                    "text": "Il est battu par les flots, mais ne sombre pas",
+                    "lang": "fr"
+                  },
+                  {
+                    "pid": "P2441",
+                    "text": "Його хитає, але він не тоне",
+                    "lang": "uk"
+                  },
+                  {
+                    "pid": "P2441",
+                    "text": "흔들릴지언정 가라앉지 않는다",
+                    "lang": "ko"
+                  },
+                  {
+                    "pid": "P2441",
+                    "text": "Es schwankt hin und her, aber geht nicht unter",
+                    "lang": "de"
                   }
+                ],
+                "texts": [
+                  "Q90-3720426d-4556-7572-59d7-a2478ddbf38b"
                 ],
                 "shown": true
               }

@@ -1000,6 +1000,12 @@ P35 = "P1906"    # head of state -> office held by head of state
 P163 = "P41"     # flag -> flag image
 P237 = "P94"     # coat of arms -> coat of arms image
 
+# An item property and the property of its words. A text that is a label
+# or an alias of an item value, in the language of the text or in "mul",
+# is shown with that value: one motto, not two.
+[roles.text]
+P1546 = "P1451"  # motto -> motto text
+
 # ----------------------------------------------------------------- splits
 # Properties whose values in one year divide one whole. The whole is the
 # sum of the parts, so the shares add up to 100 %. A split is one chart

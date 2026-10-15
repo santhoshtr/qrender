@@ -11,7 +11,7 @@ use content::{EntityId, Pid, Qid};
 use super::View;
 use super::messages::format;
 use crate::compose::picture::media_kind;
-use crate::schema::{MediaKind, QualifierPart, QualifierShown, ValueShown};
+use crate::schema::{MediaKind, QualifierPart, QualifierShown, StatementRef, ValueShown};
 use crate::wikidata::{END_TIME, START_TIME};
 
 const WIKIDATA: &str = "https://www.wikidata.org/wiki/";
@@ -114,6 +114,29 @@ impl View {
                 self.text(text)
             }
         }
+    }
+
+    /// The note of a value. An item value with joined texts (a motto with
+    /// its motto text) leaves out the texts that are its label: the value
+    /// shows them.
+    pub fn value_note(&self, s: &StatementRef) -> Vec<Part> {
+        let label = match s.value.item() {
+            Some(item) if !s.texts.is_empty() => self
+                .labels
+                .get(&EntityId::Item(item))
+                .map(|l| l.text.to_lowercase()),
+            _ => None,
+        };
+        let Some(label) = label else {
+            return self.note(&s.qualifiers);
+        };
+        let qualifiers: Vec<QualifierShown> = s
+            .qualifiers
+            .iter()
+            .filter(|q| !matches!(&q.value, QualifierPart::Text { text, .. } if text.to_lowercase() == label))
+            .cloned()
+            .collect();
+        self.note(&qualifiers)
     }
 
     /// The qualifiers of a statement as parts. A span of years reads as

@@ -73,6 +73,12 @@ pub struct Content {
     /// address of an account is its value in place of "$1".
     #[serde(default, skip_serializing_if = "IndexMap::is_empty")]
     pub formatters: IndexMap<Pid, String>,
+    /// The text statements (motto text) whose words are a label or an
+    /// alias of an item value of their paired property (motto), in the
+    /// language of the words or in `mul`, without regard to case: text
+    /// statement -> that item.
+    #[serde(default, skip_serializing_if = "IndexMap::is_empty")]
+    pub text_items: IndexMap<StatementId, Qid>,
 }
 
 /// The outline of a geoshape, simplified for a map on a page, and what its

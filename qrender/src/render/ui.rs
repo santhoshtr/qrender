@@ -290,7 +290,7 @@ impl<'v> Ui<'v> {
         };
         Shown {
             part: self.value_part(&s.value),
-            note: self.qualifiers(&s.qualifiers),
+            note: self.view.value_note(s),
             description: item
                 .filter(|_| s.described)
                 .and_then(|q| self.item(q).description),

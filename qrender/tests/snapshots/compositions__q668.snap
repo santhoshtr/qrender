@@ -1210,14 +1210,6 @@ expression: composition
                 ]
               },
               {
-                "statement": "Q668-f7cb7ece-4c30-2787-5b76-66b659185bf3",
-                "pid": "P1451",
-                "text": "सत्यमेव जयते",
-                "lang": "sa",
-                "rank": "preferred",
-                "provenance": "none"
-              },
-              {
                 "statement": "Q668-B82BCC32-36E7-4FD8-AAFB-D6567C449F39",
                 "pid": "P1451",
                 "text": "!Incredible India",
@@ -1533,6 +1525,16 @@ expression: composition
                 "item": "Q680277",
                 "rank": "normal",
                 "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P1451",
+                    "text": "सत्यमेव जयते",
+                    "lang": "sa"
+                  }
+                ],
+                "texts": [
+                  "Q668-f7cb7ece-4c30-2787-5b76-66b659185bf3"
+                ],
                 "image": {
                   "file": "Satyameva Jayate-Deva.svg",
                   "kind": "drawing",

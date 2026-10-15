@@ -951,6 +951,13 @@
         "statement": {
           "$ref": "#/$defs/StatementId"
         },
+        "texts": {
+          "description": "The text statements whose words this item value shows (motto text\nwith its motto): their words and qualifiers are in `qualifiers`.",
+          "items": {
+            "$ref": "#/$defs/StatementId"
+          },
+          "type": "array"
+        },
         "when": {
           "anyOf": [
             {
@@ -1338,6 +1345,13 @@
         },
         "statement": {
           "$ref": "#/$defs/StatementId"
+        },
+        "texts": {
+          "description": "The text statements whose words this item value shows (motto text\nwith its motto): their words and qualifiers are in `qualifiers`.",
+          "items": {
+            "$ref": "#/$defs/StatementId"
+          },
+          "type": "array"
         }
       },
       "required": [
@@ -1790,6 +1804,13 @@
         },
         "statement": {
           "$ref": "#/$defs/StatementId"
+        },
+        "texts": {
+          "description": "The text statements whose words this item value shows (motto text\nwith its motto): their words and qualifiers are in `qualifiers`.",
+          "items": {
+            "$ref": "#/$defs/StatementId"
+          },
+          "type": "array"
         }
       },
       "required": [
@@ -2037,6 +2058,13 @@
         },
         "statement": {
           "$ref": "#/$defs/StatementId"
+        },
+        "texts": {
+          "description": "The text statements whose words this item value shows (motto text\nwith its motto): their words and qualifiers are in `qualifiers`.",
+          "items": {
+            "$ref": "#/$defs/StatementId"
+          },
+          "type": "array"
         },
         "title": {
           "description": "The Commons page: \"Data:India.map\".",
@@ -2550,6 +2578,13 @@
           ],
           "description": "The item that the file pictures, from the item property of the file\nproperty (the flag of Germany, for the flag image): the title."
         },
+        "texts": {
+          "description": "The text statements whose words this item value shows (motto text\nwith its motto): their words and qualifiers are in `qualifiers`.",
+          "items": {
+            "$ref": "#/$defs/StatementId"
+          },
+          "type": "array"
+        },
         "url": {
           "type": [
             "string",
@@ -3051,6 +3086,13 @@
         },
         "statement": {
           "$ref": "#/$defs/StatementId"
+        },
+        "texts": {
+          "description": "The text statements whose words this item value shows (motto text\nwith its motto): their words and qualifiers are in `qualifiers`.",
+          "items": {
+            "$ref": "#/$defs/StatementId"
+          },
+          "type": "array"
         }
       },
       "required": [
@@ -3314,7 +3356,7 @@
       "type": "string"
     },
     "Provenance": {
-      "description": "Is a statement backed by a source?",
+      "description": "Is a statement backed by a source?\nIn order: the best first.",
       "oneOf": [
         {
           "const": "sourced",
@@ -4072,6 +4114,13 @@
           ],
           "description": "The item that the file pictures, from the item property of the file\nproperty (the flag of Germany, for the flag image): the title."
         },
+        "texts": {
+          "description": "The text statements whose words this item value shows (motto text\nwith its motto): their words and qualifiers are in `qualifiers`.",
+          "items": {
+            "$ref": "#/$defs/StatementId"
+          },
+          "type": "array"
+        },
         "url": {
           "type": [
             "string",
@@ -4605,6 +4654,13 @@
         },
         "statement": {
           "$ref": "#/$defs/StatementId"
+        },
+        "texts": {
+          "description": "The text statements whose words this item value shows (motto text\nwith its motto): their words and qualifiers are in `qualifiers`.",
+          "items": {
+            "$ref": "#/$defs/StatementId"
+          },
+          "type": "array"
         }
       },
       "required": [
