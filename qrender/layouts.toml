@@ -707,6 +707,25 @@ pids = [
   "P140",   # religion or worldview
 ]
 
+# The systems of the country that a resident or a visitor uses: power,
+# telephone, roads and railways.
+[[class_layouts.country.spreads]]
+id = "infrastructure"
+dimension = "place"
+concept = "Q121359"    # infrastructure
+kind = "facts"
+pids = [
+  "P2884",  # mains voltage
+  "P2853",  # electrical plug type
+  "P474",   # telephone country code
+  "P3238",  # trunk prefix
+  "P2258",  # mobile country code
+  "P2852",  # emergency phone number
+  "P1622",  # driving side
+  "P5658",  # railway traffic side
+  "P395",   # vehicle registration plate code
+]
+
 [[class_layouts.country.spreads]]
 id = "culture"
 dimension = "people"
@@ -900,6 +919,14 @@ web = [
   "P973",   # described at URL
   "P1581",  # official blog URL
 ]
+# The pages of the item on Commons, by their name: links in the media
+# spread. A category name has the "Category:" namespace in its link.
+commons_category = [
+  "P373",   # Commons category
+]
+commons_gallery = [
+  "P935",   # Commons gallery
+]
 
 # A Commons data file that holds a series, and the property of the dated
 # statements that the file replaces. The current value of that property
@@ -1022,9 +1049,9 @@ qualifier_logos = [
 # tier of the first renderer.
 pids = [
   "P10280", "P1151", "P1343", "P1424", "P1464", "P1465", "P1709", "P1740",
-  "P1791", "P1792", "P1889", "P1963", "P2354", "P2959", "P301", "P373",
+  "P1791", "P1792", "P1889", "P1963", "P2354", "P2959", "P301",
   "P4224", "P460", "P5008", "P5125", "P5869", "P6104", "P7084", "P7867",
-  "P8464", "P8989", "P910", "P935",
+  "P8464", "P8989", "P910",
 ]
 
 # The "... of topic" properties point to an item about one part of the

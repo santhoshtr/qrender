@@ -83,6 +83,12 @@ pub enum Role {
     Web,
     /// A holder property with the property of its office (P6 -> P1313).
     Office,
+    /// The name of the item's category on Commons: a link to it, in the
+    /// media spread.
+    CommonsCategory,
+    /// The name of the item's gallery on Commons: a link to it, in the
+    /// media spread.
+    CommonsGallery,
 }
 
 /// The roles of one property.

@@ -6449,6 +6449,42 @@ expression: composition
               "license": "CC BY 4.0"
             }
           }
+        ],
+        "web": [
+          {
+            "primitive": "fact",
+            "pid": "P373",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "q90-580dd28c-4057-7dd8-9413-8661c89a47b0",
+                "pid": "P373",
+                "text": "Paris",
+                "href": "https://commons.wikimedia.org/wiki/Category:Paris",
+                "rank": "normal",
+                "provenance": "none",
+                "shown": true
+              }
+            ],
+            "priority": 1.6
+          },
+          {
+            "primitive": "fact",
+            "pid": "P935",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q90-B636A24A-18D5-4DC4-A044-46E50613C734",
+                "pid": "P935",
+                "text": "Paris",
+                "href": "https://commons.wikimedia.org/wiki/Paris",
+                "rank": "normal",
+                "provenance": "none",
+                "shown": true
+              }
+            ],
+            "priority": 1.2
+          }
         ]
       },
       "prose": {
@@ -8184,22 +8220,6 @@ expression: composition
           },
           {
             "primitive": "fact",
-            "pid": "P373",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "q90-580dd28c-4057-7dd8-9413-8661c89a47b0",
-                "pid": "P373",
-                "string": "Paris",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 1.6
-          },
-          {
-            "primitive": "fact",
             "pid": "P5008",
             "form": "value",
             "statements": [
@@ -8341,22 +8361,6 @@ expression: composition
               }
             ],
             "priority": 2.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P935",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q90-B636A24A-18D5-4DC4-A044-46E50613C734",
-                "pid": "P935",
-                "string": "Paris",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 1.2
           }
         ],
         "projects": [

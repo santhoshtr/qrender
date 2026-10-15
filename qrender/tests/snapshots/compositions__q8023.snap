@@ -2920,6 +2920,42 @@ expression: composition
               "license": "Public domain"
             }
           }
+        ],
+        "web": [
+          {
+            "primitive": "fact",
+            "pid": "P373",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "q8023-9956ADC8-9D14-47DF-B1E2-92143A4035AF",
+                "pid": "P373",
+                "text": "Nelson Mandela",
+                "href": "https://commons.wikimedia.org/wiki/Category:Nelson_Mandela",
+                "rank": "normal",
+                "provenance": "none",
+                "shown": true
+              }
+            ],
+            "priority": 0.0
+          },
+          {
+            "primitive": "fact",
+            "pid": "P935",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q8023-38F1AA15-5E1A-4C90-8825-30E859154BB1",
+                "pid": "P935",
+                "text": "Nelson Mandela",
+                "href": "https://commons.wikimedia.org/wiki/Nelson_Mandela",
+                "rank": "normal",
+                "provenance": "none",
+                "shown": true
+              }
+            ],
+            "priority": 0.0
+          }
         ]
       }
     },
@@ -3394,22 +3430,6 @@ expression: composition
           },
           {
             "primitive": "fact",
-            "pid": "P373",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "q8023-9956ADC8-9D14-47DF-B1E2-92143A4035AF",
-                "pid": "P373",
-                "string": "Nelson Mandela",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
             "pid": "P5008",
             "form": "value",
             "statements": [
@@ -3613,22 +3633,6 @@ expression: composition
                 "statement": "Q8023-68D6AF2B-C10F-4BB4-A0DF-0D4752ED38A2",
                 "pid": "P910",
                 "item": "Q7214342",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P935",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q8023-38F1AA15-5E1A-4C90-8825-30E859154BB1",
-                "pid": "P935",
-                "string": "Nelson Mandela",
                 "rank": "normal",
                 "provenance": "none",
                 "shown": true

@@ -1,5 +1,6 @@
 //! The media spread: the Commons files that no other spread took. The best
-//! photograph is the feature; the rest is a run, photographs first.
+//! photograph is the feature; the rest is a run, photographs first. The
+//! item's category and gallery on Commons are rows of links.
 
 use content::{Datatype, Statement};
 use indexmap::IndexMap;
@@ -7,9 +8,10 @@ use indexmap::IndexMap;
 use crate::compose::Composer;
 use crate::compose::picture::media_kind;
 use crate::config::SpreadSpec;
+use crate::primitives::fact;
 use crate::primitives::media::{self, MediaRole};
 use crate::schema::{Block, MediaKind};
-use crate::vocab::{Slot, Template};
+use crate::vocab::{Role, Slot, Template};
 
 pub fn build(c: &mut Composer, spec: &SpreadSpec) -> super::Built {
     let files: Vec<&Statement> = c
@@ -19,7 +21,17 @@ pub fn build(c: &mut Composer, spec: &SpreadSpec) -> super::Built {
         .filter(|s| s.value.datatype() == Datatype::CommonsMedia && !c.is_claimed(s))
         .collect();
     let files = c.take(files);
-    if files.is_empty() {
+    let mut pages = Vec::new();
+    for role in [Role::CommonsCategory, Role::CommonsGallery] {
+        for pid in c.config.layouts.roles.list(role).to_vec() {
+            let statements = c.free(pid);
+            if !statements.is_empty() {
+                let statements = c.take(statements);
+                pages.push(Block::Fact(fact::build(c, pid, &statements, None, None)));
+            }
+        }
+    }
+    if files.is_empty() && pages.is_empty() {
         return Err(Vec::new());
     }
     // The first file with the best score.
@@ -64,6 +76,9 @@ pub fn build(c: &mut Composer, spec: &SpreadSpec) -> super::Built {
     }
     if !audio.is_empty() {
         slots.insert(Slot::Audio, audio);
+    }
+    if !pages.is_empty() {
+        slots.insert(Slot::Web, pages);
     }
     Ok(c.spread(spec, slots, Template::FeatureRun, Vec::new()))
 }

@@ -106,6 +106,10 @@ impl View {
                 text: url.clone(),
                 href: url.clone(),
             },
+            ValueShown::Link { text, href } => Part::Link {
+                text: text.clone(),
+                href: href.clone(),
+            },
             ValueShown::File { file: text } | ValueShown::String { string: text } => {
                 self.text(text)
             }

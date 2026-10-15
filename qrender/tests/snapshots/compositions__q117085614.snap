@@ -2854,6 +2854,25 @@ expression: composition
               "license": "Public domain"
             }
           }
+        ],
+        "web": [
+          {
+            "primitive": "fact",
+            "pid": "P373",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q117085614-efc52465-477f-4855-a2e7-98eebb16a3b3",
+                "pid": "P373",
+                "text": "One Battle After Another",
+                "href": "https://commons.wikimedia.org/wiki/Category:One_Battle_After_Another",
+                "rank": "normal",
+                "provenance": "none",
+                "shown": true
+              }
+            ],
+            "priority": 0.0
+          }
         ]
       }
     },
@@ -2973,24 +2992,6 @@ expression: composition
                     "item": "Q1860"
                   }
                 ],
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          }
-        ],
-        "sheet": [
-          {
-            "primitive": "fact",
-            "pid": "P373",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q117085614-efc52465-477f-4855-a2e7-98eebb16a3b3",
-                "pid": "P373",
-                "string": "One Battle After Another",
-                "rank": "normal",
-                "provenance": "none",
                 "shown": true
               }
             ],

@@ -1855,6 +1855,42 @@ expression: composition
               }
             ]
           }
+        ],
+        "web": [
+          {
+            "primitive": "fact",
+            "pid": "P373",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "q405-1D0E86C6-B391-4251-B0D8-7C73ACBE09D7",
+                "pid": "P373",
+                "text": "Moon",
+                "href": "https://commons.wikimedia.org/wiki/Category:Moon",
+                "rank": "normal",
+                "provenance": "none",
+                "shown": true
+              }
+            ],
+            "priority": 1.959
+          },
+          {
+            "primitive": "fact",
+            "pid": "P935",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q405-2DAC52A4-E1B5-4525-8D64-B76DE7E56F30",
+                "pid": "P935",
+                "text": "Moon",
+                "href": "https://commons.wikimedia.org/wiki/Moon",
+                "rank": "normal",
+                "provenance": "none",
+                "shown": true
+              }
+            ],
+            "priority": 0.367
+          }
         ]
       }
     },
@@ -2596,22 +2632,6 @@ expression: composition
           },
           {
             "primitive": "fact",
-            "pid": "P373",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "q405-1D0E86C6-B391-4251-B0D8-7C73ACBE09D7",
-                "pid": "P373",
-                "string": "Moon",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 1.959
-          },
-          {
-            "primitive": "fact",
             "pid": "P5008",
             "form": "value",
             "statements": [
@@ -2687,22 +2707,6 @@ expression: composition
               }
             ],
             "priority": 0.898
-          },
-          {
-            "primitive": "fact",
-            "pid": "P935",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q405-2DAC52A4-E1B5-4525-8D64-B76DE7E56F30",
-                "pid": "P935",
-                "string": "Moon",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.367
           }
         ],
         "projects": [

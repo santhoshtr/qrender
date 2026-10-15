@@ -366,7 +366,16 @@ impl<'a> Localizer<'a> {
         let Some((article, source)) = self.article() else {
             return Vec::new();
         };
-        let used: BTreeSet<&String> = article.concept_sections.values().flatten().collect();
+        // The sections that a spread of this page shows: the sections of its
+        // prose concepts. A concept of another layout shows nothing here.
+        let used: BTreeSet<&String> = self
+            .composition
+            .spreads
+            .iter()
+            .filter_map(|s| s.prose.as_ref())
+            .flat_map(|p| &p.concepts)
+            .flat_map(|q| article.concept_sections.get(q).into_iter().flatten())
+            .collect();
         // Notes, references, links: not sections to read.
         let apparatus: Vec<String> = self
             .config

@@ -14,7 +14,7 @@ pub mod spreads;
 
 use std::collections::HashSet;
 
-use content::{Content, Pid, Qid, Rank, Statement, StatementId};
+use content::{Content, Pid, Qid, Rank, Statement, StatementId, Value};
 use indexmap::IndexMap;
 
 use crate::config::{ClassLayout, Config, SpreadSpec};
@@ -27,6 +27,8 @@ use crate::wikidata::{END_TIME, POINT_IN_TIME, START_TIME};
 
 /// "No year": sorts before every real year.
 const NO_YEAR: i64 = -1_000_000;
+/// The pages of Commons, by name.
+const COMMONS: &str = "https://commons.wikimedia.org/wiki/";
 
 pub struct Composer<'a> {
     pub content: &'a Content,
@@ -303,6 +305,24 @@ impl<'a> Composer<'a> {
         self.is_class(item) && !self.has_role(pid, Role::Symbol)
     }
 
+    /// The value of a statement as the composition shows it. The name of a
+    /// Commons page is a link to it.
+    fn value(&self, statement: &Statement) -> ValueShown {
+        let page = |namespace: &str, name: &str| ValueShown::Link {
+            text: name.to_string(),
+            href: format!("{COMMONS}{namespace}{}", name.replace(' ', "_")),
+        };
+        match &statement.value {
+            Value::String { string } if self.has_role(statement.pid, Role::CommonsCategory) => {
+                page("Category:", string)
+            }
+            Value::String { string } if self.has_role(statement.pid, Role::CommonsGallery) => {
+                page("", string)
+            }
+            value => ValueShown::from(value),
+        }
+    }
+
     /// A statement as the composition shows it.
     pub fn statement(&self, statement: &Statement) -> StatementRef {
         let item = statement.value.item();
@@ -310,7 +330,7 @@ impl<'a> Composer<'a> {
         StatementRef {
             statement: statement.id.clone(),
             pid: statement.pid,
-            value: ValueShown::from(&statement.value),
+            value: self.value(statement),
             rank: statement.rank,
             provenance: self.provenance(statement),
             qualifiers: statement

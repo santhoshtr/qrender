@@ -5,8 +5,8 @@ expression: json
 {
   "composition": "composition/0.3",
   "coverage": {
-    "have": 1289,
-    "total": 1289
+    "have": 1291,
+    "total": 1291
   },
   "design": "design/0.2",
   "dir": "ltr",
@@ -11042,6 +11042,16 @@ expression: json
       }
     },
     {
+      "id": "infrastructure",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q121359",
+        "lang": "en",
+        "text": "infrastructure"
+      }
+    },
+    {
       "id": "culture",
       "prose_links": [
         {
@@ -11100,10 +11110,9 @@ expression: json
       "prose_links": [],
       "prose_text": null,
       "title": {
-        "fallback": true,
         "href": "https://www.wikidata.org/wiki/Q4006",
-        "lang": null,
-        "text": "Q4006"
+        "lang": "en",
+        "text": "map"
       }
     },
     {

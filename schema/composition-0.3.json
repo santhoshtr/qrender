@@ -726,6 +726,22 @@
           "type": "object"
         },
         {
+          "description": "A name that links to its page (a Commons category).",
+          "properties": {
+            "href": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "text",
+            "href"
+          ],
+          "type": "object"
+        },
+        {
           "properties": {
             "string": {
               "type": "string"
@@ -1072,6 +1088,22 @@
           "type": "object"
         },
         {
+          "description": "A name that links to its page (a Commons category).",
+          "properties": {
+            "href": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "text",
+            "href"
+          ],
+          "type": "object"
+        },
+        {
           "properties": {
             "string": {
               "type": "string"
@@ -1399,6 +1431,22 @@
           "type": "object"
         },
         {
+          "description": "A name that links to its page (a Commons category).",
+          "properties": {
+            "href": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "text",
+            "href"
+          ],
+          "type": "object"
+        },
+        {
           "properties": {
             "string": {
               "type": "string"
@@ -1624,6 +1672,22 @@
           },
           "required": [
             "url"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "A name that links to its page (a Commons category).",
+          "properties": {
+            "href": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "text",
+            "href"
           ],
           "type": "object"
         },
@@ -1867,6 +1931,22 @@
           "type": "object"
         },
         {
+          "description": "A name that links to its page (a Commons category).",
+          "properties": {
+            "href": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "text",
+            "href"
+          ],
+          "type": "object"
+        },
+        {
           "properties": {
             "string": {
               "type": "string"
@@ -2076,6 +2156,22 @@
           },
           "required": [
             "url"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "A name that links to its page (a Commons category).",
+          "properties": {
+            "href": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "text",
+            "href"
           ],
           "type": "object"
         },
@@ -2539,6 +2635,22 @@
           },
           "required": [
             "url"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "A name that links to its page (a Commons category).",
+          "properties": {
+            "href": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "text",
+            "href"
           ],
           "type": "object"
         },
@@ -3424,6 +3536,22 @@
           "type": "object"
         },
         {
+          "description": "A name that links to its page (a Commons category).",
+          "properties": {
+            "href": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "text",
+            "href"
+          ],
+          "type": "object"
+        },
+        {
           "properties": {
             "string": {
               "type": "string"
@@ -3965,6 +4093,22 @@
           },
           "required": [
             "url"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "A name that links to its page (a Commons category).",
+          "properties": {
+            "href": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "text",
+            "href"
           ],
           "type": "object"
         },

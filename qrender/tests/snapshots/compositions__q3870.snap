@@ -1102,6 +1102,42 @@ expression: composition
               "license": "CC BY 3.0"
             }
           }
+        ],
+        "web": [
+          {
+            "primitive": "fact",
+            "pid": "P373",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "q3870-DE51CCFE-910F-45AF-B222-24C4499457D1",
+                "pid": "P373",
+                "text": "Nairobi",
+                "href": "https://commons.wikimedia.org/wiki/Category:Nairobi",
+                "rank": "normal",
+                "provenance": "none",
+                "shown": true
+              }
+            ],
+            "priority": 2.0
+          },
+          {
+            "primitive": "fact",
+            "pid": "P935",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q3870-29A90393-2434-46B8-8EF1-DD7E2EB082C9",
+                "pid": "P935",
+                "text": "Nairobi",
+                "href": "https://commons.wikimedia.org/wiki/Nairobi",
+                "rank": "normal",
+                "provenance": "imported",
+                "shown": true
+              }
+            ],
+            "priority": 0.333
+          }
         ]
       },
       "prose": {
@@ -1349,22 +1385,6 @@ expression: composition
           },
           {
             "primitive": "fact",
-            "pid": "P373",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "q3870-DE51CCFE-910F-45AF-B222-24C4499457D1",
-                "pid": "P373",
-                "string": "Nairobi",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 2.0
-          },
-          {
-            "primitive": "fact",
             "pid": "P5008",
             "form": "value",
             "statements": [
@@ -1440,22 +1460,6 @@ expression: composition
               }
             ],
             "priority": 2.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P935",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q3870-29A90393-2434-46B8-8EF1-DD7E2EB082C9",
-                "pid": "P935",
-                "string": "Nairobi",
-                "rank": "normal",
-                "provenance": "imported",
-                "shown": true
-              }
-            ],
-            "priority": 0.333
           }
         ],
         "projects": [

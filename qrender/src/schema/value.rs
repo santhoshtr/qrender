@@ -75,6 +75,11 @@ pub enum ValueShown {
     Url {
         url: String,
     },
+    /// A name that links to its page (a Commons category).
+    Link {
+        text: String,
+        href: String,
+    },
     String {
         string: String,
     },

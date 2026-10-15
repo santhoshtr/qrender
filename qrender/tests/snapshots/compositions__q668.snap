@@ -10261,6 +10261,288 @@ expression: composition
       }
     },
     {
+      "id": "infrastructure",
+      "kind": "facts",
+      "dimension": "place",
+      "concept": "Q121359",
+      "template": "columns",
+      "slots": {
+        "sheet": [
+          {
+            "primitive": "fact",
+            "pid": "P2884",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q668-FAE213DE-9483-4A06-8685-D5892A6EE89D",
+                "pid": "P2884",
+                "amount": 230.0,
+                "unit": "Q25250",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P2144",
+                    "amount": 50.0
+                  }
+                ],
+                "shown": true
+              }
+            ],
+            "priority": 1.0,
+            "rule": "row"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P2853",
+            "form": "list",
+            "statements": [
+              {
+                "statement": "Q668-47D846D5-05F7-4BC2-98FD-2712C7D151D8",
+                "pid": "P2853",
+                "item": "Q1383497",
+                "rank": "normal",
+                "provenance": "sourced",
+                "class": true,
+                "shown": true
+              },
+              {
+                "statement": "Q668-8F5B6875-573E-44B5-B783-113773D3EA22",
+                "pid": "P2853",
+                "item": "Q60740126",
+                "rank": "normal",
+                "provenance": "sourced",
+                "class": true,
+                "shown": true
+              },
+              {
+                "statement": "Q668-AB374099-CA9E-4BF6-942C-991F2CFE918E",
+                "pid": "P2853",
+                "item": "Q1378312",
+                "rank": "normal",
+                "provenance": "sourced",
+                "class": true,
+                "shown": true
+              }
+            ],
+            "priority": 2.0,
+            "rule": "few-pictures"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P474",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q668-6CF2246E-F0C2-4145-B583-C292B112C6E7",
+                "pid": "P474",
+                "string": "+91",
+                "rank": "normal",
+                "provenance": "imported",
+                "shown": true
+              }
+            ],
+            "priority": 0.0,
+            "rule": "row"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P3238",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q668-C8C36BD6-9C89-4CEB-B5ED-B393D657C580",
+                "pid": "P3238",
+                "string": "0",
+                "rank": "normal",
+                "provenance": "none",
+                "shown": true
+              }
+            ],
+            "priority": 0.0,
+            "rule": "row"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P2258",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q668-174485fd-4784-08bf-5a9e-0a192709cc85",
+                "pid": "P2258",
+                "string": "404",
+                "rank": "normal",
+                "provenance": "none",
+                "shown": true
+              },
+              {
+                "statement": "Q668-f5ff83fe-4c16-eb36-14a2-5b26012714b5",
+                "pid": "P2258",
+                "string": "405",
+                "rank": "normal",
+                "provenance": "none",
+                "shown": true
+              }
+            ],
+            "priority": 0.0,
+            "rule": "row"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P2852",
+            "form": "list",
+            "statements": [
+              {
+                "statement": "Q668-28F87682-5E83-4049-A340-33BA8D0E5602",
+                "pid": "P2852",
+                "item": "Q25648793",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P366",
+                    "item": "Q35535"
+                  }
+                ],
+                "shown": true
+              },
+              {
+                "statement": "Q668-178162AC-55CA-458C-9D7A-E86B195862FB",
+                "pid": "P2852",
+                "item": "Q25648798",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P366",
+                    "item": "Q860447"
+                  }
+                ],
+                "shown": true
+              },
+              {
+                "statement": "Q668-559DE6A4-4B4B-4A9B-BDE4-3D53A2D6A81A",
+                "pid": "P2852",
+                "item": "Q25648794",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P366",
+                    "item": "Q6498663"
+                  }
+                ],
+                "shown": true
+              },
+              {
+                "statement": "Q668-7b2460dd-4080-6be9-57d8-8df78cb17adf",
+                "pid": "P2852",
+                "item": "Q1061257",
+                "rank": "normal",
+                "provenance": "sourced",
+                "image": {
+                  "file": "Centrum Powiadamiania Ratunkowego w Krakowie 4.JPG",
+                  "kind": "photo",
+                  "aspect": 1.3333,
+                  "megapixels": 4.69,
+                  "credit": {
+                    "artist": "Dawid Skalec",
+                    "license": "CC BY-SA 4.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q668-648ae12a-4e11-9d87-7ad9-0bc50eb2a65f",
+                "pid": "P2852",
+                "item": "Q4546759",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P366",
+                    "item": "Q5070802"
+                  }
+                ],
+                "image": {
+                  "file": "108 emergency.JPG",
+                  "kind": "photo",
+                  "aspect": 0.75,
+                  "megapixels": 14.0,
+                  "credit": {
+                    "artist": "Mogan",
+                    "license": "CC BY-SA 3.0"
+                  }
+                },
+                "shown": true
+              }
+            ],
+            "priority": 2.322,
+            "rule": "few-pictures"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P1622",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q668-78C0593C-1BBC-4FE6-B3A7-4A219233A61B",
+                "pid": "P1622",
+                "item": "Q11920728",
+                "rank": "normal",
+                "provenance": "sourced",
+                "class": true,
+                "shown": true
+              }
+            ],
+            "priority": 1.286,
+            "rule": "few-pictures"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P5658",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q668-78E39A9F-BE5C-4286-B0A1-6EED78624A52",
+                "pid": "P5658",
+                "item": "Q11920728",
+                "rank": "normal",
+                "provenance": "imported",
+                "class": true,
+                "shown": true
+              }
+            ],
+            "priority": 0.0,
+            "rule": "few-pictures"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P395",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q668-9EF00E67-2F32-4383-B39D-60CE7B1F7F7A",
+                "pid": "P395",
+                "string": "IND",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1947
+                  }
+                ],
+                "shown": true
+              }
+            ],
+            "priority": 0.0,
+            "rule": "row"
+          }
+        ]
+      }
+    },
+    {
       "id": "culture",
       "kind": "facts",
       "dimension": "people",
@@ -18922,6 +19204,42 @@ expression: composition
               "license": "CC BY-SA 4.0"
             }
           }
+        ],
+        "web": [
+          {
+            "primitive": "fact",
+            "pid": "P373",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "q668-AF07F724-47A9-4F56-BF83-1E1FE7622C9C",
+                "pid": "P373",
+                "text": "India",
+                "href": "https://commons.wikimedia.org/wiki/Category:India",
+                "rank": "normal",
+                "provenance": "none",
+                "shown": true
+              }
+            ],
+            "priority": 1.714
+          },
+          {
+            "primitive": "fact",
+            "pid": "P935",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q668-EA1EBB52-728B-4BE0-AB2D-C9F705B025AA",
+                "pid": "P935",
+                "text": "India",
+                "href": "https://commons.wikimedia.org/wiki/India",
+                "rank": "normal",
+                "provenance": "none",
+                "shown": true
+              }
+            ],
+            "priority": 0.0
+          }
         ]
       }
     },
@@ -18934,98 +19252,6 @@ expression: composition
         "sheet": [
           {
             "primitive": "fact",
-            "pid": "P2852",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-28F87682-5E83-4049-A340-33BA8D0E5602",
-                "pid": "P2852",
-                "item": "Q25648793",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P366",
-                    "item": "Q35535"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q668-178162AC-55CA-458C-9D7A-E86B195862FB",
-                "pid": "P2852",
-                "item": "Q25648798",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P366",
-                    "item": "Q860447"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q668-559DE6A4-4B4B-4A9B-BDE4-3D53A2D6A81A",
-                "pid": "P2852",
-                "item": "Q25648794",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P366",
-                    "item": "Q6498663"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q668-7b2460dd-4080-6be9-57d8-8df78cb17adf",
-                "pid": "P2852",
-                "item": "Q1061257",
-                "rank": "normal",
-                "provenance": "sourced",
-                "image": {
-                  "file": "Centrum Powiadamiania Ratunkowego w Krakowie 4.JPG",
-                  "kind": "photo",
-                  "aspect": 1.3333,
-                  "megapixels": 4.69,
-                  "credit": {
-                    "artist": "Dawid Skalec",
-                    "license": "CC BY-SA 4.0"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q668-648ae12a-4e11-9d87-7ad9-0bc50eb2a65f",
-                "pid": "P2852",
-                "item": "Q4546759",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P366",
-                    "item": "Q5070802"
-                  }
-                ],
-                "image": {
-                  "file": "108 emergency.JPG",
-                  "kind": "photo",
-                  "aspect": 0.75,
-                  "megapixels": 14.0,
-                  "credit": {
-                    "artist": "Mogan",
-                    "license": "CC BY-SA 3.0"
-                  }
-                },
-                "shown": true
-              }
-            ],
-            "priority": 2.322
-          },
-          {
-            "primitive": "fact",
             "pid": "P571",
             "form": "value",
             "statements": [
@@ -19036,41 +19262,6 @@ expression: composition
                 "precision": 11,
                 "rank": "normal",
                 "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 2.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P2853",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-47D846D5-05F7-4BC2-98FD-2712C7D151D8",
-                "pid": "P2853",
-                "item": "Q1383497",
-                "rank": "normal",
-                "provenance": "sourced",
-                "class": true,
-                "shown": true
-              },
-              {
-                "statement": "Q668-8F5B6875-573E-44B5-B783-113773D3EA22",
-                "pid": "P2853",
-                "item": "Q60740126",
-                "rank": "normal",
-                "provenance": "sourced",
-                "class": true,
-                "shown": true
-              },
-              {
-                "statement": "Q668-AB374099-CA9E-4BF6-942C-991F2CFE918E",
-                "pid": "P2853",
-                "item": "Q1378312",
-                "rank": "normal",
-                "provenance": "sourced",
-                "class": true,
                 "shown": true
               }
             ],
@@ -19101,23 +19292,6 @@ expression: composition
               }
             ],
             "priority": 2.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P1622",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-78C0593C-1BBC-4FE6-B3A7-4A219233A61B",
-                "pid": "P1622",
-                "item": "Q11920728",
-                "rank": "normal",
-                "provenance": "sourced",
-                "class": true,
-                "shown": true
-              }
-            ],
-            "priority": 1.286
           },
           {
             "primitive": "fact",
@@ -21478,29 +21652,6 @@ expression: composition
           },
           {
             "primitive": "fact",
-            "pid": "P2884",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-FAE213DE-9483-4A06-8685-D5892A6EE89D",
-                "pid": "P2884",
-                "amount": 230.0,
-                "unit": "Q25250",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P2144",
-                    "amount": 50.0
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 1.0
-          },
-          {
-            "primitive": "fact",
             "pid": "P1552",
             "form": "value",
             "statements": [
@@ -21539,30 +21690,6 @@ expression: composition
           },
           {
             "primitive": "fact",
-            "pid": "P2258",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-174485fd-4784-08bf-5a9e-0a192709cc85",
-                "pid": "P2258",
-                "string": "404",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              },
-              {
-                "statement": "Q668-f5ff83fe-4c16-eb36-14a2-5b26012714b5",
-                "pid": "P2258",
-                "string": "405",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
             "pid": "P487",
             "form": "value",
             "statements": [
@@ -21572,44 +21699,6 @@ expression: composition
                 "string": "🇮🇳",
                 "rank": "normal",
                 "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P3238",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-C8C36BD6-9C89-4CEB-B5ED-B393D657C580",
-                "pid": "P3238",
-                "string": "0",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P395",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-9EF00E67-2F32-4383-B39D-60CE7B1F7F7A",
-                "pid": "P395",
-                "string": "IND",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1947
-                  }
-                ],
                 "shown": true
               }
             ],
@@ -21643,39 +21732,6 @@ expression: composition
                 "string": "890",
                 "rank": "normal",
                 "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P5658",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-78E39A9F-BE5C-4286-B0A1-6EED78624A52",
-                "pid": "P5658",
-                "item": "Q11920728",
-                "rank": "normal",
-                "provenance": "imported",
-                "class": true,
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P474",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-6CF2246E-F0C2-4145-B583-C292B112C6E7",
-                "pid": "P474",
-                "string": "+91",
-                "rank": "normal",
-                "provenance": "imported",
                 "shown": true
               }
             ],
@@ -22313,22 +22369,6 @@ expression: composition
           },
           {
             "primitive": "fact",
-            "pid": "P373",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "q668-AF07F724-47A9-4F56-BF83-1E1FE7622C9C",
-                "pid": "P373",
-                "string": "India",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 1.714
-          },
-          {
-            "primitive": "fact",
             "pid": "P460",
             "form": "value",
             "statements": [
@@ -22468,22 +22508,6 @@ expression: composition
               }
             ],
             "priority": 1.143
-          },
-          {
-            "primitive": "fact",
-            "pid": "P935",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-EA1EBB52-728B-4BE0-AB2D-C9F705B025AA",
-                "pid": "P935",
-                "string": "India",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.0
           }
         ],
         "projects": [
