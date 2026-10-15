@@ -123,6 +123,12 @@ pub struct Thresholds {
     pub run_pictured: f64,
     /// Pictures shown in a set before "+N".
     pub set_max: usize,
+    /// A set of at least this many values, of which `linked_share` name
+    /// other items in their qualifiers, is rows, not pictures.
+    pub linked_min: usize,
+    pub linked_share: f64,
+    /// Rows shown in such a set before "+N".
+    pub linked_shown: usize,
     /// A property that this share of the peers has is "absent" when the
     /// item lacks it.
     pub absence: f64,

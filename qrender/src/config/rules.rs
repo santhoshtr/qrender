@@ -126,6 +126,10 @@ pub struct GroupWhen {
     pub few: Option<bool>,
     /// At least `run_pictured` of the values have a picture.
     pub mostly_pictured: Option<bool>,
+    /// A large set whose values name other items in their qualifiers (an
+    /// embassy, a border): `linked_min` values or more, `linked_share` of
+    /// them with such a qualifier.
+    pub linked: Option<bool>,
     /// The values make a series: dated, in two years or more; a year with
     /// two values has one preferred value.
     pub series: Option<bool>,
@@ -180,6 +184,9 @@ pub enum BlockMake {
     Single,
     /// A set of pictured values.
     Network,
+    /// A set whose qualifiers matter: a row for each value, with its
+    /// picture and its qualifiers.
+    LinkedSet,
     Score,
     /// A row of the fact sheet.
     Fact,

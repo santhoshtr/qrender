@@ -1,16 +1,26 @@
 {%- import "macros.html" as m -%}
-{#- The pictured values of one property: one row of pictures, cut at its
-    end, with "View all" as its last card; all of them, with their
-    qualifiers, in its dialog. -#}
+{#- The values of one property, all of them, with their qualifiers, in its
+    dialog. On the page, the first ones: a strip of pictures, cut at its
+    end, with "View all" as its last card; or, when the qualifiers matter
+    (an embassy, a border), rows as in the dialog, then "+N". -#}
 {%- let values = ui.values(b.values.as_slice()) -%}
 {%- let title = ui.property(b.pid) -%}
-{%- let all = ui.view_all(values.len()) -%}
 {%- let n = ui.id() -%}
-<div class="block set">
+<div class="block set {{ b.form.name() }}">
     <h3>{{ ui.text(&title, true)|safe }} <span class="note">{{ values.len() }}</span></h3>
-    {%- call m::scroller(title.text) -%}
-    {%- for s in values.iter() -%}{%- if s.shown -%}{{ ui.figure(s)|safe }}{%- endif -%}{%- endfor -%}
-    {%- if all %}{% call m::view_all(ui, n) %}{% endcall %}{% endif -%}
-    {%- endcall -%}
-    {%- if all %}{% call m::dialog(ui, n, title.text) %}{{ ui.rows(values.as_slice())|safe }}{% endcall %}{% endif -%}
+    {%- if b.form.name() == "rows" -%}
+        {%- let shown = ui.values(b.shown()) -%}
+        {{ ui.rows(shown.as_slice())|safe }}
+        {%- if values.len() > shown.len() -%}
+            {% call m::more(n, values.len() - shown.len()) %}{% endcall %}
+            {%- call m::dialog(ui, n, title.text) %}{{ ui.rows(values.as_slice())|safe }}{% endcall -%}
+        {%- endif -%}
+    {%- else -%}
+        {%- let all = ui.view_all(values.len()) -%}
+        {%- call m::scroller(title.text) -%}
+        {%- for s in values.iter() -%}{%- if s.shown -%}{{ ui.figure(s)|safe }}{%- endif -%}{%- endfor -%}
+        {%- if all %}{% call m::view_all(ui, n) %}{% endcall %}{% endif -%}
+        {%- endcall -%}
+        {%- if all %}{% call m::dialog(ui, n, title.text) %}{{ ui.rows(values.as_slice())|safe }}{% endcall %}{% endif -%}
+    {%- endif -%}
 </div>

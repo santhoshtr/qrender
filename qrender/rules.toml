@@ -117,6 +117,14 @@ id = "single"
 when = { type = "WikibaseItem", few = true }
 make = "single"
 
+# A large set whose values name other items in their qualifiers (an
+# embassy and the article on the relations; a border): rows that show the
+# qualifiers, not a strip of pictures.
+[[block]]
+id = "linked-set"
+when = { type = "WikibaseItem", linked = true }
+make = "linked-set"
+
 [[block]]
 id = "set"
 when = { type = "WikibaseItem" }

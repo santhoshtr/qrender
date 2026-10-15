@@ -2723,6 +2723,9 @@
     },
     "Network": {
       "properties": {
+        "form": {
+          "$ref": "#/$defs/NetworkForm"
+        },
         "pid": {
           "$ref": "#/$defs/Pid"
         },
@@ -2745,10 +2748,26 @@
       },
       "required": [
         "pid",
+        "form",
         "values",
         "priority"
       ],
       "type": "object"
+    },
+    "NetworkForm": {
+      "description": "How a set shows its first values.",
+      "oneOf": [
+        {
+          "const": "strip",
+          "description": "A strip of pictures: the picture is the value.",
+          "type": "string"
+        },
+        {
+          "const": "rows",
+          "description": "A row for each value, its picture small, its qualifiers in full:\nthey name other items (an embassy, a border).",
+          "type": "string"
+        }
+      ]
     },
     "PageImage": {
       "description": "A picture (or a sound, a video, a 3D model): intrinsic facts only.",

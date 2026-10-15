@@ -9,7 +9,7 @@ use super::facts::GroupFacts;
 use crate::config::rules::{BlockMake, SplitMake, first};
 use crate::primitives::fact::FactForm;
 use crate::primitives::media::MediaRole;
-use crate::primitives::network::GalleryValue;
+use crate::primitives::network::{GalleryValue, NetworkForm};
 use crate::primitives::{earlier, fact, map, media, network, score, series, timeline};
 use crate::schema::Block;
 
@@ -131,17 +131,22 @@ impl<'a> Composer<'a> {
                     .collect();
             }
             BlockMake::Score => Block::Score(score::build(self, pid, group, rule)),
-            BlockMake::Network => {
+            BlockMake::Network | BlockMake::LinkedSet => {
                 let order = first(
                     &self.config.rules.order,
                     &GroupFacts::new(self, pid, group, false),
                 );
+                let (form, shown) = match make {
+                    BlockMake::LinkedSet => (NetworkForm::Rows, thresholds.linked_shown),
+                    _ => (NetworkForm::Strip, thresholds.set_max),
+                };
                 Block::Network(network::build(
                     self,
                     pid,
                     group,
+                    form,
                     order.order,
-                    thresholds.set_max,
+                    shown,
                     rule,
                 ))
             }

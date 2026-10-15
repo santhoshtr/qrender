@@ -6610,6 +6610,7 @@ expression: composition
           {
             "primitive": "network",
             "pid": "P47",
+            "form": "strip",
             "values": [
               {
                 "statement": "Q668-5ff2bc16-491d-b88b-4977-46adc3c847ef",
@@ -6830,6 +6831,7 @@ expression: composition
           {
             "primitive": "network",
             "pid": "P206",
+            "form": "strip",
             "values": [
               {
                 "statement": "Q668-46e8853c-40b3-25d4-c253-42da20ea134f",
@@ -8315,6 +8317,7 @@ expression: composition
           {
             "primitive": "network",
             "pid": "P150",
+            "form": "strip",
             "values": [
               {
                 "statement": "Q668-6775fe82-4327-ab24-9c77-ca39ac831465",
@@ -10858,6 +10861,7 @@ expression: composition
           {
             "primitive": "network",
             "pid": "P140",
+            "form": "strip",
             "values": [
               {
                 "statement": "Q668-645283bc-454a-c1d3-763d-c6b0452bb2c9",
@@ -15652,6 +15656,7 @@ expression: composition
           {
             "primitive": "network",
             "pid": "P463",
+            "form": "strip",
             "values": [
               {
                 "statement": "Q668-8c28b430-4622-35ce-7e48-54efbf8aceef",
@@ -16447,6 +16452,7 @@ expression: composition
           {
             "primitive": "network",
             "pid": "P530",
+            "form": "rows",
             "values": [
               {
                 "statement": "Q668-A65BA3B1-42AF-440B-A802-373BBF68285D",
@@ -16670,7 +16676,7 @@ expression: composition
                     "license": "Public domain"
                   }
                 },
-                "shown": true
+                "shown": false
               },
               {
                 "statement": "Q668-2E2C211B-8C3F-4BC7-A75A-AF0C5FEE70A2",
@@ -16694,7 +16700,7 @@ expression: composition
                     "license": "Public domain"
                   }
                 },
-                "shown": true
+                "shown": false
               },
               {
                 "statement": "Q668-2e61cfdf-426c-bb26-2c0e-44c5752c4b61",
@@ -16718,7 +16724,7 @@ expression: composition
                     "license": "Public domain"
                   }
                 },
-                "shown": true
+                "shown": false
               },
               {
                 "statement": "Q668-3546C143-72FE-4E7C-9D1C-096746F1F79D",
@@ -16745,7 +16751,7 @@ expression: composition
                     "license": "CC BY-SA 4.0"
                   }
                 },
-                "shown": true
+                "shown": false
               },
               {
                 "statement": "Q668-3a71dec9-427e-5ca4-f87c-39d41d199939",
@@ -18799,11 +18805,12 @@ expression: composition
               }
             ],
             "priority": 1.0,
-            "rule": "set"
+            "rule": "linked-set"
           },
           {
             "primitive": "network",
             "pid": "P1344",
+            "form": "strip",
             "values": [
               {
                 "statement": "Q668-73D68145-8F78-4F24-A7B7-ED955678EB4E",

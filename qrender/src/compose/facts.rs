@@ -8,7 +8,7 @@
 
 use std::collections::{HashMap, HashSet};
 
-use content::{Datatype, Pid, Qualifier, Rank, Statement};
+use content::{Datatype, EntityId, Pid, Qualifier, QualifierValue, Rank, Statement};
 
 use super::{Composer, measurement_year};
 use crate::config::rules::{BlockMake, GroupWhen, PlacementWhen, PropertyWhen, TemplateWhen, When};
@@ -96,6 +96,30 @@ impl<'c, 'a> GroupFacts<'c, 'a> {
         pictured as f64 >= share * self.statements.len() as f64
     }
 
+    /// `linked_min` values or more, of which `linked_share` have a
+    /// qualifier that names another item. The reason for the preferred
+    /// rank does not count: it is for editors.
+    pub fn linked(&self) -> bool {
+        let thresholds = &self.composer.config.layouts.thresholds;
+        let linked = self
+            .statements
+            .iter()
+            .filter(|s| {
+                s.qualifiers.iter().any(|q| {
+                    q.pid != *PREFERRED_REASON
+                        && matches!(
+                            q.value,
+                            QualifierValue::Entity {
+                                entity: EntityId::Item(_)
+                            }
+                        )
+                })
+            })
+            .count();
+        self.statements.len() >= thresholds.linked_min
+            && linked as f64 >= thresholds.linked_share * self.statements.len() as f64
+    }
+
     /// The values make a series (`series_points`).
     pub fn series(&self) -> bool {
         series_points(self.composer, self.statements).is_some()
@@ -122,6 +146,7 @@ impl When<GroupFacts<'_, '_>> for GroupWhen {
             && self
                 .mostly_pictured
                 .is_none_or(|b| f.mostly_pictured() == b)
+            && self.linked.is_none_or(|b| f.linked() == b)
             && self.series.is_none_or(|b| f.series() == b)
             && self.globe.is_none_or(|g| f.globe() == Some(g))
     }
@@ -361,6 +386,25 @@ mod tests {
     fn block_rules() {
         let block = &rules().block;
         let none = json!({});
+        // Ten pictured relations, each with its embassy: rows. Without the
+        // embassies, or fewer of them: a strip of pictures.
+        let relation = |i: u32, embassy: bool| {
+            let mut v = pictured("P530", &format!("Q{}", 100 + i));
+            if embassy {
+                v["qualifiers"] = json!([{"pid": "P531",
+                    "value": {"type": "entity", "entity": format!("Q{}", 200 + i)}}]);
+            }
+            v
+        };
+        let linked: Vec<Value> = (0..10).map(|i| relation(i, true)).collect();
+        assert_eq!(
+            group_rule(block, json!(linked), none.clone(), false),
+            "linked-set"
+        );
+        let plain: Vec<Value> = (0..10).map(|i| relation(i, i < 3)).collect();
+        assert_eq!(group_rule(block, json!(plain), none.clone(), false), "set");
+        let few: Vec<Value> = (0..9).map(|i| relation(i, true)).collect();
+        assert_eq!(group_rule(block, json!(few), none.clone(), false), "set");
         let media = json!([{"pid": "P18", "value": {"type": "CommonsMedia", "file": "A.jpg"}}]);
         assert_eq!(
             group_rule(block, media.clone(), none.clone(), false),

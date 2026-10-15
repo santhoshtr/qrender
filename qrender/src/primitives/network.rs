@@ -1,6 +1,7 @@
 //! Network: the item values of a property, as pictures. Two forms:
-//! - a set: the values of one property, in one row that scrolls, the
-//!   first ones shown and all of them in a dialog;
+//! - a set: the values of one property, the first ones shown and all of
+//!   them in a dialog; a strip of pictures that scrolls, or rows with the
+//!   qualifiers when they matter (`NetworkForm`);
 //! - a gallery: the small values of different properties of one spread,
 //!   one picture each.
 
@@ -16,10 +17,44 @@ use crate::schema::StatementRef;
 #[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct Network {
     pub pid: Pid,
+    pub form: NetworkForm,
     pub values: Vec<StatementRef>,
     pub priority: f64,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub rule: Option<String>,
+}
+
+/// How a set shows its first values.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, JsonSchema)]
+#[serde(rename_all = "lowercase")]
+pub enum NetworkForm {
+    /// A strip of pictures: the picture is the value.
+    Strip,
+    /// A row for each value, its picture small, its qualifiers in full:
+    /// they name other items (an embassy, a border).
+    Rows,
+}
+
+impl NetworkForm {
+    /// The name the design system uses.
+    pub fn name(self) -> &'static str {
+        match self {
+            Self::Strip => "strip",
+            Self::Rows => "rows",
+        }
+    }
+}
+
+impl Network {
+    /// The values shown before "+N": the first ones.
+    pub fn shown(&self) -> &[StatementRef] {
+        let n = self
+            .values
+            .iter()
+            .take_while(|v| v.shown != Some(false))
+            .count();
+        &self.values[..n]
+    }
 }
 
 #[derive(Debug, Clone, Serialize, JsonSchema)]
@@ -67,6 +102,7 @@ pub fn build(
     c: &Composer,
     pid: Pid,
     statements: &[&Statement],
+    form: NetworkForm,
     order: Order,
     shown: usize,
     rule: Option<&str>,
@@ -97,6 +133,7 @@ pub fn build(
     }
     Network {
         pid,
+        form,
         values: mark_shown(sorted.iter().map(|s| c.statement(s)), shown),
         priority: c.priority(pid, statements),
         rule: rule.map(str::to_string),
@@ -156,6 +193,7 @@ mod tests {
             &k,
             "P463".parse().unwrap(),
             &statements,
+            NetworkForm::Strip,
             Order::Significance,
             5,
             None,
