@@ -157,8 +157,7 @@ expression: composition
               "P1813",
               "P2561",
               "P1705",
-              "P1549",
-              "P1451"
+              "P1549"
             ],
             "values": [
               {
@@ -1208,48 +1207,8 @@ expression: composition
                     "item": "Q47088295"
                   }
                 ]
-              },
-              {
-                "statement": "Q668-B82BCC32-36E7-4FD8-AAFB-D6567C449F39",
-                "pid": "P1451",
-                "text": "!Incredible India",
-                "lang": "en",
-                "rank": "normal",
-                "provenance": "imported",
-                "qualifiers": [
-                  {
-                    "pid": "P3831",
-                    "item": "Q96036107"
-                  }
-                ]
               }
             ]
-          },
-          {
-            "primitive": "earlier",
-            "pid": "P41",
-            "values": [
-              {
-                "statement": "Q668-18ec9f09-4e85-1703-0dd4-3cab9c278dff",
-                "pid": "P41",
-                "file": "British Raj Red Ensign.svg",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1858
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 1947
-                  }
-                ]
-              }
-            ],
-            "from": 1858,
-            "to": 1947,
-            "rule": "earlier"
           },
           {
             "primitive": "sounds",
@@ -1384,78 +1343,6 @@ expression: composition
         ],
         "gallery": [
           {
-            "primitive": "media",
-            "role": "stack",
-            "statement": "q668-8F5A4D6D-A089-4A17-BCDE-A9563013C0F3",
-            "pid": "P94",
-            "file": "Emblem of India.svg",
-            "rank": "normal",
-            "provenance": "none",
-            "kind": "drawing",
-            "aspect": 0.6271,
-            "megapixels": 0.48,
-            "credit": {
-              "artist": "Government of India",
-              "license": "Public domain"
-            },
-            "subject": {
-              "statement": "Q668-9F3C132B-1931-4E46-80D2-BF7E3972B091",
-              "pid": "P237",
-              "item": "Q171869",
-              "rank": "normal",
-              "provenance": "imported",
-              "image": {
-                "file": "Emblem of India.svg",
-                "kind": "drawing",
-                "aspect": 0.6271,
-                "megapixels": 0.48,
-                "credit": {
-                  "artist": "Government of India",
-                  "license": "Public domain"
-                }
-              }
-            }
-          },
-          {
-            "primitive": "media",
-            "role": "stack",
-            "statement": "q668-6F20E83B-ECF1-4D2E-84FE-EFCF9D7EB02B",
-            "pid": "P41",
-            "file": "Flag of India.svg",
-            "rank": "preferred",
-            "provenance": "none",
-            "qualifiers": [
-              {
-                "pid": "P580",
-                "year": 1946
-              }
-            ],
-            "kind": "drawing",
-            "aspect": 1.5,
-            "megapixels": 0.54,
-            "credit": {
-              "artist": "Government of India",
-              "license": "Public domain"
-            },
-            "subject": {
-              "statement": "q668-57822B6A-1895-4AC2-9C1C-97D998E6A609",
-              "pid": "P163",
-              "item": "Q41673",
-              "rank": "normal",
-              "provenance": "none",
-              "image": {
-                "file": "Flag of India.svg",
-                "kind": "drawing",
-                "aspect": 1.5,
-                "megapixels": 0.54,
-                "credit": {
-                  "artist": "Government of India",
-                  "license": "Public domain"
-                }
-              }
-            }
-          },
-          {
             "primitive": "network",
             "role": "gallery",
             "values": [
@@ -1518,7 +1405,148 @@ expression: composition
                   }
                 },
                 "priority": 0.0
-              },
+              }
+            ],
+            "priority": 0.0,
+            "rule": "single"
+          }
+        ]
+      }
+    },
+    {
+      "id": "symbols",
+      "kind": "facts",
+      "dimension": "names",
+      "concept": "Q1128637",
+      "template": "columns",
+      "slots": {
+        "stack": [
+          {
+            "primitive": "earlier",
+            "pid": "P41",
+            "values": [
+              {
+                "statement": "Q668-18ec9f09-4e85-1703-0dd4-3cab9c278dff",
+                "pid": "P41",
+                "file": "British Raj Red Ensign.svg",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1858
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1947
+                  }
+                ]
+              }
+            ],
+            "from": 1858,
+            "to": 1947,
+            "rule": "earlier"
+          },
+          {
+            "primitive": "names",
+            "pids": [
+              "P1451"
+            ],
+            "values": [
+              {
+                "statement": "Q668-B82BCC32-36E7-4FD8-AAFB-D6567C449F39",
+                "pid": "P1451",
+                "text": "!Incredible India",
+                "lang": "en",
+                "rank": "normal",
+                "provenance": "imported",
+                "qualifiers": [
+                  {
+                    "pid": "P3831",
+                    "item": "Q96036107"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "gallery": [
+          {
+            "primitive": "media",
+            "role": "stack",
+            "statement": "q668-6F20E83B-ECF1-4D2E-84FE-EFCF9D7EB02B",
+            "pid": "P41",
+            "file": "Flag of India.svg",
+            "rank": "preferred",
+            "provenance": "none",
+            "qualifiers": [
+              {
+                "pid": "P580",
+                "year": 1946
+              }
+            ],
+            "kind": "drawing",
+            "aspect": 1.5,
+            "megapixels": 0.54,
+            "credit": {
+              "artist": "Government of India",
+              "license": "Public domain"
+            },
+            "subject": {
+              "statement": "q668-57822B6A-1895-4AC2-9C1C-97D998E6A609",
+              "pid": "P163",
+              "item": "Q41673",
+              "rank": "normal",
+              "provenance": "none",
+              "image": {
+                "file": "Flag of India.svg",
+                "kind": "drawing",
+                "aspect": 1.5,
+                "megapixels": 0.54,
+                "credit": {
+                  "artist": "Government of India",
+                  "license": "Public domain"
+                }
+              }
+            }
+          },
+          {
+            "primitive": "media",
+            "role": "stack",
+            "statement": "q668-8F5A4D6D-A089-4A17-BCDE-A9563013C0F3",
+            "pid": "P94",
+            "file": "Emblem of India.svg",
+            "rank": "normal",
+            "provenance": "none",
+            "kind": "drawing",
+            "aspect": 0.6271,
+            "megapixels": 0.48,
+            "credit": {
+              "artist": "Government of India",
+              "license": "Public domain"
+            },
+            "subject": {
+              "statement": "Q668-9F3C132B-1931-4E46-80D2-BF7E3972B091",
+              "pid": "P237",
+              "item": "Q171869",
+              "rank": "normal",
+              "provenance": "imported",
+              "image": {
+                "file": "Emblem of India.svg",
+                "kind": "drawing",
+                "aspect": 0.6271,
+                "megapixels": 0.48,
+                "credit": {
+                  "artist": "Government of India",
+                  "license": "Public domain"
+                }
+              }
+            }
+          },
+          {
+            "primitive": "network",
+            "role": "gallery",
+            "values": [
               {
                 "statement": "Q668-0bef4e3f-45e9-9c4e-74ca-a187e20f3bd3",
                 "pid": "P1546",
@@ -1546,11 +1574,63 @@ expression: composition
                   }
                 },
                 "priority": 0.0
+              },
+              {
+                "statement": "Q668-ff5d2fa5-4286-426b-dd92-8da61a7879e7",
+                "pid": "P2238",
+                "item": "Q171869",
+                "rank": "normal",
+                "provenance": "imported",
+                "image": {
+                  "file": "Emblem of India.svg",
+                  "kind": "drawing",
+                  "aspect": 0.6271,
+                  "megapixels": 0.48,
+                  "credit": {
+                    "artist": "Government of India",
+                    "license": "Public domain"
+                  }
+                },
+                "priority": 0.0
               }
             ],
             "priority": 0.0,
             "rule": "single"
           }
+        ],
+        "sheet": [
+          {
+            "primitive": "fact",
+            "pid": "P85",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "q668-FC79EA4B-E713-44AF-BF57-0B7ABB672877",
+                "pid": "P85",
+                "item": "Q83099",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P51",
+                    "file": "Jana Gana Mana instrumental.ogg"
+                  },
+                  {
+                    "pid": "P51",
+                    "file": "Jana gana mana vocal.ogg"
+                  }
+                ],
+                "shown": true
+              }
+            ],
+            "priority": 2.0,
+            "rule": "few-pictures"
+          }
+        ]
+      },
+      "prose": {
+        "concepts": [
+          "Q1128637"
         ]
       }
     },
@@ -9082,24 +9162,6 @@ expression: composition
                   "credit": {
                     "artist": "Subhashish Panigrahi",
                     "license": "CC BY-SA 4.0"
-                  }
-                },
-                "priority": 0.0
-              },
-              {
-                "statement": "Q668-ff5d2fa5-4286-426b-dd92-8da61a7879e7",
-                "pid": "P2238",
-                "item": "Q171869",
-                "rank": "normal",
-                "provenance": "imported",
-                "image": {
-                  "file": "Emblem of India.svg",
-                  "kind": "drawing",
-                  "aspect": 0.6271,
-                  "megapixels": 0.48,
-                  "credit": {
-                    "artist": "Government of India",
-                    "license": "Public domain"
                   }
                 },
                 "priority": 0.0
@@ -19428,32 +19490,6 @@ expression: composition
                 "precision": 11,
                 "rank": "normal",
                 "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 2.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P85",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "q668-FC79EA4B-E713-44AF-BF57-0B7ABB672877",
-                "pid": "P85",
-                "item": "Q83099",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P51",
-                    "file": "Jana Gana Mana instrumental.ogg"
-                  },
-                  {
-                    "pid": "P51",
-                    "file": "Jana gana mana vocal.ogg"
-                  }
-                ],
                 "shown": true
               }
             ],

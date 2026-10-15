@@ -598,14 +598,31 @@ pids = [
   "P1549",  # demonym
   "P1449",  # nickname
   "P138",   # named after
-  "P1451",  # motto text
-  "P1546",  # motto
-  "P237",   # coat of arms
-  "P163",   # flag
-  "P94",    # coat of arms image
-  "P41",    # flag image
   "P443",   # pronunciation audio
   "P898",   # IPA transcription
+]
+
+# The marks of the nation: each item with the file that pictures it.
+[[class_layouts.country.spreads]]
+id = "symbols"
+dimension = "names"
+concept = "Q1128637"   # national symbol
+prose = ["Q1128637"]   # national symbol
+kind = "facts"
+pids = [
+  "P163",   # flag
+  "P41",    # flag image
+  "P237",   # coat of arms
+  "P94",    # coat of arms image
+  "P418",   # has seal, badge, or sigil
+  "P158",   # seal image
+  "P4004",  # escutcheon image
+  "P1546",  # motto
+  "P1451",  # motto text
+  "P85",    # anthem
+  "P2238",  # official symbol
+  "P6364",  # official color
+  "P154",   # logo image
 ]
 
 # The id of the settlement's spread: "geography of topic" (P2633) links
@@ -662,7 +679,6 @@ pids = [
   "P2769",  # budget
   "P457",   # foundational text
   "P92",    # main regulatory text
-  "P2238",  # official symbol
 ]
 
 # Births and deaths are next to each other: their charts are siblings.
@@ -999,6 +1015,7 @@ P35 = "P1906"    # head of state -> office held by head of state
 [roles.picture]
 P163 = "P41"     # flag -> flag image
 P237 = "P94"     # coat of arms -> coat of arms image
+P418 = "P158"    # has seal, badge, or sigil -> seal image
 
 # An item property and the property of its words. A text that is a label
 # or an alias of an item value, in the language of the text or in "mul",
