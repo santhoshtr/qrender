@@ -735,6 +735,20 @@ concept = "Q309"       # history
 prose = ["Q309"]
 kind = "history"
 
+# The map files: before the media spread, which takes the Commons files no
+# spread took.
+[[class_layouts.country.spreads]]
+id = "maps"
+dimension = "place"
+concept = "Q4006"      # map
+kind = "facts"
+pids = [
+  "P1944",  # relief location map
+  "P1943",  # location map
+  "P242",   # locator map image
+  "P1621",  # detail map
+]
+
 [[class_layouts.country.spreads]]
 id = "media"
 dimension = "media"

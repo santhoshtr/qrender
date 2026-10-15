@@ -18664,16 +18664,33 @@ expression: composition
       ]
     },
     {
-      "id": "media",
-      "kind": "media",
-      "dimension": "media",
-      "concept": "Q131765",
-      "template": "feature-run",
+      "id": "maps",
+      "kind": "facts",
+      "dimension": "place",
+      "concept": "Q4006",
+      "template": "columns",
       "slots": {
-        "run": [
+        "gallery": [
           {
             "primitive": "media",
-            "role": "run",
+            "role": "stack",
+            "statement": "Q668-457a514b-42be-5c97-d1f2-dba30a1ee773",
+            "pid": "P1944",
+            "file": "India relief location map.jpg",
+            "rank": "preferred",
+            "provenance": "none",
+            "kind": "photo",
+            "aspect": 0.9288,
+            "megapixels": 2.42,
+            "credit": {
+              "artist": "Uwe Dedering",
+              "license": "CC BY-SA 3.0"
+            },
+            "rule": "media"
+          },
+          {
+            "primitive": "media",
+            "role": "stack",
             "statement": "Q668-4c9a1f93-4e21-15c2-2263-a6eb274123b5",
             "pid": "P1944",
             "file": "Physical Map of India.jpg",
@@ -18685,8 +18702,178 @@ expression: composition
             "credit": {
               "artist": "Vigneshdm1990",
               "license": "CC BY-SA 4.0"
-            }
+            },
+            "rule": "media"
           },
+          {
+            "primitive": "media",
+            "role": "stack",
+            "statement": "Q668-5f104342-4d78-1578-4a9d-086146bb6314",
+            "pid": "P1944",
+            "file": "India Geographic Map.jpg",
+            "rank": "normal",
+            "provenance": "none",
+            "kind": "photo",
+            "aspect": 1.0375,
+            "megapixels": 2.0,
+            "credit": {
+              "artist": "mukesh Suthar palari",
+              "license": "CC BY-SA 3.0"
+            },
+            "rule": "media"
+          },
+          {
+            "primitive": "media",
+            "role": "stack",
+            "statement": "Q668-365aa476-4857-e04e-b7a1-0db87c88c9c7",
+            "pid": "P1943",
+            "file": "India-states-numbered.svg",
+            "rank": "normal",
+            "provenance": "none",
+            "kind": "drawing",
+            "aspect": 0.8533,
+            "megapixels": 2.98,
+            "credit": {
+              "artist": "See file history below.",
+              "license": "CC BY 2.5"
+            },
+            "rule": "media"
+          },
+          {
+            "primitive": "media",
+            "role": "stack",
+            "statement": "Q668-C2DE00F3-E552-4FDB-B39F-2DB3EC564932",
+            "pid": "P242",
+            "file": "India (orthographic projection).svg",
+            "rank": "preferred",
+            "provenance": "imported",
+            "qualifiers": [
+              {
+                "pid": "P195",
+                "item": "Q21167586"
+              }
+            ],
+            "kind": "drawing",
+            "aspect": 1.0,
+            "megapixels": 0.29,
+            "credit": {
+              "artist": "Ssolbergj (talk)",
+              "license": "CC BY-SA 3.0"
+            },
+            "rule": "media"
+          },
+          {
+            "primitive": "media",
+            "role": "stack",
+            "statement": "Q668-a04fae91-4541-c5f8-2832-e479ec6f052c",
+            "pid": "P242",
+            "file": "India on the globe (India centered).svg",
+            "rank": "normal",
+            "provenance": "none",
+            "kind": "drawing",
+            "aspect": 1.0,
+            "megapixels": 0.63,
+            "credit": {
+              "artist": "Addicted04",
+              "license": "CC BY-SA 3.0"
+            },
+            "rule": "media"
+          },
+          {
+            "primitive": "media",
+            "role": "stack",
+            "statement": "Q668-ac773baa-4fb1-53ff-8bd3-def4ba1370d7",
+            "pid": "P242",
+            "file": "India in the world (de-facto) (W3).svg",
+            "rank": "normal",
+            "provenance": "none",
+            "kind": "drawing",
+            "aspect": 1.6366,
+            "megapixels": 6.21,
+            "credit": {
+              "artist": "TUBS",
+              "license": "CC BY-SA 3.0"
+            },
+            "rule": "media"
+          },
+          {
+            "primitive": "media",
+            "role": "stack",
+            "statement": "Q668-ac8517a1-4723-eaba-1e49-3b6c45b56a6c",
+            "pid": "P242",
+            "file": "LocationIndia.svg",
+            "rank": "normal",
+            "provenance": "none",
+            "qualifiers": [
+              {
+                "pid": "P195",
+                "item": "Q40426579"
+              },
+              {
+                "pid": "P2061",
+                "item": "Q4218095"
+              }
+            ],
+            "kind": "drawing",
+            "aspect": 2.0,
+            "megapixels": 0.5,
+            "credit": {
+              "artist": "B1mbo",
+              "license": "CC BY-SA 3.0"
+            },
+            "rule": "media"
+          },
+          {
+            "primitive": "media",
+            "role": "stack",
+            "statement": "Q668-04e49a7b-494f-aa3a-8ae6-8b0569ecc418",
+            "pid": "P1621",
+            "file": "India population density map en.svg",
+            "rank": "normal",
+            "provenance": "none",
+            "kind": "drawing",
+            "aspect": 0.8824,
+            "megapixels": 3.03,
+            "credit": {
+              "artist": "This Image was created by User:PlaneMad.\nIf you are using the image under the creative commons share alike license please credit the photo CC-by-sa PlaneMad/Wikimedia and include a link to this page. No explicit permission is needed from me, but id appreciate an email if my work has been of help to you.\nIf you dont want to release your work under a creative commons license, please mail me at arun.planemad@gmail.com or catch me at my Website to negotiate a custom license as per your needs.\n\nInternational Borders\nUniversity of Texas map library - India Political map 2001\nDisputed Borders\nUniversity of Texas map library - China-India Borders - Eastern Sector 1988 & Western Sector 1988 - Kashmir Region 2004 - Kashmir Maps.\nState and District boundaries\nCensus of India - 2001 Census State Maps - Survey of India Maps\nOther sources\nUS Army Map Service, Survey of India Map Explorer, Columbia University\nMap specific sources\nIndia Map siteCensus - Population map.",
+              "license": "CC BY-SA 3.0"
+            },
+            "rule": "media"
+          },
+          {
+            "primitive": "media",
+            "role": "stack",
+            "statement": "Q668-d8cda054-467b-cc18-fbc0-8f8b275e04f9",
+            "pid": "P1621",
+            "file": "India population density map ca.svg",
+            "rank": "normal",
+            "provenance": "none",
+            "qualifiers": [
+              {
+                "pid": "P407",
+                "item": "Q7026"
+              }
+            ],
+            "kind": "drawing",
+            "aspect": 0.8852,
+            "megapixels": 3.05,
+            "credit": {
+              "artist": "PlaneMad\n\ntranslator: Manlleus (ca)",
+              "license": "CC BY-SA 4.0"
+            },
+            "rule": "media"
+          }
+        ]
+      }
+    },
+    {
+      "id": "media",
+      "kind": "media",
+      "dimension": "media",
+      "concept": "Q131765",
+      "template": "feature-run",
+      "slots": {
+        "run": [
           {
             "primitive": "media",
             "role": "run",
@@ -18722,38 +18909,6 @@ expression: composition
           {
             "primitive": "media",
             "role": "run",
-            "statement": "Q668-457a514b-42be-5c97-d1f2-dba30a1ee773",
-            "pid": "P1944",
-            "file": "India relief location map.jpg",
-            "rank": "preferred",
-            "provenance": "none",
-            "kind": "photo",
-            "aspect": 0.9288,
-            "megapixels": 2.42,
-            "credit": {
-              "artist": "Uwe Dedering",
-              "license": "CC BY-SA 3.0"
-            }
-          },
-          {
-            "primitive": "media",
-            "role": "run",
-            "statement": "Q668-5f104342-4d78-1578-4a9d-086146bb6314",
-            "pid": "P1944",
-            "file": "India Geographic Map.jpg",
-            "rank": "normal",
-            "provenance": "none",
-            "kind": "photo",
-            "aspect": 1.0375,
-            "megapixels": 2.0,
-            "credit": {
-              "artist": "mukesh Suthar palari",
-              "license": "CC BY-SA 3.0"
-            }
-          },
-          {
-            "primitive": "media",
-            "role": "run",
             "statement": "Q668-7aef660e-4cb6-f885-ec14-a4a652773a2a",
             "pid": "P2716",
             "file": "India montage (2025).jpg",
@@ -18765,140 +18920,6 @@ expression: composition
             "credit": {
               "artist": "Gpkp",
               "license": "CC BY-SA 4.0"
-            }
-          },
-          {
-            "primitive": "media",
-            "role": "run",
-            "statement": "Q668-ac773baa-4fb1-53ff-8bd3-def4ba1370d7",
-            "pid": "P242",
-            "file": "India in the world (de-facto) (W3).svg",
-            "rank": "normal",
-            "provenance": "none",
-            "kind": "drawing",
-            "aspect": 1.6366,
-            "megapixels": 6.21,
-            "credit": {
-              "artist": "TUBS",
-              "license": "CC BY-SA 3.0"
-            }
-          },
-          {
-            "primitive": "media",
-            "role": "run",
-            "statement": "Q668-d8cda054-467b-cc18-fbc0-8f8b275e04f9",
-            "pid": "P1621",
-            "file": "India population density map ca.svg",
-            "rank": "normal",
-            "provenance": "none",
-            "qualifiers": [
-              {
-                "pid": "P407",
-                "item": "Q7026"
-              }
-            ],
-            "kind": "drawing",
-            "aspect": 0.8852,
-            "megapixels": 3.05,
-            "credit": {
-              "artist": "PlaneMad\n\ntranslator: Manlleus (ca)",
-              "license": "CC BY-SA 4.0"
-            }
-          },
-          {
-            "primitive": "media",
-            "role": "run",
-            "statement": "Q668-04e49a7b-494f-aa3a-8ae6-8b0569ecc418",
-            "pid": "P1621",
-            "file": "India population density map en.svg",
-            "rank": "normal",
-            "provenance": "none",
-            "kind": "drawing",
-            "aspect": 0.8824,
-            "megapixels": 3.03,
-            "credit": {
-              "artist": "This Image was created by User:PlaneMad.\nIf you are using the image under the creative commons share alike license please credit the photo CC-by-sa PlaneMad/Wikimedia and include a link to this page. No explicit permission is needed from me, but id appreciate an email if my work has been of help to you.\nIf you dont want to release your work under a creative commons license, please mail me at arun.planemad@gmail.com or catch me at my Website to negotiate a custom license as per your needs.\n\nInternational Borders\nUniversity of Texas map library - India Political map 2001\nDisputed Borders\nUniversity of Texas map library - China-India Borders - Eastern Sector 1988 & Western Sector 1988 - Kashmir Region 2004 - Kashmir Maps.\nState and District boundaries\nCensus of India - 2001 Census State Maps - Survey of India Maps\nOther sources\nUS Army Map Service, Survey of India Map Explorer, Columbia University\nMap specific sources\nIndia Map siteCensus - Population map.",
-              "license": "CC BY-SA 3.0"
-            }
-          },
-          {
-            "primitive": "media",
-            "role": "run",
-            "statement": "Q668-365aa476-4857-e04e-b7a1-0db87c88c9c7",
-            "pid": "P1943",
-            "file": "India-states-numbered.svg",
-            "rank": "normal",
-            "provenance": "none",
-            "kind": "drawing",
-            "aspect": 0.8533,
-            "megapixels": 2.98,
-            "credit": {
-              "artist": "See file history below.",
-              "license": "CC BY 2.5"
-            }
-          },
-          {
-            "primitive": "media",
-            "role": "run",
-            "statement": "Q668-a04fae91-4541-c5f8-2832-e479ec6f052c",
-            "pid": "P242",
-            "file": "India on the globe (India centered).svg",
-            "rank": "normal",
-            "provenance": "none",
-            "kind": "drawing",
-            "aspect": 1.0,
-            "megapixels": 0.63,
-            "credit": {
-              "artist": "Addicted04",
-              "license": "CC BY-SA 3.0"
-            }
-          },
-          {
-            "primitive": "media",
-            "role": "run",
-            "statement": "Q668-ac8517a1-4723-eaba-1e49-3b6c45b56a6c",
-            "pid": "P242",
-            "file": "LocationIndia.svg",
-            "rank": "normal",
-            "provenance": "none",
-            "qualifiers": [
-              {
-                "pid": "P195",
-                "item": "Q40426579"
-              },
-              {
-                "pid": "P2061",
-                "item": "Q4218095"
-              }
-            ],
-            "kind": "drawing",
-            "aspect": 2.0,
-            "megapixels": 0.5,
-            "credit": {
-              "artist": "B1mbo",
-              "license": "CC BY-SA 3.0"
-            }
-          },
-          {
-            "primitive": "media",
-            "role": "run",
-            "statement": "Q668-C2DE00F3-E552-4FDB-B39F-2DB3EC564932",
-            "pid": "P242",
-            "file": "India (orthographic projection).svg",
-            "rank": "preferred",
-            "provenance": "imported",
-            "qualifiers": [
-              {
-                "pid": "P195",
-                "item": "Q21167586"
-              }
-            ],
-            "kind": "drawing",
-            "aspect": 1.0,
-            "megapixels": 0.29,
-            "credit": {
-              "artist": "Ssolbergj (talk)",
-              "license": "CC BY-SA 3.0"
             }
           }
         ]
