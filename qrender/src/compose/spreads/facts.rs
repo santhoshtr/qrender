@@ -121,7 +121,12 @@ fn properties(c: &Composer, spec: &SpreadSpec) -> Vec<Pid> {
             || *p == *INSTANCE_OF
     };
     for (pid, statements) in c.properties() {
-        let live: Vec<_> = statements.iter().filter(|s| !c.is_claimed(s)).collect();
+        // A value that is the item itself (the country of a country) is
+        // not a relation.
+        let live: Vec<_> = statements
+            .iter()
+            .filter(|s| !c.is_claimed(s) && s.value.item() != Some(c.content.qid))
+            .collect();
         let pictured = live.iter().filter(|s| c.is_pictured(s)).count();
         if !pids.contains(&pid)
             && !skip(&pid)

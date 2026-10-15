@@ -1577,27 +1577,6 @@ expression: composition
                 "priority": 0.041
               },
               {
-                "statement": "Q405-2e441b57-1b23-487e-a87e-a60b2ac70d6f",
-                "pid": "P376",
-                "item": "Q405",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "FullMoon2010.jpg",
-                  "kind": "photo",
-                  "aspect": 1.0522,
-                  "megapixels": 6.33,
-                  "assessed": [
-                    "Featured pictures on Wikimedia Commons"
-                  ],
-                  "credit": {
-                    "artist": "Gregory H. Revera",
-                    "license": "CC BY-SA 3.0"
-                  }
-                },
-                "priority": 0.041
-              },
-              {
                 "statement": "Q405-869945da-43d1-c9f0-5a37-8e428c2b9172",
                 "pid": "P1589",
                 "item": "Q598608",
@@ -2118,6 +2097,35 @@ expression: composition
                 "rank": "normal",
                 "provenance": "none",
                 "class": true,
+                "shown": true
+              }
+            ],
+            "priority": 0.041
+          },
+          {
+            "primitive": "fact",
+            "pid": "P376",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q405-2e441b57-1b23-487e-a87e-a60b2ac70d6f",
+                "pid": "P376",
+                "item": "Q405",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "FullMoon2010.jpg",
+                  "kind": "photo",
+                  "aspect": 1.0522,
+                  "megapixels": 6.33,
+                  "assessed": [
+                    "Featured pictures on Wikimedia Commons"
+                  ],
+                  "credit": {
+                    "artist": "Gregory H. Revera",
+                    "license": "CC BY-SA 3.0"
+                  }
+                },
                 "shown": true
               }
             ],
