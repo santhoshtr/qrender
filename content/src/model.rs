@@ -64,6 +64,11 @@ pub struct Content {
     /// GeoShape value holds.
     #[serde(default, skip_serializing_if = "IndexMap::is_empty")]
     pub shapes: IndexMap<String, Shape>,
+    /// The language code (P424) of each item that is the value of a
+    /// "language of work or name" (P407) qualifier: the names block and
+    /// the sounds place a value by the code of its language.
+    #[serde(default, skip_serializing_if = "IndexMap::is_empty")]
+    pub language_codes: IndexMap<Qid, String>,
 }
 
 /// The outline of a geoshape, simplified for a map on a page, and what its

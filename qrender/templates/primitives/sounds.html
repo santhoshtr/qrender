@@ -3,14 +3,14 @@
     several languages): one block, the qr-sounds element. Every recording
     has its player, so the page is whole without JavaScript; the element's
     script (assets/sounds.js) shows the choice of language and keeps one
-    player. -#}
+    player. The choice starts at the recording in the page language. -#}
 <qr-sounds class="block sounds">
 <h3>{{ ui.text(ui.property(b.pid), true)|safe }} <span class="note">{{ b.sounds.len() }}</span></h3>
 <select class="sound-choice"
         hidden
         aria-label="{{ ui.property(b.pid).text }}">
     {%- for s in b.sounds -%}
-        <option value="{{ loop.index0 }}">{{ ui.sound_label(s) }}</option>
+        <option value="{{ loop.index0 }}"{% if ui.sound_selected(s) %} selected{% endif %}>{{ ui.sound_label(s) }}</option>
     {%- endfor -%}
 </select>
 {%- for s in b.sounds -%}

@@ -2439,6 +2439,16 @@
     },
     "Names": {
       "properties": {
+        "codes": {
+          "additionalProperties": false,
+          "description": "The language code of each language of the item values (their\n\"language of work or name\" qualifiers): a value is in the group of\neach of its languages.",
+          "patternProperties": {
+            "^Q[1-9][0-9]*$": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
         "pids": {
           "description": "The properties, in the order of the spread.",
           "items": {
@@ -3727,6 +3737,13 @@
         },
         "kind": {
           "$ref": "#/$defs/MediaKind"
+        },
+        "lang": {
+          "description": "The code of the language: the choice starts at the recording in the\npage language.",
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "language": {
           "anyOf": [

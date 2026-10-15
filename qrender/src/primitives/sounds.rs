@@ -4,6 +4,7 @@
 //! each recording; the renderer draws the choice.
 
 use content::{EntityId, Pid, Qid};
+use indexmap::IndexMap;
 use schemars::JsonSchema;
 use serde::Serialize;
 
@@ -25,6 +26,10 @@ pub struct Sound {
     /// qualifier): the name of its choice.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub language: Option<Qid>,
+    /// The code of the language: the choice starts at the recording in the
+    /// page language.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub lang: Option<String>,
 }
 
 /// HTML: the template binding. The markup is templates/primitives/sounds.html.
@@ -42,8 +47,10 @@ pub const CSS: &str = include_str!("../../design/primitives/sounds.css");
 pub const JS: &str = include_str!("../../assets/sounds.js");
 
 /// Group the recordings of one property that follow each other in a slot.
-/// A single recording stays a media block.
-pub fn group(blocks: Vec<Block>) -> Vec<Block> {
+/// A single recording stays a media block. `codes`: the code of each
+/// language item.
+pub fn group(blocks: Vec<Block>, codes: &IndexMap<Qid, String>) -> Vec<Block> {
+    let sound = |media| sound(media, codes);
     let mut out: Vec<Block> = Vec::new();
     for block in blocks {
         let Block::Media(m) = block else {
@@ -72,7 +79,7 @@ pub fn group(blocks: Vec<Block>) -> Vec<Block> {
     out
 }
 
-fn sound(media: Media) -> Sound {
+fn sound(media: Media, codes: &IndexMap<Qid, String>) -> Sound {
     let language = media
         .statement
         .qualifiers
@@ -83,7 +90,11 @@ fn sound(media: Media) -> Sound {
             } if q.pid == *LANGUAGE => Some(item),
             _ => None,
         });
-    Sound { media, language }
+    Sound {
+        media,
+        language,
+        lang: language.and_then(|q| codes.get(&q).cloned()),
+    }
 }
 
 /// Markdown: each recording.
@@ -130,7 +141,8 @@ mod tests {
         );
         let k = Composer::new(&c, Config::embedded());
         let blocks = c.statements.iter().map(|s| media_of(&k, s)).collect();
-        let grouped = group(blocks);
+        let codes = [("Q7913".parse().unwrap(), "ro".to_string())].into();
+        let grouped = group(blocks, &codes);
         let shape: Vec<String> = grouped
             .iter()
             .map(|b| match b {
@@ -139,7 +151,11 @@ mod tests {
                     s.sounds.len(),
                     s.sounds
                         .iter()
-                        .map(|x| x.language.map(|q| q.to_string()))
+                        .map(|x| format!(
+                            "{}:{}",
+                            x.language.map(|q| q.to_string()).unwrap_or_default(),
+                            x.lang.as_deref().unwrap_or_default()
+                        ))
                         .collect::<Vec<_>>()
                 ),
                 other => format!("{:?}", other.primitive()),
@@ -148,7 +164,7 @@ mod tests {
         assert_eq!(
             shape,
             [
-                r#"sounds 3 [Some("Q188"), Some("Q7913"), None]"#,
+                r#"sounds 3 ["Q188:", "Q7913:ro", ":"]"#,
                 "Media", // one recording of another property
                 "Media", // a picture
                 "Media", // a recording alone

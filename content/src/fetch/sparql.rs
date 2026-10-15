@@ -6,7 +6,7 @@ use serde_json::Value as Json;
 
 use super::FetchError;
 use super::http::{Http, Service};
-use crate::id::{Pid, Qid, StatementId};
+use crate::id::{Lang, Pid, Qid, StatementId};
 use crate::model::{
     EventDates, HolidayDay, NormalQuantity, Qualifier, QualifierValue, QuantityRecord, Rank,
     ReverseWork, Statement, Value, ValueImage, file_name, year_of,
@@ -517,6 +517,40 @@ pub async fn holiday_days(
                 month: rule.or(r.qid("part")),
                 fixed: rule.is_none(),
             });
+        }
+    }
+    Ok(out)
+}
+
+/// The language code (P424) of each language item. An item with more than
+/// one code: the shortest valid code, then the first in the order of
+/// codes. Items without a valid code are not in the map.
+pub async fn language_codes(
+    http: &Http,
+    qids: &[Qid],
+) -> Result<IndexMap<Qid, String>, FetchError> {
+    if qids.is_empty() {
+        return Ok(IndexMap::new());
+    }
+    let rows = query(
+        http,
+        &format!(
+            "SELECT ?item ?code WHERE {{ VALUES ?item {{ {} }} ?item wdt:P424 ?code }}",
+            values(qids)
+        ),
+    )
+    .await?;
+    let mut out: IndexMap<Qid, String> = IndexMap::new();
+    for r in &rows {
+        let (Some(item), Some(code)) = (r.qid("item"), r.get("code")) else {
+            continue;
+        };
+        if code.parse::<Lang>().is_err() {
+            continue;
+        }
+        let shorter = |old: &String| (code.len(), code) < (old.len(), old.as_str());
+        if out.get(&item).is_none_or(shorter) {
+            out.insert(item, code.to_string());
         }
     }
     Ok(out)

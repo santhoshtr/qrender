@@ -223,6 +223,20 @@ impl<'v> Ui<'v> {
         names::groups(b, self.view.lang.as_str())
     }
 
+    /// The note of a value in the names block. An item value is without its
+    /// languages: the group names the language. A text keeps them: they
+    /// can say more than its code (a variety of the language).
+    pub fn name_note(&self, s: &StatementRef) -> Vec<Part> {
+        let item = matches!(s.value, ValueShown::Item { .. });
+        let qualifiers: Vec<QualifierShown> = s
+            .qualifiers
+            .iter()
+            .filter(|q| !item || q.pid != *crate::wikidata::LANGUAGE)
+            .cloned()
+            .collect();
+        self.qualifiers(&qualifiers)
+    }
+
     /// A strip of this many pictures has the "View all" card: its dialog
     /// shows every value with its qualifiers, more than the strip.
     pub fn view_all(&self, count: impl Arg<usize>) -> bool {
@@ -584,6 +598,11 @@ impl<'v> Ui<'v> {
             Some(part) => self.part_text(part),
             None => self.media_file(&s.media).to_string(),
         }
+    }
+
+    /// The recording in the page language: the choice starts at it.
+    pub fn sound_selected(&self, s: &crate::primitives::sounds::Sound) -> bool {
+        s.lang.as_deref() == Some(self.view.lang.as_str())
     }
 
     /// The note of a recording, without its language: the choice names it.

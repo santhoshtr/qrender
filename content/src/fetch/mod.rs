@@ -33,6 +33,9 @@ const MISSING_SHARE: f64 = 0.6;
 /// The reference properties and the age property whose labels the page
 /// shows (stated in, reference URL, imported from, age).
 const EXTRA_LABELS: [&str; 4] = ["P248", "P854", "P143", "P3629"];
+/// "language of work or name" (P407): the qualifier whose items get their
+/// language code.
+const LANGUAGE: u64 = 407;
 
 #[derive(Debug, thiserror::Error)]
 pub enum FetchError {
@@ -55,7 +58,7 @@ pub enum FetchError {
 /// The version of the fetcher. Raise it when a change of the fetcher
 /// changes what it fetches (a new field, a new request): it is part of
 /// every cache key, so the parts that an older fetcher stored are not read.
-pub const FETCH_VERSION: u32 = 4;
+pub const FETCH_VERSION: u32 = 5;
 
 /// Seconds a cached part lives: content and text change with edits;
 /// a peer set changes slowly and many items share it.
@@ -203,6 +206,18 @@ impl<S: Store> Fetcher<S> {
                 .filter(|s| self.settings.calendar.contains(&s.pid))
                 .filter_map(|s| s.value.item()),
         );
+        let languages: Vec<Qid> = unique(
+            statements
+                .iter()
+                .flat_map(|s| &s.qualifiers)
+                .filter(|q| q.pid.number() == LANGUAGE)
+                .filter_map(|q| match q.value {
+                    QualifierValue::Entity {
+                        entity: EntityId::Item(item),
+                    } => Some(item),
+                    _ => None,
+                }),
+        );
         let (
             references,
             quantities,
@@ -216,6 +231,7 @@ impl<S: Store> Fetcher<S> {
             event_dates,
             holiday_days,
             shapes,
+            language_codes,
         ) = futures::try_join!(
             sparql::references(http, qid),
             sparql::quantities(http, &targets, &quantity_pids),
@@ -233,6 +249,7 @@ impl<S: Store> Fetcher<S> {
             try_join_all(shape_urls.iter().map(|url| async move {
                 Ok::<_, FetchError>((url.clone(), commons::shape(http, url).await?))
             })),
+            sparql::language_codes(http, &languages),
         )?;
 
         let mut media: Vec<String> = statements
@@ -280,6 +297,7 @@ impl<S: Store> Fetcher<S> {
                 .into_iter()
                 .filter_map(|(url, s)| Some((url, s?)))
                 .collect(),
+            language_codes,
         })
     }
 
