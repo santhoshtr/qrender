@@ -5649,7 +5649,7 @@ expression: composition
           {
             "primitive": "network",
             "pid": "P463",
-            "form": "strip",
+            "form": "rows",
             "values": [
               {
                 "statement": "Q90-363DAE9E-2A68-4845-BE5E-391D00B322D3",
@@ -5673,6 +5673,7 @@ expression: composition
                     "license": "CC BY-SA 3.0"
                   }
                 },
+                "described": true,
                 "shown": true
               },
               {
@@ -5691,6 +5692,7 @@ expression: composition
                     "license": "CC0"
                   }
                 },
+                "described": true,
                 "shown": true
               },
               {
@@ -5699,6 +5701,7 @@ expression: composition
                 "item": "Q67652870",
                 "rank": "normal",
                 "provenance": "sourced",
+                "described": true,
                 "shown": true
               },
               {
@@ -5707,11 +5710,12 @@ expression: composition
                 "item": "Q9383972",
                 "rank": "normal",
                 "provenance": "sourced",
+                "described": true,
                 "shown": true
               }
             ],
             "priority": 2.8,
-            "rule": "set"
+            "rule": "described-set"
           }
         ],
         "gallery": [

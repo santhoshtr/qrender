@@ -927,13 +927,16 @@ score = [
 ]
 # Values whose Wikidata description is shown under them: works, where the
 # description says what the work is ("novel by Thomas Pynchon"), and the
-# things an item owns ("official residence of the US vice president").
+# things an item owns ("official residence of the US vice president"),
+# the bodies it is a member of and the events it took part in.
 # Not for classes ("drama film"), whose descriptions are general.
 described = [
   "P144",   # based on
   "P1877",  # after a work by
   "P6166",  # quotes work
   "P1830",  # owner of
+  "P463",   # member of
+  "P1344",  # participant in
 ]
 # Values with an order of importance that Wikidata does not record (who is
 # billed first). The count of references on each statement stands in for
