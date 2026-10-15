@@ -600,6 +600,15 @@ impl<'v> Ui<'v> {
         }
     }
 
+    /// A site (a URL, or an item such as an open data portal), not an
+    /// account: its card has a globe.
+    pub fn is_site(&self, card: &crate::primitives::links::Card) -> bool {
+        matches!(
+            card.statement.value,
+            ValueShown::Url { .. } | ValueShown::Item { .. }
+        )
+    }
+
     /// The recording in the page language: the choice starts at it.
     pub fn sound_selected(&self, s: &crate::primitives::sounds::Sound) -> bool {
         s.lang.as_deref() == Some(self.view.lang.as_str())

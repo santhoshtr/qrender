@@ -393,6 +393,19 @@
           "type": "object"
         },
         {
+          "$ref": "#/$defs/Links",
+          "properties": {
+            "primitive": {
+              "const": "links",
+              "type": "string"
+            }
+          },
+          "required": [
+            "primitive"
+          ],
+          "type": "object"
+        },
+        {
           "$ref": "#/$defs/Absent",
           "properties": {
             "primitive": {
@@ -445,6 +458,56 @@
           "type": "object"
         }
       ]
+    },
+    "Card": {
+      "properties": {
+        "followers": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Followers"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "href": {
+          "description": "The address: a URL value, or an account in the formatter URL of its\nproperty. None for an item value (it links to its item) and for an\naccount whose property has no formatter URL.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "logo": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Picture"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The logo of the platform."
+        },
+        "platform": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Qid"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The platform of the property (X), when the configuration names one."
+        },
+        "statement": {
+          "$ref": "#/$defs/StatementRef"
+        }
+      },
+      "required": [
+        "statement"
+      ],
+      "type": "object"
     },
     "ChainLink": {
       "properties": {
@@ -995,6 +1058,38 @@
         }
       ]
     },
+    "Followers": {
+      "description": "The number of followers of an account: the latest count.",
+      "properties": {
+        "amount": {
+          "format": "double",
+          "type": "number"
+        },
+        "pid": {
+          "$ref": "#/$defs/Pid"
+        },
+        "provenance": {
+          "$ref": "#/$defs/Provenance"
+        },
+        "statement": {
+          "$ref": "#/$defs/StatementId"
+        },
+        "year": {
+          "format": "int64",
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "pid",
+        "amount",
+        "statement",
+        "provenance"
+      ],
+      "type": "object"
+    },
     "Gallery": {
       "properties": {
         "priority": {
@@ -1443,6 +1538,20 @@
         "text",
         "lang",
         "href"
+      ],
+      "type": "object"
+    },
+    "Links": {
+      "properties": {
+        "cards": {
+          "items": {
+            "$ref": "#/$defs/Card"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "cards"
       ],
       "type": "object"
     },
@@ -3124,6 +3233,11 @@
           "const": "timeline",
           "description": "Events that are items of their own, as a vertical list.",
           "type": "string"
+        },
+        {
+          "const": "links",
+          "description": "The item's sites and accounts: a card each, with the logo of its\nplatform.",
+          "type": "string"
         }
       ]
     },
@@ -4048,13 +4162,18 @@
           "type": "string"
         },
         {
+          "const": "web",
+          "description": "The item's sites and accounts (the web role), as cards.",
+          "type": "string"
+        },
+        {
           "const": "more",
           "description": "Everything left, collapsed.",
           "type": "string"
         },
         {
           "const": "evidence",
-          "description": "Web presence, curation, sources, identifiers, provenance.",
+          "description": "Curation, sources, identifiers, provenance.",
           "type": "string"
         }
       ]

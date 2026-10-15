@@ -1,6 +1,6 @@
-//! The evidence spread: provenance counts, web presence, curation data,
-//! the projects that have a page, identifiers, and what most peers have
-//! that the item lacks.
+//! The evidence spread: provenance counts, curation data, the projects
+//! that have a page, identifiers, and what most peers have that the item
+//! lacks.
 
 use indexmap::IndexMap;
 
@@ -8,16 +8,12 @@ use crate::compose::Composer;
 use crate::config::SpreadSpec;
 use crate::primitives::{absent, fact, identifiers, provenance, sitelinks};
 use crate::schema::{Block, Spread};
-use crate::vocab::{Role, Slot, Template};
+use crate::vocab::{Slot, Template};
 
 pub fn build(c: &mut Composer, spec: &SpreadSpec) -> Spread {
     let layouts = &c.config.layouts;
     let mut slots = IndexMap::new();
     slots.insert(Slot::Summary, vec![Block::Provenance(provenance::build(c))]);
-    let web = rows(c, layouts.roles.list(Role::Web));
-    if !web.is_empty() {
-        slots.insert(Slot::Web, web);
-    }
     // A block with nothing to show is left out: no empty sheet, no
     // button for zero identifiers.
     let curation = rows(c, &layouts.evidence.pids);

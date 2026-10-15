@@ -27,6 +27,7 @@ pub struct Layouts {
     pub containers: IndexMap<Pid, ContainerMode>,
     pub compare: Compare,
     pub media: Media,
+    pub web: Web,
     pub evidence: Evidence,
     /// "... of topic" properties, and the spread that takes each one.
     pub topics: IndexMap<Pid, String>,
@@ -147,6 +148,14 @@ pub struct Media {
     pub qualifier_logos: Vec<Pid>,
     /// Commons assessment category -> weight for the feature picture.
     pub assessments: IndexMap<String, u32>,
+}
+
+#[derive(Debug, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct Web {
+    /// Web property -> its platform (X username -> X): the card of a value
+    /// has the logo of the platform.
+    pub platforms: IndexMap<Pid, Qid>,
 }
 
 #[derive(Debug, Deserialize)]

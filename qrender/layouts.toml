@@ -167,6 +167,11 @@ prose = ["Q11042"]     # culture
 kind = "media"
 
 [[class_layouts.settlement.spreads]]
+id = "web"
+concept = "Q22909728"  # web presence
+kind = "web"
+
+[[class_layouts.settlement.spreads]]
 id = "more"
 kind = "more"
 
@@ -307,6 +312,11 @@ id = "media"
 dimension = "media"
 concept = "Q131765"    # multimedia
 kind = "media"
+
+[[class_layouts.person.spreads]]
+id = "web"
+concept = "Q22909728"  # web presence
+kind = "web"
 
 [[class_layouts.person.spreads]]
 id = "more"
@@ -456,6 +466,11 @@ concept = "Q131765"    # multimedia
 kind = "media"
 
 [[class_layouts.film.spreads]]
+id = "web"
+concept = "Q22909728"  # web presence
+kind = "web"
+
+[[class_layouts.film.spreads]]
 id = "more"
 kind = "more"
 
@@ -543,6 +558,11 @@ id = "media"
 dimension = "media"
 concept = "Q131765"    # multimedia
 kind = "media"
+
+[[class_layouts.astronomical.spreads]]
+id = "web"
+concept = "Q22909728"  # web presence
+kind = "web"
 
 [[class_layouts.astronomical.spreads]]
 id = "more"
@@ -776,6 +796,11 @@ concept = "Q131765"    # multimedia
 kind = "media"
 
 [[class_layouts.country.spreads]]
+id = "web"
+concept = "Q22909728"  # web presence
+kind = "web"
+
+[[class_layouts.country.spreads]]
 id = "more"
 kind = "more"
 
@@ -821,6 +846,11 @@ id = "media"
 dimension = "media"
 concept = "Q131765"    # multimedia
 kind = "media"
+
+[[class_layouts.generic.spreads]]
+id = "web"
+concept = "Q22909728"  # web presence
+kind = "web"
 
 [[class_layouts.generic.spreads]]
 id = "more"
@@ -901,21 +931,24 @@ relation = [
 # Points that mark the extent of the item, and its geographic centre:
 # markers on its map.
 extreme_point = ["P1332", "P1333", "P1334", "P1335", "P5140"]
-# Accounts, codes and URLs: the item on the web. They go to evidence.
+# Sites and accounts: the item on the web, as cards in the web spread.
 web = [
   "P856",   # official website
   "P2002",  # X username
-  "P2003",  # Instagram username
   "P2013",  # Facebook username
+  "P2003",  # Instagram username
   "P2397",  # YouTube channel ID
+  "P11245", # YouTube handle
   "P4264",  # LinkedIn company ID
+  "P7085",  # TikTok username
+  "P4033",  # Mastodon address
+  "P3984",  # subreddit
+  "P3417",  # Quora topic ID
   "P2572",  # hashtag
   "P1482",  # Stack Exchange tag
-  "P238",   # IATA airport code
   "P10311", # official jobs URL
   "P11266", # contact page URL
   "P8402",  # open data portal
-  "P3984",  # subreddit
   "P8687",  # social media followers
   "P973",   # described at URL
   "P1581",  # official blog URL
@@ -1055,6 +1088,24 @@ qualifier_logos = [
 "Featured pictures on Wikimedia Commons" = 3
 "Quality images" = 2
 "Valued images" = 1
+
+# ------------------------------------------------------------------ web
+[web]
+# The platform of each web property: its card has the logo (P154) of the
+# platform. The properties do not name it reliably ("X username" names
+# "X account", which has no logo).
+[web.platforms]
+P2002 = "Q918"        # X username: X
+P2013 = "Q355"        # Facebook username: Facebook
+P2003 = "Q209330"     # Instagram username: Instagram
+P2397 = "Q866"        # YouTube channel ID: YouTube
+P11245 = "Q866"       # YouTube handle: YouTube
+P4264 = "Q213660"     # LinkedIn company ID: LinkedIn
+P7085 = "Q48938223"   # TikTok username: TikTok
+P4033 = "Q27986619"   # Mastodon address: Mastodon
+P3984 = "Q1136"       # subreddit: Reddit
+P3417 = "Q51711"      # Quora topic ID: Quora
+P1482 = "Q3495447"    # Stack Exchange tag: Stack Exchange
 
 # ------------------------------------------------------------- evidence
 [evidence]

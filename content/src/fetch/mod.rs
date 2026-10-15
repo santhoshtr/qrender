@@ -58,7 +58,7 @@ pub enum FetchError {
 /// The version of the fetcher. Raise it when a change of the fetcher
 /// changes what it fetches (a new field, a new request): it is part of
 /// every cache key, so the parts that an older fetcher stored are not read.
-pub const FETCH_VERSION: u32 = 5;
+pub const FETCH_VERSION: u32 = 6;
 
 /// Seconds a cached part lives: content and text change with edits;
 /// a peer set changes slowly and many items share it.
@@ -162,6 +162,12 @@ impl<S: Store> Fetcher<S> {
         let layout = self.settings.layout(&classes);
         let reverse_pids = layout.map(|l| l.reverse.clone()).unwrap_or_default();
         let value_items: Vec<Qid> = unique(statements.iter().filter_map(|s| s.value.item()));
+        let web_pids: Vec<Pid> = unique(
+            statements
+                .iter()
+                .map(|s| s.pid)
+                .filter(|p| self.settings.web.contains(p)),
+        );
         let logo_items: Vec<Qid> = unique(
             statements
                 .iter()
@@ -176,6 +182,14 @@ impl<S: Store> Fetcher<S> {
                         ) => Some(*item),
                         _ => None,
                     },
+                )
+                // The platforms of the web properties of the item.
+                .chain(
+                    self.settings
+                        .platforms
+                        .iter()
+                        .filter(|(p, _)| web_pids.contains(p))
+                        .map(|(_, item)| *item),
                 ),
         );
         let tabular_urls: Vec<String> = statements
@@ -232,6 +246,7 @@ impl<S: Store> Fetcher<S> {
             holiday_days,
             shapes,
             language_codes,
+            formatters,
         ) = futures::try_join!(
             sparql::references(http, qid),
             sparql::quantities(http, &targets, &quantity_pids),
@@ -250,6 +265,7 @@ impl<S: Store> Fetcher<S> {
                 Ok::<_, FetchError>((url.clone(), commons::shape(http, url).await?))
             })),
             sparql::language_codes(http, &languages),
+            sparql::formatters(http, &web_pids),
         )?;
 
         let mut media: Vec<String> = statements
@@ -298,6 +314,7 @@ impl<S: Store> Fetcher<S> {
                 .filter_map(|(url, s)| Some((url, s?)))
                 .collect(),
             language_codes,
+            formatters,
         })
     }
 

@@ -16,9 +16,9 @@ use crate::localize::{Label, SpreadView, View};
 use crate::primitives::fact::Fact;
 use crate::primitives::media::Media;
 use crate::primitives::{
-    absent, credits, earlier, fact, identifiers, kind, map, media, names, network, peers, pictures,
-    prose, provenance, scale, score, series, sitelinks, sounds, split, succession, timeline, title,
-    works,
+    absent, credits, earlier, fact, identifiers, kind, links, map, media, names, network, peers,
+    pictures, prose, provenance, scale, score, series, sitelinks, sounds, split, succession,
+    timeline, title, works,
 };
 use crate::schema::{Block, Credit};
 use crate::vocab::Slot;
@@ -266,6 +266,7 @@ impl<'v> Ui<'v> {
             Block::Score(b) => render(score::Html { ui: self, b }),
             Block::Works(b) => render(works::Html { ui: self, b }),
             Block::Timeline(b) => render(timeline::Html { ui: self, b }),
+            Block::Links(b) => render(links::Html { ui: self, b }),
             Block::Absent(b) => render(absent::Html { ui: self, b }),
             Block::Provenance(b) => render(provenance::Html { ui: self, b }),
             Block::Sitelinks(b) => render(sitelinks::Html { ui: self, b }),

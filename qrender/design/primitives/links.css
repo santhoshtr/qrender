@@ -1,0 +1,55 @@
+/* links */
+
+/* The item's sites and accounts: a card each, the mark of the platform
+   first. The cards are a row that wraps. */
+.links {
+	display: flex;
+	flex-direction: row;  /* a block is a column; the cards are a row */
+	flex-wrap: wrap;
+	gap: var( --gap );
+
+	& .card {
+		position: relative;
+		flex: 1 1 180px;
+		max-inline-size: 260px;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		gap: var( --spacing-25 );
+		padding: var( --spacing-75 ) var( --spacing-100 );
+		border: 1px solid var( --border-color-muted );
+		border-radius: var( --radius );
+		background-color: var( --background-color-base );
+	}
+
+	& .mark {
+		display: flex;
+		align-items: center;
+		block-size: 28px;
+		color: var( --color-subtle );
+
+		& img {
+			block-size: 28px;
+			max-inline-size: 120px;
+			object-fit: contain;
+			object-position: left;
+		}
+	}
+
+	& .hash {
+		font-size: 1.5rem;
+		font-weight: var( --font-weight-bold );
+	}
+
+	& .property {
+		color: var( --color-subtle );
+		font-size: var( --font-size-small );
+	}
+
+	& .address {
+		font-weight: var( --font-weight-bold );
+		overflow-wrap: anywhere;
+	}
+
+	& .followers { font-variant-numeric: tabular-nums; }
+}

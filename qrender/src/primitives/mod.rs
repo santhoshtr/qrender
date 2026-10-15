@@ -9,6 +9,7 @@ pub mod earlier;
 pub mod fact;
 pub mod identifiers;
 pub mod kind;
+pub mod links;
 pub mod map;
 pub mod media;
 pub mod names;

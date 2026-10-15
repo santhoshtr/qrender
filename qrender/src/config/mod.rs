@@ -68,7 +68,8 @@ impl Config {
     }
 
     /// What the fetcher needs from the layouts: layout matching, reverse
-    /// properties, container properties, qualifier logos, concepts.
+    /// properties, container properties, qualifier logos, concepts, web
+    /// properties and their platforms.
     pub fn fetch_settings(&self) -> content::Settings {
         let layouts = &self.layouts;
         let mut concepts: Vec<content::Qid> = layouts
@@ -100,6 +101,13 @@ impl Config {
             concepts,
             timeline: layouts.roles.list(Role::Timeline).to_vec(),
             calendar: layouts.roles.list(Role::Calendar).to_vec(),
+            web: layouts.roles.list(Role::Web).to_vec(),
+            platforms: layouts
+                .web
+                .platforms
+                .iter()
+                .map(|(p, q)| (*p, *q))
+                .collect(),
         }
     }
 

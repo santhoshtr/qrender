@@ -2960,6 +2960,142 @@ expression: composition
       }
     },
     {
+      "id": "web",
+      "kind": "web",
+      "dimension": "neutral",
+      "concept": "Q22909728",
+      "template": "columns",
+      "slots": {
+        "stack": [
+          {
+            "primitive": "links",
+            "cards": [
+              {
+                "statement": {
+                  "statement": "Q8023-73051f60-4d6a-1bc4-fd60-5499d4ab00c2",
+                  "pid": "P856",
+                  "url": "https://www.nelsonmandela.org",
+                  "rank": "normal",
+                  "provenance": "none",
+                  "qualifiers": [
+                    {
+                      "pid": "P407",
+                      "item": "Q1860"
+                    },
+                    {
+                      "pid": "P407",
+                      "item": "Q13218"
+                    },
+                    {
+                      "pid": "P407",
+                      "item": "Q14196"
+                    }
+                  ]
+                },
+                "href": "https://www.nelsonmandela.org"
+              },
+              {
+                "statement": {
+                  "statement": "Q8023-CD6767FB-4ED1-4EAC-A3AB-9F2FE92D377E",
+                  "pid": "P2002",
+                  "string": "NelsonMandela",
+                  "rank": "normal",
+                  "provenance": "none",
+                  "qualifiers": [
+                    {
+                      "pid": "P580",
+                      "year": 2008
+                    },
+                    {
+                      "pid": "P585",
+                      "year": 2022
+                    },
+                    {
+                      "pid": "P1552",
+                      "item": "Q28378282"
+                    },
+                    {
+                      "pid": "P6552",
+                      "amount": 15762708.0
+                    }
+                  ]
+                },
+                "platform": "Q918"
+              },
+              {
+                "statement": {
+                  "statement": "Q8023-194420D1-C957-49CD-9096-1F9B0D5FF0ED",
+                  "pid": "P3417",
+                  "string": "Nelson-Mandela",
+                  "rank": "normal",
+                  "provenance": "none"
+                },
+                "platform": "Q51711"
+              },
+              {
+                "statement": {
+                  "statement": "Q8023-5e98af06-45c5-289d-5dda-010ad9b954ab",
+                  "pid": "P2572",
+                  "string": "Madiba",
+                  "rank": "normal",
+                  "provenance": "none"
+                }
+              }
+            ]
+          }
+        ],
+        "sheet": [
+          {
+            "primitive": "fact",
+            "pid": "P8687",
+            "form": "variants",
+            "statements": [
+              {
+                "statement": "Q8023-a71ebd38-bdba-4a99-a151-916466a44d60",
+                "pid": "P8687",
+                "amount": 1569148.0,
+                "unit": null,
+                "rank": "preferred",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P585",
+                    "year": 2023
+                  },
+                  {
+                    "pid": "P6552",
+                    "amount": 15762708.0
+                  }
+                ],
+                "shown": true
+              },
+              {
+                "statement": "Q8023-2fdd72bb-a9de-443f-8760-fa79f0d3b385",
+                "pid": "P8687",
+                "amount": 1579070.0,
+                "unit": null,
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P585",
+                    "year": 2022
+                  },
+                  {
+                    "pid": "P6552",
+                    "amount": 15762708.0
+                  }
+                ],
+                "shown": true
+              }
+            ],
+            "priority": 0.0,
+            "measured": true
+          }
+        ]
+      }
+    },
+    {
       "id": "more",
       "kind": "more",
       "dimension": "neutral",
@@ -3218,135 +3354,6 @@ expression: composition
             "sourced": 62,
             "imported": 29,
             "none": 100
-          }
-        ],
-        "web": [
-          {
-            "primitive": "fact",
-            "pid": "P856",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q8023-73051f60-4d6a-1bc4-fd60-5499d4ab00c2",
-                "pid": "P856",
-                "url": "https://www.nelsonmandela.org",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P407",
-                    "item": "Q1860"
-                  },
-                  {
-                    "pid": "P407",
-                    "item": "Q13218"
-                  },
-                  {
-                    "pid": "P407",
-                    "item": "Q14196"
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P2002",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q8023-CD6767FB-4ED1-4EAC-A3AB-9F2FE92D377E",
-                "pid": "P2002",
-                "string": "NelsonMandela",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 2008
-                  },
-                  {
-                    "pid": "P585",
-                    "year": 2022
-                  },
-                  {
-                    "pid": "P1552",
-                    "item": "Q28378282"
-                  },
-                  {
-                    "pid": "P6552",
-                    "amount": 15762708.0
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P2572",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q8023-5e98af06-45c5-289d-5dda-010ad9b954ab",
-                "pid": "P2572",
-                "string": "Madiba",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P8687",
-            "form": "variants",
-            "statements": [
-              {
-                "statement": "Q8023-a71ebd38-bdba-4a99-a151-916466a44d60",
-                "pid": "P8687",
-                "amount": 1569148.0,
-                "unit": null,
-                "rank": "preferred",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2023
-                  },
-                  {
-                    "pid": "P6552",
-                    "amount": 15762708.0
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q8023-2fdd72bb-a9de-443f-8760-fa79f0d3b385",
-                "pid": "P8687",
-                "amount": 1579070.0,
-                "unit": null,
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2022
-                  },
-                  {
-                    "pid": "P6552",
-                    "amount": 15762708.0
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 0.0,
-            "measured": true
           }
         ],
         "sheet": [
@@ -4428,11 +4435,6 @@ expression: composition
                 "pid": "P3065",
                 "string": "A003556056",
                 "statement": "Q8023-1ef943b4-48b8-906d-0632-6fa41619f3ec"
-              },
-              {
-                "pid": "P3417",
-                "string": "Nelson-Mandela",
-                "statement": "Q8023-194420D1-C957-49CD-9096-1F9B0D5FF0ED"
               },
               {
                 "pid": "P4527",

@@ -6494,6 +6494,414 @@ expression: composition
       }
     },
     {
+      "id": "web",
+      "kind": "web",
+      "dimension": "neutral",
+      "concept": "Q22909728",
+      "template": "columns",
+      "slots": {
+        "stack": [
+          {
+            "primitive": "links",
+            "cards": [
+              {
+                "statement": {
+                  "statement": "Q90-2ee33771-4d72-f9f7-24d3-d6a9a2fe8508",
+                  "pid": "P856",
+                  "url": "https://www.paris.fr/",
+                  "rank": "preferred",
+                  "provenance": "none",
+                  "qualifiers": [
+                    {
+                      "pid": "P407",
+                      "item": "Q150"
+                    },
+                    {
+                      "pid": "P7452",
+                      "item": "Q201610"
+                    }
+                  ]
+                },
+                "href": "https://www.paris.fr/"
+              },
+              {
+                "statement": {
+                  "statement": "Q90-87986f8d-4aaf-26e5-d253-010f7de8ed02",
+                  "pid": "P856",
+                  "url": "http://www.villedeparis.fr/",
+                  "rank": "normal",
+                  "provenance": "none",
+                  "qualifiers": [
+                    {
+                      "pid": "P407",
+                      "item": "Q150"
+                    },
+                    {
+                      "pid": "P2241",
+                      "item": "Q1236807"
+                    }
+                  ]
+                },
+                "href": "http://www.villedeparis.fr/"
+              },
+              {
+                "statement": {
+                  "statement": "Q90-54fa6b0d-430f-4e59-c2f1-322edf0f5d25",
+                  "pid": "P2002",
+                  "string": "Parisjecoute",
+                  "rank": "normal",
+                  "provenance": "none",
+                  "qualifiers": [
+                    {
+                      "pid": "P580",
+                      "year": 2013
+                    },
+                    {
+                      "pid": "P585",
+                      "year": 2022
+                    },
+                    {
+                      "pid": "P1552",
+                      "item": "Q28378282"
+                    },
+                    {
+                      "pid": "P6552",
+                      "amount": 1722526795.0
+                    }
+                  ]
+                },
+                "platform": "Q918"
+              },
+              {
+                "statement": {
+                  "statement": "Q90-D9448182-AB24-4679-9188-C4F2565EEE21",
+                  "pid": "P2002",
+                  "string": "Paris",
+                  "rank": "normal",
+                  "provenance": "none",
+                  "qualifiers": [
+                    {
+                      "pid": "P580",
+                      "year": 2009
+                    },
+                    {
+                      "pid": "P585",
+                      "year": 2018
+                    },
+                    {
+                      "pid": "P1552",
+                      "item": "Q28378282"
+                    },
+                    {
+                      "pid": "P3744",
+                      "amount": 2072859.0
+                    },
+                    {
+                      "pid": "P6552",
+                      "amount": 71016845.0
+                    }
+                  ]
+                },
+                "platform": "Q918"
+              },
+              {
+                "statement": {
+                  "statement": "Q90-0DFFBFB8-E172-4EBC-AF3A-49D69453E728",
+                  "pid": "P2013",
+                  "string": "paris",
+                  "rank": "normal",
+                  "provenance": "none"
+                },
+                "platform": "Q355"
+              },
+              {
+                "statement": {
+                  "statement": "Q90-15c1ae38-478a-fcb9-ac11-dc47b0e09208",
+                  "pid": "P2003",
+                  "string": "paris_maville",
+                  "rank": "normal",
+                  "provenance": "none",
+                  "qualifiers": [
+                    {
+                      "pid": "P12546",
+                      "amount": 316743949.0
+                    }
+                  ]
+                },
+                "platform": "Q209330"
+              },
+              {
+                "statement": {
+                  "statement": "Q90-0fe9c06a-4d55-21c5-6fa1-8625f6604c01",
+                  "pid": "P2397",
+                  "string": "UC4e6cfcOXGycjRLZbbSwwoA",
+                  "rank": "normal",
+                  "provenance": "none",
+                  "qualifiers": [
+                    {
+                      "pid": "P580",
+                      "year": 2007
+                    },
+                    {
+                      "pid": "P585",
+                      "year": 2025
+                    },
+                    {
+                      "pid": "P1810",
+                      "string": "Ville de Paris"
+                    },
+                    {
+                      "pid": "P3740",
+                      "amount": 2614.0
+                    },
+                    {
+                      "pid": "P3744",
+                      "amount": 22300.0
+                    },
+                    {
+                      "pid": "P5436",
+                      "amount": 8686132.0
+                    },
+                    {
+                      "pid": "P11245",
+                      "string": "mairiedeparis"
+                    }
+                  ]
+                },
+                "platform": "Q866",
+                "followers": {
+                  "pid": "P8687",
+                  "amount": 22300.0,
+                  "year": 2025,
+                  "statement": "Q90-508d921f-5ecc-4d89-9352-01116faccdf7",
+                  "provenance": "sourced"
+                }
+              },
+              {
+                "statement": {
+                  "statement": "Q90-82971d45-40f8-deb3-bbb5-88fa7b4587af",
+                  "pid": "P4264",
+                  "string": "villedeparis",
+                  "rank": "normal",
+                  "provenance": "none"
+                },
+                "platform": "Q213660"
+              },
+              {
+                "statement": {
+                  "statement": "Q90-12c6b278-455f-f774-4036-686c5f846c8d",
+                  "pid": "P7085",
+                  "string": "villedeparis",
+                  "rank": "normal",
+                  "provenance": "none"
+                },
+                "platform": "Q48938223"
+              },
+              {
+                "statement": {
+                  "statement": "Q90-E51953F1-D392-46F7-9FE6-9168D4887ABA",
+                  "pid": "P3984",
+                  "string": "paris",
+                  "rank": "normal",
+                  "provenance": "imported",
+                  "qualifiers": [
+                    {
+                      "pid": "P407",
+                      "item": "Q150"
+                    },
+                    {
+                      "pid": "P580",
+                      "year": 2008
+                    },
+                    {
+                      "pid": "P1810",
+                      "string": "Paris et la banlieue"
+                    }
+                  ]
+                },
+                "platform": "Q1136"
+              },
+              {
+                "statement": {
+                  "statement": "Q90-023E3CFA-1323-4532-8250-345879B37ECF",
+                  "pid": "P3417",
+                  "string": "Paris",
+                  "rank": "normal",
+                  "provenance": "none"
+                },
+                "platform": "Q51711"
+              },
+              {
+                "statement": {
+                  "statement": "Q90-ED42BB3E-D3B5-43B5-9389-1162C54B30BC",
+                  "pid": "P3417",
+                  "string": "Places-of-France",
+                  "rank": "normal",
+                  "provenance": "none"
+                },
+                "platform": "Q51711"
+              },
+              {
+                "statement": {
+                  "statement": "Q90-4adbaa79-4e6c-7fbc-d57c-8513edbbb5d3",
+                  "pid": "P2572",
+                  "string": "Paris",
+                  "rank": "normal",
+                  "provenance": "none",
+                  "qualifiers": [
+                    {
+                      "pid": "P407",
+                      "item": "Q150"
+                    },
+                    {
+                      "pid": "P407",
+                      "item": "Q1860"
+                    }
+                  ]
+                }
+              },
+              {
+                "statement": {
+                  "statement": "Q90-c33160da-47cb-5925-efa2-d044e8236541",
+                  "pid": "P1482",
+                  "url": "https://travel.stackexchange.com/tags/paris",
+                  "rank": "normal",
+                  "provenance": "none"
+                },
+                "href": "https://travel.stackexchange.com/tags/paris",
+                "platform": "Q3495447"
+              },
+              {
+                "statement": {
+                  "statement": "Q90-843c5014-404e-06e8-c0eb-fd360d76357e",
+                  "pid": "P10311",
+                  "url": "https://www.paris.fr/paris-recrute",
+                  "rank": "normal",
+                  "provenance": "none",
+                  "qualifiers": [
+                    {
+                      "pid": "P407",
+                      "item": "Q150"
+                    }
+                  ]
+                },
+                "href": "https://www.paris.fr/paris-recrute"
+              },
+              {
+                "statement": {
+                  "statement": "Q90-e589d6c1-4844-dadd-d24a-1f1afcd92f88",
+                  "pid": "P10311",
+                  "url": "https://travaillerpourparis.paris.fr/",
+                  "rank": "normal",
+                  "provenance": "none",
+                  "qualifiers": [
+                    {
+                      "pid": "P407",
+                      "item": "Q150"
+                    }
+                  ]
+                },
+                "href": "https://travaillerpourparis.paris.fr/"
+              },
+              {
+                "statement": {
+                  "statement": "Q90-a098d62a-4a7a-132e-41aa-06bc277fa40a",
+                  "pid": "P11266",
+                  "url": "https://www.paris.fr/pages/contact-232",
+                  "rank": "normal",
+                  "provenance": "none",
+                  "qualifiers": [
+                    {
+                      "pid": "P407",
+                      "item": "Q150"
+                    }
+                  ]
+                },
+                "href": "https://www.paris.fr/pages/contact-232"
+              },
+              {
+                "statement": {
+                  "statement": "Q90-77392751-40bc-0a8c-7206-90cb116c78c4",
+                  "pid": "P8402",
+                  "item": "Q97064103",
+                  "rank": "normal",
+                  "provenance": "none"
+                }
+              }
+            ]
+          }
+        ],
+        "sheet": [
+          {
+            "primitive": "fact",
+            "pid": "P8687",
+            "form": "variants",
+            "statements": [
+              {
+                "statement": "Q90-b46b40b4-c1b3-4c2a-aa3d-cf7f157e3b37",
+                "pid": "P8687",
+                "amount": 2137114.0,
+                "unit": null,
+                "rank": "preferred",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P585",
+                    "year": 2022
+                  },
+                  {
+                    "pid": "P6552",
+                    "amount": 71016845.0
+                  }
+                ],
+                "shown": true
+              },
+              {
+                "statement": "Q90-5b0b4ab7-fb9d-4475-9dc3-c42e2965b27c",
+                "pid": "P8687",
+                "amount": 2127845.0,
+                "unit": null,
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P585",
+                    "year": 2021
+                  },
+                  {
+                    "pid": "P6552",
+                    "amount": 71016845.0
+                  }
+                ],
+                "shown": true
+              },
+              {
+                "statement": "Q90-904e9746-a33e-463b-8b37-8e142440c82d",
+                "pid": "P8687",
+                "amount": 2072859.0,
+                "unit": null,
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P585",
+                    "year": 2018
+                  },
+                  {
+                    "pid": "P6552",
+                    "amount": 71016845.0
+                  }
+                ],
+                "shown": true
+              }
+            ],
+            "priority": 1.2,
+            "measured": true
+          }
+        ]
+      }
+    },
+    {
       "id": "more",
       "kind": "more",
       "dimension": "neutral",
@@ -6921,6 +7329,22 @@ expression: composition
               }
             ],
             "priority": 0.4
+          },
+          {
+            "primitive": "fact",
+            "pid": "P238",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q90-7e2a97c3-4d49-83d6-4511-2ee052358ca0",
+                "pid": "P238",
+                "string": "PAR",
+                "rank": "normal",
+                "provenance": "none",
+                "shown": true
+              }
+            ],
+            "priority": 0.4
           }
         ]
       }
@@ -6938,463 +7362,6 @@ expression: composition
             "sourced": 78,
             "imported": 20,
             "none": 324
-          }
-        ],
-        "web": [
-          {
-            "primitive": "fact",
-            "pid": "P856",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q90-2ee33771-4d72-f9f7-24d3-d6a9a2fe8508",
-                "pid": "P856",
-                "url": "https://www.paris.fr/",
-                "rank": "preferred",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P407",
-                    "item": "Q150"
-                  },
-                  {
-                    "pid": "P7452",
-                    "item": "Q201610"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q90-87986f8d-4aaf-26e5-d253-010f7de8ed02",
-                "pid": "P856",
-                "url": "http://www.villedeparis.fr/",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P407",
-                    "item": "Q150"
-                  },
-                  {
-                    "pid": "P2241",
-                    "item": "Q1236807"
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 2.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P2002",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q90-54fa6b0d-430f-4e59-c2f1-322edf0f5d25",
-                "pid": "P2002",
-                "string": "Parisjecoute",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 2013
-                  },
-                  {
-                    "pid": "P585",
-                    "year": 2022
-                  },
-                  {
-                    "pid": "P1552",
-                    "item": "Q28378282"
-                  },
-                  {
-                    "pid": "P6552",
-                    "amount": 1722526795.0
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q90-D9448182-AB24-4679-9188-C4F2565EEE21",
-                "pid": "P2002",
-                "string": "Paris",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 2009
-                  },
-                  {
-                    "pid": "P585",
-                    "year": 2018
-                  },
-                  {
-                    "pid": "P1552",
-                    "item": "Q28378282"
-                  },
-                  {
-                    "pid": "P3744",
-                    "amount": 2072859.0
-                  },
-                  {
-                    "pid": "P6552",
-                    "amount": 71016845.0
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P2003",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q90-15c1ae38-478a-fcb9-ac11-dc47b0e09208",
-                "pid": "P2003",
-                "string": "paris_maville",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P12546",
-                    "amount": 316743949.0
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P2013",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q90-0DFFBFB8-E172-4EBC-AF3A-49D69453E728",
-                "pid": "P2013",
-                "string": "paris",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P2397",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q90-0fe9c06a-4d55-21c5-6fa1-8625f6604c01",
-                "pid": "P2397",
-                "string": "UC4e6cfcOXGycjRLZbbSwwoA",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 2007
-                  },
-                  {
-                    "pid": "P585",
-                    "year": 2025
-                  },
-                  {
-                    "pid": "P1810",
-                    "string": "Ville de Paris"
-                  },
-                  {
-                    "pid": "P3740",
-                    "amount": 2614.0
-                  },
-                  {
-                    "pid": "P3744",
-                    "amount": 22300.0
-                  },
-                  {
-                    "pid": "P5436",
-                    "amount": 8686132.0
-                  },
-                  {
-                    "pid": "P11245",
-                    "string": "mairiedeparis"
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P4264",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q90-82971d45-40f8-deb3-bbb5-88fa7b4587af",
-                "pid": "P4264",
-                "string": "villedeparis",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P2572",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q90-4adbaa79-4e6c-7fbc-d57c-8513edbbb5d3",
-                "pid": "P2572",
-                "string": "Paris",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P407",
-                    "item": "Q150"
-                  },
-                  {
-                    "pid": "P407",
-                    "item": "Q1860"
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 0.4
-          },
-          {
-            "primitive": "fact",
-            "pid": "P1482",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q90-c33160da-47cb-5925-efa2-d044e8236541",
-                "pid": "P1482",
-                "url": "https://travel.stackexchange.com/tags/paris",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.4
-          },
-          {
-            "primitive": "fact",
-            "pid": "P238",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q90-7e2a97c3-4d49-83d6-4511-2ee052358ca0",
-                "pid": "P238",
-                "string": "PAR",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.4
-          },
-          {
-            "primitive": "fact",
-            "pid": "P10311",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q90-843c5014-404e-06e8-c0eb-fd360d76357e",
-                "pid": "P10311",
-                "url": "https://www.paris.fr/paris-recrute",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P407",
-                    "item": "Q150"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q90-e589d6c1-4844-dadd-d24a-1f1afcd92f88",
-                "pid": "P10311",
-                "url": "https://travaillerpourparis.paris.fr/",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P407",
-                    "item": "Q150"
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 0.4
-          },
-          {
-            "primitive": "fact",
-            "pid": "P11266",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q90-a098d62a-4a7a-132e-41aa-06bc277fa40a",
-                "pid": "P11266",
-                "url": "https://www.paris.fr/pages/contact-232",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P407",
-                    "item": "Q150"
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 0.4
-          },
-          {
-            "primitive": "fact",
-            "pid": "P8402",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q90-77392751-40bc-0a8c-7206-90cb116c78c4",
-                "pid": "P8402",
-                "item": "Q97064103",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 1.6
-          },
-          {
-            "primitive": "fact",
-            "pid": "P3984",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q90-E51953F1-D392-46F7-9FE6-9168D4887ABA",
-                "pid": "P3984",
-                "string": "paris",
-                "rank": "normal",
-                "provenance": "imported",
-                "qualifiers": [
-                  {
-                    "pid": "P407",
-                    "item": "Q150"
-                  },
-                  {
-                    "pid": "P580",
-                    "year": 2008
-                  },
-                  {
-                    "pid": "P1810",
-                    "string": "Paris et la banlieue"
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P8687",
-            "form": "variants",
-            "statements": [
-              {
-                "statement": "Q90-508d921f-5ecc-4d89-9352-01116faccdf7",
-                "pid": "P8687",
-                "amount": 22300.0,
-                "unit": null,
-                "rank": "preferred",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2025
-                  },
-                  {
-                    "pid": "P2397",
-                    "string": "UC4e6cfcOXGycjRLZbbSwwoA"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q90-b46b40b4-c1b3-4c2a-aa3d-cf7f157e3b37",
-                "pid": "P8687",
-                "amount": 2137114.0,
-                "unit": null,
-                "rank": "preferred",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2022
-                  },
-                  {
-                    "pid": "P6552",
-                    "amount": 71016845.0
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q90-5b0b4ab7-fb9d-4475-9dc3-c42e2965b27c",
-                "pid": "P8687",
-                "amount": 2127845.0,
-                "unit": null,
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2021
-                  },
-                  {
-                    "pid": "P6552",
-                    "amount": 71016845.0
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q90-904e9746-a33e-463b-8b37-8e142440c82d",
-                "pid": "P8687",
-                "amount": 2072859.0,
-                "unit": null,
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2018
-                  },
-                  {
-                    "pid": "P6552",
-                    "amount": 71016845.0
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 2.2,
-            "measured": true
           }
         ],
         "sheet": [
@@ -9600,11 +9567,6 @@ expression: composition
                 "statement": "Q90-41B43240-516E-40F8-8C00-F0D841D76682"
               },
               {
-                "pid": "P7085",
-                "string": "villedeparis",
-                "statement": "Q90-12c6b278-455f-f774-4036-686c5f846c8d"
-              },
-              {
                 "pid": "P1566",
                 "string": "2988507",
                 "statement": "Q90-397cbca2-43a5-51e2-8137-9fe4a91b9c0c"
@@ -9648,11 +9610,6 @@ expression: composition
                 "pid": "P396",
                 "string": "LO1V149084",
                 "statement": "Q90-28bd902b-40e9-136a-68b1-5f0edb149f7a"
-              },
-              {
-                "pid": "P3417",
-                "string": "Paris",
-                "statement": "Q90-023E3CFA-1323-4532-8250-345879B37ECF"
               },
               {
                 "pid": "P2924",
@@ -9748,11 +9705,6 @@ expression: composition
                 "pid": "P7704",
                 "string": "place/base/41488",
                 "statement": "Q90-b79828c0-4b02-e13e-6159-d979666c9f2e"
-              },
-              {
-                "pid": "P3417",
-                "string": "Places-of-France",
-                "statement": "Q90-ED42BB3E-D3B5-43B5-9389-1162C54B30BC"
               },
               {
                 "pid": "P9495",

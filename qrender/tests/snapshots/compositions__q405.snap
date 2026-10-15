@@ -1895,6 +1895,66 @@ expression: composition
       }
     },
     {
+      "id": "web",
+      "kind": "web",
+      "dimension": "neutral",
+      "concept": "Q22909728",
+      "template": "columns",
+      "slots": {
+        "stack": [
+          {
+            "primitive": "links",
+            "cards": [
+              {
+                "statement": {
+                  "statement": "Q405-BDCAFC29-4CD3-4AC1-B987-1EB639814827",
+                  "pid": "P3984",
+                  "string": "moon",
+                  "rank": "normal",
+                  "provenance": "none",
+                  "qualifiers": [
+                    {
+                      "pid": "P407",
+                      "item": "Q1860"
+                    },
+                    {
+                      "pid": "P580",
+                      "year": 2008
+                    },
+                    {
+                      "pid": "P1810",
+                      "string": "The Moon Subreddit"
+                    }
+                  ]
+                },
+                "platform": "Q1136"
+              },
+              {
+                "statement": {
+                  "statement": "Q405-A5DC111A-4E73-4CD1-9C85-70194B7F09D6",
+                  "pid": "P3417",
+                  "string": "The-Moon-12",
+                  "rank": "normal",
+                  "provenance": "none"
+                },
+                "platform": "Q51711"
+              },
+              {
+                "statement": {
+                  "statement": "Q405-D226E91C-100B-4CDA-9202-DFB188E26272",
+                  "pid": "P3417",
+                  "string": "The-Moon-astronomy",
+                  "rank": "normal",
+                  "provenance": "none"
+                },
+                "platform": "Q51711"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "id": "more",
       "kind": "more",
       "dimension": "neutral",
@@ -2152,38 +2212,6 @@ expression: composition
             "sourced": 18,
             "imported": 11,
             "none": 72
-          }
-        ],
-        "web": [
-          {
-            "primitive": "fact",
-            "pid": "P3984",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q405-BDCAFC29-4CD3-4AC1-B987-1EB639814827",
-                "pid": "P3984",
-                "string": "moon",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P407",
-                    "item": "Q1860"
-                  },
-                  {
-                    "pid": "P580",
-                    "year": 2008
-                  },
-                  {
-                    "pid": "P1810",
-                    "string": "The Moon Subreddit"
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 0.0
           }
         ],
         "sheet": [
@@ -3117,11 +3145,6 @@ expression: composition
                 "statement": "Q405-E1BAE124-B82A-4885-9789-3D83E615A94F"
               },
               {
-                "pid": "P3417",
-                "string": "The-Moon-12",
-                "statement": "Q405-A5DC111A-4E73-4CD1-9C85-70194B7F09D6"
-              },
-              {
                 "pid": "P1051",
                 "string": "504",
                 "statement": "Q405-F7C59A37-CBF2-4B70-B3E0-8FD12D2839A9"
@@ -3170,11 +3193,6 @@ expression: composition
                 "pid": "P5395",
                 "string": "moon",
                 "statement": "Q405-7C406EE7-1BD1-4746-8DED-1B1E27168394"
-              },
-              {
-                "pid": "P3417",
-                "string": "The-Moon-astronomy",
-                "statement": "Q405-D226E91C-100B-4CDA-9202-DFB188E26272"
               },
               {
                 "pid": "P4801",

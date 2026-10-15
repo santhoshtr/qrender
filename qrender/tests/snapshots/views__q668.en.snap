@@ -5,8 +5,8 @@ expression: json
 {
   "composition": "composition/0.3",
   "coverage": {
-    "have": 1287,
-    "total": 1287
+    "have": 1296,
+    "total": 1296
   },
   "design": "design/0.2",
   "dir": "ltr",
@@ -1987,10 +1987,6 @@ expression: json
       "text": "X (Twitter) topic ID"
     },
     "P8687": {
-      "description": {
-        "lang": "en",
-        "text": "number of subscribers on a particular social media website (use as main statement only; see P3744 instead for qualifier). Qualify with \"point in time\" and property for account. For Twitter, use numeric id."
-      },
       "href": "https://www.wikidata.org/wiki/Property:P8687",
       "lang": "en",
       "text": "social media followers"
@@ -11194,6 +11190,16 @@ expression: json
         "href": "https://www.wikidata.org/wiki/Q131765",
         "lang": "en",
         "text": "multimedia"
+      }
+    },
+    {
+      "id": "web",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q22909728",
+        "lang": "en",
+        "text": "web presence"
       }
     },
     {

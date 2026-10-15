@@ -12,9 +12,9 @@ use content::{EntityId, Pid};
 use crate::localize::format::Part;
 use crate::localize::{Label, SpreadView, View};
 use crate::primitives::{
-    absent, credits, earlier, fact, identifiers, kind, map, media, names, network, peers, pictures,
-    prose, provenance, scale, score, series, sitelinks, sounds, split, succession, timeline, title,
-    works,
+    absent, credits, earlier, fact, identifiers, kind, links, map, media, names, network, peers,
+    pictures, prose, provenance, scale, score, series, sitelinks, sounds, split, succession,
+    timeline, title, works,
 };
 use crate::schema::{Block, Provenance, StatementRef};
 
@@ -102,6 +102,7 @@ impl Markdown<'_> {
             Block::Score(b) => score::markdown(b, self),
             Block::Works(b) => works::markdown(b, self),
             Block::Timeline(b) => timeline::markdown(b, self),
+            Block::Links(b) => links::markdown(b, self),
             Block::Absent(b) => absent::markdown(b, self),
             Block::Provenance(b) => provenance::markdown(b, self),
             Block::Sitelinks(b) => sitelinks::markdown(b, self),

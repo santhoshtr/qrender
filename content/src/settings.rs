@@ -23,6 +23,12 @@ pub struct Settings {
     pub timeline: Vec<Pid>,
     /// Properties whose item values are holidays: their days are fetched.
     pub calendar: Vec<Pid>,
+    /// The web properties (sites and accounts): their formatter URLs are
+    /// fetched.
+    pub web: Vec<Pid>,
+    /// The platform of a web property (X username: X): its logo is
+    /// fetched.
+    pub platforms: Vec<(Pid, Qid)>,
 }
 
 #[derive(Debug, Clone, Serialize)]
@@ -69,6 +75,6 @@ mod tests {
         assert_ne!(a.fingerprint(), b.fingerprint());
         // FNV-1a of the JSON of the settings: fixed, so a key from one
         // build is valid in the next.
-        assert_eq!(a.fingerprint(), 0xd0b0_e116_dab5_4633);
+        assert_eq!(a.fingerprint(), 0x6ce7_fb9b_3dfb_d2d5);
     }
 }

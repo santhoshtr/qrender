@@ -555,3 +555,30 @@ pub async fn language_codes(
     }
     Ok(out)
 }
+
+/// The formatter URL (P1630) of each property: "https://x.com/$1". A
+/// property with more than one: the shortest, then the first in order.
+pub async fn formatters(http: &Http, pids: &[Pid]) -> Result<IndexMap<Pid, String>, FetchError> {
+    if pids.is_empty() {
+        return Ok(IndexMap::new());
+    }
+    let rows = query(
+        http,
+        &format!(
+            "SELECT ?property ?url WHERE {{ VALUES ?property {{ {} }} ?property wdt:P1630 ?url }}",
+            values(pids)
+        ),
+    )
+    .await?;
+    let mut out: IndexMap<Pid, String> = IndexMap::new();
+    for r in &rows {
+        let (Some(pid), Some(url)) = (r.pid("property"), r.get("url")) else {
+            continue;
+        };
+        let shorter = |old: &String| (url.len(), url) < (old.len(), old.as_str());
+        if out.get(&pid).is_none_or(shorter) {
+            out.insert(pid, url.to_string());
+        }
+    }
+    Ok(out)
+}

@@ -13,7 +13,7 @@ use std::sync::LazyLock;
 pub use crate::schema::DESIGN;
 
 use crate::primitives::{
-    earlier, fact, identifiers, kind, map, names, prose, provenance, scale, score, series,
+    earlier, fact, identifiers, kind, links, map, names, prose, provenance, scale, score, series,
     sitelinks, sounds, split, succession, timeline, title,
 };
 use crate::vocab::Primitive;
@@ -79,6 +79,7 @@ pub fn assets(primitive: Primitive) -> Assets {
         Primitive::Succession => css(succession::CSS),
         Primitive::Score => css(score::CSS),
         Primitive::Timeline => css(timeline::CSS),
+        Primitive::Links => css(links::CSS),
         Primitive::Provenance => css(provenance::CSS),
         Primitive::Sitelinks => css(sitelinks::CSS),
         Primitive::Identifiers => css(identifiers::CSS),

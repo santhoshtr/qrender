@@ -2877,6 +2877,105 @@ expression: composition
       }
     },
     {
+      "id": "web",
+      "kind": "web",
+      "dimension": "neutral",
+      "concept": "Q22909728",
+      "template": "columns",
+      "slots": {
+        "stack": [
+          {
+            "primitive": "links",
+            "cards": [
+              {
+                "statement": {
+                  "statement": "Q117085614-7062a95d-4d11-1949-d9c7-961f0cc903cc",
+                  "pid": "P856",
+                  "url": "https://www.onebattleafteranothermovie.com/",
+                  "rank": "preferred",
+                  "provenance": "sourced",
+                  "qualifiers": [
+                    {
+                      "pid": "P407",
+                      "item": "Q1860"
+                    },
+                    {
+                      "pid": "P813",
+                      "year": 2025
+                    },
+                    {
+                      "pid": "P1476",
+                      "text": "One Battle After Another | Official Movie Site",
+                      "lang": "en"
+                    }
+                  ]
+                },
+                "href": "https://www.onebattleafteranothermovie.com/"
+              },
+              {
+                "statement": {
+                  "statement": "Q117085614-57AE0EE3-E2B5-4280-8690-333CA5CF7F85",
+                  "pid": "P2002",
+                  "string": "onebattlemovie",
+                  "rank": "normal",
+                  "provenance": "none"
+                },
+                "platform": "Q918"
+              },
+              {
+                "statement": {
+                  "statement": "Q117085614-5F64F0EF-7DEC-42B8-A34A-A671AA42EC45",
+                  "pid": "P2003",
+                  "string": "onebattleafteranothermovie",
+                  "rank": "normal",
+                  "provenance": "none",
+                  "qualifiers": [
+                    {
+                      "pid": "P12546",
+                      "amount": 71795373114.0
+                    }
+                  ]
+                },
+                "platform": "Q209330"
+              },
+              {
+                "statement": {
+                  "statement": "Q117085614-fc254421-4cbf-c4f9-912b-451807e7c862",
+                  "pid": "P973",
+                  "url": "https://www.warnerbros.com/movies/one-battle-after-another",
+                  "rank": "normal",
+                  "provenance": "none",
+                  "qualifiers": [
+                    {
+                      "pid": "P407",
+                      "item": "Q1860"
+                    }
+                  ]
+                },
+                "href": "https://www.warnerbros.com/movies/one-battle-after-another"
+              },
+              {
+                "statement": {
+                  "statement": "Q117085614-3c826705-4fd0-36b0-a844-1b195ae6e0b0",
+                  "pid": "P973",
+                  "url": "https://www.wbawards.com/film/?film=onebattleafteranother",
+                  "rank": "normal",
+                  "provenance": "none",
+                  "qualifiers": [
+                    {
+                      "pid": "P407",
+                      "item": "Q1860"
+                    }
+                  ]
+                },
+                "href": "https://www.wbawards.com/film/?film=onebattleafteranother"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "id": "evidence",
       "kind": "evidence",
       "dimension": "neutral",
@@ -2889,113 +2988,6 @@ expression: composition
             "sourced": 125,
             "imported": 0,
             "none": 10
-          }
-        ],
-        "web": [
-          {
-            "primitive": "fact",
-            "pid": "P856",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q117085614-7062a95d-4d11-1949-d9c7-961f0cc903cc",
-                "pid": "P856",
-                "url": "https://www.onebattleafteranothermovie.com/",
-                "rank": "preferred",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P407",
-                    "item": "Q1860"
-                  },
-                  {
-                    "pid": "P813",
-                    "year": 2025
-                  },
-                  {
-                    "pid": "P1476",
-                    "text": "One Battle After Another | Official Movie Site",
-                    "lang": "en"
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 1.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P2002",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q117085614-57AE0EE3-E2B5-4280-8690-333CA5CF7F85",
-                "pid": "P2002",
-                "string": "onebattlemovie",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P2003",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q117085614-5F64F0EF-7DEC-42B8-A34A-A671AA42EC45",
-                "pid": "P2003",
-                "string": "onebattleafteranothermovie",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P12546",
-                    "amount": 71795373114.0
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P973",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q117085614-fc254421-4cbf-c4f9-912b-451807e7c862",
-                "pid": "P973",
-                "url": "https://www.warnerbros.com/movies/one-battle-after-another",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P407",
-                    "item": "Q1860"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q117085614-3c826705-4fd0-36b0-a844-1b195ae6e0b0",
-                "pid": "P973",
-                "url": "https://www.wbawards.com/film/?film=onebattleafteranother",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P407",
-                    "item": "Q1860"
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 0.0
           }
         ],
         "projects": [

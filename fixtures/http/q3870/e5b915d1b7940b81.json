@@ -1,0 +1,62 @@
+{
+  "head" : {
+    "vars" : [ "property", "url" ]
+  },
+  "results" : {
+    "bindings" : [ {
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/P2002"
+      },
+      "url" : {
+        "type" : "literal",
+        "value" : "https://x.com/$1"
+      }
+    }, {
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/P2003"
+      },
+      "url" : {
+        "type" : "literal",
+        "value" : "https://www.instagram.com/$1/"
+      }
+    }, {
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/P2013"
+      },
+      "url" : {
+        "type" : "literal",
+        "value" : "https://www.facebook.com/$1"
+      }
+    }, {
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/P2572"
+      },
+      "url" : {
+        "type" : "literal",
+        "value" : "https://hashtags-hub.toolforge.org/$1"
+      }
+    }, {
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/P3417"
+      },
+      "url" : {
+        "type" : "literal",
+        "value" : "https://www.quora.com/topic/$1"
+      }
+    }, {
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/P3984"
+      },
+      "url" : {
+        "type" : "literal",
+        "value" : "https://www.reddit.com/r/$1/"
+      }
+    } ]
+  }
+}

@@ -5,8 +5,8 @@ expression: json
 {
   "composition": "composition/0.3",
   "coverage": {
-    "have": 175,
-    "total": 175
+    "have": 179,
+    "total": 179
   },
   "design": "design/0.2",
   "dir": "ltr",
@@ -1938,6 +1938,16 @@ expression: json
         "href": "https://www.wikidata.org/wiki/Q131765",
         "lang": "en",
         "text": "multimedia"
+      }
+    },
+    {
+      "id": "web",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q22909728",
+        "lang": "en",
+        "text": "web presence"
       }
     },
     {

@@ -1147,6 +1147,100 @@ expression: composition
       }
     },
     {
+      "id": "web",
+      "kind": "web",
+      "dimension": "neutral",
+      "concept": "Q22909728",
+      "template": "columns",
+      "slots": {
+        "stack": [
+          {
+            "primitive": "links",
+            "cards": [
+              {
+                "statement": {
+                  "statement": "Q3870-3e3a59dc-4ee8-8741-5a5b-915d7c3e8787",
+                  "pid": "P856",
+                  "url": "https://nairobi.go.ke/",
+                  "rank": "normal",
+                  "provenance": "imported"
+                },
+                "href": "https://nairobi.go.ke/"
+              },
+              {
+                "statement": {
+                  "statement": "Q3870-6277a993-4668-de43-60e3-921d30017e87",
+                  "pid": "P2002",
+                  "string": "047County",
+                  "rank": "normal",
+                  "provenance": "none"
+                },
+                "platform": "Q918"
+              },
+              {
+                "statement": {
+                  "statement": "Q3870-8204b22f-48c7-aaa6-41f7-eacd282e4520",
+                  "pid": "P2013",
+                  "string": "CountyGovernment047",
+                  "rank": "normal",
+                  "provenance": "none"
+                },
+                "platform": "Q355"
+              },
+              {
+                "statement": {
+                  "statement": "Q3870-54203bf5-4c4b-d452-8212-4ac15c6709ca",
+                  "pid": "P2003",
+                  "string": "nairobi_citycountygovernment",
+                  "rank": "normal",
+                  "provenance": "none"
+                },
+                "platform": "Q209330"
+              },
+              {
+                "statement": {
+                  "statement": "Q3870-7f1607b1-9ea9-4ba0-a1fb-b47e0031afab",
+                  "pid": "P3984",
+                  "string": "nairobi",
+                  "rank": "normal",
+                  "provenance": "none"
+                },
+                "platform": "Q1136"
+              },
+              {
+                "statement": {
+                  "statement": "Q3870-8ef03be1-41f8-ea51-0d89-1e3d44918d2d",
+                  "pid": "P3417",
+                  "string": "Nairobi-Kenya-1",
+                  "rank": "normal",
+                  "provenance": "none"
+                },
+                "platform": "Q51711"
+              },
+              {
+                "statement": {
+                  "statement": "Q3870-E278BB26-83AC-49D5-BC50-81820EDB5DBA",
+                  "pid": "P2572",
+                  "string": "Nairobi",
+                  "rank": "normal",
+                  "provenance": "none"
+                }
+              },
+              {
+                "statement": {
+                  "statement": "Q3870-04564b02-471b-8d76-3382-d94fe7cce59a",
+                  "pid": "P8402",
+                  "item": "Q97130876",
+                  "rank": "normal",
+                  "provenance": "none"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "id": "more",
       "kind": "more",
       "dimension": "neutral",
@@ -1186,120 +1280,6 @@ expression: composition
             "sourced": 9,
             "imported": 12,
             "none": 43
-          }
-        ],
-        "web": [
-          {
-            "primitive": "fact",
-            "pid": "P856",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q3870-3e3a59dc-4ee8-8741-5a5b-915d7c3e8787",
-                "pid": "P856",
-                "url": "https://nairobi.go.ke/",
-                "rank": "normal",
-                "provenance": "imported",
-                "shown": true
-              }
-            ],
-            "priority": 1.333
-          },
-          {
-            "primitive": "fact",
-            "pid": "P2002",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q3870-6277a993-4668-de43-60e3-921d30017e87",
-                "pid": "P2002",
-                "string": "047County",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P2003",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q3870-54203bf5-4c4b-d452-8212-4ac15c6709ca",
-                "pid": "P2003",
-                "string": "nairobi_citycountygovernment",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P2013",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q3870-8204b22f-48c7-aaa6-41f7-eacd282e4520",
-                "pid": "P2013",
-                "string": "CountyGovernment047",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.0
-          },
-          {
-            "primitive": "fact",
-            "pid": "P2572",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q3870-E278BB26-83AC-49D5-BC50-81820EDB5DBA",
-                "pid": "P2572",
-                "string": "Nairobi",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.333
-          },
-          {
-            "primitive": "fact",
-            "pid": "P8402",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q3870-04564b02-471b-8d76-3382-d94fe7cce59a",
-                "pid": "P8402",
-                "item": "Q97130876",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.333
-          },
-          {
-            "primitive": "fact",
-            "pid": "P3984",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q3870-7f1607b1-9ea9-4ba0-a1fb-b47e0031afab",
-                "pid": "P3984",
-                "string": "nairobi",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.0
           }
         ],
         "sheet": [
@@ -1872,11 +1852,6 @@ expression: composition
                 "pid": "P1871",
                 "string": "cnl00030086",
                 "statement": "Q3870-d219b7b0-4356-2201-b0b0-57691b822fd4"
-              },
-              {
-                "pid": "P3417",
-                "string": "Nairobi-Kenya-1",
-                "statement": "Q3870-8ef03be1-41f8-ea51-0d89-1e3d44918d2d"
               },
               {
                 "pid": "P3134",

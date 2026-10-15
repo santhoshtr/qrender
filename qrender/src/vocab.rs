@@ -21,9 +21,11 @@ pub enum SpreadKind {
     History,
     /// The Commons files that no spread took.
     Media,
+    /// The item's sites and accounts (the web role), as cards.
+    Web,
     /// Everything left, collapsed.
     More,
-    /// Web presence, curation, sources, identifiers, provenance.
+    /// Curation, sources, identifiers, provenance.
     Evidence,
 }
 
@@ -138,6 +140,9 @@ pub enum Primitive {
     Works,
     /// Events that are items of their own, as a vertical list.
     Timeline,
+    /// The item's sites and accounts: a card each, with the logo of its
+    /// platform.
+    Links,
     Absent,
     Provenance,
     Sitelinks,
@@ -147,7 +152,7 @@ pub enum Primitive {
 impl Primitive {
     /// Every primitive, in the order of their CSS in the stylesheet and of
     /// their scripts in a page.
-    pub const ALL: [Primitive; 24] = [
+    pub const ALL: [Primitive; 25] = [
         Self::Title,
         Self::Kind,
         Self::Prose,
@@ -168,6 +173,7 @@ impl Primitive {
         Self::Score,
         Self::Works,
         Self::Timeline,
+        Self::Links,
         Self::Absent,
         Self::Provenance,
         Self::Sitelinks,

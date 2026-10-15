@@ -8,9 +8,9 @@ use serde::Serialize;
 
 use super::StatementRef;
 use crate::primitives::{
-    absent, credits, earlier, fact, identifiers, kind, map, media, names, network, peers, pictures,
-    prose, provenance, scale, score, series, sitelinks, sounds, split, succession, timeline, title,
-    works,
+    absent, credits, earlier, fact, identifiers, kind, links, map, media, names, network, peers,
+    pictures, prose, provenance, scale, score, series, sitelinks, sounds, split, succession,
+    timeline, title, works,
 };
 use crate::vocab::{Dimension, Primitive, Slot, SpreadKind, Template};
 
@@ -110,6 +110,7 @@ pub enum Block {
     Score(score::Score),
     Works(works::Works),
     Timeline(timeline::Timeline),
+    Links(links::Links),
     Absent(absent::Absent),
     Provenance(provenance::Provenance),
     Sitelinks(sitelinks::Sitelinks),
@@ -139,6 +140,7 @@ impl Block {
             Self::Score(_) => Primitive::Score,
             Self::Works(_) => Primitive::Works,
             Self::Timeline(_) => Primitive::Timeline,
+            Self::Links(_) => Primitive::Links,
             Self::Absent(_) => Primitive::Absent,
             Self::Provenance(_) => Primitive::Provenance,
             Self::Sitelinks(_) => Primitive::Sitelinks,

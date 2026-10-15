@@ -10,6 +10,7 @@ mod identity;
 mod media;
 mod more;
 mod scale;
+mod web;
 
 use super::Composer;
 use crate::config::SpreadSpec;
@@ -27,6 +28,7 @@ pub fn build<'a>(c: &mut Composer<'a>, spec: &'a SpreadSpec) -> Built {
         SpreadKind::Scale => scale::build(c, spec),
         SpreadKind::History => history::build(c, spec),
         SpreadKind::Media => media::build(c, spec),
+        SpreadKind::Web => web::build(c, spec),
         SpreadKind::More => more::build(c, spec),
         SpreadKind::Evidence => Ok(evidence::build(c, spec)),
     }

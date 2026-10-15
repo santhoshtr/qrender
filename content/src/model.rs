@@ -69,6 +69,10 @@ pub struct Content {
     /// the sounds place a value by the code of its language.
     #[serde(default, skip_serializing_if = "IndexMap::is_empty")]
     pub language_codes: IndexMap<Qid, String>,
+    /// The formatter URL (P1630) of each web property of the item: the
+    /// address of an account is its value in place of "$1".
+    #[serde(default, skip_serializing_if = "IndexMap::is_empty")]
+    pub formatters: IndexMap<Pid, String>,
 }
 
 /// The outline of a geoshape, simplified for a map on a page, and what its
