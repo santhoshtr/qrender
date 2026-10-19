@@ -522,7 +522,13 @@ pids = [
   "P4501",  # albedo
   "P1215",  # apparent magnitude
   "P2076",  # temperature
+  "P6591",  # maximum temperature record
+  "P7422",  # minimum temperature record
   "P5348",  # angular diameter
+  "P2547",  # perimeter
+  "P2147",  # rotation period
+  "P2069",  # magnetic moment
+  "P1419",  # shape
 ]
 
 [[class_layouts.astronomical.spreads]]
@@ -540,14 +546,91 @@ pids = [
   "P2244",  # periapsis
   "P1096",  # orbital eccentricity
   "P2045",  # orbital inclination
+  "P2213",  # longitude of ascending node
+  "P2248",  # argument of periapsis
+  "P2325",  # mean anomaly
+  "P11796", # time of periapsis
+  "P6259",  # epoch
+  "P2052",  # speed
   "P2583",  # distance from Earth
 ]
 
+# The surface of the body. The id of the spread that "geography of topic"
+# (P2633) links to. Without a coordinate on the Earth there is no map, and
+# the extreme points are rows.
+[[class_layouts.astronomical.spreads]]
+id = "location"
+dimension = "place"
+concept = "Q1071"      # geography
+prose = ["Q1071"]      # geography
+kind = "facts"
+pids = [
+  "P625",   # coordinate location
+  "P1332",  # coordinates of northernmost point
+  "P1333",  # coordinates of southernmost point
+  "P1334",  # coordinates of easternmost point
+  "P1335",  # coordinates of westernmost point
+  "P5140",  # coordinates of geographic center
+  "P610",   # highest point
+  "P1589",  # lowest point
+  "P276",   # location
+]
+
+# Of the bodies of this layout only the Earth has people. A facts spread,
+# not a scale spread: the physical spread already has the peers.
+[[class_layouts.astronomical.spreads]]
+id = "demography"
+dimension = "measures"
+concept = "Q37732"     # demography
+prose = ["Q37732"]     # demography
+kind = "facts"
+pids = [
+  "P1082",  # population
+  "P2573",  # number of out-of-school children
+]
+
+# The names and the signs of the body. A catalog code of a star is one of
+# its designations ("HD 48915").
+[[class_layouts.astronomical.spreads]]
+id = "names"
+dimension = "names"
+concept = "Q82799"     # name
+prose = ["Q35245"]     # etymology
+kind = "facts"
+pids = [
+  "P1448",  # official name
+  "P2561",  # name
+  "P1813",  # short name
+  "P1705",  # native label
+  "P1549",  # demonym
+  "P1449",  # nickname
+  "P138",   # named after
+  "P1814",  # name in kana
+  "P443",   # pronunciation audio
+  "P898",   # IPA transcription
+  "P528",   # catalog code
+  "P913",   # notation
+  "P487",   # Unicode character
+  "P163",   # flag
+  "P41",    # flag image
+]
+
+# The concepts the body is linked to, and the item properties whose values
+# are mostly pictured (its moons, its parts).
 [[class_layouts.astronomical.spreads]]
 id = "relations"
 dimension = "place"
 concept = "Q930933"    # relation
 kind = "facts"
+pids = [
+  "P2579",  # studied by
+  "P1552",  # has characteristic
+  "P461",   # opposite of
+  "P1557",  # manifestation of
+  "P366",   # has use
+  "P1542",  # has effect
+  "P1299",  # depicted by
+]
 pictured = true        # also any item property whose values are mostly pictured
 
 [[class_layouts.astronomical.spreads]]
@@ -556,6 +639,11 @@ dimension = "time"
 concept = "Q309"       # history
 prose = ["Q309"]
 kind = "history"
+pids = [
+  "P571",   # inception
+  "P575",   # time of discovery or invention
+  "P576",   # dissolved, abolished or demolished
+]
 
 [[class_layouts.astronomical.spreads]]
 id = "media"
@@ -1171,6 +1259,8 @@ pids = [
   "P1791", "P1792", "P1889", "P1963", "P2354", "P2959", "P301",
   "P4224", "P460", "P5008", "P5125", "P5869", "P6104", "P7084", "P7867",
   "P8464", "P8989", "P910",
+  "P2888",  # exact match
+  "P6363",  # WordLift URL
 ]
 
 # The "... of topic" properties point to an item about one part of the

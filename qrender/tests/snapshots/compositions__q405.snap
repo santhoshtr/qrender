@@ -1353,6 +1353,246 @@ expression: composition
       }
     },
     {
+      "id": "location",
+      "kind": "facts",
+      "dimension": "place",
+      "concept": "Q1071",
+      "template": "columns",
+      "slots": {
+        "gallery": [
+          {
+            "primitive": "network",
+            "role": "gallery",
+            "values": [
+              {
+                "statement": "Q405-fc76e94c-4f8b-739c-85ef-9f84cb7d6440",
+                "pid": "P610",
+                "item": "Q18356771",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "SW view of Selenean Summit.jpg",
+                  "kind": "photo",
+                  "aspect": 1.2101,
+                  "megapixels": 1.28,
+                  "credit": {
+                    "artist": "Dennizenx",
+                    "license": "CC BY-SA 4.0"
+                  }
+                },
+                "priority": 0.041
+              },
+              {
+                "statement": "Q405-869945da-43d1-c9f0-5a37-8e428c2b9172",
+                "pid": "P1589",
+                "item": "Q598608",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Normal Antoniadi MapAPlanet Clementine 100ppd LTVT.jpg",
+                  "kind": "photo",
+                  "aspect": 0.9325,
+                  "megapixels": 0.15,
+                  "credit": {
+                    "artist": "Clementine space probe",
+                    "license": "Public domain"
+                  }
+                },
+                "priority": 0.041
+              }
+            ],
+            "priority": 0.041,
+            "rule": "single"
+          }
+        ],
+        "sheet": [
+          {
+            "primitive": "fact",
+            "pid": "P625",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q405-2af50ee1-4054-2751-bcd5-c6c0912f7b16",
+                "pid": "P625",
+                "lat": 0.0,
+                "lon": 0.0,
+                "globe": "Q405",
+                "rank": "normal",
+                "provenance": "none",
+                "shown": true
+              }
+            ],
+            "priority": 0.041,
+            "rule": "row"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P276",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q405-e88d8133-4e05-dde1-3c5f-d5da7365ed04",
+                "pid": "P276",
+                "item": "Q7879772",
+                "rank": "normal",
+                "provenance": "none",
+                "shown": true
+              }
+            ],
+            "priority": 0.041,
+            "rule": "few-pictures"
+          }
+        ]
+      },
+      "prose": {
+        "concepts": [
+          "Q1071"
+        ]
+      }
+    },
+    {
+      "id": "names",
+      "kind": "facts",
+      "dimension": "names",
+      "concept": "Q82799",
+      "template": "columns",
+      "slots": {
+        "stack": [
+          {
+            "primitive": "sounds",
+            "pid": "P443",
+            "sounds": [
+              {
+                "role": "stack",
+                "statement": "Q405-116b2c60-0888-4b1e-8deb-fa27bf5d796a",
+                "pid": "P443",
+                "file": "LL-Q9027 (swe)-Moonhouse-Månen.wav",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P407",
+                    "item": "Q9027"
+                  }
+                ],
+                "kind": "audio",
+                "bytes": 109356,
+                "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/LL-Q9027_%28swe%29-Moonhouse-M%C3%A5nen.wav",
+                "credit": {
+                  "artist": "Speaker: Moonhouse\nRecorder: Moonhouse",
+                  "license": "CC0"
+                },
+                "rule": "media",
+                "language": "Q9027"
+              },
+              {
+                "role": "stack",
+                "statement": "Q405-67A562D7-FFEE-493B-8646-C116B537BB69",
+                "pid": "P443",
+                "file": "LL-Q188 (deu)-Sebastian Wallroth-Mond.wav",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P407",
+                    "item": "Q188"
+                  }
+                ],
+                "kind": "audio",
+                "bytes": 83220,
+                "url": "https://upload.wikimedia.org/wikipedia/commons/7/74/LL-Q188_%28deu%29-Sebastian_Wallroth-Mond.wav",
+                "credit": {
+                  "artist": "Speaker: Sebastian Wallroth\nRecorder: Sebastian Wallroth",
+                  "license": "CC0"
+                },
+                "rule": "media",
+                "language": "Q188"
+              },
+              {
+                "role": "stack",
+                "statement": "Q405-d8b0c216-482f-3fa5-b87b-b0dc02ff7bd0",
+                "pid": "P443",
+                "file": "En-us-moon.ogg",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P407",
+                    "item": "Q7976"
+                  }
+                ],
+                "kind": "audio",
+                "bytes": 10049,
+                "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/En-us-moon.ogg",
+                "credit": {
+                  "artist": "Dvortygirl",
+                  "license": "CC BY-SA 3.0"
+                },
+                "rule": "media",
+                "language": "Q7976"
+              }
+            ]
+          }
+        ],
+        "sheet": [
+          {
+            "primitive": "fact",
+            "pid": "P138",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q405-f8a575ca-4775-63ad-23eb-326684af0426",
+                "pid": "P138",
+                "item": "Q221656",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P407",
+                    "item": "Q37178"
+                  }
+                ],
+                "class": true,
+                "shown": true
+              }
+            ],
+            "priority": 1.959,
+            "rule": "few-pictures"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P487",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q405-9aaa38b5-457a-b1f7-9cfc-42330f833b34",
+                "pid": "P487",
+                "string": "☽",
+                "rank": "normal",
+                "provenance": "none",
+                "shown": true
+              },
+              {
+                "statement": "Q405-ce5e84c1-468e-c29a-71da-cef330a7dc11",
+                "pid": "P487",
+                "string": "☾",
+                "rank": "normal",
+                "provenance": "none",
+                "shown": true
+              }
+            ],
+            "priority": 0.041,
+            "rule": "row"
+          }
+        ]
+      },
+      "prose": {
+        "concepts": [
+          "Q35245"
+        ]
+      }
+    },
+    {
       "id": "relations",
       "kind": "facts",
       "dimension": "place",
@@ -1557,46 +1797,125 @@ expression: composition
                   }
                 },
                 "priority": 0.735
-              },
-              {
-                "statement": "Q405-fc76e94c-4f8b-739c-85ef-9f84cb7d6440",
-                "pid": "P610",
-                "item": "Q18356771",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "SW view of Selenean Summit.jpg",
-                  "kind": "photo",
-                  "aspect": 1.2101,
-                  "megapixels": 1.28,
-                  "credit": {
-                    "artist": "Dennizenx",
-                    "license": "CC BY-SA 4.0"
-                  }
-                },
-                "priority": 0.041
-              },
-              {
-                "statement": "Q405-869945da-43d1-c9f0-5a37-8e428c2b9172",
-                "pid": "P1589",
-                "item": "Q598608",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "Normal Antoniadi MapAPlanet Clementine 100ppd LTVT.jpg",
-                  "kind": "photo",
-                  "aspect": 0.9325,
-                  "megapixels": 0.15,
-                  "credit": {
-                    "artist": "Clementine space probe",
-                    "license": "Public domain"
-                  }
-                },
-                "priority": 0.041
               }
             ],
             "priority": 1.041,
             "rule": "single"
+          }
+        ],
+        "sheet": [
+          {
+            "primitive": "fact",
+            "pid": "P2579",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q405-fca514fe-4c93-1cef-dfc7-8c3e39545af4",
+                "pid": "P2579",
+                "item": "Q126181255",
+                "rank": "normal",
+                "provenance": "none",
+                "class": true,
+                "shown": true
+              },
+              {
+                "statement": "Q405-330e2044-4e00-6fff-66e0-63a033eace9f",
+                "pid": "P2579",
+                "item": "Q1064739",
+                "rank": "normal",
+                "provenance": "none",
+                "class": true,
+                "shown": true
+              }
+            ],
+            "priority": 0.041,
+            "rule": "few-pictures"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P1552",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q405-3e5f2649-49b2-6d9d-c4ca-6634aec6c93f",
+                "pid": "P1552",
+                "item": "Q1130706",
+                "rank": "normal",
+                "provenance": "none",
+                "class": true,
+                "shown": true
+              },
+              {
+                "statement": "Q405-b3d5cff7-43ac-9f68-25d8-d7cea1e2c525",
+                "pid": "P1552",
+                "item": "Q1037706",
+                "rank": "normal",
+                "provenance": "none",
+                "shown": true
+              }
+            ],
+            "priority": 0.122,
+            "rule": "few-pictures"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P366",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q405-1640c138-490f-5bd4-ff7c-e4173013170b",
+                "pid": "P366",
+                "item": "Q367737",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P5102",
+                    "item": "Q18603603"
+                  }
+                ],
+                "class": true,
+                "shown": true
+              }
+            ],
+            "priority": 0.122,
+            "rule": "few-pictures"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P1542",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q405-2912a4f5-45df-18e2-329b-7a03a93dade8",
+                "pid": "P1542",
+                "item": "Q210448",
+                "rank": "normal",
+                "provenance": "none",
+                "class": true,
+                "shown": true
+              }
+            ],
+            "priority": 0.041,
+            "rule": "few-pictures"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P1299",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q405-ad0d60f2-402c-4de1-246d-546a61c7bf24",
+                "pid": "P1299",
+                "item": "Q782683",
+                "rank": "normal",
+                "provenance": "none",
+                "class": true,
+                "shown": true
+              }
+            ],
+            "priority": 0.041,
+            "rule": "few-pictures"
           }
         ]
       }
@@ -1607,7 +1926,33 @@ expression: composition
       "dimension": "time",
       "concept": "Q309",
       "template": "columns",
-      "slots": {},
+      "slots": {
+        "sheet": [
+          {
+            "primitive": "fact",
+            "pid": "P571",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "q405-5e31d3a6-4194-2133-4376-4eaf67d58e34",
+                "pid": "P571",
+                "time": "-4527000000-01-01T00:00:00Z",
+                "precision": 3,
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P1480",
+                    "item": "Q5727902"
+                  }
+                ],
+                "shown": true
+              }
+            ],
+            "priority": 0.041
+          }
+        ]
+      },
       "prose": {
         "concepts": [
           "Q309"
@@ -1763,78 +2108,6 @@ expression: composition
               "artist": "Speaker: Hayk Petrosyan\n\nAuthors of the article",
               "license": "CC BY-SA 4.0"
             }
-          },
-          {
-            "primitive": "sounds",
-            "pid": "P443",
-            "sounds": [
-              {
-                "role": "audio",
-                "statement": "Q405-116b2c60-0888-4b1e-8deb-fa27bf5d796a",
-                "pid": "P443",
-                "file": "LL-Q9027 (swe)-Moonhouse-Månen.wav",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P407",
-                    "item": "Q9027"
-                  }
-                ],
-                "kind": "audio",
-                "bytes": 109356,
-                "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/LL-Q9027_%28swe%29-Moonhouse-M%C3%A5nen.wav",
-                "credit": {
-                  "artist": "Speaker: Moonhouse\nRecorder: Moonhouse",
-                  "license": "CC0"
-                },
-                "language": "Q9027"
-              },
-              {
-                "role": "audio",
-                "statement": "Q405-67A562D7-FFEE-493B-8646-C116B537BB69",
-                "pid": "P443",
-                "file": "LL-Q188 (deu)-Sebastian Wallroth-Mond.wav",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P407",
-                    "item": "Q188"
-                  }
-                ],
-                "kind": "audio",
-                "bytes": 83220,
-                "url": "https://upload.wikimedia.org/wikipedia/commons/7/74/LL-Q188_%28deu%29-Sebastian_Wallroth-Mond.wav",
-                "credit": {
-                  "artist": "Speaker: Sebastian Wallroth\nRecorder: Sebastian Wallroth",
-                  "license": "CC0"
-                },
-                "language": "Q188"
-              },
-              {
-                "role": "audio",
-                "statement": "Q405-d8b0c216-482f-3fa5-b87b-b0dc02ff7bd0",
-                "pid": "P443",
-                "file": "En-us-moon.ogg",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P407",
-                    "item": "Q7976"
-                  }
-                ],
-                "kind": "audio",
-                "bytes": 10049,
-                "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/En-us-moon.ogg",
-                "credit": {
-                  "artist": "Dvortygirl",
-                  "license": "CC BY-SA 3.0"
-                },
-                "language": "Q7976"
-              }
-            ]
           }
         ],
         "web": [
@@ -1944,100 +2217,6 @@ expression: composition
         "sheet": [
           {
             "primitive": "fact",
-            "pid": "P138",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q405-f8a575ca-4775-63ad-23eb-326684af0426",
-                "pid": "P138",
-                "item": "Q221656",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P407",
-                    "item": "Q37178"
-                  }
-                ],
-                "class": true,
-                "shown": true
-              }
-            ],
-            "priority": 1.959
-          },
-          {
-            "primitive": "fact",
-            "pid": "P366",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q405-1640c138-490f-5bd4-ff7c-e4173013170b",
-                "pid": "P366",
-                "item": "Q367737",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P5102",
-                    "item": "Q18603603"
-                  }
-                ],
-                "class": true,
-                "shown": true
-              }
-            ],
-            "priority": 0.122
-          },
-          {
-            "primitive": "fact",
-            "pid": "P1552",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q405-3e5f2649-49b2-6d9d-c4ca-6634aec6c93f",
-                "pid": "P1552",
-                "item": "Q1130706",
-                "rank": "normal",
-                "provenance": "none",
-                "class": true,
-                "shown": true
-              },
-              {
-                "statement": "Q405-b3d5cff7-43ac-9f68-25d8-d7cea1e2c525",
-                "pid": "P1552",
-                "item": "Q1037706",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.122
-          },
-          {
-            "primitive": "fact",
-            "pid": "P571",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "q405-5e31d3a6-4194-2133-4376-4eaf67d58e34",
-                "pid": "P571",
-                "time": "-4527000000-01-01T00:00:00Z",
-                "precision": 3,
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P1480",
-                    "item": "Q5727902"
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 0.041
-          },
-          {
-            "primitive": "fact",
             "pid": "P3872",
             "form": "value",
             "statements": [
@@ -2054,49 +2233,6 @@ expression: composition
                     "item": "Q61704160"
                   }
                 ],
-                "shown": true
-              }
-            ],
-            "priority": 0.041
-          },
-          {
-            "primitive": "fact",
-            "pid": "P2579",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q405-fca514fe-4c93-1cef-dfc7-8c3e39545af4",
-                "pid": "P2579",
-                "item": "Q126181255",
-                "rank": "normal",
-                "provenance": "none",
-                "class": true,
-                "shown": true
-              },
-              {
-                "statement": "Q405-330e2044-4e00-6fff-66e0-63a033eace9f",
-                "pid": "P2579",
-                "item": "Q1064739",
-                "rank": "normal",
-                "provenance": "none",
-                "class": true,
-                "shown": true
-              }
-            ],
-            "priority": 0.041
-          },
-          {
-            "primitive": "fact",
-            "pid": "P1542",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q405-2912a4f5-45df-18e2-329b-7a03a93dade8",
-                "pid": "P1542",
-                "item": "Q210448",
-                "rank": "normal",
-                "provenance": "none",
-                "class": true,
                 "shown": true
               }
             ],
@@ -2126,81 +2262,6 @@ expression: composition
                     "license": "CC BY-SA 3.0"
                   }
                 },
-                "shown": true
-              }
-            ],
-            "priority": 0.041
-          },
-          {
-            "primitive": "fact",
-            "pid": "P625",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q405-2af50ee1-4054-2751-bcd5-c6c0912f7b16",
-                "pid": "P625",
-                "lat": 0.0,
-                "lon": 0.0,
-                "globe": "Q405",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.041
-          },
-          {
-            "primitive": "fact",
-            "pid": "P487",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q405-9aaa38b5-457a-b1f7-9cfc-42330f833b34",
-                "pid": "P487",
-                "string": "☽",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              },
-              {
-                "statement": "Q405-ce5e84c1-468e-c29a-71da-cef330a7dc11",
-                "pid": "P487",
-                "string": "☾",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.041
-          },
-          {
-            "primitive": "fact",
-            "pid": "P276",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q405-e88d8133-4e05-dde1-3c5f-d5da7365ed04",
-                "pid": "P276",
-                "item": "Q7879772",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.041
-          },
-          {
-            "primitive": "fact",
-            "pid": "P1299",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q405-ad0d60f2-402c-4de1-246d-546a61c7bf24",
-                "pid": "P1299",
-                "item": "Q782683",
-                "rank": "normal",
-                "provenance": "none",
-                "class": true,
                 "shown": true
               }
             ],
@@ -3799,6 +3860,11 @@ expression: composition
           }
         ]
       }
+    }
+  ],
+  "dropped": [
+    {
+      "id": "demography"
     }
   ],
   "unshown": []
