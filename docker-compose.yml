@@ -5,7 +5,7 @@ services:
     volumes:
       - .:/workspaces/qrender:cached
     environment:
-      REDIS_URL: redis://redis:6379
+      TOOL_REDIS_URI: redis://redis:6379
     depends_on:
       - redis
     ports:

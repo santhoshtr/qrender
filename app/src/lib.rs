@@ -20,7 +20,7 @@ pub struct Service {
 }
 
 impl Service {
-    /// From the environment: `USER_AGENT`, `REDIS_URL`, `REDIS_PREFIX`.
+    /// From the environment: `USER_AGENT`, `TOOL_REDIS_URI`, `REDIS_PREFIX`.
     pub fn from_env(mode: Mode) -> Result<Self, FetchError> {
         let agent = std::env::var("USER_AGENT").unwrap_or_else(|_| DEFAULT_USER_AGENT.to_string());
         let config = Config::embedded();

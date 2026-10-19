@@ -7,9 +7,9 @@
 //! - GET /design/{version}/page.css  the design system (and tokens.css)
 //! - GET /healthz
 //!
-//! Environment (or a .env file): PORT (default 4243), REDIS_URL (optional
-//! cache), REDIS_PREFIX (for every cache key), BASE_PATH (when served under
-//! a subpath, e.g. "/qrender"), USER_AGENT.
+//! Environment (or a .env file): PORT (default 4243), TOOL_REDIS_URI
+//! (optional cache), REDIS_PREFIX (for every cache key), BASE_PATH (when
+//! served under a subpath, e.g. "/qrender"), USER_AGENT.
 
 use std::sync::Arc;
 

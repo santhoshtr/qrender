@@ -1,4 +1,4 @@
-//! A Redis store for fetched and derived parts. Without `REDIS_URL`, or
+//! A Redis store for fetched and derived parts. Without `TOOL_REDIS_URI`, or
 //! when Redis fails, nothing is cached and every part is fetched: a cache
 //! failure is never an error.
 
@@ -13,19 +13,19 @@ pub struct Cache {
 }
 
 impl Cache {
-    /// From `REDIS_URL`: a `redis://` URL, or a bare `host:port`. And
-    /// `REDIS_PREFIX`, put before every key: on a shared Redis (Toolforge),
-    /// make it a long random secret, so that other users cannot find or
-    /// change the keys.
+    /// From `TOOL_REDIS_URI` (Toolforge sets it): a `redis://` URL, or a
+    /// bare `host:port`. And `REDIS_PREFIX`, put before every key: on a
+    /// shared Redis (Toolforge), make it a long random secret, so that other
+    /// users cannot find or change the keys.
     pub fn from_env() -> Self {
-        let client = std::env::var("REDIS_URL").ok().and_then(|url| {
+        let client = std::env::var("TOOL_REDIS_URI").ok().and_then(|url| {
             let url = if url.contains("://") {
                 url
             } else {
                 format!("redis://{url}")
             };
             redis::Client::open(url)
-                .inspect_err(|e| eprintln!("qrender: ignoring REDIS_URL: {e}"))
+                .inspect_err(|e| eprintln!("qrender: ignoring TOOL_REDIS_URI: {e}"))
                 .ok()
         });
         let prefix = std::env::var("REDIS_PREFIX")

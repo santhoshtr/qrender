@@ -54,12 +54,12 @@ qrender-server     # listens on PORT (default 4243)
 - `/api/content/Q3870`: the data from Wikidata, as JSON
 - `/healthz`
 
-Set `REDIS_URL` (a `redis://` URL or `host:port`) to keep fetched data for
-a day; without it, every request fetches again. On a shared Redis, set
-`REDIS_PREFIX` to a long random secret: it goes before every key.
-`BASE_PATH` is for a service under a subpath (for example `/qrender`), and
-`USER_AGENT` names the operator for the Wikimedia services. These can also
-be in a `.env` file.
+Set `TOOL_REDIS_URI` (a `redis://` URL or `host:port`; Toolforge sets it)
+to keep fetched data for a day; without it, every request fetches again.
+On a shared Redis, set `REDIS_PREFIX` to a long random secret: it goes
+before every key. `BASE_PATH` is for a service under a subpath (for
+example `/qrender`), and `USER_AGENT` names the operator for the Wikimedia
+services. These can also be in a `.env` file.
 
 ## How it works
 
