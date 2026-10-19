@@ -33,6 +33,11 @@ impl Cache {
             .filter(|p| !p.is_empty())
             .map(|p| format!("{p}:"))
             .unwrap_or_default();
+        if client.is_some() && prefix.is_empty() {
+            eprintln!(
+                "qrender: no REDIS_PREFIX: on a shared Redis, other users can read and change the keys"
+            );
+        }
         Self { client, prefix }
     }
 
