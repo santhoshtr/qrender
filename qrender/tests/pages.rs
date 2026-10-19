@@ -90,6 +90,17 @@ fn html_pages() {
                 "{page}: zoom #{id} has no lightbox"
             );
         }
+        // The data of each map of a dialog: a pin, and a box with its
+        // south-west below and left of its north-east.
+        for el in doc.select(&select("qr-map")) {
+            let data: serde_json::Value =
+                serde_json::from_str(el.attr("data-map").unwrap_or_default())
+                    .unwrap_or_else(|e| panic!("{page}: qr-map data: {e}"));
+            let [[south, west], [north, east]]: [[f64; 2]; 2] =
+                serde_json::from_value(data["bounds"].clone()).unwrap();
+            assert!(south < north && west < east, "{page}: qr-map bounds");
+            assert!(data["pin"].is_array(), "{page}: qr-map pin");
+        }
         // Pictures, sounds, videos and 3D models only from Wikimedia hosts,
         // and the icons of the sites in the web spread from their Toolforge
         // service.

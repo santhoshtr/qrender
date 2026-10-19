@@ -1,0 +1,19 @@
+{%- import "macros.html" as m -%}
+{#- A line for each shape of a map: the sample of its outline, its
+    qualifiers (whose view it is: a disputed border has two) and its
+    credit. -#}
+<ul>
+    {%- for s in shapes.iter() %}
+        {%- let groups = ui.labelled(s.statement.qualifiers.as_slice()) %}
+        <li>
+            <span class="line{% if loop.first %} main{% endif %}"></span>
+            {%- for (label, parts) in groups.iter() -%}
+                {{ ui.text(label, false)|safe }}: {{ ui.values_of(parts.as_slice())|safe }} ·
+            {% endfor -%}
+            <a href="{{ ui.commons_data(&s.title) }}">{{ s.title }}</a> · {{ s.license }}
+            {%- call m::prov(ui, s.statement.provenance) %}{% endcall %}
+            {% call m::edit(ui, ui.edit(s.statement.pid)) %}
+            {% endcall %}
+        </li>
+    {%- endfor %}
+</ul>

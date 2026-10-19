@@ -7,13 +7,13 @@ use std::cell::Cell;
 use content::{EntityId, Pid, Qid};
 use percent_encoding::{AsciiSet, NON_ALPHANUMERIC, utf8_percent_encode};
 
-use super::map::{Frame, frame};
+use super::map::{Frame, frame, live, point_frame};
 use crate::localize::format::{Part, coordinate, edit_url, number_part, percent};
 use crate::localize::{Description, Label, SpreadView, View};
 use crate::primitives::credits::{Credits, Person};
 use crate::primitives::identifiers::{Identifier, Identifiers};
 use crate::primitives::links::{Card, Links};
-use crate::primitives::map::Map;
+use crate::primitives::map::{Map, Marker};
 use crate::primitives::media::Media;
 use crate::primitives::names::{self, Names};
 use crate::primitives::provenance;
@@ -258,9 +258,29 @@ impl<'v> Ui<'v> {
         }
     }
 
-    /// A map of a point: the tile, centred on it (render/map.rs).
-    pub fn point_tile(&self, lat: impl Arg<f64>, lon: impl Arg<f64>) -> String {
-        super::map::point_tile(lat.get(), lon.get())
+    /// The map of a point, centred on it (render/map.rs).
+    pub fn point_frame(&self, lat: impl Arg<f64>, lon: impl Arg<f64>) -> Frame<'static> {
+        point_frame(lat.get(), lon.get())
+    }
+
+    /// The data of the map of a dialog (map.js): the frame, with the
+    /// markers and the shapes of the map.
+    pub fn live_map(&self, f: &Frame, b: &Map) -> String {
+        live(f, Some(b), |pid| self.property(pid).text)
+    }
+
+    /// The place of a marker, as text: a coordinate part would bring its
+    /// own pin and dialog into the dialog of the map.
+    pub fn marker_place(&self, mk: &Marker) -> String {
+        match mk.value {
+            ValueShown::Coordinate { lat, lon, .. } => coordinate(lat, lon),
+            _ => String::new(),
+        }
+    }
+
+    /// The data of the map of a coordinate pin: the point only.
+    pub fn live_point(&self, f: &Frame) -> String {
+        live(f, None, |pid| self.property(pid).text)
     }
 
     /// The date of an event: a year, or a span ("1947 – 1975").

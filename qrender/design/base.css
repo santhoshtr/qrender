@@ -169,6 +169,17 @@ a {
 
 .info { font-family: var( --font-family-serif ); font-style: italic; }
 
+/* A picture or a map is a button: it opens its dialog. */
+:is( .m, .map ) > .zoom {
+	display: block;
+	inline-size: 100%;
+	block-size: 100%;
+	padding: 0;
+	border: 0;
+	background: none;
+	cursor: zoom-in;
+}
+
 /* On a picture the tools sit in the top corner. */
 :is( .m, .map ) > .tools {
 	position: absolute;
@@ -545,17 +556,6 @@ dialog.lightbox {
 		inline-size: 100%;
 		block-size: 100%;
 		object-fit: cover;
-	}
-
-	/* The picture is a button: it opens the dialog of the file. */
-	& > .zoom {
-		display: block;
-		inline-size: 100%;
-		block-size: 100%;
-		padding: 0;
-		border: 0;
-		background: none;
-		cursor: zoom-in;
 	}
 
 	& figcaption {

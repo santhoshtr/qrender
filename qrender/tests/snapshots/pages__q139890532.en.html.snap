@@ -48,11 +48,35 @@ expression: html
              data-spread="location"
              data-dimension="place"><h2><span class="title">geography</span></h2><div class="prose-slot" lang="en"><p>Kokkachal is situated along the rural routes connecting <a href="https://en.wikipedia.org/wiki/Bandiyod">Bandiyod</a> (approximately 6.5&#160;km away) and Dharmathadukka. Geographically, it sits close to the border of the Puthige and Mangalpady local government jurisdictions. The landscape is characterized by the typical midland topography of Northern Malabar, with seasonal streams feeding into larger coastal river systems.</p><a class="read" href="https://en.wikipedia.org/wiki/Kokkachal#Geography">Geography ↗</a></div><div data-slot="hero">
         <figure class="map">
-        <img src="https://maps.wikimedia.org/img/osm-intl,11,12.65689,74.96392,800x500@2x.png" alt=""><span class="pin"
-                  style="left:50.00%;
-                         top:50.00%"></span><figcaption>coordinate location 12.6569, 74.9639 <span class="prov-none" title="—"></span></figcaption><span class="tools"><a class="edit"
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d1"
+                aria-label="Explore the map"><img src="https://maps.wikimedia.org/img/osm-intl,11,12.65689,74.96392,800x500@2x.png" alt=""><span class="pin"
+          style="left:50.00%;
+                 top:50.00%"></span></button>
+        <figcaption>coordinate location 12.6569, 74.9639 <span class="prov-none" title="—"></span></figcaption><span class="tools"><a class="edit"
        href="https://www.wikidata.org/wiki/Q139890532#P625"
        aria-label="Edit">✎</a></span></figure>
+    <dialog id="d1"
+        class="lightbox k-map"
+        closedby="any"
+        aria-labelledby="d1-h">
+    <header>
+        <h2 id="d1-h">coordinate location</h2>
+        <button type="button"
+                command="close"
+                commandfor="d1"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <qr-map data-map="{&#34;pin&#34;:[12.6569,74.9639],&#34;bounds&#34;:[[12.4893,74.6893],[12.8243,75.2386]],&#34;markers&#34;:[],&#34;outlines&#34;:[]}"
+                data-attribution="© OpenStreetMap contributors">
+            <figure class="map"><img src="https://maps.wikimedia.org/img/osm-intl,11,12.65689,74.96392,800x500@2x.png" alt="" loading="lazy"><span class="pin"
+          style="left:50.00%;
+                 top:50.00%"></span></figure>
+        </qr-map>
+    </div></dialog>
     </div><div data-slot="gallery"><div class="block set"><div class="run"><figure class="m k-drawing"
         style="--a:0.6922">
     <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kasaragod-map.svg?width=960"
@@ -63,8 +87,8 @@ expression: html
          loading="lazy">
     <figcaption><span>located in the administrative territorial entity</span><b><a href="https://www.wikidata.org/wiki/Q1419703">Kasaragod district</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p1"
-            aria-label="Credit">i</button><span id="p1" popover class="pop">Rajeshodayanchal at ml.wikipedia · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p2"
+            aria-label="Credit">i</button><span id="p2" popover class="pop">Rajeshodayanchal at ml.wikipedia · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q139890532#P131"
        aria-label="Edit">✎</a></span></figure></div></div></div></section>
             <section class="spread t-columns" id="names"
@@ -462,6 +486,83 @@ document.addEventListener( 'close', ( event ) => {
 		element.querySelector( 'img' ).replaceWith( canvas );
 		run();
 	}
+} )();
+// The qr-map element: the map of a dialog, which the reader moves and
+// zooms, drawn by Leaflet with the tiles of Wikimedia maps in the page
+// language. Progressive enhancement only: the element holds the static map
+// of the page, and without this script or without Leaflet it stays. The
+// server gives the data (the pin, the box to show first, the markers, the
+// outlines); the script draws it, and CSS gives the colours by the class
+// names. Leaflet loads once, when the first map dialog opens: a map needs
+// the size of its box, and a closed dialog has none.
+// One function scope: the page scripts share one script element.
+( () => {
+	const root = document.documentElement;
+	// The design base is on a page that the server sends (not in a file).
+	const base = root.dataset.design;
+	if ( !base || !( 'customElements' in window ) ) {
+		return;
+	}
+	const tiles = `https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}{r}.png?lang=${ encodeURIComponent( root.lang ) }`;
+	const load = ( element ) => new Promise( ( resolve, reject ) => {
+		element.onload = resolve;
+		element.onerror = reject;
+		document.head.append( element );
+	} );
+	let loading;
+	const leaflet = () => loading ??= Promise.all( [
+		load( Object.assign( document.createElement( 'link' ), { rel: 'stylesheet', href: `${ base }/leaflet.css` } ) ),
+		load( Object.assign( document.createElement( 'script' ), { src: `${ base }/leaflet.js` } ) )
+	] ).then( () => window.L );
+
+	customElements.define( 'qr-map', class extends HTMLElement {
+		connectedCallback() {
+			this.dialog = this.closest( 'dialog' );
+			this.dialog?.addEventListener( 'toggle', ( event ) => {
+				if ( event.newState === 'open' ) {
+					this.open();
+				}
+			} );
+		}
+
+		async open() {
+			if ( this.map ) {
+				// The window can have changed since the last open.
+				this.map.invalidateSize();
+				return;
+			}
+			const L = await leaflet().catch( () => null );
+			// The dialog can have closed while Leaflet loaded: the next open draws.
+			if ( !L || this.map || !this.dialog.open ) {
+				return;
+			}
+			const data = JSON.parse( this.dataset.map );
+			const icon = ( className ) => L.divIcon( { className, iconSize: null } );
+			const attribution = Object.assign( document.createElement( 'a' ), {
+				href: 'https://www.openstreetmap.org/copyright',
+				textContent: this.dataset.attribution
+			} ).outerHTML;
+
+			this.replaceChildren();
+			const map = this.map = L.map( this );
+			map.attributionControl.setPrefix( false );
+			map.fitBounds( data.bounds );
+			L.tileLayer( tiles, { maxZoom: 18, attribution } ).addTo( map );
+			for ( const outline of data.outlines ) {
+				const className = outline.main ? 'main' : 'other';
+				if ( outline.rings.length ) {
+					L.polygon( outline.rings, { className, interactive: false } ).addTo( map );
+				}
+				if ( outline.lines.length ) {
+					L.polyline( outline.lines, { className: `${ className } open`, interactive: false } ).addTo( map );
+				}
+			}
+			for ( const marker of data.markers ) {
+				L.marker( marker.at, { icon: icon( 'marker' ), title: marker.label, keyboard: false } ).addTo( map );
+			}
+			L.marker( data.pin, { icon: icon( 'pin' ), interactive: false, keyboard: false } ).addTo( map );
+		}
+	} );
 } )();
 </script>
 </body>

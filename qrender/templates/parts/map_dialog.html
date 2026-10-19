@@ -1,0 +1,40 @@
+{#- The map of a dialog, which the reader moves and zooms: qr-map draws it
+    with Leaflet (map.js) from the data of the server. Until then, and
+    without it, the static map of the frame. Under the map of the item: its
+    markers, and the lines of its shapes. -#}
+<dialog id="d{{ n }}"
+        class="lightbox k-map"
+        closedby="any"
+        aria-labelledby="d{{ n }}-h">
+    <header>
+        <h2 id="d{{ n }}-h">{{ heading }}</h2>
+        <button type="button"
+                command="close"
+                commandfor="d{{ n }}"
+                aria-label="{{ ui.msg("qrender-close") }}">×</button>
+    </header>
+    <div class="stage">
+        <qr-map data-map="{{ data }}"
+                data-attribution="{{ ui.msg("qrender-map-attribution") }}">
+            <figure class="map">{{ ui.map_frame(f, true)|safe }}</figure>
+        </qr-map>
+    </div>
+    {%- if let Some(b) = b -%}
+        {%- if !b.markers.is_empty() || !b.shapes.is_empty() %}
+            <div class="about">
+                {%- if !b.markers.is_empty() %}
+                    <ul class="map-legend">
+                        {%- for mk in b.markers %}
+                            <li>
+                                <span class="marker"></span>{{ ui.text(ui.property(mk.pid), false)|safe }} {{ ui.marker_place(mk) }}
+                            </li>
+                        {%- endfor %}
+                    </ul>
+                {%- endif -%}
+                {%- if !b.shapes.is_empty() %}
+                    <div class="map-shapes">{{ ui.map_shapes(b.shapes.as_slice())|safe }}</div>
+                {%- endif %}
+            </div>
+        {%- endif -%}
+    {%- endif -%}
+</dialog>

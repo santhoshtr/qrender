@@ -4,7 +4,8 @@
 //! - GET /api/content/{qid}          content JSON
 //! - GET /api/composition/{qid}      composition JSON (the same in every language)
 //! - GET /api/view/{lang}/{qid}      view JSON
-//! - GET /design/{version}/page.css  the design system
+//! - GET /design/{version}/page.css  the design system; also echarts.js,
+//!   leaflet.js and leaflet.css, which the page scripts load
 //! - GET /healthz
 //!
 //! Environment (or a .env file): PORT (default 4243), TOOL_REDIS_URI
@@ -21,7 +22,7 @@ use axum::response::{Html, IntoResponse, Response};
 use axum::routing::get;
 use content::fetch::{FetchError, Mode};
 use content::{Lang, Qid};
-use qrender::render::design::{DESIGN, ECHARTS, STYLESHEET};
+use qrender::render::design::{DESIGN, ECHARTS, LEAFLET_CSS, LEAFLET_JS, STYLESHEET};
 use qrender::render::html::{self, Styles};
 use qrender::render::markdown;
 use tower_http::compression::CompressionLayer;
@@ -80,6 +81,8 @@ async fn design(Path((version, file)): Path<(String, String)>) -> Response {
     let (body, content_type) = match file.as_str() {
         "page.css" => (STYLESHEET.as_str(), "text/css; charset=utf-8"),
         "echarts.js" => (ECHARTS, "text/javascript; charset=utf-8"),
+        "leaflet.js" => (LEAFLET_JS, "text/javascript; charset=utf-8"),
+        "leaflet.css" => (LEAFLET_CSS, "text/css; charset=utf-8"),
         _ => return StatusCode::NOT_FOUND.into_response(),
     };
     (
@@ -211,4 +214,26 @@ async fn usage(State(state): State<AppState>) -> Html<String> {
 </ul>
 </body></html>"#
     ))
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[tokio::test]
+    async fn the_design_route_serves_its_files() {
+        let get = |file: &str| design(Path((design_version().to_string(), file.to_string())));
+        for (file, kind) in [
+            ("page.css", "text/css"),
+            ("echarts.js", "text/javascript"),
+            ("leaflet.js", "text/javascript"),
+            ("leaflet.css", "text/css"),
+        ] {
+            let response = get(file).await;
+            assert_eq!(response.status(), StatusCode::OK, "{file}");
+            let content_type = response.headers()[header::CONTENT_TYPE].to_str().unwrap();
+            assert!(content_type.starts_with(kind), "{file}: {content_type}");
+        }
+        assert_eq!(get("other.js").await.status(), StatusCode::NOT_FOUND);
+    }
 }

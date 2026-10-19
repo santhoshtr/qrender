@@ -138,37 +138,61 @@ derivative work: Jjtkk · CC BY 3.0</p>
              data-spread="location"
              data-dimension="place"><h2><span class="title">geography</span></h2><div class="prose-slot" lang="en"><p>Nairobi is situated at 1°09′S 36°39′E&#xfeff; / &#xfeff;1.150°S 36.650°E&#xfeff; / -1.150; 36.650&#xfeff; (Nairobi, Kenya) and 1°27′S 37°06′E&#xfeff; / &#xfeff;1.450°S 37.100°E&#xfeff; / -1.450; 37.100&#xfeff; (Nairobi, Kenya) and occupies 696 square kilometres (270&#160;sq&#160;mi).</p><a class="read" href="https://en.wikipedia.org/wiki/Nairobi#Geography">Geography ↗</a></div><div data-slot="hero">
         <figure class="map">
-        <img src="https://maps.wikimedia.org/img/osm-intl,11,-1.28639,36.81722,800x500@2x.png" alt=""><span class="pin"
-                  style="left:50.00%;
-                         top:50.00%"></span><figcaption>coordinate location -1.28639, 36.8172 <span class="prov-imported" title="imported from Wikimedia project">W</span></figcaption><span class="tools"><a class="edit"
-       href="https://www.wikidata.org/wiki/Q3870#P625"
-       aria-label="Edit">✎</a></span></figure>
-    </div><div data-slot="gallery"><div class="block set"><div class="run"><figure class="m k-photo" style="--a:0.9083">
         <button class="zoom"
                 type="button"
                 command="show-modal"
                 commandfor="d5"
+                aria-label="Explore the map"><img src="https://maps.wikimedia.org/img/osm-intl,11,-1.28639,36.81722,800x500@2x.png" alt=""><span class="pin"
+          style="left:50.00%;
+                 top:50.00%"></span></button>
+        <figcaption>coordinate location -1.28639, 36.8172 <span class="prov-imported" title="imported from Wikimedia project">W</span></figcaption><span class="tools"><a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P625"
+       aria-label="Edit">✎</a></span></figure>
+    <dialog id="d5"
+        class="lightbox k-map"
+        closedby="any"
+        aria-labelledby="d5-h">
+    <header>
+        <h2 id="d5-h">coordinate location</h2>
+        <button type="button"
+                command="close"
+                commandfor="d5"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <qr-map data-map="{&#34;pin&#34;:[-1.2864,36.8172],&#34;bounds&#34;:[[-1.458,36.5426],[-1.1148,37.0919]],&#34;markers&#34;:[],&#34;outlines&#34;:[]}"
+                data-attribution="© OpenStreetMap contributors">
+            <figure class="map"><img src="https://maps.wikimedia.org/img/osm-intl,11,-1.28639,36.81722,800x500@2x.png" alt="" loading="lazy"><span class="pin"
+          style="left:50.00%;
+                 top:50.00%"></span></figure>
+        </qr-map>
+    </div></dialog>
+    </div><div data-slot="gallery"><div class="block set"><div class="run"><figure class="m k-photo" style="--a:0.9083">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d6"
                 aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
         </button><figcaption><span>locator map image</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p6"
-            aria-label="Credit">i</button><span id="p6" popover class="pop">Nairobi123 · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p7"
+            aria-label="Credit">i</button><span id="p7" popover class="pop">Nairobi123 · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P242"
        aria-label="Edit">✎</a></span>
     </figure>
-    <dialog id="d5"
+    <dialog id="d6"
         class="lightbox k-photo"
         closedby="any"
-        aria-labelledby="d5-h"
+        aria-labelledby="d6-h"
         style="--a:0.9083">
     <header>
-        <h2 id="d5-h">locator map image</h2>
+        <h2 id="d6-h">locator map image</h2>
         <button type="button"
                 command="close"
-                commandfor="d5"
+                commandfor="d6"
                 aria-label="Close">×</button>
     </header>
     <div class="stage"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=1280"
@@ -195,8 +219,8 @@ derivative work: Jjtkk · CC BY 3.0</p>
          loading="lazy">
     <figcaption><span>located in the administrative territorial entity</span><b><a href="https://www.wikidata.org/wiki/Q3335223">Nairobi City County</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p7"
-            aria-label="Credit">i</button><span id="p7" popover class="pop">Jorge Láscar · CC BY-SA 2.0</span><a class="edit"
+            popovertarget="p8"
+            aria-label="Credit">i</button><span id="p8" popover class="pop">Jorge Láscar · CC BY-SA 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P131"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3333">
@@ -208,8 +232,8 @@ derivative work: Jjtkk · CC BY 3.0</p>
          loading="lazy">
     <figcaption><span>part of</span><b><a href="https://www.wikidata.org/wiki/Q14206200">Southern Rift Valley</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p8"
-            aria-label="Credit">i</button><span id="p8" popover class="pop">User:Chris 73 · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p9"
+            aria-label="Credit">i</button><span id="p9" popover class="pop">User:Chris 73 · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P361"
        aria-label="Edit">✎</a></span></figure></div></div></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>elevation above sea level</dt>
 <dd><data value="1661" data-f="number">1661</data> <span class="note">metre</span></dd>
@@ -295,28 +319,28 @@ derivative work: Jjtkk · CC BY 3.0</p>
         <button class="zoom"
                 type="button"
                 command="show-modal"
-                commandfor="d9"
+                commandfor="d10"
                 aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
         </button><figcaption><span>coat of arms image</span><span class="prov-imported" title="imported from Wikimedia project">W</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p10"
-            aria-label="Credit">i</button><span id="p10" popover class="pop">Josedar (SVG conversion) · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p11"
+            aria-label="Credit">i</button><span id="p11" popover class="pop">Josedar (SVG conversion) · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P94"
        aria-label="Edit">✎</a></span>
     </figure>
-    <dialog id="d9"
+    <dialog id="d10"
         class="lightbox k-drawing"
         closedby="any"
-        aria-labelledby="d9-h"
+        aria-labelledby="d10-h"
         style="--a:0.9918">
     <header>
-        <h2 id="d9-h">coat of arms image</h2>
+        <h2 id="d10-h">coat of arms image</h2>
         <button type="button"
                 command="close"
-                commandfor="d9"
+                commandfor="d10"
                 aria-label="Close">×</button>
     </header>
     <div class="stage"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=1280"
@@ -337,28 +361,28 @@ derivative work: Jjtkk · CC BY 3.0</p>
         <button class="zoom"
                 type="button"
                 command="show-modal"
-                commandfor="d11"
+                commandfor="d12"
                 aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
         </button><figcaption><span>flag image</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p12"
-            aria-label="Credit">i</button><span id="p12" popover class="pop">earlier version Mandingoesque; this version Johannes Rössel · Public domain</span><a class="edit"
+            popovertarget="p13"
+            aria-label="Credit">i</button><span id="p13" popover class="pop">earlier version Mandingoesque; this version Johannes Rössel · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P41"
        aria-label="Edit">✎</a></span>
     </figure>
-    <dialog id="d11"
+    <dialog id="d12"
         class="lightbox k-drawing"
         closedby="any"
-        aria-labelledby="d11-h"
+        aria-labelledby="d12-h"
         style="--a:1.5">
     <header>
-        <h2 id="d11-h">flag image</h2>
+        <h2 id="d12-h">flag image</h2>
         <button type="button"
                 command="close"
-                commandfor="d11"
+                commandfor="d12"
                 aria-label="Close">×</button>
     </header>
     <div class="stage"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=1280"
@@ -407,8 +431,8 @@ derivative work: Jjtkk · CC BY 3.0</p>
          loading="lazy">
     <figcaption><span>head of government</span><b><a href="https://www.wikidata.org/wiki/Q28967580">Sakaja Johnson</a></b><span>2022 –</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p13"
-            aria-label="Credit">i</button><span id="p13" popover class="pop">LuffyDe · CC0</span><a class="edit"
+            popovertarget="p14"
+            aria-label="Credit">i</button><span id="p14" popover class="pop">LuffyDe · CC0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P6"
        aria-label="Edit">✎</a></span></figure></div>
     </div><div data-slot="stack">
@@ -423,8 +447,8 @@ derivative work: Jjtkk · CC BY 3.0</p>
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q114">Kenya</a></b><span>1963 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p15"
-            aria-label="Credit">i</button><span id="p15" popover class="pop">UN Office for the Coordination of Humanitarian Affairs (OCHA) · CC BY 3.0</span><a class="edit"
+            popovertarget="p16"
+            aria-label="Credit">i</button><span id="p16" popover class="pop">UN Office for the Coordination of Humanitarian Affairs (OCHA) · CC BY 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P1376"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.5056">
@@ -436,8 +460,8 @@ derivative work: Jjtkk · CC BY 3.0</p>
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q3335223">Nairobi City County</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p16"
-            aria-label="Credit">i</button><span id="p16" popover class="pop">Jorge Láscar · CC BY-SA 2.0</span><a class="edit"
+            popovertarget="p17"
+            aria-label="Credit">i</button><span id="p17" popover class="pop">Jorge Láscar · CC BY-SA 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P1376"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.5056">
@@ -449,15 +473,15 @@ derivative work: Jjtkk · CC BY 3.0</p>
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q1061480">Nairobi Province</a></b><span class="from" title="en.wikipedia.org">W</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p17"
-            aria-label="Credit">i</button><span id="p17" popover class="pop">Jorge Láscar · CC BY-SA 2.0</span><a class="edit"
+            popovertarget="p18"
+            aria-label="Credit">i</button><span id="p18" popover class="pop">Jorge Láscar · CC BY-SA 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P1376"
-       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d14">View all</button></div><dialog id="d14" closedby="any">
+       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d15">View all</button></div><dialog id="d15" closedby="any">
         <header>
             <h2>capital of</h2>
             <button type="button"
                     command="close"
-                    commandfor="d14"
+                    commandfor="d15"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -521,8 +545,8 @@ derivative work: Jjtkk · CC BY 3.0</p>
     </div><qr-chart class="block series"><h3>population
     <button class="info"
             type="button"
-            popovertarget="p18"
-            aria-label="Description">i</button><span id="p18" popover class="pop">number of people inhabiting the place; number of people of subject</span>
+            popovertarget="p19"
+            aria-label="Description">i</button><span id="p19" popover class="pop">number of people inhabiting the place; number of people of subject</span>
     <a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P1082"
        aria-label="Edit">✎</a>
@@ -589,8 +613,8 @@ derivative work: Jjtkk · CC BY 3.0</p>
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q41087">Raleigh</a></b><span>2022 –</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p20"
-            aria-label="Credit">i</button><span id="p20" popover class="pop">Abhiram Juvvadi · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p21"
+            aria-label="Credit">i</button><span id="p21" popover class="pop">Abhiram Juvvadi · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.8989">
@@ -602,8 +626,8 @@ derivative work: Jjtkk · CC BY 3.0</p>
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q16554">Denver</a></b><span>1975 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p21"
-            aria-label="Credit">i</button><span id="p21" popover class="pop">Quintin Soloviev · CC BY 4.0</span><a class="edit"
+            popovertarget="p22"
+            aria-label="Credit">i</button><span id="p22" popover class="pop">Quintin Soloviev · CC BY 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.7778">
@@ -615,8 +639,8 @@ derivative work: Jjtkk · CC BY 3.0</p>
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q182852">Kunming</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p22"
-            aria-label="Credit">i</button><span id="p22" popover class="pop">瑞丽江的河水 · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p23"
+            aria-label="Credit">i</button><span id="p23" popover class="pop">瑞丽江的河水 · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3333">
@@ -628,8 +652,8 @@ derivative work: Jjtkk · CC BY 3.0</p>
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q964130">Colonia Tovar</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p23"
-            aria-label="Credit">i</button><span id="p23" popover class="pop">Pascual De Ruvo (Pderuvo at en.wikipedia) · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p24"
+            aria-label="Credit">i</button><span id="p24" popover class="pop">Pascual De Ruvo (Pderuvo at en.wikipedia) · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.8727">
@@ -641,8 +665,8 @@ derivative work: Jjtkk · CC BY 3.0</p>
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q8678">Rio de Janeiro</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p24"
-            aria-label="Credit">i</button><span id="p24" popover class="pop">Rafael Rabello de Barros · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p25"
+            aria-label="Credit">i</button><span id="p25" popover class="pop">Rafael Rabello de Barros · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3333">
@@ -654,8 +678,8 @@ derivative work: Jjtkk · CC BY 3.0</p>
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q362865">Pingxiang</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p25"
-            aria-label="Credit">i</button><span id="p25" popover class="pop">Chinaculturefriend · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p26"
+            aria-label="Credit">i</button><span id="p26" popover class="pop">Chinaculturefriend · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.4904">
@@ -667,15 +691,15 @@ derivative work: Jjtkk · CC BY 3.0</p>
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q926713">Parintins</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p26"
-            aria-label="Credit">i</button><span id="p26" popover class="pop">Mário Oliveira - MTUR · Public domain</span><a class="edit"
+            popovertarget="p27"
+            aria-label="Credit">i</button><span id="p27" popover class="pop">Mário Oliveira - MTUR · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P190"
-       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d19">View all</button></div><dialog id="d19" closedby="any">
+       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d20">View all</button></div><dialog id="d20" closedby="any">
         <header>
             <h2>twinned administrative body</h2>
             <button type="button"
                     command="close"
-                    commandfor="d19"
+                    commandfor="d20"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -769,28 +793,28 @@ derivative work: Jjtkk · CC BY 3.0</p>
         <button class="zoom"
                 type="button"
                 command="show-modal"
-                commandfor="d27"
+                commandfor="d28"
                 aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=1920 1920w" sizes="100vw"
                  alt="" loading="lazy">
         </button><figcaption><span>nighttime view</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p28"
-            aria-label="Credit">i</button><span id="p28" popover class="pop">Africanmodern · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p29"
+            aria-label="Credit">i</button><span id="p29" popover class="pop">Africanmodern · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P3451"
        aria-label="Edit">✎</a></span>
     </figure>
-    <dialog id="d27"
+    <dialog id="d28"
         class="lightbox k-photo"
         closedby="any"
-        aria-labelledby="d27-h"
+        aria-labelledby="d28-h"
         style="--a:1">
     <header>
-        <h2 id="d27-h">nighttime view</h2>
+        <h2 id="d28-h">nighttime view</h2>
         <button type="button"
                 command="close"
-                commandfor="d27"
+                commandfor="d28"
                 aria-label="Close">×</button>
     </header>
     <div class="stage"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=1280"
@@ -813,28 +837,28 @@ derivative work: Jjtkk · CC BY 3.0</p>
         <button class="zoom"
                 type="button"
                 command="show-modal"
-                commandfor="d29"
+                commandfor="d30"
                 aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
         </button><figcaption><span>montage image</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p30"
-            aria-label="Credit">i</button><span id="p30" popover class="pop">Southlondoneye (talk) 20:30, 29 March 2015 (UTC) · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p31"
+            aria-label="Credit">i</button><span id="p31" popover class="pop">Southlondoneye (talk) 20:30, 29 March 2015 (UTC) · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P2716"
        aria-label="Edit">✎</a></span>
     </figure>
-    <dialog id="d29"
+    <dialog id="d30"
         class="lightbox k-photo"
         closedby="any"
-        aria-labelledby="d29-h"
+        aria-labelledby="d30-h"
         style="--a:0.6633">
     <header>
-        <h2 id="d29-h">montage image</h2>
+        <h2 id="d30-h">montage image</h2>
         <button type="button"
                 command="close"
-                commandfor="d29"
+                commandfor="d30"
                 aria-label="Close">×</button>
     </header>
     <div class="stage"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=1280"
@@ -855,28 +879,28 @@ derivative work: Jjtkk · CC BY 3.0</p>
         <button class="zoom"
                 type="button"
                 command="show-modal"
-                commandfor="d31"
+                commandfor="d32"
                 aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
         </button><figcaption><span>aerial view</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p32"
-            aria-label="Credit">i</button><span id="p32" popover class="pop">Mkimemia at English Wikipedia · Public domain</span><a class="edit"
+            popovertarget="p33"
+            aria-label="Credit">i</button><span id="p33" popover class="pop">Mkimemia at English Wikipedia · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P8592"
        aria-label="Edit">✎</a></span>
     </figure>
-    <dialog id="d31"
+    <dialog id="d32"
         class="lightbox k-photo"
         closedby="any"
-        aria-labelledby="d31-h"
+        aria-labelledby="d32-h"
         style="--a:1.6234">
     <header>
-        <h2 id="d31-h">aerial view</h2>
+        <h2 id="d32-h">aerial view</h2>
         <button type="button"
                 command="close"
-                commandfor="d31"
+                commandfor="d32"
                 aria-label="Close">×</button>
     </header>
     <div class="stage"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=1280"
@@ -897,7 +921,7 @@ derivative work: Jjtkk · CC BY 3.0</p>
         <button class="zoom"
                 type="button"
                 command="show-modal"
-                commandfor="d33"
+                commandfor="d34"
                 aria-label="Play">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Google%20Timelapse-%20Nairobi%2C%20Kenya.webm?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Google%20Timelapse-%20Nairobi%2C%20Kenya.webm?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Google%20Timelapse-%20Nairobi%2C%20Kenya.webm?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Google%20Timelapse-%20Nairobi%2C%20Kenya.webm?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Google%20Timelapse-%20Nairobi%2C%20Kenya.webm?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Google%20Timelapse-%20Nairobi%2C%20Kenya.webm?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
@@ -906,21 +930,21 @@ derivative work: Jjtkk · CC BY 3.0</p>
                     <span class="size">29 MB</span>
                 </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p34"
-            aria-label="Credit">i</button><span id="p34" popover class="pop">Google Earth · CC BY 3.0</span><a class="edit"
+            popovertarget="p35"
+            aria-label="Credit">i</button><span id="p35" popover class="pop">Google Earth · CC BY 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P10"
        aria-label="Edit">✎</a></span>
     </figure>
-    <dialog id="d33"
+    <dialog id="d34"
         class="lightbox k-video"
         closedby="any"
-        aria-labelledby="d33-h"
+        aria-labelledby="d34-h"
         style="--a:1.7778">
     <header>
-        <h2 id="d33-h">video</h2>
+        <h2 id="d34-h">video</h2>
         <button type="button"
                 command="close"
-                commandfor="d33"
+                commandfor="d34"
                 aria-label="Close">×</button>
     </header>
     <div class="stage"><video controls
@@ -1130,12 +1154,12 @@ derivative work: Jjtkk · CC BY 3.0</p>
     <div><span class="chip">wikipedia <b>210</b> ✓</span><span class="chip">wikivoyage <b>19</b> ✓</span><span class="chip">wikinews <b>5</b> ✓</span><span class="chip">wikiquote <b>3</b></span></div>
 </div>
     </div><div data-slot="identifiers">
-        <button class="more" type="button" command="show-modal" commandfor="d35"># 84</button><dialog id="d35" closedby="any">
+        <button class="more" type="button" command="show-modal" commandfor="d36"># 84</button><dialog id="d36" closedby="any">
         <header>
             <h2>84</h2>
             <button type="button"
                     command="close"
-                    commandfor="d35"
+                    commandfor="d36"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><div class="idlist"><div><span>archINFORM location ID</span><span>8464</span></div><div><span>BabelNet ID</span><span>00015561n</span></div><div><span>BBC News topic ID</span><span>cq26565v4d9t</span></div><div><span>BBC Things ID</span><span>bfe2de9d-fde7-4781-89ca-1735ede10982</span></div><div><span>Bibliothèque nationale de France ID</span><span>118650453</span></div><div><span>BlackPast.org ID</span><span>global-african-history/nairobi-kenya</span></div><div><span>Canadiana Name Authority ID</span><span>ncf10290894</span></div><div><span>CERL Thesaurus ID</span><span>cnl00030086</span></div><div><span>Comic Vine ID</span><span>4020-61168</span></div><div><span>Curlie ID</span><span>Regional/Africa/Kenya/Localities/Nairobi/</span></div><div><span>Data Commons ID</span><span>wikidataId/Q3870</span></div><div><span>Daum Encyclopedia ID</span><span>b03n2669a</span></div><div><span>De Agostini ID</span><span>Nairobi</span></div><div><span>Dewey Decimal Classification</span><span>2--67625</span></div><div><span>Encyclopædia Britannica Online ID</span><span>place/Nairobi</span></div><div><span>Encyclopædia Universalis ID</span><span>nairobi</span></div><div><span>Facebook location ID</span><span>114751268540391</span></div><div><span>FactGrid item ID</span><span>Q449252</span></div><div><span>FAST ID</span><span>1204373</span></div><div><span>FIPS 10-4 (countries and regions)</span><span>KE05</span></div><div><span>France 24 topic ID (French)</span><span>nairobi</span></div><div><span>Freebase ID</span><span>/m/05d49</span></div><div><span>GeoNames ID</span><span>184745</span></div><div><span>Getty Thesaurus of Geographic Names ID</span><span>7001116</span></div><div><span>GitHub topic</span><span>nairobi</span></div><div><span>GND ID</span><span>4041172-2</span></div><div><span>GNS Unique Feature ID</span><span>-2258072</span></div><div><span>Golden ID (archived)</span><span>Nairobi-PJED</span></div><div><span>Google Maps Customer ID</span><span>17856493610344092236</span></div><div><span>Google News topics ID</span><span>CAAqIQgKIhtDQkFTRGdvSUwyMHZNRFZrTkRrU0FtcGhLQUFQAQ</span></div><div><span>Gran Enciclopèdia Catalana ID</span><span>nairobi-0</span></div><div><span>Gran Enciclopèdia Catalana ID (former scheme)</span><span>0045300</span></div><div><span>Great Norwegian Encyclopedia ID</span><span>Nairobi</span></div><div><span>Great Russian Encyclopedia Online ID (2017)</span><span>2246269</span></div><div><span>Gynopedia ID</span><span>Nairobi</span></div><div><span>Harper&#39;s tag</span><span>nairobi</span></div><div><span>HASC</span><span>KE.NB</span></div><div><span>IdRef ID</span><span>029153042</span></div><div><span>iNaturalist place ID</span><span>10957</span></div><div><span>Interlingual Index ID</span><span>i83637</span></div><div><span>ISNI</span><span>000000010791732X</span></div><div><span>ISO 3166-2 code</span><span>KE-110</span></div><div><span>J9U entity ID</span><span>987007552644805171</span></div><div><span>KBpedia ID</span><span>NairobiArea-Kenya</span></div><div><span>Le Figaro tag ID</span><span>Nairobi</span></div><div><span>Lex ID</span><span>Nairobi</span></div><div><span>Library of Congress Authorities ID</span><span>n79011090</span></div><div><span>museum-digital place ID</span><span>20868</span></div><div><span>MusicBrainz area ID</span><span>4cc373f3-8b60-400b-8aa3-6df3fe4ab8fb</span></div><div><span>National Historical Museums of Sweden ID</span><span>geo/24610d81-9de7-4a91-97fc-9bb4cf1b8c7e</span></div><div><span>National Library of Spain SpMaBN ID</span><span>XX453921</span></div><div><span>Naver Encyclopedia ID (pre-August 2026)</span><span>1074255</span></div><div><span>NDL Authority ID</span><span>00628843</span></div><div><span>NL CR AUT ID</span><span>ge432139</span></div><div><span>OmegaWiki Defined Meaning</span><span>457020</span></div><div><span>Online PWN Encyclopedia ID</span><span>3945429</span></div><div><span>OpenHistoricalMap relation ID</span><span>2862891</span></div><div><span>OpenStreetMap relation ID</span><span>9185096</span></div><div><span>OpenWeatherMap city ID</span><span>184745</span></div><div><span>Proleksis enciklopedija ID</span><span>38283</span></div><div><span>RKD thesaurus ID</span><span>15689</span></div><div><span>SBN place ID</span><span>TSAL000079</span></div><div><span>SNARC ID</span><span>Q1381</span></div><div><span>SVKKL authority ID</span><span>0423566-Nairobi-Kena</span></div><div><span>Treccani ID</span><span>nairobi</span></div><div><span>Treccani&#39;s Dizionario di Storia ID</span><span>nairobi</span></div><div><span>Treccani&#39;s Enciclopedia Italiana ID</span><span>nairobi</span></div><div><span>Tripadvisor ID</span><span>294207</span></div><div><span>U.S. National Archives Identifier</span><span>10044568</span></div><div><span>UK Parliament thesaurus ID</span><span>11803</span></div><div><span>UN/LOCODE</span><span>KENBO</span></div><div><span>VIAF cluster ID</span><span>264835402</span></div><div><span>Vikidia article ID</span><span>fr:Nairobi</span></div><div><span>Vikidia article ID</span><span>en:Nairobi</span></div><div><span>Vikidia article ID</span><span>it:Nairobi</span></div><div><span>Vikidia article ID</span><span>es:Nairobi</span></div><div><span>Who&#39;s on First ID</span><span>421174401</span></div><div><span>WikiKids ID</span><span>Nairobi</span></div><div><span>Wikisimpsons article ID</span><span>49149</span></div><div><span>WOEID</span><span>1528488</span></div><div><span>WordNet 3.1 Synset ID</span><span>08948355-n</span></div><div><span>WorldCat Entities ID</span><span>E39PBJccgHVhXJcjCxQ6cXJxDq</span></div><div><span>YSO ID</span><span>110125</span></div><div><span>‎Yale LUX ID</span><span>place/2594dec6-5ad7-4c29-9b82-864ef69905b3</span></div></div></div>
@@ -1511,6 +1535,83 @@ document.addEventListener( 'close', ( event ) => {
 		element.querySelector( 'img' ).replaceWith( canvas );
 		run();
 	}
+} )();
+// The qr-map element: the map of a dialog, which the reader moves and
+// zooms, drawn by Leaflet with the tiles of Wikimedia maps in the page
+// language. Progressive enhancement only: the element holds the static map
+// of the page, and without this script or without Leaflet it stays. The
+// server gives the data (the pin, the box to show first, the markers, the
+// outlines); the script draws it, and CSS gives the colours by the class
+// names. Leaflet loads once, when the first map dialog opens: a map needs
+// the size of its box, and a closed dialog has none.
+// One function scope: the page scripts share one script element.
+( () => {
+	const root = document.documentElement;
+	// The design base is on a page that the server sends (not in a file).
+	const base = root.dataset.design;
+	if ( !base || !( 'customElements' in window ) ) {
+		return;
+	}
+	const tiles = `https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}{r}.png?lang=${ encodeURIComponent( root.lang ) }`;
+	const load = ( element ) => new Promise( ( resolve, reject ) => {
+		element.onload = resolve;
+		element.onerror = reject;
+		document.head.append( element );
+	} );
+	let loading;
+	const leaflet = () => loading ??= Promise.all( [
+		load( Object.assign( document.createElement( 'link' ), { rel: 'stylesheet', href: `${ base }/leaflet.css` } ) ),
+		load( Object.assign( document.createElement( 'script' ), { src: `${ base }/leaflet.js` } ) )
+	] ).then( () => window.L );
+
+	customElements.define( 'qr-map', class extends HTMLElement {
+		connectedCallback() {
+			this.dialog = this.closest( 'dialog' );
+			this.dialog?.addEventListener( 'toggle', ( event ) => {
+				if ( event.newState === 'open' ) {
+					this.open();
+				}
+			} );
+		}
+
+		async open() {
+			if ( this.map ) {
+				// The window can have changed since the last open.
+				this.map.invalidateSize();
+				return;
+			}
+			const L = await leaflet().catch( () => null );
+			// The dialog can have closed while Leaflet loaded: the next open draws.
+			if ( !L || this.map || !this.dialog.open ) {
+				return;
+			}
+			const data = JSON.parse( this.dataset.map );
+			const icon = ( className ) => L.divIcon( { className, iconSize: null } );
+			const attribution = Object.assign( document.createElement( 'a' ), {
+				href: 'https://www.openstreetmap.org/copyright',
+				textContent: this.dataset.attribution
+			} ).outerHTML;
+
+			this.replaceChildren();
+			const map = this.map = L.map( this );
+			map.attributionControl.setPrefix( false );
+			map.fitBounds( data.bounds );
+			L.tileLayer( tiles, { maxZoom: 18, attribution } ).addTo( map );
+			for ( const outline of data.outlines ) {
+				const className = outline.main ? 'main' : 'other';
+				if ( outline.rings.length ) {
+					L.polygon( outline.rings, { className, interactive: false } ).addTo( map );
+				}
+				if ( outline.lines.length ) {
+					L.polyline( outline.lines, { className: `${ className } open`, interactive: false } ).addTo( map );
+				}
+			}
+			for ( const marker of data.markers ) {
+				L.marker( marker.at, { icon: icon( 'marker' ), title: marker.label, keyboard: false } ).addTo( map );
+			}
+			L.marker( data.pin, { icon: icon( 'pin' ), interactive: false, keyboard: false } ).addTo( map );
+		}
+	} );
 } )();
 // The qr-names element: the names of the item in many languages, as one
 // choice of language and the group of that language. Progressive

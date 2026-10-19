@@ -10,10 +10,12 @@
 use askama::Template;
 
 use super::design::{STYLESHEET, scripts};
+use super::map::Frame;
 use super::ui::{Arg, Ref, Shown, Ui};
 use crate::localize::format::Part;
 use crate::localize::{Label, SpreadView, View};
 use crate::primitives::fact::Fact;
+use crate::primitives::map::{Map, MapShape};
 use crate::primitives::media::Media;
 use crate::primitives::{
     absent, credits, earlier, fact, identifiers, kind, links, map, media, names, network, peers,
@@ -151,6 +153,34 @@ struct TocHtml<'a> {
 struct CreditHtml<'a> {
     ui: &'a Ui<'a>,
     c: &'a Credit,
+}
+
+#[derive(Template)]
+#[template(path = "parts/map_frame.html")]
+struct MapFrameHtml<'a> {
+    ui: &'a Ui<'a>,
+    f: &'a Frame<'a>,
+    lazy: bool,
+}
+
+#[derive(Template)]
+#[template(path = "parts/map_shapes.html")]
+struct MapShapesHtml<'a> {
+    ui: &'a Ui<'a>,
+    shapes: &'a [MapShape],
+}
+
+#[derive(Template)]
+#[template(path = "parts/map_dialog.html")]
+struct MapDialogHtml<'a> {
+    ui: &'a Ui<'a>,
+    n: u32,
+    heading: &'a str,
+    f: &'a Frame<'a>,
+    /// The JSON for map.js (render/map.rs `live`).
+    data: &'a str,
+    /// The map of the item; None for the map of a coordinate pin.
+    b: Option<&'a Map>,
 }
 
 #[derive(Template)]
@@ -294,6 +324,34 @@ impl<'v> Ui<'v> {
             ui: self,
             b,
             n: n.get(),
+        })
+    }
+
+    /// The static map of a frame; `lazy` in a dialog.
+    pub fn map_frame(&self, f: &Frame, lazy: bool) -> String {
+        render(MapFrameHtml { ui: self, f, lazy })
+    }
+
+    pub fn map_shapes(&self, shapes: &[MapShape]) -> String {
+        render(MapShapesHtml { ui: self, shapes })
+    }
+
+    /// The dialog of a map: the map that the reader moves and zooms.
+    pub fn map_dialog(
+        &self,
+        n: impl Arg<u32>,
+        heading: impl Ref<str>,
+        f: &Frame,
+        data: impl Ref<str>,
+        b: Option<&Map>,
+    ) -> String {
+        render(MapDialogHtml {
+            ui: self,
+            n: n.get(),
+            heading: heading.r(),
+            f,
+            data: data.r(),
+            b,
         })
     }
 

@@ -1,0 +1,25 @@
+{#- The static map of a frame: the tile, the outlines of the shapes, the pin
+    and the markers, placed by render/map.rs. `lazy`: in a dialog, which
+    loads nothing while it is closed. -#}
+<img src="{{ f.tile }}" alt=""{% if lazy %} loading="lazy"{% endif %}>
+{%- if !f.outlines.is_empty() %}
+    <svg class="outlines"
+         viewBox="0 0 100 100"
+         preserveAspectRatio="none"
+         aria-hidden="true">
+        {%- for (d, main) in f.outlines.iter() -%}
+            <path class="{% if *main %}main{% else %}other{% endif %}" d="{{ d }}" />
+        {%- endfor -%}
+    </svg>
+{%- endif -%}
+{%- if let Some((left, top)) = f.pin -%}
+    <span class="pin"
+          style="left:{{ ui.percent_css(left) }}%;
+                 top:{{ ui.percent_css(top) }}%"></span>
+{%- endif -%}
+{%- for (left, top, mk) in f.markers -%}
+    <span class="marker"
+          style="left:{{ ui.percent_css(left) }}%;
+                 top:{{ ui.percent_css(top) }}%"
+          title="{{ ui.property(mk.pid).text }}"></span>
+{%- endfor -%}

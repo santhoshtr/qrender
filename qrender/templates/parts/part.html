@@ -24,17 +24,13 @@
 {#- On the Earth: a pin that opens a map of the point. -#}
 {%- if *earth -%}
     {%- let n = ui.id() -%}
+    {%- let f = ui.point_frame(lat, lon) -%}
     <button class="pin-link"
             type="button"
             command="show-modal"
             commandfor="d{{ n }}"
             aria-label="{{ ui.msg("qrender-show-map") }}">📍</button>{{ text }}
-    {%- call m::dialog(ui, n, text) -%}
-    <figure class="map point">
-        <img src="{{ ui.point_tile(lat, lon) }}" alt="" loading="lazy">
-        <span class="pin" style="left:50%; top:50%"></span>
-    </figure>
-    {%- endcall -%}
+    {{- ui.map_dialog(n, text, f, ui.live_point(f), None)|safe -}}
 {%- else -%}
     {{ text }}
 {%- endif -%}

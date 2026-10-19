@@ -18,6 +18,8 @@
 	"qrender-view-model": "The label of the button on the picture of a 3D model of the item: it opens a dialog where the reader can turn the model. Screen readers read it.",
 	"qrender-model-loading": "The status over the picture of a 3D model while the model file loads (it can be tens of MB). Parameters:\n* $1 - the share loaded, as a percentage (\"45%\"); empty when the size of the file is not known.",
 	"qrender-model-unsupported": "The status over the picture of a 3D model when the file is in a format that the page cannot draw (an ASCII STL file). The picture stays.",
+	"qrender-explore-map": "The label of the button on the map of the item: it opens a dialog with the map, large, which the reader can move and zoom. Screen readers read it.",
+	"qrender-map-attribution": "The credit of the map data, in the corner of a map that the reader moves and zooms. It links to the copyright page of OpenStreetMap.",
 	"qrender-view-all": "The label of the last card of a strip of pictures (the values of one property): it opens a dialog with all the values, with their pictures and qualifiers. The count is in the heading of the strip.",
 	"qrender-former": "A mark after the label of a row of the fact sheet: its values ended (the former capitals of a country). The current values of the property are in another row or block.",
 	"qrender-description": "The name of the (i) button after the label of a property: it shows the description of the property. Screen readers read it.",

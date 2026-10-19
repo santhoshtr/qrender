@@ -12,47 +12,16 @@
 
 	& img { display: block; inline-size: 100%; block-size: 100%; object-fit: cover; }
 
-	/* The outlines of the shapes: the preferred one solid with a light fill,
-	   the others dashed. The line keeps its width when the frame scales. */
+	/* The outlines, the pin and the markers, placed by the renderer on its
+	   frame; their look is below. A line keeps its width when the frame
+	   scales. */
 	& .outlines {
 		position: absolute;
 		inset: 0;
 		inline-size: 100%;
 		block-size: 100%;
 
-		& path {
-			fill: none;
-			fill-rule: evenodd;
-			stroke: var( --ink );
-			stroke-width: 2;
-			vector-effect: non-scaling-stroke;
-		}
-
-		& .main { fill: color-mix( in srgb, var( --ink ) 12%, transparent ); }
-		& .other { stroke-dasharray: 6 4; }
-	}
-
-	/* Physical left and top: a map does not flip with the text direction. */
-	& .pin {
-		position: absolute;
-		inline-size: 16px;
-		block-size: 16px;
-		translate: -50% -50%;
-		border-radius: 50%;
-		background-color: var( --color-progressive );
-		border: 3px solid #fff;
-		box-shadow: 0 0 0 1px rgba( 0, 0, 0, 0.4 );
-	}
-
-	/* The extreme points of the item, placed by the renderer on its frame. */
-	& .marker {
-		position: absolute;
-		inline-size: 10px;
-		block-size: 10px;
-		translate: -50% -50%;
-		rotate: 45deg;
-		background-color: var( --ink );
-		border: 2px solid #fff;
+		& path { vector-effect: non-scaling-stroke; }
 	}
 
 	& figcaption {
@@ -105,7 +74,84 @@
 	cursor: pointer;
 }
 
-.dialog-body > .map.point {
-	column-span: all;
-	inline-size: min( 100%, 800px );
+/* The marks of a map, the same on the static map and on the map that the
+   reader moves (Leaflet draws them with these classes). The outlines of
+   the shapes: the preferred one solid with a light fill, the others
+   dashed; an open line has no fill. Physical left and top on the static
+   map: a map does not flip with the text direction. */
+:is( .map .outlines, qr-map ) path {
+	fill: none;
+	fill-opacity: 1;
+	fill-rule: evenodd;
+	stroke: var( --ink );
+	stroke-opacity: 1;
+	stroke-width: 2;
+
+	&.main { fill: color-mix( in srgb, var( --ink ) 12%, transparent ); }
+	&.other { stroke-dasharray: 6 4; }
+	&.open { fill: none; }
+}
+
+:is( .map, qr-map ) .pin {
+	position: absolute;
+	inline-size: 16px;
+	block-size: 16px;
+	translate: -50% -50%;
+	border-radius: 50%;
+	background-color: var( --color-progressive );
+	border: 3px solid #fff;
+	box-shadow: 0 0 0 1px rgba( 0, 0, 0, 0.4 );
+}
+
+/* The extreme points of the item: a diamond. The box is not rotated, its
+   ::before is: Leaflet places a marker by its transform, and a rotation
+   of the box would turn that place too. */
+:is( .map, qr-map, .map-legend ) .marker {
+	position: absolute;
+	inline-size: 10px;
+	block-size: 10px;
+	translate: -50% -50%;
+
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		rotate: 45deg;
+		background-color: var( --ink );
+		border: 2px solid #fff;
+	}
+}
+
+/* The map in a dialog: the reader moves it and zooms it. Until Leaflet
+   has drawn it, the static map of the page. */
+qr-map {
+	display: block;
+	inline-size: 100%;
+	aspect-ratio: 8 / 5;
+	max-block-size: 70vh;
+
+	& > .map { border-radius: 0; }
+
+	&.leaflet-container {
+		font: inherit;
+		font-size: var( --font-size-x-small );
+		background-color: var( --background-color-neutral );
+	}
+}
+
+/* Under the map in its dialog: what each marker is. */
+.map-legend {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var( --spacing-25 ) var( --spacing-150 );
+	margin: 0 0 var( --spacing-50 );
+	padding: 0;
+	list-style: none;
+
+	& .marker {
+		position: relative;
+		display: inline-block;
+		translate: none;
+		margin-inline-end: var( --spacing-75 );
+	}
 }

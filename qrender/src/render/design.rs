@@ -7,7 +7,7 @@
 //! template partials, then the CSS of each primitive in the order of
 //! `Primitive::ALL`. A page gets
 //! the scripts of the primitives it shows. A library that a script loads
-//! (ECharts) is served by the same route, not put in the page.
+//! (ECharts, Leaflet) is served by the same route, not put in the page.
 
 use std::sync::LazyLock;
 
@@ -25,6 +25,11 @@ const TOKENS: &str = include_str!("../../design/tokens.css");
 /// server serves it by the design route; `chart.js` loads it.
 pub const ECHARTS: &str = include_str!("../../assets/vendor/echarts/echarts.common.min.js");
 
+/// Leaflet, for the qr-map element (the map of a dialog). The server
+/// serves it by the design route; `map.js` loads it.
+pub const LEAFLET_JS: &str = include_str!("../../assets/vendor/leaflet/leaflet.js");
+pub const LEAFLET_CSS: &str = include_str!("../../assets/vendor/leaflet/leaflet.css");
+
 /// The CSS of the page grid and of the templates (the design system's own).
 const BASE: [&str; 6] = [
     include_str!("../../design/base.css"),
@@ -35,15 +40,17 @@ const BASE: [&str; 6] = [
     include_str!("../../design/templates/collapsed.css"),
 ];
 
-/// The scripts of every page: progressive enhancement only. The lightbox
-/// and 3D model scripts are here, not with a primitive: the media,
-/// pictures and other blocks show the files of the item.
-pub const PAGE_SCRIPTS: [&str; 5] = [
+/// The scripts of every page: progressive enhancement only. The lightbox,
+/// 3D model and map scripts are here, not with a primitive: the media,
+/// pictures and other blocks show the files of the item, and a coordinate
+/// pin (a map) can be in any block.
+pub const PAGE_SCRIPTS: [&str; 6] = [
     include_str!("../../assets/invokers.js"),
     include_str!("../../assets/intl.js"),
     include_str!("../../assets/play.js"),
     include_str!("../../assets/lightbox.js"),
     include_str!("../../assets/model.js"),
+    include_str!("../../assets/map.js"),
 ];
 
 /// The CSS and the JavaScript of a primitive, from its module.
