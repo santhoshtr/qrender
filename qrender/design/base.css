@@ -503,6 +503,86 @@ dialog.lightbox {
 	}
 }
 
+/* The sections of an article in another language (the fallback article):
+   the full width of the spread, the text in a column of reading width.
+   Subsections are collapsed to their titles. */
+.article-slot {
+	grid-column: 1 / -1;
+	display: grid;
+	gap: var( --spacing-150 );
+}
+
+.article-section {
+	font-family: var( --font-family-serif );
+	font-size: var( --font-size-medium );
+
+	& .head {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		justify-content: space-between;
+		gap: var( --spacing-50 ) var( --spacing-150 );
+		max-inline-size: 70ch;
+
+		& > :is( h3, h4, h5, h6 ) {
+			margin: 0;
+			font-family: var( --font-family-system-sans );
+			font-size: var( --font-size-large );
+		}
+	}
+
+	& .source {
+		max-inline-size: 70ch;
+		line-height: 1.7;
+
+		& :is( p, ul, ol, dl, blockquote ) {
+			margin-block: var( --spacing-50 ) var( --spacing-75 );
+			text-wrap: pretty;
+		}
+	}
+
+	& .read {
+		font-family: var( --font-family-system-sans );
+		font-size: var( --font-size-small );
+		font-weight: var( --font-weight-semi-bold );
+	}
+
+	/* A heading in a summary: inline, beside the marker of the summary. */
+	& summary {
+		cursor: pointer;
+
+		& > :is( h3, h4, h5, h6 ) { display: inline; }
+	}
+
+	/* A section collapsed to its head: the head is a flex row (the title,
+	   then its actions), which has no marker of its own. */
+	&:is( details ) > summary.head {
+		list-style: none;
+
+		&::-webkit-details-marker { display: none; }
+
+		& > :is( h3, h4, h5, h6 )::before {
+			content: '▸';
+			display: inline-block;
+			inline-size: 1.2em;
+			color: var( --color-subtle );
+		}
+	}
+
+	&:is( details[ open ] ) > summary.head > :is( h3, h4, h5, h6 )::before { content: '▾'; }
+
+	& .subsection {
+		margin-block: var( --spacing-50 );
+
+		& > summary > :is( h4, h5, h6 ) {
+			font-family: var( --font-family-system-sans );
+			font-size: var( --font-size-medium );
+		}
+
+		& > :not( summary ) { margin-inline-start: var( --spacing-150 ); }
+	}
+}
+
 /* A play link of an audio file (play.js): a small round button. */
 .play {
 	display: inline-grid;

@@ -38,8 +38,12 @@ pub struct View {
     pub projects: Vec<Project>,
     /// The spreads that have something to show.
     pub spreads: Vec<SpreadView>,
-    /// The article sections that no spread matched.
+    /// The article sections that no spread matched (their titles), when
+    /// the page does not show their content.
     pub unmatched_sections: Vec<Link>,
+    /// The same sections with their content: for a fallback article.
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub more_sections: Vec<ProseSection>,
     /// The values that the page does not show: not of the best rank.
     #[serde(skip_serializing_if = "Vec::is_empty")]
     pub set_aside: Vec<StatementRef>,
@@ -113,10 +117,31 @@ pub struct SpreadView {
     pub spread: Spread,
     /// The label of the spread's concept.
     pub title: Option<Label>,
-    /// The first paragraph of the article section of the spread.
+    /// The first paragraph of the article section of the spread, when the
+    /// page does not show its content.
     pub prose_text: Option<SectionProse>,
     /// The article sections of the spread.
     pub prose_links: Vec<Link>,
+    /// The article sections of the spread with their content: for a
+    /// fallback article.
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub sections: Vec<ProseSection>,
+}
+
+/// A section of the fallback article, with its content and its
+/// subsections.
+#[derive(Debug, Clone, Serialize, JsonSchema)]
+pub struct ProseSection {
+    pub title: String,
+    pub anchor: String,
+    /// The section in the article.
+    pub href: String,
+    pub lang: Lang,
+    /// 2 for a section, 3 for its subsection, and so on.
+    pub level: u8,
+    /// Cleaned HTML, as the lead: `p`, `ul`, `ol`, `dl`, `blockquote`.
+    pub blocks: Vec<String>,
+    pub sections: Vec<ProseSection>,
 }
 
 #[derive(Debug, Clone, Serialize, JsonSchema)]

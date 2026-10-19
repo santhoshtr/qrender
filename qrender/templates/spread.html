@@ -13,6 +13,7 @@
              data-spread="{{ s.spread.id }}"
              data-dimension="{{ s.spread.dimension.name() }}">
         {%- if s.spread.id != "identity" -%}{%- if let Some(t) = s.title %}<h2><span class="title">{{ ui.text(t, false)|safe }}</span></h2>{% endif -%}{%- endif -%}
+        {%- if !s.sections.is_empty() %}<div class="article-slot">{% for a in s.sections %}{{ ui.article_section(a, false)|safe }}{% endfor %}</div>{% endif -%}
         {%- if let Some(p) = s.prose_text %}<div class="prose-slot" lang="{{ p.lang }}"><p>{{ p.html|safe }}</p><a class="read" href="{{ p.href }}">{{ p.title }} ↗</a></div>{% endif -%}
         {%- for (slot, blocks) in s.spread.slots -%}
             {{ ui.slot(slot, blocks.as_slice())|safe }}

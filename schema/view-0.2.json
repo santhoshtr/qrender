@@ -3368,6 +3368,54 @@
       ],
       "type": "object"
     },
+    "ProseSection": {
+      "description": "A section of the fallback article, with its content and its\nsubsections.",
+      "properties": {
+        "anchor": {
+          "type": "string"
+        },
+        "blocks": {
+          "description": "Cleaned HTML, as the lead: `p`, `ul`, `ol`, `dl`, `blockquote`.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "href": {
+          "description": "The section in the article.",
+          "type": "string"
+        },
+        "lang": {
+          "$ref": "#/$defs/Lang"
+        },
+        "level": {
+          "description": "2 for a section, 3 for its subsection, and so on.",
+          "format": "uint8",
+          "maximum": 255,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "sections": {
+          "items": {
+            "$ref": "#/$defs/ProseSection"
+          },
+          "type": "array"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "anchor",
+        "href",
+        "lang",
+        "level",
+        "blocks",
+        "sections"
+      ],
+      "type": "object"
+    },
     "ProseSource": {
       "enum": [
         "lead"
@@ -4315,7 +4363,14 @@
               "type": "null"
             }
           ],
-          "description": "The first paragraph of the article section of the spread."
+          "description": "The first paragraph of the article section of the spread, when the\npage does not show its content."
+        },
+        "sections": {
+          "description": "The article sections of the spread with their content: for a\nfallback article.",
+          "items": {
+            "$ref": "#/$defs/ProseSection"
+          },
+          "type": "array"
         },
         "silent": {
           "description": "Primitives that had too little data, with the reason.",
@@ -4951,6 +5006,13 @@
       "description": "The interface messages of the page language.",
       "type": "object"
     },
+    "more_sections": {
+      "description": "The same sections with their content: for a fallback article.",
+      "items": {
+        "$ref": "#/$defs/ProseSection"
+      },
+      "type": "array"
+    },
     "page_images": {
       "additionalProperties": false,
       "description": "Pictures from articles, for item values that have no picture.",
@@ -4992,7 +5054,7 @@
       "type": "array"
     },
     "unmatched_sections": {
-      "description": "The article sections that no spread matched.",
+      "description": "The article sections that no spread matched (their titles), when\nthe page does not show their content.",
       "items": {
         "$ref": "#/$defs/Link"
       },

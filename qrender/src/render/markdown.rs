@@ -10,7 +10,7 @@
 use content::{EntityId, Pid};
 
 use crate::localize::format::Part;
-use crate::localize::{Label, SpreadView, View};
+use crate::localize::{Label, ProseSection, SpreadView, View};
 use crate::primitives::{
     absent, credits, earlier, fact, identifiers, kind, links, map, media, names, network, peers,
     pictures, prose, provenance, scale, score, series, sitelinks, sounds, split, succession,
@@ -40,12 +40,19 @@ pub fn page(view: &View) -> String {
             md.items(&md.property(pid), &values);
         }
     }
-    if !view.unmatched_sections.is_empty() {
-        let links: Vec<_> = view
-            .unmatched_sections
-            .iter()
-            .map(|l| format!("[{}]({})", l.text, l.href))
-            .collect();
+    // The titles of the sections that no spread shows; with their content
+    // (a fallback article), the titles only too.
+    let links: Vec<_> = view
+        .unmatched_sections
+        .iter()
+        .map(|l| format!("[{}]({})", l.text, l.href))
+        .chain(
+            view.more_sections
+                .iter()
+                .map(|s| format!("[{}]({})", s.title, s.href)),
+        )
+        .collect();
+    if !links.is_empty() {
         md.paragraph(&format!("Article sections: {}", links.join(" · ")));
     }
     md.paragraph(&format!(
@@ -53,6 +60,13 @@ pub fn page(view: &View) -> String {
         view.qid, view.composition, view.schema, view.design
     ));
     md.out
+}
+
+/// The first block of a section, or of its first subsection that has one.
+fn first_block(s: &ProseSection) -> Option<&String> {
+    s.blocks
+        .first()
+        .or_else(|| s.sections.iter().find_map(first_block))
 }
 
 pub struct Markdown<'v> {
@@ -69,6 +83,17 @@ impl Markdown<'_> {
         }
         if let Some(p) = &s.prose_text {
             self.paragraph(&format!("{} ([{}]({}))", plain(&p.html), p.title, p.href));
+        } else if let Some((section, block)) =
+            s.sections.iter().find_map(|a| Some((a, first_block(a)?)))
+        {
+            // The sections with their content (a fallback article): their
+            // first paragraph, as for a section without it.
+            self.paragraph(&format!(
+                "{} ([{}]({}))",
+                plain(block),
+                section.title,
+                section.href
+            ));
         }
         for block in s.spread.slots.values().flatten() {
             self.block(block);

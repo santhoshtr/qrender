@@ -33,6 +33,17 @@
         {%- for s in view.spreads %}
             {{ ui.spread(s)|safe }}
         {%- endfor %}
+        {%- if !view.more_sections.is_empty() %}
+            <section class="spread t-article"
+                     id="article"
+                     data-spread="article"
+                     data-dimension="neutral">
+                <h2><span class="title">{{ ui.msg("qrender-article-more") }}</span></h2>
+                <div class="article-slot">
+                    {%- for a in view.more_sections %}{{ ui.article_section(a, true)|safe }}{% endfor -%}
+                </div>
+            </section>
+        {%- endif %}
         {%- if !view.unmatched_sections.is_empty() %}
             <section class="spread t-sheet"
                      data-spread="evidence"

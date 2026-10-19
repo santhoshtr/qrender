@@ -13,7 +13,7 @@ use super::design::{STYLESHEET, scripts};
 use super::map::Frame;
 use super::ui::{Arg, Ref, Shown, Ui};
 use crate::localize::format::Part;
-use crate::localize::{Label, SpreadView, View};
+use crate::localize::{Label, ProseSection, SpreadView, View};
 use crate::primitives::fact::Fact;
 use crate::primitives::map::{Map, MapShape};
 use crate::primitives::media::Media;
@@ -184,6 +184,22 @@ struct MapDialogHtml<'a> {
 }
 
 #[derive(Template)]
+#[template(path = "parts/article_section.html")]
+struct ArticleSectionHtml<'a> {
+    ui: &'a Ui<'a>,
+    s: &'a ProseSection,
+    /// At the end of the page: the whole section collapsed to its title.
+    collapsed: bool,
+}
+
+#[derive(Template)]
+#[template(path = "parts/article_subsection.html")]
+struct ArticleSubsectionHtml<'a> {
+    ui: &'a Ui<'a>,
+    s: &'a ProseSection,
+}
+
+#[derive(Template)]
 #[template(path = "parts/lightbox.html")]
 struct LightboxHtml<'a> {
     ui: &'a Ui<'a>,
@@ -325,6 +341,20 @@ impl<'v> Ui<'v> {
             b,
             n: n.get(),
         })
+    }
+
+    /// A section of the fallback article; `collapsed` at the end of the
+    /// page.
+    pub fn article_section(&self, s: &ProseSection, collapsed: bool) -> String {
+        render(ArticleSectionHtml {
+            ui: self,
+            s,
+            collapsed,
+        })
+    }
+
+    pub fn article_subsection(&self, s: &ProseSection) -> String {
+        render(ArticleSubsectionHtml { ui: self, s })
     }
 
     /// The static map of a frame; `lazy` in a dialog.

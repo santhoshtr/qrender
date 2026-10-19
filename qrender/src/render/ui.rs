@@ -67,6 +67,7 @@ macro_rules! arg {
 arg!(
     f64,
     i64,
+    u8,
     u64,
     u32,
     usize,
@@ -759,6 +760,17 @@ impl<'v> Ui<'v> {
 
     pub fn wikipedia_logo(&self) -> &'static str {
         WIKIPEDIA_LOGO
+    }
+
+    /// The heading of an article section of a level: the spread title is
+    /// `h2`, so a section (level 2) is `h3`, its subsection `h4`.
+    pub fn section_tag(&self, level: impl Arg<u8>) -> &'static str {
+        match level.get() {
+            0..=2 => "h3",
+            3 => "h4",
+            4 => "h5",
+            _ => "h6",
+        }
     }
 
     /// The note at the end of the page, with a link to the item.

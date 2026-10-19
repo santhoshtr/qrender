@@ -18,8 +18,8 @@ use content::{EntityId, Lang, Pid, Qid, Text};
 use serde_json::Value;
 
 pub use view::{
-    Article, Coverage, Description, Label, Link, PageImage, Project, SectionProse, SpreadView,
-    VIEW_SCHEMA, View,
+    Article, Coverage, Description, Label, Link, PageImage, Project, ProseSection, SectionProse,
+    SpreadView, VIEW_SCHEMA, View,
 };
 
 use crate::compose::picture::media_kind;
@@ -142,9 +142,11 @@ impl<'a> Localizer<'a> {
                     !v.spread.slots.is_empty()
                         || !v.spread.topics.is_empty()
                         || v.prose_text.is_some()
+                        || !v.sections.is_empty()
                 })
                 .collect(),
             unmatched_sections: self.unmatched_sections(),
+            more_sections: self.more_sections(),
             set_aside: self.composition.set_aside.clone(),
             labels,
         }
@@ -326,11 +328,61 @@ impl<'a> Localizer<'a> {
             .prose
             .as_ref()
             .map_or(&[][..], |p| p.concepts.as_slice());
+        let sections = self.outline_sections(concepts);
         SpreadView {
             spread: spread.clone(),
             title: spread.concept.map(|q| self.concept(q)),
-            prose_text: self.section_prose(concepts),
+            prose_text: sections
+                .is_empty()
+                .then(|| self.section_prose(concepts))
+                .flatten(),
             prose_links: self.section_links(concepts),
+            sections,
+        }
+    }
+
+    /// The sections of the concepts, with their content: the outline of
+    /// the fallback article (empty for an article in the page language).
+    fn outline_sections(&self, concepts: &[Qid]) -> Vec<ProseSection> {
+        let Some((article, source)) = self.article() else {
+            return Vec::new();
+        };
+        let mut anchors: Vec<&String> = concepts
+            .iter()
+            .flat_map(|q| article.concept_sections.get(q).into_iter().flatten())
+            .collect();
+        let mut seen = BTreeSet::new();
+        anchors.retain(|a| seen.insert(*a));
+        anchors
+            .into_iter()
+            .filter_map(|a| article.outline.iter().find(|s| s.anchor == *a))
+            .map(|s| self.prose_section(s, article, source))
+            .collect()
+    }
+
+    fn prose_section(
+        &self,
+        s: &content::OutlineSection,
+        article: &content::Article,
+        source: &str,
+    ) -> ProseSection {
+        ProseSection {
+            title: s.title.clone(),
+            anchor: s.anchor.clone(),
+            href: format!("{}#{}", article_url(source, &article.title), s.anchor),
+            lang: source.parse().expect("a language code"),
+            level: s.level,
+            blocks: s
+                .blocks
+                .iter()
+                .map(|b| self.rewrite(b, article, source))
+                .filter(|b| !b.is_empty())
+                .collect(),
+            sections: s
+                .sections
+                .iter()
+                .map(|c| self.prose_section(c, article, source))
+                .collect(),
         }
     }
 
@@ -363,10 +415,35 @@ impl<'a> Localizer<'a> {
             .collect()
     }
 
+    /// The titles of the sections that no spread shows, when the page does
+    /// not show their content (`more_sections`).
     fn unmatched_sections(&self) -> Vec<Link> {
+        match self.article() {
+            Some((article, source)) if article.outline.is_empty() => self
+                .unmatched(article, source)
+                .into_iter()
+                .map(|s| section_link(article, source, &s.anchor))
+                .collect(),
+            _ => Vec::new(),
+        }
+    }
+
+    /// The sections that no spread shows, with their content: for a
+    /// fallback article.
+    fn more_sections(&self) -> Vec<ProseSection> {
         let Some((article, source)) = self.article() else {
             return Vec::new();
         };
+        self.unmatched(article, source)
+            .into_iter()
+            .filter_map(|s| article.outline.iter().find(|o| o.anchor == s.anchor))
+            .map(|s| self.prose_section(s, article, source))
+            .collect()
+    }
+
+    /// The top-level sections of the article that no spread of this page
+    /// shows, without the apparatus (notes, references, links).
+    fn unmatched(&self, article: &'a content::Article, source: &str) -> Vec<&'a content::Section> {
         // The sections that a spread of this page shows: the sections of its
         // prose concepts. A concept of another layout shows nothing here.
         let used: BTreeSet<&String> = self
@@ -392,7 +469,6 @@ impl<'a> Localizer<'a> {
             .iter()
             .filter(|s| !used.contains(&s.anchor))
             .filter(|s| !apparatus.contains(&s.title.trim().to_lowercase()))
-            .map(|s| section_link(article, source, &s.anchor))
             .collect()
     }
 

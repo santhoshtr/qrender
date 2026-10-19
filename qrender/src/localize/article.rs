@@ -5,6 +5,8 @@
 //! come out:
 //! - `a`, with an `href` that this module builds;
 //! - `b` and `i`, without attributes;
+//! - the blocks of a section, without attributes: `p`, `ul`, `ol`, `li`,
+//!   `dl`, `dt`, `dd`, `blockquote`;
 //! - `ruby`, `rt` and `span`, which this module adds for a gloss.
 //!
 //! Every other element is removed with its content (scripts, styles,
@@ -82,7 +84,9 @@ fn clean(el: &mut Element, links: &Links) {
             el.replace(&alt, ContentType::Text);
         }
         "a" => link(el, links),
-        "b" | "i" => strip_attributes(el),
+        "b" | "i" | "p" | "ul" | "ol" | "li" | "dl" | "dt" | "dd" | "blockquote" => {
+            strip_attributes(el)
+        }
         _ => el.remove_and_keep_content(),
     }
 }
