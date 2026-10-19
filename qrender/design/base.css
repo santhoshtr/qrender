@@ -253,6 +253,35 @@ dialog {
 	}
 }
 
+/* A file of the item in its dialog: the file over the whole width, as high
+   as the window lets it be, and its words under it. */
+dialog.lightbox {
+	inline-size: min( 1200px, 100vw - 2 * var( --gutter ) );
+	max-block-size: 95vh;
+
+	& .stage {
+		background-color: #1b1f23;
+
+		& > img {
+			display: block;
+			inline-size: 100%;
+			max-block-size: 70vh;
+			aspect-ratio: var( --a );
+			object-fit: contain;
+		}
+	}
+
+	&.k-drawing .stage { background-color: var( --background-color-base ); }
+
+	& .about {
+		padding: var( --spacing-75 ) var( --spacing-100 );
+		font-size: var( --font-size-small );
+
+		& p { margin: 0 0 var( --spacing-25 ); }
+		& .credit { color: var( --color-subtle ); }
+	}
+}
+
 /* ---------- chrome ---------- */
 
 .chrome {
@@ -482,7 +511,7 @@ dialog {
 	background-color: #1b1f23;
 
 	& > img,
-	& > a > img,
+	& > .zoom > img,
 	& > video {
 		display: block;
 		inline-size: 100%;
@@ -490,7 +519,16 @@ dialog {
 		object-fit: cover;
 	}
 
-	& > a { display: contents; }
+	/* The picture is a button: it opens the dialog of the file. */
+	& > .zoom {
+		display: block;
+		inline-size: 100%;
+		block-size: 100%;
+		padding: 0;
+		border: 0;
+		background: none;
+		cursor: zoom-in;
+	}
 
 	& figcaption {
 		position: absolute;

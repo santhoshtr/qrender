@@ -41,17 +41,52 @@ expression: html
 </div>
     </div><div data-slot="hero">
         <figure class="m k-photo" style="--a:1.8618">
-        <a href="https://commons.wikimedia.org/wiki/File:Vista_Theater_Presenting_One_Battle_After_Another_in_VistaVision_Sign.jpg">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d1"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Vista%20Theater%20Presenting%20One%20Battle%20After%20Another%20in%20VistaVision%20Sign.jpg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Vista%20Theater%20Presenting%20One%20Battle%20After%20Another%20in%20VistaVision%20Sign.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Vista%20Theater%20Presenting%20One%20Battle%20After%20Another%20in%20VistaVision%20Sign.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Vista%20Theater%20Presenting%20One%20Battle%20After%20Another%20in%20VistaVision%20Sign.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Vista%20Theater%20Presenting%20One%20Battle%20After%20Another%20in%20VistaVision%20Sign.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Vista%20Theater%20Presenting%20One%20Battle%20After%20Another%20in%20VistaVision%20Sign.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" fetchpriority="high">
-        </a><span class="tools"><button class="info"
+        </button><span class="tools"><button class="info"
             type="button"
-            popovertarget="p1"
-            aria-label="Credit">i</button><span id="p1" popover class="pop">Sevgonlernassau · CC BY 4.0</span><a class="edit"
+            popovertarget="p2"
+            aria-label="Credit">i</button><span id="p2" popover class="pop">Sevgonlernassau · CC BY 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P18"
        aria-label="Edit">✎</a></span>
     </figure>
+    <dialog id="d1"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d1-h"
+        style="--a:1.8618">
+    <header>
+        <h2 id="d1-h">image</h2>
+        <button type="button"
+                command="close"
+                commandfor="d1"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Vista%20Theater%20Presenting%20One%20Battle%20After%20Another%20in%20VistaVision%20Sign.jpg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Vista%20Theater%20Presenting%20One%20Battle%20After%20Another%20in%20VistaVision%20Sign.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Vista%20Theater%20Presenting%20One%20Battle%20After%20Another%20in%20VistaVision%20Sign.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Vista%20Theater%20Presenting%20One%20Battle%20After%20Another%20in%20VistaVision%20Sign.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Vista%20Theater%20Presenting%20One%20Battle%20After%20Another%20in%20VistaVision%20Sign.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Vista%20Theater%20Presenting%20One%20Battle%20After%20Another%20in%20VistaVision%20Sign.jpg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p><a href="https://www.wikidata.org/wiki/Q7936468">Vista Theatre</a></p>
+        
+            <p class="credit">Sevgonlernassau · CC BY 4.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Vista_Theater_Presenting_One_Battle_After_Another_in_VistaVision_Sign.jpg">Vista Theater Presenting One Battle After Another in VistaVision Sign.jpg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q117085614#P18"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog>
     </div><div data-slot="kind">
         <div class="kind"><div>
             <span class="k">instance of</span><a href="https://www.wikidata.org/wiki/Q11424">film</a></div></div>
@@ -71,8 +106,8 @@ expression: html
             </span>
         <span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p2"
-            aria-label="Credit">i</button><span id="p2" popover class="pop">Photo presumably taken by &#34;Mr. DiLillo&#34;, who was identified as staff photographer of The Oysterette (Mead 1989, p. 170). · Public domain</span><a class="edit"
+            popovertarget="p3"
+            aria-label="Credit">i</button><span id="p3" popover class="pop">Photo presumably taken by &#34;Mr. DiLillo&#34;, who was identified as staff photographer of The Oysterette (Mead 1989, p. 170). · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P1877"
        aria-label="Edit">✎</a></span></figure></div></div></div><dl class="sheet" data-slot="sheet"><div class="row r-list"><dt>genre</dt>
 <dd><span class="v"><a href="https://www.wikidata.org/wiki/Q5778924">black comedy film</a>
@@ -157,8 +192,8 @@ expression: html
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q38111">Leonardo DiCaprio</a></b><span><a href="https://www.wikidata.org/wiki/Q137550600">Bob Ferguson</a></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p4"
-            aria-label="Credit">i</button><span id="p4" popover class="pop">Raph_PH · CC BY 4.0</span><a class="edit"
+            popovertarget="p5"
+            aria-label="Credit">i</button><span id="p5" popover class="pop">Raph_PH · CC BY 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P161"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.6668">
@@ -170,8 +205,8 @@ expression: html
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q44221">Sean Penn</a></b><span>Col. Steven J. Lockjaw</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p5"
-            aria-label="Credit">i</button><span id="p5" popover class="pop">Harald Krichel · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p6"
+            aria-label="Credit">i</button><span id="p6" popover class="pop">Harald Krichel · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P161"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.7503">
@@ -183,8 +218,8 @@ expression: html
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q7708542">Teyana Taylor</a></b><span>Perfidia</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p6"
-            aria-label="Credit">i</button><span id="p6" popover class="pop">VOA · Public domain</span><a class="edit"
+            popovertarget="p7"
+            aria-label="Credit">i</button><span id="p7" popover class="pop">VOA · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P161"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.6667">
@@ -196,8 +231,8 @@ expression: html
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q193668">Benicio del Toro</a></b><span>Sensei Sergio St. Carlos</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p7"
-            aria-label="Credit">i</button><span id="p7" popover class="pop">Harald Krichel · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p8"
+            aria-label="Credit">i</button><span id="p8" popover class="pop">Harald Krichel · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P161"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.7086">
@@ -209,8 +244,8 @@ expression: html
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q235141">Regina Hall</a></b><span>Deandra</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p8"
-            aria-label="Credit">i</button><span id="p8" popover class="pop">The Other Side · CC BY 3.0</span><a class="edit"
+            popovertarget="p9"
+            aria-label="Credit">i</button><span id="p9" popover class="pop">The Other Side · CC BY 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P161"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.6691">
@@ -222,8 +257,8 @@ expression: html
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q125156936">Chase Infiniti</a></b><span>Willa</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p9"
-            aria-label="Credit">i</button><span id="p9" popover class="pop">JoshPopov · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p10"
+            aria-label="Credit">i</button><span id="p10" popover class="pop">JoshPopov · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P161"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.75">
@@ -235,8 +270,8 @@ expression: html
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q224754">Tony Goldwyn</a></b><span>Virgil Throckmorton</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p10"
-            aria-label="Credit">i</button><span id="p10" popover class="pop">LBJ Library from Austin · Public domain</span><a class="edit"
+            popovertarget="p11"
+            aria-label="Credit">i</button><span id="p11" popover class="pop">LBJ Library from Austin · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P161"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.7949">
@@ -248,8 +283,8 @@ expression: html
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q1151457">D. W. Moffett</a></b><span>Bill Desmond</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p11"
-            aria-label="Credit">i</button><span id="p11" popover class="pop">US_Army_53056_Ambassadors_of_Hollywood_visit_Afghanistan.jpg: Spc. Elisebet Freeburg, Joint Sustainment Command-Afghanistan, PAO
+            popovertarget="p12"
+            aria-label="Credit">i</button><span id="p12" popover class="pop">US_Army_53056_Ambassadors_of_Hollywood_visit_Afghanistan.jpg: Spc. Elisebet Freeburg, Joint Sustainment Command-Afghanistan, PAO
 derivative work: B3t (talk) · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P161"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
@@ -262,8 +297,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q1288447">Kevin Tighe</a></b><span>Roy More</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p12"
-            aria-label="Credit">i</button><span id="p12" popover class="pop">NBC Television · Public domain</span><a class="edit"
+            popovertarget="p13"
+            aria-label="Credit">i</button><span id="p13" popover class="pop">NBC Television · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P161"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.6648">
@@ -275,8 +310,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q1321005">Wood Harris</a></b><span>Laredo</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p13"
-            aria-label="Credit">i</button><span id="p13" popover class="pop">Senior Airman Jet Fabara · Public domain</span><a class="edit"
+            popovertarget="p14"
+            aria-label="Credit">i</button><span id="p14" popover class="pop">Senior Airman Jet Fabara · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P161"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.7473">
@@ -288,8 +323,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q16726249">Alana Haim</a></b><span>Mae West</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p14"
-            aria-label="Credit">i</button><span id="p14" popover class="pop">Lyn Fairly Media · CC BY 3.0</span><a class="edit"
+            popovertarget="p15"
+            aria-label="Credit">i</button><span id="p15" popover class="pop">Lyn Fairly Media · CC BY 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P161"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.784">
@@ -301,15 +336,15 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q122783389">Jon Beavers</a></b><span>1776 James</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p15"
-            aria-label="Credit">i</button><span id="p15" popover class="pop">Sarran Hamilton · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p16"
+            aria-label="Credit">i</button><span id="p16" popover class="pop">Sarran Hamilton · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P161"
-       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d3">View all</button></div><dialog id="d3" closedby="any">
+       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d4">View all</button></div><dialog id="d4" closedby="any">
         <header>
             <h2>cast member</h2>
             <button type="button"
                     command="close"
-                    commandfor="d3"
+                    commandfor="d4"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -528,8 +563,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q25132">Paul Thomas Anderson</a></b><span><a href="https://www.wikidata.org/wiki/Property:P57">director</a> · <a href="https://www.wikidata.org/wiki/Property:P58">screenwriter</a> · <a href="https://www.wikidata.org/wiki/Property:P162">producer</a></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p17"
-            aria-label="Credit">i</button><span id="p17" popover class="pop">Lyn Fairly Media · CC BY 3.0</span><a class="edit"
+            popovertarget="p18"
+            aria-label="Credit">i</button><span id="p18" popover class="pop">Lyn Fairly Media · CC BY 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P57"
        aria-label="Edit">✎</a></span></figure><figure class="m k-empty" style="--a:1.333">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q6204042">JoAnne Sellar</a></b><span><a href="https://www.wikidata.org/wiki/Property:P162">producer</a></span>
@@ -571,8 +606,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q286410">Jonny Greenwood</a></b><span><a href="https://www.wikidata.org/wiki/Property:P86">composer</a></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p18"
-            aria-label="Credit">i</button><span id="p18" popover class="pop">Zach Klein · CC BY 2.5</span><a class="edit"
+            popovertarget="p19"
+            aria-label="Credit">i</button><span id="p19" popover class="pop">Zach Klein · CC BY 2.5</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P86"
        aria-label="Edit">✎</a></span></figure><figure class="m k-empty" style="--a:1.333">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q110393717">Michael Bauman</a></b><span><a href="https://www.wikidata.org/wiki/Property:P344">director of photography</a></span>
@@ -604,12 +639,12 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
        aria-label="Edit">✎</a>
         
     </span>
-</figure><button class="view-all" type="button" command="show-modal" commandfor="d16">View all</button></div><dialog id="d16" closedby="any">
+</figure><button class="view-all" type="button" command="show-modal" commandfor="d17">View all</button></div><dialog id="d17" closedby="any">
         <header>
             <h2>director, screenwriter, producer, composer, director of photography, film editor, film crew member</h2>
             <button type="button"
                     command="close"
-                    commandfor="d16"
+                    commandfor="d17"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -706,8 +741,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q488702">Eureka</a></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p20"
-            aria-label="Credit">i</button><span id="p20" popover class="pop">Robert Campbell · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p21"
+            aria-label="Credit">i</button><span id="p21" popover class="pop">Robert Campbell · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P915"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:2.0186">
@@ -719,8 +754,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q18013">Sacramento</a></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p21"
-            aria-label="Credit">i</button><span id="p21" popover class="pop">Quintin Soloviev · CC BY 4.0</span><a class="edit"
+            popovertarget="p22"
+            aria-label="Credit">i</button><span id="p22" popover class="pop">Quintin Soloviev · CC BY 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P915"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.6212">
@@ -732,8 +767,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q49240">Stockton</a></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p22"
-            aria-label="Credit">i</button><span id="p22" popover class="pop">Quintin Soloviev · CC BY 4.0</span><a class="edit"
+            popovertarget="p23"
+            aria-label="Credit">i</button><span id="p23" popover class="pop">Quintin Soloviev · CC BY 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P915"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3333">
@@ -745,8 +780,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q6464680">La Purisima Mission</a></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p23"
-            aria-label="Credit">i</button><span id="p23" popover class="pop">Jsweida · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p24"
+            aria-label="Credit">i</button><span id="p24" popover class="pop">Jsweida · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P915"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3333">
@@ -758,8 +793,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q2049424">Borrego Springs</a></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p24"
-            aria-label="Credit">i</button><span id="p24" popover class="pop">Perdelsky at English Wikipedia · Public domain</span><a class="edit"
+            popovertarget="p25"
+            aria-label="Credit">i</button><span id="p25" popover class="pop">Perdelsky at English Wikipedia · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P915"
        aria-label="Edit">✎</a></span></figure><figure class="m k-empty" style="--a:1.333">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q7413623">Otay Mesa Detention Center</a></b>
@@ -771,12 +806,12 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
        aria-label="Edit">✎</a>
         
     </span>
-</figure><button class="view-all" type="button" command="show-modal" commandfor="d19">View all</button></div><dialog id="d19" closedby="any">
+</figure><button class="view-all" type="button" command="show-modal" commandfor="d20">View all</button></div><dialog id="d20" closedby="any">
         <header>
             <h2>filming location</h2>
             <button type="button"
                     command="close"
-                    commandfor="d19"
+                    commandfor="d20"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -856,8 +891,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q20970431">3:2</a></b><span><a href="https://www.wikidata.org/wiki/Q1788758">VistaVision</a> · 1.5:1</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p26"
-            aria-label="Credit">i</button><span id="p26" popover class="pop">Jerzy Jalocha N · Public domain</span><a class="edit"
+            popovertarget="p27"
+            aria-label="Credit">i</button><span id="p27" popover class="pop">Jerzy Jalocha N · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P2061"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:1.7358">
@@ -869,8 +904,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q1383069">16:9</a></b><span><a href="https://www.wikidata.org/wiki/Q47770">Blu-ray Disc</a> · <a href="https://www.wikidata.org/wiki/Q723685">video on demand</a> · 1.78:1</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p27"
-            aria-label="Credit">i</button><span id="p27" popover class="pop">Jerzy Jalocha N · Public domain</span><a class="edit"
+            popovertarget="p28"
+            aria-label="Credit">i</button><span id="p28" popover class="pop">Jerzy Jalocha N · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P2061"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:1.8019">
@@ -882,8 +917,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q21037379">1.85:1</a></b><span><a href="https://www.wikidata.org/wiki/Q5294">DVD</a> · <a href="https://www.wikidata.org/wiki/Q26225765">theatrical version</a></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p28"
-            aria-label="Credit">i</button><span id="p28" popover class="pop">Jerzy Jalocha N · Public domain</span><a class="edit"
+            popovertarget="p29"
+            aria-label="Credit">i</button><span id="p29" popover class="pop">Jerzy Jalocha N · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P2061"
        aria-label="Edit">✎</a></span></figure><figure class="m k-empty" style="--a:1.333">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q22987783">10:7</a></b><span><a href="https://www.wikidata.org/wiki/Q188575">IMAX</a> · 1.43:1</span>
@@ -905,12 +940,12 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
        aria-label="Edit">✎</a>
         
     </span>
-</figure><button class="view-all" type="button" command="show-modal" commandfor="d25">View all</button></div><dialog id="d25" closedby="any">
+</figure><button class="view-all" type="button" command="show-modal" commandfor="d26">View all</button></div><dialog id="d26" closedby="any">
         <header>
             <h2>aspect ratio (W:H)</h2>
             <button type="button"
                     command="close"
-                    commandfor="d25"
+                    commandfor="d26"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -977,8 +1012,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><span>production company</span><b><a href="https://www.wikidata.org/wiki/Q8016302">Warner Bros. Pictures</a></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p29"
-            aria-label="Credit">i</button><span id="p29" popover class="pop">Coolcaesar · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p30"
+            aria-label="Credit">i</button><span id="p30" popover class="pop">Coolcaesar · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P272"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:1">
@@ -990,8 +1025,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><span>country of origin</span><b><a href="https://www.wikidata.org/wiki/Q30">United States</a></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p30"
-            aria-label="Credit">i</button><span id="p30" popover class="pop">UN Office for the Coordination of Humanitarian Affairs (OCHA) · CC BY 3.0</span><a class="edit"
+            popovertarget="p31"
+            aria-label="Credit">i</button><span id="p31" popover class="pop">UN Office for the Coordination of Humanitarian Affairs (OCHA) · CC BY 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P495"
        aria-label="Edit">✎</a></span></figure></div></div></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>original language of film or TV show</dt>
 <dd><a href="https://www.wikidata.org/wiki/Q1860">English</a></dd>
@@ -1065,8 +1100,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><span>distributed by</span><b><a href="https://www.wikidata.org/wiki/Q8016302">Warner Bros. Pictures</a></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p31"
-            aria-label="Credit">i</button><span id="p31" popover class="pop">Coolcaesar · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p32"
+            aria-label="Credit">i</button><span id="p32" popover class="pop">Coolcaesar · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P750"
        aria-label="Edit">✎</a></span></figure><figure class="m k-empty" style="--a:1.333">
     <figcaption><span>distributed by</span><b><a href="https://www.wikidata.org/wiki/Q1097348">InterCom</a></b><span><a href="https://www.wikidata.org/wiki/Q28">Hungary</a></span>
@@ -1227,12 +1262,12 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P166"
        aria-label="Edit">✎</a>
-    </span><button class="more" type="button" command="show-modal" commandfor="d32">+5</button><dialog id="d32" closedby="any">
+    </span><button class="more" type="button" command="show-modal" commandfor="d33">+5</button><dialog id="d33" closedby="any">
         <header>
             <h2>award received</h2>
             <button type="button"
                     command="close"
-                    commandfor="d32"
+                    commandfor="d33"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -1383,12 +1418,12 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P1411"
        aria-label="Edit">✎</a>
-    </span><button class="more" type="button" command="show-modal" commandfor="d33">+6</button><dialog id="d33" closedby="any">
+    </span><button class="more" type="button" command="show-modal" commandfor="d34">+6</button><dialog id="d34" closedby="any">
         <header>
             <h2>nominated for</h2>
             <button type="button"
                     command="close"
-                    commandfor="d33"
+                    commandfor="d34"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -1536,8 +1571,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><span>MPA film rating</span><b><a href="https://www.wikidata.org/wiki/Q18665344">R</a></b><span>rating certificate ID: <data value="55553" data-f="number">55553</data> · <a href="https://www.wikidata.org/wiki/Q117501801">Violence (MPA)</a> · <a href="https://www.wikidata.org/wiki/Q121597885">Drug use</a> · <a href="https://www.wikidata.org/wiki/Q123985313">Pervasive language</a> · <a href="https://www.wikidata.org/wiki/Q123986363">Sexual content</a></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p34"
-            aria-label="Credit">i</button><span id="p34" popover class="pop">w:Motion Picture Association · Public domain</span><a class="edit"
+            popovertarget="p35"
+            aria-label="Credit">i</button><span id="p35" popover class="pop">w:Motion Picture Association · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P1657"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:1">
@@ -1549,8 +1584,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><span>BBFC rating</span><b><a href="https://www.wikidata.org/wiki/Q4550895">15 certificate</a></b><span><a href="https://www.wikidata.org/wiki/Q101979266">Strong language</a> · <a href="https://www.wikidata.org/wiki/Q101979422">Violence</a> · <a href="https://www.wikidata.org/wiki/Q102174580">Sex references</a> · <a href="https://www.wikidata.org/wiki/Q105639382">Sexual violence</a></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p35"
-            aria-label="Credit">i</button><span id="p35" popover class="pop">British Board of Film Classification · Public domain</span><a class="edit"
+            popovertarget="p36"
+            aria-label="Credit">i</button><span id="p36" popover class="pop">British Board of Film Classification · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P2629"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:1">
@@ -1562,8 +1597,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><span>FSK film rating</span><b><a href="https://www.wikidata.org/wiki/Q20644797">FSK 16</a></b><span>rating certificate ID: <data value="272971" data-f="number">272971</data></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p36"
-            aria-label="Credit">i</button><span id="p36" popover class="pop">Infanf · Public domain</span><a class="edit"
+            popovertarget="p37"
+            aria-label="Credit">i</button><span id="p37" popover class="pop">Infanf · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P1981"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:1.5754">
@@ -1575,8 +1610,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><span>EIRIN film rating</span><b><a href="https://www.wikidata.org/wiki/Q23790279">PG12</a></b><span>rating certificate ID: <data value="60749" data-f="number">60749</data></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p37"
-            aria-label="Credit">i</button><span id="p37" popover class="pop">映画倫理委員会 (Film Classification and Rating Organization of Japan) · Public domain</span><a class="edit"
+            popovertarget="p38"
+            aria-label="Credit">i</button><span id="p38" popover class="pop">映画倫理委員会 (Film Classification and Rating Organization of Japan) · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P2756"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:1.7652">
@@ -1588,8 +1623,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><span>CBFC rating</span><b><a href="https://www.wikidata.org/wiki/Q56902855">A certificate</a></b><span>2025 · DFL/3/64/2025-MUM</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p38"
-            aria-label="Credit">i</button><span id="p38" popover class="pop">Central Board of Film Certification · Public domain</span><a class="edit"
+            popovertarget="p39"
+            aria-label="Credit">i</button><span id="p39" popover class="pop">Central Board of Film Certification · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P6452"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:1">
@@ -1601,8 +1636,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><span>Australian Classification</span><b><a href="https://www.wikidata.org/wiki/Q26708077">M</a></b><span>CLAS-979013 · <a href="https://www.wikidata.org/wiki/Q68182045">Violence</a> · <a href="https://www.wikidata.org/wiki/Q68182093">Coarse language</a> · <a href="https://www.wikidata.org/wiki/Q68182330">Mature themes</a> · <a href="https://www.wikidata.org/wiki/Q69569595">Sexual references</a></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p39"
-            aria-label="Credit">i</button><span id="p39" popover class="pop">User:JamesHenstridge · Public domain</span><a class="edit"
+            popovertarget="p40"
+            aria-label="Credit">i</button><span id="p40" popover class="pop">User:JamesHenstridge · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P3156"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:1">
@@ -1614,8 +1649,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><span>OFLC classification</span><b><a href="https://www.wikidata.org/wiki/Q66812927">R16</a></b><span><a href="https://www.wikidata.org/wiki/Q68181753">Offensive language</a> · <a href="https://www.wikidata.org/wiki/Q68181937">Violence</a> · <a href="https://www.wikidata.org/wiki/Q69821989">Sexual material</a></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p40"
-            aria-label="Credit">i</button><span id="p40" popover class="pop">Original: Classification Office (New Zealand); Recreated by FireDragonValo · Public domain</span><a class="edit"
+            popovertarget="p41"
+            aria-label="Credit">i</button><span id="p41" popover class="pop">Original: Classification Office (New Zealand); Recreated by FireDragonValo · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P7327"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:1">
@@ -1627,8 +1662,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><span>NMHH film rating</span><b><a href="https://www.wikidata.org/wiki/Q21571490">Category V</a></b><span>NFT/27425/2025</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p41"
-            aria-label="Credit">i</button><span id="p41" popover class="pop">This image was created by me, Matthew with Inkscape based on directive 10/2012. (III. 28.) NMHH. · Public domain</span><a class="edit"
+            popovertarget="p42"
+            aria-label="Credit">i</button><span id="p42" popover class="pop">This image was created by me, Matthew with Inkscape based on directive 10/2012. (III. 28.) NMHH. · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P2363"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:2.3127">
@@ -1640,8 +1675,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><span>IMDA rating</span><b><a href="https://www.wikidata.org/wiki/Q52382311">M18</a></b><span><a href="https://www.wikidata.org/wiki/Q108878608">Coarse language</a></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p42"
-            aria-label="Credit">i</button><span id="p42" popover class="pop">Original: Infocomm Media Development Authority (Singapore); Converted to SVG by FireDragonValo · Public domain</span><a class="edit"
+            popovertarget="p43"
+            aria-label="Credit">i</button><span id="p43" popover class="pop">Original: Infocomm Media Development Authority (Singapore); Converted to SVG by FireDragonValo · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P5201"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:1">
@@ -1653,8 +1688,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><span>IFCO rating</span><b><a href="https://www.wikidata.org/wiki/Q74434535">15A</a></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p43"
-            aria-label="Credit">i</button><span id="p43" popover class="pop">Original: IFCO; Converted to SVG by FireDragonValo · Public domain</span><a class="edit"
+            popovertarget="p44"
+            aria-label="Credit">i</button><span id="p44" popover class="pop">Original: IFCO; Converted to SVG by FireDragonValo · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P7573"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:1">
@@ -1666,8 +1701,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><span>ClassInd rating</span><b><a href="https://www.wikidata.org/wiki/Q26678735">16</a></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p44"
-            aria-label="Credit">i</button><span id="p44" popover class="pop">Ministério da Justiça e Segurança Pública do Brasil · Public domain</span><a class="edit"
+            popovertarget="p45"
+            aria-label="Credit">i</button><span id="p45" popover class="pop">Ministério da Justiça e Segurança Pública do Brasil · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P3216"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:0.8346">
@@ -1679,8 +1714,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><span>ICAA rating</span><b><a href="https://www.wikidata.org/wiki/Q27253947">Not recommended for minors under 16</a></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p45"
-            aria-label="Credit">i</button><span id="p45" popover class="pop">Government of Spain · Public domain</span><a class="edit"
+            popovertarget="p46"
+            aria-label="Credit">i</button><span id="p46" popover class="pop">Government of Spain · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P3306"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:1.6151">
@@ -1692,8 +1727,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><span>INCAA film rating</span><b><a href="https://www.wikidata.org/wiki/Q27925241">+16</a></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p46"
-            aria-label="Credit">i</button><span id="p46" popover class="pop">Original: Instituto Nacional de Cine y Artes Audiovisuales; Converted to SVG by FireDragonValo · Public domain</span><a class="edit"
+            popovertarget="p47"
+            aria-label="Credit">i</button><span id="p47" popover class="pop">Original: Instituto Nacional de Cine y Artes Audiovisuales; Converted to SVG by FireDragonValo · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P3428"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:1">
@@ -1705,8 +1740,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><span>KMRB film rating</span><b><a href="https://www.wikidata.org/wiki/Q28951021">15</a></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p47"
-            aria-label="Credit">i</button><span id="p47" popover class="pop">™/® Korea Media Rating Board · Public domain</span><a class="edit"
+            popovertarget="p48"
+            aria-label="Credit">i</button><span id="p48" popover class="pop">™/® Korea Media Rating Board · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P3818"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:1.2987">
@@ -1718,8 +1753,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><span>FPB rating</span><b><a href="https://www.wikidata.org/wiki/Q42012505">16</a></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p48"
-            aria-label="Credit">i</button><span id="p48" popover class="pop">FPB, vector by FireDragonValo for Film and Publication Board of South Africa · Public domain</span><a class="edit"
+            popovertarget="p49"
+            aria-label="Credit">i</button><span id="p49" popover class="pop">FPB, vector by FireDragonValo for Film and Publication Board of South Africa · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P4437"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:2.0645">
@@ -1731,8 +1766,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><span>RCQ classification</span><b><a href="https://www.wikidata.org/wiki/Q62371961">13+</a></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p49"
-            aria-label="Credit">i</button><span id="p49" popover class="pop">Ministère de la Culture et des Communications (Quebec) · Public domain</span><a class="edit"
+            popovertarget="p50"
+            aria-label="Credit">i</button><span id="p50" popover class="pop">Ministère de la Culture et des Communications (Quebec) · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P6658"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:1">
@@ -1744,8 +1779,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><span>Kijkwijzer rating</span><b><a href="https://www.wikidata.org/wiki/Q23649984">16</a></b><span><a href="https://www.wikidata.org/wiki/Q98034423">Violence</a> · <a href="https://www.wikidata.org/wiki/Q98042270">Coarse language</a></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p50"
-            aria-label="Credit">i</button><span id="p50" popover class="pop">Nederlands Instituut voor de Classificatie voor Audiovisueel Materiaal (NICAM) · Public domain</span><a class="edit"
+            popovertarget="p51"
+            aria-label="Credit">i</button><span id="p51" popover class="pop">Nederlands Instituut voor de Classificatie voor Audiovisueel Materiaal (NICAM) · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P2684"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:1.0057">
@@ -1757,8 +1792,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><span>RTC film rating</span><b><a href="https://www.wikidata.org/wiki/Q28980118">B15</a></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p51"
-            aria-label="Credit">i</button><span id="p51" popover class="pop">Government of Mexico · Public domain</span><a class="edit"
+            popovertarget="p52"
+            aria-label="Credit">i</button><span id="p52" popover class="pop">Government of Mexico · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P3834"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:1.002">
@@ -1770,8 +1805,8 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
          loading="lazy">
     <figcaption><span>RARS rating</span><b><a href="https://www.wikidata.org/wiki/Q23308564">18+</a></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p52"
-            aria-label="Credit">i</button><span id="p52" popover class="pop">Art. Lebedev Studio (Студия Артемия Лебедева) · Public domain</span><a class="edit"
+            popovertarget="p53"
+            aria-label="Credit">i</button><span id="p53" popover class="pop">Art. Lebedev Studio (Студия Артемия Лебедева) · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P2637"
        aria-label="Edit">✎</a></span></figure></div></div></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>CNC film rating (France)</dt>
 <dd><span class="v"><a href="https://www.wikidata.org/wiki/Q23817729">no age restriction</a>
@@ -1805,20 +1840,55 @@ derivative work: B3t (talk) · Public domain</span><a class="edit"
              data-spread="media"
              data-dimension="media"><h2><span class="title">multimedia</span></h2><div data-slot="run">
         <div class="run"> <figure class="m k-drawing" style="--a:1.831">
-        <a href="https://commons.wikimedia.org/wiki/File:One_Battle_After_Another_logo.svg">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d54"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/One%20Battle%20After%20Another%20logo.svg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/One%20Battle%20After%20Another%20logo.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/One%20Battle%20After%20Another%20logo.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/One%20Battle%20After%20Another%20logo.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/One%20Battle%20After%20Another%20logo.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/One%20Battle%20After%20Another%20logo.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
-        </a><figcaption><span>logo image</span>
+        </button><figcaption><span>logo image</span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p53"
-            aria-label="Credit">i</button><span id="p53" popover class="pop">Original:  Warner Bros. Pictures
+            popovertarget="p55"
+            aria-label="Credit">i</button><span id="p55" popover class="pop">Original:  Warner Bros. Pictures
 
 Derivative work:  Logovectorizer · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q117085614#P154"
        aria-label="Edit">✎</a></span>
-    </figure> </div>
+    </figure>
+    <dialog id="d54"
+        class="lightbox k-drawing"
+        closedby="any"
+        aria-labelledby="d54-h"
+        style="--a:1.831">
+    <header>
+        <h2 id="d54-h">logo image</h2>
+        <button type="button"
+                command="close"
+                commandfor="d54"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/One%20Battle%20After%20Another%20logo.svg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/One%20Battle%20After%20Another%20logo.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/One%20Battle%20After%20Another%20logo.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/One%20Battle%20After%20Another%20logo.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/One%20Battle%20After%20Another%20logo.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/One%20Battle%20After%20Another%20logo.svg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">Original:  Warner Bros. Pictures
+
+Derivative work:  Logovectorizer · Public domain</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:One_Battle_After_Another_logo.svg">One Battle After Another logo.svg</a>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q117085614#P154"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog> </div>
     </div><dl class="sheet" data-slot="web"><div class="row r-value"><dt>Commons category</dt>
 <dd><a href="https://commons.wikimedia.org/wiki/Category:One_Battle_After_Another">One Battle After Another</a></dd>
 <span class="tools">
@@ -1885,12 +1955,12 @@ Derivative work:  Logovectorizer · Public domain</span><a class="edit"
     <div><span class="chip">wikipedia <b>51</b> ✓</span><span class="chip">wikiquote <b>1</b> ✓</span></div>
 </div>
     </div><div data-slot="identifiers">
-        <button class="more" type="button" command="show-modal" commandfor="d54"># 98</button><dialog id="d54" closedby="any">
+        <button class="more" type="button" command="show-modal" commandfor="d56"># 98</button><dialog id="d56" closedby="any">
         <header>
             <h2>98</h2>
             <button type="button"
                     command="close"
-                    commandfor="d54"
+                    commandfor="d56"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><div class="idlist"><div><span>Academy Collection film ID</span><span>W1577207</span></div><div><span>AdoroCinema film ID</span><span>311364</span></div><div><span>Allcinema film ID</span><span>400953</span></div><div><span>AllMovie title ID</span><span>am598895</span></div><div><span>AlloCiné film ID</span><span>311364</span></div><div><span>Amazon Prime Video ID</span><span>B0FR6PZZ2C</span></div><div><span>Apple TV movie ID</span><span>umc.cmc.66y1fmjq8p3jni6jntoj53id7</span></div><div><span>Bechdel Test Movie List ID</span><span>11887</span></div><div><span>CineCartaz film ID</span><span>414147</span></div><div><span>CineFAN.ro title ID</span><span>10646-one-battle-after-another-2025</span></div><div><span>CineMagia title ID</span><span>3322169</span></div><div><span>Cinematografo.it film ID (new)</span><span>una-battaglia-dopo-laltra-isstsg9r</span></div><div><span>ComingSoon.it film ID</span><span>66964</span></div><div><span>Common Sense Media ID</span><span>107445</span></div><div><span>Crew United title ID</span><span>358908</span></div><div><span>César Award film ID</span><span>46813</span></div><div><span>Decine21 film ID</span><span>49518</span></div><div><span>Douban film ID</span><span>36176155</span></div><div><span>EIDR content ID</span><span>10.5240/211D-FF57-B1C0-05D5-93ED-F</span></div><div><span>Eiga.com movie ID</span><span>104106</span></div><div><span>elCinema film ID</span><span>2093308</span></div><div><span>Elonet movie ID</span><span>1653971</span></div><div><span>Encyclopædia Britannica Online ID</span><span>topic/One-Battle-After-Another</span></div><div><span>exploitation mark number</span><span>165146</span></div><div><span>Fandango video ID</span><span>4597040</span></div><div><span>Fandom article ID</span><span>warnerbros:One_Battle_After_Another</span></div><div><span>fernsehserien.de ID</span><span>filme/one-battle-after-another</span></div><div><span>Film.ru film ID</span><span>bitva-za-bitvoy</span></div><div><span>FilmAffinity film ID</span><span>910030</span></div><div><span>Filmová databáze film ID</span><span>196269</span></div><div><span>Filmow ID</span><span>t368869</span></div><div><span>Filmstarts title ID</span><span>311364</span></div><div><span>FilmTv.it movie ID</span><span>251744</span></div><div><span>FilmVandaag ID</span><span>film/143439</span></div><div><span>Filmweb.pl film ID</span><span>10059894</span></div><div><span>FVLB work ID</span><span>225116</span></div><div><span>Google Knowledge Graph ID</span><span>/g/11tms1fbgr</span></div><div><span>HBO Max ID</span><span>movie/bebe611d-8178-481a-a4f2-de743b5b135a</span></div><div><span>ICAA film catalogue ID</span><span>44725</span></div><div><span>IGN film ID</span><span>one-battle-after-another</span></div><div><span>Il mondo dei doppiatori ID</span><span>film1/unabattagliadopolaltra</span></div><div><span>IMCDB work ID</span><span>30144839</span></div><div><span>IMDb ID</span><span>tt30144839</span></div><div><span>IMFDB ID</span><span>One_Battle_After_Another</span></div><div><span>ISAN</span><span>0000-0007-7E2D-0000-Z-0000-0000-6</span></div><div><span>kino-teatr.ru film ID</span><span>193473</span></div><div><span>Kino-teatr.ua film ID</span><span>55427</span></div><div><span>Kino.mail.ru film ID</span><span>939925</span></div><div><span>Kinobaza film ID</span><span>one-battle-after-another</span></div><div><span>Kinobox film ID</span><span>3029855</span></div><div><span>Kinofilms.ua film ID</span><span>movie/954426</span></div><div><span>Kinopoisk film ID</span><span>5437094</span></div><div><span>Kinorium movie ID</span><span>10867004</span></div><div><span>LdiF ID</span><span>624998</span></div><div><span>Letterboxd film ID</span><span>one-battle-after-another</span></div><div><span>Lithuanian movie register ID</span><span>FRL03203</span></div><div><span>Metacritic ID</span><span>movie/one-battle-after-another</span></div><div><span>Moviebuff ID</span><span>one-battle-after-another</span></div><div><span>MovieMeter film ID</span><span>1170755</span></div><div><span>Moviepilot.de film ID</span><span>one-battle-after-another</span></div><div><span>Movieplayer film ID</span><span>63959</span></div><div><span>Movies Anywhere ID</span><span>one-battle-after-another-2025</span></div><div><span>MUBI film numeric ID</span><span>363407</span></div><div><span>MYmovies audiovisual work ID</span><span>117029</span></div><div><span>National Library of Poland MMS ID</span><span>9815199968805606</span></div><div><span>OFDb film ID</span><span>396242</span></div><div><span>oKino.ua film ID</span><span>619765</span></div><div><span>OMDb film ID</span><span>288781</span></div><div><span>Plex media key</span><span>6562d1dbf8acedbdfebce1d1</span></div><div><span>PORT film ID</span><span>262145</span></div><div><span>Rate Your Music film ID</span><span>one-battle-after-another</span></div><div><span>RogerEbert.com film ID</span><span>one-battle-after-another-movie-review-2025</span></div><div><span>Rotten Tomatoes ID</span><span>m/one_battle_after_another</span></div><div><span>Schnittberichte.com title ID</span><span>94412</span></div><div><span>SensCritique work ID</span><span>72691307</span></div><div><span>Shazoo tag ID</span><span>23830</span></div><div><span>Sinemalar title ID</span><span>279375</span></div><div><span>SinemaTürk film ID</span><span>76092</span></div><div><span>Swedish Film Database ID</span><span>728206</span></div><div><span>The Guardian topic ID</span><span>film/one-battle-after-another</span></div><div><span>The Numbers movie ID</span><span>One-Battle-After-Another-(2025)</span></div><div><span>TheTVDB movie ID</span><span>355416</span></div><div><span>TMDB movie ID</span><span>1054867</span></div><div><span>Trakt.tv film ID</span><span>848797</span></div><div><span>Trakt.tv ID</span><span>movies/one-battle-after-another-2025</span></div><div><span>TV Spielfilm film ID</span><span>12710300</span></div><div><span>TV Tropes ID</span><span>Film/OneBattleAfterAnother</span></div><div><span>Unconsenting Media ID</span><span>15536</span></div><div><span>VIAF cluster ID</span><span>2005176725915424980003</span></div><div><span>Vokrug.tv show ID</span><span>17431603321</span></div><div><span>Writers Guild of America project ID</span><span>1265934</span></div><div><span>YouTube video ID</span><span>Uye8x9ilHAY</span></div><div><span>ČSFD film ID</span><span>1476388</span></div><div><span>‎BBFC release ID</span><span>one-battle-after-another-q29sbgvjdglvbjpwwc0xmdi5mdix</span></div><div><span>‎Blu-ray.com ID</span><span>1797896</span></div><div><span>‎Does the Dog Die? media ID</span><span>1537151</span></div><div><span>‎Filmarks ID</span><span>movies/121982</span></div><div><span>‎MPA certificate number</span><span>55553</span></div></div></div>

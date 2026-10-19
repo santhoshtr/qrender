@@ -33,18 +33,52 @@ expression: html
     </div>
     </div><div data-slot="band">
         <div class="band"> <figure class="m k-photo" style="--a:6.9825">
-        <a href="https://commons.wikimedia.org/wiki/File:TajMahal_Banner.jpg">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d1"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/TajMahal%20Banner.jpg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/TajMahal%20Banner.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/TajMahal%20Banner.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/TajMahal%20Banner.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/TajMahal%20Banner.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/TajMahal%20Banner.jpg?width=1920 1920w" sizes="100vw"
                  alt="">
-        </a><span class="tools"><button class="info"
+        </button><span class="tools"><button class="info"
             type="button"
-            popovertarget="p1"
-            aria-label="Credit">i</button><span id="p1" popover class="pop">Panoramic View of TajMahal.jpg: Kumaravels
+            popovertarget="p2"
+            aria-label="Credit">i</button><span id="p2" popover class="pop">Panoramic View of TajMahal.jpg: Kumaravels
 derivative work: ויקיג&#39;אנקי · CC BY 2.5 in</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P948"
        aria-label="Edit">✎</a></span>
-    </figure> </div>
+    </figure>
+    <dialog id="d1"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d1-h"
+        style="--a:6.9825">
+    <header>
+        <h2 id="d1-h">പേജ് ബാനർ</h2>
+        <button type="button"
+                command="close"
+                commandfor="d1"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/TajMahal%20Banner.jpg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/TajMahal%20Banner.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/TajMahal%20Banner.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/TajMahal%20Banner.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/TajMahal%20Banner.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/TajMahal%20Banner.jpg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">Panoramic View of TajMahal.jpg: Kumaravels
+derivative work: ויקיג&#39;אנקי · CC BY 2.5 in</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:TajMahal_Banner.jpg">TajMahal Banner.jpg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q668#P948"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog> </div>
     </div><nav class="toc" aria-label="Contents">
     <ul><li data-dimension="names"><a href="#names"><span class="fb" lang="en">name</span></a></li><li data-dimension="names"><a href="#symbols">ദേശീയപ്രതീകം</a></li><li data-dimension="place"><a href="#location">ഭൂമിശാസ്ത്രം</a></li><li data-dimension="people"><a href="#government">സർക്കാർ</a></li><li data-dimension="measures"><a href="#demography">ജനസംഖ്യാപഠനം</a></li><li data-dimension="measures"><a href="#economy">സമ്പദ്ഘടന</a></li><li data-dimension="measures"><a href="#development"><span class="fb" lang="en">socioeconomic development</span></a></li><li data-dimension="place"><a href="#infrastructure"><span class="fb" lang="en">infrastructure</span></a></li><li data-dimension="people"><a href="#culture">സംസ്കാരം</a></li><li data-dimension="people"><a href="#relations">അന്താരാഷ്ട്ര ബന്ധങ്ങൾ</a></li><li data-dimension="time"><a href="#history">ചരിത്രം</a></li><li data-dimension="place"><a href="#maps">ഭൂപടം</a></li><li data-dimension="media"><a href="#media">മൾട്ടിമീഡിയ</a></li><li data-dimension="neutral"><a href="#web"><span class="fb" lang="en">web presence</span></a></li><li data-dimension="neutral"><a href="#evidence">അവലംബം</a></li></ul>
 </nav><div data-slot="lead">
@@ -55,17 +89,50 @@ derivative work: ויקיג&#39;אנקי · CC BY 2.5 in</span><a class="edit"
 </div>
     </div><div data-slot="hero">
         <figure class="m k-drawing" style="--a:0.857">
-        <a href="https://commons.wikimedia.org/wiki/File:India-locator-map-blank.svg">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d3"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/India-locator-map-blank.svg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/India-locator-map-blank.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/India-locator-map-blank.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/India-locator-map-blank.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/India-locator-map-blank.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/India-locator-map-blank.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" fetchpriority="high">
-        </a><span class="tools"><button class="info"
+        </button><span class="tools"><button class="info"
             type="button"
-            popovertarget="p2"
-            aria-label="Credit">i</button><span id="p2" popover class="pop">CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p4"
+            aria-label="Credit">i</button><span id="p4" popover class="pop">CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P18"
        aria-label="Edit">✎</a></span>
     </figure>
+    <dialog id="d3"
+        class="lightbox k-drawing"
+        closedby="any"
+        aria-labelledby="d3-h"
+        style="--a:0.857">
+    <header>
+        <h2 id="d3-h">ചിത്രം</h2>
+        <button type="button"
+                command="close"
+                commandfor="d3"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/India-locator-map-blank.svg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/India-locator-map-blank.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/India-locator-map-blank.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/India-locator-map-blank.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/India-locator-map-blank.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/India-locator-map-blank.svg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">CC BY-SA 3.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:India-locator-map-blank.svg">India-locator-map-blank.svg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q668#P18"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog>
     </div><div data-slot="kind">
         <div class="kind"><div>
             <span class="k">തരം</span><a href="https://www.wikidata.org/wiki/Q3624078">പരമാധികാര രാഷ്ട്രം</a>, <a href="https://www.wikidata.org/wiki/Q6256">ദേശം</a>, <a href="https://www.wikidata.org/wiki/Q223832">ഡൊമീനിയൻ പദവി</a></div></div>
@@ -1421,8 +1488,8 @@ derivative work: ויקיג&#39;אנקי · CC BY 2.5 in</span><a class="edit"
          loading="lazy">
     <figcaption><span>പേര് വന്ന വഴി</span><b><a href="https://www.wikidata.org/wiki/Q7348">സിന്ധു നദി</a></b><span><span lang="en">India</span> <span class="note" data-lang-name="en">en</span></span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p3"
-            aria-label="Credit">i</button><span id="p3" popover class="pop">Kogo · GFDL</span><a class="edit"
+            popovertarget="p5"
+            aria-label="Credit">i</button><span id="p5" popover class="pop">Kogo · GFDL</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P138"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.7086">
@@ -1434,21 +1501,21 @@ derivative work: ויקיג&#39;אנקי · CC BY 2.5 in</span><a class="edit"
          loading="lazy">
     <figcaption><span>പേര് വന്ന വഴി</span><b><a href="https://www.wikidata.org/wiki/Q1377025">ഭരതൻ</a></b><span><span lang="hi">भारत</span> <span class="note" data-lang-name="hi">hi</span> · <span lang="bn">ভারত</span> <span class="note" data-lang-name="bn">bn</span> · <span lang="sa">भारतम्</span> <span class="note" data-lang-name="sa">sa</span></span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p4"
-            aria-label="Credit">i</button><span id="p4" popover class="pop">Raja Ravi Varma · Public domain</span><a class="edit"
+            popovertarget="p6"
+            aria-label="Credit">i</button><span id="p6" popover class="pop">Raja Ravi Varma · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P138"
        aria-label="Edit">✎</a></span></figure></div></div></div></section>
             <section class="spread t-columns" id="symbols"
              data-spread="symbols"
              data-dimension="names"><h2><span class="title">ദേശീയപ്രതീകം</span></h2><div data-slot="stack">
         <div class="block earlier">
-    <h3>പതാകയുടെ ചിത്രം <span class="note">earlier · 1858 – 1947</span></h3><button class="more" type="button" command="show-modal" commandfor="d5">+1</button>
-    <dialog id="d5" closedby="any">
+    <h3>പതാകയുടെ ചിത്രം <span class="note">earlier · 1858 – 1947</span></h3><button class="more" type="button" command="show-modal" commandfor="d7">+1</button>
+    <dialog id="d7" closedby="any">
         <header>
             <h2>പതാകയുടെ ചിത്രം</h2>
             <button type="button"
                     command="close"
-                    commandfor="d5"
+                    commandfor="d7"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body">
@@ -1499,33 +1566,101 @@ derivative work: ויקיג&#39;אנקי · CC BY 2.5 in</span><a class="edit"
 </div>
 </qr-names>
     </div><div data-slot="gallery"><div class="block set"><div class="run"><figure class="m k-drawing" style="--a:1.5">
-        <a href="https://commons.wikimedia.org/wiki/File:Flag_of_India.svg">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d8"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20India.svg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20India.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20India.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20India.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20India.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20India.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
-        </a><figcaption><span>പതാക</span> <a href="https://www.wikidata.org/wiki/Q41673">ഇന്ത്യയുടെ ദേശീയപതാക</a><span class="prov-none" title="—"></span>
+        </button><figcaption><span>പതാക</span> <a href="https://www.wikidata.org/wiki/Q41673">ഇന്ത്യയുടെ ദേശീയപതാക</a><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p6"
-            aria-label="Credit">i</button><span id="p6" popover class="pop">Government of India · Public domain</span><a class="edit"
+            popovertarget="p9"
+            aria-label="Credit">i</button><span id="p9" popover class="pop">Government of India · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P41"
        aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-drawing" style="--a:0.6271">
-        <a href="https://commons.wikimedia.org/wiki/File:Emblem_of_India.svg">
+    </figure>
+    <dialog id="d8"
+        class="lightbox k-drawing"
+        closedby="any"
+        aria-labelledby="d8-h"
+        style="--a:1.5">
+    <header>
+        <h2 id="d8-h">പതാക: <a href="https://www.wikidata.org/wiki/Q41673">ഇന്ത്യയുടെ ദേശീയപതാക</a></h2>
+        <button type="button"
+                command="close"
+                commandfor="d8"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20India.svg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20India.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20India.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20India.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20India.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20India.svg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p>1946 –</p>
+        
+            <p class="credit">Government of India · Public domain</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Flag_of_India.svg">Flag of India.svg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q668#P41"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-drawing" style="--a:0.6271">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d10"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20India.svg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20India.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20India.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20India.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20India.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20India.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
-        </a><figcaption><span><span class="fb-group"><span class="fb"
+        </button><figcaption><span><span class="fb-group"><span class="fb"
       lang="en">coat of arms</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/P237"
            aria-label="Add a label in your language">+</a></span></span> <a href="https://www.wikidata.org/wiki/Q171869">ഇന്ത്യയുടെ ദേശീയ ചിഹ്നം</a><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p7"
-            aria-label="Credit">i</button><span id="p7" popover class="pop">Government of India · Public domain</span><a class="edit"
+            popovertarget="p11"
+            aria-label="Credit">i</button><span id="p11" popover class="pop">Government of India · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P94"
        aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-drawing"
+    </figure>
+    <dialog id="d10"
+        class="lightbox k-drawing"
+        closedby="any"
+        aria-labelledby="d10-h"
+        style="--a:0.6271">
+    <header>
+        <h2 id="d10-h"><span class="fb" lang="en">coat of arms</span>: <a href="https://www.wikidata.org/wiki/Q171869">ഇന്ത്യയുടെ ദേശീയ ചിഹ്നം</a></h2>
+        <button type="button"
+                command="close"
+                commandfor="d10"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20India.svg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20India.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20India.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20India.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20India.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20India.svg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">Government of India · Public domain</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Emblem_of_India.svg">Emblem of India.svg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q668#P94"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-drawing"
         style="--a:4.9844">
     <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Satyameva%20Jayate-Deva.svg?width=960"
          srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Satyameva%20Jayate-Deva.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Satyameva%20Jayate-Deva.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Satyameva%20Jayate-Deva.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Satyameva%20Jayate-Deva.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Satyameva%20Jayate-Deva.svg?width=1920 1920w"
@@ -1535,8 +1670,8 @@ derivative work: ויקיג&#39;אנקי · CC BY 2.5 in</span><a class="edit"
          loading="lazy">
     <figcaption><span>motto</span><b><a href="https://www.wikidata.org/wiki/Q680277">സത്യമേവ ജയതേ</a></b><span><span lang="sa">सत्यमेव जयते</span> <span class="note" data-lang-name="sa">sa</span></span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p8"
-            aria-label="Credit">i</button><span id="p8" popover class="pop">This file is created by Sbb1413. All files created by him are released under the {{CC-BY 4.0}} license unless otherwise noted. Derived works are released under the same license as original. · CC0</span><a class="edit"
+            popovertarget="p12"
+            aria-label="Credit">i</button><span id="p12" popover class="pop">This file is created by Sbb1413. All files created by him are released under the {{CC-BY 4.0}} license unless otherwise noted. Derived works are released under the same license as original. · CC0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P1546"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:0.6271">
@@ -1551,8 +1686,8 @@ derivative work: ויקיג&#39;אנקי · CC BY 2.5 in</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/P2238"
            aria-label="Add a label in your language">+</a></span></span><b><a href="https://www.wikidata.org/wiki/Q171869">ഇന്ത്യയുടെ ദേശീയ ചിഹ്നം</a></b><span class="prov-imported" title="ഇറക്കുമതി സ്രോതസ്">W</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p9"
-            aria-label="Credit">i</button><span id="p9" popover class="pop">Government of India · Public domain</span><a class="edit"
+            popovertarget="p13"
+            aria-label="Credit">i</button><span id="p13" popover class="pop">Government of India · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P2238"
        aria-label="Edit">✎</a></span></figure></div></div></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>ദേശീയഗാനം</dt>
 <dd><a href="https://www.wikidata.org/wiki/Q83099">ജനഗണമന</a> <span class="note"><a class="play"
@@ -1629,8 +1764,8 @@ derivative work: ויקיג&#39;אנקי · CC BY 2.5 in</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q252">ഇന്തോനേഷ്യ</a></b><span><a href="https://www.wikidata.org/wiki/Q17351772">ഇന്ത്യ-ഇൻഡോനേഷ്യ അതിർത്തി</a></span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p11"
-            aria-label="Credit">i</button><span id="p11" popover class="pop">Tari_Pendet.jpg: Christopher Michel from San Francisco, USA
+            popovertarget="p15"
+            aria-label="Credit">i</button><span id="p15" popover class="pop">Tari_Pendet.jpg: Christopher Michel from San Francisco, USA
 Garuda Pancasila.jpg : Gunkarta
 Borobudur-Nothwest-view.jpg: Gunkarta
 TMII Rumah Gadang West Sumatra.JPG : Gunkarta
@@ -1657,8 +1792,8 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q836">മ്യാന്മാർ</a></b><span><a href="https://www.wikidata.org/wiki/Q2749165">ഇന്തോ-ബർമ്മ കടമ്പ</a></span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p12"
-            aria-label="Credit">i</button><span id="p12" popover class="pop">Wine Su11 · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p16"
+            aria-label="Credit">i</button><span id="p16" popover class="pop">Wine Su11 · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P47"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.7385">
@@ -1670,8 +1805,8 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q837">നേപ്പാൾ</a></b><span><a href="https://www.wikidata.org/wiki/Q3088768">ഇന്ത്യ-നേപ്പാൾ അതിർത്തി</a></span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p13"
-            aria-label="Credit">i</button><span id="p13" popover class="pop">Jacques Descloitres, MODIS Rapid Response Team, NASA/GSFC · Public domain</span><a class="edit"
+            popovertarget="p17"
+            aria-label="Credit">i</button><span id="p17" popover class="pop">Jacques Descloitres, MODIS Rapid Response Team, NASA/GSFC · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P47"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.5769">
@@ -1685,8 +1820,8 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q17351774"
            aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p14"
-            aria-label="Credit">i</button><span id="p14" popover class="pop">National Aeronautics &#38; Space Administration · Public domain</span><a class="edit"
+            popovertarget="p18"
+            aria-label="Credit">i</button><span id="p18" popover class="pop">National Aeronautics &#38; Space Administration · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P47"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.5612">
@@ -1698,8 +1833,8 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q148">ചൈന</a></b><span><a href="https://www.wikidata.org/wiki/Q1992790">ചൈന-ഇന്ത്യ അതിർത്തി</a></span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p15"
-            aria-label="Credit">i</button><span id="p15" popover class="pop">CEphoto, Uwe Aranas · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p19"
+            aria-label="Credit">i</button><span id="p19" popover class="pop">CEphoto, Uwe Aranas · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P47"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:1">
@@ -1713,8 +1848,8 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3250182"
            aria-label="Add a label in your language">+</a></span> · <a href="https://www.wikidata.org/wiki/Q2767140">ഭാരത സർക്കാർ</a></span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p16"
-            aria-label="Credit">i</button><span id="p16" popover class="pop">UN Office for the Coordination of Humanitarian Affairs (OCHA) · CC BY 3.0</span><a class="edit"
+            popovertarget="p20"
+            aria-label="Credit">i</button><span id="p20" popover class="pop">UN Office for the Coordination of Humanitarian Affairs (OCHA) · CC BY 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P47"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.5">
@@ -1726,8 +1861,8 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q843">പാകിസ്താൻ</a></b><span><a href="https://www.wikidata.org/wiki/Q2635466">ഇന്ത്യ-പാകിസ്ഥാൻ അതിർത്തി</a></span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p17"
-            aria-label="Credit">i</button><span id="p17" popover class="pop">Muhammad Ashar · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p21"
+            aria-label="Credit">i</button><span id="p21" popover class="pop">Muhammad Ashar · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P47"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:1.6678">
@@ -1739,8 +1874,8 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q902">ബംഗ്ലാദേശ്</a></b><span class="from" title="ml.wikipedia.org">W</span><span><a href="https://www.wikidata.org/wiki/Q2399139">ബംഗ്ലാദേശ്-ഇന്ത്യ അതിർത്തി</a></span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p18"
-            aria-label="Credit">i</button><span id="p18" popover class="pop">See File history below for details. · Public domain</span><a class="edit"
+            popovertarget="p22"
+            aria-label="Credit">i</button><span id="p22" popover class="pop">See File history below for details. · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P47"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:1.5">
@@ -1752,15 +1887,15 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q917">ഭൂട്ടാൻ</a></b><span class="from" title="ml.wikipedia.org">W</span><span><a href="https://www.wikidata.org/wiki/Q2749121">ഭൂട്ടാൻ-ഇന്ത്യ അതിർത്തി</a></span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p19"
-            aria-label="Credit">i</button><span id="p19" popover class="pop">See File history below for details. · Public domain</span><a class="edit"
+            popovertarget="p23"
+            aria-label="Credit">i</button><span id="p23" popover class="pop">See File history below for details. · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P47"
-       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d10">View all</button></div><dialog id="d10" closedby="any">
+       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d14">View all</button></div><dialog id="d14" closedby="any">
         <header>
             <h2>അതിർത്തി പങ്കിടുന്നത്</h2>
             <button type="button"
                     command="close"
-                    commandfor="d10"
+                    commandfor="d14"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -1882,8 +2017,8 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q38684">ബംഗാൾ ഉൾക്കടൽ</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p21"
-            aria-label="Credit">i</button><span id="p21" popover class="pop">Mgiganteus · Public domain</span><a class="edit"
+            popovertarget="p25"
+            aria-label="Credit">i</button><span id="p25" popover class="pop">Mgiganteus · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P206"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1">
@@ -1895,8 +2030,8 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q1239">ഇന്ത്യൻ മഹാസമുദ്രം</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p22"
-            aria-label="Credit">i</button><span id="p22" popover class="pop">United States Central Intelligence Agency · Public domain</span><a class="edit"
+            popovertarget="p26"
+            aria-label="Credit">i</button><span id="p26" popover class="pop">United States Central Intelligence Agency · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P206"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.5314">
@@ -1908,15 +2043,15 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q58705">അറബിക്കടൽ</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p23"
-            aria-label="Credit">i</button><span id="p23" popover class="pop">Arjun Sinh Jadeja · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p27"
+            aria-label="Credit">i</button><span id="p27" popover class="pop">Arjun Sinh Jadeja · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P206"
-       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d20">View all</button></div><dialog id="d20" closedby="any">
+       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d24">View all</button></div><dialog id="d24" closedby="any">
         <header>
             <h2>located in or next to body of water</h2>
             <button type="button"
                     command="close"
-                    commandfor="d20"
+                    commandfor="d24"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -1965,8 +2100,8 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
          loading="lazy">
     <figcaption><span>വൻകര</span><b><a href="https://www.wikidata.org/wiki/Q48">ഏഷ്യ</a></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p24"
-            aria-label="Credit">i</button><span id="p24" popover class="pop">Public domain</span><a class="edit"
+            popovertarget="p28"
+            aria-label="Credit">i</button><span id="p28" popover class="pop">Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P30"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.4993">
@@ -1978,8 +2113,8 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
          loading="lazy">
     <figcaption><span>ഏറ്റവും ഉയരം കൂടിയ സ്ഥാനം</span><b><a href="https://www.wikidata.org/wiki/Q82019">കാഞ്ചൻ‌ജംഗ കൊടുമുടി</a></b><span><a href="https://www.wikidata.org/wiki/Q2767140">ഭാരത സർക്കാർ</a></span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p25"
-            aria-label="Credit">i</button><span id="p25" popover class="pop">My Discovery · CC BY 2.0</span><a class="edit"
+            popovertarget="p29"
+            aria-label="Credit">i</button><span id="p29" popover class="pop">My Discovery · CC BY 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P610"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3333">
@@ -1993,8 +2128,8 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q3250182"
            aria-label="Add a label in your language">+</a></span> · <a href="https://www.wikidata.org/wiki/Q2767140">ഭാരത സർക്കാർ</a></span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p26"
-            aria-label="Credit">i</button><span id="p26" popover class="pop">Zacharie Grossen · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p30"
+            aria-label="Credit">i</button><span id="p30" popover class="pop">Zacharie Grossen · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P610"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.5496">
@@ -2009,8 +2144,8 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/P1589"
            aria-label="Add a label in your language">+</a></span></span><b><a href="https://www.wikidata.org/wiki/Q1435109">കുട്ടനാട്</a></b><span>സമുദ്രനിരപ്പിൽ നിന്നുമുള്ള ഉയരം: <data value="-2" data-f="number">-2</data></span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p27"
-            aria-label="Credit">i</button><span id="p27" popover class="pop">Sourav Niyogi · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p31"
+            aria-label="Credit">i</button><span id="p31" popover class="pop">Sourav Niyogi · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P1589"
        aria-label="Edit">✎</a></span></figure></div></div></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>വിസ്തീർണ്ണം</dt>
 <dd><data value="3287263" data-f="number">3287263</data> <span class="note">ചതുരശ്ര കിലോമീറ്റർ</span></dd>
@@ -2056,8 +2191,8 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
            aria-label="Add a label in your language">+</a></span>
     <button class="info"
             type="button"
-            popovertarget="p28"
-            aria-label="Description">i</button><span id="p28" popover class="pop"><span class="fb" lang="en">maximum temperature reached at this location</span></span></dt>
+            popovertarget="p32"
+            aria-label="Description">i</button><span id="p32" popover class="pop"><span class="fb" lang="en">maximum temperature reached at this location</span></span></dt>
 <dd><data value="51" data-f="number">51</data> <span class="note">സെൽഷ്യസ്</span> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q2718721"><span class="fb" lang="en">Phalodi</span></a><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q2718721"
            aria-label="Add a label in your language">+</a></span> · 2016</span></dd>
@@ -2073,8 +2208,8 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
            aria-label="Add a label in your language">+</a></span>
     <button class="info"
             type="button"
-            popovertarget="p29"
-            aria-label="Description">i</button><span id="p29" popover class="pop"><span class="fb" lang="en">lowest temperature reached at this location</span></span></dt>
+            popovertarget="p33"
+            aria-label="Description">i</button><span id="p33" popover class="pop"><span class="fb" lang="en">lowest temperature reached at this location</span></span></dt>
 <dd><data value="-33.9" data-f="number">-33.9</data> <span class="note">സെൽഷ്യസ്</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q4167739">ദ്രാസ്</a> · 1911</span></dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
@@ -2098,8 +2233,8 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
          loading="lazy">
     <figcaption><span>ഭരണാധികാരി</span><b><a href="https://www.wikidata.org/wiki/Q1058">നരേന്ദ്ര മോദി</a></b><span>2014 – · <a href="https://www.wikidata.org/wiki/Q10230">ഭാരതീയ ജനതാ പാർട്ടി</a></span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p30"
-            aria-label="Credit">i</button><span id="p30" popover class="pop">Prime Minister&#39;s Office · GODL-India</span><a class="edit"
+            popovertarget="p34"
+            aria-label="Credit">i</button><span id="p34" popover class="pop">Prime Minister&#39;s Office · GODL-India</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P6"
        aria-label="Edit">✎</a></span></figure><div class="before"><span class="v"><a href="https://www.wikidata.org/wiki/Q41914">മൻമോഹൻ സിംഗ്‌</a> <span class="note">2004 – 2014</span>
         <a class="edit"
@@ -2125,12 +2260,12 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P6"
        aria-label="Edit">✎</a>
-    </span><button class="more" type="button" command="show-modal" commandfor="d31">+11</button><dialog id="d31" closedby="any">
+    </span><button class="more" type="button" command="show-modal" commandfor="d35">+11</button><dialog id="d35" closedby="any">
         <header>
             <h2>ഇന്ത്യൻ പ്രധാനമന്ത്രി</h2>
             <button type="button"
                     command="close"
-                    commandfor="d31"
+                    commandfor="d35"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -2347,8 +2482,8 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
          loading="lazy">
     <figcaption><span>രാഷ്ട്രത്തലവൻ</span><b><a href="https://www.wikidata.org/wiki/Q19901232">ദ്രൗപതി മുർമു</a></b><span>2022 – · <a href="https://www.wikidata.org/wiki/Q10230">ഭാരതീയ ജനതാ പാർട്ടി</a></span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p32"
-            aria-label="Credit">i</button><span id="p32" popover class="pop">President&#39;s Secretariat · GODL-India</span><a class="edit"
+            popovertarget="p36"
+            aria-label="Credit">i</button><span id="p36" popover class="pop">President&#39;s Secretariat · GODL-India</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P35"
        aria-label="Edit">✎</a></span></figure><div class="before"><span class="v"><a href="https://www.wikidata.org/wiki/Q16845347">രാംനാഥ് കോവിന്ദ്</a> <span class="note">2017 – 2022 · <a href="https://www.wikidata.org/wiki/Q327591">സ്വതന്ത്രൻ</a></span>
         <a class="edit"
@@ -2374,12 +2509,12 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P35"
        aria-label="Edit">✎</a>
-    </span><button class="more" type="button" command="show-modal" commandfor="d33">+11</button><dialog id="d33" closedby="any">
+    </span><button class="more" type="button" command="show-modal" commandfor="d37">+11</button><dialog id="d37" closedby="any">
         <header>
             <h2>ഇന്ത്യൻ രാഷ്ട്രപതി</h2>
             <button type="button"
                     command="close"
-                    commandfor="d33"
+                    commandfor="d37"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -2606,8 +2741,8 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q77997266">ദാദ്രാ, നഗർ ഹവേലിയും ദാമൻ, ദിയുവും</a></b><span>2020 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p35"
-            aria-label="Credit">i</button><span id="p35" popover class="pop">Vipulvaibhav5 · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p39"
+            aria-label="Credit">i</button><span id="p39" popover class="pop">Vipulvaibhav5 · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P150"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1">
@@ -2619,8 +2754,8 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q66278313">ജമ്മു-കശ്മീർ</a></b><span>2019 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p36"
-            aria-label="Credit">i</button><span id="p36" popover class="pop">NASA · Public domain</span><a class="edit"
+            popovertarget="p40"
+            aria-label="Credit">i</button><span id="p40" popover class="pop">NASA · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P150"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.5169">
@@ -2632,8 +2767,8 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q200667">ലഡാക്</a></b><span>2019 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p37"
-            aria-label="Credit">i</button><span id="p37" popover class="pop">Narender9 · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p41"
+            aria-label="Credit">i</button><span id="p41" popover class="pop">Narender9 · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P150"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.5028">
@@ -2645,8 +2780,8 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q1499">ഉത്തരാഖണ്ഡ്</a></b><span>2000 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p38"
-            aria-label="Credit">i</button><span id="p38" popover class="pop">Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center · Public domain</span><a class="edit"
+            popovertarget="p42"
+            aria-label="Credit">i</button><span id="p42" popover class="pop">Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P150"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3333">
@@ -2658,8 +2793,8 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q1168">ഛത്തീസ്‌ഗഢ്</a></b><span>2000 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p39"
-            aria-label="Credit">i</button><span id="p39" popover class="pop">Mettle30 · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p43"
+            aria-label="Credit">i</button><span id="p43" popover class="pop">Mettle30 · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P150"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.5079">
@@ -2671,8 +2806,8 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q1184">ഝാർഖണ്ഡ്‌</a></b><span>2000 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p40"
-            aria-label="Credit">i</button><span id="p40" popover class="pop">Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center · Public domain</span><a class="edit"
+            popovertarget="p44"
+            aria-label="Credit">i</button><span id="p44" popover class="pop">Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P150"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.4939">
@@ -2684,8 +2819,8 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q1502">മിസോറം</a></b><span>1987 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p41"
-            aria-label="Credit">i</button><span id="p41" popover class="pop">Bogman · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p45"
+            aria-label="Credit">i</button><span id="p45" popover class="pop">Bogman · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P150"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.5">
@@ -2697,8 +2832,8 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q1171">ഗോവ</a></b><span>1987 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p42"
-            aria-label="Credit">i</button><span id="p42" popover class="pop">Vyacheslav Argenberg · CC BY 4.0</span><a class="edit"
+            popovertarget="p46"
+            aria-label="Credit">i</button><span id="p46" popover class="pop">Vyacheslav Argenberg · CC BY 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P150"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.542">
@@ -2710,8 +2845,8 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q1505">സിക്കിം</a></b><span>1975 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p43"
-            aria-label="Credit">i</button><span id="p43" popover class="pop">Subhrajyoti07 · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p47"
+            aria-label="Credit">i</button><span id="p47" popover class="pop">Subhrajyoti07 · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P150"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.7783">
@@ -2723,8 +2858,8 @@ derivative work: Gunkarta · CC BY 2.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q1193">മണിപ്പൂർ</a></b><span>1972 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p44"
-            aria-label="Credit">i</button><span id="p44" popover class="pop">Original:  Samudra Bikash Hazarika
+            popovertarget="p48"
+            aria-label="Credit">i</button><span id="p48" popover class="pop">Original:  Samudra Bikash Hazarika
 
 Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P150"
@@ -2738,8 +2873,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q1363">ത്രിപുര</a></b><span>1972 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p45"
-            aria-label="Credit">i</button><span id="p45" popover class="pop">Sharada Prasad CS · CC BY 2.0</span><a class="edit"
+            popovertarget="p49"
+            aria-label="Credit">i</button><span id="p49" popover class="pop">Sharada Prasad CS · CC BY 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P150"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3333">
@@ -2751,15 +2886,15 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q1195">മേഘാലയ</a></b><span>1972 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p46"
-            aria-label="Credit">i</button><span id="p46" popover class="pop">Indrani911basu · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p50"
+            aria-label="Credit">i</button><span id="p50" popover class="pop">Indrani911basu · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P150"
-       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d34">View all</button></div><dialog id="d34" closedby="any">
+       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d38">View all</button></div><dialog id="d38" closedby="any">
         <header>
             <h2>contains the administrative territorial entity</h2>
             <button type="button"
                     command="close"
-                    commandfor="d34"
+                    commandfor="d38"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -3171,8 +3306,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><span>തലസ്ഥാനം</span><b><a href="https://www.wikidata.org/wiki/Q987">ന്യൂ ഡെൽഹി</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p47"
-            aria-label="Credit">i</button><span id="p47" popover class="pop">Navonildutta4 · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p51"
+            aria-label="Credit">i</button><span id="p51" popover class="pop">Navonildutta4 · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P36"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3333">
@@ -3184,8 +3319,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><span>ഭരണവിഭാഗം</span><b><a href="https://www.wikidata.org/wiki/Q695252">ഇന്ത്യൻ പാർലമെന്റ്</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p48"
-            aria-label="Credit">i</button><span id="p48" popover class="pop">Ministry of Parliamentary Affairs · GODL-India</span><a class="edit"
+            popovertarget="p52"
+            aria-label="Credit">i</button><span id="p52" popover class="pop">Ministry of Parliamentary Affairs · GODL-India</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P194"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.6056">
@@ -3200,8 +3335,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/P209"
            aria-label="Add a label in your language">+</a></span></span><b><a href="https://www.wikidata.org/wiki/Q213380">സുപ്രീം കോടതി</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p49"
-            aria-label="Credit">i</button><span id="p49" popover class="pop">Subhashish Panigrahi · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p53"
+            aria-label="Credit">i</button><span id="p53" popover class="pop">Subhashish Panigrahi · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P209"
        aria-label="Edit">✎</a></span></figure></div></div></div><dl class="sheet" data-slot="sheet"><div class="row r-list"><dt><span class="fb-group"><span class="fb"
       lang="en">basic form of government</span><a class="add-label"
@@ -3281,8 +3416,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
         <qr-chart class="block series"><h3>ജനസംഖ്യ
     <button class="info"
             type="button"
-            popovertarget="p50"
-            aria-label="Description">i</button><span id="p50" popover class="pop">താമസിക്കുന്ന ആൾക്കാരുടെ എണ്ണം</span>
+            popovertarget="p54"
+            aria-label="Description">i</button><span id="p54" popover class="pop">താമസിക്കുന്ന ആൾക്കാരുടെ എണ്ണം</span>
     <a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P1082"
        aria-label="Edit">✎</a>
@@ -3323,8 +3458,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
             <span class="key" style="--c: var( --part-1 )"></span>നഗരജനസംഖ്യ
     <button class="info"
             type="button"
-            popovertarget="p51"
-            aria-label="Description">i</button><span id="p51" popover class="pop"><span class="fb" lang="en">number of people living within the territorial entity who live in its urban parts</span></span>
+            popovertarget="p55"
+            aria-label="Description">i</button><span id="p55" popover class="pop"><span class="fb" lang="en">number of people living within the territorial entity who live in its urban parts</span></span>
             <a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P6343"
        aria-label="Edit">✎</a>
@@ -3335,8 +3470,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
            aria-label="Add a label in your language">+</a></span>
     <button class="info"
             type="button"
-            popovertarget="p52"
-            aria-label="Description">i</button><span id="p52" popover class="pop"><span class="fb" lang="en">number of people living within the territorial entity who live in its rural parts</span></span>
+            popovertarget="p56"
+            aria-label="Description">i</button><span id="p56" popover class="pop"><span class="fb" lang="en">number of people living within the territorial entity who live in its rural parts</span></span>
             <a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P6344"
        aria-label="Edit">✎</a>
@@ -3357,8 +3492,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
 </div></qr-chart><qr-chart class="block series"><h3>ജനനനിരക്ക്
     <button class="info"
             type="button"
-            popovertarget="p53"
-            aria-label="Description">i</button><span id="p53" popover class="pop"><span class="fb" lang="en">the total number of live births per 1,000 population</span></span>
+            popovertarget="p57"
+            aria-label="Description">i</button><span id="p57" popover class="pop"><span class="fb" lang="en">the total number of live births per 1,000 population</span></span>
     <a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P8763"
        aria-label="Edit">✎</a>
@@ -3378,8 +3513,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
 </div></qr-chart><qr-chart class="block series"><h3>മരണനിരക്ക്
     <button class="info"
             type="button"
-            popovertarget="p54"
-            aria-label="Description">i</button><span id="p54" popover class="pop"><span class="fb" lang="en">the total number of persons dead per 1,000 population per year</span></span>
+            popovertarget="p58"
+            aria-label="Description">i</button><span id="p58" popover class="pop"><span class="fb" lang="en">the total number of persons dead per 1,000 population per year</span></span>
     <a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P10091"
        aria-label="Edit">✎</a>
@@ -3399,8 +3534,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
 </div></qr-chart><qr-chart class="block series"><h3>മൊത്തത്തിലുള്ള ജനനനിരക്ക്
     <button class="info"
             type="button"
-            popovertarget="p55"
-            aria-label="Description">i</button><span id="p55" popover class="pop"><span class="fb" lang="en">average number of children that would be born to a woman over her lifetime who lives in this territorial entity</span></span>
+            popovertarget="p59"
+            aria-label="Description">i</button><span id="p59" popover class="pop"><span class="fb" lang="en">average number of children that would be born to a woman over her lifetime who lives in this territorial entity</span></span>
     <a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P4841"
        aria-label="Edit">✎</a>
@@ -3420,8 +3555,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
 </div></qr-chart><qr-chart class="block series"><h3>ആയുർദൈർഘ്യം
     <button class="info"
             type="button"
-            popovertarget="p56"
-            aria-label="Description">i</button><span id="p56" popover class="pop"><span class="fb" lang="en">average life expectancy for this group or species</span></span>
+            popovertarget="p60"
+            aria-label="Description">i</button><span id="p60" popover class="pop"><span class="fb" lang="en">average life expectancy for this group or species</span></span>
     <a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P2250"
        aria-label="Edit">✎</a>
@@ -3441,8 +3576,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
 </div></qr-chart><qr-chart class="block series"><h3>സാക്ഷരത നിരക്ക്
     <button class="info"
             type="button"
-            popovertarget="p57"
-            aria-label="Description">i</button><span id="p57" popover class="pop"><span class="fb" lang="en">percentage of the population that is not illiterate</span></span>
+            popovertarget="p61"
+            aria-label="Description">i</button><span id="p61" popover class="pop"><span class="fb" lang="en">percentage of the population that is not illiterate</span></span>
     <a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P6897"
        aria-label="Edit">✎</a>
@@ -3507,8 +3642,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
            aria-label="Add a label in your language">+</a></span>
     <button class="info"
             type="button"
-            popovertarget="p58"
-            aria-label="Description">i</button><span id="p58" popover class="pop"><span class="fb" lang="en">market value of all officially recognized final goods and services produced within a country in a given period of time</span></span>
+            popovertarget="p62"
+            aria-label="Description">i</button><span id="p62" popover class="pop"><span class="fb" lang="en">market value of all officially recognized final goods and services produced within a country in a given period of time</span></span>
     <a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P2131"
        aria-label="Edit">✎</a>
@@ -3536,8 +3671,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><span>നാണയം</span><b><a href="https://www.wikidata.org/wiki/Q80524">ഇന്ത്യൻ രൂപ</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p59"
-            aria-label="Credit">i</button><span id="p59" popover class="pop">Reserve bank of India, Adithya pergade (talk) 16:06, 25 June 2018 (UTC) · GODL-India</span><a class="edit"
+            popovertarget="p63"
+            aria-label="Credit">i</button><span id="p63" popover class="pop">Reserve bank of India, Adithya pergade (talk) 16:06, 25 June 2018 (UTC) · GODL-India</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P38"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:2.8706">
@@ -3552,8 +3687,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/P1304"
            aria-label="Add a label in your language">+</a></span></span><b><a href="https://www.wikidata.org/wiki/Q944085">ഭാരതീയ റിസർവ് ബാങ്ക്</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p60"
-            aria-label="Credit">i</button><span id="p60" popover class="pop">Government of the United Kingdom, Government of India &#38; Swapnil1101 · Public domain</span><a class="edit"
+            popovertarget="p64"
+            aria-label="Credit">i</button><span id="p64" popover class="pop">Government of the United Kingdom, Government of India &#38; Swapnil1101 · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P1304"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.7779">
@@ -3568,8 +3703,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/P13574"
            aria-label="Add a label in your language">+</a></span></span><b><a href="https://www.wikidata.org/wiki/Q1353">ദില്ലി</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p61"
-            aria-label="Credit">i</button><span id="p61" popover class="pop">A.Savin · FAL</span><a class="edit"
+            popovertarget="p65"
+            aria-label="Credit">i</button><span id="p65" popover class="pop">A.Savin · FAL</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P13574"
        aria-label="Edit">✎</a></span></figure></div></div></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt><span class="fb-group"><span class="fb"
       lang="en">unemployment rate</span><a class="add-label"
@@ -3577,8 +3712,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
            aria-label="Add a label in your language">+</a></span>
     <button class="info"
             type="button"
-            popovertarget="p62"
-            aria-label="Description">i</button><span id="p62" popover class="pop"><span class="fb" lang="en">portion of a workforce population that is not employed</span></span></dt>
+            popovertarget="p66"
+            aria-label="Description">i</button><span id="p66" popover class="pop"><span class="fb" lang="en">portion of a workforce population that is not employed</span></span></dt>
 <dd><data value="4" data-f="number">4</data> <span class="note">ശതമാനം</span> <span class="note">2014</span>
                 <span class="gauge g-proportion" style="--at: 0.04"><span class="track" aria-hidden="true"><span></span></span></span></dd>
 <span class="tools">
@@ -3608,8 +3743,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
            aria-label="Add a label in your language">+</a></span>
     <button class="info"
             type="button"
-            popovertarget="p63"
-            aria-label="Description">i</button><span id="p63" popover class="pop"><span class="fb" lang="en">HDI value of a region</span></span>
+            popovertarget="p67"
+            aria-label="Description">i</button><span id="p67" popover class="pop"><span class="fb" lang="en">HDI value of a region</span></span>
     <a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P1081"
        aria-label="Edit">✎</a>
@@ -3632,8 +3767,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
            aria-label="Add a label in your language">+</a></span>
     <button class="info"
             type="button"
-            popovertarget="p64"
-            aria-label="Description">i</button><span id="p64" popover class="pop"><span class="fb" lang="en">Inequality-adjusted Human Development Index (IHDI) value of a country</span></span>
+            popovertarget="p68"
+            aria-label="Description">i</button><span id="p68" popover class="pop"><span class="fb" lang="en">Inequality-adjusted Human Development Index (IHDI) value of a country</span></span>
     <a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P11593"
        aria-label="Edit">✎</a>
@@ -3656,8 +3791,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
            aria-label="Add a label in your language">+</a></span>
     <button class="info"
             type="button"
-            popovertarget="p65"
-            aria-label="Description">i</button><span id="p65" popover class="pop"><span class="fb" lang="en">measures change of countries towards democracy and market economy</span></span>
+            popovertarget="p69"
+            aria-label="Description">i</button><span id="p69" popover class="pop"><span class="fb" lang="en">measures change of countries towards democracy and market economy</span></span>
     <a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P8476"
        aria-label="Edit">✎</a>
@@ -3680,8 +3815,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
            aria-label="Add a label in your language">+</a></span>
     <button class="info"
             type="button"
-            popovertarget="p66"
-            aria-label="Description">i</button><span id="p66" popover class="pop"><span class="fb" lang="en">measures change of countries towards democracy and market economy</span></span>
+            popovertarget="p70"
+            aria-label="Description">i</button><span id="p70" popover class="pop"><span class="fb" lang="en">measures change of countries towards democracy and market economy</span></span>
     <a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P8477"
        aria-label="Edit">✎</a>
@@ -3701,8 +3836,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
 </div></qr-chart><qr-chart class="block series"><h3>ജനാധിപത്യസൂചിക
     <button class="info"
             type="button"
-            popovertarget="p67"
-            aria-label="Description">i</button><span id="p67" popover class="pop"><span class="fb" lang="en">Democracy Index rating of a country</span></span>
+            popovertarget="p71"
+            aria-label="Description">i</button><span id="p71" popover class="pop"><span class="fb" lang="en">Democracy Index rating of a country</span></span>
     <a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P8328"
        aria-label="Edit">✎</a>
@@ -3730,8 +3865,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q9316">സിഖ് മതം</a></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p69"
-            aria-label="Credit">i</button><span id="p69" popover class="pop">Paulrudd · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p73"
+            aria-label="Credit">i</button><span id="p73" popover class="pop">Paulrudd · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P140"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3333">
@@ -3743,8 +3878,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q9232">ജൈനമതം</a></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p70"
-            aria-label="Credit">i</button><span id="p70" popover class="pop">Matthew Logelin · CC BY 2.0</span><a class="edit"
+            popovertarget="p74"
+            aria-label="Credit">i</button><span id="p74" popover class="pop">Matthew Logelin · CC BY 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P140"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3333">
@@ -3756,8 +3891,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q9089">ഹിന്ദുമതം</a></b><span><span class="fb" lang="en">proportion</span>: <data value="0.805" data-f="number">0.805</data></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p71"
-            aria-label="Credit">i</button><span id="p71" popover class="pop">Alicia Nijdam · CC BY 2.0</span><a class="edit"
+            popovertarget="p75"
+            aria-label="Credit">i</button><span id="p75" popover class="pop">Alicia Nijdam · CC BY 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P140"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.0113">
@@ -3769,8 +3904,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q5043">ക്രിസ്തുമതം</a></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p72"
-            aria-label="Credit">i</button><span id="p72" popover class="pop">Berthold Werner · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p76"
+            aria-label="Credit">i</button><span id="p76" popover class="pop">Berthold Werner · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P140"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.6649">
@@ -3782,8 +3917,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q748">ബുദ്ധമതം</a></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p73"
-            aria-label="Credit">i</button><span id="p73" popover class="pop">Subhrajyoti07 · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p77"
+            aria-label="Credit">i</button><span id="p77" popover class="pop">Subhrajyoti07 · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P140"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3333">
@@ -3795,15 +3930,15 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q432">ഇസ്‌ലാം</a></b><span><span class="fb" lang="en">proportion</span>: <data value="0.134" data-f="number">0.134</data></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p74"
-            aria-label="Credit">i</button><span id="p74" popover class="pop">Antonio Melina/Agência Brasil · CC BY 3.0 br</span><a class="edit"
+            popovertarget="p78"
+            aria-label="Credit">i</button><span id="p78" popover class="pop">Antonio Melina/Agência Brasil · CC BY 3.0 br</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P140"
-       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d68">View all</button></div><dialog id="d68" closedby="any">
+       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d72">View all</button></div><dialog id="d72" closedby="any">
         <header>
             <h2>മതം</h2>
             <button type="button"
                     command="close"
-                    commandfor="d68"
+                    commandfor="d72"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -3881,8 +4016,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
            aria-label="Add a label in your language">+</a></span>
     <button class="info"
             type="button"
-            popovertarget="p75"
-            aria-label="Description">i</button><span id="p75" popover class="pop"><span class="fb" lang="en">measure of statistical dispersion intended to represent the income distribution of a nation&#39;s residents</span></span></dt>
+            popovertarget="p79"
+            aria-label="Description">i</button><span id="p79" popover class="pop"><span class="fb" lang="en">measure of statistical dispersion intended to represent the income distribution of a nation&#39;s residents</span></span></dt>
 <dd><data value="35.7" data-f="number">35.7</data> <span class="note">2019</span>
                 <span class="gauge g-index" style="--at: 0.357"><span class="end"><data value="0" data-f="number">0</data></span><span class="track" aria-hidden="true"><span></span></span><span class="end"><data value="100" data-f="number">100</data></span></span></dd>
 <span class="tools">
@@ -3897,8 +4032,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
            aria-label="Add a label in your language">+</a></span>
     <button class="info"
             type="button"
-            popovertarget="p76"
-            aria-label="Description">i</button><span id="p76" popover class="pop"><span class="fb" lang="en">The Happy Planet Index (HPI) is an index of human well-being and environmental impact that was introduced by the New Economics Foundation in 2006</span></span></dt>
+            popovertarget="p80"
+            aria-label="Description">i</button><span id="p80" popover class="pop"><span class="fb" lang="en">The Happy Planet Index (HPI) is an index of human well-being and environmental impact that was introduced by the New Economics Foundation in 2006</span></span></dt>
 <dd><data value="36.4" data-f="number">36.4</data> <span class="note">2019</span>
                 <span class="gauge g-index" style="--at: 0.364"><span class="end"><data value="0" data-f="number">0</data></span><span class="track" aria-hidden="true"><span></span></span><span class="end"><data value="100" data-f="number">100</data></span></span></dd>
 <span class="tools">
@@ -3913,8 +4048,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
            aria-label="Add a label in your language">+</a></span>
     <button class="info"
             type="button"
-            popovertarget="p77"
-            aria-label="Description">i</button><span id="p77" popover class="pop"><span class="fb" lang="en">amount of suicides per 100,000 people and year in the place or group</span></span></dt>
+            popovertarget="p81"
+            aria-label="Description">i</button><span id="p81" popover class="pop"><span class="fb" lang="en">amount of suicides per 100,000 people and year in the place or group</span></span></dt>
 <dd><data value="12.9" data-f="number">12.9</data> <span class="note">2019</span></dd>
 <span class="tools">
         <span class="prov-imported" title="ഇറക്കുമതി സ്രോതസ്">W</span>
@@ -3950,8 +4085,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
            aria-label="Add a label in your language">+</a></span>
     <button class="info"
             type="button"
-            popovertarget="p78"
-            aria-label="Description">i</button><span id="p78" popover class="pop"><span class="fb" lang="en">number of out-of-school children reported for a place</span></span></dt>
+            popovertarget="p82"
+            aria-label="Description">i</button><span id="p82" popover class="pop"><span class="fb" lang="en">number of out-of-school children reported for a place</span></span></dt>
 <dd><data value="60824152" data-f="number">60824152</data> <span class="note"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q47005776"><span class="fb" lang="en">UIS estimation</span></a><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q47005776"
            aria-label="Add a label in your language">+</a></span> · 2013</span></dd>
@@ -4227,12 +4362,12 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P2936"
        aria-label="Edit">✎</a>
-    </span><button class="more" type="button" command="show-modal" commandfor="d79">+438</button><dialog id="d79" closedby="any">
+    </span><button class="more" type="button" command="show-modal" commandfor="d83">+438</button><dialog id="d83" closedby="any">
         <header>
             <h2>ഉപയോഗിക്കുന്ന ഭാഷ</h2>
             <button type="button"
                     command="close"
-                    commandfor="d79"
+                    commandfor="d83"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -9095,12 +9230,12 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
                     </span>
                 <span class="note">1960 –</span></span>
         </li>
-</ul><button class="more" type="button" command="show-modal" commandfor="d80">+28</button><dialog id="d80" closedby="any">
+</ul><button class="more" type="button" command="show-modal" commandfor="d84">+28</button><dialog id="d84" closedby="any">
         <header>
             <h2>എവിടെയെല്ലാം അംഗമാണ്</h2>
             <button type="button"
                     command="close"
-                    commandfor="d80"
+                    commandfor="d84"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -9766,12 +9901,12 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q6024345"
            aria-label="Add a label in your language">+</a></span></span></span>
         </li>
-</ul><button class="more" type="button" command="show-modal" commandfor="d81">+94</button><dialog id="d81" closedby="any">
+</ul><button class="more" type="button" command="show-modal" commandfor="d85">+94</button><dialog id="d85" closedby="any">
         <header>
             <h2>diplomatic relation</h2>
             <button type="button"
                     command="close"
-                    commandfor="d81"
+                    commandfor="d85"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -11169,8 +11304,8 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><span>പിന്തുടർച്ച</span><b><a href="https://www.wikidata.org/wiki/Q129286">ബ്രിട്ടീഷ് രാജ്</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p83"
-            aria-label="Credit">i</button><span id="p83" popover class="pop">Edinburgh Geographical Institute; J. G. Bartholomew and Sons. · Public domain</span><a class="edit"
+            popovertarget="p87"
+            aria-label="Credit">i</button><span id="p87" popover class="pop">Edinburgh Geographical Institute; J. G. Bartholomew and Sons. · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P155"
        aria-label="Edit">✎</a></span></figure></div></div></div></section>
             <section class="spread t-columns" id="history"
@@ -11243,63 +11378,170 @@ Derivative work:  UnpetitproleX · CC BY-SA 4.0</span><a class="edit"
             <section class="spread t-columns" id="maps"
              data-spread="maps"
              data-dimension="place"><h2><span class="title">ഭൂപടം</span></h2><div data-slot="gallery"><div class="block set"><div class="run"><figure class="m k-photo" style="--a:0.9288">
-        <a href="https://commons.wikimedia.org/wiki/File:India_relief_location_map.jpg">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d88"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/India%20relief%20location%20map.jpg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/India%20relief%20location%20map.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20relief%20location%20map.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20relief%20location%20map.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20relief%20location%20map.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20relief%20location%20map.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
-        </a><figcaption><span><span class="fb-group"><span class="fb"
+        </button><figcaption><span><span class="fb-group"><span class="fb"
       lang="en">relief location map</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/P1944"
            aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p84"
-            aria-label="Credit">i</button><span id="p84" popover class="pop">Uwe Dedering · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p89"
+            aria-label="Credit">i</button><span id="p89" popover class="pop">Uwe Dedering · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P1944"
        aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-drawing" style="--a:0.8533">
-        <a href="https://commons.wikimedia.org/wiki/File:India-states-numbered.svg">
+    </figure>
+    <dialog id="d88"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d88-h"
+        style="--a:0.9288">
+    <header>
+        <h2 id="d88-h"><span class="fb" lang="en">relief location map</span></h2>
+        <button type="button"
+                command="close"
+                commandfor="d88"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/India%20relief%20location%20map.jpg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/India%20relief%20location%20map.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20relief%20location%20map.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20relief%20location%20map.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20relief%20location%20map.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20relief%20location%20map.jpg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">Uwe Dedering · CC BY-SA 3.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:India_relief_location_map.jpg">India relief location map.jpg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q668#P1944"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-drawing" style="--a:0.8533">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d90"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/India-states-numbered.svg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/India-states-numbered.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/India-states-numbered.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/India-states-numbered.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/India-states-numbered.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/India-states-numbered.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
-        </a><figcaption><span><span class="fb-group"><span class="fb"
+        </button><figcaption><span><span class="fb-group"><span class="fb"
       lang="en">location map</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/P1943"
            aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p85"
-            aria-label="Credit">i</button><span id="p85" popover class="pop">See file history below. · CC BY 2.5</span><a class="edit"
+            popovertarget="p91"
+            aria-label="Credit">i</button><span id="p91" popover class="pop">See file history below. · CC BY 2.5</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P1943"
        aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-drawing" style="--a:1">
-        <a href="https://commons.wikimedia.org/wiki/File:India_%28orthographic_projection%29.svg">
+    </figure>
+    <dialog id="d90"
+        class="lightbox k-drawing"
+        closedby="any"
+        aria-labelledby="d90-h"
+        style="--a:0.8533">
+    <header>
+        <h2 id="d90-h"><span class="fb" lang="en">location map</span></h2>
+        <button type="button"
+                command="close"
+                commandfor="d90"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/India-states-numbered.svg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/India-states-numbered.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/India-states-numbered.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/India-states-numbered.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/India-states-numbered.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/India-states-numbered.svg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">See file history below. · CC BY 2.5</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:India-states-numbered.svg">India-states-numbered.svg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q668#P1943"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-drawing" style="--a:1">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d92"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/India%20%28orthographic%20projection%29.svg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/India%20%28orthographic%20projection%29.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20%28orthographic%20projection%29.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20%28orthographic%20projection%29.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20%28orthographic%20projection%29.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20%28orthographic%20projection%29.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
-        </a><figcaption><span><span class="fb-group"><span class="fb"
+        </button><figcaption><span><span class="fb-group"><span class="fb"
       lang="en">locator map image</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/P242"
            aria-label="Add a label in your language">+</a></span></span><span class="prov-imported" title="ഇറക്കുമതി സ്രോതസ്">W</span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p86"
-            aria-label="Credit">i</button><span id="p86" popover class="pop">Ssolbergj (talk) · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p93"
+            aria-label="Credit">i</button><span id="p93" popover class="pop">Ssolbergj (talk) · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P242"
        aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-drawing" style="--a:0.8824">
-        <a href="https://commons.wikimedia.org/wiki/File:India_population_density_map_en.svg">
+    </figure>
+    <dialog id="d92"
+        class="lightbox k-drawing"
+        closedby="any"
+        aria-labelledby="d92-h"
+        style="--a:1">
+    <header>
+        <h2 id="d92-h"><span class="fb" lang="en">locator map image</span></h2>
+        <button type="button"
+                command="close"
+                commandfor="d92"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/India%20%28orthographic%20projection%29.svg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/India%20%28orthographic%20projection%29.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20%28orthographic%20projection%29.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20%28orthographic%20projection%29.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20%28orthographic%20projection%29.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20%28orthographic%20projection%29.svg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q21167586"><span class="fb" lang="en">gray–green orthographic projections maps</span></a><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q21167586"
+           aria-label="Add a label in your language">+</a></span></p>
+        
+            <p class="credit">Ssolbergj (talk) · CC BY-SA 3.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:India_%28orthographic_projection%29.svg">India (orthographic projection).svg</a><span class="prov-imported" title="ഇറക്കുമതി സ്രോതസ്">W</span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q668#P242"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-drawing" style="--a:0.8824">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d94"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/India%20population%20density%20map%20en.svg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/India%20population%20density%20map%20en.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20population%20density%20map%20en.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20population%20density%20map%20en.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20population%20density%20map%20en.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20population%20density%20map%20en.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
-        </a><figcaption><span><span class="fb-group"><span class="fb"
+        </button><figcaption><span><span class="fb-group"><span class="fb"
       lang="en">detail map</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/P1621"
            aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p87"
-            aria-label="Credit">i</button><span id="p87" popover class="pop">This Image was created by User:PlaneMad.
+            popovertarget="p95"
+            aria-label="Credit">i</button><span id="p95" popover class="pop">This Image was created by User:PlaneMad.
 If you are using the image under the creative commons share alike license please credit the photo CC-by-sa PlaneMad/Wikimedia and include a link to this page. No explicit permission is needed from me, but id appreciate an email if my work has been of help to you.
 If you dont want to release your work under a creative commons license, please mail me at arun.planemad@gmail.com or catch me at my Website to negotiate a custom license as per your needs.
 
@@ -11315,58 +11557,203 @@ Map specific sources
 India Map siteCensus - Population map. · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P1621"
        aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-drawing" style="--a:0.8852">
-        <a href="https://commons.wikimedia.org/wiki/File:India_population_density_map_ca.svg">
+    </figure>
+    <dialog id="d94"
+        class="lightbox k-drawing"
+        closedby="any"
+        aria-labelledby="d94-h"
+        style="--a:0.8824">
+    <header>
+        <h2 id="d94-h"><span class="fb" lang="en">detail map</span></h2>
+        <button type="button"
+                command="close"
+                commandfor="d94"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/India%20population%20density%20map%20en.svg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/India%20population%20density%20map%20en.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20population%20density%20map%20en.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20population%20density%20map%20en.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20population%20density%20map%20en.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20population%20density%20map%20en.svg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">This Image was created by User:PlaneMad.
+If you are using the image under the creative commons share alike license please credit the photo CC-by-sa PlaneMad/Wikimedia and include a link to this page. No explicit permission is needed from me, but id appreciate an email if my work has been of help to you.
+If you dont want to release your work under a creative commons license, please mail me at arun.planemad@gmail.com or catch me at my Website to negotiate a custom license as per your needs.
+
+International Borders
+University of Texas map library - India Political map 2001
+Disputed Borders
+University of Texas map library - China-India Borders - Eastern Sector 1988 &#38; Western Sector 1988 - Kashmir Region 2004 - Kashmir Maps.
+State and District boundaries
+Census of India - 2001 Census State Maps - Survey of India Maps
+Other sources
+US Army Map Service, Survey of India Map Explorer, Columbia University
+Map specific sources
+India Map siteCensus - Population map. · CC BY-SA 3.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:India_population_density_map_en.svg">India population density map en.svg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q668#P1621"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-drawing" style="--a:0.8852">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d96"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/India%20population%20density%20map%20ca.svg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/India%20population%20density%20map%20ca.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20population%20density%20map%20ca.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20population%20density%20map%20ca.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20population%20density%20map%20ca.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20population%20density%20map%20ca.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
-        </a><figcaption><span><span class="fb-group"><span class="fb"
+        </button><figcaption><span><span class="fb-group"><span class="fb"
       lang="en">detail map</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/P1621"
            aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p88"
-            aria-label="Credit">i</button><span id="p88" popover class="pop">PlaneMad
+            popovertarget="p97"
+            aria-label="Credit">i</button><span id="p97" popover class="pop">PlaneMad
 
 translator: Manlleus (ca) · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P1621"
        aria-label="Edit">✎</a></span>
-    </figure></div></div></div></section>
+    </figure>
+    <dialog id="d96"
+        class="lightbox k-drawing"
+        closedby="any"
+        aria-labelledby="d96-h"
+        style="--a:0.8852">
+    <header>
+        <h2 id="d96-h"><span class="fb" lang="en">detail map</span></h2>
+        <button type="button"
+                command="close"
+                commandfor="d96"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/India%20population%20density%20map%20ca.svg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/India%20population%20density%20map%20ca.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20population%20density%20map%20ca.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20population%20density%20map%20ca.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20population%20density%20map%20ca.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20population%20density%20map%20ca.svg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p><a href="https://www.wikidata.org/wiki/Q7026">കാറ്റലൻ ഭാഷ</a></p>
+        
+            <p class="credit">PlaneMad
+
+translator: Manlleus (ca) · CC BY-SA 4.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:India_population_density_map_ca.svg">India population density map ca.svg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q668#P1621"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog></div></div></div></section>
             <section class="spread t-feature-run" id="media"
              data-spread="media"
              data-dimension="media"><h2><span class="title">മൾട്ടിമീഡിയ</span></h2><div data-slot="run">
         <div class="run"> <figure class="m k-photo" style="--a:2">
-        <a href="https://commons.wikimedia.org/wiki/File:Photo_from_Mapillary_2025-03-29_%281218213809879063%29.jpg">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d98"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Photo%20from%20Mapillary%202025-03-29%20%281218213809879063%29.jpg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Photo%20from%20Mapillary%202025-03-29%20%281218213809879063%29.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Photo%20from%20Mapillary%202025-03-29%20%281218213809879063%29.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Photo%20from%20Mapillary%202025-03-29%20%281218213809879063%29.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Photo%20from%20Mapillary%202025-03-29%20%281218213809879063%29.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Photo%20from%20Mapillary%202025-03-29%20%281218213809879063%29.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
-        </a><figcaption><span><span class="fb-group"><span class="fb"
+        </button><figcaption><span><span class="fb-group"><span class="fb"
       lang="en">spherical panorama image</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/P4640"
            aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p89"
-            aria-label="Credit">i</button><span id="p89" popover class="pop">skysign · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p99"
+            aria-label="Credit">i</button><span id="p99" popover class="pop">skysign · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P4640"
        aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-photo" style="--a:0.7217">
-        <a href="https://commons.wikimedia.org/wiki/File:India_Montage.jpg">
+    </figure>
+    <dialog id="d98"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d98-h"
+        style="--a:2">
+    <header>
+        <h2 id="d98-h"><span class="fb" lang="en">spherical panorama image</span></h2>
+        <button type="button"
+                command="close"
+                commandfor="d98"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Photo%20from%20Mapillary%202025-03-29%20%281218213809879063%29.jpg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Photo%20from%20Mapillary%202025-03-29%20%281218213809879063%29.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Photo%20from%20Mapillary%202025-03-29%20%281218213809879063%29.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Photo%20from%20Mapillary%202025-03-29%20%281218213809879063%29.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Photo%20from%20Mapillary%202025-03-29%20%281218213809879063%29.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Photo%20from%20Mapillary%202025-03-29%20%281218213809879063%29.jpg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">skysign · CC BY-SA 4.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Photo_from_Mapillary_2025-03-29_%281218213809879063%29.jpg">Photo from Mapillary 2025-03-29 (1218213809879063).jpg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q668#P4640"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-photo" style="--a:0.7217">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d100"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/India%20Montage.jpg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/India%20Montage.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20Montage.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20Montage.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20Montage.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20Montage.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
-        </a><figcaption><span><span class="fb-group"><span class="fb"
+        </button><figcaption><span><span class="fb-group"><span class="fb"
       lang="en">montage image</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/P2716"
            aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p90"
-            aria-label="Credit">i</button><span id="p90" popover class="pop">This photograph is created by Sbb1413. All photographs created by him are released under the {{CC-BY 4.0}} license unless otherwise noted. Derived works are released under the same license as original. · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p101"
+            aria-label="Credit">i</button><span id="p101" popover class="pop">This photograph is created by Sbb1413. All photographs created by him are released under the {{CC-BY 4.0}} license unless otherwise noted. Derived works are released under the same license as original. · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P2716"
        aria-label="Edit">✎</a></span>
-    </figure> </div>
+    </figure>
+    <dialog id="d100"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d100-h"
+        style="--a:0.7217">
+    <header>
+        <h2 id="d100-h"><span class="fb" lang="en">montage image</span></h2>
+        <button type="button"
+                command="close"
+                commandfor="d100"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/India%20Montage.jpg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/India%20Montage.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20Montage.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20Montage.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20Montage.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/India%20Montage.jpg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">This photograph is created by Sbb1413. All photographs created by him are released under the {{CC-BY 4.0}} license unless otherwise noted. Derived works are released under the same license as original. · CC BY-SA 4.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:India_Montage.jpg">India Montage.jpg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q668#P2716"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog> </div>
     </div><dl class="sheet" data-slot="web"><div class="row r-value"><dt>കോമൺസ് വർഗ്ഗം</dt>
 <dd><a href="https://commons.wikimedia.org/wiki/Category:India">India</a></dd>
 <span class="tools">
@@ -11521,12 +11908,12 @@ translator: Manlleus (ca) · CC BY-SA 4.0</span><a class="edit"
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P1365"
        aria-label="Edit">✎</a>
-    </span><button class="more" type="button" command="show-modal" commandfor="d91">+262</button><dialog id="d91" closedby="any">
+    </span><button class="more" type="button" command="show-modal" commandfor="d102">+262</button><dialog id="d102" closedby="any">
         <header>
             <h2>മുൻഗാമി</h2>
             <button type="button"
                     command="close"
-                    commandfor="d91"
+                    commandfor="d102"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -15056,12 +15443,12 @@ translator: Manlleus (ca) · CC BY-SA 4.0</span><a class="edit"
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q668#P1343"
        aria-label="Edit">✎</a>
-    </span><button class="more" type="button" command="show-modal" commandfor="d92">+4</button><dialog id="d92" closedby="any">
+    </span><button class="more" type="button" command="show-modal" commandfor="d103">+4</button><dialog id="d103" closedby="any">
         <header>
             <h2>ഇതേപ്പറ്റി വിവരിച്ചിട്ടുള്ള ഇടങ്ങൾ</h2>
             <button type="button"
                     command="close"
-                    commandfor="d92"
+                    commandfor="d103"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -15413,12 +15800,12 @@ translator: Manlleus (ca) · CC BY-SA 4.0</span><a class="edit"
     <div><span class="chip">wikipedia <b>313</b> ✓</span><span class="chip">wikiquote <b>32</b> ✓</span><span class="chip">wikinews <b>31</b></span><span class="chip">wikivoyage <b>26</b></span></div>
 </div>
     </div><div data-slot="identifiers">
-        <button class="more" type="button" command="show-modal" commandfor="d93"># 278</button><dialog id="d93" closedby="any">
+        <button class="more" type="button" command="show-modal" commandfor="d104"># 278</button><dialog id="d104" closedby="any">
         <header>
             <h2>278</h2>
             <button type="button"
                     command="close"
-                    commandfor="d93"
+                    commandfor="d104"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><div class="idlist"><div><span><span class="fb-group"><span class="fb"

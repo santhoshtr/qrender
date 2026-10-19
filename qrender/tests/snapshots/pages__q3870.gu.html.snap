@@ -33,18 +33,52 @@ expression: html
     </div>
     </div><div data-slot="band">
         <div class="band"> <figure class="m k-photo" style="--a:7">
-        <a href="https://commons.wikimedia.org/wiki/File:Nairobi_banner.jpg">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d1"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20banner.jpg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20banner.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20banner.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20banner.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20banner.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20banner.jpg?width=1920 1920w" sizes="100vw"
                  alt="">
-        </a><span class="tools"><button class="info"
+        </button><span class="tools"><button class="info"
             type="button"
-            popovertarget="p1"
-            aria-label="Credit">i</button><span id="p1" popover class="pop">Nairobi_Skyline2.jpg: Nite Owl
+            popovertarget="p2"
+            aria-label="Credit">i</button><span id="p2" popover class="pop">Nairobi_Skyline2.jpg: Nite Owl
 derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P948"
        aria-label="Edit">✎</a></span>
-    </figure> </div>
+    </figure>
+    <dialog id="d1"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d1-h"
+        style="--a:7">
+    <header>
+        <h2 id="d1-h">વિકિવોયેજ પાના માટે મથાળાની છબી</h2>
+        <button type="button"
+                command="close"
+                commandfor="d1"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20banner.jpg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20banner.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20banner.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20banner.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20banner.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20banner.jpg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">Nairobi_Skyline2.jpg: Nite Owl
+derivative work: Jjtkk · CC BY 3.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Nairobi_banner.jpg">Nairobi banner.jpg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P948"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog> </div>
     </div><nav class="toc" aria-label="Contents">
     <ul><li data-dimension="place"><a href="#location">ભૂગોળ</a></li><li data-dimension="names"><a href="#names">નામ</a></li><li data-dimension="people"><a href="#government">સરકાર</a></li><li data-dimension="measures"><a href="#demography">વસ્તી-વિષયક માહિતીઓ</a></li><li data-dimension="measures"><a href="#economy"><span class="fb" lang="en">economy</span></a></li><li data-dimension="place"><a href="#connections"><span class="fb" lang="en">relation</span></a></li><li data-dimension="time"><a href="#history">ઈતિહાસ</a></li><li data-dimension="media"><a href="#media"><span class="fb" lang="en">multimedia</span></a></li><li data-dimension="neutral"><a href="#web"><span class="fb" lang="en">web presence</span></a></li><li data-dimension="neutral"><a href="#evidence"><span class="fb" lang="en">reference</span></a></li></ul>
 </nav><div data-slot="lead">
@@ -55,17 +89,50 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
 </div>
     </div><div data-slot="hero">
         <figure class="m k-photo" style="--a:1.3333">
-        <a href="https://commons.wikimedia.org/wiki/File:Nairobi%2C_view_from_KICC.JPG">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d3"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%2C%20view%20from%20KICC.JPG?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%2C%20view%20from%20KICC.JPG?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%2C%20view%20from%20KICC.JPG?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%2C%20view%20from%20KICC.JPG?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%2C%20view%20from%20KICC.JPG?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%2C%20view%20from%20KICC.JPG?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" fetchpriority="high">
-        </a><span class="tools"><button class="info"
+        </button><span class="tools"><button class="info"
             type="button"
-            popovertarget="p2"
-            aria-label="Credit">i</button><span id="p2" popover class="pop">Daryona · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p4"
+            aria-label="Credit">i</button><span id="p4" popover class="pop">Daryona · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P18"
        aria-label="Edit">✎</a></span>
     </figure>
+    <dialog id="d3"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d3-h"
+        style="--a:1.3333">
+    <header>
+        <h2 id="d3-h">ચિત્ર</h2>
+        <button type="button"
+                command="close"
+                commandfor="d3"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%2C%20view%20from%20KICC.JPG?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%2C%20view%20from%20KICC.JPG?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%2C%20view%20from%20KICC.JPG?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%2C%20view%20from%20KICC.JPG?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%2C%20view%20from%20KICC.JPG?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%2C%20view%20from%20KICC.JPG?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">Daryona · CC BY-SA 3.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Nairobi%2C_view_from_KICC.JPG">Nairobi, view from KICC.JPG</a><span class="prov-imported" title="આયાત કર્યું">W</span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P18"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog>
     </div><div data-slot="kind">
         <div class="kind"><div>
             <span class="k">ઉદાહરણ</span><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q3976641"><span class="fb" lang="en">administrative territorial entity of Kenya</span></a><a class="add-label"
@@ -85,18 +152,51 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P625"
        aria-label="Edit">✎</a></span></figure>
     </div><div data-slot="gallery"><div class="block set"><div class="run"><figure class="m k-photo" style="--a:0.9083">
-        <a href="https://commons.wikimedia.org/wiki/File:Nairobi_County_location_map.png">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d5"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
-        </a><figcaption><span>સ્થાન દર્શક નક્શો</span><span class="prov-none" title="—"></span>
+        </button><figcaption><span>સ્થાન દર્શક નક્શો</span><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p3"
-            aria-label="Credit">i</button><span id="p3" popover class="pop">Nairobi123 · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p6"
+            aria-label="Credit">i</button><span id="p6" popover class="pop">Nairobi123 · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P242"
        aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-photo"
+    </figure>
+    <dialog id="d5"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d5-h"
+        style="--a:0.9083">
+    <header>
+        <h2 id="d5-h">સ્થાન દર્શક નક્શો</h2>
+        <button type="button"
+                command="close"
+                commandfor="d5"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20County%20location%20map.png?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">Nairobi123 · CC BY-SA 3.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Nairobi_County_location_map.png">Nairobi County location map.png</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P242"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-photo"
         style="--a:1.5056">
     <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=960"
          srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20city%20hall.jpg?width=1920 1920w"
@@ -106,8 +206,8 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
          loading="lazy">
     <figcaption><span>પ્રશાસન વિભાગમાં આવેલ છે</span><b><a href="https://www.wikidata.org/wiki/Q3335223">નૈરોબી કાઉન્ટી</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p4"
-            aria-label="Credit">i</button><span id="p4" popover class="pop">Jorge Láscar · CC BY-SA 2.0</span><a class="edit"
+            popovertarget="p7"
+            aria-label="Credit">i</button><span id="p7" popover class="pop">Jorge Láscar · CC BY-SA 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P131"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3333">
@@ -121,8 +221,8 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q14206200"
            aria-label="Add a label in your language">+</a></span></b><span class="prov-imported" title="આયાત કર્યું">W</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p5"
-            aria-label="Credit">i</button><span id="p5" popover class="pop">User:Chris 73 · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p8"
+            aria-label="Credit">i</button><span id="p8" popover class="pop">User:Chris 73 · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P361"
        aria-label="Edit">✎</a></span></figure></div></div></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>સમુદ્ર સપાટીથી ઉંચાઇ</dt>
 <dd><data value="1661" data-f="number">1661</data> <span class="note">મીટર</span></dd>
@@ -215,30 +315,96 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
             <span class="note"><a href="https://www.wikidata.org/wiki/Q7838">સ્વાહિલી</a></span>
         </div>
     </div><div data-slot="gallery"><div class="block set"><div class="run"><figure class="m k-drawing" style="--a:0.9918">
-        <a href="https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_Nairobi.svg">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d9"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
-        </a><figcaption><span>રાજચિહ્નની છબી</span><span class="prov-imported" title="આયાત કર્યું">W</span>
+        </button><figcaption><span>રાજચિહ્નની છબી</span><span class="prov-imported" title="આયાત કર્યું">W</span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p6"
-            aria-label="Credit">i</button><span id="p6" popover class="pop">Josedar (SVG conversion) · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p10"
+            aria-label="Credit">i</button><span id="p10" popover class="pop">Josedar (SVG conversion) · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P94"
        aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-drawing" style="--a:1.5">
-        <a href="https://commons.wikimedia.org/wiki/File:Flag_of_Nairobi.svg">
+    </figure>
+    <dialog id="d9"
+        class="lightbox k-drawing"
+        closedby="any"
+        aria-labelledby="d9-h"
+        style="--a:0.9918">
+    <header>
+        <h2 id="d9-h">રાજચિહ્નની છબી</h2>
+        <button type="button"
+                command="close"
+                commandfor="d9"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Nairobi.svg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">Josedar (SVG conversion) · CC BY-SA 4.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_Nairobi.svg">Coat of Arms of Nairobi.svg</a><span class="prov-imported" title="આયાત કર્યું">W</span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P94"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-drawing" style="--a:1.5">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d11"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
-        </a><figcaption><span>ધ્વજની છબી</span><span class="prov-none" title="—"></span>
+        </button><figcaption><span>ધ્વજની છબી</span><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p7"
-            aria-label="Credit">i</button><span id="p7" popover class="pop">earlier version Mandingoesque; this version Johannes Rössel · Public domain</span><a class="edit"
+            popovertarget="p12"
+            aria-label="Credit">i</button><span id="p12" popover class="pop">earlier version Mandingoesque; this version Johannes Rössel · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P41"
        aria-label="Edit">✎</a></span>
-    </figure></div></div></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>પોસ્ટલ કોડ</dt>
+    </figure>
+    <dialog id="d11"
+        class="lightbox k-drawing"
+        closedby="any"
+        aria-labelledby="d11-h"
+        style="--a:1.5">
+    <header>
+        <h2 id="d11-h">ધ્વજની છબી</h2>
+        <button type="button"
+                command="close"
+                commandfor="d11"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nairobi.svg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">earlier version Mandingoesque; this version Johannes Rössel · Public domain</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Flag_of_Nairobi.svg">Flag of Nairobi.svg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P41"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog></div></div></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>પોસ્ટલ કોડ</dt>
 <dd>00100</dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
@@ -272,8 +438,8 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q28967580"
            aria-label="Add a label in your language">+</a></span></b><span>2022 –</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p8"
-            aria-label="Credit">i</button><span id="p8" popover class="pop">LuffyDe · CC0</span><a class="edit"
+            popovertarget="p13"
+            aria-label="Credit">i</button><span id="p13" popover class="pop">LuffyDe · CC0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P6"
        aria-label="Edit">✎</a></span></figure></div>
     </div><div data-slot="stack">
@@ -288,8 +454,8 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q114">કેન્યા</a></b><span>1963 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p10"
-            aria-label="Credit">i</button><span id="p10" popover class="pop">UN Office for the Coordination of Humanitarian Affairs (OCHA) · CC BY 3.0</span><a class="edit"
+            popovertarget="p15"
+            aria-label="Credit">i</button><span id="p15" popover class="pop">UN Office for the Coordination of Humanitarian Affairs (OCHA) · CC BY 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P1376"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.5056">
@@ -301,8 +467,8 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q3335223">નૈરોબી કાઉન્ટી</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p11"
-            aria-label="Credit">i</button><span id="p11" popover class="pop">Jorge Láscar · CC BY-SA 2.0</span><a class="edit"
+            popovertarget="p16"
+            aria-label="Credit">i</button><span id="p16" popover class="pop">Jorge Láscar · CC BY-SA 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P1376"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.5056">
@@ -316,15 +482,15 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q1061480"
            aria-label="Add a label in your language">+</a></span></b><span class="from" title="en.wikipedia.org">W</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p12"
-            aria-label="Credit">i</button><span id="p12" popover class="pop">Jorge Láscar · CC BY-SA 2.0</span><a class="edit"
+            popovertarget="p17"
+            aria-label="Credit">i</button><span id="p17" popover class="pop">Jorge Láscar · CC BY-SA 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P1376"
-       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d9">View all</button></div><dialog id="d9" closedby="any">
+       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d14">View all</button></div><dialog id="d14" closedby="any">
         <header>
             <h2>મુખ્ય મથક છે</h2>
             <button type="button"
                     command="close"
-                    commandfor="d9"
+                    commandfor="d14"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -398,8 +564,8 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
     </div><qr-chart class="block series"><h3>વસ્તી / જનસંખ્યા
     <button class="info"
             type="button"
-            popovertarget="p13"
-            aria-label="Description">i</button><span id="p13" popover class="pop">આ સ્થાને રહેતા લોકોની વસ્તી</span>
+            popovertarget="p18"
+            aria-label="Description">i</button><span id="p18" popover class="pop">આ સ્થાને રહેતા લોકોની વસ્તી</span>
     <a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P1082"
        aria-label="Edit">✎</a>
@@ -473,8 +639,8 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q41087">રેલે</a></b><span>2022 –</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p15"
-            aria-label="Credit">i</button><span id="p15" popover class="pop">Abhiram Juvvadi · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p20"
+            aria-label="Credit">i</button><span id="p20" popover class="pop">Abhiram Juvvadi · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.8989">
@@ -486,8 +652,8 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q16554">ડેનવર</a></b><span>1975 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p16"
-            aria-label="Credit">i</button><span id="p16" popover class="pop">Quintin Soloviev · CC BY 4.0</span><a class="edit"
+            popovertarget="p21"
+            aria-label="Credit">i</button><span id="p21" popover class="pop">Quintin Soloviev · CC BY 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.7778">
@@ -499,8 +665,8 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q182852">કુન્મિંગ</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p17"
-            aria-label="Credit">i</button><span id="p17" popover class="pop">瑞丽江的河水 · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p22"
+            aria-label="Credit">i</button><span id="p22" popover class="pop">瑞丽江的河水 · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3333">
@@ -514,8 +680,8 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
            href="https://www.wikidata.org/wiki/Special:SetLabel/gu/Q964130"
            aria-label="Add a label in your language">+</a></span></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p18"
-            aria-label="Credit">i</button><span id="p18" popover class="pop">Pascual De Ruvo (Pderuvo at en.wikipedia) · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p23"
+            aria-label="Credit">i</button><span id="p23" popover class="pop">Pascual De Ruvo (Pderuvo at en.wikipedia) · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.8727">
@@ -527,8 +693,8 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q8678">રિયો ડિ જેનેરો</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p19"
-            aria-label="Credit">i</button><span id="p19" popover class="pop">Rafael Rabello de Barros · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p24"
+            aria-label="Credit">i</button><span id="p24" popover class="pop">Rafael Rabello de Barros · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3333">
@@ -540,8 +706,8 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q362865">પિંગક્સીઆંગ</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p20"
-            aria-label="Credit">i</button><span id="p20" popover class="pop">Chinaculturefriend · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p25"
+            aria-label="Credit">i</button><span id="p25" popover class="pop">Chinaculturefriend · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.4904">
@@ -553,15 +719,15 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q926713">પેરિંટિન્સ</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p21"
-            aria-label="Credit">i</button><span id="p21" popover class="pop">Mário Oliveira - MTUR · Public domain</span><a class="edit"
+            popovertarget="p26"
+            aria-label="Credit">i</button><span id="p26" popover class="pop">Mário Oliveira - MTUR · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P190"
-       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d14">View all</button></div><dialog id="d14" closedby="any">
+       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d19">View all</button></div><dialog id="d19" closedby="any">
         <header>
             <h2>જોડકું શહેર</h2>
             <button type="button"
                     command="close"
-                    commandfor="d14"
+                    commandfor="d19"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -656,50 +822,149 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
              data-spread="media"
              data-dimension="media"><h2><span class="title"><span class="fb" lang="en">multimedia</span></span></h2><div class="prose-slot" lang="en"><p>Nairobi is diverse in African cultures. As a cosmopolitan African city, it hosts all the diverse tribes that make up Kenya, and hosts a large immigrant population from other African countries.</p><a class="read" href="https://en.wikipedia.org/wiki/Nairobi#Culture">Culture ↗</a></div><div data-slot="feature">
         <div class="feature"> <figure class="m k-photo" style="--a:1">
-        <a href="https://commons.wikimedia.org/wiki/File:Nairobi_economic_capital_of_africa.jpg">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d27"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=1920 1920w" sizes="100vw"
                  alt="" loading="lazy">
-        </a><figcaption><span><span class="fb-group"><span class="fb"
+        </button><figcaption><span><span class="fb-group"><span class="fb"
       lang="en">nighttime view</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P3451"
            aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p22"
-            aria-label="Credit">i</button><span id="p22" popover class="pop">Africanmodern · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p28"
+            aria-label="Credit">i</button><span id="p28" popover class="pop">Africanmodern · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P3451"
        aria-label="Edit">✎</a></span>
-    </figure> </div>
+    </figure>
+    <dialog id="d27"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d27-h"
+        style="--a:1">
+    <header>
+        <h2 id="d27-h"><span class="fb" lang="en">nighttime view</span></h2>
+        <button type="button"
+                command="close"
+                commandfor="d27"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20economic%20capital%20of%20africa.jpg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">Africanmodern · CC BY-SA 4.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Nairobi_economic_capital_of_africa.jpg">Nairobi economic capital of africa.jpg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P3451"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog> </div>
     </div><div data-slot="run">
         <div class="run"> <figure class="m k-photo" style="--a:0.6633">
-        <a href="https://commons.wikimedia.org/wiki/File:Nairobi_Montage_A.jpg">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d29"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
-        </a><figcaption><span>કોલાઝ છબી</span><span class="prov-none" title="—"></span>
+        </button><figcaption><span>કોલાઝ છબી</span><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p23"
-            aria-label="Credit">i</button><span id="p23" popover class="pop">Southlondoneye (talk) 20:30, 29 March 2015 (UTC) · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p30"
+            aria-label="Credit">i</button><span id="p30" popover class="pop">Southlondoneye (talk) 20:30, 29 March 2015 (UTC) · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P2716"
        aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-photo" style="--a:1.6234">
-        <a href="https://commons.wikimedia.org/wiki/File:Nairobi_Aerial_Photo.jpg">
+    </figure>
+    <dialog id="d29"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d29-h"
+        style="--a:0.6633">
+    <header>
+        <h2 id="d29-h">કોલાઝ છબી</h2>
+        <button type="button"
+                command="close"
+                commandfor="d29"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Montage%20A.jpg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">Southlondoneye (talk) 20:30, 29 March 2015 (UTC) · CC BY-SA 3.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Nairobi_Montage_A.jpg">Nairobi Montage A.jpg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P2716"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-photo" style="--a:1.6234">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d31"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
-        </a><figcaption><span><span class="fb-group"><span class="fb"
+        </button><figcaption><span><span class="fb-group"><span class="fb"
       lang="en">aerial view</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/gu/P8592"
            aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p24"
-            aria-label="Credit">i</button><span id="p24" popover class="pop">Mkimemia at English Wikipedia · Public domain</span><a class="edit"
+            popovertarget="p32"
+            aria-label="Credit">i</button><span id="p32" popover class="pop">Mkimemia at English Wikipedia · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P8592"
        aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-video" style="--a:1.7778">
+    </figure>
+    <dialog id="d31"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d31-h"
+        style="--a:1.6234">
+    <header>
+        <h2 id="d31-h"><span class="fb" lang="en">aerial view</span></h2>
+        <button type="button"
+                command="close"
+                commandfor="d31"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20Aerial%20Photo.jpg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">Mkimemia at English Wikipedia · Public domain</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Nairobi_Aerial_Photo.jpg">Nairobi Aerial Photo.jpg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q3870#P8592"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-video" style="--a:1.7778">
         <video controls
                preload="none"
                poster="https://commons.wikimedia.org/wiki/Special:FilePath/Google%20Timelapse-%20Nairobi%2C%20Kenya.webm?width=960"
@@ -712,8 +977,8 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
             </figcaption>
         <span class="tools"><button class="info"
             type="button"
-            popovertarget="p25"
-            aria-label="Credit">i</button><span id="p25" popover class="pop">Google Earth · CC BY 3.0</span><a class="edit"
+            popovertarget="p33"
+            aria-label="Credit">i</button><span id="p33" popover class="pop">Google Earth · CC BY 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q3870#P10"
        aria-label="Edit">✎</a></span>
     </figure> </div>
@@ -941,12 +1206,12 @@ derivative work: Jjtkk · CC BY 3.0</span><a class="edit"
     <div><span class="chip">wikipedia <b>210</b></span><span class="chip">wikivoyage <b>19</b></span><span class="chip">wikinews <b>5</b></span><span class="chip">wikiquote <b>3</b></span></div>
 </div>
     </div><div data-slot="identifiers">
-        <button class="more" type="button" command="show-modal" commandfor="d26"># 84</button><dialog id="d26" closedby="any">
+        <button class="more" type="button" command="show-modal" commandfor="d34"># 84</button><dialog id="d34" closedby="any">
         <header>
             <h2>84</h2>
             <button type="button"
                     command="close"
-                    commandfor="d26"
+                    commandfor="d34"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><div class="idlist"><div><span><span class="fb-group"><span class="fb"

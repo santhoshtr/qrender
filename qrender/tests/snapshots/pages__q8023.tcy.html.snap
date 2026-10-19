@@ -41,17 +41,52 @@ expression: html
 </div>
     </div><div data-slot="hero">
         <figure class="m k-photo" style="--a:0.7732">
-        <a href="https://commons.wikimedia.org/wiki/File:Nelson_Mandela_1994.jpg">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d1"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%201994.jpg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%201994.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%201994.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%201994.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%201994.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%201994.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" fetchpriority="high">
-        </a><span class="tools"><button class="info"
+        </button><span class="tools"><button class="info"
             type="button"
-            popovertarget="p1"
-            aria-label="Credit">i</button><span id="p1" popover class="pop">Kingkongphoto &#38; www.celebrity-photos.com from Laurel · CC BY-SA 2.0</span><a class="edit"
+            popovertarget="p2"
+            aria-label="Credit">i</button><span id="p2" popover class="pop">Kingkongphoto &#38; www.celebrity-photos.com from Laurel · CC BY-SA 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P18"
        aria-label="Edit">✎</a></span>
     </figure>
+    <dialog id="d1"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d1-h"
+        style="--a:0.7732">
+    <header>
+        <h2 id="d1-h">ಪಟೊ</h2>
+        <button type="button"
+                command="close"
+                commandfor="d1"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%201994.jpg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%201994.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%201994.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%201994.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%201994.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%201994.jpg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p>1994</p>
+        
+            <p class="credit">Kingkongphoto &#38; www.celebrity-photos.com from Laurel · CC BY-SA 2.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Nelson_Mandela_1994.jpg">Nelson Mandela 1994.jpg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q8023#P18"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog>
     </div><div data-slot="kind">
         <div class="kind"><div>
             <span class="k">ಉದಾರ್ಮೆಗ್</span><a href="https://www.wikidata.org/wiki/Q5">ಮಾನವೆ</a></div></div>
@@ -77,8 +112,8 @@ expression: html
            href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/Q849164"
            aria-label="Add a label in your language">+</a></span></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p2"
-            aria-label="Credit">i</button><span id="p2" popover class="pop">Michael (Fihliwe) Denne · CC BY-SA 2.0</span><a class="edit"
+            popovertarget="p3"
+            aria-label="Credit">i</button><span id="p3" popover class="pop">Michael (Fihliwe) Denne · CC BY-SA 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P19"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.5004">
@@ -95,8 +130,8 @@ expression: html
            href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/Q1856170"
            aria-label="Add a label in your language">+</a></span></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p3"
-            aria-label="Credit">i</button><span id="p3" popover class="pop">Salym Fayad · CC BY 2.0</span><a class="edit"
+            popovertarget="p4"
+            aria-label="Credit">i</button><span id="p4" popover class="pop">Salym Fayad · CC BY 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P119"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.75">
@@ -113,8 +148,8 @@ expression: html
            href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/Q5912944"
            aria-label="Add a label in your language">+</a></span></b><span class="prov-imported" title="ಆಮದು ಮಲ್ತ್‌ನೆ">W</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p4"
-            aria-label="Credit">i</button><span id="p4" popover class="pop">Ekem · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p5"
+            aria-label="Credit">i</button><span id="p5" popover class="pop">Ekem · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P20"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:1">
@@ -129,8 +164,8 @@ expression: html
            href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/P27"
            aria-label="Add a label in your language">+</a></span></span><b><a href="https://www.wikidata.org/wiki/Q258">ದಕ್ಷಿಣ ಆಫ್ರಿಕಾ</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p5"
-            aria-label="Credit">i</button><span id="p5" popover class="pop">UN Office for the Coordination of Humanitarian Affairs (OCHA) · CC BY 3.0</span><a class="edit"
+            popovertarget="p6"
+            aria-label="Credit">i</button><span id="p6" popover class="pop">UN Office for the Coordination of Humanitarian Affairs (OCHA) · CC BY 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P27"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.75">
@@ -147,8 +182,8 @@ expression: html
            href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/Q5912944"
            aria-label="Add a label in your language">+</a></span></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p6"
-            aria-label="Credit">i</button><span id="p6" popover class="pop">Ekem · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p7"
+            aria-label="Credit">i</button><span id="p7" popover class="pop">Ekem · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P551"
        aria-label="Edit">✎</a></span></figure></div></div></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt><span class="fb-group"><span class="fb"
       lang="en">date of birth</span><a class="add-label"
@@ -288,8 +323,8 @@ expression: html
            href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/Q99521170"
            aria-label="Add a label in your language">+</a></span></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p8"
-            aria-label="Credit">i</button><span id="p8" popover class="pop">Ministerio de la Presidencia de España · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p9"
+            aria-label="Credit">i</button><span id="p9" popover class="pop">Ministerio de la Presidencia de España · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P26"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.0615">
@@ -303,8 +338,8 @@ expression: html
            href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/Q93190"
            aria-label="Add a label in your language">+</a></span></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p9"
-            aria-label="Credit">i</button><span id="p9" popover class="pop">Rotational · Public domain</span><a class="edit"
+            popovertarget="p10"
+            aria-label="Credit">i</button><span id="p10" popover class="pop">Rotational · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P26"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.98">
@@ -320,15 +355,15 @@ expression: html
            href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/Q93190"
            aria-label="Add a label in your language">+</a></span></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p10"
-            aria-label="Credit">i</button><span id="p10" popover class="pop">The original uploader was André Koehne at Portuguese Wikipedia. · Public domain</span><a class="edit"
+            popovertarget="p11"
+            aria-label="Credit">i</button><span id="p11" popover class="pop">The original uploader was André Koehne at Portuguese Wikipedia. · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P26"
-       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d7">View all</button></div><dialog id="d7" closedby="any">
+       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d8">View all</button></div><dialog id="d8" closedby="any">
         <header>
             <h2>ಕಂಡನಿ/ಬುಡೆದಿ</h2>
             <button type="button"
                     command="close"
-                    commandfor="d7"
+                    commandfor="d8"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -388,8 +423,8 @@ expression: html
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q16103937">Zenani Mandela-Dlamini</a></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p12"
-            aria-label="Credit">i</button><span id="p12" popover class="pop">Official White House Photo by Pete Souza · Public domain</span><a class="edit"
+            popovertarget="p13"
+            aria-label="Credit">i</button><span id="p13" popover class="pop">Official White House Photo by Pete Souza · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P40"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.7405">
@@ -401,8 +436,8 @@ expression: html
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q204369">Zindzi Mandela</a></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p13"
-            aria-label="Credit">i</button><span id="p13" popover class="pop">Official White House Photo by Pete Souza · Public domain</span><a class="edit"
+            popovertarget="p14"
+            aria-label="Credit">i</button><span id="p14" popover class="pop">Official White House Photo by Pete Souza · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P40"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.6625">
@@ -414,8 +449,8 @@ expression: html
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q14775521">Makaziwe Mandela</a></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p14"
-            aria-label="Credit">i</button><span id="p14" popover class="pop">Jose Rosengurtt · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p15"
+            aria-label="Credit">i</button><span id="p15" popover class="pop">Jose Rosengurtt · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P40"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.7732">
@@ -427,8 +462,8 @@ expression: html
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q16103975">Thembekile Mandela</a></b><span class="from" title="en.wikipedia.org">W</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p15"
-            aria-label="Credit">i</button><span id="p15" popover class="pop">Kingkongphoto &#38; www.celebrity-photos.com from Laurel · CC BY-SA 2.0</span><a class="edit"
+            popovertarget="p16"
+            aria-label="Credit">i</button><span id="p16" popover class="pop">Kingkongphoto &#38; www.celebrity-photos.com from Laurel · CC BY-SA 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P40"
        aria-label="Edit">✎</a></span></figure><figure class="m k-empty" style="--a:1.333">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q2104774">Makgatho Mandela</a></b>
@@ -440,12 +475,12 @@ expression: html
        aria-label="Edit">✎</a>
         
     </span>
-</figure><button class="view-all" type="button" command="show-modal" commandfor="d11">View all</button></div><dialog id="d11" closedby="any">
+</figure><button class="view-all" type="button" command="show-modal" commandfor="d12">View all</button></div><dialog id="d12" closedby="any">
         <header>
             <h2>child</h2>
             <button type="button"
                     command="close"
-                    commandfor="d11"
+                    commandfor="d12"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -560,8 +595,8 @@ expression: html
            href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/Q2005511"
            aria-label="Add a label in your language">+</a></span></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p17"
-            aria-label="Credit">i</button><span id="p17" popover class="pop">Morné van Rooyen · Attribution</span><a class="edit"
+            popovertarget="p18"
+            aria-label="Credit">i</button><span id="p18" popover class="pop">Morné van Rooyen · Attribution</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P69"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.5115">
@@ -575,8 +610,8 @@ expression: html
            href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/Q534643"
            aria-label="Add a label in your language">+</a></span></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p18"
-            aria-label="Credit">i</button><span id="p18" popover class="pop">Samuella99 · Copyrighted free use</span><a class="edit"
+            popovertarget="p19"
+            aria-label="Credit">i</button><span id="p19" popover class="pop">Samuella99 · Copyrighted free use</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P69"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.7778">
@@ -590,8 +625,8 @@ expression: html
            href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/Q677993"
            aria-label="Add a label in your language">+</a></span></b><span><a href="https://www.wikidata.org/wiki/Q1765120">Bachelor of Arts</a></span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p19"
-            aria-label="Credit">i</button><span id="p19" popover class="pop">A. Bailey · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p20"
+            aria-label="Credit">i</button><span id="p20" popover class="pop">A. Bailey · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P69"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3333">
@@ -605,15 +640,15 @@ expression: html
            href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/Q170027"
            aria-label="Add a label in your language">+</a></span></b><span class="prov-imported" title="ಆಮದು ಮಲ್ತ್‌ನೆ">W</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p20"
-            aria-label="Credit">i</button><span id="p20" popover class="pop">An Siarach at English Wikipedia · Public domain</span><a class="edit"
+            popovertarget="p21"
+            aria-label="Credit">i</button><span id="p21" popover class="pop">An Siarach at English Wikipedia · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P69"
-       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d16">View all</button></div><dialog id="d16" closedby="any">
+       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d17">View all</button></div><dialog id="d17" closedby="any">
         <header>
             <h2>ಓದ್‍ನೆ</h2>
             <button type="button"
                     command="close"
-                    commandfor="d16"
+                    commandfor="d17"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -723,12 +758,12 @@ expression: html
            href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/Q115599548"
            aria-label="Add a label in your language">+</a></span></span><span class="v"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q115647426"><span class="fb" lang="en">Nobel Peace Prize Address</span></a><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/Q115647426"
-           aria-label="Add a label in your language">+</a></span></span><button class="more" type="button" command="show-modal" commandfor="d21">+1</button><dialog id="d21" closedby="any">
+           aria-label="Add a label in your language">+</a></span></span><button class="more" type="button" command="show-modal" commandfor="d22">+1</button><dialog id="d22" closedby="any">
         <header>
             <h2>author, screenwriter</h2>
             <button type="button"
                     command="close"
-                    commandfor="d21"
+                    commandfor="d22"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><span class="v"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q55669983"><span class="fb" lang="en">Travel diary from the Rivonia Trial</span></a><a class="add-label"
@@ -772,8 +807,8 @@ expression: html
            href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/Q983310"
            aria-label="Add a label in your language">+</a></span></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p22"
-            aria-label="Credit">i</button><span id="p22" popover class="pop">Unknown authorUnknown author · Public domain</span><a class="edit"
+            popovertarget="p23"
+            aria-label="Credit">i</button><span id="p23" popover class="pop">Unknown authorUnknown author · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P737"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:0.7341">
@@ -790,8 +825,8 @@ expression: html
            href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/Q83162"
            aria-label="Add a label in your language">+</a></span></b><span>1943 –</span><span class="prov-imported" title="ಆಮದು ಮಲ್ತ್‌ನೆ">W</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p23"
-            aria-label="Credit">i</button><span id="p23" popover class="pop">Rob Koster · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p24"
+            aria-label="Credit">i</button><span id="p24" popover class="pop">Rob Koster · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P102"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:0.8932">
@@ -808,8 +843,8 @@ expression: html
            href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/Q305317"
            aria-label="Add a label in your language">+</a></span></b><span>1950 – 1960</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p24"
-            aria-label="Credit">i</button><span id="p24" popover class="pop">MrPenguin20 · Public domain</span><a class="edit"
+            popovertarget="p25"
+            aria-label="Credit">i</button><span id="p25" popover class="pop">MrPenguin20 · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P102"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3333">
@@ -829,8 +864,8 @@ expression: html
             </span>
         <span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p25"
-            aria-label="Credit">i</button><span id="p25" popover class="pop">Daderot · Public domain</span><a class="edit"
+            popovertarget="p26"
+            aria-label="Credit">i</button><span id="p26" popover class="pop">Daderot · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P463"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1">
@@ -848,8 +883,8 @@ expression: html
             </span>
         <span>2007 – 2013</span><span class="prov-imported" title="ಆಮದು ಮಲ್ತ್‌ನೆ">W</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p26"
-            aria-label="Credit">i</button><span id="p26" popover class="pop">Montage · CC BY 3.0</span><a class="edit"
+            popovertarget="p27"
+            aria-label="Credit">i</button><span id="p27" popover class="pop">Montage · CC BY 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P463"
        aria-label="Edit">✎</a></span></figure></div></div></div><dl class="sheet" data-slot="sheet"><div class="row r-list"><dt>ಬೇಲೆ</dt>
 <dd><span class="v"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q40348"><span class="fb" lang="en">lawyer</span></a><a class="add-label"
@@ -888,12 +923,12 @@ expression: html
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P106"
        aria-label="Edit">✎</a>
-    </span><button class="more" type="button" command="show-modal" commandfor="d27">+1</button><dialog id="d27" closedby="any">
+    </span><button class="more" type="button" command="show-modal" commandfor="d28">+1</button><dialog id="d28" closedby="any">
         <header>
             <h2>ಬೇಲೆ</h2>
             <button type="button"
                     command="close"
-                    commandfor="d27"
+                    commandfor="d28"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows text-rows">
@@ -1069,12 +1104,12 @@ expression: html
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P166"
        aria-label="Edit">✎</a>
-    </span><button class="more" type="button" command="show-modal" commandfor="d28">+83</button><dialog id="d28" closedby="any">
+    </span><button class="more" type="button" command="show-modal" commandfor="d29">+83</button><dialog id="d29" closedby="any">
         <header>
             <h2>award received</h2>
             <button type="button"
                     command="close"
-                    commandfor="d28"
+                    commandfor="d29"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -2152,21 +2187,54 @@ expression: html
 </div>
 </qr-names>
     </div><div data-slot="gallery"><div class="block set"><div class="run"><figure class="m k-drawing" style="--a:2.5">
-        <a href="https://commons.wikimedia.org/wiki/File:Nelson_Mandela_Signature.svg">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d30"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%20Signature.svg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%20Signature.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%20Signature.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%20Signature.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%20Signature.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%20Signature.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
-        </a><figcaption><span><span class="fb-group"><span class="fb"
+        </button><figcaption><span><span class="fb-group"><span class="fb"
       lang="en">signature</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/P109"
            aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p29"
-            aria-label="Credit">i</button><span id="p29" popover class="pop">Nelson Mandela · Public domain</span><a class="edit"
+            popovertarget="p31"
+            aria-label="Credit">i</button><span id="p31" popover class="pop">Nelson Mandela · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P109"
        aria-label="Edit">✎</a></span>
-    </figure></div></div></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt><span class="fb-group"><span class="fb"
+    </figure>
+    <dialog id="d30"
+        class="lightbox k-drawing"
+        closedby="any"
+        aria-labelledby="d30-h"
+        style="--a:2.5">
+    <header>
+        <h2 id="d30-h"><span class="fb" lang="en">signature</span></h2>
+        <button type="button"
+                command="close"
+                commandfor="d30"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%20Signature.svg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%20Signature.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%20Signature.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%20Signature.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%20Signature.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%20Mandela%20Signature.svg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">Nelson Mandela · Public domain</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Nelson_Mandela_Signature.svg">Nelson Mandela Signature.svg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q8023#P109"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog></div></div></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt><span class="fb-group"><span class="fb"
       lang="en">given name</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/P735"
            aria-label="Add a label in your language">+</a></span></dt>
@@ -2193,66 +2261,198 @@ expression: html
              data-spread="media"
              data-dimension="media"><h2><span class="title"><span class="fb" lang="en">multimedia</span></span></h2><div data-slot="run">
         <div class="run"> <figure class="m k-photo" style="--a:1.3333">
-        <a href="https://commons.wikimedia.org/wiki/File:Star_Walk_Campus_R%C3%BCtli_Berlin_Neuk%C3%B6lln_Nelson_Mandela.jpg">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d32"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Star%20Walk%20Campus%20R%C3%BCtli%20Berlin%20Neuk%C3%B6lln%20Nelson%20Mandela.jpg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Star%20Walk%20Campus%20R%C3%BCtli%20Berlin%20Neuk%C3%B6lln%20Nelson%20Mandela.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Star%20Walk%20Campus%20R%C3%BCtli%20Berlin%20Neuk%C3%B6lln%20Nelson%20Mandela.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Star%20Walk%20Campus%20R%C3%BCtli%20Berlin%20Neuk%C3%B6lln%20Nelson%20Mandela.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Star%20Walk%20Campus%20R%C3%BCtli%20Berlin%20Neuk%C3%B6lln%20Nelson%20Mandela.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Star%20Walk%20Campus%20R%C3%BCtli%20Berlin%20Neuk%C3%B6lln%20Nelson%20Mandela.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
-        </a><figcaption><span><span class="fb-group"><span class="fb"
-      lang="en">plaque image</span><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/P1801"
-           aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span>
-            </figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p30"
-            aria-label="Credit">i</button><span id="p30" popover class="pop">SupapleX · CC BY-SA 4.0</span><a class="edit"
-       href="https://www.wikidata.org/wiki/Q8023#P1801"
-       aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-photo" style="--a:1.3333">
-        <a href="https://commons.wikimedia.org/wiki/File:Parc_Nelson-Mandela%2C_plaque_Nelson_Mandela.jpg">
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Parc%20Nelson-Mandela%2C%20plaque%20Nelson%20Mandela.jpg?width=960"
-                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Parc%20Nelson-Mandela%2C%20plaque%20Nelson%20Mandela.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Parc%20Nelson-Mandela%2C%20plaque%20Nelson%20Mandela.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Parc%20Nelson-Mandela%2C%20plaque%20Nelson%20Mandela.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Parc%20Nelson-Mandela%2C%20plaque%20Nelson%20Mandela.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Parc%20Nelson-Mandela%2C%20plaque%20Nelson%20Mandela.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
-                 alt="" loading="lazy">
-        </a><figcaption><span><span class="fb-group"><span class="fb"
-      lang="en">plaque image</span><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/P1801"
-           aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span>
-            </figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p31"
-            aria-label="Credit">i</button><span id="p31" popover class="pop">Ptaff · CC0</span><a class="edit"
-       href="https://www.wikidata.org/wiki/Q8023#P1801"
-       aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-photo" style="--a:1.407">
-        <a href="https://commons.wikimedia.org/wiki/File:Plaque_50e_Anniversaire_D%C3%A9claration_Universelle_Droits_Homme_Parc_Nelson_Mandela_-_Pierrefitte-sur-Seine_%28FR93%29_-_2022-08-14_-_1.jpg">
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%2050e%20Anniversaire%20D%C3%A9claration%20Universelle%20Droits%20Homme%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=960"
-                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%2050e%20Anniversaire%20D%C3%A9claration%20Universelle%20Droits%20Homme%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%2050e%20Anniversaire%20D%C3%A9claration%20Universelle%20Droits%20Homme%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%2050e%20Anniversaire%20D%C3%A9claration%20Universelle%20Droits%20Homme%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%2050e%20Anniversaire%20D%C3%A9claration%20Universelle%20Droits%20Homme%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%2050e%20Anniversaire%20D%C3%A9claration%20Universelle%20Droits%20Homme%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
-                 alt="" loading="lazy">
-        </a><figcaption><span><span class="fb-group"><span class="fb"
-      lang="en">plaque image</span><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/P1801"
-           aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span>
-            </figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p32"
-            aria-label="Credit">i</button><span id="p32" popover class="pop">Chabe01 · CC BY-SA 4.0</span><a class="edit"
-       href="https://www.wikidata.org/wiki/Q8023#P1801"
-       aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-photo" style="--a:1.3921">
-        <a href="https://commons.wikimedia.org/wiki/File:Plaque_Parc_Nelson_Mandela_-_Pierrefitte-sur-Seine_%28FR93%29_-_2022-08-14_-_1.jpg">
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=960"
-                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
-                 alt="" loading="lazy">
-        </a><figcaption><span><span class="fb-group"><span class="fb"
+        </button><figcaption><span><span class="fb-group"><span class="fb"
       lang="en">plaque image</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/P1801"
            aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
             popovertarget="p33"
-            aria-label="Credit">i</button><span id="p33" popover class="pop">Chabe01 · CC BY-SA 4.0</span><a class="edit"
+            aria-label="Credit">i</button><span id="p33" popover class="pop">SupapleX · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P1801"
        aria-label="Edit">✎</a></span>
-    </figure> </div>
+    </figure>
+    <dialog id="d32"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d32-h"
+        style="--a:1.3333">
+    <header>
+        <h2 id="d32-h"><span class="fb" lang="en">plaque image</span></h2>
+        <button type="button"
+                command="close"
+                commandfor="d32"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Star%20Walk%20Campus%20R%C3%BCtli%20Berlin%20Neuk%C3%B6lln%20Nelson%20Mandela.jpg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Star%20Walk%20Campus%20R%C3%BCtli%20Berlin%20Neuk%C3%B6lln%20Nelson%20Mandela.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Star%20Walk%20Campus%20R%C3%BCtli%20Berlin%20Neuk%C3%B6lln%20Nelson%20Mandela.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Star%20Walk%20Campus%20R%C3%BCtli%20Berlin%20Neuk%C3%B6lln%20Nelson%20Mandela.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Star%20Walk%20Campus%20R%C3%BCtli%20Berlin%20Neuk%C3%B6lln%20Nelson%20Mandela.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Star%20Walk%20Campus%20R%C3%BCtli%20Berlin%20Neuk%C3%B6lln%20Nelson%20Mandela.jpg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">SupapleX · CC BY-SA 4.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Star_Walk_Campus_R%C3%BCtli_Berlin_Neuk%C3%B6lln_Nelson_Mandela.jpg">Star Walk Campus Rütli Berlin Neukölln Nelson Mandela.jpg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q8023#P1801"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-photo" style="--a:1.3333">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d34"
+                aria-label="View larger">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Parc%20Nelson-Mandela%2C%20plaque%20Nelson%20Mandela.jpg?width=960"
+                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Parc%20Nelson-Mandela%2C%20plaque%20Nelson%20Mandela.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Parc%20Nelson-Mandela%2C%20plaque%20Nelson%20Mandela.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Parc%20Nelson-Mandela%2C%20plaque%20Nelson%20Mandela.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Parc%20Nelson-Mandela%2C%20plaque%20Nelson%20Mandela.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Parc%20Nelson-Mandela%2C%20plaque%20Nelson%20Mandela.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
+                 alt="" loading="lazy">
+        </button><figcaption><span><span class="fb-group"><span class="fb"
+      lang="en">plaque image</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/P1801"
+           aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span>
+            </figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p35"
+            aria-label="Credit">i</button><span id="p35" popover class="pop">Ptaff · CC0</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q8023#P1801"
+       aria-label="Edit">✎</a></span>
+    </figure>
+    <dialog id="d34"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d34-h"
+        style="--a:1.3333">
+    <header>
+        <h2 id="d34-h"><span class="fb" lang="en">plaque image</span></h2>
+        <button type="button"
+                command="close"
+                commandfor="d34"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Parc%20Nelson-Mandela%2C%20plaque%20Nelson%20Mandela.jpg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Parc%20Nelson-Mandela%2C%20plaque%20Nelson%20Mandela.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Parc%20Nelson-Mandela%2C%20plaque%20Nelson%20Mandela.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Parc%20Nelson-Mandela%2C%20plaque%20Nelson%20Mandela.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Parc%20Nelson-Mandela%2C%20plaque%20Nelson%20Mandela.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Parc%20Nelson-Mandela%2C%20plaque%20Nelson%20Mandela.jpg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">Ptaff · CC0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Parc_Nelson-Mandela%2C_plaque_Nelson_Mandela.jpg">Parc Nelson-Mandela, plaque Nelson Mandela.jpg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q8023#P1801"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-photo" style="--a:1.407">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d36"
+                aria-label="View larger">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%2050e%20Anniversaire%20D%C3%A9claration%20Universelle%20Droits%20Homme%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=960"
+                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%2050e%20Anniversaire%20D%C3%A9claration%20Universelle%20Droits%20Homme%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%2050e%20Anniversaire%20D%C3%A9claration%20Universelle%20Droits%20Homme%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%2050e%20Anniversaire%20D%C3%A9claration%20Universelle%20Droits%20Homme%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%2050e%20Anniversaire%20D%C3%A9claration%20Universelle%20Droits%20Homme%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%2050e%20Anniversaire%20D%C3%A9claration%20Universelle%20Droits%20Homme%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
+                 alt="" loading="lazy">
+        </button><figcaption><span><span class="fb-group"><span class="fb"
+      lang="en">plaque image</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/P1801"
+           aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span>
+            </figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p37"
+            aria-label="Credit">i</button><span id="p37" popover class="pop">Chabe01 · CC BY-SA 4.0</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q8023#P1801"
+       aria-label="Edit">✎</a></span>
+    </figure>
+    <dialog id="d36"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d36-h"
+        style="--a:1.407">
+    <header>
+        <h2 id="d36-h"><span class="fb" lang="en">plaque image</span></h2>
+        <button type="button"
+                command="close"
+                commandfor="d36"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%2050e%20Anniversaire%20D%C3%A9claration%20Universelle%20Droits%20Homme%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%2050e%20Anniversaire%20D%C3%A9claration%20Universelle%20Droits%20Homme%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%2050e%20Anniversaire%20D%C3%A9claration%20Universelle%20Droits%20Homme%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%2050e%20Anniversaire%20D%C3%A9claration%20Universelle%20Droits%20Homme%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%2050e%20Anniversaire%20D%C3%A9claration%20Universelle%20Droits%20Homme%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%2050e%20Anniversaire%20D%C3%A9claration%20Universelle%20Droits%20Homme%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">Chabe01 · CC BY-SA 4.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Plaque_50e_Anniversaire_D%C3%A9claration_Universelle_Droits_Homme_Parc_Nelson_Mandela_-_Pierrefitte-sur-Seine_%28FR93%29_-_2022-08-14_-_1.jpg">Plaque 50e Anniversaire Déclaration Universelle Droits Homme Parc Nelson Mandela - Pierrefitte-sur-Seine (FR93) - 2022-08-14 - 1.jpg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q8023#P1801"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-photo" style="--a:1.3921">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d38"
+                aria-label="View larger">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=960"
+                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
+                 alt="" loading="lazy">
+        </button><figcaption><span><span class="fb-group"><span class="fb"
+      lang="en">plaque image</span><a class="add-label"
+           href="https://www.wikidata.org/wiki/Special:SetLabel/tcy/P1801"
+           aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span>
+            </figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p39"
+            aria-label="Credit">i</button><span id="p39" popover class="pop">Chabe01 · CC BY-SA 4.0</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q8023#P1801"
+       aria-label="Edit">✎</a></span>
+    </figure>
+    <dialog id="d38"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d38-h"
+        style="--a:1.3921">
+    <header>
+        <h2 id="d38-h"><span class="fb" lang="en">plaque image</span></h2>
+        <button type="button"
+                command="close"
+                commandfor="d38"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Plaque%20Parc%20Nelson%20Mandela%20-%20Pierrefitte-sur-Seine%20%28FR93%29%20-%202022-08-14%20-%201.jpg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">Chabe01 · CC BY-SA 4.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Plaque_Parc_Nelson_Mandela_-_Pierrefitte-sur-Seine_%28FR93%29_-_2022-08-14_-_1.jpg">Plaque Parc Nelson Mandela - Pierrefitte-sur-Seine (FR93) - 2022-08-14 - 1.jpg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q8023#P1801"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog> </div>
     </div><div data-slot="audio">
         <div class="block">
         <h3><span class="fb-group"><span class="fb"
@@ -2340,8 +2540,8 @@ expression: html
            aria-label="Add a label in your language">+</a></span>
     <button class="info"
             type="button"
-            popovertarget="p34"
-            aria-label="Description">i</button><span id="p34" popover class="pop"><span class="fb" lang="en">number of subscribers on a particular social media website (use as main statement only; see P3744 instead for qualifier). Qualify with &#34;point in time&#34; and property for account. For Twitter, use numeric id.</span></span></dt>
+            popovertarget="p40"
+            aria-label="Description">i</button><span id="p40" popover class="pop"><span class="fb" lang="en">number of subscribers on a particular social media website (use as main statement only; see P3744 instead for qualifier). Qualify with &#34;point in time&#34; and property for account. For Twitter, use numeric id.</span></span></dt>
 <dd><data value="1569148" data-f="number">1569148</data> <span class="note">2023 · <span class="fb" lang="en">X (Twitter) numeric user ID</span>: <data value="15762708" data-f="number">15762708</data></span><br><data value="1579070" data-f="number">1579070</data> <span class="note">2022 · <span class="fb" lang="en">X (Twitter) numeric user ID</span>: <data value="15762708" data-f="number">15762708</data></span></dd>
 <span class="tools"></span>
 </div></dl></section>
@@ -2610,12 +2810,12 @@ expression: html
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q8023#P6104"
        aria-label="Edit">✎</a>
-    </span><button class="more" type="button" command="show-modal" commandfor="d35">+9</button><dialog id="d35" closedby="any">
+    </span><button class="more" type="button" command="show-modal" commandfor="d41">+9</button><dialog id="d41" closedby="any">
         <header>
             <h2>maintained by WikiProject</h2>
             <button type="button"
                     command="close"
-                    commandfor="d35"
+                    commandfor="d41"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -2811,12 +3011,12 @@ expression: html
     <div><span class="chip">wikipedia <b>234</b></span><span class="chip">wikiquote <b>47</b></span><span class="chip">wikinews <b>10</b></span><span class="chip">wikisource <b>3</b></span></div>
 </div>
     </div><div data-slot="identifiers">
-        <button class="more" type="button" command="show-modal" commandfor="d36"># 247</button><dialog id="d36" closedby="any">
+        <button class="more" type="button" command="show-modal" commandfor="d42"># 247</button><dialog id="d42" closedby="any">
         <header>
             <h2>247</h2>
             <button type="button"
                     command="close"
-                    commandfor="d36"
+                    commandfor="d42"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><div class="idlist"><div><span><span class="fb-group"><span class="fb"

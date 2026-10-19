@@ -34,14 +34,21 @@
         <span class="tools">{{ ui.credit(&b.picture.credit)|safe }}{% call m::edit(ui, edit) %}{% endcall %}</span>
     </figure>
 {%- else -%}
+    {#- The picture opens its dialog (parts/lightbox.html), after the
+        figure: in the figure, the figure's styles would reach it. -#}
+    {%- let n = ui.id() -%}
     <figure class="m k-{{ kind }}" style="--a:{{ ui.aspect(b.picture.aspect) }}">
-        <a href="{{ ui.commons_page(file) }}">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d{{ n }}"
+                aria-label="{{ ui.msg("qrender-view-larger") }}">
             <img src="{{ ui.src(file, 960) }}"
                  srcset="{{ ui.srcset(file) }}"
                  {%- if role == "feature" || role == "banner" %} sizes="100vw"{% else %} sizes="(max-width: 760px) 100vw, 40vw"{% endif %}
                  alt=""
                  {%- if role == "identity" %} fetchpriority="high"{% else if role != "banner" %} loading="lazy"{% endif %}>
-        </a>
+        </button>
         {%- if role != "identity" && role != "banner" -%}
             <figcaption>
                 {%- match b.subject -%}
@@ -59,4 +66,5 @@
         {%- endif -%}
         <span class="tools">{{ ui.credit(&b.picture.credit)|safe }}{% call m::edit(ui, edit) %}{% endcall %}</span>
     </figure>
+    {{ ui.lightbox(b, n)|safe }}
 {%- endif -%}

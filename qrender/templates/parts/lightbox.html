@@ -1,0 +1,53 @@
+{%- import "macros.html" as m -%}
+{#- The dialog of a file of the item, opened from its figure: the file as
+    large as the window lets it be, and under it what the figure has no
+    room for: the qualifiers, the author and the licence, the file on
+    Commons. The large picture is lazy: a closed dialog loads nothing. -#}
+{%- let file = ui.media_file(b) -%}
+<dialog id="d{{ n }}"
+        class="lightbox k-{{ b.picture.kind.name() }}"
+        closedby="any"
+        aria-labelledby="d{{ n }}-h"
+        style="--a:{{ ui.aspect(b.picture.aspect) }}">
+    <header>
+        <h2 id="d{{ n }}-h">
+            {%- match b.subject -%}
+            {%- when Some with (subject) -%}
+            {{ ui.text(ui.property(subject.pid), false)|safe }}: {{ ui.part(ui.value_part(&subject.value))|safe }}
+            {%- when None -%}
+            {{ ui.text(ui.property(b.statement.pid), false)|safe }}
+            {%- endmatch -%}
+        </h2>
+        <button type="button"
+                command="close"
+                commandfor="d{{ n }}"
+                aria-label="{{ ui.msg("qrender-close") }}">×</button>
+    </header>
+    <div class="stage">
+        <img src="{{ ui.src(file, 1280) }}"
+             srcset="{{ ui.srcset(file) }}"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+        {%- let note = ui.qualifiers(b.statement.qualifiers.as_slice()) -%}
+        {%- if !note.is_empty() %}
+            <p>{{ ui.note(note.as_slice())|safe }}</p>
+        {% endif -%}
+        {%- let credit = ui.credit_text(&b.picture.credit) -%}
+        {%- if !credit.is_empty() %}
+            <p class="credit">{{ credit }}</p>
+        {% endif -%}
+        <p>
+            <a href="{{ ui.commons_page(file) }}">{{ file }}</a>
+            {%- if !b.picture.assessed.is_empty() %}
+                · <span class="assessed">★</span> {{ b.picture.assessed|join(", ") }}
+            {% endif -%}
+            {% call m::prov(ui, b.statement.provenance) %}
+            {% endcall %}
+            {% call m::edit(ui, ui.edit(b.statement.pid)) %}
+            {% endcall %}
+        </p>
+    </div>
+</dialog>

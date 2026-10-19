@@ -33,17 +33,50 @@ expression: html
     </div>
     </div><div data-slot="band">
         <div class="band"> <figure class="m k-photo" style="--a:6.9982">
-        <a href="https://commons.wikimedia.org/wiki/File:Apollo_17_Moon_Panorama_banner.jpg">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d1"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Apollo%2017%20Moon%20Panorama%20banner.jpg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Apollo%2017%20Moon%20Panorama%20banner.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Apollo%2017%20Moon%20Panorama%20banner.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Apollo%2017%20Moon%20Panorama%20banner.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Apollo%2017%20Moon%20Panorama%20banner.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Apollo%2017%20Moon%20Panorama%20banner.jpg?width=1920 1920w" sizes="100vw"
                  alt="">
-        </a><span class="tools"><button class="info"
+        </button><span class="tools"><button class="info"
             type="button"
-            popovertarget="p1"
-            aria-label="Credit">i</button><span id="p1" popover class="pop">NASA · Public domain</span><a class="edit"
+            popovertarget="p2"
+            aria-label="Credit">i</button><span id="p2" popover class="pop">NASA · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q405#P948"
        aria-label="Edit">✎</a></span>
-    </figure> </div>
+    </figure>
+    <dialog id="d1"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d1-h"
+        style="--a:6.9982">
+    <header>
+        <h2 id="d1-h">പേജ് ബാനർ</h2>
+        <button type="button"
+                command="close"
+                commandfor="d1"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Apollo%2017%20Moon%20Panorama%20banner.jpg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Apollo%2017%20Moon%20Panorama%20banner.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Apollo%2017%20Moon%20Panorama%20banner.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Apollo%2017%20Moon%20Panorama%20banner.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Apollo%2017%20Moon%20Panorama%20banner.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Apollo%2017%20Moon%20Panorama%20banner.jpg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">NASA · Public domain</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Apollo_17_Moon_Panorama_banner.jpg">Apollo 17 Moon Panorama banner.jpg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q405#P948"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog> </div>
     </div><nav class="toc" aria-label="Contents">
     <ul><li data-dimension="measures"><a href="#physical">ഭൗതികഗുണങ്ങൾ</a></li><li data-dimension="measures"><a href="#orbit">ഭ്രമണപഥം</a></li><li data-dimension="place"><a href="#relations"><span class="fb" lang="en">relation</span></a></li><li data-dimension="time"><a href="#history">ചരിത്രം</a></li><li data-dimension="media"><a href="#media">മൾട്ടിമീഡിയ</a></li><li data-dimension="neutral"><a href="#web"><span class="fb" lang="en">web presence</span></a></li><li data-dimension="neutral"><a href="#evidence">അവലംബം</a></li></ul>
 </nav><div data-slot="lead">
@@ -55,17 +88,54 @@ expression: html
 </div>
     </div><div data-slot="hero">
         <figure class="m k-photo" style="--a:1.0522">
-        <a href="https://commons.wikimedia.org/wiki/File:FullMoon2010.jpg">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d3"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/FullMoon2010.jpg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/FullMoon2010.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/FullMoon2010.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/FullMoon2010.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/FullMoon2010.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/FullMoon2010.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" fetchpriority="high">
-        </a><span class="tools"><button class="info"
+        </button><span class="tools"><button class="info"
             type="button"
-            popovertarget="p2"
-            aria-label="Credit">i</button><span id="p2" popover class="pop">Gregory H. Revera · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p4"
+            aria-label="Credit">i</button><span id="p4" popover class="pop">Gregory H. Revera · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q405#P18"
        aria-label="Edit">✎</a></span>
     </figure>
+    <dialog id="d3"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d3-h"
+        style="--a:1.0522">
+    <header>
+        <h2 id="d3-h">ചിത്രം</h2>
+        <button type="button"
+                command="close"
+                commandfor="d3"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/FullMoon2010.jpg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/FullMoon2010.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/FullMoon2010.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/FullMoon2010.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/FullMoon2010.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/FullMoon2010.jpg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p><span lang="en">Full moon as seen from North America in Earth&#39;s Northern Hemisphere</span> <span class="note" data-lang-name="en">en</span> · <span lang="fr">Pleine Lune vue depuis l&#39;Amérique du Nord, dans l&#39;hémisphère nord de la Terre</span> <span class="note" data-lang-name="fr">fr</span> · <span lang="pl">Pełnia Księżyca widoczna z Ameryki Północnej, na półkuli północnej Ziemi</span> <span class="note" data-lang-name="pl">pl</span></p>
+        
+            <p class="credit">Gregory H. Revera · CC BY-SA 3.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:FullMoon2010.jpg">FullMoon2010.jpg</a>
+                · <span class="assessed">★</span> Featured pictures on Wikimedia Commons
+            <span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q405#P18"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog>
     </div><div data-slot="kind">
         <div class="kind"><div>
             <span class="k">തരം</span><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q85793519"><span class="fb" lang="en">planetary-mass moon</span></a><a class="add-label"
@@ -314,8 +384,8 @@ expression: html
            aria-label="Add a label in your language">+</a></span>
     <button class="info"
             type="button"
-            popovertarget="p3"
-            aria-label="Description">i</button><span id="p3" popover class="pop"><span class="fb" lang="en">amount of the deviation of an orbit from a perfect circle</span></span></dt>
+            popovertarget="p5"
+            aria-label="Description">i</button><span id="p5" popover class="pop"><span class="fb" lang="en">amount of the deviation of an orbit from a perfect circle</span></span></dt>
 <dd><data value="0.054908" data-f="number">0.054908</data> <span class="note">1850</span><br><data value="0.0567" data-f="number">0.0567</data> <span class="note"></span></dd>
 <span class="tools"></span>
 </div><div class="row r-value"><dt><span class="fb-group"><span class="fb"
@@ -335,8 +405,8 @@ expression: html
            aria-label="Add a label in your language">+</a></span>
     <button class="info"
             type="button"
-            popovertarget="p4"
-            aria-label="Description">i</button><span id="p4" popover class="pop"><span class="fb" lang="en">estimated distance to astronomical objects</span></span></dt>
+            popovertarget="p6"
+            aria-label="Description">i</button><span id="p6" popover class="pop"><span class="fb" lang="en">estimated distance to astronomical objects</span></span></dt>
 <dd><data value="356565" data-f="number">356565</data> <span class="note">കിലോമീറ്റർ</span> <span class="note">2018 · <span class="fb-group"><a href="https://www.wikidata.org/wiki/Q1349468"><span class="fb" lang="en">perigee</span></a><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q1349468"
            aria-label="Add a label in your language">+</a></span></span><br><data value="406464" data-f="number">406464</data> <span class="note">കിലോമീറ്റർ</span> <span class="note">2018 · <a href="https://www.wikidata.org/wiki/Q1179441">അപഭൂ</a></span><br><data value="385000.5" data-f="number">385000</data> <span class="note">കിലോമീറ്റർ</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q4130">ഭ്രമണപഥം</a></span></dd>
@@ -359,8 +429,8 @@ expression: html
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q85160256">CAPSTONE</a></b><span>2022 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p6"
-            aria-label="Credit">i</button><span id="p6" popover class="pop">Daniel J. Rutter · Public domain</span><a class="edit"
+            popovertarget="p8"
+            aria-label="Credit">i</button><span id="p8" popover class="pop">Daniel J. Rutter · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q405#P398"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.429">
@@ -374,8 +444,8 @@ expression: html
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q331778"
            aria-label="Add a label in your language">+</a></span></b><span>2009 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p7"
-            aria-label="Credit">i</button><span id="p7" popover class="pop">Public domain</span><a class="edit"
+            popovertarget="p9"
+            aria-label="Credit">i</button><span id="p9" popover class="pop">Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q405#P398"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3375">
@@ -387,8 +457,8 @@ expression: html
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q29098442">ഡീപ് സ്പേസ് ഗേയ്റ്റ്‌വേ</a></b><span class="prov-imported" title="ഇറക്കുമതി സ്രോതസ്">W</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p8"
-            aria-label="Credit">i</button><span id="p8" popover class="pop">NASA Johnson Space Center · Public domain</span><a class="edit"
+            popovertarget="p10"
+            aria-label="Credit">i</button><span id="p10" popover class="pop">NASA Johnson Space Center · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q405#P398"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.6674">
@@ -400,15 +470,15 @@ expression: html
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q325065">ചന്ദ്രയാൻ-2</a></b><span class="prov-imported" title="ഇറക്കുമതി സ്രോതസ്">W</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p9"
-            aria-label="Credit">i</button><span id="p9" popover class="pop">Indian Space Research Organisation · GODL-India</span><a class="edit"
+            popovertarget="p11"
+            aria-label="Credit">i</button><span id="p11" popover class="pop">Indian Space Research Organisation · GODL-India</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q405#P398"
-       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d5">View all</button></div><dialog id="d5" closedby="any">
+       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d7">View all</button></div><dialog id="d7" closedby="any">
         <header>
             <h2>child astronomical body</h2>
             <button type="button"
                     command="close"
-                    commandfor="d5"
+                    commandfor="d7"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -470,8 +540,8 @@ expression: html
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q500909">Montes Pyrenaeus</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p11"
-            aria-label="Credit">i</button><span id="p11" popover class="pop">NASA · Public domain</span><a class="edit"
+            popovertarget="p13"
+            aria-label="Credit">i</button><span id="p13" popover class="pop">NASA · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q405#P527"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:2.4983">
@@ -485,8 +555,8 @@ expression: html
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q115507"
            aria-label="Add a label in your language">+</a></span></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p12"
-            aria-label="Credit">i</button><span id="p12" popover class="pop">NASA · Public domain</span><a class="edit"
+            popovertarget="p14"
+            aria-label="Credit">i</button><span id="p14" popover class="pop">NASA · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q405#P527"
        aria-label="Edit">✎</a></span></figure><figure class="m k-empty" style="--a:1.333">
     <figcaption><b><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q12046612"><span class="fb" lang="en">geological features on the Moon</span></a><a class="add-label"
@@ -512,12 +582,12 @@ expression: html
        aria-label="Edit">✎</a>
         
     </span>
-</figure><button class="view-all" type="button" command="show-modal" commandfor="d10">View all</button></div><dialog id="d10" closedby="any">
+</figure><button class="view-all" type="button" command="show-modal" commandfor="d12">View all</button></div><dialog id="d12" closedby="any">
         <header>
             <h2>ഇത് ഭാഗമായി</h2>
             <button type="button"
                     command="close"
-                    commandfor="d10"
+                    commandfor="d12"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -581,8 +651,8 @@ expression: html
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q426778"
            aria-label="Add a label in your language">+</a></span></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p13"
-            aria-label="Credit">i</button><span id="p13" popover class="pop">Farragutful · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p15"
+            aria-label="Credit">i</button><span id="p15" popover class="pop">Farragutful · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q405#P708"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.1671">
@@ -596,8 +666,8 @@ expression: html
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q18589965"
            aria-label="Add a label in your language">+</a></span></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p14"
-            aria-label="Credit">i</button><span id="p14" popover class="pop">No machine-readable author provided. Vulpecula assumed (based on copyright claims). · Public domain</span><a class="edit"
+            popovertarget="p16"
+            aria-label="Credit">i</button><span id="p16" popover class="pop">No machine-readable author provided. Vulpecula assumed (based on copyright claims). · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q405#P361"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.2101">
@@ -611,8 +681,8 @@ expression: html
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q18356771"
            aria-label="Add a label in your language">+</a></span></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p15"
-            aria-label="Credit">i</button><span id="p15" popover class="pop">Dennizenx · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p17"
+            aria-label="Credit">i</button><span id="p17" popover class="pop">Dennizenx · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q405#P610"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.9325">
@@ -629,8 +699,8 @@ expression: html
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/Q598608"
            aria-label="Add a label in your language">+</a></span></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p16"
-            aria-label="Credit">i</button><span id="p16" popover class="pop">Clementine space probe · Public domain</span><a class="edit"
+            popovertarget="p18"
+            aria-label="Credit">i</button><span id="p18" popover class="pop">Clementine space probe · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q405#P1589"
        aria-label="Edit">✎</a></span></figure></div></div></div></section>
             <section class="spread t-columns" id="history"
@@ -642,49 +712,150 @@ expression: html
              data-spread="media"
              data-dimension="media"><h2><span class="title">മൾട്ടിമീഡിയ</span></h2><div data-slot="feature">
         <div class="feature"> <figure class="m k-photo" style="--a:1.5">
-        <a href="https://commons.wikimedia.org/wiki/File:Solar_eclipse_taken_from_Artemis_II_-_April_2026.jpg">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d19"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Solar%20eclipse%20taken%20from%20Artemis%20II%20-%20April%202026.jpg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Solar%20eclipse%20taken%20from%20Artemis%20II%20-%20April%202026.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Solar%20eclipse%20taken%20from%20Artemis%20II%20-%20April%202026.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Solar%20eclipse%20taken%20from%20Artemis%20II%20-%20April%202026.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Solar%20eclipse%20taken%20from%20Artemis%20II%20-%20April%202026.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Solar%20eclipse%20taken%20from%20Artemis%20II%20-%20April%202026.jpg?width=1920 1920w" sizes="100vw"
                  alt="" loading="lazy">
-        </a><figcaption><span>ചിത്രം</span>
+        </button><figcaption><span>ചിത്രം</span>
                     <span class="assessed" title="Featured pictures on Wikimedia Commons">★</span>
                 <span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p17"
-            aria-label="Credit">i</button><span id="p17" popover class="pop">NASA · Public domain</span><a class="edit"
+            popovertarget="p20"
+            aria-label="Credit">i</button><span id="p20" popover class="pop">NASA · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q405#P18"
        aria-label="Edit">✎</a></span>
-    </figure> </div>
+    </figure>
+    <dialog id="d19"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d19-h"
+        style="--a:1.5">
+    <header>
+        <h2 id="d19-h">ചിത്രം</h2>
+        <button type="button"
+                command="close"
+                commandfor="d19"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Solar%20eclipse%20taken%20from%20Artemis%20II%20-%20April%202026.jpg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Solar%20eclipse%20taken%20from%20Artemis%20II%20-%20April%202026.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Solar%20eclipse%20taken%20from%20Artemis%20II%20-%20April%202026.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Solar%20eclipse%20taken%20from%20Artemis%20II%20-%20April%202026.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Solar%20eclipse%20taken%20from%20Artemis%20II%20-%20April%202026.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Solar%20eclipse%20taken%20from%20Artemis%20II%20-%20April%202026.jpg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">NASA · Public domain</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Solar_eclipse_taken_from_Artemis_II_-_April_2026.jpg">Solar eclipse taken from Artemis II - April 2026.jpg</a>
+                · <span class="assessed">★</span> Featured pictures on Wikimedia Commons
+            <span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q405#P18"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog> </div>
     </div><div data-slot="run">
         <div class="run"> <figure class="m k-photo" style="--a:2">
-        <a href="https://commons.wikimedia.org/wiki/File:Moon_texture.jpg">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d21"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Moon%20texture.jpg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Moon%20texture.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Moon%20texture.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Moon%20texture.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Moon%20texture.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Moon%20texture.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
-        </a><figcaption><span><span class="fb-group"><span class="fb"
+        </button><figcaption><span><span class="fb-group"><span class="fb"
       lang="en">spherical panorama image</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/P4640"
            aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p18"
-            aria-label="Credit">i</button><span id="p18" popover class="pop">NASA&#39;s Scientific Visualization Studio · Public domain</span><a class="edit"
+            popovertarget="p22"
+            aria-label="Credit">i</button><span id="p22" popover class="pop">NASA&#39;s Scientific Visualization Studio · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q405#P4640"
        aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-photo" style="--a:2.0307">
-        <a href="https://commons.wikimedia.org/wiki/File:Night_view_of_THE_MOON.jpg">
+    </figure>
+    <dialog id="d21"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d21-h"
+        style="--a:2">
+    <header>
+        <h2 id="d21-h"><span class="fb" lang="en">spherical panorama image</span></h2>
+        <button type="button"
+                command="close"
+                commandfor="d21"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Moon%20texture.jpg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Moon%20texture.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Moon%20texture.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Moon%20texture.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Moon%20texture.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Moon%20texture.jpg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">NASA&#39;s Scientific Visualization Studio · Public domain</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Moon_texture.jpg">Moon texture.jpg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q405#P4640"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-photo" style="--a:2.0307">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d23"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Night%20view%20of%20THE%20MOON.jpg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Night%20view%20of%20THE%20MOON.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Night%20view%20of%20THE%20MOON.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Night%20view%20of%20THE%20MOON.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Night%20view%20of%20THE%20MOON.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Night%20view%20of%20THE%20MOON.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
-        </a><figcaption><span>രാത്രികാല കാഴ്ച</span><span class="prov-none" title="—"></span>
+        </button><figcaption><span>രാത്രികാല കാഴ്ച</span><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p19"
-            aria-label="Credit">i</button><span id="p19" popover class="pop">रोहित साव27 · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p24"
+            aria-label="Credit">i</button><span id="p24" popover class="pop">रोहित साव27 · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q405#P3451"
        aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-video" style="--a:1.7778">
+    </figure>
+    <dialog id="d23"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d23-h"
+        style="--a:2.0307">
+    <header>
+        <h2 id="d23-h">രാത്രികാല കാഴ്ച</h2>
+        <button type="button"
+                command="close"
+                commandfor="d23"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Night%20view%20of%20THE%20MOON.jpg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Night%20view%20of%20THE%20MOON.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Night%20view%20of%20THE%20MOON.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Night%20view%20of%20THE%20MOON.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Night%20view%20of%20THE%20MOON.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Night%20view%20of%20THE%20MOON.jpg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">रोहित साव27 · CC BY-SA 4.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Night_view_of_THE_MOON.jpg">Night view of THE MOON.jpg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q405#P3451"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-video" style="--a:1.7778">
         <video controls
                preload="none"
                poster="https://commons.wikimedia.org/wiki/Special:FilePath/Moon%20Essentials-%20Turntable%20%28SVS5319%29.webm?width=960"
@@ -697,41 +868,107 @@ expression: html
             </figcaption>
         <span class="tools"><button class="info"
             type="button"
-            popovertarget="p20"
-            aria-label="Credit">i</button><span id="p20" popover class="pop">NASA&#39;s Scientific Visualization Studio - USRA/Ernie Wright, ADNET Systems, Inc./Laurence Schuler, ADNET Systems, Inc./Ian Jones · Public domain</span><a class="edit"
+            popovertarget="p25"
+            aria-label="Credit">i</button><span id="p25" popover class="pop">NASA&#39;s Scientific Visualization Studio - USRA/Ernie Wright, ADNET Systems, Inc./Laurence Schuler, ADNET Systems, Inc./Ian Jones · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q405#P10"
        aria-label="Edit">✎</a></span>
     </figure><figure class="m k-model3d" style="--a:1.7778">
-        <a href="https://commons.wikimedia.org/wiki/File:Moon_elevation.stl">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d26"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Moon%20elevation.stl?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Moon%20elevation.stl?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Moon%20elevation.stl?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Moon%20elevation.stl?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Moon%20elevation.stl?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Moon%20elevation.stl?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
-        </a><figcaption><span><span class="fb-group"><span class="fb"
+        </button><figcaption><span><span class="fb-group"><span class="fb"
       lang="en">3D model</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/P4896"
            aria-label="Add a label in your language">+</a></span></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p21"
-            aria-label="Credit">i</button><span id="p21" popover class="pop">Cmglee · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p27"
+            aria-label="Credit">i</button><span id="p27" popover class="pop">Cmglee · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q405#P4896"
        aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-drawing" style="--a:1">
-        <a href="https://commons.wikimedia.org/wiki/File:Decrescent_icon.svg">
+    </figure>
+    <dialog id="d26"
+        class="lightbox k-model3d"
+        closedby="any"
+        aria-labelledby="d26-h"
+        style="--a:1.7778">
+    <header>
+        <h2 id="d26-h"><span class="fb" lang="en">3D model</span></h2>
+        <button type="button"
+                command="close"
+                commandfor="d26"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Moon%20elevation.stl?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Moon%20elevation.stl?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Moon%20elevation.stl?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Moon%20elevation.stl?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Moon%20elevation.stl?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Moon%20elevation.stl?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">Cmglee · CC BY-SA 4.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Moon_elevation.stl">Moon elevation.stl</a>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q405#P4896"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-drawing" style="--a:1">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d28"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Decrescent%20icon.svg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Decrescent%20icon.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Decrescent%20icon.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Decrescent%20icon.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Decrescent%20icon.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Decrescent%20icon.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
-        </a><figcaption><span><span class="fb-group"><span class="fb"
+        </button><figcaption><span><span class="fb-group"><span class="fb"
       lang="en">astronomic symbol image</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/ml/P367"
            aria-label="Add a label in your language">+</a></span></span><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p22"
-            aria-label="Credit">i</button><span id="p22" popover class="pop">Kwamikagami · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p29"
+            aria-label="Credit">i</button><span id="p29" popover class="pop">Kwamikagami · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q405#P367"
        aria-label="Edit">✎</a></span>
-    </figure> </div>
+    </figure>
+    <dialog id="d28"
+        class="lightbox k-drawing"
+        closedby="any"
+        aria-labelledby="d28-h"
+        style="--a:1">
+    <header>
+        <h2 id="d28-h"><span class="fb" lang="en">astronomic symbol image</span></h2>
+        <button type="button"
+                command="close"
+                commandfor="d28"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Decrescent%20icon.svg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Decrescent%20icon.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Decrescent%20icon.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Decrescent%20icon.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Decrescent%20icon.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Decrescent%20icon.svg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">Kwamikagami · CC BY-SA 4.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Decrescent_icon.svg">Decrescent icon.svg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q405#P367"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog> </div>
     </div><div data-slot="audio">
         <div class="block">
         <h3><span class="fb-group"><span class="fb"
@@ -1029,12 +1266,12 @@ expression: html
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q405#P1343"
        aria-label="Edit">✎</a>
-    </span><button class="more" type="button" command="show-modal" commandfor="d23">+11</button><dialog id="d23" closedby="any">
+    </span><button class="more" type="button" command="show-modal" commandfor="d30">+11</button><dialog id="d30" closedby="any">
         <header>
             <h2>ഇതേപ്പറ്റി വിവരിച്ചിട്ടുള്ള ഇടങ്ങൾ</h2>
             <button type="button"
                     command="close"
-                    commandfor="d23"
+                    commandfor="d30"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -1353,12 +1590,12 @@ expression: html
     <div><span class="chip">wikipedia <b>295</b> ✓</span><span class="chip">wikiquote <b>33</b></span><span class="chip">wikivoyage <b>11</b></span><span class="chip">wikinews <b>10</b></span><span class="chip">wikibooks <b>5</b></span><span class="chip">wikisource <b>2</b></span><span class="chip">wikiversity <b>1</b></span></div>
 </div>
     </div><div data-slot="identifiers">
-        <button class="more" type="button" command="show-modal" commandfor="d24"># 128</button><dialog id="d24" closedby="any">
+        <button class="more" type="button" command="show-modal" commandfor="d31"># 128</button><dialog id="d31" closedby="any">
         <header>
             <h2>128</h2>
             <button type="button"
                     command="close"
-                    commandfor="d24"
+                    commandfor="d31"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><div class="idlist"><div><span><span class="fb-group"><span class="fb"

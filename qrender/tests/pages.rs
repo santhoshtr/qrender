@@ -80,6 +80,16 @@ fn html_pages() {
                 "{page}: no single target #{id}"
             );
         }
+        // A picture of the item opens its own dialog.
+        for button in doc.select(&select("button.zoom")) {
+            let id = button.attr("commandfor").unwrap_or_default();
+            let dialog = select(&format!("dialog.lightbox#{id}"));
+            assert_eq!(
+                doc.select(&dialog).count(),
+                1,
+                "{page}: zoom #{id} has no lightbox"
+            );
+        }
         // Pictures, sounds and videos only from Wikimedia hosts, and the
         // icons of the sites in the web spread from their Toolforge
         // service.

@@ -153,6 +153,15 @@ struct CreditHtml<'a> {
     c: &'a Credit,
 }
 
+#[derive(Template)]
+#[template(path = "parts/lightbox.html")]
+struct LightboxHtml<'a> {
+    ui: &'a Ui<'a>,
+    b: &'a Media,
+    /// The id of the dialog, which the figure opens.
+    n: u32,
+}
+
 /// The parts, for the templates.
 impl<'v> Ui<'v> {
     pub fn spread(&self, s: &SpreadView) -> String {
@@ -276,6 +285,16 @@ impl<'v> Ui<'v> {
 
     pub fn credit(&self, c: impl Ref<Credit>) -> String {
         render(CreditHtml { ui: self, c: c.r() })
+    }
+
+    /// The dialog of a file of the item: the file large, its words under
+    /// it.
+    pub fn lightbox(&self, b: &Media, n: impl Arg<u32>) -> String {
+        render(LightboxHtml {
+            ui: self,
+            b,
+            n: n.get(),
+        })
     }
 
     pub fn media(&self, b: &Media) -> String {

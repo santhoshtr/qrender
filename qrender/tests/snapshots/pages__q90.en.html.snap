@@ -33,18 +33,52 @@ expression: html
     </div>
     </div><div data-slot="band">
         <div class="band"> <figure class="m k-photo" style="--a:7">
-        <a href="https://commons.wikimedia.org/wiki/File:Paris_banner.jpg">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d1"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20banner.jpg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20banner.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20banner.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20banner.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20banner.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20banner.jpg?width=1920 1920w" sizes="100vw"
                  alt="">
-        </a><span class="tools"><button class="info"
+        </button><span class="tools"><button class="info"
             type="button"
-            popovertarget="p1"
-            aria-label="Credit">i</button><span id="p1" popover class="pop">Paris Night.jpg: Benh LIEU SONG
+            popovertarget="p2"
+            aria-label="Credit">i</button><span id="p2" popover class="pop">Paris Night.jpg: Benh LIEU SONG
 derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P948"
        aria-label="Edit">✎</a></span>
-    </figure> </div>
+    </figure>
+    <dialog id="d1"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d1-h"
+        style="--a:7">
+    <header>
+        <h2 id="d1-h">page banner</h2>
+        <button type="button"
+                command="close"
+                commandfor="d1"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20banner.jpg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20banner.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20banner.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20banner.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20banner.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20banner.jpg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">Paris Night.jpg: Benh LIEU SONG
+derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Paris_banner.jpg">Paris banner.jpg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q90#P948"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog> </div>
     </div><nav class="toc" aria-label="Contents">
     <ul><li data-dimension="place"><a href="#location">geography</a></li><li data-dimension="names"><a href="#names">name</a></li><li data-dimension="people"><a href="#government">government</a></li><li data-dimension="measures"><a href="#demography">demography</a></li><li data-dimension="measures"><a href="#economy">economy</a></li><li data-dimension="place"><a href="#connections">relation</a></li><li data-dimension="time"><a href="#history">history</a></li><li data-dimension="media"><a href="#media">multimedia</a></li><li data-dimension="neutral"><a href="#web">web presence</a></li><li data-dimension="neutral"><a href="#evidence">reference</a></li></ul>
 </nav><div data-slot="lead">
@@ -55,17 +89,52 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
 </div>
     </div><div data-slot="hero">
         <figure class="m k-photo" style="--a:1.6">
-        <a href="https://commons.wikimedia.org/wiki/File:La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d3"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/La%20Tour%20Eiffel%20vue%20de%20la%20Tour%20Saint-Jacques%2C%20Paris%20ao%C3%BBt%202014%20%282%29.jpg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/La%20Tour%20Eiffel%20vue%20de%20la%20Tour%20Saint-Jacques%2C%20Paris%20ao%C3%BBt%202014%20%282%29.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/La%20Tour%20Eiffel%20vue%20de%20la%20Tour%20Saint-Jacques%2C%20Paris%20ao%C3%BBt%202014%20%282%29.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/La%20Tour%20Eiffel%20vue%20de%20la%20Tour%20Saint-Jacques%2C%20Paris%20ao%C3%BBt%202014%20%282%29.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/La%20Tour%20Eiffel%20vue%20de%20la%20Tour%20Saint-Jacques%2C%20Paris%20ao%C3%BBt%202014%20%282%29.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/La%20Tour%20Eiffel%20vue%20de%20la%20Tour%20Saint-Jacques%2C%20Paris%20ao%C3%BBt%202014%20%282%29.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" fetchpriority="high">
-        </a><span class="tools"><button class="info"
+        </button><span class="tools"><button class="info"
             type="button"
-            popovertarget="p2"
-            aria-label="Credit">i</button><span id="p2" popover class="pop">Yann Caradec from Paris, France · CC BY-SA 2.0</span><a class="edit"
+            popovertarget="p4"
+            aria-label="Credit">i</button><span id="p4" popover class="pop">Yann Caradec from Paris, France · CC BY-SA 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P18"
        aria-label="Edit">✎</a></span>
     </figure>
+    <dialog id="d3"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d3-h"
+        style="--a:1.6">
+    <header>
+        <h2 id="d3-h">image</h2>
+        <button type="button"
+                command="close"
+                commandfor="d3"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/La%20Tour%20Eiffel%20vue%20de%20la%20Tour%20Saint-Jacques%2C%20Paris%20ao%C3%BBt%202014%20%282%29.jpg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/La%20Tour%20Eiffel%20vue%20de%20la%20Tour%20Saint-Jacques%2C%20Paris%20ao%C3%BBt%202014%20%282%29.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/La%20Tour%20Eiffel%20vue%20de%20la%20Tour%20Saint-Jacques%2C%20Paris%20ao%C3%BBt%202014%20%282%29.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/La%20Tour%20Eiffel%20vue%20de%20la%20Tour%20Saint-Jacques%2C%20Paris%20ao%C3%BBt%202014%20%282%29.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/La%20Tour%20Eiffel%20vue%20de%20la%20Tour%20Saint-Jacques%2C%20Paris%20ao%C3%BBt%202014%20%282%29.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/La%20Tour%20Eiffel%20vue%20de%20la%20Tour%20Saint-Jacques%2C%20Paris%20ao%C3%BBt%202014%20%282%29.jpg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p><a href="https://www.wikidata.org/wiki/Q243">Eiffel Tower</a> · <a href="https://www.wikidata.org/wiki/Q1471">Seine</a> · 2014 · <a href="https://www.wikidata.org/wiki/Q1431547">Saint-Jacques Tower</a></p>
+        
+            <p class="credit">Yann Caradec from Paris, France · CC BY-SA 2.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg">La Tour Eiffel vue de la Tour Saint-Jacques, Paris août 2014 (2).jpg</a><span class="prov-imported" title="imported from Wikimedia project">W</span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q90#P18"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog>
     </div><div data-slot="kind">
         <div class="kind"><div>
             <span class="k">instance of</span><a href="https://www.wikidata.org/wiki/Q22923920">territorial collectivity of France with special status</a>, <a href="https://www.wikidata.org/wiki/Q200250">metropolis</a>, <a href="https://www.wikidata.org/wiki/Q208511">global city</a>, <a href="https://www.wikidata.org/wiki/Q108178728">national capital</a>, <a href="https://www.wikidata.org/wiki/Q51929311">largest city</a> <span class="note">+10</span></div><div>
@@ -117,8 +186,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q131575588">Saint-Denis</a></b><span>2025 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p4"
-            aria-label="Credit">i</button><span id="p4" popover class="pop">Claude Shoshany · CC BY 2.5</span><a class="edit"
+            popovertarget="p6"
+            aria-label="Credit">i</button><span id="p6" popover class="pop">Claude Shoshany · CC BY 2.5</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P47"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3956">
@@ -130,8 +199,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q12788">Val-de-Marne</a></b><span>1968 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p5"
-            aria-label="Credit">i</button><span id="p5" popover class="pop">Zairon · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p7"
+            aria-label="Credit">i</button><span id="p7" popover class="pop">Zairon · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P47"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.7779">
@@ -143,8 +212,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q12543">Hauts-de-Seine</a></b><span>1968 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p6"
-            aria-label="Credit">i</button><span id="p6" popover class="pop">Arthur Weidmann · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p8"
+            aria-label="Credit">i</button><span id="p8" popover class="pop">Arthur Weidmann · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P47"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.8868">
@@ -156,8 +225,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q12761">Seine-Saint-Denis</a></b><span>1968 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p7"
-            aria-label="Credit">i</button><span id="p7" popover class="pop">Clicsouris · CC BY-SA 2.5</span><a class="edit"
+            popovertarget="p9"
+            aria-label="Credit">i</button><span id="p9" popover class="pop">Clicsouris · CC BY-SA 2.5</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P47"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.5">
@@ -169,8 +238,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q212274">Nogent-sur-Marne</a></b><span>1929 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p8"
-            aria-label="Credit">i</button><span id="p8" popover class="pop">Nogent94130 · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p10"
+            aria-label="Credit">i</button><span id="p10" popover class="pop">Nogent94130 · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P47"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3333">
@@ -182,8 +251,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q234743">Puteaux</a></b><span>1929 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p9"
-            aria-label="Credit">i</button><span id="p9" popover class="pop">Copyleft · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p11"
+            aria-label="Credit">i</button><span id="p11" popover class="pop">Copyleft · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P47"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.0235">
@@ -195,8 +264,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q193819">Vincennes</a></b><span>1929 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p10"
-            aria-label="Credit">i</button><span id="p10" popover class="pop">ignis · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p12"
+            aria-label="Credit">i</button><span id="p12" popover class="pop">ignis · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P47"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.1548">
@@ -208,8 +277,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q193899">Fontenay-sous-Bois</a></b><span>1929 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p11"
-            aria-label="Credit">i</button><span id="p11" popover class="pop">Chabe01 · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p13"
+            aria-label="Credit">i</button><span id="p13" popover class="pop">Chabe01 · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P47"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3333">
@@ -221,8 +290,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q609134">Joinville-le-Pont</a></b><span>1929 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p12"
-            aria-label="Credit">i</button><span id="p12" popover class="pop">Lecheminlu · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p14"
+            aria-label="Credit">i</button><span id="p14" popover class="pop">Lecheminlu · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P47"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.5026">
@@ -234,8 +303,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q274327">Saint-Maurice</a></b><span>1929 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p13"
-            aria-label="Credit">i</button><span id="p13" popover class="pop">besopha · CC BY-SA 2.0</span><a class="edit"
+            popovertarget="p15"
+            aria-label="Credit">i</button><span id="p15" popover class="pop">besopha · CC BY-SA 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P47"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.5006">
@@ -247,8 +316,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q193929">Suresnes</a></b><span>1925 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p14"
-            aria-label="Credit">i</button><span id="p14" popover class="pop">Celette · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p16"
+            aria-label="Credit">i</button><span id="p16" popover class="pop">Celette · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P47"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.7802">
@@ -260,15 +329,15 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q189153">Saint-Cloud</a></b><span>1925 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p15"
-            aria-label="Credit">i</button><span id="p15" popover class="pop">Rémih · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p17"
+            aria-label="Credit">i</button><span id="p17" popover class="pop">Rémih · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P47"
-       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d3">View all</button></div><dialog id="d3" closedby="any">
+       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d5">View all</button></div><dialog id="d5" closedby="any">
         <header>
             <h2>shares border with</h2>
             <button type="button"
                     command="close"
-                    commandfor="d3"
+                    commandfor="d5"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -636,8 +705,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q1471">Seine</a></b><span><a href="https://www.wikidata.org/wiki/Q570116">tourist attraction</a></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p17"
-            aria-label="Credit">i</button><span id="p17" popover class="pop">User Arpingstone on en.wikipedia · Public domain</span><a class="edit"
+            popovertarget="p19"
+            aria-label="Credit">i</button><span id="p19" popover class="pop">User Arpingstone on en.wikipedia · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P206"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.5">
@@ -649,8 +718,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q810526">Bassin de la Villette</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p18"
-            aria-label="Credit">i</button><span id="p18" popover class="pop">Fred Romero from Paris, France · CC BY 2.0</span><a class="edit"
+            popovertarget="p20"
+            aria-label="Credit">i</button><span id="p20" popover class="pop">Fred Romero from Paris, France · CC BY 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P206"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3333">
@@ -662,8 +731,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q1032646">Canal de l&#39;Ourcq</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p19"
-            aria-label="Credit">i</button><span id="p19" popover class="pop">Pline · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p21"
+            aria-label="Credit">i</button><span id="p21" popover class="pop">Pline · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P206"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.5336">
@@ -675,15 +744,15 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q860172">Canal Saint-Martin</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p20"
-            aria-label="Credit">i</button><span id="p20" popover class="pop">JLPC · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p22"
+            aria-label="Credit">i</button><span id="p22" popover class="pop">JLPC · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P206"
-       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d16">View all</button></div><dialog id="d16" closedby="any">
+       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d18">View all</button></div><dialog id="d18" closedby="any">
         <header>
             <h2>located in or next to body of water</h2>
             <button type="button"
                     command="close"
-                    commandfor="d16"
+                    commandfor="d18"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -743,8 +812,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q191066">15th arrondissement of Paris</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p22"
-            aria-label="Credit">i</button><span id="p22" popover class="pop">Jean-François Gornet from Paris, France · CC BY-SA 2.0</span><a class="edit"
+            popovertarget="p24"
+            aria-label="Credit">i</button><span id="p24" popover class="pop">Jean-François Gornet from Paris, France · CC BY-SA 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P150"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.3629">
@@ -756,8 +825,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q259463">7th arrondissement of Paris</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p23"
-            aria-label="Credit">i</button><span id="p23" popover class="pop">Alexpl2400 · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p25"
+            aria-label="Credit">i</button><span id="p25" popover class="pop">Alexpl2400 · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P150"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3333">
@@ -769,8 +838,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q175129">13th arrondissement of Paris</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p24"
-            aria-label="Credit">i</button><span id="p24" popover class="pop">PHGCOM · Public domain</span><a class="edit"
+            popovertarget="p26"
+            aria-label="Credit">i</button><span id="p26" popover class="pop">PHGCOM · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P150"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3308">
@@ -782,8 +851,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q194420">16th arrondissement of Paris</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p25"
-            aria-label="Credit">i</button><span id="p25" popover class="pop">Cyberjunkie · CC BY 2.5</span><a class="edit"
+            popovertarget="p27"
+            aria-label="Credit">i</button><span id="p27" popover class="pop">Cyberjunkie · CC BY 2.5</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P150"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.6641">
@@ -795,8 +864,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q270230">8th arrondissement of Paris</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p26"
-            aria-label="Credit">i</button><span id="p26" popover class="pop">Aleksandr Zykov from Russia · CC BY-SA 2.0</span><a class="edit"
+            popovertarget="p28"
+            aria-label="Credit">i</button><span id="p28" popover class="pop">Aleksandr Zykov from Russia · CC BY-SA 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P150"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.5028">
@@ -808,8 +877,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q275118">9th arrondissement of Paris</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p27"
-            aria-label="Credit">i</button><span id="p27" popover class="pop">Daniel Stockman from Seattle, WA, USA · CC BY-SA 2.0</span><a class="edit"
+            popovertarget="p29"
+            aria-label="Credit">i</button><span id="p29" popover class="pop">Daniel Stockman from Seattle, WA, USA · CC BY-SA 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P150"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.1983">
@@ -821,8 +890,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q245546">6th arrondissement of Paris</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p28"
-            aria-label="Credit">i</button><span id="p28" popover class="pop">Mbzt · CC BY 3.0</span><a class="edit"
+            popovertarget="p30"
+            aria-label="Credit">i</button><span id="p30" popover class="pop">Mbzt · CC BY 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P150"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3333">
@@ -834,8 +903,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q197297">17th arrondissement of Paris</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p29"
-            aria-label="Credit">i</button><span id="p29" popover class="pop">Loïc LLH · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p31"
+            aria-label="Credit">i</button><span id="p31" popover class="pop">Loïc LLH · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P150"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.4544">
@@ -847,8 +916,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q230127">4th arrondissement of Paris</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p30"
-            aria-label="Credit">i</button><span id="p30" popover class="pop">Vincent Desjardins · CC BY 2.0</span><a class="edit"
+            popovertarget="p32"
+            aria-label="Credit">i</button><span id="p32" popover class="pop">Vincent Desjardins · CC BY 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P150"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.9985">
@@ -860,8 +929,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q171689">12th arrondissement of Paris</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p31"
-            aria-label="Credit">i</button><span id="p31" popover class="pop">Mbzt · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p33"
+            aria-label="Credit">i</button><span id="p33" popover class="pop">Mbzt · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P150"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3459">
@@ -873,8 +942,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q204622">19th arrondissement of Paris</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p32"
-            aria-label="Credit">i</button><span id="p32" popover class="pop">Mbzt · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p34"
+            aria-label="Credit">i</button><span id="p34" popover class="pop">Mbzt · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P150"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.75">
@@ -886,15 +955,15 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q210720">20th arrondissement of Paris</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p33"
-            aria-label="Credit">i</button><span id="p33" popover class="pop">CC BY 2.0</span><a class="edit"
+            popovertarget="p35"
+            aria-label="Credit">i</button><span id="p35" popover class="pop">CC BY 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P150"
-       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d21">View all</button></div><dialog id="d21" closedby="any">
+       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d23">View all</button></div><dialog id="d23" closedby="any">
         <header>
             <h2>contains the administrative territorial entity</h2>
             <button type="button"
                     command="close"
-                    commandfor="d21"
+                    commandfor="d23"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -1132,18 +1201,51 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
 </ul></div>
     </dialog></div>
     </div><div data-slot="gallery"><div class="block set"><div class="run"><figure class="m k-drawing" style="--a:0.9168">
-        <a href="https://commons.wikimedia.org/wiki/File:Paris-Position.svg">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d36"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Paris-Position.svg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Paris-Position.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris-Position.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris-Position.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris-Position.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris-Position.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
-        </a><figcaption><span>locator map image</span><span class="prov-none" title="—"></span>
+        </button><figcaption><span>locator map image</span><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p34"
-            aria-label="Credit">i</button><span id="p34" popover class="pop">Marmelad · CC BY-SA 2.5</span><a class="edit"
+            popovertarget="p37"
+            aria-label="Credit">i</button><span id="p37" popover class="pop">Marmelad · CC BY-SA 2.5</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P242"
        aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-photo"
+    </figure>
+    <dialog id="d36"
+        class="lightbox k-drawing"
+        closedby="any"
+        aria-labelledby="d36-h"
+        style="--a:0.9168">
+    <header>
+        <h2 id="d36-h">locator map image</h2>
+        <button type="button"
+                command="close"
+                commandfor="d36"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Paris-Position.svg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Paris-Position.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris-Position.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris-Position.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris-Position.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris-Position.svg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">Marmelad · CC BY-SA 2.5</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Paris-Position.svg">Paris-Position.svg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q90#P242"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-photo"
         style="--a:0.9486">
     <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20and%20vicinities%2C%20LandSat-5%20false%20color%20satellite%20image%2C%202006-07-16.jpg?width=960"
          srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20and%20vicinities%2C%20LandSat-5%20false%20color%20satellite%20image%2C%202006-07-16.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20and%20vicinities%2C%20LandSat-5%20false%20color%20satellite%20image%2C%202006-07-16.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20and%20vicinities%2C%20LandSat-5%20false%20color%20satellite%20image%2C%202006-07-16.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20and%20vicinities%2C%20LandSat-5%20false%20color%20satellite%20image%2C%202006-07-16.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20and%20vicinities%2C%20LandSat-5%20false%20color%20satellite%20image%2C%202006-07-16.jpg?width=1920 1920w"
@@ -1153,8 +1255,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><span>located in the administrative territorial entity</span><b><a href="https://www.wikidata.org/wiki/Q16665915">Grand Paris</a></b><span>2016 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p35"
-            aria-label="Credit">i</button><span id="p35" popover class="pop">NASA · Public domain</span><a class="edit"
+            popovertarget="p38"
+            aria-label="Credit">i</button><span id="p38" popover class="pop">NASA · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P131"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.4114">
@@ -1166,8 +1268,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><span>part of</span><b><a href="https://www.wikidata.org/wiki/Q13917">Île-de-France</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p36"
-            aria-label="Credit">i</button><span id="p36" popover class="pop">David McSpadden from Daly City, United States · CC BY 2.0</span><a class="edit"
+            popovertarget="p39"
+            aria-label="Credit">i</button><span id="p39" popover class="pop">David McSpadden from Daly City, United States · CC BY 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P361"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3333">
@@ -1179,8 +1281,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><span>highest point</span><b><a href="https://www.wikidata.org/wiki/Q1440664">highest point of Paris</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p37"
-            aria-label="Credit">i</button><span id="p37" popover class="pop">LPLT · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p40"
+            aria-label="Credit">i</button><span id="p40" popover class="pop">LPLT · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P610"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.2739">
@@ -1192,8 +1294,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><span>continent</span><b><a href="https://www.wikidata.org/wiki/Q46">Europe</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p38"
-            aria-label="Credit">i</button><span id="p38" popover class="pop">Public domain</span><a class="edit"
+            popovertarget="p41"
+            aria-label="Credit">i</button><span id="p41" popover class="pop">Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P30"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.1558">
@@ -1205,8 +1307,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><span>located in the statistical territorial entity</span><b><a href="https://www.wikidata.org/wiki/Q1082222">Paris unité urbaine</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p39"
-            aria-label="Credit">i</button><span id="p39" popover class="pop">NASA/GSFC/METI/ERSDAC/JAROS, and U.S./Japan ASTER Science Team. · Public domain</span><a class="edit"
+            popovertarget="p42"
+            aria-label="Credit">i</button><span id="p42" popover class="pop">NASA/GSFC/METI/ERSDAC/JAROS, and U.S./Japan ASTER Science Team. · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P8138"
        aria-label="Edit">✎</a></span></figure><figure class="m k-empty" style="--a:1.333">
     <figcaption><span>located in the statistical territorial entity</span><b><a href="https://www.wikidata.org/wiki/Q108921672">Paris attraction area</a></b><span class="prov-none" title="—"></span>
@@ -1495,54 +1597,194 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
             <span class="note"><a href="https://www.wikidata.org/wiki/Q150">French</a></span>
         </div>
     </div><div data-slot="gallery"><div class="block set"><div class="run"><figure class="m k-drawing" style="--a:0.707">
-        <a href="https://commons.wikimedia.org/wiki/File:Armoiries_de_la_ville_de_Paris_%281949%29.svg">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d43"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Armoiries%20de%20la%20ville%20de%20Paris%20%281949%29.svg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Armoiries%20de%20la%20ville%20de%20Paris%20%281949%29.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Armoiries%20de%20la%20ville%20de%20Paris%20%281949%29.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Armoiries%20de%20la%20ville%20de%20Paris%20%281949%29.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Armoiries%20de%20la%20ville%20de%20Paris%20%281949%29.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Armoiries%20de%20la%20ville%20de%20Paris%20%281949%29.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
-        </a><figcaption><span>coat of arms</span> <a href="https://www.wikidata.org/wiki/Q1925366">coat of arms of Paris</a>
+        </button><figcaption><span>coat of arms</span> <a href="https://www.wikidata.org/wiki/Q1925366">coat of arms of Paris</a>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p40"
-            aria-label="Credit">i</button><span id="p40" popover class="pop">RaphaëlMignon · CC BY 4.0</span><a class="edit"
+            popovertarget="p44"
+            aria-label="Credit">i</button><span id="p44" popover class="pop">RaphaëlMignon · CC BY 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P94"
        aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-drawing" style="--a:1.5">
-        <a href="https://commons.wikimedia.org/wiki/File:Drapeau_des_armes_de_la_ville_de_Paris.svg">
+    </figure>
+    <dialog id="d43"
+        class="lightbox k-drawing"
+        closedby="any"
+        aria-labelledby="d43-h"
+        style="--a:0.707">
+    <header>
+        <h2 id="d43-h">coat of arms: <a href="https://www.wikidata.org/wiki/Q1925366">coat of arms of Paris</a></h2>
+        <button type="button"
+                command="close"
+                commandfor="d43"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Armoiries%20de%20la%20ville%20de%20Paris%20%281949%29.svg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Armoiries%20de%20la%20ville%20de%20Paris%20%281949%29.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Armoiries%20de%20la%20ville%20de%20Paris%20%281949%29.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Armoiries%20de%20la%20ville%20de%20Paris%20%281949%29.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Armoiries%20de%20la%20ville%20de%20Paris%20%281949%29.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Armoiries%20de%20la%20ville%20de%20Paris%20%281949%29.svg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p><a href="https://www.wikidata.org/wiki/Q11446">ship</a> · <a href="https://www.wikidata.org/wiki/Q12004">Quercus</a> · <a href="https://www.wikidata.org/wiki/Q26006">Laurus nobilis</a> · <a href="https://www.wikidata.org/wiki/Q193622">order</a> · <a href="https://www.wikidata.org/wiki/Q211568">fleur-de-lis</a> · <a href="https://www.wikidata.org/wiki/Q429340">mural crown</a> · <a href="https://www.wikidata.org/wiki/Q1370565">sash</a> · <a href="https://www.wikidata.org/wiki/Q2689628">speech scroll</a> · <span lang="de">Großes Wappen der Stadt Paris</span> <span class="note" data-lang-name="de">de</span> · <span lang="en">Greater coat of arms of the City of Paris</span> <span class="note" data-lang-name="en">en</span> · <span lang="fr">Armoiries de la Ville de Paris</span> <span class="note" data-lang-name="fr">fr</span></p>
+        
+            <p class="credit">RaphaëlMignon · CC BY 4.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Armoiries_de_la_ville_de_Paris_%281949%29.svg">Armoiries de la ville de Paris (1949).svg</a>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q90#P94"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-drawing" style="--a:1.5">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d45"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Drapeau%20des%20armes%20de%20la%20ville%20de%20Paris.svg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Drapeau%20des%20armes%20de%20la%20ville%20de%20Paris.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Drapeau%20des%20armes%20de%20la%20ville%20de%20Paris.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Drapeau%20des%20armes%20de%20la%20ville%20de%20Paris.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Drapeau%20des%20armes%20de%20la%20ville%20de%20Paris.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Drapeau%20des%20armes%20de%20la%20ville%20de%20Paris.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
-        </a><figcaption><span>flag</span> <a href="https://www.wikidata.org/wiki/Q659058">flag of Paris</a><span class="prov-none" title="—"></span>
+        </button><figcaption><span>flag</span> <a href="https://www.wikidata.org/wiki/Q659058">flag of Paris</a><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p41"
-            aria-label="Credit">i</button><span id="p41" popover class="pop">RaphaëlMignon · CC BY 4.0</span><a class="edit"
+            popovertarget="p46"
+            aria-label="Credit">i</button><span id="p46" popover class="pop">RaphaëlMignon · CC BY 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P41"
        aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-drawing" style="--a:0.8418">
-        <a href="https://commons.wikimedia.org/wiki/File:Grandes_Armes_de_Paris.svg">
+    </figure>
+    <dialog id="d45"
+        class="lightbox k-drawing"
+        closedby="any"
+        aria-labelledby="d45-h"
+        style="--a:1.5">
+    <header>
+        <h2 id="d45-h">flag: <a href="https://www.wikidata.org/wiki/Q659058">flag of Paris</a></h2>
+        <button type="button"
+                command="close"
+                commandfor="d45"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Drapeau%20des%20armes%20de%20la%20ville%20de%20Paris.svg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Drapeau%20des%20armes%20de%20la%20ville%20de%20Paris.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Drapeau%20des%20armes%20de%20la%20ville%20de%20Paris.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Drapeau%20des%20armes%20de%20la%20ville%20de%20Paris.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Drapeau%20des%20armes%20de%20la%20ville%20de%20Paris.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Drapeau%20des%20armes%20de%20la%20ville%20de%20Paris.svg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p><span lang="de">Flagge der Stadt Paris</span> <span class="note" data-lang-name="de">de</span> · <span lang="en">Flag of the City of Paris</span> <span class="note" data-lang-name="en">en</span> · <span lang="fr">Drapeau de la Ville de Paris</span> <span class="note" data-lang-name="fr">fr</span></p>
+        
+            <p class="credit">RaphaëlMignon · CC BY 4.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Drapeau_des_armes_de_la_ville_de_Paris.svg">Drapeau des armes de la ville de Paris.svg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q90#P41"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-drawing" style="--a:0.8418">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d47"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Grandes%20Armes%20de%20Paris.svg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Grandes%20Armes%20de%20Paris.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Grandes%20Armes%20de%20Paris.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Grandes%20Armes%20de%20Paris.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Grandes%20Armes%20de%20Paris.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Grandes%20Armes%20de%20Paris.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
-        </a><figcaption><span>coat of arms image</span><span class="prov-imported" title="imported from Wikimedia project">W</span>
+        </button><figcaption><span>coat of arms image</span><span class="prov-imported" title="imported from Wikimedia project">W</span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p42"
-            aria-label="Credit">i</button><span id="p42" popover class="pop">Bluebear2 · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p48"
+            aria-label="Credit">i</button><span id="p48" popover class="pop">Bluebear2 · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P94"
        aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-drawing" style="--a:1.5">
-        <a href="https://commons.wikimedia.org/wiki/File:Flag_of_Paris_with_coat_of_arms.svg">
+    </figure>
+    <dialog id="d47"
+        class="lightbox k-drawing"
+        closedby="any"
+        aria-labelledby="d47-h"
+        style="--a:0.8418">
+    <header>
+        <h2 id="d47-h">coat of arms image</h2>
+        <button type="button"
+                command="close"
+                commandfor="d47"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Grandes%20Armes%20de%20Paris.svg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Grandes%20Armes%20de%20Paris.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Grandes%20Armes%20de%20Paris.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Grandes%20Armes%20de%20Paris.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Grandes%20Armes%20de%20Paris.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Grandes%20Armes%20de%20Paris.svg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p><span lang="de">Großes Wappen der Stadt Paris</span> <span class="note" data-lang-name="de">de</span> · <span lang="en">Greater coat of arms of the City of Paris</span> <span class="note" data-lang-name="en">en</span> · <span lang="fr">Armoiries de la Ville de Paris</span> <span class="note" data-lang-name="fr">fr</span></p>
+        
+            <p class="credit">Bluebear2 · CC BY-SA 3.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Grandes_Armes_de_Paris.svg">Grandes Armes de Paris.svg</a><span class="prov-imported" title="imported from Wikimedia project">W</span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q90#P94"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-drawing" style="--a:1.5">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d49"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Paris%20with%20coat%20of%20arms.svg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Paris%20with%20coat%20of%20arms.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Paris%20with%20coat%20of%20arms.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Paris%20with%20coat%20of%20arms.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Paris%20with%20coat%20of%20arms.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Paris%20with%20coat%20of%20arms.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
-        </a><figcaption><span>flag image</span><span class="prov-none" title="—"></span>
+        </button><figcaption><span>flag image</span><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p43"
-            aria-label="Credit">i</button><span id="p43" popover class="pop">Invitatious (me) · Public domain</span><a class="edit"
+            popovertarget="p50"
+            aria-label="Credit">i</button><span id="p50" popover class="pop">Invitatious (me) · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P41"
        aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-photo"
+    </figure>
+    <dialog id="d49"
+        class="lightbox k-drawing"
+        closedby="any"
+        aria-labelledby="d49-h"
+        style="--a:1.5">
+    <header>
+        <h2 id="d49-h">flag image</h2>
+        <button type="button"
+                command="close"
+                commandfor="d49"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Paris%20with%20coat%20of%20arms.svg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Paris%20with%20coat%20of%20arms.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Paris%20with%20coat%20of%20arms.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Paris%20with%20coat%20of%20arms.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Paris%20with%20coat%20of%20arms.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Paris%20with%20coat%20of%20arms.svg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p><span lang="de">Flagge der Stadt Paris</span> <span class="note" data-lang-name="de">de</span> · <span lang="en">Flag of the City of Paris</span> <span class="note" data-lang-name="en">en</span> · <span lang="fr">Drapeau de la Ville de Paris</span> <span class="note" data-lang-name="fr">fr</span></p>
+        
+            <p class="credit">Invitatious (me) · Public domain</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Flag_of_Paris_with_coat_of_arms.svg">Flag of Paris with coat of arms.svg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q90#P41"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-photo"
         style="--a:0.5216">
     <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ste%20genevieve%20st%20etienne.jpg?width=960"
          srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Ste%20genevieve%20st%20etienne.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Ste%20genevieve%20st%20etienne.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Ste%20genevieve%20st%20etienne.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Ste%20genevieve%20st%20etienne.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Ste%20genevieve%20st%20etienne.jpg?width=1920 1920w"
@@ -1552,8 +1794,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><span>patron saint</span><b><a href="https://www.wikidata.org/wiki/Q235863">Genevieve of Paris</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p44"
-            aria-label="Credit">i</button><span id="p44" popover class="pop">Jastrow · Public domain</span><a class="edit"
+            popovertarget="p51"
+            aria-label="Credit">i</button><span id="p51" popover class="pop">Jastrow · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P417"
        aria-label="Edit">✎</a></span></figure></div></div></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>named after</dt>
 <dd><a href="https://www.wikidata.org/wiki/Q656902">Parisii</a></dd>
@@ -1596,12 +1838,12 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P281"
        aria-label="Edit">✎</a>
-    </span><button class="more" type="button" command="show-modal" commandfor="d45">+16</button><dialog id="d45" closedby="any">
+    </span><button class="more" type="button" command="show-modal" commandfor="d52">+16</button><dialog id="d52" closedby="any">
         <header>
             <h2>postal code</h2>
             <button type="button"
                     command="close"
-                    commandfor="d45"
+                    commandfor="d52"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows text-rows">
@@ -1816,8 +2058,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><span>head of government</span><b><a href="https://www.wikidata.org/wiki/Q64281962">Emmanuel Grégoire</a></b><span>2026 –</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p46"
-            aria-label="Credit">i</button><span id="p46" popover class="pop">Jacques Paquier · CC BY 2.0</span><a class="edit"
+            popovertarget="p53"
+            aria-label="Credit">i</button><span id="p53" popover class="pop">Jacques Paquier · CC BY 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P6"
        aria-label="Edit">✎</a></span></figure><div class="before"><span class="v"><a href="https://www.wikidata.org/wiki/Q2851133">Anne Hidalgo</a> <span class="note">2014 – 2026 · <a href="https://www.wikidata.org/wiki/Q170972">Socialist Party</a></span>
         <a class="edit"
@@ -1843,12 +2085,12 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P6"
        aria-label="Edit">✎</a>
-    </span><button class="more" type="button" command="show-modal" commandfor="d47">+17</button><dialog id="d47" closedby="any">
+    </span><button class="more" type="button" command="show-modal" commandfor="d54">+17</button><dialog id="d54" closedby="any">
         <header>
             <h2>mayor of Paris</h2>
             <button type="button"
                     command="close"
-                    commandfor="d47"
+                    commandfor="d54"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -2120,8 +2362,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q142">France</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p49"
-            aria-label="Credit">i</button><span id="p49" popover class="pop">Pierre Blaché from Paris, France · CC0</span><a class="edit"
+            popovertarget="p56"
+            aria-label="Credit">i</button><span id="p56" popover class="pop">Pierre Blaché from Paris, France · CC0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1376"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.9486">
@@ -2133,8 +2375,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q16665915">Grand Paris</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p50"
-            aria-label="Credit">i</button><span id="p50" popover class="pop">NASA · Public domain</span><a class="edit"
+            popovertarget="p57"
+            aria-label="Credit">i</button><span id="p57" popover class="pop">NASA · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1376"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.4114">
@@ -2146,8 +2388,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q13917">Île-de-France</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p51"
-            aria-label="Credit">i</button><span id="p51" popover class="pop">David McSpadden from Daly City, United States · CC BY 2.0</span><a class="edit"
+            popovertarget="p58"
+            aria-label="Credit">i</button><span id="p58" popover class="pop">David McSpadden from Daly City, United States · CC BY 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1376"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1">
@@ -2159,8 +2401,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q69829">French Fourth Republic</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p52"
-            aria-label="Credit">i</button><span id="p52" popover class="pop">VoodooIsland at English Wikipedia · Public domain</span><a class="edit"
+            popovertarget="p59"
+            aria-label="Credit">i</button><span id="p59" popover class="pop">VoodooIsland at English Wikipedia · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1376"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.4292">
@@ -2172,8 +2414,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q133132">Paris Commune</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p53"
-            aria-label="Credit">i</button><span id="p53" popover class="pop">Anonyme, photographe · CC0</span><a class="edit"
+            popovertarget="p60"
+            aria-label="Credit">i</button><span id="p60" popover class="pop">Anonyme, photographe · CC0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1376"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.0097">
@@ -2185,8 +2427,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q106577">Neustria</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p54"
-            aria-label="Credit">i</button><span id="p54" popover class="pop">Kairom13 · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p61"
+            aria-label="Credit">i</button><span id="p61" popover class="pop">Kairom13 · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1376"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3772">
@@ -2198,8 +2440,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q70972">Kingdom of France</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p55"
-            aria-label="Credit">i</button><span id="p55" popover class="pop">Pierre Patel · Public domain</span><a class="edit"
+            popovertarget="p62"
+            aria-label="Credit">i</button><span id="p62" popover class="pop">Pierre Patel · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1376"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:0.9525">
@@ -2211,8 +2453,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q58296">French First Republic</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p56"
-            aria-label="Credit">i</button><span id="p56" popover class="pop">BrightRaven · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p63"
+            aria-label="Credit">i</button><span id="p63" popover class="pop">BrightRaven · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1376"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.4056">
@@ -2224,8 +2466,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q69808">Vichy France</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p57"
-            aria-label="Credit">i</button><span id="p57" popover class="pop">Unknown authorUnknown author · Public domain</span><a class="edit"
+            popovertarget="p64"
+            aria-label="Credit">i</button><span id="p64" popover class="pop">Unknown authorUnknown author · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1376"
        aria-label="Edit">✎</a></span></figure><figure class="m k-drawing"
         style="--a:1.5">
@@ -2237,8 +2479,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q71092">Second French Empire</a></b><span class="from" title="en.wikipedia.org">W</span><span class="prov-imported" title="imported from Wikimedia project">W</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p58"
-            aria-label="Credit">i</button><span id="p58" popover class="pop">https://commons.wikimedia.org/wiki/File:Flag_of_France.svg , https://diffusion.shom.fr/pro/downloadable/download/sample/sample_id/73/ , https://www.gouvernement.fr/charte/charte-graphique-les-fondamentaux/les-couleurs , User:Anomie , User:MSGJ , User:SKopp · PD</span><a class="edit"
+            popovertarget="p65"
+            aria-label="Credit">i</button><span id="p65" popover class="pop">https://commons.wikimedia.org/wiki/File:Flag_of_France.svg , https://diffusion.shom.fr/pro/downloadable/download/sample/sample_id/73/ , https://www.gouvernement.fr/charte/charte-graphique-les-fondamentaux/les-couleurs , User:Anomie , User:MSGJ , User:SKopp · PD</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1376"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3729">
@@ -2250,8 +2492,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q2863958">arrondissement of Paris</a></b><span class="from" title="en.wikipedia.org">W</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p59"
-            aria-label="Credit">i</button><span id="p59" popover class="pop">Tschubby · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p66"
+            aria-label="Credit">i</button><span id="p66" popover class="pop">Tschubby · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1376"
        aria-label="Edit">✎</a></span></figure><figure class="m k-empty" style="--a:1.333">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q88521107">zone de défense et de sécurité de Paris</a></b><span class="prov-none" title="—"></span>
@@ -2263,12 +2505,12 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
        aria-label="Edit">✎</a>
         
     </span>
-</figure><button class="view-all" type="button" command="show-modal" commandfor="d48">View all</button></div><dialog id="d48" closedby="any">
+</figure><button class="view-all" type="button" command="show-modal" commandfor="d55">View all</button></div><dialog id="d55" closedby="any">
         <header>
             <h2>capital of</h2>
             <button type="button"
                     command="close"
-                    commandfor="d48"
+                    commandfor="d55"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -2467,8 +2709,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><span>legislative body</span><b><a href="https://www.wikidata.org/wiki/Q775994">Council of Paris</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p60"
-            aria-label="Credit">i</button><span id="p60" popover class="pop">Zigsfy · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p67"
+            aria-label="Credit">i</button><span id="p67" popover class="pop">Zigsfy · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P194"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.6546">
@@ -2480,8 +2722,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><span>authority</span><b><a href="https://www.wikidata.org/wiki/Q3278478">municipality of Paris</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p61"
-            aria-label="Credit">i</button><span id="p61" popover class="pop">Juan Enrique Gilardi from Mar del Plata, Argentina · CC BY-SA 2.0</span><a class="edit"
+            popovertarget="p68"
+            aria-label="Credit">i</button><span id="p68" popover class="pop">Juan Enrique Gilardi from Mar del Plata, Argentina · CC BY-SA 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P797"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:0.7528">
@@ -2493,8 +2735,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><span>diocese</span><b><a href="https://www.wikidata.org/wiki/Q1242250">Roman Catholic Archdiocese of Paris</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p62"
-            aria-label="Credit">i</button><span id="p62" popover class="pop">Sanchezn · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p69"
+            aria-label="Credit">i</button><span id="p69" popover class="pop">Sanchezn · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P708"
        aria-label="Edit">✎</a></span></figure></div></div></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>legal form</dt>
 <dd><a href="https://www.wikidata.org/wiki/Q22927616">commune of France with specific status</a></dd>
@@ -2507,8 +2749,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
 </div><div class="row r-value"><dt>budget
     <button class="info"
             type="button"
-            popovertarget="p63"
-            aria-label="Description">i</button><span id="p63" popover class="pop">assigned monetary amount for a project (for the estimated cost of a film, also commonly referred to as budget, use P2130)</span></dt>
+            popovertarget="p70"
+            aria-label="Description">i</button><span id="p70" popover class="pop">assigned monetary amount for a project (for the estimated cost of a film, also commonly referred to as budget, use P2130)</span></dt>
 <dd><data value="7561800000" data-f="scientific">7.56 × 10⁹</data> <span class="note">euro</span> <span class="note">2026</span></dd>
 <span class="tools">
         
@@ -2543,8 +2785,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
         <qr-chart class="block series"><h3>tabular population
     <button class="info"
             type="button"
-            popovertarget="p64"
-            aria-label="Description">i</button><span id="p64" popover class="pop">same as population (P1082); used when there is data for many different points in time</span><span class="prov-none" title="—"></span>
+            popovertarget="p71"
+            aria-label="Description">i</button><span id="p71" popover class="pop">same as population (P1082); used when there is data for many different points in time</span><span class="prov-none" title="—"></span>
     <a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P4179"
        aria-label="Edit">✎</a>
@@ -2585,8 +2827,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
     </div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>population
     <button class="info"
             type="button"
-            popovertarget="p65"
-            aria-label="Description">i</button><span id="p65" popover class="pop">number of people inhabiting the place; number of people of subject</span></dt>
+            popovertarget="p72"
+            aria-label="Description">i</button><span id="p72" popover class="pop">number of people inhabiting the place; number of people of subject</span></dt>
 <dd><data value="2103778" data-f="number">2103778</data> <span class="note"><a href="https://www.wikidata.org/wiki/Q39825">census</a> · 2023</span></dd>
 <span class="tools">
         
@@ -2605,8 +2847,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
 </div><div class="row r-value"><dt>annual number of weddings
     <button class="info"
             type="button"
-            popovertarget="p66"
-            aria-label="Description">i</button><span id="p66" popover class="pop">number of marriages per year in a location</span></dt>
+            popovertarget="p73"
+            aria-label="Description">i</button><span id="p73" popover class="pop">number of marriages per year in a location</span></dt>
 <dd><data value="9021" data-f="number">9021</data> <span class="note">2015</span></dd>
 <span class="tools">
         
@@ -2759,12 +3001,12 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
                     </span>
                 </span>
         </li>
-</ul><button class="more" type="button" command="show-modal" commandfor="d67">+11</button><dialog id="d67" closedby="any">
+</ul><button class="more" type="button" command="show-modal" commandfor="d74">+11</button><dialog id="d74" closedby="any">
         <header>
             <h2>owner of</h2>
             <button type="button"
                     command="close"
-                    commandfor="d67"
+                    commandfor="d74"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -3072,8 +3314,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q220">Rome</a></b><span>1956 –</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p69"
-            aria-label="Credit">i</button><span id="p69" popover class="pop">Bert Kaufmann from Roermond, Netherlands · CC BY-SA 2.0</span><a class="edit"
+            popovertarget="p76"
+            aria-label="Credit">i</button><span id="p76" popover class="pop">Bert Kaufmann from Roermond, Netherlands · CC BY-SA 2.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.4998">
@@ -3085,8 +3327,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q994">Tbilisi</a></b><span>1997 –</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p70"
-            aria-label="Credit">i</button><span id="p70" popover class="pop">Alexey Komarov · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p77"
+            aria-label="Credit">i</button><span id="p77" popover class="pop">Alexey Komarov · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.7067">
@@ -3098,8 +3340,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q62">San Francisco</a></b><span>1996 –</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p71"
-            aria-label="Credit">i</button><span id="p71" popover class="pop">Lightandtruth · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p78"
+            aria-label="Credit">i</button><span id="p78" popover class="pop">Lightandtruth · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.5048">
@@ -3111,8 +3353,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q1899">Kyiv</a></b><span>1992 –</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p72"
-            aria-label="Credit">i</button><span id="p72" popover class="pop">Francisco Anzola · CC BY 3.0</span><a class="edit"
+            popovertarget="p79"
+            aria-label="Credit">i</button><span id="p79" popover class="pop">Francisco Anzola · CC BY 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.5101">
@@ -3124,8 +3366,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q656">Saint Petersburg</a></b><span>1991 –</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p73"
-            aria-label="Credit">i</button><span id="p73" popover class="pop">Florstein (Telegram:WikiPhoto.Space) · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p80"
+            aria-label="Credit">i</button><span id="p80" popover class="pop">Florstein (Telegram:WikiPhoto.Space) · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.9548">
@@ -3137,8 +3379,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q64">Berlin</a></b><span>1987 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p74"
-            aria-label="Credit">i</button><span id="p74" popover class="pop">Thomas Wolf, www.foto-tw.de · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p81"
+            aria-label="Credit">i</button><span id="p81" popover class="pop">Thomas Wolf, www.foto-tw.de · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.8299">
@@ -3150,8 +3392,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q1490">Tokyo</a></b><span>1982 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p75"
-            aria-label="Credit">i</button><span id="p75" popover class="pop">Morio · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p82"
+            aria-label="Credit">i</button><span id="p82" popover class="pop">Morio · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.5">
@@ -3163,8 +3405,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q34600">Kyoto</a></b><span>1958 –</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p76"
-            aria-label="Credit">i</button><span id="p76" popover class="pop">Basile Morin · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p83"
+            aria-label="Credit">i</button><span id="p83" popover class="pop">Basile Morin · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.4997">
@@ -3176,8 +3418,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q1489">Mexico City</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p77"
-            aria-label="Credit">i</button><span id="p77" popover class="pop">Gobierno CDMX · CC0</span><a class="edit"
+            popovertarget="p84"
+            aria-label="Credit">i</button><span id="p84" popover class="pop">Gobierno CDMX · CC0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:2.4184">
@@ -3189,8 +3431,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q612">Dubai</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p78"
-            aria-label="Credit">i</button><span id="p78" popover class="pop">Tim Reckmann from Hamm, Deutschland · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p85"
+            aria-label="Credit">i</button><span id="p85" popover class="pop">Tim Reckmann from Hamm, Deutschland · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.3333">
@@ -3202,8 +3444,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q158119">Ramallah</a></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p79"
-            aria-label="Credit">i</button><span id="p79" popover class="pop">أمين · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p86"
+            aria-label="Credit">i</button><span id="p86" popover class="pop">أمين · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P190"
        aria-label="Edit">✎</a></span></figure><figure class="m k-photo"
         style="--a:1.5601">
@@ -3215,15 +3457,15 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><b><a href="https://www.wikidata.org/wiki/Q101625">Marrakech</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p80"
-            aria-label="Credit">i</button><span id="p80" popover class="pop">Donar Reiskoffer · CC BY 3.0</span><a class="edit"
+            popovertarget="p87"
+            aria-label="Credit">i</button><span id="p87" popover class="pop">Donar Reiskoffer · CC BY 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P190"
-       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d68">View all</button></div><dialog id="d68" closedby="any">
+       aria-label="Edit">✎</a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d75">View all</button></div><dialog id="d75" closedby="any">
         <header>
             <h2>twinned administrative body</h2>
             <button type="button"
                     command="close"
-                    commandfor="d68"
+                    commandfor="d75"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -3517,8 +3759,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
          loading="lazy">
     <figcaption><span>depicted by</span><b><a href="https://www.wikidata.org/wiki/Q3725832">Henry IV at the Battle of Ivry, 14 March 1590</a></b></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p82"
-            aria-label="Credit">i</button><span id="p82" popover class="pop">Peter Paul Rubens · Public domain</span><a class="edit"
+            popovertarget="p89"
+            aria-label="Credit">i</button><span id="p89" popover class="pop">Peter Paul Rubens · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1299"
        aria-label="Edit">✎</a></span></figure></div></div></div><dl class="sheet" data-slot="sheet"><div class="row r-list"><dt>award received</dt>
 <dd><span class="v"><a href="https://www.wikidata.org/wiki/Q2990283">Companion of the Liberation</a>
@@ -3867,142 +4109,523 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
              data-spread="media"
              data-dimension="media"><h2><span class="title">multimedia</span></h2><div class="prose-slot" lang="en"><p>For centuries, Paris has attracted artists from around the world. As a result, Paris has acquired a reputation as the "City of Art". Italian artists were a profound influence on the development of art in Paris in the 16th and 17th centuries, particularly in sculpture and reliefs. Painting and sculpture became the pride of the French monarchy, and the French royal family commissioned many Parisian artists to adorn their palaces during the <a href="https://en.wikipedia.org/wiki/French_Baroque_and_Classicism">French Baroque and Classicism</a> era. Sculptors such as <a href="https://en.wikipedia.org/wiki/Fran%C3%A7ois_Girardon">Girardon</a>, <a href="https://en.wikipedia.org/wiki/Antoine_Coysevox">Coysevox</a>, and <a href="https://en.wikipedia.org/wiki/Nicolas_Coustou">Coustou</a> acquired reputations as the finest artists in the royal court in 17th-century France. <a href="https://en.wikipedia.org/wiki/Pierre_Mignard">Pierre Mignard</a> became the first painter to King <a href="https://en.wikipedia.org/wiki/Louis_XIV">Louis XIV</a> during this period. In 1648, the <i><a href="https://en.wikipedia.org/wiki/Acad%C3%A9mie_royale_de_peinture_et_de_sculpture">Académie royale de peinture et de sculpture</a></i> (Royal Academy of Painting and Sculpture) was established to accommodate the dramatic interest in art in the capital.</p><a class="read" href="https://en.wikipedia.org/wiki/Paris#Culture">Culture ↗</a></div><div data-slot="feature">
         <div class="feature"> <figure class="m k-photo" style="--a:3.1679">
-        <a href="https://commons.wikimedia.org/wiki/File:Paris_Night.jpg">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d90"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20Night.jpg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20Night.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20Night.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20Night.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20Night.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20Night.jpg?width=1920 1920w" sizes="100vw"
                  alt="" loading="lazy">
-        </a><figcaption><span>nighttime view</span>
+        </button><figcaption><span>nighttime view</span>
                     <span class="assessed" title="Featured pictures on Wikimedia Commons, Quality images">★</span>
                 <span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p83"
-            aria-label="Credit">i</button><span id="p83" popover class="pop">Benh LIEU SONG · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p91"
+            aria-label="Credit">i</button><span id="p91" popover class="pop">Benh LIEU SONG · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P3451"
        aria-label="Edit">✎</a></span>
-    </figure> </div>
+    </figure>
+    <dialog id="d90"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d90-h"
+        style="--a:3.1679">
+    <header>
+        <h2 id="d90-h">nighttime view</h2>
+        <button type="button"
+                command="close"
+                commandfor="d90"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20Night.jpg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20Night.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20Night.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20Night.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20Night.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20Night.jpg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p>2008</p>
+        
+            <p class="credit">Benh LIEU SONG · CC BY-SA 4.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Paris_Night.jpg">Paris Night.jpg</a>
+                · <span class="assessed">★</span> Featured pictures on Wikimedia Commons, Quality images
+            <span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q90#P3451"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog> </div>
     </div><div data-slot="run">
         <div class="run"> <figure class="m k-photo" style="--a:1.2476">
-        <a href="https://commons.wikimedia.org/wiki/File:Paris_-_Orthophotographie_-_2018.jpg">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d92"
+                aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20-%20Orthophotographie%20-%202018.jpg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20-%20Orthophotographie%20-%202018.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20-%20Orthophotographie%20-%202018.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20-%20Orthophotographie%20-%202018.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20-%20Orthophotographie%20-%202018.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20-%20Orthophotographie%20-%202018.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
-        </a><figcaption><span>aerial view</span><span class="prov-none" title="—"></span>
-            </figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p84"
-            aria-label="Credit">i</button><span id="p84" popover class="pop">Institut national de l&#39;information géographique et forestière · Licence Ouverte</span><a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P8592"
-       aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-photo" style="--a:2">
-        <a href="https://commons.wikimedia.org/wiki/File:Sunrise_above_Paris%2C_9_April_2007.jpg">
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise%20above%20Paris%2C%209%20April%202007.jpg?width=960"
-                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise%20above%20Paris%2C%209%20April%202007.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise%20above%20Paris%2C%209%20April%202007.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise%20above%20Paris%2C%209%20April%202007.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise%20above%20Paris%2C%209%20April%202007.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise%20above%20Paris%2C%209%20April%202007.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
-                 alt="" loading="lazy">
-        </a><figcaption><span>spherical panorama image</span><span class="prov-none" title="—"></span>
-            </figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p85"
-            aria-label="Credit">i</button><span id="p85" popover class="pop">Alexandre Duret-Lutz from Paris, France · CC BY-SA 2.0</span><a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P4640"
-       aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-photo" style="--a:6.5703">
-        <a href="https://commons.wikimedia.org/wiki/File:LaDefense_pl.jpg">
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/LaDefense%20pl.jpg?width=960"
-                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/LaDefense%20pl.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/LaDefense%20pl.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/LaDefense%20pl.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/LaDefense%20pl.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/LaDefense%20pl.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
-                 alt="" loading="lazy">
-        </a><figcaption><span>panoramic view</span><span class="prov-none" title="—"></span>
-            </figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p86"
-            aria-label="Credit">i</button><span id="p86" popover class="pop">Matism · CC BY-SA 3.0</span><a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P4291"
-       aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-photo" style="--a:1.5056">
-        <a href="https://commons.wikimedia.org/wiki/File:Eiffel_Tower_from_the_Tour_Montparnasse%2C_1_May_2012_N2.jpg">
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Eiffel%20Tower%20from%20the%20Tour%20Montparnasse%2C%201%20May%202012%20N2.jpg?width=960"
-                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Eiffel%20Tower%20from%20the%20Tour%20Montparnasse%2C%201%20May%202012%20N2.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Eiffel%20Tower%20from%20the%20Tour%20Montparnasse%2C%201%20May%202012%20N2.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Eiffel%20Tower%20from%20the%20Tour%20Montparnasse%2C%201%20May%202012%20N2.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Eiffel%20Tower%20from%20the%20Tour%20Montparnasse%2C%201%20May%202012%20N2.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Eiffel%20Tower%20from%20the%20Tour%20Montparnasse%2C%201%20May%202012%20N2.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
-                 alt="" loading="lazy">
-        </a><figcaption><span>nighttime view</span><span class="prov-none" title="—"></span>
-            </figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p87"
-            aria-label="Credit">i</button><span id="p87" popover class="pop">Getfunky · CC BY 2.0</span><a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P3451"
-       aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-photo" style="--a:2.3805">
-        <a href="https://commons.wikimedia.org/wiki/File:Panneau_Entr%C3%A9e_Paris_Avenue_Porte_Chapelle_-_Paris_XVIII_%28FR75%29_-_2021-07-26_-_2.jpg">
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Panneau%20Entr%C3%A9e%20Paris%20Avenue%20Porte%20Chapelle%20-%20Paris%20XVIII%20%28FR75%29%20-%202021-07-26%20-%202.jpg?width=960"
-                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Panneau%20Entr%C3%A9e%20Paris%20Avenue%20Porte%20Chapelle%20-%20Paris%20XVIII%20%28FR75%29%20-%202021-07-26%20-%202.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Panneau%20Entr%C3%A9e%20Paris%20Avenue%20Porte%20Chapelle%20-%20Paris%20XVIII%20%28FR75%29%20-%202021-07-26%20-%202.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Panneau%20Entr%C3%A9e%20Paris%20Avenue%20Porte%20Chapelle%20-%20Paris%20XVIII%20%28FR75%29%20-%202021-07-26%20-%202.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Panneau%20Entr%C3%A9e%20Paris%20Avenue%20Porte%20Chapelle%20-%20Paris%20XVIII%20%28FR75%29%20-%202021-07-26%20-%202.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Panneau%20Entr%C3%A9e%20Paris%20Avenue%20Porte%20Chapelle%20-%20Paris%20XVIII%20%28FR75%29%20-%202021-07-26%20-%202.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
-                 alt="" loading="lazy">
-        </a><figcaption><span>place name sign</span><span class="prov-none" title="—"></span>
-            </figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p88"
-            aria-label="Credit">i</button><span id="p88" popover class="pop">Chabe01 · CC BY-SA 4.0</span><a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1766"
-       aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-photo" style="--a:1.3793">
-        <a href="https://commons.wikimedia.org/wiki/File:Paris_plan_jms.png">
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20plan%20jms.png?width=960"
-                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20plan%20jms.png?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20plan%20jms.png?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20plan%20jms.png?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20plan%20jms.png?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20plan%20jms.png?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
-                 alt="" loading="lazy">
-        </a><figcaption><span>location map</span><span class="prov-none" title="—"></span>
-            </figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p89"
-            aria-label="Credit">i</button><span id="p89" popover class="pop">ThePromenader · CC BY-SA 3.0</span><a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P1943"
-       aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-photo" style="--a:0.667">
-        <a href="https://commons.wikimedia.org/wiki/File:Paris_montage.jpg">
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20montage.jpg?width=960"
-                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20montage.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20montage.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20montage.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20montage.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20montage.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
-                 alt="" loading="lazy">
-        </a><figcaption><span>montage image</span><span class="prov-none" title="—"></span>
-            </figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p90"
-            aria-label="Credit">i</button><span id="p90" popover class="pop">Paris 16 (talk) 06:14, 14 February 2011 (UTC) · CC BY-SA 3.0</span><a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P2716"
-       aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-drawing" style="--a:0.9883">
-        <a href="https://commons.wikimedia.org/wiki/File:Ville_de_Paris_logo.svg">
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ville%20de%20Paris%20logo.svg?width=960"
-                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Ville%20de%20Paris%20logo.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Ville%20de%20Paris%20logo.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Ville%20de%20Paris%20logo.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Ville%20de%20Paris%20logo.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Ville%20de%20Paris%20logo.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
-                 alt="" loading="lazy">
-        </a><figcaption><span>logo image</span><span class="prov-none" title="—"></span>
-            </figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p91"
-            aria-label="Credit">i</button><span id="p91" popover class="pop">Unknown authorUnknown author · Public domain</span><a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P154"
-       aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-drawing" style="--a:3.6056">
-        <a href="https://commons.wikimedia.org/wiki/File:Paris_horizontal_logo.svg">
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20horizontal%20logo.svg?width=960"
-                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20horizontal%20logo.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20horizontal%20logo.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20horizontal%20logo.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20horizontal%20logo.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20horizontal%20logo.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
-                 alt="" loading="lazy">
-        </a><figcaption><span>logo image</span><span class="prov-none" title="—"></span>
-            </figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p92"
-            aria-label="Credit">i</button><span id="p92" popover class="pop">Unknown authorUnknown author · Public domain</span><a class="edit"
-       href="https://www.wikidata.org/wiki/Q90#P154"
-       aria-label="Edit">✎</a></span>
-    </figure><figure class="m k-drawing" style="--a:0.9076">
-        <a href="https://commons.wikimedia.org/wiki/File:Ecu_de_la_ville_de_Paris.svg">
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ecu%20de%20la%20ville%20de%20Paris.svg?width=960"
-                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Ecu%20de%20la%20ville%20de%20Paris.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Ecu%20de%20la%20ville%20de%20Paris.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Ecu%20de%20la%20ville%20de%20Paris.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Ecu%20de%20la%20ville%20de%20Paris.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Ecu%20de%20la%20ville%20de%20Paris.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
-                 alt="" loading="lazy">
-        </a><figcaption><span>escutcheon image</span><span class="prov-none" title="—"></span>
+        </button><figcaption><span>aerial view</span><span class="prov-none" title="—"></span>
             </figcaption><span class="tools"><button class="info"
             type="button"
             popovertarget="p93"
-            aria-label="Credit">i</button><span id="p93" popover class="pop">RaphaëlMignon · CC BY 4.0</span><a class="edit"
+            aria-label="Credit">i</button><span id="p93" popover class="pop">Institut national de l&#39;information géographique et forestière · Licence Ouverte</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q90#P8592"
+       aria-label="Edit">✎</a></span>
+    </figure>
+    <dialog id="d92"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d92-h"
+        style="--a:1.2476">
+    <header>
+        <h2 id="d92-h">aerial view</h2>
+        <button type="button"
+                command="close"
+                commandfor="d92"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20-%20Orthophotographie%20-%202018.jpg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20-%20Orthophotographie%20-%202018.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20-%20Orthophotographie%20-%202018.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20-%20Orthophotographie%20-%202018.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20-%20Orthophotographie%20-%202018.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20-%20Orthophotographie%20-%202018.jpg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">Institut national de l&#39;information géographique et forestière · Licence Ouverte</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Paris_-_Orthophotographie_-_2018.jpg">Paris - Orthophotographie - 2018.jpg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q90#P8592"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-photo" style="--a:2">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d94"
+                aria-label="View larger">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise%20above%20Paris%2C%209%20April%202007.jpg?width=960"
+                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise%20above%20Paris%2C%209%20April%202007.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise%20above%20Paris%2C%209%20April%202007.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise%20above%20Paris%2C%209%20April%202007.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise%20above%20Paris%2C%209%20April%202007.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise%20above%20Paris%2C%209%20April%202007.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
+                 alt="" loading="lazy">
+        </button><figcaption><span>spherical panorama image</span><span class="prov-none" title="—"></span>
+            </figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p95"
+            aria-label="Credit">i</button><span id="p95" popover class="pop">Alexandre Duret-Lutz from Paris, France · CC BY-SA 2.0</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q90#P4640"
+       aria-label="Edit">✎</a></span>
+    </figure>
+    <dialog id="d94"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d94-h"
+        style="--a:2">
+    <header>
+        <h2 id="d94-h">spherical panorama image</h2>
+        <button type="button"
+                command="close"
+                commandfor="d94"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise%20above%20Paris%2C%209%20April%202007.jpg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise%20above%20Paris%2C%209%20April%202007.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise%20above%20Paris%2C%209%20April%202007.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise%20above%20Paris%2C%209%20April%202007.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise%20above%20Paris%2C%209%20April%202007.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise%20above%20Paris%2C%209%20April%202007.jpg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p>2007</p>
+        
+            <p class="credit">Alexandre Duret-Lutz from Paris, France · CC BY-SA 2.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Sunrise_above_Paris%2C_9_April_2007.jpg">Sunrise above Paris, 9 April 2007.jpg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q90#P4640"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-photo" style="--a:6.5703">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d96"
+                aria-label="View larger">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/LaDefense%20pl.jpg?width=960"
+                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/LaDefense%20pl.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/LaDefense%20pl.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/LaDefense%20pl.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/LaDefense%20pl.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/LaDefense%20pl.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
+                 alt="" loading="lazy">
+        </button><figcaption><span>panoramic view</span><span class="prov-none" title="—"></span>
+            </figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p97"
+            aria-label="Credit">i</button><span id="p97" popover class="pop">Matism · CC BY-SA 3.0</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q90#P4291"
+       aria-label="Edit">✎</a></span>
+    </figure>
+    <dialog id="d96"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d96-h"
+        style="--a:6.5703">
+    <header>
+        <h2 id="d96-h">panoramic view</h2>
+        <button type="button"
+                command="close"
+                commandfor="d96"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/LaDefense%20pl.jpg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/LaDefense%20pl.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/LaDefense%20pl.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/LaDefense%20pl.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/LaDefense%20pl.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/LaDefense%20pl.jpg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p>2009</p>
+        
+            <p class="credit">Matism · CC BY-SA 3.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:LaDefense_pl.jpg">LaDefense pl.jpg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q90#P4291"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-photo" style="--a:1.5056">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d98"
+                aria-label="View larger">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Eiffel%20Tower%20from%20the%20Tour%20Montparnasse%2C%201%20May%202012%20N2.jpg?width=960"
+                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Eiffel%20Tower%20from%20the%20Tour%20Montparnasse%2C%201%20May%202012%20N2.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Eiffel%20Tower%20from%20the%20Tour%20Montparnasse%2C%201%20May%202012%20N2.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Eiffel%20Tower%20from%20the%20Tour%20Montparnasse%2C%201%20May%202012%20N2.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Eiffel%20Tower%20from%20the%20Tour%20Montparnasse%2C%201%20May%202012%20N2.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Eiffel%20Tower%20from%20the%20Tour%20Montparnasse%2C%201%20May%202012%20N2.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
+                 alt="" loading="lazy">
+        </button><figcaption><span>nighttime view</span><span class="prov-none" title="—"></span>
+            </figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p99"
+            aria-label="Credit">i</button><span id="p99" popover class="pop">Getfunky · CC BY 2.0</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q90#P3451"
+       aria-label="Edit">✎</a></span>
+    </figure>
+    <dialog id="d98"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d98-h"
+        style="--a:1.5056">
+    <header>
+        <h2 id="d98-h">nighttime view</h2>
+        <button type="button"
+                command="close"
+                commandfor="d98"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Eiffel%20Tower%20from%20the%20Tour%20Montparnasse%2C%201%20May%202012%20N2.jpg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Eiffel%20Tower%20from%20the%20Tour%20Montparnasse%2C%201%20May%202012%20N2.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Eiffel%20Tower%20from%20the%20Tour%20Montparnasse%2C%201%20May%202012%20N2.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Eiffel%20Tower%20from%20the%20Tour%20Montparnasse%2C%201%20May%202012%20N2.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Eiffel%20Tower%20from%20the%20Tour%20Montparnasse%2C%201%20May%202012%20N2.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Eiffel%20Tower%20from%20the%20Tour%20Montparnasse%2C%201%20May%202012%20N2.jpg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p>2012</p>
+        
+            <p class="credit">Getfunky · CC BY 2.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Eiffel_Tower_from_the_Tour_Montparnasse%2C_1_May_2012_N2.jpg">Eiffel Tower from the Tour Montparnasse, 1 May 2012 N2.jpg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q90#P3451"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-photo" style="--a:2.3805">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d100"
+                aria-label="View larger">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Panneau%20Entr%C3%A9e%20Paris%20Avenue%20Porte%20Chapelle%20-%20Paris%20XVIII%20%28FR75%29%20-%202021-07-26%20-%202.jpg?width=960"
+                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Panneau%20Entr%C3%A9e%20Paris%20Avenue%20Porte%20Chapelle%20-%20Paris%20XVIII%20%28FR75%29%20-%202021-07-26%20-%202.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Panneau%20Entr%C3%A9e%20Paris%20Avenue%20Porte%20Chapelle%20-%20Paris%20XVIII%20%28FR75%29%20-%202021-07-26%20-%202.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Panneau%20Entr%C3%A9e%20Paris%20Avenue%20Porte%20Chapelle%20-%20Paris%20XVIII%20%28FR75%29%20-%202021-07-26%20-%202.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Panneau%20Entr%C3%A9e%20Paris%20Avenue%20Porte%20Chapelle%20-%20Paris%20XVIII%20%28FR75%29%20-%202021-07-26%20-%202.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Panneau%20Entr%C3%A9e%20Paris%20Avenue%20Porte%20Chapelle%20-%20Paris%20XVIII%20%28FR75%29%20-%202021-07-26%20-%202.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
+                 alt="" loading="lazy">
+        </button><figcaption><span>place name sign</span><span class="prov-none" title="—"></span>
+            </figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p101"
+            aria-label="Credit">i</button><span id="p101" popover class="pop">Chabe01 · CC BY-SA 4.0</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q90#P1766"
+       aria-label="Edit">✎</a></span>
+    </figure>
+    <dialog id="d100"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d100-h"
+        style="--a:2.3805">
+    <header>
+        <h2 id="d100-h">place name sign</h2>
+        <button type="button"
+                command="close"
+                commandfor="d100"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Panneau%20Entr%C3%A9e%20Paris%20Avenue%20Porte%20Chapelle%20-%20Paris%20XVIII%20%28FR75%29%20-%202021-07-26%20-%202.jpg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Panneau%20Entr%C3%A9e%20Paris%20Avenue%20Porte%20Chapelle%20-%20Paris%20XVIII%20%28FR75%29%20-%202021-07-26%20-%202.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Panneau%20Entr%C3%A9e%20Paris%20Avenue%20Porte%20Chapelle%20-%20Paris%20XVIII%20%28FR75%29%20-%202021-07-26%20-%202.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Panneau%20Entr%C3%A9e%20Paris%20Avenue%20Porte%20Chapelle%20-%20Paris%20XVIII%20%28FR75%29%20-%202021-07-26%20-%202.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Panneau%20Entr%C3%A9e%20Paris%20Avenue%20Porte%20Chapelle%20-%20Paris%20XVIII%20%28FR75%29%20-%202021-07-26%20-%202.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Panneau%20Entr%C3%A9e%20Paris%20Avenue%20Porte%20Chapelle%20-%20Paris%20XVIII%20%28FR75%29%20-%202021-07-26%20-%202.jpg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p>City limit signs in Paris · <a href="https://www.wikidata.org/wiki/Q150">French</a></p>
+        
+            <p class="credit">Chabe01 · CC BY-SA 4.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Panneau_Entr%C3%A9e_Paris_Avenue_Porte_Chapelle_-_Paris_XVIII_%28FR75%29_-_2021-07-26_-_2.jpg">Panneau Entrée Paris Avenue Porte Chapelle - Paris XVIII (FR75) - 2021-07-26 - 2.jpg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q90#P1766"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-photo" style="--a:1.3793">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d102"
+                aria-label="View larger">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20plan%20jms.png?width=960"
+                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20plan%20jms.png?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20plan%20jms.png?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20plan%20jms.png?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20plan%20jms.png?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20plan%20jms.png?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
+                 alt="" loading="lazy">
+        </button><figcaption><span>location map</span><span class="prov-none" title="—"></span>
+            </figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p103"
+            aria-label="Credit">i</button><span id="p103" popover class="pop">ThePromenader · CC BY-SA 3.0</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q90#P1943"
+       aria-label="Edit">✎</a></span>
+    </figure>
+    <dialog id="d102"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d102-h"
+        style="--a:1.3793">
+    <header>
+        <h2 id="d102-h">location map</h2>
+        <button type="button"
+                command="close"
+                commandfor="d102"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20plan%20jms.png?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20plan%20jms.png?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20plan%20jms.png?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20plan%20jms.png?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20plan%20jms.png?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20plan%20jms.png?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">ThePromenader · CC BY-SA 3.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Paris_plan_jms.png">Paris plan jms.png</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q90#P1943"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-photo" style="--a:0.667">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d104"
+                aria-label="View larger">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20montage.jpg?width=960"
+                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20montage.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20montage.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20montage.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20montage.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20montage.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
+                 alt="" loading="lazy">
+        </button><figcaption><span>montage image</span><span class="prov-none" title="—"></span>
+            </figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p105"
+            aria-label="Credit">i</button><span id="p105" popover class="pop">Paris 16 (talk) 06:14, 14 February 2011 (UTC) · CC BY-SA 3.0</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q90#P2716"
+       aria-label="Edit">✎</a></span>
+    </figure>
+    <dialog id="d104"
+        class="lightbox k-photo"
+        closedby="any"
+        aria-labelledby="d104-h"
+        style="--a:0.667">
+    <header>
+        <h2 id="d104-h">montage image</h2>
+        <button type="button"
+                command="close"
+                commandfor="d104"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20montage.jpg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20montage.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20montage.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20montage.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20montage.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20montage.jpg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p class="credit">Paris 16 (talk) 06:14, 14 February 2011 (UTC) · CC BY-SA 3.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Paris_montage.jpg">Paris montage.jpg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q90#P2716"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-drawing" style="--a:0.9883">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d106"
+                aria-label="View larger">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ville%20de%20Paris%20logo.svg?width=960"
+                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Ville%20de%20Paris%20logo.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Ville%20de%20Paris%20logo.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Ville%20de%20Paris%20logo.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Ville%20de%20Paris%20logo.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Ville%20de%20Paris%20logo.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
+                 alt="" loading="lazy">
+        </button><figcaption><span>logo image</span><span class="prov-none" title="—"></span>
+            </figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p107"
+            aria-label="Credit">i</button><span id="p107" popover class="pop">Unknown authorUnknown author · Public domain</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q90#P154"
+       aria-label="Edit">✎</a></span>
+    </figure>
+    <dialog id="d106"
+        class="lightbox k-drawing"
+        closedby="any"
+        aria-labelledby="d106-h"
+        style="--a:0.9883">
+    <header>
+        <h2 id="d106-h">logo image</h2>
+        <button type="button"
+                command="close"
+                commandfor="d106"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ville%20de%20Paris%20logo.svg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Ville%20de%20Paris%20logo.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Ville%20de%20Paris%20logo.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Ville%20de%20Paris%20logo.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Ville%20de%20Paris%20logo.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Ville%20de%20Paris%20logo.svg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p><a href="https://www.wikidata.org/wiki/Q11446">ship</a> · <a href="https://www.wikidata.org/wiki/Q150">French</a> · <a href="https://www.wikidata.org/wiki/Q101608434">dark-on-light color scheme</a></p>
+        
+            <p class="credit">Unknown authorUnknown author · Public domain</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Ville_de_Paris_logo.svg">Ville de Paris logo.svg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q90#P154"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-drawing" style="--a:3.6056">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d108"
+                aria-label="View larger">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20horizontal%20logo.svg?width=960"
+                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20horizontal%20logo.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20horizontal%20logo.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20horizontal%20logo.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20horizontal%20logo.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20horizontal%20logo.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
+                 alt="" loading="lazy">
+        </button><figcaption><span>logo image</span><span class="prov-none" title="—"></span>
+            </figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p109"
+            aria-label="Credit">i</button><span id="p109" popover class="pop">Unknown authorUnknown author · Public domain</span><a class="edit"
+       href="https://www.wikidata.org/wiki/Q90#P154"
+       aria-label="Edit">✎</a></span>
+    </figure>
+    <dialog id="d108"
+        class="lightbox k-drawing"
+        closedby="any"
+        aria-labelledby="d108-h"
+        style="--a:3.6056">
+    <header>
+        <h2 id="d108-h">logo image</h2>
+        <button type="button"
+                command="close"
+                commandfor="d108"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20horizontal%20logo.svg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20horizontal%20logo.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20horizontal%20logo.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20horizontal%20logo.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20horizontal%20logo.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20horizontal%20logo.svg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p><a href="https://www.wikidata.org/wiki/Q11446">ship</a> · <a href="https://www.wikidata.org/wiki/Q150">French</a> · <a href="https://www.wikidata.org/wiki/Q101608434">dark-on-light color scheme</a></p>
+        
+            <p class="credit">Unknown authorUnknown author · Public domain</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Paris_horizontal_logo.svg">Paris horizontal logo.svg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q90#P154"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog><figure class="m k-drawing" style="--a:0.9076">
+        <button class="zoom"
+                type="button"
+                command="show-modal"
+                commandfor="d110"
+                aria-label="View larger">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ecu%20de%20la%20ville%20de%20Paris.svg?width=960"
+                 srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Ecu%20de%20la%20ville%20de%20Paris.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Ecu%20de%20la%20ville%20de%20Paris.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Ecu%20de%20la%20ville%20de%20Paris.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Ecu%20de%20la%20ville%20de%20Paris.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Ecu%20de%20la%20ville%20de%20Paris.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
+                 alt="" loading="lazy">
+        </button><figcaption><span>escutcheon image</span><span class="prov-none" title="—"></span>
+            </figcaption><span class="tools"><button class="info"
+            type="button"
+            popovertarget="p111"
+            aria-label="Credit">i</button><span id="p111" popover class="pop">RaphaëlMignon · CC BY 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P4004"
        aria-label="Edit">✎</a></span>
-    </figure> </div>
+    </figure>
+    <dialog id="d110"
+        class="lightbox k-drawing"
+        closedby="any"
+        aria-labelledby="d110-h"
+        style="--a:0.9076">
+    <header>
+        <h2 id="d110-h">escutcheon image</h2>
+        <button type="button"
+                command="close"
+                commandfor="d110"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ecu%20de%20la%20ville%20de%20Paris.svg?width=1280"
+             srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Ecu%20de%20la%20ville%20de%20Paris.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Ecu%20de%20la%20ville%20de%20Paris.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Ecu%20de%20la%20ville%20de%20Paris.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Ecu%20de%20la%20ville%20de%20Paris.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Ecu%20de%20la%20ville%20de%20Paris.svg?width=1920 1920w"
+             sizes="(max-width: 1200px) 100vw, 1200px"
+             alt=""
+             loading="lazy">
+    </div>
+    <div class="about">
+            <p><a href="https://www.wikidata.org/wiki/Q11446">ship</a> · <a href="https://www.wikidata.org/wiki/Q211568">fleur-de-lis</a> · <span lang="de">Kleines Wappen der Stadt Paris</span> <span class="note" data-lang-name="de">de</span> · <span lang="en">Lesser coat of arms of the City of Paris</span> <span class="note" data-lang-name="en">en</span> · <span lang="fr">Blason de la Ville de Paris</span> <span class="note" data-lang-name="fr">fr</span></p>
+        
+            <p class="credit">RaphaëlMignon · CC BY 4.0</p>
+        <p>
+            <a href="https://commons.wikimedia.org/wiki/File:Ecu_de_la_ville_de_Paris.svg">Ecu de la ville de Paris.svg</a><span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q90#P4004"
+       aria-label="Edit">✎</a>
+        </p>
+    </div>
+</dialog> </div>
     </div><dl class="sheet" data-slot="web"><div class="row r-value"><dt>Commons category</dt>
 <dd><a href="https://commons.wikimedia.org/wiki/Category:Paris">Paris</a></dd>
 <span class="tools">
@@ -4158,8 +4781,8 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
     </div><dl class="sheet" data-slot="sheet"><div class="row r-variants"><dt>social media followers
     <button class="info"
             type="button"
-            popovertarget="p94"
-            aria-label="Description">i</button><span id="p94" popover class="pop">number of subscribers on a particular social media website (use as main statement only; see P3744 instead for qualifier). Qualify with &#34;point in time&#34; and property for account. For Twitter, use numeric id.</span></dt>
+            popovertarget="p112"
+            aria-label="Description">i</button><span id="p112" popover class="pop">number of subscribers on a particular social media website (use as main statement only; see P3744 instead for qualifier). Qualify with &#34;point in time&#34; and property for account. For Twitter, use numeric id.</span></dt>
 <dd><data value="2137114" data-f="number">2137114</data> <span class="note">2022 · X (Twitter) numeric user ID: <data value="71016845" data-f="number">71016845</data></span><br><data value="2127845" data-f="number">2127845</data> <span class="note">2021 · X (Twitter) numeric user ID: <data value="71016845" data-f="number">71016845</data></span><br><data value="2072859" data-f="number">2072859</data> <span class="note">2018 · X (Twitter) numeric user ID: <data value="71016845" data-f="number">71016845</data></span></dd>
 <span class="tools"></span>
 </div></dl></section>
@@ -4341,12 +4964,12 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1343"
        aria-label="Edit">✎</a>
-    </span><button class="more" type="button" command="show-modal" commandfor="d95">+6</button><dialog id="d95" closedby="any">
+    </span><button class="more" type="button" command="show-modal" commandfor="d113">+6</button><dialog id="d113" closedby="any">
         <header>
             <h2>described by source</h2>
             <button type="button"
                     command="close"
-                    commandfor="d95"
+                    commandfor="d113"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -4560,12 +5183,12 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q90#P1889"
        aria-label="Edit">✎</a>
-    </span><button class="more" type="button" command="show-modal" commandfor="d96">+31</button><dialog id="d96" closedby="any">
+    </span><button class="more" type="button" command="show-modal" commandfor="d114">+31</button><dialog id="d114" closedby="any">
         <header>
             <h2>different from</h2>
             <button type="button"
                     command="close"
-                    commandfor="d96"
+                    commandfor="d114"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -5010,12 +5633,12 @@ derivative work: ויקיג&#39;אנקי · CC BY-SA 4.0</span><a class="edit"
     <div><span class="chip">wikipedia <b>290</b> ✓</span><span class="chip">wikiquote <b>28</b> ✓</span><span class="chip">wikivoyage <b>25</b> ✓</span><span class="chip">wikinews <b>21</b> ✓</span><span class="chip">wikisource <b>1</b></span></div>
 </div>
     </div><div data-slot="identifiers">
-        <button class="more" type="button" command="show-modal" commandfor="d97"># 257</button><dialog id="d97" closedby="any">
+        <button class="more" type="button" command="show-modal" commandfor="d115"># 257</button><dialog id="d115" closedby="any">
         <header>
             <h2>257</h2>
             <button type="button"
                     command="close"
-                    commandfor="d97"
+                    commandfor="d115"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><div class="idlist"><div><span>AIATSIS Place Thesaurus ID</span><span>4973</span></div><div><span>Alvin ID</span><span>alvin-place:676</span></div><div><span>Analysis &#38; Policy Observatory term ID</span><span>11005</span></div><div><span>Anarâš aavis topic ID</span><span>pariisi</span></div><div><span>Apple Maps &#34;auid&#34; identifier</span><span>686784093234299453</span></div><div><span>Arab Encyclopedia concept ID</span><span>159273</span></div><div><span>ARAE ID</span><span>paris-francia</span></div><div><span>archINFORM location ID</span><span>585</span></div><div><span>Archive of Our Own tag</span><span>Paris (City)</span></div><div><span>Armeniapedia ID</span><span>4309</span></div><div><span>article ID in the Lithuanian Universal Encyclopedia Online</span><span>paryzius</span></div><div><span>Auñamendi ID</span><span>102546</span></div><div><span>Babelio subject ID</span><span>88917</span></div><div><span>BabelNet ID</span><span>00015540n</span></div><div><span>BBC News topic ID</span><span>cxw7q5zm562t</span></div><div><span>BBC Things ID</span><span>76742136-f193-446e-be12-9cd72c177834</span></div><div><span>Beta maṣāḥǝft ID</span><span>LOC5076Paris</span></div><div><span>BHCL UUID</span><span>165885fa-ad09-4f0f-adbc-6500b639222d</span></div><div><span>BHCL UUID</span><span>07a5cd50-bb17-4948-8b4d-eb37e47c0750</span></div><div><span>BHCL UUID</span><span>0c24d48b-0e00-46bb-9923-80fc116b1efd</span></div><div><span>Biblioteca Nacional de México ID</span><span>000048013</span></div><div><span>Bibliothèque nationale de France ID</span><span>11932931q</span></div><div><span>Bibliothèque nationale de France ID</span><span>11865278m</span></div><div><span>Biblissima authority ID</span><span>Q27392</span></div><div><span>BIBSYS ID</span><span>1009791</span></div><div><span>Bing entity ID</span><span>85584d24-2116-5b98-89f9-5714db931ac6</span></div><div><span>Bluesky handle</span><span>paris.fr</span></div><div><span>BNMM authority ID</span><span>000047813</span></div><div><span>Britannica Kids kids level article ID</span><span>345991</span></div><div><span>Britannica Kids scholars level article ID</span><span>108530</span></div><div><span>Britannica Kids students level article ID</span><span>276286</span></div><div><span>Brockhaus Enzyklopädie online ID</span><span>paris-40</span></div><div><span>Canadiana Name Authority ID</span><span>ncf10131039</span></div><div><span>CANTIC ID</span><span>981058613861806706</span></div><div><span>Catalogue of the General State Archives ID</span><span>kays-a5g5-qad7</span></div><div><span>CCAB ID</span><span>000031011</span></div><div><span>CERL Thesaurus ID</span><span>cnl00032963</span></div><div><span>CiNii Research ID</span><span>1140282266612945920</span></div><div><span>CNA topic ID</span><span>paris</span></div><div><span>Comic Vine ID</span><span>4020-56052</span></div><div><span>Courrier international topic ID</span><span>paris</span></div><div><span>Curlie ID</span><span>World/Italiano/Regionale/Europa/Francia/Ile-de-France/Parigi/</span></div><div><span>Curlie ID</span><span>World/Català/Regional/Europa/França/Regions/Illa_de_França/París/</span></div><div><span>Curlie ID</span><span>World/Russian/Страны_и_регионы/Европа/Франция/Париж/</span></div><div><span>Curlie ID</span><span>World/Français/Régional/Europe/France/Régions/Ile-de-France/Paris/</span></div><div><span>Curlie ID</span><span>Regional/Europe/France/Regions/Ile-de-France/Paris/</span></div><div><span>Curlie ID</span><span>World/Español/Regional/Europa/Francia/Regiones/Isla_de_Francia/París/</span></div><div><span>Curlie ID</span><span>World/Japanese/地域/ヨーロッパ/フランス/市町村/パリ/</span></div><div><span>Curlie ID</span><span>World/Deutsch/Regional/Europa/Frankreich/Regionen/Ile-de-France/Städte_und_Gemeinden/Paris/</span></div><div><span>Data Commons ID</span><span>nuts/FR101</span></div><div><span>data.gouv.fr organisation ID</span><span>534fff89a3a7292c64a77eb7</span></div><div><span>De Agostini ID</span><span>Parigi</span></div><div><span>DeCS ID</span><span>10486</span></div><div><span>Der Spiegel topic ID</span><span>paris</span></div><div><span>Dewey Decimal Classification</span><span>2--44361</span></div><div><span>Dictionary of Late Antiquity ID</span><span>3568</span></div><div><span>domain name</span><span>paris.fr</span></div><div><span>DPLA subject term</span><span>Paris (France)</span></div><div><span>Early Modern Letters Online location ID</span><span>0d3cfe92-75a3-4ec3-b66e-3243ba783b6d</span></div><div><span>Early Modern Letters Online location ID</span><span>ea30d147-7f3c-4765-89b7-a6e9aadbe7b6</span></div><div><span>Early Modern Letters Online location ID</span><span>8c11005d-9007-4839-b35e-f7fe1cedc116</span></div><div><span>Early Modern Letters Online location ID</span><span>eb878cf5-18a7-4065-aa31-2a0d53644174</span></div><div><span>Early Modern Letters Online location ID</span><span>efc0401b-db62-4c7d-a6e0-dc1fe0181ee1</span></div><div><span>EHESS ID of a French commune</span><span>26207</span></div><div><span>El Moudjahid topic ID</span><span>paris</span></div><div><span>Enciclopedia dei ragazzi ID</span><span>parigi</span></div><div><span>Enciclopedia dell&#39;Arte Antica ID</span><span>parigi</span></div><div><span>Enciclopedia dell&#39;Arte Antica ID</span><span>parigi_res-e168c7cf-66c0-11e1-b491-d5ce3506d72e</span></div><div><span>Enciclopedia dell&#39;Arte Medievale ID</span><span>parigi</span></div><div><span>Encyclopedia of China (Second Edition) ID</span><span>191897</span></div><div><span>Encyclopædia Britannica Online ID</span><span>place/Paris</span></div><div><span>Encyclopædia Universalis ID</span><span>paris</span></div><div><span>eska.pl topic ID</span><span>tg-9wU6-ymgp-xn6k</span></div><div><span>EU Knowledge Graph item ID</span><span>Q35</span></div><div><span>EU Participant Identification Code</span><span>998498504</span></div><div><span>Euronews topic ID</span><span>paris</span></div><div><span>Europeana entity</span><span>place/base/41488</span></div><div><span>Facebook location ID</span><span>110774245616525</span></div><div><span>FactGrid item ID</span><span>Q10441</span></div><div><span>Fandom article ID</span><span>fr.you:Paris</span></div><div><span>Fandom article ID</span><span>you:Paris</span></div><div><span>Fandom article ID</span><span>europe:Paris</span></div><div><span>Fandom article ID</span><span>cities:Paris</span></div><div><span>FAST ID</span><span>1205283</span></div><div><span>FINESS ID</span><span>750002008</span></div><div><span>FINESS ID</span><span>750805483</span></div><div><span>Foursquare City Guide venue ID</span><span>50dbd18d498eb594ef575b0a</span></div><div><span>France 24 topic ID (French)</span><span>paris</span></div><div><span>FranceArchives agent ID</span><span>793866059</span></div><div><span>Freebase ID</span><span>/m/05qtj</span></div><div><span>GADM ID</span><span>FRA.8.3_1</span></div><div><span>GeoNames ID</span><span>2968815</span></div><div><span>GeoNames ID</span><span>2988507</span></div><div><span>Getty Thesaurus of Geographic Names ID</span><span>7008038</span></div><div><span>Giant Bomb ID (former scheme)</span><span>3035-487</span></div><div><span>GitHub topic</span><span>paris</span></div><div><span>GND ID</span><span>4044660-8</span></div><div><span>GNS Unique Feature ID</span><span>-1456928</span></div><div><span>Golden ID (archived)</span><span>Paris-BWWKE</span></div><div><span>Google Maps Customer ID</span><span>291470376679806048</span></div><div><span>Gran Enciclopèdia Catalana ID</span><span>paris-8</span></div><div><span>Gran Enciclopèdia Catalana ID (former scheme)</span><span>0049060</span></div><div><span>Great Encyclopedia of Cyril and Methodius entry ID</span><span>Париж</span></div><div><span>Great Norwegian Encyclopedia ID</span><span>Paris</span></div><div><span>Great Russian Encyclopedia Online ID (2017)</span><span>2320508</span></div><div><span>Grove Art Online ID</span><span>T065354</span></div><div><span>Gyldendals Teaterleksikon ID</span><span>Paris</span></div><div><span>Gynopedia ID</span><span>Paris</span></div><div><span>HAL structure ID</span><span>460091</span></div><div><span>Harper&#39;s tag</span><span>paris</span></div><div><span>HASC</span><span>FR.IF.VP</span></div><div><span>HDS ID</span><span>006604</span></div><div><span>Hikr waypoint ID</span><span>29182</span></div><div><span>Historical Gazetteer (GOV) ID</span><span>object_884969</span></div><div><span>House Divided ID</span><span>9501</span></div><div><span>Hungarian National Namespace place ID (new)</span><span>568832</span></div><div><span>Hungarian National Namespace place ID (old)</span><span>197469</span></div><div><span>IATE entry ID</span><span>1891427</span></div><div><span>ICPSR Geographic Names Thesaurus ID</span><span>30794</span></div><div><span>iDAI.gazetteer ID</span><span>2081915</span></div><div><span>IdRef ID</span><span>026397765</span></div><div><span>Il Sole 24 Ore topic ID</span><span>parigi</span></div><div><span>iNaturalist place ID</span><span>99545</span></div><div><span>INSEE department code</span><span>75</span></div><div><span>Insee municipality code</span><span>75056</span></div><div><span>Instagram location ID</span><span>6889842</span></div><div><span>Interlingual Index ID</span><span>i83645</span></div><div><span>ISNI</span><span>000000012114268X</span></div><div><span>ISO 3166-2 code</span><span>FR-75C</span></div><div><span>J-GLOBAL ID</span><span>200906015068886000</span></div><div><span>J9U entity ID</span><span>987007561794505171</span></div><div><span>Japan Search name ID</span><span>パリ</span></div><div><span>Jewish Encyclopedia ID</span><span>11912</span></div><div><span>Jewish Encyclopedia ID (Russian)</span><span>13151</span></div><div><span>Joconde discovery ID</span><span>T115-1966</span></div><div><span>Joconde location ID</span><span>T84-2769</span></div><div><span>Kalliope-Verbund (GND) ID</span><span>4044660-8</span></div><div><span>KBpedia ID</span><span>Paris</span></div><div><span>Klexikon article ID</span><span>Paris</span></div><div><span>Krugosvet article (archived)</span><span>Earth_sciences/geografiya/PARIZH.html</span></div><div><span>KSW place ID</span><span>78838</span></div><div><span>Kulturenvanteri taxonomy ID</span><span>6031</span></div><div><span>KulturNav-ID</span><span>5fd4d231-00c4-4f69-abf6-cd63ffe60e2a</span></div><div><span>Larousse ID</span><span>ville/wd/137068</span></div><div><span>Latin Place Names ID</span><span>l/lutetiae-parisiorum</span></div><div><span>Lemmy community ID</span><span>paris@jlai.lu</span></div><div><span>Lex ID</span><span>Paris</span></div><div><span>Libraries Australia ID</span><span>35995688</span></div><div><span>Library of Congress Authorities ID</span><span>n79058874</span></div><div><span>Listal ID</span><span>place/paris-france</span></div><div><span>MeSH descriptor ID</span><span>D010297</span></div><div><span>MeSH tree code</span><span>Z01.433.800</span></div><div><span>MeSH tree code</span><span>Z01.542.286.588</span></div><div><span>Moegirlpedia ID</span><span>巴黎</span></div><div><span>museum-digital place ID</span><span>199</span></div><div><span>MusicBrainz area ID</span><span>dc10c22b-e510-4006-8b7f-fecb4f36436e</span></div><div><span>Mythoskop ID</span><span>o125</span></div><div><span>NACSIS-CAT author ID</span><span>DA10980120</span></div><div><span>Namuwiki ID</span><span>파리(프랑스)</span></div><div><span>National Gallery of Victoria artist ID</span><span>13498</span></div><div><span>National Historical Museums of Sweden ID</span><span>geo/2A504C90-B17F-4A6A-B657-61696CBC3736</span></div><div><span>National Library of Brazil ID</span><span>000073666</span></div><div><span>National Library of Ireland ID</span><span>vtls001424121</span></div><div><span>National Library of Israel ID (old)</span><span>000975505</span></div><div><span>National Library of Latvia ID</span><span>000042629</span></div><div><span>National Library of Spain SpMaBN ID</span><span>XX451222</span></div><div><span>National Library of Wales Authority ID</span><span>paris-france-2</span></div><div><span>NCL ID</span><span>021097610</span></div><div><span>NDL Authority ID</span><span>00629026</span></div><div><span>NE.se ID</span><span>paris-(departement-frankrike)</span></div><div><span>NE.se ID</span><span>paris</span></div><div><span>NHK ONE  News topic ID</span><span>E0000000428</span></div><div><span>NicoNicoPedia ID</span><span>パリ</span></div><div><span>NL CR AUT ID</span><span>ge130380</span></div><div><span>Nomisma ID</span><span>paris</span></div><div><span>NUTS code</span><span>FR101</span></div><div><span>OmegaWiki Defined Meaning</span><span>6724</span></div><div><span>Online PWN Encyclopedia ID</span><span>3954709</span></div><div><span>Open Library ID</span><span>OL133096A</span></div><div><span>Open Library subject ID</span><span>place:paris</span></div><div><span>OpenStreetMap node ID</span><span>17807753</span></div><div><span>OpenStreetMap relation ID</span><span>7444</span></div><div><span>OpenWeatherMap city ID</span><span>2988506</span></div><div><span>OpenWeatherMap city ID</span><span>2988507</span></div><div><span>PACTOLS thesaurus ID</span><span>pcrtKWS6It1qMw</span></div><div><span>PARES ID</span><span>82613</span></div><div><span>Pinakes city ID</span><span>440</span></div><div><span>Pixiv Encyclopedia ID</span><span>パリ</span></div><div><span>Provenio UUID</span><span>0826d055-7b01-4153-bd3f-f50b19163e57</span></div><div><span>Provenio UUID</span><span>856a5774-8a28-4200-8e8f-f540d4c34431</span></div><div><span>Radio Algeria topic ID (Arabic)</span><span>باريس</span></div><div><span>Radio Algeria topic ID (French)</span><span>paris</span></div><div><span>Reddit topic ID (obsolete)</span><span>paris</span></div><div><span>RERO ID (legacy)</span><span>A005473890</span></div><div><span>Ringgold ID</span><span>55653</span></div><div><span>RKD thesaurus ID</span><span>129</span></div><div><span>SBN author ID</span><span>LO1V149084</span></div><div><span>SBN place ID</span><span>TO0L002626</span></div><div><span>Schoenberg Database of Manuscripts place ID</span><span>1</span></div><div><span>ScienceDirect topic ID</span><span>social-sciences/paris</span></div><div><span>setlist.fm venue ID</span><span>6bd40a46</span></div><div><span>SK cinema authority ID</span><span>0007612</span></div><div><span>SNAC ARK ID</span><span>w6n62wkx</span></div><div><span>SNARC ID</span><span>Q1412</span></div><div><span>Spanish Cultural Heritage thesauri ID</span><span>geografico/1146543</span></div><div><span>SPAP ID</span><span>p/b38adfac-e177-4289-bcbb-a849d21eaef9</span></div><div><span>SVKKL authority ID</span><span>g0001643-Pariz-Francie</span></div><div><span>Swedish National Library Arken ID</span><span>Paris</span></div><div><span>symogih.org ID</span><span>NaPl2085</span></div><div><span>Süddeutsche Zeitung topic ID</span><span>Paris</span></div><div><span>The Encyclopedia of Fantasy ID</span><span>paris</span></div><div><span>The Guardian topic ID</span><span>world/paris</span></div><div><span>The Independent topic ID</span><span>Paris</span></div><div><span>Thesaurus Linguae Aegyptiae ID</span><span>CRKL5Y562ZHBJHDLCV5PHJUNXM</span></div><div><span>Thomas Jefferson Encyclopedia ID</span><span>paris</span></div><div><span>Treccani ID</span><span>parigi</span></div><div><span>Treccani&#39;s Dizionario di Storia ID</span><span>parigi</span></div><div><span>Treccani&#39;s Enciclopedia Dantesca ID</span><span>parigi</span></div><div><span>Treccani&#39;s Enciclopedia Italiana ID</span><span>parigi_res-95bbe873-87e6-11dc-8e9d-0016357eee51</span></div><div><span>Treccani&#39;s Enciclopedia Italiana ID</span><span>parigi</span></div><div><span>Treccani&#39;s Enciclopedia Italiana ID</span><span>parigi_res-73d4f20b-87e8-11dc-8e9d-0016357eee51</span></div><div><span>Treccani&#39;s Enciclopedia Italiana ID</span><span>parigi_res-a3aa8f10-9bc6-11e2-9d1b-00271042e8d9</span></div><div><span>Treccani&#39;s Enciclopedia Italiana ID</span><span>parigi_res-c7aa0457-87e9-11dc-8e9d-0016357eee51</span></div><div><span>Treccani&#39;s Enciclopedia Italiana ID</span><span>parigi_res-f07f3de3-87ea-11dc-8e9d-0016357eee51</span></div><div><span>Tripadvisor ID</span><span>187147</span></div><div><span>TV Tropes ID</span><span>UsefulNotes/Paris</span></div><div><span>U.S. National Archives Identifier</span><span>10045153</span></div><div><span>U.S. National Archives Identifier</span><span>10044289</span></div><div><span>UK Parliament thesaurus ID</span><span>95293</span></div><div><span>UMLS CUI</span><span>C0030561</span></div><div><span>UN/LOCODE</span><span>FRPAR</span></div><div><span>Urban Electric Transit city ID</span><span>152</span></div><div><span>UVL group ID</span><span>city-paris-fr</span></div><div><span>Valencian Library ID</span><span>264040</span></div><div><span>Vatican Library ID (former scheme)</span><span>ADV12362772</span></div><div><span>VIAF cluster ID</span><span>158822968</span></div><div><span>Vikidia article ID</span><span>es:París</span></div><div><span>Vikidia article ID</span><span>ru:Париж</span></div><div><span>Vikidia article ID</span><span>ca:París</span></div><div><span>Vikidia article ID</span><span>en:Paris</span></div><div><span>Vikidia article ID</span><span>eu:Paris</span></div><div><span>Vikidia article ID</span><span>fr:Paris</span></div><div><span>Vikidia article ID</span><span>it:Parigi</span></div><div><span>Who&#39;s on First ID</span><span>101751119</span></div><div><span>WikiKids ID</span><span>Parijs</span></div><div><span>Wikisimpsons article ID</span><span>17289</span></div><div><span>WikiTree category or space</span><span>Category: Paris, France</span></div><div><span>WordNet 3.1 Synset ID</span><span>08952341-n</span></div><div><span>World Historical Gazetteer place ID</span><span>12346116</span></div><div><span>WorldCat Entities ID</span><span>E39PBJrmbyBWhYrMkc793vqWjC</span></div><div><span>Yle topic ID</span><span>18-196013</span></div><div><span>YSA ID</span><span>Y104996</span></div><div><span>YSO ID</span><span>104996</span></div><div><span>Zhihu topic ID</span><span>19566221</span></div><div><span>Ávvir topic ID</span><span>paris</span></div><div><span>‎Giant Bomb Wiki ID</span><span>Locations/Paris</span></div><div><span>‎Yale LUX ID</span><span>concept/13e96ee2-4db0-46c6-a7bc-e9fa4ad77202</span></div></div></div>
