@@ -55,10 +55,11 @@ qrender-server     # listens on PORT (default 4243)
 - `/healthz`
 
 Set `REDIS_URL` (a `redis://` URL or `host:port`) to keep fetched data for
-a day; without it, every request fetches again. `BASE_PATH` is for a
-service under a subpath (for example `/qrender`), and `USER_AGENT` names
-the operator for the Wikimedia services. These can also be in a `.env`
-file.
+a day; without it, every request fetches again. On a shared Redis, set
+`REDIS_PREFIX` to a long random secret: it goes before every key.
+`BASE_PATH` is for a service under a subpath (for example `/qrender`), and
+`USER_AGENT` names the operator for the Wikimedia services. These can also
+be in a `.env` file.
 
 ## How it works
 

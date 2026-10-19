@@ -8,8 +8,8 @@
 //! - GET /healthz
 //!
 //! Environment (or a .env file): PORT (default 4243), REDIS_URL (optional
-//! cache), BASE_PATH (when served under a subpath, e.g. "/qrender"),
-//! USER_AGENT.
+//! cache), REDIS_PREFIX (for every cache key), BASE_PATH (when served under
+//! a subpath, e.g. "/qrender"), USER_AGENT.
 
 use std::sync::Arc;
 

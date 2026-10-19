@@ -8,10 +8,15 @@ use crate::fetch::Store;
 
 pub struct Cache {
     client: Option<redis::Client>,
+    /// Put before every key; empty, or ends with ':'.
+    prefix: String,
 }
 
 impl Cache {
-    /// From `REDIS_URL`: a `redis://` URL, or a bare `host:port`.
+    /// From `REDIS_URL`: a `redis://` URL, or a bare `host:port`. And
+    /// `REDIS_PREFIX`, put before every key: on a shared Redis (Toolforge),
+    /// make it a long random secret, so that other users cannot find or
+    /// change the keys.
     pub fn from_env() -> Self {
         let client = std::env::var("REDIS_URL").ok().and_then(|url| {
             let url = if url.contains("://") {
@@ -23,7 +28,12 @@ impl Cache {
                 .inspect_err(|e| eprintln!("qrender: ignoring REDIS_URL: {e}"))
                 .ok()
         });
-        Self { client }
+        let prefix = std::env::var("REDIS_PREFIX")
+            .ok()
+            .filter(|p| !p.is_empty())
+            .map(|p| format!("{p}:"))
+            .unwrap_or_default();
+        Self { client, prefix }
     }
 
     pub fn is_enabled(&self) -> bool {
@@ -38,18 +48,22 @@ impl Cache {
             .inspect_err(|e| eprintln!("qrender: redis: {e}"))
             .ok()
     }
+
+    fn key(&self, key: &str) -> String {
+        format!("{}{key}", self.prefix)
+    }
 }
 
 impl Store for Cache {
     async fn get(&self, key: &str) -> Option<String> {
-        self.connection().await?.get(key).await.ok()?
+        self.connection().await?.get(self.key(key)).await.ok()?
     }
 
     async fn set(&self, key: &str, value: String, ttl: u64) {
         let Some(mut connection) = self.connection().await else {
             return;
         };
-        let result: Result<(), _> = connection.set_ex(key, value, ttl).await;
+        let result: Result<(), _> = connection.set_ex(self.key(key), value, ttl).await;
         if let Err(e) = result {
             eprintln!("qrender: redis: could not store {key}: {e}");
         }
