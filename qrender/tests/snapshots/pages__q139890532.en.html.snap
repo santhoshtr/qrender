@@ -566,15 +566,18 @@ document.addEventListener( 'close', ( event ) => {
 } )();
 // The qr-section element: a text of the article in another language (the
 // page language has no article), which the reader translates into the page
-// language. Progressive enhancement only: the server renders the text and
-// every word of the editor; without this script the text stays and the
-// button stays hidden. On "Translate", each block of the text (a paragraph,
-// a list, the title of a subsection) goes to the machine translation of
-// Wikimedia (MinT, by cxserver), a few at a time, and its translation comes
-// in an editable row beside it. "Save" is a prototype: nothing is sent.
+// language. Progressive enhancement only: the server renders the text, and
+// every word of the editor in the dialog of the page (#translator); without
+// this script the text stays and the button stays hidden. On "Translate",
+// the dialog opens: each block of the text (its title, a paragraph, a list,
+// the title of a subsection) goes to the machine translation of Wikimedia
+// (MinT, by cxserver), a few at a time, and its translation comes in an
+// editable row beside it. "Save" mimics a published edit: the section on
+// the page shows the translation. Nothing is sent.
 // One function scope: the page scripts share one script element.
 ( () => {
-	if ( !( 'customElements' in window ) ) {
+	const dialog = document.getElementById( 'translator' );
+	if ( !dialog || !( 'customElements' in window ) ) {
 		return;
 	}
 	const MT = 'https://cxserver.wikimedia.org/v2/translate';
@@ -584,6 +587,11 @@ document.addEventListener( 'close', ( event ) => {
 	// What a translation may hold: the tags of the text, links to the web.
 	const ALLOWED = new Set( [ 'P', 'UL', 'OL', 'LI', 'DL', 'DT', 'DD', 'BLOCKQUOTE',
 		'H3', 'H4', 'H5', 'H6', 'A', 'B', 'I', 'SPAN' ] );
+	const rows = dialog.querySelector( '.rows' );
+	const status = dialog.querySelector( '.status' );
+	// The section in the dialog, and the requests of its translation.
+	let current = null;
+	let controller = null;
 
 	// The blocks of a text, in order: a subsection gives its title, then
 	// its blocks; a collapsed part without a title (the rest of the lead)
@@ -632,12 +640,13 @@ document.addEventListener( 'close', ( event ) => {
 		return template.content;
 	};
 
-	const translate = async ( from, to, el ) => {
+	const translate = async ( from, to, el, signal ) => {
 		// MinT translates the first element only: one block in a section.
 		const response = await fetch( `${ MT }/${ from }/${ to }/MinT`, {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify( { html: `<section>${ el.outerHTML }</section>` } )
+			body: JSON.stringify( { html: `<section>${ el.outerHTML }</section>` } ),
+			signal
 		} );
 		if ( !response.ok ) {
 			throw new Error( response.status );
@@ -660,13 +669,33 @@ document.addEventListener( 'close', ( event ) => {
 		} ) );
 	};
 
+	// The content of a translated row: the children of its block when it
+	// is of the same kind as the source (a paragraph for a paragraph).
+	const content = ( target, unit ) => {
+		const el = target.firstElementChild;
+		return el && el.tagName === unit.tagName && target.children.length === 1 ?
+			[ ...el.childNodes ] : [ ...target.childNodes ];
+	};
+
+	dialog.addEventListener( 'close', () => {
+		controller?.abort();
+		current = null;
+		rows.replaceChildren();
+		status.textContent = '';
+	} );
+	dialog.querySelector( '.discard' ).addEventListener( 'click', () => dialog.close() );
+	dialog.querySelector( '.save' ).addEventListener( 'click', () => {
+		current?.save( [ ...rows.querySelectorAll( '.translated' ) ] );
+		dialog.close();
+	} );
+
 	customElements.define( 'qr-section', class extends HTMLElement {
 		connectedCallback() {
-			// The section's own button and editor, not those of a section in it.
+			// The section's own button and text, not those of a section in it.
 			this.button = this.querySelector( '.translate' );
-			this.editor = this.querySelector( ':scope > .translation, :scope > details > .translation' );
+			this.heading = this.querySelector( ':scope > .head > :is( h3, h4, h5, h6 ), :scope > details > .head > :is( h3, h4, h5, h6 )' );
 			this.body = this.querySelector( ':scope > .body, :scope > details > .body' );
-			if ( !this.button || !this.editor || !this.body ) {
+			if ( !this.button || !this.body ) {
 				return;
 			}
 			this.button.hidden = false;
@@ -675,60 +704,89 @@ document.addEventListener( 'close', ( event ) => {
 				event.preventDefault();
 				this.open();
 			} );
-			this.editor.querySelector( '.discard' ).addEventListener( 'click', () => this.close() );
-			this.editor.querySelector( '.save' ).addEventListener( 'click', () => {
-				this.editor.querySelector( '.saved' ).hidden = false;
-			} );
+		}
+
+		// The blocks on the page: the title first, then the text.
+		units() {
+			return [ ...( this.heading ? [ this.heading ] : [] ), ...units( this.body ) ];
 		}
 
 		async open() {
-			this.querySelector( ':scope > details' )?.setAttribute( 'open', '' );
-			if ( !this.editor.hidden ) {
+			if ( dialog.open ) {
 				return;
 			}
 			const { from, to, dir } = this.dataset;
-			const rows = this.editor.querySelector( '.rows' );
-			const status = this.editor.querySelector( '.status' );
-			const jobs = units( this.body ).map( ( el ) => {
-				const block = source( el );
+			// The English blocks of the first open: after a save, the page
+			// shows the translation.
+			this.sources ??= this.units().map( source );
+			current = this;
+			controller = new AbortController();
+			const { signal } = controller;
+			dialog.querySelector( '.section-title' ).textContent =
+				this.heading ? ` · ${ this.sources[ 0 ].textContent }` : '';
+			const jobs = this.sources.map( ( block, i ) => {
 				const target = document.createElement( 'div' );
 				target.className = 'translated';
 				target.lang = to;
 				target.dir = dir;
 				target.contentEditable = 'true';
-				target.textContent = rows.dataset.translating;
-				target.setAttribute( 'aria-busy', 'true' );
 				const original = document.createElement( 'div' );
 				original.className = 'original';
 				original.lang = from;
 				original.append( block.cloneNode( true ) );
 				rows.append( original, target );
+				if ( this.saved ) {
+					target.append( this.saved[ i ].cloneNode( true ) );
+					return null;
+				}
+				target.textContent = rows.dataset.translating;
+				target.setAttribute( 'aria-busy', 'true' );
 				return async () => {
 					try {
-						target.replaceChildren( await translate( from, to, block ) );
+						target.replaceChildren( await translate( from, to, block, signal ) );
 					} catch {
-						target.replaceChildren( block );
+						if ( signal.aborted ) {
+							return;
+						}
+						target.replaceChildren( block.cloneNode( true ) );
 						target.lang = from;
 						target.classList.add( 'failed' );
 						target.title = rows.dataset.failed;
 					}
 					target.removeAttribute( 'aria-busy' );
 				};
-			} );
-			this.body.hidden = true;
-			this.editor.hidden = false;
-			this.button.disabled = true;
-			status.textContent = rows.dataset.translating;
-			await run( jobs, PARALLEL );
-			status.textContent = '';
+			} ).filter( Boolean );
+			dialog.showModal();
+			if ( jobs.length ) {
+				status.textContent = rows.dataset.translating;
+				await run( jobs, PARALLEL );
+				if ( !signal.aborted ) {
+					status.textContent = '';
+				}
+			}
 		}
 
-		close() {
-			this.editor.hidden = true;
-			this.editor.querySelector( '.rows' ).replaceChildren();
-			this.editor.querySelector( '.saved' ).hidden = true;
-			this.body.hidden = false;
-			this.button.disabled = false;
+		// The rows of the dialog, in the place of the blocks on the page:
+		// the same elements, their children replaced, so a second edit maps
+		// row to block again.
+		save( targets ) {
+			const { dir } = this.dataset;
+			// A row that was not translated keeps the language of its source.
+			const langs = targets.map( ( target ) => target.lang );
+			this.saved = targets.map( ( target ) => {
+				const copy = document.createDocumentFragment();
+				copy.append( ...[ ...target.childNodes ].map( ( n ) => n.cloneNode( true ) ) );
+				return copy;
+			} );
+			this.units().forEach( ( unit, i ) => {
+				unit.replaceChildren( ...content( this.saved[ i ].cloneNode( true ), unit ) );
+				unit.lang = langs[ i ];
+				unit.dir = langs[ i ] === this.dataset.to ? dir : '';
+			} );
+			this.classList.add( 'translated' );
+			this.querySelector( '.saved-note' ).hidden = false;
+			this.button.querySelector( '.new' ).hidden = true;
+			this.button.querySelector( '.edit' ).hidden = false;
 		}
 	} );
 } )();

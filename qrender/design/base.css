@@ -585,8 +585,11 @@ qr-section { display: block; }
 	}
 }
 
-/* The action to translate a text of the article into the page language. */
+/* The action to translate a text of the article into the page language.
+   In the head of a section it keeps its width: the title wraps, not it. */
 .translate {
+	flex: none;
+	white-space: nowrap;
 	padding: var( --spacing-25 ) var( --spacing-75 );
 	border: 1px solid var( --border-color-progressive );
 	border-radius: var( --border-radius-base );
@@ -601,25 +604,52 @@ qr-section { display: block; }
 	&:disabled { opacity: 0.5; cursor: default; }
 }
 
-/* The editor of a translation: the source and the machine translation side
-   by side, a row for each block; on a narrow page, one under the other. */
-.translation {
+/* A section whose translation the reader saved (on the page only): a mark
+   at its side, and its note. */
+qr-section.translated > .body,
+qr-section.translated > details > .body {
+	border-inline-start: 3px solid var( --border-color-success );
+	padding-inline-start: var( --spacing-100 );
+}
+
+.saved-note {
+	margin: var( --spacing-50 ) 0 0;
+	font-family: var( --font-family-system-sans );
+	font-size: var( --font-size-small );
+	color: var( --color-success );
+}
+
+/* The editor of a translation, a dialog of the page: wide, the actions in
+   view while the rows scroll. The source and the machine translation side
+   by side, a row for each block; on a narrow screen, one under the other. */
+dialog.translator {
+	inline-size: min( 1400px, 100vw - 2 * var( --gutter ) );
+	max-block-size: 90vh;
 	font-family: var( --font-family-serif );
 	line-height: 1.7;
+
+	& h2 {
+		font-family: var( --font-family-system-sans );
+
+		& .section-title { color: var( --color-subtle ); font-weight: var( --font-weight-normal ); }
+	}
 
 	& .labels,
 	& .rows {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: var( --spacing-75 ) var( --spacing-200 );
+		padding-inline: var( --spacing-100 );
 	}
 
 	& .labels {
+		padding-block-start: var( --spacing-75 );
 		font-family: var( --font-family-system-sans );
 		font-size: var( --font-size-small );
 		color: var( --color-subtle );
-		margin-block-end: var( --spacing-50 );
 	}
+
+	& .rows { padding-block: var( --spacing-50 ) var( --spacing-100 ); }
 
 	& .original { color: var( --color-subtle ); }
 
@@ -638,11 +668,15 @@ qr-section { display: block; }
 	}
 
 	& .actions {
+		position: sticky;
+		inset-block-end: 0;
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
 		gap: var( --spacing-75 );
-		margin-block-start: var( --spacing-100 );
+		padding: var( --spacing-75 ) var( --spacing-100 );
+		border-block-start: 1px solid var( --border-color-muted );
+		background-color: var( --background-color-base );
 		font-family: var( --font-family-system-sans );
 
 		& .status { margin-inline-end: auto; color: var( --color-subtle ); font-size: var( --font-size-small ); }
@@ -663,16 +697,11 @@ qr-section { display: block; }
 			color: var( --color-inverted );
 		}
 	}
-
-	& .saved {
-		font-family: var( --font-family-system-sans );
-		font-size: var( --font-size-small );
-		color: var( --color-success );
-	}
 }
 
-@container page ( width < 760px ) {
-	.translation :is( .labels, .rows ) { grid-template-columns: 1fr; }
+/* A dialog is in the top layer: it follows the window, not the page. */
+@media ( width < 760px ) {
+	dialog.translator :is( .labels, .rows ) { grid-template-columns: 1fr; }
 }
 
 /* A play link of an audio file (play.js): a small round button. */

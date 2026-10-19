@@ -54,6 +54,7 @@
             </section>
         {%- endif %}
         <p class="provenance-note">{{ ui.footer()|safe }}</p>
+        {%- if let Some(from) = ui.translation_source() %}{{ ui.translator(from)|safe }}{% endif %}
     </main>
     <script>{{ scripts|safe }}</script>
 </body>

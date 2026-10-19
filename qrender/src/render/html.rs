@@ -199,8 +199,8 @@ struct TranslateButtonHtml<'a> {
 }
 
 #[derive(Template)]
-#[template(path = "parts/translation.html")]
-struct TranslationHtml<'a> {
+#[template(path = "parts/translator.html")]
+struct TranslatorHtml<'a> {
     ui: &'a Ui<'a>,
     /// The language of the source text.
     from: &'a str,
@@ -372,9 +372,9 @@ impl<'v> Ui<'v> {
         render(TranslateButtonHtml { ui: self })
     }
 
-    /// The hidden editor of a translation from `from`.
-    pub fn translation(&self, from: &str) -> String {
-        render(TranslationHtml { ui: self, from })
+    /// The dialog of the page that edits a translation from `from`.
+    pub fn translator(&self, from: &str) -> String {
+        render(TranslatorHtml { ui: self, from })
     }
 
     pub fn article_subsection(&self, s: &ProseSection) -> String {

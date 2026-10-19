@@ -773,6 +773,22 @@ impl<'v> Ui<'v> {
         }
     }
 
+    /// The language of the texts that the reader can translate into the
+    /// page language: the fallback article's, when the page shows its lead
+    /// or its sections. None: the page has no translator.
+    pub fn translation_source(&self) -> Option<&'v str> {
+        let view = self.view;
+        let lead = view.lead.as_ref().filter(|a| !a.local).map(|a| &a.lang);
+        let section = view
+            .spreads
+            .iter()
+            .flat_map(|s| &s.sections)
+            .chain(&view.more_sections)
+            .map(|s| &s.lang)
+            .next();
+        lead.or(section).map(|l| l.as_str())
+    }
+
     /// "Translate to ગુજરાતી": the page language named by `intl.js`.
     pub fn translate_label(&self) -> String {
         let lang = escape(self.view.lang.as_str());

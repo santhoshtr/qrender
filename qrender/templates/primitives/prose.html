@@ -26,7 +26,7 @@
         <img src="{{ ui.wikipedia_logo() }}" alt="" width="18">
         <a href="{{ a.url }}">{{ a.host }}</a> · {{ b.languages }} {{ ui.translate_button()|safe }}
     </p>
-    {{ ui.translation(a.lang.as_str())|safe }}
+    <p class="saved-note" lang="{{ ui.view.lang }}" hidden>{{ ui.msg("qrender-saved") }}</p>
 </qr-section>
 {%- endif -%}
 {%- when None -%}

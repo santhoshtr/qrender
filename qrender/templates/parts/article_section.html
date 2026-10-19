@@ -2,7 +2,7 @@
     its title, its blocks, and its subsections, each collapsed to its
     title. At the end of the page (`collapsed`), the whole section is
     collapsed to its title. The reader translates it into the page
-    language (qr-section, translate.js); the editor is hidden until then. -#}
+    language in the dialog of the page (qr-section, translate.js). -#}
 {%- let h = ui.section_tag(s.level) -%}
 <qr-section class="article-section"
             lang="{{ s.lang }}"
@@ -17,6 +17,6 @@
         {%- for c in s.sections %}{{ ui.article_subsection(c)|safe }}{% endfor -%}
         <a class="read" href="{{ s.href }}">{{ s.title }} ↗</a>
     </div>
-    {{ ui.translation(s.lang.as_str())|safe }}
+    <p class="saved-note" lang="{{ ui.view.lang }}" hidden>{{ ui.msg("qrender-saved") }}</p>
     {%- if collapsed %}</details>{% endif %}
 </qr-section>

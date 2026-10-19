@@ -1,0 +1,29 @@
+{#- The editor of a translation, one for the page: the source and the
+    machine translation side by side, a row for each block. Every edit of
+    the page is in a dialog: the layout of the page does not limit it.
+    translate.js fills it from the section whose button the reader
+    pressed; every word of it is here, in the page language. -#}
+<dialog id="translator"
+        class="translator"
+        lang="{{ ui.view.lang }}"
+        aria-labelledby="translator-title">
+    <header>
+        <h2 id="translator-title">{{ ui.translate_label()|safe }}<span class="section-title" lang="{{ from }}"></span></h2>
+        <button type="button"
+                command="close"
+                commandfor="translator"
+                aria-label="{{ ui.msg("qrender-close") }}">×</button>
+    </header>
+    <div class="labels">
+        <span data-lang-name="{{ from }}">{{ from }}</span>
+        <span><span data-lang-name="{{ ui.view.lang }}">{{ ui.view.lang }}</span> · {{ ui.msg("qrender-translation-note") }}</span>
+    </div>
+    <div class="rows"
+         data-translating="{{ ui.msg("qrender-translating") }}"
+         data-failed="{{ ui.msg("qrender-translate-failed") }}"></div>
+    <footer class="actions">
+        <span class="status" role="status"></span>
+        <button class="discard" type="button">{{ ui.msg("qrender-discard") }}</button>
+        <button class="save" type="button">{{ ui.msg("qrender-save") }}</button>
+    </footer>
+</dialog>
