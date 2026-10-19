@@ -19007,6 +19007,25 @@ expression: composition
               }
             ]
           }
+        ],
+        "sheet": [
+          {
+            "primitive": "fact",
+            "pid": "P571",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q668-bae17c3d-48e0-b090-9e6f-4e5b1e4ec017",
+                "pid": "P571",
+                "time": "1947-08-15T00:00:00Z",
+                "precision": 11,
+                "rank": "normal",
+                "provenance": "none",
+                "shown": true
+              }
+            ],
+            "priority": 2.0
+          }
         ]
       },
       "prose": {
@@ -19509,23 +19528,6 @@ expression: composition
       "template": "collapsed",
       "slots": {
         "sheet": [
-          {
-            "primitive": "fact",
-            "pid": "P571",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-bae17c3d-48e0-b090-9e6f-4e5b1e4ec017",
-                "pid": "P571",
-                "time": "1947-08-15T00:00:00Z",
-                "precision": 11,
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 2.0
-          },
           {
             "primitive": "fact",
             "pid": "P1365",

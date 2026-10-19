@@ -1012,7 +1012,27 @@ expression: composition
       "dimension": "time",
       "concept": "Q309",
       "template": "columns",
-      "slots": {},
+      "slots": {
+        "sheet": [
+          {
+            "primitive": "fact",
+            "pid": "P571",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q3870-5cd9e5fc-4d39-0416-0b37-99ff83e95d3f",
+                "pid": "P571",
+                "time": "1899-01-01T00:00:00Z",
+                "precision": 9,
+                "rank": "normal",
+                "provenance": "none",
+                "shown": true
+              }
+            ],
+            "priority": 2.0
+          }
+        ]
+      },
       "prose": {
         "concepts": [
           "Q309"
@@ -1238,33 +1258,6 @@ expression: composition
                 }
               }
             ]
-          }
-        ]
-      }
-    },
-    {
-      "id": "more",
-      "kind": "more",
-      "dimension": "neutral",
-      "template": "collapsed",
-      "slots": {
-        "sheet": [
-          {
-            "primitive": "fact",
-            "pid": "P571",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q3870-5cd9e5fc-4d39-0416-0b37-99ff83e95d3f",
-                "pid": "P571",
-                "time": "1899-01-01T00:00:00Z",
-                "precision": 9,
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 2.0
           }
         ]
       }
@@ -2124,6 +2117,11 @@ expression: composition
           }
         ]
       }
+    }
+  ],
+  "dropped": [
+    {
+      "id": "more"
     }
   ],
   "unshown": []

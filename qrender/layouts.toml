@@ -157,7 +157,11 @@ dimension = "time"
 concept = "Q309"       # history
 prose = ["Q309"]
 kind = "history"
-pids = ["P2184"]       # history of topic
+pids = [
+  "P2184",  # history of topic
+  "P571",   # inception
+  "P576",   # dissolved, abolished or demolished
+]
 
 [[class_layouts.settlement.spreads]]
 id = "media"
@@ -798,6 +802,10 @@ dimension = "time"
 concept = "Q309"       # history
 prose = ["Q309"]
 kind = "history"
+pids = [
+  "P571",   # inception
+  "P576",   # dissolved, abolished or demolished
+]
 
 # The map files: before the media spread, which takes the Commons files no
 # spread took.
