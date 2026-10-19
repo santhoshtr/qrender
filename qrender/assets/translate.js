@@ -219,8 +219,6 @@
 			} );
 			this.classList.add( 'translated' );
 			this.querySelector( '.saved-note' ).hidden = false;
-			this.button.querySelector( '.new' ).hidden = true;
-			this.button.querySelector( '.edit' ).hidden = false;
 		}
 	} );
 } )();

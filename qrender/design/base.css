@@ -585,12 +585,23 @@ qr-section { display: block; }
 	}
 }
 
-/* The action to translate a text of the article into the page language.
-   In the head of a section it keeps its width: the title wraps, not it. */
+/* Words for screen readers only: the name of an icon button. */
+.visually-hidden {
+	position: absolute;
+	inline-size: 1px;
+	block-size: 1px;
+	overflow: hidden;
+	clip-path: inset( 50% );
+	white-space: nowrap;
+}
+
+/* The action to translate a text of the article into the page language:
+   an icon. In the head of a section it keeps its size. */
 .translate {
 	flex: none;
-	white-space: nowrap;
-	padding: var( --spacing-25 ) var( --spacing-75 );
+	display: inline-grid;
+	place-items: center;
+	padding: var( --spacing-25 );
 	border: 1px solid var( --border-color-progressive );
 	border-radius: var( --border-radius-base );
 	background-color: var( --background-color-base );

@@ -789,6 +789,11 @@ impl<'v> Ui<'v> {
         lead.or(section).map(|l| l.as_str())
     }
 
+    /// The icon of the translation action.
+    pub fn language_icon(&self) -> &'static str {
+        &super::design::LANGUAGE_ICON
+    }
+
     /// "Translate to ગુજરાતી": the page language named by `intl.js`.
     pub fn translate_label(&self) -> String {
         let lang = escape(self.view.lang.as_str());

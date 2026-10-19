@@ -30,6 +30,22 @@ pub const ECHARTS: &str = include_str!("../../assets/vendor/echarts/echarts.comm
 pub const LEAFLET_JS: &str = include_str!("../../assets/vendor/leaflet/leaflet.js");
 pub const LEAFLET_CSS: &str = include_str!("../../assets/vendor/leaflet/leaflet.css");
 
+/// The icon of the translation action (a Codex icon), inline in the page:
+/// in the colour of its button (`currentColor`), hidden from screen
+/// readers (the button has its words), without its English title.
+pub static LANGUAGE_ICON: LazyLock<String> = LazyLock::new(|| {
+    let svg = include_str!("../../assets/icons/language.svg");
+    let start = svg.find("<svg").expect("an svg element");
+    let svg = &svg[start..];
+    let svg = match (svg.find("<title>"), svg.find("</title>")) {
+        (Some(a), Some(b)) => format!("{}{}", &svg[..a], &svg[b + "</title>".len()..]),
+        _ => svg.to_string(),
+    };
+    svg.replacen("<svg", r#"<svg aria-hidden="true" fill="currentColor""#, 1)
+        .trim()
+        .to_string()
+});
+
 /// The CSS of the page grid and of the templates (the design system's own).
 const BASE: [&str; 6] = [
     include_str!("../../design/base.css"),
