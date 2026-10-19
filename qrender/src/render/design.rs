@@ -35,11 +35,14 @@ const BASE: [&str; 6] = [
     include_str!("../../design/templates/collapsed.css"),
 ];
 
-/// The scripts of every page: progressive enhancement only.
-pub const PAGE_SCRIPTS: [&str; 3] = [
+/// The scripts of every page: progressive enhancement only. The lightbox
+/// script is here, not with a primitive: the media, pictures and other
+/// blocks show the files of the item.
+pub const PAGE_SCRIPTS: [&str; 4] = [
     include_str!("../../assets/invokers.js"),
     include_str!("../../assets/intl.js"),
     include_str!("../../assets/play.js"),
+    include_str!("../../assets/lightbox.js"),
 ];
 
 /// The CSS and the JavaScript of a primitive, from its module.

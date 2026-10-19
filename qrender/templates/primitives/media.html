@@ -1,7 +1,7 @@
 {%- import "macros.html" as m -%}
 {#- A Commons file of the item: a picture, a sound, a video. A file that
     pictures an item value (the flag image of the flag) is titled by the
-    item. -#}
+    item. A video is its poster here; it plays in its dialog. -#}
 {%- let file = ui.media_file(b) -%}
 {%- let kind = b.picture.kind.name() -%}
 {%- let role = b.role.name() -%}
@@ -16,33 +16,17 @@
             <span class="note">{{ ui.note(note.as_slice())|safe }}</span>
         {% endif -%}
     </div>
-{%- else if kind == "video" -%}
-    <figure class="m k-video" style="--a:{{ ui.aspect(b.picture.aspect) }}">
-        <video controls
-               preload="none"
-               poster="{{ ui.src(file, 960) }}"
-               src="{% if let Some(url) = b.picture.url %}{{ url }}{% else %}{{ ui.file(file) }}{% endif %}">
-        </video>
-        <figcaption>
-            <span>{{ ui.text(ui.property(b.statement.pid), true)|safe }}</span>
-            {% call m::prov(ui, b.statement.provenance) %}
-            {% endcall %}
-            {%- if let Some(bytes) = b.picture.bytes %}
-                <span class="size">{{ ui.megabytes(bytes) }}</span>
-            {% endif -%}
-        </figcaption>
-        <span class="tools">{{ ui.credit(&b.picture.credit)|safe }}{% call m::edit(ui, edit) %}{% endcall %}</span>
-    </figure>
 {%- else -%}
-    {#- The picture opens its dialog (parts/lightbox.html), after the
-        figure: in the figure, the figure's styles would reach it. -#}
+    {#- The picture or the poster opens its dialog (parts/lightbox.html),
+        after the figure: in the figure, the figure's styles would reach
+        it. -#}
     {%- let n = ui.id() -%}
     <figure class="m k-{{ kind }}" style="--a:{{ ui.aspect(b.picture.aspect) }}">
         <button class="zoom"
                 type="button"
                 command="show-modal"
                 commandfor="d{{ n }}"
-                aria-label="{{ ui.msg("qrender-view-larger") }}">
+                aria-label="{% if kind == "video" %}{{ ui.msg("qrender-play") }}{% else %}{{ ui.msg("qrender-view-larger") }}{% endif %}">
             <img src="{{ ui.src(file, 960) }}"
                  srcset="{{ ui.srcset(file) }}"
                  {%- if role == "feature" || role == "banner" %} sizes="100vw"{% else %} sizes="(max-width: 760px) 100vw, 40vw"{% endif %}
@@ -62,6 +46,9 @@
                 {% endif -%}
                 {% call m::prov(ui, b.statement.provenance) %}
                 {% endcall %}
+                {%- if let Some(bytes) = b.picture.bytes %}
+                    <span class="size">{{ ui.megabytes(bytes) }}</span>
+                {% endif -%}
             </figcaption>
         {%- endif -%}
         <span class="tools">{{ ui.credit(&b.picture.credit)|safe }}{% call m::edit(ui, edit) %}{% endcall %}</span>

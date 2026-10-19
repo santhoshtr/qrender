@@ -2,7 +2,8 @@
 {#- The dialog of a file of the item, opened from its figure: the file as
     large as the window lets it be, and under it what the figure has no
     room for: the qualifiers, the author and the licence, the file on
-    Commons. The large picture is lazy: a closed dialog loads nothing. -#}
+    Commons. The large picture is lazy and the video is not preloaded: a
+    closed dialog loads nothing. -#}
 {%- let file = ui.media_file(b) -%}
 <dialog id="d{{ n }}"
         class="lightbox k-{{ b.picture.kind.name() }}"
@@ -24,11 +25,20 @@
                 aria-label="{{ ui.msg("qrender-close") }}">×</button>
     </header>
     <div class="stage">
-        <img src="{{ ui.src(file, 1280) }}"
-             srcset="{{ ui.srcset(file) }}"
-             sizes="(max-width: 1200px) 100vw, 1200px"
-             alt=""
-             loading="lazy">
+        {%- if b.picture.kind.name() == "video" -%}
+            {#- The poster is the one of the figure: the browser has it. -#}
+            <video controls
+                   preload="none"
+                   poster="{{ ui.src(file, 960) }}"
+                   src="{% if let Some(url) = b.picture.url %}{{ url }}{% else %}{{ ui.file(file) }}{% endif %}">
+            </video>
+        {%- else -%}
+            <img src="{{ ui.src(file, 1280) }}"
+                 srcset="{{ ui.srcset(file) }}"
+                 sizes="(max-width: 1200px) 100vw, 1200px"
+                 alt=""
+                 loading="lazy">
+        {%- endif -%}
     </div>
     <div class="about">
         {%- let note = ui.qualifiers(b.statement.qualifiers.as_slice()) -%}
@@ -41,6 +51,7 @@
         {% endif -%}
         <p>
             <a href="{{ ui.commons_page(file) }}">{{ file }}</a>
+            {%- if let Some(bytes) = b.picture.bytes %} · {{ ui.megabytes(bytes) }}{% endif -%}
             {%- if !b.picture.assessed.is_empty() %}
                 · <span class="assessed">★</span> {{ b.picture.assessed|join(", ") }}
             {% endif -%}

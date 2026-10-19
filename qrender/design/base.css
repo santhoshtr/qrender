@@ -262,7 +262,7 @@ dialog.lightbox {
 	& .stage {
 		background-color: #1b1f23;
 
-		& > img {
+		& > :is( img, video ) {
 			display: block;
 			inline-size: 100%;
 			max-block-size: 70vh;
@@ -511,8 +511,7 @@ dialog.lightbox {
 	background-color: #1b1f23;
 
 	& > img,
-	& > .zoom > img,
-	& > video {
+	& > .zoom > img {
 		display: block;
 		inline-size: 100%;
 		block-size: 100%;
@@ -581,17 +580,27 @@ dialog.lightbox {
 		}
 	}
 
-	/* Video controls are at the bottom, so the caption goes to the top. */
-	&.k-video {
-		background-color: #000;
+	/* A video is its poster with a play mark; it plays in its dialog. The
+	   mark does not flip in a right-to-left page: media controls do not. */
+	&.k-video > .zoom {
+		cursor: pointer;
 
-		& video { object-fit: contain; }
-
-		& figcaption {
-			inset-block: 0 auto;
-			padding: var( --spacing-50 ) var( --spacing-75 ) var( --spacing-250 );
-			background: linear-gradient( to bottom, rgba( 0, 0, 0, 0.7 ), transparent );
+		&::after {
+			content: '▶';
+			position: absolute;
+			inset: 0;
+			display: grid;
+			place-items: center;
+			inline-size: 56px;
+			block-size: 56px;
+			margin: auto;
+			border-radius: 50%;
+			background-color: rgba( 0, 0, 0, 0.6 );
+			color: #fff;
+			font-size: 24px;
 		}
+
+		&:hover::after { background-color: rgba( 0, 0, 0, 0.8 ); }
 	}
 
 	&.k-empty {
