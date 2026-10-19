@@ -1,7 +1,8 @@
 {%- import "macros.html" as m -%}
 {#- A Commons file of the item: a picture, a sound, a video. A file that
     pictures an item value (the flag image of the flag) is titled by the
-    item. A video is its poster here; it plays in its dialog. -#}
+    item. A video is its poster here; it plays in its dialog. A 3D model is
+    the picture that Commons renders from it; it turns in its dialog. -#}
 {%- let file = ui.media_file(b) -%}
 {%- let kind = b.picture.kind.name() -%}
 {%- let role = b.role.name() -%}
@@ -26,7 +27,7 @@
                 type="button"
                 command="show-modal"
                 commandfor="d{{ n }}"
-                aria-label="{% if kind == "video" %}{{ ui.msg("qrender-play") }}{% else %}{{ ui.msg("qrender-view-larger") }}{% endif %}">
+                aria-label="{% if kind == "video" %}{{ ui.msg("qrender-play") }}{% else if kind == "model3d" %}{{ ui.msg("qrender-view-model") }}{% else %}{{ ui.msg("qrender-view-larger") }}{% endif %}">
             <img src="{{ ui.src(file, 960) }}"
                  srcset="{{ ui.srcset(file) }}"
                  {%- if role == "feature" || role == "banner" %} sizes="100vw"{% else %} sizes="(max-width: 760px) 100vw, 40vw"{% endif %}

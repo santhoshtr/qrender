@@ -262,12 +262,41 @@ dialog.lightbox {
 	& .stage {
 		background-color: #1b1f23;
 
-		& > :is( img, video ) {
+		& :is( img, video, canvas ) {
 			display: block;
 			inline-size: 100%;
 			max-block-size: 70vh;
 			aspect-ratio: var( --a );
 			object-fit: contain;
+		}
+
+		/* A 3D model: its picture, then its canvas. A drag turns the
+		   model; on a touch screen it does not scroll the dialog. */
+		& qr-model {
+			position: relative;
+			display: block;
+		}
+
+		& canvas {
+			touch-action: none;
+			cursor: grab;
+
+			&:active { cursor: grabbing; }
+		}
+
+		& .status {
+			position: absolute;
+			inset-block-end: var( --spacing-100 );
+			inset-inline-start: 50%;
+			translate: -50% 0;
+			padding: var( --spacing-25 ) var( --spacing-75 );
+			border-radius: var( --border-radius-pill );
+			background-color: rgba( 0, 0, 0, 0.7 );
+			color: #fff;
+			font-size: var( --font-size-small );
+
+			&:empty { display: none; }
+			&:dir( rtl ) { translate: 50% 0; }
 		}
 	}
 
@@ -581,8 +610,9 @@ dialog.lightbox {
 	}
 
 	/* A video is its poster with a play mark; it plays in its dialog. The
-	   mark does not flip in a right-to-left page: media controls do not. */
-	&.k-video > .zoom {
+	   mark does not flip in a right-to-left page: media controls do not.
+	   A 3D model has a "3D" mark; it turns in its dialog. */
+	&:is( .k-video, .k-model3d ) > .zoom {
 		cursor: pointer;
 
 		&::after {
@@ -601,6 +631,12 @@ dialog.lightbox {
 		}
 
 		&:hover::after { background-color: rgba( 0, 0, 0, 0.8 ); }
+	}
+
+	&.k-model3d > .zoom::after {
+		content: '3D';
+		font-size: var( --font-size-medium );
+		font-weight: var( --font-weight-bold );
 	}
 
 	&.k-empty {

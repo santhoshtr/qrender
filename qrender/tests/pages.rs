@@ -90,10 +90,12 @@ fn html_pages() {
                 "{page}: zoom #{id} has no lightbox"
             );
         }
-        // Pictures, sounds and videos only from Wikimedia hosts, and the
-        // icons of the sites in the web spread from their Toolforge
+        // Pictures, sounds, videos and 3D models only from Wikimedia hosts,
+        // and the icons of the sites in the web spread from their Toolforge
         // service.
-        for el in doc.select(&select("img[src], video[src], video[poster], audio[src]")) {
+        for el in doc.select(&select(
+            "img[src], video[src], video[poster], audio[src], qr-model[src]",
+        )) {
             let favicon = el
                 .value()
                 .has_class("favicon", CaseSensitivity::CaseSensitive);

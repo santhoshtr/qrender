@@ -5,8 +5,9 @@
     Commons. The large picture is lazy and the video is not preloaded: a
     closed dialog loads nothing. -#}
 {%- let file = ui.media_file(b) -%}
+{%- let kind = b.picture.kind.name() -%}
 <dialog id="d{{ n }}"
-        class="lightbox k-{{ b.picture.kind.name() }}"
+        class="lightbox k-{{ kind }}"
         closedby="any"
         aria-labelledby="d{{ n }}-h"
         style="--a:{{ ui.aspect(b.picture.aspect) }}">
@@ -25,13 +26,28 @@
                 aria-label="{{ ui.msg("qrender-close") }}">×</button>
     </header>
     <div class="stage">
-        {%- if b.picture.kind.name() == "video" -%}
+        {%- if kind == "video" -%}
             {#- The poster is the one of the figure: the browser has it. -#}
             <video controls
                    preload="none"
                    poster="{{ ui.src(file, 960) }}"
                    src="{% if let Some(url) = b.picture.url %}{{ url }}{% else %}{{ ui.file(file) }}{% endif %}">
             </video>
+        {%- else if kind == "model3d" -%}
+            {#- The picture that Commons renders from the model, until
+                model.js has loaded the model; the status shows the load. -#}
+            <qr-model src="{% if let Some(url) = b.picture.url %}{{ url }}{% else %}{{ ui.file(file) }}{% endif %}"
+                      data-label="{{ file }}"
+                      data-loading="{{ ui.msg("qrender-model-loading") }}"
+                      data-unsupported="{{ ui.msg("qrender-model-unsupported") }}"
+                      {%- if let Some(bytes) = b.picture.bytes %} data-bytes="{{ bytes }}"{% endif %}>
+                <img src="{{ ui.src(file, 1280) }}"
+                     srcset="{{ ui.srcset(file) }}"
+                     sizes="(max-width: 1200px) 100vw, 1200px"
+                     alt=""
+                     loading="lazy">
+                <span class="status" role="status"></span>
+            </qr-model>
         {%- else -%}
             <img src="{{ ui.src(file, 1280) }}"
                  srcset="{{ ui.srcset(file) }}"
