@@ -8,6 +8,7 @@
 
 #[cfg(feature = "cache")]
 pub mod cache;
+pub mod citation;
 #[cfg(feature = "fetch")]
 pub mod fetch;
 pub mod geo;
@@ -17,6 +18,10 @@ pub mod model;
 pub mod settings;
 pub mod text;
 
+pub use citation::{
+    Archive, Book, Citation, Cited, Date, Identifier, Journal, News, Origin, Original, Person,
+    Record, RecordId, Web, WebUrl, Work,
+};
 pub use id::{EntityId, IdError, Lang, Pid, Qid, StatementId};
 pub use model::{
     CONTENT_SCHEMA, Cell, CommonsFile, Container, Content, Datatype, EventDates, HolidayDay,
