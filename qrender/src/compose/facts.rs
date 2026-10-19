@@ -8,12 +8,14 @@
 
 use std::collections::{HashMap, HashSet};
 
-use content::{Datatype, EntityId, Pid, Qualifier, QualifierValue, Rank, Statement};
+use content::{Datatype, EntityId, Pid, Qualifier, QualifierValue, Rank, Statement, Value};
 
 use super::{Composer, measurement_year};
 use crate::config::rules::{BlockMake, GroupWhen, PlacementWhen, PropertyWhen, TemplateWhen, When};
 use crate::vocab::{Primitive, Role, RoleSet};
-use crate::wikidata::{END_TIME, POINT_IN_TIME, PREFERRED_REASON, START_TIME};
+use crate::wikidata::{
+    COORDINATE_LOCATION, EARTH, END_TIME, POINT_IN_TIME, PREFERRED_REASON, START_TIME,
+};
 
 // ------------------------------------------------------------- property
 
@@ -22,13 +24,26 @@ pub struct PropertyFacts {
     /// The property names the office of a holder property (P1313).
     pub office_title: bool,
     pub roles: RoleSet,
+    /// The spread lists the coordinate (P625) and the item has one on the
+    /// Earth: the spread has a map, and its extreme points are markers on
+    /// it.
+    pub map: bool,
 }
 
 impl PropertyFacts {
-    pub fn new(composer: &Composer, pid: Pid) -> Self {
+    /// `pids`: the properties of the spread.
+    pub fn new(composer: &Composer, pid: Pid, pids: &[Pid]) -> Self {
+        // All the statements: the map has claimed the coordinate before.
+        let on_earth = || {
+            composer
+                .statements_of(*COORDINATE_LOCATION)
+                .iter()
+                .any(|s| matches!(s.value, Value::GlobeCoordinate { globe, .. } if globe == *EARTH))
+        };
         Self {
             office_title: composer.is_office_title(pid),
             roles: composer.config.roles(pid),
+            map: pids.contains(&COORDINATE_LOCATION) && on_earth(),
         }
     }
 }
@@ -37,6 +52,7 @@ impl When<PropertyFacts> for PropertyWhen {
     fn holds(&self, f: &PropertyFacts) -> bool {
         self.office_title.is_none_or(|b| f.office_title == b)
             && self.role.is_none_or(|r| f.roles.has(r))
+            && self.map.is_none_or(|b| f.map == b)
     }
 }
 
@@ -303,18 +319,39 @@ mod tests {
         &Config::embedded().rules
     }
 
-    fn property_rule(p: &str) -> (&'static str, PropertyMake) {
-        let c = content(json!([]), json!({}));
+    /// The id of the first property rule, in a spread of `pids` of an item
+    /// with `statements`.
+    fn property_rule_in(p: &str, statements: Value, pids: &[&str]) -> (&'static str, PropertyMake) {
+        let c = content(statements, json!({}));
         let k = Composer::new(&c, Config::embedded());
-        let rule = first(&rules().property, &PropertyFacts::new(&k, pid(p)));
+        let pids: Vec<Pid> = pids.iter().map(|p| pid(p)).collect();
+        let rule = first(&rules().property, &PropertyFacts::new(&k, pid(p), &pids));
         (rule.id(), rule.make)
+    }
+
+    fn property_rule(p: &str) -> (&'static str, PropertyMake) {
+        property_rule_in(p, json!([]), &[])
     }
 
     #[test]
     fn property_rules() {
         use PropertyMake::*;
         assert_eq!(property_rule("P1313"), ("office-title", Skip));
-        assert_eq!(property_rule("P1332"), ("extreme-point", Skip));
+        // An extreme point is a marker on the map of the spread; without a
+        // map of the Earth, a value like any other.
+        let on = |globe: &str| json!([{"pid": "P625", "value": {"type": "GlobeCoordinate", "lat": 1.0, "lon": 2.0, "globe": globe}}]);
+        assert_eq!(
+            property_rule_in("P1332", on("Q2"), &["P625", "P1332"]),
+            ("extreme-point", Skip)
+        );
+        assert_eq!(
+            property_rule_in("P1332", on("Q2"), &["P1332"]),
+            ("values", Values)
+        );
+        assert_eq!(
+            property_rule_in("P1332", on("Q405"), &["P625", "P1332"]),
+            ("values", Values)
+        );
         assert_eq!(property_rule("P6"), ("office", Succession));
         assert_eq!(property_rule("P57"), ("crew", Credits));
         assert_eq!(property_rule("P31"), ("values", Values));
@@ -417,6 +454,12 @@ mod tests {
         // On the Moon: no Earth map, a row.
         let moon = json!([{"pid": "P625", "value": {"type": "GlobeCoordinate", "lat": 0.0, "lon": 0.0, "globe": "Q405"}}]);
         assert_eq!(group_rule(block, moon, none.clone(), false), "row");
+        // An extreme point that reaches the block rules has no map: a row.
+        let pole = json!([{"pid": "P1332", "value": {"type": "GlobeCoordinate", "lat": 90.0, "lon": 0.0, "globe": "Q2"}}]);
+        assert_eq!(
+            group_rule(block, pole, none.clone(), false),
+            "extreme-point-row"
+        );
         let series = json!([
             dated("P1082", 1.0, 2000),
             dated("P1082", 2.0, 2010),

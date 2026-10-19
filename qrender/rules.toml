@@ -16,7 +16,7 @@ make = "skip"
 
 [[property]]
 id = "extreme-point"
-when = { role = "extreme_point" }  # shown as markers on the map
+when = { role = "extreme_point", map = true }  # shown as markers on the map
 make = "skip"
 
 [[property]]
@@ -73,6 +73,13 @@ make = "earlier"
 id = "media"
 when = { type = "CommonsMedia" }
 make = "media"
+
+# An extreme point with no map in its spread (the item has no coordinate,
+# as the Earth): a row, whose pin opens a map of the point.
+[[block]]
+id = "extreme-point-row"
+when = { role = "extreme_point" }
+make = "fact"
 
 # A map of the Earth for a coordinate on the Earth. A coordinate on
 # another globe (the Moon) is a row, until a map of that globe exists.

@@ -95,6 +95,8 @@ pub struct PropertyWhen {
     /// The property names the office of a holder property (P1313).
     pub office_title: Option<bool>,
     pub role: Option<Role>,
+    /// The spread has a map of the Earth (`PropertyFacts::map`).
+    pub map: Option<bool>,
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Deserialize)]

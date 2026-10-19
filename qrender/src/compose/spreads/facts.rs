@@ -37,7 +37,7 @@ pub fn build<'a>(c: &mut Composer<'a>, spec: &'a SpreadSpec) -> super::Built {
                 block,
             });
         }
-        let rule = first(&config.rules.property, &PropertyFacts::new(c, *pid));
+        let rule = first(&config.rules.property, &PropertyFacts::new(c, *pid, &pids));
         let id = Some(rule.id.as_str());
         match rule.make {
             PropertyMake::Skip => {}

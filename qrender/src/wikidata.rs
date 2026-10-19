@@ -28,8 +28,12 @@ properties! {
     AREA = "P2046", "area";
     LANGUAGE = "P407", "language of work or name";
     GEOSHAPE = "P3896", "geoshape";
+    COORDINATE_LOCATION = "P625", "coordinate location";
     PREFERRED_REASON = "P7452", "reason for preferred rank";
 }
+
+/// Earth (Q2): the globe of a coordinate that a map of the Earth shows.
+pub static EARTH: LazyLock<content::Qid> = LazyLock::new(|| "Q2".parse().expect("an item id"));
 
 /// Percent (Q11229): the unit of a proportion.
 pub static PERCENT: LazyLock<content::Qid> =
