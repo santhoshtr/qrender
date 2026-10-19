@@ -1,6 +1,7 @@
 {#- The lead of the article, beside the head picture. -#}
 {%- match ui.view.lead -%}
 {%- when Some with (a) -%}
+{%- if a.local -%}
 <div class="lead" lang="{{ a.lang }}">
     {%- for p in a.paragraphs %}<p>{{ p|safe }}</p>{% endfor -%}
     {%- if !a.more.is_empty() %}<details><summary>¶ +{{ a.more.len() }}</summary>{% for p in a.more %}<p>{{ p|safe }}</p>{% endfor %}</details>{% endif -%}
@@ -9,6 +10,25 @@
         <a href="{{ a.url }}">{{ a.host }}</a> · {{ b.languages }}
     </p>
 </div>
+{%- else -%}
+{#- The lead of the article in another language: the reader translates
+    it into the page language (qr-section, translate.js). -#}
+<qr-section class="lead"
+            lang="{{ a.lang }}"
+            data-from="{{ a.lang }}"
+            data-to="{{ ui.view.lang }}"
+            data-dir="{{ ui.view.dir.name() }}">
+    <div class="body">
+        {%- for p in a.paragraphs %}<p>{{ p|safe }}</p>{% endfor -%}
+        {%- if !a.more.is_empty() %}<details><summary>¶ +{{ a.more.len() }}</summary>{% for p in a.more %}<p>{{ p|safe }}</p>{% endfor %}</details>{% endif -%}
+    </div>
+    <p class="source">
+        <img src="{{ ui.wikipedia_logo() }}" alt="" width="18">
+        <a href="{{ a.url }}">{{ a.host }}</a> · {{ b.languages }} {{ ui.translate_button()|safe }}
+    </p>
+    {{ ui.translation(a.lang.as_str())|safe }}
+</qr-section>
+{%- endif -%}
 {%- when None -%}
 <div class="lead">
     <p class="note">— {{ b.languages }}</p>

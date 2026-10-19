@@ -773,6 +773,13 @@ impl<'v> Ui<'v> {
         }
     }
 
+    /// "Translate to ગુજરાતી": the page language named by `intl.js`.
+    pub fn translate_label(&self) -> String {
+        let lang = escape(self.view.lang.as_str());
+        let name = format!(r#"<span data-lang-name="{lang}">{lang}</span>"#);
+        crate::localize::messages::format(&escape(self.msg("qrender-translate")), &[&name])
+    }
+
     /// The note at the end of the page, with a link to the item.
     pub fn footer(&self) -> String {
         let qid = self.view.qid;

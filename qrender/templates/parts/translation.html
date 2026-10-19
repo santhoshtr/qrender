@@ -1,0 +1,19 @@
+{#- The editor of a translation, hidden until the reader asks for it: the
+    source and the machine translation side by side, a row for each block
+    (translate.js makes the rows). Every word of it is here, in the page
+    language. -#}
+<div class="translation" lang="{{ ui.view.lang }}" hidden>
+    <div class="labels">
+        <span data-lang-name="{{ from }}">{{ from }}</span>
+        <span><span data-lang-name="{{ ui.view.lang }}">{{ ui.view.lang }}</span> · {{ ui.msg("qrender-translation-note") }}</span>
+    </div>
+    <div class="rows"
+         data-translating="{{ ui.msg("qrender-translating") }}"
+         data-failed="{{ ui.msg("qrender-translate-failed") }}"></div>
+    <div class="actions">
+        <span class="status" role="status"></span>
+        <button class="discard" type="button">{{ ui.msg("qrender-discard") }}</button>
+        <button class="save" type="button">{{ ui.msg("qrender-save") }}</button>
+    </div>
+    <p class="saved" hidden>{{ ui.msg("qrender-saved") }}</p>
+</div>

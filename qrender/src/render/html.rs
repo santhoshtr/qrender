@@ -193,6 +193,20 @@ struct ArticleSectionHtml<'a> {
 }
 
 #[derive(Template)]
+#[template(path = "parts/translate_button.html")]
+struct TranslateButtonHtml<'a> {
+    ui: &'a Ui<'a>,
+}
+
+#[derive(Template)]
+#[template(path = "parts/translation.html")]
+struct TranslationHtml<'a> {
+    ui: &'a Ui<'a>,
+    /// The language of the source text.
+    from: &'a str,
+}
+
+#[derive(Template)]
 #[template(path = "parts/article_subsection.html")]
 struct ArticleSubsectionHtml<'a> {
     ui: &'a Ui<'a>,
@@ -351,6 +365,16 @@ impl<'v> Ui<'v> {
             s,
             collapsed,
         })
+    }
+
+    /// The action to translate a text of the article (translate.js).
+    pub fn translate_button(&self) -> String {
+        render(TranslateButtonHtml { ui: self })
+    }
+
+    /// The hidden editor of a translation from `from`.
+    pub fn translation(&self, from: &str) -> String {
+        render(TranslationHtml { ui: self, from })
     }
 
     pub fn article_subsection(&self, s: &ProseSection) -> String {
