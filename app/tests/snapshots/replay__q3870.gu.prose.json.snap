@@ -1,0 +1,785 @@
+---
+source: app/tests/replay.rs
+expression: "serde_json::to_string_pretty(&prose).unwrap()"
+---
+{
+  "lead": {
+    "host": "en.wikipedia.org",
+    "lang": "en",
+    "local": false,
+    "more": [
+      "Nicknamed the \"Green City under the Sun\", Nairobi is uniquely notable for being the only capital city in the world that hosts a <a href=\"https://www.wikidata.org/wiki/Q739993\">national park</a> within its boundaries. Its name originates from the <a href=\"https://www.wikidata.org/wiki/Q35787\">Maasai</a> phrase <i>Enkare Nyirobi</i>, meaning \"place of cool waters\".",
+      "As the national capital, Nairobi is home to the <a href=\"https://www.wikidata.org/wiki/Q110579137\">Kenyan Parliament Buildings</a>, the <a href=\"https://www.wikidata.org/wiki/Q3497294\">State House</a> and the <a href=\"https://www.wikidata.org/wiki/Q2368297\">Supreme Court Building</a>. It is the major financial and economic hub of <a href=\"https://www.wikidata.org/wiki/Q27407\">East Africa</a>, hosting thousands of Kenyan businesses and international companies and organisations, including the <a href=\"https://www.wikidata.org/wiki/Q182016\">United Nations Environment Programme</a> (UN Environment) and the <a href=\"https://www.wikidata.org/wiki/Q1021627\">United Nations Office at Nairobi</a> (UNON). The <a href=\"https://www.wikidata.org/wiki/Q2384385\">Nairobi Securities Exchange</a> (NSE) is one of the largest <a href=\"https://www.wikidata.org/wiki/Q11691\">stock exchanges</a> in Africa and the second-oldest exchange on the continent. It is Africa's fourth-largest stock exchange by trading volume, capable of processing 10 million trades a day. Nairobi is considered a <a href=\"https://www.wikidata.org/wiki/Q208511\">global city</a> and was ranked as a \"Beta World City\" by the <a href=\"https://www.wikidata.org/wiki/Q1531726\">Globalisation and World Cities Research Network</a> as of 2024.",
+      "Nairobi was founded in 1898 by colonial authorities in <a href=\"https://www.wikidata.org/wiki/Q876185\">British East Africa</a>, as a rail depot on the <a href=\"https://www.wikidata.org/wiki/Q1036\">Uganda</a>–<a href=\"https://www.wikidata.org/wiki/Q850755\">Kenya Railway.</a> The authorities favoured it as an ideal resting place due to its <a href=\"https://www.wikidata.org/wiki/Q1141462\">high elevation</a>, <a href=\"https://www.wikidata.org/wiki/Q167466\">temperate climate</a>, and adequate water supply. The town quickly grew to replace <ruby><a href=\"https://www.wikidata.org/wiki/Q225641\">Mombasa</a><rt><span>મોમ્બાસા</span></rt></ruby> as the capital of Kenya in 1907.",
+      "After independence in 1963, Nairobi became the capital of the <ruby><a href=\"https://www.wikidata.org/wiki/Q114\">Republic of Kenya</a><rt><span>કેન્યા</span></rt></ruby>. During Kenya's early period, the city became a centre for the <a href=\"https://www.wikidata.org/wiki/Q8486\">coffee</a>, <a href=\"https://www.wikidata.org/wiki/Q6097\">tea</a> and <a href=\"https://www.wikidata.org/wiki/Q159221\">sisal</a> industries. Successive post-independence governments have built and turned Nairobi into a modern metropolitan city with a diverse population and a growing economy."
+    ],
+    "paragraphs": [
+      "<b>Nairobi</b> (/naɪˈroʊbi/&#32;ⓘ <i>ny-ROH-bee</i>) (<i>Jiji kuu la Nairobi</i>, in <ruby><a href=\"https://www.wikidata.org/wiki/Q7838\">Swahili</a><rt><span>સ્વાહિલી</span></rt></ruby>),  is the <a href=\"https://www.wikidata.org/wiki/Q5119\">capital</a> and largest city of <ruby><a href=\"https://www.wikidata.org/wiki/Q114\">Kenya</a><rt><span>કેન્યા</span></rt></ruby>, located in the south-central part of the country. As of 2026, it has a population of 5.6 million and a metropolitan population of 15.95 million, making it the <a href=\"https://www.wikidata.org/wiki/Q4733189\">8th most populous city</a> in <a href=\"https://www.wikidata.org/wiki/Q15\">Africa</a> and the 4th most populous metropolitan area. The city goes beyond its borders and has expanded into neighbouring counties, making it the 4th largest metropolitan area in Africa."
+    ],
+    "url": "https://en.wikipedia.org/wiki/Nairobi"
+  },
+  "more_sections": [
+    {
+      "anchor": "Parks_and_gardens",
+      "blocks": [
+        "<p>\n\nNairobi has many parks and open spaces throughout the city. Much of the city has dense tree-cover and plenty of green spaces. </p>",
+        "<p>The most famous park in Nairobi is <a href=\"https://www.wikidata.org/wiki/Q3444748\">Uhuru Park</a>. The park borders the central business district and the neighbourhood Upper Hill. Uhuru (<i>Freedom</i> in <ruby><a href=\"https://www.wikidata.org/wiki/Q7838\">Swahili</a><rt><span>સ્વાહિલી</span></rt></ruby>) Park is a centre for outdoor speeches, services, and rallies. The park was to be built over by former President <a href=\"https://www.wikidata.org/wiki/Q193492\">Daniel arap Moi</a>, who wanted the 62-storey headquarters of his party, the <a href=\"https://www.wikidata.org/wiki/Q1422517\">Kenya African National Union</a>, situated in the park. However, the park was saved following a campaign by <a href=\"https://www.wikidata.org/wiki/Q35637\">Nobel Peace Prize</a> winner <a href=\"https://www.wikidata.org/wiki/Q46795\">Wangari Maathai</a>.</p>",
+        "<p>Central Park is adjacent to Uhuru Park, and includes a memorial for <a href=\"https://www.wikidata.org/wiki/Q173563\">Jomo Kenyatta</a>, the first president of Kenya, and the Moi Monument, built in 1988 to commemorate the second president's first decade in power.</p>",
+        "<p>Both Uhuru Park and Central Park were renovated by the-then Nairobi Metropolitan Services (NMS) together with the <a href=\"https://www.wikidata.org/wiki/Q720033\">Kenya Defence Forces</a>. The process started in September 2023 and incorporates several key elements, including a cascading water feature, upgraded sanitation facilities, a skateboarding zone, and pedestrian-friendly paths. It also highlights statues of native wildlife, carefully groomed lawns, thriving trees, improved footpaths, and expanded green zones. A botanical section has been established as well, showcasing a diverse collection of flowers and plant species to reflect Kenya's abundant floral heritage.</p>",
+        "<p><a href=\"https://www.wikidata.org/wiki/Q10539858\">Jeevanjee Gardens</a> is located within the Central Business District and is easily accessible via foot, private vehicles and public transport. Among Nairobi's most historic and oldest public green spaces, the park was created in the early 20th century by Asian industrialist <a href=\"https://www.wikidata.org/wiki/Q4725647\">A.M. Jeevanjee</a>.</p>",
+        "<p>The John Michuki Memorial Park is situated along the <a href=\"https://www.wikidata.org/wiki/Q1233042\">Nairobi River</a>, stretching from Globe Cinema Roundabout to Museum Bridge. It was previously known as the Mazingira Park, and was reopened in August 2020 by President <a href=\"https://www.wikidata.org/wiki/Q196070\">Uhuru Kenyatta</a> after renovation by the <a href=\"https://www.wikidata.org/wiki/Q6392574\">Kenya Forest Service</a>, Kenya Forestry Research Institute (KEFRI), and <a href=\"https://www.wikidata.org/wiki/Q6972473\">National Environment Management Authority</a> (NEMA). The park is named in tribute to the late former Cabinet Minister <a href=\"https://www.wikidata.org/wiki/Q6248686\">John Michuki</a>, who was instrumental in the restoration of the Nairobi River and its surroundings during his time as Minister for Environment.</p>",
+        "<p><a href=\"https://www.wikidata.org/wiki/Q6959773\">Nairobi Arboretum</a>, founded in 1907 by E. Batiscombe as a trial site for forestry tree species, is a 30-hectare botanical reserve that hosts more than 350 types of trees and functions as both a leisure destination and a research hub. It is located near the <a href=\"https://www.wikidata.org/wiki/Q3497294\">State House</a>.</p>",
+        "<p><a href=\"https://www.wikidata.org/wiki/Q6373728\">Karura Forest</a>, the city-based nature reserve, features nature trails, picnic spots, caves and waterfalls. It is an excellent destination for birdwatching as the area is home to over 200 documented bird species. While strolling along the trails, visitors may also catch glimpses of monkeys and bushbucks.</p>",
+        "<p>Nairobi City Park, is located between Forest Road and Limuru Road. As one of Nairobi's oldest and most expansive urban green spaces, spanning over 60 hectares, City Park holds considerable ecological value. It preserves one of the last remaining patches of indigenous forest that once blanketed the region. The park is home to a rich array of biodiversity, including <a href=\"https://www.wikidata.org/wiki/Q40463494\">Sykes' monkeys</a>, various bird species, and a wide assortment of native plant life. City Park also carries historical weight, because it hosts cemeteries for veterans of World War I and II and is the final resting place of notable figures such as freedom fighter <a href=\"https://www.wikidata.org/wiki/Q3388887\">Pio Gama Pinto</a> and former Vice President <a href=\"https://www.wikidata.org/wiki/Q6285701\">Joseph Murumbi</a>, whose memorial garden is located within the park grounds.</p>",
+        "<p>Oloolua Nature Trail is situated in <a href=\"https://www.wikidata.org/wiki/Q125498745\">Oloolua Forest</a> in the <a href=\"https://www.wikidata.org/wiki/Q4131979\">Karen</a> area of Nairobi. It is under the management of Kenya Institute of Primate Research (KIPRE) and provides opportunities for nature walks, bird watching, and enjoying the natural environment. Key attractions include a 37-meter deep natural cave that was historically used by Mau Mau fighters, a beautiful waterfall draining into the <a href=\"https://www.wikidata.org/wiki/Q3652700\">Mbagathi River</a>, a bamboo resting point, and a papyrus swamp.</p>",
+        "<p><a href=\"https://www.wikidata.org/wiki/Q30623599\">Ngong Road Forest</a> Sanctuary contains winding walking and jogging paths that pass through tall trees inhabited by various bird species, with occasional sightings of <a href=\"https://www.wikidata.org/wiki/Q40463494\">Sykes monkeys</a>. The area also includes a picnic site and a playground for children. Additionally, Ngong Road Forest has cycling trails that run beneath the indigenous tree canopy.</p>",
+        "<p>Langata Botanical Gardens is a private recreational garden located along Langata South Road. The area comprises numerous native trees, expansive well-maintained lawns, and a lagoon inhabited by a diverse range of fish species.</p>",
+        "<p>Other private botanical gardens include Maarifa Park Botanical Garden, located in Kitisuru and the Five Senses Botanical Gardens by Enaki, located in Nyari, Nairobi.</p>",
+        "<p>Nairobi Botanical Gardens is located within the <a href=\"https://www.wikidata.org/wiki/Q3330879\">National Museum of Kenya</a>. The Nairobi Botanical Gardens are organized into themed sections, each highlighting a particular conservation topic. For example, the Children's Garden focuses on botany and habitat, providing a space where visitors can learn about indigenous and exotic plants while enjoying open lawns and an outdoor amphitheatre. Other sections include the Grass Gardens, which showcase important food and beverage plants, the Herbal Garden dedicated to medicinal and food plants, the Succulent Gardens illustrating plant adaptations to arid environments, the Quarry Garden transformed from a former quarry, and the Memorial Garden commemorating World War II with symbolic plants and a water feature.</p>",
+        "<p>The <a href=\"https://www.wikidata.org/wiki/Q4820629\">August 7th Memorial Park</a> is located at the site of the <a href=\"https://www.wikidata.org/wiki/Q876206\">1998 US Embassy bombing</a> and features a green space that offers tranquility.</p>"
+      ],
+      "href": "https://en.wikipedia.org/wiki/Nairobi#Parks_and_gardens",
+      "lang": "en",
+      "level": 2,
+      "sections": [
+        {
+          "anchor": "Threats_to_public_spaces",
+          "blocks": [
+            "<p>The colonial 1948 Master Plan for Nairobi still acts as the governing mechanism when it comes to making decisions related to urban planning. The Master Plan at the time, which was designed for 250,000 people, allocated 28% of Nairobi's land to public space, but because of rapid population growth, much of the vitality of public spaces within the city are increasingly threatened. City Park, the only natural park in Nairobi, for example, was originally 60 ha (150 acres), but has since lost approximately 20 ha (50 acres) of land to private development through squatting and illegal alienation which began in the 1980s.</p>"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Nairobi#Threats_to_public_spaces",
+          "lang": "en",
+          "level": 3,
+          "sections": [],
+          "title": "Threats to public spaces"
+        }
+      ],
+      "title": "Parks and gardens"
+    },
+    {
+      "anchor": "Political_divisions",
+      "blocks": [
+        "<p>The City of Nairobi has the status of a full <a href=\"https://www.wikidata.org/wiki/Q269218\">administrative county</a>.</p>",
+        "<p>Initially, Nairobi was one of the eight provinces in Kenya before 2013. The Nairobi province differed in several ways from other Kenyan regions. Nairobi Province was not divided into &quot;districts&quot; until 2007, when three districts were created. In 2010, along with the new constitution, Nairobi was renamed a county and consolidated into a <a href=\"https://www.wikidata.org/wiki/Q17093012\">city-county</a>. The county is entirely urban. It had only one local council, <a href=\"https://www.wikidata.org/wiki/Q6959778\">Nairobi City Council</a>, which was replaced by <ruby><a href=\"https://www.wikidata.org/wiki/Q3335223\">Nairobi City County</a><rt><span>નૈરોબી કાઉન્ટી</span></rt></ruby> after the new constitution was effected in March 2013.</p>",
+        "<p>Nairobi County has 17 constituencies. Constituency name may differ from division name, such that Starehe Constituency is equal to Central Division, Lang'ata Constituency to Kibera division, and Kamukunji Constituency to Pumwani Division in terms of boundaries.</p>"
+      ],
+      "href": "https://en.wikipedia.org/wiki/Nairobi#Political_divisions",
+      "lang": "en",
+      "level": 2,
+      "sections": [
+        {
+          "anchor": "Constituencies",
+          "blocks": [
+            "<p>Nairobi is divided into 17 <a href=\"https://www.wikidata.org/wiki/Q4893522\">constituencies</a> and 85 <a href=\"https://www.wikidata.org/wiki/Q6664846\">wards</a>, mostly named after residential estates. Kibera Division, for example, includes <a href=\"https://www.wikidata.org/wiki/Q579521\">Kibera</a>, Kenya's largest slum, and the affluent estates of <a href=\"https://www.wikidata.org/wiki/Q4131979\">Karen</a> and <a href=\"https://www.wikidata.org/wiki/Q6485576\">Langata</a>.</p>",
+            "<p>The Nairobi GPO (General Post Office) Postal code is <b>00100</b>.</p>"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Nairobi#Constituencies",
+          "lang": "en",
+          "level": 3,
+          "sections": [],
+          "title": "Constituencies"
+        }
+      ],
+      "title": "Political divisions"
+    },
+    {
+      "anchor": "Demographics",
+      "blocks": [
+        "<p>As of 2024, Nairobi has an estimated population of 4.8 million, up from 4.3 million in 2019, making it the largest city in <ruby><a href=\"https://www.wikidata.org/wiki/Q114\">Kenya</a><rt><span>કેન્યા</span></rt></ruby>. The city spans approximately 696 km², with a population density of about 6,900 inhabitants per km². Nairobi's demographics are characterized by a youthful and rapidly growing population, reflecting ongoing urbanization and migration trends.</p>",
+        "<p>Nairobi has experienced one of the highest growth rates of any city in Africa. Since its foundation in 1899, Nairobi has grown to become the second-largest city in the African Great Lakes, despite being one of the youngest cities in the region. The growth rate of Nairobi was estimated in 2023 to be 2.09% a year. It is estimated that Nairobi's population will reach 5 million people in 2025.</p>",
+        "<p>Given this high population growth, owing itself both to urban migration and high birth rates, the economy has yet to catch up. Unemployment is estimated at 5.5% within the city, mainly in the high-density, low-income areas of the city which can make them seem even denser than the higher-income neighbourhoods.</p>",
+        "<p>A population projection in the 21st century is listed below:</p>"
+      ],
+      "href": "https://en.wikipedia.org/wiki/Nairobi#Demographics",
+      "lang": "en",
+      "level": 2,
+      "sections": [
+        {
+          "anchor": "Religion",
+          "blocks": [
+            "<p><b>Religion in Nairobi</b> is diverse but predominantly Christian. Approximately 88.85% of Nairobi's population identifies as <a href=\"https://www.wikidata.org/wiki/Q5043\">Christian</a>, with <a href=\"https://www.wikidata.org/wiki/Q23540\">Protestants</a> accounting for 31.34%, <a href=\"https://www.wikidata.org/wiki/Q9592\">Catholics</a> for 24.01%, and <a href=\"https://www.wikidata.org/wiki/Q194253\">Evangelicals</a> for 20.70%. Other Christian groups include African Instituted Churches (7.08%), Other Christian denominations (5.19%), and a small <a href=\"https://www.wikidata.org/wiki/Q3333484\">Orthodox Christian</a> community (0.53%). <a href=\"https://www.wikidata.org/wiki/Q432\">Islam</a> is the second-largest religion in the county, practiced by approximately 7.53% of residents. Nairobi also has the largest <a href=\"https://www.wikidata.org/wiki/Q9089\">Hindu</a> population in Kenya, with 38,141 adherents, accounting for approximately 63% of the national Hindu population. Smaller proportions of the population adhere to <a href=\"https://www.wikidata.org/wiki/Q386498\">traditional African religions</a> (0.16%), other religions (1.07%), or report <a href=\"https://www.wikidata.org/wiki/Q58721\">no religion or atheism</a> (1.26%), with the remainder classified as don't know or not stated.</p>",
+            "<p>In the 2019 Census, Christianity was the most widely practiced religion in Nairobi, accounting for 89% of the population, of which the majority belong to Protestant and Evangelical churches. In 2019, Muslims were 7.6% of the population.</p>"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Nairobi#Religion",
+          "lang": "en",
+          "level": 3,
+          "sections": [],
+          "title": "Religion"
+        }
+      ],
+      "title": "Demographics"
+    },
+    {
+      "anchor": "Sports",
+      "blocks": [
+        "<p>Nairobi is the African Great Lakes region's sporting centre. Notable annual events staged in Nairobi include <a href=\"https://www.wikidata.org/wiki/Q281772\">Safari Rally</a>, <a href=\"https://www.wikidata.org/wiki/Q7398396\">Safari Sevens</a> <a href=\"https://www.wikidata.org/wiki/Q5849\">rugby union</a> tournament, and <a href=\"https://www.wikidata.org/wiki/Q1963862\">Nairobi Marathon</a>.</p>"
+      ],
+      "href": "https://en.wikipedia.org/wiki/Nairobi#Sports",
+      "lang": "en",
+      "level": 2,
+      "sections": [
+        {
+          "anchor": "Facilities",
+          "blocks": [
+            "<p>The premier sports facility in Nairobi and generally in Kenya is the <a href=\"https://www.wikidata.org/wiki/Q1385710\">Moi International Sports Centre</a> in the suburb of Kasarani. The complex was completed in 1987, and was used to host the 1987 <a href=\"https://www.wikidata.org/wiki/Q391394\">All Africa Games</a>. The complex comprises a 60,000 seater stadium, the second largest in the African Great Lakes (after Tanzania's new national stadium), a 5,000 seater gymnasium, and a 2,000 seater aquatics centre. In 2029, the venue will host the <a href=\"https://www.wikidata.org/wiki/Q127602160\">World Athletics Championships</a>. It will be the first World Athletics Championships to be ever held in Africa.</p>",
+            "<p>The <a href=\"https://www.wikidata.org/wiki/Q1582845\">Nyayo National Stadium</a> is Nairobi's second largest stadium renowned for hosting global rugby event under the &quot;Safaricom Sevens&quot;. Completed in 1983, the stadium has a capacity of 30,000. This stadium is primarily used for <a href=\"https://www.wikidata.org/wiki/Q2736\">football</a>. The facility is located close to the Central Business District, which makes it a convenient location for political gatherings.</p>",
+            "<p><a href=\"https://www.wikidata.org/wiki/Q6959780\">Nairobi City Stadium</a> is Nairobi's first stadium, and used for club football.</p>",
+            "<p><a href=\"https://www.wikidata.org/wiki/Q6959784\">Nairobi Gymkhana</a> is the home of the <a href=\"https://www.wikidata.org/wiki/Q1706956\">Kenyan cricket team</a>, and was a venue for the <a href=\"https://www.wikidata.org/wiki/Q1139957\">2003 Cricket World Cup</a>.</p>",
+            "<p>Ulinzi Sports Complex was officially opened by President Uhuru Kenyatta in 2022 after its construction that started in 2020. It has a capacity of 7,500, an 8-lane Athletics track, training grounds and an indoor arena.</p>",
+            "<p>Dandora Stadium, a 4,000 capacity stadium opened in 2024, hosts some of the top flight national league football tournaments. The stadium has seats in the VIP section and regular stands.</p>",
+            "<p><a href=\"https://www.wikidata.org/wiki/Q125314790\">Talanta Sports Stadium</a>, with a capacity of 60,000, is currently under construction with an estimated completion date of February 2026.</p>"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Nairobi#Facilities",
+          "lang": "en",
+          "level": 3,
+          "sections": [],
+          "title": "Facilities"
+        },
+        {
+          "anchor": "Football",
+          "blocks": [
+            "<p><a href=\"https://www.wikidata.org/wiki/Q2736\">Football</a> is the most popular sport in the city by viewership and participation. This is highlighted by the number of football clubs in the city, including <a href=\"https://www.wikidata.org/wiki/Q589722\">Kenyan Premier League</a> sides <a href=\"https://www.wikidata.org/wiki/Q579931\">Gor Mahia</a>, <a href=\"https://www.wikidata.org/wiki/Q2156138\">A.F.C. Leopards</a> Sports Club, <a href=\"https://www.wikidata.org/wiki/Q2365084\">Tusker F. C.</a> and <a href=\"https://www.wikidata.org/wiki/Q2510217\">Mathare United</a>.</p>",
+            "<p>Kenya, together with Tanzania and Uganda will be cohosting the 2025 <a href=\"https://www.wikidata.org/wiki/Q386362\">CHAN</a> competition. Also, the three countries will jointly host the 2027 <a href=\"https://www.wikidata.org/wiki/Q83145\">AFCON</a> football competition.</p>"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Nairobi#Football",
+          "lang": "en",
+          "level": 3,
+          "sections": [],
+          "title": "Football"
+        },
+        {
+          "anchor": "Golf",
+          "blocks": [
+            "<p>There are several <a href=\"https://www.wikidata.org/wiki/Q1048525\">golf courses</a> within a 20 km radius of Nairobi. The oldest 18-hole golf course in the city is the Royal Nairobi Golf Club. It was established in 1906 by the <a href=\"https://www.wikidata.org/wiki/Q174193\">British</a>, just seven years after the city was founded. Other notable golf clubs include the Windsor Golf Hotel and Country Club, Karen Country Club, VetLab Sports Club, Golf Park Golf Club, Kenya Railways Golf Club, Sigona Golf Club and Muthaiga Golf Club.</p>",
+            "<p>The <a href=\"https://www.wikidata.org/wiki/Q2695089\">Kenya Open</a> golf tournament, which is part of the <a href=\"https://www.wikidata.org/wiki/Q121571\">European Tour</a>, takes place in Nairobi.</p>"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Nairobi#Golf",
+          "lang": "en",
+          "level": 3,
+          "sections": [],
+          "title": "Golf"
+        },
+        {
+          "anchor": "Equestrian_Sports",
+          "blocks": [
+            "<p>The <a href=\"https://www.wikidata.org/wiki/Q15036590\">Ngong Racecourse</a> in Nairobi is the centre of <a href=\"https://www.wikidata.org/wiki/Q3214425\">horse racing</a> in Kenya.</p>",
+            "<p>The Kenya Open Polo tournament and other polo games are often hosted at the Nairobi Polo Club.</p>",
+            "<p>The Horse Association of Kenya offices are located in Nairobi, at Racecourse.</p>"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Nairobi#Equestrian_Sports",
+          "lang": "en",
+          "level": 3,
+          "sections": [],
+          "title": "Equestrian Sports"
+        },
+        {
+          "anchor": "Rugby",
+          "blocks": [
+            "<p>Rugby is a popular sport in Nairobi with 8 of the 12 top flight clubs based here.</p>",
+            "<p><a href=\"https://www.wikidata.org/wiki/Q7378181\">The Rugby Football Union of East Africa (RFUEA)</a> is hosted in Nairobi.</p>"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Nairobi#Rugby",
+          "lang": "en",
+          "level": 3,
+          "sections": [],
+          "title": "Rugby"
+        },
+        {
+          "anchor": "Basketball",
+          "blocks": [
+            "<p>Basketball is a popular sport played in the city's primary, Secondary and college leagues. Many of the city's urban youth are basketball fans and watch the American <a href=\"https://www.wikidata.org/wiki/Q155223\">NBA</a>.</p>"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Nairobi#Basketball",
+          "lang": "en",
+          "level": 3,
+          "sections": [],
+          "title": "Basketball"
+        },
+        {
+          "anchor": "Marathons",
+          "blocks": [
+            "<p>Nairobi often hosts a number of marathons including:</p>",
+            "<ul><li>Nairobi City Marathon</li>\n<li>Standard Chartered Nairobi Marathon</li></ul>"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Nairobi#Marathons",
+          "lang": "en",
+          "level": 3,
+          "sections": [],
+          "title": "Marathons"
+        }
+      ],
+      "title": "Sports"
+    },
+    {
+      "anchor": "Places_of_worship",
+      "blocks": [
+        "<p>The <a href=\"https://www.wikidata.org/wiki/Q1370598\">places of worship</a> are predominantly <a href=\"https://www.wikidata.org/wiki/Q5043\">Christian</a> churches and temples: <a href=\"https://www.wikidata.org/wiki/Q368648\">Roman Catholic Archdiocese of Nairobi</a> (<a href=\"https://www.wikidata.org/wiki/Q9592\">Catholic Church</a>), <a href=\"https://www.wikidata.org/wiki/Q540783\">Anglican Church of Kenya</a> (<a href=\"https://www.wikidata.org/wiki/Q193312\">Anglican Communion</a>), <a href=\"https://www.wikidata.org/wiki/Q7240759\">Presbyterian Church of East Africa</a> (<a href=\"https://www.wikidata.org/wiki/Q1246720\">World Communion of Reformed Churches</a>), <a href=\"https://www.wikidata.org/wiki/Q61900702\">Baptist Convention of Kenya</a> (<a href=\"https://www.wikidata.org/wiki/Q1929251\">Baptist World Alliance</a>), and <a href=\"https://www.wikidata.org/wiki/Q494890\">Assemblies of God</a>. There are also <a href=\"https://www.wikidata.org/wiki/Q432\">Muslim</a> mosques including <a href=\"https://www.wikidata.org/wiki/Q6146433\">Jamia Mosque</a>.</p>"
+      ],
+      "href": "https://en.wikipedia.org/wiki/Nairobi#Places_of_worship",
+      "lang": "en",
+      "level": 2,
+      "sections": [],
+      "title": "Places of worship"
+    },
+    {
+      "anchor": "Education",
+      "blocks": [
+        "<p>The majority of schools follow the Kenyan Competence Based Education (CBE). Nairobi Innovation Week (NIW) is an annual that was started in 2015. It is organized by the University of Nairobi and in collaboration with government agencies. It focuses on partnerships, innovations, incubation, and startups. It promotes an entrepreneurial culture. It is an event for local and international innovators to showcase innovations, and to network.</p>"
+      ],
+      "href": "https://en.wikipedia.org/wiki/Nairobi#Education",
+      "lang": "en",
+      "level": 2,
+      "sections": [
+        {
+          "anchor": "Higher_education",
+          "blocks": [
+            "<p>Nairobi is home to several Universities and Colleges.</p>",
+            "<ul><li>The <a href=\"https://www.wikidata.org/wiki/Q649998\">University of Nairobi</a> is the largest and oldest university in Kenya. It was established in 1956, as part of the <a href=\"https://www.wikidata.org/wiki/Q557172\">University of East Africa</a>, but became an independent university in 1970. The university has approximately 84,000 students.</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q46756\">Kenyatta University</a> is situated 16 km (9.9 mi) from Nairobi on the Nairobi road Thika dual carriageway on 450 hectares (1,100 acres) of land. The university was chartered in 1985, offering mainly education-related courses, but has since diversified, offering medicine, environmental studies, engineering, law, business, statistics, agriculture, and economics. It has a student body of about 32,000, the bulk of whom (17,000) are in the main campus. It is one of the fastest-growing public universities.</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q7622156\">Strathmore University</a> started in 1961 as an <a href=\"https://www.wikidata.org/wiki/Q16981711\">Advanced Level (UK)</a> Sixth Form College offering Science and Arts subjects. The college started to admit accountancy students in March 1966, and thus became a university. In January 1993, Strathmore College merged with Kianda College and moved to Ole Sangale Road, Madaraka Estate, Nairobi.</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q77518402\">United States International University – Nairobi</a> was originally a branch of the <a href=\"https://www.wikidata.org/wiki/Q77518402\">United States International University</a>, but became a fully autonomous university in 2005. It was first established in 1969. The university has accreditation from the Western Association of Schools and Colleges, in the US, and the Government of Kenya. It is located in a quiet west side location of Roysambu area north-central Nairobi opposite the Safari Park Hotel.</li>\n<li>In 2005, The <a href=\"https://www.wikidata.org/wiki/Q4690949\">Aga Khan Hospital, Nairobi</a> was upgraded to a health sciences teaching hospital, providing post graduate education in medicine and surgery including nursing education, henceforth renamed the Aga Khan University Hospital.</li>\n<li>The <a href=\"https://www.wikidata.org/wiki/Q1736407\">Catholic University of Eastern Africa</a> located in Lang'ata suburb, obtained its &quot;Letter of Interim Authority&quot; in 1989. Following negotiations between the Authority of the Graduate School of Theology and the Commission for Higher Education (CHIEA), the Faculty of Arts and Social Sciences was established three years later, culminating in the granting of the Civil Charter to CHIEA on 3 November 1992.</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q7692311\">The Technical University of Kenya</a> (formerly Kenya Polytechnic) is the only <a href=\"https://www.wikidata.org/wiki/Q1371037\">Technical University</a> in the country. Established in 1961 as the Kenya Technical Institute, the university was chartered by <a href=\"https://www.wikidata.org/wiki/Q57291\">Mwai Kibaki</a> in 2013 to become an independent institution of higher learning (It was previously a constituent college of the University of Nairobi). It offers highly technical degree courses in three faculties: Engineering and Built Environment, Applied Sciences and Technologies, and Social Sciences and Technologies.</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q6326561\">KCA University</a> (formerly the Kenya College of Accountancy), located in Ruaraka.</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q7129540\">Pan African Christian University</a> is located along Lumumba Drive, Roysambu.</li>\n<li>East Africa Institute of Certified Studies (well known as ICS College) is located at Stanbank House with branches in Mombasa and Kisumu.</li>\n<li>Compugoal College</li>\n<li>Pioneer International University in Ngara.</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q17110806\">Riara University</a> on Mbagathi road.</li>\n<li>Multimedia University of Kenya</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q5243437\">Daystar university</a></li>\n<li><a href=\"https://www.wikidata.org/wiki/Q16250182\">Africa International University</a></li>\n<li>Cooperative university of Kenya   Islamic University of Kenya</li></ul>",
+            "<p>Numerous other universities have opened satellite campuses in Nairobi. The Railways Training Institute established in 1956, is a notable institution of higher learning with a campus in Nairobi.</p>"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Nairobi#Higher_education",
+          "lang": "en",
+          "level": 3,
+          "sections": [],
+          "title": "Higher education"
+        }
+      ],
+      "title": "Education"
+    },
+    {
+      "anchor": "Infrastructure",
+      "blocks": [],
+      "href": "https://en.wikipedia.org/wiki/Nairobi#Infrastructure",
+      "lang": "en",
+      "level": 2,
+      "sections": [
+        {
+          "anchor": "Transport",
+          "blocks": [
+            "<p>Major plans are being implemented in the need to decongest the city's traffic and the completion of <a href=\"https://www.wikidata.org/wiki/Q7784144\">Thika Road</a> has given the city a much needed face-lift attributed to road's enhancement of global standards. Several projects have been completed, such as Syokimau Rail Station, the Eastern and Northern Bypasses, while numerous other projects are still underway.</p>",
+            "<p>The development of these critical transport facilities will, besides reducing transport costs due to faster movement of goods and people within the region, also increase trade, improve the socio-economic welfare of Northern Kenya and boost the country's potential in attracting investments from all over the world.</p>"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Nairobi#Transport",
+          "lang": "en",
+          "level": 3,
+          "sections": [
+            {
+              "anchor": "Airports",
+              "blocks": [
+                "<p><a href=\"https://www.wikidata.org/wiki/Q206349\">Jomo Kenyatta International Airport</a> is the largest airport in Kenya. Domestic travellers made up 40% of overall passengers in 2016, an increase of 32% since 2012. JKIA had more than 7 million passengers pass through it in 2016. In February 2017, JKIA received a Category One Status from the <a href=\"https://www.wikidata.org/wiki/Q335357\">FAA</a>, boosting the airport's status as a Regional Aviation hub.</p>",
+                "<p><a href=\"https://www.wikidata.org/wiki/Q1049288\">Wilson Airport</a> is a general-aviation airport handling smaller aircraft, mostly propeller-driven. In July 2016, construction of a new air traffic control tower commenced at a cost of KES 163 million (approximately US$1.63 million).</p>",
+                "<p><a href=\"https://www.wikidata.org/wiki/Q2748390\">Moi Air Base</a> is a military airport. In its earlier years, it was utilised as a landing strip in the pre-<a href=\"https://www.wikidata.org/wiki/Q206592\">jet</a> airline era. It was mostly used as a British passenger and mail route from <a href=\"https://www.wikidata.org/wiki/Q79848\">Southampton</a> to <a href=\"https://www.wikidata.org/wiki/Q5465\">Cape Town</a> in the 1930s and 1940s. This route was served by <a href=\"https://www.wikidata.org/wiki/Q115940\">flying boats</a> between Britain and <ruby><a href=\"https://www.wikidata.org/wiki/Q214485\">Kisumu</a><rt><span>કિસુમુ શહેર</span></rt></ruby> and then by land-based aircraft on the routes to the south.</p>"
+              ],
+              "href": "https://en.wikipedia.org/wiki/Nairobi#Airports",
+              "lang": "en",
+              "level": 4,
+              "sections": [],
+              "title": "Airports"
+            },
+            {
+              "anchor": "Matatu",
+              "blocks": [
+                "<p>Matatus are the most common form of public transport in Nairobi. <a href=\"https://www.wikidata.org/wiki/Q1908107\">Matatu</a>, which literally translates to &quot;three cents for a ride&quot; (nowadays much more) are privately owned minibuses. They generally seat 14 to 33 riders. Matatus operate within Nairobi, its environs and suburbs and from Nairobi to other towns around the country. The matatu's route is imprinted along a yellow stripe on the side of the bus, and matatus plying specific routes have specific route numbers.</p>",
+                "<p>In 2004, a <a href=\"https://www.wikidata.org/wiki/Q16259521\">law was passed, requiring all matatus to include seat belts</a>, <a href=\"https://www.wikidata.org/wiki/Q3229617\">speed governors</a> and to be painted with a yellow stripe. At first, this caused a furore amongst Matatu operators, but they were pressured by government and the public to make the changes. Matatus are now limited to 80 km/h (50 mph).</p>",
+                "<p>In November 2014 President Uhuru Kenyatta lifted the ban on the yellow stripe and allowed matatus to maintain the colourful graphics in an effort to support the youth in creating employment. Matatus in Nairobi were easily distinguishable by their extravagant paint schemes, as owners would paint their matatu with various colourful decorations, such as their favourite <a href=\"https://www.wikidata.org/wiki/Q2736\">football</a> team or <a href=\"https://www.wikidata.org/wiki/Q11401\">hip-hop</a> artist. They are notorious for their poor safety records, which are a result of overcrowding and reckless driving. Due to the intense competition between matatus, many are equipped inside with powerful sound systems and television sets to attract more customers.</p>"
+              ],
+              "href": "https://en.wikipedia.org/wiki/Nairobi#Matatu",
+              "lang": "en",
+              "level": 4,
+              "sections": [],
+              "title": "Matatu"
+            },
+            {
+              "anchor": "Buses",
+              "blocks": [
+                "<p>Buses are increasingly becoming common in the city with some even going to the extents of installing complimentary WiFi systems in partnership with the leading mobile service provider. There are four major bus companies operating the city routes and are the traditional Kenya Bus Service (KBS), and newer private operators Citi Hoppa, Compliant MOA and Double M. The Citi Hoppa buses are distinguishable by their green livery, the Double M buses are painted purple, Compliant MOA by their distinctively screaming names and mix of white, blue colours while the KBS buses are painted blue.</p>",
+                "<p>Companies such as Easy Coach, Guardian Angel, Transline, Tahmeed, NorthWest, Kisii Classic and Ena coach scheduled buses and luxury coaches to other cities and towns.</p>",
+                "<p>A <a href=\"https://www.wikidata.org/wiki/Q2878855\">Bus rapid transit</a> will commence operating with 100 high capacity buses along <a href=\"https://www.wikidata.org/wiki/Q7784144\">Thika Road</a> in July 2022 between <a href=\"https://www.wikidata.org/wiki/Q6374032\">Kasarani</a> and the <a href=\"https://www.wikidata.org/wiki/Q6392918\">Kenyatta National Hospital</a>. After the pilot, Nairobi Metropolitan Area Transport Authority (Namata) will implement another 300 buses as the first phase that will expand the BRT line to run from <a href=\"https://www.wikidata.org/wiki/Q302246\">Ruiru</a> to Kenyatta National Hospital. A second phase will later extend the line to run between Kenol in <a href=\"https://www.wikidata.org/wiki/Q1781723\">Murang'a County</a> to <a href=\"https://www.wikidata.org/wiki/Q3882702\">Ongata Rongai</a> in <a href=\"https://www.wikidata.org/wiki/Q285072\">Kajiado County</a>.</p>"
+              ],
+              "href": "https://en.wikipedia.org/wiki/Nairobi#Buses",
+              "lang": "en",
+              "level": 4,
+              "sections": [],
+              "title": "Buses"
+            },
+            {
+              "anchor": "Trains",
+              "blocks": [
+                "<p>Nairobi was founded as a <a href=\"https://www.wikidata.org/wiki/Q1782540\">railway town</a>, and the main headquarters of <a href=\"https://www.wikidata.org/wiki/Q1663639\">Kenya Railways (KR)</a> is still situated at <a href=\"https://www.wikidata.org/wiki/Q6959799\">Nairobi railway station</a>, which is located near the city centre. The line runs through Nairobi, from <ruby><a href=\"https://www.wikidata.org/wiki/Q225641\">Mombasa</a><rt><span>મોમ્બાસા</span></rt></ruby> to <a href=\"https://www.wikidata.org/wiki/Q3894\">Kampala</a>. Its main use is freight traffic connecting Nairobi to Mombasa and <ruby><a href=\"https://www.wikidata.org/wiki/Q214485\">Kisumu</a><rt><span>કિસુમુ શહેર</span></rt></ruby>. A number of morning and evening commuter <a href=\"https://www.wikidata.org/wiki/Q24088688\">trains</a> connect the centre with the suburbs, but the city has no proper light rail, tramway, or rapid transit lines. A proposal has been passed for the construction of a commuter rail line. </p>",
+                "<p>In November 2012, President <a href=\"https://www.wikidata.org/wiki/Q57291\">Mwai Kibaki</a> launched the Syokimau Rail Service, marking a major milestone in the history of railway development in Kenya. The opening of the station marked another milestone in efforts to realise various projects envisaged under the Vision 2030 Economic Blueprint. The new station has a train that ferries passengers from <a href=\"https://www.wikidata.org/wiki/Q7662958\">Syokimau</a> to the city centre cutting travel time by half. </p>",
+                "<p>The opening of the station marks the completion of the first phase of the Sh24b Nairobi Commuter Rail Network that is geared at easing traffic congestion in Nairobi, blamed for huge economic losses. Other modern stations include Imara Daima Railway Station and Makadara Railway Station.</p>",
+                "<p>The new <a href=\"https://www.wikidata.org/wiki/Q24088686\">Mombasa–Nairobi Standard Gauge Railway</a> connects the port city of Mombasa and Nairobi. The new railway line has virtually replaced the old metre-gauge railway. The <a href=\"https://www.wikidata.org/wiki/Q64869892\">Nairobi Terminus</a> is located at <a href=\"https://www.wikidata.org/wiki/Q7662958\">Syokimau</a>, some 20 km from the city centre. Passengers travelling from Mombasa are transferred the short distance into the CBD with the metre-gauge trains.</p>"
+              ],
+              "href": "https://en.wikipedia.org/wiki/Nairobi#Trains",
+              "lang": "en",
+              "level": 4,
+              "sections": [],
+              "title": "Trains"
+            },
+            {
+              "anchor": "Roads",
+              "blocks": [
+                "<p>Two trans-African automobile routes pass through Nairobi: the <a href=\"https://www.wikidata.org/wiki/Q1507197\">Cairo-Cape Town Highway</a> and the <a href=\"https://www.wikidata.org/wiki/Q1406553\">Lagos-Mombasa Highway</a>. Nairobi is served by highways that link Mombasa to Kampala in Uganda and Arusha in Tanzania. These are earmarked to ease the daily motor traffic within and surrounding the metro area. However, driving in Nairobi is chaotic. Most of the roads are tarmacked and there are signs showing directions to certain neighbourhoods. </p>",
+                "<p>Nairobi is connected to the <a href=\"https://www.wikidata.org/wiki/Q206349\">Jomo Kenyatta International Airport</a> by the Mombasa Highway, which passes through Industrial Area, South B, South C and Embakasi. <a href=\"https://www.wikidata.org/wiki/Q3882702\">Ongata Rongai</a>, Langata and Karen are connected to the city centre by Langata Road, which runs to the south. Lavington, Riverside, and Westlands are connected by Waiyaki Way. Kasarani, Eastlands, and Embakasi are connected by <a href=\"https://www.wikidata.org/wiki/Q7784144\">Thika Road</a>, Jogoo Road, and Outer Ring Road.</p>",
+                "<p>Highways connect the city with other major towns such as Mombasa, Machakos, Voi, (A109), <ruby><a href=\"https://www.wikidata.org/wiki/Q322149\">Eldoret</a><rt><span>એલ્ડોરેટ</span></rt></ruby>, <ruby><a href=\"https://www.wikidata.org/wiki/Q214485\">Kisumu</a><rt><span>કિસુમુ શહેર</span></rt></ruby>, <ruby><a href=\"https://www.wikidata.org/wiki/Q239421\">Nakuru</a><rt><span>નાકુરુ</span></rt></ruby>, <a href=\"https://www.wikidata.org/wiki/Q1007647\">Naivasha</a>, and Namanga Border Tanzania (A104).</p>",
+                "<p>Nairobi is undergoing major road constructions to update its infrastructure network. The new system of roads, flyovers, and bridges are intended to better cope with high traffic levels. It is also a major component of Kenya's Vision 2030 and Nairobi Metropolis plans. Most roads now are well lit and surfaced with adequate signage.</p>",
+                "<p>In 2020, the construction of The <a href=\"https://www.wikidata.org/wiki/Q65065084\">Nairobi Expressway</a> began. The Nairobi expressway is a 27 km toll road connecting the Eastern Nairobi neighbourhood of Mulolongo to the uptown neighbourhood of Westlands at James Gichuru junction through Nairobi CBD. The road is directly to the Jomo Kenyatta International Airport enabling travellers to access the airport faster avoiding the heavy traffic on Mombasa Road and Waiyaki Way. The road has an 11.025 km elevated section between Airtel Center and Westlands.</p>",
+                "<p>This road, is intended to ease traffic from Jomo Kenyatta International Airport that accesses Nairobi city centre. Also traffic from Central Nairobi is expected to be facilitated, to reduce the number of departing passengers who miss their fights, while stuck in road traffic jams on the city streets.[5] The work involves expansion of the existing road to four-lanes one-way, (8 lanes total), with foot paths, drainage channels, overpass bridges and street lighting. It was opened to the public in May 2022.</p>"
+              ],
+              "href": "https://en.wikipedia.org/wiki/Nairobi#Roads",
+              "lang": "en",
+              "level": 4,
+              "sections": [],
+              "title": "Roads"
+            },
+            {
+              "anchor": "Private_car_population_projection_for_Nairobi",
+              "blocks": [],
+              "href": "https://en.wikipedia.org/wiki/Nairobi#Private_car_population_projection_for_Nairobi",
+              "lang": "en",
+              "level": 4,
+              "sections": [],
+              "title": "Private car population projection for Nairobi"
+            }
+          ],
+          "title": "Transport"
+        },
+        {
+          "anchor": "Water_supply_and_sanitation",
+          "blocks": [
+            "<p>94% of the piped water supply for Nairobi comes from rivers and reservoirs in the <a href=\"https://www.wikidata.org/wiki/Q319371\">Aberdare Range</a> north of the city, of which the reservoir of the <a href=\"https://www.wikidata.org/wiki/Q7784141\">Thika Dam</a> is the most important one. Water distribution losses – technically called <a href=\"https://www.wikidata.org/wiki/Q7049015\">non-revenue water</a> – are 40%, and only 40% of those with house connections receive water continuously. Slum residents receive water through <a href=\"https://www.wikidata.org/wiki/Q7973529\">water kiosks</a> and end up paying much higher water prices than those fortunate enough to have access to piped water at their residence.</p>"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Nairobi#Water_supply_and_sanitation",
+          "lang": "en",
+          "level": 3,
+          "sections": [],
+          "title": "Water supply and sanitation"
+        },
+        {
+          "anchor": "Housing",
+          "blocks": [
+            "<p>There is a wide variety of housing options in Nairobi. The options range from privately owned housing units/apartments, rented units, leased spaces and even houses on mortgage. Most wealthy Kenyans live in Nairobi, but the majority of Nairobians are of average and low income. Half of the population has been estimated to live in <a href=\"https://www.wikidata.org/wiki/Q201759\">slums</a> which cover just 5% of the city area. The growth of these slums is a result of urbanisation, poor town planning, lack of good governance and proper leadership in these settlements and lack of empowerment and social capital among other factors.</p>",
+            "<p><a href=\"https://www.wikidata.org/wiki/Q579521\">Kibera</a> is one of the largest slums in Africa, and is situated to the west of Nairobi. (Kibera comes from the Nubian word Kibra, meaning &quot;forest&quot; or &quot;jungle&quot;). The slums cover two square kilometres and are on government land. Kibera has been the setting for several films, the most recent being <i><a href=\"https://www.wikidata.org/wiki/Q645168\">The Constant Gardener</a></i>.</p>",
+            "<p>Other notable slums include <a href=\"https://www.wikidata.org/wiki/Q626697\">Mathare</a> and <a href=\"https://www.wikidata.org/wiki/Q239057\">Korogocho</a>. Altogether, 66 areas are counted as slums within Nairobi.</p>",
+            "<p>Many Nairobi non-slum-dwellers live in relatively good housing conditions. Large houses can be found in many of the upmarket neighbourhoods, especially to the west of Nairobi. Middle and high income estates include <a href=\"https://www.wikidata.org/wiki/Q24236262\">Gigiri</a>, <a href=\"https://www.wikidata.org/wiki/Q84054477\">Muthaiga</a>, <a href=\"https://www.wikidata.org/wiki/Q6485576\">Langata</a> and <a href=\"https://www.wikidata.org/wiki/Q4131979\">Karen</a>. Other middle and high income estates include <a href=\"https://www.wikidata.org/wiki/Q7138579\">Parklands</a>, <a href=\"https://www.wikidata.org/wiki/Q7193729\">Westlands</a>, Hurlingham, Kilimani, Milimani, Spring Valley, Lavington, Rosslyn, Kitisuru, and Nairobi Hill.</p>",
+            "<p>To accommodate the growing middle class, many new apartments and housing developments are being built in and around the city. The most notable development is <i>Greenpark</i>, at <a href=\"https://www.wikidata.org/wiki/Q4813647\">Athi River</a>, <a href=\"https://www.wikidata.org/wiki/Q1882639\">Machakos County</a> 25 km (16 mi) from Nairobi's Central Business District. Over 5,000 houses, villas and apartments are being constructed at this development, including leisure, retail and commercial facilities. The development is being marketed to families, as are most others within the city. Eastlands also houses most of the city's middle class and includes <a href=\"https://www.wikidata.org/wiki/Q7566465\">South C</a>, <a href=\"https://www.wikidata.org/wiki/Q7566224\">South B</a>, <a href=\"https://www.wikidata.org/wiki/Q5369414\">Embakasi</a>, <a href=\"https://www.wikidata.org/wiki/Q5000971\">Buru Buru</a>, Komarock, Donholm, Umoja, Saika, Ruai, Kasarani  and various others.</p>"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Nairobi#Housing",
+          "lang": "en",
+          "level": 3,
+          "sections": [],
+          "title": "Housing"
+        }
+      ],
+      "title": "Infrastructure"
+    },
+    {
+      "anchor": "Crime_and_law_enforcement",
+      "blocks": [
+        "<p>Crime levels and safety have very much improved in Nairobi over recent years. Violent crime is rare but petty crime can still be an issue. In general, petty crime in Nairobi mostly involves pickpocketing and theft, and on rare occasions can be confrontational. Although there have been a handful of isolated attacks in Kenya by <a href=\"https://www.wikidata.org/wiki/Q309998\">Al Shabaab</a> from neighbouring Somalia, these incidences are rare.</p>"
+      ],
+      "href": "https://en.wikipedia.org/wiki/Nairobi#Crime_and_law_enforcement",
+      "lang": "en",
+      "level": 2,
+      "sections": [],
+      "title": "Crime and law enforcement"
+    },
+    {
+      "anchor": "Media",
+      "blocks": [
+        "<p>Nairobi is home to most of Kenya's news and media organisations. The city is also home to the region's largest newspapers: the <i><a href=\"https://www.wikidata.org/wiki/Q1768677\">Daily Nation</a></i> and <i><a href=\"https://www.wikidata.org/wiki/Q7766218\">The Standard</a></i>. These are circulated within Kenya and cover a range of domestic and regional issues. Both newspapers are published in English. People Daily is also the leading free newspaper distributed on the streets of Nairobi. It is published by Mediamax Limited.</p>",
+        "<p><a href=\"https://www.wikidata.org/wiki/Q6392548\">Kenya Broadcasting Corporation</a>, a state-run television and radio station, is headquartered in the city. <a href=\"https://www.wikidata.org/wiki/Q6392752\">Kenya Television Network</a> is part of the Standard Group and was Kenya's first privately owned TV station. The Nation Media Group runs NTV which is based in Nairobi, The Royal Media Services (RMS). There are also a number of prominent radio stations located in Kenya's capital including Citizen radio, Inooro fm, KISS 100, Capital FM, East FM, Kameme FM, Metro FM, and Family FM, among others.</p>",
+        "<p>Several multinational media organisations have their regional headquarters in Nairobi. These include the <a href=\"https://www.wikidata.org/wiki/Q9531\">BBC</a>, <a href=\"https://www.wikidata.org/wiki/Q48340\">CNN</a>, <a href=\"https://www.wikidata.org/wiki/Q40464\">Agence France-Presse</a>, <a href=\"https://www.wikidata.org/wiki/Q130879\">Reuters</a>, <a href=\"https://www.wikidata.org/wiki/Q153770\">Deutsche Welle</a>, and the <a href=\"https://www.wikidata.org/wiki/Q40469\">Associated Press</a>. The East African bureau of <a href=\"https://www.wikidata.org/wiki/Q4259574\">CNBC Africa</a> is located in Nairobi's city centre, while the Nairobi bureau of <i><a href=\"https://www.wikidata.org/wiki/Q9684\">The New York Times</a></i> is located in the suburb of Gigiri. The broadcast headquarters of <a href=\"https://www.wikidata.org/wiki/Q4378607\">CCTV Africa</a> are located in Nairobi.</p>"
+      ],
+      "href": "https://en.wikipedia.org/wiki/Nairobi#Media",
+      "lang": "en",
+      "level": 2,
+      "sections": [],
+      "title": "Media"
+    },
+    {
+      "anchor": "Notable_people",
+      "blocks": [
+        "<ul><li><a href=\"https://www.wikidata.org/wiki/Q6080491\">Ishmael Awange</a> (born 1989), basketball player</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q112438915\">Marylize Biubwa</a>, intersectional feminist and activist</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q5317814\">Dvora Bochman</a> (born 1950), Israeli artist, painter, sculptor, graphic designer and art educator</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q105069432\">Elsa Conrad</a> (1887–1963),  German businesswoman and night club entrepreneur</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q44461\">Richard Dawkins</a> (born 1941), British evolutionary biologist</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q59191836\">Roshanara Ebrahim</a> (born 1993), TV host, model, author and beauty pageant titleholder</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q319591\">Chris Froome</a> (born 1985), born in Nairobi, British professional cyclist 4x <a href=\"https://www.wikidata.org/wiki/Q33881\">Tour de France</a> winner</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q324647\">Edi Gathegi</a> (born 1979), actor</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q135258356\">Fena Gitu</a> (born 1991), rapper</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q124545095\">Polly Irungu</a>, photographer and journalist</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q270684\">Pamela Jelimo</a> (born 1989), Olympic champion runner</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q3566180\">Wanuri Kahiu</a> (born 1980), film director, producer, and author</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q16730890\">Mike Kirkland</a> (born 1947), rally driver</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q231111\">Mary Douglas Leakey</a> (1913–1996), paleoanthropologist</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q318960\">Richard Erskine Frere Leakey</a> (1944–2022), paleoanthropologist, conservationist and politician</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q7250877\">Prosper Masatu Makonya</a>, Tanzanian sportsperson</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q123235734\">Susan Murabana</a>, astronomer</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q57975946\">Alice Wairimu Nderitu</a> (born 1968), human rights activist, and  United Nations Under-Secretary-General and Special Adviser on the Prevention of Genocide to UN Secretary-General</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q56877085\">Nuni Omot</a>  (born 1994), basketball player in the  <a href=\"https://www.wikidata.org/wiki/Q1462454\">Israeli Basketball Premier League</a></li>\n<li><a href=\"https://www.wikidata.org/wiki/Q5298575\">Dorothy Ooko</a>, activist and technology professional</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q4662365\">Aaron Rimbui</a> (born 1979), pianist, keyboardist, bandleader, producer, festival curator, and radio host</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q121297100\">Njeri Rionge</a> (1966–2023) , technology entrepreneur who was a co-founder of the Internet Service Provider (ISP) Wananchi Online Limited (WOL)</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q6267630\">Johnny Rozsa</a>, photographer</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q6087219\">Israel Somen</a> (1903–1984), <a href=\"https://www.wikidata.org/wiki/Q6797762\">Mayor of Nairobi</a></li>\n<li><a href=\"https://www.wikidata.org/wiki/Q21175253\">Jonathan Somen</a> (born 1969), co-founder of Access Kenya Group</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q116958306\">Abdi Salim</a> (born 2001), Somali footballer</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q2939004\">Carl Tundo</a> (born 1973), rally driver</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q99270622\">Jeremy Wahome</a> (born 1998), racing driver</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q313893\">McDonald Mariga Wanyama</a> (born 1987), politician and retired footballer</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q459897\">Victor Wanyama</a> (born 1991), footballer</li></ul>"
+      ],
+      "href": "https://en.wikipedia.org/wiki/Nairobi#Notable_people",
+      "lang": "en",
+      "level": 2,
+      "sections": [],
+      "title": "Notable people"
+    },
+    {
+      "anchor": "Pop_culture",
+      "blocks": [
+        "<p><i><a href=\"https://www.wikidata.org/wiki/Q4115358\">Rise and Fall of Idi Amin</a></i>, also referred to as, <i>Amin: The Rise and Fall</i>, is a 1981 biographical film by Sharad Patel. The movie details the controversial actions and atrocities of the once dictator of <a href=\"https://www.wikidata.org/wiki/Q1036\">Uganda</a>, <a href=\"https://www.wikidata.org/wiki/Q48231\">Idi Amin</a>, in the time of his violent rise to power in 1971 until he descends in 1979 as the result of Uganda–<a href=\"https://www.wikidata.org/wiki/Q924\">Tanzania</a> uprising. The movie depicts some of the roles Nairobi as the political hub of Kenya served in opposing the Ugandan dictator, including the coordination between <a href=\"https://www.wikidata.org/wiki/Q33935\">Tel Aviv</a> and Nairobi during <a href=\"https://www.wikidata.org/wiki/Q33933\">operation Entebe</a>.</p>",
+        "<p>In 2012, a Kenyan <a href=\"https://www.wikidata.org/wiki/Q130232\">drama film</a> directed by David &quot;Tosh&quot; Gitonga named <i><a href=\"https://www.wikidata.org/wiki/Q1338623\">Nairobi Half Life</a></i> came to the big screen. The film was selected as the Kenyan entry for the <a href=\"https://www.wikidata.org/wiki/Q105304\">Best Foreign Language Oscar</a> at the <a href=\"https://www.wikidata.org/wiki/Q248688\">85th Academy Awards</a>, but did not make the final shortlist, and is the first time Kenya has submitted a film in this category.</p>",
+        "<p>Nairobi inspired the nicknaming of the character Ágata Jiménez as <a href=\"https://www.wikidata.org/wiki/Q66563368\">'Nairobi'</a><b>;</b> a fictional character in the <a href=\"https://www.wikidata.org/wiki/Q907311\">Netflix</a> series <i><a href=\"https://www.wikidata.org/wiki/Q29647346\">Money Heist</a></i>, portrayed by <a href=\"https://www.wikidata.org/wiki/Q8193236\">Alba Flores</a>. She serves as the quality manager of the group, in charge of printing money in the <a href=\"https://www.wikidata.org/wiki/Q733486\">Royal Mint of Spain</a> in parts 1 and 2, and overseeing the melting of gold in the <a href=\"https://www.wikidata.org/wiki/Q789966\">Bank of Spain</a> in parts 3 and 4. She is widely considered to be the show's most popular character.</p>"
+      ],
+      "href": "https://en.wikipedia.org/wiki/Nairobi#Pop_culture",
+      "lang": "en",
+      "level": 2,
+      "sections": [],
+      "title": "Pop culture"
+    }
+  ],
+  "spreads": [
+    [
+      null,
+      [],
+      []
+    ],
+    [
+      null,
+      [
+        {
+          "href": "https://en.wikipedia.org/wiki/Nairobi#Geography",
+          "lang": "en",
+          "text": "Geography"
+        }
+      ],
+      [
+        {
+          "anchor": "Geography",
+          "blocks": [
+            "<p>Nairobi is situated at 1°09′S 36°39′E and 1°27′S 37°06′E and occupies 696 square kilometres (270 sq mi).</p>",
+            "<p>Nairobi is situated between the cities of Kampala and Mombasa. As Nairobi is adjacent to the eastern edge of the <a href=\"https://www.wikidata.org/wiki/Q2384313\">Rift Valley</a>, minor earthquakes and tremors occasionally occur. The <a href=\"https://www.wikidata.org/wiki/Q1861057\">Ngong Hills</a>, located to the west of the city, are the most prominent geographical feature of the Nairobi area. <a href=\"https://www.wikidata.org/wiki/Q172070\">Mount Kenya</a> is situated north of Nairobi, and <a href=\"https://www.wikidata.org/wiki/Q7296\">Mount Kilimanjaro</a> is towards the south-east.</p>",
+            "<p>The <a href=\"https://www.wikidata.org/wiki/Q1233042\">Nairobi River</a> and its <a href=\"https://www.wikidata.org/wiki/Q159675\">tributaries</a> traverse through the Nairobi County and join the larger River Athi on the eastern edge of the county.</p>",
+            "<p><a href=\"https://www.wikidata.org/wiki/Q35637\">Nobel Peace Prize</a> laureate <a href=\"https://www.wikidata.org/wiki/Q46795\">Wangari Maathai</a> fought fiercely to save the indigenous <a href=\"https://www.wikidata.org/wiki/Q6373728\">Karura Forest</a> in northern Nairobi, which was under threat of being replaced by housing and other infrastructure.</p>",
+            "<p>Nairobi's western suburbs stretch all the way from the Kenyatta National Hospital in the south to the UN headquarters at Gigiri suburb in the north, a distance of about 20 kilometres (12 mi). The city is centred on the City Square, which is located in the Central Business District. The <a href=\"https://www.wikidata.org/wiki/Q1701225\">Kenyan Parliament</a> buildings, the <a href=\"https://www.wikidata.org/wiki/Q4451415\">Holy Family Cathedral</a>, Nairobi City Hall, Nairobi Law Courts, and the <a href=\"https://www.wikidata.org/wiki/Q3272625\">Kenyatta Convention Centre</a> all surround the square.</p>"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Nairobi#Geography",
+          "lang": "en",
+          "level": 2,
+          "sections": [
+            {
+              "anchor": "Climate",
+              "blocks": [
+                "<p>Under the <a href=\"https://www.wikidata.org/wiki/Q124095\">Köppen climate classification</a>, Nairobi has a <a href=\"https://www.wikidata.org/wiki/Q182090\">subtropical highland climate</a> (Cwb). At 1,795 metres (5,889 ft) above sea level, evenings may be cool, especially in the June/July season, when the temperature can drop to 9 °C (48 °F). The sunniest and warmest part of the year is from December to March, when temperatures average in the high-twenties <a href=\"https://www.wikidata.org/wiki/Q25267\">Celsius</a> during the day. The mean maximum temperature for this period is 28 °C (82 °F).</p>",
+                "<p>There are rainy seasons, but rainfall can be moderate. The cloudiest part of the year is just after the first rainy season, when, until September, conditions are usually overcast with drizzle. As Nairobi is situated close to the equator, the differences between the seasons are minimal. The seasons are referred to as the <a href=\"https://www.wikidata.org/wiki/Q3117517\">wet season</a> and <a href=\"https://www.wikidata.org/wiki/Q146575\">dry season</a>. The timing of sunrise and sunset varies little throughout the year for the same reason.</p>"
+              ],
+              "href": "https://en.wikipedia.org/wiki/Nairobi#Climate",
+              "lang": "en",
+              "level": 3,
+              "sections": [],
+              "title": "Climate"
+            },
+            {
+              "anchor": "Nairobi_metropolitan_region",
+              "blocks": [
+                "<p>Nairobi is found within the Greater Nairobi Metropolitan region, which consists of parts of 5 out of 47 counties in Kenya, which generate about 40% of the entire nation's GDP as per 2022 data by the Kenya National Bureau of Statistics. Nairobi County on its own contributes to 27.5% of the country's GDP according to the same report while <a href=\"https://www.wikidata.org/wiki/Q2575594\">Kiambu county</a> comes second with 5.9%.</p>"
+              ],
+              "href": "https://en.wikipedia.org/wiki/Nairobi#Nairobi_metropolitan_region",
+              "lang": "en",
+              "level": 3,
+              "sections": [],
+              "title": "Nairobi metropolitan region"
+            },
+            {
+              "anchor": "Districts_and_neighbourhoods",
+              "blocks": [
+                "<p>Nairobi is divided into a series of constituencies, with each being represented by members of Parliament in the National Assembly. The initial constituencies before the 2010 constitution which led to the county electoral boundaries being redrawn were: Makadara, Kamukunji, Starehe, <a href=\"https://www.wikidata.org/wiki/Q6485576\">Langata</a>, Dagoretti, <a href=\"https://www.wikidata.org/wiki/Q7193729\">Westlands</a>, Kasarani, and <a href=\"https://www.wikidata.org/wiki/Q5369414\">Embakasi</a>. The new electoral boundaries after this were revised to Embakasi North, Embakasi South, Embakasi Central, Embakasi East, Embakasi West, Makadara, Kamukunji, Starehe, Mathare, Westlands, Dagoretti North, Dagoretti South, Langata, Kibra, Ruaraka, Roysambu and Kasarani.</p>",
+                "<p>The main administrative divisions of Nairobi are Central, Dagoretti, <a href=\"https://www.wikidata.org/wiki/Q5369414\">Embakasi</a>, Kasarani, <a href=\"https://www.wikidata.org/wiki/Q579521\">Kibera</a>, Makadara, Pumwani, and <a href=\"https://www.wikidata.org/wiki/Q7193729\">Westlands</a>. Most of the upmarket suburbs are situated to the west and north-central of Nairobi, where most European settlers resided during the colonial times AKA 'Ubabini'. These include <a href=\"https://www.wikidata.org/wiki/Q4131979\">Karen</a>, <a href=\"https://www.wikidata.org/wiki/Q6485576\">Langata</a>, <a href=\"https://www.wikidata.org/wiki/Q6502700\">Lavington</a>, <a href=\"https://www.wikidata.org/wiki/Q24236262\">Gigiri</a>, <a href=\"https://www.wikidata.org/wiki/Q84054477\">Muthaiga</a>, Brookside, Spring Valley, Loresho, <a href=\"https://www.wikidata.org/wiki/Q6406937\">Kilimani</a>, Kileleshwa, Hurlingham, <a href=\"https://www.wikidata.org/wiki/Q16899476\">Runda</a>, <a href=\"https://www.wikidata.org/wiki/Q6418234\">Kitisuru</a>, Nyari, Kyuna, <a href=\"https://www.wikidata.org/wiki/Q15045615\">Lower Kabete</a>, Westlands, and Highridge, although Kangemi, Kawangware, and <a href=\"https://www.wikidata.org/wiki/Q5208643\">Dagoretti</a> are lower income areas close to these affluent suburbs. The city's colonial past is commemorated by many English place-names.</p>",
+                "<p>Most lower-middle and upper-middle income neighbourhoods are located in the north-central areas, such as Highridge, Parklands, Ngara, Pangani, and areas to the southwest and southeast of the metropolitan area near the Jomo Kenyatta International Airport. The most notable ones include Avenue Park, Fedha, Pipeline, Donholm, Greenfields, Nyayo, Taasia, Baraka, Nairobi West, Madaraka, Siwaka, South B, South C, Mugoya, Riverbank, Hazina, Buru Buru, Uhuru, Harambee Civil Servants', Akiba, Kimathi, Pioneer, and Koma Rock to the centre-east and Kasarani to the northeast area, among others. </p>",
+                "<p>The low and lower-income estates are located mainly in far eastern Nairobi. These include, Umoja, Kariokor, <a href=\"https://www.wikidata.org/wiki/Q3701493\">Dandora</a>, <a href=\"https://www.wikidata.org/wiki/Q1143939\">Kariobangi</a>, <a href=\"https://www.wikidata.org/wiki/Q115813841\">Kayole</a>,Njiru, Chokaa, <a href=\"https://www.wikidata.org/wiki/Q115805659\">Ruai</a>, <a href=\"https://www.wikidata.org/wiki/Q6359844\">Kamulu</a>, <a href=\"https://www.wikidata.org/wiki/Q5369414\">Embakasi</a>, and <a href=\"https://www.wikidata.org/wiki/Q5948790\">Huruma</a>. Kitengela suburb, though located further southeast, Ongata Rongai and Kiserian further southwest, and Ngong/Embulbul suburbs, also known as 'Diaspora' to the far west are considered part of the Greater Nairobi Metropolitan area. More than 90% of Nairobi residents work within the Nairobi Metropolitan area, in the formal and informal sectors. Many <a href=\"https://www.wikidata.org/wiki/Q241696\">Somali</a> immigrants have also settled in <a href=\"https://www.wikidata.org/wiki/Q1278269\">Eastleigh</a>, nicknamed &quot;Little <a href=\"https://www.wikidata.org/wiki/Q2449\">Mogadishu</a>&quot;. A complete list of Nairobi postal codes by area and constituency is available online.</p>"
+              ],
+              "href": "https://en.wikipedia.org/wiki/Nairobi#Districts_and_neighbourhoods",
+              "lang": "en",
+              "level": 3,
+              "sections": [
+                {
+                  "anchor": "Kibera_slum",
+                  "blocks": [
+                    "<p>The <a href=\"https://www.wikidata.org/wiki/Q579521\">Kibera</a> slum in Nairobi is claimed by the Kenyan government to have a population of 185,777. However, non-governmental sources generally estimate the slum to have a population of 500,000 to 1,000,000, depending on what areas are defined as comprising Kibera.</p>"
+                  ],
+                  "href": "https://en.wikipedia.org/wiki/Nairobi#Kibera_slum",
+                  "lang": "en",
+                  "level": 4,
+                  "sections": [],
+                  "title": "Kibera slum"
+                }
+              ],
+              "title": "Districts and neighbourhoods"
+            }
+          ],
+          "title": "Geography"
+        }
+      ]
+    ],
+    [
+      null,
+      [],
+      []
+    ],
+    [
+      null,
+      [],
+      []
+    ],
+    [
+      null,
+      [],
+      []
+    ],
+    [
+      null,
+      [
+        {
+          "href": "https://en.wikipedia.org/wiki/Nairobi#Economy",
+          "lang": "en",
+          "text": "Economy"
+        }
+      ],
+      [
+        {
+          "anchor": "Economy",
+          "blocks": [
+            "<p>Nairobi is home to the <a href=\"https://www.wikidata.org/wiki/Q2384385\">Nairobi Securities Exchange</a> (NSE), one of Africa's largest <a href=\"https://www.wikidata.org/wiki/Q11691\">stock exchanges</a>. The NSE was officially recognised as an overseas stock exchange by the <a href=\"https://www.wikidata.org/wiki/Q171240\">London Stock Exchange</a> in 1953. The exchange is Africa's fourth largest in terms of trading volumes, and fifth largest in terms of Market Capitalization as a percentage of GDP.</p>",
+            "<p>Nairobi is the regional headquarters of several international companies and organisations. In 2007, <a href=\"https://www.wikidata.org/wiki/Q54173\">General Electric</a>, <a href=\"https://www.wikidata.org/wiki/Q100927743\">Young &amp; Rubicam</a>, <a href=\"https://www.wikidata.org/wiki/Q95\">Google</a>, <a href=\"https://www.wikidata.org/wiki/Q3295867\">Coca-Cola</a>, <a href=\"https://www.wikidata.org/wiki/Q37156\">IBM Services</a>, and <a href=\"https://www.wikidata.org/wiki/Q173395\">Cisco Systems</a> relocated their African headquarters to the city. The <a href=\"https://www.wikidata.org/wiki/Q1021627\">United Nations Office at Nairobi</a> hosts <a href=\"https://www.wikidata.org/wiki/Q182016\">UN Environment</a> and <a href=\"https://www.wikidata.org/wiki/Q487883\">UN-Habitat</a> headquarters.</p>",
+            "<p>Several of Africa's largest companies are headquartered in Nairobi. <a href=\"https://www.wikidata.org/wiki/Q7398410\">Safaricom</a>, the largest company in Kenya by assets and profitability is headquartered in Nairobi, KenGen, which is the largest African stock outside <a href=\"https://www.wikidata.org/wiki/Q258\">South Africa</a>, is based in the city. <a href=\"https://www.wikidata.org/wiki/Q638900\">Kenya Airways</a>, Africa's fourth largest airline, uses Nairobi's <a href=\"https://www.wikidata.org/wiki/Q206349\">Jomo Kenyatta International Airport</a> as a hub.</p>",
+            "<p>Nairobi has not been left behind by the FinTech phenomenon that has taken over worldwide. It has produced a couple of tech firms like Craft Silicon, Kangai Technologies, Jambo Pay  and Hostraha Limited. which have been in the forefront of technology, innovation and cloud based computing services. Their products are widely used and have considerable market share presence within Kenya and outside its borders.</p>",
+            "<p>Goods manufactured in Nairobi include clothing, textiles, building materials, <a href=\"https://www.wikidata.org/wiki/Q627371\">processed foods</a>, beverages, and cigarettes. Several foreign companies have factories based in and around the city. These include <a href=\"https://www.wikidata.org/wiki/Q620875\">Goodyear Tire and Rubber Company</a>, <a href=\"https://www.wikidata.org/wiki/Q81965\">General Motors</a>, <a href=\"https://www.wikidata.org/wiki/Q53268\">Toyota</a>, and <a href=\"https://www.wikidata.org/wiki/Q3295867\">The Coca-Cola Company</a>.[<i>citation needed</i>]</p>",
+            "<p>Nairobi has a large <a href=\"https://www.wikidata.org/wiki/Q49389\">tourist industry</a>, being both a tourist destination and a transport hub.</p>"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Nairobi#Economy",
+          "lang": "en",
+          "level": 2,
+          "sections": [
+            {
+              "anchor": "Central_Business_District_(CBD)",
+              "blocks": [
+                "<p>Nairobi has grown around its <a href=\"https://www.wikidata.org/wiki/Q738570\">central business district</a>, usually referred to colloquially as &quot;the CBD&quot;. This takes a pentagonal shape, around the Uhuru Highway, Haile Selassie Avenue, Moi Avenue, and University Way. It features many of Nairobi's important buildings, including the City Hall and Parliament Building. The city square is also located within the perimeter.</p>",
+                "<p>Most of the skyscrapers in this region are the headquarters of businesses and corporations, such as I&amp;M and the <a href=\"https://www.wikidata.org/wiki/Q3272625\">Kenyatta International Conference Centre</a>. The <a href=\"https://www.wikidata.org/wiki/Q876206\">United States Embassy bombing</a> took place in this district, prompting the building of a new embassy building in the suburbs.</p>",
+                "<p>A large beautification project took place in the Central Business District, as the city prepared to host the 2006 Afri-Cities summit. Iconic buildings such as the <a href=\"https://www.wikidata.org/wiki/Q3272625\">Kenyatta International Conference Centre</a> had their exteriors cleaned and repainted.</p>",
+                "<p>Nairobi downtown area or central business district is bordered to the southwest by <a href=\"https://www.wikidata.org/wiki/Q3444748\">Uhuru Park</a> and Central Park. The <ruby><a href=\"https://www.wikidata.org/wiki/Q225641\">Mombasa</a><rt><span>મોમ્બાસા</span></rt></ruby> to <a href=\"https://www.wikidata.org/wiki/Q3894\">Kampala</a> railway runs to the southeast of the district.</p>"
+              ],
+              "href": "https://en.wikipedia.org/wiki/Nairobi#Central_Business_District_(CBD)",
+              "lang": "en",
+              "level": 3,
+              "sections": [],
+              "title": "Central Business District (CBD)"
+            },
+            {
+              "anchor": "Upper_Hill",
+              "blocks": [
+                "<p>Two areas outside the Central Business District that are seeing growth in companies and office space are <a href=\"https://www.wikidata.org/wiki/Q7898689\">Upper Hill</a>, which is located, approximately 4 km (2.5 mi) from the Central Business District and <a href=\"https://www.wikidata.org/wiki/Q7193729\">Westlands</a>, about the same distance from the city centre.</p>",
+                "<p>Companies that have moved from the Central Business District to Upper Hill include <a href=\"https://www.wikidata.org/wiki/Q857063\">Citibank</a>, and in 2007 <a href=\"https://www.wikidata.org/wiki/Q3295867\">Coca-Cola</a> began construction of their <a href=\"https://www.wikidata.org/wiki/Q27407\">East</a> and Central African headquarters in Upper Hill, cementing the district as the preferred location for office space in Nairobi. The largest office development in this area is <a href=\"https://www.wikidata.org/wiki/Q20899643\">UAP Tower</a>, completed in 2015 and opened for business in July 2016. It is a 33-storey tower 163 meters high. The World Bank and <a href=\"https://www.wikidata.org/wiki/Q656801\">International Finance Corporation</a>, part of the World Bank Group, are also located in Upper Hill at the Delta Center, Menegai Road. Earlier on, they were located in the Hill Park Building and CBA Building respectively, both in Upper Hill, and prior to that in View Park towers in the Central Business District.</p>",
+                "<p>To accommodate the large demand for floor space in Nairobi, various commercial projects are being constructed. New business parks are being built in the city, including the flagship <a href=\"https://www.wikidata.org/wiki/Q17110642\">Nairobi Business Park</a>.</p>"
+              ],
+              "href": "https://en.wikipedia.org/wiki/Nairobi#Upper_Hill",
+              "lang": "en",
+              "level": 3,
+              "sections": [],
+              "title": "Upper Hill"
+            },
+            {
+              "anchor": "Construction_boom_and_real_estate_development_projects",
+              "blocks": [
+                "<p>Nairobi is undergoing a construction boom. Major real estate projects and skyscrapers are coming up in the city. Among them are the pinnacle twin towers which will tower at 314 m, <a href=\"https://www.wikidata.org/wiki/Q28223286\">Britam Tower</a> (200 m), Avic International Africa headquarters (176 m), Prism tower (140 m), Pan Africa insurance towers, Pallazzo offices, and many other projects. Shopping malls are also being constructed like the recently completed Garden city Mall, Centum's <a href=\"https://www.wikidata.org/wiki/Q120142532\">Two rivers Mall</a>, The Hub in Karen, Karen waterfront, Thika Greens, and the recently reconstructed Westgate Mall. </p>",
+                "<p>High-class residential apartments for living are coming up like Le Mac towers, a residential tower in Westlands Nairobi with 23 floors. Avic International is also putting up a total of four residential apartments on Waiyaki way: a 28-level tower, two 24-level towers, and a 25-level tower. Hotel towers are also being erected in the city. </p>",
+                "<p>Avic International is putting up a 30-level hotel tower of 141 m in the Westlands. The hotel tower will be operated by Marriot group. Jabavu limited is constructing a 35 floor hotel tower in Upper Hill which will be high over 140 metres in the city skyline. Arcon Group Africa has also announced plans to erect a skyscraper in Upper hill which will have 66 floors and tower over 290 metres, further cementing Upper hill as the preferred metropolis for multinational corporations launching their operations in the Kenyan capital.</p>",
+                "<p>Also see <a href=\"https://www.wikidata.org/wiki/Q6642291\">List of tallest buildings in Kenya</a></p>"
+              ],
+              "href": "https://en.wikipedia.org/wiki/Nairobi#Construction_boom_and_real_estate_development_projects",
+              "lang": "en",
+              "level": 3,
+              "sections": [],
+              "title": "Construction boom and real estate development projects"
+            }
+          ],
+          "title": "Economy"
+        }
+      ]
+    ],
+    [
+      null,
+      [
+        {
+          "href": "https://en.wikipedia.org/wiki/Nairobi#Twin_towns_and_sister_cities",
+          "lang": "en",
+          "text": "Twin towns and sister cities"
+        }
+      ],
+      [
+        {
+          "anchor": "Twin_towns_and_sister_cities",
+          "blocks": [
+            "<p>Nairobi is <a href=\"https://www.wikidata.org/wiki/Q184711\">twinned</a> with:</p>",
+            "<ul><li><a href=\"https://www.wikidata.org/wiki/Q115\">Ethiopia</a> <a href=\"https://www.wikidata.org/wiki/Q3624\">Addis Ababa</a>, Ethiopia</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q258\">South Africa</a> <a href=\"https://www.wikidata.org/wiki/Q5465\">Cape Town</a>, South Africa</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q30\">United States</a> <ruby><a href=\"https://www.wikidata.org/wiki/Q16554\">Denver</a><rt><span>ડેનવર</span></rt></ruby>, United States</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q148\">China</a> <ruby><a href=\"https://www.wikidata.org/wiki/Q182852\">Kunming</a><rt><span>કુન્મિંગ</span></rt></ruby>, China</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q30\">United States</a> <a href=\"https://www.wikidata.org/wiki/Q49162\">Lowell</a>, United States</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q30\">United States</a> <ruby><a href=\"https://www.wikidata.org/wiki/Q41087\">Raleigh</a><rt><span>રેલે</span></rt></ruby>, United States</li>\n<li><a href=\"https://www.wikidata.org/wiki/Q155\">Brazil</a> <a href=\"https://www.wikidata.org/wiki/Q28441\">São Luís</a>, Brazil</li></ul>"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Nairobi#Twin_towns_and_sister_cities",
+          "lang": "en",
+          "level": 2,
+          "sections": [],
+          "title": "Twin towns and sister cities"
+        }
+      ]
+    ],
+    [
+      null,
+      [
+        {
+          "href": "https://en.wikipedia.org/wiki/Nairobi#History",
+          "lang": "en",
+          "text": "History"
+        }
+      ],
+      [
+        {
+          "anchor": "History",
+          "blocks": [],
+          "href": "https://en.wikipedia.org/wiki/Nairobi#History",
+          "lang": "en",
+          "level": 2,
+          "sections": [
+            {
+              "anchor": "Early_years",
+              "blocks": [
+                "<p>The site of Nairobi was originally a swamp land occupied by a <a href=\"https://www.wikidata.org/wiki/Q9056738\">pastoralist</a> people, the <a href=\"https://www.wikidata.org/wiki/Q163022\">Maasai</a>, the long-distance trader community, <a href=\"https://www.wikidata.org/wiki/Q1143929\">Akamba People</a>, as well as the <a href=\"https://www.wikidata.org/wiki/Q1781198\">agriculturalist</a> <a href=\"https://www.wikidata.org/wiki/Q203178\">Kikuyu people</a>. The name Nairobi comes from the <a href=\"https://www.wikidata.org/wiki/Q35787\">Maasai</a> expression meaning 'cool waters'. referring to the cold water stream which flowed through the area. With the arrival of the <a href=\"https://www.wikidata.org/wiki/Q500115\">Uganda Railway</a>, the site was identified by <a href=\"https://www.wikidata.org/wiki/Q56665460\">Sir George Whitehouse</a> for a store depot, shunting ground and camping ground for the <a href=\"https://www.wikidata.org/wiki/Q6024095\">Indian</a> labourers working on the railway.</p>",
+                "<p>Whitehouse, chief engineer of the railway, favoured the site as an ideal resting place due to its high elevation, temperate climate, adequate water supply and being situated before the steep ascent of the <a href=\"https://www.wikidata.org/wiki/Q1825607\">Limuru</a> <a href=\"https://www.wikidata.org/wiki/Q1174791\">escarpments</a>. His choice was criticised by officials within the <a href=\"https://www.wikidata.org/wiki/Q876185\">Protectorate</a> government who felt the site was too flat, poorly drained and relatively infertile.</p>",
+                "<p>In the pre-colonial era, the people of modern Kenya mostly lived in villages amongst their tribes and cultural groups, where they had rulers within their communities rather than one singular government or leader.</p>",
+                "<p>In 1898, Arthur Church was commissioned to design the first town layout for the railway depot. It constituted two streets – <a href=\"https://www.wikidata.org/wiki/Q65118866\">Victoria Street</a> and <a href=\"https://www.wikidata.org/wiki/Q16964523\">Station Street</a>, ten avenues, staff quarters and an Indian commercial area. The railway arrived at Nairobi on 30 May 1899, and soon Nairobi replaced Machakos as the headquarters of the provincial administration for the Ukamba province.</p>",
+                "<p>On the arrival of the railway, Whitehouse remarked that &quot;Nairobi itself will in the course of the next two years become a large and flourishing place and already there are many applications for sites for hotels, shops and houses.&quot; The town's early years were however beset with problems of <a href=\"https://www.wikidata.org/wiki/Q12156\">malaria</a> leading to at least one attempt to have the town moved. In the early 1900s, Bazaar Street, now Biashara Street, was completely rebuilt after an outbreak of <a href=\"https://www.wikidata.org/wiki/Q217519\">plague</a> and the burning of the original town.</p>",
+                "<p>Between 1902 and 1910, the town's population rose from 5,000 to 16,000 and grew around <a href=\"https://www.wikidata.org/wiki/Q31728\">administration</a> and tourism, initially in the form of <a href=\"https://www.wikidata.org/wiki/Q4904849\">big game hunting</a>. In 1907, Nairobi replaced <ruby><a href=\"https://www.wikidata.org/wiki/Q225641\">Mombasa</a><rt><span>મોમ્બાસા</span></rt></ruby> as the capital of the East Africa Protectorate. In 1919, Nairobi was declared to be a municipality.</p>"
+              ],
+              "href": "https://en.wikipedia.org/wiki/Nairobi#Early_years",
+              "lang": "en",
+              "level": 3,
+              "sections": [],
+              "title": "Early years"
+            },
+            {
+              "anchor": "Growth",
+              "blocks": [
+                "<p>In 1921, Nairobi had 24,000 residents, of which circa 12,000 were native Africans. The next decade saw growth in native African communities in Nairobi, and they began to constitute a majority for the first time. This growth caused planning issues, described by Thorntorn White and his planning team as the &quot;Nairobi Problem&quot;. In February 1926, colonial officer Eric Dutton passed through Nairobi on his way to <a href=\"https://www.wikidata.org/wiki/Q172070\">Mount Kenya</a>, and said of the city:</p>",
+                "<blockquote><p>Maybe one day Nairobi will be laid out with tarred roads, with avenues of flowering trees, flanked by noble buildings; with open spaces and stately squares; a cathedral worthy of faith and country; museums and art; theatres and public offices. And it is fair to say that the Government and the Municipality have already bravely tackled the problem and that a town-plan ambitious enough to turn Nairobi into a thing of beauty has been slowly worked out, and much has already been done. But until that plan has borne fruit, Nairobi must remain what she was then, a slatternly creature, unfit to queen it over so lovely a country.</p>\n</blockquote>",
+                "<p>After <a href=\"https://www.wikidata.org/wiki/Q362\">World War II</a>, continuous expansion of the city angered both the indigenous <a href=\"https://www.wikidata.org/wiki/Q163022\">Maasai</a> and <a href=\"https://www.wikidata.org/wiki/Q203178\">Kikuyu</a>. This led to the <a href=\"https://www.wikidata.org/wiki/Q476855\">Mau Mau Uprising</a> in the 1950s, and the <a href=\"https://www.wikidata.org/wiki/Q6483199\">Lancaster House Conferences</a>, which initiated a transition to Kenyan independence in 1963.</p>",
+                "<p>In the spring of 1950, the East African Trades Union Congress (EAUTC) led a <a href=\"https://www.wikidata.org/wiki/Q108470840\">nine-day general strike</a> in the city.</p>"
+              ],
+              "href": "https://en.wikipedia.org/wiki/Nairobi#Growth",
+              "lang": "en",
+              "level": 3,
+              "sections": [],
+              "title": "Growth"
+            },
+            {
+              "anchor": "Post_independence",
+              "blocks": [
+                "<p>Nairobi remained Kenya's capital after independence, and its continued rapid growth put pressure on the city's infrastructure, with power cuts and <a href=\"https://www.wikidata.org/wiki/Q5376358\">water shortages</a> becoming a common occurrence.</p>",
+                "<p>In September 1973, the <a href=\"https://www.wikidata.org/wiki/Q3272625\">Kenyatta International Conference Centre</a> (KICC) was opened to the public. The 28-story building at the time was designed by the Norwegian architect Karl Henrik Nøstvik and Kenyan David Mutiso. It is the only building within the city with a helipad that is open to the public. Of the buildings built in the Seventies, the KICC was the most eco-friendly and most environmentally conscious structure. Its main frame was constructed with locally available materials like gravel, sand, cement and wood, and it had wide open spaces which allowed for natural aeration and lighting. Cuboids made up the plenary hall, the tower consisted of a cylinder composed of several cuboids, and the amphitheatre and helipad both resembled cones. The tower was built around a concrete core, and it had no walls but glass windows, which allowed for maximum natural lighting. It had the largest halls in eastern and central Africa.</p>",
+                "<p>In 1972, the <a href=\"https://www.wikidata.org/wiki/Q320863\">World Bank</a> approved funds for further expansion of the then Nairobi Airport (now <a href=\"https://www.wikidata.org/wiki/Q206349\">Jomo Kenyatta International Airport</a>), including a new international and domestic passenger terminal building, the airport's first dedicated cargo and freight terminal, new taxiways, associated aprons, internal roads, car parks, police and fire stations, a State Pavilion, airfield and roadway lighting, fire hydrant system, water, electrical, telecommunications and sewage systems, a dual carriageway passenger access road, security, drainage and the building of the main access road to the airport (Airport South Road). The cost of the project was more than US$29 million, US$111.8 million in 2013 dollars. On 14 March 1978, construction of the terminal building was completed on the other side of the airport's single runway and opened by President <a href=\"https://www.wikidata.org/wiki/Q173563\">Jomo Kenyatta</a> less than five months before his death. The airport was renamed Jomo Kenyatta International Airport in memory of its first president.</p>",
+                "<p>The United States Embassy, then located in downtown Nairobi, was bombed in August 1998 by <a href=\"https://www.wikidata.org/wiki/Q34490\">Al-Qaeda</a> and the <a href=\"https://www.wikidata.org/wiki/Q310214\">Egyptian Islamic Jihad</a>, as one of a series of <a href=\"https://www.wikidata.org/wiki/Q876206\">US embassy bombings</a>. It is now the site of a memorial park.</p>"
+              ],
+              "href": "https://en.wikipedia.org/wiki/Nairobi#Post_independence",
+              "lang": "en",
+              "level": 3,
+              "sections": [],
+              "title": "Post independence"
+            },
+            {
+              "anchor": "21st_century",
+              "blocks": [
+                "<p>In November 2012, President <a href=\"https://www.wikidata.org/wiki/Q57291\">Mwai Kibaki</a> opened the KES 31 billion Thika Superhighway. This mega-project in Kenya started in 2009 and ended in 2011. It involved expanding the four-lane carriageway to eight lanes, building underpasses, providing interchanges at roundabouts, erecting flyovers and building underpasses to ease congestion. The 50.4-kilometre road was built in three phases: Uhuru Highway to Muthaiga Roundabout; Muthaiga Roundabout to <a href=\"https://www.wikidata.org/wiki/Q46756\">Kenyatta University</a> and; Kenyatta University to <a href=\"https://www.wikidata.org/wiki/Q47463425\">Thika Town</a>.</p>",
+                "<p>In May 2017, President <a href=\"https://www.wikidata.org/wiki/Q196070\">Uhuru Kenyatta</a> inaugurated the Standard Gauge Railway, which connects Nairobi to Mombasa. It was primarily built by a Chinese firm with about 90% of total funding from China and about 10% from the Kenyan government. A second phase is also being built, which will link <a href=\"https://www.wikidata.org/wiki/Q1007647\">Naivasha</a> to the existing route and also the <a href=\"https://www.wikidata.org/wiki/Q1036\">Uganda</a> border.</p>",
+                "<p>In August 2020, Nairobi County Assembly Speaker <a href=\"https://www.wikidata.org/wiki/Q47093702\">Beatrice Elachi</a> resigned. In December 2020, recently elected Nairobi County Assembly Speaker Benson Mutura was sworn in as acting Nairobi Governor four days after the previous Nairobi Governor <a href=\"https://www.wikidata.org/wiki/Q6848880\">Mike Sonko</a> was impeached and removed from office. At the time of Mutura's swearing in as acting Governor, which he will hold for at least 60 days, Nairobi did not have a Deputy Governor as well.\nNairobi has seen several major infrastructure projects in the 2020s. The Nairobi Expressway, completed in 2022, was developed to reduce traffic congestion along Mombasa Road. In 2021, the Green Park Bus Terminal, part of efforts to improve public transport, began operations. In line with the Kenyan government's Affordable Housing Program, various housing developments are underway to accommodate the city's growing population.</p>"
+              ],
+              "href": "https://en.wikipedia.org/wiki/Nairobi#21st_century",
+              "lang": "en",
+              "level": 3,
+              "sections": [],
+              "title": "21st century"
+            }
+          ],
+          "title": "History"
+        }
+      ]
+    ],
+    [
+      null,
+      [
+        {
+          "href": "https://en.wikipedia.org/wiki/Nairobi#Culture",
+          "lang": "en",
+          "text": "Culture"
+        }
+      ],
+      [
+        {
+          "anchor": "Culture",
+          "blocks": [
+            "<p>Nairobi is diverse in African cultures. As a cosmopolitan African city, it hosts all the diverse tribes that make up Kenya, and hosts a large immigrant population from other African countries.</p>",
+            "<p>Nairobi has two informal nicknames. The first is &quot;The Green City in the Sun&quot;, which is derived from the city's foliage and warm climate. The second is the &quot;Safari Capital of the World&quot;, which is used due to Nairobi's prominence as a hub for safari tourism.</p>",
+            "<p>In 2026, Nairobi made it to the final for the &quot;World Capital of Kindness&quot; competition, beaten only by San Donato Milanese, Italy (first place).</p>"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Nairobi#Culture",
+          "lang": "en",
+          "level": 2,
+          "sections": [
+            {
+              "anchor": "Literature_and_film",
+              "blocks": [
+                "<p><i><a href=\"https://www.wikidata.org/wiki/Q2675538\">Kwani?</a></i> is Kenya's first literary journal and was established by writers living in Nairobi. Nairobi's publishing houses have also produced the works of some of Kenya's authors, including <a href=\"https://www.wikidata.org/wiki/Q302910\">Ngũgĩ wa Thiong'o</a> and <a href=\"https://www.wikidata.org/wiki/Q1918860\">Meja Mwangi</a> who were part of post-colonial writing.</p>",
+                "<p>Many film makers also practice their craft out of Nairobi. Film-making is still young in the country, but people like producer Njeri Karago and director Judy Kibinge are paving the way for others.</p>",
+                "<p>Perhaps the most famous book and film set in Nairobi is <i><a href=\"https://www.wikidata.org/wiki/Q1756234\">Out of Africa</a></i>. The book was written by <a href=\"https://www.wikidata.org/wiki/Q182804\">Karen Blixen</a>, whose pseudonym was Isak Dinesen, and it is her account of living in <ruby><a href=\"https://www.wikidata.org/wiki/Q114\">Kenya</a><rt><span>કેન્યા</span></rt></ruby>. Karen Blixen lived in the Nairobi area from 1917 to 1931. The neighbourhood in which she lived, <a href=\"https://www.wikidata.org/wiki/Q4131979\">Karen</a>, is named after her.</p>",
+                "<p>In 1985, <i><a href=\"https://www.wikidata.org/wiki/Q208266\">Out of Africa</a></i> was made into a film, directed by <a href=\"https://www.wikidata.org/wiki/Q51522\">Sydney Pollack</a>. The film won 28 awards, including seven <a href=\"https://www.wikidata.org/wiki/Q19020\">Academy Awards</a>. The popularity of the film prompted the opening of Nairobi's <a href=\"https://www.wikidata.org/wiki/Q367631\">Karen Blixen Museum</a>.</p>",
+                "<p>Nairobi is the setting of many of the novels of <a href=\"https://www.wikidata.org/wiki/Q302910\">Ngũgĩ wa Thiong'o</a>, Kenya's foremost writer.</p>",
+                "<p>Nairobi has been the set of several other <a href=\"https://www.wikidata.org/wiki/Q380675\">American</a> and <a href=\"https://www.wikidata.org/wiki/Q849763\">British</a> films. The most recent of these was <i><a href=\"https://www.wikidata.org/wiki/Q645168\">The Constant Gardener</a></i> (2005), a large part of which was filmed in the city. The story revolves around a British diplomat in Nairobi whose wife is murdered in northern Kenya. Much of the filming was in the <a href=\"https://www.wikidata.org/wiki/Q579521\">Kibera</a> slum.</p>",
+                "<p>Among the latest Kenyan actors in Hollywood who identify with Nairobi is <a href=\"https://www.wikidata.org/wiki/Q3840847\">Lupita Nyong'o</a>. Lupita received an Oscar award for <a href=\"https://www.wikidata.org/wiki/Q106301\">best supporting actress</a> in her role as Patsy in the film <i><a href=\"https://www.wikidata.org/wiki/Q7857661\">12 Years a Slave</a></i> during the <i><a href=\"https://www.wikidata.org/wiki/Q13419956\">86th Academy Awards</a></i> at the Dolby theatre in Los Angeles. Lupita is the daughter of Kenyan politician Peter Anyang' Nyong'o.</p>",
+                "<p>Most new Hollywood films are nowadays screened at Nairobi's cinemas. Up until the early 1990s, there were only a few film theatres and the repertoire was limited. There are also two <a href=\"https://www.wikidata.org/wiki/Q786922\">drive-in cinemas</a> in Nairobi.</p>",
+                "<p>In 2015 and 2016, Nairobi was the focus point for the American television series <i><a href=\"https://www.wikidata.org/wiki/Q17080059\">Sense8</a></i> which shot its first and second seasons partly in the city. The TV series has high reviews in <a href=\"https://www.wikidata.org/wiki/Q37312\">The Internet Movie Database</a> (IMDb).</p>",
+                "<p>In 2015 Nairobi was featured in the British thriller film <i><a href=\"https://www.wikidata.org/wiki/Q18149766\">Eye in the Sky</a></i>, which is a story about a lieutenant general and a colonel who faced political opposition after ordering a drone missile strike to take out a group of suicide bombers in Nairobi.</p>",
+                "<p>In 2017, the name &quot;Nairobi&quot; was taken as a code-name by a female main character in the famous Spanish TV series <i><a href=\"https://www.wikidata.org/wiki/Q29647346\">Money Heist</a></i>.</p>"
+              ],
+              "href": "https://en.wikipedia.org/wiki/Nairobi#Literature_and_film",
+              "lang": "en",
+              "level": 3,
+              "sections": [],
+              "title": "Literature and film"
+            },
+            {
+              "anchor": "Food",
+              "blocks": [
+                "<p>In Nairobi, there are a range of restaurants. Besides being home to <i><a href=\"https://www.wikidata.org/wiki/Q22328037\">nyama choma</a></i> which is a local term used to refer to roasted meat, there are American fast food restaurants such as <a href=\"https://www.wikidata.org/wiki/Q524757\">KFC</a>, <a href=\"https://www.wikidata.org/wiki/Q244457\">Subway</a>, <a href=\"https://www.wikidata.org/wiki/Q839466\">Domino's Pizza</a>, <a href=\"https://www.wikidata.org/wiki/Q191615\">Pizza Hut</a>, <a href=\"https://www.wikidata.org/wiki/Q1585088\">Hardee's</a> and <a href=\"https://www.wikidata.org/wiki/Q177054\">Burger King</a>, and the longer established South African chains, <a href=\"https://www.wikidata.org/wiki/Q116619555\">Galito's</a>, <a href=\"https://www.wikidata.org/wiki/Q3056765\">Steers</a>, PizzaMojo, and <a href=\"https://www.wikidata.org/wiki/Q7581546\">Spur Steak Ranches</a>.</p>",
+                "<p>Coffee houses, doubling up as restaurants and mostly frequented by the upper middle classes, such as Artcaffe <a href=\"https://www.wikidata.org/wiki/Q6959786\">Nairobi Java House</a> and Dormans, have become increasingly popular in recent days. Traditional food joints such as the popular K'osewe's in the city centre and Amaica, which specialize in African delicacies, are widespread. </p>",
+                "<p>The Kenchic franchise which specialized in old-school chicken and chips meals was popular, particularly among the lower classes and students, with restaurants all over the city and its suburbs. However, as of February 2016, Kenchic stopped operating its eatery business. Upscale restaurants often specialize in specific cuisines such as Italian, Lebanese, Ethiopian, and French, but are more likely to be found in five star hotels and the wealthier suburbs in the West and South of the city.</p>",
+                "<p>Nairobi has an annual restaurant week (NRW) at the beginning of the year, January–February. Nairobi's restaurants offer dining packages at reduced prices. NRW is managed by Eatout Kenya which is an online platform that lists and reviews restaurants in Nairobi, and provides a platform for Kenyan foodies to congregate and share.</p>"
+              ],
+              "href": "https://en.wikipedia.org/wiki/Nairobi#Food",
+              "lang": "en",
+              "level": 3,
+              "sections": [],
+              "title": "Food"
+            },
+            {
+              "anchor": "Music",
+              "blocks": [
+                "<p>Nairobi is the centre of Kenya's music scene. <a href=\"https://www.wikidata.org/wiki/Q6301761\">Benga</a> is a Kenyan genre which was developed in Nairobi. The style is a fusion of <a href=\"https://www.wikidata.org/wiki/Q8341\">jazz</a> and <a href=\"https://www.wikidata.org/wiki/Q12826303\">Luo</a> music forms. Mugithi is another popular genre in Kenya, with its origins in the central parts of the country. A majority of music videos of leading local musicians are also filmed in the city.</p>",
+                "<p>In the 1970s, Nairobi became the prominent centre for <a href=\"https://www.wikidata.org/wiki/Q638\">music</a> in the <a href=\"https://www.wikidata.org/wiki/Q87982\">African Great Lakes</a>. During this period, Nairobi was established as a hub of <a href=\"https://www.wikidata.org/wiki/Q1752683\">soukous</a> music. This genre was originally developed in <a href=\"https://www.wikidata.org/wiki/Q3838\">Kinshasa</a> and <a href=\"https://www.wikidata.org/wiki/Q3844\">Brazzaville</a>. After the political climate in the region <a href=\"https://www.wikidata.org/wiki/Q1773926\">deteriorated</a>, many Congolese artists relocated to Nairobi. Artists such as <a href=\"https://www.wikidata.org/wiki/Q7100247\">Orchestra Super Mazembe</a> moved from <a href=\"https://www.wikidata.org/wiki/Q974\">Congo</a> to Nairobi and found great success. <a href=\"https://www.wikidata.org/wiki/Q203059\">Virgin records</a> became aware of the popularity of the genre and signed recording contracts with several soukous artists.</p>",
+                "<p>More recently, Nairobi has become the centre of the <a href=\"https://www.wikidata.org/wiki/Q6392890\">Kenyan hip-hop</a> scene. The genre has become very popular amongst local youth, and domestic musicians have become some of the most popular in the region. Successful artists based in Nairobi include <a href=\"https://www.wikidata.org/wiki/Q6298712\">Jua Cali</a>, <a href=\"https://www.wikidata.org/wiki/Q7049430\">Nonini</a>, <a href=\"https://www.wikidata.org/wiki/Q5027435\">Camp Mulla</a>, <a href=\"https://www.wikidata.org/wiki/Q6307812\">Juliani</a>, <a href=\"https://www.wikidata.org/wiki/Q1351730\">Eric Wainaina</a>, and <a href=\"https://www.wikidata.org/wiki/Q11167386\">Nameless</a>. Popular record labels include <a href=\"https://www.wikidata.org/wiki/Q7080207\">Ogopa DJs</a> and <a href=\"https://www.wikidata.org/wiki/Q5019912\">Calif Records</a>.</p>",
+                "<p>Nairobi, including the coastal towns of Mombasa and Diani, have recently become the centre of <a href=\"https://www.wikidata.org/wiki/Q851213\">EDM</a> in Kenya, producing DJs as well as producers like <a href=\"https://www.wikidata.org/wiki/Q59655883\">DJ Fita</a>.</p>",
+                "<p>Many nightclubs in and around the city have witnessed a growth in the population that exclusively listen to Electronic Dance Music, especially amongst the younger generations.[<i>neutrality is disputed</i>] Gospel music is also popular in Nairobi just as in the rest of Kenya, with gospel artists having a great impact in the mostly Christian city.[<i>citation needed</i>]</p>",
+                "<p>Musical group <a href=\"https://www.wikidata.org/wiki/Q7427621\">Sauti Sol</a> performed for U.S. President <a href=\"https://www.wikidata.org/wiki/Q76\">Barack Obama</a> when he was in the city for the 2015 <a href=\"https://www.wikidata.org/wiki/Q85763706\">Global Entrepreneurship Summit</a>.</p>"
+              ],
+              "href": "https://en.wikipedia.org/wiki/Nairobi#Music",
+              "lang": "en",
+              "level": 3,
+              "sections": [],
+              "title": "Music"
+            }
+          ],
+          "title": "Culture"
+        }
+      ]
+    ],
+    [
+      null,
+      [],
+      []
+    ],
+    [
+      null,
+      [],
+      []
+    ]
+  ],
+  "unmatched_sections": []
+}

@@ -10,6 +10,7 @@ use content::fetch::{Fetcher, Http, Mode, NoStore};
 use content::{Lang, Qid};
 use qrender::config::Config;
 use qrender::render::markdown;
+use serde_json::json;
 
 fn fetcher() -> Fetcher<NoStore> {
     let dir = Path::new(env!("CARGO_MANIFEST_DIR")).join("../fixtures/http/q3870");
@@ -45,6 +46,23 @@ async fn nairobi_from_recorded_responses() {
         assert!(!article.concept_sections.is_empty());
         let view = qrender::localize(&composition, &text, Config::embedded());
         insta::assert_snapshot!(format!("q3870.{lang}.md"), markdown::page(&view));
+        // The article prose as the page shows it, after the localize step:
+        // a change of how the fetcher reads the article shows here.
+        let spreads: Vec<_> = view
+            .spreads
+            .iter()
+            .map(|s| json!([s.prose_text, s.prose_links, s.sections]))
+            .collect();
+        let prose = json!({
+            "lead": view.lead,
+            "spreads": spreads,
+            "unmatched_sections": view.unmatched_sections,
+            "more_sections": view.more_sections,
+        });
+        insta::assert_snapshot!(
+            format!("q3870.{lang}.prose.json"),
+            serde_json::to_string_pretty(&prose).unwrap()
+        );
     }
 }
 
