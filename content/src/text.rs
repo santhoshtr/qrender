@@ -54,7 +54,8 @@ pub struct Concept {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Article {
     pub title: String,
-    /// The lead, as HTML paragraphs.
+    /// The lead: the content of each paragraph, as HTML without
+    /// references and with no attribute but `href` and `alt`.
     pub paragraphs: Vec<String>,
     /// The item of each article that a paragraph links to, by page title.
     pub links: IndexMap<String, Qid>,
@@ -62,7 +63,8 @@ pub struct Article {
     /// The anchors of the sections that each concept matches.
     #[serde(default)]
     pub concept_sections: IndexMap<Qid, Vec<String>>,
-    /// The first paragraph of each matched section, by anchor.
+    /// The first paragraph of each matched section, by anchor: its
+    /// content, as the lead.
     #[serde(default)]
     pub section_text: IndexMap<String, String>,
     /// The sections with their content: only for the fallback article of
@@ -89,8 +91,6 @@ pub struct OutlineSection {
 pub struct Section {
     pub title: String,
     pub anchor: String,
-    /// The section index of the parse API (a string: "T-1" is possible).
-    pub index: String,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]

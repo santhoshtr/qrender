@@ -59,7 +59,7 @@ pub enum FetchError {
 /// The version of the fetcher. Raise it when a change of the fetcher
 /// changes what it fetches (a new field, a new request): it is part of
 /// every cache key, so the parts that an older fetcher stored are not read.
-pub const FETCH_VERSION: u32 = 10;
+pub const FETCH_VERSION: u32 = 11;
 
 /// Seconds a cached part lives: content and text change with edits;
 /// a peer set changes slowly and many items share it.
@@ -505,9 +505,7 @@ impl<S: Store> Fetcher<S> {
         let article = match content.sitelinks.get(&format!("{lang}wiki")) {
             Some(title) => {
                 let host = format!("{lang}.wikipedia.org");
-                let mut article = wikipedia::lead(http, &host, title).await?;
-                wikipedia::match_sections(http, &host, &mut article, &concepts).await?;
-                Some(article)
+                Some(wikipedia::article(http, &host, title, &concepts, false).await?)
             }
             None => None,
         };
@@ -515,14 +513,10 @@ impl<S: Store> Fetcher<S> {
             Some(title) if lang.as_str() != "en" => {
                 let host = "en.wikipedia.org";
                 let english = wikidata::concepts(http, &self.settings.concepts, &en).await?;
-                let mut fallback = wikipedia::lead(http, host, title).await?;
-                wikipedia::match_sections(http, host, &mut fallback, &english).await?;
                 // The whole article only for a page that shows it: one
                 // with no article of its own.
-                if article.is_none() {
-                    wikipedia::outline(http, host, &mut fallback).await?;
-                }
-                Some(fallback)
+                let outline = article.is_none();
+                Some(wikipedia::article(http, host, title, &english, outline).await?)
             }
             _ => None,
         };

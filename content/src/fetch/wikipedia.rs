@@ -1,6 +1,7 @@
-//! Wikipedia: the lead of an article, its sections, the first paragraph
-//! of a section, the whole body of a section (the outline), the items its
-//! links point to; page images.
+//! Wikipedia: an article from one Parsoid parse of the whole page (its
+//! lead, its sections, the first paragraph of a section, the whole body
+//! of each section: the outline), the items its links point to; page
+//! images.
 
 use std::sync::LazyLock;
 
@@ -20,13 +21,6 @@ use crate::text::{Article, Concept, OutlineSection, PageImage, Section};
 const BATCH: usize = 50;
 const DISPLAY_IMAGE: &str = "https://wiki-display-image.toolforge.org/json/wikidata/";
 
-static TABLE: LazyLock<Regex> = LazyLock::new(|| Regex::new(r"(?s)<table.*?</table>").unwrap());
-static REFERENCE: LazyLock<Regex> =
-    LazyLock::new(|| Regex::new(r#"(?s)<sup[^>]*class="[^"]*reference[^"]*".*?</sup>"#).unwrap());
-static STYLE: LazyLock<Regex> = LazyLock::new(|| Regex::new(r"(?s)<style.*?</style>").unwrap());
-/// A paragraph: `<p>` (legacy parser) or `<p id="…">` (Parsoid).
-static PARAGRAPH: LazyLock<Regex> =
-    LazyLock::new(|| Regex::new(r"(?s)<p(\s[^>]*)?>(.*?)</p>").unwrap());
 static HREF: LazyLock<Regex> = LazyLock::new(|| Regex::new(r#"href="([^"]*)""#).unwrap());
 
 fn api(host: &str) -> String {
@@ -45,149 +39,23 @@ async fn parse(http: &Http, host: &str, params: &[(&str, &str)]) -> Result<Json,
     Ok(json["parse"].clone())
 }
 
-/// The paragraphs of rendered HTML: tables, styles and reference marks
-/// removed; empty paragraphs and parser error messages left out. Parsoid
-/// marks a paragraph of templates only as empty (`mw-empty-elt`).
-fn paragraphs(html: &str) -> Vec<String> {
-    let html = TABLE.replace_all(html, "");
-    let html = REFERENCE.replace_all(&html, "");
-    let html = STYLE.replace_all(&html, "");
-    PARAGRAPH
-        .captures_iter(&html)
-        .filter(|c| {
-            !c.get(1)
-                .is_some_and(|a| a.as_str().contains("mw-empty-elt"))
-        })
-        .map(|c| c[2].to_string())
-        .filter(|p| !strip_tags(p).trim().is_empty())
-        // "Cite error: ..." and other messages of the wiki parser.
-        .filter(|p| !p.contains("class=\"error") && !p.contains("mw-ext-cite-error"))
-        .collect()
-}
-
-/// The lead of an article, the item of each article it links to, and the
-/// titles of its top-level sections.
-pub async fn lead(http: &Http, host: &str, title: &str) -> Result<Article, FetchError> {
-    let text = parse(
-        http,
-        host,
-        &[
-            ("page", title),
-            ("section", "0"),
-            ("prop", "text"),
-            ("disableeditsection", "1"),
-            ("disablelimitreport", "1"),
-        ],
-    )
-    .await?;
-    let paragraphs = paragraphs(text["text"].as_str().unwrap_or_default());
-    let sections = parse(http, host, &[("page", title), ("prop", "sections")]).await?;
-    let sections = sections["sections"]
-        .as_array()
-        .into_iter()
-        .flatten()
-        .filter(|s| s["toclevel"] == 1)
-        .map(|s| Section {
-            title: strip_tags(s["line"].as_str().unwrap_or_default()),
-            anchor: s["anchor"].as_str().unwrap_or_default().to_string(),
-            index: s["index"].as_str().unwrap_or_default().to_string(),
-        })
-        .collect();
-    Ok(Article {
-        title: title.to_string(),
-        links: links(http, host, &paragraphs).await?,
-        paragraphs,
-        sections,
-        concept_sections: IndexMap::new(),
-        section_text: IndexMap::new(),
-        outline: Vec::new(),
-    })
-}
-
-/// The first paragraph of one section of an article.
-async fn section_text(
+/// An article from one Parsoid parse of the whole page: its lead, its
+/// top-level sections, the sections whose title names a concept and the
+/// first paragraph of each, and the item of each article that this text
+/// links to. `outline`: also the sections with their content, for a page
+/// that shows them.
+pub async fn article(
     http: &Http,
     host: &str,
     title: &str,
-    index: &str,
-) -> Result<Option<String>, FetchError> {
+    concepts: &IndexMap<Qid, Concept>,
+    outline: bool,
+) -> Result<Article, FetchError> {
     let text = parse(
         http,
         host,
         &[
             ("page", title),
-            ("section", index),
-            ("prop", "text"),
-            ("disableeditsection", "1"),
-            ("disablelimitreport", "1"),
-        ],
-    )
-    .await?;
-    Ok(paragraphs(text["text"].as_str().unwrap_or_default())
-        .into_iter()
-        .next())
-}
-
-/// The sections whose title is a label or an alias of a concept, in the
-/// language of the article; then the first paragraph of each, and the
-/// items of their links. No other matching: a title that names no concept
-/// stays unmatched.
-pub async fn match_sections(
-    http: &Http,
-    host: &str,
-    article: &mut Article,
-    concepts: &IndexMap<Qid, Concept>,
-) -> Result<(), FetchError> {
-    for (qid, concept) in concepts {
-        let wanted: Vec<String> = concept.names.iter().map(|n| n.to_lowercase()).collect();
-        let hits: Vec<String> = article
-            .sections
-            .iter()
-            .filter(|s| wanted.contains(&s.title.to_lowercase()))
-            .map(|s| s.anchor.clone())
-            .collect();
-        if !hits.is_empty() {
-            article.concept_sections.insert(*qid, hits);
-        }
-    }
-    let matched: Vec<&Section> = article
-        .sections
-        .iter()
-        .filter(|s| {
-            article
-                .concept_sections
-                .values()
-                .flatten()
-                .any(|a| *a == s.anchor)
-        })
-        .collect();
-    let texts = join_all(matched.iter().map(|s| async {
-        (
-            s.anchor.clone(),
-            section_text(http, host, &article.title, &s.index).await,
-        )
-    }))
-    .await;
-    let mut found = Vec::new();
-    for (anchor, text) in texts {
-        if let Some(text) = text? {
-            found.push(text.clone());
-            article.section_text.insert(anchor, text);
-        }
-    }
-    let more = links(http, host, &found).await?;
-    article.links.extend(more);
-    Ok(())
-}
-
-/// The sections of an article with their content (not the lead), from
-/// its Parsoid HTML, and the items of the articles that they link to.
-pub async fn outline(http: &Http, host: &str, article: &mut Article) -> Result<(), FetchError> {
-    let text = parse(
-        http,
-        host,
-        &[
-            ("page", &article.title),
             ("prop", "text"),
             ("parsoid", "1"),
             ("disableeditsection", "1"),
@@ -195,13 +63,60 @@ pub async fn outline(http: &Http, host: &str, article: &mut Article) -> Result<(
         ],
     )
     .await?;
-    let outline = outline_of(text["text"].as_str().unwrap_or_default());
-    let mut blocks = Vec::new();
-    collect_blocks(&outline, &mut blocks);
-    let more = links(http, host, &blocks).await?;
-    article.links.extend(more);
-    article.outline = outline;
-    Ok(())
+    let parsed = read(text["text"].as_str().unwrap_or_default());
+    let sections: Vec<Section> = parsed
+        .outline
+        .iter()
+        .map(|s| Section {
+            title: s.title.clone(),
+            anchor: s.anchor.clone(),
+        })
+        .collect();
+    let concept_sections = match_sections(&sections, concepts);
+    let section_text: IndexMap<String, String> = sections
+        .iter()
+        .filter(|s| concept_sections.values().flatten().any(|a| *a == s.anchor))
+        .filter_map(|s| Some((s.anchor.clone(), parsed.first.get(&s.anchor)?.clone())))
+        .collect();
+    let outline = if outline { parsed.outline } else { Vec::new() };
+    let mut texts: Vec<String> = parsed
+        .lead
+        .iter()
+        .chain(section_text.values())
+        .cloned()
+        .collect();
+    collect_blocks(&outline, &mut texts);
+    Ok(Article {
+        title: title.to_string(),
+        links: links(http, host, &texts).await?,
+        paragraphs: parsed.lead,
+        sections,
+        concept_sections,
+        section_text,
+        outline,
+    })
+}
+
+/// The sections whose title is a label or an alias of a concept, in the
+/// language of the article. No other matching: a title that names no
+/// concept stays unmatched.
+fn match_sections(
+    sections: &[Section],
+    concepts: &IndexMap<Qid, Concept>,
+) -> IndexMap<Qid, Vec<String>> {
+    let mut out = IndexMap::new();
+    for (qid, concept) in concepts {
+        let wanted: Vec<String> = concept.names.iter().map(|n| n.to_lowercase()).collect();
+        let hits: Vec<String> = sections
+            .iter()
+            .filter(|s| wanted.contains(&s.title.to_lowercase()))
+            .map(|s| s.anchor.clone())
+            .collect();
+        if !hits.is_empty() {
+            out.insert(*qid, hits);
+        }
+    }
+    out
 }
 
 fn collect_blocks(sections: &[OutlineSection], out: &mut Vec<String>) {
@@ -211,12 +126,89 @@ fn collect_blocks(sections: &[OutlineSection], out: &mut Vec<String>) {
     }
 }
 
+/// What a page reads from the Parsoid HTML of an article.
+struct Parsed {
+    /// The lead: the paragraphs of section 0.
+    lead: Vec<String>,
+    /// The sections with a heading, and their content.
+    outline: Vec<OutlineSection>,
+    /// The first paragraph of each section, by its anchor.
+    first: IndexMap<String, String>,
+}
+
+fn read(html: &str) -> Parsed {
+    let doc = Html::parse_fragment(html);
+    let mut lead = Vec::new();
+    let mut first = IndexMap::new();
+    let sections = doc
+        .root_element()
+        .descendants()
+        .filter_map(ElementRef::wrap)
+        .filter(|e| e.value().name() == "section");
+    for el in sections {
+        if el.value().attr("data-mw-section-id") == Some("0") {
+            lead = paragraphs(el).collect();
+        } else if let Some(heading) = el.child_elements().find_map(heading)
+            && let Some(anchor) = heading.value().attr("id")
+            && let Some(paragraph) = paragraphs(el).next()
+        {
+            first.insert(anchor.to_string(), paragraph);
+        }
+    }
+    Parsed {
+        lead,
+        outline: outline_of(&doc),
+        first,
+    }
+}
+
+/// The paragraphs in an element, its subsections too, in order: each as
+/// its content, cleaned. Not a paragraph in a table, an empty one, or one
+/// with a message of the wiki parser ("Cite error: …"). Parsoid marks a
+/// paragraph of templates only as empty (`mw-empty-elt`).
+fn paragraphs(el: ElementRef) -> impl Iterator<Item = String> {
+    el.descendants()
+        .filter_map(ElementRef::wrap)
+        .filter(|p| p.value().name() == "p")
+        .filter(move |p| !within(*p, el, |a| a.value().name() == "table"))
+        .filter(|p| !class_has(*p, "mw-empty-elt"))
+        .filter(|p| !has_error(*p))
+        .map(|p| {
+            let mut out = String::new();
+            write_children(p, &mut out);
+            out
+        })
+        .filter(|p| !strip_tags(p).trim().is_empty())
+}
+
+/// An ancestor of `el`, below `top`, is such an element.
+fn within(el: ElementRef, top: ElementRef, test: impl Fn(ElementRef) -> bool) -> bool {
+    el.ancestors()
+        .take_while(|a| a.id() != top.id())
+        .filter_map(ElementRef::wrap)
+        .any(test)
+}
+
+fn class_has(el: ElementRef, name: &str) -> bool {
+    el.value()
+        .attr("class")
+        .is_some_and(|c| c.split_whitespace().any(|w| w == name))
+}
+
+/// A message of the wiki parser in a paragraph, outside its references.
+fn has_error(p: ElementRef) -> bool {
+    let reference = |e: ElementRef| e.value().name() == "sup" && class_has(e, "reference");
+    p.descendants()
+        .filter_map(ElementRef::wrap)
+        .filter(|e| class_has(*e, "error") || class_has(*e, "mw-ext-cite-error"))
+        .any(|e| !within(e, p, reference))
+}
+
 /// The sections of Parsoid HTML. Parsoid wraps each section in
 /// `<section>`, nested by level, with its heading first (in a
 /// `div.mw-heading`, or bare). Section 0, the lead, has no heading. The
 /// parse API puts them all in a `div.mw-parser-output`.
-fn outline_of(html: &str) -> Vec<OutlineSection> {
-    let doc = Html::parse_fragment(html);
+fn outline_of(doc: &Html) -> Vec<OutlineSection> {
     let wrapper = |e: &ElementRef| {
         e.value().name() == "div"
             && e.value()
@@ -336,6 +328,13 @@ fn write_element(el: ElementRef, out: &mut String) {
     if matches!(name, "img" | "br" | "wbr") {
         return;
     }
+    write_children(el, out);
+    out.push_str("</");
+    out.push_str(name);
+    out.push('>');
+}
+
+fn write_children(el: ElementRef, out: &mut String) {
     for child in el.children() {
         if let Some(child) = ElementRef::wrap(child) {
             write_element(child, out);
@@ -343,9 +342,6 @@ fn write_element(el: ElementRef, out: &mut String) {
             out.push_str(&escape(text));
         }
     }
-    out.push_str("</");
-    out.push_str(name);
-    out.push('>');
 }
 
 /// The Wikidata item of every article that the paragraphs link to, by
@@ -468,6 +464,14 @@ pub async fn page_images(http: &Http, qids: &[Qid], lang: &Lang) -> IndexMap<Qid
 mod tests {
     use super::*;
 
+    /// A lead, as Parsoid gives it, around some paragraphs.
+    fn lead_of(paragraphs: &str) -> Vec<String> {
+        read(&format!(
+            "<div class=\"mw-parser-output\"><section data-mw-section-id=\"0\">{paragraphs}</section></div>"
+        ))
+        .lead
+    }
+
     #[test]
     fn paragraphs_without_tables_references_and_errors() {
         let html = concat!(
@@ -475,9 +479,22 @@ mod tests {
             "<p>Nairobi<sup class=\"reference\"><a>[1]</a></sup> is a city.</p>",
             "<p> </p>",
             "<p><span class=\"error mw-ext-cite-error\">Cite error: ...</span></p>",
-            "<style>.x{}</style><p>Second.</p>"
+            "<style>.x{}</style><p>Second.</p>",
+            "<div class=\"x\"><p>In a box.</p></div>"
         );
-        assert_eq!(paragraphs(html), ["Nairobi is a city.", "Second."]);
+        assert_eq!(
+            lead_of(html),
+            ["Nairobi is a city.", "Second.", "In a box."]
+        );
+    }
+
+    #[test]
+    fn an_error_in_a_reference_keeps_the_paragraph() {
+        let html = concat!(
+            "<p>Text<sup class=\"mw-ref reference\"><a href=\"#cite_note-1\">",
+            "<span class=\"mw-ext-cite-error\">[1]</span></a></sup>.</p>"
+        );
+        assert_eq!(lead_of(html), ["Text."]);
     }
 
     #[test]
@@ -498,7 +515,9 @@ mod tests {
             "<section data-mw-section-id=\"-1\"><p>From a template.</p></section>",
             "</section>",
             "<section data-mw-section-id=\"3\"><h2 id=\"People\">People</h2>",
-            "<div class=\"div-col\"><ul><li>A</li></ul></div></section>",
+            "<div class=\"div-col\"><ul><li>A</li></ul></div>",
+            "<section data-mw-section-id=\"4\"><h3 id=\"Famous\">Famous</h3>",
+            "<p>Later.</p></section></section>",
             "</div>",
         );
         let early = OutlineSection {
@@ -508,8 +527,24 @@ mod tests {
             blocks: vec!["<ul><li>One &amp; two</li></ul>".into()],
             sections: vec![],
         };
+        let parsed = read(html);
+        assert_eq!(parsed.lead, ["The lead."]);
+        // A section without a paragraph of its own: the first one of its
+        // subsections.
         assert_eq!(
-            outline_of(html),
+            parsed.first,
+            IndexMap::from([
+                (
+                    "History".to_string(),
+                    "Founded in <a href=\"https://en.wikipedia.org/wiki/1899\">1899</a>."
+                        .to_string()
+                ),
+                ("People".to_string(), "Later.".to_string()),
+                ("Famous".to_string(), "Later.".to_string()),
+            ])
+        );
+        assert_eq!(
+            parsed.outline,
             [
                 OutlineSection {
                     title: "History".into(),
@@ -530,7 +565,13 @@ mod tests {
                     anchor: "People".into(),
                     level: 2,
                     blocks: vec!["<ul><li>A</li></ul>".into()],
-                    sections: vec![],
+                    sections: vec![OutlineSection {
+                        title: "Famous".into(),
+                        anchor: "Famous".into(),
+                        level: 3,
+                        blocks: vec!["<p>Later.</p>".into()],
+                        sections: vec![],
+                    }],
                 },
             ]
         );
@@ -548,10 +589,10 @@ mod tests {
             "<pre>not a paragraph</pre>"
         );
         assert_eq!(
-            paragraphs(html),
+            lead_of(html),
             [concat!(
-                "<b id=\"mwTg\">Kenya</b>, is a <a rel=\"mw:WikiLink\" ",
-                "href=\"https://en.wikipedia.org/wiki/Country\">country</a>."
+                "<b>Kenya</b>, is a ",
+                "<a href=\"https://en.wikipedia.org/wiki/Country\">country</a>."
             )]
         );
     }
