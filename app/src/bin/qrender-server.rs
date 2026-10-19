@@ -24,6 +24,7 @@ use content::{Lang, Qid};
 use qrender::render::design::{DESIGN, ECHARTS, STYLESHEET};
 use qrender::render::html::{self, Styles};
 use qrender::render::markdown;
+use tower_http::compression::CompressionLayer;
 
 const PAGE_CACHE: &str = "public, max-age=3600";
 const ASSET_CACHE: &str = "public, max-age=604800, immutable";
@@ -54,6 +55,7 @@ async fn main() {
         .route("/api/composition/{qid}", get(composition_json))
         .route("/api/view/{lang}/{qid}", get(view_json))
         .route("/{lang}/{qid}", get(page))
+        .layer(CompressionLayer::new())
         .with_state(state);
     let port: u16 = std::env::var("PORT")
         .unwrap_or_else(|_| "4243".to_string())
