@@ -1,6 +1,21 @@
 //! Small HTML text helpers: the fetcher and the localize step both need
 //! them.
 
+/// Text for HTML: in an element or in a quoted attribute.
+pub fn escape(text: &str) -> String {
+    let mut out = String::with_capacity(text.len());
+    for c in text.chars() {
+        match c {
+            '&' => out.push_str("&amp;"),
+            '<' => out.push_str("&lt;"),
+            '>' => out.push_str("&gt;"),
+            '"' => out.push_str("&quot;"),
+            c => out.push(c),
+        }
+    }
+    out
+}
+
 /// The text of raw HTML: numeric character references and the named ones
 /// that attribute values use. Another named reference stays as it is.
 pub fn decode_entities(raw: &str) -> String {

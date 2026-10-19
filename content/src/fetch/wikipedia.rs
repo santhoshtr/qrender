@@ -1,5 +1,6 @@
 //! Wikipedia: the lead of an article, its sections, the first paragraph
-//! of a section, the items its links point to; page images.
+//! of a section, the whole body of a section (the outline), the items its
+//! links point to; page images.
 
 use std::sync::LazyLock;
 
@@ -10,9 +11,11 @@ use serde_json::Value as Json;
 
 use super::FetchError;
 use super::http::{Http, Service};
-use crate::html::{strip_tags, wiki_target};
+use scraper::{ElementRef, Html};
+
+use crate::html::{escape, strip_tags, wiki_target};
 use crate::id::{Lang, Qid};
-use crate::text::{Article, Concept, PageImage, Section};
+use crate::text::{Article, Concept, OutlineSection, PageImage, Section};
 
 const BATCH: usize = 50;
 const DISPLAY_IMAGE: &str = "https://wiki-display-image.toolforge.org/json/wikidata/";
@@ -97,6 +100,7 @@ pub async fn lead(http: &Http, host: &str, title: &str) -> Result<Article, Fetch
         sections,
         concept_sections: IndexMap::new(),
         section_text: IndexMap::new(),
+        outline: Vec::new(),
     })
 }
 
@@ -174,6 +178,174 @@ pub async fn match_sections(
     let more = links(http, host, &found).await?;
     article.links.extend(more);
     Ok(())
+}
+
+/// The sections of an article with their content (not the lead), from
+/// its Parsoid HTML, and the items of the articles that they link to.
+pub async fn outline(http: &Http, host: &str, article: &mut Article) -> Result<(), FetchError> {
+    let text = parse(
+        http,
+        host,
+        &[
+            ("page", &article.title),
+            ("prop", "text"),
+            ("parsoid", "1"),
+            ("disableeditsection", "1"),
+            ("disablelimitreport", "1"),
+        ],
+    )
+    .await?;
+    let outline = outline_of(text["text"].as_str().unwrap_or_default());
+    let mut blocks = Vec::new();
+    collect_blocks(&outline, &mut blocks);
+    let more = links(http, host, &blocks).await?;
+    article.links.extend(more);
+    article.outline = outline;
+    Ok(())
+}
+
+fn collect_blocks(sections: &[OutlineSection], out: &mut Vec<String>) {
+    for s in sections {
+        out.extend(s.blocks.iter().cloned());
+        collect_blocks(&s.sections, out);
+    }
+}
+
+/// The sections of Parsoid HTML. Parsoid wraps each section in
+/// `<section>`, nested by level, with its heading first (in a
+/// `div.mw-heading`, or bare). Section 0, the lead, has no heading. The
+/// parse API puts them all in a `div.mw-parser-output`.
+fn outline_of(html: &str) -> Vec<OutlineSection> {
+    let doc = Html::parse_fragment(html);
+    let wrapper = |e: &ElementRef| {
+        e.value().name() == "div"
+            && e.value()
+                .attr("class")
+                .is_some_and(|c| c.contains("mw-parser-output"))
+    };
+    let mut out = Vec::new();
+    for el in doc.root_element().child_elements() {
+        let top: Vec<ElementRef> = if wrapper(&el) {
+            el.child_elements().collect()
+        } else {
+            vec![el]
+        };
+        for el in top.into_iter().filter(|e| e.value().name() == "section") {
+            section(el, &mut out, &mut Vec::new());
+        }
+    }
+    out
+}
+
+/// One `<section>`: a section with a heading goes in `out`; without one
+/// (the lead, or a section that a template made), its blocks go in
+/// `blocks` and its subsections in `out`.
+fn section(el: ElementRef, out: &mut Vec<OutlineSection>, blocks: &mut Vec<String>) {
+    let Some(heading) = el.child_elements().find_map(heading) else {
+        for child in el.child_elements() {
+            match child.value().name() {
+                "section" => section(child, out, blocks),
+                _ => block(child, blocks),
+            }
+        }
+        return;
+    };
+    let mut node = OutlineSection {
+        title: heading.text().collect::<String>().trim().to_string(),
+        anchor: heading.value().attr("id").unwrap_or_default().to_string(),
+        level: heading.value().name()[1..].parse().unwrap_or(2),
+        blocks: Vec::new(),
+        sections: Vec::new(),
+    };
+    for child in el.child_elements() {
+        match child.value().name() {
+            "section" => section(child, &mut node.sections, &mut node.blocks),
+            _ => block(child, &mut node.blocks),
+        }
+    }
+    out.push(node);
+}
+
+/// The heading of a section: `h2`–`h6`, bare or in a `div.mw-heading`.
+fn heading(el: ElementRef) -> Option<ElementRef> {
+    let is_heading = |e: &ElementRef| matches!(e.value().name(), "h2" | "h3" | "h4" | "h5" | "h6");
+    if is_heading(&el) {
+        return Some(el);
+    }
+    let class = el.value().attr("class").unwrap_or_default();
+    (el.value().name() == "div" && class.contains("mw-heading"))
+        .then(|| el.child_elements().find(is_heading))
+        .flatten()
+}
+
+/// A block of text that a reader reads: a paragraph with text, a list, a
+/// quotation; the lists of a multi-column list. Not a heading, a hatnote
+/// ("Main article: …"), a table, a figure or a navigation box.
+fn block(el: ElementRef, out: &mut Vec<String>) {
+    let class = el.value().attr("class").unwrap_or_default();
+    match el.value().name() {
+        "p" if !class.contains("mw-empty-elt") => {
+            let html = clean(el);
+            if !strip_tags(&html).trim().is_empty() && !class.contains("error") {
+                out.push(html);
+            }
+        }
+        "ul" | "ol" | "dl" | "blockquote" => out.push(clean(el)),
+        "div" if class.contains("div-col") => {
+            for child in el.child_elements() {
+                block(child, out);
+            }
+        }
+        _ => {}
+    }
+}
+
+/// An element as HTML without references, styles and metadata, and with no
+/// attribute but `href` and `alt`. The localize step cleans it again; this
+/// keeps the stored text small (Parsoid's attributes are most of it).
+fn clean(el: ElementRef) -> String {
+    let mut out = String::new();
+    write_element(el, &mut out);
+    out
+}
+
+fn write_element(el: ElementRef, out: &mut String) {
+    let e = el.value();
+    let name = e.name();
+    let class = e.attr("class").unwrap_or_default();
+    let reference = name == "sup" && class.contains("reference");
+    // The other forms of a coordinate, which the CSS of the wiki hides.
+    let hidden = class.contains("geo-nondefault") || class.contains("geo-multi-punct");
+    if reference
+        || hidden
+        || matches!(
+            name,
+            "style" | "script" | "link" | "meta" | "table" | "figure"
+        )
+    {
+        return;
+    }
+    out.push('<');
+    out.push_str(name);
+    for attribute in ["href", "alt"] {
+        if let Some(value) = e.attr(attribute) {
+            out.push_str(&format!(" {attribute}=\"{}\"", escape(value)));
+        }
+    }
+    out.push('>');
+    if matches!(name, "img" | "br" | "wbr") {
+        return;
+    }
+    for child in el.children() {
+        if let Some(child) = ElementRef::wrap(child) {
+            write_element(child, out);
+        } else if let Some(text) = child.value().as_text() {
+            out.push_str(&escape(text));
+        }
+    }
+    out.push_str("</");
+    out.push_str(name);
+    out.push('>');
 }
 
 /// The Wikidata item of every article that the paragraphs link to, by
@@ -306,6 +478,62 @@ mod tests {
             "<style>.x{}</style><p>Second.</p>"
         );
         assert_eq!(paragraphs(html), ["Nairobi is a city.", "Second."]);
+    }
+
+    #[test]
+    fn the_outline_of_parsoid_html() {
+        let html = concat!(
+            "<div class=\"mw-content-ltr mw-parser-output\" lang=\"en\">",
+            "<section data-mw-section-id=\"0\"><p>The lead.</p></section>",
+            "<section data-mw-section-id=\"1\"><div class=\"mw-heading mw-heading2\">",
+            "<h2 id=\"History\">History</h2></div>",
+            "<div role=\"note\" class=\"hatnote\">Main article: X</div>",
+            "<p id=\"mwAB\" data-mw='{\"a\":\">\"}'>Founded in <a rel=\"mw:WikiLink\" ",
+            "href=\"https://en.wikipedia.org/wiki/1899\" title=\"1899\">1899</a>",
+            "<sup class=\"mw-ref reference\"><a href=\"#cite_note-1\">[1]</a></sup>.",
+            "<style>.x{}</style></p>",
+            "<p class=\"mw-empty-elt\"></p><table><tr><td>a table</td></tr></table>",
+            "<section data-mw-section-id=\"2\"><h3 id=\"Early_years\">Early years</h3>",
+            "<ul><li>One &amp; two</li></ul></section>",
+            "<section data-mw-section-id=\"-1\"><p>From a template.</p></section>",
+            "</section>",
+            "<section data-mw-section-id=\"3\"><h2 id=\"People\">People</h2>",
+            "<div class=\"div-col\"><ul><li>A</li></ul></div></section>",
+            "</div>",
+        );
+        let early = OutlineSection {
+            title: "Early years".into(),
+            anchor: "Early_years".into(),
+            level: 3,
+            blocks: vec!["<ul><li>One &amp; two</li></ul>".into()],
+            sections: vec![],
+        };
+        assert_eq!(
+            outline_of(html),
+            [
+                OutlineSection {
+                    title: "History".into(),
+                    anchor: "History".into(),
+                    level: 2,
+                    blocks: vec![
+                        concat!(
+                            "<p>Founded in <a href=\"https://en.wikipedia.org/wiki/1899\">",
+                            "1899</a>.</p>"
+                        )
+                        .into(),
+                        "<p>From a template.</p>".into(),
+                    ],
+                    sections: vec![early],
+                },
+                OutlineSection {
+                    title: "People".into(),
+                    anchor: "People".into(),
+                    level: 2,
+                    blocks: vec!["<ul><li>A</li></ul>".into()],
+                    sections: vec![],
+                },
+            ]
+        );
     }
 
     #[test]

@@ -65,6 +65,24 @@ pub struct Article {
     /// The first paragraph of each matched section, by anchor.
     #[serde(default)]
     pub section_text: IndexMap<String, String>,
+    /// The sections with their content: only for the fallback article of
+    /// a page whose language has no article.
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub outline: Vec<OutlineSection>,
+}
+
+/// A section of an article with its content, and its subsections.
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+pub struct OutlineSection {
+    pub title: String,
+    pub anchor: String,
+    /// 2 for a section, 3 for its subsection, and so on.
+    pub level: u8,
+    /// The blocks before the first subsection (`p`, `ul`, `ol`, `dl`,
+    /// `blockquote`), as HTML: no references, and no attributes but `href`
+    /// and `alt`.
+    pub blocks: Vec<String>,
+    pub sections: Vec<OutlineSection>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]

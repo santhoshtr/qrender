@@ -24,4 +24,6 @@ pub use model::{
     Shape, Statement, Table, Value, ValueError, ValueImage,
 };
 pub use settings::{LayoutMatch, Settings};
-pub use text::{Article, Concept, LangText, PageImage, Section, TEXT_SCHEMA, Term, Text};
+pub use text::{
+    Article, Concept, LangText, OutlineSection, PageImage, Section, TEXT_SCHEMA, Term, Text,
+};
