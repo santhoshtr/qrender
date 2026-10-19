@@ -12,7 +12,7 @@ use qrender::render::markdown;
 use qrender::render::ui::FAVICONS;
 use scraper::{CaseSensitivity, Html, Selector};
 
-const PAGES: [&str; 12] = [
+const PAGES: [&str; 14] = [
     "q3870.en",
     "q3870.gu",
     "q90.en",
@@ -25,6 +25,8 @@ const PAGES: [&str; 12] = [
     "q139890532.ml",
     "q668.en",
     "q668.ml",
+    "q2.en",
+    "q2.ml",
 ];
 
 /// Hosts a page may load from: Commons (its pages and its media server)

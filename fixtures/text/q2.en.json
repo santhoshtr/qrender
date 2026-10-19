@@ -1,0 +1,6432 @@
+{
+  "schema": "text/0.1",
+  "lang": "en",
+  "labels": {
+    "Q1": {
+      "label": {
+        "text": "universe",
+        "lang": "en"
+      },
+      "description": {
+        "text": "totality consisting of space, time, matter and energy",
+        "lang": "en"
+      }
+    },
+    "Q1069": {
+      "label": {
+        "text": "geology",
+        "lang": "en"
+      },
+      "description": {
+        "text": "study of the composition, structure, physical properties, and history of Earth's components, and the processes by which they are shaped",
+        "lang": "en"
+      }
+    },
+    "Q111": {
+      "label": {
+        "text": "Mars",
+        "lang": "en"
+      },
+      "description": {
+        "text": "fourth planet from the Solar System, tellurian and orange-red due to iron oxide",
+        "lang": "en"
+      }
+    },
+    "Q11438": {
+      "label": {
+        "text": "solid",
+        "lang": "en"
+      },
+      "description": {
+        "text": "solid matter; matter which does not deform easily under pressure",
+        "lang": "en"
+      }
+    },
+    "Q11570": {
+      "label": {
+        "text": "kilogram",
+        "lang": "en"
+      },
+      "description": {
+        "text": "metric unit of mass",
+        "lang": "en"
+      }
+    },
+    "Q1239": {
+      "label": {
+        "text": "Indian Ocean",
+        "lang": "en"
+      },
+      "description": {
+        "text": "ocean bounded by Africa, Asia, Australia, and Antarctica",
+        "lang": "en"
+      }
+    },
+    "Q1321": {
+      "label": {
+        "text": "Spanish",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Romance language originating in the Iberian Peninsula",
+        "lang": "en"
+      }
+    },
+    "Q143": {
+      "label": {
+        "text": "Esperanto",
+        "lang": "en"
+      },
+      "description": {
+        "text": "international auxiliary language designed by L. L. Zamenhof",
+        "lang": "en"
+      }
+    },
+    "Q15": {
+      "label": {
+        "text": "Africa",
+        "lang": "en"
+      },
+      "description": {
+        "text": "continent",
+        "lang": "en"
+      }
+    },
+    "Q150": {
+      "label": {
+        "text": "French",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Romance language",
+        "lang": "en"
+      }
+    },
+    "Q1811": {
+      "label": {
+        "text": "astronomical unit",
+        "lang": "en"
+      },
+      "description": {
+        "text": "mean distance between Earth and the Sun, common length reference in astronomy",
+        "lang": "en"
+      }
+    },
+    "Q1860": {
+      "label": {
+        "text": "English",
+        "lang": "en"
+      },
+      "description": {
+        "text": "West Germanic language",
+        "lang": "en"
+      }
+    },
+    "Q188": {
+      "label": {
+        "text": "German",
+        "lang": "en"
+      },
+      "description": {
+        "text": "West Germanic language",
+        "lang": "en"
+      }
+    },
+    "Q199": {
+      "label": {
+        "text": "1",
+        "lang": "en"
+      },
+      "description": {
+        "text": "natural number one",
+        "lang": "en"
+      }
+    },
+    "Q2": {
+      "label": {
+        "text": "Earth",
+        "lang": "en"
+      },
+      "description": {
+        "text": "third planet from the Sun in the Solar System",
+        "lang": "en"
+      }
+    },
+    "Q2513": {
+      "label": {
+        "text": "Hubble Space Telescope",
+        "lang": "en"
+      },
+      "description": {
+        "text": "NASA and ESA space telescope (launched 1990)",
+        "lang": "en"
+      }
+    },
+    "Q256": {
+      "label": {
+        "text": "Turkish",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Oghuz Turkic language of the Turkish people",
+        "lang": "en"
+      }
+    },
+    "Q313": {
+      "label": {
+        "text": "Venus",
+        "lang": "en"
+      },
+      "description": {
+        "text": "second planet from the Solar System, tellurian and very similar to Earth",
+        "lang": "en"
+      }
+    },
+    "Q321": {
+      "label": {
+        "text": "Milky Way",
+        "lang": "en"
+      },
+      "description": {
+        "text": "galaxy containing our Solar System",
+        "lang": "en"
+      }
+    },
+    "Q3230": {
+      "label": {
+        "text": "atmosphere of Earth",
+        "lang": "en"
+      },
+      "description": {
+        "text": "gas layer surrounding Earth",
+        "lang": "en"
+      }
+    },
+    "Q3630": {
+      "label": {
+        "text": "Jakarta",
+        "lang": "en"
+      },
+      "description": {
+        "text": "capital and largest city of Indonesia",
+        "lang": "en"
+      }
+    },
+    "Q3944": {
+      "label": {
+        "text": "Local Group",
+        "lang": "en"
+      },
+      "description": {
+        "text": "group of galaxies that includes the Milky Way",
+        "lang": "en"
+      }
+    },
+    "Q3960": {
+      "label": {
+        "text": "Australian continent",
+        "lang": "en"
+      },
+      "description": {
+        "text": "continent in the Earth's Southern Hemisphere",
+        "lang": "en"
+      }
+    },
+    "Q405": {
+      "label": {
+        "text": "Moon",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Earth's only natural satellite",
+        "lang": "en"
+      }
+    },
+    "Q4169": {
+      "label": {
+        "text": "outer space",
+        "lang": "en"
+      },
+      "description": {
+        "text": "void between celestial bodies",
+        "lang": "en"
+      }
+    },
+    "Q46": {
+      "label": {
+        "text": "Europe",
+        "lang": "en"
+      },
+      "description": {
+        "text": "terrestrial continent located in north-western Eurasia",
+        "lang": "en"
+      }
+    },
+    "Q48": {
+      "label": {
+        "text": "Asia",
+        "lang": "en"
+      },
+      "description": {
+        "text": "part of terrestrial continent, mainly in the northeastern quadrant",
+        "lang": "en"
+      }
+    },
+    "Q51": {
+      "label": {
+        "text": "Antarctica",
+        "lang": "en"
+      },
+      "description": {
+        "text": "terrestrial continent in the Southern Hemisphere",
+        "lang": "en"
+      }
+    },
+    "Q5107": {
+      "label": {
+        "text": "continent",
+        "lang": "en"
+      },
+      "description": {
+        "text": "large landmass identified by convention",
+        "lang": "en"
+      }
+    },
+    "Q513": {
+      "label": {
+        "text": "Mount Everest",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Earth's highest mountain above sea level, located in the Mahalangur Himal sub-range of the Himalayas",
+        "lang": "en"
+      }
+    },
+    "Q525": {
+      "label": {
+        "text": "Sun",
+        "lang": "en"
+      },
+      "description": {
+        "text": "star at the centre of the Solar System",
+        "lang": "en"
+      }
+    },
+    "Q527": {
+      "label": {
+        "text": "sky",
+        "lang": "en"
+      },
+      "description": {
+        "text": "region of the atmosphere and outer space visible from the surface of the Earth",
+        "lang": "en"
+      }
+    },
+    "Q5401": {
+      "label": {
+        "text": "Eurasia",
+        "lang": "en"
+      },
+      "description": {
+        "text": "continental landmass comprising Europe and Asia",
+        "lang": "en"
+      }
+    },
+    "Q544": {
+      "label": {
+        "text": "Solar System",
+        "lang": "en"
+      },
+      "description": {
+        "text": "the Sun, its planets and their moons",
+        "lang": "en"
+      }
+    },
+    "Q573": {
+      "label": {
+        "text": "day",
+        "lang": "en"
+      },
+      "description": {
+        "text": "unit of time lasting 24 hours, derived from the period of Earth's rotation about its axis",
+        "lang": "en"
+      }
+    },
+    "Q634": {
+      "label": {
+        "text": "planet",
+        "lang": "en"
+      },
+      "description": {
+        "text": "celestial body directly orbiting a star or stellar remnant",
+        "lang": "en"
+      }
+    },
+    "Q652": {
+      "label": {
+        "text": "Italian",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Romance language",
+        "lang": "en"
+      }
+    },
+    "Q7737": {
+      "label": {
+        "text": "Russian",
+        "lang": "en"
+      },
+      "description": {
+        "text": "East Slavic language",
+        "lang": "en"
+      }
+    },
+    "Q7976": {
+      "label": {
+        "text": "American English",
+        "lang": "en"
+      },
+      "description": {
+        "text": "set of dialects of the English language spoken in the United States",
+        "lang": "en"
+      }
+    },
+    "Q8008": {
+      "label": {
+        "text": "Earth science",
+        "lang": "en"
+      },
+      "description": {
+        "text": "fields of science dealing with planet Earth and its nearby planets in space",
+        "lang": "en"
+      }
+    },
+    "Q809": {
+      "label": {
+        "text": "Polish",
+        "lang": "en"
+      },
+      "description": {
+        "text": "West Slavic language",
+        "lang": "en"
+      }
+    },
+    "Q828": {
+      "label": {
+        "text": "Americas",
+        "lang": "en"
+      },
+      "description": {
+        "text": "North America and South America taken together as a single continent or landmass",
+        "lang": "en"
+      }
+    },
+    "Q8752": {
+      "label": {
+        "text": "Basque",
+        "lang": "en"
+      },
+      "description": {
+        "text": "language of the Basque people",
+        "lang": "en"
+      }
+    },
+    "Q9027": {
+      "label": {
+        "text": "Swedish",
+        "lang": "en"
+      },
+      "description": {
+        "text": "North Germanic language spoken in Sweden and Finland",
+        "lang": "en"
+      }
+    },
+    "Q9035": {
+      "label": {
+        "text": "Danish",
+        "lang": "en"
+      },
+      "description": {
+        "text": "North Germanic language spoken in Northern Europe",
+        "lang": "en"
+      }
+    },
+    "Q9067": {
+      "label": {
+        "text": "Hungarian",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Ugric language mainly spoken in Hungary and surrounding countries",
+        "lang": "en"
+      }
+    },
+    "Q933": {
+      "label": {
+        "text": "South Pole",
+        "lang": "en"
+      },
+      "description": {
+        "text": "one of the two points where the Earth's axis of rotation intersects its surface",
+        "lang": "en"
+      }
+    },
+    "Q934": {
+      "label": {
+        "text": "North Pole",
+        "lang": "en"
+      },
+      "description": {
+        "text": "one of the two points where the Earth's axis of rotation intersects its surface",
+        "lang": "en"
+      }
+    },
+    "Q97": {
+      "label": {
+        "text": "Atlantic Ocean",
+        "lang": "en"
+      },
+      "description": {
+        "text": "ocean between Europe, Africa and the Americas",
+        "lang": "en"
+      }
+    },
+    "Q98": {
+      "label": {
+        "text": "Pacific Ocean",
+        "lang": "en"
+      },
+      "description": {
+        "text": "ocean between Asia, Australia and the Americas",
+        "lang": "en"
+      }
+    },
+    "Q101949": {
+      "label": {
+        "text": "mantle",
+        "lang": "en"
+      },
+      "description": {
+        "text": "layer of silicate rock between Earth's crust and its outer core",
+        "lang": "en"
+      }
+    },
+    "Q104499": {
+      "label": {
+        "text": "planetary science",
+        "lang": "en"
+      },
+      "description": {
+        "text": "science of planets and other astronomical objects apparently in orbit around one or more stellar objects",
+        "lang": "en"
+      }
+    },
+    "Q110786": {
+      "label": {
+        "text": "singular",
+        "lang": "en"
+      },
+      "description": {
+        "text": "grammatical number",
+        "lang": "en"
+      }
+    },
+    "Q11573": {
+      "label": {
+        "text": "metre",
+        "lang": "en"
+      },
+      "description": {
+        "text": "SI unit of length",
+        "lang": "en"
+      }
+    },
+    "Q11574": {
+      "label": {
+        "text": "second",
+        "lang": "en"
+      },
+      "description": {
+        "text": "SI unit of time, defined as 9 192 631 770 periods of the ground-state hyperfine transitions of caesium-133",
+        "lang": "en"
+      }
+    },
+    "Q11579": {
+      "label": {
+        "text": "kelvin",
+        "lang": "en"
+      },
+      "description": {
+        "text": "SI unit of thermodynamic temperature",
+        "lang": "en"
+      }
+    },
+    "Q11826": {
+      "label": {
+        "text": "Al-Biruni",
+        "lang": "en"
+      },
+      "description": {
+        "text": "11th-century Khwarazmian scholar and polymath (973–1048)",
+        "lang": "en"
+      }
+    },
+    "Q125465": {
+      "label": {
+        "text": "sea level",
+        "lang": "en"
+      },
+      "description": {
+        "text": "average level for the surface of one or more of Earth's oceans",
+        "lang": "en"
+      }
+    },
+    "Q131230": {
+      "label": {
+        "text": "Mauna Kea",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Hawaiian volcano",
+        "lang": "en"
+      }
+    },
+    "Q13955": {
+      "label": {
+        "text": "Arabic",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Semitic language and lingua franca of the Arab world",
+        "lang": "en"
+      }
+    },
+    "Q14081": {
+      "label": {
+        "text": "Chimborazo",
+        "lang": "en"
+      },
+      "description": {
+        "text": "volcano and highest mountain in Ecuador",
+        "lang": "en"
+      }
+    },
+    "Q14267": {
+      "label": {
+        "text": "Julian day",
+        "lang": "en"
+      },
+      "description": {
+        "text": "days since the beginning of the Julian Period",
+        "lang": "en"
+      }
+    },
+    "Q146786": {
+      "label": {
+        "text": "plural",
+        "lang": "en"
+      },
+      "description": {
+        "text": "grammatical number",
+        "lang": "en"
+      }
+    },
+    "Q15011": {
+      "label": {
+        "text": "Active Magnetospheric Particle Tracer Explorers",
+        "lang": "en"
+      },
+      "description": {
+        "text": "international space mission",
+        "lang": "en"
+      }
+    },
+    "Q15316": {
+      "label": {
+        "text": "Earth's crust",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Earth's outer layer",
+        "lang": "en"
+      }
+    },
+    "Q156312": {
+      "label": {
+        "text": "history of Earth",
+        "lang": "en"
+      },
+      "description": {
+        "text": "evolution of Earth throughout times",
+        "lang": "en"
+      }
+    },
+    "Q16502": {
+      "label": {
+        "text": "world",
+        "lang": "en"
+      },
+      "description": {
+        "text": "term ambiguously referring to any of: the whole of reality, the universe, the Earth and all life upon it, or human civilization",
+        "lang": "en"
+      }
+    },
+    "Q17397": {
+      "label": {
+        "text": "Aqua",
+        "lang": "en"
+      },
+      "description": {
+        "text": "NASA Earth observation satellite",
+        "lang": "en"
+      }
+    },
+    "Q180154": {
+      "label": {
+        "text": "kilometre per hour",
+        "lang": "en"
+      },
+      "description": {
+        "text": "unit of speed",
+        "lang": "en"
+      }
+    },
+    "Q180971": {
+      "label": {
+        "text": "Apollo 17",
+        "lang": "en"
+      },
+      "description": {
+        "text": "sixth and final Moon landing and eleventh crewed flight of the United States Apollo program",
+        "lang": "en"
+      }
+    },
+    "Q182429": {
+      "label": {
+        "text": "metre per second",
+        "lang": "en"
+      },
+      "description": {
+        "text": "SI unit of speed and velocity",
+        "lang": "en"
+      }
+    },
+    "Q183273": {
+      "label": {
+        "text": "geographical pole",
+        "lang": "en"
+      },
+      "description": {
+        "text": "point of intersection of a celestial body’s surface and its rotational axis",
+        "lang": "en"
+      }
+    },
+    "Q18539": {
+      "label": {
+        "text": "Array of Low-Energy X-ray Imaging Sensors",
+        "lang": "en"
+      },
+      "description": {
+        "text": "decommissioned American X-ray telescope",
+        "lang": "en"
+      }
+    },
+    "Q185969": {
+      "label": {
+        "text": "geoid",
+        "lang": "en"
+      },
+      "description": {
+        "text": "irregular surface approximating the mean sea level",
+        "lang": "en"
+      }
+    },
+    "Q190776": {
+      "label": {
+        "text": "Skylab",
+        "lang": "en"
+      },
+      "description": {
+        "text": "space station launched and operated by NASA",
+        "lang": "en"
+      }
+    },
+    "Q192316": {
+      "label": {
+        "text": "geostationary orbit",
+        "lang": "en"
+      },
+      "description": {
+        "text": "geosynchronous orbit with zero eccentricity at a fixed longitude and a nominally fixed latitude; common orbit for communications satellites",
+        "lang": "en"
+      }
+    },
+    "Q192854": {
+      "label": {
+        "text": "solar time",
+        "lang": "en"
+      },
+      "description": {
+        "text": "calculation of elapsed time by the apparent position of the sun",
+        "lang": "en"
+      }
+    },
+    "Q193927": {
+      "label": {
+        "text": "Earth's core",
+        "lang": "en"
+      },
+      "description": {
+        "text": "innermost part of Earth's centre",
+        "lang": "en"
+      }
+    },
+    "Q200325": {
+      "label": {
+        "text": "human history",
+        "lang": "en"
+      },
+      "description": {
+        "text": "narrative of humanity's past",
+        "lang": "en"
+      }
+    },
+    "Q202014": {
+      "label": {
+        "text": "The Blue Marble",
+        "lang": "en"
+      },
+      "description": {
+        "text": "photograph of the Earth, cropped and rotated from one taken by the crew of the Apollo 17 spacecraft",
+        "lang": "en"
+      }
+    },
+    "Q211014": {
+      "label": {
+        "text": "Vostok Station",
+        "lang": "en"
+      },
+      "description": {
+        "text": "research station in inland Princess Elizabeth Land, Antarctica",
+        "lang": "en"
+      }
+    },
+    "Q211498": {
+      "label": {
+        "text": "2006 RH120",
+        "lang": "en"
+      },
+      "description": {
+        "text": "asteroid",
+        "lang": "en"
+      }
+    },
+    "Q23538": {
+      "label": {
+        "text": "equator",
+        "lang": "en"
+      },
+      "description": {
+        "text": "great circle that divides a spheroid into northern and southern hemispheres, particularly that line for the planet Earth",
+        "lang": "en"
+      }
+    },
+    "Q25235": {
+      "label": {
+        "text": "hour",
+        "lang": "en"
+      },
+      "description": {
+        "text": "unit of time",
+        "lang": "en"
+      }
+    },
+    "Q25267": {
+      "label": {
+        "text": "degree Celsius",
+        "lang": "en"
+      },
+      "description": {
+        "text": "SI unit of Celsius temperature",
+        "lang": "en"
+      }
+    },
+    "Q25271": {
+      "label": {
+        "text": "International Space Station",
+        "lang": "en"
+      },
+      "description": {
+        "text": "modular space station in low Earth orbit",
+        "lang": "en"
+      }
+    },
+    "Q25343": {
+      "label": {
+        "text": "square metre",
+        "lang": "en"
+      },
+      "description": {
+        "text": "SI unit of area",
+        "lang": "en"
+      }
+    },
+    "Q25517": {
+      "label": {
+        "text": "cubic metre",
+        "lang": "en"
+      },
+      "description": {
+        "text": "SI unit of volume",
+        "lang": "en"
+      }
+    },
+    "Q28390": {
+      "label": {
+        "text": "degree",
+        "lang": "en"
+      },
+      "description": {
+        "text": "angle unit; π/180 radians",
+        "lang": "en"
+      }
+    },
+    "Q33680": {
+      "label": {
+        "text": "radian",
+        "lang": "en"
+      },
+      "description": {
+        "text": "SI unit of angular measure",
+        "lang": "en"
+      }
+    },
+    "Q36133": {
+      "label": {
+        "text": "soil",
+        "lang": "en"
+      },
+      "description": {
+        "text": "natural body consisting of layers that are primarily composed of minerals",
+        "lang": "en"
+      }
+    },
+    "Q36846": {
+      "label": {
+        "text": "Toki Pona",
+        "lang": "en"
+      },
+      "description": {
+        "text": "minimalist language created by Sonja Lang",
+        "lang": "en"
+      }
+    },
+    "Q40610": {
+      "label": {
+        "text": "Tyazhely Sputnik",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Soviet unmanned spacecraft launched in 1961 towards Venus, lost in a launch vehicle failure",
+        "lang": "en"
+      }
+    },
+    "Q42762": {
+      "label": {
+        "text": "biosphere",
+        "lang": "en"
+      },
+      "description": {
+        "text": "global sum of all ecosystems",
+        "lang": "en"
+      }
+    },
+    "Q46255": {
+      "label": {
+        "text": "geophysics",
+        "lang": "en"
+      },
+      "description": {
+        "text": "study of physical processes and phenomena occurring in the Earth and in its vicinity, and of their characteristics",
+        "lang": "en"
+      }
+    },
+    "Q48604": {
+      "label": {
+        "text": "Mir",
+        "lang": "en"
+      },
+      "description": {
+        "text": "1986–2001 modular space station in low Earth orbit",
+        "lang": "en"
+      }
+    },
+    "Q58635": {
+      "label": {
+        "text": "Punjabi",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Indo-Aryan language spoken in the Punjab region of Pakistan and India",
+        "lang": "en"
+      }
+    },
+    "Q82794": {
+      "label": {
+        "text": "region",
+        "lang": "en"
+      },
+      "description": {
+        "text": "2D or 3D defined space on something, mainly in terrestrial and astrophysics sciences",
+        "lang": "en"
+      }
+    },
+    "Q83169": {
+      "label": {
+        "text": "hydrosphere",
+        "lang": "en"
+      },
+      "description": {
+        "text": "combined mass of water found on, under, and above the surface of a planet, minor planet or natural satellite",
+        "lang": "en"
+      }
+    },
+    "Q83296": {
+      "label": {
+        "text": "lithosphere",
+        "lang": "en"
+      },
+      "description": {
+        "text": "rigid, outermost shell of a terrestrial-type planet or natural satellite that is defined by its rigid mechanical properties",
+        "lang": "en"
+      }
+    },
+    "Q1043322": {
+      "label": {
+        "text": "Salyut 5",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Soviet space station launched in 1976",
+        "lang": "en"
+      }
+    },
+    "Q1051665": {
+      "label": {
+        "text": "metre per square second",
+        "lang": "en"
+      },
+      "description": {
+        "text": "SI unit of acceleration",
+        "lang": "en"
+      }
+    },
+    "Q1074821": {
+      "label": {
+        "text": "Young Earth creationism",
+        "lang": "en"
+      },
+      "description": {
+        "text": "form of creationism",
+        "lang": "en"
+      }
+    },
+    "Q1076866": {
+      "label": {
+        "text": "Vanguard 2",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Earth-orbiting weather satellite",
+        "lang": "en"
+      }
+    },
+    "Q1155470": {
+      "label": {
+        "text": "Earth radius",
+        "lang": "en"
+      },
+      "description": {
+        "text": "mean distance from the Earth's center to its surface",
+        "lang": "en"
+      }
+    },
+    "Q1264450": {
+      "label": {
+        "text": "J2000.0",
+        "lang": "en"
+      },
+      "description": {
+        "text": "epoch in astronomy",
+        "lang": "en"
+      }
+    },
+    "Q1323537": {
+      "label": {
+        "text": "Transiting Exoplanet Survey Satellite",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "NASA satellite of the Explorer program",
+        "lang": "en"
+      }
+    },
+    "Q1348808": {
+      "label": {
+        "text": "orbit of Earth",
+        "lang": "en"
+      },
+      "description": {
+        "text": "gravitationally curved trajectory Earth travels around the Sun",
+        "lang": "en"
+      }
+    },
+    "Q1349283": {
+      "label": {
+        "text": "spherical Earth",
+        "lang": "en"
+      },
+      "description": {
+        "text": "assertion that the Earth is (at least approximately) spherical",
+        "lang": "en"
+      }
+    },
+    "Q1349417": {
+      "label": {
+        "text": "Earth's surface",
+        "lang": "en"
+      },
+      "description": {
+        "text": "term for the surface of the Earth",
+        "lang": "en"
+      }
+    },
+    "Q1379273": {
+      "label": {
+        "text": "surface area",
+        "lang": "en"
+      },
+      "description": {
+        "text": "measure of the total area occupied by a mathematical surface (e.g. the boundary of a solid)",
+        "lang": "en"
+      }
+    },
+    "Q1384577": {
+      "label": {
+        "text": "Explorer 6",
+        "lang": "en"
+      },
+      "description": {
+        "text": "NASA earth science satellite launched in 1959",
+        "lang": "en"
+      }
+    },
+    "Q1412630": {
+      "label": {
+        "text": "geosynchronous satellite",
+        "lang": "en"
+      },
+      "description": {
+        "text": "satellite in geosynchronous orbit",
+        "lang": "en"
+      }
+    },
+    "Q1420942": {
+      "label": {
+        "text": "Kosmos 557",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Soviet Salyut space station that malfunctioned shortly after launch",
+        "lang": "en"
+      }
+    },
+    "Q1430362": {
+      "label": {
+        "text": "Kordylewski cloud",
+        "lang": "en"
+      },
+      "description": {
+        "text": "large concentrations of dust that exist at the L4 and L5 Lagrangian points of the Earth–Moon system",
+        "lang": "en"
+      }
+    },
+    "Q1450506": {
+      "label": {
+        "text": "Canadian French",
+        "lang": "en"
+      },
+      "description": {
+        "text": "dialect of French mainly spoken in Canada",
+        "lang": "en"
+      }
+    },
+    "Q211761": {
+      "label": {
+        "text": "Salyut 1",
+        "lang": "en"
+      },
+      "description": {
+        "text": "first space station launched by the Soviet Union",
+        "lang": "en"
+      }
+    },
+    "Q214753": {
+      "label": {
+        "text": "radiometric dating",
+        "lang": "en"
+      },
+      "description": {
+        "text": "a technique used to date materials such as rocks or carbon",
+        "lang": "en"
+      }
+    },
+    "Q215913": {
+      "label": {
+        "text": "circumstellar habitable zone",
+        "lang": "en"
+      },
+      "description": {
+        "text": "zone around the star with strong possibilities for stable liquid water and evolution of life",
+        "lang": "en"
+      }
+    },
+    "Q253276": {
+      "label": {
+        "text": "mile",
+        "lang": "en"
+      },
+      "description": {
+        "text": "unit of length (on ground)",
+        "lang": "en"
+      }
+    },
+    "Q262787": {
+      "label": {
+        "text": "STS-90",
+        "lang": "en"
+      },
+      "description": {
+        "text": "human spaceflight",
+        "lang": "en"
+      }
+    },
+    "Q280068": {
+      "label": {
+        "text": "Soil Moisture and Ocean Salinity",
+        "lang": "en"
+      },
+      "description": {
+        "text": "ESA Earth observation satellite",
+        "lang": "en"
+      }
+    },
+    "Q290390": {
+      "label": {
+        "text": "ADM-Aeolus",
+        "lang": "en"
+      },
+      "description": {
+        "text": "ESA wind-measuring satellite that reentered in 2023",
+        "lang": "en"
+      }
+    },
+    "Q340271": {
+      "label": {
+        "text": "Tellus",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia disambiguation page",
+        "lang": "en"
+      }
+    },
+    "Q348045": {
+      "label": {
+        "text": "Erde",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia disambiguation page",
+        "lang": "en"
+      }
+    },
+    "Q370053": {
+      "label": {
+        "text": "Explorer 4",
+        "lang": "en"
+      },
+      "description": {
+        "text": "American research satellite launched in 1958",
+        "lang": "en"
+      }
+    },
+    "Q399984": {
+      "label": {
+        "text": "hemisphere of the Earth",
+        "lang": "en"
+      },
+      "description": {
+        "text": "bipartite divisions of Earth",
+        "lang": "en"
+      }
+    },
+    "Q400922": {
+      "label": {
+        "text": "Terra",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia disambiguation page",
+        "lang": "en"
+      }
+    },
+    "Q408386": {
+      "label": {
+        "text": "inference",
+        "lang": "en"
+      },
+      "description": {
+        "text": "act or process of deriving logical conclusions from premises known or assumed to be true",
+        "lang": "en"
+      }
+    },
+    "Q426529": {
+      "label": {
+        "text": "Earth symbol",
+        "lang": "en"
+      },
+      "description": {
+        "text": "planetary symbol representing Earth",
+        "lang": "en"
+      }
+    },
+    "Q437877": {
+      "label": {
+        "text": "location of Earth",
+        "lang": "en"
+      },
+      "description": {
+        "text": "overview about the location of Earth in the Universe",
+        "lang": "en"
+      }
+    },
+    "Q437882": {
+      "label": {
+        "text": "figure of the Earth",
+        "lang": "en"
+      },
+      "description": {
+        "text": "mathematical descriptions of Earth's complex shape",
+        "lang": "en"
+      }
+    },
+    "Q459173": {
+      "label": {
+        "text": "Challenger Deep",
+        "lang": "en"
+      },
+      "description": {
+        "text": "deepest known point in the Earth's seabed hydrosphere",
+        "lang": "en"
+      }
+    },
+    "Q468469": {
+      "label": {
+        "text": "seabed",
+        "lang": "en"
+      },
+      "description": {
+        "text": "the bottom of the ocean, no matter how deep",
+        "lang": "en"
+      }
+    },
+    "Q499327": {
+      "label": {
+        "text": "masculine",
+        "lang": "en"
+      },
+      "description": {
+        "text": "grammatical gender",
+        "lang": "en"
+      }
+    },
+    "Q511093": {
+      "label": {
+        "text": "centroid",
+        "lang": "en"
+      },
+      "description": {
+        "text": "mean (\"average\") position of all the points in the shape; mean position of all the points in all of the coordinate directions; point at which a cutout of the shape could be perfectly balanced on the tip of a pin",
+        "lang": "en"
+      }
+    },
+    "Q602358": {
+      "label": {
+        "text": "Brockhaus and Efron Encyclopedic Dictionary",
+        "lang": "en"
+      },
+      "description": {
+        "text": "comprehensive multi-volume encyclopedia in Russian",
+        "lang": "en"
+      }
+    },
+    "Q613726": {
+      "label": {
+        "text": "yottagram",
+        "lang": "en"
+      },
+      "description": {
+        "text": "unit of mass, equal to 10^24 grams",
+        "lang": "en"
+      }
+    },
+    "Q705882": {
+      "label": {
+        "text": "TerraSAR-X",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Earth observing satellite",
+        "lang": "en"
+      }
+    },
+    "Q712226": {
+      "label": {
+        "text": "square kilometre",
+        "lang": "en"
+      },
+      "description": {
+        "text": "decimal multiple of the SI unit of surface area",
+        "lang": "en"
+      }
+    },
+    "Q737809": {
+      "label": {
+        "text": "heliocentric orbit",
+        "lang": "en"
+      },
+      "description": {
+        "text": "orbit around the barycenter of the Sun",
+        "lang": "en"
+      }
+    },
+    "Q828224": {
+      "label": {
+        "text": "kilometre",
+        "lang": "en"
+      },
+      "description": {
+        "text": "SI unit of length equal to one thousand metres",
+        "lang": "en"
+      }
+    },
+    "Q838611": {
+      "label": {
+        "text": "ball",
+        "lang": "en"
+      },
+      "description": {
+        "text": "space bounded by a sphere",
+        "lang": "en"
+      }
+    },
+    "Q844211": {
+      "label": {
+        "text": "kilogram per cubic metre",
+        "lang": "en"
+      },
+      "description": {
+        "text": "SI unit of mass density",
+        "lang": "en"
+      }
+    },
+    "Q846030": {
+      "label": {
+        "text": "planetary habitability",
+        "lang": "en"
+      },
+      "description": {
+        "text": "degree to which a planet is suitable for life, or study of planets which may be so suited",
+        "lang": "en"
+      }
+    },
+    "Q867541": {
+      "label": {
+        "text": "Encyclopædia Britannica 11th edition",
+        "lang": "en"
+      },
+      "description": {
+        "text": "11th edition of Encyclopædia Britannica",
+        "lang": "en"
+      }
+    },
+    "Q898312": {
+      "label": {
+        "text": "open system",
+        "lang": "en"
+      },
+      "description": {
+        "text": "systems with external interactions",
+        "lang": "en"
+      }
+    },
+    "Q930933": {
+      "label": {
+        "text": "relation",
+        "lang": "en"
+      },
+      "description": {
+        "text": "general relation between different objects or individuals",
+        "lang": "en"
+      }
+    },
+    "Q935310": {
+      "label": {
+        "text": "age of the Earth",
+        "lang": "en"
+      },
+      "description": {
+        "text": "scientific dating of the age of the Earth",
+        "lang": "en"
+      }
+    },
+    "Q967966": {
+      "label": {
+        "text": "Furnace Creek",
+        "lang": "en"
+      },
+      "description": {
+        "text": "census-designated place in Inyo County, California, United States",
+        "lang": "en"
+      }
+    },
+    "Q1458521": {
+      "label": {
+        "text": "Category:Earth",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia category",
+        "lang": "en"
+      }
+    },
+    "Q1485199": {
+      "label": {
+        "text": "ESA-GEOS 2",
+        "lang": "en"
+      },
+      "description": {
+        "text": "ESA geostationary research satellite",
+        "lang": "en"
+      }
+    },
+    "Q1491734": {
+      "label": {
+        "text": "Galathea Depth",
+        "lang": "en"
+      },
+      "description": {
+        "text": "portion the Philippine Trench exceeding 6,000-metre (20,000 ft) depths in the south-western Pacific Ocean",
+        "lang": "en"
+      }
+    },
+    "Q1579577": {
+      "label": {
+        "text": "geocentric orbit",
+        "lang": "en"
+      },
+      "description": {
+        "text": "orbit around Earth",
+        "lang": "en"
+      }
+    },
+    "Q1703583": {
+      "label": {
+        "text": "Jorda",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia disambiguation page",
+        "lang": "en"
+      }
+    },
+    "Q1768721": {
+      "label": {
+        "text": "Gujin Tushu Jicheng",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Chinese encyclopedia completed in 1725",
+        "lang": "en"
+      }
+    },
+    "Q1775415": {
+      "label": {
+        "text": "feminine",
+        "lang": "en"
+      },
+      "description": {
+        "text": "grammatical gender",
+        "lang": "en"
+      }
+    },
+    "Q1816481": {
+      "label": {
+        "text": "Landsat 1",
+        "lang": "en"
+      },
+      "description": {
+        "text": "first satellite of the United States' Landsat program, active 1972-1978",
+        "lang": "en"
+      }
+    },
+    "Q1891259": {
+      "label": {
+        "text": "Wide-Field Infrared Explorer",
+        "lang": "en"
+      },
+      "description": {
+        "text": "former NASA space observatory",
+        "lang": "en"
+      }
+    },
+    "Q1949963": {
+      "label": {
+        "text": "statistic",
+        "lang": "en"
+      },
+      "description": {
+        "text": "function of random variables",
+        "lang": "en"
+      }
+    },
+    "Q1970746": {
+      "label": {
+        "text": "Explanatory Dictionary of the Living Great Russian Language",
+        "lang": "en"
+      },
+      "description": {
+        "text": "explanatory dictionary of the Russian language",
+        "lang": "en"
+      }
+    },
+    "Q2003654": {
+      "label": {
+        "text": "future of Earth",
+        "lang": "en"
+      },
+      "description": {
+        "text": "hypothetical possible upcoming scenarios for Earth",
+        "lang": "en"
+      }
+    },
+    "Q2041543": {
+      "label": {
+        "text": "Otto's encyclopedia",
+        "lang": "en"
+      },
+      "description": {
+        "text": "1888–1909 edition of the largest printed encyclopedia written in the Czech language",
+        "lang": "en"
+      }
+    },
+    "Q2221906": {
+      "label": {
+        "text": "geographic location",
+        "lang": "en"
+      },
+      "description": {
+        "text": "point, line or area on or near Earth",
+        "lang": "en"
+      }
+    },
+    "Q2278545": {
+      "label": {
+        "text": "AMSAT-OSCAR 7",
+        "lang": "en"
+      },
+      "description": {
+        "text": "artificial earth satellite",
+        "lang": "en"
+      }
+    },
+    "Q2293672": {
+      "label": {
+        "text": "flag of the Earth",
+        "lang": "en"
+      },
+      "description": {
+        "text": "any flag meant to represent the entire planet of Earth, or global society thereon",
+        "lang": "en"
+      }
+    },
+    "Q2389585": {
+      "label": {
+        "text": "geological history of Earth",
+        "lang": "en"
+      },
+      "description": {
+        "text": "major geological occurrences in Earth's past",
+        "lang": "en"
+      }
+    },
+    "Q2556676": {
+      "label": {
+        "text": "invariable plane",
+        "lang": "en"
+      },
+      "description": {
+        "text": "plane passing through the barycenter of a planetary system, perpendicular to its angular momentum vector",
+        "lang": "en"
+      }
+    },
+    "Q2586548": {
+      "label": {
+        "text": "Vityas Deep 1",
+        "lang": "en"
+      }
+    },
+    "Q2731139": {
+      "label": {
+        "text": "Bond albedo",
+        "lang": "en"
+      },
+      "description": {
+        "text": "albedo subtype",
+        "lang": "en"
+      }
+    },
+    "Q2790523": {
+      "label": {
+        "text": "ITAMSAT",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Italian amateur radio satellite",
+        "lang": "en"
+      }
+    },
+    "Q2796622": {
+      "label": {
+        "text": "mean",
+        "lang": "en"
+      },
+      "description": {
+        "text": "numeric quantity representing the center of a collection of numbers",
+        "lang": "en"
+      }
+    },
+    "Q2832068": {
+      "label": {
+        "text": "geometric albedo",
+        "lang": "en"
+      },
+      "description": {
+        "text": "albedo subtype",
+        "lang": "en"
+      }
+    },
+    "Q3122598": {
+      "label": {
+        "text": "Tiangong-2",
+        "lang": "en"
+      },
+      "description": {
+        "text": "former Chinese space station",
+        "lang": "en"
+      }
+    },
+    "Q3186787": {
+      "label": {
+        "text": "stellar day",
+        "lang": "en"
+      },
+      "description": {
+        "text": "duration needed for the Earth to face the Sun again at a given angle",
+        "lang": "en"
+      }
+    },
+    "Q3189123": {
+      "label": {
+        "text": "WikiProject Geography",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia subject-area collaborative project",
+        "lang": "en"
+      }
+    },
+    "Q3241540": {
+      "label": {
+        "text": "oblate spheroid",
+        "lang": "en"
+      },
+      "description": {
+        "text": "rotationally symmetric ellipsoid having a polar axis shorter than the diameter of the equatorial circle whose plane bisects it",
+        "lang": "en"
+      }
+    },
+    "Q3270674": {
+      "label": {
+        "text": "Libertad 1",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Colombian CubeSat",
+        "lang": "en"
+      }
+    },
+    "Q3329015": {
+      "label": {
+        "text": "DODGE",
+        "lang": "en"
+      },
+      "description": {
+        "text": "American research satellite",
+        "lang": "en"
+      }
+    },
+    "Q3446604": {
+      "label": {
+        "text": "Armenian Sign Language",
+        "lang": "en"
+      },
+      "description": {
+        "text": "deaf sign language of Armenia",
+        "lang": "en"
+      }
+    },
+    "Q3459718": {
+      "label": {
+        "text": "Soil Moisture Active Passive",
+        "lang": "en"
+      },
+      "description": {
+        "text": "NASA environmental monitoring satellite",
+        "lang": "en"
+      }
+    },
+    "Q3459966": {
+      "label": {
+        "text": "SPOT 1",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Earth observation satellite (1986-2003)",
+        "lang": "en"
+      }
+    },
+    "Q3502357": {
+      "label": {
+        "text": "Landsat 5",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Earth observation satellite",
+        "lang": "en"
+      }
+    },
+    "Q3504248": {
+      "label": {
+        "text": "inner planet of the Solar System",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Mercury, Venus, Earth, and Mars",
+        "lang": "en"
+      }
+    },
+    "Q3514088": {
+      "label": {
+        "text": "Taiyin",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Synonymous with traditional Chinese astronomy",
+        "lang": "en"
+      }
+    },
+    "Q3717087": {
+      "label": {
+        "text": "e-st@r",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Italian satellite",
+        "lang": "en"
+      }
+    },
+    "Q3814663": {
+      "label": {
+        "text": "Solar equator",
+        "lang": "en"
+      },
+      "description": {
+        "text": "circle of latitude",
+        "lang": "en"
+      }
+    },
+    "Q4086271": {
+      "label": {
+        "text": "Bible Encyclopedia of Archimandrite Nicephorus",
+        "lang": "en"
+      },
+      "description": {
+        "text": "encyclopedia, published in 1891–1892 in Moscow",
+        "lang": "en"
+      }
+    },
+    "Q4173137": {
+      "label": {
+        "text": "Jewish Encyclopedia of Brockhaus and Efron",
+        "lang": "en"
+      },
+      "description": {
+        "text": "encyclopedia",
+        "lang": "en"
+      }
+    },
+    "Q4243638": {
+      "label": {
+        "text": "cubic kilometre",
+        "lang": "en"
+      },
+      "description": {
+        "text": "unit of volume",
+        "lang": "en"
+      }
+    },
+    "Q4330518": {
+      "label": {
+        "text": "object of study",
+        "lang": "en"
+      },
+      "description": {
+        "text": "something that undergoes testing or observation in a scientific experiment or in a scientific study",
+        "lang": "en"
+      }
+    },
+    "Q4532138": {
+      "label": {
+        "text": "Granat Encyclopedic Dictionary",
+        "lang": "en"
+      },
+      "description": {
+        "text": "seventh edition of Russian encyclopedic dictionary",
+        "lang": "en"
+      }
+    },
+    "Q5327160": {
+      "label": {
+        "text": "Earth in fiction",
+        "lang": "en"
+      },
+      "description": {
+        "text": "overview of the status of the Earth in fictional stories",
+        "lang": "en"
+      }
+    },
+    "Q5460604": {
+      "label": {
+        "text": "Wikipedia:List of articles all languages should have",
+        "lang": "en"
+      },
+      "description": {
+        "text": "list of 1000 articles every Wikipedia edition should have",
+        "lang": "en"
+      }
+    },
+    "Q5497659": {
+      "label": {
+        "text": "WikiProject Environment",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia subject-area collaboration",
+        "lang": "en"
+      }
+    },
+    "Q5727902": {
+      "label": {
+        "text": "circa",
+        "lang": "en"
+      },
+      "description": {
+        "text": "approximative date",
+        "lang": "en"
+      }
+    },
+    "Q6173448": {
+      "label": {
+        "text": "Wikipedia:Vital articles/Level/4",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia project page",
+        "lang": "en"
+      }
+    },
+    "Q6500960": {
+      "label": {
+        "text": "Earth's magnetic field",
+        "lang": "en"
+      },
+      "description": {
+        "text": "magnetic field that extends from the Earth's inner core to where it meets the solar wind",
+        "lang": "en"
+      }
+    },
+    "Q6508336": {
+      "label": {
+        "text": "lead-lead dating",
+        "lang": "en"
+      },
+      "description": {
+        "text": "type of radiometric dating",
+        "lang": "en"
+      }
+    },
+    "Q7725395": {
+      "label": {
+        "text": "Category:Earth (planet)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia category",
+        "lang": "en"
+      }
+    },
+    "Q10522795": {
+      "label": {
+        "text": "WikiProject Science",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia subject-area collaboration",
+        "lang": "en"
+      }
+    },
+    "Q11030684": {
+      "label": {
+        "text": "WikiProject Solar System",
+        "lang": "en"
+      },
+      "description": {
+        "text": "sub-project of Wikipedia:WikiProject Astronomy",
+        "lang": "en"
+      }
+    },
+    "Q11081619": {
+      "label": {
+        "text": "land",
+        "lang": "en"
+      },
+      "description": {
+        "text": "solid surface of Earth that is not permanently covered by water",
+        "lang": "en"
+      }
+    },
+    "Q11362158": {
+      "label": {
+        "text": "world geography",
+        "lang": "en"
+      },
+      "description": {
+        "text": "geography of the entire Earth",
+        "lang": "en"
+      }
+    },
+    "Q12047459": {
+      "label": {
+        "text": "Earth diameter",
+        "lang": "en"
+      },
+      "description": {
+        "text": "diameter of planet Earth",
+        "lang": "en"
+      }
+    },
+    "Q12832168": {
+      "label": {
+        "text": "artificial satellite of the Earth",
+        "lang": "en"
+      },
+      "description": {
+        "text": "spacecraft orbiting the Earth",
+        "lang": "en"
+      }
+    },
+    "Q13147228": {
+      "label": {
+        "text": "gram per cubic centimetre",
+        "lang": "en"
+      },
+      "description": {
+        "text": "SI unit of density",
+        "lang": "en"
+      }
+    },
+    "Q13414913": {
+      "label": {
+        "text": "Simplified Chinese",
+        "lang": "en"
+      },
+      "description": {
+        "text": "written Chinese language using a simplified set of Chinese characters, used in People's Republic of China, Singapore, Malaysia",
+        "lang": "en"
+      }
+    },
+    "Q13460542": {
+      "label": {
+        "text": "Wikipedia:Vital articles/Level/1",
+        "lang": "en"
+      },
+      "description": {
+        "text": "List of ten vital articles on the English Wikipedia",
+        "lang": "en"
+      }
+    },
+    "Q14943910": {
+      "label": {
+        "text": "WikiProject Geology",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikipedia subject-area collaboration for geology",
+        "lang": "en"
+      }
+    },
+    "Q16054810": {
+      "label": {
+        "text": "Sentinel-1A",
+        "lang": "en"
+      },
+      "description": {
+        "text": "European radar imaging satellite",
+        "lang": "en"
+      }
+    },
+    "Q16082057": {
+      "label": {
+        "text": "The New Student's Reference Work",
+        "lang": "en"
+      },
+      "description": {
+        "text": "1914 reference work",
+        "lang": "en"
+      }
+    },
+    "Q16500041": {
+      "label": {
+        "text": "SCD-1",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "Brazilian data collection and relay satellite",
+        "lang": "en"
+      }
+    },
+    "Q17285883": {
+      "label": {
+        "text": "UniSat 6",
+        "lang": "en"
+      },
+      "description": {
+        "text": "40012",
+        "lang": "en"
+      }
+    },
+    "Q17486654": {
+      "label": {
+        "text": "AsiaSat 8",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Hong Kong commercial communication satellite",
+        "lang": "en"
+      }
+    },
+    "Q17859486": {
+      "label": {
+        "text": "WikiProject Culture",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia subject-area collaboration",
+        "lang": "en"
+      }
+    },
+    "Q18589965": {
+      "label": {
+        "text": "Earth–Moon system",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Moon orbiting Earth",
+        "lang": "en"
+      }
+    },
+    "Q19180675": {
+      "label": {
+        "text": "Small Brockhaus and Efron Encyclopedic Dictionary",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Russian encyclopedic dictionary",
+        "lang": "en"
+      }
+    },
+    "Q19219752": {
+      "label": {
+        "text": "Meyers Konversations-Lexikon, 4th edition (1885–1890)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "edition of a German language encyclopaedia",
+        "lang": "en"
+      }
+    },
+    "Q19362195": {
+      "label": {
+        "text": "geostationary satellite",
+        "lang": "en"
+      },
+      "description": {
+        "text": "satellite in geostationary orbit",
+        "lang": "en"
+      }
+    },
+    "Q19636560": {
+      "label": {
+        "text": "SpaceX CRS-9",
+        "lang": "en"
+      },
+      "description": {
+        "text": "cargo resupply mission to the ISS",
+        "lang": "en"
+      }
+    },
+    "Q20055945": {
+      "label": {
+        "text": "GSAT-18",
+        "lang": "en"
+      },
+      "description": {
+        "text": "41793",
+        "lang": "en"
+      }
+    },
+    "Q20354353": {
+      "label": {
+        "text": "Sentinel-2A",
+        "lang": "en"
+      },
+      "description": {
+        "text": "ESA optical Earth observation satellite",
+        "lang": "en"
+      }
+    },
+    "Q21088638": {
+      "label": {
+        "text": "joule per tesla",
+        "lang": "en"
+      },
+      "description": {
+        "text": "SI unit of magnetic moment",
+        "lang": "en"
+      }
+    },
+    "Q22828183": {
+      "label": {
+        "text": "Earth",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia permanent duplicate item",
+        "lang": "en"
+      }
+    },
+    "Q23048336": {
+      "label": {
+        "text": "Earth",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia disambiguation page",
+        "lang": "en"
+      }
+    },
+    "Q23818223": {
+      "label": {
+        "text": "Sentinel-1B",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "European radar imaging satellite",
+        "lang": "en"
+      }
+    },
+    "Q23859820": {
+      "label": {
+        "text": "Země",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "article in Otto's encyclopedia",
+        "lang": "en"
+      }
+    },
+    "Q23876039": {
+      "label": {
+        "text": "Zeměkoule",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "article in Otto's encyclopedia",
+        "lang": "en"
+      }
+    },
+    "Q24005632": {
+      "label": {
+        "text": "descriptive page and disambiguation page have to be in different items",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikidata-specific criterion related to disambiguation pages",
+        "lang": "en"
+      }
+    },
+    "Q24206672": {
+      "description": {
+        "text": "encyclopedic article",
+        "lang": "en"
+      }
+    },
+    "Q24206689": {
+      "description": {
+        "text": "encyclopedic article",
+        "lang": "en"
+      }
+    },
+    "Q24206694": {
+      "description": {
+        "text": "encyclopedic article",
+        "lang": "en"
+      }
+    },
+    "Q24206696": {
+      "description": {
+        "text": "encyclopedic article",
+        "lang": "en"
+      }
+    },
+    "Q24732074": {
+      "description": {
+        "text": "encyclopedic article",
+        "lang": "en"
+      }
+    },
+    "Q25382402": {
+      "label": {
+        "text": "QUESS",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Chinese scientific satellite",
+        "lang": "en"
+      }
+    },
+    "Q25426699": {
+      "label": {
+        "text": "Telstar 18V",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "communications satellite",
+        "lang": "en"
+      }
+    },
+    "Q25449060": {
+      "label": {
+        "text": "SGDC-1",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Brazilian geostationary communication satellite",
+        "lang": "en"
+      }
+    },
+    "Q25935139": {
+      "label": {
+        "text": "mass of the Earth",
+        "lang": "en"
+      },
+      "description": {
+        "text": "mass of the planet Earth",
+        "lang": "en"
+      }
+    },
+    "Q26256810": {
+      "label": {
+        "text": "topic",
+        "lang": "en"
+      },
+      "description": {
+        "text": "topic or area addressed by a work or set of works",
+        "lang": "en"
+      }
+    },
+    "Q28231576": {
+      "label": {
+        "text": "outline of Earth",
+        "lang": "en"
+      },
+      "description": {
+        "text": "overview of and topical guide to Earth",
+        "lang": "en"
+      }
+    },
+    "Q28473093": {
+      "label": {
+        "text": "Van Allen Probe A",
+        "lang": "en"
+      },
+      "description": {
+        "text": "former space probe used to study Earth's Van Allen radiation belts",
+        "lang": "en"
+      }
+    },
+    "Q28473100": {
+      "label": {
+        "text": "Van Allen Probe B",
+        "lang": "en"
+      },
+      "description": {
+        "text": "space probe used to study Earth's Van Allen radiation belts",
+        "lang": "en"
+      }
+    },
+    "Q28857865": {
+      "label": {
+        "text": "Sentinel-2B",
+        "lang": "en"
+      },
+      "description": {
+        "text": "ESA optical Earth observation satellite",
+        "lang": "en"
+      }
+    },
+    "Q33056464": {
+      "label": {
+        "text": "Encyclopedia Galactica",
+        "lang": "en"
+      },
+      "description": {
+        "text": "hypothetical encyclopedia created by an extraterrestrial civilization, described in Carl Sagan's Cosmos TV series",
+        "lang": "en"
+      }
+    },
+    "Q39053896": {
+      "label": {
+        "text": "X-ray Imaging and Spectroscopy Mission",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Japanese X-ray space telescope",
+        "lang": "en"
+      }
+    },
+    "Q7879772": {
+      "label": {
+        "text": "inner Solar System",
+        "lang": "en"
+      },
+      "description": {
+        "text": "region of the Solar System comprising of Mercury, Venus, Earth and Mars with natural satellites, as well as the main-belt asteroids",
+        "lang": "en"
+      }
+    },
+    "Q8084930": {
+      "label": {
+        "text": "Template:Earth",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia template",
+        "lang": "en"
+      }
+    },
+    "Q8493596": {
+      "label": {
+        "text": "WikiProject Astronomy",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia subject-area collaborative project",
+        "lang": "en"
+      }
+    },
+    "Q8502932": {
+      "label": {
+        "text": "WikiProject Astronomical objects",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia subject-area collaboration",
+        "lang": "en"
+      }
+    },
+    "Q102424477": {
+      "label": {
+        "text": "Sentinel-6 Michael Freilich",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Earth observation satellite",
+        "lang": "en"
+      }
+    },
+    "Q102424501": {
+      "label": {
+        "text": "Sentinel-6B",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Earth observation satellite",
+        "lang": "en"
+      }
+    },
+    "Q105085344": {
+      "label": {
+        "text": "Historical Dictionary of Science Fiction",
+        "lang": "en"
+      },
+      "description": {
+        "text": "online database",
+        "lang": "en"
+      }
+    },
+    "Q105115142": {
+      "label": {
+        "text": "narrative location",
+        "lang": "en"
+      },
+      "description": {
+        "text": "place where a fictional story takes place",
+        "lang": "en"
+      }
+    },
+    "Q105265074": {
+      "label": {
+        "text": "canonical tag",
+        "lang": "en"
+      },
+      "description": {
+        "text": "tag quality used by Archive of Our Own",
+        "lang": "en"
+      }
+    },
+    "Q105889224": {
+      "label": {
+        "text": "Asgardia-1",
+        "lang": "en"
+      },
+      "description": {
+        "text": "former CubeSat operated by Asgardia",
+        "lang": "en"
+      }
+    },
+    "Q106073481": {
+      "label": {
+        "text": "Enxaneta",
+        "lang": "en"
+      },
+      "description": {
+        "text": "nanosatellite of the Generalitat de Catalunya",
+        "lang": "en"
+      }
+    },
+    "Q107316855": {
+      "label": {
+        "text": "additional tag",
+        "lang": "en"
+      },
+      "description": {
+        "text": "tag category used by Archive of Our Own",
+        "lang": "en"
+      }
+    },
+    "Q107433072": {
+      "label": {
+        "text": "Der Volks-Brockhaus",
+        "lang": "en"
+      },
+      "description": {
+        "text": "6th Edition",
+        "lang": "en"
+      }
+    },
+    "Q107629312": {
+      "label": {
+        "text": "SXM-8",
+        "lang": "en"
+      },
+      "description": {
+        "text": "satellite radio communications satellite operated by SiriusXM",
+        "lang": "en"
+      }
+    },
+    "Q108104224": {
+      "label": {
+        "text": "SAMPAN I",
+        "lang": "en"
+      },
+      "description": {
+        "text": "American signals intelligence satellite",
+        "lang": "en"
+      }
+    },
+    "Q108156638": {
+      "label": {
+        "text": "geologic activity",
+        "lang": "en"
+      },
+      "description": {
+        "text": "natural phenomenon",
+        "lang": "en"
+      }
+    },
+    "Q109250322": {
+      "label": {
+        "text": "Orbital Reef",
+        "lang": "en"
+      },
+      "description": {
+        "text": "planned low-Earth-orbit space station developed by Blue Origin and Sierra Space",
+        "lang": "en"
+      }
+    },
+    "Q109283872": {
+      "label": {
+        "text": "Starlab",
+        "lang": "en"
+      },
+      "description": {
+        "text": "planned low-Earth-orbit space station developed by Starlab Space",
+        "lang": "en"
+      }
+    },
+    "Q110087470": {},
+    "Q110613557": {
+      "label": {
+        "text": "LEDsat",
+        "lang": "en"
+      }
+    },
+    "Q111471801": {
+      "label": {
+        "text": "Unisat 5",
+        "lang": "en"
+      },
+      "description": {
+        "text": "39421",
+        "lang": "en"
+      }
+    },
+    "Q112775138": {
+      "description": {
+        "text": "encyclopedia article published in Meyers Konversations-Lexikon, 4th edition (1885–1890)",
+        "lang": "en"
+      }
+    },
+    "Q113380363": {
+      "label": {
+        "text": "2022 NX1",
+        "lang": "en"
+      },
+      "description": {
+        "text": "temporary satellite capture",
+        "lang": "en"
+      }
+    },
+    "Q115252651": {
+      "description": {
+        "text": "event when the world's population rose above 8 billion",
+        "lang": "en"
+      }
+    },
+    "Q115329454": {
+      "label": {
+        "text": "AstroBio CubeSat",
+        "lang": "en"
+      }
+    },
+    "Q115563191": {
+      "label": {
+        "text": "Space Travelling Egg-Controlled Catadioptric Object",
+        "lang": "en"
+      }
+    },
+    "Q115837838": {
+      "label": {
+        "text": "Eerd",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Wikimedia disambiguation page",
+        "lang": "en"
+      }
+    },
+    "Q119457151": {
+      "label": {
+        "text": "Spei Satelles",
+        "lang": "en"
+      },
+      "description": {
+        "text": "cubesat; the Vatican's first satellite",
+        "lang": "en"
+      }
+    },
+    "Q120069071": {
+      "label": {
+        "text": "Haven-1",
+        "lang": "en"
+      },
+      "description": {
+        "text": "planned low-Earth-orbit space station developed by Vast",
+        "lang": "en"
+      }
+    },
+    "Q120799836": {
+      "label": {
+        "text": "Dictionnaire des biens communs",
+        "lang": "en"
+      },
+      "description": {
+        "text": "2nd edition published in 2021",
+        "lang": "en"
+      }
+    },
+    "Q122987993": {
+      "label": {
+        "text": "Gaofen 12-04",
+        "lang": "en"
+      }
+    },
+    "Q122989364": {
+      "label": {
+        "text": "Gaofen 12-02",
+        "lang": "en"
+      }
+    },
+    "Q124011418": {
+      "label": {
+        "text": "The New Student's Reference Work/Earth",
+        "lang": "en"
+      }
+    },
+    "Q126372457": {
+      "label": {
+        "text": "Kosmos 2553",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Russian satellite",
+        "lang": "en"
+      }
+    },
+    "Q127460082": {
+      "label": {
+        "text": "Ariane flight VA262",
+        "lang": "en"
+      },
+      "description": {
+        "text": "maiden flight of the Ariane 6 launch vehicle",
+        "lang": "en"
+      }
+    },
+    "Q128945147": {
+      "label": {
+        "text": "Fram2",
+        "lang": "en"
+      },
+      "description": {
+        "text": "first crewed spaceflight to operate in a polar orbit",
+        "lang": "en"
+      }
+    },
+    "Q129522190": {
+      "label": {
+        "text": "Lemu Nge",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Chilean private nano-satellite",
+        "lang": "en"
+      }
+    },
+    "Q130301991": {
+      "label": {
+        "text": "2024 PT5",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "temporary satellite capture",
+        "lang": "en"
+      }
+    },
+    "Q130475553": {
+      "label": {
+        "text": "Sentinel-1C",
+        "lang": "mul"
+      },
+      "description": {
+        "text": "European radar imaging satellite",
+        "lang": "en"
+      }
+    },
+    "Q131540118": {
+      "label": {
+        "text": "PROBA-3 Coronagraph",
+        "lang": "en"
+      },
+      "description": {
+        "text": "formation-flying spacecraft of the PROBA-3 mission",
+        "lang": "en"
+      }
+    },
+    "Q39893449": {
+      "label": {
+        "text": "exact match",
+        "lang": "en"
+      },
+      "description": {
+        "text": "SKOS mapping relation (for use with P4390): two concepts have equivalent meaning, and the link can be exploited across a wide range of applications and schemes; the link is meant to be transitive",
+        "lang": "en"
+      }
+    },
+    "Q46539410": {
+      "label": {
+        "text": "GRACE-1",
+        "lang": "en"
+      },
+      "description": {
+        "text": "German/American science satellite",
+        "lang": "en"
+      }
+    },
+    "Q46539486": {
+      "label": {
+        "text": "GRACE-2",
+        "lang": "en"
+      },
+      "description": {
+        "text": "German/American science satellite",
+        "lang": "en"
+      }
+    },
+    "Q47005776": {
+      "label": {
+        "text": "UIS estimation",
+        "lang": "en"
+      },
+      "description": {
+        "text": "estimation process",
+        "lang": "en"
+      }
+    },
+    "Q60070514": {
+      "label": {
+        "text": "approximately",
+        "lang": "en"
+      },
+      "description": {
+        "text": "the source specified value and explicitly stated that value is a rough approximation or estimate. For use with qualifier P1480",
+        "lang": "en"
+      }
+    },
+    "Q61040416": {
+      "label": {
+        "text": "GRACE-FO 1",
+        "lang": "en"
+      },
+      "description": {
+        "text": "German/American science satellite",
+        "lang": "en"
+      }
+    },
+    "Q61040417": {
+      "label": {
+        "text": "GRACE-FO 2",
+        "lang": "en"
+      },
+      "description": {
+        "text": "German/American science satellite",
+        "lang": "en"
+      }
+    },
+    "Q66385159": {
+      "label": {
+        "text": "🜨",
+        "lang": "en"
+      },
+      "description": {
+        "text": "alchemical symbol",
+        "lang": "en"
+      }
+    },
+    "Q71533355": {
+      "label": {
+        "text": "most recent value",
+        "lang": "en"
+      },
+      "description": {
+        "text": "reason for preferred rank based on time",
+        "lang": "en"
+      }
+    },
+    "Q73389119": {
+      "label": {
+        "text": "Seeker",
+        "lang": "en"
+      },
+      "description": {
+        "text": "CubeSat built to demonstrate inspection of other spacecraft",
+        "lang": "en"
+      }
+    },
+    "Q84652023": {
+      "label": {
+        "text": "1911 Encyclopædia Britannica/Earth",
+        "lang": "en"
+      },
+      "description": {
+        "text": "encyclopedia article",
+        "lang": "en"
+      }
+    },
+    "Q86388198": {
+      "label": {
+        "text": "2020 CD3",
+        "lang": "en"
+      },
+      "description": {
+        "text": "temporary satellite of Earth",
+        "lang": "en"
+      }
+    },
+    "Q87526782": {
+      "label": {
+        "text": "Earth symbol",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Earth and alchemical symbol",
+        "lang": "en"
+      }
+    },
+    "Q96594012": {},
+    "P10": {
+      "label": {
+        "text": "video",
+        "lang": "en"
+      },
+      "description": {
+        "text": "relevant video; use property P18 for images; for film trailers, qualify with \"object has role\" (P3831)=\"trailer\" (Q622550); for films, qualify with \"object has role\" (P3831)=\"full video available on Wikimedia Commons\" (Q89347362)",
+        "lang": "en"
+      }
+    },
+    "P138": {
+      "label": {
+        "text": "named after",
+        "lang": "en"
+      },
+      "description": {
+        "text": "entity or event that inspired the subject's name, or namesake (in at least one language). Qualifier \"applies to name\" (P5168) can be used to indicate which one",
+        "lang": "en"
+      }
+    },
+    "P143": {
+      "label": {
+        "text": "imported from Wikimedia project",
+        "lang": "en"
+      },
+      "description": {
+        "text": "source of this claim's value; used in references section by bots or humans importing data from Wikimedia projects",
+        "lang": "en"
+      }
+    },
+    "P155": {
+      "label": {
+        "text": "follows",
+        "lang": "en"
+      },
+      "description": {
+        "text": "immediately prior item in a series of which the subject is a part, preferably use as qualifier of P179 [if the subject has replaced the preceding item, e.g. political offices, use \"replaces\" (P1365)]",
+        "lang": "en"
+      }
+    },
+    "P156": {
+      "label": {
+        "text": "followed by",
+        "lang": "en"
+      },
+      "description": {
+        "text": "immediately following item in a series of which the subject is a part, preferably use as qualifier of P179 [if the subject has been replaced, e.g. political offices, use \"replaced by\" (P1366)]",
+        "lang": "en"
+      }
+    },
+    "P163": {
+      "label": {
+        "text": "flag",
+        "lang": "en"
+      },
+      "description": {
+        "text": "subject's flag",
+        "lang": "en"
+      }
+    },
+    "P18": {
+      "label": {
+        "text": "image",
+        "lang": "en"
+      },
+      "description": {
+        "text": "image of relevant illustration of the subject; if available, also use more specific properties (sample: coat of arms image, locator map, flag image, signature image, logo image, collage image)",
+        "lang": "en"
+      }
+    },
+    "P207": {
+      "label": {
+        "text": "bathymetry image",
+        "lang": "en"
+      },
+      "description": {
+        "text": "image showing bathymetric chart, bathymetric map",
+        "lang": "en"
+      }
+    },
+    "P214": {
+      "label": {
+        "text": "VIAF cluster ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for the Virtual International Authority File database [format: up to 22 digits]; please note: VIAF is a cluster, the ID can include multiple items",
+        "lang": "en"
+      }
+    },
+    "P227": {
+      "label": {
+        "text": "GND ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier from the Gemeinsame Normdatei authority file of names, subjects, and organizations",
+        "lang": "en"
+      }
+    },
+    "P244": {
+      "label": {
+        "text": "Library of Congress Authorities ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Library of Congress name authority (persons, families, corporate bodies, events, places, works and expressions) and subject authority identifier [Format: 1-2 specific letters followed by 8-10 digits (see regex). For manifestations, use P1144]",
+        "lang": "en"
+      }
+    },
+    "P248": {
+      "label": {
+        "text": "stated in",
+        "lang": "en"
+      },
+      "description": {
+        "text": "to be used in the references field to refer to the information document or database in which a claim is made; for qualifiers use P805; for the type of document in which a claim is made use P3865",
+        "lang": "en"
+      }
+    },
+    "P268": {
+      "label": {
+        "text": "Bibliothèque nationale de France ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for the subject issued by BNF (Bibliothèque nationale de France)",
+        "lang": "en"
+      }
+    },
+    "P276": {
+      "label": {
+        "text": "location",
+        "lang": "en"
+      },
+      "description": {
+        "text": "location of the object, structure or event; use P131 to indicate the containing administrative entity, P8138 for statistical entities, or P706 for geographic entities; use P7153 for locations associated with the object",
+        "lang": "en"
+      }
+    },
+    "P304": {
+      "label": {
+        "text": "page(s)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "page number of source referenced for statement. Note \"column(s)\" (P3903) and \"folio(s)\" (P7416) for other numbering systems",
+        "lang": "en"
+      }
+    },
+    "P31": {
+      "label": {
+        "text": "instance of",
+        "lang": "en"
+      },
+      "description": {
+        "text": "type to which this subject corresponds/belongs. Different from P279 (subclass of); for example: K2 is an instance of mountain; volcano is a subclass of mountain",
+        "lang": "en"
+      }
+    },
+    "P349": {
+      "label": {
+        "text": "NDL Authority ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for authority control per the National Diet Library of Japan",
+        "lang": "en"
+      }
+    },
+    "P361": {
+      "label": {
+        "text": "part of",
+        "lang": "en"
+      },
+      "description": {
+        "text": "object of which the subject is a part (as directly as possible); inverse property of \"has part\" (P527, see also \"has parts of the class\" (P2670))",
+        "lang": "en"
+      }
+    },
+    "P367": {
+      "label": {
+        "text": "astronomic symbol image",
+        "lang": "en"
+      },
+      "description": {
+        "text": "image of the symbol that identifies a planet, asteroid, or other object in the Solar System",
+        "lang": "en"
+      }
+    },
+    "P373": {
+      "label": {
+        "text": "Commons category",
+        "lang": "en"
+      },
+      "description": {
+        "text": "name of the Wikimedia Commons category containing files related to this item (without the prefix \"Category:\")",
+        "lang": "en"
+      }
+    },
+    "P397": {
+      "label": {
+        "text": "parent astronomical body",
+        "lang": "en"
+      },
+      "description": {
+        "text": "major astronomical body the item belongs to",
+        "lang": "en"
+      }
+    },
+    "P398": {
+      "label": {
+        "text": "child astronomical body",
+        "lang": "en"
+      },
+      "description": {
+        "text": "minor body that belongs to the item",
+        "lang": "en"
+      }
+    },
+    "P407": {
+      "label": {
+        "text": "language of work or name",
+        "lang": "en"
+      },
+      "description": {
+        "text": "language associated with this creative work (such as books, shows, songs, broadcasts or websites) or a name (for persons use \"native language\" (P103) and \"languages spoken, written or signed\" (P1412))",
+        "lang": "en"
+      }
+    },
+    "P443": {
+      "label": {
+        "text": "pronunciation audio",
+        "lang": "en"
+      },
+      "description": {
+        "text": "audio file with pronunciation",
+        "lang": "en"
+      }
+    },
+    "P459": {
+      "label": {
+        "text": "determination method or standard",
+        "lang": "en"
+      },
+      "description": {
+        "text": "how a value is determined, or the standard by which it is declared",
+        "lang": "en"
+      }
+    },
+    "P460": {
+      "label": {
+        "text": "said to be the same as",
+        "lang": "en"
+      },
+      "description": {
+        "text": "this item is said to be the same as that item, though this may be uncertain or disputed",
+        "lang": "en"
+      }
+    },
+    "P461": {
+      "label": {
+        "text": "opposite of",
+        "lang": "en"
+      },
+      "description": {
+        "text": "item that is in some way the opposite of this item",
+        "lang": "en"
+      }
+    },
+    "P486": {
+      "label": {
+        "text": "MeSH descriptor ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for Descriptor or Supplementary concept in the Medical Subject Headings controlled vocabulary",
+        "lang": "en"
+      }
+    },
+    "P487": {
+      "label": {
+        "text": "Unicode character",
+        "lang": "en"
+      },
+      "description": {
+        "text": "single Unicode character representing the item, suggested only if it is in its NFC form and is not a control character, strongly discouraged for combining diacritics (in such cases, use only P4213)",
+        "lang": "en"
+      }
+    },
+    "P508": {
+      "label": {
+        "text": "BNCF Thesaurus ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the subject indexing tool of the National Central Library of Florence",
+        "lang": "en"
+      }
+    },
+    "P515": {
+      "label": {
+        "text": "state of matter",
+        "lang": "en"
+      },
+      "description": {
+        "text": "state or phase of the matter at which the measure was made",
+        "lang": "en"
+      }
+    },
+    "P518": {
+      "label": {
+        "text": "applies to part",
+        "lang": "en"
+      },
+      "description": {
+        "text": "part, aspect, or form of the item to which the claim applies",
+        "lang": "en"
+      }
+    },
+    "P522": {
+      "label": {
+        "text": "type of orbit",
+        "lang": "en"
+      },
+      "description": {
+        "text": "orbit a satellite has around its central body",
+        "lang": "en"
+      }
+    },
+    "P527": {
+      "label": {
+        "text": "has part(s)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "part of this subject; inverse property of \"part of\" (P361). See also \"has parts of the class\" (P2670).",
+        "lang": "en"
+      }
+    },
+    "P528": {
+      "label": {
+        "text": "catalog code",
+        "lang": "en"
+      },
+      "description": {
+        "text": "catalog name of an object, use with qualifier P972",
+        "lang": "en"
+      }
+    },
+    "P571": {
+      "label": {
+        "text": "inception",
+        "lang": "en"
+      },
+      "description": {
+        "text": "time when an entity begins to exist; for date of official opening use P1619",
+        "lang": "en"
+      }
+    },
+    "P575": {
+      "label": {
+        "text": "time of discovery or invention",
+        "lang": "en"
+      },
+      "description": {
+        "text": "date or point in time when the item was discovered or invented",
+        "lang": "en"
+      }
+    },
+    "P576": {
+      "label": {
+        "text": "dissolved, abolished or demolished",
+        "lang": "en"
+      },
+      "description": {
+        "text": "point in time at which the subject (organisation, building) ceased to exist; see \"date of official closure\" (P3999) for closing a facility, \"service retirement\" (P730) for retiring equipment, \"discontinued date\" (P2669) for stopping a product",
+        "lang": "en"
+      }
+    },
+    "P580": {
+      "label": {
+        "text": "start time",
+        "lang": "en"
+      },
+      "description": {
+        "text": "time an entity begins to exist or a statement starts being valid",
+        "lang": "en"
+      }
+    },
+    "P582": {
+      "label": {
+        "text": "end time",
+        "lang": "en"
+      },
+      "description": {
+        "text": "moment when an entity ceases to exist and a statement stops being entirely valid or no longer be true",
+        "lang": "en"
+      }
+    },
+    "P585": {
+      "label": {
+        "text": "point in time",
+        "lang": "en"
+      },
+      "description": {
+        "text": "date something took place, existed or a statement was true; for providing time use the \"refine date\" property (P4241)",
+        "lang": "en"
+      }
+    },
+    "P610": {
+      "label": {
+        "text": "highest point",
+        "lang": "en"
+      },
+      "description": {
+        "text": "point with highest elevation in a region or path",
+        "lang": "en"
+      }
+    },
+    "P646": {
+      "label": {
+        "text": "Freebase ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Machine Identifier (MID) for a topic in the former Freebase knowledge graph; new Freebase MIDs are no longer issued, but existing /m/ identifiers remain in use, including by Google Knowledge Graph",
+        "lang": "en"
+      }
+    },
+    "P672": {
+      "label": {
+        "text": "MeSH tree code",
+        "lang": "en"
+      },
+      "description": {
+        "text": "hierarchical category codes for MeSH descriptors (≠ MeSH ID)",
+        "lang": "en"
+      }
+    },
+    "P691": {
+      "label": {
+        "text": "NL CR AUT ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the Czech National Authority Database of National Library of the Czech Republic (NL CR)",
+        "lang": "en"
+      }
+    },
+    "P706": {
+      "label": {
+        "text": "located in/on physical feature",
+        "lang": "en"
+      },
+      "description": {
+        "text": "located on the specified (geo)physical feature. Should not be used when the value is only political/administrative (P131) or a mountain range (P4552). Use P206 for things in/on bodies of water.",
+        "lang": "en"
+      }
+    },
+    "Q131540119": {
+      "label": {
+        "text": "PROBA-3 Occulter",
+        "lang": "en"
+      },
+      "description": {
+        "text": "formation-flying spacecraft of the PROBA-3 mission",
+        "lang": "en"
+      }
+    },
+    "Q131577490": {
+      "label": {
+        "text": "SXM-9",
+        "lang": "en"
+      },
+      "description": {
+        "text": "satellite radio communications satellite operated by SiriusXM",
+        "lang": "en"
+      }
+    },
+    "Q131626482": {
+      "description": {
+        "text": "entry in Granat Encyclopedic Dictionary",
+        "lang": "en"
+      }
+    },
+    "Q131826169": {
+      "label": {
+        "text": "Blue Ring Pathfinder",
+        "lang": "en"
+      },
+      "description": {
+        "text": "test article launched aboard the New Glenn NG-1 spaceflight",
+        "lang": "en"
+      }
+    },
+    "P1013": {
+      "label": {
+        "text": "criterion used",
+        "lang": "en"
+      },
+      "description": {
+        "text": "property by which a distinction or classification is made",
+        "lang": "en"
+      }
+    },
+    "P1036": {
+      "label": {
+        "text": "Dewey Decimal Classification",
+        "lang": "en"
+      },
+      "description": {
+        "text": "use with qualifier \"edition (P747)\" with item value \"DDC 23\" or create new item to represent the corresponding DDC edition",
+        "lang": "en"
+      }
+    },
+    "P1051": {
+      "label": {
+        "text": "PSH ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the authority database of the Czech Technical Library",
+        "lang": "en"
+      }
+    },
+    "P1082": {
+      "label": {
+        "text": "population",
+        "lang": "en"
+      },
+      "description": {
+        "text": "number of people inhabiting the place; number of people of subject",
+        "lang": "en"
+      }
+    },
+    "P1096": {
+      "label": {
+        "text": "orbital eccentricity",
+        "lang": "en"
+      },
+      "description": {
+        "text": "amount of the deviation of an orbit from a perfect circle",
+        "lang": "en"
+      }
+    },
+    "P1102": {
+      "label": {
+        "text": "flattening",
+        "lang": "en"
+      },
+      "description": {
+        "text": "measure of the compression of an ellipsoid of revolution",
+        "lang": "en"
+      }
+    },
+    "P1149": {
+      "label": {
+        "text": "Library of Congress Classification",
+        "lang": "en"
+      },
+      "description": {
+        "text": "subject classification number used in the Library of Congress Classification system; does not include the shelflisting portion assigned to individual publications",
+        "lang": "en"
+      }
+    },
+    "P1225": {
+      "label": {
+        "text": "U.S. National Archives Identifier",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for the United States National Archives and Records Administration's online catalog",
+        "lang": "en"
+      }
+    },
+    "P1245": {
+      "label": {
+        "text": "OmegaWiki Defined Meaning",
+        "lang": "en"
+      },
+      "description": {
+        "text": "\"Defined Meaning\" on the site",
+        "lang": "en"
+      }
+    },
+    "P1256": {
+      "label": {
+        "text": "Iconclass notation",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Iconclass code that corresponds with an artistic theme or concept. For artworks, use P1257 (depicts Iconclass notation)",
+        "lang": "en"
+      }
+    },
+    "P1281": {
+      "label": {
+        "text": "WOEID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a location on Yahoo! GeoPlanet and Flickr",
+        "lang": "en"
+      }
+    },
+    "P1296": {
+      "label": {
+        "text": "Gran Enciclopèdia Catalana ID (former scheme)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an item in the Gran Enciclopèdia Catalana. Replaced with \"Gran Enciclopèdia Catalana ID (P12385)\"",
+        "lang": "en"
+      }
+    },
+    "P1299": {
+      "label": {
+        "text": "depicted by",
+        "lang": "en"
+      },
+      "description": {
+        "text": "object depicting this subject (object being creative works such as books, films, paintings)",
+        "lang": "en"
+      }
+    },
+    "P1310": {
+      "label": {
+        "text": "statement disputed by",
+        "lang": "en"
+      },
+      "description": {
+        "text": "entity that disputes a given statement",
+        "lang": "en"
+      }
+    },
+    "P1332": {
+      "label": {
+        "text": "coordinates of northernmost point",
+        "lang": "en"
+      },
+      "description": {
+        "text": "northernmost point of a location. For an administrative entity this includes offshore islands",
+        "lang": "en"
+      }
+    },
+    "P1333": {
+      "label": {
+        "text": "coordinates of southernmost point",
+        "lang": "en"
+      },
+      "description": {
+        "text": "southernmost point of a place. For administrative entities this includes offshore islands",
+        "lang": "en"
+      }
+    },
+    "P1343": {
+      "label": {
+        "text": "described by source",
+        "lang": "en"
+      },
+      "description": {
+        "text": "work where this item is described, in statistical contexts, a methodological note describing the data",
+        "lang": "en"
+      }
+    },
+    "P1368": {
+      "label": {
+        "text": "National Library of Latvia ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier assigned by the National Library of Latvia",
+        "lang": "en"
+      }
+    },
+    "P1417": {
+      "label": {
+        "text": "Encyclopædia Britannica Online ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an article in the online version of Encyclopædia Britannica",
+        "lang": "en"
+      }
+    },
+    "P1419": {
+      "label": {
+        "text": "shape",
+        "lang": "en"
+      },
+      "description": {
+        "text": "shape of an object",
+        "lang": "en"
+      }
+    },
+    "P1424": {
+      "label": {
+        "text": "topic has template",
+        "lang": "en"
+      },
+      "description": {
+        "text": "the main template relating to a topic",
+        "lang": "en"
+      }
+    },
+    "P1480": {
+      "label": {
+        "text": "sourcing circumstances",
+        "lang": "en"
+      },
+      "description": {
+        "text": "qualification of the truth or accuracy of a source: circa (Q5727902), near (Q21818619), presumably (Q18122778), etc.",
+        "lang": "en"
+      }
+    },
+    "P1482": {
+      "label": {
+        "text": "Stack Exchange tag",
+        "lang": "en"
+      },
+      "description": {
+        "text": "tag on the Stack Exchange websites",
+        "lang": "en"
+      }
+    },
+    "P1545": {
+      "label": {
+        "text": "series ordinal",
+        "lang": "en"
+      },
+      "description": {
+        "text": "position of an item in its parent series (most frequently a 1-based index), generally to be used as a qualifier (different from \"rank\" defined as a class, and from \"ranking\" defined as a property for evaluating a quality)",
+        "lang": "en"
+      }
+    },
+    "P1549": {
+      "label": {
+        "text": "demonym",
+        "lang": "en"
+      },
+      "description": {
+        "text": "name for people or things associated with a given place, usually based off the place name",
+        "lang": "en"
+      }
+    },
+    "P1552": {
+      "label": {
+        "text": "has characteristic",
+        "lang": "en"
+      },
+      "description": {
+        "text": "inherent or distinguishing quality or feature of the entity. Use a more specific property when possible",
+        "lang": "en"
+      }
+    },
+    "P1557": {
+      "label": {
+        "text": "manifestation of",
+        "lang": "en"
+      },
+      "description": {
+        "text": "inherent and characteristic embodiment of a given concept",
+        "lang": "en"
+      }
+    },
+    "P1566": {
+      "label": {
+        "text": "GeoNames ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the GeoNames geographical database",
+        "lang": "en"
+      }
+    },
+    "P1589": {
+      "label": {
+        "text": "lowest point",
+        "lang": "en"
+      },
+      "description": {
+        "text": "point with lowest elevation in a region or path",
+        "lang": "en"
+      }
+    },
+    "P1617": {
+      "label": {
+        "text": "BBC Things ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the BBC Things database, automatically enriched with Wikipedia and MusicBrainz content",
+        "lang": "en"
+      }
+    },
+    "P1667": {
+      "label": {
+        "text": "Getty Thesaurus of Geographic Names ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the Getty Thesaurus of Geographic Names",
+        "lang": "en"
+      }
+    },
+    "P1810": {
+      "label": {
+        "text": "subject named as",
+        "lang": "en"
+      },
+      "description": {
+        "text": "name by which a subject is recorded in a database, mentioned as a contributor of a work, or is referred to in a particular context",
+        "lang": "en"
+      }
+    },
+    "P1814": {
+      "label": {
+        "text": "name in kana",
+        "lang": "en"
+      },
+      "description": {
+        "text": "the reading of a Japanese name in kana",
+        "lang": "en"
+      }
+    },
+    "P1889": {
+      "label": {
+        "text": "different from",
+        "lang": "en"
+      },
+      "description": {
+        "text": "item that is different from another item, with which it may be confused",
+        "lang": "en"
+      }
+    },
+    "P2001": {
+      "label": {
+        "text": "Revised Romanization",
+        "lang": "en"
+      },
+      "description": {
+        "text": "romanisation following the Revised Romanisation of the Korean language",
+        "lang": "en"
+      }
+    },
+    "P2044": {
+      "label": {
+        "text": "elevation above sea level",
+        "lang": "en"
+      },
+      "description": {
+        "text": "height of the item (geographical object) as measured relative to sea level",
+        "lang": "en"
+      }
+    },
+    "P2045": {
+      "label": {
+        "text": "orbital inclination",
+        "lang": "en"
+      },
+      "description": {
+        "text": "orbital inclination of a stable orbit",
+        "lang": "en"
+      }
+    },
+    "P2046": {
+      "label": {
+        "text": "area",
+        "lang": "en"
+      },
+      "description": {
+        "text": "area occupied by an object",
+        "lang": "en"
+      }
+    },
+    "P2052": {
+      "label": {
+        "text": "speed",
+        "lang": "en"
+      },
+      "description": {
+        "text": "magnitude of the velocity of the item",
+        "lang": "en"
+      }
+    },
+    "P805": {
+      "label": {
+        "text": "statement is subject of",
+        "lang": "en"
+      },
+      "description": {
+        "text": "(qualifying) item that describes the relation identified in this statement",
+        "lang": "en"
+      }
+    },
+    "P854": {
+      "label": {
+        "text": "reference URL",
+        "lang": "en"
+      },
+      "description": {
+        "text": "should be used for Internet URLs as references. Use \"Wikimedia import URL\" (P4656) for imports from Wikimedia sites",
+        "lang": "en"
+      }
+    },
+    "P910": {
+      "label": {
+        "text": "topic's main category",
+        "lang": "en"
+      },
+      "description": {
+        "text": "main Wikimedia category",
+        "lang": "en"
+      }
+    },
+    "P913": {
+      "label": {
+        "text": "notation",
+        "lang": "en"
+      },
+      "description": {
+        "text": "mathematical notation or another symbol",
+        "lang": "en"
+      }
+    },
+    "P935": {
+      "label": {
+        "text": "Commons gallery",
+        "lang": "en"
+      },
+      "description": {
+        "text": "name of the Wikimedia Commons gallery page(s) related to this item (is suitable to allow multiple links to more gallery pages)",
+        "lang": "en"
+      }
+    },
+    "P949": {
+      "label": {
+        "text": "National Library of Israel ID (old)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "former identifier for authority control used at the National Library of Israel. Replaced with \"National Library of Israel J9U ID\" (P8189)",
+        "lang": "en"
+      }
+    },
+    "P950": {
+      "label": {
+        "text": "National Library of Spain SpMaBN ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "semi-deprecated control number of the National Library of Spain catalog powered by Symphony. Format for persons: \"XX\" followed by 4 to 7 digits. (Formerly referred to in VIAF as BNE)",
+        "lang": "en"
+      }
+    },
+    "P972": {
+      "label": {
+        "text": "catalog",
+        "lang": "en"
+      },
+      "description": {
+        "text": "catalog for the item, or, as a qualifier of P528 – catalog for which the 'catalog code' is valid",
+        "lang": "en"
+      }
+    },
+    "P973": {
+      "label": {
+        "text": "described at URL",
+        "lang": "en"
+      },
+      "description": {
+        "text": "item is described at the following URL",
+        "lang": "en"
+      }
+    },
+    "P989": {
+      "label": {
+        "text": "spoken text audio",
+        "lang": "en"
+      },
+      "description": {
+        "text": "audio file for the spoken work or Wikipedia article, including audio descriptions",
+        "lang": "en"
+      }
+    },
+    "P998": {
+      "label": {
+        "text": "Curlie ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "category path at Open Directory Project",
+        "lang": "en"
+      }
+    },
+    "P2054": {
+      "label": {
+        "text": "density",
+        "lang": "en"
+      },
+      "description": {
+        "text": "density of a substance with phase of matter and temperature as qualifiers",
+        "lang": "en"
+      }
+    },
+    "P2067": {
+      "label": {
+        "text": "mass",
+        "lang": "en"
+      },
+      "description": {
+        "text": "mass (in colloquial usage also known as weight) of the item",
+        "lang": "en"
+      }
+    },
+    "P2069": {
+      "label": {
+        "text": "magnetic moment",
+        "lang": "en"
+      },
+      "description": {
+        "text": "torque a particle will experience in an external magnetic field",
+        "lang": "en"
+      }
+    },
+    "P2076": {
+      "label": {
+        "text": "temperature",
+        "lang": "en"
+      },
+      "description": {
+        "text": "qualifier to indicate at what temperature something took place",
+        "lang": "en"
+      }
+    },
+    "P2093": {
+      "label": {
+        "text": "author name string",
+        "lang": "en"
+      },
+      "description": {
+        "text": "stores unspecified author or editor name for publications; use if Wikidata item for author (P50) or editor (P98) does not exist or is not known. Do not use both.",
+        "lang": "en"
+      }
+    },
+    "P2096": {
+      "label": {
+        "text": "media legend",
+        "lang": "en"
+      },
+      "description": {
+        "text": "qualifier to describe the media of the statement. This avoids legend storage in the local infobox when the media is defined at Wikidata. For the date, use P585 instead",
+        "lang": "en"
+      }
+    },
+    "P2120": {
+      "label": {
+        "text": "radius",
+        "lang": "en"
+      },
+      "description": {
+        "text": "distance between the center and the surface of a circle or sphere",
+        "lang": "en"
+      }
+    },
+    "P2125": {
+      "label": {
+        "text": "revised Hepburn romanization",
+        "lang": "en"
+      },
+      "description": {
+        "text": "romanized Japanese following the revised Hepburn romanization system",
+        "lang": "en"
+      }
+    },
+    "P2146": {
+      "label": {
+        "text": "orbital period",
+        "lang": "en"
+      },
+      "description": {
+        "text": "the time taken for a given astronomic object to make one complete orbit about another object",
+        "lang": "en"
+      }
+    },
+    "P2147": {
+      "label": {
+        "text": "rotation period",
+        "lang": "en"
+      },
+      "description": {
+        "text": "the time that astronomic objects takes to complete one revolution around its axis of rotation",
+        "lang": "en"
+      }
+    },
+    "P2163": {
+      "label": {
+        "text": "FAST ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "authority control identifier in WorldCat's “FAST Linked Data” authority file",
+        "lang": "en"
+      }
+    },
+    "P2184": {
+      "label": {
+        "text": "history of topic",
+        "lang": "en"
+      },
+      "description": {
+        "text": "item about the historical development of a subject's topic, example: \"history of Argentina\" for \"Argentina\". To list key events of the topic, use \"significant event\" (P793)",
+        "lang": "en"
+      }
+    },
+    "P2210": {
+      "label": {
+        "text": "relative to",
+        "lang": "en"
+      },
+      "description": {
+        "text": "qualifier: what a statement value is relative to",
+        "lang": "en"
+      }
+    },
+    "P2213": {
+      "label": {
+        "text": "longitude of ascending node",
+        "lang": "en"
+      },
+      "description": {
+        "text": "property of one of the orbital elements used to specify the orbit of an object in space",
+        "lang": "en"
+      }
+    },
+    "P2233": {
+      "label": {
+        "text": "semi-major axis of an orbit",
+        "lang": "en"
+      },
+      "description": {
+        "text": "semi-major axis of a stable orbit (Astronomy)",
+        "lang": "en"
+      }
+    },
+    "P2234": {
+      "label": {
+        "text": "volume as quantity",
+        "lang": "en"
+      },
+      "description": {
+        "text": "quantity of three-dimensional space",
+        "lang": "en"
+      }
+    },
+    "P2243": {
+      "label": {
+        "text": "apoapsis",
+        "lang": "en"
+      },
+      "description": {
+        "text": "distance, at which a celestial body is the farthest to the object it orbits",
+        "lang": "en"
+      }
+    },
+    "P2244": {
+      "label": {
+        "text": "periapsis",
+        "lang": "en"
+      },
+      "description": {
+        "text": "distance, at which a celestial body is the closest to the object it orbits",
+        "lang": "en"
+      }
+    },
+    "P2248": {
+      "label": {
+        "text": "argument of periapsis",
+        "lang": "en"
+      },
+      "description": {
+        "text": "angle from the body's ascending node to its periapsis",
+        "lang": "en"
+      }
+    },
+    "P2325": {
+      "label": {
+        "text": "mean anomaly",
+        "lang": "en"
+      },
+      "description": {
+        "text": "element of orbital definition",
+        "lang": "en"
+      }
+    },
+    "P2347": {
+      "label": {
+        "text": "YSO ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a concept in the General Finnish Ontology YSO",
+        "lang": "en"
+      }
+    },
+    "P2386": {
+      "label": {
+        "text": "diameter",
+        "lang": "en"
+      },
+      "description": {
+        "text": "diameter of a circular or spherical object",
+        "lang": "en"
+      }
+    },
+    "P2547": {
+      "label": {
+        "text": "perimeter",
+        "lang": "en"
+      },
+      "description": {
+        "text": "linear distance around the outside of an object",
+        "lang": "en"
+      }
+    },
+    "P2572": {
+      "label": {
+        "text": "hashtag",
+        "lang": "en"
+      },
+      "description": {
+        "text": "reference keyword associated with this item for online communities (do not include the \"#\" symbol which is often used as a prefixed indicator)",
+        "lang": "en"
+      }
+    },
+    "P2573": {
+      "label": {
+        "text": "number of out-of-school children",
+        "lang": "en"
+      },
+      "description": {
+        "text": "number of out-of-school children reported for a place",
+        "lang": "en"
+      }
+    },
+    "P2579": {
+      "label": {
+        "text": "studied by",
+        "lang": "en"
+      },
+      "description": {
+        "text": "subject is studied by this science or domain",
+        "lang": "en"
+      }
+    },
+    "P2581": {
+      "label": {
+        "text": "BabelNet ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "ID in BabelNet encyclopedic dictionary",
+        "lang": "en"
+      }
+    },
+    "P2583": {
+      "label": {
+        "text": "distance from Earth",
+        "lang": "en"
+      },
+      "description": {
+        "text": "estimated distance to astronomical objects",
+        "lang": "en"
+      }
+    },
+    "P2633": {
+      "label": {
+        "text": "geography of topic",
+        "lang": "en"
+      },
+      "description": {
+        "text": "item that deals with the geography of the subject. Sample: \"Rio de Janeiro\" uses this property with value \"geography of Rio de Janeiro\" (Q10288853). For the location of a subject, use \"location\" (P276).",
+        "lang": "en"
+      }
+    },
+    "P2699": {
+      "label": {
+        "text": "URL",
+        "lang": "en"
+      },
+      "description": {
+        "text": "location of a resource",
+        "lang": "en"
+      }
+    },
+    "P2888": {
+      "label": {
+        "text": "exact match",
+        "lang": "en"
+      },
+      "description": {
+        "text": "URL used to link two items or properties, indicating a high degree of confidence that the concepts can be used interchangeably",
+        "lang": "en"
+      }
+    },
+    "P2892": {
+      "label": {
+        "text": "UMLS CUI",
+        "lang": "en"
+      },
+      "description": {
+        "text": "NLM Unified Medical Language System (UMLS) controlled biomedical vocabulary unique identifier",
+        "lang": "en"
+      }
+    },
+    "P2919": {
+      "label": {
+        "text": "label in sign language",
+        "lang": "en"
+      },
+      "description": {
+        "text": "media file showing label of this item in sign language. Use \"language of work or name\" (P407) as qualifier to indicate which language",
+        "lang": "en"
+      }
+    },
+    "P2924": {
+      "label": {
+        "text": "Great Russian Encyclopedia Online ID (2017)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an entry on old.bigenc.ru, the official site of the Great Russian Encyclopedia Online 2014–2017 (current version of bigenc.ru is P11514)",
+        "lang": "en"
+      }
+    },
+    "P2956": {
+      "label": {
+        "text": "NAIF ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "integer code assigned by NASA's Navigation and Ancillary Information Facility to solar system objects, reference frames, and instruments that it tracks",
+        "lang": "en"
+      }
+    },
+    "P2959": {
+      "label": {
+        "text": "permanent duplicated item",
+        "lang": "en"
+      },
+      "description": {
+        "text": "this item duplicates another item and they can't be merged, as one Wikimedia project includes two pages, e.g. in different scripts or languages (examples: cdowiki, gomwiki, nanwiki). Use P31=Q17362920 when the Wikimedia project could merge the pages.",
+        "lang": "en"
+      }
+    },
+    "P3180": {
+      "label": {
+        "text": "Visual Novel Database ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier at the Visual Novel Database",
+        "lang": "en"
+      }
+    },
+    "P3219": {
+      "label": {
+        "text": "Encyclopædia Universalis ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an article in the online version of Encyclopædia Universalis",
+        "lang": "en"
+      }
+    },
+    "P3221": {
+      "label": {
+        "text": "New York Times topic ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of a topic at the New York Times website",
+        "lang": "en"
+      }
+    },
+    "P3222": {
+      "label": {
+        "text": "NE.se ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "ID of article on the Swedish Nationalencyklopedin (NE.se) site",
+        "lang": "en"
+      }
+    },
+    "P3308": {
+      "label": {
+        "text": "lib.reviews ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "ID for “Things” (review subjects) on lib.reviews",
+        "lang": "en"
+      }
+    },
+    "P3417": {
+      "label": {
+        "text": "Quora topic ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a topic on Quora (English language version)",
+        "lang": "en"
+      }
+    },
+    "P3451": {
+      "label": {
+        "text": "nighttime view",
+        "lang": "en"
+      },
+      "description": {
+        "text": "image at night or in twilight",
+        "lang": "en"
+      }
+    },
+    "P3553": {
+      "label": {
+        "text": "Zhihu topic ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "numeric id of topics (tags) of questions on Zhihu, a Chinese question-and-answer website",
+        "lang": "en"
+      }
+    },
+    "P3569": {
+      "label": {
+        "text": "Cultureel Woordenboek ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a concept in the Dutch Cultureel Woordenboek ('Cultural Dictionary')",
+        "lang": "en"
+      }
+    },
+    "P3629": {
+      "label": {
+        "text": "age of subject at event",
+        "lang": "en"
+      },
+      "description": {
+        "text": "the age of the subject according to the cited source at the time of an event. Used as a qualifier of significant event property",
+        "lang": "en"
+      }
+    },
+    "P3635": {
+      "label": {
+        "text": "Peakbagger area ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a mountain range or an area, on the peakbagger.com website",
+        "lang": "en"
+      }
+    },
+    "P3680": {
+      "label": {
+        "text": "statement supported by",
+        "lang": "en"
+      },
+      "description": {
+        "text": "entity that supports a given statement",
+        "lang": "en"
+      }
+    },
+    "P3740": {
+      "label": {
+        "text": "number of works",
+        "lang": "en"
+      },
+      "description": {
+        "text": "qualifier on identifiers, e.g. for creators or locations, giving the number of works in the external database associated with the subject of the identifier",
+        "lang": "en"
+      }
+    },
+    "P3827": {
+      "label": {
+        "text": "JSTOR topic ID (archived)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a topic at JSTOR",
+        "lang": "en"
+      }
+    },
+    "P3831": {
+      "label": {
+        "text": "object of statement has role",
+        "lang": "en"
+      },
+      "description": {
+        "text": "(qualifier) role held by the predicate value (object) of a statement in the context of that statement; for the role of the item the statement appears on (subject), use P2868",
+        "lang": "en"
+      }
+    },
+    "P3847": {
+      "label": {
+        "text": "Open Library subject ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a topic in the Open Library database",
+        "lang": "en"
+      }
+    },
+    "P3903": {
+      "label": {
+        "text": "column(s)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "column in the page of a document, column number of source referenced for statement",
+        "lang": "en"
+      }
+    },
+    "P3916": {
+      "label": {
+        "text": "UNESCO Thesaurus ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a concept in the UNESCO Thesaurus",
+        "lang": "en"
+      }
+    },
+    "P3984": {
+      "label": {
+        "text": "subreddit",
+        "lang": "en"
+      },
+      "description": {
+        "text": "name of the Reddit forum associated to this subject",
+        "lang": "en"
+      }
+    },
+    "P4212": {
+      "label": {
+        "text": "PACTOLS thesaurus ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the PACTOLS archaeology thesaurus by FRANTIQ",
+        "lang": "en"
+      }
+    },
+    "P4239": {
+      "label": {
+        "text": "vocalized name",
+        "lang": "en"
+      },
+      "description": {
+        "text": "item name with full vowel marks",
+        "lang": "en"
+      }
+    },
+    "P4342": {
+      "label": {
+        "text": "Great Norwegian Encyclopedia ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of an article in the online encyclopedia snl.no",
+        "lang": "en"
+      }
+    },
+    "P4390": {
+      "label": {
+        "text": "mapping relation type",
+        "lang": "en"
+      },
+      "description": {
+        "text": "qualifier to more precisely define the relation of the item to the external identifier using SKOS",
+        "lang": "en"
+      }
+    },
+    "P4427": {
+      "label": {
+        "text": "GACS ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of a concept in the Global Agricultural Concept Scheme",
+        "lang": "en"
+      }
+    },
+    "P4466": {
+      "label": {
+        "text": "Unified Astronomy Thesaurus ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a term in the Unified Astronomy Thesaurus (UAT)",
+        "lang": "en"
+      }
+    },
+    "P4501": {
+      "label": {
+        "text": "albedo",
+        "lang": "en"
+      },
+      "description": {
+        "text": "ratio of reflected radiation to incident radiation",
+        "lang": "en"
+      }
+    },
+    "P4613": {
+      "label": {
+        "text": "Encyclopedia of Modern Ukraine ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an entry on the official website of the Encyclopedia of Modern Ukraine",
+        "lang": "en"
+      }
+    },
+    "P4801": {
+      "label": {
+        "text": "LC and MARC vocabularies ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an item in one of the controlled vocabularies maintained by the Library of Congress",
+        "lang": "en"
+      }
+    },
+    "P4839": {
+      "label": {
+        "text": "Wolfram Language entity code",
+        "lang": "en"
+      },
+      "description": {
+        "text": "input form for an entity in Wolfram Language",
+        "lang": "en"
+      }
+    },
+    "P4896": {
+      "label": {
+        "text": "3D model",
+        "lang": "en"
+      },
+      "description": {
+        "text": "representation of any three-dimensional surface of an object",
+        "lang": "en"
+      }
+    },
+    "P4900": {
+      "label": {
+        "text": "broader concept",
+        "lang": "en"
+      },
+      "description": {
+        "text": "qualifier to indicate a broader concept that the present item is part of, as mapped by an external source. The statement being qualified should be an exact match.",
+        "lang": "en"
+      }
+    },
+    "P4970": {
+      "label": {
+        "text": "alternative name",
+        "lang": "en"
+      },
+      "description": {
+        "text": "qualifier for alternative name(s), given for a subject in a database entry, or preserved in references (even these are no longer the preferred name)",
+        "lang": "en"
+      }
+    },
+    "P5008": {
+      "label": {
+        "text": "on focus list of Wikimedia project",
+        "lang": "en"
+      },
+      "description": {
+        "text": "property to indicate that an item is of particular interest for a Wikimedia project. This property does not add notability. Items should not be created with this property if they are not notable for Wikidata. See also P6104, P972, P2354",
+        "lang": "en"
+      }
+    },
+    "P5017": {
+      "label": {
+        "text": "last update",
+        "lang": "en"
+      },
+      "description": {
+        "text": "date a reference was modified, revised, or updated",
+        "lang": "en"
+      }
+    },
+    "P5019": {
+      "label": {
+        "text": "Brockhaus Enzyklopädie online ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an article in the online version of Brockhaus Enzyklopädie",
+        "lang": "en"
+      }
+    },
+    "P5034": {
+      "label": {
+        "text": "National Library of Korea ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for name and subject authority in the database of the National Library of Korea",
+        "lang": "en"
+      }
+    },
+    "P5063": {
+      "label": {
+        "text": "Interlingual Index ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a concept in the Global WordNet Association's Collaborative Interlingual Index",
+        "lang": "en"
+      }
+    },
+    "P5076": {
+      "label": {
+        "text": "Römpp online ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an article in the online version of Römpp",
+        "lang": "en"
+      }
+    },
+    "P5125": {
+      "label": {
+        "text": "Wikimedia outline",
+        "lang": "en"
+      },
+      "description": {
+        "text": "item about an outline of the topic at Wikimedia sites",
+        "lang": "en"
+      }
+    },
+    "P5168": {
+      "label": {
+        "text": "applies to name of subject",
+        "lang": "en"
+      },
+      "description": {
+        "text": "(qualifier) label or alias name to which the claim applies (subject of the statement). To refer to name of the value, use \"applies to name of object\" (P8338)",
+        "lang": "en"
+      }
+    },
+    "P5185": {
+      "label": {
+        "text": "grammatical gender",
+        "lang": "en"
+      },
+      "description": {
+        "text": "grammatical gender of the word",
+        "lang": "en"
+      }
+    },
+    "P5237": {
+      "label": {
+        "text": "pronunciation variety",
+        "lang": "en"
+      },
+      "description": {
+        "text": "qualifier for IPA transcription (P898), pronunciation audio (P443) or spoken text audio (P989) to indicate the associated spoken language variant",
+        "lang": "en"
+      }
+    },
+    "P5247": {
+      "label": {
+        "text": "Giant Bomb ID (former scheme)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier at the Giant Bomb database of video games, fictional characters and voice actors",
+        "lang": "en"
+      }
+    },
+    "P5337": {
+      "label": {
+        "text": "Google News topics ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a subject in the news on Google News",
+        "lang": "en"
+      }
+    },
+    "P5357": {
+      "label": {
+        "text": "Encyclopedia of Science Fiction ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an entry on the Encyclopedia of Science Fiction website",
+        "lang": "en"
+      }
+    },
+    "P5555": {
+      "label": {
+        "text": "schematic",
+        "lang": "en"
+      },
+      "description": {
+        "text": "illustration of the structure or operation of an object, system, or process",
+        "lang": "en"
+      }
+    },
+    "P5573": {
+      "label": {
+        "text": "archINFORM location ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a location on the archINFORM website",
+        "lang": "en"
+      }
+    },
+    "P5748": {
+      "label": {
+        "text": "Basisklassifikation",
+        "lang": "en"
+      },
+      "description": {
+        "text": "corresponding class in the Basisklassifikation library classification",
+        "lang": "en"
+      }
+    },
+    "P5905": {
+      "label": {
+        "text": "Comic Vine ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier at the Comic Vine database of comic books, fictional characters, people, films and television series/episodes",
+        "lang": "en"
+      }
+    },
+    "P6058": {
+      "label": {
+        "text": "Larousse ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a subject on the 'Encyclopédie Larousse'",
+        "lang": "en"
+      }
+    },
+    "P6104": {
+      "label": {
+        "text": "maintained by WikiProject",
+        "lang": "en"
+      },
+      "description": {
+        "text": "WikiProject that maintains this property, item, or linked pages. If the WikiProject is hosted outside of Wikidata, identify the hosting project using the qualifier \"part of\" (P361)",
+        "lang": "en"
+      }
+    },
+    "P6200": {
+      "label": {
+        "text": "BBC News topic ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a topic on the BBC News website",
+        "lang": "en"
+      }
+    },
+    "P6259": {
+      "label": {
+        "text": "epoch",
+        "lang": "en"
+      },
+      "description": {
+        "text": "epoch of an astronomical object coordinate",
+        "lang": "en"
+      }
+    },
+    "P6262": {
+      "label": {
+        "text": "Fandom article ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of an article on Fandom (Wikia). Format: subdomain:Page_title (language-code.subdomain:Page_title for non-English wikis)",
+        "lang": "en"
+      }
+    },
+    "P6293": {
+      "label": {
+        "text": "YSA ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a concept in the General Finnish Thesaurus YSA",
+        "lang": "en"
+      }
+    },
+    "P6296": {
+      "label": {
+        "text": "bgm.tv character ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a character or group of characters on bgm.tv (Bangumi/Chobits)",
+        "lang": "en"
+      }
+    },
+    "P6363": {
+      "label": {
+        "text": "WordLift URL",
+        "lang": "en"
+      },
+      "description": {
+        "text": "a Linked Open Data permanent ID of publicly available entities curated by online publishers and distributed in various formats",
+        "lang": "en"
+      }
+    },
+    "P6385": {
+      "label": {
+        "text": "Krugosvet article (archived)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "link to article of Russian-language online encyclopedia",
+        "lang": "en"
+      }
+    },
+    "P6573": {
+      "label": {
+        "text": "Klexikon article ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "ID of an article in Klexikon",
+        "lang": "en"
+      }
+    },
+    "P6591": {
+      "label": {
+        "text": "maximum temperature record",
+        "lang": "en"
+      },
+      "description": {
+        "text": "maximum temperature reached at this location",
+        "lang": "en"
+      }
+    },
+    "P6680": {
+      "label": {
+        "text": "MeSH term ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of a \"MeSH term\" (Medical Subject Headings) of National Library of Medicine (National Institutes of Health - U.S. Department of Health)",
+        "lang": "en"
+      }
+    },
+    "P6694": {
+      "label": {
+        "text": "MeSH concept ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of a Medical Subject Headings concept",
+        "lang": "en"
+      }
+    },
+    "P6706": {
+      "label": {
+        "text": "De Agostini ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a subject on the Enciclopedia De Agostini online",
+        "lang": "en"
+      }
+    },
+    "P6766": {
+      "label": {
+        "text": "Who's on First ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier from the Who's on First database",
+        "lang": "en"
+      }
+    },
+    "P10135": {
+      "label": {
+        "text": "recording date",
+        "lang": "en"
+      },
+      "description": {
+        "text": "the date when a recording was made",
+        "lang": "en"
+      }
+    },
+    "P10227": {
+      "label": {
+        "text": "National Library of Ireland ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of a National Library of Ireland authority record",
+        "lang": "en"
+      }
+    },
+    "P10234": {
+      "label": {
+        "text": "Der Spiegel topic ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for topics in the German news portal “Der Spiegel”",
+        "lang": "en"
+      }
+    },
+    "P10283": {
+      "label": {
+        "text": "OpenAlex ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for works, grants, authors, institutes, venues, concepts/subjects in OpenAlex",
+        "lang": "en"
+      }
+    },
+    "P10291": {
+      "label": {
+        "text": "Wikisimpsons article ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a Wikisimpsons article",
+        "lang": "en"
+      }
+    },
+    "P10376": {
+      "label": {
+        "text": "ScienceDirect topic ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a topic on the research publication website ScienceDirect",
+        "lang": "en"
+      }
+    },
+    "P10565": {
+      "label": {
+        "text": "Encyclopedia of China (Third Edition) old ID (2021)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the 2021 system for an article in the online version of Encyclopedia of China (third edition)",
+        "lang": "en"
+      }
+    },
+    "P10730": {
+      "label": {
+        "text": "Data Commons ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the Data Commons knowledge graph",
+        "lang": "en"
+      }
+    },
+    "P10757": {
+      "label": {
+        "text": "Personality Database profile ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of a human, fictional character, or other entity on the Personality Database website",
+        "lang": "en"
+      }
+    },
+    "P10832": {
+      "label": {
+        "text": "WorldCat Entities ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person, work, place, historical period, or event from the WorldCat Entities linked data service",
+        "lang": "en"
+      }
+    },
+    "P10894": {
+      "label": {
+        "text": "spoken by",
+        "lang": "en"
+      },
+      "description": {
+        "text": "the person who is speaking in this audio or video file",
+        "lang": "en"
+      }
+    },
+    "P11012": {
+      "label": {
+        "text": "EU Knowledge Graph item ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for the corresponding entity in the EU Knowledge Graph",
+        "lang": "en"
+      }
+    },
+    "P6781": {
+      "label": {
+        "text": "ProofWiki ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a ProofWiki article",
+        "lang": "en"
+      }
+    },
+    "P6839": {
+      "label": {
+        "text": "TV Tropes ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the TV Tropes online wiki",
+        "lang": "en"
+      }
+    },
+    "P6900": {
+      "label": {
+        "text": "NicoNicoPedia word article ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an word article in NicoNicoPedia",
+        "lang": "en"
+      }
+    },
+    "P7015": {
+      "label": {
+        "text": "surface gravity",
+        "lang": "en"
+      },
+      "description": {
+        "text": "gravitational acceleration experienced at the equator of an astronomical body surface",
+        "lang": "en"
+      }
+    },
+    "P7033": {
+      "label": {
+        "text": "Australian Educational Vocabulary ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "ID for curriculum term in one of the controlled vocabularies at Australian education vocabularies",
+        "lang": "en"
+      }
+    },
+    "P7039": {
+      "label": {
+        "text": "National Library of Iceland ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for authority control managed by the National Library of Iceland",
+        "lang": "en"
+      }
+    },
+    "P7284": {
+      "label": {
+        "text": "The Independent topic ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an topic on website of the English newspaper \"The Independent\"",
+        "lang": "en"
+      }
+    },
+    "P7305": {
+      "label": {
+        "text": "Online PWN Encyclopedia ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an entry in the online release of the Online PWN Encyclopedia",
+        "lang": "en"
+      }
+    },
+    "P7314": {
+      "label": {
+        "text": "TDV Encyclopedia of Islam ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for the Islamic Encyclopedia created by the Turkish religion authority Diyanet",
+        "lang": "en"
+      }
+    },
+    "P7422": {
+      "label": {
+        "text": "minimum temperature record",
+        "lang": "en"
+      },
+      "description": {
+        "text": "lowest temperature reached at this location",
+        "lang": "en"
+      }
+    },
+    "P7452": {
+      "label": {
+        "text": "reason for preferred rank",
+        "lang": "en"
+      },
+      "description": {
+        "text": "qualifier to allow the reason to be indicated why a particular statement should be considered preferred",
+        "lang": "en"
+      }
+    },
+    "P7471": {
+      "label": {
+        "text": "iNaturalist place ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a place in iNaturalist",
+        "lang": "en"
+      }
+    },
+    "P7502": {
+      "label": {
+        "text": "Golden ID (archived)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "ID page in Golden knowledge base",
+        "lang": "en"
+      }
+    },
+    "P7666": {
+      "label": {
+        "text": "article ID in the Lithuanian Universal Encyclopedia Online",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an item in the online edition of the Visuotinė lietuvių enciklopedija",
+        "lang": "en"
+      }
+    },
+    "P8061": {
+      "label": {
+        "text": "AGROVOC ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a subject in AGROVOC thesaurus",
+        "lang": "en"
+      }
+    },
+    "P8069": {
+      "label": {
+        "text": "ToposText person ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a person, event, or concept mentioned by ancient authors, in the website ToposText",
+        "lang": "en"
+      }
+    },
+    "P8168": {
+      "label": {
+        "text": "FactGrid item ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an item in FactGrid",
+        "lang": "en"
+      }
+    },
+    "P8189": {
+      "label": {
+        "text": "J9U entity ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier used by the National Library of Israel",
+        "lang": "en"
+      }
+    },
+    "P8217": {
+      "label": {
+        "text": "iDAI.gazetteer ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a place in the database iDAI.gazetteer compiled by the German Archaeological Institute",
+        "lang": "en"
+      }
+    },
+    "P8313": {
+      "label": {
+        "text": "Lex ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of an article in the online encyclopedia.lex.dk",
+        "lang": "en"
+      }
+    },
+    "P8338": {
+      "label": {
+        "text": "applies to name of object",
+        "lang": "en"
+      },
+      "description": {
+        "text": "(qualifier) label or alias (of the claim object) to which the claim applies",
+        "lang": "en"
+      }
+    },
+    "P8408": {
+      "label": {
+        "text": "KBpedia ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for the KBpedia knowledge graph, which provides consistent mappings across seven large-scale public knowledge bases including Wikidata, and is used to promote data interoperability and extraction of training sets for machine learning",
+        "lang": "en"
+      }
+    },
+    "P8419": {
+      "label": {
+        "text": "Archive of Our Own tag",
+        "lang": "en"
+      },
+      "description": {
+        "text": "tag for this item on Archive of Our Own",
+        "lang": "en"
+      }
+    },
+    "P8519": {
+      "label": {
+        "text": "RKD thesaurus ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the RKD thesaurus (Rijksbureau voor Kunsthistorische Documentatie)",
+        "lang": "en"
+      }
+    },
+    "P8814": {
+      "label": {
+        "text": "WordNet 3.1 Synset ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "Synset identifier in Princeton’s WordNet Version 3.1",
+        "lang": "en"
+      }
+    },
+    "P8885": {
+      "label": {
+        "text": "Namuwiki ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of an article on Namuwiki",
+        "lang": "en"
+      }
+    },
+    "P8895": {
+      "label": {
+        "text": "All the Tropes article ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in All the Tropes",
+        "lang": "en"
+      }
+    },
+    "P9112": {
+      "label": {
+        "text": "IFLA value vocabularies ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a term in the IFLA value vocabularies",
+        "lang": "en"
+      }
+    },
+    "P9162": {
+      "label": {
+        "text": "Estonian Subject Thesaurus ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a subject in the Estonian Subject Thesaurus (EMS)",
+        "lang": "en"
+      }
+    },
+    "P9222": {
+      "label": {
+        "text": "bashenc.online ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "article code on the encyclopedic portal “Bashkortostan”",
+        "lang": "en"
+      }
+    },
+    "P9287": {
+      "label": {
+        "text": "Cyprus Bibliography ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an authority in the Cyprus Bibliography (catalogue of all Cypriot publications after 1980)",
+        "lang": "en"
+      }
+    },
+    "P9322": {
+      "label": {
+        "text": "SVKKL authority ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the regional authority database of Central Bohemian Research Library",
+        "lang": "en"
+      }
+    },
+    "P9346": {
+      "label": {
+        "text": "France 24 topic ID (French)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of a topic on the French version of the France 24 website",
+        "lang": "en"
+      }
+    },
+    "P9475": {
+      "label": {
+        "text": "Encyclopedia of Korean Culture ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an article in the Encyclopedia of Korean Culture",
+        "lang": "en"
+      }
+    },
+    "P9545": {
+      "label": {
+        "text": "Encyclopedia of China (Second Edition) ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an article in the online version of Encyclopedia of China (Second Edition)",
+        "lang": "en"
+      }
+    },
+    "P9675": {
+      "label": {
+        "text": "MediaWiki page ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "numeric identifier of a page in a MediaWiki wiki",
+        "lang": "en"
+      }
+    },
+    "P9807": {
+      "label": {
+        "text": "SNK ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "authority control for the Slovak National Library, used in its catalog",
+        "lang": "en"
+      }
+    },
+    "P9885": {
+      "label": {
+        "text": "Bing entity ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an entity in Microsoft Bing; the former public Bing Search resolver was retired on 11 August 2025, while bingId remains exposed by Azure AI Language Entity Linking",
+        "lang": "en"
+      }
+    },
+    "P11054": {
+      "label": {
+        "text": "grammatical number",
+        "lang": "en"
+      },
+      "description": {
+        "text": "grammatical number category (singular, plural, etc.) of pronouns and certain types of nouns",
+        "lang": "en"
+      }
+    },
+    "P11194": {
+      "label": {
+        "text": "Famous Birthdays ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for entities listed on the Famous Birthdays website",
+        "lang": "en"
+      }
+    },
+    "P11408": {
+      "label": {
+        "text": "Pixiv Encyclopedia ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an article on Pixiv Encyclopedia",
+        "lang": "en"
+      }
+    },
+    "P11589": {
+      "label": {
+        "text": "Fallout Wiki ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a Fallout Wiki article",
+        "lang": "en"
+      }
+    },
+    "P11796": {
+      "label": {
+        "text": "time of periapsis",
+        "lang": "en"
+      },
+      "description": {
+        "text": "the time at which the orbit of an object in space, typically a planet or a satellite, goes through its periapsis",
+        "lang": "en"
+      }
+    },
+    "P11924": {
+      "label": {
+        "text": "IMDb keyword",
+        "lang": "en"
+      },
+      "description": {
+        "text": "IMDb keyword related to movies and television programs",
+        "lang": "en"
+      }
+    },
+    "P12086": {
+      "label": {
+        "text": "WikiKids ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of the article on the Dutch online encyclopedia for kids",
+        "lang": "en"
+      }
+    },
+    "P12143": {
+      "label": {
+        "text": "Gaming Wiki Network article ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of an article on the GWN. Format: wiki:Page_title",
+        "lang": "en"
+      }
+    },
+    "P12385": {
+      "label": {
+        "text": "Gran Enciclopèdia Catalana ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an item in the Gran Enciclopèdia Catalana",
+        "lang": "en"
+      }
+    },
+    "P12596": {
+      "label": {
+        "text": "museum-digital tag ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "numeric identifier for keywords used in the description of cultural heritage objects in Museum-Digital",
+        "lang": "en"
+      }
+    },
+    "P12721": {
+      "label": {
+        "text": "Lille norske leksikon ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identificator for an article in Lille/Vesle norske leksikon (lille.snl.no)",
+        "lang": "en"
+      }
+    },
+    "P12800": {
+      "label": {
+        "text": "Vikidia article ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an article on Vikidia (format \"lang-code:title\")",
+        "lang": "en"
+      }
+    },
+    "P13044": {
+      "label": {
+        "text": "characteristic of",
+        "lang": "en"
+      },
+      "description": {
+        "text": "subject item or statement is a characteristic, quality, property, or state of this object (use a more specific property where possible)",
+        "lang": "en"
+      }
+    },
+    "P13236": {
+      "label": {
+        "text": "Danbooru tag",
+        "lang": "en"
+      },
+      "description": {
+        "text": "tag for a character, work or entity on Danbooru",
+        "lang": "en"
+      }
+    },
+    "P13300": {
+      "label": {
+        "text": "New York Post topic ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of a topic on the New York Post website",
+        "lang": "en"
+      }
+    },
+    "P13317": {
+      "label": {
+        "text": "The New Yorker topic ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier of a topic on The New Yorker website",
+        "lang": "en"
+      }
+    },
+    "P13390": {
+      "label": {
+        "text": "booru tag",
+        "lang": "en"
+      },
+      "description": {
+        "text": "tag associated with this character, work or entity for booru websites",
+        "lang": "en"
+      }
+    },
+    "P13574": {
+      "label": {
+        "text": "‎most populous urban area",
+        "lang": "en"
+      },
+      "description": {
+        "text": "city or town with the largest population in this area (country, state, county, continent, etc.)",
+        "lang": "en"
+      }
+    },
+    "P13591": {
+      "label": {
+        "text": "‎Yale LUX ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an entity in Yale's LUX cross collection knowledge graph",
+        "lang": "en"
+      }
+    },
+    "P13613": {
+      "label": {
+        "text": "Enciclopedia Galega Universal ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "numerical identifier for an ítem in Enciclopedia Galega Universal",
+        "lang": "en"
+      }
+    },
+    "P13691": {
+      "label": {
+        "text": "Georgian Encyclopedia ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for an item in the Georgian Encyclopedia",
+        "lang": "en"
+      }
+    },
+    "P13750": {
+      "label": {
+        "text": "Arab Encyclopedia concept ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "digital identifier for a topic within the articles of the Arabic Encyclopedia",
+        "lang": "en"
+      }
+    },
+    "P13772": {
+      "label": {
+        "text": "Harper's tag",
+        "lang": "en"
+      },
+      "description": {
+        "text": "tag in Harper's Magazine",
+        "lang": "en"
+      }
+    },
+    "P14457": {
+      "label": {
+        "text": "subject named as (monolingual text)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "(with an associated language code) name by which a subject is recorded in a database, mentioned as a contributor of a work, or is referred to in a particular context",
+        "lang": "en"
+      }
+    },
+    "P14458": {
+      "label": {
+        "text": "alternative name (monolingual text)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "(with an associated language code) qualifier for alternative name(s), given for a subject in a database entry, or preserved in references (even these are no longer the preferred name)",
+        "lang": "en"
+      }
+    },
+    "P14470": {
+      "label": {
+        "text": "‎Giant Bomb Wiki ID",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier for a page on the Giant Bomb Wiki",
+        "lang": "en"
+      }
+    },
+    "P14541": {
+      "label": {
+        "text": "Encyclopedia of China (Third Edition) ID (2026)",
+        "lang": "en"
+      },
+      "description": {
+        "text": "identifier in the 2026 system for an article in the online version of Encyclopedia of China (third edition)",
+        "lang": "en"
+      }
+    }
+  },
+  "concepts": {
+    "Q1071": {
+      "label": {
+        "text": "geography",
+        "lang": "en"
+      },
+      "names": [
+        "geographical science",
+        "geography",
+        "geography (general)"
+      ]
+    },
+    "Q11042": {
+      "label": {
+        "text": "culture",
+        "lang": "en"
+      },
+      "names": [
+        "cultural activity",
+        "culture",
+        "cultures"
+      ]
+    },
+    "Q1128637": {
+      "label": {
+        "text": "national symbol",
+        "lang": "en"
+      },
+      "names": [
+        "national symbol"
+      ]
+    },
+    "Q115161035": {
+      "label": {
+        "text": "culture and society",
+        "lang": "en"
+      },
+      "names": [
+        "culture and society",
+        "sociocultural context"
+      ]
+    },
+    "Q115668531": {
+      "label": {
+        "text": "film release",
+        "lang": "en"
+      },
+      "names": [
+        "film release",
+        "movie release"
+      ]
+    },
+    "Q121359": {
+      "label": {
+        "text": "infrastructure",
+        "lang": "en"
+      },
+      "names": [
+        "infrastructure",
+        "public infrastructure",
+        "social infrastructure"
+      ]
+    },
+    "Q121769": {
+      "label": {
+        "text": "reference",
+        "lang": "en"
+      },
+      "names": [
+        "base object",
+        "linked object",
+        "reference"
+      ]
+    },
+    "Q12737077": {
+      "label": {
+        "text": "occupation",
+        "lang": "en"
+      },
+      "names": [
+        "job",
+        "non-professional work activities",
+        "non-professional work activity",
+        "occupation",
+        "occupations",
+        "profession",
+        "work"
+      ]
+    },
+    "Q131765": {
+      "label": {
+        "text": "multimedia",
+        "lang": "en"
+      },
+      "names": [
+        "multimedia"
+      ]
+    },
+    "Q14775294": {
+      "label": {
+        "text": "motion picture rating system",
+        "lang": "en"
+      },
+      "names": [
+        "motion picture content rating system",
+        "motion picture rating system"
+      ]
+    },
+    "Q15267437": {
+      "label": {
+        "text": "cast",
+        "lang": "en"
+      },
+      "names": [
+        "cast",
+        "theatrical cast",
+        "vocal cast"
+      ]
+    },
+    "Q159810": {
+      "label": {
+        "text": "economy",
+        "lang": "en"
+      },
+      "names": [
+        "economy"
+      ]
+    },
+    "Q161078": {
+      "label": {
+        "text": "urbanization",
+        "lang": "en"
+      },
+      "names": [
+        "urban growth",
+        "urbanisation",
+        "urbanization"
+      ]
+    },
+    "Q166542": {
+      "label": {
+        "text": "international relations",
+        "lang": "en"
+      },
+      "names": [
+        "IR",
+        "international affairs",
+        "international relations"
+      ]
+    },
+    "Q1758354": {
+      "label": {
+        "text": "plot",
+        "lang": "en"
+      },
+      "names": [
+        "plot",
+        "sjužet",
+        "sujet",
+        "syuzhet"
+      ]
+    },
+    "Q184711": {
+      "label": {
+        "text": "twin town",
+        "lang": "en"
+      },
+      "names": [
+        "sister city",
+        "twin town",
+        "twin towns and sister cities"
+      ]
+    },
+    "Q22909728": {
+      "label": {
+        "text": "web presence",
+        "lang": "en"
+      },
+      "names": [
+        "web presence"
+      ]
+    },
+    "Q2725376": {
+      "label": {
+        "text": "demographics",
+        "lang": "en"
+      },
+      "names": [
+        "census",
+        "demographics"
+      ]
+    },
+    "Q290": {
+      "label": {
+        "text": "sex",
+        "lang": "en"
+      },
+      "names": [
+        "sex",
+        "sex (biological division)",
+        "sex (biology)",
+        "sexed"
+      ]
+    },
+    "Q309": {
+      "label": {
+        "text": "history",
+        "lang": "en"
+      },
+      "names": [
+        "historical record",
+        "history",
+        "human history"
+      ]
+    },
+    "Q35245": {
+      "label": {
+        "text": "etymology science",
+        "lang": "en"
+      },
+      "names": [
+        "etymologies",
+        "etymology",
+        "etymology science",
+        "field of etymology",
+        "science of words",
+        "word science"
+      ]
+    },
+    "Q36279": {
+      "label": {
+        "text": "biography",
+        "lang": "en"
+      },
+      "names": [
+        "bio",
+        "biography"
+      ]
+    },
+    "Q37732": {
+      "label": {
+        "text": "demography",
+        "lang": "en"
+      },
+      "names": [
+        "demographic research",
+        "demography",
+        "population research"
+      ]
+    },
+    "Q4006": {
+      "label": {
+        "text": "map",
+        "lang": "en"
+      },
+      "names": [
+        "chart",
+        "charts",
+        "map",
+        "maps"
+      ]
+    },
+    "Q4130": {
+      "label": {
+        "text": "orbit",
+        "lang": "en"
+      },
+      "names": [
+        "orbit"
+      ]
+    },
+    "Q4373292": {
+      "label": {
+        "text": "physical property",
+        "lang": "en"
+      },
+      "names": [
+        "non-chemical property",
+        "non-chemical property of a material",
+        "pato:physical_property",
+        "physical (non-chemical) property of a material",
+        "physical attribute",
+        "physical property",
+        "physical property (chemistry)",
+        "physical property (of object)",
+        "physical property (of system)",
+        "physical quality",
+        "property (physics)",
+        "property of a material (non-chemical)",
+        "property of an object (physics)",
+        "relational physical quality",
+        "system property (physics)"
+      ]
+    },
+    "Q4482": {
+      "label": {
+        "text": "film criticism",
+        "lang": "en"
+      },
+      "names": [
+        "FilmCriticism",
+        "film criticism",
+        "film review",
+        "motion picture criticism",
+        "motion picture review",
+        "movie criticism",
+        "movie review",
+        "movie reviews"
+      ]
+    },
+    "Q4810841": {
+      "label": {
+        "text": "socioeconomic development",
+        "lang": "en"
+      },
+      "names": [
+        "socio-economic development",
+        "socioeconomic development"
+      ]
+    },
+    "Q506702": {
+      "label": {
+        "text": "film crew",
+        "lang": "en"
+      },
+      "names": [
+        "film crew",
+        "movie crew"
+      ]
+    },
+    "Q618779": {
+      "label": {
+        "text": "award",
+        "lang": "en"
+      },
+      "names": [
+        "Awards and Prizes",
+        "award",
+        "honor",
+        "honour",
+        "medal",
+        "prize"
+      ]
+    },
+    "Q7163": {
+      "label": {
+        "text": "politics",
+        "lang": "en"
+      },
+      "names": [
+        "politics"
+      ]
+    },
+    "Q7188": {
+      "label": {
+        "text": "government",
+        "lang": "en"
+      },
+      "names": [
+        "gov",
+        "government",
+        "govt.",
+        "gvmnt"
+      ]
+    },
+    "Q7937": {
+      "label": {
+        "text": "climate",
+        "lang": "en"
+      },
+      "names": [
+        "climate",
+        "local climate",
+        "weather system"
+      ]
+    },
+    "Q8236": {
+      "label": {
+        "text": "literacy",
+        "lang": "en"
+      },
+      "names": [
+        "literacy"
+      ]
+    },
+    "Q82799": {
+      "label": {
+        "text": "name",
+        "lang": "en"
+      },
+      "names": [
+        "label",
+        "name"
+      ]
+    },
+    "Q8434": {
+      "label": {
+        "text": "education",
+        "lang": "en"
+      },
+      "names": [
+        "education"
+      ]
+    },
+    "Q8436": {
+      "label": {
+        "text": "family",
+        "lang": "en"
+      },
+      "names": [
+        "a family",
+        "families",
+        "family"
+      ]
+    },
+    "Q930933": {
+      "label": {
+        "text": "relation",
+        "lang": "en"
+      },
+      "names": [
+        "connection",
+        "link",
+        "linkage",
+        "relation",
+        "relationship"
+      ]
+    },
+    "Q932586": {
+      "label": {
+        "text": "film production",
+        "lang": "en"
+      },
+      "names": [
+        "film production",
+        "filmmaking",
+        "movie production"
+      ]
+    }
+  },
+  "article": {
+    "title": "Earth",
+    "paragraphs": [
+      "<b>Earth</b> is the third <a href=\"/wiki/Planet\" title=\"Planet\">planet</a> from the <a href=\"/wiki/Sun\" title=\"Sun\">Sun</a> and the only <a href=\"/wiki/Astronomical_object\" title=\"Astronomical object\">astronomical object</a> known to <a href=\"/wiki/Planetary_habitability\" title=\"Planetary habitability\">harbor life</a>. This is made possible by Earth being an <a href=\"/wiki/Ocean_world\" title=\"Ocean world\">ocean world</a>, the only one in the <a href=\"/wiki/Solar_System\" title=\"Solar System\">Solar System</a> sustaining liquid <a href=\"/wiki/Surface_water\" title=\"Surface water\">surface water</a>. Almost all of Earth's water is contained in its <a href=\"/wiki/Ocean\" title=\"Ocean\">ocean</a>, which covers <a href=\"/wiki/Water_distribution_on_Earth\" title=\"Water distribution on Earth\">70.8%</a> of <a href=\"/wiki/Earth%27s_crust\" title=\"Earth&#39;s crust\">Earth's crust</a>. The remaining 29.2% of Earth's crust is dry <a href=\"/wiki/Land\" title=\"Land\">land</a>, which is predominantly located within Earth's <a href=\"/wiki/Land_and_water_hemispheres\" title=\"Land and water hemispheres\">land hemisphere</a> in the form of <a href=\"/wiki/Continent\" title=\"Continent\">continental</a> <a href=\"/wiki/Landmass\" title=\"Landmass\">landmasses</a>. Most of Earth's land is at least somewhat <a href=\"/wiki/Humid\" class=\"mw-redirect\" title=\"Humid\">humid</a> and covered by <a href=\"/wiki/Vegetation\" title=\"Vegetation\">vegetation</a>, while large <a href=\"/wiki/Ice_sheet\" title=\"Ice sheet\">ice sheets</a> at Earth's <a href=\"/wiki/Polar_desert\" title=\"Polar desert\">polar deserts</a> retain more water than Earth's <a href=\"/wiki/Groundwater\" title=\"Groundwater\">groundwater</a>, lakes, rivers, and <a href=\"/wiki/Water_vapor#In_Earth&#39;s_atmosphere\" title=\"Water vapor\">atmospheric water</a> combined. Earth's crust consists of slowly moving <a href=\"/wiki/Tectonic_plates\" class=\"mw-redirect\" title=\"Tectonic plates\">tectonic plates</a>, which interact to produce <a href=\"/wiki/Mountain_range\" title=\"Mountain range\">mountain ranges</a>, <a href=\"/wiki/Volcano\" title=\"Volcano\">volcanoes</a>, and <a href=\"/wiki/Earthquake\" title=\"Earthquake\">earthquakes</a>. Earth has <a href=\"/wiki/Earth%27s_outer_core\" title=\"Earth&#39;s outer core\">a liquid outer core</a> that generates a <a href=\"/wiki/Magnetosphere\" title=\"Magnetosphere\">magnetosphere</a> capable of deflecting most of the destructive <a href=\"/wiki/Solar_wind\" title=\"Solar wind\">solar winds</a> and <a href=\"/wiki/Cosmic_radiation\" class=\"mw-redirect\" title=\"Cosmic radiation\">cosmic radiation</a>.\n",
+      "Earth has <a href=\"/wiki/Atmosphere_of_Earth\" title=\"Atmosphere of Earth\">a dynamic atmosphere</a>, which sustains Earth's surface conditions and protects it from most <a href=\"/wiki/Meteoroid\" title=\"Meteoroid\">meteoroids</a> and <a href=\"/wiki/Ozone_layer\" title=\"Ozone layer\">ultraviolet light at entry</a>. It is composed primarily of <a href=\"/wiki/Nitrogen\" title=\"Nitrogen\">nitrogen</a> and <a href=\"/wiki/Oxygen\" title=\"Oxygen\">oxygen</a>. <a href=\"/wiki/Water_vapor\" title=\"Water vapor\">Water vapor</a> is widely present in the atmosphere, <a href=\"/wiki/Cloud#Formation\" title=\"Cloud\">forming clouds</a> that cover most of the planet. The water vapor acts as a <a href=\"/wiki/Greenhouse_gas\" title=\"Greenhouse gas\">greenhouse gas</a> and, together with other greenhouse gases in the atmosphere, particularly <a href=\"/wiki/Carbon_dioxide\" title=\"Carbon dioxide\">carbon dioxide</a> (CO<sub>2</sub>), creates the conditions for both liquid surface water and water vapor to persist via the capturing of <a href=\"/wiki/Solar_irradiance\" title=\"Solar irradiance\">energy from the Sun's light</a>. This process maintains the current average surface temperature of 14.76&#160;°C (58.57&#160;°F), at which water is liquid under normal <a href=\"/wiki/Atmospheric_pressure\" title=\"Atmospheric pressure\">atmospheric pressure</a>. Differences in the amount of captured energy between geographic regions (as with the <a href=\"/wiki/Equatorial_region\" class=\"mw-redirect\" title=\"Equatorial region\">equatorial region</a> receiving more sunlight than the polar regions) drive <a href=\"/wiki/Atmospheric_circulation\" title=\"Atmospheric circulation\">atmospheric</a> and <a href=\"/wiki/Ocean_current\" title=\"Ocean current\">ocean currents</a>, producing a global <a href=\"/wiki/Climate_system\" title=\"Climate system\">climate system</a> with different <a href=\"/wiki/Climate_region\" class=\"mw-redirect\" title=\"Climate region\">climate regions</a>, and a range of weather phenomena such as <a href=\"/wiki/Precipitation\" title=\"Precipitation\">precipitation</a>, allowing components such as <a href=\"/wiki/Carbon_cycle\" title=\"Carbon cycle\">carbon</a> and <a href=\"/wiki/Nitrogen_cycle\" title=\"Nitrogen cycle\">nitrogen</a> to <a href=\"/wiki/Biogeochemical_cycle\" title=\"Biogeochemical cycle\">cycle</a>.\n",
+      "Earth is <a href=\"/wiki/Hydrostatic_equilibrium\" title=\"Hydrostatic equilibrium\">rounded</a> into <a href=\"/wiki/Earth_ellipsoid\" title=\"Earth ellipsoid\">an ellipsoid</a> with <a href=\"/wiki/Earth%27s_circumference\" title=\"Earth&#39;s circumference\">a circumference</a> of about 40,000&#160;km (24,900&#160;mi). It is the <a href=\"/wiki/List_of_Solar_System_objects_by_size\" title=\"List of Solar System objects by size\">densest planet in the Solar System</a>. Of the four <a href=\"/wiki/Rocky_planets\" class=\"mw-redirect\" title=\"Rocky planets\">rocky planets</a>, it is the largest and most massive. Overall, Earth is the sixth largest object in the Solar System after the Sun and the <a href=\"/wiki/Outer_Solar_System\" class=\"mw-redirect\" title=\"Outer Solar System\">outer planets</a>. Earth is about eight <a href=\"/wiki/Light-minute\" class=\"mw-redirect\" title=\"Light-minute\">light-minutes</a> (1 <a href=\"/wiki/Astronomical_unit\" title=\"Astronomical unit\">astronomical unit</a> [AU]) away from the Sun and <a href=\"/wiki/Earth%27s_orbit\" title=\"Earth&#39;s orbit\">orbits it</a>, taking a year (about 365.25 days) to complete one revolution. <a href=\"/wiki/Earth%27s_rotation\" title=\"Earth&#39;s rotation\">Earth rotates</a> around its own axis in slightly less than a day (in about 23 hours and 56 minutes). <a class=\"mw-selflink-fragment\" href=\"#Axial_tilt_and_seasons\">Earth's axis of rotation</a> is tilted with respect to the perpendicular to its orbital plane around the Sun, producing <a href=\"/wiki/Season\" title=\"Season\">seasons</a>. Earth is <a href=\"/wiki/Orbit\" title=\"Orbit\">orbited</a> by one permanent <a href=\"/wiki/Natural_satellite\" title=\"Natural satellite\">natural satellite</a>, the <a href=\"/wiki/Moon\" title=\"Moon\">Moon</a>, which orbits Earth at 384,400&#160;km (238,855&#160;mi)—1.28 light seconds—and is roughly a quarter as wide as Earth. The Moon's gravity helps stabilize Earth's <a href=\"/wiki/Axial_tilt\" title=\"Axial tilt\">axis</a>, causes <a href=\"/wiki/Tide\" title=\"Tide\">tides</a>, and <a href=\"/wiki/Tidal_acceleration\" title=\"Tidal acceleration\">gradually slows Earth's rotation</a>. Likewise, Earth's gravitational pull has already made the Moon's rotation <a href=\"/wiki/Tidally_locked\" class=\"mw-redirect\" title=\"Tidally locked\">tidally locked</a>, keeping the same <a href=\"/wiki/Near_side_of_the_Moon\" title=\"Near side of the Moon\">near side</a> facing Earth.\n",
+      "Earth, like most other bodies in the Solar System, <a href=\"/wiki/Age_of_Earth\" title=\"Age of Earth\">formed about 4.5&#160;billion years ago</a> from gas and dust in the <a href=\"/wiki/Formation_and_evolution_of_the_Solar_System\" title=\"Formation and evolution of the Solar System\">early Solar System</a>. The formation of the ocean and the subsequent <a href=\"/wiki/Abiogenesis\" title=\"Abiogenesis\">development of life</a> occurred during the first billion years of <a href=\"/wiki/Earth%27s_history\" class=\"mw-redirect\" title=\"Earth&#39;s history\">Earth's history</a>. Life spread globally and has been altering Earth's atmosphere and surface, leading to the <a href=\"/wiki/Great_Oxidation_Event\" title=\"Great Oxidation Event\">Great Oxidation Event</a> two billion years ago. <a href=\"/wiki/Human\" title=\"Human\">Humans</a> emerged 300,000 years ago in Africa and have spread across every continent on Earth. Humans depend on Earth's <a href=\"/wiki/Biosphere\" title=\"Biosphere\">biosphere</a> and natural resources for their survival, but have <a href=\"/wiki/Human_impact_on_the_environment\" title=\"Human impact on the environment\">increasingly impacted the planet's environment</a>. Humanity's current impact on Earth's climate and biosphere is unsustainable, threatening the livelihood of humans and many other forms of life, and <a href=\"/wiki/Holocene_extinction\" title=\"Holocene extinction\">causing widespread extinctions</a>.\n"
+    ],
+    "links": {
+      "Astronomical unit": "Q1811",
+      "Biosphere": "Q42762",
+      "Carbon dioxide": "Q1997",
+      "Earthquake": "Q7944",
+      "Holocene extinction": "Q796140",
+      "Moon": "Q405",
+      "Mountain range": "Q46831",
+      "Magnetosphere": "Q6915",
+      "Nitrogen": "Q627",
+      "Atmospheric pressure": "Q81809",
+      "Carbon cycle": "Q167751",
+      "Cloud": "Q8074",
+      "Cosmic ray": "Q11547",
+      "Cosmic radiation": "Q11547",
+      "Age of Earth": "Q935310",
+      "Hydrostatic equilibrium": "Q208641",
+      "Humidity": "Q180600",
+      "Humid": "Q180600",
+      "Natural satellite": "Q2537",
+      "Nitrogen cycle": "Q82551",
+      "Meteoroid": "Q7012",
+      "Tropics": "Q42530",
+      "Equatorial region": "Q42530",
+      "Axial tilt": "Q179745",
+      "Earth's outer core": "Q857867",
+      "Light-second": "Q909315",
+      "Light-minute": "Q909315",
+      "Atmosphere of Earth": "Q3230",
+      "Astronomical object": "Q6999",
+      "Groundwater": "Q161598",
+      "Biogeochemical cycle": "Q846303",
+      "Atmospheric circulation": "Q2615451",
+      "Landmass": "Q205895",
+      "Ice sheet": "Q12599",
+      "List of Solar System objects by size": "Q514436",
+      "Human": "Q5",
+      "Earth's orbit": "Q1348808",
+      "Earth's crust": "Q15316",
+      "Human impact on the environment": "Q574376",
+      "History of Earth": "Q156312",
+      "Earth's history": "Q156312",
+      "Great Oxidation Event": "Q837561",
+      "Earth's rotation": "Q244743",
+      "Near side of the Moon": "Q782867",
+      "Climate system": "Q3509184",
+      "Formation and evolution of the Solar System": "Q3535",
+      "Climate classification": "Q267474",
+      "Climate region": "Q267474",
+      "Earth ellipsoid": "Q1335878",
+      "Ocean": "Q9430",
+      "Abiogenesis": "Q231218",
+      "Continent": "Q5107",
+      "Greenhouse gas": "Q167336",
+      "Land": "Q11081619",
+      "Land and water hemispheres": "Q17651246",
+      "Earth's circumference": "Q60760152",
+      "Oxygen": "Q629",
+      "Orbit": "Q4130",
+      "Ozone layer": "Q79995",
+      "Planet": "Q634",
+      "Plate tectonics": "Q7950",
+      "Tectonic plates": "Q7950",
+      "Sun": "Q525",
+      "Solar System": "Q544",
+      "Outer Solar System": "Q544",
+      "Solar wind": "Q79833",
+      "Tidal acceleration": "Q2477230",
+      "Tide": "Q23384",
+      "Volcano": "Q8072",
+      "Terrestrial planet": "Q128207",
+      "Rocky planets": "Q128207",
+      "Tidal locking": "Q109144",
+      "Tidally locked": "Q109144",
+      "Water vapor": "Q190120",
+      "Vegetation": "Q187997",
+      "Precipitation": "Q25257",
+      "Ocean current": "Q129558",
+      "Solar irradiance": "Q1531731",
+      "Polar desert": "Q3290007",
+      "Planetary habitability": "Q846030",
+      "Water distribution on Earth": "Q3711792",
+      "Ocean world": "Q1045138",
+      "Surface water": "Q752112",
+      "Season": "Q24384",
+      "Germanic languages": "Q21200",
+      "Germanic language": "Q21200",
+      "Old English": "Q42365",
+      "Roman Empire": "Q2277",
+      "Greeks": "Q539051",
+      "Middle English": "Q36395",
+      "Jörð": "Q548730",
+      "Modern English": "Q1649537",
+      "Thor": "Q42952",
+      "Terra (mythology)": "Q270867",
+      "Terra (goddess)": "Q270867",
+      "Germanic paganism": "Q1122452",
+      "Gaia": "Q93172",
+      "Norse mythology": "Q128285",
+      "List of earth deities": "Q18700062",
+      "Earth goddess": "Q18700062"
+    },
+    "sections": [
+      {
+        "title": "Etymology",
+        "anchor": "Etymology",
+        "index": "1"
+      },
+      {
+        "title": "Natural history",
+        "anchor": "Natural_history",
+        "index": "2"
+      },
+      {
+        "title": "Composition and structure",
+        "anchor": "Composition_and_structure",
+        "index": "7"
+      },
+      {
+        "title": "Gravity and magnetic field",
+        "anchor": "Gravity_and_magnetic_field",
+        "index": "16"
+      },
+      {
+        "title": "Moon and orbital space",
+        "anchor": "Moon_and_orbital_space",
+        "index": "19"
+      },
+      {
+        "title": "Orbit and rotation",
+        "anchor": "Orbit_and_rotation",
+        "index": "22"
+      },
+      {
+        "title": "Atmosphere and climate",
+        "anchor": "Atmosphere_and_climate",
+        "index": "26"
+      },
+      {
+        "title": "Hydrosphere",
+        "anchor": "Hydrosphere",
+        "index": "31"
+      },
+      {
+        "title": "Biosphere",
+        "anchor": "Biosphere",
+        "index": "32"
+      },
+      {
+        "title": "Human geography",
+        "anchor": "Human_geography",
+        "index": "34"
+      },
+      {
+        "title": "In culture",
+        "anchor": "In_culture",
+        "index": "37"
+      },
+      {
+        "title": "See also",
+        "anchor": "See_also",
+        "index": "38"
+      },
+      {
+        "title": "Notes",
+        "anchor": "Notes",
+        "index": "39"
+      },
+      {
+        "title": "References",
+        "anchor": "References",
+        "index": "40"
+      },
+      {
+        "title": "External links",
+        "anchor": "External_links",
+        "index": "41"
+      }
+    ],
+    "concept_sections": {
+      "Q35245": [
+        "Etymology"
+      ]
+    },
+    "section_text": {
+      "Etymology": "The <a href=\"/wiki/Modern_English\" title=\"Modern English\">Modern English</a> word <span class=\"anchor\" id=\"Name\"></span><span class=\"anchor\" id=\"Etymology\"></span> <i>Earth</i> developed, via <a href=\"/wiki/Middle_English\" title=\"Middle English\">Middle English</a>, from an <a href=\"/wiki/Old_English\" title=\"Old English\">Old English</a> noun most often spelled <i><span lang=\"ang\"><a href=\"https://en.wiktionary.org/wiki/eor%C3%B0e#Old_English\" class=\"extiw\" title=\"wikt:eorðe\">eorðe</a></span></i>. It has cognates in every <a href=\"/wiki/Germanic_language\" class=\"mw-redirect\" title=\"Germanic language\">Germanic language</a>, from which <span title=\"Proto-Germanic-language text\">&#42;<i lang=\"gem\">erþō</i></span> has been reconstructed. In its earliest attestation, the word <i><span title=\"Old English (ca. 450-1100)-language text\"><i lang=\"ang\">eorðe</i></span></i> was used to translate the many senses of Latin <i><span lang=\"la\"><a href=\"https://en.wiktionary.org/wiki/terra#Latin\" class=\"extiw\" title=\"wikt:terra\">terra</a></span></i> and Greek <i lang=\"grc\"><a href=\"https://en.wiktionary.org/wiki/%CE%B3%E1%BF%86#Ancient_Greek\" class=\"extiw\" title=\"wikt:γῆ\">gē</a></i>: the ground, its soil, dry land, the human world, the surface of the world (including the sea), and the globe itself. As with <a href=\"/wiki/Roman_Empire\" title=\"Roman Empire\">Roman</a> <span title=\"Latin-language text\"><span lang=\"la\"><a href=\"/wiki/Terra_(goddess)\" class=\"mw-redirect\" title=\"Terra (goddess)\">Terra</a></span></span> (or <span title=\"Latin-language text\"><span lang=\"la\">Tellus</span></span>) and <a href=\"/wiki/Greeks\" title=\"Greeks\">Greek</a> <span title=\"Ancient Greek (to 1453)-language text\"><span lang=\"grc-Latn\"><a href=\"/wiki/Gaia\" title=\"Gaia\">Gaia</a></span></span>, Earth may have been a <a href=\"/wiki/Earth_goddess\" class=\"mw-redirect\" title=\"Earth goddess\">personified goddess</a> in <a href=\"/wiki/Germanic_paganism\" title=\"Germanic paganism\">Germanic paganism</a>: late <a href=\"/wiki/Norse_mythology\" title=\"Norse mythology\">Norse mythology</a> included <span title=\"Old Norse-language text\"><span lang=\"non\"><a href=\"/wiki/J%C3%B6r%C3%B0\" title=\"Jörð\">Jörð</a></span></span> ('Earth'), a giantess often given as the mother of <a href=\"/wiki/Thor\" title=\"Thor\">Thor</a>.\n"
+    }
+  },
+  "page_images": {
+    "Q83169": {
+      "file": "Ocean world Earth.jpg",
+      "width": 2300,
+      "height": 2300,
+      "artist": "NASA , Apollo 11",
+      "license": "Public domain",
+      "source": "en.wikipedia.org"
+    },
+    "Q83296": {
+      "file": "Plates tect2 en.svg",
+      "width": 4167,
+      "height": 2844,
+      "artist": "Map: USGS Description: Scott Nash",
+      "license": "Public domain",
+      "source": "en.wikipedia.org"
+    },
+    "Q192316": {
+      "file": "Geostationaryjava3D.gif",
+      "width": 220,
+      "height": 220,
+      "artist": "Lookang many thanks to author of original simulation = Francisco Esquembre author of Easy Java Simulation = Francisco Esquembre",
+      "license": "CC BY-SA 3.0",
+      "source": "en.wikipedia.org"
+    },
+    "Q737809": {
+      "file": "Solar system barycenter.svg",
+      "width": 463,
+      "height": 459,
+      "artist": "Solarsystembarycenter.gif : Carl Smith derivative work: Rubik-wuerfel ( talk )",
+      "license": "CC BY-SA 3.0",
+      "source": "en.wikipedia.org"
+    },
+    "Q846030": {
+      "file": "Meteosat-12-fci-march-equinox-2025-noon.jpg",
+      "width": 12261,
+      "height": 12261,
+      "artist": "EUMETSAT",
+      "license": "Attribution",
+      "source": "en.wikipedia.org"
+    },
+    "Q1349417": {
+      "file": "Meteosat-12-fci-march-equinox-2025-noon.jpg",
+      "width": 12261,
+      "height": 12261,
+      "artist": "EUMETSAT",
+      "license": "Attribution",
+      "source": "en.wikipedia.org"
+    },
+    "Q1412630": {
+      "file": "Geostationaryjava3Dsideview.gif",
+      "width": 220,
+      "height": 220,
+      "artist": "Lookang many thanks to author of original simulation = Francisco Esquembre author of Easy Java Simulation = Francisco Esquembre",
+      "license": "CC BY-SA 3.0",
+      "source": "en.wikipedia.org"
+    },
+    "Q7879772": {
+      "file": "Solar System True Color EN.png",
+      "width": 3840,
+      "height": 2160,
+      "artist": "Omarius257",
+      "license": "CC BY-SA 4.0",
+      "source": "en.wikipedia.org"
+    },
+    "Q11362158": {
+      "file": "CIA World Physical Map (2023).pdf",
+      "width": 6600,
+      "height": 3600,
+      "artist": "Unknown author Unknown author",
+      "license": "Public domain",
+      "source": "en.wikipedia.org"
+    },
+    "Q17486654": {
+      "file": "Launch of Falcon 9 carrying ASIASAT 8 (16668638138).jpg",
+      "width": 4288,
+      "height": 2848,
+      "artist": "SpaceX",
+      "license": "CC0",
+      "source": "en.wikipedia.org"
+    },
+    "Q25426699": {
+      "file": "Telstar 18 Vantage Mission (43881229604).jpg",
+      "width": 3000,
+      "height": 2000,
+      "artist": "Official SpaceX Photos",
+      "license": "CC0",
+      "source": "en.wikipedia.org"
+    },
+    "Q25449060": {
+      "file": "Koreasat 7.jpg",
+      "width": 700,
+      "height": 600,
+      "artist": "Rkasha",
+      "license": "CC BY-SA 4.0",
+      "source": "en.wikipedia.org"
+    }
+  }
+}

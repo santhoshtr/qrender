@@ -7,7 +7,7 @@ use std::path::Path;
 use content::Content;
 use qrender::config::Config;
 
-const ITEMS: [&str; 7] = [
+const ITEMS: [&str; 8] = [
     "q3870",
     "q90",
     "q8023",
@@ -15,6 +15,7 @@ const ITEMS: [&str; 7] = [
     "q405",
     "q139890532",
     "q668",
+    "q2",
 ];
 
 #[test]
@@ -30,6 +31,13 @@ fn compositions() {
             "{qid}: {:?}",
             composition.unshown
         );
+        // Every property of the Earth has a place in its layout.
+        if qid == "q2" {
+            assert!(
+                composition.spreads.iter().all(|s| s.id != "more"),
+                "q2: a \"more\" spread"
+            );
+        }
         insta::assert_json_snapshot!(qid, composition);
     }
 }

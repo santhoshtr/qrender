@@ -1,0 +1,3160 @@
+---
+source: qrender/tests/views.rs
+expression: json
+---
+{
+  "composition": "composition/0.3",
+  "coverage": {
+    "have": 341,
+    "total": 342
+  },
+  "design": "design/0.2",
+  "dir": "ltr",
+  "labels": {
+    "P10": {
+      "href": "https://www.wikidata.org/wiki/Property:P10",
+      "lang": "en",
+      "text": "video"
+    },
+    "P1013": {
+      "href": "https://www.wikidata.org/wiki/Property:P1013",
+      "lang": "en",
+      "text": "criterion used"
+    },
+    "P10135": {
+      "href": "https://www.wikidata.org/wiki/Property:P10135",
+      "lang": "en",
+      "text": "recording date"
+    },
+    "P10227": {
+      "href": "https://www.wikidata.org/wiki/Property:P10227",
+      "lang": "en",
+      "text": "National Library of Ireland ID"
+    },
+    "P10234": {
+      "href": "https://www.wikidata.org/wiki/Property:P10234",
+      "lang": "en",
+      "text": "Der Spiegel topic ID"
+    },
+    "P10283": {
+      "href": "https://www.wikidata.org/wiki/Property:P10283",
+      "lang": "en",
+      "text": "OpenAlex ID"
+    },
+    "P10291": {
+      "href": "https://www.wikidata.org/wiki/Property:P10291",
+      "lang": "en",
+      "text": "Wikisimpsons article ID"
+    },
+    "P1036": {
+      "href": "https://www.wikidata.org/wiki/Property:P1036",
+      "lang": "en",
+      "text": "Dewey Decimal Classification"
+    },
+    "P10376": {
+      "href": "https://www.wikidata.org/wiki/Property:P10376",
+      "lang": "en",
+      "text": "ScienceDirect topic ID"
+    },
+    "P1051": {
+      "href": "https://www.wikidata.org/wiki/Property:P1051",
+      "lang": "en",
+      "text": "PSH ID"
+    },
+    "P10565": {
+      "href": "https://www.wikidata.org/wiki/Property:P10565",
+      "lang": "en",
+      "text": "Encyclopedia of China (Third Edition) old ID (2021)"
+    },
+    "P10730": {
+      "href": "https://www.wikidata.org/wiki/Property:P10730",
+      "lang": "en",
+      "text": "Data Commons ID"
+    },
+    "P10757": {
+      "href": "https://www.wikidata.org/wiki/Property:P10757",
+      "lang": "en",
+      "text": "Personality Database profile ID"
+    },
+    "P1082": {
+      "description": {
+        "lang": "en",
+        "text": "number of people inhabiting the place; number of people of subject"
+      },
+      "href": "https://www.wikidata.org/wiki/Property:P1082",
+      "lang": "en",
+      "text": "population"
+    },
+    "P10832": {
+      "href": "https://www.wikidata.org/wiki/Property:P10832",
+      "lang": "en",
+      "text": "WorldCat Entities ID"
+    },
+    "P1096": {
+      "href": "https://www.wikidata.org/wiki/Property:P1096",
+      "lang": "en",
+      "text": "orbital eccentricity"
+    },
+    "P11012": {
+      "href": "https://www.wikidata.org/wiki/Property:P11012",
+      "lang": "en",
+      "text": "EU Knowledge Graph item ID"
+    },
+    "P1102": {
+      "href": "https://www.wikidata.org/wiki/Property:P1102",
+      "lang": "en",
+      "text": "flattening"
+    },
+    "P11054": {
+      "href": "https://www.wikidata.org/wiki/Property:P11054",
+      "lang": "en",
+      "text": "grammatical number"
+    },
+    "P11194": {
+      "href": "https://www.wikidata.org/wiki/Property:P11194",
+      "lang": "en",
+      "text": "Famous Birthdays ID"
+    },
+    "P11408": {
+      "href": "https://www.wikidata.org/wiki/Property:P11408",
+      "lang": "en",
+      "text": "Pixiv Encyclopedia ID"
+    },
+    "P1149": {
+      "href": "https://www.wikidata.org/wiki/Property:P1149",
+      "lang": "en",
+      "text": "Library of Congress Classification"
+    },
+    "P11589": {
+      "href": "https://www.wikidata.org/wiki/Property:P11589",
+      "lang": "en",
+      "text": "Fallout Wiki ID"
+    },
+    "P11796": {
+      "href": "https://www.wikidata.org/wiki/Property:P11796",
+      "lang": "en",
+      "text": "time of periapsis"
+    },
+    "P11924": {
+      "href": "https://www.wikidata.org/wiki/Property:P11924",
+      "lang": "en",
+      "text": "IMDb keyword"
+    },
+    "P12086": {
+      "href": "https://www.wikidata.org/wiki/Property:P12086",
+      "lang": "en",
+      "text": "WikiKids ID"
+    },
+    "P12143": {
+      "href": "https://www.wikidata.org/wiki/Property:P12143",
+      "lang": "en",
+      "text": "Gaming Wiki Network article ID"
+    },
+    "P1225": {
+      "href": "https://www.wikidata.org/wiki/Property:P1225",
+      "lang": "en",
+      "text": "U.S. National Archives Identifier"
+    },
+    "P12385": {
+      "href": "https://www.wikidata.org/wiki/Property:P12385",
+      "lang": "en",
+      "text": "Gran Enciclopèdia Catalana ID"
+    },
+    "P1245": {
+      "href": "https://www.wikidata.org/wiki/Property:P1245",
+      "lang": "en",
+      "text": "OmegaWiki Defined Meaning"
+    },
+    "P1256": {
+      "href": "https://www.wikidata.org/wiki/Property:P1256",
+      "lang": "en",
+      "text": "Iconclass notation"
+    },
+    "P12596": {
+      "href": "https://www.wikidata.org/wiki/Property:P12596",
+      "lang": "en",
+      "text": "museum-digital tag ID"
+    },
+    "P12721": {
+      "href": "https://www.wikidata.org/wiki/Property:P12721",
+      "lang": "en",
+      "text": "Lille norske leksikon ID"
+    },
+    "P12800": {
+      "href": "https://www.wikidata.org/wiki/Property:P12800",
+      "lang": "en",
+      "text": "Vikidia article ID"
+    },
+    "P1281": {
+      "href": "https://www.wikidata.org/wiki/Property:P1281",
+      "lang": "en",
+      "text": "WOEID"
+    },
+    "P1296": {
+      "href": "https://www.wikidata.org/wiki/Property:P1296",
+      "lang": "en",
+      "text": "Gran Enciclopèdia Catalana ID (former scheme)"
+    },
+    "P1299": {
+      "href": "https://www.wikidata.org/wiki/Property:P1299",
+      "lang": "en",
+      "text": "depicted by"
+    },
+    "P13044": {
+      "href": "https://www.wikidata.org/wiki/Property:P13044",
+      "lang": "en",
+      "text": "characteristic of"
+    },
+    "P1310": {
+      "href": "https://www.wikidata.org/wiki/Property:P1310",
+      "lang": "en",
+      "text": "statement disputed by"
+    },
+    "P13236": {
+      "href": "https://www.wikidata.org/wiki/Property:P13236",
+      "lang": "en",
+      "text": "Danbooru tag"
+    },
+    "P13300": {
+      "href": "https://www.wikidata.org/wiki/Property:P13300",
+      "lang": "en",
+      "text": "New York Post topic ID"
+    },
+    "P13317": {
+      "href": "https://www.wikidata.org/wiki/Property:P13317",
+      "lang": "en",
+      "text": "The New Yorker topic ID"
+    },
+    "P1332": {
+      "href": "https://www.wikidata.org/wiki/Property:P1332",
+      "lang": "en",
+      "text": "coordinates of northernmost point"
+    },
+    "P1333": {
+      "href": "https://www.wikidata.org/wiki/Property:P1333",
+      "lang": "en",
+      "text": "coordinates of southernmost point"
+    },
+    "P13390": {
+      "href": "https://www.wikidata.org/wiki/Property:P13390",
+      "lang": "en",
+      "text": "booru tag"
+    },
+    "P1343": {
+      "href": "https://www.wikidata.org/wiki/Property:P1343",
+      "lang": "en",
+      "text": "described by source"
+    },
+    "P13574": {
+      "href": "https://www.wikidata.org/wiki/Property:P13574",
+      "lang": "en",
+      "text": "‎most populous urban area"
+    },
+    "P13591": {
+      "href": "https://www.wikidata.org/wiki/Property:P13591",
+      "lang": "en",
+      "text": "‎Yale LUX ID"
+    },
+    "P13613": {
+      "href": "https://www.wikidata.org/wiki/Property:P13613",
+      "lang": "en",
+      "text": "Enciclopedia Galega Universal ID"
+    },
+    "P1368": {
+      "href": "https://www.wikidata.org/wiki/Property:P1368",
+      "lang": "en",
+      "text": "National Library of Latvia ID"
+    },
+    "P13691": {
+      "href": "https://www.wikidata.org/wiki/Property:P13691",
+      "lang": "en",
+      "text": "Georgian Encyclopedia ID"
+    },
+    "P13750": {
+      "href": "https://www.wikidata.org/wiki/Property:P13750",
+      "lang": "en",
+      "text": "Arab Encyclopedia concept ID"
+    },
+    "P13772": {
+      "href": "https://www.wikidata.org/wiki/Property:P13772",
+      "lang": "en",
+      "text": "Harper's tag"
+    },
+    "P138": {
+      "href": "https://www.wikidata.org/wiki/Property:P138",
+      "lang": "en",
+      "text": "named after"
+    },
+    "P1417": {
+      "href": "https://www.wikidata.org/wiki/Property:P1417",
+      "lang": "en",
+      "text": "Encyclopædia Britannica Online ID"
+    },
+    "P1419": {
+      "href": "https://www.wikidata.org/wiki/Property:P1419",
+      "lang": "en",
+      "text": "shape"
+    },
+    "P1424": {
+      "href": "https://www.wikidata.org/wiki/Property:P1424",
+      "lang": "en",
+      "text": "topic has template"
+    },
+    "P143": {
+      "href": "https://www.wikidata.org/wiki/Property:P143",
+      "lang": "en",
+      "text": "imported from Wikimedia project"
+    },
+    "P14470": {
+      "href": "https://www.wikidata.org/wiki/Property:P14470",
+      "lang": "en",
+      "text": "‎Giant Bomb Wiki ID"
+    },
+    "P14541": {
+      "href": "https://www.wikidata.org/wiki/Property:P14541",
+      "lang": "en",
+      "text": "Encyclopedia of China (Third Edition) ID (2026)"
+    },
+    "P1480": {
+      "href": "https://www.wikidata.org/wiki/Property:P1480",
+      "lang": "en",
+      "text": "sourcing circumstances"
+    },
+    "P1482": {
+      "href": "https://www.wikidata.org/wiki/Property:P1482",
+      "lang": "en",
+      "text": "Stack Exchange tag"
+    },
+    "P1545": {
+      "href": "https://www.wikidata.org/wiki/Property:P1545",
+      "lang": "en",
+      "text": "series ordinal"
+    },
+    "P1549": {
+      "href": "https://www.wikidata.org/wiki/Property:P1549",
+      "lang": "en",
+      "text": "demonym"
+    },
+    "P155": {
+      "href": "https://www.wikidata.org/wiki/Property:P155",
+      "lang": "en",
+      "text": "follows"
+    },
+    "P1552": {
+      "href": "https://www.wikidata.org/wiki/Property:P1552",
+      "lang": "en",
+      "text": "has characteristic"
+    },
+    "P1557": {
+      "href": "https://www.wikidata.org/wiki/Property:P1557",
+      "lang": "en",
+      "text": "manifestation of"
+    },
+    "P156": {
+      "href": "https://www.wikidata.org/wiki/Property:P156",
+      "lang": "en",
+      "text": "followed by"
+    },
+    "P1566": {
+      "href": "https://www.wikidata.org/wiki/Property:P1566",
+      "lang": "en",
+      "text": "GeoNames ID"
+    },
+    "P1589": {
+      "href": "https://www.wikidata.org/wiki/Property:P1589",
+      "lang": "en",
+      "text": "lowest point"
+    },
+    "P1617": {
+      "href": "https://www.wikidata.org/wiki/Property:P1617",
+      "lang": "en",
+      "text": "BBC Things ID"
+    },
+    "P163": {
+      "href": "https://www.wikidata.org/wiki/Property:P163",
+      "lang": "en",
+      "text": "flag"
+    },
+    "P1667": {
+      "href": "https://www.wikidata.org/wiki/Property:P1667",
+      "lang": "en",
+      "text": "Getty Thesaurus of Geographic Names ID"
+    },
+    "P18": {
+      "href": "https://www.wikidata.org/wiki/Property:P18",
+      "lang": "en",
+      "text": "image"
+    },
+    "P1810": {
+      "href": "https://www.wikidata.org/wiki/Property:P1810",
+      "lang": "en",
+      "text": "subject named as"
+    },
+    "P1814": {
+      "href": "https://www.wikidata.org/wiki/Property:P1814",
+      "lang": "en",
+      "text": "name in kana"
+    },
+    "P1889": {
+      "href": "https://www.wikidata.org/wiki/Property:P1889",
+      "lang": "en",
+      "text": "different from"
+    },
+    "P2001": {
+      "href": "https://www.wikidata.org/wiki/Property:P2001",
+      "lang": "en",
+      "text": "Revised Romanization"
+    },
+    "P2044": {
+      "href": "https://www.wikidata.org/wiki/Property:P2044",
+      "lang": "en",
+      "text": "elevation above sea level"
+    },
+    "P2045": {
+      "href": "https://www.wikidata.org/wiki/Property:P2045",
+      "lang": "en",
+      "text": "orbital inclination"
+    },
+    "P2046": {
+      "href": "https://www.wikidata.org/wiki/Property:P2046",
+      "lang": "en",
+      "text": "area"
+    },
+    "P2052": {
+      "href": "https://www.wikidata.org/wiki/Property:P2052",
+      "lang": "en",
+      "text": "speed"
+    },
+    "P2054": {
+      "href": "https://www.wikidata.org/wiki/Property:P2054",
+      "lang": "en",
+      "text": "density"
+    },
+    "P2067": {
+      "href": "https://www.wikidata.org/wiki/Property:P2067",
+      "lang": "en",
+      "text": "mass"
+    },
+    "P2069": {
+      "href": "https://www.wikidata.org/wiki/Property:P2069",
+      "lang": "en",
+      "text": "magnetic moment"
+    },
+    "P207": {
+      "href": "https://www.wikidata.org/wiki/Property:P207",
+      "lang": "en",
+      "text": "bathymetry image"
+    },
+    "P2076": {
+      "href": "https://www.wikidata.org/wiki/Property:P2076",
+      "lang": "en",
+      "text": "temperature"
+    },
+    "P2096": {
+      "href": "https://www.wikidata.org/wiki/Property:P2096",
+      "lang": "en",
+      "text": "media legend"
+    },
+    "P2120": {
+      "description": {
+        "lang": "en",
+        "text": "distance between the center and the surface of a circle or sphere"
+      },
+      "href": "https://www.wikidata.org/wiki/Property:P2120",
+      "lang": "en",
+      "text": "radius"
+    },
+    "P2125": {
+      "href": "https://www.wikidata.org/wiki/Property:P2125",
+      "lang": "en",
+      "text": "revised Hepburn romanization"
+    },
+    "P214": {
+      "href": "https://www.wikidata.org/wiki/Property:P214",
+      "lang": "en",
+      "text": "VIAF cluster ID"
+    },
+    "P2146": {
+      "href": "https://www.wikidata.org/wiki/Property:P2146",
+      "lang": "en",
+      "text": "orbital period"
+    },
+    "P2147": {
+      "href": "https://www.wikidata.org/wiki/Property:P2147",
+      "lang": "en",
+      "text": "rotation period"
+    },
+    "P2163": {
+      "href": "https://www.wikidata.org/wiki/Property:P2163",
+      "lang": "en",
+      "text": "FAST ID"
+    },
+    "P2184": {
+      "href": "https://www.wikidata.org/wiki/Property:P2184",
+      "lang": "en",
+      "text": "history of topic"
+    },
+    "P2210": {
+      "href": "https://www.wikidata.org/wiki/Property:P2210",
+      "lang": "en",
+      "text": "relative to"
+    },
+    "P2213": {
+      "href": "https://www.wikidata.org/wiki/Property:P2213",
+      "lang": "en",
+      "text": "longitude of ascending node"
+    },
+    "P2233": {
+      "href": "https://www.wikidata.org/wiki/Property:P2233",
+      "lang": "en",
+      "text": "semi-major axis of an orbit"
+    },
+    "P2234": {
+      "href": "https://www.wikidata.org/wiki/Property:P2234",
+      "lang": "en",
+      "text": "volume as quantity"
+    },
+    "P2243": {
+      "href": "https://www.wikidata.org/wiki/Property:P2243",
+      "lang": "en",
+      "text": "apoapsis"
+    },
+    "P2244": {
+      "href": "https://www.wikidata.org/wiki/Property:P2244",
+      "lang": "en",
+      "text": "periapsis"
+    },
+    "P2248": {
+      "href": "https://www.wikidata.org/wiki/Property:P2248",
+      "lang": "en",
+      "text": "argument of periapsis"
+    },
+    "P227": {
+      "href": "https://www.wikidata.org/wiki/Property:P227",
+      "lang": "en",
+      "text": "GND ID"
+    },
+    "P2325": {
+      "href": "https://www.wikidata.org/wiki/Property:P2325",
+      "lang": "en",
+      "text": "mean anomaly"
+    },
+    "P2347": {
+      "href": "https://www.wikidata.org/wiki/Property:P2347",
+      "lang": "en",
+      "text": "YSO ID"
+    },
+    "P2386": {
+      "href": "https://www.wikidata.org/wiki/Property:P2386",
+      "lang": "en",
+      "text": "diameter"
+    },
+    "P244": {
+      "href": "https://www.wikidata.org/wiki/Property:P244",
+      "lang": "en",
+      "text": "Library of Congress Authorities ID"
+    },
+    "P248": {
+      "href": "https://www.wikidata.org/wiki/Property:P248",
+      "lang": "en",
+      "text": "stated in"
+    },
+    "P2547": {
+      "href": "https://www.wikidata.org/wiki/Property:P2547",
+      "lang": "en",
+      "text": "perimeter"
+    },
+    "P2572": {
+      "href": "https://www.wikidata.org/wiki/Property:P2572",
+      "lang": "en",
+      "text": "hashtag"
+    },
+    "P2573": {
+      "description": {
+        "lang": "en",
+        "text": "number of out-of-school children reported for a place"
+      },
+      "href": "https://www.wikidata.org/wiki/Property:P2573",
+      "lang": "en",
+      "text": "number of out-of-school children"
+    },
+    "P2579": {
+      "href": "https://www.wikidata.org/wiki/Property:P2579",
+      "lang": "en",
+      "text": "studied by"
+    },
+    "P2581": {
+      "href": "https://www.wikidata.org/wiki/Property:P2581",
+      "lang": "en",
+      "text": "BabelNet ID"
+    },
+    "P2583": {
+      "href": "https://www.wikidata.org/wiki/Property:P2583",
+      "lang": "en",
+      "text": "distance from Earth"
+    },
+    "P2633": {
+      "href": "https://www.wikidata.org/wiki/Property:P2633",
+      "lang": "en",
+      "text": "geography of topic"
+    },
+    "P268": {
+      "href": "https://www.wikidata.org/wiki/Property:P268",
+      "lang": "en",
+      "text": "Bibliothèque nationale de France ID"
+    },
+    "P2699": {
+      "href": "https://www.wikidata.org/wiki/Property:P2699",
+      "lang": "en",
+      "text": "URL"
+    },
+    "P276": {
+      "href": "https://www.wikidata.org/wiki/Property:P276",
+      "lang": "en",
+      "text": "location"
+    },
+    "P2888": {
+      "href": "https://www.wikidata.org/wiki/Property:P2888",
+      "lang": "en",
+      "text": "exact match"
+    },
+    "P2892": {
+      "href": "https://www.wikidata.org/wiki/Property:P2892",
+      "lang": "en",
+      "text": "UMLS CUI"
+    },
+    "P2919": {
+      "href": "https://www.wikidata.org/wiki/Property:P2919",
+      "lang": "en",
+      "text": "label in sign language"
+    },
+    "P2924": {
+      "href": "https://www.wikidata.org/wiki/Property:P2924",
+      "lang": "en",
+      "text": "Great Russian Encyclopedia Online ID (2017)"
+    },
+    "P2956": {
+      "href": "https://www.wikidata.org/wiki/Property:P2956",
+      "lang": "en",
+      "text": "NAIF ID"
+    },
+    "P2959": {
+      "href": "https://www.wikidata.org/wiki/Property:P2959",
+      "lang": "en",
+      "text": "permanent duplicated item"
+    },
+    "P304": {
+      "href": "https://www.wikidata.org/wiki/Property:P304",
+      "lang": "en",
+      "text": "page(s)"
+    },
+    "P31": {
+      "href": "https://www.wikidata.org/wiki/Property:P31",
+      "lang": "en",
+      "text": "instance of"
+    },
+    "P3180": {
+      "href": "https://www.wikidata.org/wiki/Property:P3180",
+      "lang": "en",
+      "text": "Visual Novel Database ID"
+    },
+    "P3219": {
+      "href": "https://www.wikidata.org/wiki/Property:P3219",
+      "lang": "en",
+      "text": "Encyclopædia Universalis ID"
+    },
+    "P3221": {
+      "href": "https://www.wikidata.org/wiki/Property:P3221",
+      "lang": "en",
+      "text": "New York Times topic ID"
+    },
+    "P3222": {
+      "href": "https://www.wikidata.org/wiki/Property:P3222",
+      "lang": "en",
+      "text": "NE.se ID"
+    },
+    "P3308": {
+      "href": "https://www.wikidata.org/wiki/Property:P3308",
+      "lang": "en",
+      "text": "lib.reviews ID"
+    },
+    "P3417": {
+      "href": "https://www.wikidata.org/wiki/Property:P3417",
+      "lang": "en",
+      "text": "Quora topic ID"
+    },
+    "P3451": {
+      "href": "https://www.wikidata.org/wiki/Property:P3451",
+      "lang": "en",
+      "text": "nighttime view"
+    },
+    "P349": {
+      "href": "https://www.wikidata.org/wiki/Property:P349",
+      "lang": "en",
+      "text": "NDL Authority ID"
+    },
+    "P3553": {
+      "href": "https://www.wikidata.org/wiki/Property:P3553",
+      "lang": "en",
+      "text": "Zhihu topic ID"
+    },
+    "P3569": {
+      "href": "https://www.wikidata.org/wiki/Property:P3569",
+      "lang": "en",
+      "text": "Cultureel Woordenboek ID"
+    },
+    "P361": {
+      "href": "https://www.wikidata.org/wiki/Property:P361",
+      "lang": "en",
+      "text": "part of"
+    },
+    "P3629": {
+      "href": "https://www.wikidata.org/wiki/Property:P3629",
+      "lang": "en",
+      "text": "age of subject at event"
+    },
+    "P3635": {
+      "href": "https://www.wikidata.org/wiki/Property:P3635",
+      "lang": "en",
+      "text": "Peakbagger area ID"
+    },
+    "P367": {
+      "href": "https://www.wikidata.org/wiki/Property:P367",
+      "lang": "en",
+      "text": "astronomic symbol image"
+    },
+    "P3680": {
+      "href": "https://www.wikidata.org/wiki/Property:P3680",
+      "lang": "en",
+      "text": "statement supported by"
+    },
+    "P373": {
+      "href": "https://www.wikidata.org/wiki/Property:P373",
+      "lang": "en",
+      "text": "Commons category"
+    },
+    "P3827": {
+      "href": "https://www.wikidata.org/wiki/Property:P3827",
+      "lang": "en",
+      "text": "JSTOR topic ID (archived)"
+    },
+    "P3831": {
+      "href": "https://www.wikidata.org/wiki/Property:P3831",
+      "lang": "en",
+      "text": "object of statement has role"
+    },
+    "P3847": {
+      "href": "https://www.wikidata.org/wiki/Property:P3847",
+      "lang": "en",
+      "text": "Open Library subject ID"
+    },
+    "P3903": {
+      "href": "https://www.wikidata.org/wiki/Property:P3903",
+      "lang": "en",
+      "text": "column(s)"
+    },
+    "P3916": {
+      "href": "https://www.wikidata.org/wiki/Property:P3916",
+      "lang": "en",
+      "text": "UNESCO Thesaurus ID"
+    },
+    "P397": {
+      "href": "https://www.wikidata.org/wiki/Property:P397",
+      "lang": "en",
+      "text": "parent astronomical body"
+    },
+    "P398": {
+      "href": "https://www.wikidata.org/wiki/Property:P398",
+      "lang": "en",
+      "text": "child astronomical body"
+    },
+    "P3984": {
+      "href": "https://www.wikidata.org/wiki/Property:P3984",
+      "lang": "en",
+      "text": "subreddit"
+    },
+    "P407": {
+      "href": "https://www.wikidata.org/wiki/Property:P407",
+      "lang": "en",
+      "text": "language of work or name"
+    },
+    "P4212": {
+      "href": "https://www.wikidata.org/wiki/Property:P4212",
+      "lang": "en",
+      "text": "PACTOLS thesaurus ID"
+    },
+    "P4239": {
+      "href": "https://www.wikidata.org/wiki/Property:P4239",
+      "lang": "en",
+      "text": "vocalized name"
+    },
+    "P4342": {
+      "href": "https://www.wikidata.org/wiki/Property:P4342",
+      "lang": "en",
+      "text": "Great Norwegian Encyclopedia ID"
+    },
+    "P4427": {
+      "href": "https://www.wikidata.org/wiki/Property:P4427",
+      "lang": "en",
+      "text": "GACS ID"
+    },
+    "P443": {
+      "href": "https://www.wikidata.org/wiki/Property:P443",
+      "lang": "en",
+      "text": "pronunciation audio"
+    },
+    "P4466": {
+      "href": "https://www.wikidata.org/wiki/Property:P4466",
+      "lang": "en",
+      "text": "Unified Astronomy Thesaurus ID"
+    },
+    "P4501": {
+      "href": "https://www.wikidata.org/wiki/Property:P4501",
+      "lang": "en",
+      "text": "albedo"
+    },
+    "P459": {
+      "href": "https://www.wikidata.org/wiki/Property:P459",
+      "lang": "en",
+      "text": "determination method or standard"
+    },
+    "P460": {
+      "href": "https://www.wikidata.org/wiki/Property:P460",
+      "lang": "en",
+      "text": "said to be the same as"
+    },
+    "P461": {
+      "href": "https://www.wikidata.org/wiki/Property:P461",
+      "lang": "en",
+      "text": "opposite of"
+    },
+    "P4613": {
+      "href": "https://www.wikidata.org/wiki/Property:P4613",
+      "lang": "en",
+      "text": "Encyclopedia of Modern Ukraine ID"
+    },
+    "P4801": {
+      "href": "https://www.wikidata.org/wiki/Property:P4801",
+      "lang": "en",
+      "text": "LC and MARC vocabularies ID"
+    },
+    "P4839": {
+      "href": "https://www.wikidata.org/wiki/Property:P4839",
+      "lang": "en",
+      "text": "Wolfram Language entity code"
+    },
+    "P486": {
+      "href": "https://www.wikidata.org/wiki/Property:P486",
+      "lang": "en",
+      "text": "MeSH descriptor ID"
+    },
+    "P487": {
+      "href": "https://www.wikidata.org/wiki/Property:P487",
+      "lang": "en",
+      "text": "Unicode character"
+    },
+    "P4896": {
+      "href": "https://www.wikidata.org/wiki/Property:P4896",
+      "lang": "en",
+      "text": "3D model"
+    },
+    "P5008": {
+      "href": "https://www.wikidata.org/wiki/Property:P5008",
+      "lang": "en",
+      "text": "on focus list of Wikimedia project"
+    },
+    "P5019": {
+      "href": "https://www.wikidata.org/wiki/Property:P5019",
+      "lang": "en",
+      "text": "Brockhaus Enzyklopädie online ID"
+    },
+    "P5034": {
+      "href": "https://www.wikidata.org/wiki/Property:P5034",
+      "lang": "en",
+      "text": "National Library of Korea ID"
+    },
+    "P5063": {
+      "href": "https://www.wikidata.org/wiki/Property:P5063",
+      "lang": "en",
+      "text": "Interlingual Index ID"
+    },
+    "P5076": {
+      "href": "https://www.wikidata.org/wiki/Property:P5076",
+      "lang": "en",
+      "text": "Römpp online ID"
+    },
+    "P508": {
+      "href": "https://www.wikidata.org/wiki/Property:P508",
+      "lang": "en",
+      "text": "BNCF Thesaurus ID"
+    },
+    "P5125": {
+      "href": "https://www.wikidata.org/wiki/Property:P5125",
+      "lang": "en",
+      "text": "Wikimedia outline"
+    },
+    "P515": {
+      "href": "https://www.wikidata.org/wiki/Property:P515",
+      "lang": "en",
+      "text": "state of matter"
+    },
+    "P5168": {
+      "href": "https://www.wikidata.org/wiki/Property:P5168",
+      "lang": "en",
+      "text": "applies to name of subject"
+    },
+    "P518": {
+      "href": "https://www.wikidata.org/wiki/Property:P518",
+      "lang": "en",
+      "text": "applies to part"
+    },
+    "P5185": {
+      "href": "https://www.wikidata.org/wiki/Property:P5185",
+      "lang": "en",
+      "text": "grammatical gender"
+    },
+    "P522": {
+      "href": "https://www.wikidata.org/wiki/Property:P522",
+      "lang": "en",
+      "text": "type of orbit"
+    },
+    "P5237": {
+      "href": "https://www.wikidata.org/wiki/Property:P5237",
+      "lang": "en",
+      "text": "pronunciation variety"
+    },
+    "P5247": {
+      "href": "https://www.wikidata.org/wiki/Property:P5247",
+      "lang": "en",
+      "text": "Giant Bomb ID (former scheme)"
+    },
+    "P527": {
+      "href": "https://www.wikidata.org/wiki/Property:P527",
+      "lang": "en",
+      "text": "has part(s)"
+    },
+    "P528": {
+      "href": "https://www.wikidata.org/wiki/Property:P528",
+      "lang": "en",
+      "text": "catalog code"
+    },
+    "P5337": {
+      "href": "https://www.wikidata.org/wiki/Property:P5337",
+      "lang": "en",
+      "text": "Google News topics ID"
+    },
+    "P5357": {
+      "href": "https://www.wikidata.org/wiki/Property:P5357",
+      "lang": "en",
+      "text": "Encyclopedia of Science Fiction ID"
+    },
+    "P5555": {
+      "href": "https://www.wikidata.org/wiki/Property:P5555",
+      "lang": "en",
+      "text": "schematic"
+    },
+    "P5573": {
+      "href": "https://www.wikidata.org/wiki/Property:P5573",
+      "lang": "en",
+      "text": "archINFORM location ID"
+    },
+    "P571": {
+      "href": "https://www.wikidata.org/wiki/Property:P571",
+      "lang": "en",
+      "text": "inception"
+    },
+    "P5748": {
+      "href": "https://www.wikidata.org/wiki/Property:P5748",
+      "lang": "en",
+      "text": "Basisklassifikation"
+    },
+    "P575": {
+      "href": "https://www.wikidata.org/wiki/Property:P575",
+      "lang": "en",
+      "text": "time of discovery or invention"
+    },
+    "P576": {
+      "href": "https://www.wikidata.org/wiki/Property:P576",
+      "lang": "en",
+      "text": "dissolved, abolished or demolished"
+    },
+    "P580": {
+      "href": "https://www.wikidata.org/wiki/Property:P580",
+      "lang": "en",
+      "text": "start time"
+    },
+    "P582": {
+      "href": "https://www.wikidata.org/wiki/Property:P582",
+      "lang": "en",
+      "text": "end time"
+    },
+    "P585": {
+      "href": "https://www.wikidata.org/wiki/Property:P585",
+      "lang": "en",
+      "text": "point in time"
+    },
+    "P5905": {
+      "href": "https://www.wikidata.org/wiki/Property:P5905",
+      "lang": "en",
+      "text": "Comic Vine ID"
+    },
+    "P6058": {
+      "href": "https://www.wikidata.org/wiki/Property:P6058",
+      "lang": "en",
+      "text": "Larousse ID"
+    },
+    "P610": {
+      "href": "https://www.wikidata.org/wiki/Property:P610",
+      "lang": "en",
+      "text": "highest point"
+    },
+    "P6104": {
+      "href": "https://www.wikidata.org/wiki/Property:P6104",
+      "lang": "en",
+      "text": "maintained by WikiProject"
+    },
+    "P6200": {
+      "href": "https://www.wikidata.org/wiki/Property:P6200",
+      "lang": "en",
+      "text": "BBC News topic ID"
+    },
+    "P6259": {
+      "href": "https://www.wikidata.org/wiki/Property:P6259",
+      "lang": "en",
+      "text": "epoch"
+    },
+    "P6262": {
+      "href": "https://www.wikidata.org/wiki/Property:P6262",
+      "lang": "en",
+      "text": "Fandom article ID"
+    },
+    "P6293": {
+      "href": "https://www.wikidata.org/wiki/Property:P6293",
+      "lang": "en",
+      "text": "YSA ID"
+    },
+    "P6296": {
+      "href": "https://www.wikidata.org/wiki/Property:P6296",
+      "lang": "en",
+      "text": "bgm.tv character ID"
+    },
+    "P6363": {
+      "href": "https://www.wikidata.org/wiki/Property:P6363",
+      "lang": "en",
+      "text": "WordLift URL"
+    },
+    "P6385": {
+      "href": "https://www.wikidata.org/wiki/Property:P6385",
+      "lang": "en",
+      "text": "Krugosvet article (archived)"
+    },
+    "P646": {
+      "href": "https://www.wikidata.org/wiki/Property:P646",
+      "lang": "en",
+      "text": "Freebase ID"
+    },
+    "P6573": {
+      "href": "https://www.wikidata.org/wiki/Property:P6573",
+      "lang": "en",
+      "text": "Klexikon article ID"
+    },
+    "P6591": {
+      "description": {
+        "lang": "en",
+        "text": "maximum temperature reached at this location"
+      },
+      "href": "https://www.wikidata.org/wiki/Property:P6591",
+      "lang": "en",
+      "text": "maximum temperature record"
+    },
+    "P6680": {
+      "href": "https://www.wikidata.org/wiki/Property:P6680",
+      "lang": "en",
+      "text": "MeSH term ID"
+    },
+    "P6694": {
+      "href": "https://www.wikidata.org/wiki/Property:P6694",
+      "lang": "en",
+      "text": "MeSH concept ID"
+    },
+    "P6706": {
+      "href": "https://www.wikidata.org/wiki/Property:P6706",
+      "lang": "en",
+      "text": "De Agostini ID"
+    },
+    "P672": {
+      "href": "https://www.wikidata.org/wiki/Property:P672",
+      "lang": "en",
+      "text": "MeSH tree code"
+    },
+    "P6766": {
+      "href": "https://www.wikidata.org/wiki/Property:P6766",
+      "lang": "en",
+      "text": "Who's on First ID"
+    },
+    "P6781": {
+      "href": "https://www.wikidata.org/wiki/Property:P6781",
+      "lang": "en",
+      "text": "ProofWiki ID"
+    },
+    "P6839": {
+      "href": "https://www.wikidata.org/wiki/Property:P6839",
+      "lang": "en",
+      "text": "TV Tropes ID"
+    },
+    "P6900": {
+      "href": "https://www.wikidata.org/wiki/Property:P6900",
+      "lang": "en",
+      "text": "NicoNicoPedia word article ID"
+    },
+    "P691": {
+      "href": "https://www.wikidata.org/wiki/Property:P691",
+      "lang": "en",
+      "text": "NL CR AUT ID"
+    },
+    "P7015": {
+      "href": "https://www.wikidata.org/wiki/Property:P7015",
+      "lang": "en",
+      "text": "surface gravity"
+    },
+    "P7033": {
+      "href": "https://www.wikidata.org/wiki/Property:P7033",
+      "lang": "en",
+      "text": "Australian Educational Vocabulary ID"
+    },
+    "P7039": {
+      "href": "https://www.wikidata.org/wiki/Property:P7039",
+      "lang": "en",
+      "text": "National Library of Iceland ID"
+    },
+    "P706": {
+      "href": "https://www.wikidata.org/wiki/Property:P706",
+      "lang": "en",
+      "text": "located in/on physical feature"
+    },
+    "P7284": {
+      "href": "https://www.wikidata.org/wiki/Property:P7284",
+      "lang": "en",
+      "text": "The Independent topic ID"
+    },
+    "P7305": {
+      "href": "https://www.wikidata.org/wiki/Property:P7305",
+      "lang": "en",
+      "text": "Online PWN Encyclopedia ID"
+    },
+    "P7314": {
+      "href": "https://www.wikidata.org/wiki/Property:P7314",
+      "lang": "en",
+      "text": "TDV Encyclopedia of Islam ID"
+    },
+    "P7422": {
+      "description": {
+        "lang": "en",
+        "text": "lowest temperature reached at this location"
+      },
+      "href": "https://www.wikidata.org/wiki/Property:P7422",
+      "lang": "en",
+      "text": "minimum temperature record"
+    },
+    "P7452": {
+      "href": "https://www.wikidata.org/wiki/Property:P7452",
+      "lang": "en",
+      "text": "reason for preferred rank"
+    },
+    "P7471": {
+      "href": "https://www.wikidata.org/wiki/Property:P7471",
+      "lang": "en",
+      "text": "iNaturalist place ID"
+    },
+    "P7502": {
+      "href": "https://www.wikidata.org/wiki/Property:P7502",
+      "lang": "en",
+      "text": "Golden ID (archived)"
+    },
+    "P7666": {
+      "href": "https://www.wikidata.org/wiki/Property:P7666",
+      "lang": "en",
+      "text": "article ID in the Lithuanian Universal Encyclopedia Online"
+    },
+    "P805": {
+      "href": "https://www.wikidata.org/wiki/Property:P805",
+      "lang": "en",
+      "text": "statement is subject of"
+    },
+    "P8061": {
+      "href": "https://www.wikidata.org/wiki/Property:P8061",
+      "lang": "en",
+      "text": "AGROVOC ID"
+    },
+    "P8069": {
+      "href": "https://www.wikidata.org/wiki/Property:P8069",
+      "lang": "en",
+      "text": "ToposText person ID"
+    },
+    "P8168": {
+      "href": "https://www.wikidata.org/wiki/Property:P8168",
+      "lang": "en",
+      "text": "FactGrid item ID"
+    },
+    "P8189": {
+      "href": "https://www.wikidata.org/wiki/Property:P8189",
+      "lang": "en",
+      "text": "J9U entity ID"
+    },
+    "P8217": {
+      "href": "https://www.wikidata.org/wiki/Property:P8217",
+      "lang": "en",
+      "text": "iDAI.gazetteer ID"
+    },
+    "P8313": {
+      "href": "https://www.wikidata.org/wiki/Property:P8313",
+      "lang": "en",
+      "text": "Lex ID"
+    },
+    "P8338": {
+      "href": "https://www.wikidata.org/wiki/Property:P8338",
+      "lang": "en",
+      "text": "applies to name of object"
+    },
+    "P8408": {
+      "href": "https://www.wikidata.org/wiki/Property:P8408",
+      "lang": "en",
+      "text": "KBpedia ID"
+    },
+    "P8419": {
+      "href": "https://www.wikidata.org/wiki/Property:P8419",
+      "lang": "en",
+      "text": "Archive of Our Own tag"
+    },
+    "P8519": {
+      "href": "https://www.wikidata.org/wiki/Property:P8519",
+      "lang": "en",
+      "text": "RKD thesaurus ID"
+    },
+    "P854": {
+      "href": "https://www.wikidata.org/wiki/Property:P854",
+      "lang": "en",
+      "text": "reference URL"
+    },
+    "P8814": {
+      "href": "https://www.wikidata.org/wiki/Property:P8814",
+      "lang": "en",
+      "text": "WordNet 3.1 Synset ID"
+    },
+    "P8885": {
+      "href": "https://www.wikidata.org/wiki/Property:P8885",
+      "lang": "en",
+      "text": "Namuwiki ID"
+    },
+    "P8895": {
+      "href": "https://www.wikidata.org/wiki/Property:P8895",
+      "lang": "en",
+      "text": "All the Tropes article ID"
+    },
+    "P910": {
+      "href": "https://www.wikidata.org/wiki/Property:P910",
+      "lang": "en",
+      "text": "topic's main category"
+    },
+    "P9112": {
+      "href": "https://www.wikidata.org/wiki/Property:P9112",
+      "lang": "en",
+      "text": "IFLA value vocabularies ID"
+    },
+    "P913": {
+      "href": "https://www.wikidata.org/wiki/Property:P913",
+      "lang": "en",
+      "text": "notation"
+    },
+    "P9162": {
+      "href": "https://www.wikidata.org/wiki/Property:P9162",
+      "lang": "en",
+      "text": "Estonian Subject Thesaurus ID"
+    },
+    "P9222": {
+      "href": "https://www.wikidata.org/wiki/Property:P9222",
+      "lang": "en",
+      "text": "bashenc.online ID"
+    },
+    "P9287": {
+      "href": "https://www.wikidata.org/wiki/Property:P9287",
+      "lang": "en",
+      "text": "Cyprus Bibliography ID"
+    },
+    "P9322": {
+      "href": "https://www.wikidata.org/wiki/Property:P9322",
+      "lang": "en",
+      "text": "SVKKL authority ID"
+    },
+    "P9346": {
+      "href": "https://www.wikidata.org/wiki/Property:P9346",
+      "lang": "en",
+      "text": "France 24 topic ID (French)"
+    },
+    "P935": {
+      "href": "https://www.wikidata.org/wiki/Property:P935",
+      "lang": "en",
+      "text": "Commons gallery"
+    },
+    "P9475": {
+      "href": "https://www.wikidata.org/wiki/Property:P9475",
+      "lang": "en",
+      "text": "Encyclopedia of Korean Culture ID"
+    },
+    "P949": {
+      "href": "https://www.wikidata.org/wiki/Property:P949",
+      "lang": "en",
+      "text": "National Library of Israel ID (old)"
+    },
+    "P950": {
+      "href": "https://www.wikidata.org/wiki/Property:P950",
+      "lang": "en",
+      "text": "National Library of Spain SpMaBN ID"
+    },
+    "P9545": {
+      "href": "https://www.wikidata.org/wiki/Property:P9545",
+      "lang": "en",
+      "text": "Encyclopedia of China (Second Edition) ID"
+    },
+    "P972": {
+      "href": "https://www.wikidata.org/wiki/Property:P972",
+      "lang": "en",
+      "text": "catalog"
+    },
+    "P973": {
+      "href": "https://www.wikidata.org/wiki/Property:P973",
+      "lang": "en",
+      "text": "described at URL"
+    },
+    "P9807": {
+      "href": "https://www.wikidata.org/wiki/Property:P9807",
+      "lang": "en",
+      "text": "SNK ID"
+    },
+    "P9885": {
+      "href": "https://www.wikidata.org/wiki/Property:P9885",
+      "lang": "en",
+      "text": "Bing entity ID"
+    },
+    "P989": {
+      "href": "https://www.wikidata.org/wiki/Property:P989",
+      "lang": "en",
+      "text": "spoken text audio"
+    },
+    "P998": {
+      "href": "https://www.wikidata.org/wiki/Property:P998",
+      "lang": "en",
+      "text": "Curlie ID"
+    },
+    "Q1": {
+      "href": "https://www.wikidata.org/wiki/Q1",
+      "lang": "en",
+      "text": "universe"
+    },
+    "Q101949": {
+      "href": "https://www.wikidata.org/wiki/Q101949",
+      "lang": "en",
+      "text": "mantle"
+    },
+    "Q102424477": {
+      "href": "https://www.wikidata.org/wiki/Q102424477",
+      "lang": "en",
+      "text": "Sentinel-6 Michael Freilich"
+    },
+    "Q102424501": {
+      "href": "https://www.wikidata.org/wiki/Q102424501",
+      "lang": "en",
+      "text": "Sentinel-6B"
+    },
+    "Q1043322": {
+      "href": "https://www.wikidata.org/wiki/Q1043322",
+      "lang": "en",
+      "text": "Salyut 5"
+    },
+    "Q104499": {
+      "href": "https://www.wikidata.org/wiki/Q104499",
+      "lang": "en",
+      "text": "planetary science"
+    },
+    "Q105085344": {
+      "href": "https://www.wikidata.org/wiki/Q105085344",
+      "lang": "en",
+      "text": "Historical Dictionary of Science Fiction"
+    },
+    "Q105115142": {
+      "href": "https://www.wikidata.org/wiki/Q105115142",
+      "lang": "en",
+      "text": "narrative location"
+    },
+    "Q1051665": {
+      "href": "https://www.wikidata.org/wiki/Q1051665",
+      "lang": "en",
+      "text": "metre per square second"
+    },
+    "Q10522795": {
+      "href": "https://www.wikidata.org/wiki/Q10522795",
+      "lang": "en",
+      "text": "WikiProject Science"
+    },
+    "Q105889224": {
+      "href": "https://www.wikidata.org/wiki/Q105889224",
+      "lang": "en",
+      "text": "Asgardia-1"
+    },
+    "Q106073481": {
+      "href": "https://www.wikidata.org/wiki/Q106073481",
+      "lang": "en",
+      "text": "Enxaneta"
+    },
+    "Q1069": {
+      "href": "https://www.wikidata.org/wiki/Q1069",
+      "lang": "en",
+      "text": "geology"
+    },
+    "Q107433072": {
+      "href": "https://www.wikidata.org/wiki/Q107433072",
+      "lang": "en",
+      "text": "Der Volks-Brockhaus"
+    },
+    "Q1074821": {
+      "href": "https://www.wikidata.org/wiki/Q1074821",
+      "lang": "en",
+      "text": "Young Earth creationism"
+    },
+    "Q107629312": {
+      "href": "https://www.wikidata.org/wiki/Q107629312",
+      "lang": "en",
+      "text": "SXM-8"
+    },
+    "Q1076866": {
+      "href": "https://www.wikidata.org/wiki/Q1076866",
+      "lang": "en",
+      "text": "Vanguard 2"
+    },
+    "Q108104224": {
+      "href": "https://www.wikidata.org/wiki/Q108104224",
+      "lang": "en",
+      "text": "SAMPAN I"
+    },
+    "Q108156638": {
+      "href": "https://www.wikidata.org/wiki/Q108156638",
+      "lang": "en",
+      "text": "geologic activity"
+    },
+    "Q109250322": {
+      "href": "https://www.wikidata.org/wiki/Q109250322",
+      "lang": "en",
+      "text": "Orbital Reef"
+    },
+    "Q109283872": {
+      "href": "https://www.wikidata.org/wiki/Q109283872",
+      "lang": "en",
+      "text": "Starlab"
+    },
+    "Q110087470": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/en/Q110087470",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q110087470",
+      "lang": null,
+      "text": "Q110087470"
+    },
+    "Q11030684": {
+      "href": "https://www.wikidata.org/wiki/Q11030684",
+      "lang": "en",
+      "text": "WikiProject Solar System"
+    },
+    "Q110613557": {
+      "href": "https://www.wikidata.org/wiki/Q110613557",
+      "lang": "en",
+      "text": "LEDsat"
+    },
+    "Q110786": {
+      "href": "https://www.wikidata.org/wiki/Q110786",
+      "lang": "en",
+      "text": "singular"
+    },
+    "Q11081619": {
+      "href": "https://www.wikidata.org/wiki/Q11081619",
+      "lang": "en",
+      "text": "land"
+    },
+    "Q111": {
+      "href": "https://www.wikidata.org/wiki/Q111",
+      "lang": "en",
+      "text": "Mars"
+    },
+    "Q111471801": {
+      "href": "https://www.wikidata.org/wiki/Q111471801",
+      "lang": "en",
+      "text": "Unisat 5"
+    },
+    "Q112775138": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/en/Q112775138",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q112775138",
+      "lang": null,
+      "text": "Q112775138"
+    },
+    "Q113380363": {
+      "href": "https://www.wikidata.org/wiki/Q113380363",
+      "lang": "en",
+      "text": "2022 NX1"
+    },
+    "Q11362158": {
+      "href": "https://www.wikidata.org/wiki/Q11362158",
+      "lang": "en",
+      "text": "world geography"
+    },
+    "Q11438": {
+      "href": "https://www.wikidata.org/wiki/Q11438",
+      "lang": "en",
+      "text": "solid"
+    },
+    "Q115252651": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/en/Q115252651",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q115252651",
+      "lang": null,
+      "text": "Q115252651"
+    },
+    "Q115329454": {
+      "href": "https://www.wikidata.org/wiki/Q115329454",
+      "lang": "en",
+      "text": "AstroBio CubeSat"
+    },
+    "Q1155470": {
+      "href": "https://www.wikidata.org/wiki/Q1155470",
+      "lang": "en",
+      "text": "Earth radius"
+    },
+    "Q115563191": {
+      "href": "https://www.wikidata.org/wiki/Q115563191",
+      "lang": "en",
+      "text": "Space Travelling Egg-Controlled Catadioptric Object"
+    },
+    "Q11570": {
+      "href": "https://www.wikidata.org/wiki/Q11570",
+      "lang": "en",
+      "text": "kilogram"
+    },
+    "Q11573": {
+      "href": "https://www.wikidata.org/wiki/Q11573",
+      "lang": "en",
+      "text": "metre"
+    },
+    "Q11574": {
+      "href": "https://www.wikidata.org/wiki/Q11574",
+      "lang": "en",
+      "text": "second"
+    },
+    "Q115837838": {
+      "href": "https://www.wikidata.org/wiki/Q115837838",
+      "lang": "en",
+      "text": "Eerd"
+    },
+    "Q11826": {
+      "href": "https://www.wikidata.org/wiki/Q11826",
+      "lang": "en",
+      "text": "Al-Biruni"
+    },
+    "Q119457151": {
+      "href": "https://www.wikidata.org/wiki/Q119457151",
+      "lang": "en",
+      "text": "Spei Satelles"
+    },
+    "Q120069071": {
+      "href": "https://www.wikidata.org/wiki/Q120069071",
+      "lang": "en",
+      "text": "Haven-1"
+    },
+    "Q12047459": {
+      "href": "https://www.wikidata.org/wiki/Q12047459",
+      "lang": "en",
+      "text": "Earth diameter"
+    },
+    "Q120799836": {
+      "href": "https://www.wikidata.org/wiki/Q120799836",
+      "lang": "en",
+      "text": "Dictionnaire des biens communs"
+    },
+    "Q122987993": {
+      "href": "https://www.wikidata.org/wiki/Q122987993",
+      "lang": "en",
+      "text": "Gaofen 12-04"
+    },
+    "Q122989364": {
+      "href": "https://www.wikidata.org/wiki/Q122989364",
+      "lang": "en",
+      "text": "Gaofen 12-02"
+    },
+    "Q1239": {
+      "href": "https://www.wikidata.org/wiki/Q1239",
+      "lang": "en",
+      "text": "Indian Ocean"
+    },
+    "Q124011418": {
+      "href": "https://www.wikidata.org/wiki/Q124011418",
+      "lang": "en",
+      "text": "The New Student's Reference Work/Earth"
+    },
+    "Q125465": {
+      "href": "https://www.wikidata.org/wiki/Q125465",
+      "lang": "en",
+      "text": "sea level"
+    },
+    "Q126372457": {
+      "href": "https://www.wikidata.org/wiki/Q126372457",
+      "lang": "en",
+      "text": "Kosmos 2553"
+    },
+    "Q1264450": {
+      "href": "https://www.wikidata.org/wiki/Q1264450",
+      "lang": "en",
+      "text": "J2000.0"
+    },
+    "Q127460082": {
+      "href": "https://www.wikidata.org/wiki/Q127460082",
+      "lang": "en",
+      "text": "Ariane flight VA262"
+    },
+    "Q12832168": {
+      "href": "https://www.wikidata.org/wiki/Q12832168",
+      "lang": "en",
+      "text": "artificial satellite of the Earth"
+    },
+    "Q128945147": {
+      "href": "https://www.wikidata.org/wiki/Q128945147",
+      "lang": "en",
+      "text": "Fram2"
+    },
+    "Q129522190": {
+      "href": "https://www.wikidata.org/wiki/Q129522190",
+      "lang": "en",
+      "text": "Lemu Nge"
+    },
+    "Q130301991": {
+      "href": "https://www.wikidata.org/wiki/Q130301991",
+      "lang": "mul",
+      "text": "2024 PT5"
+    },
+    "Q130475553": {
+      "href": "https://www.wikidata.org/wiki/Q130475553",
+      "lang": "mul",
+      "text": "Sentinel-1C"
+    },
+    "Q131230": {
+      "href": "https://www.wikidata.org/wiki/Q131230",
+      "lang": "en",
+      "text": "Mauna Kea"
+    },
+    "Q13147228": {
+      "href": "https://www.wikidata.org/wiki/Q13147228",
+      "lang": "en",
+      "text": "gram per cubic centimetre"
+    },
+    "Q131540118": {
+      "href": "https://www.wikidata.org/wiki/Q131540118",
+      "lang": "en",
+      "text": "PROBA-3 Coronagraph"
+    },
+    "Q131540119": {
+      "href": "https://www.wikidata.org/wiki/Q131540119",
+      "lang": "en",
+      "text": "PROBA-3 Occulter"
+    },
+    "Q131577490": {
+      "href": "https://www.wikidata.org/wiki/Q131577490",
+      "lang": "en",
+      "text": "SXM-9"
+    },
+    "Q131626482": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/en/Q131626482",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q131626482",
+      "lang": null,
+      "text": "Q131626482"
+    },
+    "Q131826169": {
+      "href": "https://www.wikidata.org/wiki/Q131826169",
+      "lang": "en",
+      "text": "Blue Ring Pathfinder"
+    },
+    "Q1321": {
+      "href": "https://www.wikidata.org/wiki/Q1321",
+      "lang": "en",
+      "text": "Spanish"
+    },
+    "Q1323537": {
+      "href": "https://www.wikidata.org/wiki/Q1323537",
+      "lang": "mul",
+      "text": "Transiting Exoplanet Survey Satellite"
+    },
+    "Q13414913": {
+      "href": "https://www.wikidata.org/wiki/Q13414913",
+      "lang": "en",
+      "text": "Simplified Chinese"
+    },
+    "Q13460542": {
+      "href": "https://www.wikidata.org/wiki/Q13460542",
+      "lang": "en",
+      "text": "Wikipedia:Vital articles/Level/1"
+    },
+    "Q1348808": {
+      "href": "https://www.wikidata.org/wiki/Q1348808",
+      "lang": "en",
+      "text": "orbit of Earth"
+    },
+    "Q1349283": {
+      "href": "https://www.wikidata.org/wiki/Q1349283",
+      "lang": "en",
+      "text": "spherical Earth"
+    },
+    "Q1349417": {
+      "href": "https://www.wikidata.org/wiki/Q1349417",
+      "lang": "en",
+      "text": "Earth's surface"
+    },
+    "Q1379273": {
+      "href": "https://www.wikidata.org/wiki/Q1379273",
+      "lang": "en",
+      "text": "surface area"
+    },
+    "Q1384577": {
+      "href": "https://www.wikidata.org/wiki/Q1384577",
+      "lang": "en",
+      "text": "Explorer 6"
+    },
+    "Q13955": {
+      "href": "https://www.wikidata.org/wiki/Q13955",
+      "lang": "en",
+      "text": "Arabic"
+    },
+    "Q14081": {
+      "href": "https://www.wikidata.org/wiki/Q14081",
+      "lang": "en",
+      "text": "Chimborazo"
+    },
+    "Q1412630": {
+      "href": "https://www.wikidata.org/wiki/Q1412630",
+      "lang": "en",
+      "text": "geosynchronous satellite"
+    },
+    "Q1420942": {
+      "href": "https://www.wikidata.org/wiki/Q1420942",
+      "lang": "en",
+      "text": "Kosmos 557"
+    },
+    "Q14267": {
+      "href": "https://www.wikidata.org/wiki/Q14267",
+      "lang": "en",
+      "text": "Julian day"
+    },
+    "Q143": {
+      "href": "https://www.wikidata.org/wiki/Q143",
+      "lang": "en",
+      "text": "Esperanto"
+    },
+    "Q1430362": {
+      "href": "https://www.wikidata.org/wiki/Q1430362",
+      "lang": "en",
+      "text": "Kordylewski cloud"
+    },
+    "Q1450506": {
+      "href": "https://www.wikidata.org/wiki/Q1450506",
+      "lang": "en",
+      "text": "Canadian French"
+    },
+    "Q1458521": {
+      "href": "https://www.wikidata.org/wiki/Q1458521",
+      "lang": "en",
+      "text": "Category:Earth"
+    },
+    "Q146786": {
+      "href": "https://www.wikidata.org/wiki/Q146786",
+      "lang": "en",
+      "text": "plural"
+    },
+    "Q1485199": {
+      "href": "https://www.wikidata.org/wiki/Q1485199",
+      "lang": "en",
+      "text": "ESA-GEOS 2"
+    },
+    "Q1491734": {
+      "href": "https://www.wikidata.org/wiki/Q1491734",
+      "lang": "en",
+      "text": "Galathea Depth"
+    },
+    "Q14943910": {
+      "href": "https://www.wikidata.org/wiki/Q14943910",
+      "lang": "en",
+      "text": "WikiProject Geology"
+    },
+    "Q15": {
+      "href": "https://www.wikidata.org/wiki/Q15",
+      "lang": "en",
+      "text": "Africa"
+    },
+    "Q150": {
+      "href": "https://www.wikidata.org/wiki/Q150",
+      "lang": "en",
+      "text": "French"
+    },
+    "Q15011": {
+      "href": "https://www.wikidata.org/wiki/Q15011",
+      "lang": "en",
+      "text": "Active Magnetospheric Particle Tracer Explorers"
+    },
+    "Q15316": {
+      "href": "https://www.wikidata.org/wiki/Q15316",
+      "lang": "en",
+      "text": "Earth's crust"
+    },
+    "Q156312": {
+      "href": "https://www.wikidata.org/wiki/Q156312",
+      "lang": "en",
+      "text": "history of Earth"
+    },
+    "Q1579577": {
+      "href": "https://www.wikidata.org/wiki/Q1579577",
+      "lang": "en",
+      "text": "geocentric orbit"
+    },
+    "Q16054810": {
+      "href": "https://www.wikidata.org/wiki/Q16054810",
+      "lang": "en",
+      "text": "Sentinel-1A"
+    },
+    "Q16082057": {
+      "href": "https://www.wikidata.org/wiki/Q16082057",
+      "lang": "en",
+      "text": "The New Student's Reference Work"
+    },
+    "Q16500041": {
+      "href": "https://www.wikidata.org/wiki/Q16500041",
+      "lang": "mul",
+      "text": "SCD-1"
+    },
+    "Q16502": {
+      "href": "https://www.wikidata.org/wiki/Q16502",
+      "lang": "en",
+      "text": "world"
+    },
+    "Q1703583": {
+      "href": "https://www.wikidata.org/wiki/Q1703583",
+      "lang": "en",
+      "text": "Jorda"
+    },
+    "Q17285883": {
+      "href": "https://www.wikidata.org/wiki/Q17285883",
+      "lang": "en",
+      "text": "UniSat 6"
+    },
+    "Q17397": {
+      "href": "https://www.wikidata.org/wiki/Q17397",
+      "lang": "en",
+      "text": "Aqua"
+    },
+    "Q17486654": {
+      "href": "https://www.wikidata.org/wiki/Q17486654",
+      "lang": "en",
+      "text": "AsiaSat 8"
+    },
+    "Q1768721": {
+      "href": "https://www.wikidata.org/wiki/Q1768721",
+      "lang": "en",
+      "text": "Gujin Tushu Jicheng"
+    },
+    "Q1775415": {
+      "href": "https://www.wikidata.org/wiki/Q1775415",
+      "lang": "en",
+      "text": "feminine"
+    },
+    "Q17859486": {
+      "href": "https://www.wikidata.org/wiki/Q17859486",
+      "lang": "en",
+      "text": "WikiProject Culture"
+    },
+    "Q180154": {
+      "href": "https://www.wikidata.org/wiki/Q180154",
+      "lang": "en",
+      "text": "kilometre per hour"
+    },
+    "Q180971": {
+      "href": "https://www.wikidata.org/wiki/Q180971",
+      "lang": "en",
+      "text": "Apollo 17"
+    },
+    "Q1811": {
+      "href": "https://www.wikidata.org/wiki/Q1811",
+      "lang": "en",
+      "text": "astronomical unit"
+    },
+    "Q1816481": {
+      "href": "https://www.wikidata.org/wiki/Q1816481",
+      "lang": "en",
+      "text": "Landsat 1"
+    },
+    "Q183273": {
+      "href": "https://www.wikidata.org/wiki/Q183273",
+      "lang": "en",
+      "text": "geographical pole"
+    },
+    "Q18539": {
+      "href": "https://www.wikidata.org/wiki/Q18539",
+      "lang": "en",
+      "text": "Array of Low-Energy X-ray Imaging Sensors"
+    },
+    "Q18589965": {
+      "href": "https://www.wikidata.org/wiki/Q18589965",
+      "lang": "en",
+      "text": "Earth–Moon system"
+    },
+    "Q185969": {
+      "href": "https://www.wikidata.org/wiki/Q185969",
+      "lang": "en",
+      "text": "geoid"
+    },
+    "Q1860": {
+      "href": "https://www.wikidata.org/wiki/Q1860",
+      "lang": "en",
+      "text": "English"
+    },
+    "Q188": {
+      "href": "https://www.wikidata.org/wiki/Q188",
+      "lang": "en",
+      "text": "German"
+    },
+    "Q1891259": {
+      "href": "https://www.wikidata.org/wiki/Q1891259",
+      "lang": "en",
+      "text": "Wide-Field Infrared Explorer"
+    },
+    "Q190776": {
+      "href": "https://www.wikidata.org/wiki/Q190776",
+      "lang": "en",
+      "text": "Skylab"
+    },
+    "Q19180675": {
+      "href": "https://www.wikidata.org/wiki/Q19180675",
+      "lang": "en",
+      "text": "Small Brockhaus and Efron Encyclopedic Dictionary"
+    },
+    "Q19219752": {
+      "href": "https://www.wikidata.org/wiki/Q19219752",
+      "lang": "en",
+      "text": "Meyers Konversations-Lexikon, 4th edition (1885–1890)"
+    },
+    "Q192316": {
+      "href": "https://www.wikidata.org/wiki/Q192316",
+      "lang": "en",
+      "text": "geostationary orbit"
+    },
+    "Q192854": {
+      "href": "https://www.wikidata.org/wiki/Q192854",
+      "lang": "en",
+      "text": "solar time"
+    },
+    "Q19362195": {
+      "href": "https://www.wikidata.org/wiki/Q19362195",
+      "lang": "en",
+      "text": "geostationary satellite"
+    },
+    "Q193927": {
+      "href": "https://www.wikidata.org/wiki/Q193927",
+      "lang": "en",
+      "text": "Earth's core"
+    },
+    "Q1949963": {
+      "href": "https://www.wikidata.org/wiki/Q1949963",
+      "lang": "en",
+      "text": "statistic"
+    },
+    "Q19636560": {
+      "href": "https://www.wikidata.org/wiki/Q19636560",
+      "lang": "en",
+      "text": "SpaceX CRS-9"
+    },
+    "Q1970746": {
+      "href": "https://www.wikidata.org/wiki/Q1970746",
+      "lang": "en",
+      "text": "Explanatory Dictionary of the Living Great Russian Language"
+    },
+    "Q2": {
+      "description": {
+        "lang": "en",
+        "text": "third planet from the Sun in the Solar System"
+      },
+      "href": "https://www.wikidata.org/wiki/Q2",
+      "lang": "en",
+      "text": "Earth"
+    },
+    "Q200325": {
+      "href": "https://www.wikidata.org/wiki/Q200325",
+      "lang": "en",
+      "text": "human history"
+    },
+    "Q2003654": {
+      "href": "https://www.wikidata.org/wiki/Q2003654",
+      "lang": "en",
+      "text": "future of Earth"
+    },
+    "Q20055945": {
+      "href": "https://www.wikidata.org/wiki/Q20055945",
+      "lang": "en",
+      "text": "GSAT-18"
+    },
+    "Q202014": {
+      "href": "https://www.wikidata.org/wiki/Q202014",
+      "lang": "en",
+      "text": "The Blue Marble"
+    },
+    "Q20354353": {
+      "href": "https://www.wikidata.org/wiki/Q20354353",
+      "lang": "en",
+      "text": "Sentinel-2A"
+    },
+    "Q2041543": {
+      "href": "https://www.wikidata.org/wiki/Q2041543",
+      "lang": "en",
+      "text": "Otto's encyclopedia"
+    },
+    "Q21088638": {
+      "href": "https://www.wikidata.org/wiki/Q21088638",
+      "lang": "en",
+      "text": "joule per tesla"
+    },
+    "Q211014": {
+      "href": "https://www.wikidata.org/wiki/Q211014",
+      "lang": "en",
+      "text": "Vostok Station"
+    },
+    "Q211498": {
+      "href": "https://www.wikidata.org/wiki/Q211498",
+      "lang": "en",
+      "text": "2006 RH120"
+    },
+    "Q211761": {
+      "href": "https://www.wikidata.org/wiki/Q211761",
+      "lang": "en",
+      "text": "Salyut 1"
+    },
+    "Q214753": {
+      "href": "https://www.wikidata.org/wiki/Q214753",
+      "lang": "en",
+      "text": "radiometric dating"
+    },
+    "Q215913": {
+      "href": "https://www.wikidata.org/wiki/Q215913",
+      "lang": "en",
+      "text": "circumstellar habitable zone"
+    },
+    "Q2221906": {
+      "href": "https://www.wikidata.org/wiki/Q2221906",
+      "lang": "en",
+      "text": "geographic location"
+    },
+    "Q2278545": {
+      "href": "https://www.wikidata.org/wiki/Q2278545",
+      "lang": "en",
+      "text": "AMSAT-OSCAR 7"
+    },
+    "Q22828183": {
+      "href": "https://www.wikidata.org/wiki/Q22828183",
+      "lang": "en",
+      "text": "Earth"
+    },
+    "Q2293672": {
+      "href": "https://www.wikidata.org/wiki/Q2293672",
+      "lang": "en",
+      "text": "flag of the Earth"
+    },
+    "Q23048336": {
+      "href": "https://www.wikidata.org/wiki/Q23048336",
+      "lang": "en",
+      "text": "Earth"
+    },
+    "Q23538": {
+      "href": "https://www.wikidata.org/wiki/Q23538",
+      "lang": "en",
+      "text": "equator"
+    },
+    "Q23818223": {
+      "href": "https://www.wikidata.org/wiki/Q23818223",
+      "lang": "mul",
+      "text": "Sentinel-1B"
+    },
+    "Q23859820": {
+      "href": "https://www.wikidata.org/wiki/Q23859820",
+      "lang": "mul",
+      "text": "Země"
+    },
+    "Q23876039": {
+      "href": "https://www.wikidata.org/wiki/Q23876039",
+      "lang": "mul",
+      "text": "Zeměkoule"
+    },
+    "Q2389585": {
+      "href": "https://www.wikidata.org/wiki/Q2389585",
+      "lang": "en",
+      "text": "geological history of Earth"
+    },
+    "Q24005632": {
+      "href": "https://www.wikidata.org/wiki/Q24005632",
+      "lang": "en",
+      "text": "descriptive page and disambiguation page have to be in different items"
+    },
+    "Q24206672": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/en/Q24206672",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q24206672",
+      "lang": null,
+      "text": "Q24206672"
+    },
+    "Q24206689": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/en/Q24206689",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q24206689",
+      "lang": null,
+      "text": "Q24206689"
+    },
+    "Q24206694": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/en/Q24206694",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q24206694",
+      "lang": null,
+      "text": "Q24206694"
+    },
+    "Q24206696": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/en/Q24206696",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q24206696",
+      "lang": null,
+      "text": "Q24206696"
+    },
+    "Q24732074": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/en/Q24732074",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q24732074",
+      "lang": null,
+      "text": "Q24732074"
+    },
+    "Q2513": {
+      "href": "https://www.wikidata.org/wiki/Q2513",
+      "lang": "en",
+      "text": "Hubble Space Telescope"
+    },
+    "Q25235": {
+      "href": "https://www.wikidata.org/wiki/Q25235",
+      "lang": "en",
+      "text": "hour"
+    },
+    "Q25267": {
+      "href": "https://www.wikidata.org/wiki/Q25267",
+      "lang": "en",
+      "text": "degree Celsius"
+    },
+    "Q25271": {
+      "href": "https://www.wikidata.org/wiki/Q25271",
+      "lang": "en",
+      "text": "International Space Station"
+    },
+    "Q253276": {
+      "href": "https://www.wikidata.org/wiki/Q253276",
+      "lang": "en",
+      "text": "mile"
+    },
+    "Q25343": {
+      "href": "https://www.wikidata.org/wiki/Q25343",
+      "lang": "en",
+      "text": "square metre"
+    },
+    "Q25382402": {
+      "href": "https://www.wikidata.org/wiki/Q25382402",
+      "lang": "en",
+      "text": "QUESS"
+    },
+    "Q25426699": {
+      "href": "https://www.wikidata.org/wiki/Q25426699",
+      "lang": "mul",
+      "text": "Telstar 18V"
+    },
+    "Q25449060": {
+      "href": "https://www.wikidata.org/wiki/Q25449060",
+      "lang": "en",
+      "text": "SGDC-1"
+    },
+    "Q2556676": {
+      "href": "https://www.wikidata.org/wiki/Q2556676",
+      "lang": "en",
+      "text": "invariable plane"
+    },
+    "Q256": {
+      "href": "https://www.wikidata.org/wiki/Q256",
+      "lang": "en",
+      "text": "Turkish"
+    },
+    "Q2586548": {
+      "href": "https://www.wikidata.org/wiki/Q2586548",
+      "lang": "en",
+      "text": "Vityas Deep 1"
+    },
+    "Q25935139": {
+      "href": "https://www.wikidata.org/wiki/Q25935139",
+      "lang": "en",
+      "text": "mass of the Earth"
+    },
+    "Q26256810": {
+      "href": "https://www.wikidata.org/wiki/Q26256810",
+      "lang": "en",
+      "text": "topic"
+    },
+    "Q262787": {
+      "href": "https://www.wikidata.org/wiki/Q262787",
+      "lang": "en",
+      "text": "STS-90"
+    },
+    "Q2731139": {
+      "href": "https://www.wikidata.org/wiki/Q2731139",
+      "lang": "en",
+      "text": "Bond albedo"
+    },
+    "Q2790523": {
+      "href": "https://www.wikidata.org/wiki/Q2790523",
+      "lang": "en",
+      "text": "ITAMSAT"
+    },
+    "Q2796622": {
+      "href": "https://www.wikidata.org/wiki/Q2796622",
+      "lang": "en",
+      "text": "mean"
+    },
+    "Q280068": {
+      "href": "https://www.wikidata.org/wiki/Q280068",
+      "lang": "en",
+      "text": "Soil Moisture and Ocean Salinity"
+    },
+    "Q28231576": {
+      "href": "https://www.wikidata.org/wiki/Q28231576",
+      "lang": "en",
+      "text": "outline of Earth"
+    },
+    "Q2832068": {
+      "href": "https://www.wikidata.org/wiki/Q2832068",
+      "lang": "en",
+      "text": "geometric albedo"
+    },
+    "Q28390": {
+      "href": "https://www.wikidata.org/wiki/Q28390",
+      "lang": "en",
+      "text": "degree"
+    },
+    "Q28473093": {
+      "href": "https://www.wikidata.org/wiki/Q28473093",
+      "lang": "en",
+      "text": "Van Allen Probe A"
+    },
+    "Q28473100": {
+      "href": "https://www.wikidata.org/wiki/Q28473100",
+      "lang": "en",
+      "text": "Van Allen Probe B"
+    },
+    "Q28857865": {
+      "href": "https://www.wikidata.org/wiki/Q28857865",
+      "lang": "en",
+      "text": "Sentinel-2B"
+    },
+    "Q290390": {
+      "href": "https://www.wikidata.org/wiki/Q290390",
+      "lang": "en",
+      "text": "ADM-Aeolus"
+    },
+    "Q3122598": {
+      "href": "https://www.wikidata.org/wiki/Q3122598",
+      "lang": "en",
+      "text": "Tiangong-2"
+    },
+    "Q313": {
+      "href": "https://www.wikidata.org/wiki/Q313",
+      "lang": "en",
+      "text": "Venus"
+    },
+    "Q3186787": {
+      "href": "https://www.wikidata.org/wiki/Q3186787",
+      "lang": "en",
+      "text": "stellar day"
+    },
+    "Q3189123": {
+      "href": "https://www.wikidata.org/wiki/Q3189123",
+      "lang": "en",
+      "text": "WikiProject Geography"
+    },
+    "Q321": {
+      "href": "https://www.wikidata.org/wiki/Q321",
+      "lang": "en",
+      "text": "Milky Way"
+    },
+    "Q3230": {
+      "href": "https://www.wikidata.org/wiki/Q3230",
+      "lang": "en",
+      "text": "atmosphere of Earth"
+    },
+    "Q3241540": {
+      "href": "https://www.wikidata.org/wiki/Q3241540",
+      "lang": "en",
+      "text": "oblate spheroid"
+    },
+    "Q3270674": {
+      "href": "https://www.wikidata.org/wiki/Q3270674",
+      "lang": "en",
+      "text": "Libertad 1"
+    },
+    "Q33056464": {
+      "href": "https://www.wikidata.org/wiki/Q33056464",
+      "lang": "en",
+      "text": "Encyclopedia Galactica"
+    },
+    "Q3329015": {
+      "href": "https://www.wikidata.org/wiki/Q3329015",
+      "lang": "en",
+      "text": "DODGE"
+    },
+    "Q340271": {
+      "href": "https://www.wikidata.org/wiki/Q340271",
+      "lang": "en",
+      "text": "Tellus"
+    },
+    "Q3446604": {
+      "href": "https://www.wikidata.org/wiki/Q3446604",
+      "lang": "en",
+      "text": "Armenian Sign Language"
+    },
+    "Q3459718": {
+      "href": "https://www.wikidata.org/wiki/Q3459718",
+      "lang": "en",
+      "text": "Soil Moisture Active Passive"
+    },
+    "Q3459966": {
+      "href": "https://www.wikidata.org/wiki/Q3459966",
+      "lang": "en",
+      "text": "SPOT 1"
+    },
+    "Q348045": {
+      "href": "https://www.wikidata.org/wiki/Q348045",
+      "lang": "en",
+      "text": "Erde"
+    },
+    "Q3502357": {
+      "href": "https://www.wikidata.org/wiki/Q3502357",
+      "lang": "en",
+      "text": "Landsat 5"
+    },
+    "Q3504248": {
+      "href": "https://www.wikidata.org/wiki/Q3504248",
+      "lang": "en",
+      "text": "inner planet of the Solar System"
+    },
+    "Q3514088": {
+      "href": "https://www.wikidata.org/wiki/Q3514088",
+      "lang": "en",
+      "text": "Taiyin"
+    },
+    "Q36133": {
+      "href": "https://www.wikidata.org/wiki/Q36133",
+      "lang": "en",
+      "text": "soil"
+    },
+    "Q3630": {
+      "href": "https://www.wikidata.org/wiki/Q3630",
+      "lang": "en",
+      "text": "Jakarta"
+    },
+    "Q36846": {
+      "href": "https://www.wikidata.org/wiki/Q36846",
+      "lang": "en",
+      "text": "Toki Pona"
+    },
+    "Q370053": {
+      "href": "https://www.wikidata.org/wiki/Q370053",
+      "lang": "en",
+      "text": "Explorer 4"
+    },
+    "Q3717087": {
+      "href": "https://www.wikidata.org/wiki/Q3717087",
+      "lang": "en",
+      "text": "e-st@r"
+    },
+    "Q3814663": {
+      "href": "https://www.wikidata.org/wiki/Q3814663",
+      "lang": "en",
+      "text": "Solar equator"
+    },
+    "Q39053896": {
+      "href": "https://www.wikidata.org/wiki/Q39053896",
+      "lang": "en",
+      "text": "X-ray Imaging and Spectroscopy Mission"
+    },
+    "Q3944": {
+      "href": "https://www.wikidata.org/wiki/Q3944",
+      "lang": "en",
+      "text": "Local Group"
+    },
+    "Q3960": {
+      "href": "https://www.wikidata.org/wiki/Q3960",
+      "lang": "en",
+      "text": "Australian continent"
+    },
+    "Q399984": {
+      "href": "https://www.wikidata.org/wiki/Q399984",
+      "lang": "en",
+      "text": "hemisphere of the Earth"
+    },
+    "Q400922": {
+      "href": "https://www.wikidata.org/wiki/Q400922",
+      "lang": "en",
+      "text": "Terra"
+    },
+    "Q405": {
+      "href": "https://www.wikidata.org/wiki/Q405",
+      "lang": "en",
+      "text": "Moon"
+    },
+    "Q40610": {
+      "href": "https://www.wikidata.org/wiki/Q40610",
+      "lang": "en",
+      "text": "Tyazhely Sputnik"
+    },
+    "Q4086271": {
+      "href": "https://www.wikidata.org/wiki/Q4086271",
+      "lang": "en",
+      "text": "Bible Encyclopedia of Archimandrite Nicephorus"
+    },
+    "Q4169": {
+      "href": "https://www.wikidata.org/wiki/Q4169",
+      "lang": "en",
+      "text": "outer space"
+    },
+    "Q4173137": {
+      "href": "https://www.wikidata.org/wiki/Q4173137",
+      "lang": "en",
+      "text": "Jewish Encyclopedia of Brockhaus and Efron"
+    },
+    "Q4243638": {
+      "href": "https://www.wikidata.org/wiki/Q4243638",
+      "lang": "en",
+      "text": "cubic kilometre"
+    },
+    "Q426529": {
+      "href": "https://www.wikidata.org/wiki/Q426529",
+      "lang": "en",
+      "text": "Earth symbol"
+    },
+    "Q42762": {
+      "href": "https://www.wikidata.org/wiki/Q42762",
+      "lang": "en",
+      "text": "biosphere"
+    },
+    "Q4330518": {
+      "href": "https://www.wikidata.org/wiki/Q4330518",
+      "lang": "en",
+      "text": "object of study"
+    },
+    "Q437877": {
+      "href": "https://www.wikidata.org/wiki/Q437877",
+      "lang": "en",
+      "text": "location of Earth"
+    },
+    "Q437882": {
+      "href": "https://www.wikidata.org/wiki/Q437882",
+      "lang": "en",
+      "text": "figure of the Earth"
+    },
+    "Q4532138": {
+      "href": "https://www.wikidata.org/wiki/Q4532138",
+      "lang": "en",
+      "text": "Granat Encyclopedic Dictionary"
+    },
+    "Q459173": {
+      "href": "https://www.wikidata.org/wiki/Q459173",
+      "lang": "en",
+      "text": "Challenger Deep"
+    },
+    "Q46": {
+      "href": "https://www.wikidata.org/wiki/Q46",
+      "lang": "en",
+      "text": "Europe"
+    },
+    "Q46255": {
+      "href": "https://www.wikidata.org/wiki/Q46255",
+      "lang": "en",
+      "text": "geophysics"
+    },
+    "Q46539410": {
+      "href": "https://www.wikidata.org/wiki/Q46539410",
+      "lang": "en",
+      "text": "GRACE-1"
+    },
+    "Q46539486": {
+      "href": "https://www.wikidata.org/wiki/Q46539486",
+      "lang": "en",
+      "text": "GRACE-2"
+    },
+    "Q468469": {
+      "href": "https://www.wikidata.org/wiki/Q468469",
+      "lang": "en",
+      "text": "seabed"
+    },
+    "Q48": {
+      "href": "https://www.wikidata.org/wiki/Q48",
+      "lang": "en",
+      "text": "Asia"
+    },
+    "Q48604": {
+      "href": "https://www.wikidata.org/wiki/Q48604",
+      "lang": "en",
+      "text": "Mir"
+    },
+    "Q499327": {
+      "href": "https://www.wikidata.org/wiki/Q499327",
+      "lang": "en",
+      "text": "masculine"
+    },
+    "Q51": {
+      "href": "https://www.wikidata.org/wiki/Q51",
+      "lang": "en",
+      "text": "Antarctica"
+    },
+    "Q5107": {
+      "href": "https://www.wikidata.org/wiki/Q5107",
+      "lang": "en",
+      "text": "continent"
+    },
+    "Q511093": {
+      "href": "https://www.wikidata.org/wiki/Q511093",
+      "lang": "en",
+      "text": "centroid"
+    },
+    "Q513": {
+      "href": "https://www.wikidata.org/wiki/Q513",
+      "lang": "en",
+      "text": "Mount Everest"
+    },
+    "Q525": {
+      "href": "https://www.wikidata.org/wiki/Q525",
+      "lang": "en",
+      "text": "Sun"
+    },
+    "Q527": {
+      "href": "https://www.wikidata.org/wiki/Q527",
+      "lang": "en",
+      "text": "sky"
+    },
+    "Q5327160": {
+      "href": "https://www.wikidata.org/wiki/Q5327160",
+      "lang": "en",
+      "text": "Earth in fiction"
+    },
+    "Q5401": {
+      "href": "https://www.wikidata.org/wiki/Q5401",
+      "lang": "en",
+      "text": "Eurasia"
+    },
+    "Q544": {
+      "href": "https://www.wikidata.org/wiki/Q544",
+      "lang": "en",
+      "text": "Solar System"
+    },
+    "Q5460604": {
+      "href": "https://www.wikidata.org/wiki/Q5460604",
+      "lang": "en",
+      "text": "Wikipedia:List of articles all languages should have"
+    },
+    "Q5497659": {
+      "href": "https://www.wikidata.org/wiki/Q5497659",
+      "lang": "en",
+      "text": "WikiProject Environment"
+    },
+    "Q5727902": {
+      "href": "https://www.wikidata.org/wiki/Q5727902",
+      "lang": "en",
+      "text": "circa"
+    },
+    "Q573": {
+      "href": "https://www.wikidata.org/wiki/Q573",
+      "lang": "en",
+      "text": "day"
+    },
+    "Q58635": {
+      "href": "https://www.wikidata.org/wiki/Q58635",
+      "lang": "en",
+      "text": "Punjabi"
+    },
+    "Q60070514": {
+      "href": "https://www.wikidata.org/wiki/Q60070514",
+      "lang": "en",
+      "text": "approximately"
+    },
+    "Q602358": {
+      "href": "https://www.wikidata.org/wiki/Q602358",
+      "lang": "en",
+      "text": "Brockhaus and Efron Encyclopedic Dictionary"
+    },
+    "Q61040416": {
+      "href": "https://www.wikidata.org/wiki/Q61040416",
+      "lang": "en",
+      "text": "GRACE-FO 1"
+    },
+    "Q61040417": {
+      "href": "https://www.wikidata.org/wiki/Q61040417",
+      "lang": "en",
+      "text": "GRACE-FO 2"
+    },
+    "Q613726": {
+      "href": "https://www.wikidata.org/wiki/Q613726",
+      "lang": "en",
+      "text": "yottagram"
+    },
+    "Q6173448": {
+      "href": "https://www.wikidata.org/wiki/Q6173448",
+      "lang": "en",
+      "text": "Wikipedia:Vital articles/Level/4"
+    },
+    "Q6500960": {
+      "href": "https://www.wikidata.org/wiki/Q6500960",
+      "lang": "en",
+      "text": "Earth's magnetic field"
+    },
+    "Q6508336": {
+      "href": "https://www.wikidata.org/wiki/Q6508336",
+      "lang": "en",
+      "text": "lead-lead dating"
+    },
+    "Q652": {
+      "href": "https://www.wikidata.org/wiki/Q652",
+      "lang": "en",
+      "text": "Italian"
+    },
+    "Q66385159": {
+      "href": "https://www.wikidata.org/wiki/Q66385159",
+      "lang": "en",
+      "text": "🜨"
+    },
+    "Q705882": {
+      "href": "https://www.wikidata.org/wiki/Q705882",
+      "lang": "en",
+      "text": "TerraSAR-X"
+    },
+    "Q712226": {
+      "href": "https://www.wikidata.org/wiki/Q712226",
+      "lang": "en",
+      "text": "square kilometre"
+    },
+    "Q71533355": {
+      "href": "https://www.wikidata.org/wiki/Q71533355",
+      "lang": "en",
+      "text": "most recent value"
+    },
+    "Q73389119": {
+      "href": "https://www.wikidata.org/wiki/Q73389119",
+      "lang": "en",
+      "text": "Seeker"
+    },
+    "Q737809": {
+      "href": "https://www.wikidata.org/wiki/Q737809",
+      "lang": "en",
+      "text": "heliocentric orbit"
+    },
+    "Q7725395": {
+      "href": "https://www.wikidata.org/wiki/Q7725395",
+      "lang": "en",
+      "text": "Category:Earth (planet)"
+    },
+    "Q7737": {
+      "href": "https://www.wikidata.org/wiki/Q7737",
+      "lang": "en",
+      "text": "Russian"
+    },
+    "Q7879772": {
+      "href": "https://www.wikidata.org/wiki/Q7879772",
+      "lang": "en",
+      "text": "inner Solar System"
+    },
+    "Q7976": {
+      "href": "https://www.wikidata.org/wiki/Q7976",
+      "lang": "en",
+      "text": "American English"
+    },
+    "Q8008": {
+      "href": "https://www.wikidata.org/wiki/Q8008",
+      "lang": "en",
+      "text": "Earth science"
+    },
+    "Q8084930": {
+      "href": "https://www.wikidata.org/wiki/Q8084930",
+      "lang": "en",
+      "text": "Template:Earth"
+    },
+    "Q809": {
+      "href": "https://www.wikidata.org/wiki/Q809",
+      "lang": "en",
+      "text": "Polish"
+    },
+    "Q82794": {
+      "href": "https://www.wikidata.org/wiki/Q82794",
+      "lang": "en",
+      "text": "region"
+    },
+    "Q828": {
+      "href": "https://www.wikidata.org/wiki/Q828",
+      "lang": "en",
+      "text": "Americas"
+    },
+    "Q828224": {
+      "href": "https://www.wikidata.org/wiki/Q828224",
+      "lang": "en",
+      "text": "kilometre"
+    },
+    "Q83169": {
+      "href": "https://www.wikidata.org/wiki/Q83169",
+      "lang": "en",
+      "text": "hydrosphere"
+    },
+    "Q83296": {
+      "href": "https://www.wikidata.org/wiki/Q83296",
+      "lang": "en",
+      "text": "lithosphere"
+    },
+    "Q838611": {
+      "href": "https://www.wikidata.org/wiki/Q838611",
+      "lang": "en",
+      "text": "ball"
+    },
+    "Q846030": {
+      "href": "https://www.wikidata.org/wiki/Q846030",
+      "lang": "en",
+      "text": "planetary habitability"
+    },
+    "Q84652023": {
+      "href": "https://www.wikidata.org/wiki/Q84652023",
+      "lang": "en",
+      "text": "1911 Encyclopædia Britannica/Earth"
+    },
+    "Q8493596": {
+      "href": "https://www.wikidata.org/wiki/Q8493596",
+      "lang": "en",
+      "text": "WikiProject Astronomy"
+    },
+    "Q8502932": {
+      "href": "https://www.wikidata.org/wiki/Q8502932",
+      "lang": "en",
+      "text": "WikiProject Astronomical objects"
+    },
+    "Q86388198": {
+      "href": "https://www.wikidata.org/wiki/Q86388198",
+      "lang": "en",
+      "text": "2020 CD3"
+    },
+    "Q867541": {
+      "href": "https://www.wikidata.org/wiki/Q867541",
+      "lang": "en",
+      "text": "Encyclopædia Britannica 11th edition"
+    },
+    "Q8752": {
+      "href": "https://www.wikidata.org/wiki/Q8752",
+      "lang": "en",
+      "text": "Basque"
+    },
+    "Q87526782": {
+      "href": "https://www.wikidata.org/wiki/Q87526782",
+      "lang": "en",
+      "text": "Earth symbol"
+    },
+    "Q898312": {
+      "href": "https://www.wikidata.org/wiki/Q898312",
+      "lang": "en",
+      "text": "open system"
+    },
+    "Q9027": {
+      "href": "https://www.wikidata.org/wiki/Q9027",
+      "lang": "en",
+      "text": "Swedish"
+    },
+    "Q9035": {
+      "href": "https://www.wikidata.org/wiki/Q9035",
+      "lang": "en",
+      "text": "Danish"
+    },
+    "Q9067": {
+      "href": "https://www.wikidata.org/wiki/Q9067",
+      "lang": "en",
+      "text": "Hungarian"
+    },
+    "Q930933": {
+      "href": "https://www.wikidata.org/wiki/Q930933",
+      "lang": "en",
+      "text": "relation"
+    },
+    "Q933": {
+      "href": "https://www.wikidata.org/wiki/Q933",
+      "lang": "en",
+      "text": "South Pole"
+    },
+    "Q934": {
+      "href": "https://www.wikidata.org/wiki/Q934",
+      "lang": "en",
+      "text": "North Pole"
+    },
+    "Q935310": {
+      "href": "https://www.wikidata.org/wiki/Q935310",
+      "lang": "en",
+      "text": "age of the Earth"
+    },
+    "Q96594012": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/en/Q96594012",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q96594012",
+      "lang": null,
+      "text": "Q96594012"
+    },
+    "Q967966": {
+      "href": "https://www.wikidata.org/wiki/Q967966",
+      "lang": "en",
+      "text": "Furnace Creek"
+    },
+    "Q97": {
+      "href": "https://www.wikidata.org/wiki/Q97",
+      "lang": "en",
+      "text": "Atlantic Ocean"
+    },
+    "Q98": {
+      "href": "https://www.wikidata.org/wiki/Q98",
+      "lang": "en",
+      "text": "Pacific Ocean"
+    }
+  },
+  "lang": "en",
+  "lead": {
+    "host": "en.wikipedia.org",
+    "lang": "en",
+    "local": true,
+    "more": [
+      "Earth has <a href=\"https://en.wikipedia.org/wiki/Atmosphere_of_Earth\">a dynamic atmosphere</a>, which sustains Earth's surface conditions and protects it from most <a href=\"https://en.wikipedia.org/wiki/Meteoroid\">meteoroids</a> and <a href=\"https://en.wikipedia.org/wiki/Ozone_layer\">ultraviolet light at entry</a>. It is composed primarily of <a href=\"https://en.wikipedia.org/wiki/Nitrogen\">nitrogen</a> and <a href=\"https://en.wikipedia.org/wiki/Oxygen\">oxygen</a>. <a href=\"https://en.wikipedia.org/wiki/Water_vapor\">Water vapor</a> is widely present in the atmosphere, <a href=\"https://en.wikipedia.org/wiki/Cloud\">forming clouds</a> that cover most of the planet. The water vapor acts as a <a href=\"https://en.wikipedia.org/wiki/Greenhouse_gas\">greenhouse gas</a> and, together with other greenhouse gases in the atmosphere, particularly <a href=\"https://en.wikipedia.org/wiki/Carbon_dioxide\">carbon dioxide</a> (CO2), creates the conditions for both liquid surface water and water vapor to persist via the capturing of <a href=\"https://en.wikipedia.org/wiki/Solar_irradiance\">energy from the Sun's light</a>. This process maintains the current average surface temperature of 14.76&#160;°C (58.57&#160;°F), at which water is liquid under normal <a href=\"https://en.wikipedia.org/wiki/Atmospheric_pressure\">atmospheric pressure</a>. Differences in the amount of captured energy between geographic regions (as with the <a href=\"https://en.wikipedia.org/wiki/Equatorial_region\">equatorial region</a> receiving more sunlight than the polar regions) drive <a href=\"https://en.wikipedia.org/wiki/Atmospheric_circulation\">atmospheric</a> and <a href=\"https://en.wikipedia.org/wiki/Ocean_current\">ocean currents</a>, producing a global <a href=\"https://en.wikipedia.org/wiki/Climate_system\">climate system</a> with different <a href=\"https://en.wikipedia.org/wiki/Climate_region\">climate regions</a>, and a range of weather phenomena such as <a href=\"https://en.wikipedia.org/wiki/Precipitation\">precipitation</a>, allowing components such as <a href=\"https://en.wikipedia.org/wiki/Carbon_cycle\">carbon</a> and <a href=\"https://en.wikipedia.org/wiki/Nitrogen_cycle\">nitrogen</a> to <a href=\"https://en.wikipedia.org/wiki/Biogeochemical_cycle\">cycle</a>.",
+      "Earth is <a href=\"https://en.wikipedia.org/wiki/Hydrostatic_equilibrium\">rounded</a> into <a href=\"https://en.wikipedia.org/wiki/Earth_ellipsoid\">an ellipsoid</a> with <a href=\"https://en.wikipedia.org/wiki/Earth%27s_circumference\">a circumference</a> of about 40,000&#160;km (24,900&#160;mi). It is the <a href=\"https://en.wikipedia.org/wiki/List_of_Solar_System_objects_by_size\">densest planet in the Solar System</a>. Of the four <a href=\"https://en.wikipedia.org/wiki/Rocky_planets\">rocky planets</a>, it is the largest and most massive. Overall, Earth is the sixth largest object in the Solar System after the Sun and the <a href=\"https://en.wikipedia.org/wiki/Outer_Solar_System\">outer planets</a>. Earth is about eight <a href=\"https://en.wikipedia.org/wiki/Light-minute\">light-minutes</a> (1 <a href=\"https://en.wikipedia.org/wiki/Astronomical_unit\">astronomical unit</a> [AU]) away from the Sun and <a href=\"https://en.wikipedia.org/wiki/Earth%27s_orbit\">orbits it</a>, taking a year (about 365.25 days) to complete one revolution. <a href=\"https://en.wikipedia.org/wiki/Earth%27s_rotation\">Earth rotates</a> around its own axis in slightly less than a day (in about 23 hours and 56 minutes). Earth's axis of rotation is tilted with respect to the perpendicular to its orbital plane around the Sun, producing <a href=\"https://en.wikipedia.org/wiki/Season\">seasons</a>. Earth is <a href=\"https://en.wikipedia.org/wiki/Orbit\">orbited</a> by one permanent <a href=\"https://en.wikipedia.org/wiki/Natural_satellite\">natural satellite</a>, the <a href=\"https://en.wikipedia.org/wiki/Moon\">Moon</a>, which orbits Earth at 384,400&#160;km (238,855&#160;mi)—1.28 light seconds—and is roughly a quarter as wide as Earth. The Moon's gravity helps stabilize Earth's <a href=\"https://en.wikipedia.org/wiki/Axial_tilt\">axis</a>, causes <a href=\"https://en.wikipedia.org/wiki/Tide\">tides</a>, and <a href=\"https://en.wikipedia.org/wiki/Tidal_acceleration\">gradually slows Earth's rotation</a>. Likewise, Earth's gravitational pull has already made the Moon's rotation <a href=\"https://en.wikipedia.org/wiki/Tidally_locked\">tidally locked</a>, keeping the same <a href=\"https://en.wikipedia.org/wiki/Near_side_of_the_Moon\">near side</a> facing Earth.",
+      "Earth, like most other bodies in the Solar System, <a href=\"https://en.wikipedia.org/wiki/Age_of_Earth\">formed about 4.5&#160;billion years ago</a> from gas and dust in the <a href=\"https://en.wikipedia.org/wiki/Formation_and_evolution_of_the_Solar_System\">early Solar System</a>. The formation of the ocean and the subsequent <a href=\"https://en.wikipedia.org/wiki/Abiogenesis\">development of life</a> occurred during the first billion years of <a href=\"https://en.wikipedia.org/wiki/Earth%27s_history\">Earth's history</a>. Life spread globally and has been altering Earth's atmosphere and surface, leading to the <a href=\"https://en.wikipedia.org/wiki/Great_Oxidation_Event\">Great Oxidation Event</a> two billion years ago. <a href=\"https://en.wikipedia.org/wiki/Human\">Humans</a> emerged 300,000 years ago in Africa and have spread across every continent on Earth. Humans depend on Earth's <a href=\"https://en.wikipedia.org/wiki/Biosphere\">biosphere</a> and natural resources for their survival, but have <a href=\"https://en.wikipedia.org/wiki/Human_impact_on_the_environment\">increasingly impacted the planet's environment</a>. Humanity's current impact on Earth's climate and biosphere is unsustainable, threatening the livelihood of humans and many other forms of life, and <a href=\"https://en.wikipedia.org/wiki/Holocene_extinction\">causing widespread extinctions</a>."
+    ],
+    "paragraphs": [
+      "<b>Earth</b> is the third <a href=\"https://en.wikipedia.org/wiki/Planet\">planet</a> from the <a href=\"https://en.wikipedia.org/wiki/Sun\">Sun</a> and the only <a href=\"https://en.wikipedia.org/wiki/Astronomical_object\">astronomical object</a> known to <a href=\"https://en.wikipedia.org/wiki/Planetary_habitability\">harbor life</a>. This is made possible by Earth being an <a href=\"https://en.wikipedia.org/wiki/Ocean_world\">ocean world</a>, the only one in the <a href=\"https://en.wikipedia.org/wiki/Solar_System\">Solar System</a> sustaining liquid <a href=\"https://en.wikipedia.org/wiki/Surface_water\">surface water</a>. Almost all of Earth's water is contained in its <a href=\"https://en.wikipedia.org/wiki/Ocean\">ocean</a>, which covers <a href=\"https://en.wikipedia.org/wiki/Water_distribution_on_Earth\">70.8%</a> of <a href=\"https://en.wikipedia.org/wiki/Earth%27s_crust\">Earth's crust</a>. The remaining 29.2% of Earth's crust is dry <a href=\"https://en.wikipedia.org/wiki/Land\">land</a>, which is predominantly located within Earth's <a href=\"https://en.wikipedia.org/wiki/Land_and_water_hemispheres\">land hemisphere</a> in the form of <a href=\"https://en.wikipedia.org/wiki/Continent\">continental</a> <a href=\"https://en.wikipedia.org/wiki/Landmass\">landmasses</a>. Most of Earth's land is at least somewhat <a href=\"https://en.wikipedia.org/wiki/Humid\">humid</a> and covered by <a href=\"https://en.wikipedia.org/wiki/Vegetation\">vegetation</a>, while large <a href=\"https://en.wikipedia.org/wiki/Ice_sheet\">ice sheets</a> at Earth's <a href=\"https://en.wikipedia.org/wiki/Polar_desert\">polar deserts</a> retain more water than Earth's <a href=\"https://en.wikipedia.org/wiki/Groundwater\">groundwater</a>, lakes, rivers, and <a href=\"https://en.wikipedia.org/wiki/Water_vapor\">atmospheric water</a> combined. Earth's crust consists of slowly moving <a href=\"https://en.wikipedia.org/wiki/Tectonic_plates\">tectonic plates</a>, which interact to produce <a href=\"https://en.wikipedia.org/wiki/Mountain_range\">mountain ranges</a>, <a href=\"https://en.wikipedia.org/wiki/Volcano\">volcanoes</a>, and <a href=\"https://en.wikipedia.org/wiki/Earthquake\">earthquakes</a>. Earth has <a href=\"https://en.wikipedia.org/wiki/Earth%27s_outer_core\">a liquid outer core</a> that generates a <a href=\"https://en.wikipedia.org/wiki/Magnetosphere\">magnetosphere</a> capable of deflecting most of the destructive <a href=\"https://en.wikipedia.org/wiki/Solar_wind\">solar winds</a> and <a href=\"https://en.wikipedia.org/wiki/Cosmic_radiation\">cosmic radiation</a>."
+    ],
+    "url": "https://en.wikipedia.org/wiki/Earth"
+  },
+  "locale": "en",
+  "messages": {
+    "qrender-add-label": "Add a label in your language",
+    "qrender-add-value": "Add it in this language",
+    "qrender-age": "aged $1",
+    "qrender-bce": "$1 BCE",
+    "qrender-close": "Close",
+    "qrender-contents": "Contents",
+    "qrender-credit": "Credit",
+    "qrender-description": "Description",
+    "qrender-earlier": "earlier",
+    "qrender-edit": "Edit",
+    "qrender-explore-map": "Explore the map",
+    "qrender-footer": "Composed by rule from Wikidata item $1 ($2). The lead paragraph, the section paragraphs and the section links come from Wikipedia. Pictures come from Wikimedia Commons; a W on a picture marks one from an article, not from Wikidata; a W on a value marks a statement whose only reference is a Wikipedia.",
+    "qrender-former": "former",
+    "qrender-language": "Language",
+    "qrender-map-attribution": "© OpenStreetMap contributors",
+    "qrender-model-loading": "Loading the 3D model… $1",
+    "qrender-model-unsupported": "This 3D model cannot be shown here.",
+    "qrender-other-value": "other value",
+    "qrender-play": "Play",
+    "qrender-search": "Search Wikipedia",
+    "qrender-show-map": "Show on a map",
+    "qrender-some-value": "unknown value",
+    "qrender-view-all": "View all",
+    "qrender-view-larger": "View larger",
+    "qrender-view-model": "View in 3D"
+  },
+  "page_images": {
+    "Q11362158": {
+      "aspect": 1.8333,
+      "credit": {
+        "artist": "Unknown author Unknown author",
+        "license": "Public domain"
+      },
+      "file": "CIA World Physical Map (2023).pdf",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q1349417": {
+      "aspect": 1.0,
+      "credit": {
+        "artist": "EUMETSAT",
+        "license": "Attribution"
+      },
+      "file": "Meteosat-12-fci-march-equinox-2025-noon.jpg",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q17486654": {
+      "aspect": 1.5056,
+      "credit": {
+        "artist": "SpaceX",
+        "license": "CC0"
+      },
+      "file": "Launch of Falcon 9 carrying ASIASAT 8 (16668638138).jpg",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q25426699": {
+      "aspect": 1.5,
+      "credit": {
+        "artist": "Official SpaceX Photos",
+        "license": "CC0"
+      },
+      "file": "Telstar 18 Vantage Mission (43881229604).jpg",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q25449060": {
+      "aspect": 1.1667,
+      "credit": {
+        "artist": "Rkasha",
+        "license": "CC BY-SA 4.0"
+      },
+      "file": "Koreasat 7.jpg",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q7879772": {
+      "aspect": 1.7778,
+      "credit": {
+        "artist": "Omarius257",
+        "license": "CC BY-SA 4.0"
+      },
+      "file": "Solar System True Color EN.png",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    }
+  },
+  "page_title": "Earth",
+  "projects": [
+    {
+      "count": 320,
+      "local": true,
+      "name": "wikipedia"
+    },
+    {
+      "count": 31,
+      "local": true,
+      "name": "wikiquote"
+    },
+    {
+      "count": 8,
+      "local": true,
+      "name": "wikibooks"
+    },
+    {
+      "count": 5,
+      "local": true,
+      "name": "wikinews"
+    },
+    {
+      "count": 3,
+      "local": true,
+      "name": "wikiversity"
+    },
+    {
+      "count": 1,
+      "local": false,
+      "name": "wikisource"
+    },
+    {
+      "count": 1,
+      "local": false,
+      "name": "wikivoyage"
+    }
+  ],
+  "qid": "Q2",
+  "schema": "view/0.2",
+  "set_aside": [
+    {
+      "file": "Earth.stl",
+      "pid": "P4896",
+      "provenance": "none",
+      "rank": "normal",
+      "statement": "Q2-d437f0ed-4f15-1f43-a6ab-45c0a304163a"
+    }
+  ],
+  "spreads": [
+    {
+      "id": "identity",
+      "prose_links": [],
+      "prose_text": null,
+      "title": null
+    },
+    {
+      "id": "physical",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q4373292",
+        "lang": "en",
+        "text": "physical property"
+      }
+    },
+    {
+      "id": "orbit",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q4130",
+        "lang": "en",
+        "text": "orbit"
+      }
+    },
+    {
+      "id": "location",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q1071",
+        "lang": "en",
+        "text": "geography"
+      }
+    },
+    {
+      "id": "demography",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q37732",
+        "lang": "en",
+        "text": "demography"
+      }
+    },
+    {
+      "id": "names",
+      "prose_links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Earth#Etymology",
+          "lang": "en",
+          "text": "Etymology"
+        }
+      ],
+      "prose_text": {
+        "href": "https://en.wikipedia.org/wiki/Earth#Etymology",
+        "html": "The <a href=\"https://en.wikipedia.org/wiki/Modern_English\">Modern English</a> word  <i>Earth</i> developed, via <a href=\"https://en.wikipedia.org/wiki/Middle_English\">Middle English</a>, from an <a href=\"https://en.wikipedia.org/wiki/Old_English\">Old English</a> noun most often spelled <i>eorðe</i>. It has cognates in every <a href=\"https://en.wikipedia.org/wiki/Germanic_language\">Germanic language</a>, from which &#42;<i>erþō</i> has been reconstructed. In its earliest attestation, the word <i><i>eorðe</i></i> was used to translate the many senses of Latin <i>terra</i> and Greek <i>gē</i>: the ground, its soil, dry land, the human world, the surface of the world (including the sea), and the globe itself. As with <a href=\"https://en.wikipedia.org/wiki/Roman_Empire\">Roman</a> <a href=\"https://en.wikipedia.org/wiki/Terra_(goddess)\">Terra</a> (or Tellus) and <a href=\"https://en.wikipedia.org/wiki/Greeks\">Greek</a> <a href=\"https://en.wikipedia.org/wiki/Gaia\">Gaia</a>, Earth may have been a <a href=\"https://en.wikipedia.org/wiki/Earth_goddess\">personified goddess</a> in <a href=\"https://en.wikipedia.org/wiki/Germanic_paganism\">Germanic paganism</a>: late <a href=\"https://en.wikipedia.org/wiki/Norse_mythology\">Norse mythology</a> included <a href=\"https://en.wikipedia.org/wiki/J%C3%B6r%C3%B0\">Jörð</a> ('Earth'), a giantess often given as the mother of <a href=\"https://en.wikipedia.org/wiki/Thor\">Thor</a>.",
+        "lang": "en",
+        "local": true,
+        "title": "Etymology"
+      },
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q82799",
+        "lang": "en",
+        "text": "name"
+      }
+    },
+    {
+      "id": "relations",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q930933",
+        "lang": "en",
+        "text": "relation"
+      }
+    },
+    {
+      "id": "history",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q309",
+        "lang": "en",
+        "text": "history"
+      }
+    },
+    {
+      "id": "media",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q131765",
+        "lang": "en",
+        "text": "multimedia"
+      }
+    },
+    {
+      "id": "web",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q22909728",
+        "lang": "en",
+        "text": "web presence"
+      }
+    },
+    {
+      "id": "evidence",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q121769",
+        "lang": "en",
+        "text": "reference"
+      }
+    }
+  ],
+  "unmatched_sections": [
+    {
+      "href": "https://en.wikipedia.org/wiki/Earth#Natural_history",
+      "lang": "en",
+      "text": "Natural history"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Earth#Composition_and_structure",
+      "lang": "en",
+      "text": "Composition and structure"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Earth#Gravity_and_magnetic_field",
+      "lang": "en",
+      "text": "Gravity and magnetic field"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Earth#Moon_and_orbital_space",
+      "lang": "en",
+      "text": "Moon and orbital space"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Earth#Orbit_and_rotation",
+      "lang": "en",
+      "text": "Orbit and rotation"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Earth#Atmosphere_and_climate",
+      "lang": "en",
+      "text": "Atmosphere and climate"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Earth#Hydrosphere",
+      "lang": "en",
+      "text": "Hydrosphere"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Earth#Biosphere",
+      "lang": "en",
+      "text": "Biosphere"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Earth#Human_geography",
+      "lang": "en",
+      "text": "Human geography"
+    },
+    {
+      "href": "https://en.wikipedia.org/wiki/Earth#In_culture",
+      "lang": "en",
+      "text": "In culture"
+    }
+  ]
+}

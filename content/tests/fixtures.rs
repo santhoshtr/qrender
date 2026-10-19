@@ -21,15 +21,17 @@ fn fixtures(kind: &str) -> Vec<PathBuf> {
 #[test]
 fn content_fixtures() {
     let files = fixtures("content");
-    assert_eq!(files.len(), 7);
+    assert_eq!(files.len(), 8);
     for path in files {
         let c: Content = serde_json::from_str(&fs::read_to_string(&path).unwrap())
             .unwrap_or_else(|e| panic!("{}: {e}", path.display()));
         assert_eq!(c.schema, CONTENT_SCHEMA);
         assert!(!c.statements.is_empty(), "{}", path.display());
+        // "Unknown value" (SomeValue) is a value of the model; an unknown
+        // datatype (Other) is not.
         for s in &c.statements {
             assert!(
-                !matches!(s.value, Value::Other { .. } | Value::SomeValue { .. }),
+                !matches!(s.value, Value::Other { .. }),
                 "{}: {} has {:?}",
                 path.display(),
                 s.id,
@@ -43,7 +45,7 @@ fn content_fixtures() {
 #[test]
 fn text_fixtures() {
     let files = fixtures("text");
-    assert_eq!(files.len(), 12);
+    assert_eq!(files.len(), 14);
     for path in files {
         let t: Text = serde_json::from_str(&fs::read_to_string(&path).unwrap())
             .unwrap_or_else(|e| panic!("{}: {e}", path.display()));
