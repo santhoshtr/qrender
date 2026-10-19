@@ -4,7 +4,7 @@
 //! - GET /api/content/{qid}          content JSON
 //! - GET /api/composition/{qid}      composition JSON (the same in every language)
 //! - GET /api/view/{lang}/{qid}      view JSON
-//! - GET /design/{version}/page.css  the design system (and tokens.css)
+//! - GET /design/{version}/page.css  the design system
 //! - GET /healthz
 //!
 //! Environment (or a .env file): PORT (default 4243), TOOL_REDIS_URI
@@ -21,7 +21,7 @@ use axum::response::{Html, IntoResponse, Response};
 use axum::routing::get;
 use content::fetch::{FetchError, Mode};
 use content::{Lang, Qid};
-use qrender::render::design::{DESIGN, ECHARTS, STYLESHEET, TOKENS};
+use qrender::render::design::{DESIGN, ECHARTS, STYLESHEET};
 use qrender::render::html::{self, Styles};
 use qrender::render::markdown;
 
@@ -77,7 +77,6 @@ async fn design(Path((version, file)): Path<(String, String)>) -> Response {
     }
     let (body, content_type) = match file.as_str() {
         "page.css" => (STYLESHEET.as_str(), "text/css; charset=utf-8"),
-        "tokens.css" => (TOKENS, "text/css; charset=utf-8"),
         "echarts.js" => (ECHARTS, "text/javascript; charset=utf-8"),
         _ => return StatusCode::NOT_FOUND.into_response(),
     };

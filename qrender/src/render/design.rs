@@ -3,8 +3,9 @@
 //! Each primitive module declares its own CSS and JavaScript (`CSS`, `JS`);
 //! `assets` is the one table of them, and the compiler checks that it names
 //! every primitive. The stylesheet is one file, served at a URL with its
-//! version and cached by every page: `base.css`, the template partials, then
-//! the CSS of each primitive in the order of `Primitive::ALL`. A page gets
+//! version and cached by every page: the Codex tokens, `base.css`, the
+//! template partials, then the CSS of each primitive in the order of
+//! `Primitive::ALL`. A page gets
 //! the scripts of the primitives it shows. A library that a script loads
 //! (ECharts) is served by the same route, not put in the page.
 
@@ -18,7 +19,7 @@ use crate::primitives::{
 };
 use crate::vocab::Primitive;
 
-pub const TOKENS: &str = include_str!("../../design/tokens.css");
+const TOKENS: &str = include_str!("../../design/tokens.css");
 
 /// Apache ECharts (the "common" build), for the qr-chart element. The
 /// server serves it by the design route; `chart.js` loads it.
@@ -93,9 +94,11 @@ pub fn assets(primitive: Primitive) -> Assets {
     }
 }
 
-/// The stylesheet: the design system's CSS, then each primitive's.
+/// The stylesheet: the tokens, the design system's CSS, then each
+/// primitive's.
 pub static STYLESHEET: LazyLock<String> = LazyLock::new(|| {
-    BASE.into_iter()
+    std::iter::once(TOKENS)
+        .chain(BASE)
         .chain(Primitive::ALL.into_iter().filter_map(|p| assets(p).css))
         .collect()
 });

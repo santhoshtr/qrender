@@ -9,7 +9,7 @@
 
 use askama::Template;
 
-use super::design::{STYLESHEET, TOKENS, scripts};
+use super::design::{STYLESHEET, scripts};
 use super::ui::{Arg, Ref, Shown, Ui};
 use crate::localize::format::Part;
 use crate::localize::{Label, SpreadView, View};
@@ -23,7 +23,7 @@ use crate::primitives::{
 use crate::schema::{Block, Credit};
 use crate::vocab::{self, Slot};
 
-/// How the page gets its stylesheets.
+/// How the page gets its stylesheet.
 pub enum Styles<'a> {
     /// In the page: one file to open.
     Inline,
@@ -43,7 +43,6 @@ pub fn page(view: &View, styles: Styles) -> String {
         ui: &ui,
         view,
         styles,
-        tokens: TOKENS,
         stylesheet: &STYLESHEET,
         scripts: scripts(&shown),
     })
@@ -59,7 +58,6 @@ struct Page<'a> {
     ui: &'a Ui<'a>,
     view: &'a View,
     styles: Styles<'a>,
-    tokens: &'static str,
     stylesheet: &'static str,
     scripts: String,
 }

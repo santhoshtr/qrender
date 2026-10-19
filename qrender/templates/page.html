@@ -11,12 +11,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ view.page_title }}</title>
+    {%- if let Some(d) = ui.item(view.qid).description %}
+    <meta name="description" content="{{ d.text }}">
+    {%- endif %}
     {% match styles -%}
     {%- when Styles::Inline -%}
-    <style>{{ tokens|safe }}</style>
     <style>{{ stylesheet|safe }}</style>
     {%- when Styles::Linked with (base) -%}
-    <link rel="stylesheet" href="{{ base }}/tokens.css">
     <link rel="stylesheet" href="{{ base }}/page.css">
 {%- endmatch %}
 </head>
