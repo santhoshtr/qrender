@@ -7,7 +7,7 @@ use std::path::Path;
 use content::{Content, Text};
 use qrender::config::Config;
 
-const PAGES: [&str; 14] = [
+const PAGES: [&str; 15] = [
     "q3870.en",
     "q3870.gu",
     "q90.en",
@@ -22,6 +22,7 @@ const PAGES: [&str; 14] = [
     "q668.ml",
     "q2.en",
     "q2.ml",
+    "q30.en",
 ];
 
 fn read<T: serde::de::DeserializeOwned>(path: &str) -> T {
