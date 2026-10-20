@@ -857,25 +857,19 @@ expression: composition
             "form": "strip",
             "values": [
               {
-                "statement": "Q3870-1074ff47-48bc-2fcc-cb9e-5e384c041157",
+                "statement": "Q3870-99cd8e17-40bb-0dfb-ec5f-525051419f11",
                 "pid": "P190",
-                "item": "Q41087",
+                "item": "Q8678",
                 "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 2022
-                  }
-                ],
+                "provenance": "none",
                 "image": {
-                  "file": "Raleigh Skyline.jpg",
+                  "file": "Cidade Maravilhosa.jpg",
                   "kind": "photo",
-                  "aspect": 1.7778,
-                  "megapixels": 9.0,
+                  "aspect": 1.8727,
+                  "megapixels": 7.11,
                   "credit": {
-                    "artist": "Abhiram Juvvadi",
-                    "license": "CC BY-SA 4.0"
+                    "artist": "Rafael Rabello de Barros",
+                    "license": "CC BY-SA 3.0"
                   }
                 },
                 "shown": true
@@ -905,6 +899,30 @@ expression: composition
                 "shown": true
               },
               {
+                "statement": "Q3870-1074ff47-48bc-2fcc-cb9e-5e384c041157",
+                "pid": "P190",
+                "item": "Q41087",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 2022
+                  }
+                ],
+                "image": {
+                  "file": "Raleigh Skyline.jpg",
+                  "kind": "photo",
+                  "aspect": 1.7778,
+                  "megapixels": 9.0,
+                  "credit": {
+                    "artist": "Abhiram Juvvadi",
+                    "license": "CC BY-SA 4.0"
+                  }
+                },
+                "shown": true
+              },
+              {
                 "statement": "Q3870-6ef11667-456d-fbaa-5cb6-3610d0630726",
                 "pid": "P190",
                 "item": "Q182852",
@@ -918,42 +936,6 @@ expression: composition
                   "credit": {
                     "artist": "瑞丽江的河水",
                     "license": "CC BY-SA 4.0"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q3870-7faee803-4a4d-4e94-fbbe-59105f1e235d",
-                "pid": "P190",
-                "item": "Q964130",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "Colonia-Tovar.jpg",
-                  "kind": "photo",
-                  "aspect": 1.3333,
-                  "megapixels": 1.92,
-                  "credit": {
-                    "artist": "Pascual De Ruvo (Pderuvo at en.wikipedia)",
-                    "license": "CC BY-SA 3.0"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q3870-99cd8e17-40bb-0dfb-ec5f-525051419f11",
-                "pid": "P190",
-                "item": "Q8678",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "Cidade Maravilhosa.jpg",
-                  "kind": "photo",
-                  "aspect": 1.8727,
-                  "megapixels": 7.11,
-                  "credit": {
-                    "artist": "Rafael Rabello de Barros",
-                    "license": "CC BY-SA 3.0"
                   }
                 },
                 "shown": true
@@ -990,6 +972,24 @@ expression: composition
                   "credit": {
                     "artist": "Mário Oliveira - MTUR",
                     "license": "Public domain"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q3870-7faee803-4a4d-4e94-fbbe-59105f1e235d",
+                "pid": "P190",
+                "item": "Q964130",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Colonia-Tovar.jpg",
+                  "kind": "photo",
+                  "aspect": 1.3333,
+                  "megapixels": 1.92,
+                  "credit": {
+                    "artist": "Pascual De Ruvo (Pderuvo at en.wikipedia)",
+                    "license": "CC BY-SA 3.0"
                   }
                 },
                 "shown": true
@@ -1197,7 +1197,18 @@ expression: composition
                   "rank": "normal",
                   "provenance": "none"
                 },
-                "platform": "Q918"
+                "href": "https://x.com/047County",
+                "platform": "Q918",
+                "logo": {
+                  "file": "X logo 2023.svg",
+                  "kind": "drawing",
+                  "aspect": 1.107,
+                  "megapixels": 0.08,
+                  "credit": {
+                    "artist": "Sawyer Merritt on Twitter",
+                    "license": "Public domain"
+                  }
+                }
               },
               {
                 "statement": {
@@ -1207,7 +1218,18 @@ expression: composition
                   "rank": "normal",
                   "provenance": "none"
                 },
-                "platform": "Q355"
+                "href": "https://www.facebook.com/CountyGovernment047",
+                "platform": "Q355",
+                "logo": {
+                  "file": "2023 Facebook icon.svg",
+                  "kind": "drawing",
+                  "aspect": 1.0,
+                  "megapixels": 0.44,
+                  "credit": {
+                    "artist": "Facebook",
+                    "license": "Public domain"
+                  }
+                }
               },
               {
                 "statement": {
@@ -1217,7 +1239,18 @@ expression: composition
                   "rank": "normal",
                   "provenance": "none"
                 },
-                "platform": "Q209330"
+                "href": "https://www.instagram.com/nairobi_citycountygovernment/",
+                "platform": "Q209330",
+                "logo": {
+                  "file": "Instagram logo 2022.svg",
+                  "kind": "drawing",
+                  "aspect": 1.0,
+                  "megapixels": 1.0,
+                  "credit": {
+                    "artist": "Instagram",
+                    "license": "Public domain"
+                  }
+                }
               },
               {
                 "statement": {
@@ -1227,7 +1260,18 @@ expression: composition
                   "rank": "normal",
                   "provenance": "none"
                 },
-                "platform": "Q1136"
+                "href": "https://www.reddit.com/r/nairobi/",
+                "platform": "Q1136",
+                "logo": {
+                  "file": "Reddit wordmark.svg",
+                  "kind": "drawing",
+                  "aspect": 3.4595,
+                  "megapixels": 0.08,
+                  "credit": {
+                    "artist": "Reddit Inc.",
+                    "license": "Public domain"
+                  }
+                }
               },
               {
                 "statement": {
@@ -1237,7 +1281,18 @@ expression: composition
                   "rank": "normal",
                   "provenance": "none"
                 },
-                "platform": "Q51711"
+                "href": "https://www.quora.com/topic/Nairobi-Kenya-1",
+                "platform": "Q51711",
+                "logo": {
+                  "file": "Quora logo 2015.svg",
+                  "kind": "drawing",
+                  "aspect": 3.5804,
+                  "megapixels": 0.07,
+                  "credit": {
+                    "artist": "Commercial Type (by Paul Barnes and Christian Schwartz) for Quora",
+                    "license": "Public domain"
+                  }
+                }
               },
               {
                 "statement": {
@@ -1246,7 +1301,8 @@ expression: composition
                   "string": "Nairobi",
                   "rank": "normal",
                   "provenance": "none"
-                }
+                },
+                "href": "https://hashtags-hub.toolforge.org/Nairobi"
               },
               {
                 "statement": {
@@ -1694,6 +1750,191 @@ expression: composition
             "primitive": "identifiers",
             "values": [
               {
+                "pid": "P7506",
+                "string": "1074255",
+                "statement": "Q3870-64e58102-4089-b71c-9c5a-800d6fed2ed9"
+              },
+              {
+                "pid": "P8349",
+                "string": "38283",
+                "statement": "Q3870-357ba70a-4e92-9210-e4eb-9d672dae382e"
+              },
+              {
+                "pid": "P8408",
+                "string": "NairobiArea-Kenya",
+                "statement": "Q3870-3999357C-1B8C-43B0-B48F-A629B2F85390"
+              },
+              {
+                "pid": "P9346",
+                "string": "nairobi",
+                "statement": "Q3870-22ec3636-4854-eea0-2dc4-264d7f75163f"
+              },
+              {
+                "pid": "P5573",
+                "string": "8464",
+                "statement": "Q3870-F6FD08D5-10D9-48D4-9990-A7F1F6E97D67"
+              },
+              {
+                "pid": "P6766",
+                "string": "421174401",
+                "statement": "Q3870-B0CC255C-4E69-4BD4-A8B0-D9A8BE4C7C07"
+              },
+              {
+                "pid": "P6723",
+                "string": "global-african-history/nairobi-kenya",
+                "statement": "Q3870-C575520E-978F-4701-B2B7-B33402DBD428"
+              },
+              {
+                "pid": "P6621",
+                "string": "Nairobi",
+                "statement": "Q3870-c9f6ddd1-4899-b218-4b5b-02ba2da30180"
+              },
+              {
+                "pid": "P8814",
+                "string": "08948355-n",
+                "statement": "Q3870-79515548-8831-4F16-8E25-40F0EB8FF487"
+              },
+              {
+                "pid": "P9957",
+                "string": "20868",
+                "statement": "Q3870-45365C79-0FDD-464A-915B-E3C628540620"
+              },
+              {
+                "pid": "P8168",
+                "string": "Q449252",
+                "statement": "Q3870-B0C3B696-1590-49CF-BA05-EF41A3F068B9"
+              },
+              {
+                "pid": "P7471",
+                "string": "10957",
+                "statement": "Q3870-de986b3b-4008-252b-f146-2f4df6d9783f"
+              },
+              {
+                "pid": "P8119",
+                "string": "KE.NB",
+                "statement": "Q3870-b75f6250-427a-2c32-1854-74e579b4bdd8"
+              },
+              {
+                "pid": "P7502",
+                "string": "Nairobi-PJED",
+                "statement": "Q3870-e4ae9f76-4c27-54c3-49ae-de3bf2546760"
+              },
+              {
+                "pid": "P9100",
+                "string": "nairobi",
+                "statement": "Q3870-99728FCC-64E8-428F-9602-9D3FC613784E"
+              },
+              {
+                "pid": "P7197",
+                "string": "184745",
+                "statement": "Q3870-fe3482c4-40c2-18a4-50a3-d51624c77fac"
+              },
+              {
+                "pid": "P8519",
+                "string": "15689",
+                "statement": "Q3870-b251694e-4531-46e5-8c25-739d91ea4049"
+              },
+              {
+                "pid": "P10730",
+                "string": "wikidataId/Q3870",
+                "statement": "Q3870-53b6e6fa-4eaa-6f8d-7169-967df2adc906"
+              },
+              {
+                "pid": "P10291",
+                "string": "49149",
+                "statement": "Q3870-71069163-5E19-4A60-9574-8074CDFD0CA1"
+              },
+              {
+                "pid": "P10832",
+                "string": "E39PBJccgHVhXJcjCxQ6cXJxDq",
+                "statement": "Q3870-5cffb789-4da5-9555-82dc-5853f0342ae2"
+              },
+              {
+                "pid": "P9495",
+                "string": "geo/24610d81-9de7-4a91-97fc-9bb4cf1b8c7e",
+                "statement": "Q3870-9e26f7e2-49bb-80c9-fcaf-65647668d578"
+              },
+              {
+                "pid": "P8189",
+                "string": "987007552644805171",
+                "statement": "Q3870-EA7078D5-4F35-416E-8675-1BB80B4E1B13"
+              },
+              {
+                "pid": "P8313",
+                "string": "Nairobi",
+                "statement": "Q3870-F5045C3C-1D39-48E2-93E1-C6AA759AF9BE"
+              },
+              {
+                "pid": "P8424",
+                "string": "2862891",
+                "statement": "Q3870-f5e4c438-46d4-1acf-d680-8514be4118e2"
+              },
+              {
+                "pid": "P12800",
+                "string": "fr:Nairobi",
+                "statement": "Q3870-05E1397F-0990-4401-B1D5-A3AF14998A5A"
+              },
+              {
+                "pid": "P10397",
+                "string": "TSAL000079",
+                "statement": "Q3870-A55C2A2A-30A0-4ED9-9A50-1896DC0F73B0"
+              },
+              {
+                "pid": "P12800",
+                "string": "en:Nairobi",
+                "statement": "Q3870-73885414-625E-4C79-9225-432C09C2FAC5"
+              },
+              {
+                "pid": "P12086",
+                "string": "Nairobi",
+                "statement": "Q3870-AF31DE7E-1AC4-45D1-8C2D-1CDF97CC26DF"
+              },
+              {
+                "pid": "P12800",
+                "string": "it:Nairobi",
+                "statement": "Q3870-92992E03-12B9-43BA-A5D5-AD242018FD7C"
+              },
+              {
+                "pid": "P13591",
+                "string": "place/2594dec6-5ad7-4c29-9b82-864ef69905b3",
+                "statement": "Q3870-74A9643B-40BA-4F89-9CFA-650859F5C2FC"
+              },
+              {
+                "pid": "P12385",
+                "string": "nairobi-0",
+                "statement": "Q3870-f19dfabf-c4d2-448d-bb86-ce550d268c24"
+              },
+              {
+                "pid": "P12749",
+                "string": "Q1381",
+                "statement": "Q3870-D9F12C10-406A-4DFC-B7A5-7DC1287A17AC"
+              },
+              {
+                "pid": "P12800",
+                "string": "es:Nairobi",
+                "statement": "Q3870-EE9747E4-9551-4ADA-AB43-035BE0377950"
+              },
+              {
+                "pid": "P213",
+                "string": "000000010791732X",
+                "statement": "Q3870-27A2390F-F31D-47D2-9BF5-0CE54F8DF385"
+              },
+              {
+                "pid": "P227",
+                "string": "4041172-2",
+                "statement": "Q3870-739619CB-F9AA-43F6-BA0F-13A48F9540CF"
+              },
+              {
+                "pid": "P244",
+                "string": "n79011090",
+                "statement": "Q3870-9C5F7916-06C9-4B10-AEAD-F883C96AC71D"
+              },
+              {
+                "pid": "P214",
+                "string": "264835402",
+                "statement": "Q3870-DF30BBA0-6B16-409E-8577-685ED4E2D109"
+              },
+              {
                 "pid": "P9322",
                 "string": "0423566-Nairobi-Kena",
                 "statement": "Q3870-056A0DF8-2C05-4CAB-B29F-03C8F2538DDC"
@@ -1927,191 +2168,6 @@ expression: composition
                 "pid": "P6404",
                 "string": "nairobi",
                 "statement": "Q3870-82EC4E21-F532-40A3-BF00-42D1B9F2CD76"
-              },
-              {
-                "pid": "P7506",
-                "string": "1074255",
-                "statement": "Q3870-64e58102-4089-b71c-9c5a-800d6fed2ed9"
-              },
-              {
-                "pid": "P8349",
-                "string": "38283",
-                "statement": "Q3870-357ba70a-4e92-9210-e4eb-9d672dae382e"
-              },
-              {
-                "pid": "P8408",
-                "string": "NairobiArea-Kenya",
-                "statement": "Q3870-3999357C-1B8C-43B0-B48F-A629B2F85390"
-              },
-              {
-                "pid": "P9346",
-                "string": "nairobi",
-                "statement": "Q3870-22ec3636-4854-eea0-2dc4-264d7f75163f"
-              },
-              {
-                "pid": "P5573",
-                "string": "8464",
-                "statement": "Q3870-F6FD08D5-10D9-48D4-9990-A7F1F6E97D67"
-              },
-              {
-                "pid": "P6766",
-                "string": "421174401",
-                "statement": "Q3870-B0CC255C-4E69-4BD4-A8B0-D9A8BE4C7C07"
-              },
-              {
-                "pid": "P6723",
-                "string": "global-african-history/nairobi-kenya",
-                "statement": "Q3870-C575520E-978F-4701-B2B7-B33402DBD428"
-              },
-              {
-                "pid": "P6621",
-                "string": "Nairobi",
-                "statement": "Q3870-c9f6ddd1-4899-b218-4b5b-02ba2da30180"
-              },
-              {
-                "pid": "P8814",
-                "string": "08948355-n",
-                "statement": "Q3870-79515548-8831-4F16-8E25-40F0EB8FF487"
-              },
-              {
-                "pid": "P9957",
-                "string": "20868",
-                "statement": "Q3870-45365C79-0FDD-464A-915B-E3C628540620"
-              },
-              {
-                "pid": "P8168",
-                "string": "Q449252",
-                "statement": "Q3870-B0C3B696-1590-49CF-BA05-EF41A3F068B9"
-              },
-              {
-                "pid": "P7471",
-                "string": "10957",
-                "statement": "Q3870-de986b3b-4008-252b-f146-2f4df6d9783f"
-              },
-              {
-                "pid": "P8119",
-                "string": "KE.NB",
-                "statement": "Q3870-b75f6250-427a-2c32-1854-74e579b4bdd8"
-              },
-              {
-                "pid": "P7502",
-                "string": "Nairobi-PJED",
-                "statement": "Q3870-e4ae9f76-4c27-54c3-49ae-de3bf2546760"
-              },
-              {
-                "pid": "P9100",
-                "string": "nairobi",
-                "statement": "Q3870-99728FCC-64E8-428F-9602-9D3FC613784E"
-              },
-              {
-                "pid": "P7197",
-                "string": "184745",
-                "statement": "Q3870-fe3482c4-40c2-18a4-50a3-d51624c77fac"
-              },
-              {
-                "pid": "P8519",
-                "string": "15689",
-                "statement": "Q3870-b251694e-4531-46e5-8c25-739d91ea4049"
-              },
-              {
-                "pid": "P10730",
-                "string": "wikidataId/Q3870",
-                "statement": "Q3870-53b6e6fa-4eaa-6f8d-7169-967df2adc906"
-              },
-              {
-                "pid": "P10291",
-                "string": "49149",
-                "statement": "Q3870-71069163-5E19-4A60-9574-8074CDFD0CA1"
-              },
-              {
-                "pid": "P10832",
-                "string": "E39PBJccgHVhXJcjCxQ6cXJxDq",
-                "statement": "Q3870-5cffb789-4da5-9555-82dc-5853f0342ae2"
-              },
-              {
-                "pid": "P9495",
-                "string": "geo/24610d81-9de7-4a91-97fc-9bb4cf1b8c7e",
-                "statement": "Q3870-9e26f7e2-49bb-80c9-fcaf-65647668d578"
-              },
-              {
-                "pid": "P8189",
-                "string": "987007552644805171",
-                "statement": "Q3870-EA7078D5-4F35-416E-8675-1BB80B4E1B13"
-              },
-              {
-                "pid": "P8313",
-                "string": "Nairobi",
-                "statement": "Q3870-F5045C3C-1D39-48E2-93E1-C6AA759AF9BE"
-              },
-              {
-                "pid": "P8424",
-                "string": "2862891",
-                "statement": "Q3870-f5e4c438-46d4-1acf-d680-8514be4118e2"
-              },
-              {
-                "pid": "P12800",
-                "string": "fr:Nairobi",
-                "statement": "Q3870-05E1397F-0990-4401-B1D5-A3AF14998A5A"
-              },
-              {
-                "pid": "P10397",
-                "string": "TSAL000079",
-                "statement": "Q3870-A55C2A2A-30A0-4ED9-9A50-1896DC0F73B0"
-              },
-              {
-                "pid": "P12800",
-                "string": "en:Nairobi",
-                "statement": "Q3870-73885414-625E-4C79-9225-432C09C2FAC5"
-              },
-              {
-                "pid": "P12086",
-                "string": "Nairobi",
-                "statement": "Q3870-AF31DE7E-1AC4-45D1-8C2D-1CDF97CC26DF"
-              },
-              {
-                "pid": "P12800",
-                "string": "it:Nairobi",
-                "statement": "Q3870-92992E03-12B9-43BA-A5D5-AD242018FD7C"
-              },
-              {
-                "pid": "P13591",
-                "string": "place/2594dec6-5ad7-4c29-9b82-864ef69905b3",
-                "statement": "Q3870-74A9643B-40BA-4F89-9CFA-650859F5C2FC"
-              },
-              {
-                "pid": "P12385",
-                "string": "nairobi-0",
-                "statement": "Q3870-f19dfabf-c4d2-448d-bb86-ce550d268c24"
-              },
-              {
-                "pid": "P12749",
-                "string": "Q1381",
-                "statement": "Q3870-D9F12C10-406A-4DFC-B7A5-7DC1287A17AC"
-              },
-              {
-                "pid": "P12800",
-                "string": "es:Nairobi",
-                "statement": "Q3870-EE9747E4-9551-4ADA-AB43-035BE0377950"
-              },
-              {
-                "pid": "P213",
-                "string": "000000010791732X",
-                "statement": "Q3870-27A2390F-F31D-47D2-9BF5-0CE54F8DF385"
-              },
-              {
-                "pid": "P227",
-                "string": "4041172-2",
-                "statement": "Q3870-739619CB-F9AA-43F6-BA0F-13A48F9540CF"
-              },
-              {
-                "pid": "P244",
-                "string": "n79011090",
-                "statement": "Q3870-9C5F7916-06C9-4B10-AEAD-F883C96AC71D"
-              },
-              {
-                "pid": "P214",
-                "string": "264835402",
-                "statement": "Q3870-DF30BBA0-6B16-409E-8577-685ED4E2D109"
               }
             ]
           }
