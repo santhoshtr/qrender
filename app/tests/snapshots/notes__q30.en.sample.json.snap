@@ -1,0 +1,1004 @@
+---
+source: app/tests/notes.rs
+expression: "serde_json::to_string_pretty(&sample).unwrap()"
+---
+{
+  "coins": [
+    [
+      "cite_note-de_facto_Motto-2",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "web",
+              "title": "The Great Seal of the United States",
+              "url": "https://2009-2017.state.gov/documents/organization/27807.pdf",
+              "date": {
+                "time": "2003-01-01T00:00:00Z",
+                "precision": 9
+              },
+              "publisher": "U.S. Department of State, Bureau of Public Affairs"
+            },
+            "origin": {
+              "from": "coins"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-3",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "web",
+              "title": "An Act To make The Star-Spangled Banner the national anthem of the United States of America",
+              "url": "https://uscode.house.gov/statviewer.htm?volume=46&page=1508",
+              "date": {
+                "time": "1931-03-03T00:00:00Z",
+                "precision": 11
+              },
+              "publisher": "71st United States Congress"
+            },
+            "origin": {
+              "from": "coins"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-EONYT-7",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "news",
+              "title": "Trump Signs Order to Designate English as Official Language of the U.S.",
+              "url": "https://www.nytimes.com/2025/03/01/us/politics/trump-order-english-official-language.html",
+              "authors": [
+                {
+                  "family": "Broadwater",
+                  "given": "Luke"
+                }
+              ],
+              "date": {
+                "time": "2025-03-01T00:00:00Z",
+                "precision": 11
+              },
+              "newspaper": "The New York Times"
+            },
+            "origin": {
+              "from": "coins"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-8",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "web",
+              "title": "FYI: English isn't the official language of the United States",
+              "url": "https://edition.cnn.com/2018/05/20/us/english-us-official-language-trnd/index.html",
+              "date": {
+                "time": "2018-05-20T00:00:00Z",
+                "precision": 11
+              },
+              "publisher": "CNN"
+            },
+            "origin": {
+              "from": "coins"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-2020CensusData-11",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "web",
+              "title": "2020 Census Illuminates Racial and Ethnic Composition of the Country",
+              "url": "https://www.census.gov/library/stories/2021/08/improved-race-ethnicity-measures-reveal-united-states-population-much-more-multiracial.html",
+              "website": "United States Census"
+            },
+            "origin": {
+              "from": "coins"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-2020InteractiveCensusData-12",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "web",
+              "title": "Race and Ethnicity in the United States: 2010 Census and 2020 Census",
+              "url": "https://www.census.gov/library/visualizations/interactive/race-and-ethnicity-in-the-united-state-2010-and-2020-census.html?linkId=100000060666476",
+              "website": "United States Census"
+            },
+            "origin": {
+              "from": "coins"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-13",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "web",
+              "title": "A Breakdown of 2020 Census Demographic Data",
+              "url": "https://www.npr.org/2021/08/13/1014710483/2020-census-data-us-race-ethnicity-diversity",
+              "date": {
+                "time": "2021-08-13T00:00:00Z",
+                "precision": 11
+              },
+              "publisher": "NPR"
+            },
+            "origin": {
+              "from": "coins"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-Gallup-14",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "web",
+              "title": "In Depth: Topics A to Z (Religion)",
+              "url": "https://news.gallup.com/poll/1690/Religion.aspx",
+              "date": {
+                "time": "2025-01-01T00:00:00Z",
+                "precision": 9
+              },
+              "website": "Gallup"
+            },
+            "origin": {
+              "from": "coins"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-15",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "book",
+              "title": "Compton's Pictured Encyclopedia and Fact-index: Ohio",
+              "url": "https://books.google.com/books?id=uV5tvKPO684C&q=%22national+nicknames%22+Yankee",
+              "date": {
+                "time": "1963-01-01T00:00:00Z",
+                "precision": 9
+              },
+              "pages": "336"
+            },
+            "origin": {
+              "from": "coins"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-CIA_Factbook_Area-18",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "web",
+              "title": "Area",
+              "url": "https://www.cia.gov/library/publications/the-world-factbook/fields/2147.html",
+              "website": "The World Factbook"
+            },
+            "origin": {
+              "from": "coins"
+            }
+          }
+        ]
+      }
+    ]
+  ],
+  "coins+html": [
+    [
+      "cite_note-CensusGov2010HTML-17",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "web",
+              "title": "State Area Measurements and Internal Point Coordinates",
+              "url": "https://www.census.gov/geographies/reference-files/2010/geo/state-area.html",
+              "date": {
+                "time": "2010-08-01T00:00:00Z",
+                "precision": 10
+              },
+              "website": "Census.gov"
+            },
+            "origin": {
+              "from": "coins"
+            }
+          },
+          {
+            "citation": {
+              "kind": "text",
+              "html": "Areas of the 50 states and the District of Columbia but not Puerto Rico nor other island territories per"
+            },
+            "origin": {
+              "from": "html"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-23",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "web",
+              "title": "U.S. Census Bureau Today Delivers State Population Totals for Congressional Apportionment",
+              "url": "https://www.census.gov/library/stories/2021/04/2020-census-data-release.html",
+              "website": "United States Census"
+            },
+            "origin": {
+              "from": "coins"
+            }
+          },
+          {
+            "citation": {
+              "kind": "text",
+              "html": "The 2020 census was held on April 1, 2020."
+            },
+            "origin": {
+              "from": "html"
+            }
+          }
+        ]
+      }
+    ]
+  ],
+  "html": [
+    [
+      "cite_note-1",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "text",
+              "html": "<a href=\"https://en.wikipedia.org/wiki/Title_36_of_the_United_States_Code\">36<span> </span>U.S.C.</a><span> </span><a href=\"https://www.law.cornell.edu/uscode/text/36/302\">§<span> </span>302</a>"
+            },
+            "origin": {
+              "from": "html"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-9",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "text",
+              "html": "<a href=\"#CITEREFFaingold2018\">Faingold 2018</a>, p.<span> </span>8. &quot;The United States has never had an official language and attempts to declare English its official language have been unsuccessful in the U.S. Congress.&quot;"
+            },
+            "origin": {
+              "from": "html"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-Davis72-43",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "text",
+              "html": "<a href=\"#Davis96\">Davis 1996</a>, p. 7."
+            },
+            "origin": {
+              "from": "html"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-FOOTNOTESider2007226-52",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "text",
+              "html": "<a href=\"#CITEREFSider2007\">Sider 2007</a>, p.<span> </span>226."
+            },
+            "origin": {
+              "from": "html"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-FOOTNOTEWilson199327–28-55",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "text",
+              "html": "<a href=\"#CITEREFWilson1993\">Wilson 1993</a>, pp.<span> </span>27–28."
+            },
+            "origin": {
+              "from": "html"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-56",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "text",
+              "html": "<a href=\"https://coloradoencyclopedia.org/article/cliff-palace\">&quot;Cliff Palace&quot;</a> at Colorado Encyclopedia. Retrieved January 31, 2024."
+            },
+            "origin": {
+              "from": "html"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-FOOTNOTEErlandsonRickVellanoweth200819-57",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "text",
+              "html": "<a href=\"#CITEREFErlandsonRickVellanoweth2008\">Erlandson, Rick <span>&amp;</span> Vellanoweth 2008</a>, p.<span> </span>19."
+            },
+            "origin": {
+              "from": "html"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-FOOTNOTESavage201155–58-58",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "text",
+              "html": "<a href=\"#CITEREFSavage2011\">Savage 2011</a>, pp.<span> </span>55–58."
+            },
+            "origin": {
+              "from": "html"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-FOOTNOTEWatersStafford20071122–1126-59",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "text",
+              "html": "<a href=\"#CITEREFWatersStafford2007\">Waters <span>&amp;</span> Stafford 2007</a>, pp.<span> </span>1122–1126."
+            },
+            "origin": {
+              "from": "html"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-FOOTNOTEFlannery2015173–185-60",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "text",
+              "html": "<a href=\"#CITEREFFlannery2015\">Flannery 2015</a>, pp.<span> </span>173–185."
+            },
+            "origin": {
+              "from": "html"
+            }
+          }
+        ]
+      }
+    ]
+  ],
+  "lower-alpha": [
+    [
+      "cite_note-4",
+      {
+        "group": "lower-alpha",
+        "text": "D.C. stands for <a href=\"https://en.wikipedia.org/wiki/District_of_Columbia\">District of Columbia</a>, the formal name of the U.S. <a href=\"https://en.wikipedia.org/wiki/Federal_district\">federal district</a>."
+      }
+    ],
+    [
+      "cite_note-5",
+      {
+        "group": "lower-alpha",
+        "text": "Officially New York but commonly called New York City to avoid confusion with the <a href=\"https://en.wikipedia.org/wiki/New_York_(state)\">state of the same name</a>"
+      }
+    ],
+    [
+      "cite_note-officiallanguage-10",
+      {
+        "group": "lower-alpha",
+        "text": "Per <a href=\"https://en.wikipedia.org/wiki/Executive_Order_14224\">Executive Order 14224</a>.<sup data-note=\"cite_note-EOWP-6\"></sup><sup data-note=\"cite_note-EONYT-7\"></sup> States and territories variously recognize English only, English plus one or more local languages, or no language at all. See <a href=\"#Language\">§ Language</a>. The <a href=\"https://en.wikipedia.org/wiki/U.S._Congress\">U.S. Congress</a> has never passed legislation designating an official language at the federal level, and the <a href=\"https://en.wikipedia.org/wiki/U.S._Constitution\">U.S. Constitution</a> does not specify an official language.<sup data-note=\"cite_note-8\"></sup><sup data-note=\"cite_note-9\"></sup>"
+      }
+    ],
+    [
+      "cite_note-demonym-16",
+      {
+        "group": "lower-alpha",
+        "text": "The historical and informal demonym <a href=\"https://en.wikipedia.org/wiki/Yankee\">Yankee</a> has been applied to Americans, New Englanders, and northeasterners since the 18th century. Other terms, such as <a href=\"https://en.wikipedia.org/wiki/Usonia_(name)\">Usonian</a>, are rare. For all lesser used terms, see <a href=\"https://en.wikipedia.org/wiki/Demonyms_for_the_United_States\">Demonyms for the United States</a>."
+      }
+    ],
+    [
+      "cite_note-largestcountry-20",
+      {
+        "group": "lower-alpha",
+        "text": "At 3,531,900<span> </span>sq<span> </span>mi (9,147,590<span> </span>km<sup>2</sup>), the United States is the third-largest country in the world by land area, behind <a href=\"https://en.wikipedia.org/wiki/Russia\">Russia</a> and <a href=\"https://en.wikipedia.org/wiki/China\">China</a>. By total area (land and water), it is the third-largest, behind Russia and <a href=\"https://en.wikipedia.org/wiki/Canada\">Canada</a>, if its coastal and territorial water areas are included. However, if only its internal waters are included (bays, sounds, rivers, lakes, and the <a href=\"https://en.wikipedia.org/wiki/Great_Lakes\">Great Lakes</a>), the U.S. ranks fourth, after Russia, Canada, and China.\n<br>\nCoastal/territorial waters included: 3,796,742<span> </span>sq<span> </span>mi (9,833,517<span> </span>km<sup>2</sup>)<sup data-note=\"cite_note-CIA_Factbook_Area-18\"></sup>\n<br>\nOnly internal waters included: 3,696,100<span> </span>sq<span> </span>mi (9,572,900<span> </span>km<sup>2</sup>)<sup data-note=\"cite_note-BritannicaUS-19\"></sup>"
+      }
+    ],
+    [
+      "cite_note-pop-24",
+      {
+        "group": "lower-alpha",
+        "text": "This figure excludes <a href=\"https://en.wikipedia.org/wiki/Puerto_Rico\">Puerto Rico</a> and the other <a href=\"https://en.wikipedia.org/wiki/Unincorporated_territories_of_the_United_States\">unincorporated islands</a> because they are counted separately in <a href=\"https://en.wikipedia.org/wiki/U.S._census\">U.S. census</a> statistics."
+      }
+    ],
+    [
+      "cite_note-PPP-26",
+      {
+        "group": "lower-alpha",
+        "text": "U.S. nominal and PPP-adjusted GDP are the same as the U.S. is the reference country for PPP calculations."
+      }
+    ],
+    [
+      "cite_note-28",
+      {
+        "group": "lower-alpha",
+        "text": "After adjustment for taxes and transfers"
+      }
+    ],
+    [
+      "cite_note-time-30",
+      {
+        "group": "lower-alpha",
+        "text": "See <a href=\"https://en.wikipedia.org/wiki/Time_in_the_United_States\">Time in the United States</a> for details about laws governing time zones in the United States."
+      }
+    ],
+    [
+      "cite_note-31",
+      {
+        "group": "lower-alpha",
+        "text": "See <a href=\"https://en.wikipedia.org/wiki/Date_and_time_notation_in_the_United_States\">Date and time notation in the United States</a>."
+      }
+    ]
+  ],
+  "template": [
+    [
+      "cite_note-EOWP-6",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "news",
+              "title": "A Trump order made English the official language of the U.S. What does that mean?",
+              "url": "https://www.washingtonpost.com/nation/2025/03/01/trump-english-official-language-explainer/",
+              "authors": [
+                {
+                  "name": "Vivian Ho"
+                },
+                {
+                  "name": "Rachel Pannett"
+                }
+              ],
+              "date": {
+                "time": "2025-03-01T00:00:00Z",
+                "precision": 11
+              },
+              "newspaper": "The Washington Post"
+            },
+            "origin": {
+              "from": "template",
+              "name": "cite news",
+              "params": {
+                "author1": "Vivian Ho",
+                "author2": "Rachel Pannett",
+                "date": "March 1, 2025",
+                "newspaper": "[[The Washington Post]]",
+                "title": "A Trump order made English the official language of the U.S. What does that mean?",
+                "url": "https://www.washingtonpost.com/nation/2025/03/01/trump-english-official-language-explainer/"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-DeLear-20132-41",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "news",
+              "title": "Who coined 'United States of America'? Mystery might have intriguing answer",
+              "url": "https://www.csmonitor.com/USA/Politics/2013/0704/Who-coined-United-States-of-America-Mystery-might-have-intriguing-answer",
+              "authors": [
+                {
+                  "family": "DeLear",
+                  "given": "Byron"
+                }
+              ],
+              "date": {
+                "time": "2013-07-04T00:00:00Z",
+                "precision": 11
+              },
+              "newspaper": "The Christian Science Monitor"
+            },
+            "origin": {
+              "from": "template",
+              "name": "cite news",
+              "params": {
+                "date": "July 4, 2013",
+                "first": "Byron",
+                "last": "DeLear",
+                "title": "Who coined 'United States of America'? Mystery might have intriguing answer",
+                "url": "https://www.csmonitor.com/USA/Politics/2013/0704/Who-coined-United-States-of-America-Mystery-might-have-intriguing-answer",
+                "work": "[[The Christian Science Monitor]]"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-42",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "web",
+              "title": "The forgotten Irishman who named the 'United States of America'",
+              "url": "https://www.irishcentral.com/roots/history/The-forgotten-Irishman-who-named-the-United-States-of-America.html",
+              "authors": [
+                {
+                  "family": "Fay",
+                  "given": "John"
+                }
+              ],
+              "date": {
+                "time": "2016-07-15T00:00:00Z",
+                "precision": 11
+              },
+              "website": "IrishCentral"
+            },
+            "origin": {
+              "from": "template",
+              "name": "cite web",
+              "params": {
+                "date": "July 15, 2016",
+                "first": "John",
+                "last": "Fay",
+                "title": "The forgotten Irishman who named the 'United States of America'",
+                "url": "https://www.irishcentral.com/roots/history/The-forgotten-Irishman-who-named-the-United-States-of-America.html",
+                "work": "[[IrishCentral]]"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-:1-44",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "web",
+              "title": "Is USA A Noun Or Adjective?",
+              "url": "https://www.dictionary.com/e/is-usa-a-noun/",
+              "date": {
+                "time": "2017-03-09T00:00:00Z",
+                "precision": 11
+              },
+              "accessed": {
+                "time": "2025-07-03T00:00:00Z",
+                "precision": 11
+              },
+              "archive": {
+                "url": "https://web.archive.org/web/20200920175638/https://www.dictionary.com/e/is-usa-a-noun/",
+                "date": {
+                  "time": "2020-09-20T00:00:00Z",
+                  "precision": 11
+                },
+                "original": "dead"
+              },
+              "website": "Dictionary.com"
+            },
+            "origin": {
+              "from": "template",
+              "name": "cite web",
+              "params": {
+                "access-date": "July 3, 2025",
+                "archive-date": "September 20, 2020",
+                "archive-url": "https://web.archive.org/web/20200920175638/https://www.dictionary.com/e/is-usa-a-noun/",
+                "date": "March 9, 2017",
+                "title": "Is USA A Noun Or Adjective?",
+                "url": "https://www.dictionary.com/e/is-usa-a-noun/",
+                "url-status": "dead",
+                "website": "Dictionary.com"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-53",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "web",
+              "title": "Amerigo Vespucci: Facts, Biography & Naming of America",
+              "url": "https://www.livescience.com/42510-amerigo-vespucci.html",
+              "authors": [
+                {
+                  "family": "Szalay",
+                  "given": "Jessie"
+                }
+              ],
+              "date": {
+                "time": "2017-09-20T00:00:00Z",
+                "precision": 11
+              },
+              "accessed": {
+                "time": "2019-06-23T00:00:00Z",
+                "precision": 11
+              },
+              "publisher": "Live Science"
+            },
+            "origin": {
+              "from": "template",
+              "name": "cite web",
+              "params": {
+                "access-date": "June 23, 2019",
+                "date": "September 20, 2017",
+                "first1": "Jessie",
+                "last1": "Szalay",
+                "publisher": "[[Live Science]]",
+                "title": "Amerigo Vespucci: Facts, Biography & Naming of America",
+                "url": "https://www.livescience.com/42510-amerigo-vespucci.html"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-locnamingofamerica-54",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "web",
+              "title": "How Did America Get Its Name?",
+              "url": "https://blogs.loc.gov/loc/2016/07/how-did-america-get-its-name/#:~:text=America%20is%20named%20after%20Amerigo,part%20of%20a%20separate%20continent",
+              "authors": [
+                {
+                  "family": "Allen",
+                  "given": "Erin"
+                }
+              ],
+              "date": {
+                "time": "2016-07-04T00:00:00Z",
+                "precision": 11
+              },
+              "accessed": {
+                "time": "2020-09-03T00:00:00Z",
+                "precision": 11
+              },
+              "website": "Library of Congress Blog"
+            },
+            "origin": {
+              "from": "template",
+              "name": "cite web",
+              "params": {
+                "access-date": "September 3, 2020",
+                "date": "July 4, 2016",
+                "first1": "Erin",
+                "last1": "Allen",
+                "title": "How Did America Get Its Name?",
+                "url": "https://blogs.loc.gov/loc/2016/07/how-did-america-get-its-name/#:~:text=America%20is%20named%20after%20Amerigo,part%20of%20a%20separate%20continent",
+                "website": "Library of Congress Blog"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-66",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "web",
+              "title": "Race (B02001)",
+              "url": "https://data.census.gov/table/ACSDT1Y2024.B02001",
+              "accessed": {
+                "time": "2026-09-19T00:00:00Z",
+                "precision": 11
+              },
+              "website": "2024 American Community Survey, 1-Year Estimates",
+              "publisher": "United States Census Bureau"
+            },
+            "origin": {
+              "from": "template",
+              "name": "cite web",
+              "params": {
+                "access-date": "September 19, 2026",
+                "publisher": "United States Census Bureau",
+                "title": "Race (B02001)",
+                "url": "https://data.census.gov/table/ACSDT1Y2024.B02001",
+                "work": "2024 American Community Survey, 1-Year Estimates"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-67",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "web",
+              "title": "American Indian and Alaska Native Alone or in Combination With One or More Other Races (B02010)",
+              "url": "https://data.census.gov/table/ACSDT1Y2024.B02010",
+              "accessed": {
+                "time": "2026-09-19T00:00:00Z",
+                "precision": 11
+              },
+              "website": "2024 American Community Survey, 1-Year Estimates",
+              "publisher": "United States Census Bureau"
+            },
+            "origin": {
+              "from": "template",
+              "name": "cite web",
+              "params": {
+                "access-date": "September 19, 2026",
+                "publisher": "United States Census Bureau",
+                "title": "American Indian and Alaska Native Alone or in Combination With One or More Other Races (B02010)",
+                "url": "https://data.census.gov/table/ACSDT1Y2024.B02010",
+                "work": "2024 American Community Survey, 1-Year Estimates"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-71",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "book",
+              "title": "A Short History of Florida",
+              "url": "https://fcit.usf.edu/florida/lessons/menendz/menendz1.htm",
+              "authors": [
+                {
+                  "name": "Florida Center for Instructional Technology"
+                }
+              ],
+              "date": {
+                "time": "2002-01-01T00:00:00Z",
+                "precision": 9
+              },
+              "publisher": "University of South Florida"
+            },
+            "origin": {
+              "from": "template",
+              "name": "cite book",
+              "params": {
+                "author": "Florida Center for Instructional Technology",
+                "chapter": "Pedro Menendez de Aviles Claims Florida for Spain",
+                "date": "2002",
+                "publisher": "University of South Florida",
+                "title": "A Short History of Florida",
+                "url": "https://fcit.usf.edu/florida/lessons/menendz/menendz1.htm"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-72",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "web",
+              "title": "Not So Fast, Jamestown: St. Augustine Was Here First",
+              "url": "https://www.npr.org/2015/02/28/389682893/not-so-fast-jamestown-st-augustine-was-here-first",
+              "date": {
+                "time": "2015-02-28T00:00:00Z",
+                "precision": 11
+              },
+              "accessed": {
+                "time": "2021-03-05T00:00:00Z",
+                "precision": 11
+              },
+              "language": "en",
+              "publisher": "NPR"
+            },
+            "origin": {
+              "from": "template",
+              "name": "cite web",
+              "params": {
+                "access-date": "March 5, 2021",
+                "date": "February 28, 2015",
+                "language": "en",
+                "publisher": "NPR",
+                "title": "Not So Fast, Jamestown: St. Augustine Was Here First",
+                "url": "https://www.npr.org/2015/02/28/389682893/not-so-fast-jamestown-st-augustine-was-here-first"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  ],
+  "template+html": [
+    [
+      "cite_note-191",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "book",
+              "title": "A Companion to Europe Since 1945",
+              "url": "https://books.google.com/books?id=EyNcCwAAQBAJ&pg=PT174",
+              "date": {
+                "time": "2014-01-01T00:00:00Z",
+                "precision": 9
+              },
+              "ids": [
+                {
+                  "type": "isbn",
+                  "id": "978-1-118-89024-0"
+                }
+              ],
+              "publisher": "Wiley",
+              "pages": "79"
+            },
+            "origin": {
+              "from": "template",
+              "name": "Cite book",
+              "params": {
+                "editor-first": "Klaus",
+                "editor-last": "Larresm",
+                "isbn": "978-1-118-89024-0",
+                "page": "79",
+                "publisher": "Wiley",
+                "title": "A Companion to Europe Since 1945",
+                "url": "https://books.google.com/books?id=EyNcCwAAQBAJ&pg=PT174",
+                "year": "2014"
+              }
+            }
+          },
+          {
+            "citation": {
+              "kind": "text",
+              "html": "Mark Kramer, &quot;The Soviet Bloc and the Cold War in Europe,&quot; in"
+            },
+            "origin": {
+              "from": "html"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-710",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "web",
+              "title": "Professional Football Widens Its Lead Over Baseball as Nation's Favorite Sport",
+              "url": "https://www.harrisinteractive.com/Insights/HarrisVault8482.aspx?PID=337",
+              "authors": [
+                {
+                  "name": "Krane, David K."
+                }
+              ],
+              "date": {
+                "time": "2002-10-30T00:00:00Z",
+                "precision": 11
+              },
+              "accessed": {
+                "time": "2007-09-14T00:00:00Z",
+                "precision": 11
+              },
+              "archive": {
+                "url": "https://web.archive.org/web/20100709111448/https://www.harrisinteractive.com/Insights/HarrisVault8482.aspx?PID=337",
+                "date": {
+                  "time": "2010-07-09T00:00:00Z",
+                  "precision": 11
+                },
+                "original": "dead"
+              },
+              "publisher": "Harris Interactive"
+            },
+            "origin": {
+              "from": "template",
+              "name": "cite web",
+              "params": {
+                "access-date": "September 14, 2007",
+                "archive-date": "July 9, 2010",
+                "archive-url": "https://web.archive.org/web/20100709111448/https://www.harrisinteractive.com/Insights/HarrisVault8482.aspx?PID=337",
+                "author": "Krane, David K.",
+                "date": "October 30, 2002",
+                "publisher": "Harris Interactive",
+                "title": "Professional Football Widens Its Lead Over Baseball as Nation's Favorite Sport",
+                "url": "https://www.harrisinteractive.com/Insights/HarrisVault8482.aspx?PID=337"
+              }
+            }
+          },
+          {
+            "citation": {
+              "kind": "text",
+              "html": "MacCambridge, Michael (2004). <i>America's Game: The Epic Story of How Pro Football Captured a Nation</i>. New York: Random House. ."
+            },
+            "origin": {
+              "from": "html"
+            }
+          }
+        ]
+      }
+    ]
+  ]
+}

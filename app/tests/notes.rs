@@ -1,9 +1,12 @@
-//! The notes of a whole article, from its recorded Parsoid HTML: every
+//! The notes of whole articles, from their recorded Parsoid HTML: every
 //! note gives a result, and a report counts how each was read. Citations
 //! are wild; a change of the parse shows as a diff of the snapshots.
+//! Nairobi (Q3870) and the United States (Q30, revision 1380971971: 723
+//! notes, many short footnotes).
 
 use std::collections::BTreeMap;
 use std::fs;
+use std::io::Read;
 use std::path::Path;
 
 use content::fetch::article_notes;
@@ -25,6 +28,17 @@ fn nairobi() -> String {
         .filter(|html| html.contains("mw-references"))
         .max_by_key(String::len)
         .expect("the recorded article")
+}
+
+/// The Parsoid HTML of the English article of the United States,
+/// compressed.
+fn united_states() -> String {
+    let path = Path::new(env!("CARGO_MANIFEST_DIR")).join("../fixtures/notes/q30.en.html.gz");
+    let mut html = String::new();
+    flate2::read::GzDecoder::new(fs::File::open(path).unwrap())
+        .read_to_string(&mut html)
+        .unwrap();
+    html
 }
 
 fn origin(origin: &Origin) -> &'static str {
@@ -116,11 +130,11 @@ fn report(notes: &[&Note], html: &str) -> String {
     )
 }
 
-#[test]
-fn every_note_of_nairobi() {
-    let html = nairobi();
-    let notes = article_notes(&html, &Config::embedded().citations);
-    for (id, note) in &notes {
+/// Every note gives a result, and every link in a note's HTML is to the
+/// web, to an article (`./`), or to a place in the page (`#`: a short
+/// footnote's work).
+fn check(notes: &indexmap::IndexMap<String, Note>) {
+    for (id, note) in notes {
         match &note.group {
             None => assert!(!note.citations.is_empty(), "{id}: no citation"),
             Some(_) => assert!(note.text.is_some(), "{id}: no text"),
@@ -131,13 +145,20 @@ fn every_note_of_nairobi() {
         });
         for href in texts.chain(note.text.as_deref()).flat_map(hrefs) {
             assert!(
-                href.starts_with("https://")
-                    || href.starts_with("http://")
-                    || href.starts_with("./"),
+                ["https://", "http://", "./", "#"]
+                    .iter()
+                    .any(|p| href.starts_with(p)),
                 "{id}: link {href:?}"
             );
         }
     }
+}
+
+#[test]
+fn every_note_of_nairobi() {
+    let html = nairobi();
+    let notes = article_notes(&html, &Config::embedded().citations);
+    check(&notes);
     insta::assert_snapshot!(
         "q3870.en.report",
         report(&notes.values().collect::<Vec<_>>(), &html)
@@ -145,5 +166,32 @@ fn every_note_of_nairobi() {
     insta::assert_snapshot!(
         "q3870.en.notes.json",
         serde_json::to_string_pretty(&notes).unwrap()
+    );
+}
+
+#[test]
+fn every_note_of_the_united_states() {
+    let html = united_states();
+    let notes = article_notes(&html, &Config::embedded().citations);
+    check(&notes);
+    insta::assert_snapshot!(
+        "q30.en.report",
+        report(&notes.values().collect::<Vec<_>>(), &html)
+    );
+    // All the notes are too many for a snapshot: the first ten of each
+    // path.
+    let mut sample: BTreeMap<String, Vec<(&String, &Note)>> = BTreeMap::new();
+    for (id, note) in &notes {
+        let mut origins: Vec<&str> = note.citations.iter().map(|c| origin(&c.origin)).collect();
+        origins.dedup();
+        let path = note.group.clone().unwrap_or_else(|| origins.join("+"));
+        let notes = sample.entry(path).or_default();
+        if notes.len() < 10 {
+            notes.push((id, note));
+        }
+    }
+    insta::assert_snapshot!(
+        "q30.en.sample.json",
+        serde_json::to_string_pretty(&sample).unwrap()
     );
 }
