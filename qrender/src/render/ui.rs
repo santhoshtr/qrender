@@ -758,16 +758,16 @@ impl<'v> Ui<'v> {
         super::cite::shared(statements)
     }
 
-    /// The values of a list; with `shared`, without their citations: the
-    /// list shows them once.
+    /// The values of a list; a value whose citations are the `shared`
+    /// ones without them: the list shows them once.
     pub fn values_beside<'a>(
         &'a self,
         statements: &'a [StatementRef],
-        shared: bool,
+        shared: &Option<&Vec<String>>,
     ) -> Vec<Shown<'a>> {
         let mut values = self.values(statements);
-        if shared {
-            for v in &mut values {
+        for v in &mut values {
+            if *shared == Some(v.citations) {
                 v.citations = &NO_CITATIONS;
             }
         }

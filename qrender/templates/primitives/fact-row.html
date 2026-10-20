@@ -1,8 +1,8 @@
 {%- import "macros.html" as m -%}
 {#- A row of the fact sheet. Its form follows the shape of the data. -#}
-{#- Values that all have the same sources show them once, with the tools. -#}
+{#- The sources that most values have: once, with the tools. -#}
 {%- let shared = ui.shared_citations(b.statements.as_slice()) -%}
-{%- let values = ui.values_beside(b.statements.as_slice(), shared.is_some()) -%}
+{%- let values = ui.values_beside(b.statements.as_slice(), shared) -%}
 {%- let first = ui.first(b.statements.as_slice()) -%}
 {%- let form = b.form.name() -%}
 {%- let single = b.statements.len() == 1 && form != "list" -%}

@@ -53,15 +53,20 @@ pub enum Value {
     Language(String),
 }
 
-/// The citations that every value of a list has, when it has two values
-/// at least: the list shows them once, and its values do not (210
-/// languages from one census are one source, not 210).
+/// The citations that most values of a list have (more than half, two at
+/// least): the list shows them once, and those values do not; a value with
+/// other citations keeps its own. 210 languages from one census are one
+/// source, not 210.
 pub fn shared(statements: &[StatementRef]) -> Option<&Vec<String>> {
-    let (first, rest) = statements.split_first()?;
-    let all = !rest.is_empty()
-        && !first.citations.is_empty()
-        && rest.iter().all(|s| s.citations == first.citations);
-    all.then_some(&first.citations)
+    let mut counts: Vec<(&Vec<String>, usize)> = Vec::new();
+    for s in statements.iter().filter(|s| !s.citations.is_empty()) {
+        match counts.iter_mut().find(|(set, _)| **set == s.citations) {
+            Some((_, n)) => *n += 1,
+            None => counts.push((&s.citations, 1)),
+        }
+    }
+    let (set, n) = counts.into_iter().max_by_key(|(_, n)| *n)?;
+    (n >= 2 && 2 * n > statements.len()).then_some(set)
 }
 
 pub fn card<'a>(cited: &'a Cited, view: &'a View) -> Card<'a> {

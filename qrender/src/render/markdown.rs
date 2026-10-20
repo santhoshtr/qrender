@@ -236,22 +236,16 @@ impl Markdown<'_> {
     }
 
     /// The values of a list, and the footnote marks of the sources that
-    /// all of them have (`cite::shared`): the list shows those once, after
-    /// its key, and its values do not.
+    /// most of them have (`cite::shared`): the list shows those once, after
+    /// its key, and those values do not.
     pub fn list_values(&self, statements: &[StatementRef]) -> (Vec<String>, String) {
-        match super::cite::shared(statements) {
-            Some(shared) => (
-                statements
-                    .iter()
-                    .map(|s| self.value_with(s, false))
-                    .collect(),
-                self.source_marks(shared),
-            ),
-            None => (
-                statements.iter().map(|s| self.value(s)).collect(),
-                String::new(),
-            ),
-        }
+        let shared = super::cite::shared(statements);
+        let marks = shared.map_or_else(String::new, |set| self.source_marks(set));
+        let values = statements
+            .iter()
+            .map(|s| self.value_with(s, shared != Some(&s.citations)))
+            .collect();
+        (values, marks)
     }
 
     /// The footnote marks of the sources of a statement: `[^s1][^s2]`.
