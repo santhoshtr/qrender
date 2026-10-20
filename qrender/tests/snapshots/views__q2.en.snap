@@ -3,6 +3,28 @@ source: qrender/tests/views.rs
 expression: json
 ---
 {
+  "articles": {
+    "Q11362158": {
+      "href": "https://en.wikipedia.org/wiki/Geography_of_the_earth",
+      "lang": "en",
+      "text": "Geography of the earth"
+    },
+    "Q156312": {
+      "href": "https://en.wikipedia.org/wiki/History_of_Earth",
+      "lang": "en",
+      "text": "History of Earth"
+    },
+    "Q200325": {
+      "href": "https://en.wikipedia.org/wiki/Human_history",
+      "lang": "en",
+      "text": "Human history"
+    },
+    "Q2389585": {
+      "href": "https://en.wikipedia.org/wiki/Geological_history_of_Earth",
+      "lang": "en",
+      "text": "Geological history of Earth"
+    }
+  },
   "composition": "composition/0.3",
   "coverage": {
     "have": 341,
@@ -1501,6 +1523,10 @@ expression: json
       "text": "2022 NX1"
     },
     "Q11362158": {
+      "description": {
+        "lang": "en",
+        "text": "geography of the entire Earth"
+      },
       "href": "https://www.wikidata.org/wiki/Q11362158",
       "lang": "en",
       "text": "world geography"
@@ -1810,6 +1836,10 @@ expression: json
       "text": "Earth's crust"
     },
     "Q156312": {
+      "description": {
+        "lang": "en",
+        "text": "evolution of Earth throughout times"
+      },
       "href": "https://www.wikidata.org/wiki/Q156312",
       "lang": "en",
       "text": "history of Earth"
@@ -1989,6 +2019,10 @@ expression: json
       "text": "Earth"
     },
     "Q200325": {
+      "description": {
+        "lang": "en",
+        "text": "narrative of humanity's past"
+      },
       "href": "https://www.wikidata.org/wiki/Q200325",
       "lang": "en",
       "text": "human history"
@@ -2094,6 +2128,10 @@ expression: json
       "text": "Zeměkoule"
     },
     "Q2389585": {
+      "description": {
+        "lang": "en",
+        "text": "major geological occurrences in Earth's past"
+      },
       "href": "https://www.wikidata.org/wiki/Q2389585",
       "lang": "en",
       "text": "geological history of Earth"

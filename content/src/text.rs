@@ -26,6 +26,10 @@ pub struct Text {
     pub fallback_article: Option<Article>,
     /// Pictures from the articles of items that have no P18.
     pub page_images: IndexMap<Qid, PageImage>,
+    /// The Wikipedia article of each topic item (the "... of topic"
+    /// values): its title, in the page language or else in English.
+    #[serde(default, skip_serializing_if = "IndexMap::is_empty")]
+    pub articles: IndexMap<Qid, LangText>,
 }
 
 /// A text and the language it is in. By the chain `{lang}, mul, en`, the

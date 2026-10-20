@@ -241,7 +241,17 @@ impl<'a> Composer<'a> {
             if *spread == spec.id {
                 let statements = self.free(*pid);
                 for s in self.take(statements) {
-                    topics.push(self.statement(s));
+                    // A topic is an article: shown with its description
+                    // and its picture, also when it is a class ("history
+                    // of Germany"): the picture is not of an example.
+                    let mut topic = self.statement(s);
+                    topic.described = topic.value.item().is_some();
+                    topic.class = false;
+                    topic.image = s
+                        .value_image
+                        .as_ref()
+                        .map(|i| self.picture(&i.file, i.logo));
+                    topics.push(topic);
                 }
             }
         }

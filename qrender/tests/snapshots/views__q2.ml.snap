@@ -3,6 +3,28 @@ source: qrender/tests/views.rs
 expression: json
 ---
 {
+  "articles": {
+    "Q11362158": {
+      "href": "https://en.wikipedia.org/wiki/Geography_of_the_earth",
+      "lang": "en",
+      "text": "Geography of the earth"
+    },
+    "Q156312": {
+      "href": "https://ml.wikipedia.org/wiki/%E0%B4%AD%E0%B5%82%E0%B4%AE%E0%B4%BF%E0%B4%AF%E0%B5%81%E0%B4%9F%E0%B5%86_%E0%B4%9A%E0%B4%B0%E0%B4%BF%E0%B4%A4%E0%B5%8D%E0%B4%B0%E0%B4%82",
+      "lang": "ml",
+      "text": "ഭൂമിയുടെ ചരിത്രം"
+    },
+    "Q200325": {
+      "href": "https://ml.wikipedia.org/wiki/%E0%B4%B2%E0%B5%8B%E0%B4%95%E0%B4%9A%E0%B4%B0%E0%B4%BF%E0%B4%A4%E0%B5%8D%E0%B4%B0%E0%B4%82",
+      "lang": "ml",
+      "text": "ലോകചരിത്രം"
+    },
+    "Q2389585": {
+      "href": "https://en.wikipedia.org/wiki/Geological_history_of_Earth",
+      "lang": "en",
+      "text": "Geological history of Earth"
+    }
+  },
   "composition": "composition/0.3",
   "coverage": {
     "have": 150,
@@ -1898,6 +1920,11 @@ expression: json
     },
     "Q11362158": {
       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q11362158",
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "geography of the entire Earth"
+      },
       "fallback": true,
       "href": "https://www.wikidata.org/wiki/Q11362158",
       "lang": "en",
@@ -2272,6 +2299,11 @@ expression: json
       "text": "ഭൂവൽക്കം"
     },
     "Q156312": {
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "evolution of Earth throughout times"
+      },
       "href": "https://www.wikidata.org/wiki/Q156312",
       "lang": "ml",
       "text": "ഭൂമിയുടെ ചരിത്രം"
@@ -2489,6 +2521,11 @@ expression: json
       "text": "ഭൂമി"
     },
     "Q200325": {
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "narrative of humanity's past"
+      },
       "href": "https://www.wikidata.org/wiki/Q200325",
       "lang": "ml",
       "text": "ലോകചരിത്രം"
@@ -2615,6 +2652,11 @@ expression: json
     },
     "Q2389585": {
       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q2389585",
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "major geological occurrences in Earth's past"
+      },
       "fallback": true,
       "href": "https://www.wikidata.org/wiki/Q2389585",
       "lang": "en",

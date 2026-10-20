@@ -28,6 +28,10 @@ pub struct View {
     pub labels: BTreeMap<EntityId, Label>,
     /// Pictures from articles, for item values that have no picture.
     pub page_images: BTreeMap<Qid, PageImage>,
+    /// The Wikipedia article of each topic item: in the page language, or
+    /// else in English.
+    #[serde(skip_serializing_if = "BTreeMap::is_empty")]
+    pub articles: BTreeMap<Qid, Link>,
     /// The interface messages of the page language.
     pub messages: BTreeMap<String, String>,
     /// The lead of the article, in the page language or the fallback.

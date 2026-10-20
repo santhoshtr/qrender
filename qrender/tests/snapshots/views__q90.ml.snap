@@ -3,6 +3,23 @@ source: qrender/tests/views.rs
 expression: json
 ---
 {
+  "articles": {
+    "Q12522114": {
+      "href": "https://en.wikipedia.org/wiki/Geography_of_Paris",
+      "lang": "en",
+      "text": "Geography of Paris"
+    },
+    "Q2246902": {
+      "href": "https://en.wikipedia.org/wiki/Demographics_of_Paris",
+      "lang": "en",
+      "text": "Demographics of Paris"
+    },
+    "Q845625": {
+      "href": "https://en.wikipedia.org/wiki/History_of_Paris",
+      "lang": "en",
+      "text": "History of Paris"
+    }
+  },
   "composition": "composition/0.3",
   "coverage": {
     "have": 173,
@@ -2643,6 +2660,11 @@ expression: json
     },
     "Q12522114": {
       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q12522114",
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "overview of the geography of Paris"
+      },
       "fallback": true,
       "href": "https://www.wikidata.org/wiki/Q12522114",
       "lang": "en",
@@ -3448,6 +3470,11 @@ expression: json
     },
     "Q2246902": {
       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q2246902",
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "overview about the demographics of Paris"
+      },
       "fallback": true,
       "href": "https://www.wikidata.org/wiki/Q2246902",
       "lang": "en",
@@ -4567,6 +4594,11 @@ expression: json
     },
     "Q845625": {
       "add": "https://www.wikidata.org/wiki/Special:SetLabel/ml/Q845625",
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "history of the capital city of France"
+      },
       "fallback": true,
       "href": "https://www.wikidata.org/wiki/Q845625",
       "lang": "en",
@@ -4917,6 +4949,16 @@ expression: json
         "license": "CC0"
       },
       "file": "WI; Kenosha County Map; Town of Paris.png",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q2246902": {
+      "aspect": 0.9164,
+      "credit": {
+        "artist": "The original uploader was ThePromenader at English Wikipedia .",
+        "license": "CC BY-SA 3.0"
+      },
+      "file": "Paris uu ua jms.png",
       "from": "en.wikipedia.org",
       "kind": "photo"
     },

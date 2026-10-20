@@ -107,9 +107,30 @@ impl Markdown<'_> {
         for block in s.spread.slots.values().flatten() {
             self.block(block);
         }
-        let topics: Vec<String> = s.spread.topics.iter().map(|t| self.value(t)).collect();
+        let topics: Vec<String> = s.spread.topics.iter().map(|t| self.topic(t)).collect();
         if !topics.is_empty() {
             self.paragraph(&format!("Topics: {}", topics.join(" · ")));
+        }
+    }
+
+    /// A topic: a link to its Wikipedia article and the description of
+    /// its item; without an article, the item.
+    fn topic(&self, t: &StatementRef) -> String {
+        let Some(item) = t.value.item() else {
+            return self.value(t);
+        };
+        let Some(article) = self.view.articles.get(&item) else {
+            return self.value(t);
+        };
+        let link = format!("[{}]({})", article.text, article.href);
+        match self
+            .view
+            .labels
+            .get(&EntityId::Item(item))
+            .and_then(|l| l.description.as_ref())
+        {
+            Some(d) => format!("{link} — {}", d.text),
+            None => link,
         }
     }
 

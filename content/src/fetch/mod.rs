@@ -63,7 +63,7 @@ pub enum FetchError {
 /// The version of the fetcher. Raise it when a change of the fetcher
 /// changes what it fetches (a new field, a new request): it is part of
 /// every cache key, so the parts that an older fetcher stored are not read.
-pub const FETCH_VERSION: u32 = 15;
+pub const FETCH_VERSION: u32 = 16;
 
 /// Seconds a cached part lives: content and text change with edits;
 /// a peer set changes slowly and many items share it.
@@ -492,7 +492,8 @@ impl<S: Store> Fetcher<S> {
     }
 
     /// The text of an item in one language: labels, concepts, the article
-    /// (and the English one when the page language has none), page images.
+    /// (and the English one when the page language has none), page images,
+    /// the articles of the topics.
     async fn fetch_text(&self, content: &Content, lang: &Lang) -> Result<Text, FetchError> {
         let http = &self.http;
         let ids: Vec<EntityId> = identifiers(content).into_iter().collect();
@@ -503,11 +504,19 @@ impl<S: Store> Fetcher<S> {
                 .filter(|s| s.value_image.is_none())
                 .filter_map(|s| s.value.item()),
         );
+        let topics: Vec<Qid> = unique(
+            content
+                .statements
+                .iter()
+                .filter(|s| self.settings.topics.contains(&s.pid))
+                .filter_map(|s| s.value.item()),
+        );
         let en: Lang = "en".parse().expect("a language code");
-        let (labels, concepts, page_images) = futures::try_join!(
+        let (labels, concepts, page_images, articles) = futures::try_join!(
             wikidata::terms(http, &ids, lang),
             wikidata::concepts(http, &self.settings.concepts, lang),
             async { Ok(wikipedia::page_images(http, &unpictured, lang).await) },
+            wikidata::articles(http, &topics, lang),
         )?;
         let article = match content.sitelinks.get(&format!("{lang}wiki")) {
             Some(title) => {
@@ -537,6 +546,7 @@ impl<S: Store> Fetcher<S> {
             article,
             fallback_article,
             page_images,
+            articles,
         })
     }
 }

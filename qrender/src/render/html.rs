@@ -12,7 +12,7 @@ use askama::Template;
 use super::cite::{self, Card, Value as CiteValue};
 use super::design::{REFERENCE_ICON, STYLESHEET, scripts};
 use super::map::Frame;
-use super::ui::{Arg, Ref, Shown, Ui};
+use super::ui::{Arg, Ref, Shown, TopicArticle, Ui};
 use crate::localize::format::Part;
 use crate::localize::messages::format;
 use crate::localize::{Label, Note, ProseSection, SpreadView, View};
@@ -192,6 +192,13 @@ struct ArticleSectionHtml<'a> {
     s: &'a ProseSection,
     /// At the end of the page: the whole section collapsed to its title.
     collapsed: bool,
+}
+
+#[derive(Template)]
+#[template(path = "parts/topic_article.html")]
+struct TopicArticleHtml<'a> {
+    ui: &'a Ui<'a>,
+    t: &'a TopicArticle<'a>,
 }
 
 #[derive(Template)]
@@ -397,6 +404,11 @@ impl<'v> Ui<'v> {
             b,
             n: n.get(),
         })
+    }
+
+    /// A topic of a spread as a card: its Wikipedia article.
+    pub fn topic_article(&self, t: &TopicArticle) -> String {
+        render(TopicArticleHtml { ui: self, t })
     }
 
     /// A section of the article; `collapsed` at the end of the page.

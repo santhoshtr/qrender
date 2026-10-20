@@ -1344,7 +1344,8 @@ expression: composition
           "pid": "P2633",
           "item": "Q11362158",
           "rank": "normal",
-          "provenance": "none"
+          "provenance": "none",
+          "described": true
         }
       ]
     },
@@ -5086,7 +5087,7 @@ expression: composition
           "item": "Q200325",
           "rank": "normal",
           "provenance": "none",
-          "class": true
+          "described": true
         },
         {
           "statement": "Q2-369c354a-4c85-ac56-3a52-96262848253b",
@@ -5103,7 +5104,8 @@ expression: composition
               "artist": "Woudloper\n\nDerivative work: Hardwigg\nDerivative work: Lourdes Sada",
               "license": "CC0"
             }
-          }
+          },
+          "described": true
         },
         {
           "statement": "Q2-cb06624c-4871-9105-7ea9-24de77e5debf",
@@ -5111,7 +5113,17 @@ expression: composition
           "item": "Q156312",
           "rank": "normal",
           "provenance": "none",
-          "class": true
+          "image": {
+            "file": "2025-07-31-Elektro-L-3.png",
+            "kind": "photo",
+            "aspect": 1.0,
+            "megapixels": 7.75,
+            "credit": {
+              "artist": "Ivtorov, Elektro-L 3 camera",
+              "license": "CC BY 4.0"
+            }
+          },
+          "described": true
         }
       ]
     },

@@ -48,6 +48,39 @@ pub async fn sitelinks(http: &Http, qid: Qid) -> Result<IndexMap<String, String>
         .collect())
 }
 
+/// The Wikipedia article of each item: its title in the wiki of the page
+/// language, else in the English one; `lang` is the language of the wiki.
+pub async fn articles(
+    http: &Http,
+    qids: &[Qid],
+    lang: &Lang,
+) -> Result<IndexMap<Qid, LangText>, FetchError> {
+    let batches = qids.chunks(BATCH).map(|batch| {
+        let batch: Vec<String> = batch.iter().map(ToString::to_string).collect();
+        async move { entities(http, &batch, "sitelinks", None).await }
+    });
+    let mut out = IndexMap::new();
+    for all in try_join_all(batches).await? {
+        for (id, entity) in all.as_object().into_iter().flatten() {
+            let Ok(qid) = id.parse::<Qid>() else {
+                continue;
+            };
+            let found = [lang.as_str(), "en"].into_iter().find_map(|code| {
+                Some(LangText {
+                    text: entity["sitelinks"][format!("{code}wiki")]["title"]
+                        .as_str()?
+                        .to_string(),
+                    lang: code.parse().ok()?,
+                })
+            });
+            if let Some(article) = found {
+                out.insert(qid, article);
+            }
+        }
+    }
+    Ok(out)
+}
+
 /// The language chain of labels: the page language, `mul`, English.
 pub fn chain(lang: &Lang) -> Vec<String> {
     let mut chain = vec![lang.to_string()];

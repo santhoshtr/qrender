@@ -3,6 +3,23 @@ source: qrender/tests/views.rs
 expression: json
 ---
 {
+  "articles": {
+    "Q12522114": {
+      "href": "https://en.wikipedia.org/wiki/Geography_of_Paris",
+      "lang": "en",
+      "text": "Geography of Paris"
+    },
+    "Q2246902": {
+      "href": "https://en.wikipedia.org/wiki/Demographics_of_Paris",
+      "lang": "en",
+      "text": "Demographics of Paris"
+    },
+    "Q845625": {
+      "href": "https://en.wikipedia.org/wiki/History_of_Paris",
+      "lang": "en",
+      "text": "History of Paris"
+    }
+  },
   "composition": "composition/0.3",
   "coverage": {
     "have": 386,
@@ -2084,6 +2101,10 @@ expression: json
       "text": "Jacques de Flesselles"
     },
     "Q12522114": {
+      "description": {
+        "lang": "en",
+        "text": "overview of the geography of Paris"
+      },
       "href": "https://www.wikidata.org/wiki/Q12522114",
       "lang": "en",
       "text": "geography of Paris"
@@ -2735,6 +2756,10 @@ expression: json
       "text": "fashion capital"
     },
     "Q2246902": {
+      "description": {
+        "lang": "en",
+        "text": "overview about the demographics of Paris"
+      },
       "href": "https://www.wikidata.org/wiki/Q2246902",
       "lang": "en",
       "text": "demographics of Paris"
@@ -3638,6 +3663,10 @@ expression: json
       "text": "Paris"
     },
     "Q845625": {
+      "description": {
+        "lang": "en",
+        "text": "history of the capital city of France"
+      },
       "href": "https://www.wikidata.org/wiki/Q845625",
       "lang": "en",
       "text": "history of Paris"
@@ -3955,6 +3984,16 @@ expression: json
         "license": "CC0"
       },
       "file": "WI; Kenosha County Map; Town of Paris.png",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q2246902": {
+      "aspect": 0.9164,
+      "credit": {
+        "artist": "The original uploader was ThePromenader at English Wikipedia .",
+        "license": "CC BY-SA 3.0"
+      },
+      "file": "Paris uu ua jms.png",
       "from": "en.wikipedia.org",
       "kind": "photo"
     },

@@ -3,6 +3,13 @@ source: qrender/tests/views.rs
 expression: json
 ---
 {
+  "articles": {
+    "Q7102486": {
+      "href": "https://en.wikipedia.org/wiki/Origin_of_the_Moon",
+      "lang": "en",
+      "text": "Origin of the Moon"
+    }
+  },
   "composition": "composition/0.3",
   "coverage": {
     "have": 179,
@@ -1705,6 +1712,10 @@ expression: json
       "text": "Wikipedia:Vital articles/Level/4"
     },
     "Q7102486": {
+      "description": {
+        "lang": "en",
+        "text": "how the Earth's moon was formed"
+      },
       "href": "https://www.wikidata.org/wiki/Q7102486",
       "lang": "en",
       "text": "origin of the Moon"

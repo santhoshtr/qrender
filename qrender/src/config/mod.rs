@@ -109,6 +109,7 @@ impl Config {
             concepts,
             timeline: layouts.roles.list(Role::Timeline).to_vec(),
             calendar: layouts.roles.list(Role::Calendar).to_vec(),
+            topics: layouts.topics.keys().copied().collect(),
             web: layouts.roles.list(Role::Web).to_vec(),
             platforms: layouts
                 .web

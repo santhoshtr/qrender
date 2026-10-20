@@ -9,7 +9,7 @@ use percent_encoding::{AsciiSet, NON_ALPHANUMERIC, utf8_percent_encode};
 
 use super::map::{Frame, frame, live, point_frame};
 use crate::localize::format::{Part, coordinate, edit_url, number_part, percent};
-use crate::localize::{Description, Label, SpreadView, View};
+use crate::localize::{Description, Label, Link, SpreadView, View};
 use crate::primitives::credits::{Credits, Person};
 use crate::primitives::identifiers::{Identifier, Identifiers};
 use crate::primitives::links::{Card, Links};
@@ -157,6 +157,13 @@ pub struct Shown<'a> {
     pub edit: Option<String>,
     /// False when the value is behind "+N".
     pub shown: bool,
+}
+
+/// A topic of a spread that has a Wikipedia article: its picture and
+/// description, and the article.
+pub struct TopicArticle<'a> {
+    pub s: Shown<'a>,
+    pub article: &'a Link,
 }
 
 /// A picture of a value: its own, or one from its article (`from`).
@@ -558,8 +565,32 @@ impl<'v> Ui<'v> {
                 text: l.text.clone(),
                 href: l.href.clone(),
             });
-        let topics = s.spread.topics.iter().map(|t| self.value_part(&t.value));
+        // A topic with an article is a card (`topic_articles`).
+        let topics = s
+            .spread
+            .topics
+            .iter()
+            .filter(|t| self.article_of(t).is_none())
+            .map(|t| self.value_part(&t.value));
         sections.chain(topics).collect()
+    }
+
+    /// The topics of a spread that have a Wikipedia article.
+    pub fn topic_articles<'a>(&'a self, s: &'a SpreadView) -> Vec<TopicArticle<'a>> {
+        s.spread
+            .topics
+            .iter()
+            .filter_map(|t| {
+                Some(TopicArticle {
+                    article: self.article_of(t)?,
+                    s: self.value(t),
+                })
+            })
+            .collect()
+    }
+
+    fn article_of(&self, topic: &StatementRef) -> Option<&'v Link> {
+        self.view.articles.get(&topic.value.item()?)
     }
 
     // --------------------------------------------------------------- blocks

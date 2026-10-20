@@ -416,6 +416,66 @@ dialog.lightbox {
 	}
 }
 
+/* The topics of a spread that are Wikipedia articles: a card each, the
+   picture at the start, the wiki, the title and the description. */
+.topic-articles {
+	grid-column: 1 / -1;
+	display: grid;
+	grid-template-columns: repeat( auto-fill, minmax( 280px, 1fr ) );
+	gap: var( --spacing-100 );
+}
+
+.topic-article {
+	position: relative;
+	display: flex;
+	gap: var( --spacing-100 );
+	padding: var( --spacing-75 );
+	border: 1px solid var( --border-color-muted );
+	border-radius: var( --border-radius-base );
+	background-color: var( --background-color-base );
+
+	& > img {
+		flex: none;
+		inline-size: 96px;
+		block-size: 96px;
+		object-fit: cover;
+		border-radius: var( --border-radius-base );
+	}
+
+	& .body {
+		display: flex;
+		flex-direction: column;
+		gap: var( --spacing-25 );
+		min-inline-size: 0;
+	}
+
+	& .source {
+		display: flex;
+		align-items: center;
+		gap: var( --spacing-25 );
+		margin: 0;
+		font-size: var( --font-size-x-small );
+		color: var( --color-subtle );
+	}
+
+	& .title {
+		font-size: var( --font-size-large );
+		font-weight: var( --font-weight-bold );
+	}
+
+	& .desc {
+		margin: 0;
+		font-size: var( --font-size-small );
+		color: var( --color-subtle );
+	}
+
+	& > .tools {
+		position: absolute;
+		inset-block-end: var( --spacing-50 );
+		inset-inline-end: var( --spacing-50 );
+	}
+}
+
 .prose-links {
 	grid-column: 1 / -1;
 	display: flex;

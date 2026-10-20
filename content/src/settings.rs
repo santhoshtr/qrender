@@ -24,6 +24,9 @@ pub struct Settings {
     pub timeline: Vec<Pid>,
     /// Properties whose item values are holidays: their days are fetched.
     pub calendar: Vec<Pid>,
+    /// The "... of topic" properties: the Wikipedia articles of their item
+    /// values are fetched.
+    pub topics: Vec<Pid>,
     /// The web properties (sites and accounts): their formatter URLs are
     /// fetched.
     pub web: Vec<Pid>,
@@ -173,6 +176,6 @@ mod tests {
         assert_ne!(a.fingerprint(), b.fingerprint());
         // FNV-1a of the JSON of the settings: fixed, so a key from one
         // build is valid in the next.
-        assert_eq!(a.fingerprint(), 0xd5b2_378e_0bb2_46cb);
+        assert_eq!(a.fingerprint(), 0xad09_f105_b0b7_ee5d);
     }
 }

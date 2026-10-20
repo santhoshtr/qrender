@@ -153,6 +153,7 @@ impl<'a> Localizer<'a> {
                 .iter()
                 .filter_map(|q| Some((*q, self.page_image(*q)?)))
                 .collect(),
+            articles: self.articles(),
             messages: messages::for_lang(self.lang),
             lead,
             coverage: self.coverage(),
@@ -303,6 +304,28 @@ impl<'a> Localizer<'a> {
             },
             from: image.source.clone(),
         })
+    }
+
+    /// The articles of the topics of the spreads.
+    fn articles(&self) -> BTreeMap<Qid, Link> {
+        self.composition
+            .spreads
+            .iter()
+            .flat_map(|s| &s.topics)
+            .filter_map(|t| t.value.item())
+            .filter_map(|q| {
+                let article = self.text.articles.get(&q)?;
+                let lang = article.lang.as_str();
+                Some((
+                    q,
+                    Link {
+                        text: article.text.clone(),
+                        lang: article.lang.clone(),
+                        href: article_url(lang, &article.text),
+                    },
+                ))
+            })
+            .collect()
     }
 
     // -------------------------------------------------------------- prose

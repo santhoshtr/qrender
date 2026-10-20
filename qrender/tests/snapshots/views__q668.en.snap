@@ -3,6 +3,28 @@ source: qrender/tests/views.rs
 expression: json
 ---
 {
+  "articles": {
+    "Q133136": {
+      "href": "https://en.wikipedia.org/wiki/History_of_India",
+      "lang": "en",
+      "text": "History of India"
+    },
+    "Q233623": {
+      "href": "https://en.wikipedia.org/wiki/Economy_of_India",
+      "lang": "en",
+      "text": "Economy of India"
+    },
+    "Q838671": {
+      "href": "https://en.wikipedia.org/wiki/Geography_of_India",
+      "lang": "en",
+      "text": "Geography of India"
+    },
+    "Q996189": {
+      "href": "https://en.wikipedia.org/wiki/Demographics_of_India",
+      "lang": "en",
+      "text": "Demographics of India"
+    }
+  },
   "composition": "composition/0.3",
   "coverage": {
     "have": 1296,
@@ -3221,6 +3243,10 @@ expression: json
       "text": "Nagarchal"
     },
     "Q133136": {
+      "description": {
+        "lang": "en",
+        "text": "history of the Indian subcontinent"
+      },
       "href": "https://www.wikidata.org/wiki/Q133136",
       "lang": "en",
       "text": "history of India"
@@ -4419,6 +4445,10 @@ expression: json
       "text": "International Hydrographic Organization"
     },
     "Q233623": {
+      "description": {
+        "lang": "en",
+        "text": "Indian Economy is the sixth largest economy in the world in terms of nominal GDP ($1.15 billion) as of May, 2026."
+      },
       "href": "https://www.wikidata.org/wiki/Q233623",
       "lang": "en",
       "text": "economy of India"
@@ -8018,6 +8048,10 @@ expression: json
       "text": "G4 nations"
     },
     "Q838671": {
+      "description": {
+        "lang": "en",
+        "text": "Overview of the geography of India"
+      },
       "href": "https://www.wikidata.org/wiki/Q838671",
       "lang": "en",
       "text": "Geography of India"
@@ -8398,6 +8432,10 @@ expression: json
       "text": "China–India relations"
     },
     "Q996189": {
+      "description": {
+        "lang": "en",
+        "text": "Aspect of human geography in India"
+      },
       "href": "https://www.wikidata.org/wiki/Q996189",
       "lang": "en",
       "text": "demographics of India"

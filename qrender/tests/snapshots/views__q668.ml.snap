@@ -3,6 +3,28 @@ source: qrender/tests/views.rs
 expression: json
 ---
 {
+  "articles": {
+    "Q133136": {
+      "href": "https://ml.wikipedia.org/wiki/%E0%B4%87%E0%B4%A8%E0%B5%8D%E0%B4%A4%E0%B5%8D%E0%B4%AF%E0%B4%BE%E0%B4%9A%E0%B4%B0%E0%B4%BF%E0%B4%A4%E0%B5%8D%E0%B4%B0%E0%B4%82",
+      "lang": "ml",
+      "text": "ഇന്ത്യാചരിത്രം"
+    },
+    "Q233623": {
+      "href": "https://ml.wikipedia.org/wiki/%E0%B4%87%E0%B4%A8%E0%B5%8D%E0%B4%A4%E0%B5%8D%E0%B4%AF%E0%B4%AF%E0%B5%81%E0%B4%9F%E0%B5%86_%E0%B4%B8%E0%B4%AE%E0%B5%8D%E0%B4%AA%E0%B4%A6%E0%B5%8D%E0%B4%98%E0%B4%9F%E0%B4%A8",
+      "lang": "ml",
+      "text": "ഇന്ത്യയുടെ സമ്പദ്ഘടന"
+    },
+    "Q838671": {
+      "href": "https://ml.wikipedia.org/wiki/%E0%B4%87%E0%B4%A8%E0%B5%8D%E0%B4%A4%E0%B5%8D%E0%B4%AF%E0%B4%AF%E0%B5%81%E0%B4%9F%E0%B5%86_%E0%B4%AD%E0%B5%82%E0%B4%AE%E0%B4%BF%E0%B4%B6%E0%B4%BE%E0%B4%B8%E0%B5%8D%E0%B4%A4%E0%B5%8D%E0%B4%B0%E0%B4%82",
+      "lang": "ml",
+      "text": "ഇന്ത്യയുടെ ഭൂമിശാസ്ത്രം"
+    },
+    "Q996189": {
+      "href": "https://en.wikipedia.org/wiki/Demographics_of_India",
+      "lang": "en",
+      "text": "Demographics of India"
+    }
+  },
   "composition": "composition/0.3",
   "coverage": {
     "have": 483,
@@ -4084,6 +4106,10 @@ expression: json
       "text": "Nagarchal"
     },
     "Q133136": {
+      "description": {
+        "lang": "ml",
+        "text": "ഇന്ത്യയുടെ ചരിത്രം"
+      },
       "href": "https://www.wikidata.org/wiki/Q133136",
       "lang": "ml",
       "text": "ഇന്ത്യാചരിത്രം"
@@ -5587,6 +5613,11 @@ expression: json
       "text": "International Hydrographic Organization"
     },
     "Q233623": {
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "Indian Economy is the sixth largest economy in the world in terms of nominal GDP ($1.15 billion) as of May, 2026."
+      },
       "href": "https://www.wikidata.org/wiki/Q233623",
       "lang": "ml",
       "text": "ഇന്ത്യയുടെ സമ്പദ്ഘടന"
@@ -10088,6 +10119,11 @@ expression: json
       "text": "G4 nations"
     },
     "Q838671": {
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "Overview of the geography of India"
+      },
       "href": "https://www.wikidata.org/wiki/Q838671",
       "lang": "ml",
       "text": "ഇന്ത്യയുടെ ഭൂമിശാസ്ത്രം"
@@ -10541,6 +10577,11 @@ expression: json
       "text": "ഇന്ത്യാ-ചൈന ബന്ധം"
     },
     "Q996189": {
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "Aspect of human geography in India"
+      },
       "href": "https://www.wikidata.org/wiki/Q996189",
       "lang": "ml",
       "text": "india 2030"

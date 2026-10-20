@@ -6365,6 +6365,16 @@
   },
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "properties": {
+    "articles": {
+      "additionalProperties": false,
+      "description": "The Wikipedia article of each topic item: in the page language, or\nelse in English.",
+      "patternProperties": {
+        "^Q[1-9][0-9]*$": {
+          "$ref": "#/$defs/Link"
+        }
+      },
+      "type": "object"
+    },
     "citations": {
       "additionalProperties": {
         "$ref": "#/$defs/Cited"

@@ -3,6 +3,28 @@ source: qrender/tests/views.rs
 expression: json
 ---
 {
+  "articles": {
+    "Q131110": {
+      "href": "https://en.wikipedia.org/wiki/History_of_the_United_States",
+      "lang": "en",
+      "text": "History of the United States"
+    },
+    "Q188540": {
+      "href": "https://en.wikipedia.org/wiki/Economy_of_the_United_States",
+      "lang": "en",
+      "text": "Economy of the United States"
+    },
+    "Q1965974": {
+      "href": "https://en.wikipedia.org/wiki/Demographics_of_the_United_States",
+      "lang": "en",
+      "text": "Demographics of the United States"
+    },
+    "Q272160": {
+      "href": "https://en.wikipedia.org/wiki/Geography_of_the_United_States",
+      "lang": "en",
+      "text": "Geography of the United States"
+    }
+  },
   "citations": {
     "01b944de76b21379d70ac50a32e1dd4e0dce54c3": {
       "citation": {
@@ -5081,6 +5103,10 @@ expression: json
       "text": "Kingman Reef"
     },
     "Q131110": {
+      "description": {
+        "lang": "en",
+        "text": "occurrences and people in the USA throughout history"
+      },
       "href": "https://www.wikidata.org/wiki/Q131110",
       "lang": "en",
       "text": "history of the United States"
@@ -5940,6 +5966,10 @@ expression: json
       "text": "German"
     },
     "Q188540": {
+      "description": {
+        "lang": "en",
+        "text": "national economy of the United States"
+      },
       "href": "https://www.wikidata.org/wiki/Q188540",
       "lang": "en",
       "text": "economy of the United States"
@@ -6044,6 +6074,10 @@ expression: json
       "text": "Mandan"
     },
     "Q1965974": {
+      "description": {
+        "lang": "en",
+        "text": "study of the population of the United States and how it changes"
+      },
       "href": "https://www.wikidata.org/wiki/Q1965974",
       "lang": "en",
       "text": "demographics of the United States"
@@ -6729,6 +6763,10 @@ expression: json
       "text": "Aleut"
     },
     "Q272160": {
+      "description": {
+        "lang": "en",
+        "text": "overview of the geography of the United States of America"
+      },
       "href": "https://www.wikidata.org/wiki/Q272160",
       "lang": "en",
       "text": "geography of the United States"
@@ -12469,6 +12507,16 @@ expression: json
       "from": "en.wikipedia.org",
       "kind": "drawing"
     },
+    "Q1965974": {
+      "aspect": 1.4461,
+      "credit": {
+        "artist": "Mishomp",
+        "license": "CC0"
+      },
+      "file": "US Population pyramid 2026.png",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
     "Q20": {
       "aspect": 1.3763,
       "credit": {
@@ -12556,6 +12604,16 @@ expression: json
         "license": "Public domain"
       },
       "file": "Charge of the Danites.jpg",
+      "from": "en.wikipedia.org",
+      "kind": "photo"
+    },
+    "Q272160": {
+      "aspect": 1.6181,
+      "credit": {
+        "artist": "Wapcaplet",
+        "license": "CC BY-SA 3.0"
+      },
+      "file": "Map of USA with state and territory names 2.png",
       "from": "en.wikipedia.org",
       "kind": "photo"
     },
