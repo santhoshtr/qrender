@@ -225,7 +225,7 @@ fn shape(c: &Composer, statements: &[&Statement]) -> FactForm {
 
 /// Markdown: the row, with all of its values.
 pub fn markdown(b: &Fact, md: &mut crate::render::markdown::Markdown) {
-    let mut values: Vec<String> = b.statements.iter().map(|s| md.value(s)).collect();
+    let (mut values, marks) = md.list_values(&b.statements);
     if let (Some(age), Some(first)) = (&b.age, values.first_mut()) {
         let words = crate::localize::messages::format(
             md.view.msg("qrender-age"),
@@ -248,7 +248,7 @@ pub fn markdown(b: &Fact, md: &mut crate::render::markdown::Markdown) {
     } else {
         md.described_property(b.pid)
     };
-    md.items(&key, &values);
+    md.items(&format!("{key}{marks}"), &values);
 }
 
 #[cfg(test)]

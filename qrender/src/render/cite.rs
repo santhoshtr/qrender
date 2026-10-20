@@ -8,6 +8,7 @@ use percent_encoding::{AsciiSet, CONTROLS, percent_decode_str, utf8_percent_enco
 use super::ui::favicon;
 use crate::localize::View;
 use crate::localize::format::Part;
+use crate::schema::StatementRef;
 
 /// The characters of an identifier that its resolver's address encodes.
 const ID: &AsciiSet = &CONTROLS
@@ -50,6 +51,17 @@ pub enum Value {
     Parts(Vec<Part>),
     /// A language code; the browser names it (`intl.js`).
     Language(String),
+}
+
+/// The citations that every value of a list has, when it has two values
+/// at least: the list shows them once, and its values do not (210
+/// languages from one census are one source, not 210).
+pub fn shared(statements: &[StatementRef]) -> Option<&Vec<String>> {
+    let (first, rest) = statements.split_first()?;
+    let all = !rest.is_empty()
+        && !first.citations.is_empty()
+        && rest.iter().all(|s| s.citations == first.citations);
+    all.then_some(&first.citations)
 }
 
 pub fn card<'a>(cited: &'a Cited, view: &'a View) -> Card<'a> {

@@ -753,6 +753,27 @@ impl<'v> Ui<'v> {
     }
 
     /// "imported", "none", or "" for a sourced statement: its mark.
+    /// The citations that every value of a list has (`cite::shared`).
+    pub fn shared_citations<'a>(&self, statements: &'a [StatementRef]) -> Option<&'a Vec<String>> {
+        super::cite::shared(statements)
+    }
+
+    /// The values of a list; with `shared`, without their citations: the
+    /// list shows them once.
+    pub fn values_beside<'a>(
+        &'a self,
+        statements: &'a [StatementRef],
+        shared: bool,
+    ) -> Vec<Shown<'a>> {
+        let mut values = self.values(statements);
+        if shared {
+            for v in &mut values {
+                v.citations = &NO_CITATIONS;
+            }
+        }
+        values
+    }
+
     /// No citations, for a mark of provenance without a statement.
     pub fn no_citations(&self) -> &'static Vec<String> {
         &NO_CITATIONS

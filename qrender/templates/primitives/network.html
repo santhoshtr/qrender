@@ -3,13 +3,15 @@
     dialog. On the page, the first ones: a strip of pictures, cut at its
     end, with "View all" as its last card; or, when the qualifiers matter
     (an embassy, a border), rows as in the dialog, then "+N". -#}
-{%- let values = ui.values(b.values.as_slice()) -%}
+{%- let shared = ui.shared_citations(b.values.as_slice()) -%}
+{%- let values = ui.values_beside(b.values.as_slice(), shared.is_some()) -%}
 {%- let title = ui.property(b.pid) -%}
 {%- let n = ui.id() -%}
 <div class="block set {{ b.form.name() }}">
-    <h3>{{ ui.text(&title, true)|safe }} <span class="note">{{ values.len() }}</span></h3>
+    <h3>{{ ui.text(&title, true)|safe }} <span class="note">{{ values.len() }}</span>
+        {%- if let Some(c) = shared %}{{ ui.sources(c.as_slice())|safe }}{% endif %}</h3>
     {%- if b.form.name() == "rows" -%}
-        {%- let shown = ui.values(b.shown()) -%}
+        {%- let shown = ui.values_beside(b.shown(), shared.is_some()) -%}
         {{ ui.rows(shown.as_slice())|safe }}
         {%- if values.len() > shown.len() -%}
             {% call m::more(n, values.len() - shown.len()) %}{% endcall %}

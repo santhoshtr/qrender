@@ -235,6 +235,25 @@ impl Markdown<'_> {
         out
     }
 
+    /// The values of a list, and the footnote marks of the sources that
+    /// all of them have (`cite::shared`): the list shows those once, after
+    /// its key, and its values do not.
+    pub fn list_values(&self, statements: &[StatementRef]) -> (Vec<String>, String) {
+        match super::cite::shared(statements) {
+            Some(shared) => (
+                statements
+                    .iter()
+                    .map(|s| self.value_with(s, false))
+                    .collect(),
+                self.source_marks(shared),
+            ),
+            None => (
+                statements.iter().map(|s| self.value(s)).collect(),
+                String::new(),
+            ),
+        }
+    }
+
     /// The footnote marks of the sources of a statement: `[^s1][^s2]`.
     fn source_marks(&self, citations: &[String]) -> String {
         let mut sources = self.sources.borrow_mut();
@@ -330,6 +349,12 @@ impl Markdown<'_> {
 
     /// A statement: its value, its qualifiers, and its provenance in words.
     pub fn value(&self, s: &StatementRef) -> String {
+        self.value_with(s, true)
+    }
+
+    /// A statement; without `sources`, no marks of its sources (its list
+    /// has them).
+    pub fn value_with(&self, s: &StatementRef, sources: bool) -> String {
         let mut out = self.part(&self.view.part(&s.value));
         let note = self.view.value_note(s);
         if !note.is_empty() {
@@ -345,8 +370,12 @@ impl Markdown<'_> {
         {
             out.push_str(&format!(" — {}", d.text));
         }
-        let marks = self.source_marks(&s.citations);
-        if marks.is_empty() {
+        let marks = if sources {
+            self.source_marks(&s.citations)
+        } else {
+            String::new()
+        };
+        if marks.is_empty() && sources {
             out.push_str(provenance_words(s.provenance));
         } else {
             out.push_str(&marks);

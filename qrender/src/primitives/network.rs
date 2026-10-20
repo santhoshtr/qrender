@@ -157,8 +157,8 @@ pub fn gallery(mut values: Vec<GalleryValue>, rule: Option<&str>) -> Gallery {
 
 /// Markdown: every value of the set.
 pub fn markdown(b: &Network, md: &mut crate::render::markdown::Markdown) {
-    let values: Vec<String> = b.values.iter().map(|v| md.value(v)).collect();
-    md.items(&md.property(b.pid), &values);
+    let (values, marks) = md.list_values(&b.values);
+    md.items(&format!("{}{marks}", md.property(b.pid)), &values);
 }
 
 /// Markdown: each small value with its property.
