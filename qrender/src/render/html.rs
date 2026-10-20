@@ -35,7 +35,9 @@ pub enum Styles<'a> {
     Linked(&'a str),
 }
 
-pub fn page(view: &View, styles: Styles) -> String {
+/// `service`: the base path of the server that serves the page. The page
+/// links its Markdown and JSON versions there.
+pub fn page(view: &View, styles: Styles, service: Option<&str>) -> String {
     let ui = Ui::new(view);
     let shown: Vec<_> = view
         .spreads
@@ -47,6 +49,7 @@ pub fn page(view: &View, styles: Styles) -> String {
         ui: &ui,
         view,
         styles,
+        service,
         stylesheet: &STYLESHEET,
         scripts: scripts(&shown),
     })
@@ -62,6 +65,7 @@ struct Page<'a> {
     ui: &'a Ui<'a>,
     view: &'a View,
     styles: Styles<'a>,
+    service: Option<&'a str>,
     stylesheet: &'static str,
     scripts: String,
 }

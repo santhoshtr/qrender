@@ -151,7 +151,7 @@ async fn run(cli: Cli) -> Result<()> {
                 Format::Markdown => print!("{}", markdown::page(&view)),
                 Format::Html => {
                     let styles = design.as_deref().map_or(Styles::Inline, Styles::Linked);
-                    print!("{}", html::page(&view, styles));
+                    print!("{}", html::page(&view, styles, None));
                 }
             }
         }

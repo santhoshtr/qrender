@@ -144,7 +144,11 @@ async fn page(
     let base = format!("{}/design/{}", state.base_path, design_version());
     (
         [(header::CACHE_CONTROL, PAGE_CACHE)],
-        Html(html::page(&view, Styles::Linked(&base))),
+        Html(html::page(
+            &view,
+            Styles::Linked(&base),
+            Some(&state.base_path),
+        )),
     )
         .into_response()
 }

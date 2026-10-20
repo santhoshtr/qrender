@@ -61,7 +61,7 @@ fn select(s: &str) -> Selector {
 fn html_pages() {
     for page in PAGES {
         // Linked styles: the snapshot holds the markup, not the stylesheet.
-        let html = html::page(&view(page), Styles::Linked("design/0.2"));
+        let html = html::page(&view(page), Styles::Linked("design/0.2"), Some(""));
         let doc = Html::parse_document(&html);
 
         // No link in a link: the parser would close the outer link early.
