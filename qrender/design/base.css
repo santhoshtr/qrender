@@ -712,7 +712,7 @@ qr-section { display: block; }
 
 		& > summary > :is( h4, h5, h6 ) {
 			font-family: var( --font-family-system-sans );
-			font-size: var( --font-size-medium );
+			font-size: var( --font-size-large );
 		}
 
 		& > :not( summary ) { margin-inline-start: var( --spacing-150 ); }
