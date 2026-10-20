@@ -5,6 +5,7 @@
 mod commons;
 pub mod http;
 mod notes;
+mod references;
 mod sparql;
 mod wikidata;
 mod wikipedia;
@@ -18,6 +19,7 @@ use indexmap::IndexMap;
 use serde::Serialize;
 use serde::de::DeserializeOwned;
 
+use crate::citation::Citation;
 use crate::id::{EntityId, Lang, Pid, Qid, StatementId};
 use crate::model::{
     CONTENT_SCHEMA, Container, Content, Datatype, Peers, QualifierValue, Rank, Statement, Value,
@@ -61,7 +63,7 @@ pub enum FetchError {
 /// The version of the fetcher. Raise it when a change of the fetcher
 /// changes what it fetches (a new field, a new request): it is part of
 /// every cache key, so the parts that an older fetcher stored are not read.
-pub const FETCH_VERSION: u32 = 12;
+pub const FETCH_VERSION: u32 = 13;
 
 /// Seconds a cached part lives: content and text change with edits;
 /// a peer set changes slowly and many items share it.
@@ -299,6 +301,7 @@ impl<S: Store> Fetcher<S> {
             sparql::names(http, &named_items, &name_langs),
         )?;
         let text_items = text_items(&statements, &self.settings.texts, &item_names);
+        let references = references::read(references);
 
         let mut media: Vec<String> = statements
             .iter()
@@ -322,7 +325,9 @@ impl<S: Store> Fetcher<S> {
             schema: CONTENT_SCHEMA.to_string(),
             qid,
             statements,
-            references,
+            references: references.sets,
+            statement_citations: references.cited,
+            citations: references.citations,
             container,
             quantities,
             peers,
@@ -565,6 +570,16 @@ fn identifiers(content: &Content) -> BTreeSet<EntityId> {
     if let Some(q) = content.container.qid {
         ids.insert(q.into());
     }
+    // The works that references name (P248 stated in).
+    ids.extend(
+        content
+            .citations
+            .values()
+            .filter_map(|c| match &c.citation {
+                Citation::Record(r) => Some(EntityId::Item(r.stated_in)),
+                _ => None,
+            }),
+    );
     // The days of holidays: their labels are dates ("July 4").
     ids.extend(content.holiday_days.values().map(|d| EntityId::Item(d.day)));
     for record in content.quantities.values() {

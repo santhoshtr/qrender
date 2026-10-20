@@ -1,0 +1,323 @@
+---
+source: app/tests/replay.rs
+expression: "serde_json::to_string_pretty(&content.citations).unwrap()"
+---
+{
+  "7b276f86e9588d62c2b6e9176bc2edd62d63e623": {
+    "citation": {
+      "kind": "record",
+      "stated_in": "Q265049",
+      "id": {
+        "pid": "P5573",
+        "value": "8464"
+      },
+      "url": "https://www.archinform.net/ort/8464.htm",
+      "accessed": {
+        "time": "2018-08-06T00:00:00Z",
+        "precision": 11
+      }
+    },
+    "origin": {
+      "from": "wikidata",
+      "hash": "7b276f86e9588d62c2b6e9176bc2edd62d63e623"
+    }
+  },
+  "85a1dd64278cf3881a74eafb95e62988daff611f": {
+    "citation": {
+      "kind": "record",
+      "stated_in": "Q54919",
+      "id": {
+        "pid": "P214",
+        "value": "264835402"
+      },
+      "url": "https://viaf.org/en/viaf/264835402",
+      "accessed": {
+        "time": "2023-10-31T00:00:00Z",
+        "precision": 11
+      }
+    },
+    "origin": {
+      "from": "wikidata",
+      "hash": "85a1dd64278cf3881a74eafb95e62988daff611f"
+    }
+  },
+  "a2daf62a4c78bf9f5b784fec95d7ba36b81cbc62": {
+    "citation": {
+      "kind": "record",
+      "stated_in": "Q54919",
+      "id": {
+        "pid": "P214",
+        "value": "264835402"
+      },
+      "url": "https://viaf.org/en/viaf/264835402",
+      "accessed": {
+        "time": "2025-11-28T00:00:00Z",
+        "precision": 11
+      }
+    },
+    "origin": {
+      "from": "wikidata",
+      "hash": "a2daf62a4c78bf9f5b784fec95d7ba36b81cbc62"
+    }
+  },
+  "2b00cb481cddcac7623114367489b5c194901c4a": {
+    "citation": {
+      "kind": "record",
+      "stated_in": "Q15241312",
+      "published": {
+        "time": "2013-10-28T00:00:00Z",
+        "precision": 11
+      }
+    },
+    "origin": {
+      "from": "wikidata",
+      "hash": "2b00cb481cddcac7623114367489b5c194901c4a"
+    }
+  },
+  "21494d78c86d729112257391ca4131a84f73b44b": {
+    "citation": {
+      "kind": "record",
+      "stated_in": "Q265049",
+      "url": "https://www.archinform.net/service/wd_aiort.php",
+      "accessed": {
+        "time": "2018-08-05T00:00:00Z",
+        "precision": 11
+      }
+    },
+    "origin": {
+      "from": "wikidata",
+      "hash": "21494d78c86d729112257391ca4131a84f73b44b"
+    }
+  },
+  "ae9bb79089b689a1e4482ab1adea0085a44c6e63": {
+    "citation": {
+      "kind": "record",
+      "stated_in": "Q84087675",
+      "accessed": {
+        "time": "2022-04-23T00:00:00Z",
+        "precision": 11
+      }
+    },
+    "origin": {
+      "from": "wikidata",
+      "hash": "ae9bb79089b689a1e4482ab1adea0085a44c6e63"
+    }
+  },
+  "4db00b1cfb50382f93174d76a11f79b75b2ff6b3": {
+    "citation": {
+      "kind": "record",
+      "stated_in": "Q65921422",
+      "accessed": {
+        "time": "2022-04-23T00:00:00Z",
+        "precision": 11
+      }
+    },
+    "origin": {
+      "from": "wikidata",
+      "hash": "4db00b1cfb50382f93174d76a11f79b75b2ff6b3"
+    }
+  },
+  "8582ee3687be881378177644d3018182027cf151": {
+    "citation": {
+      "kind": "record",
+      "stated_in": "Q731361",
+      "accessed": {
+        "time": "2022-04-23T00:00:00Z",
+        "precision": 11
+      }
+    },
+    "origin": {
+      "from": "wikidata",
+      "hash": "8582ee3687be881378177644d3018182027cf151"
+    }
+  },
+  "998cc81b042e28b97d34f26dc57c1a1eb221abc7": {
+    "citation": {
+      "kind": "web",
+      "title": "Nairobi City and the city of Raleigh, North Carolina ink twining agreement",
+      "url": "https://nairobi.go.ke/nairobi-city-city-raleigh-north-carolina-ink-twining-agreement/",
+      "accessed": {
+        "time": "2023-11-01T00:00:00Z",
+        "precision": 11
+      },
+      "language": "en"
+    },
+    "origin": {
+      "from": "wikidata",
+      "hash": "998cc81b042e28b97d34f26dc57c1a1eb221abc7"
+    }
+  },
+  "5a858a70d6ac562123c1debf25a5aed93a5c4939": {
+    "citation": {
+      "kind": "record",
+      "stated_in": "Q19938912",
+      "accessed": {
+        "time": "2015-08-26T00:00:00Z",
+        "precision": 11
+      }
+    },
+    "origin": {
+      "from": "wikidata",
+      "hash": "5a858a70d6ac562123c1debf25a5aed93a5c4939"
+    }
+  },
+  "9a681f9dd95c90224547c404e11295f4f7dcf54e": {
+    "citation": {
+      "kind": "record",
+      "stated_in": "Q64139102",
+      "accessed": {
+        "time": "2020-07-09T00:00:00Z",
+        "precision": 11
+      }
+    },
+    "origin": {
+      "from": "wikidata",
+      "hash": "9a681f9dd95c90224547c404e11295f4f7dcf54e"
+    }
+  },
+  "eb5115599e6a93f57647d90eedf5a498d0532466": {
+    "citation": {
+      "kind": "record",
+      "stated_in": "Q13550863",
+      "accessed": {
+        "time": "2020-02-02T00:00:00Z",
+        "precision": 11
+      }
+    },
+    "origin": {
+      "from": "wikidata",
+      "hash": "eb5115599e6a93f57647d90eedf5a498d0532466"
+    }
+  },
+  "94cd09bdd3373d7b8eb4e3cc26e524afe7466ff7": {
+    "citation": {
+      "kind": "record",
+      "stated_in": "Q54919",
+      "accessed": {
+        "time": "2015-08-02T00:00:00Z",
+        "precision": 11
+      }
+    },
+    "origin": {
+      "from": "wikidata",
+      "hash": "94cd09bdd3373d7b8eb4e3cc26e524afe7466ff7"
+    }
+  },
+  "4f71788aaceb07865620ab192af96b5a4c85fcb4": {
+    "citation": {
+      "kind": "web",
+      "url": "http://www.demographia.com/db-worldua.pdf"
+    },
+    "origin": {
+      "from": "wikidata",
+      "hash": "4f71788aaceb07865620ab192af96b5a4c85fcb4"
+    }
+  },
+  "f2e6563645b8b0cd63f14d11cf9a65125daa1188": {
+    "citation": {
+      "kind": "web",
+      "url": "http://cnig.gouv.fr/wp-content/uploads/2020/02/CNT-PVM_r%C3%A9vis%C3%A9_2020-01-27-1.pdf"
+    },
+    "origin": {
+      "from": "wikidata",
+      "hash": "f2e6563645b8b0cd63f14d11cf9a65125daa1188"
+    }
+  },
+  "b31b2e8297e678c210743cf2a193cb826d470471": {
+    "citation": {
+      "kind": "web",
+      "url": "https://www.c40.org/es/steering-committee/governor-sakaja-arthur-johnson/"
+    },
+    "origin": {
+      "from": "wikidata",
+      "hash": "b31b2e8297e678c210743cf2a193cb826d470471"
+    }
+  },
+  "9bafa148bebe67741e97cb9dc1c39ca5250126bc": {
+    "citation": {
+      "kind": "web",
+      "url": "https://web.archive.org/web/20090314131819/http://www.cbs.go.ke/sectoral/population/projections.html"
+    },
+    "origin": {
+      "from": "wikidata",
+      "hash": "9bafa148bebe67741e97cb9dc1c39ca5250126bc"
+    }
+  },
+  "83062976fff06eb66df8603e0f6503c766988b4c": {
+    "citation": {
+      "kind": "record",
+      "stated_in": "Q3063249",
+      "archive": {
+        "url": "https://web.archive.org/web/20010208080459/http://www.itl.nist.gov/fipspubs/fip10-4.htm",
+        "date": {
+          "time": "2001-02-08T00:00:00Z",
+          "precision": 11
+        }
+      }
+    },
+    "origin": {
+      "from": "wikidata",
+      "hash": "83062976fff06eb66df8603e0f6503c766988b4c"
+    }
+  },
+  "190527dca615f4510213808b0e1cb81522b247f6": {
+    "citation": {
+      "kind": "record",
+      "stated_in": "Q1360745"
+    },
+    "origin": {
+      "from": "wikidata",
+      "hash": "190527dca615f4510213808b0e1cb81522b247f6"
+    }
+  },
+  "d4767d15e44afe8795350d71c4aaf13e1067eea5": {
+    "citation": {
+      "kind": "record",
+      "stated_in": "Q24010939"
+    },
+    "origin": {
+      "from": "wikidata",
+      "hash": "d4767d15e44afe8795350d71c4aaf13e1067eea5"
+    }
+  },
+  "88694a0f4d1486770c269f7db16a1982f74da69d": {
+    "citation": {
+      "kind": "record",
+      "stated_in": "Q830106"
+    },
+    "origin": {
+      "from": "wikidata",
+      "hash": "88694a0f4d1486770c269f7db16a1982f74da69d"
+    }
+  },
+  "706208b3024200fd0a39ad499808dd0d98d74065": {
+    "citation": {
+      "kind": "record",
+      "stated_in": "Q14005"
+    },
+    "origin": {
+      "from": "wikidata",
+      "hash": "706208b3024200fd0a39ad499808dd0d98d74065"
+    }
+  },
+  "fc508efe8351fc28439079bc359d81c8cf4dfb1a": {
+    "citation": {
+      "kind": "record",
+      "stated_in": "Q2864340"
+    },
+    "origin": {
+      "from": "wikidata",
+      "hash": "fc508efe8351fc28439079bc359d81c8cf4dfb1a"
+    }
+  },
+  "ecb7a39cf436eb1fba419853af168ef9f2ba1dab": {
+    "citation": {
+      "kind": "record",
+      "stated_in": "Q106509962"
+    },
+    "origin": {
+      "from": "wikidata",
+      "hash": "ecb7a39cf436eb1fba419853af168ef9f2ba1dab"
+    }
+  }
+}

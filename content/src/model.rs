@@ -6,6 +6,7 @@ use indexmap::IndexMap;
 use percent_encoding::percent_decode_str;
 use serde::{Deserialize, Serialize};
 
+use crate::citation::Cited;
 use crate::id::{EntityId, Pid, Qid, StatementId};
 
 pub const CONTENT_SCHEMA: &str = "content/0.1";
@@ -28,6 +29,14 @@ pub struct Content {
     pub statements: Vec<Statement>,
     /// For each statement, the property set of each of its references.
     pub references: IndexMap<StatementId, Vec<Vec<Pid>>>,
+    /// For each statement, the hashes of its references that cite a
+    /// source (in `citations`).
+    #[serde(default, skip_serializing_if = "IndexMap::is_empty")]
+    pub statement_citations: IndexMap<StatementId, Vec<String>>,
+    /// The references that cite a source, by hash: a reference that many
+    /// statements share is here once.
+    #[serde(default, skip_serializing_if = "IndexMap::is_empty")]
+    pub citations: IndexMap<String, Cited>,
     pub container: Container,
     /// Quantities of the item and of its container, normalized to SI units.
     pub quantities: IndexMap<Qid, QuantityRecord>,

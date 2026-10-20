@@ -30,6 +30,20 @@ async fn nairobi_from_recorded_responses() {
     let peers = content.peers.as_ref().unwrap();
     assert_eq!(peers.class, "Q1549591".parse().unwrap());
     assert!(!content.commons.is_empty() && !content.references.is_empty());
+    // The references that cite a source, once each; every statement's
+    // citation is in the table.
+    assert!(!content.citations.is_empty());
+    assert!(
+        content
+            .statement_citations
+            .values()
+            .flatten()
+            .all(|h| content.citations.contains_key(h))
+    );
+    insta::assert_snapshot!(
+        "q3870.citations.json",
+        serde_json::to_string_pretty(&content.citations).unwrap()
+    );
 
     let composition = qrender::compose(&content, Config::embedded());
     assert!(composition.unshown.is_empty());

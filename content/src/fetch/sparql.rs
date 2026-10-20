@@ -206,40 +206,76 @@ pub async fn statements(http: &Http, qid: Qid) -> Result<Vec<Statement>, FetchEr
     Ok(out)
 }
 
-/// For each statement, the property set of each of its references.
+/// A value of a reference, as the rows give it.
+#[derive(Debug, Clone, PartialEq)]
+pub struct Snak {
+    pub pid: Pid,
+    /// The datatype of the property: "Url", "Time", "ExternalId", ...
+    pub datatype: String,
+    pub value: String,
+    pub lang: Option<String>,
+    pub precision: Option<u8>,
+    /// The formatter URL of an external identifier property.
+    pub formatter: Option<String>,
+}
+
+/// For each statement, its references by hash, each with its values.
 pub async fn references(
     http: &Http,
     qid: Qid,
-) -> Result<IndexMap<StatementId, Vec<Vec<Pid>>>, FetchError> {
+) -> Result<IndexMap<StatementId, IndexMap<String, Vec<Snak>>>, FetchError> {
     let rows = query(
         http,
         &format!(
-            "SELECT ?st ?ref ?rp WHERE {{
-                wd:{qid} ?claim ?st . ?st prov:wasDerivedFrom ?ref . ?ref ?rp [] .
-                FILTER(STRSTARTS(STR(?rp), \"http://www.wikidata.org/prop/reference/P\")) }}"
+            "SELECT ?st ?ref ?prop ?type ?value ?precision ?formatter WHERE {{
+                wd:{qid} ?claim ?st . ?st prov:wasDerivedFrom ?ref . ?ref ?pr ?value .
+                ?prop wikibase:reference ?pr ; wikibase:propertyType ?type .
+                OPTIONAL {{ ?prop wikibase:referenceValue ?prv . ?ref ?prv ?node .
+                           ?node wikibase:timePrecision ?precision . }}
+                OPTIONAL {{ ?prop wdt:P1630 ?formatter . FILTER(?type = wikibase:ExternalId) }}
+            }}"
         ),
     )
     .await?;
-    let mut by_statement: IndexMap<StatementId, IndexMap<String, Vec<Pid>>> = IndexMap::new();
+    let mut by_statement: IndexMap<StatementId, IndexMap<String, Vec<Snak>>> = IndexMap::new();
     for r in &rows {
-        let (Some(st), Some(reference), Some(pid)) = (
+        let (Some(st), Some(hash), Some(pid), Some(value)) = (
             r.local("st").and_then(|s| s.parse().ok()),
-            r.get("ref"),
-            r.pid("rp"),
+            r.local("ref"),
+            r.pid("prop"),
+            r.get("value"),
         ) else {
             continue;
         };
-        by_statement
+        let snaks = by_statement
             .entry(st)
             .or_default()
-            .entry(reference.to_string())
-            .or_default()
-            .push(pid);
+            .entry(hash.to_string())
+            .or_default();
+        let formatter = r.get("formatter").map(str::to_string);
+        // The same value again: another time node or formatter. The
+        // shortest formatter, as `formatters` takes it.
+        if let Some(old) = snaks.iter_mut().find(|s| s.pid == pid && s.value == value) {
+            if let Some(f) = formatter
+                && old
+                    .formatter
+                    .as_ref()
+                    .is_none_or(|o| (f.len(), &f) < (o.len(), o))
+            {
+                old.formatter = Some(f);
+            }
+            continue;
+        }
+        snaks.push(Snak {
+            pid,
+            datatype: r.local("type").unwrap_or_default().to_string(),
+            value: value.to_string(),
+            lang: r.lang("value").map(str::to_string),
+            precision: r.get("precision").and_then(|p| p.parse().ok()),
+            formatter,
+        });
     }
-    Ok(by_statement
-        .into_iter()
-        .map(|(st, refs)| (st, refs.into_values().collect()))
-        .collect())
+    Ok(by_statement)
 }
 
 /// Normalized quantities (SI units) of some properties on some items, and
