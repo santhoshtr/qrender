@@ -431,7 +431,7 @@ impl<'a> Localizer<'a> {
     }
 
     /// The sections of the concepts, with their content: the outline of
-    /// the fallback article (empty for an article in the page language).
+    /// the article.
     fn outline_sections(&self, concepts: &[Qid]) -> Vec<ProseSection> {
         let Some((article, source)) = self.article() else {
             return Vec::new();
@@ -460,6 +460,7 @@ impl<'a> Localizer<'a> {
             anchor: s.anchor.clone(),
             href: format!("{}#{}", article_url(source, &article.title), s.anchor),
             lang: source.parse().expect("a language code"),
+            local: source == self.lang.as_str(),
             level: s.level,
             blocks: s
                 .blocks
@@ -517,8 +518,7 @@ impl<'a> Localizer<'a> {
         }
     }
 
-    /// The sections that no spread shows, with their content: for a
-    /// fallback article.
+    /// The sections that no spread shows, with their content.
     fn more_sections(&self) -> Vec<ProseSection> {
         let Some((article, source)) = self.article() else {
             return Vec::new();

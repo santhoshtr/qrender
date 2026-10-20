@@ -818,8 +818,8 @@ impl<'v> Ui<'v> {
             .iter()
             .flat_map(|s| &s.sections)
             .chain(&view.more_sections)
-            .map(|s| &s.lang)
-            .next();
+            .find(|s| !s.local)
+            .map(|s| &s.lang);
         lead.or(section).map(|l| l.as_str())
     }
 

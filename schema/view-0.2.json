@@ -4446,7 +4446,7 @@
       "type": "object"
     },
     "ProseSection": {
-      "description": "A section of the fallback article, with its content and its\nsubsections.",
+      "description": "A section of the article, with its content and its subsections.",
       "properties": {
         "anchor": {
           "type": "string"
@@ -4472,6 +4472,10 @@
           "minimum": 0,
           "type": "integer"
         },
+        "local": {
+          "description": "The article is in the page language: nothing to translate.",
+          "type": "boolean"
+        },
         "sections": {
           "items": {
             "$ref": "#/$defs/ProseSection"
@@ -4487,6 +4491,7 @@
         "anchor",
         "href",
         "lang",
+        "local",
         "level",
         "blocks",
         "sections"
@@ -5669,7 +5674,7 @@
           "description": "The first paragraph of the article section of the spread, when the\npage does not show its content."
         },
         "sections": {
-          "description": "The article sections of the spread with their content: for a\nfallback article.",
+          "description": "The article sections of the spread with their content.",
           "items": {
             "$ref": "#/$defs/ProseSection"
           },
@@ -6417,7 +6422,7 @@
       "type": "object"
     },
     "more_sections": {
-      "description": "The same sections with their content: for a fallback article.",
+      "description": "The same sections with their content, when the page shows it.",
       "items": {
         "$ref": "#/$defs/ProseSection"
       },

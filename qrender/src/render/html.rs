@@ -399,8 +399,7 @@ impl<'v> Ui<'v> {
         })
     }
 
-    /// A section of the fallback article; `collapsed` at the end of the
-    /// page.
+    /// A section of the article; `collapsed` at the end of the page.
     pub fn article_section(&self, s: &ProseSection, collapsed: bool) -> String {
         render(ArticleSectionHtml {
             ui: self,

@@ -68,8 +68,9 @@ pub struct Article {
     /// content, as the lead.
     #[serde(default)]
     pub section_text: IndexMap<String, String>,
-    /// The sections with their content: only for the fallback article of
-    /// a page whose language has no article.
+    /// The sections with their content: for the article that the page
+    /// shows (the article in the page language, or the fallback article
+    /// when the page language has none).
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub outline: Vec<OutlineSection>,
     /// The notes that the text above marks, by the id of their item in the

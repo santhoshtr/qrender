@@ -638,9 +638,8 @@ dialog.lightbox {
 	}
 }
 
-/* The sections of an article in another language (the fallback article):
-   the full width of the spread, the text in a column of reading width.
-   Subsections are collapsed to their titles. */
+/* The sections of the article: the full width of the spread, the text in
+   a column of reading width. Subsections are collapsed to their titles. */
 .article-slot {
 	grid-column: 1 / -1;
 	display: grid;

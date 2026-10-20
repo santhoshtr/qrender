@@ -1,22 +1,32 @@
-{#- A section of the article in another language (the fallback article):
-    its title, its blocks, and its subsections, each collapsed to its
-    title. At the end of the page (`collapsed`), the whole section is
-    collapsed to its title. The reader translates it into the page
-    language in the dialog of the page (qr-section, translate.js). -#}
+{#- A section of the article: its title, its blocks, and its subsections,
+    each collapsed to its title. At the end of the page (`collapsed`), the
+    whole section is collapsed to its title. A section in another language
+    (the fallback article) is a qr-section: the reader translates it into
+    the page language in the dialog of the page (translate.js). -#}
 {%- let h = ui.section_tag(s.level) -%}
+{%- if s.local -%}
+<div class="article-section" lang="{{ s.lang }}">
+{%- else -%}
 <qr-section class="article-section"
             lang="{{ s.lang }}"
             data-from="{{ s.lang }}"
             data-to="{{ ui.view.lang }}"
             data-dir="{{ ui.view.dir.name() }}">
+{%- endif %}
     {%- if collapsed %}<details><summary class="head">{% else %}<div class="head">{% endif -%}
-    <{{ h }}>{{ s.title }}</{{ h }}>{{ ui.translate_button()|safe }}
+    <{{ h }}>{{ s.title }}</{{ h }}>{% if !s.local %}{{ ui.translate_button()|safe }}{% endif %}
     {%- if collapsed %}</summary>{% else %}</div>{% endif %}
     <div class="body">
         {%- for b in s.blocks %}{{ ui.prose(b)|safe }}{% endfor -%}
         {%- for c in s.sections %}{{ ui.article_subsection(c)|safe }}{% endfor -%}
         <a class="read" href="{{ s.href }}">{{ s.title }} ↗</a>
     </div>
+    {%- if !s.local %}
     <p class="saved-note" lang="{{ ui.view.lang }}" hidden>{{ ui.msg("qrender-saved") }}</p>
+    {%- endif %}
     {%- if collapsed %}</details>{% endif %}
+{%- if s.local %}
+</div>
+{%- else %}
 </qr-section>
+{%- endif %}

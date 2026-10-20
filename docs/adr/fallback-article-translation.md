@@ -2,7 +2,8 @@
 
 Status: first iteration done (2026-10-19): commits ef53dc6, 64c2034,
 0319715, 0350717; notes in §8. Iteration 2 (the editor in a dialog, §6)
-done (7b48eed); notes in §9.
+done (7b48eed); notes in §9. Iteration 3 (the article in the page
+language, §10) done.
 
 ## 1. The problem
 
@@ -27,7 +28,8 @@ person writes the article in Gujarati. The prototype must show both:
   opened, its lead paragraphs and its subsections, collapsed. Notes,
   references and links (the `apparatus` titles) are left out, as now.
 - **Only for a fallback article.** When the page language has its own
-  article, nothing changes in this iteration.
+  article, nothing changes in this iteration. (Changed in iteration 3,
+  §10: the page shows the whole article in the page language too.)
 - **Translate, for each top-level section and for the lead.** A button at
   the end of the section heading: the Codex "language" icon
   (`assets/icons/language.svg`, inline, `currentColor`), no visible words,
@@ -257,3 +259,35 @@ Each step is one commit.
   section (`flex: none`).
 - A media query, not the page container query, stacks the columns of the
   dialog: the dialog is in the top layer and follows the window.
+
+## 10. Iteration 3: the article in the page language
+
+- **The problem.** A page whose language has an article (`en/Q183`,
+  `ig/Q30`) showed the first paragraph of a matched section, and the
+  titles of the other sections as links. A page with a fallback article
+  showed the whole article. The two pages must be the same.
+- **Decision.** The page shows the whole article that it shows the lead
+  of: the article in the page language, or else the fallback article.
+  The placement is the same (§2). A section in the page language has no
+  translate button and no saved note, and it is a `div`, not a
+  `qr-section`. The page has the translator dialog only when it has a
+  text in another language.
+- **Fetch.** The article in the page language keeps its outline too. The
+  parse request does not change; the links of the outline need more
+  requests. `FETCH_VERSION` 14 → 15.
+- **View.** `ProseSection` gets `local` (as `Article` and
+  `SectionProse`). The view schema changes.
+- **Fixtures.** The `article` of `q3870.en` is fetched again (the labels
+  are as before). The replay test needs no new record: the en text uses
+  the same English article as the gu text.
+- **Notes.**
+  - Size: the HTML of `en/Q3870` grew from 27 KB to 97 KB (gzip), the
+    same as `gu/Q3870` (101 KB). `en/Q183` is 250 KB.
+  - The apparatus titles (`layouts.toml`) are listed for `en` and `ml`
+    only. In another wiki, "See also" and "External links" are now
+    sections with content at the end of the page (`ig/Q30`: "Lee nke
+    ozo", "Jikodo na ga ezí"). Before, they were only titles.
+  - When every article has an outline, `unmatched_sections`,
+    `prose_text` (`section_prose`) and `Article.section_text` are not
+    used. The text fixtures that were fetched before this change still
+    use them.

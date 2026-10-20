@@ -41,7 +41,7 @@ pub struct View {
     /// The article sections that no spread matched (their titles), when
     /// the page does not show their content.
     pub unmatched_sections: Vec<Link>,
-    /// The same sections with their content: for a fallback article.
+    /// The same sections with their content, when the page shows it.
     #[serde(skip_serializing_if = "Vec::is_empty")]
     pub more_sections: Vec<ProseSection>,
     /// The values that the page does not show: not of the best rank.
@@ -150,14 +150,12 @@ pub struct SpreadView {
     pub prose_text: Option<SectionProse>,
     /// The article sections of the spread.
     pub prose_links: Vec<Link>,
-    /// The article sections of the spread with their content: for a
-    /// fallback article.
+    /// The article sections of the spread with their content.
     #[serde(skip_serializing_if = "Vec::is_empty")]
     pub sections: Vec<ProseSection>,
 }
 
-/// A section of the fallback article, with its content and its
-/// subsections.
+/// A section of the article, with its content and its subsections.
 #[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct ProseSection {
     pub title: String,
@@ -165,6 +163,8 @@ pub struct ProseSection {
     /// The section in the article.
     pub href: String,
     pub lang: Lang,
+    /// The article is in the page language: nothing to translate.
+    pub local: bool,
     /// 2 for a section, 3 for its subsection, and so on.
     pub level: u8,
     /// Cleaned HTML, as the lead: `p`, `ul`, `ol`, `dl`, `blockquote`.
