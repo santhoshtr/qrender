@@ -3,6 +3,93 @@ source: qrender/tests/views.rs
 expression: json
 ---
 {
+  "citations": {
+    "4f71788aaceb07865620ab192af96b5a4c85fcb4": {
+      "citation": {
+        "kind": "web",
+        "url": "http://www.demographia.com/db-worldua.pdf"
+      },
+      "origin": {
+        "from": "wikidata",
+        "hash": "4f71788aaceb07865620ab192af96b5a4c85fcb4"
+      }
+    },
+    "7b276f86e9588d62c2b6e9176bc2edd62d63e623": {
+      "citation": {
+        "accessed": {
+          "precision": 11,
+          "time": "2018-08-06T00:00:00Z"
+        },
+        "id": {
+          "pid": "P5573",
+          "value": "8464"
+        },
+        "kind": "record",
+        "stated_in": "Q265049",
+        "url": "https://www.archinform.net/ort/8464.htm"
+      },
+      "origin": {
+        "from": "wikidata",
+        "hash": "7b276f86e9588d62c2b6e9176bc2edd62d63e623"
+      }
+    },
+    "998cc81b042e28b97d34f26dc57c1a1eb221abc7": {
+      "citation": {
+        "accessed": {
+          "precision": 11,
+          "time": "2023-11-01T00:00:00Z"
+        },
+        "kind": "web",
+        "language": "en",
+        "title": "Nairobi City and the city of Raleigh, North Carolina ink twining agreement",
+        "url": "https://nairobi.go.ke/nairobi-city-city-raleigh-north-carolina-ink-twining-agreement/"
+      },
+      "origin": {
+        "from": "wikidata",
+        "hash": "998cc81b042e28b97d34f26dc57c1a1eb221abc7"
+      }
+    },
+    "9bafa148bebe67741e97cb9dc1c39ca5250126bc": {
+      "citation": {
+        "kind": "web",
+        "url": "https://web.archive.org/web/20090314131819/http://www.cbs.go.ke/sectoral/population/projections.html"
+      },
+      "origin": {
+        "from": "wikidata",
+        "hash": "9bafa148bebe67741e97cb9dc1c39ca5250126bc"
+      }
+    },
+    "b31b2e8297e678c210743cf2a193cb826d470471": {
+      "citation": {
+        "kind": "web",
+        "url": "https://www.c40.org/es/steering-committee/governor-sakaja-arthur-johnson/"
+      },
+      "origin": {
+        "from": "wikidata",
+        "hash": "b31b2e8297e678c210743cf2a193cb826d470471"
+      }
+    },
+    "f2e6563645b8b0cd63f14d11cf9a65125daa1188": {
+      "citation": {
+        "kind": "web",
+        "url": "http://cnig.gouv.fr/wp-content/uploads/2020/02/CNT-PVM_r%C3%A9vis%C3%A9_2020-01-27-1.pdf"
+      },
+      "origin": {
+        "from": "wikidata",
+        "hash": "f2e6563645b8b0cd63f14d11cf9a65125daa1188"
+      }
+    },
+    "fc508efe8351fc28439079bc359d81c8cf4dfb1a": {
+      "citation": {
+        "kind": "record",
+        "stated_in": "Q2864340"
+      },
+      "origin": {
+        "from": "wikidata",
+        "hash": "fc508efe8351fc28439079bc359d81c8cf4dfb1a"
+      }
+    }
+  },
   "composition": "composition/0.3",
   "coverage": {
     "have": 74,
@@ -785,6 +872,16 @@ expression: json
       "lang": "en",
       "text": "Kenya Colony"
     },
+    "Q265049": {
+      "href": "https://www.wikidata.org/wiki/Q265049",
+      "lang": "en",
+      "text": "archINFORM"
+    },
+    "Q2864340": {
+      "href": "https://www.wikidata.org/wiki/Q2864340",
+      "lang": "en",
+      "text": "French order of 4 Nov. 1993 about names of states and capitals"
+    },
     "Q28967580": {
       "href": "https://www.wikidata.org/wiki/Q28967580",
       "lang": "en",
@@ -933,11 +1030,11 @@ expression: json
     "more": [
       "Nicknamed the &quot;Green City under the Sun&quot;, Nairobi is uniquely notable for being the only capital city in the world that hosts a <a href=\"https://en.wikipedia.org/wiki/Nairobi_National_Park\">national park</a> within its boundaries. Its name originates from the <a href=\"https://en.wikipedia.org/wiki/Maasai_language\">Maasai</a> phrase <i>Enkare Nyirobi</i>, meaning &quot;place of cool waters&quot;.",
       "As the national capital, Nairobi is home to the <a href=\"https://en.wikipedia.org/wiki/Parliament_Buildings_(Kenya)\">Kenyan Parliament Buildings</a>, the <a href=\"https://en.wikipedia.org/wiki/State_House,_Nairobi\">State House</a> and the <a href=\"https://en.wikipedia.org/wiki/Supreme_Court_of_Kenya\">Supreme Court Building</a>. It is the major financial and economic hub of <a href=\"https://en.wikipedia.org/wiki/East_Africa\">East Africa</a>, hosting thousands of Kenyan businesses and international companies and organisations, including the <a href=\"https://en.wikipedia.org/wiki/United_Nations_Environment_Programme\">United Nations Environment Programme</a> (UN Environment) and the <a href=\"https://en.wikipedia.org/wiki/United_Nations_Office_at_Nairobi\">United Nations Office at Nairobi</a> (UNON). The <a href=\"https://en.wikipedia.org/wiki/Nairobi_Securities_Exchange\">Nairobi Securities Exchange</a> (NSE) is one of the largest <a href=\"https://en.wikipedia.org/wiki/Stock_exchange\">stock exchanges</a> in Africa and the second-oldest exchange on the continent. It is Africa's fourth-largest stock exchange by trading volume, capable of processing 10 million trades a day. Nairobi is considered a <a href=\"https://en.wikipedia.org/wiki/Global_city\">global city</a> and was ranked as a &quot;Beta World City&quot; by the <a href=\"https://en.wikipedia.org/wiki/Globalization_and_World_Cities_Research_Network\">Globalisation and World Cities Research Network</a> as of 2024.",
-      "Nairobi was founded in 1898 by colonial authorities in <a href=\"https://en.wikipedia.org/wiki/British_East_Africa\">British East Africa</a>, as a rail depot on the <a href=\"https://en.wikipedia.org/wiki/Uganda\">Uganda</a>–<a href=\"https://en.wikipedia.org/wiki/Rail_transport_in_Kenya\">Kenya Railway.</a> The authorities favoured it as an ideal resting place due to its <a href=\"https://en.wikipedia.org/wiki/Montane_ecosystems\">high elevation</a>, <a href=\"https://en.wikipedia.org/wiki/Temperate_climate\">temperate climate</a>, and adequate water supply. The town quickly grew to replace <a href=\"https://en.wikipedia.org/wiki/Mombasa\">Mombasa</a> as the capital of Kenya in 1907.",
-      "After independence in 1963, Nairobi became the capital of the <a href=\"https://en.wikipedia.org/wiki/Kenya\">Republic of Kenya</a>. During Kenya's early period, the city became a centre for the <a href=\"https://en.wikipedia.org/wiki/Coffee\">coffee</a>, <a href=\"https://en.wikipedia.org/wiki/Tea\">tea</a> and <a href=\"https://en.wikipedia.org/wiki/Sisal\">sisal</a> industries. Successive post-independence governments have built and turned Nairobi into a modern metropolitan city with a diverse population and a growing economy."
+      "Nairobi was founded in 1898 by colonial authorities in <a href=\"https://en.wikipedia.org/wiki/British_East_Africa\">British East Africa</a>, as a rail depot on the <a href=\"https://en.wikipedia.org/wiki/Uganda\">Uganda</a>–<a href=\"https://en.wikipedia.org/wiki/Rail_transport_in_Kenya\">Kenya Railway.</a> The authorities favoured it as an ideal resting place due to its <a href=\"https://en.wikipedia.org/wiki/Montane_ecosystems\">high elevation</a>, <a href=\"https://en.wikipedia.org/wiki/Temperate_climate\">temperate climate</a>, and adequate water supply.<sup data-note=\"2\"></sup> The town quickly grew to replace <a href=\"https://en.wikipedia.org/wiki/Mombasa\">Mombasa</a> as the capital of Kenya in 1907.<sup data-note=\"3\"></sup>",
+      "After independence in 1963, Nairobi became the capital of the <a href=\"https://en.wikipedia.org/wiki/Kenya\">Republic of Kenya</a>.<sup data-note=\"4\"></sup> During Kenya's early period, the city became a centre for the <a href=\"https://en.wikipedia.org/wiki/Coffee\">coffee</a>, <a href=\"https://en.wikipedia.org/wiki/Tea\">tea</a> and <a href=\"https://en.wikipedia.org/wiki/Sisal\">sisal</a> industries.<sup data-note=\"5\"></sup><sup data-note=\"6\"></sup> Successive post-independence governments have built and turned Nairobi into a modern metropolitan city with a diverse population and a growing economy.<sup data-note=\"7\"></sup>"
     ],
     "paragraphs": [
-      "<b>Nairobi</b> (<a href=\"https://en.wikipedia.org/wiki/Help:IPA/English\">/naɪˈroʊbi/</a> <a href=\"https://en.wikipedia.org/wiki/File:Swa-nairobi.ogg\">ⓘ</a> <a href=\"https://en.wikipedia.org/wiki/Help:Pronunciation_respelling_key\"><i>ny-ROH-bee</i></a>) (<i>Jiji kuu la Nairobi</i>, in <a href=\"https://en.wikipedia.org/wiki/Swahili_language\">Swahili</a>),  is the <a href=\"https://en.wikipedia.org/wiki/Capital_city\">capital</a> and largest city of <a href=\"https://en.wikipedia.org/wiki/Kenya\">Kenya</a>, located in the south-central part of the country. As of 2026, it has a population of 5.6 million and a metropolitan population of 15.95 million, making it the <a href=\"https://en.wikipedia.org/wiki/List_of_cities_in_Africa_by_population\">8th most populous city</a> in <a href=\"https://en.wikipedia.org/wiki/Africa\">Africa</a> and the 4th most populous metropolitan area. The city goes beyond its borders and has expanded into neighbouring counties, making it the 4th largest metropolitan area in Africa."
+      "<b>Nairobi</b> (<a href=\"https://en.wikipedia.org/wiki/Help:IPA/English\">/naɪˈroʊbi/</a> <a href=\"https://en.wikipedia.org/wiki/File:Swa-nairobi.ogg\">ⓘ</a> <a href=\"https://en.wikipedia.org/wiki/Help:Pronunciation_respelling_key\"><i>ny-ROH-bee</i></a>) (<i>Jiji kuu la Nairobi</i>, in <a href=\"https://en.wikipedia.org/wiki/Swahili_language\">Swahili</a>),  is the <a href=\"https://en.wikipedia.org/wiki/Capital_city\">capital</a> and largest city of <a href=\"https://en.wikipedia.org/wiki/Kenya\">Kenya</a>, located in the south-central part of the country. As of 2026, it has a population of 5.6 million and a metropolitan population of 15.95 million,<sup data-note=\"1\"></sup> making it the <a href=\"https://en.wikipedia.org/wiki/List_of_cities_in_Africa_by_population\">8th most populous city</a> in <a href=\"https://en.wikipedia.org/wiki/Africa\">Africa</a> and the 4th most populous metropolitan area. The city goes beyond its borders and has expanded into neighbouring counties, making it the 4th largest metropolitan area in Africa."
     ],
     "url": "https://en.wikipedia.org/wiki/Nairobi"
   },
@@ -977,6 +1074,597 @@ expression: json
     "qrender-view-larger": "View larger",
     "qrender-view-model": "View in 3D"
   },
+  "notes": [
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "name": "OECD/SWAC"
+              }
+            ],
+            "date": {
+              "precision": 9,
+              "time": "2025-01-01T00:00:00Z"
+            },
+            "kind": "web",
+            "publisher": "Organisation for Economic Co-operation and Development",
+            "title": "Africapolis Database: Kenya Urban Agglomerations",
+            "url": "https://africapolis.org"
+          },
+          "origin": {
+            "from": "coins"
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 1
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "html": "Roger S. Greenway, Timothy M. Monsma, <i>Cities: missions' new frontier</i>, (Baker Book House: 1989), p.163.",
+            "kind": "text"
+          },
+          "origin": {
+            "from": "html"
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 2
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "accessed": {
+              "precision": 11,
+              "time": "2019-06-14T00:00:00Z"
+            },
+            "archive": {
+              "date": {
+                "precision": 11,
+                "time": "2021-01-26T00:00:00Z"
+              },
+              "original": "dead",
+              "url": "https://web.archive.org/web/20210126151126/http://www.mombasa.go.ke/history-of-mombasa/"
+            },
+            "authors": [
+              {
+                "name": "mombasa.go.ke"
+              }
+            ],
+            "date": {
+              "precision": 11,
+              "time": "2018-07-28T00:00:00Z"
+            },
+            "kind": "web",
+            "publisher": "Mombasa County",
+            "title": "History of Mombasa",
+            "url": "http://www.mombasa.go.ke/history-of-mombasa/"
+          },
+          "origin": {
+            "from": "template",
+            "name": "cite web",
+            "params": {
+              "access-date": "14 June 2019",
+              "archive-date": "26 January 2021",
+              "archive-url": "https://web.archive.org/web/20210126151126/http://www.mombasa.go.ke/history-of-mombasa/",
+              "date": "2018-07-28",
+              "last": "mombasa.go.ke",
+              "publisher": "Mombasa County",
+              "title": "History of Mombasa",
+              "url": "http://www.mombasa.go.ke/history-of-mombasa/",
+              "url-status": "dead"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 3
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "accessed": {
+              "precision": 11,
+              "time": "2020-02-18T00:00:00Z"
+            },
+            "archive": {
+              "date": {
+                "precision": 11,
+                "time": "2019-12-11T00:00:00Z"
+              },
+              "url": "https://web.archive.org/web/20191211213417/https://www.britannica.com/place/Nairobi"
+            },
+            "kind": "web",
+            "publisher": "Britannica",
+            "title": "Nairobi History",
+            "url": "https://www.britannica.com/place/Nairobi"
+          },
+          "origin": {
+            "from": "template",
+            "name": "cite web",
+            "params": {
+              "access-date": "18 February 2020",
+              "archive-date": "11 December 2019",
+              "archive-url": "https://web.archive.org/web/20191211213417/https://www.britannica.com/place/Nairobi",
+              "last": "",
+              "publisher": "Britannica",
+              "title": "Nairobi History",
+              "url": "https://www.britannica.com/place/Nairobi",
+              "url-status": "live"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 4
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "accessed": {
+              "precision": 11,
+              "time": "2020-05-24T00:00:00Z"
+            },
+            "archive": {
+              "date": {
+                "precision": 11,
+                "time": "2020-07-22T00:00:00Z"
+              },
+              "url": "https://web.archive.org/web/20200722121011/http://www.eastafricasisal.com/production/"
+            },
+            "kind": "web",
+            "language": "en-us",
+            "title": "Production",
+            "url": "http://www.eastafricasisal.com/production/",
+            "website": "East Africa Sisal"
+          },
+          "origin": {
+            "from": "template",
+            "name": "cite web",
+            "params": {
+              "access-date": "2020-05-24",
+              "archive-date": "22 July 2020",
+              "archive-url": "https://web.archive.org/web/20200722121011/http://www.eastafricasisal.com/production/",
+              "language": "en-US",
+              "title": "Production",
+              "url": "http://www.eastafricasisal.com/production/",
+              "url-status": "live",
+              "website": "East Africa Sisal"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 5
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "family": "Rashid",
+                "given": "Mahbub"
+              }
+            ],
+            "date": {
+              "precision": 11,
+              "time": "2016-06-16T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "978-3-319-30750-3",
+                "type": "isbn"
+              }
+            ],
+            "kind": "book",
+            "language": "en",
+            "publisher": "Springer",
+            "title": "The Geometry of Urban Layouts: A Global Comparative Study",
+            "url": "https://books.google.com/books?id=Iuh6DAAAQBAJ&q=During+Kenya%27s+colonial+period%2C+the+city+became+a+centre+for+the+colony%27s+coffee%2C+tea+and+sisal+industry&pg=PA374"
+          },
+          "origin": {
+            "from": "template",
+            "name": "Cite book",
+            "params": {
+              "date": "2016-06-16",
+              "first": "Mahbub",
+              "isbn": "978-3-319-30750-3",
+              "language": "en",
+              "last": "Rashid",
+              "publisher": "Springer",
+              "title": "The Geometry of Urban Layouts: A Global Comparative Study",
+              "url": "https://books.google.com/books?id=Iuh6DAAAQBAJ&q=During+Kenya%27s+colonial+period%2C+the+city+became+a+centre+for+the+colony%27s+coffee%2C+tea+and+sisal+industry&pg=PA374"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 6
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "accessed": {
+              "precision": 11,
+              "time": "2025-01-19T00:00:00Z"
+            },
+            "kind": "web",
+            "language": "en",
+            "title": "Nairobi, Kenya | History Timeline",
+            "url": "https://historytimelines.co/timeline/nairobi-kenya",
+            "website": "History Timelines"
+          },
+          "origin": {
+            "from": "template",
+            "name": "Cite web",
+            "params": {
+              "access-date": "2025-01-19",
+              "language": "en",
+              "title": "Nairobi, Kenya {{!}} History Timeline",
+              "url": "https://historytimelines.co/timeline/nairobi-kenya",
+              "website": "History Timelines"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 7
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "accessed": {
+              "precision": 11,
+              "time": "2007-06-28T00:00:00Z"
+            },
+            "archive": {
+              "date": {
+                "precision": 11,
+                "time": "2006-11-03T00:00:00Z"
+              },
+              "original": "dead",
+              "url": "https://web.archive.org/web/20061103152926/http://www.millenniumit.com/esp/news_7.php"
+            },
+            "authors": [
+              {
+                "name": "Millennium IT"
+              }
+            ],
+            "kind": "web",
+            "publisher": "millenniumit.com",
+            "title": "Live Trading commences at Nairobi Securities Exchange",
+            "url": "http://www.millenniumit.com/esp/news_7.php"
+          },
+          "origin": {
+            "from": "template",
+            "name": "cite web",
+            "params": {
+              "access-date": "28 June 2007",
+              "archive-date": "3 November 2006",
+              "archive-url": "https://web.archive.org/web/20061103152926/http://www.millenniumit.com/esp/news_7.php",
+              "last": "Millennium IT",
+              "publisher": "millenniumit.com",
+              "title": "Live Trading commences at Nairobi Securities Exchange",
+              "url": "http://www.millenniumit.com/esp/news_7.php",
+              "url-status": "dead"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 8
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "accessed": {
+              "precision": 11,
+              "time": "2021-08-03T00:00:00Z"
+            },
+            "archive": {
+              "date": {
+                "precision": 11,
+                "time": "2023-03-26T00:00:00Z"
+              },
+              "original": "dead",
+              "url": "https://web.archive.org/web/20230326032129/https://nairobiassembly.go.ke/ncca/wp-content/uploads/hansard/2019/20th-November-2019.pdf"
+            },
+            "date": {
+              "precision": 11,
+              "time": "2019-11-20T00:00:00Z"
+            },
+            "kind": "web",
+            "publisher": "Nairobi",
+            "title": "Official Report: Second County Assembly – Third Session",
+            "url": "https://nairobiassembly.go.ke/ncca/wp-content/uploads/hansard/2019/20th-November-2019.pdf"
+          },
+          "origin": {
+            "from": "template",
+            "name": "cite web",
+            "params": {
+              "access-date": "2021-08-03",
+              "archive-date": "26 March 2023",
+              "archive-url": "https://web.archive.org/web/20230326032129/https://nairobiassembly.go.ke/ncca/wp-content/uploads/hansard/2019/20th-November-2019.pdf",
+              "date": "2019-11-20",
+              "publisher": "Nairobi",
+              "title": "Official Report: Second County Assembly – Third Session",
+              "url": "https://nairobiassembly.go.ke/ncca/wp-content/uploads/hansard/2019/20th-November-2019.pdf",
+              "url-status": "dead"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 9
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "html": "Donald B. Freeman, City of Farmers: Informal Urban Agriculture in the Open Spaces of Nairobi, Kenya, McGill-Queen's Press – MQUP, 1 March 1991",
+            "kind": "text"
+          },
+          "origin": {
+            "from": "html"
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 10
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "html": "Frédéric Landy, From Urban National Parks to Natured Cities in the Global South: The Quest for Naturbanity, Springer, 20 Jul 2018, p.50",
+            "kind": "text"
+          },
+          "origin": {
+            "from": "html"
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 11
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "html": "Anne-Marie Deisser, Mugwima Njuguna, Conservation of Natural and Cultural Heritage in Kenya, UCL Press, 7 Oct 2016, p.76",
+            "kind": "text"
+          },
+          "origin": {
+            "from": "html"
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 12
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "accessed": {
+              "precision": 11,
+              "time": "2007-06-17T00:00:00Z"
+            },
+            "archive": {
+              "date": {
+                "precision": 11,
+                "time": "2013-06-09T00:00:00Z"
+              },
+              "url": "https://web.archive.org/web/20130609014131/http://archive.unu.edu/unupress/unupbooks/uu26ue/uu26ue0o.htm"
+            },
+            "authors": [
+              {
+                "name": "United Nations University"
+              }
+            ],
+            "kind": "web",
+            "publisher": "unu.edu",
+            "title": "Nairobi: National capital and regional hub",
+            "url": "http://www.unu.edu/unupress/unupbooks/uu26ue/uu26ue0o.htm"
+          },
+          "origin": {
+            "from": "template",
+            "name": "cite web",
+            "params": {
+              "access-date": "17 June 2007",
+              "archive-date": "9 June 2013",
+              "archive-url": "https://web.archive.org/web/20130609014131/http://archive.unu.edu/unupress/unupbooks/uu26ue/uu26ue0o.htm",
+              "last": "United Nations University",
+              "publisher": "unu.edu",
+              "title": "Nairobi: National capital and regional hub",
+              "url": "http://www.unu.edu/unupress/unupbooks/uu26ue/uu26ue0o.htm",
+              "url-status": "live"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 13
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "accessed": {
+              "precision": 11,
+              "time": "2024-03-27T00:00:00Z"
+            },
+            "archive": {
+              "date": {
+                "precision": 11,
+                "time": "2024-03-27T00:00:00Z"
+              },
+              "url": "https://web.archive.org/web/20240327074432/https://kenyanwallstreet.com/kenya-among-countries-with-largest-number-of-african-immigrants/"
+            },
+            "date": {
+              "precision": 11,
+              "time": "2018-06-04T00:00:00Z"
+            },
+            "kind": "web",
+            "language": "en-us",
+            "title": "Kenya Among Countries with largest number of African immigrants – Kenyan Wall Street",
+            "url": "https://kenyanwallstreet.com/kenya-among-countries-with-largest-number-of-african-immigrants/"
+          },
+          "origin": {
+            "from": "template",
+            "name": "Cite web",
+            "params": {
+              "access-date": "2024-03-27",
+              "archive-date": "27 March 2024",
+              "archive-url": "https://web.archive.org/web/20240327074432/https://kenyanwallstreet.com/kenya-among-countries-with-largest-number-of-african-immigrants/",
+              "date": "2018-06-04",
+              "language": "en-US",
+              "title": "Kenya Among Countries with largest number of African immigrants – Kenyan Wall Street",
+              "url": "https://kenyanwallstreet.com/kenya-among-countries-with-largest-number-of-african-immigrants/",
+              "url-status": "live"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 14
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "accessed": {
+              "precision": 11,
+              "time": "2019-09-06T00:00:00Z"
+            },
+            "archive": {
+              "date": {
+                "precision": 11,
+                "time": "2013-10-02T00:00:00Z"
+              },
+              "original": "dead",
+              "url": "https://web.archive.org/web/20131002062623/http://www.nielect.com/county_moreinfo.php?cid=46"
+            },
+            "date": {
+              "precision": 11,
+              "time": "2013-10-02T00:00:00Z"
+            },
+            "kind": "web",
+            "title": "NiElect::Be a Peace Ambassador",
+            "url": "http://www.nielect.com/county_moreinfo.php?cid=46"
+          },
+          "origin": {
+            "from": "template",
+            "name": "cite web",
+            "params": {
+              "access-date": "2019-09-06",
+              "archive-date": "2013-10-02",
+              "archive-url": "https://web.archive.org/web/20131002062623/http://www.nielect.com/county_moreinfo.php?cid=46",
+              "date": "2013-10-02",
+              "title": "NiElect::Be a Peace Ambassador",
+              "url": "http://www.nielect.com/county_moreinfo.php?cid=46",
+              "url-status": "dead"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 15
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "accessed": {
+              "precision": 11,
+              "time": "2019-09-06T00:00:00Z"
+            },
+            "archive": {
+              "date": {
+                "precision": 11,
+                "time": "2019-09-06T00:00:00Z"
+              },
+              "url": "https://web.archive.org/web/20190906161345/https://journals.openedition.org/eastafrica/521"
+            },
+            "authors": [
+              {
+                "family": "Desgroppes",
+                "given": "Amélie"
+              },
+              {
+                "family": "Taupin",
+                "given": "Sophie"
+              }
+            ],
+            "date": {
+              "precision": 11,
+              "time": "2011-09-01T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "10.4000/eastafrica.521",
+                "type": "doi"
+              },
+              {
+                "id": "2071-7245",
+                "type": "issn"
+              },
+              {
+                "id": "16003013",
+                "type": "s2cid"
+              }
+            ],
+            "issue": "44",
+            "journal": "Les Cahiers d'Afrique de l'Est / The East African Review",
+            "kind": "journal",
+            "language": "en",
+            "pages": "23–33",
+            "title": "Kibera: The Biggest Slum in Africa?",
+            "url": "http://journals.openedition.org/eastafrica/521"
+          },
+          "origin": {
+            "from": "template",
+            "name": "Cite journal",
+            "params": {
+              "access-date": "6 September 2019",
+              "archive-date": "6 September 2019",
+              "archive-url": "https://web.archive.org/web/20190906161345/https://journals.openedition.org/eastafrica/521",
+              "date": "2011-09-01",
+              "doi": "10.4000/eastafrica.521",
+              "doi-access": "free",
+              "first1": "Amélie",
+              "first2": "Sophie",
+              "issn": "2071-7245",
+              "issue": "44",
+              "journal": "Les Cahiers d'Afrique de l'Est / The East African Review",
+              "language": "en",
+              "last1": "Desgroppes",
+              "last2": "Taupin",
+              "pages": "23–33",
+              "s2cid": "16003013",
+              "title": "Kibera: The Biggest Slum in Africa?",
+              "url": "http://journals.openedition.org/eastafrica/521",
+              "url-status": "live"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 16
+    }
+  ],
   "page_images": {
     "Q1061480": {
       "aspect": 1.5056,
@@ -1094,7 +1782,7 @@ expression: json
       ],
       "prose_text": {
         "href": "https://en.wikipedia.org/wiki/Nairobi#Economy",
-        "html": "Nairobi is home to the <a href=\"https://en.wikipedia.org/wiki/Nairobi_Securities_Exchange\">Nairobi Securities Exchange</a> (NSE), one of Africa's largest <a href=\"https://en.wikipedia.org/wiki/Stock_exchange\">stock exchanges</a>. The NSE was officially recognised as an overseas stock exchange by the <a href=\"https://en.wikipedia.org/wiki/London_Stock_Exchange\">London Stock Exchange</a> in 1953. The exchange is Africa's fourth largest in terms of trading volumes, and fifth largest in terms of Market Capitalization as a percentage of GDP.",
+        "html": "Nairobi is home to the <a href=\"https://en.wikipedia.org/wiki/Nairobi_Securities_Exchange\">Nairobi Securities Exchange</a> (NSE), one of Africa's largest <a href=\"https://en.wikipedia.org/wiki/Stock_exchange\">stock exchanges</a>. The NSE was officially recognised as an overseas stock exchange by the <a href=\"https://en.wikipedia.org/wiki/London_Stock_Exchange\">London Stock Exchange</a> in 1953. The exchange is Africa's fourth largest in terms of trading volumes, and fifth largest in terms of Market Capitalization as a percentage of GDP.<sup data-note=\"8\"></sup>",
         "lang": "en",
         "local": true,
         "title": "Economy"
@@ -1116,7 +1804,7 @@ expression: json
       ],
       "prose_text": {
         "href": "https://en.wikipedia.org/wiki/Nairobi#Twin_towns_and_sister_cities",
-        "html": "Nairobi is <a href=\"https://en.wikipedia.org/wiki/Sister_city\">twinned</a> with:",
+        "html": "Nairobi is <a href=\"https://en.wikipedia.org/wiki/Sister_city\">twinned</a> with:<sup data-note=\"9\"></sup>",
         "lang": "en",
         "local": true,
         "title": "Twin towns and sister cities"
@@ -1138,7 +1826,7 @@ expression: json
       ],
       "prose_text": {
         "href": "https://en.wikipedia.org/wiki/Nairobi#History",
-        "html": "The site of Nairobi was originally a swamp land occupied by a <a href=\"https://en.wikipedia.org/wiki/Pastoralism\">pastoralist</a> people, the <a href=\"https://en.wikipedia.org/wiki/Maasai_people\">Maasai</a>, the long-distance trader community, <a href=\"https://en.wikipedia.org/wiki/Kamba_people\">Akamba People</a>, as well as the <a href=\"https://en.wikipedia.org/wiki/Agriculturalist\">agriculturalist</a> <a href=\"https://en.wikipedia.org/wiki/Kikuyu_people\">Kikuyu people</a>. The name Nairobi comes from the <a href=\"https://en.wikipedia.org/wiki/Maasai_language\">Maasai</a> expression meaning 'cool waters'. referring to the cold water stream which flowed through the area. With the arrival of the <a href=\"https://en.wikipedia.org/wiki/Uganda_Railway\">Uganda Railway</a>, the site was identified by <a href=\"https://en.wikipedia.org/wiki/George_Whitehouse\">Sir George Whitehouse</a> for a store depot, shunting ground and camping ground for the <a href=\"https://en.wikipedia.org/wiki/Indians_in_Kenya\">Indian</a> labourers working on the railway.",
+        "html": "The site of Nairobi was originally a swamp land occupied by a <a href=\"https://en.wikipedia.org/wiki/Pastoralism\">pastoralist</a> people, the <a href=\"https://en.wikipedia.org/wiki/Maasai_people\">Maasai</a>, the long-distance trader community, <a href=\"https://en.wikipedia.org/wiki/Kamba_people\">Akamba People</a>, as well as the <a href=\"https://en.wikipedia.org/wiki/Agriculturalist\">agriculturalist</a> <a href=\"https://en.wikipedia.org/wiki/Kikuyu_people\">Kikuyu people</a>.<sup data-note=\"10\"></sup> The name Nairobi comes from the <a href=\"https://en.wikipedia.org/wiki/Maasai_language\">Maasai</a> expression meaning 'cool waters'. referring to the cold water stream which flowed through the area.<sup data-note=\"11\"></sup> With the arrival of the <a href=\"https://en.wikipedia.org/wiki/Uganda_Railway\">Uganda Railway</a>, the site was identified by <a href=\"https://en.wikipedia.org/wiki/George_Whitehouse\">Sir George Whitehouse</a> for a store depot, shunting ground and camping ground for the <a href=\"https://en.wikipedia.org/wiki/Indians_in_Kenya\">Indian</a> labourers working on the railway.<sup data-note=\"12\"></sup><sup data-note=\"13\"></sup>",
         "lang": "en",
         "local": true,
         "title": "History"
@@ -1160,7 +1848,7 @@ expression: json
       ],
       "prose_text": {
         "href": "https://en.wikipedia.org/wiki/Nairobi#Culture",
-        "html": "Nairobi is diverse in African cultures. As a cosmopolitan African city, it hosts all the diverse tribes that make up Kenya, and hosts a large immigrant population from other African countries.",
+        "html": "Nairobi is diverse in African cultures. As a cosmopolitan African city, it hosts all the diverse tribes that make up Kenya, and hosts a large immigrant population from other African countries.<sup data-note=\"14\"></sup><sup data-note=\"15\"></sup><sup data-note=\"16\"></sup>",
         "lang": "en",
         "local": true,
         "title": "Culture"

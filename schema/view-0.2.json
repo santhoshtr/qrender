@@ -49,6 +49,32 @@
       ],
       "type": "object"
     },
+    "Archive": {
+      "description": "A copy of the source in a web archive.",
+      "properties": {
+        "date": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "original": {
+          "$ref": "#/$defs/Original",
+          "description": "The state of the original URL."
+        },
+        "url": {
+          "$ref": "#/$defs/WebUrl"
+        }
+      },
+      "required": [
+        "url"
+      ],
+      "type": "object"
+    },
     "Article": {
       "properties": {
         "host": {
@@ -459,6 +485,103 @@
         }
       ]
     },
+    "Book": {
+      "description": "The fields that every work has.",
+      "properties": {
+        "accessed": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Date"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The date the source was read."
+        },
+        "archive": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Archive"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "authors": {
+          "items": {
+            "$ref": "#/$defs/Person2"
+          },
+          "type": "array"
+        },
+        "date": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Date"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The date of publication."
+        },
+        "ids": {
+          "items": {
+            "$ref": "#/$defs/Identifier2"
+          },
+          "type": "array"
+        },
+        "language": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Lang"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The language of the source."
+        },
+        "pages": {
+          "description": "The pages cited, as written.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "place": {
+          "description": "The place of publication.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "publisher": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "url": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/WebUrl"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
     "Card": {
       "properties": {
         "followers": {
@@ -524,6 +647,113 @@
       "required": [
         "pid",
         "values"
+      ],
+      "type": "object"
+    },
+    "Citation": {
+      "description": "A source that a text or a statement cites.",
+      "oneOf": [
+        {
+          "$ref": "#/$defs/Web",
+          "description": "A page on a site.",
+          "properties": {
+            "kind": {
+              "const": "web",
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/News",
+          "description": "An article in a newspaper or on a news site.",
+          "properties": {
+            "kind": {
+              "const": "news",
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/Journal",
+          "description": "An article in a journal.",
+          "properties": {
+            "kind": {
+              "const": "journal",
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/Book",
+          "properties": {
+            "kind": {
+              "const": "book",
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/Record",
+          "description": "A database or a work that Wikidata names (P248 stated in), maybe\nwith the identifier of the record in it.",
+          "properties": {
+            "kind": {
+              "const": "record",
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Free text that no template made, as HTML. It is not parsed: no\nguess.",
+          "properties": {
+            "html": {
+              "type": "string"
+            },
+            "kind": {
+              "const": "text",
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind",
+            "html"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "Cited": {
+      "description": "A citation and where it came from.",
+      "properties": {
+        "citation": {
+          "$ref": "#/$defs/Citation"
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin"
+        }
+      },
+      "required": [
+        "citation",
+        "origin"
       ],
       "type": "object"
     },
@@ -639,6 +869,43 @@
         "priority"
       ],
       "type": "object"
+    },
+    "Date": {
+      "anyOf": [
+        {
+          "properties": {
+            "precision": {
+              "description": "Wikidata precision: 9 year, 10 month, 11 day.",
+              "format": "uint8",
+              "maximum": 255,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "time": {
+              "description": "\"2018-07-28T00:00:00Z\".",
+              "type": "string"
+            }
+          },
+          "required": [
+            "time",
+            "precision"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "The text as the source wrote it: \"c. 1990\", \"Spring 2004\".",
+          "properties": {
+            "text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "text"
+          ],
+          "type": "object"
+        }
+      ],
+      "description": "A date. A date that the parser can read is a Wikidata time, so the\nbrowser formats it as it formats a statement value."
     },
     "Description": {
       "properties": {
@@ -896,6 +1163,13 @@
       ],
       "description": "A statement as the composition shows it.",
       "properties": {
+        "citations": {
+          "description": "The references that cite a source, by hash (in the citations of\nthe composition).",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
         "class": {
           "description": "The value is a class: its picture would show an example only.",
           "type": "boolean"
@@ -1071,6 +1345,13 @@
         "amount": {
           "format": "double",
           "type": "number"
+        },
+        "citations": {
+          "description": "The references that cite a source, by hash.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
         },
         "pid": {
           "$ref": "#/$defs/Pid"
@@ -1297,6 +1578,13 @@
       ],
       "description": "A small value: it joins the gallery of its spread.",
       "properties": {
+        "citations": {
+          "description": "The references that cite a source, by hash (in the citations of\nthe composition).",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
         "class": {
           "description": "The value is a class: its picture would show an example only.",
           "type": "boolean"
@@ -1424,6 +1712,142 @@
       ],
       "type": "object"
     },
+    "Identifier2": {
+      "description": "A standard identifier of a work.",
+      "oneOf": [
+        {
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "type": {
+              "const": "doi",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "id"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "type": {
+              "const": "isbn",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "id"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "type": {
+              "const": "issn",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "id"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "type": {
+              "const": "oclc",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "id"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "type": {
+              "const": "jstor",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "id"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Semantic Scholar.",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "type": {
+              "const": "s2cid",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "id"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "The Astrophysics Data System.",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "type": {
+              "const": "bibcode",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "id"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "The Handle System.",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "type": {
+              "const": "hdl",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "id"
+          ],
+          "type": "object"
+        }
+      ]
+    },
     "Identifiers": {
       "properties": {
         "values": {
@@ -1447,6 +1871,108 @@
       "required": [
         "item"
       ],
+      "type": "object"
+    },
+    "Journal": {
+      "description": "The fields that every work has.",
+      "properties": {
+        "accessed": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Date"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The date the source was read."
+        },
+        "archive": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Archive"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "authors": {
+          "items": {
+            "$ref": "#/$defs/Person2"
+          },
+          "type": "array"
+        },
+        "date": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Date"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The date of publication."
+        },
+        "ids": {
+          "items": {
+            "$ref": "#/$defs/Identifier2"
+          },
+          "type": "array"
+        },
+        "issue": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "journal": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "language": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Lang"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The language of the source."
+        },
+        "pages": {
+          "description": "As written: \"144–155\".",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "url": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/WebUrl"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "volume": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
       "type": "object"
     },
     "Kind": {
@@ -1734,6 +2260,13 @@
       ],
       "description": "A statement as the composition shows it.",
       "properties": {
+        "citations": {
+          "description": "The references that cite a source, by hash (in the citations of\nthe composition).",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
         "class": {
           "description": "The value is a class: its picture would show an example only.",
           "type": "boolean"
@@ -1996,6 +2529,13 @@
           "minItems": 4,
           "type": "array"
         },
+        "citations": {
+          "description": "The references that cite a source, by hash (in the citations of\nthe composition).",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
         "class": {
           "description": "The value is a class: its picture would show an example only.",
           "type": "boolean"
@@ -2248,6 +2788,13 @@
       ],
       "description": "A statement value, by the keys its kind uses.",
       "properties": {
+        "citations": {
+          "description": "The references that cite a source, by hash.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
         "pid": {
           "$ref": "#/$defs/Pid"
         },
@@ -2270,6 +2817,13 @@
         "amount": {
           "format": "double",
           "type": "number"
+        },
+        "citations": {
+          "description": "The references that cite a source, by hash.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
         },
         "pid": {
           "$ref": "#/$defs/Pid"
@@ -2500,6 +3054,13 @@
             "integer",
             "null"
           ]
+        },
+        "citations": {
+          "description": "The references that cite a source, by hash (in the citations of\nthe composition).",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
         },
         "class": {
           "description": "The value is a class: its picture would show an example only.",
@@ -2765,6 +3326,228 @@
         {
           "const": "rows",
           "description": "A row for each value, its picture small, its qualifiers in full:\nthey name other items (an embassy, a border).",
+          "type": "string"
+        }
+      ]
+    },
+    "News": {
+      "description": "The fields that every work has.",
+      "properties": {
+        "accessed": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Date"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The date the source was read."
+        },
+        "archive": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Archive"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "authors": {
+          "items": {
+            "$ref": "#/$defs/Person2"
+          },
+          "type": "array"
+        },
+        "date": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Date"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The date of publication."
+        },
+        "ids": {
+          "items": {
+            "$ref": "#/$defs/Identifier2"
+          },
+          "type": "array"
+        },
+        "language": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Lang"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The language of the source."
+        },
+        "newspaper": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "publisher": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "url": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/WebUrl"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "Note": {
+      "description": "A note of the article: a reference, or an explanatory note.",
+      "properties": {
+        "citations": {
+          "description": "The citations; the HTML of free text is cleaned as prose is.",
+          "items": {
+            "$ref": "#/$defs/Cited"
+          },
+          "type": "array"
+        },
+        "group": {
+          "description": "None for a reference; \"lower-alpha\" for an explanatory note.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "lang": {
+          "$ref": "#/$defs/Lang",
+          "description": "The language of the article."
+        },
+        "number": {
+          "description": "The number of the note on this page: its marks in the prose show\nit (`<sup data-note=\"3\"></sup>`).",
+          "format": "uint",
+          "minimum": 0,
+          "type": "integer"
+        },
+        "text": {
+          "description": "An explanatory note: its text, cleaned, with its own marks.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "number",
+        "lang"
+      ],
+      "type": "object"
+    },
+    "Origin": {
+      "description": "Where a citation came from: what an edit changes.",
+      "oneOf": [
+        {
+          "description": "A template in the article: its name and its parameters as\nwikitext, so an edit changes the same parameters (`access-date`,\nnot `accessed`).",
+          "properties": {
+            "from": {
+              "const": "template",
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "params": {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "type": "object"
+            }
+          },
+          "required": [
+            "from",
+            "name",
+            "params"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "The COinS data of a citation that has no template data (a\ntemplate made it inside another template).",
+          "properties": {
+            "from": {
+              "const": "coins",
+              "type": "string"
+            }
+          },
+          "required": [
+            "from"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "The free text of a note.",
+          "properties": {
+            "from": {
+              "const": "html",
+              "type": "string"
+            }
+          },
+          "required": [
+            "from"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "A reference of a Wikidata statement, by its hash.",
+          "properties": {
+            "from": {
+              "const": "wikidata",
+              "type": "string"
+            },
+            "hash": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "from",
+            "hash"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "Original": {
+      "description": "The state of the original URL of an archived source.",
+      "oneOf": [
+        {
+          "const": "live",
+          "description": "Live, or not known.",
+          "type": "string"
+        },
+        {
+          "const": "dead",
+          "description": "The address gives no page: the archive is the source.",
+          "type": "string"
+        },
+        {
+          "const": "unfit",
+          "description": "The address now has other content (usurped, unfit): it gets no\nlink.",
           "type": "string"
         }
       ]
@@ -3055,6 +3838,13 @@
       ],
       "description": "A statement as the composition shows it.",
       "properties": {
+        "citations": {
+          "description": "The references that cite a source, by hash (in the citations of\nthe composition).",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
         "class": {
           "description": "The value is a class: its picture would show an example only.",
           "type": "boolean"
@@ -3122,6 +3912,39 @@
         "pids"
       ],
       "type": "object"
+    },
+    "Person2": {
+      "anyOf": [
+        {
+          "properties": {
+            "family": {
+              "type": "string"
+            },
+            "given": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "family"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "type": "object"
+        }
+      ],
+      "description": "An author: a name in parts, or a name as one text (an organization,\n\"mombasa.go.ke\")."
     },
     "Picture": {
       "description": "A picture (or a sound, a video, a 3D model): intrinsic facts only.",
@@ -3207,6 +4030,13 @@
         "apart": {
           "description": "A value of a year whose values differ by another qualifier (by sex),\nnot of the measurement of most values: in the table, not on the\nline. The gap shows editors the data to fix.",
           "type": "boolean"
+        },
+        "citations": {
+          "description": "The references that cite a source, by hash.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
         },
         "other": {
           "description": "Another value of the year, from another source: the point of the\nyear is its preferred value.",
@@ -3601,6 +4431,89 @@
       ],
       "type": "string"
     },
+    "Record": {
+      "properties": {
+        "accessed": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "archive": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Archive"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "id": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/RecordId"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "published": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "stated_in": {
+          "$ref": "#/$defs/Qid"
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "url": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/WebUrl"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "stated_in"
+      ],
+      "type": "object"
+    },
+    "RecordId": {
+      "description": "The identifier of a record in a database: an external identifier\nproperty (P214 VIAF ID) and its value. The formatter URL of the\nproperty gives its address.",
+      "properties": {
+        "pid": {
+          "$ref": "#/$defs/Pid"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "pid",
+        "value"
+      ],
+      "type": "object"
+    },
     "Scale": {
       "properties": {
         "container": {
@@ -3676,6 +4589,13 @@
     },
     "ScoreValue": {
       "properties": {
+        "citations": {
+          "description": "The references that cite a source, by hash.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
         "count": {
           "anyOf": [
             {
@@ -3765,6 +4685,13 @@
     },
     "Series": {
       "properties": {
+        "citations": {
+          "description": "The references that cite a source, by hash.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
         "concept": {
           "anyOf": [
             {
@@ -3830,6 +4757,13 @@
         "amount": {
           "format": "double",
           "type": "number"
+        },
+        "citations": {
+          "description": "The references that cite a source, by hash.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
         },
         "provenance": {
           "$ref": "#/$defs/Provenance"
@@ -4085,6 +5019,13 @@
             "integer",
             "null"
           ]
+        },
+        "citations": {
+          "description": "The references that cite a source, by hash (in the citations of\nthe composition).",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
         },
         "class": {
           "description": "The value is a class: its picture would show an example only.",
@@ -4685,6 +5626,13 @@
       ],
       "description": "A statement as the composition shows it.",
       "properties": {
+        "citations": {
+          "description": "The references that cite a source, by hash (in the citations of\nthe composition).",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
         "class": {
           "description": "The value is a class: its picture would show an example only.",
           "type": "boolean"
@@ -4841,6 +5789,99 @@
       ],
       "type": "object"
     },
+    "Web": {
+      "description": "The fields that every work has.",
+      "properties": {
+        "accessed": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Date"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The date the source was read."
+        },
+        "archive": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Archive"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "authors": {
+          "items": {
+            "$ref": "#/$defs/Person2"
+          },
+          "type": "array"
+        },
+        "date": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Date"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The date of publication."
+        },
+        "ids": {
+          "items": {
+            "$ref": "#/$defs/Identifier2"
+          },
+          "type": "array"
+        },
+        "language": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Lang"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The language of the source."
+        },
+        "publisher": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "url": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/WebUrl"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "website": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "WebUrl": {
+      "pattern": "^[Hh][Tt][Tt][Pp][Ss]?://",
+      "type": "string"
+    },
     "When": {
       "description": "A year, or a span of years (either end can be unknown).",
       "properties": {
@@ -4957,6 +5998,13 @@
   },
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "properties": {
+    "citations": {
+      "additionalProperties": {
+        "$ref": "#/$defs/Cited"
+      },
+      "description": "The references of the statements that cite a source, by hash.",
+      "type": "object"
+    },
     "composition": {
       "type": "string"
     },
@@ -5010,6 +6058,13 @@
       "description": "The same sections with their content: for a fallback article.",
       "items": {
         "$ref": "#/$defs/ProseSection"
+      },
+      "type": "array"
+    },
+    "notes": {
+      "description": "The notes of the prose that the page shows, by number.",
+      "items": {
+        "$ref": "#/$defs/Note"
       },
       "type": "array"
     },

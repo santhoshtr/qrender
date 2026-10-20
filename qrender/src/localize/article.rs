@@ -3,8 +3,10 @@
 //! One pass of an HTML rewriter does all of it, and it is also the
 //! sanitizer: the renderer prints the result as HTML, so only these can
 //! come out:
-//! - `a`, with an `href` that this module builds;
+//! - `a`, with an `href` that this module builds (in the text of a
+//!   citation, also the `http` and `https` links as they are);
 //! - `b` and `i`, without attributes;
+//! - `sup` with the number of a note on the page: `<sup data-note="3">`;
 //! - the blocks of a section, without attributes: `p`, `ul`, `ol`, `li`,
 //!   `dl`, `dt`, `dd`, `blockquote`;
 //! - `ruby`, `rt` and `span`, which this module adds for a gloss.
@@ -12,7 +14,9 @@
 //! Every other element is removed with its content (scripts, styles,
 //! tables, references) or unwrapped (its text stays).
 
-use content::{EntityId, Qid, Term};
+use std::cell::RefCell;
+
+use content::{EntityId, Note, Qid, Term};
 use indexmap::IndexMap;
 use lol_html::html_content::{ContentType, Element};
 use lol_html::{RewriteStrSettings, doc_comments, element, rewrite_str};
@@ -37,6 +41,44 @@ pub struct Links<'a> {
     /// The language of the page.
     pub page: &'a str,
     pub labels: &'a IndexMap<EntityId, Term>,
+    /// The numbers of the notes. None: marks are removed.
+    pub notes: Option<&'a Numbering<'a>>,
+    /// Links to other sites stay (the text of a citation).
+    pub external: bool,
+}
+
+/// The number of each note on a page, given at its first mark: in reading
+/// order. The numbers only join a mark to its note.
+pub struct Numbering<'a> {
+    notes: &'a IndexMap<String, Note>,
+    numbers: RefCell<IndexMap<String, usize>>,
+}
+
+impl<'a> Numbering<'a> {
+    pub fn new(notes: &'a IndexMap<String, Note>) -> Self {
+        Self {
+            notes,
+            numbers: RefCell::default(),
+        }
+    }
+
+    /// The number of a note; None when the article does not have it.
+    pub fn number(&self, id: &str) -> Option<usize> {
+        if !self.notes.contains_key(id) {
+            return None;
+        }
+        let mut numbers = self.numbers.borrow_mut();
+        let next = numbers.len() + 1;
+        Some(*numbers.entry(id.to_string()).or_insert(next))
+    }
+
+    /// The note of a number.
+    pub fn note(&self, number: usize) -> Option<(&'a str, &'a Note)> {
+        let numbers = self.numbers.borrow();
+        let (id, _) = numbers.get_index(number.checked_sub(1)?)?;
+        let (id, note) = self.notes.get_key_value(id)?;
+        Some((id.as_str(), note))
+    }
 }
 
 /// The address of an article.
@@ -69,6 +111,19 @@ fn clean(el: &mut Element, links: &Links) {
     let tag = el.tag_name();
     match tag.as_str() {
         "script" | "style" | "table" => el.remove(),
+        "sup" if el.get_attribute("data-note").is_some() => {
+            let id =
+                content::html::decode_entities(&el.get_attribute("data-note").unwrap_or_default());
+            match links.notes.and_then(|n| n.number(&id)) {
+                Some(number) => {
+                    strip_attributes(el);
+                    el.set_attribute("data-note", &number.to_string())
+                        .expect("a valid attribute");
+                    el.set_inner_content("", ContentType::Text);
+                }
+                None => el.remove(),
+            }
+        }
         "sup"
             if el
                 .get_attribute("class")
@@ -97,8 +152,19 @@ fn link(el: &mut Element, links: &Links) {
         .get_attribute("href")
         .and_then(|h| Some(content::html::wiki_target(&h, &host)?.to_string()));
     let Some(target) = target else {
-        // Not a link to an article: the text stays, the link goes.
-        el.remove_and_keep_content();
+        let href = el
+            .get_attribute("href")
+            .map(|h| content::html::decode_entities(&h));
+        match href.and_then(|h| h.parse::<content::WebUrl>().ok()) {
+            // A source on another site, in the text of a citation.
+            Some(url) if links.external => {
+                strip_attributes(el);
+                // `set_attribute` escapes the quotes only.
+                set_href(el, &url.as_str().replace('&', "&amp;"));
+            }
+            // Not a link to an article: the text stays, the link goes.
+            _ => el.remove_and_keep_content(),
+        }
         return;
     };
     strip_attributes(el);
@@ -158,6 +224,8 @@ mod tests {
             source,
             page,
             labels,
+            notes: None,
+            external: false,
         }
     }
 
@@ -241,6 +309,72 @@ mod tests {
         ] {
             assert!(!out.contains(bad), "{bad} in {out}");
         }
+    }
+
+    #[test]
+    fn marks_of_notes_get_numbers_in_order() {
+        let (items, labels) = (IndexMap::new(), IndexMap::new());
+        let note = Note {
+            group: None,
+            citations: Vec::new(),
+            text: None,
+        };
+        let notes: IndexMap<String, Note> = ["cite_note-1", "cite_note-Nation-2"]
+            .into_iter()
+            .map(|id| (id.to_string(), note.clone()))
+            .collect();
+        let numbering = Numbering::new(&notes);
+        let l = Links {
+            notes: Some(&numbering),
+            ..links(&items, &labels, "en", "en")
+        };
+        let mark = |id: &str| format!("<sup data-note=\"{id}\"></sup>");
+        // The second note first: it is 1. A note again keeps its number; a
+        // note that the article does not have loses its mark.
+        let first = format!(
+            "A{} b{}.",
+            mark("cite_note-Nation-2"),
+            mark("cite_note-gone")
+        );
+        let second = format!("C{}{}.", mark("cite_note-1"), mark("cite_note-Nation-2"));
+        assert_eq!(rewrite(&first, &l), "A<sup data-note=\"1\"></sup> b.");
+        assert_eq!(
+            rewrite(&second, &l),
+            "C<sup data-note=\"2\"></sup><sup data-note=\"1\"></sup>."
+        );
+        assert_eq!(
+            numbering.note(1).map(|(id, _)| id),
+            Some("cite_note-Nation-2")
+        );
+        assert_eq!(numbering.note(2).map(|(id, _)| id), Some("cite_note-1"));
+        assert!(numbering.note(3).is_none() && numbering.note(0).is_none());
+        // Without numbers, a mark goes.
+        let plain = links(&items, &labels, "en", "en");
+        assert_eq!(rewrite(&first, &plain), "A b.");
+    }
+
+    #[test]
+    fn links_to_other_sites_stay_only_in_a_citation() {
+        let (items, labels) = (IndexMap::new(), IndexMap::new());
+        let html = concat!(
+            r#"<a href="https://www.knbs.or.ke/x?a=1&amp;b=2" class="external">KNBS</a> "#,
+            r#"<a href="//example.org/a">rel</a> <a href="javascript:alert(1)">js</a>"#
+        );
+        let citation = Links {
+            external: true,
+            ..links(&items, &labels, "en", "en")
+        };
+        assert_eq!(
+            rewrite(html, &citation),
+            concat!(
+                r#"<a href="https://www.knbs.or.ke/x?a=1&amp;b=2">KNBS</a> "#,
+                r#"<a href="https://example.org/a">rel</a> js"#
+            )
+        );
+        assert_eq!(
+            rewrite(html, &links(&items, &labels, "en", "en")),
+            "KNBS rel js"
+        );
     }
 
     #[test]

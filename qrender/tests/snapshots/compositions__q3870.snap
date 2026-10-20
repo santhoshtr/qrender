@@ -99,6 +99,9 @@ expression: composition
                     "item": "Q114",
                     "rank": "normal",
                     "provenance": "sourced",
+                    "citations": [
+                      "7b276f86e9588d62c2b6e9176bc2edd62d63e623"
+                    ],
                     "image": {
                       "file": "Kenya - Location Map (2013) - KEN - UNOCHA.svg",
                       "kind": "drawing",
@@ -268,6 +271,9 @@ expression: composition
                 "lang": "fr",
                 "rank": "normal",
                 "provenance": "sourced",
+                "citations": [
+                  "f2e6563645b8b0cd63f14d11cf9a65125daa1188"
+                ],
                 "qualifiers": [
                   {
                     "pid": "P518",
@@ -282,6 +288,9 @@ expression: composition
                 "lang": "fr",
                 "rank": "normal",
                 "provenance": "sourced",
+                "citations": [
+                  "f2e6563645b8b0cd63f14d11cf9a65125daa1188"
+                ],
                 "qualifiers": [
                   {
                     "pid": "P518",
@@ -304,6 +313,9 @@ expression: composition
                 "lang": "fr",
                 "rank": "normal",
                 "provenance": "sourced",
+                "citations": [
+                  "fc508efe8351fc28439079bc359d81c8cf4dfb1a"
+                ],
                 "qualifiers": [
                   {
                     "pid": "P518",
@@ -326,6 +338,9 @@ expression: composition
                 "lang": "fr",
                 "rank": "normal",
                 "provenance": "sourced",
+                "citations": [
+                  "fc508efe8351fc28439079bc359d81c8cf4dfb1a"
+                ],
                 "qualifiers": [
                   {
                     "pid": "P518",
@@ -460,6 +475,9 @@ expression: composition
               "item": "Q28967580",
               "rank": "normal",
               "provenance": "sourced",
+              "citations": [
+                "b31b2e8297e678c210743cf2a193cb826d470471"
+              ],
               "qualifiers": [
                 {
                   "pid": "P580",
@@ -604,7 +622,10 @@ expression: composition
                 "whole": 48468138.0,
                 "unit": null,
                 "statement": "Q3870-7194a63a-4237-d601-f3ec-7f65c52b5d2f",
-                "provenance": "sourced"
+                "provenance": "sourced",
+                "citations": [
+                  "4f71788aaceb07865620ab192af96b5a4c85fcb4"
+                ]
               },
               {
                 "pid": "P2046",
@@ -734,13 +755,19 @@ expression: composition
                     "year": 2010,
                     "amount": 3240155.0,
                     "statement": "Q3870-53d14d3e-4db5-3a52-7493-5f03d6b0f8bc",
-                    "provenance": "sourced"
+                    "provenance": "sourced",
+                    "citations": [
+                      "9bafa148bebe67741e97cb9dc1c39ca5250126bc"
+                    ]
                   },
                   {
                     "year": 2016,
                     "amount": 5545000.0,
                     "statement": "Q3870-7194a63a-4237-d601-f3ec-7f65c52b5d2f",
-                    "provenance": "sourced"
+                    "provenance": "sourced",
+                    "citations": [
+                      "4f71788aaceb07865620ab192af96b5a4c85fcb4"
+                    ]
                   }
                 ]
               }
@@ -904,6 +931,9 @@ expression: composition
                 "item": "Q41087",
                 "rank": "normal",
                 "provenance": "sourced",
+                "citations": [
+                  "998cc81b042e28b97d34f26dc57c1a1eb221abc7"
+                ],
                 "qualifiers": [
                   {
                     "pid": "P580",
@@ -2180,5 +2210,92 @@ expression: composition
       "id": "more"
     }
   ],
+  "citations": {
+    "7b276f86e9588d62c2b6e9176bc2edd62d63e623": {
+      "citation": {
+        "kind": "record",
+        "stated_in": "Q265049",
+        "id": {
+          "pid": "P5573",
+          "value": "8464"
+        },
+        "url": "https://www.archinform.net/ort/8464.htm",
+        "accessed": {
+          "time": "2018-08-06T00:00:00Z",
+          "precision": 11
+        }
+      },
+      "origin": {
+        "from": "wikidata",
+        "hash": "7b276f86e9588d62c2b6e9176bc2edd62d63e623"
+      }
+    },
+    "998cc81b042e28b97d34f26dc57c1a1eb221abc7": {
+      "citation": {
+        "kind": "web",
+        "title": "Nairobi City and the city of Raleigh, North Carolina ink twining agreement",
+        "url": "https://nairobi.go.ke/nairobi-city-city-raleigh-north-carolina-ink-twining-agreement/",
+        "accessed": {
+          "time": "2023-11-01T00:00:00Z",
+          "precision": 11
+        },
+        "language": "en"
+      },
+      "origin": {
+        "from": "wikidata",
+        "hash": "998cc81b042e28b97d34f26dc57c1a1eb221abc7"
+      }
+    },
+    "4f71788aaceb07865620ab192af96b5a4c85fcb4": {
+      "citation": {
+        "kind": "web",
+        "url": "http://www.demographia.com/db-worldua.pdf"
+      },
+      "origin": {
+        "from": "wikidata",
+        "hash": "4f71788aaceb07865620ab192af96b5a4c85fcb4"
+      }
+    },
+    "f2e6563645b8b0cd63f14d11cf9a65125daa1188": {
+      "citation": {
+        "kind": "web",
+        "url": "http://cnig.gouv.fr/wp-content/uploads/2020/02/CNT-PVM_r%C3%A9vis%C3%A9_2020-01-27-1.pdf"
+      },
+      "origin": {
+        "from": "wikidata",
+        "hash": "f2e6563645b8b0cd63f14d11cf9a65125daa1188"
+      }
+    },
+    "b31b2e8297e678c210743cf2a193cb826d470471": {
+      "citation": {
+        "kind": "web",
+        "url": "https://www.c40.org/es/steering-committee/governor-sakaja-arthur-johnson/"
+      },
+      "origin": {
+        "from": "wikidata",
+        "hash": "b31b2e8297e678c210743cf2a193cb826d470471"
+      }
+    },
+    "9bafa148bebe67741e97cb9dc1c39ca5250126bc": {
+      "citation": {
+        "kind": "web",
+        "url": "https://web.archive.org/web/20090314131819/http://www.cbs.go.ke/sectoral/population/projections.html"
+      },
+      "origin": {
+        "from": "wikidata",
+        "hash": "9bafa148bebe67741e97cb9dc1c39ca5250126bc"
+      }
+    },
+    "fc508efe8351fc28439079bc359d81c8cf4dfb1a": {
+      "citation": {
+        "kind": "record",
+        "stated_in": "Q2864340"
+      },
+      "origin": {
+        "from": "wikidata",
+        "hash": "fc508efe8351fc28439079bc359d81c8cf4dfb1a"
+      }
+    }
+  },
   "unshown": []
 }

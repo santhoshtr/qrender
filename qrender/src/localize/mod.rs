@@ -14,12 +14,12 @@ pub mod view;
 
 use std::collections::{BTreeMap, BTreeSet};
 
-use content::{EntityId, Lang, Pid, Qid, Text};
+use content::{Citation, Cited, EntityId, Lang, Pid, Qid, Text};
 use serde_json::Value;
 
 pub use view::{
-    Article, Coverage, Description, Label, Link, PageImage, Project, ProseSection, SectionProse,
-    SpreadView, VIEW_SCHEMA, View,
+    Article, Coverage, Description, Label, Link, Note, PageImage, Project, ProseSection,
+    SectionProse, SpreadView, VIEW_SCHEMA, View,
 };
 
 use crate::compose::picture::media_kind;
@@ -29,7 +29,7 @@ use crate::schema::{
     round_to,
 };
 use crate::wikidata::{AGE, POINT_IN_TIME};
-use article::{Links, article_url};
+use article::{Links, Numbering, article_url};
 use format::entity_url;
 
 const SET_LABEL: &str = "https://www.wikidata.org/wiki/Special:SetLabel";
@@ -38,7 +38,7 @@ const SET_LABEL: &str = "https://www.wikidata.org/wiki/Special:SetLabel";
 const FALLBACK: &str = "en";
 
 /// Keys of the composition whose values are identifiers to label.
-const LABELLED: [&str; 8] = [
+const LABELLED: [&str; 9] = [
     "item",
     "pid",
     "unit",
@@ -47,6 +47,7 @@ const LABELLED: [&str; 8] = [
     "via",
     "pids",
     "day",
+    "stated_in",
 ];
 
 /// Keys whose identifiers the coverage counts: what a reader sees.
@@ -67,6 +68,8 @@ struct Localizer<'a> {
     lang: &'a Lang,
     /// The composition as JSON, to walk it by the shape of its data.
     json: Value,
+    /// The numbers of the notes of the article that the page shows.
+    numbering: Option<Numbering<'a>>,
 }
 
 impl<'a> Localizer<'a> {
@@ -77,6 +80,11 @@ impl<'a> Localizer<'a> {
             config,
             lang: &text.lang,
             json: serde_json::to_value(composition).expect("a composition serializes"),
+            numbering: text
+                .article
+                .as_ref()
+                .or(text.fallback_article.as_ref())
+                .map(|a| Numbering::new(&a.notes)),
         }
     }
 
@@ -114,6 +122,24 @@ impl<'a> Localizer<'a> {
         for qid in self.block_concepts() {
             labels.insert(EntityId::Item(qid), self.concept(qid));
         }
+        // The prose in reading order, then its notes: a note gets its
+        // number at its first mark.
+        let lead = self.lead();
+        let spreads = self
+            .composition
+            .spreads
+            .iter()
+            .map(|s| self.spread(s))
+            // A spread without blocks stays for its topics or its
+            // prose (a history without significant events).
+            .filter(|v| {
+                !v.spread.slots.is_empty()
+                    || !v.spread.topics.is_empty()
+                    || v.prose_text.is_some()
+                    || !v.sections.is_empty()
+            })
+            .collect();
+        let more_sections = self.more_sections();
         View {
             schema: VIEW_SCHEMA,
             composition: COMPOSITION_SCHEMA,
@@ -128,26 +154,20 @@ impl<'a> Localizer<'a> {
                 .filter_map(|q| Some((*q, self.page_image(*q)?)))
                 .collect(),
             messages: messages::for_lang(self.lang),
-            lead: self.lead(),
+            lead,
             coverage: self.coverage(),
             projects: self.projects(),
-            spreads: self
-                .composition
-                .spreads
-                .iter()
-                .map(|s| self.spread(s))
-                // A spread without blocks stays for its topics or its
-                // prose (a history without significant events).
-                .filter(|v| {
-                    !v.spread.slots.is_empty()
-                        || !v.spread.topics.is_empty()
-                        || v.prose_text.is_some()
-                        || !v.sections.is_empty()
-                })
-                .collect(),
+            spreads,
             unmatched_sections: self.unmatched_sections(),
-            more_sections: self.more_sections(),
+            more_sections,
             set_aside: self.composition.set_aside.clone(),
+            notes: self.notes(),
+            citations: self
+                .composition
+                .citations
+                .iter()
+                .map(|(hash, c)| (hash.clone(), c.clone()))
+                .collect(),
             labels,
         }
     }
@@ -296,13 +316,65 @@ impl<'a> Localizer<'a> {
     }
 
     fn rewrite(&self, html: &str, article: &content::Article, source: &str) -> String {
+        self.rewrite_links(html, article, source, false)
+    }
+
+    /// `external`: links to other sites stay (the text of a citation).
+    fn rewrite_links(
+        &self,
+        html: &str,
+        article: &content::Article,
+        source: &str,
+        external: bool,
+    ) -> String {
         let links = Links {
             items: &article.links,
             source,
             page: self.lang.as_str(),
             labels: &self.text.labels,
+            notes: self.numbering.as_ref(),
+            external,
         };
         article::rewrite(html, &links)
+    }
+
+    /// The notes that the prose of the page marks, by number. A note that
+    /// an explanatory note marks gets the next number, so it comes after.
+    fn notes(&self) -> Vec<Note> {
+        let (Some(numbering), Some((article, source))) = (&self.numbering, self.article()) else {
+            return Vec::new();
+        };
+        let mut out = Vec::new();
+        let mut number = 1;
+        while let Some((_, note)) = numbering.note(number) {
+            out.push(Note {
+                number,
+                group: note.group.clone(),
+                lang: source.parse().expect("a language code"),
+                citations: note
+                    .citations
+                    .iter()
+                    .map(|c| self.cited(c, article, source))
+                    .collect(),
+                text: note.text.as_ref().map(|t| self.rewrite(t, article, source)),
+            });
+            number += 1;
+        }
+        out
+    }
+
+    /// A citation of a note: the HTML of free text is cleaned as prose is,
+    /// with its links to other sites.
+    fn cited(&self, cited: &Cited, article: &content::Article, source: &str) -> Cited {
+        match &cited.citation {
+            Citation::Text { html } => Cited {
+                citation: Citation::Text {
+                    html: self.rewrite_links(html, article, source, true),
+                },
+                origin: cited.origin.clone(),
+            },
+            _ => cited.clone(),
+        }
     }
 
     fn lead(&self) -> Option<Article> {

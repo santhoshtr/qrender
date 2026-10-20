@@ -44,6 +44,9 @@ pub struct Share {
     pub share: f64,
     pub statement: StatementId,
     pub provenance: Provenance,
+    /// The references that cite a source, by hash.
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub citations: Vec<String>,
     /// The qualifiers but the point in time (the year of the bar): the
     /// parts of a part ("female population: 328875190").
     #[serde(skip_serializing_if = "Vec::is_empty")]
@@ -135,6 +138,7 @@ fn bars<'a>(
                     share: round_to(amount / total, 4),
                     statement: s.id.clone(),
                     provenance: c.provenance(s),
+                    citations: c.citations(s),
                     qualifiers: s
                         .qualifiers
                         .iter()

@@ -23,6 +23,9 @@ pub struct Series {
     pub statement: Option<StatementId>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub provenance: Option<Provenance>,
+    /// The references that cite a source, by hash.
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub citations: Vec<String>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub source: Option<Source>,
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -122,6 +125,9 @@ pub struct Point {
     pub statement: Option<StatementId>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub provenance: Option<Provenance>,
+    /// The references that cite a source, by hash.
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub citations: Vec<String>,
 }
 
 /// Dated quantity statements of one property, when they make a series
@@ -137,6 +143,7 @@ pub fn dated(
         lines: vec![line(c, pid, statements)?],
         statement: None,
         provenance: None,
+        citations: Vec::new(),
         source: None,
         rule: rule.map(str::to_string),
     })
@@ -153,6 +160,7 @@ pub fn lines(c: &Composer, concept: Qid, parts: &[(Pid, Vec<&Statement>)]) -> Op
             .collect::<Option<_>>()?,
         statement: None,
         provenance: None,
+        citations: Vec::new(),
         source: None,
         rule: None,
     })
@@ -177,6 +185,7 @@ fn line(c: &Composer, pid: Pid, statements: &[&Statement]) -> Option<Line> {
                 },
                 statement: Some(p.statement.id.clone()),
                 provenance: Some(c.provenance(p.statement)),
+                citations: c.citations(p.statement),
             }),
             _ => None,
         })
@@ -229,11 +238,13 @@ pub fn tabular(c: &Composer, pid: Pid, statement: &Statement) -> Option<Series> 
                     qualifiers: Vec::new(),
                     statement: None,
                     provenance: None,
+                    citations: Vec::new(),
                 })
                 .collect(),
         }],
         statement: Some(statement.id.clone()),
         provenance: Some(c.provenance(statement)),
+        citations: c.citations(statement),
         source: Some(Source {
             file: table.title.clone(),
             license: table.license.clone(),

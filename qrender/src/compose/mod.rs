@@ -14,7 +14,7 @@ pub mod spreads;
 
 use std::collections::HashSet;
 
-use content::{Content, Pid, Qid, QualifierValue, Rank, Statement, StatementId, Value};
+use content::{Cited, Content, Pid, Qid, QualifierValue, Rank, Statement, StatementId, Value};
 use indexmap::IndexMap;
 
 use crate::config::{ClassLayout, Config, SpreadSpec};
@@ -147,7 +147,7 @@ impl<'a> Composer<'a> {
                 }
             }
         }
-        Composition {
+        let mut composition = Composition {
             schema: COMPOSITION_SCHEMA,
             design: DESIGN,
             qid: self.content.qid,
@@ -182,8 +182,11 @@ impl<'a> Composer<'a> {
                 })
                 .collect(),
             set_aside,
+            citations: IndexMap::new(),
             unshown: self.unclaimed().iter().map(|s| s.id.clone()).collect(),
-        }
+        };
+        composition.citations = cited(&composition, &self.content.citations);
+        composition
     }
 
     /// Claims the values of the best-rank properties that are not of the
@@ -313,6 +316,16 @@ impl<'a> Composer<'a> {
             })
     }
 
+    /// The hashes of the references of a statement that cite a source (in
+    /// the citations of the content).
+    pub fn citations(&self, statement: &Statement) -> Vec<String> {
+        self.content
+            .statement_citations
+            .get(&statement.id)
+            .cloned()
+            .unwrap_or_default()
+    }
+
     /// How much a property matters: how many peers have it, and how many of
     /// its statements are sourced.
     pub fn priority(&self, pid: Pid, statements: &[&Statement]) -> f64 {
@@ -370,7 +383,8 @@ impl<'a> Composer<'a> {
 
     /// A statement as the composition shows it.
     /// An item value with joined texts has their words and their
-    /// qualifiers, and the best provenance of them all.
+    /// qualifiers, the best provenance of them all, and the citations of
+    /// them all.
     pub fn statement(&self, statement: &Statement) -> StatementRef {
         let item = statement.value.item();
         let class = item.is_some_and(|q| self.is_class_value(statement.pid, q));
@@ -395,6 +409,15 @@ impl<'a> Composer<'a> {
                 qualifiers.push(q);
             }
         }
+        let mut citations: Vec<String> = Vec::new();
+        for hash in std::iter::once(statement)
+            .chain(texts.iter().copied())
+            .flat_map(|s| self.citations(s))
+        {
+            if !citations.contains(&hash) {
+                citations.push(hash);
+            }
+        }
         StatementRef {
             statement: statement.id.clone(),
             pid: statement.pid,
@@ -405,6 +428,7 @@ impl<'a> Composer<'a> {
                 .map(|s| self.provenance(s))
                 .min()
                 .expect("one statement at least"),
+            citations,
             qualifiers,
             texts: texts.iter().map(|t| t.id.clone()).collect(),
             image: self.picture_of(statement),
@@ -413,6 +437,34 @@ impl<'a> Composer<'a> {
             shown: None,
         }
     }
+}
+
+/// The citations that the blocks of a composition cite: the hashes in
+/// their `citations` lists. (The identifiers block cites none.)
+fn cited(composition: &Composition, all: &IndexMap<String, Cited>) -> IndexMap<String, Cited> {
+    fn walk<'v>(value: &'v serde_json::Value, out: &mut HashSet<&'v str>) {
+        match value {
+            serde_json::Value::Object(o) => {
+                for (key, v) in o {
+                    match (key.as_str(), v) {
+                        ("citations", serde_json::Value::Array(hashes)) => {
+                            out.extend(hashes.iter().filter_map(|h| h.as_str()));
+                        }
+                        _ => walk(v, out),
+                    }
+                }
+            }
+            serde_json::Value::Array(a) => a.iter().for_each(|v| walk(v, out)),
+            _ => {}
+        }
+    }
+    let json = serde_json::to_value(composition).expect("a composition serializes");
+    let mut hashes = HashSet::new();
+    walk(&json, &mut hashes);
+    all.iter()
+        .filter(|(hash, _)| hashes.contains(hash.as_str()))
+        .map(|(hash, c)| (hash.clone(), c.clone()))
+        .collect()
 }
 
 /// The year of a measurement: its point in time; else its start time (a

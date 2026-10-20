@@ -29,6 +29,10 @@ pub struct StatementRef {
     pub value: ValueShown,
     pub rank: Rank,
     pub provenance: Provenance,
+    /// The references that cite a source, by hash (in the citations of
+    /// the composition).
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub citations: Vec<String>,
     #[serde(skip_serializing_if = "Vec::is_empty")]
     pub qualifiers: Vec<QualifierShown>,
     /// The text statements whose words this item value shows (motto text

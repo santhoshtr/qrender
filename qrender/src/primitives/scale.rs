@@ -44,6 +44,9 @@ pub struct Measure {
     pub unit: Option<Qid>,
     pub statement: StatementId,
     pub provenance: Provenance,
+    /// The references that cite a source, by hash.
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub citations: Vec<String>,
 }
 
 /// The comparable quantities of the spread that both the item and its
@@ -81,6 +84,7 @@ pub fn build(c: &Composer, spread_pids: &[Pid]) -> Option<Scale> {
                 unit: Some(own.unit).filter(|u| u.number() != 199),
                 statement: statement.id.clone(),
                 provenance: c.provenance(statement),
+                citations: c.citations(statement),
             })
         })
         .collect();

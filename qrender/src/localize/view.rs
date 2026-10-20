@@ -3,7 +3,7 @@
 
 use std::collections::BTreeMap;
 
-use content::{EntityId, Lang, Qid};
+use content::{Cited, EntityId, Lang, Qid};
 use schemars::JsonSchema;
 use serde::Serialize;
 
@@ -47,6 +47,31 @@ pub struct View {
     /// The values that the page does not show: not of the best rank.
     #[serde(skip_serializing_if = "Vec::is_empty")]
     pub set_aside: Vec<StatementRef>,
+    /// The notes of the prose that the page shows, by number.
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub notes: Vec<Note>,
+    /// The references of the statements that cite a source, by hash.
+    #[serde(skip_serializing_if = "BTreeMap::is_empty")]
+    pub citations: BTreeMap<String, Cited>,
+}
+
+/// A note of the article: a reference, or an explanatory note.
+#[derive(Debug, Clone, Serialize, JsonSchema)]
+pub struct Note {
+    /// The number of the note on this page: its marks in the prose show
+    /// it (`<sup data-note="3"></sup>`).
+    pub number: usize,
+    /// None for a reference; "lower-alpha" for an explanatory note.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub group: Option<String>,
+    /// The language of the article.
+    pub lang: Lang,
+    /// The citations; the HTML of free text is cleaned as prose is.
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub citations: Vec<Cited>,
+    /// An explanatory note: its text, cleaned, with its own marks.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub text: Option<String>,
 }
 
 #[derive(Debug, Clone, Serialize, JsonSchema)]

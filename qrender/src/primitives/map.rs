@@ -60,6 +60,9 @@ pub struct Marker {
     pub value: ValueShown,
     pub statement: StatementId,
     pub provenance: Provenance,
+    /// The references that cite a source, by hash.
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub citations: Vec<String>,
 }
 
 /// The extreme points and the geoshapes of the spread's properties become
@@ -86,6 +89,7 @@ pub fn build(
                     value: ValueShown::from(&s.value),
                     statement: s.id.clone(),
                     provenance: c.provenance(s),
+                    citations: c.citations(s),
                 });
             }
         }

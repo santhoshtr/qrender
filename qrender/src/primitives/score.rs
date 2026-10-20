@@ -43,6 +43,9 @@ pub struct ScoreValue {
     /// The score as Wikidata has it: "94%", "7.9/10".
     pub string: String,
     pub provenance: Provenance,
+    /// The references that cite a source, by hash.
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub citations: Vec<String>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub source: Option<ScoreSource>,
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -101,6 +104,7 @@ pub fn build(c: &Composer, pid: Pid, statements: &[&Statement], rule: Option<&st
                     other => format!("{other:?}"),
                 },
                 provenance: c.provenance(s),
+                citations: c.citations(s),
                 source: item(source).map(|item| ScoreSource {
                     item,
                     image: c.content.logos.get(&item).map(|logo| c.picture(logo, true)),

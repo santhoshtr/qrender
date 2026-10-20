@@ -31,6 +31,27 @@ fn compositions() {
             "{qid}: {:?}",
             composition.unshown
         );
+        // Every citation that a block cites is in the table, and the table
+        // has no other.
+        let json = serde_json::to_string(&composition.spreads).unwrap()
+            + &serde_json::to_string(&composition.set_aside).unwrap();
+        for hash in composition.citations.keys() {
+            assert!(
+                json.contains(&format!("\"{hash}\"")),
+                "{qid}: {hash} not cited"
+            );
+        }
+        let cited = json.split("\"citations\":[\"").skip(1).flat_map(|rest| {
+            rest[..rest.find(']').unwrap()]
+                .split(',')
+                .map(|h| h.trim_matches('"').to_string())
+        });
+        for hash in cited {
+            assert!(
+                composition.citations.contains_key(&hash),
+                "{qid}: {hash} not in the table"
+            );
+        }
         // Every property of the Earth has a place in its layout.
         if qid == "q2" {
             assert!(

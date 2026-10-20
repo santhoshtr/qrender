@@ -1,7 +1,7 @@
 //! The composition of one item (`composition/0.3`): its spreads, the slots
 //! of each spread, the blocks in each slot. No labels, no geometry.
 
-use content::{Qid, StatementId};
+use content::{Cited, Qid, StatementId};
 use indexmap::IndexMap;
 use schemars::JsonSchema;
 use serde::Serialize;
@@ -32,6 +32,9 @@ pub struct Composition {
     /// page.
     #[serde(skip_serializing_if = "Vec::is_empty")]
     pub set_aside: Vec<StatementRef>,
+    /// The references of the statements that cite a source, by hash.
+    #[serde(skip_serializing_if = "IndexMap::is_empty")]
+    pub citations: IndexMap<String, Cited>,
     /// Statements that no spread shows. Always empty: a test checks it.
     pub unshown: Vec<StatementId>,
 }

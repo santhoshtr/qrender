@@ -42,6 +42,9 @@ pub struct Followers {
     pub year: Option<i64>,
     pub statement: StatementId,
     pub provenance: Provenance,
+    /// The references that cite a source, by hash.
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub citations: Vec<String>,
 }
 
 /// HTML: the template binding. The markup is templates/primitives/links.html.
@@ -108,6 +111,7 @@ pub fn build<'a>(c: &mut Composer<'a>, pids: &[Pid]) -> (Option<Links>, Vec<&'a 
                     year: measurement_year(s),
                     statement: s.id.clone(),
                     provenance: c.provenance(s),
+                    citations: c.citations(s),
                 });
             }
             _ => others.push(s),
