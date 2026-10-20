@@ -8,6 +8,7 @@ use percent_encoding::{AsciiSet, CONTROLS, percent_decode_str, utf8_percent_enco
 use super::ui::favicon;
 use crate::localize::View;
 use crate::localize::format::Part;
+use crate::localize::messages::format;
 use crate::schema::StatementRef;
 
 /// The characters of an identifier that its resolver's address encodes.
@@ -48,9 +49,19 @@ pub struct Row {
 }
 
 pub enum Value {
+    /// Shown joined by " · ".
     Parts(Vec<Part>),
     /// A language code; the browser names it (`intl.js`).
     Language(String),
+    /// A copy in a web archive: its date, its address, shown by the icon
+    /// of the archive's site, and the state of the original.
+    Archive {
+        date: Option<Part>,
+        href: String,
+        host: String,
+        favicon: String,
+        state: Option<String>,
+    },
 }
 
 /// The citations that most values of a list have (more than half, two at
@@ -99,69 +110,78 @@ pub fn card<'a>(cited: &'a Cited, view: &'a View) -> Card<'a> {
             view,
             "web",
             &w.work,
-            &[
-                ("qrender-cite-website", &w.website),
-                ("qrender-cite-publisher", &w.publisher),
+            vec![
+                ("qrender-cite-website", vec![w.website.clone()]),
+                ("qrender-cite-publisher", vec![w.publisher.clone()]),
             ],
         ),
         Citation::News(n) => work(
             view,
             "news",
             &n.work,
-            &[
-                ("qrender-cite-newspaper", &n.newspaper),
-                ("qrender-cite-publisher", &n.publisher),
+            vec![
+                ("qrender-cite-newspaper", vec![n.newspaper.clone()]),
+                ("qrender-cite-publisher", vec![n.publisher.clone()]),
             ],
         ),
+        // The journal, its volume, issue and pages: one line.
         Citation::Journal(j) => work(
             view,
             "journal",
             &j.work,
-            &[
-                ("qrender-cite-journal", &j.journal),
-                ("qrender-cite-volume", &j.volume),
-                ("qrender-cite-issue", &j.issue),
-                ("qrender-cite-pages", &j.pages),
-            ],
+            vec![(
+                "qrender-cite-journal",
+                vec![
+                    j.journal.clone(),
+                    volume(view, &j.volume),
+                    issue(view, &j.issue),
+                    pages(view, &j.pages),
+                ],
+            )],
         ),
         Citation::Magazine(m) => work(
             view,
             "magazine",
             &m.work,
-            &[
-                ("qrender-cite-magazine", &m.magazine),
-                ("qrender-cite-volume", &m.volume),
-                ("qrender-cite-issue", &m.issue),
-                ("qrender-cite-pages", &m.pages),
-            ],
+            vec![(
+                "qrender-cite-magazine",
+                vec![
+                    m.magazine.clone(),
+                    volume(view, &m.volume),
+                    issue(view, &m.issue),
+                    pages(view, &m.pages),
+                ],
+            )],
         ),
         Citation::Book(b) => work(
             view,
             "book",
             &b.work,
-            &[
-                ("qrender-cite-publisher", &b.publisher),
-                ("qrender-cite-place", &b.place),
-                ("qrender-cite-pages", &b.pages),
+            vec![
+                (
+                    "qrender-cite-publisher",
+                    vec![b.publisher.clone(), b.place.clone()],
+                ),
+                ("qrender-cite-pages", vec![b.pages.clone()]),
             ],
         ),
         Citation::Report(r) => work(
             view,
             "report",
             &r.work,
-            &[
-                ("qrender-cite-publisher", &r.publisher),
-                ("qrender-cite-pages", &r.pages),
+            vec![
+                ("qrender-cite-publisher", vec![r.publisher.clone()]),
+                ("qrender-cite-pages", vec![r.pages.clone()]),
             ],
         ),
         Citation::Entry(e) => work(
             view,
             "entry",
             &e.work,
-            &[
-                ("qrender-cite-encyclopedia", &e.encyclopedia),
-                ("qrender-cite-publisher", &e.publisher),
-            ],
+            vec![(
+                "qrender-cite-encyclopedia",
+                vec![e.encyclopedia.clone(), e.publisher.clone()],
+            )],
         ),
         Citation::Record(r) => {
             let label = view.labels.get(&EntityId::Item(r.stated_in));
@@ -208,22 +228,29 @@ pub fn card<'a>(cited: &'a Cited, view: &'a View) -> Card<'a> {
     }
 }
 
-/// A work: its title line, its authors, the fields of its kind, then the
-/// dates, identifiers, language, and archive.
+/// A work: its title line, its authors, the lines of its kind, then the
+/// dates, identifiers, language, and archive. A value that says the site
+/// again (a publisher "nation.africa") or a value of a line before is not
+/// shown twice.
 fn work(
     view: &View,
     kind: &'static str,
     w: &Work,
-    fields: &[(&'static str, &Option<String>)],
+    lines: Vec<(&'static str, Vec<Option<String>>)>,
 ) -> Card<'static> {
+    let host = w.url.as_ref().map(|u| u.host());
+    let mut seen: Vec<String> = host.iter().map(|h| same(h)).collect();
     let mut rows = Vec::new();
-    if !w.authors.is_empty() {
-        let names: Vec<String> = w.authors.iter().map(person).collect();
-        rows.push(parts("qrender-cite-authors", vec![text(&names.join("; "))]));
-    }
-    for (key, value) in fields {
-        if let Some(value) = value {
-            rows.push(parts(key, vec![text(value)]));
+    let names: Vec<String> = w.authors.iter().map(person).collect();
+    let lines = std::iter::once((
+        "qrender-cite-authors",
+        vec![(!names.is_empty()).then(|| names.join("; "))],
+    ))
+    .chain(lines);
+    for (key, values) in lines {
+        let shown = new_values(values, &mut seen);
+        if !shown.is_empty() {
+            rows.push(parts(key, shown.iter().map(|v| text(v)).collect()));
         }
     }
     rows.extend(date(view, "qrender-cite-published", &w.date));
@@ -241,7 +268,6 @@ fn work(
     }
     rows.extend(date(view, "qrender-cite-retrieved", &w.accessed));
     rows.extend(archived(view, &w.archive));
-    let host = w.url.as_ref().map(|u| u.host());
     // The original; the archive when the original is gone or reused.
     let href = match &w.archive {
         Some(a) if a.original != Original::Live => Some(&a.url),
@@ -263,6 +289,50 @@ fn work(
         rows,
         html: None,
     }
+}
+
+/// The values not shown yet: not empty, not the site, not a value of a
+/// line before (without regard to case and to "www.").
+fn new_values(values: Vec<Option<String>>, seen: &mut Vec<String>) -> Vec<String> {
+    let mut out = Vec::new();
+    for value in values.into_iter().flatten() {
+        let key = same(&value);
+        if !key.is_empty() && !seen.contains(&key) {
+            seen.push(key);
+            out.push(value);
+        }
+    }
+    out
+}
+
+/// A value as it compares: "https://www.Nation.africa/" is "nation.africa".
+fn same(value: &str) -> String {
+    let value = value.trim().to_lowercase();
+    let value = value
+        .split_once("://")
+        .map_or(value.as_str(), |(_, rest)| rest);
+    let value = value.strip_prefix("www.").unwrap_or(value);
+    value.trim_end_matches('/').to_string()
+}
+
+/// "vol. 70", "no. 2", "pp. 120–139" (or "p. 8"): short, beside the
+/// journal.
+fn volume(view: &View, v: &Option<String>) -> Option<String> {
+    Some(format(view.msg("qrender-cite-volume-in"), &[v.as_ref()?]))
+}
+
+fn issue(view: &View, v: &Option<String>) -> Option<String> {
+    Some(format(view.msg("qrender-cite-issue-in"), &[v.as_ref()?]))
+}
+
+fn pages(view: &View, v: &Option<String>) -> Option<String> {
+    let v = v.as_ref()?;
+    let key = if v.contains(['–', '-', ',']) {
+        "qrender-cite-pages-in"
+    } else {
+        "qrender-cite-page-in"
+    };
+    Some(format(view.msg(key), &[v]))
 }
 
 fn parts(key: &'static str, parts: Vec<Part>) -> Row {
@@ -305,25 +375,26 @@ fn date(view: &View, key: &'static str, date: &Option<Date>) -> Option<Row> {
 /// The date of the copy, a link to it, and the state of the original.
 fn archived(view: &View, archive: &Option<Archive>) -> Option<Row> {
     let a = archive.as_ref()?;
-    let mut out: Vec<Part> = date(view, "", &a.date)
-        .map(|row| match row.value {
-            Value::Parts(p) => p,
-            Value::Language(_) => Vec::new(),
-        })
-        .unwrap_or_default();
-    out.push(Part::Link {
-        text: short_host(&a.url.host()),
-        href: a.url.as_str().to_string(),
+    let date = date(view, "", &a.date).and_then(|row| match row.value {
+        Value::Parts(mut p) => p.pop(),
+        _ => None,
     });
     let state = match a.original {
         Original::Live => None,
         Original::Dead => Some("qrender-cite-original-dead"),
         Original::Unfit => Some("qrender-cite-original-unfit"),
     };
-    if let Some(key) = state {
-        out.push(text(view.messages.get(key).map_or("", String::as_str)));
-    }
-    Some(parts("qrender-cite-archived", out))
+    let host = a.url.host();
+    Some(Row {
+        key: "qrender-cite-archived",
+        value: Value::Archive {
+            date,
+            href: a.url.as_str().to_string(),
+            favicon: favicon(&host),
+            host: short_host(&host),
+            state: state.map(|key| view.msg(key).to_string()),
+        },
+    })
 }
 
 /// A standard identifier: its name and value, linked to its resolver.
@@ -378,6 +449,26 @@ mod tests {
             link(Identifier::Hdl("11370/a b#c".into())).1,
             "https://hdl.handle.net/11370/a%20b%23c"
         );
+    }
+
+    #[test]
+    fn a_value_is_not_shown_twice() {
+        let some = |v: &str| Some(v.to_string());
+        // The site, as the host of the address.
+        let mut seen = vec![same("www.Nation.africa")];
+        assert_eq!(
+            new_values(
+                vec![some("nation.africa"), some("Nation Media Group"), None],
+                &mut seen
+            ),
+            ["Nation Media Group"]
+        );
+        // A publisher that is the website of a line before.
+        assert_eq!(
+            new_values(vec![some("NATION MEDIA GROUP ")], &mut seen),
+            Vec::<String>::new()
+        );
+        assert_eq!(same("https://www.Nation.africa/"), "nation.africa");
     }
 
     #[test]

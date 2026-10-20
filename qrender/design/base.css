@@ -478,8 +478,8 @@ dialog.lightbox {
 	cursor: help;
 }
 
-/* The sources of a statement: the icon of the first source, and their
-   number when there is more than one. It opens their cards. */
+/* The sources of a statement: the icon of a reference, and their number
+   when there is more than one. It opens their cards. */
 .src {
 	display: inline-flex;
 	align-items: center;
@@ -497,7 +497,7 @@ dialog.lightbox {
 	cursor: pointer;
 
 	&:hover { border-color: var( --border-color-base ); }
-	& :is( .favicon, svg ) { inline-size: 12px; block-size: 12px; object-fit: contain; }
+	& svg { inline-size: 12px; block-size: 12px; }
 }
 
 /* The mark of a note in the text of the article: its number. */
@@ -519,11 +519,12 @@ dialog.lightbox {
 	}
 }
 
-/* Cards of sources, in a popover: wider than a credit, and apart from
-   the line of its mark. */
+/* Cards of sources, in a popover: wider than a credit, with room around
+   them, and apart from the line of its mark. */
 .pop.cites {
 	margin-block-start: var( --spacing-25 );
-	max-inline-size: min( 420px, 100vw - 2 * var( --spacing-100 ) );
+	padding: var( --spacing-100 ) var( --spacing-125 );
+	max-inline-size: min( 440px, 100vw - 2 * var( --spacing-100 ) );
 	max-block-size: 60vh;
 	overflow-y: auto;
 	font-size: var( --font-size-small );
@@ -536,45 +537,60 @@ dialog.lightbox {
 	& a { color: var( --color-progressive ); }
 
 	& > * + * {
-		margin-block-start: var( --spacing-75 );
-		padding-block-start: var( --spacing-75 );
+		margin-block-start: var( --spacing-100 );
+		padding-block-start: var( --spacing-100 );
 		border-block-start: 1px solid var( --border-color-muted );
 	}
 }
 
-/* A source: the icon of its site, its title, the site; then its fields,
-   a name and a value on each line. Spans only (it is in a popover in a
-   line), so the lines are a grid. */
+/* A source: the icon of its site beside its title and, under the title,
+   the site; then its fields, a name and a value on each line. Spans only
+   (it is in a popover in a line), so the lines are a grid. */
 .cite {
 	display: grid;
 	grid-template-columns: max-content minmax( 0, 1fr );
-	gap: 2px var( --spacing-75 );
+	gap: var( --spacing-25 ) var( --spacing-75 );
 	overflow-wrap: anywhere;
 
-	/* The icon, the title and the site wrap as text: a long address
-	   has no gap under the icon. */
 	& .head {
 		grid-column: 1 / -1;
-		font-weight: var( --font-weight-bold );
+		display: grid;
+		grid-template-columns: 32px minmax( 0, 1fr );
+		align-items: center;
+		column-gap: var( --spacing-75 );
+		margin-block-end: var( --spacing-50 );
 
 		& :is( .favicon, svg ) {
-			inline-size: 16px;
-			block-size: 16px;
-			margin-inline-end: var( --spacing-50 );
+			grid-row: 1 / span 2;
+			inline-size: 32px;
+			block-size: 32px;
 			object-fit: contain;
-			vertical-align: -3px;
+		}
+
+		/* No site icon: the reference icon, smaller, in the same place. */
+		& svg {
+			padding: 4px;
+			box-sizing: border-box;
 			color: var( --color-subtle );
 		}
 	}
 
+	& .title { font-weight: var( --font-weight-bold ); }
+
 	& .host {
 		color: var( --color-subtle );
 		font-size: var( --font-size-x-small );
-		font-weight: var( --font-weight-normal );
 	}
 
 	& .field { display: contents; }
 	& .field-name { color: var( --color-subtle ); }
+
+	/* A copy in a web archive: the icon of the archive's site. */
+	& .archive img {
+		inline-size: 16px;
+		block-size: 16px;
+		vertical-align: -3px;
+	}
 
 	/* Free text: as the editor wrote it. */
 	&[data-kind="text"] { display: block; }

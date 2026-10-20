@@ -224,6 +224,18 @@ impl Markdown<'_> {
                     .collect::<Vec<_>>()
                     .join(" · "),
                 CiteValue::Language(code) => code.clone(),
+                CiteValue::Archive {
+                    date,
+                    href,
+                    host,
+                    state,
+                    ..
+                } => {
+                    let mut parts: Vec<String> = date.iter().map(|d| self.part(d)).collect();
+                    parts.push(format!("[{host}]({href})"));
+                    parts.extend(state.iter().cloned());
+                    parts.join(" · ")
+                }
             };
             let name = self
                 .view
