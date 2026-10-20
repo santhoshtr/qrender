@@ -55,7 +55,10 @@ fn kind(citation: &Citation) -> &'static str {
         Citation::Web(_) => "web",
         Citation::News(_) => "news",
         Citation::Journal(_) => "journal",
+        Citation::Magazine(_) => "magazine",
         Citation::Book(_) => "book",
+        Citation::Report(_) => "report",
+        Citation::Entry(_) => "entry",
         Citation::Record(_) => "record",
         Citation::Short(_) => "short",
         Citation::Text { .. } => "text",
@@ -122,7 +125,14 @@ fn report(
         .iter()
         .flat_map(|s| {
             let t = &s.templates;
-            t.web.iter().chain(&t.news).chain(&t.journal).chain(&t.book)
+            t.web
+                .iter()
+                .chain(&t.news)
+                .chain(&t.journal)
+                .chain(&t.book)
+                .chain(&t.magazine)
+                .chain(&t.report)
+                .chain(&t.entry)
         })
         .cloned()
         .collect();

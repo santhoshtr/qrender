@@ -19,8 +19,8 @@ pub mod settings;
 pub mod text;
 
 pub use citation::{
-    Archive, Book, Citation, Cited, Date, Identifier, Journal, News, Origin, Original, Person,
-    Record, RecordId, Short, Web, WebUrl, Work,
+    Archive, Book, Citation, Cited, Date, Entry, Identifier, Journal, Magazine, News, Origin,
+    Original, Person, Record, RecordId, Report, Short, Web, WebUrl, Work,
 };
 pub use id::{EntityId, IdError, Lang, Pid, Qid, StatementId};
 pub use model::{

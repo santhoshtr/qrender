@@ -32,7 +32,7 @@ expression: "serde_json::to_string_pretty(&sample).unwrap()"
         "citations": [
           {
             "citation": {
-              "kind": "web",
+              "kind": "report",
               "title": "An Act To make The Star-Spangled Banner the national anthem of the United States of America",
               "url": "https://uscode.house.gov/statviewer.htm?volume=46&page=1508",
               "date": {
@@ -687,6 +687,108 @@ expression: "serde_json::to_string_pretty(&sample).unwrap()"
       }
     ],
     [
+      "cite_note-47",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "entry",
+              "title": "\"The States\"",
+              "url": "https://www.ldoceonline.com/dictionary/the-states",
+              "accessed": {
+                "time": "2024-09-27T00:00:00Z",
+                "precision": 11
+              },
+              "encyclopedia": "Longman dictionary"
+            },
+            "origin": {
+              "from": "template",
+              "name": "cite dictionary",
+              "params": {
+                "access-date": "September 27, 2024",
+                "dictionary": "Longman dictionary",
+                "title": "\"The States\"",
+                "url": "https://www.ldoceonline.com/dictionary/the-states"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-48",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "entry",
+              "title": "Stateside",
+              "url": "https://www.merriam-webster.com/dictionary/stateside",
+              "date": {
+                "time": "2024-09-27T00:00:00Z",
+                "precision": 11
+              },
+              "accessed": {
+                "time": "2024-10-04T00:00:00Z",
+                "precision": 11
+              },
+              "encyclopedia": "Merriam-Webster"
+            },
+            "origin": {
+              "from": "template",
+              "name": "Cite dictionary",
+              "params": {
+                "access-date": "October 4, 2024",
+                "date": "September 27, 2024",
+                "dictionary": "[[Merriam-Webster]]",
+                "title": "Stateside",
+                "url": "https://www.merriam-webster.com/dictionary/stateside"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    [
+      "cite_note-50",
+      {
+        "citations": [
+          {
+            "citation": {
+              "kind": "entry",
+              "title": "Amerigo Vespucci",
+              "url": "https://www.britannica.com/EBchecked/topic/626894/Amerigo-Vespucci",
+              "accessed": {
+                "time": "2011-07-07T00:00:00Z",
+                "precision": 11
+              },
+              "archive": {
+                "url": "https://web.archive.org/web/20120710004308/http://www.britannica.com/EBchecked/topic/626894/Amerigo-Vespucci",
+                "date": {
+                  "time": "2012-07-10T00:00:00Z",
+                  "precision": 11
+                }
+              },
+              "encyclopedia": "Encyclopædia Britannica"
+            },
+            "origin": {
+              "from": "template",
+              "name": "cite encyclopedia",
+              "params": {
+                "access-date": "July 7, 2011",
+                "archive-date": "July 10, 2012",
+                "archive-url": "https://web.archive.org/web/20120710004308/http://www.britannica.com/EBchecked/topic/626894/Amerigo-Vespucci",
+                "encyclopedia": "Encyclopædia Britannica",
+                "title": "Amerigo Vespucci",
+                "url": "https://www.britannica.com/EBchecked/topic/626894/Amerigo-Vespucci",
+                "url-status": "live"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    [
       "cite_note-53",
       {
         "citations": [
@@ -795,109 +897,6 @@ expression: "serde_json::to_string_pretty(&sample).unwrap()"
                 "title": "Race (B02001)",
                 "url": "https://data.census.gov/table/ACSDT1Y2024.B02001",
                 "work": "2024 American Community Survey, 1-Year Estimates"
-              }
-            }
-          }
-        ]
-      }
-    ],
-    [
-      "cite_note-67",
-      {
-        "citations": [
-          {
-            "citation": {
-              "kind": "web",
-              "title": "American Indian and Alaska Native Alone or in Combination With One or More Other Races (B02010)",
-              "url": "https://data.census.gov/table/ACSDT1Y2024.B02010",
-              "accessed": {
-                "time": "2026-09-19T00:00:00Z",
-                "precision": 11
-              },
-              "website": "2024 American Community Survey, 1-Year Estimates",
-              "publisher": "United States Census Bureau"
-            },
-            "origin": {
-              "from": "template",
-              "name": "cite web",
-              "params": {
-                "access-date": "September 19, 2026",
-                "publisher": "United States Census Bureau",
-                "title": "American Indian and Alaska Native Alone or in Combination With One or More Other Races (B02010)",
-                "url": "https://data.census.gov/table/ACSDT1Y2024.B02010",
-                "work": "2024 American Community Survey, 1-Year Estimates"
-              }
-            }
-          }
-        ]
-      }
-    ],
-    [
-      "cite_note-71",
-      {
-        "citations": [
-          {
-            "citation": {
-              "kind": "book",
-              "title": "A Short History of Florida",
-              "url": "https://fcit.usf.edu/florida/lessons/menendz/menendz1.htm",
-              "authors": [
-                {
-                  "name": "Florida Center for Instructional Technology"
-                }
-              ],
-              "date": {
-                "time": "2002-01-01T00:00:00Z",
-                "precision": 9
-              },
-              "publisher": "University of South Florida"
-            },
-            "origin": {
-              "from": "template",
-              "name": "cite book",
-              "params": {
-                "author": "Florida Center for Instructional Technology",
-                "chapter": "Pedro Menendez de Aviles Claims Florida for Spain",
-                "date": "2002",
-                "publisher": "University of South Florida",
-                "title": "A Short History of Florida",
-                "url": "https://fcit.usf.edu/florida/lessons/menendz/menendz1.htm"
-              }
-            }
-          }
-        ]
-      }
-    ],
-    [
-      "cite_note-72",
-      {
-        "citations": [
-          {
-            "citation": {
-              "kind": "web",
-              "title": "Not So Fast, Jamestown: St. Augustine Was Here First",
-              "url": "https://www.npr.org/2015/02/28/389682893/not-so-fast-jamestown-st-augustine-was-here-first",
-              "date": {
-                "time": "2015-02-28T00:00:00Z",
-                "precision": 11
-              },
-              "accessed": {
-                "time": "2021-03-05T00:00:00Z",
-                "precision": 11
-              },
-              "language": "en",
-              "publisher": "NPR"
-            },
-            "origin": {
-              "from": "template",
-              "name": "cite web",
-              "params": {
-                "access-date": "March 5, 2021",
-                "date": "February 28, 2015",
-                "language": "en",
-                "publisher": "NPR",
-                "title": "Not So Fast, Jamestown: St. Augustine Was Here First",
-                "url": "https://www.npr.org/2015/02/28/389682893/not-so-fast-jamestown-st-augustine-was-here-first"
               }
             }
           }

@@ -107,6 +107,17 @@ pub fn card<'a>(cited: &'a Cited, view: &'a View) -> Card<'a> {
                 ("qrender-cite-pages", &j.pages),
             ],
         ),
+        Citation::Magazine(m) => work(
+            view,
+            "magazine",
+            &m.work,
+            &[
+                ("qrender-cite-magazine", &m.magazine),
+                ("qrender-cite-volume", &m.volume),
+                ("qrender-cite-issue", &m.issue),
+                ("qrender-cite-pages", &m.pages),
+            ],
+        ),
         Citation::Book(b) => work(
             view,
             "book",
@@ -115,6 +126,24 @@ pub fn card<'a>(cited: &'a Cited, view: &'a View) -> Card<'a> {
                 ("qrender-cite-publisher", &b.publisher),
                 ("qrender-cite-place", &b.place),
                 ("qrender-cite-pages", &b.pages),
+            ],
+        ),
+        Citation::Report(r) => work(
+            view,
+            "report",
+            &r.work,
+            &[
+                ("qrender-cite-publisher", &r.publisher),
+                ("qrender-cite-pages", &r.pages),
+            ],
+        ),
+        Citation::Entry(e) => work(
+            view,
+            "entry",
+            &e.work,
+            &[
+                ("qrender-cite-encyclopedia", &e.encyclopedia),
+                ("qrender-cite-publisher", &e.publisher),
             ],
         ),
         Citation::Record(r) => {

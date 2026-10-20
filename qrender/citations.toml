@@ -11,22 +11,28 @@
 name = "CS1"
 
 [style.templates]
-web = ["cite web"]
+web = ["cite web", "cite press release"]
 news = ["cite news"]
 journal = ["cite journal"]
 book = ["cite book"]
+magazine = ["cite magazine"]
+report = ["cite report"]
+entry = ["cite encyclopedia", "cite dictionary"]
 
 # The classes of the <cite> that each kind makes: `citation web cs1`.
 [style.classes]
-web = ["web"]
+web = ["web", "pressrelease"]
 news = ["news"]
 journal = ["journal"]
 book = ["book"]
+magazine = ["magazine"]
+report = ["report"]
+entry = ["encyclopaedia"]
 
 [style.parameters]
 title = ["title"]
 url = ["url"]
-container = ["website", "work", "newspaper", "journal", "magazine"]
+container = ["website", "work", "newspaper", "journal", "magazine", "encyclopedia", "encyclopaedia", "dictionary"]
 publisher = ["publisher"]
 date = ["date", "year"]
 accessed = ["access-date", "accessdate"]

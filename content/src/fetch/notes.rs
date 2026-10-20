@@ -22,8 +22,8 @@ use serde_json::Value as Json;
 
 use super::wikipedia::{class_has, write_children, write_element};
 use crate::citation::{
-    Archive, Book, Citation, Cited, Date, Identifier, Journal, News, Origin, Original, Person,
-    Short, Web, WebUrl, Work,
+    Archive, Book, Citation, Cited, Date, Entry, Identifier, Journal, Magazine, News, Origin,
+    Original, Person, Report, Short, Web, WebUrl, Work,
 };
 use crate::html::{decode_entities, escape, strip_tags};
 use crate::id::Lang;
@@ -38,7 +38,69 @@ enum Kind {
     Web,
     News,
     Journal,
+    Magazine,
     Book,
+    Report,
+    Entry,
+}
+
+/// The fields beside the work, from template parameters or from COinS.
+/// A kind takes the ones it has.
+#[derive(Default)]
+struct Fields {
+    /// The site, the newspaper, the journal, the magazine, the
+    /// encyclopedia.
+    container: Option<String>,
+    publisher: Option<String>,
+    place: Option<String>,
+    volume: Option<String>,
+    issue: Option<String>,
+    pages: Option<String>,
+}
+
+fn assemble(kind: Kind, work: Work, f: Fields) -> Citation {
+    match kind {
+        Kind::Web => Citation::Web(Web {
+            work,
+            website: f.container,
+            publisher: f.publisher,
+        }),
+        Kind::News => Citation::News(News {
+            work,
+            newspaper: f.container,
+            publisher: f.publisher,
+        }),
+        Kind::Journal => Citation::Journal(Journal {
+            work,
+            journal: f.container,
+            volume: f.volume,
+            issue: f.issue,
+            pages: f.pages,
+        }),
+        Kind::Magazine => Citation::Magazine(Magazine {
+            work,
+            magazine: f.container,
+            volume: f.volume,
+            issue: f.issue,
+            pages: f.pages,
+        }),
+        Kind::Book => Citation::Book(Book {
+            work,
+            publisher: f.publisher,
+            place: f.place,
+            pages: f.pages,
+        }),
+        Kind::Report => Citation::Report(Report {
+            work,
+            publisher: f.publisher,
+            pages: f.pages,
+        }),
+        Kind::Entry => Citation::Entry(Entry {
+            work,
+            encyclopedia: f.container,
+            publisher: f.publisher,
+        }),
+    }
 }
 
 /// A short footnote, cleaned: one link to a place in the page, then maybe
@@ -347,7 +409,10 @@ fn kind_of(by: &ByKind, name: &str) -> Option<Kind> {
         (Kind::Web, &by.web),
         (Kind::News, &by.news),
         (Kind::Journal, &by.journal),
+        (Kind::Magazine, &by.magazine),
         (Kind::Book, &by.book),
+        (Kind::Report, &by.report),
+        (Kind::Entry, &by.entry),
     ]
     .into_iter()
     .find(|(_, names)| names.iter().any(|n| normalize(n) == name))
@@ -368,33 +433,15 @@ fn from_params(kind: Kind, p: &Parameters, params: &IndexMap<String, String>) ->
         language: get(&p.language).and_then(|l| language(&l)),
         ids: ids(p, params),
     };
-    let container = get(&p.container);
-    let publisher = get(&p.publisher);
-    match kind {
-        Kind::Web => Citation::Web(Web {
-            work,
-            website: container,
-            publisher,
-        }),
-        Kind::News => Citation::News(News {
-            work,
-            newspaper: container,
-            publisher,
-        }),
-        Kind::Journal => Citation::Journal(Journal {
-            work,
-            journal: container,
-            volume: get(&p.volume),
-            issue: get(&p.issue),
-            pages: get(&p.pages),
-        }),
-        Kind::Book => Citation::Book(Book {
-            work,
-            publisher,
-            place: get(&p.place),
-            pages: get(&p.pages),
-        }),
-    }
+    let fields = Fields {
+        container: get(&p.container),
+        publisher: get(&p.publisher),
+        place: get(&p.place),
+        volume: get(&p.volume),
+        issue: get(&p.issue),
+        pages: get(&p.pages),
+    };
+    assemble(kind, work, fields)
 }
 
 /// The authors, by number: a family name with a given name, or a name as
@@ -663,8 +710,8 @@ fn coins(span: ElementRef, styles: &[CitationStyle]) -> Option<Cited> {
     );
     let (first, second) = (get("rft.atitle"), get("rft.btitle"));
     let title = match kind {
-        Kind::Book => second.or(first),
-        _ => first.or(second),
+        Kind::Book | Kind::Report => second.clone().or(first),
+        _ => first.or(second.clone()),
     };
     if title.is_none() && url.is_none() {
         return None;
@@ -684,33 +731,21 @@ fn coins(span: ElementRef, styles: &[CitationStyle]) -> Option<Cited> {
             None => start,
         })
     });
-    let citation = match kind {
-        Kind::Web => Citation::Web(Web {
-            work,
-            website: get("rft.jtitle"),
-            publisher: get("rft.pub"),
-        }),
-        Kind::News => Citation::News(News {
-            work,
-            newspaper: get("rft.jtitle"),
-            publisher: get("rft.pub"),
-        }),
-        Kind::Journal => Citation::Journal(Journal {
-            work,
-            journal: get("rft.jtitle"),
-            volume: get("rft.volume"),
-            issue: get("rft.issue"),
-            pages,
-        }),
-        Kind::Book => Citation::Book(Book {
-            work,
-            publisher: get("rft.pub"),
-            place: get("rft.place"),
-            pages,
-        }),
+    // An entry: the title of the encyclopedia is the book title.
+    let container = match kind {
+        Kind::Entry => second.or_else(|| get("rft.jtitle")),
+        _ => get("rft.jtitle"),
+    };
+    let fields = Fields {
+        container,
+        publisher: get("rft.pub"),
+        place: get("rft.place"),
+        volume: get("rft.volume"),
+        issue: get("rft.issue"),
+        pages,
     };
     Some(Cited {
-        citation,
+        citation: assemble(kind, work, fields),
         origin: Origin::Coins,
     })
 }
@@ -1010,7 +1045,7 @@ mod tests {
 
     #[test]
     fn a_template_of_no_style_without_coins_is_text() {
-        let html = cite("cite magazine", r#"{"title":{"wt":"A"}}"#)
+        let html = cite("cite podcast", r#"{"title":{"wt":"A"}}"#)
             .replace("</span></li>", "Rendered text.</span></li>");
         assert_eq!(
             only(&html),
@@ -1096,6 +1131,49 @@ mod tests {
         };
         assert!(sider.work.title.is_some());
         assert_eq!(found.works["CITEREFSider2007"].origin, Origin::Coins);
+    }
+
+    #[test]
+    fn the_kinds_of_the_united_states() {
+        // One note of each of these templates in the English article of
+        // the United States.
+        let notes = read(include_str!("../../../fixtures/notes/q30-kinds.html"));
+        let citation = |id: &str| notes[id].citations[0].citation.clone();
+        let Citation::Magazine(time) = citation("cite_note-201") else {
+            panic!("{:?}", citation("cite_note-201"));
+        };
+        assert_eq!(time.magazine.as_deref(), Some("Time"));
+        assert_eq!(
+            time.work.title.as_deref(),
+            Some("Behind the Protests Against the Vietnam War in 1968")
+        );
+        let Citation::Report(report) = citation("cite_note-AKLeg_CRS_Federal_Land-257") else {
+            panic!();
+        };
+        assert_eq!(
+            report.publisher.as_deref(),
+            Some("Congressional Research Service")
+        );
+        assert_eq!(report.pages.as_deref(), Some("2"));
+        assert_eq!(report.work.authors.len(), 3);
+        let Citation::Entry(vespucci) = citation("cite_note-50") else {
+            panic!();
+        };
+        assert_eq!(vespucci.work.title.as_deref(), Some("Amerigo Vespucci"));
+        assert_eq!(
+            vespucci.encyclopedia.as_deref(),
+            Some("Encyclopædia Britannica")
+        );
+        // A dictionary is an encyclopedia's kind of work.
+        let Citation::Entry(states) = citation("cite_note-47") else {
+            panic!();
+        };
+        assert_eq!(states.encyclopedia.as_deref(), Some("Longman dictionary"));
+        // A press release is a page of its publisher.
+        let Citation::Web(un) = citation("cite_note-659") else {
+            panic!();
+        };
+        assert_eq!(un.publisher.as_deref(), Some("United Nations"));
     }
 
     #[test]

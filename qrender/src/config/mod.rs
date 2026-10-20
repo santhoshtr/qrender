@@ -328,7 +328,7 @@ mod tests {
             Template::Columns
         );
         assert_eq!(config.citations[0].name, "CS1");
-        assert_eq!(config.citations[0].templates.web, ["cite web"]);
+        assert_eq!(config.citations[0].templates.web[0], "cite web");
     }
 
     #[test]
@@ -364,7 +364,7 @@ mod tests {
         assert!(invalid(&bad_role, RULES).contains("layouts.toml"));
         let bad_pid = LAYOUTS.replacen("\"P1082\",", "\"1082\",", 1);
         assert!(invalid(&bad_pid, RULES).contains("layouts.toml"));
-        let bad_kind = CITATIONS.replacen("web = [\"cite web\"]", "webs = [\"cite web\"]", 1);
+        let bad_kind = CITATIONS.replacen("magazine = [", "magazines = [", 1);
         let error = Config::parse(LAYOUTS, RULES, &bad_kind).unwrap_err();
         assert!(error.to_string().contains("citations.toml"));
     }

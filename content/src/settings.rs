@@ -66,6 +66,13 @@ pub struct ByKind {
     pub journal: Vec<String>,
     #[serde(default)]
     pub book: Vec<String>,
+    #[serde(default)]
+    pub magazine: Vec<String>,
+    #[serde(default)]
+    pub report: Vec<String>,
+    /// An entry in an encyclopedia or a dictionary.
+    #[serde(default)]
+    pub entry: Vec<String>,
 }
 
 /// The parameters of each field, the first one that has a value first.

@@ -28,7 +28,13 @@ pub enum Citation {
     News(News),
     /// An article in a journal.
     Journal(Journal),
+    /// An article in a magazine.
+    Magazine(Magazine),
     Book(Book),
+    /// A report of an institution.
+    Report(Report),
+    /// An entry in an encyclopedia or a dictionary.
+    Entry(Entry),
     /// A database or a work that Wikidata names (P248 stated in), maybe
     /// with the identifier of the record in it.
     Record(Record),
@@ -40,6 +46,43 @@ pub enum Citation {
     Text {
         html: String,
     },
+}
+
+#[derive(Debug, Clone, Default, PartialEq, Serialize, Deserialize, schemars::JsonSchema)]
+pub struct Magazine {
+    #[serde(flatten)]
+    pub work: Work,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub magazine: Option<String>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub volume: Option<String>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub issue: Option<String>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub pages: Option<String>,
+}
+
+#[derive(Debug, Clone, Default, PartialEq, Serialize, Deserialize, schemars::JsonSchema)]
+pub struct Report {
+    #[serde(flatten)]
+    pub work: Work,
+    /// The institution that published it.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub publisher: Option<String>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub pages: Option<String>,
+}
+
+/// An entry: its title is the title of the work.
+#[derive(Debug, Clone, Default, PartialEq, Serialize, Deserialize, schemars::JsonSchema)]
+pub struct Entry {
+    #[serde(flatten)]
+    pub work: Work,
+    /// The encyclopedia or the dictionary.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub encyclopedia: Option<String>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub publisher: Option<String>,
 }
 
 /// A short footnote. The work is in the works of the article, by its

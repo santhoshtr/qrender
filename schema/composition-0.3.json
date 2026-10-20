@@ -656,10 +656,52 @@
           "type": "object"
         },
         {
+          "$ref": "#/$defs/Magazine",
+          "description": "An article in a magazine.",
+          "properties": {
+            "kind": {
+              "const": "magazine",
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "type": "object"
+        },
+        {
           "$ref": "#/$defs/Book",
           "properties": {
             "kind": {
               "const": "book",
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/Report",
+          "description": "A report of an institution.",
+          "properties": {
+            "kind": {
+              "const": "report",
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/Entry",
+          "description": "An entry in an encyclopedia or a dictionary.",
+          "properties": {
+            "kind": {
+              "const": "entry",
               "type": "string"
             }
           },
@@ -945,6 +987,96 @@
     "EntityId": {
       "pattern": "^[QP][1-9][0-9]*$",
       "type": "string"
+    },
+    "Entry": {
+      "description": "An entry: its title is the title of the work.",
+      "properties": {
+        "accessed": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Date"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The date the source was read."
+        },
+        "archive": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Archive"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "authors": {
+          "items": {
+            "$ref": "#/$defs/Person2"
+          },
+          "type": "array"
+        },
+        "date": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Date"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The date of publication."
+        },
+        "encyclopedia": {
+          "description": "The encyclopedia or the dictionary.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ids": {
+          "items": {
+            "$ref": "#/$defs/Identifier2"
+          },
+          "type": "array"
+        },
+        "language": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Lang"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The language of the source."
+        },
+        "publisher": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "url": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/WebUrl"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "type": "object"
     },
     "Event": {
       "anyOf": [
@@ -1972,6 +2104,107 @@
       "required": [
         "cards"
       ],
+      "type": "object"
+    },
+    "Magazine": {
+      "description": "The fields that every work has.",
+      "properties": {
+        "accessed": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Date"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The date the source was read."
+        },
+        "archive": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Archive"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "authors": {
+          "items": {
+            "$ref": "#/$defs/Person2"
+          },
+          "type": "array"
+        },
+        "date": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Date"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The date of publication."
+        },
+        "ids": {
+          "items": {
+            "$ref": "#/$defs/Identifier2"
+          },
+          "type": "array"
+        },
+        "issue": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "language": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Lang"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The language of the source."
+        },
+        "magazine": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "pages": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "url": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/WebUrl"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "volume": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
       "type": "object"
     },
     "Map": {
@@ -4218,6 +4451,96 @@
         "pid",
         "value"
       ],
+      "type": "object"
+    },
+    "Report": {
+      "description": "The fields that every work has.",
+      "properties": {
+        "accessed": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Date"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The date the source was read."
+        },
+        "archive": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Archive"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "authors": {
+          "items": {
+            "$ref": "#/$defs/Person2"
+          },
+          "type": "array"
+        },
+        "date": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Date"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The date of publication."
+        },
+        "ids": {
+          "items": {
+            "$ref": "#/$defs/Identifier2"
+          },
+          "type": "array"
+        },
+        "language": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Lang"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The language of the source."
+        },
+        "pages": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "publisher": {
+          "description": "The institution that published it.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "url": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/WebUrl"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
       "type": "object"
     },
     "Scale": {
