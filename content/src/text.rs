@@ -6,7 +6,7 @@
 use indexmap::IndexMap;
 use serde::{Deserialize, Serialize};
 
-use crate::citation::Cited;
+use crate::citation::{Citation, Cited};
 use crate::id::{EntityId, Lang, Qid};
 
 pub const TEXT_SCHEMA: &str = "text/0.1";
@@ -77,6 +77,10 @@ pub struct Article {
     /// `<sup data-note="cite_note-12"></sup>`.
     #[serde(default, skip_serializing_if = "IndexMap::is_empty")]
     pub notes: IndexMap<String, Note>,
+    /// The works that the short footnotes of the notes cite, by their
+    /// anchor ("CITEREFFaingold2018"): entries of the bibliography.
+    #[serde(default, skip_serializing_if = "IndexMap::is_empty")]
+    pub works: IndexMap<String, Cited>,
 }
 
 /// A note of an article: a reference (the default group) or an
@@ -92,6 +96,17 @@ pub struct Note {
     /// An explanatory note: its text as HTML, with its own marks.
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub text: Option<String>,
+}
+
+impl Note {
+    /// The anchors of the works that the short footnotes of this note
+    /// cite.
+    pub fn works(&self) -> impl Iterator<Item = &str> {
+        self.citations.iter().filter_map(|c| match &c.citation {
+            Citation::Short(s) => Some(s.work.as_str()),
+            _ => None,
+        })
+    }
 }
 
 /// A section of an article with its content, and its subsections.

@@ -1,9 +1,10 @@
 ---
 source: app/tests/notes.rs
-expression: "report(&notes.values().collect::<Vec<_>>(), &html)"
+expression: "report(&notes.values().collect::<Vec<_>>(), &works, &html)"
 ---
 notes: 723
 groups: {"(references)": 695, "lower-alpha": 28}
 paths of the references: {"coins": 44, "coins+html": 2, "html": 247, "template": 400, "template+html": 2}
-citations by kind: {"book": 20, "journal": 13, "news": 65, "text": 251, "web": 366}
+citations by kind: {"book": 20, "journal": 13, "news": 65, "short": 201, "text": 50, "web": 366}
+works of short footnotes: 177 cited, 175 found, by kind {"book": 126, "journal": 42, "web": 7}
 templates in no style: {"cbignore": 1, "cite dictionary": 2, "cite encyclopedia": 1, "cite magazine": 7, "cite press release": 1, "cite report": 4, "dead link": 1, "harvard citation no brackets": 2, "harvnb": 19, "isbn": 13, "multiref2": 3, "omission": 3, "usc": 3, "webarchive": 2}

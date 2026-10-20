@@ -52,8 +52,32 @@ pub enum Value {
     Language(String),
 }
 
-pub fn card<'a>(cited: &'a Cited, view: &View) -> Card<'a> {
+pub fn card<'a>(cited: &'a Cited, view: &'a View) -> Card<'a> {
     match &cited.citation {
+        // The card of its work, with the place; without the work, its
+        // words.
+        Citation::Short(s) => {
+            let at =
+                s.at.as_ref()
+                    .map(|at| parts("qrender-cite-at", vec![text(at)]));
+            match view.works.get(&s.work) {
+                Some(work) => {
+                    let mut card = card(work, view);
+                    card.rows.extend(at);
+                    card
+                }
+                None => Card {
+                    title: s.label.clone(),
+                    title_lang: None,
+                    href: None,
+                    host: None,
+                    favicon: None,
+                    kind: "short",
+                    rows: at.into_iter().collect(),
+                    html: None,
+                },
+            }
+        }
         Citation::Web(w) => work(
             view,
             "web",

@@ -9,7 +9,7 @@ use std::fs;
 use std::io::Read;
 use std::path::Path;
 
-use content::fetch::article_notes;
+use content::fetch::{ArticleNotes, article_notes};
 use content::{Citation, Note, Origin};
 use qrender::config::Config;
 use serde_json::Value;
@@ -57,6 +57,7 @@ fn kind(citation: &Citation) -> &'static str {
         Citation::Journal(_) => "journal",
         Citation::Book(_) => "book",
         Citation::Record(_) => "record",
+        Citation::Short(_) => "short",
         Citation::Text { .. } => "text",
     }
 }
@@ -92,8 +93,13 @@ fn templates(html: &str) -> BTreeMap<String, usize> {
 }
 
 /// How the notes were read: the notes for each set of origins, the
-/// citations of each kind, and the templates that no style has.
-fn report(notes: &[&Note], html: &str) -> String {
+/// citations of each kind, the short footnotes and their works, and the
+/// templates that no style has.
+fn report(
+    notes: &[&Note],
+    works: &indexmap::IndexMap<String, content::Cited>,
+    html: &str,
+) -> String {
     let mut paths: BTreeMap<String, usize> = BTreeMap::new();
     let mut kinds: BTreeMap<&str, usize> = BTreeMap::new();
     let mut groups: BTreeMap<String, usize> = BTreeMap::new();
@@ -124,9 +130,16 @@ fn report(notes: &[&Note], html: &str) -> String {
         .into_iter()
         .filter(|(name, _)| !known.contains(name))
         .collect();
+    let cited: std::collections::BTreeSet<&str> = notes.iter().flat_map(|n| n.works()).collect();
+    let found = cited.iter().filter(|w| works.contains_key(**w)).count();
+    let work_kinds: BTreeMap<&str, usize> = works.values().fold(BTreeMap::new(), |mut m, w| {
+        *m.entry(kind(&w.citation)).or_default() += 1;
+        m
+    });
     format!(
-        "notes: {}\ngroups: {groups:?}\npaths of the references: {paths:?}\ncitations by kind: {kinds:?}\ntemplates in no style: {unknown:?}\n",
-        notes.len()
+        "notes: {}\ngroups: {groups:?}\npaths of the references: {paths:?}\ncitations by kind: {kinds:?}\nworks of short footnotes: {} cited, {found} found, by kind {work_kinds:?}\ntemplates in no style: {unknown:?}\n",
+        notes.len(),
+        cited.len()
     )
 }
 
@@ -157,11 +170,11 @@ fn check(notes: &indexmap::IndexMap<String, Note>) {
 #[test]
 fn every_note_of_nairobi() {
     let html = nairobi();
-    let notes = article_notes(&html, &Config::embedded().citations);
+    let ArticleNotes { notes, works } = article_notes(&html, &Config::embedded().citations);
     check(&notes);
     insta::assert_snapshot!(
         "q3870.en.report",
-        report(&notes.values().collect::<Vec<_>>(), &html)
+        report(&notes.values().collect::<Vec<_>>(), &works, &html)
     );
     insta::assert_snapshot!(
         "q3870.en.notes.json",
@@ -172,11 +185,11 @@ fn every_note_of_nairobi() {
 #[test]
 fn every_note_of_the_united_states() {
     let html = united_states();
-    let notes = article_notes(&html, &Config::embedded().citations);
+    let ArticleNotes { notes, works } = article_notes(&html, &Config::embedded().citations);
     check(&notes);
     insta::assert_snapshot!(
         "q30.en.report",
-        report(&notes.values().collect::<Vec<_>>(), &html)
+        report(&notes.values().collect::<Vec<_>>(), &works, &html)
     );
     // All the notes are too many for a snapshot: the first ten of each
     // path.

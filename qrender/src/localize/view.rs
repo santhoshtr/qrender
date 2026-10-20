@@ -53,6 +53,9 @@ pub struct View {
     /// The references of the statements that cite a source, by hash.
     #[serde(skip_serializing_if = "BTreeMap::is_empty")]
     pub citations: BTreeMap<String, Cited>,
+    /// The works that the short footnotes of the notes cite, by anchor.
+    #[serde(skip_serializing_if = "BTreeMap::is_empty")]
+    pub works: BTreeMap<String, Cited>,
 }
 
 /// A note of the article: a reference, or an explanatory note.

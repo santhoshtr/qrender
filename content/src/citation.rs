@@ -32,11 +32,27 @@ pub enum Citation {
     /// A database or a work that Wikidata names (P248 stated in), maybe
     /// with the identifier of the record in it.
     Record(Record),
+    /// A short footnote: a work of the article's bibliography, at a place
+    /// in it ("Faingold 2018, p. 8").
+    Short(Short),
     /// Free text that no template made, as HTML. It is not parsed: no
     /// guess.
     Text {
         html: String,
     },
+}
+
+/// A short footnote. The work is in the works of the article, by its
+/// anchor; the page can lack it (a broken short footnote).
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize, schemars::JsonSchema)]
+pub struct Short {
+    /// The anchor of the work in the article: "CITEREFFaingold2018".
+    pub work: String,
+    /// The words of the footnote's link: "Faingold 2018".
+    pub label: String,
+    /// The place in the work: "p. 8", "pp. 2–3".
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub at: Option<String>,
 }
 
 /// The fields that every work has.

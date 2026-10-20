@@ -683,6 +683,20 @@
           "type": "object"
         },
         {
+          "$ref": "#/$defs/Short",
+          "description": "A short footnote: a work of the article's bibliography, at a place\nin it (\"Faingold 2018, p. 8\").",
+          "properties": {
+            "kind": {
+              "const": "short",
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "type": "object"
+        },
+        {
           "description": "Free text that no template made, as HTML. It is not parsed: no\nguess.",
           "properties": {
             "html": {
@@ -4453,6 +4467,31 @@
         "share",
         "statement",
         "provenance"
+      ],
+      "type": "object"
+    },
+    "Short": {
+      "description": "A short footnote. The work is in the works of the article, by its\nanchor; the page can lack it (a broken short footnote).",
+      "properties": {
+        "at": {
+          "description": "The place in the work: \"p. 8\", \"pp. 2–3\".",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "label": {
+          "description": "The words of the footnote's link: \"Faingold 2018\".",
+          "type": "string"
+        },
+        "work": {
+          "description": "The anchor of the work in the article: \"CITEREFFaingold2018\".",
+          "type": "string"
+        }
+      },
+      "required": [
+        "work",
+        "label"
       ],
       "type": "object"
     },

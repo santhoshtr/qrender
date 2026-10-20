@@ -27,7 +27,7 @@ use crate::model::{
 use crate::settings::Settings;
 use crate::text::{TEXT_SCHEMA, Text};
 pub use http::{Http, Mode};
-pub use notes::article_notes;
+pub use notes::{ArticleNotes, article_notes};
 
 /// A peer set has this many members at least, and at most.
 const PEERS_MIN: usize = 5;
@@ -63,7 +63,7 @@ pub enum FetchError {
 /// The version of the fetcher. Raise it when a change of the fetcher
 /// changes what it fetches (a new field, a new request): it is part of
 /// every cache key, so the parts that an older fetcher stored are not read.
-pub const FETCH_VERSION: u32 = 13;
+pub const FETCH_VERSION: u32 = 14;
 
 /// Seconds a cached part lives: content and text change with edits;
 /// a peer set changes slowly and many items share it.

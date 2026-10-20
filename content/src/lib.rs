@@ -20,7 +20,7 @@ pub mod text;
 
 pub use citation::{
     Archive, Book, Citation, Cited, Date, Identifier, Journal, News, Origin, Original, Person,
-    Record, RecordId, Web, WebUrl, Work,
+    Record, RecordId, Short, Web, WebUrl, Work,
 };
 pub use id::{EntityId, IdError, Lang, Pid, Qid, StatementId};
 pub use model::{

@@ -318,8 +318,10 @@ expression: "serde_json::to_string_pretty(&sample).unwrap()"
         "citations": [
           {
             "citation": {
-              "kind": "text",
-              "html": "<a href=\"#Davis96\">Davis 1996</a>, p. 7."
+              "kind": "short",
+              "work": "Davis96",
+              "label": "Davis 1996",
+              "at": "p. 7"
             },
             "origin": {
               "from": "html"
@@ -334,8 +336,10 @@ expression: "serde_json::to_string_pretty(&sample).unwrap()"
         "citations": [
           {
             "citation": {
-              "kind": "text",
-              "html": "<a href=\"#CITEREFSider2007\">Sider 2007</a>, p.<span> </span>226."
+              "kind": "short",
+              "work": "CITEREFSider2007",
+              "label": "Sider 2007",
+              "at": "p. 226"
             },
             "origin": {
               "from": "html"
@@ -350,8 +354,10 @@ expression: "serde_json::to_string_pretty(&sample).unwrap()"
         "citations": [
           {
             "citation": {
-              "kind": "text",
-              "html": "<a href=\"#CITEREFWilson1993\">Wilson 1993</a>, pp.<span> </span>27–28."
+              "kind": "short",
+              "work": "CITEREFWilson1993",
+              "label": "Wilson 1993",
+              "at": "pp. 27–28"
             },
             "origin": {
               "from": "html"
@@ -382,8 +388,10 @@ expression: "serde_json::to_string_pretty(&sample).unwrap()"
         "citations": [
           {
             "citation": {
-              "kind": "text",
-              "html": "<a href=\"#CITEREFErlandsonRickVellanoweth2008\">Erlandson, Rick <span>&amp;</span> Vellanoweth 2008</a>, p.<span> </span>19."
+              "kind": "short",
+              "work": "CITEREFErlandsonRickVellanoweth2008",
+              "label": "Erlandson, Rick & Vellanoweth 2008",
+              "at": "p. 19"
             },
             "origin": {
               "from": "html"
@@ -398,8 +406,10 @@ expression: "serde_json::to_string_pretty(&sample).unwrap()"
         "citations": [
           {
             "citation": {
-              "kind": "text",
-              "html": "<a href=\"#CITEREFSavage2011\">Savage 2011</a>, pp.<span> </span>55–58."
+              "kind": "short",
+              "work": "CITEREFSavage2011",
+              "label": "Savage 2011",
+              "at": "pp. 55–58"
             },
             "origin": {
               "from": "html"
@@ -414,8 +424,10 @@ expression: "serde_json::to_string_pretty(&sample).unwrap()"
         "citations": [
           {
             "citation": {
-              "kind": "text",
-              "html": "<a href=\"#CITEREFWatersStafford2007\">Waters <span>&amp;</span> Stafford 2007</a>, pp.<span> </span>1122–1126."
+              "kind": "short",
+              "work": "CITEREFWatersStafford2007",
+              "label": "Waters & Stafford 2007",
+              "at": "pp. 1122–1126"
             },
             "origin": {
               "from": "html"
@@ -430,8 +442,10 @@ expression: "serde_json::to_string_pretty(&sample).unwrap()"
         "citations": [
           {
             "citation": {
-              "kind": "text",
-              "html": "<a href=\"#CITEREFFlannery2015\">Flannery 2015</a>, pp.<span> </span>173–185."
+              "kind": "short",
+              "work": "CITEREFFlannery2015",
+              "label": "Flannery 2015",
+              "at": "pp. 173–185"
             },
             "origin": {
               "from": "html"

@@ -162,6 +162,7 @@ impl<'a> Localizer<'a> {
             more_sections,
             set_aside: self.composition.set_aside.clone(),
             notes: self.notes(),
+            works: self.works(),
             citations: self
                 .composition
                 .citations
@@ -361,6 +362,22 @@ impl<'a> Localizer<'a> {
             number += 1;
         }
         out
+    }
+
+    /// The works that the short footnotes of the shown notes cite; the
+    /// HTML of a work of free text cleaned as a note's.
+    fn works(&self) -> BTreeMap<String, Cited> {
+        let (Some(numbering), Some((article, source))) = (&self.numbering, self.article()) else {
+            return BTreeMap::new();
+        };
+        (1..)
+            .map_while(|n| numbering.note(n))
+            .flat_map(|(_, note)| note.works())
+            .filter_map(|anchor| {
+                let work = article.works.get(anchor)?;
+                Some((anchor.to_string(), self.cited(work, article, source)))
+            })
+            .collect()
     }
 
     /// A citation of a note: the HTML of free text is cleaned as prose is,

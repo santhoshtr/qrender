@@ -17,6 +17,7 @@ use super::http::{Http, Service};
 use super::notes;
 use scraper::{ElementRef, Html};
 
+use crate::citation::Cited;
 use crate::html::{decode_entities, escape, strip_tags, wiki_target};
 use crate::id::{Lang, Qid};
 use crate::settings::CitationStyle;
@@ -95,6 +96,8 @@ pub async fn article(
     collect_blocks(&outline, &mut texts);
     let marked = marked(&texts, &parsed.notes);
     parsed.notes.retain(|id, _| marked.contains(id));
+    let cited = notes::cited_works(parsed.notes.values());
+    parsed.works.retain(|anchor, _| cited.contains(anchor));
     Ok(Article {
         title: title.to_string(),
         links: links(http, host, &texts).await?,
@@ -104,6 +107,7 @@ pub async fn article(
         section_text,
         outline,
         notes: parsed.notes,
+        works: parsed.works,
     })
 }
 
@@ -168,6 +172,8 @@ struct Parsed {
     first: IndexMap<String, String>,
     /// Every note of the article.
     notes: IndexMap<String, Note>,
+    /// The works that short footnotes cite, by anchor.
+    works: IndexMap<String, Cited>,
 }
 
 fn read(html: &str, styles: &[CitationStyle]) -> Parsed {
@@ -189,11 +195,14 @@ fn read(html: &str, styles: &[CitationStyle]) -> Parsed {
             first.insert(anchor.to_string(), paragraph);
         }
     }
+    let notes = notes::notes(&doc, styles);
+    let works = notes::works(&doc, styles, &notes::cited_works(notes.values()));
     Parsed {
         lead,
         outline: outline_of(&doc),
         first,
-        notes: notes::notes(&doc, styles),
+        notes,
+        works,
     }
 }
 
@@ -348,8 +357,18 @@ pub(super) fn write_element(el: ElementRef, out: &mut String) {
         }
         return;
     }
-    // The other forms of a coordinate, which the CSS of the wiki hides.
-    let hidden = class.contains("geo-nondefault") || class.contains("geo-multi-punct");
+    // What the CSS of the wiki hides: the other forms of a coordinate,
+    // and the messages of citation templates for editors (a short
+    // footnote without its work, a maintenance note).
+    let hidden = [
+        "geo-nondefault",
+        "geo-multi-punct",
+        "harv-error",
+        "cs1-hidden-error",
+        "cs1-maint",
+    ]
+    .iter()
+    .any(|c| class.split_whitespace().any(|w| w == *c));
     if hidden
         || matches!(
             name,

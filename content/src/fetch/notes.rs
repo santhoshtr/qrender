@@ -4,19 +4,26 @@
 //!    `data-mw` of the first node of the transclusion;
 //! 2. COinS (`span.Z3988`): a citation that a template made inside
 //!    another template (the infobox) has no template data of its own;
-//! 3. else the note is one citation: its text, as HTML.
+//! 3. else the note is one citation: its text, as HTML; or, when the text
+//!    is only a link to a work of the article and a place ("Faingold
+//!    2018, p. 8"), a short footnote. The works are read from their
+//!    `<cite id>` as notes are (template, else COinS, else text).
 //!
 //! The input is wild: no note fails, and every note gives a citation.
 
+use std::collections::BTreeSet;
+use std::sync::LazyLock;
+
 use indexmap::IndexMap;
 use percent_encoding::percent_decode_str;
+use regex::Regex;
 use scraper::{ElementRef, Html};
 use serde_json::Value as Json;
 
 use super::wikipedia::{class_has, write_children, write_element};
 use crate::citation::{
-    Archive, Book, Citation, Cited, Date, Identifier, Journal, News, Origin, Original, Person, Web,
-    WebUrl, Work,
+    Archive, Book, Citation, Cited, Date, Identifier, Journal, News, Origin, Original, Person,
+    Short, Web, WebUrl, Work,
 };
 use crate::html::{decode_entities, escape, strip_tags};
 use crate::id::Lang;
@@ -34,10 +41,119 @@ enum Kind {
     Book,
 }
 
-/// Every note of an article, from its Parsoid HTML, by the id of its
-/// item in a list of notes.
-pub fn article_notes(html: &str, styles: &[CitationStyle]) -> IndexMap<String, Note> {
-    notes(&Html::parse_fragment(html), styles)
+/// A short footnote, cleaned: one link to a place in the page, then maybe
+/// the place in the work, then maybe a full stop.
+static SHORT: LazyLock<Regex> =
+    LazyLock::new(|| Regex::new(r##"(?s)^<a href="#([^"]+)">(.*?)</a>(.*)$"##).unwrap());
+/// What follows the link: ", p. 8", ", pp. 2–3", then maybe ".".
+static AT: LazyLock<Regex> =
+    LazyLock::new(|| Regex::new(r"^(?:,\s*(pp?\.\s*[^.]+?))?\s*\.?$").unwrap());
+
+/// The notes of an article and the works that their short footnotes
+/// cite.
+pub struct ArticleNotes {
+    /// By the id of its item in a list of notes.
+    pub notes: IndexMap<String, Note>,
+    /// By the anchor of the work.
+    pub works: IndexMap<String, Cited>,
+}
+
+/// Every note of an article, from its Parsoid HTML, and the works that
+/// they cite.
+pub fn article_notes(html: &str, styles: &[CitationStyle]) -> ArticleNotes {
+    let doc = Html::parse_fragment(html);
+    let notes = notes(&doc, styles);
+    let works = works(&doc, styles, &cited_works(notes.values()));
+    ArticleNotes { notes, works }
+}
+
+/// The anchors of the works that short footnotes of these notes cite.
+pub fn cited_works<'a>(notes: impl IntoIterator<Item = &'a Note>) -> BTreeSet<String> {
+    notes
+        .into_iter()
+        .flat_map(Note::works)
+        .map(str::to_string)
+        .collect()
+}
+
+/// The works of these anchors: each `<cite id>` read as a citation of a
+/// note is (its template, else its COinS, else its text). An anchor that
+/// the page does not have is not there.
+pub fn works(
+    doc: &Html,
+    styles: &[CitationStyle],
+    anchors: &BTreeSet<String>,
+) -> IndexMap<String, Cited> {
+    let mut out = IndexMap::new();
+    let cites = doc
+        .root_element()
+        .descendants()
+        .filter_map(ElementRef::wrap)
+        .filter(|e| e.value().name() == "cite");
+    for cite in cites {
+        let Some(id) = cite.value().attr("id").filter(|id| anchors.contains(*id)) else {
+            continue;
+        };
+        if out.contains_key(id) {
+            continue;
+        }
+        let work = template_of(cite, styles)
+            .or_else(|| {
+                let span = cite
+                    .next_siblings()
+                    .find_map(ElementRef::wrap)
+                    .filter(|e| is_coins(*e))?;
+                coins(span, styles)
+            })
+            .unwrap_or_else(|| Cited {
+                citation: Citation::Text {
+                    html: html_of(cite),
+                },
+                origin: Origin::Html,
+            });
+        out.insert(id.to_string(), work);
+    }
+    out
+}
+
+/// The citation of a `<cite>` from the template that made it: the first
+/// node of its transclusion has the data (the `<cite>` itself, or a node
+/// before it with the same `about`).
+fn template_of(cite: ElementRef, styles: &[CitationStyle]) -> Option<Cited> {
+    let about = cite.value().attr("about")?;
+    let head = std::iter::once(cite)
+        .chain(cite.prev_siblings().filter_map(ElementRef::wrap))
+        .take_while(|e| e.value().attr("about") == Some(about))
+        .filter_map(transclusion)
+        .next()?;
+    head.iter().find_map(|part| {
+        let (style, kind) = styles
+            .iter()
+            .find_map(|s| Some((s, kind_of(&s.templates, &part.name)?)))?;
+        Some(Cited {
+            citation: from_params(kind, &style.parameters, &part.params),
+            origin: Origin::Template {
+                name: part.name.clone(),
+                params: part.params.clone(),
+            },
+        })
+    })
+}
+
+/// A short footnote: the cleaned HTML of a note that is one link to a
+/// place in the page and maybe a place in the work.
+fn short(html: &str) -> Option<Short> {
+    let found = SHORT.captures(html)?;
+    let rest = decode_entities(&strip_tags(&found[3])).replace('\u{a0}', " ");
+    let at = AT.captures(rest.trim())?;
+    let label = decode_entities(&strip_tags(&found[2])).replace('\u{a0}', " ");
+    Some(Short {
+        work: decode_entities(&found[1]),
+        label: label.split_whitespace().collect::<Vec<_>>().join(" "),
+        at: at
+            .get(1)
+            .map(|a| a.as_str().split_whitespace().collect::<Vec<_>>().join(" ")),
+    })
 }
 
 /// Every note of the article, by the id of its item in a list of notes.
@@ -82,10 +198,9 @@ fn note(body: ElementRef, group: Option<String>, styles: &[CitationStyle]) -> No
     }
     let mut citations = citations(body, styles);
     if citations.is_empty() {
+        let html = html_of(body);
         citations.push(Cited {
-            citation: Citation::Text {
-                html: html_of(body),
-            },
+            citation: short(&html).map_or_else(|| Citation::Text { html }, Citation::Short),
             origin: Origin::Html,
         });
     }
@@ -632,7 +747,7 @@ mod tests {
     }
 
     fn read(html: &str) -> IndexMap<String, Note> {
-        article_notes(html, &styles())
+        article_notes(html, &styles()).notes
     }
 
     /// The citations of the only note of some HTML.
@@ -942,6 +1057,71 @@ mod tests {
             notes["cite_note-1"].citations[0].citation,
             Citation::Text { html: "".into() }
         );
+    }
+
+    #[test]
+    fn short_footnotes_and_their_works() {
+        // Three notes of the English article of the United States, and the
+        // entries of its bibliography (COinS only: the list is in a
+        // template).
+        let found = article_notes(
+            include_str!("../../../fixtures/notes/q30-short.html"),
+            &styles(),
+        );
+        let citation = |id: &str| found.notes[id].citations[0].citation.clone();
+        assert_eq!(
+            citation("cite_note-FOOTNOTESider2007226-52"),
+            Citation::Short(Short {
+                work: "CITEREFSider2007".into(),
+                label: "Sider 2007".into(),
+                at: Some("p. 226".into()),
+            })
+        );
+        // A quotation after the place: not only a short footnote.
+        assert!(matches!(citation("cite_note-9"), Citation::Text { .. }));
+        // The message for editors ("sfn error: multiple targets") is
+        // hidden, as the wiki hides it.
+        let Citation::Short(ryan) = citation("cite_note-FOOTNOTERyan2000-270") else {
+            panic!("{:?}", citation("cite_note-FOOTNOTERyan2000-270"));
+        };
+        assert_eq!(ryan.work, "CITEREFRyan2000");
+        // The works of the short footnotes, from their COinS; not the one
+        // that only a text cites.
+        assert_eq!(
+            found.works.keys().collect::<Vec<_>>(),
+            ["CITEREFSider2007", "CITEREFRyan2000"]
+        );
+        let Citation::Book(sider) = &found.works["CITEREFSider2007"].citation else {
+            panic!("{:?}", found.works["CITEREFSider2007"]);
+        };
+        assert!(sider.work.title.is_some());
+        assert_eq!(found.works["CITEREFSider2007"].origin, Origin::Coins);
+    }
+
+    #[test]
+    fn what_a_short_footnote_is() {
+        let link = r##"<a href="#CITEREFMintz1996">Mintz 1996</a>"##;
+        let short_of = |html: &str| short(html).map(|s| (s.work, s.label, s.at));
+        assert_eq!(
+            short_of(&format!("{link}.")),
+            Some(("CITEREFMintz1996".into(), "Mintz 1996".into(), None))
+        );
+        assert_eq!(
+            short_of(&format!("{link}, pp.<span>\u{a0}</span>2–3.")).and_then(|s| s.2),
+            Some("pp. 2–3".into())
+        );
+        assert_eq!(
+            short_of(&format!("{link}, p. 134")).and_then(|s| s.2),
+            Some("p. 134".into())
+        );
+        // Not a short footnote: a link to another page, two links, words
+        // after the place.
+        assert_eq!(
+            short_of(r#"<a href="https://example.org/">Mintz 1996</a>."#),
+            None
+        );
+        assert_eq!(short_of(&format!("{link}; {link}.")), None);
+        assert_eq!(short_of(&format!(r#"{link}, p. 8. "A quotation.""#)), None);
     }
 
     #[test]
