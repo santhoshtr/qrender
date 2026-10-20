@@ -1,6 +1,7 @@
-{#- The projects with a page about the item, the most first. -#}
+{#- The projects with a page about the item, the most first: the logo and
+    the name of each, and the number of its wikis. -#}
 <div class="block">
     <div>
-        {%- for p in ui.view.projects -%}<span class="chip">{{ p.name }} <b>{{ p.count }}</b>{% if p.local %} ✓{% endif %}</span>{%- endfor -%}
+        {%- for p in ui.view.projects -%}<span class="chip">{{ ui.project_logo(p.name)|safe }}{{ ui.project_name(p.name) }} <b>{{ p.count }}</b>{% if p.local %} ✓{% endif %}</span>{%- endfor -%}
     </div>
 </div>

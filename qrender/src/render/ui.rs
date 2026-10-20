@@ -859,6 +859,16 @@ impl<'v> Ui<'v> {
         lead.or(section).map(|l| l.as_str())
     }
 
+    /// The name of a project family ("Wikipedia"), else its id.
+    pub fn project_name<'a>(&self, family: &'a str) -> &'a str {
+        crate::primitives::sitelinks::project(family).map_or(family, |(name, _)| name)
+    }
+
+    /// The logo of a project family, inline; empty when it has none.
+    pub fn project_logo(&self, family: &str) -> &'static str {
+        crate::primitives::sitelinks::project(family).map_or("", |(_, logo)| logo)
+    }
+
     /// The icon of the translation action.
     pub fn language_icon(&self) -> &'static str {
         &super::design::LANGUAGE_ICON

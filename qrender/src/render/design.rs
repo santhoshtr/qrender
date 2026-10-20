@@ -41,7 +41,7 @@ pub static REFERENCE_ICON: LazyLock<String> =
 /// A Codex icon, inline in the page: in the colour of its button
 /// (`currentColor`), hidden from screen readers (the button has its
 /// words), without its English title.
-fn inline_icon(svg: &str) -> String {
+pub(crate) fn inline_icon(svg: &str) -> String {
     let start = svg.find("<svg").expect("an svg element");
     let svg = &svg[start..];
     let svg = match (svg.find("<title>"), svg.find("</title>")) {
