@@ -168,6 +168,112 @@ pub enum Date {
     Text { text: String },
 }
 
+const MONTHS: [&str; 12] = [
+    "january",
+    "february",
+    "march",
+    "april",
+    "may",
+    "june",
+    "july",
+    "august",
+    "september",
+    "october",
+    "november",
+    "december",
+];
+
+impl Date {
+    /// A date as a citation writes it: "2018-07-28", "2018-07", "2018",
+    /// "28 July 2018", "July 28, 2018", "July 2018", with English month
+    /// names, full or of three letters ("Jul", "Sept."). Another text
+    /// stays as it is.
+    pub fn parse(text: &str) -> Date {
+        let text = text.trim();
+        let words: Vec<&str> = text
+            .split(|c: char| c.is_whitespace() || c == ',')
+            .filter(|w| !w.is_empty())
+            .collect();
+        let found = match words.as_slice() {
+            [iso] => iso_date(iso),
+            [day, month, year] if day.bytes().all(|b| b.is_ascii_digit()) => {
+                date_of(year, Some(month), Some(day))
+            }
+            [month, day, year] => date_of(year, Some(month), Some(day)),
+            [month, year] => date_of(year, Some(month), None),
+            _ => None,
+        };
+        match found {
+            Some((year, month, day)) => Date::Time {
+                time: format!(
+                    "{year:04}-{:02}-{:02}T00:00:00Z",
+                    month.unwrap_or(1),
+                    day.unwrap_or(1)
+                ),
+                precision: match (month, day) {
+                    (Some(_), Some(_)) => 11,
+                    (Some(_), None) => 10,
+                    _ => 9,
+                },
+            },
+            None => Date::Text {
+                text: text.to_string(),
+            },
+        }
+    }
+}
+
+type YearMonthDay = (u32, Option<u32>, Option<u32>);
+
+/// "2018-07-28", "2018-07" or "2018".
+fn iso_date(text: &str) -> Option<YearMonthDay> {
+    let parts: Vec<&str> = text.split('-').collect();
+    let number = |s: &str, len: usize| {
+        (s.len() == len && s.bytes().all(|b| b.is_ascii_digit()))
+            .then(|| s.parse::<u32>().ok())
+            .flatten()
+    };
+    let year = number(parts[0], 4)?;
+    let month = parts.get(1).map(|m| number(m, 2)).unwrap_or(Some(0))?;
+    let day = parts.get(2).map(|d| number(d, 2)).unwrap_or(Some(0))?;
+    if parts.len() > 3 {
+        return None;
+    }
+    valid(year, (month > 0).then_some(month), (day > 0).then_some(day))
+}
+
+/// A date of words: the month a name, the day and the year numbers.
+fn date_of(year: &str, month: Option<&str>, day: Option<&str>) -> Option<YearMonthDay> {
+    let year = (year.len() == 4).then(|| year.parse().ok()).flatten()?;
+    let month = match month {
+        Some(m) => Some(month_number(m)?),
+        None => None,
+    };
+    let day = match day {
+        Some(d) if (1..=2).contains(&d.len()) => Some(d.parse().ok()?),
+        Some(_) => return None,
+        None => None,
+    };
+    valid(year, month, day)
+}
+
+fn month_number(name: &str) -> Option<u32> {
+    let name = name.trim_end_matches('.').to_lowercase();
+    if name.len() < 3 {
+        return None;
+    }
+    MONTHS
+        .iter()
+        .position(|m| *m == name || (name.len() <= 4 && m.starts_with(&name)))
+        .map(|i| i as u32 + 1)
+}
+
+fn valid(year: u32, month: Option<u32>, day: Option<u32>) -> Option<YearMonthDay> {
+    let month_ok = month.is_none_or(|m| (1..=12).contains(&m));
+    let day_ok = day.is_none_or(|d| month.is_some() && (1..=31).contains(&d));
+    (month_ok && day_ok).then_some((year, month, day))
+}
+
 /// A copy of the source in a web archive.
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize, schemars::JsonSchema)]
 pub struct Archive {
@@ -353,6 +459,36 @@ mod tests {
             assert!(bad.parse::<WebUrl>().is_err(), "{bad}");
         }
         assert!(serde_json::from_value::<WebUrl>(json!("javascript:x")).is_err());
+    }
+
+    #[test]
+    fn dates() {
+        let time = |t: &str, precision| Date::Time {
+            time: format!("{t}T00:00:00Z"),
+            precision,
+        };
+        let text = |t: &str| Date::Text { text: t.into() };
+        for (written, date) in [
+            ("2018-07-28", time("2018-07-28", 11)),
+            ("2018-07", time("2018-07-01", 10)),
+            ("2018", time("2018-01-01", 9)),
+            ("28 July 2018", time("2018-07-28", 11)),
+            ("July 28, 2018", time("2018-07-28", 11)),
+            ("September 8, 2026", time("2026-09-08", 11)),
+            (" 2 Feb 2004 ", time("2004-02-02", 11)),
+            ("Sept. 2019", time("2019-09-01", 10)),
+            ("July 2018", time("2018-07-01", 10)),
+            ("c. 1990", text("c. 1990")),
+            ("Spring 2004", text("Spring 2004")),
+            ("2018-13-01", text("2018-13-01")),
+            ("32 July 2018", text("32 July 2018")),
+            ("Ju 2018", text("Ju 2018")),
+            ("18 July", text("18 July")),
+            ("2018–2019", text("2018–2019")),
+            ("", text("")),
+        ] {
+            assert_eq!(Date::parse(written), date, "{written:?}");
+        }
     }
 
     #[test]

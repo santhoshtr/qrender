@@ -1,10 +1,11 @@
 //! What the fetcher needs to know from the composer's configuration: the
 //! class layouts (to choose one and fetch its reverse statements), the
 //! container properties, the qualifiers shown by a logo, and the concepts
-//! that title the spreads. The `qrender` crate fills it from its layouts,
-//! so this crate does not depend on `qrender`.
+//! that title the spreads; and the citation templates (how a note of an
+//! article becomes a typed citation). The `qrender` crate fills it from
+//! its configuration, so this crate does not depend on `qrender`.
 
-use serde::Serialize;
+use serde::{Deserialize, Serialize};
 
 use crate::id::{Pid, Qid};
 
@@ -33,6 +34,92 @@ pub struct Settings {
     /// text): the names of the item values are fetched, to match them with
     /// the texts.
     pub texts: Vec<(Pid, Pid)>,
+    /// The families of citation templates. A template that is in none is
+    /// read from its COinS data.
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub citations: Vec<CitationStyle>,
+}
+
+/// A family of citation templates that share their parameters (Citation
+/// Style 1).
+#[derive(Debug, Clone, Default, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct CitationStyle {
+    pub name: String,
+    /// The template names of each kind.
+    pub templates: ByKind,
+    /// The classes of the `<cite>` that the templates of each kind make
+    /// (`citation web`): the kind of a citation that has only COinS data.
+    pub classes: ByKind,
+    pub parameters: Parameters,
+}
+
+/// Names for each kind of citation that a template makes.
+#[derive(Debug, Clone, Default, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct ByKind {
+    #[serde(default)]
+    pub web: Vec<String>,
+    #[serde(default)]
+    pub news: Vec<String>,
+    #[serde(default)]
+    pub journal: Vec<String>,
+    #[serde(default)]
+    pub book: Vec<String>,
+}
+
+/// The parameters of each field, the first one that has a value first.
+#[derive(Debug, Clone, Default, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct Parameters {
+    pub title: Vec<String>,
+    pub url: Vec<String>,
+    /// The work that contains the source: a site, a newspaper, a journal.
+    pub container: Vec<String>,
+    pub publisher: Vec<String>,
+    pub date: Vec<String>,
+    pub accessed: Vec<String>,
+    pub language: Vec<String>,
+    pub volume: Vec<String>,
+    pub issue: Vec<String>,
+    pub pages: Vec<String>,
+    pub place: Vec<String>,
+    pub authors: AuthorParameters,
+    pub archive: ArchiveParameters,
+    pub ids: IdParameters,
+}
+
+/// The parameters of the authors. "{n}" in a name is the number of the
+/// author: empty or 1 for the first, 2 for the second, and so on.
+#[derive(Debug, Clone, Default, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct AuthorParameters {
+    pub family: Vec<String>,
+    pub given: Vec<String>,
+    /// A name as one text.
+    pub name: Vec<String>,
+}
+
+#[derive(Debug, Clone, Default, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct ArchiveParameters {
+    pub url: Vec<String>,
+    pub date: Vec<String>,
+    /// The state of the original URL: live, dead, usurped, unfit.
+    pub status: Vec<String>,
+}
+
+#[derive(Debug, Clone, Default, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct IdParameters {
+    pub doi: Vec<String>,
+    pub isbn: Vec<String>,
+    pub issn: Vec<String>,
+    pub oclc: Vec<String>,
+    pub jstor: Vec<String>,
+    pub s2cid: Vec<String>,
+    pub bibcode: Vec<String>,
+    pub hdl: Vec<String>,
 }
 
 #[derive(Debug, Clone, Serialize)]

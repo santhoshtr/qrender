@@ -28,7 +28,7 @@ pub use model::{
     NormalQuantity, Peers, Qualifier, QualifierValue, QuantityRecord, Range, Rank, ReverseWork,
     Shape, Statement, Table, Value, ValueError, ValueImage,
 };
-pub use settings::{LayoutMatch, Settings};
+pub use settings::{CitationStyle, LayoutMatch, Settings};
 pub use text::{
-    Article, Concept, LangText, OutlineSection, PageImage, Section, TEXT_SCHEMA, Term, Text,
+    Article, Concept, LangText, Note, OutlineSection, PageImage, Section, TEXT_SCHEMA, Term, Text,
 };

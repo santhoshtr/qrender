@@ -4,6 +4,7 @@
 
 mod commons;
 pub mod http;
+mod notes;
 mod sparql;
 mod wikidata;
 mod wikipedia;
@@ -24,6 +25,7 @@ use crate::model::{
 use crate::settings::Settings;
 use crate::text::{TEXT_SCHEMA, Text};
 pub use http::{Http, Mode};
+pub use notes::article_notes;
 
 /// A peer set has this many members at least, and at most.
 const PEERS_MIN: usize = 5;
@@ -59,7 +61,7 @@ pub enum FetchError {
 /// The version of the fetcher. Raise it when a change of the fetcher
 /// changes what it fetches (a new field, a new request): it is part of
 /// every cache key, so the parts that an older fetcher stored are not read.
-pub const FETCH_VERSION: u32 = 11;
+pub const FETCH_VERSION: u32 = 12;
 
 /// Seconds a cached part lives: content and text change with edits;
 /// a peer set changes slowly and many items share it.
@@ -505,7 +507,8 @@ impl<S: Store> Fetcher<S> {
         let article = match content.sitelinks.get(&format!("{lang}wiki")) {
             Some(title) => {
                 let host = format!("{lang}.wikipedia.org");
-                Some(wikipedia::article(http, &host, title, &concepts, false).await?)
+                let styles = &self.settings.citations;
+                Some(wikipedia::article(http, &host, title, &concepts, false, styles).await?)
             }
             None => None,
         };
@@ -516,7 +519,8 @@ impl<S: Store> Fetcher<S> {
                 // The whole article only for a page that shows it: one
                 // with no article of its own.
                 let outline = article.is_none();
-                Some(wikipedia::article(http, host, title, &english, outline).await?)
+                let styles = &self.settings.citations;
+                Some(wikipedia::article(http, host, title, &english, outline, styles).await?)
             }
             _ => None,
         };

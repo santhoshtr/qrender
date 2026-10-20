@@ -4,6 +4,7 @@
 //!   qrender fetch --qid Q3870 --lang en --record fixtures/http/q3870 --out /tmp/q
 //!   qrender fetch --qid Q3870 --lang gu --record fixtures/http/q3870 --out /tmp/q
 
+use std::collections::BTreeSet;
 use std::path::Path;
 
 use content::fetch::{Fetcher, Http, Mode, NoStore};
@@ -44,6 +45,28 @@ async fn nairobi_from_recorded_responses() {
         // The parser error message of the lead is left out.
         assert!(article.paragraphs.iter().all(|p| !p.contains("Cite error")));
         assert!(!article.concept_sections.is_empty());
+        // Every mark in the stored text has its note, and every note kept
+        // is marked.
+        let mut texts: Vec<&str> = article
+            .paragraphs
+            .iter()
+            .chain(article.section_text.values())
+            .map(String::as_str)
+            .collect();
+        let mut sections: Vec<&content::OutlineSection> = article.outline.iter().collect();
+        while let Some(s) = sections.pop() {
+            texts.extend(s.blocks.iter().map(String::as_str));
+            sections.extend(&s.sections);
+        }
+        texts.extend(article.notes.values().filter_map(|n| n.text.as_deref()));
+        let marks: BTreeSet<&str> = texts
+            .iter()
+            .flat_map(|t| t.split("data-note=\"").skip(1))
+            .filter_map(|rest| rest.split('"').next())
+            .collect();
+        let notes: BTreeSet<&str> = article.notes.keys().map(String::as_str).collect();
+        assert_eq!(marks, notes);
+        assert!(!notes.is_empty());
         let view = qrender::localize(&composition, &text, Config::embedded());
         insta::assert_snapshot!(format!("q3870.{lang}.md"), markdown::page(&view));
         // The article prose as the page shows it, after the localize step:

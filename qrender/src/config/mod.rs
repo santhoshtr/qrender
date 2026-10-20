@@ -1,5 +1,5 @@
-//! The configuration: `layouts.toml` and `rules.toml`, embedded at build
-//! time, parsed and checked once.
+//! The configuration: `layouts.toml`, `rules.toml` and `citations.toml`,
+//! embedded at build time, parsed and checked once.
 
 pub mod layouts;
 pub mod rules;
@@ -7,7 +7,8 @@ pub mod rules;
 use std::collections::{HashMap, HashSet};
 use std::sync::LazyLock;
 
-use content::Pid;
+use content::{CitationStyle, Pid};
+use serde::Deserialize;
 
 pub use layouts::{ClassLayout, Layouts, SplitSpec, SpreadSpec, Thresholds};
 pub use rules::Rules;
@@ -21,6 +22,7 @@ const LAYOUTS: &str = include_str!("../../layouts.toml");
 /// system (`--part-1` to `--part-6`).
 pub const PARTS_MAX: usize = 6;
 const RULES: &str = include_str!("../../rules.toml");
+const CITATIONS: &str = include_str!("../../citations.toml");
 
 #[derive(Debug, thiserror::Error)]
 pub enum ConfigError {
@@ -37,6 +39,8 @@ pub enum ConfigError {
 pub struct Config {
     pub layouts: Layouts,
     pub rules: Rules,
+    /// The citation templates, for the fetcher.
+    pub citations: Vec<CitationStyle>,
     roles: HashMap<Pid, RoleSet>,
     hash: u64,
 }
@@ -46,15 +50,18 @@ impl Config {
     /// cannot fail in a build that passed its tests.
     pub fn embedded() -> &'static Config {
         static CONFIG: LazyLock<Config> = LazyLock::new(|| {
-            Config::parse(LAYOUTS, RULES).unwrap_or_else(|e| panic!("embedded configuration: {e}"))
+            Config::parse(LAYOUTS, RULES, CITATIONS)
+                .unwrap_or_else(|e| panic!("embedded configuration: {e}"))
         });
         &CONFIG
     }
 
-    pub fn parse(layouts: &str, rules: &str) -> Result<Config, ConfigError> {
+    pub fn parse(layouts: &str, rules: &str, citations: &str) -> Result<Config, ConfigError> {
         let toml_error = |file| move |source| ConfigError::Toml { file, source };
         let layouts: Layouts = toml::from_str(layouts).map_err(toml_error("layouts.toml"))?;
         let rules: Rules = toml::from_str(rules).map_err(toml_error("rules.toml"))?;
+        let citations: Citations =
+            toml::from_str(citations).map_err(toml_error("citations.toml"))?;
         let errors = validate(&layouts, &rules);
         if !errors.is_empty() {
             return Err(ConfigError::Invalid(errors));
@@ -64,12 +71,13 @@ impl Config {
             hash: fnv1a(&[LAYOUTS, RULES]),
             layouts,
             rules,
+            citations: citations.style,
         })
     }
 
     /// What the fetcher needs from the layouts: layout matching, reverse
     /// properties, container properties, qualifier logos, concepts, web
-    /// properties and their platforms.
+    /// properties and their platforms; and the citation templates.
     pub fn fetch_settings(&self) -> content::Settings {
         let layouts = &self.layouts;
         let mut concepts: Vec<content::Qid> = layouts
@@ -109,6 +117,7 @@ impl Config {
                 .map(|(p, q)| (*p, *q))
                 .collect(),
             texts: layouts.roles.text.iter().map(|(i, t)| (*i, *t)).collect(),
+            citations: self.citations.clone(),
         }
     }
 
@@ -122,6 +131,13 @@ impl Config {
     pub fn hash(&self) -> u64 {
         self.hash
     }
+}
+
+/// `citations.toml`.
+#[derive(Deserialize)]
+#[serde(deny_unknown_fields)]
+struct Citations {
+    style: Vec<CitationStyle>,
 }
 
 fn role_index(layouts: &Layouts) -> HashMap<Pid, RoleSet> {
@@ -311,6 +327,8 @@ mod tests {
             config.rules.template.last().unwrap().template,
             Template::Columns
         );
+        assert_eq!(config.citations[0].name, "CS1");
+        assert_eq!(config.citations[0].templates.web, ["cite web"]);
     }
 
     #[test]
@@ -331,7 +349,9 @@ mod tests {
     }
 
     fn invalid(layouts: &str, rules: &str) -> String {
-        Config::parse(layouts, rules).unwrap_err().to_string()
+        Config::parse(layouts, rules, CITATIONS)
+            .unwrap_err()
+            .to_string()
     }
 
     #[test]
@@ -344,6 +364,9 @@ mod tests {
         assert!(invalid(&bad_role, RULES).contains("layouts.toml"));
         let bad_pid = LAYOUTS.replacen("\"P1082\",", "\"1082\",", 1);
         assert!(invalid(&bad_pid, RULES).contains("layouts.toml"));
+        let bad_kind = CITATIONS.replacen("web = [\"cite web\"]", "webs = [\"cite web\"]", 1);
+        let error = Config::parse(LAYOUTS, RULES, &bad_kind).unwrap_err();
+        assert!(error.to_string().contains("citations.toml"));
     }
 
     #[test]

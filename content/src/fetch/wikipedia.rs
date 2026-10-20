@@ -1,27 +1,33 @@
 //! Wikipedia: an article from one Parsoid parse of the whole page (its
 //! lead, its sections, the first paragraph of a section, the whole body
-//! of each section: the outline), the items its links point to; page
-//! images.
+//! of each section: the outline, its notes), the items its links point
+//! to; page images.
 
+use std::collections::BTreeSet;
 use std::sync::LazyLock;
 
 use futures::future::join_all;
 use indexmap::IndexMap;
+use percent_encoding::percent_decode_str;
 use regex::Regex;
 use serde_json::Value as Json;
 
 use super::FetchError;
 use super::http::{Http, Service};
+use super::notes;
 use scraper::{ElementRef, Html};
 
-use crate::html::{escape, strip_tags, wiki_target};
+use crate::html::{decode_entities, escape, strip_tags, wiki_target};
 use crate::id::{Lang, Qid};
-use crate::text::{Article, Concept, OutlineSection, PageImage, Section};
+use crate::settings::CitationStyle;
+use crate::text::{Article, Concept, Note, OutlineSection, PageImage, Section};
 
 const BATCH: usize = 50;
 const DISPLAY_IMAGE: &str = "https://wiki-display-image.toolforge.org/json/wikidata/";
 
 static HREF: LazyLock<Regex> = LazyLock::new(|| Regex::new(r#"href="([^"]*)""#).unwrap());
+/// The mark of a note, as `write_element` writes it.
+static MARK: LazyLock<Regex> = LazyLock::new(|| Regex::new(r#"data-note="([^"]*)""#).unwrap());
 
 fn api(host: &str) -> String {
     format!("https://{host}/w/api.php")
@@ -41,15 +47,16 @@ async fn parse(http: &Http, host: &str, params: &[(&str, &str)]) -> Result<Json,
 
 /// An article from one Parsoid parse of the whole page: its lead, its
 /// top-level sections, the sections whose title names a concept and the
-/// first paragraph of each, and the item of each article that this text
-/// links to. `outline`: also the sections with their content, for a page
-/// that shows them.
+/// first paragraph of each, the notes that this text marks, and the item
+/// of each article that this text links to. `outline`: also the sections
+/// with their content, for a page that shows them.
 pub async fn article(
     http: &Http,
     host: &str,
     title: &str,
     concepts: &IndexMap<Qid, Concept>,
     outline: bool,
+    styles: &[CitationStyle],
 ) -> Result<Article, FetchError> {
     let text = parse(
         http,
@@ -63,7 +70,7 @@ pub async fn article(
         ],
     )
     .await?;
-    let parsed = read(text["text"].as_str().unwrap_or_default());
+    let mut parsed = read(text["text"].as_str().unwrap_or_default(), styles);
     let sections: Vec<Section> = parsed
         .outline
         .iter()
@@ -86,6 +93,8 @@ pub async fn article(
         .cloned()
         .collect();
     collect_blocks(&outline, &mut texts);
+    let marked = marked(&texts, &parsed.notes);
+    parsed.notes.retain(|id, _| marked.contains(id));
     Ok(Article {
         title: title.to_string(),
         links: links(http, host, &texts).await?,
@@ -94,7 +103,30 @@ pub async fn article(
         concept_sections,
         section_text,
         outline,
+        notes: parsed.notes,
     })
+}
+
+/// The notes that the texts mark, and the notes that those mark (an
+/// explanatory note can cite a source).
+fn marked(texts: &[String], notes: &IndexMap<String, Note>) -> BTreeSet<String> {
+    let mut found = BTreeSet::new();
+    let mut todo: Vec<String> = texts.iter().flat_map(|t| marks(t)).collect();
+    while let Some(id) = todo.pop() {
+        if found.insert(id.clone())
+            && let Some(text) = notes.get(&id).and_then(|n| n.text.as_ref())
+        {
+            todo.extend(marks(text));
+        }
+    }
+    found
+}
+
+/// The notes that an HTML text marks, in order.
+fn marks(html: &str) -> Vec<String> {
+    MARK.captures_iter(html)
+        .map(|c| decode_entities(&c[1]))
+        .collect()
 }
 
 /// The sections whose title is a label or an alias of a concept, in the
@@ -134,9 +166,11 @@ struct Parsed {
     outline: Vec<OutlineSection>,
     /// The first paragraph of each section, by its anchor.
     first: IndexMap<String, String>,
+    /// Every note of the article.
+    notes: IndexMap<String, Note>,
 }
 
-fn read(html: &str) -> Parsed {
+fn read(html: &str, styles: &[CitationStyle]) -> Parsed {
     let doc = Html::parse_fragment(html);
     let mut lead = Vec::new();
     let mut first = IndexMap::new();
@@ -159,6 +193,7 @@ fn read(html: &str) -> Parsed {
         lead,
         outline: outline_of(&doc),
         first,
+        notes: notes::notes(&doc, styles),
     }
 }
 
@@ -189,7 +224,7 @@ fn within(el: ElementRef, top: ElementRef, test: impl Fn(ElementRef) -> bool) ->
         .any(test)
 }
 
-fn class_has(el: ElementRef, name: &str) -> bool {
+pub(super) fn class_has(el: ElementRef, name: &str) -> bool {
     el.value()
         .attr("class")
         .is_some_and(|c| c.split_whitespace().any(|w| w == name))
@@ -292,24 +327,30 @@ fn block(el: ElementRef, out: &mut Vec<String>) {
     }
 }
 
-/// An element as HTML without references, styles and metadata, and with no
-/// attribute but `href` and `alt`. The localize step cleans it again; this
-/// keeps the stored text small (Parsoid's attributes are most of it).
+/// An element as HTML without styles and metadata, and with no attribute
+/// but `href` and `alt`; a reference as the mark of its note:
+/// `<sup data-note="cite_note-12"></sup>`. The localize step cleans it
+/// again; this keeps the stored text small (Parsoid's attributes are most
+/// of it).
 fn clean(el: ElementRef) -> String {
     let mut out = String::new();
     write_element(el, &mut out);
     out
 }
 
-fn write_element(el: ElementRef, out: &mut String) {
+pub(super) fn write_element(el: ElementRef, out: &mut String) {
     let e = el.value();
     let name = e.name();
     let class = e.attr("class").unwrap_or_default();
-    let reference = name == "sup" && class.contains("reference");
+    if name == "sup" && class.contains("reference") {
+        if let Some(note) = note_of(el) {
+            out.push_str(&format!("<sup data-note=\"{}\"></sup>", escape(&note)));
+        }
+        return;
+    }
     // The other forms of a coordinate, which the CSS of the wiki hides.
     let hidden = class.contains("geo-nondefault") || class.contains("geo-multi-punct");
-    if reference
-        || hidden
+    if hidden
         || matches!(
             name,
             "style" | "script" | "link" | "meta" | "table" | "figure"
@@ -334,7 +375,19 @@ fn write_element(el: ElementRef, out: &mut String) {
     out.push('>');
 }
 
-fn write_children(el: ElementRef, out: &mut String) {
+/// The note that a reference mark links to: the fragment of its link
+/// ("./Nairobi#cite_note-12"), decoded.
+fn note_of(reference: ElementRef) -> Option<String> {
+    let href = reference
+        .descendants()
+        .filter_map(ElementRef::wrap)
+        .find_map(|e| e.value().attr("href"))?;
+    let (_, fragment) = href.rsplit_once('#')?;
+    let note = percent_decode_str(fragment).decode_utf8_lossy();
+    (!note.is_empty()).then(|| note.into_owned())
+}
+
+pub(super) fn write_children(el: ElementRef, out: &mut String) {
     for child in el.children() {
         if let Some(child) = ElementRef::wrap(child) {
             write_element(child, out);
@@ -468,8 +521,54 @@ mod tests {
     fn lead_of(paragraphs: &str) -> Vec<String> {
         read(&format!(
             "<div class=\"mw-parser-output\"><section data-mw-section-id=\"0\">{paragraphs}</section></div>"
-        ))
+        ), &[])
         .lead
+    }
+
+    #[test]
+    fn the_notes_that_the_text_marks() {
+        let mark = |id: &str| format!("<sup data-note=\"{id}\"></sup>");
+        let note = |text: Option<String>| Note {
+            group: text.as_ref().map(|_| "lower-alpha".to_string()),
+            citations: Vec::new(),
+            text,
+        };
+        let notes = IndexMap::from([
+            (
+                "cite_note-a".to_string(),
+                note(Some(format!("See{}", mark("cite_note-3")))),
+            ),
+            ("cite_note-3".to_string(), note(None)),
+            ("cite_note-Deisser-4".to_string(), note(None)),
+            ("cite_note-unmarked".to_string(), note(None)),
+        ]);
+        // A named reference, used three times; a mark of a note that is
+        // not in the list (a broken reference).
+        let texts = [
+            format!(
+                "One{} two{}.",
+                mark("cite_note-Deisser-4"),
+                mark("cite_note-a")
+            ),
+            format!(
+                "Three{}{}.",
+                mark("cite_note-Deisser-4"),
+                mark("cite_note-gone")
+            ),
+            format!("Four{}.", mark("cite_note-Deisser-4")),
+        ];
+        assert_eq!(
+            marked(&texts, &notes),
+            BTreeSet::from(
+                [
+                    "cite_note-3",
+                    "cite_note-Deisser-4",
+                    "cite_note-a",
+                    "cite_note-gone"
+                ]
+                .map(String::from)
+            )
+        );
     }
 
     #[test]
@@ -494,7 +593,10 @@ mod tests {
             "<p>Text<sup class=\"mw-ref reference\"><a href=\"#cite_note-1\">",
             "<span class=\"mw-ext-cite-error\">[1]</span></a></sup>.</p>"
         );
-        assert_eq!(lead_of(html), ["Text."]);
+        assert_eq!(
+            lead_of(html),
+            ["Text<sup data-note=\"cite_note-1\"></sup>."]
+        );
     }
 
     #[test]
@@ -527,7 +629,7 @@ mod tests {
             blocks: vec!["<ul><li>One &amp; two</li></ul>".into()],
             sections: vec![],
         };
-        let parsed = read(html);
+        let parsed = read(html, &[]);
         assert_eq!(parsed.lead, ["The lead."]);
         // A section without a paragraph of its own: the first one of its
         // subsections.
@@ -536,8 +638,11 @@ mod tests {
             IndexMap::from([
                 (
                     "History".to_string(),
-                    "Founded in <a href=\"https://en.wikipedia.org/wiki/1899\">1899</a>."
-                        .to_string()
+                    concat!(
+                        "Founded in <a href=\"https://en.wikipedia.org/wiki/1899\">1899</a>",
+                        "<sup data-note=\"cite_note-1\"></sup>."
+                    )
+                    .to_string()
                 ),
                 ("People".to_string(), "Later.".to_string()),
                 ("Famous".to_string(), "Later.".to_string()),
@@ -553,7 +658,7 @@ mod tests {
                     blocks: vec![
                         concat!(
                             "<p>Founded in <a href=\"https://en.wikipedia.org/wiki/1899\">",
-                            "1899</a>.</p>"
+                            "1899</a><sup data-note=\"cite_note-1\"></sup>.</p>"
                         )
                         .into(),
                         "<p>From a template.</p>".into(),
@@ -591,7 +696,7 @@ mod tests {
         assert_eq!(
             lead_of(html),
             [concat!(
-                "<b>Kenya</b>, is a ",
+                "<b>Kenya</b>,<sup data-note=\"cite_note-12\"></sup> is a ",
                 "<a href=\"https://en.wikipedia.org/wiki/Country\">country</a>."
             )]
         );

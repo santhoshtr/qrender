@@ -1,0 +1,57 @@
+# Citation templates: how a note of an article becomes a typed citation.
+#
+# A style is a family of templates that share their parameters. A
+# template name is compared without regard to case, with "_" as a space.
+# A template that is in no style is read from its COinS data; a note with
+# neither is kept as its text.
+
+[[style]]
+# Citation Style 1: English Wikipedia, and the wikis that copy its
+# templates with their English names.
+name = "CS1"
+
+[style.templates]
+web = ["cite web"]
+news = ["cite news"]
+journal = ["cite journal"]
+book = ["cite book"]
+
+# The classes of the <cite> that each kind makes: `citation web cs1`.
+[style.classes]
+web = ["web"]
+news = ["news"]
+journal = ["journal"]
+book = ["book"]
+
+[style.parameters]
+title = ["title"]
+url = ["url"]
+container = ["website", "work", "newspaper", "journal", "magazine"]
+publisher = ["publisher"]
+date = ["date", "year"]
+accessed = ["access-date", "accessdate"]
+language = ["language", "lang"]
+volume = ["volume"]
+issue = ["issue", "number"]
+pages = ["pages", "page", "pp", "p"]
+place = ["location", "place"]
+
+[style.parameters.authors]
+family = ["last{n}", "surname{n}"]
+given = ["first{n}", "given{n}"]
+name = ["author{n}"]
+
+[style.parameters.archive]
+url = ["archive-url", "archiveurl"]
+date = ["archive-date", "archivedate"]
+status = ["url-status"]
+
+[style.parameters.ids]
+doi = ["doi"]
+isbn = ["isbn"]
+issn = ["issn"]
+oclc = ["oclc"]
+jstor = ["jstor"]
+s2cid = ["s2cid"]
+bibcode = ["bibcode"]
+hdl = ["hdl"]

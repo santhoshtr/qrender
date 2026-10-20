@@ -6,6 +6,7 @@
 use indexmap::IndexMap;
 use serde::{Deserialize, Serialize};
 
+use crate::citation::Cited;
 use crate::id::{EntityId, Lang, Qid};
 
 pub const TEXT_SCHEMA: &str = "text/0.1";
@@ -54,8 +55,8 @@ pub struct Concept {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Article {
     pub title: String,
-    /// The lead: the content of each paragraph, as HTML without
-    /// references and with no attribute but `href` and `alt`.
+    /// The lead: the content of each paragraph, as HTML with the marks of
+    /// notes, and no attribute but `href` and `alt`.
     pub paragraphs: Vec<String>,
     /// The item of each article that a paragraph links to, by page title.
     pub links: IndexMap<String, Qid>,
@@ -71,6 +72,26 @@ pub struct Article {
     /// a page whose language has no article.
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub outline: Vec<OutlineSection>,
+    /// The notes that the text above marks, by the id of their item in the
+    /// list of notes ("cite_note-12"). A mark in the HTML is
+    /// `<sup data-note="cite_note-12"></sup>`.
+    #[serde(default, skip_serializing_if = "IndexMap::is_empty")]
+    pub notes: IndexMap<String, Note>,
+}
+
+/// A note of an article: a reference (the default group) or an
+/// explanatory note.
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+pub struct Note {
+    /// None for the default group (numbers); "lower-alpha" for notes.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub group: Option<String>,
+    /// The citations in the note, in order.
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub citations: Vec<Cited>,
+    /// An explanatory note: its text as HTML, with its own marks.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub text: Option<String>,
 }
 
 /// A section of an article with its content, and its subsections.
@@ -81,8 +102,8 @@ pub struct OutlineSection {
     /// 2 for a section, 3 for its subsection, and so on.
     pub level: u8,
     /// The blocks before the first subsection (`p`, `ul`, `ol`, `dl`,
-    /// `blockquote`), as HTML: no references, and no attributes but `href`
-    /// and `alt`.
+    /// `blockquote`), as HTML: the marks of notes, and no attributes but
+    /// `href` and `alt`.
     pub blocks: Vec<String>,
     pub sections: Vec<OutlineSection>,
 }
