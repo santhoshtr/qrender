@@ -5,14 +5,15 @@
 //! - GET /api/composition/{qid}      composition JSON (the same in every language)
 //! - GET /api/view/{lang}/{qid}      view JSON
 //! - GET /design/{version}/page.css  the design system; also echarts.js,
-//!   leaflet.js and leaflet.css, which the page scripts load
+//!   leaflet.js and leaflet.css, which the page scripts load. The version
+//!   has a hash of the files, so a changed file has a new address.
 //! - GET /healthz
 //!
 //! Environment (or a .env file): PORT (default 4243), TOOL_REDIS_URI
 //! (optional cache), REDIS_PREFIX (for every cache key), BASE_PATH (when
 //! served under a subpath, e.g. "/qrender"), USER_AGENT.
 
-use std::sync::Arc;
+use std::sync::{Arc, LazyLock};
 
 use app::Service;
 use axum::Router;
@@ -69,13 +70,32 @@ async fn main() {
     axum::serve(listener, app).await.expect("the server runs");
 }
 
-/// The version of the design system in its URL: "design/0.2" -> "0.2".
-fn design_version() -> &'static str {
+/// The version of the design system: "design/0.2" -> "0.2".
+fn design_system() -> &'static str {
     DESIGN.rsplit('/').next().unwrap_or(DESIGN)
 }
 
+/// The version of the design files in their URL: the version of the
+/// design system and a hash of the files ("0.2-1a2b3c4d"). The files are
+/// cached for a week as immutable, so a changed file needs a new address.
+/// FNV-1a, 64 bit: the same in every build of the same files.
+fn design_version() -> &'static str {
+    static VERSION: LazyLock<String> = LazyLock::new(|| {
+        let hash = [STYLESHEET.as_str(), ECHARTS, LEAFLET_JS, LEAFLET_CSS]
+            .iter()
+            .flat_map(|file| file.bytes().chain([0]))
+            .fold(0xcbf2_9ce4_8422_2325_u64, |hash, byte| {
+                (hash ^ u64::from(byte)).wrapping_mul(0x0100_0000_01b3)
+            });
+        format!("{}-{:08x}", design_system(), hash as u32)
+    });
+    &VERSION
+}
+
+/// The files of the design system. A page that a browser cached with the
+/// address of older files gets the files of this build.
 async fn design(Path((version, file)): Path<(String, String)>) -> Response {
-    if version != design_version() {
+    if version.split('-').next() != Some(design_system()) {
         return StatusCode::NOT_FOUND.into_response();
     }
     let (body, content_type) = match file.as_str() {
@@ -235,5 +255,21 @@ mod tests {
             assert!(content_type.starts_with(kind), "{file}: {content_type}");
         }
         assert_eq!(get("other.js").await.status(), StatusCode::NOT_FOUND);
+    }
+
+    #[tokio::test]
+    async fn the_design_version_follows_the_files() {
+        let version = design_version();
+        assert!(
+            version.starts_with(&format!("{}-", design_system())),
+            "{version}"
+        );
+        // The address of older files of the same design system: the files
+        // of this build. Another design system: none.
+        let older = format!("{}-00000000", design_system());
+        let response = design(Path((older, "page.css".to_string()))).await;
+        assert_eq!(response.status(), StatusCode::OK);
+        let other = design(Path(("9.9".to_string(), "page.css".to_string()))).await;
+        assert_eq!(other.status(), StatusCode::NOT_FOUND);
     }
 }
