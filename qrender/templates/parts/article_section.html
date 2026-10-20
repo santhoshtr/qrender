@@ -19,7 +19,6 @@
     <div class="body">
         {%- for b in s.blocks %}{{ ui.prose(b)|safe }}{% endfor -%}
         {%- for c in s.sections %}{{ ui.article_subsection(c)|safe }}{% endfor -%}
-        <a class="read" href="{{ s.href }}">{{ s.title }} ↗</a>
     </div>
     {%- if !s.local %}
     <p class="saved-note" lang="{{ ui.view.lang }}" hidden>{{ ui.msg("qrender-saved") }}</p>

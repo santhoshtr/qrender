@@ -677,12 +677,6 @@ qr-section { display: block; }
 		}
 	}
 
-	& .read {
-		font-family: var( --font-family-system-sans );
-		font-size: var( --font-size-small );
-		font-weight: var( --font-weight-semi-bold );
-	}
-
 	/* A heading in a summary: inline, beside the marker of the summary. */
 	& summary {
 		cursor: pointer;

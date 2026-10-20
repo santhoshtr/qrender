@@ -541,14 +541,19 @@ impl<'v> Ui<'v> {
         s.spread.slots.values().map(Vec::len).sum()
     }
 
-    /// The links under a spread: its article sections (but the one whose
-    /// paragraph is shown), then its topics.
+    /// The links under a spread: its article sections (but those the
+    /// spread shows: a paragraph or the content), then its topics.
     pub fn prose_links(&self, s: &SpreadView) -> Vec<Part> {
-        let shown = s.prose_text.as_ref().map(|p| p.href.as_str());
+        let shown: Vec<&str> = s
+            .prose_text
+            .iter()
+            .map(|p| p.href.as_str())
+            .chain(s.sections.iter().map(|a| a.href.as_str()))
+            .collect();
         let sections = s
             .prose_links
             .iter()
-            .filter(|l| Some(l.href.as_str()) != shown)
+            .filter(|l| !shown.contains(&l.href.as_str()))
             .map(|l| Part::Link {
                 text: l.text.clone(),
                 href: l.href.clone(),
