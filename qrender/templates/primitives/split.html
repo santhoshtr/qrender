@@ -18,7 +18,7 @@
                     {%- let pid = b.pids[loop.index0] %}
                     <li>
                         <span class="key" style="--c: var( --part-{{ loop.index }} )"></span>{{ ui.text(ui.property(pid), true)|safe }} <b>{{ ui.part(ui.percent(s.share))|safe }}</b> · {{ ui.part(ui.number(s.amount))|safe }}
-                        {%- call m::prov(ui, s.provenance) %}
+                        {%- call m::prov(ui, s.provenance, s.citations) %}
                         {% endcall %}
                         {% call m::edit(ui, ui.edit(pid)) %}
                         {% endcall %}

@@ -19,7 +19,7 @@
             <span class="text">
                 <b>{{ ui.part(s.part)|safe }}</b>
                 {%- if let Some(image) = s.image -%}{%- if let Some(from) = image.from %}<span class="from" title="{{ from }}">W</span>{% endif -%}{%- endif -%}
-                {%- call m::prov(ui, s.provenance) %}{% endcall -%}
+                {%- call m::prov(ui, s.provenance, s.citations) %}{% endcall -%}
                 {%- if let Some(e) = s.edit %}
                     {% call m::edit(ui, e) %}
                     {% endcall %}

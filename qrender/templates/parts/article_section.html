@@ -13,7 +13,7 @@
     <{{ h }}>{{ s.title }}</{{ h }}>{{ ui.translate_button()|safe }}
     {%- if collapsed %}</summary>{% else %}</div>{% endif %}
     <div class="body">
-        {%- for b in s.blocks %}{{ b|safe }}{% endfor -%}
+        {%- for b in s.blocks %}{{ ui.prose(b)|safe }}{% endfor -%}
         {%- for c in s.sections %}{{ ui.article_subsection(c)|safe }}{% endfor -%}
         <a class="read" href="{{ s.href }}">{{ s.title }} ↗</a>
     </div>

@@ -1,0 +1,5 @@
+{#- The mark of a note in the text of the article: a button that opens
+    the note. -#}
+<sup class="ref"><button type="button"
+        popovertarget="note-{{ number }}"
+        aria-label="{{ ui.note_label(number) }}">{{ number }}</button></sup>

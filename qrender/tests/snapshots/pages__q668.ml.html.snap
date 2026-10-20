@@ -17007,9 +17007,11 @@ document.addEventListener( 'close', ( event ) => {
 	} );
 
 	// A block without the glosses of its links (the labels in the page
-	// language): the machine translation reads the source text only.
+	// language) and the marks of its notes: the machine translation reads
+	// the source text only.
 	const source = ( el ) => {
 		const copy = el.cloneNode( true );
+		copy.querySelectorAll( 'sup.ref' ).forEach( ( mark ) => mark.remove() );
 		copy.querySelectorAll( 'rt' ).forEach( ( rt ) => rt.remove() );
 		copy.querySelectorAll( 'ruby' ).forEach( ( ruby ) => ruby.replaceWith( ...ruby.childNodes ) );
 		return copy;

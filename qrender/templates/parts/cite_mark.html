@@ -1,0 +1,13 @@
+{#- The sources of a statement: a button with the icon of the first source
+    (and their number, when there is more than one), and a popover with a
+    card for each. -#}
+<button class="src"
+        type="button"
+        popovertarget="p{{ n }}"
+        aria-label="{{ ui.msg("qrender-sources") }}">
+    {%- match cards[0].favicon -%}
+    {%- when Some with (icon) -%}<img class="favicon" src="{{ icon }}" alt="" width="16" height="16" loading="lazy">
+    {%- when None -%}{{ ui.reference_icon()|safe }}
+    {%- endmatch -%}
+    {%- if cards.len() > 1 %}<span class="count">{{ cards.len() }}</span>{% endif -%}
+</button><span id="p{{ n }}" popover class="pop cites">{% for c in cards %}{{ ui.cite(c)|safe }}{% endfor %}</span>

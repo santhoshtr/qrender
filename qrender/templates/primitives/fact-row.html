@@ -38,7 +38,7 @@
 </dd>
 <span class="tools">
     {%- if single %}
-        {% call m::prov(ui, first.provenance) %}
+        {% call m::prov(ui, first.provenance, first.citations) %}
         {% endcall %}
         {% call m::edit(ui, ui.edit(first.pid)) %}
         {% endcall %}

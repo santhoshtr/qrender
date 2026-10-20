@@ -12,13 +12,17 @@
 {%- macro description(d) -%}
     {%- if d.fallback -%}<span class="fb" lang="{{ d.lang }}">{{ d.text }}</span>{%- else -%}{{ d.text }}{%- endif -%}
 {%- endmacro -%}
-{#- Provenance, marked by exception: a sourced statement carries no mark;
-    one whose only reference is a Wikipedia carries a worded tag; one with
-    no reference carries a quiet mark. -#}
-{%- macro prov(ui, kind) -%}
+{#- Provenance: a statement with citations carries its sources (a button
+    that opens their cards); else, by exception, one whose only reference
+    is a Wikipedia carries a worded tag, and one with no reference a quiet
+    mark. -#}
+{%- macro prov(ui, kind, citations) -%}
+    {%- if !citations.is_empty() -%}{{ ui.sources(citations.as_slice())|safe }}
+    {%- else -%}
     {%- let mark = ui.mark(kind) -%}
     {%- if mark == "imported" -%}<span class="prov-imported" title="{{ ui.imported() }}">W</span>
-{%- else if mark == "none" -%}<span class="prov-none" title="—"></span>{%- endif -%}
+    {%- else if mark == "none" -%}<span class="prov-none" title="—"></span>{%- endif -%}
+    {%- endif -%}
 {%- endmacro -%}
 {%- macro edit(ui, href) -%}
     <a class="edit"

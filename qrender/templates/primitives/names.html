@@ -33,7 +33,7 @@
                                 {%- endmatch -%}
                                 {%- let note = ui.name_note(t.statement) -%}
                                 {%- if !note.is_empty() %} <span class="note">{{ ui.note(note.as_slice())|safe }}</span>{% endif -%}
-                                {%- call m::prov(ui, t.statement.provenance) %}{% endcall -%}
+                                {%- call m::prov(ui, t.statement.provenance, t.statement.citations) %}{% endcall -%}
                             {%- endfor -%}
                             {%- if let Some(lang) = r.fallback %}
                                 <span class="note" data-lang-name="{{ lang }}">{{ lang }}</span><a class="add-label" href="{{ ui.edit(r.pid) }}" aria-label="{{ ui.msg("qrender-add-value") }}">+</a>

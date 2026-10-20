@@ -1,14 +1,18 @@
 //! The Markdown renderer: the text of a page for readers that read text,
 //! LLMs among them. It reads the view, as the HTML page does, so the two
 //! cannot disagree. It keeps what a page shows behind "+N" (all values),
-//! the qualifier notes, provenance in words, absences, and the language of
-//! a label that is not in the page language.
+//! the qualifier notes, provenance in words, absences, the language of a
+//! label that is not in the page language, and the sources as footnotes:
+//! `[^3]` for a note of the article, `[^s1]` for a source of a statement.
 //!
 //! Each primitive writes its own part (its module's `markdown` function);
 //! this file has the page, the spreads and the small parts they share.
 
+use std::cell::RefCell;
+
 use content::{EntityId, Pid};
 
+use super::cite::{self, Card, Value as CiteValue};
 use crate::localize::format::Part;
 use crate::localize::{Label, ProseSection, SpreadView, View};
 use crate::primitives::{
@@ -22,6 +26,7 @@ pub fn page(view: &View) -> String {
     let mut md = Markdown {
         view,
         out: String::new(),
+        sources: RefCell::default(),
     };
     for spread in &view.spreads {
         md.spread(spread);
@@ -55,6 +60,7 @@ pub fn page(view: &View) -> String {
     if !links.is_empty() {
         md.paragraph(&format!("Article sections: {}", links.join(" · ")));
     }
+    md.footnotes();
     md.paragraph(&format!(
         "Composed by rule from Wikidata item {} ({}, {}, {}).",
         view.qid, view.composition, view.schema, view.design
@@ -72,6 +78,9 @@ fn first_block(s: &ProseSection) -> Option<&String> {
 pub struct Markdown<'v> {
     pub view: &'v View,
     out: String,
+    /// The citations of statements, by hash, in the order of their first
+    /// footnote mark: `[^s1]` is the first.
+    sources: RefCell<Vec<String>>,
 }
 
 impl Markdown<'_> {
@@ -161,6 +170,85 @@ impl Markdown<'_> {
         for v in values {
             self.out.push_str(&format!("  - {v}\n"));
         }
+    }
+
+    /// The notes of the article (`[^3]`), then the sources of statements
+    /// (`[^s1]`): each the text of its card.
+    fn footnotes(&mut self) {
+        let mut lines: Vec<String> = Vec::new();
+        for note in &self.view.notes {
+            let parts: Vec<String> = note
+                .text
+                .iter()
+                .map(|t| plain(t))
+                .chain(
+                    note.citations
+                        .iter()
+                        .map(|c| self.card(&cite::card(c, self.view))),
+                )
+                .collect();
+            lines.push(format!("[^{}]: {}", note.number, parts.join(" ")));
+        }
+        for (i, hash) in self.sources.borrow().iter().enumerate() {
+            if let Some(c) = self.view.citations.get(hash) {
+                lines.push(format!(
+                    "[^s{}]: {}",
+                    i + 1,
+                    self.card(&cite::card(c, self.view))
+                ));
+            }
+        }
+        if !lines.is_empty() {
+            self.paragraph(&lines.join("\n"));
+        }
+    }
+
+    /// A source in one line: its title as a link, its site, its fields.
+    fn card(&self, c: &Card) -> String {
+        if let Some(html) = c.html {
+            return plain(html);
+        }
+        let title = c.title.replace('[', "\\[").replace(']', "\\]");
+        let mut out = match &c.href {
+            Some(href) => format!("[{title}]({href})"),
+            None => title,
+        };
+        if let Some(host) = &c.host {
+            out.push_str(&format!(" ({host})"));
+        }
+        for row in &c.rows {
+            let value = match &row.value {
+                CiteValue::Parts(parts) => parts
+                    .iter()
+                    .map(|p| self.part(p))
+                    .collect::<Vec<_>>()
+                    .join(" · "),
+                CiteValue::Language(code) => code.clone(),
+            };
+            let name = self
+                .view
+                .messages
+                .get(row.key)
+                .map_or(row.key, String::as_str);
+            out.push_str(&format!(". {name}: {value}"));
+        }
+        out
+    }
+
+    /// The footnote marks of the sources of a statement: `[^s1][^s2]`.
+    fn source_marks(&self, citations: &[String]) -> String {
+        let mut sources = self.sources.borrow_mut();
+        citations
+            .iter()
+            .filter(|h| self.view.citations.contains_key(*h))
+            .map(|h| {
+                let i = sources.iter().position(|s| s == h).unwrap_or_else(|| {
+                    sources.push(h.clone());
+                    sources.len() - 1
+                });
+                format!("[^s{}]", i + 1)
+            })
+            .collect()
     }
 
     /// The end of a list of items.
@@ -257,7 +345,12 @@ impl Markdown<'_> {
         {
             out.push_str(&format!(" — {}", d.text));
         }
-        out.push_str(provenance_words(s.provenance));
+        let marks = self.source_marks(&s.citations);
+        if marks.is_empty() {
+            out.push_str(provenance_words(s.provenance));
+        } else {
+            out.push_str(&marks);
+        }
         out
     }
 }
@@ -272,9 +365,11 @@ pub fn provenance_words(p: Provenance) -> &'static str {
 }
 
 /// The text of cleaned article HTML: tags removed, a ruby gloss in
-/// parentheses, entities decoded.
+/// parentheses, the mark of a note as its footnote mark (`[^3]`),
+/// entities decoded.
 pub fn plain(html: &str) -> String {
     let html = html.replace("<rt>", " (").replace("</rt>", ")");
+    let html = note_marks(&html);
     let mut out = String::with_capacity(html.len());
     let mut in_tag = false;
     for c in html.chars() {
@@ -286,6 +381,26 @@ pub fn plain(html: &str) -> String {
         }
     }
     content::html::decode_entities(&out)
+}
+
+/// The marks of notes (`<sup data-note="3"></sup>`) as footnote marks.
+fn note_marks(html: &str) -> String {
+    const MARK: &str = "<sup data-note=\"";
+    const END: &str = "\"></sup>";
+    let mut out = String::with_capacity(html.len());
+    let mut rest = html;
+    while let Some(start) = rest.find(MARK) {
+        out.push_str(&rest[..start]);
+        let after = &rest[start + MARK.len()..];
+        let Some(end) = after.find(END) else {
+            out.push_str(&rest[start..]);
+            return out;
+        };
+        out.push_str(&format!("[^{}]", &after[..end]));
+        rest = &after[end + END.len()..];
+    }
+    out.push_str(rest);
+    out
 }
 
 impl crate::schema::ValueShown {
@@ -309,6 +424,14 @@ mod tests {
                 r#"capital of <ruby><a href="x">Kenya</a><rt><span>കെനിയ</span></rt></ruby> &amp; more"#
             ),
             "capital of Kenya (കെനിയ) & more"
+        );
+    }
+
+    #[test]
+    fn marks_of_notes_are_footnote_marks() {
+        assert_eq!(
+            plain(r#"A city.<sup data-note="1"></sup><sup data-note="12"></sup> B"#),
+            "A city.[^1][^12] B"
         );
     }
 }

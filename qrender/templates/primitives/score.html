@@ -20,7 +20,7 @@
       title="{{ ui.property(count.pid).text }}">{{ ui.part(ui.number(count.amount))|safe }}</span>{% endif -%}
         {%- if let Some(year) = v.year %}<span class="year">{{ ui.year(year) }}</span>{% endif -%}
     </span><span class="tools">
-        {% call m::prov(ui, v.provenance) %}
+        {% call m::prov(ui, v.provenance, v.citations) %}
         {% endcall %}
         {% call m::edit(ui, ui.edit(v.pid)) %}
         {% endcall %}

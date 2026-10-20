@@ -19,7 +19,7 @@
     {%- endfor -%}
 {%- else -%}
     {%- let property = ui.property(b.lines[0].pid) -%}
-    <h3>{{ ui.text(&property, true)|safe }}{{ ui.about(&property)|safe }}{% call m::prov(ui, b.provenance) %}{% endcall %}
+    <h3>{{ ui.text(&property, true)|safe }}{{ ui.about(&property)|safe }}{% call m::prov(ui, b.provenance, b.citations) %}{% endcall %}
     {% call m::edit(ui, ui.edit(b.lines[0].pid)) %}
     {% endcall %}
     </h3>

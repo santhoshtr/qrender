@@ -14,7 +14,7 @@
                 command="show-modal"
                 commandfor="d{{ n }}"
                 aria-label="{{ ui.msg("qrender-explore-map") }}">{{ ui.map_frame(f, false)|safe }}</button>
-        <figcaption>{{ ui.text(ui.property(b.statement.pid), true)|safe }} {{ ui.coordinate(f.lat, f.lon) }} {% call m::prov(ui, b.statement.provenance) %}{% endcall %}</figcaption><span class="tools">{% call m::edit(ui, ui.edit(b.statement.pid)) %}{% endcall %}</span></figure>
+        <figcaption>{{ ui.text(ui.property(b.statement.pid), true)|safe }} {{ ui.coordinate(f.lat, f.lon) }} {% call m::prov(ui, b.statement.provenance, b.statement.citations) %}{% endcall %}</figcaption><span class="tools">{% call m::edit(ui, ui.edit(b.statement.pid)) %}{% endcall %}</span></figure>
     {{ ui.map_dialog(n, ui.property(b.statement.pid).text, f, ui.live_map(f, b), Some(b))|safe }}
     {%- if !b.shapes.is_empty() %}
         {{ ui.map_shapes(b.shapes.as_slice())|safe }}

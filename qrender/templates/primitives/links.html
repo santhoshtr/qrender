@@ -34,7 +34,7 @@
                         {%- endif -%}
                         {%- let note = ui.link_note(card) -%}
                         {%- if !note.is_empty() %} <span class="note">{{ ui.note(note.as_slice())|safe }}</span>{% endif -%}
-                        {% call m::prov(ui, card.statement.provenance) %}
+                        {% call m::prov(ui, card.statement.provenance, card.statement.citations) %}
                         {% endcall %}
                     </span>
                 {%- endfor -%}

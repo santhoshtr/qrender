@@ -1,0 +1,17 @@
+{#- The notes of the article text: a popover for each, which its marks
+    open; and all of them, by number, collapsed at the end of the page. -#}
+<div class="note-pops">
+    {%- for (note, body) in notes %}
+    <div id="note-{{ note.number }}" popover class="pop cites" lang="{{ note.lang }}">{{ body|safe }}</div>
+    {%- endfor %}
+</div>
+<section class="spread t-sheet sources" data-spread="sources" data-dimension="neutral">
+    <details>
+        <summary class="head"><h2>{{ ui.msg("qrender-sources") }}</h2></summary>
+        <ol>
+            {%- for (note, body) in notes %}
+            <li value="{{ note.number }}" lang="{{ note.lang }}">{{ body|safe }}</li>
+            {%- endfor %}
+        </ol>
+    </details>
+</section>

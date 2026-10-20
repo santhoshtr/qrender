@@ -1,0 +1,28 @@
+{#- A citation: the icon of its site, its title as a link, the site; then
+    its fields, each with its name. Free text is its text. Spans only: a
+    card is in a popover, and a popover can be in a line. -#}
+{%- if let Some(h) = c.html -%}
+<span class="cite" data-kind="text">{{ ui.prose(h)|safe }}</span>
+{%- else -%}
+<span class="cite" data-kind="{{ c.kind }}">
+    <span class="head">
+        {%- match c.favicon -%}
+        {%- when Some with (icon) -%}<img class="favicon" src="{{ icon }}" alt="" width="16" height="16" loading="lazy">
+        {%- when None -%}{{ ui.reference_icon()|safe }}
+        {%- endmatch -%}
+        {%- match c.href -%}
+        {%- when Some with (href) -%}<a href="{{ href }}"{% if let Some(l) = c.title_lang %} lang="{{ l }}"{% endif %}>{{ c.title }}</a>
+        {%- when None -%}<span{% if let Some(l) = c.title_lang %} lang="{{ l }}"{% endif %}>{{ c.title }}</span>
+        {%- endmatch -%}
+        {%- if let Some(host) = c.host %} <span class="host">{{ host }}</span>{% endif -%}
+    </span>
+    {%- for row in c.rows %}
+    <span class="field"><span class="field-name">{{ ui.msg(row.key) }}</span> <span class="field-value">
+        {%- match row.value -%}
+        {%- when CiteValue::Parts with (parts) -%}{% for p in parts %}{% if !loop.first %} · {% endif %}{{ ui.part(p)|safe }}{% endfor %}
+        {%- when CiteValue::Language with (code) -%}<span data-lang-name="{{ code }}">{{ code }}</span>
+        {%- endmatch -%}
+    </span></span>
+    {%- endfor %}
+</span>
+{%- endif -%}

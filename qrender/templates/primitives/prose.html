@@ -3,8 +3,8 @@
 {%- when Some with (a) -%}
 {%- if a.local -%}
 <div class="lead" lang="{{ a.lang }}">
-    {%- for p in a.paragraphs %}<p>{{ p|safe }}</p>{% endfor -%}
-    {%- if !a.more.is_empty() %}<details><summary>¶ +{{ a.more.len() }}</summary>{% for p in a.more %}<p>{{ p|safe }}</p>{% endfor %}</details>{% endif -%}
+    {%- for p in a.paragraphs %}<p>{{ ui.prose(p)|safe }}</p>{% endfor -%}
+    {%- if !a.more.is_empty() %}<details><summary>¶ +{{ a.more.len() }}</summary>{% for p in a.more %}<p>{{ ui.prose(p)|safe }}</p>{% endfor %}</details>{% endif -%}
     <p class="source">
         <img src="{{ ui.wikipedia_logo() }}" alt="" width="18">
         <a href="{{ a.url }}">{{ a.host }}</a> · {{ b.languages }}
@@ -19,8 +19,8 @@
             data-to="{{ ui.view.lang }}"
             data-dir="{{ ui.view.dir.name() }}">
     <div class="body">
-        {%- for p in a.paragraphs %}<p>{{ p|safe }}</p>{% endfor -%}
-        {%- if !a.more.is_empty() %}<details><summary>¶ +{{ a.more.len() }}</summary>{% for p in a.more %}<p>{{ p|safe }}</p>{% endfor %}</details>{% endif -%}
+        {%- for p in a.paragraphs %}<p>{{ ui.prose(p)|safe }}</p>{% endfor -%}
+        {%- if !a.more.is_empty() %}<details><summary>¶ +{{ a.more.len() }}</summary>{% for p in a.more %}<p>{{ ui.prose(p)|safe }}</p>{% endfor %}</details>{% endif -%}
     </div>
     <p class="source">
         <img src="{{ ui.wikipedia_logo() }}" alt="" width="18">

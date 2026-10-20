@@ -478,6 +478,125 @@ dialog.lightbox {
 	cursor: help;
 }
 
+/* The sources of a statement: the icon of the first source, and their
+   number when there is more than one. It opens their cards. */
+.src {
+	display: inline-flex;
+	align-items: center;
+	gap: 2px;
+	margin-inline-start: 4px;
+	padding: 1px 3px;
+	border: 1px solid transparent;
+	border-radius: var( --border-radius-base );
+	background: none;
+	color: var( --color-subtle );
+	font: inherit;
+	font-size: 10px;
+	line-height: 1;
+	vertical-align: middle;
+	cursor: pointer;
+
+	&:hover { border-color: var( --border-color-base ); }
+	& :is( .favicon, svg ) { inline-size: 12px; block-size: 12px; object-fit: contain; }
+}
+
+/* The mark of a note in the text of the article: its number. */
+.ref {
+	line-height: 0;
+
+	& button {
+		padding: 0 1px;
+		border: 0;
+		background: none;
+		color: var( --color-progressive );
+		font: inherit;
+		font-size: var( --font-size-x-small );
+		cursor: pointer;
+
+		&::before { content: "["; }
+		&::after { content: "]"; }
+		&:hover { text-decoration: underline; }
+	}
+}
+
+/* Cards of sources, in a popover: wider than a credit, and apart from
+   the line of its mark. */
+.pop.cites {
+	margin-block-start: var( --spacing-25 );
+	max-inline-size: min( 420px, 100vw - 2 * var( --spacing-100 ) );
+	max-block-size: 60vh;
+	overflow-y: auto;
+	font-size: var( --font-size-small );
+	line-height: var( --line-height-small );
+	/* Not the colours and the pointer of a caption on a picture that it
+	   is in (a popover inherits from its place in the page). */
+	color: var( --color-base );
+	pointer-events: auto;
+
+	& a { color: var( --color-progressive ); }
+
+	& > * + * {
+		margin-block-start: var( --spacing-75 );
+		padding-block-start: var( --spacing-75 );
+		border-block-start: 1px solid var( --border-color-muted );
+	}
+}
+
+/* A source: the icon of its site, its title, the site; then its fields,
+   a name and a value on each line. Spans only (it is in a popover in a
+   line), so the lines are a grid. */
+.cite {
+	display: grid;
+	grid-template-columns: max-content minmax( 0, 1fr );
+	gap: 2px var( --spacing-75 );
+	overflow-wrap: anywhere;
+
+	/* The icon, the title and the site wrap as text: a long address
+	   has no gap under the icon. */
+	& .head {
+		grid-column: 1 / -1;
+		font-weight: var( --font-weight-bold );
+
+		& :is( .favicon, svg ) {
+			inline-size: 16px;
+			block-size: 16px;
+			margin-inline-end: var( --spacing-50 );
+			object-fit: contain;
+			vertical-align: -3px;
+			color: var( --color-subtle );
+		}
+	}
+
+	& .host {
+		color: var( --color-subtle );
+		font-size: var( --font-size-x-small );
+		font-weight: var( --font-weight-normal );
+	}
+
+	& .field { display: contents; }
+	& .field-name { color: var( --color-subtle ); }
+
+	/* Free text: as the editor wrote it. */
+	&[data-kind="text"] { display: block; }
+}
+
+.note-text { display: block; }
+
+/* The notes of the article, at the end of the page: collapsed, across
+   the grid of the spread. */
+.sources {
+	& > details { grid-column: 1 / -1; }
+	& summary h2 { display: inline; }
+
+	& ol {
+		margin: var( --spacing-75 ) 0 0;
+		padding-inline-start: var( --spacing-200 );
+		font-size: var( --font-size-small );
+	}
+
+	& li + li { margin-block-start: var( --spacing-75 ); }
+}
+
 /* The prose of a spread: its article section, as a short column. */
 .prose-slot {
 	grid-column: 1 / span 8;

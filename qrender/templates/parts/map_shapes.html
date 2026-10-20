@@ -11,7 +11,7 @@
                 {{ ui.text(label, false)|safe }}: {{ ui.values_of(parts.as_slice())|safe }} ·
             {% endfor -%}
             <a href="{{ ui.commons_data(&s.title) }}">{{ s.title }}</a> · {{ s.license }}
-            {%- call m::prov(ui, s.statement.provenance) %}{% endcall %}
+            {%- call m::prov(ui, s.statement.provenance, s.statement.citations) %}{% endcall %}
             {% call m::edit(ui, ui.edit(s.statement.pid)) %}
             {% endcall %}
         </li>

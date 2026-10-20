@@ -1,0 +1,4 @@
+{#- A note: the text of an explanatory note, then the card of each
+    citation. -#}
+{%- if let Some(t) = note.text %}<span class="note-text">{{ ui.prose(t)|safe }}</span>{% endif -%}
+{%- for c in cards %}{{ ui.cite(c)|safe }}{% endfor -%}

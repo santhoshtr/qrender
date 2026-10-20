@@ -9,7 +9,7 @@
 {%- let edit = ui.edit(b.statement.pid) -%}
 {%- if kind == "audio" -%}
     <div class="block">
-        <h3>{{ ui.text(ui.property(b.statement.pid), true)|safe }}{% call m::prov(ui, b.statement.provenance) %}{% endcall %}{% call m::edit(ui, edit) %}{% endcall %}</h3>
+        <h3>{{ ui.text(ui.property(b.statement.pid), true)|safe }}{% call m::prov(ui, b.statement.provenance, b.statement.citations) %}{% endcall %}{% call m::edit(ui, edit) %}{% endcall %}</h3>
         <audio controls preload="none" src="{{ ui.file(file) }}">
         </audio>
         {%- let note = ui.qualifiers(b.statement.qualifiers.as_slice()) -%}
@@ -45,7 +45,7 @@
                 {%- if !b.picture.assessed.is_empty() %}
                     <span class="assessed" title="{{ b.picture.assessed|join(", ") }}">★</span>
                 {% endif -%}
-                {% call m::prov(ui, b.statement.provenance) %}
+                {% call m::prov(ui, b.statement.provenance, b.statement.citations) %}
                 {% endcall %}
                 {%- if let Some(bytes) = b.picture.bytes %}
                     <span class="size">{{ ui.megabytes(bytes) }}</span>

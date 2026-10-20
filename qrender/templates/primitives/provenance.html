@@ -10,7 +10,7 @@
 </div>
 <ul class="legend">
     {%- for r in rows.iter() -%}
-        <li>{% call m::prov(ui, Some(r.mark)) %}{% endcall %} {% if r.labels.is_empty() %}—{% else %}{% for l in r.labels %}{% if !loop.first %} / {% endif %}{{ ui.text(l, true)|safe }}{% endfor %}{% endif %} <b>{{ r.count }}</b></li>
+        <li>{% call m::prov(ui, Some(r.mark), ui.no_citations()) %}{% endcall %} {% if r.labels.is_empty() %}—{% else %}{% for l in r.labels %}{% if !loop.first %} / {% endif %}{{ ui.text(l, true)|safe }}{% endfor %}{% endif %} <b>{{ r.count }}</b></li>
     {%- endfor -%}
 </ul>
 <p class="note">{{ ui.view.lang }}: {{ ui.view.coverage.have }} / {{ ui.view.coverage.total }}</p>

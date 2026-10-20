@@ -26,6 +26,10 @@ use crate::schema::{
 use crate::vocab::Slot;
 use crate::wikidata::POINT_IN_TIME;
 
+/// No citations: for a value that has no statement (a work by the item,
+/// a row of the provenance legend).
+pub static NO_CITATIONS: Vec<String> = Vec::new();
+
 /// The values of a strip of pictures from which it has "View all".
 const VIEW_ALL_MIN: usize = 3;
 
@@ -148,6 +152,8 @@ pub struct Shown<'a> {
     pub description: Option<Description>,
     pub image: Option<Image<'a>>,
     pub provenance: Option<Provenance>,
+    /// The references that cite a source, by hash.
+    pub citations: &'a Vec<String>,
     pub edit: Option<String>,
     /// False when the value is behind "+N".
     pub shown: bool,
@@ -324,6 +330,7 @@ impl<'v> Ui<'v> {
                 .and_then(|q| self.item(q).description),
             image: self.image(item, s.image.as_ref(), s.class),
             provenance: Some(s.provenance),
+            citations: &s.citations,
             edit: Some(self.edit(s.pid)),
             shown: s.shown.unwrap_or(true),
         }
@@ -357,6 +364,7 @@ impl<'v> Ui<'v> {
             description: None,
             image: self.image(Some(w.item), w.image.as_ref(), false),
             provenance: None,
+            citations: &NO_CITATIONS,
             edit: None,
             shown: index < shown_count,
         }
@@ -745,6 +753,11 @@ impl<'v> Ui<'v> {
     }
 
     /// "imported", "none", or "" for a sourced statement: its mark.
+    /// No citations, for a mark of provenance without a statement.
+    pub fn no_citations(&self) -> &'static Vec<String> {
+        &NO_CITATIONS
+    }
+
     pub fn mark(&self, provenance: impl Arg<Option<Provenance>>) -> &'static str {
         match provenance.get() {
             Some(Provenance::Imported) => "imported",
@@ -853,6 +866,6 @@ fn domain(href: &str) -> Option<&str> {
 }
 
 /// The icon of a site (128 px; it shows at 16 px).
-fn favicon(domain: &str) -> String {
+pub(crate) fn favicon(domain: &str) -> String {
     format!("{FAVICONS}?url={}", utf8_percent_encode(domain, PATH))
 }

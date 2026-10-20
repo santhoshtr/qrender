@@ -71,7 +71,7 @@
             {%- if !b.picture.assessed.is_empty() %}
                 · <span class="assessed">★</span> {{ b.picture.assessed|join(", ") }}
             {% endif -%}
-            {% call m::prov(ui, b.statement.provenance) %}
+            {% call m::prov(ui, b.statement.provenance, b.statement.citations) %}
             {% endcall %}
             {% call m::edit(ui, ui.edit(b.statement.pid)) %}
             {% endcall %}

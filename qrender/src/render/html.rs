@@ -9,11 +9,13 @@
 
 use askama::Template;
 
-use super::design::{STYLESHEET, scripts};
+use super::cite::{self, Card, Value as CiteValue};
+use super::design::{REFERENCE_ICON, STYLESHEET, scripts};
 use super::map::Frame;
 use super::ui::{Arg, Ref, Shown, Ui};
 use crate::localize::format::Part;
-use crate::localize::{Label, ProseSection, SpreadView, View};
+use crate::localize::messages::format;
+use crate::localize::{Label, Note, ProseSection, SpreadView, View};
 use crate::primitives::fact::Fact;
 use crate::primitives::map::{Map, MapShape};
 use crate::primitives::media::Media;
@@ -214,6 +216,46 @@ struct ArticleSubsectionHtml<'a> {
 }
 
 #[derive(Template)]
+#[template(path = "parts/cite.html")]
+struct CiteHtml<'a> {
+    ui: &'a Ui<'a>,
+    c: &'a Card<'a>,
+}
+
+#[derive(Template)]
+#[template(path = "parts/cite_mark.html")]
+struct CiteMarkHtml<'a> {
+    ui: &'a Ui<'a>,
+    /// The id of the popover.
+    n: u32,
+    /// One at least.
+    cards: Vec<Card<'a>>,
+}
+
+#[derive(Template)]
+#[template(path = "parts/note_mark.html")]
+struct NoteMarkHtml<'a> {
+    ui: &'a Ui<'a>,
+    number: usize,
+}
+
+#[derive(Template)]
+#[template(path = "parts/note_body.html")]
+struct NoteBodyHtml<'a> {
+    ui: &'a Ui<'a>,
+    note: &'a Note,
+    cards: Vec<Card<'a>>,
+}
+
+#[derive(Template)]
+#[template(path = "parts/notes.html")]
+struct NotesHtml<'a> {
+    ui: &'a Ui<'a>,
+    /// Each note, and its body as HTML: in its popover and in the list.
+    notes: Vec<(&'a Note, String)>,
+}
+
+#[derive(Template)]
 #[template(path = "parts/lightbox.html")]
 struct LightboxHtml<'a> {
     ui: &'a Ui<'a>,
@@ -365,6 +407,90 @@ impl<'v> Ui<'v> {
             s,
             collapsed,
         })
+    }
+
+    /// Article HTML with the mark of each note (`<sup data-note="3"></sup>`,
+    /// as the localize step writes it) as a button that opens the note.
+    pub fn prose(&self, html: impl Ref<str>) -> String {
+        const MARK: &str = "<sup data-note=\"";
+        const END: &str = "\"></sup>";
+        let mut out = String::with_capacity(html.r().len());
+        let mut rest = html.r();
+        while let Some(start) = rest.find(MARK) {
+            out.push_str(&rest[..start]);
+            let after = &rest[start + MARK.len()..];
+            let Some(end) = after.find(END) else {
+                out.push_str(&rest[start..]);
+                return out;
+            };
+            if let Ok(number) = after[..end].parse() {
+                out.push_str(&render(NoteMarkHtml { ui: self, number }));
+            }
+            rest = &after[end + END.len()..];
+        }
+        out.push_str(rest);
+        out
+    }
+
+    /// "Note 3": the name of a note mark for a screen reader.
+    pub fn note_label(&self, number: impl Arg<usize>) -> String {
+        format(self.msg("qrender-note"), &[&number.get().to_string()])
+    }
+
+    /// The sources of a statement: a button and a popover with a card for
+    /// each. Nothing without one.
+    pub fn sources(&self, citations: &[String]) -> String {
+        let cards: Vec<Card> = citations
+            .iter()
+            .filter_map(|hash| self.view.citations.get(hash))
+            .map(|c| cite::card(c, self.view))
+            .collect();
+        if cards.is_empty() {
+            return String::new();
+        }
+        render(CiteMarkHtml {
+            ui: self,
+            n: self.id(),
+            cards,
+        })
+    }
+
+    /// The notes of the article text: their popovers and their list.
+    /// Nothing without notes.
+    pub fn notes(&self) -> String {
+        if self.view.notes.is_empty() {
+            return String::new();
+        }
+        let notes = self
+            .view
+            .notes
+            .iter()
+            .map(|note| {
+                let cards = note
+                    .citations
+                    .iter()
+                    .map(|c| cite::card(c, self.view))
+                    .collect();
+                (
+                    note,
+                    render(NoteBodyHtml {
+                        ui: self,
+                        note,
+                        cards,
+                    }),
+                )
+            })
+            .collect();
+        render(NotesHtml { ui: self, notes })
+    }
+
+    pub fn cite(&self, c: &Card) -> String {
+        render(CiteHtml { ui: self, c })
+    }
+
+    /// The icon of a source without a site icon.
+    pub fn reference_icon(&self) -> &'static str {
+        &REFERENCE_ICON
     }
 
     /// The action to translate a text of the article (translate.js).

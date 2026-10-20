@@ -23,7 +23,7 @@
             <span class="note">{{ ui.note(note.as_slice())|safe }}</span>
         {% endif -%}
         <span class="tools">
-            {% call m::prov(ui, s.media.statement.provenance) %}
+            {% call m::prov(ui, s.media.statement.provenance, s.media.statement.citations) %}
             {% endcall %}
             {% call m::edit(ui, edit) %}
             {% endcall %}
