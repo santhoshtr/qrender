@@ -24,7 +24,7 @@ use crate::primitives::{
     pictures, prose, provenance, scale, score, series, sitelinks, sounds, split, succession,
     timeline, title, works,
 };
-use crate::schema::{Block, Credit};
+use crate::schema::{Block, Credit, StatementRef};
 use crate::vocab::{self, Slot};
 
 /// How the page gets its stylesheet.
@@ -115,13 +115,24 @@ struct LineHtml<'a> {
 }
 
 #[derive(Template)]
+#[template(path = "parts/row_lines.html")]
+struct RowLinesHtml<'a> {
+    ui: &'a Ui<'a>,
+    /// The values that the composer marked as shown.
+    values: &'a [Shown<'a>],
+    /// The values behind "+N".
+    rest: usize,
+    /// The values of the dialog: all of them, and more when the block has
+    /// more (the holder now, for the holders before).
+    all: &'a [Shown<'a>],
+    heading: &'a str,
+}
+
+#[derive(Template)]
 #[template(path = "parts/lines.html")]
 struct LinesHtml<'a> {
     ui: &'a Ui<'a>,
     values: &'a [Shown<'a>],
-    /// The values of the dialog: all of them, and more when the block has
-    /// more (the holder now, for the holders before).
-    all: &'a [Shown<'a>],
     heading: &'a str,
 }
 
@@ -381,14 +392,30 @@ impl<'v> Ui<'v> {
     }
 
     pub fn lines(&self, values: &[Shown], heading: impl Ref<str>) -> String {
-        self.lines_with(values, values, heading)
-    }
-
-    /// Lines of `values`, with `all` in the dialog.
-    pub fn lines_with(&self, values: &[Shown], all: &[Shown], heading: impl Ref<str>) -> String {
         render(LinesHtml {
             ui: self,
             values,
+            heading: heading.r(),
+        })
+    }
+
+    /// Values as rows with their pictures, as in a dialog: the ones that
+    /// the composer marked as shown; all of them (`all`) in a dialog.
+    pub fn rows_with(
+        &self,
+        statements: &[StatementRef],
+        all: &[Shown],
+        heading: impl Ref<str>,
+    ) -> String {
+        let values: Vec<Shown> = statements
+            .iter()
+            .filter(|s| s.shown != Some(false))
+            .map(|s| self.value(s))
+            .collect();
+        render(RowLinesHtml {
+            ui: self,
+            values: &values,
+            rest: self.hidden_refs(statements),
             all,
             heading: heading.r(),
         })

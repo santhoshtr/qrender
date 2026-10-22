@@ -1,8 +1,13 @@
 /* succession */
 
-/* An office: the holder now, and the holders before. */
+/* An office: the holder now, and the holders before, each a row with its
+   picture (as in the dialog). */
 .succession {
 	& > .m { max-inline-size: 320px; }
 
-	& .before { font-size: var( --font-size-small ); }
+	& .before {
+		font-size: var( --font-size-small );
+
+		& > .more { margin-block-start: var( --spacing-75 ); }
+	}
 }

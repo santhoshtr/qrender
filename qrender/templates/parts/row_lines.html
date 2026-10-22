@@ -1,0 +1,8 @@
+{%- import "macros.html" as m -%}
+{#- Values as rows with their pictures, as in a dialog: the ones the
+    composer marked as shown; all of them in a dialog. -#}
+{{- ui.rows(values)|safe -}}
+{%- if rest > 0 -%}
+    {%- let n = ui.id() -%}
+    {% call m::more(n, rest) %}{% endcall %}{% call m::dialog(ui, n, heading) %}{{ ui.rows(all)|safe }}{% endcall %}
+{%- endif -%}

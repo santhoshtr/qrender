@@ -1187,7 +1187,7 @@ absence_min_peers = 20   # fewer peers than this: no absence is shown
 chain_max = 5            # classes shown in the identity chain
 list_shown = 12          # works shown in a list before "+N"
 row_shown = 6            # values shown in a row of the fact sheet before "+N"
-succession_shown = 6     # predecessors shown before "+N"
+succession_shown = 5     # predecessors shown before "+N"
 
 # ------------------------------------------------------------ comparisons
 [containers]

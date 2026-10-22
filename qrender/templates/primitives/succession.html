@@ -1,9 +1,10 @@
-{#- An office: the holder now, and the holders before, newest first. The
-    dialog has every holder, the holder now first. -#}
+{#- An office: the holder now, and the holders before, newest first, each
+    a row with its picture. The dialog has every holder, the holder now
+    first. -#}
 <div class="block succession">
     <h3>
         {%- match b.office -%}{%- when Some with (office) -%}{{ ui.part(ui.value_part(&office.value))|safe }}{%- when None -%}{{ ui.text(ui.property(b.pids[0]), true)|safe }}{%- endmatch -%}
 </h3>
 {{ ui.figure_with(ui.value(&b.holder), ui.roles(b.pids.as_slice()))|safe }}
-{%- if !b.before.is_empty() %}<div class="before">{{ ui.lines_with(ui.values(b.before.as_slice()).as_slice(), ui.holders(b).as_slice(), ui.succession_title(b))|safe }}</div>{% endif -%}
+{%- if !b.before.is_empty() %}<div class="before">{{ ui.rows_with(b.before.as_slice(), ui.holders(b).as_slice(), ui.succession_title(b))|safe }}</div>{% endif -%}
 </div>
