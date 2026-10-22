@@ -881,9 +881,28 @@ impl<'v> Ui<'v> {
 
     /// "Translate to ગુજરાતી": the page language named by `intl.js`.
     pub fn translate_label(&self) -> String {
+        self.with_page_language("qrender-translate")
+    }
+
+    /// "Add the label in ગુજરાતી": the title of the label editor.
+    pub fn label_title(&self) -> String {
+        self.with_page_language("qrender-label-title")
+    }
+
+    /// A message whose `$1` is the page language, named by `intl.js`.
+    fn with_page_language(&self, key: &str) -> String {
         let lang = escape(self.view.lang.as_str());
         let name = format!(r#"<span data-lang-name="{lang}">{lang}</span>"#);
-        crate::localize::messages::format(&escape(self.msg("qrender-translate")), &[&name])
+        crate::localize::messages::format(&escape(self.msg(key)), &[&name])
+    }
+
+    /// The page has a label that the reader can add in the page language:
+    /// it has the label editor.
+    pub fn has_label_actions(&self) -> bool {
+        self.view
+            .labels
+            .values()
+            .any(|l| l.fallback && l.add.is_some())
     }
 
     /// The note at the end of the page, with a link to the item.

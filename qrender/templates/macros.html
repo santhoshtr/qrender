@@ -1,12 +1,14 @@
 {#- Leaf markup: small parts that call nothing. Every other shared part is
     a template of its own (parts/), rendered once by a `Ui` method. -#}
 {#- The action to add a label in the page language, for a fallback. It goes
-    after a link, not in it: a link in a link is not valid HTML. -#}
+    after a link, not in it: a link in a link is not valid HTML. It links
+    to Special:SetLabel on Wikidata; label.js opens the editor of the page
+    in its place. -#}
 {%- macro add_label(ui, l) -%}
     {%- if l.fallback -%}{%- if let Some(add) = l.add -%}
         <a class="add-label"
            href="{{ add }}"
-           aria-label="{{ ui.msg("qrender-add-label") }}">+</a>
+           aria-label="{{ ui.msg("qrender-add-label") }}">{{ ui.edit_icon()|safe }}</a>
     {%- endif -%}{%- endif -%}
 {%- endmacro -%}
 {%- macro description(d) -%}

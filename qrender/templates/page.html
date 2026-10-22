@@ -60,6 +60,7 @@
         {{- ui.notes()|safe }}
         <p class="provenance-note">{{ ui.footer()|safe }}</p>
         {%- if let Some(from) = ui.translation_source() %}{{ ui.translator(from)|safe }}{% endif %}
+        {%- if ui.has_label_actions() %}{{ ui.label_editor()|safe }}{% endif %}
     </main>
     <script>{{ scripts|safe }}</script>
 </body>

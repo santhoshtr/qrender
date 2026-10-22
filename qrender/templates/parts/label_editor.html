@@ -1,0 +1,34 @@
+{#- The editor of a label, one for the page: a label that is not in the
+    page language, and a field for it in the page language, which the
+    machine translation fills first. label.js opens it from the action of
+    a label; every word of it is here, in the page language. -#}
+<dialog id="label-editor"
+        class="label-editor"
+        lang="{{ ui.view.lang }}"
+        aria-labelledby="label-editor-title"
+        data-saved="{{ ui.msg("qrender-saved") }}">
+    <header>
+        <h2 id="label-editor-title">{{ ui.label_title()|safe }}</h2>
+        <button type="button"
+                command="close"
+                commandfor="label-editor"
+                aria-label="{{ ui.msg("qrender-close") }}">×</button>
+    </header>
+    <div class="fields">
+        <p class="source"><span class="note source-lang"></span><span class="text"></span></p>
+        <label class="note" for="label-editor-text"><span data-lang-name="{{ ui.view.lang }}">{{ ui.view.lang }}</span> · {{ ui.msg("qrender-translation-note") }}</label>
+        <input id="label-editor-text"
+               type="text"
+               lang="{{ ui.view.lang }}"
+               dir="{{ ui.view.dir.name() }}"
+               autocomplete="off">
+    </div>
+    <footer class="actions">
+        <span class="status"
+              role="status"
+              data-translating="{{ ui.msg("qrender-translating") }}"
+              data-failed="{{ ui.msg("qrender-label-failed") }}"></span>
+        <button class="close" type="button">{{ ui.msg("qrender-close") }}</button>
+        <button class="save" type="button">{{ ui.msg("qrender-save") }}</button>
+    </footer>
+</dialog>

@@ -118,8 +118,21 @@ a {
 	opacity: 0;
 	text-decoration: none;
 
-	.fb-group:hover > &,
+	& > svg {
+		inline-size: 0.8em;
+		block-size: 0.8em;
+	}
+
+	/* label.js shows it also on a click of a label that is not a link. */
+	.fb-group:is( :hover, :focus-within, .shown ) > &,
 	&:focus-visible { opacity: 1; }
+}
+
+/* A label that the reader added in the page language (label.js): saved on
+   this page only. A solid line, in the colour of success. */
+.localized {
+	text-decoration: underline solid var( --border-color-success );
+	text-underline-offset: 0.2em;
 }
 
 /* The tools of a statement or a picture: credit, edit. They show on hover
@@ -901,36 +914,68 @@ dialog.translator {
 	& :is( .original, .translated ) > :is( p, ul, ol, dl, blockquote, h3, h4, h5, h6 ) {
 		margin-block: var( --spacing-25 );
 	}
+}
 
-	& .actions {
-		position: sticky;
-		inset-block-end: 0;
+/* The editor of a label, a dialog of the page: the label in its language,
+   and the field in the page language. */
+dialog.label-editor {
+	inline-size: min( 560px, 100vw - 2 * var( --gutter ) );
+
+	& .fields {
+		display: grid;
+		gap: var( --spacing-50 );
+		padding: var( --spacing-100 );
+	}
+
+	& .source {
 		display: flex;
-		align-items: center;
-		justify-content: flex-end;
+		align-items: baseline;
 		gap: var( --spacing-75 );
-		padding: var( --spacing-75 ) var( --spacing-100 );
-		border-block-start: 1px solid var( --border-color-muted );
-		background-color: var( --background-color-base );
-		font-family: var( --font-family-system-sans );
+		margin: 0 0 var( --spacing-75 );
 
-		& .status { margin-inline-end: auto; color: var( --color-subtle ); font-size: var( --font-size-small ); }
+		& .text { font-size: var( --font-size-large ); }
+	}
 
-		& button {
-			padding: var( --spacing-35 ) var( --spacing-100 );
-			border: 1px solid var( --border-color-base );
-			border-radius: var( --border-radius-base );
-			background-color: var( --background-color-interactive-subtle );
-			font: inherit;
-			font-weight: var( --font-weight-bold );
-			cursor: pointer;
-		}
+	& input {
+		padding: var( --spacing-50 ) var( --spacing-75 );
+		border: 1px solid var( --border-color-base );
+		border-radius: var( --border-radius-base );
+		font: inherit;
+		font-size: var( --font-size-large );
 
-		& .save {
-			border-color: var( --background-color-progressive );
-			background-color: var( --background-color-progressive );
-			color: var( --color-inverted );
-		}
+		&:focus { outline: 2px solid var( --outline-color-progressive--focus ); outline-offset: -1px; }
+	}
+}
+
+/* The actions of an editor: in view at the end of the dialog. */
+dialog:is( .translator, .label-editor ) .actions {
+	position: sticky;
+	inset-block-end: 0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: var( --spacing-75 );
+	padding: var( --spacing-75 ) var( --spacing-100 );
+	border-block-start: 1px solid var( --border-color-muted );
+	background-color: var( --background-color-base );
+	font-family: var( --font-family-system-sans );
+
+	& .status { margin-inline-end: auto; color: var( --color-subtle ); font-size: var( --font-size-small ); }
+
+	& button {
+		padding: var( --spacing-35 ) var( --spacing-100 );
+		border: 1px solid var( --border-color-base );
+		border-radius: var( --border-radius-base );
+		background-color: var( --background-color-interactive-subtle );
+		font: inherit;
+		font-weight: var( --font-weight-bold );
+		cursor: pointer;
+	}
+
+	& .save {
+		border-color: var( --background-color-progressive );
+		background-color: var( --background-color-progressive );
+		color: var( --color-inverted );
 	}
 }
 

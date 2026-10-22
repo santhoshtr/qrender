@@ -212,6 +212,12 @@ struct TranslateButtonHtml<'a> {
 }
 
 #[derive(Template)]
+#[template(path = "parts/label_editor.html")]
+struct LabelEditorHtml<'a> {
+    ui: &'a Ui<'a>,
+}
+
+#[derive(Template)]
 #[template(path = "parts/translator.html")]
 struct TranslatorHtml<'a> {
     ui: &'a Ui<'a>,
@@ -525,6 +531,11 @@ impl<'v> Ui<'v> {
     /// The action to translate a text of the article (translate.js).
     pub fn translate_button(&self) -> String {
         render(TranslateButtonHtml { ui: self })
+    }
+
+    /// The dialog of the page that edits a label in the page language.
+    pub fn label_editor(&self) -> String {
+        render(LabelEditorHtml { ui: self })
     }
 
     /// The dialog of the page that edits a translation from `from`.
