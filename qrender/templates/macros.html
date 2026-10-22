@@ -27,7 +27,7 @@
 {%- macro edit(ui, href) -%}
     <a class="edit"
        href="{{ href }}"
-       aria-label="{{ ui.msg("qrender-edit") }}">✎</a>
+       aria-label="{{ ui.msg("qrender-edit") }}">{{ ui.edit_icon()|safe }}</a>
 {%- endmacro -%}
 {#- The last card of a strip of pictures: it opens the dialog of all the
     values. No count: the heading has it. -#}

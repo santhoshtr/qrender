@@ -869,6 +869,11 @@ impl<'v> Ui<'v> {
         crate::primitives::sitelinks::project(family).map_or("", |(_, logo)| logo)
     }
 
+    /// The icon of the edit action.
+    pub fn edit_icon(&self) -> &'static str {
+        &super::design::EDIT_ICON
+    }
+
     /// The icon of the translation action.
     pub fn language_icon(&self) -> &'static str {
         &super::design::LANGUAGE_ICON

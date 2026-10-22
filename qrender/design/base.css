@@ -167,6 +167,12 @@ a {
 	&:hover { color: var( --color-progressive ); text-decoration: none; }
 }
 
+/* The icon of the edit action: the size of the glyph of the (i) button. */
+.edit > svg {
+	inline-size: 12px;
+	block-size: 12px;
+}
+
 .info { font-family: var( --font-family-serif ); font-style: italic; }
 
 /* A picture or a map is a button: it opens its dialog. */

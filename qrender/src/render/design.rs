@@ -34,13 +34,18 @@ pub const LEAFLET_CSS: &str = include_str!("../../assets/vendor/leaflet/leaflet.
 pub static LANGUAGE_ICON: LazyLock<String> =
     LazyLock::new(|| inline_icon(include_str!("../../assets/icons/language.svg")));
 
+/// The icon of the edit action of a statement (a Codex icon).
+pub static EDIT_ICON: LazyLock<String> =
+    LazyLock::new(|| inline_icon(include_str!("../../assets/icons/edit.svg")));
+
 /// The icon of a source without a site icon (a Codex icon).
 pub static REFERENCE_ICON: LazyLock<String> =
     LazyLock::new(|| inline_icon(include_str!("../../assets/icons/reference.svg")));
 
 /// A Codex icon, inline in the page: in the colour of its button
 /// (`currentColor`), hidden from screen readers (the button has its
-/// words), without its English title.
+/// words), without its English title, and without the white space of the
+/// file (an icon can be on a page a thousand times).
 pub(crate) fn inline_icon(svg: &str) -> String {
     let start = svg.find("<svg").expect("an svg element");
     let svg = &svg[start..];
@@ -48,9 +53,16 @@ pub(crate) fn inline_icon(svg: &str) -> String {
         (Some(a), Some(b)) => format!("{}{}", &svg[..a], &svg[b + "</title>".len()..]),
         _ => svg.to_string(),
     };
-    svg.replacen("<svg", r#"<svg aria-hidden="true" fill="currentColor""#, 1)
-        .trim()
-        .to_string()
+    let svg: Vec<&str> = svg
+        .lines()
+        .map(str::trim)
+        .filter(|l| !l.is_empty())
+        .collect();
+    svg.join(" ").replace("> <", "><").replacen(
+        "<svg",
+        r#"<svg aria-hidden="true" fill="currentColor""#,
+        1,
+    )
 }
 
 /// The CSS of the page grid and of the templates (the design system's own).
