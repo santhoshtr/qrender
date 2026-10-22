@@ -2,8 +2,16 @@
    the shorter column. */
 
 .t-lead-beside {
-	& > [data-slot='hero'] { grid-column: 1 / span 5; }
 	& > [data-slot='stack'] { grid-column: 6 / -1; }
+
+	/* The lead, and the blocks under it when a second office is beside it
+	   (the `beside` rule): spaced as the stack. */
+	& > [data-slot='hero'] {
+		grid-column: 1 / span 5;
+		display: flex;
+		flex-direction: column;
+		gap: var( --gap );
+	}
 }
 
 .t-hero-plus-stack {

@@ -13,8 +13,10 @@ use crate::vocab::{Slot, Template};
 
 impl Composer<'_> {
     /// The first block of a lead primitive leads the spread (the hero
-    /// slot). The others go to the slot of their placement rule. Slot order
-    /// is reading order: hero, stack, gallery, sheet.
+    /// slot). The others go to the slot of their placement rule. A stack
+    /// with a block as tall as the lead (a second office) keeps only such
+    /// blocks; the others go under the lead. Slot order is reading order:
+    /// hero, stack, gallery, sheet.
     pub fn place(&self, made: Vec<Made>) -> (IndexMap<Slot, Vec<Block>>, Template) {
         let rules = &self.config.rules;
         let mut placed: IndexMap<Slot, Vec<Block>> = IndexMap::new();
@@ -53,9 +55,17 @@ impl Composer<'_> {
         )
         .template;
 
+        let mut hero: Vec<Block> = lead.into_iter().collect();
+        let beside = |b: &Block| rules.lead.beside.contains(&b.primitive());
+        if !hero.is_empty() && stack.iter().any(beside) {
+            let (kept, under): (Vec<Block>, Vec<Block>) = stack.into_iter().partition(beside);
+            hero.extend(under);
+            stack = kept;
+        }
+
         let mut slots = IndexMap::new();
-        if let Some(lead) = lead {
-            slots.insert(Slot::Hero, vec![lead]);
+        if !hero.is_empty() {
+            slots.insert(Slot::Hero, hero);
         }
         if !stack.is_empty() {
             slots.insert(Slot::Stack, stack);

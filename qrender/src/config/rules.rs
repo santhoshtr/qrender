@@ -222,6 +222,10 @@ pub enum Order {
 #[serde(deny_unknown_fields)]
 pub struct Lead {
     pub primitives: Vec<Primitive>,
+    /// The primitives that stay beside the lead; the other blocks of the
+    /// stack go under the lead when the stack has one of them.
+    #[serde(default)]
+    pub beside: Vec<Primitive>,
 }
 
 /// The slot of a block that does not lead.

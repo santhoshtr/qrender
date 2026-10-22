@@ -21,6 +21,7 @@ use crate::primitives::{
     timeline, title, works,
 };
 use crate::schema::{Block, Provenance, StatementRef};
+use crate::vocab::Slot;
 
 pub fn page(view: &View) -> String {
     let mut md = Markdown {
@@ -109,8 +110,22 @@ impl Markdown<'_> {
                 section.href
             ));
         }
-        for block in s.spread.slots.values().flatten() {
-            self.block(block);
+        // The order of the slots, but the stack right after the lead: a
+        // second office beside the lead (the `beside` rule) stays with it,
+        // before the blocks under the lead.
+        let slots = &s.spread.slots;
+        for (slot, blocks) in slots {
+            match slot {
+                Slot::Hero => {
+                    let (lead, under) = blocks.split_at(blocks.len().min(1));
+                    let stack = slots.get(&Slot::Stack).into_iter().flatten();
+                    for block in lead.iter().chain(stack).chain(under) {
+                        self.block(block);
+                    }
+                }
+                Slot::Stack if slots.contains_key(&Slot::Hero) => {}
+                _ => blocks.iter().for_each(|b| self.block(b)),
+            }
         }
         let topics: Vec<String> = s.spread.topics.iter().map(|t| self.topic(t)).collect();
         if !topics.is_empty() {

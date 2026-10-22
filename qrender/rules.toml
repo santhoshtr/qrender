@@ -166,6 +166,11 @@ order = "significance"
 
 [lead]
 primitives = ["succession", "map"]
+# A block of these in the stack is as tall as the lead: a second office
+# (the head of state beside the head of government). The stack keeps only
+# them, and the other blocks go under the lead: the columns are of a
+# similar height.
+beside = ["succession"]
 
 # ------------------------------------------------------------ placement
 # The slot of every block that does not lead.
