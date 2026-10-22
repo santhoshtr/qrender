@@ -190,7 +190,8 @@ impl<'a> Localizer<'a> {
             text,
             lang,
             fallback,
-            add: fallback.then(|| format!("{SET_LABEL}/{}/{id}", self.lang)),
+            // Special:SetLabel/{id}/{language}: the form with both set.
+            add: fallback.then(|| format!("{SET_LABEL}/{id}/{}", self.lang)),
             href: entity_url(id),
             description: None,
         }
