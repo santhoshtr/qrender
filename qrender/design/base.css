@@ -771,6 +771,36 @@ qr-section { display: block; }
 
 		& > :not( summary ) { margin-inline-start: var( --spacing-150 ); }
 	}
+
+	/* An image of the article: a block at the full width of the text, with
+	   its aspect ratio. A tall image is at most 80% of the window high, so
+	   it is narrower. Not a thumbnail: the reader sees it without a click. */
+	& .article-figure {
+		margin: var( --spacing-100 ) 0;
+
+		& .image {
+			display: block;
+			inline-size: min( 100%, calc( 80vh * var( --a ) ) );
+			margin-inline: auto;
+		}
+
+		& img {
+			display: block;
+			inline-size: 100%;
+			block-size: auto;
+			aspect-ratio: var( --a );
+			border-radius: var( --border-radius-base );
+			background-color: var( --background-color-interactive-subtle );
+		}
+
+		& :is( .caption, figcaption ) {
+			margin: var( --spacing-25 ) 0 var( --spacing-75 );
+			font-family: var( --font-family-system-sans );
+			font-size: var( --font-size-small );
+			line-height: var( --line-height-small );
+			color: var( --color-subtle );
+		}
+	}
 }
 
 /* Words for screen readers only: the name of an icon button. */

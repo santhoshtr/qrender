@@ -3,6 +3,6 @@
 {%- let h = ui.section_tag(s.level) -%}
 <details class="subsection">
     <summary><{{ h }}>{{ s.title }}</{{ h }}></summary>
-    {%- for b in s.blocks %}{{ ui.prose(b)|safe }}{% endfor -%}
+    {{- ui.article_blocks(s.blocks)|safe -}}
     {%- for c in s.sections %}{{ ui.article_subsection(c)|safe }}{% endfor -%}
 </details>

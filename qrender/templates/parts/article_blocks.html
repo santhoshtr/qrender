@@ -1,0 +1,7 @@
+{#- The blocks of an article section, in order: a text, or a figure. -#}
+{%- for b in blocks -%}
+{%- match b -%}
+{%- when ProseBlock::Text with (html) -%}{{ ui.prose(html)|safe }}
+{%- when ProseBlock::Figure with (f) -%}{{ ui.article_figure(f)|safe }}
+{%- endmatch -%}
+{%- endfor -%}

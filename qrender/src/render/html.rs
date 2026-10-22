@@ -15,7 +15,7 @@ use super::map::Frame;
 use super::ui::{Arg, Ref, Shown, TopicArticle, Ui};
 use crate::localize::format::Part;
 use crate::localize::messages::format;
-use crate::localize::{Label, Note, ProseSection, SpreadView, View};
+use crate::localize::{Label, Note, ProseBlock, ProseFigure, ProseSection, SpreadView, View};
 use crate::primitives::fact::Fact;
 use crate::primitives::map::{Map, MapShape};
 use crate::primitives::media::Media;
@@ -224,6 +224,20 @@ struct TranslatorHtml<'a> {
 struct ArticleSubsectionHtml<'a> {
     ui: &'a Ui<'a>,
     s: &'a ProseSection,
+}
+
+#[derive(Template)]
+#[template(path = "parts/article_blocks.html")]
+struct ArticleBlocksHtml<'a> {
+    ui: &'a Ui<'a>,
+    blocks: &'a [ProseBlock],
+}
+
+#[derive(Template)]
+#[template(path = "parts/article_figure.html")]
+struct ArticleFigureHtml<'a> {
+    ui: &'a Ui<'a>,
+    f: &'a ProseFigure,
 }
 
 #[derive(Template)]
@@ -520,6 +534,16 @@ impl<'v> Ui<'v> {
 
     pub fn article_subsection(&self, s: &ProseSection) -> String {
         render(ArticleSubsectionHtml { ui: self, s })
+    }
+
+    /// The blocks of an article section, in order: texts and figures.
+    pub fn article_blocks(&self, blocks: &[ProseBlock]) -> String {
+        render(ArticleBlocksHtml { ui: self, blocks })
+    }
+
+    /// The images of a figure of the article, at the width of the text.
+    pub fn article_figure(&self, f: &ProseFigure) -> String {
+        render(ArticleFigureHtml { ui: self, f })
     }
 
     /// The static map of a frame; `lazy` in a dialog.

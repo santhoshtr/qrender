@@ -69,7 +69,7 @@ async fn nairobi_from_recorded_responses() {
             .collect();
         let mut sections: Vec<&content::OutlineSection> = article.outline.iter().collect();
         while let Some(s) = sections.pop() {
-            texts.extend(s.blocks.iter().map(String::as_str));
+            texts.extend(s.blocks.iter().flat_map(|b| b.texts()));
             sections.extend(&s.sections);
         }
         texts.extend(article.notes.values().filter_map(|n| n.text.as_deref()));

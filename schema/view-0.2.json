@@ -4430,6 +4430,18 @@
       ],
       "type": "object"
     },
+    "ProseBlock": {
+      "anyOf": [
+        {
+          "description": "Cleaned HTML, as the lead: `p`, `ul`, `ol`, `dl`, `blockquote`.",
+          "type": "string"
+        },
+        {
+          "$ref": "#/$defs/ProseFigure"
+        }
+      ],
+      "description": "A block of an article section: a text, or a figure."
+    },
     "ProseConcepts": {
       "description": "The concepts whose article sections give the spread its prose.",
       "properties": {
@@ -4445,6 +4457,47 @@
       ],
       "type": "object"
     },
+    "ProseFigure": {
+      "description": "The images of a thumbnail, a multiple-image template or a gallery of\nthe article: files on Commons.",
+      "properties": {
+        "caption": {
+          "description": "The caption of the whole figure: cleaned HTML, as the lead.",
+          "type": "string"
+        },
+        "images": {
+          "items": {
+            "$ref": "#/$defs/ProseImage"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "images"
+      ],
+      "type": "object"
+    },
+    "ProseImage": {
+      "properties": {
+        "aspect": {
+          "description": "Width / height.",
+          "format": "double",
+          "type": "number"
+        },
+        "caption": {
+          "description": "The caption of this image in a group: cleaned HTML.",
+          "type": "string"
+        },
+        "file": {
+          "description": "The name of the file on Commons, without \"File:\".",
+          "type": "string"
+        }
+      },
+      "required": [
+        "file",
+        "aspect"
+      ],
+      "type": "object"
+    },
     "ProseSection": {
       "description": "A section of the article, with its content and its subsections.",
       "properties": {
@@ -4452,9 +4505,8 @@
           "type": "string"
         },
         "blocks": {
-          "description": "Cleaned HTML, as the lead: `p`, `ul`, `ol`, `dl`, `blockquote`.",
           "items": {
-            "type": "string"
+            "$ref": "#/$defs/ProseBlock"
           },
           "type": "array"
         },

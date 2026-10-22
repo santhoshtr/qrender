@@ -171,9 +171,38 @@ pub struct ProseSection {
     pub local: bool,
     /// 2 for a section, 3 for its subsection, and so on.
     pub level: u8,
-    /// Cleaned HTML, as the lead: `p`, `ul`, `ol`, `dl`, `blockquote`.
-    pub blocks: Vec<String>,
+    pub blocks: Vec<ProseBlock>,
     pub sections: Vec<ProseSection>,
+}
+
+/// A block of an article section: a text, or a figure.
+#[derive(Debug, Clone, Serialize, JsonSchema)]
+#[serde(untagged)]
+pub enum ProseBlock {
+    /// Cleaned HTML, as the lead: `p`, `ul`, `ol`, `dl`, `blockquote`.
+    Text(String),
+    Figure(ProseFigure),
+}
+
+/// The images of a thumbnail, a multiple-image template or a gallery of
+/// the article: files on Commons.
+#[derive(Debug, Clone, Serialize, JsonSchema)]
+pub struct ProseFigure {
+    pub images: Vec<ProseImage>,
+    /// The caption of the whole figure: cleaned HTML, as the lead.
+    #[serde(skip_serializing_if = "String::is_empty")]
+    pub caption: String,
+}
+
+#[derive(Debug, Clone, Serialize, JsonSchema)]
+pub struct ProseImage {
+    /// The name of the file on Commons, without "File:".
+    pub file: String,
+    /// Width / height.
+    pub aspect: f64,
+    /// The caption of this image in a group: cleaned HTML.
+    #[serde(skip_serializing_if = "String::is_empty")]
+    pub caption: String,
 }
 
 #[derive(Debug, Clone, Serialize, JsonSchema)]

@@ -14,7 +14,7 @@ use content::{EntityId, Pid};
 
 use super::cite::{self, Card, Value as CiteValue};
 use crate::localize::format::Part;
-use crate::localize::{Label, ProseSection, SpreadView, View};
+use crate::localize::{Label, ProseBlock, ProseSection, SpreadView, View};
 use crate::primitives::{
     absent, credits, earlier, fact, identifiers, kind, links, map, media, names, network, peers,
     pictures, prose, provenance, scale, score, series, sitelinks, sounds, split, succession,
@@ -68,10 +68,15 @@ pub fn page(view: &View) -> String {
     md.out
 }
 
-/// The first block of a section, or of its first subsection that has one.
+/// The first text block of a section, or of its first subsection that has
+/// one.
 fn first_block(s: &ProseSection) -> Option<&String> {
     s.blocks
-        .first()
+        .iter()
+        .find_map(|b| match b {
+            ProseBlock::Text(html) => Some(html),
+            ProseBlock::Figure(_) => None,
+        })
         .or_else(|| s.sections.iter().find_map(first_block))
 }
 

@@ -30,5 +30,6 @@ pub use model::{
 };
 pub use settings::{CitationStyle, LayoutMatch, Settings};
 pub use text::{
-    Article, Concept, LangText, Note, OutlineSection, PageImage, Section, TEXT_SCHEMA, Term, Text,
+    Article, ArticleFigure, ArticleImage, Concept, LangText, Note, OutlineBlock, OutlineSection,
+    PageImage, Section, TEXT_SCHEMA, Term, Text,
 };

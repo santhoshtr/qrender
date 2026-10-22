@@ -14,12 +14,12 @@ pub mod view;
 
 use std::collections::{BTreeMap, BTreeSet};
 
-use content::{Citation, Cited, EntityId, Lang, Pid, Qid, Text};
+use content::{Citation, Cited, EntityId, Lang, OutlineBlock, Pid, Qid, Text};
 use serde_json::Value;
 
 pub use view::{
-    Article, Coverage, Description, Label, Link, Note, PageImage, Project, ProseSection,
-    SectionProse, SpreadView, VIEW_SCHEMA, View,
+    Article, Coverage, Description, Label, Link, Note, PageImage, Project, ProseBlock, ProseFigure,
+    ProseImage, ProseSection, SectionProse, SpreadView, VIEW_SCHEMA, View,
 };
 
 use crate::compose::picture::media_kind;
@@ -488,8 +488,27 @@ impl<'a> Localizer<'a> {
             blocks: s
                 .blocks
                 .iter()
-                .map(|b| self.rewrite(b, article, source))
-                .filter(|b| !b.is_empty())
+                .filter_map(|b| match b {
+                    OutlineBlock::Text(html) => Some(self.rewrite(html, article, source))
+                        .filter(|t| !t.is_empty())
+                        .map(ProseBlock::Text),
+                    OutlineBlock::Figure(f) => Some(ProseBlock::Figure(ProseFigure {
+                        images: f
+                            .images
+                            .iter()
+                            .map(|i| ProseImage {
+                                file: i.file.clone(),
+                                aspect: if i.height > 0 {
+                                    round_to(f64::from(i.width) / f64::from(i.height), 4)
+                                } else {
+                                    1.0
+                                },
+                                caption: self.rewrite(&i.caption, article, source),
+                            })
+                            .collect(),
+                        caption: self.rewrite(&f.caption, article, source),
+                    })),
+                })
                 .collect(),
             sections: s
                 .sections

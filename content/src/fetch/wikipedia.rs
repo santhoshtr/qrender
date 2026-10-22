@@ -21,7 +21,10 @@ use crate::citation::Cited;
 use crate::html::{decode_entities, escape, strip_tags, wiki_target};
 use crate::id::{Lang, Qid};
 use crate::settings::CitationStyle;
-use crate::text::{Article, Concept, Note, OutlineSection, PageImage, Section};
+use crate::text::{
+    Article, ArticleFigure, ArticleImage, Concept, Note, OutlineBlock, OutlineSection, PageImage,
+    Section,
+};
 
 const BATCH: usize = 50;
 const DISPLAY_IMAGE: &str = "https://wiki-display-image.toolforge.org/json/wikidata/";
@@ -157,7 +160,7 @@ fn match_sections(
 
 fn collect_blocks(sections: &[OutlineSection], out: &mut Vec<String>) {
     for s in sections {
-        out.extend(s.blocks.iter().cloned());
+        out.extend(s.blocks.iter().flat_map(|b| b.texts()).map(str::to_string));
         collect_blocks(&s.sections, out);
     }
 }
@@ -276,7 +279,7 @@ fn outline_of(doc: &Html) -> Vec<OutlineSection> {
 /// One `<section>`: a section with a heading goes in `out`; without one
 /// (the lead, or a section that a template made), its blocks go in
 /// `blocks` and its subsections in `out`.
-fn section(el: ElementRef, out: &mut Vec<OutlineSection>, blocks: &mut Vec<String>) {
+fn section(el: ElementRef, out: &mut Vec<OutlineSection>, blocks: &mut Vec<OutlineBlock>) {
     let Some(heading) = el.child_elements().find_map(heading) else {
         for child in el.child_elements() {
             match child.value().name() {
@@ -314,19 +317,31 @@ fn heading(el: ElementRef) -> Option<ElementRef> {
         .flatten()
 }
 
-/// A block of text that a reader reads: a paragraph with text, a list, a
-/// quotation; the lists of a multi-column list. Not a heading, a hatnote
-/// ("Main article: …"), a table, a figure or a navigation box.
-fn block(el: ElementRef, out: &mut Vec<String>) {
+/// A block that a reader reads: a paragraph with text, a list, a
+/// quotation; the lists of a multi-column list; the images of a
+/// thumbnail, a multiple-image template or a gallery. Not a heading, a
+/// hatnote ("Main article: …"), a table or a navigation box.
+fn block(el: ElementRef, out: &mut Vec<OutlineBlock>) {
     let class = el.value().attr("class").unwrap_or_default();
     match el.value().name() {
         "p" if !class.contains("mw-empty-elt") => {
             let html = clean(el);
             if !strip_tags(&html).trim().is_empty() && !class.contains("error") {
-                out.push(html);
+                out.push(OutlineBlock::Text(html));
             }
         }
-        "ul" | "ol" | "dl" | "blockquote" => out.push(clean(el)),
+        "ul" if class_has(el, "gallery") => figure(gallery(el), out),
+        "ul" | "ol" | "dl" | "blockquote" => out.push(OutlineBlock::Text(clean(el))),
+        "figure" => {
+            let caption = el
+                .child_elements()
+                .find(|c| c.value().name() == "figcaption")
+                .map(inner)
+                .unwrap_or_default();
+            let images = image(el, String::new()).into_iter().collect();
+            figure(ArticleFigure { images, caption }, out);
+        }
+        "div" if class_has(el, "tmulti") => figure(multiple(el), out),
         "div" if class.contains("div-col") => {
             for child in el.child_elements() {
                 block(child, out);
@@ -334,6 +349,107 @@ fn block(el: ElementRef, out: &mut Vec<String>) {
         }
         _ => {}
     }
+}
+
+/// A figure with an image at least.
+fn figure(f: ArticleFigure, out: &mut Vec<OutlineBlock>) {
+    if !f.images.is_empty() {
+        out.push(OutlineBlock::Figure(f));
+    }
+}
+
+/// The images of a multiple-image template (`div.tmulti`): each in a
+/// `div.tsingle` with its caption; the caption of the whole is a
+/// `div.thumbcaption` outside them.
+fn multiple(el: ElementRef) -> ArticleFigure {
+    let single = |e: ElementRef| class_has(e, "tsingle");
+    let images = el
+        .descendants()
+        .filter_map(ElementRef::wrap)
+        .filter(|e| single(*e))
+        .filter_map(|s| {
+            let caption: Vec<String> = s
+                .child_elements()
+                .filter(|c| file_element(*c).is_none())
+                .map(inner)
+                .filter(|c| !c.is_empty())
+                .collect();
+            image(s, caption.join(" "))
+        })
+        .collect();
+    let caption = el
+        .descendants()
+        .filter_map(ElementRef::wrap)
+        .find(|e| class_has(*e, "thumbcaption") && !within(*e, el, single))
+        .map(inner)
+        .unwrap_or_default();
+    ArticleFigure { images, caption }
+}
+
+/// The images of a gallery (`ul.gallery`): each in a `li.gallerybox`
+/// with its `div.gallerytext`; the caption of the whole is a
+/// `li.gallerycaption`.
+fn gallery(el: ElementRef) -> ArticleFigure {
+    let images = el
+        .child_elements()
+        .filter(|li| class_has(*li, "gallerybox"))
+        .filter_map(|li| {
+            let caption = li
+                .descendants()
+                .filter_map(ElementRef::wrap)
+                .find(|e| class_has(*e, "gallerytext"))
+                .map(inner)
+                .unwrap_or_default();
+            image(li, caption)
+        })
+        .collect();
+    let caption = el
+        .child_elements()
+        .find(|li| class_has(*li, "gallerycaption"))
+        .map(inner)
+        .unwrap_or_default();
+    ArticleFigure { images, caption }
+}
+
+/// The image of the file in `el`, when the file is on Commons.
+fn image(el: ElementRef, caption: String) -> Option<ArticleImage> {
+    let img = file_element(el)?;
+    let size = |name: &str| img.value().attr(name)?.parse().ok();
+    Some(ArticleImage {
+        file: commons_file(img.value().attr("src")?)?,
+        width: size("data-file-width")?,
+        height: size("data-file-height")?,
+        caption,
+    })
+}
+
+/// The image of a file (`img.mw-file-element`) in `el`, or `el` itself.
+fn file_element(el: ElementRef) -> Option<ElementRef> {
+    el.descendants()
+        .filter_map(ElementRef::wrap)
+        .find(|e| e.value().name() == "img" && class_has(*e, "mw-file-element"))
+}
+
+/// The name of a Commons file from the URL of its image
+/// (`//upload.wikimedia.org/wikipedia/commons/thumb/9/9a/A_b.jpg/250px-A_b.jpg`,
+/// or the file itself without `thumb/`). The URL does not depend on the
+/// language of the wiki, as the "File:" namespace does. None for a file
+/// of the wiki: it is not on Commons, and it is often not free.
+fn commons_file(src: &str) -> Option<String> {
+    let (_, path) = src.split_once("/wikipedia/commons/")?;
+    let path = path.strip_prefix("thumb/").unwrap_or(path);
+    let name = path.split('/').nth(2)?.split(['?', '#']).next()?;
+    let name = percent_decode_str(name)
+        .decode_utf8_lossy()
+        .replace('_', " ");
+    (!name.is_empty()).then_some(name)
+}
+
+/// The content of an element, cleaned as a block (a caption).
+fn inner(el: ElementRef) -> String {
+    let mut out = String::new();
+    write_children(el, &mut out);
+    out.trim().to_string()
 }
 
 /// An element as HTML without styles and metadata, and with no attribute
@@ -618,6 +734,91 @@ mod tests {
         );
     }
 
+    fn text(html: &str) -> OutlineBlock {
+        OutlineBlock::Text(html.to_string())
+    }
+
+    #[test]
+    fn the_images_of_a_section() {
+        let img = |path: &str, w: u32, h: u32| {
+            format!(
+                "<span typeof=\"mw:File\"><a href=\"./File:X\"><img class=\"mw-file-element\" \
+                 src=\"//upload.wikimedia.org/wikipedia/{path}\" data-file-width=\"{w}\" \
+                 data-file-height=\"{h}\"/></a></span>"
+            )
+        };
+        let html = [
+            "<section data-mw-section-id=\"1\"><h2 id=\"City\">City</h2>".to_string(),
+            format!(
+                "<figure typeof=\"mw:File/Thumb\">{}<figcaption>The <a href=\"./Old\">old</a> \
+                 city</figcaption></figure>",
+                img(
+                    "commons/thumb/9/9a/Nairobi_18_99.jpg/250px-Nairobi_18_99.jpg",
+                    522,
+                    384
+                )
+            ),
+            // A file of the wiki (fair use): left out, and its figure too.
+            format!(
+                "<figure typeof=\"mw:File/Thumb\">{}<figcaption>A logo</figcaption></figure>",
+                img("en/a/ab/Logo.png", 200, 100)
+            ),
+            "<p>Text.</p>".to_string(),
+            format!(
+                "<div class=\"thumb tmulti tright\"><div class=\"multiimageinner\">\
+                 <div class=\"trow\"><div class=\"tsingle\"><div>{}</div>\
+                 <div class=\"thumbcaption\">Day</div></div>\
+                 <div class=\"tsingle\"><div>{}</div><div class=\"thumbcaption\">Night</div>\
+                 </div></div><div class=\"trow\"><div class=\"thumbcaption\">The skyline\
+                 </div></div></div></div>",
+                img(
+                    "commons/thumb/b/be/Sky%2C_day.jpg/330px-Sky%2C_day.jpg",
+                    300,
+                    200
+                ),
+                img("commons/c/cd/Sky_night.svg", 30, 20)
+            ),
+            format!(
+                "<ul class=\"gallery mw-gallery-traditional\"><li class=\"gallerycaption\">Parks\
+                 </li><li class=\"gallerybox\"><div class=\"thumb\">{}</div>\
+                 <div class=\"gallerytext\">Uhuru Park</div></li></ul>",
+                img("commons/thumb/1/12/Uhuru.jpg/120px-Uhuru.jpg", 400, 300)
+            ),
+            "</section>".to_string(),
+        ]
+        .concat();
+        let image = |file: &str, width, height, caption: &str| ArticleImage {
+            file: file.into(),
+            width,
+            height,
+            caption: caption.into(),
+        };
+        let figure = |images, caption: &str| {
+            OutlineBlock::Figure(ArticleFigure {
+                images,
+                caption: caption.into(),
+            })
+        };
+        assert_eq!(
+            read(&html, &[]).outline[0].blocks,
+            [
+                figure(
+                    vec![image("Nairobi 18 99.jpg", 522, 384, "")],
+                    "The <a href=\"./Old\">old</a> city"
+                ),
+                text("<p>Text.</p>"),
+                figure(
+                    vec![
+                        image("Sky, day.jpg", 300, 200, "Day"),
+                        image("Sky night.svg", 30, 20, "Night")
+                    ],
+                    "The skyline"
+                ),
+                figure(vec![image("Uhuru.jpg", 400, 300, "Uhuru Park")], "Parks"),
+            ]
+        );
+    }
+
     #[test]
     fn the_outline_of_parsoid_html() {
         let html = concat!(
@@ -645,7 +846,7 @@ mod tests {
             title: "Early years".into(),
             anchor: "Early_years".into(),
             level: 3,
-            blocks: vec!["<ul><li>One &amp; two</li></ul>".into()],
+            blocks: vec![text("<ul><li>One &amp; two</li></ul>")],
             sections: vec![],
         };
         let parsed = read(html, &[]);
@@ -675,12 +876,11 @@ mod tests {
                     anchor: "History".into(),
                     level: 2,
                     blocks: vec![
-                        concat!(
+                        text(concat!(
                             "<p>Founded in <a href=\"https://en.wikipedia.org/wiki/1899\">",
                             "1899</a><sup data-note=\"cite_note-1\"></sup>.</p>"
-                        )
-                        .into(),
-                        "<p>From a template.</p>".into(),
+                        )),
+                        text("<p>From a template.</p>"),
                     ],
                     sections: vec![early],
                 },
@@ -688,12 +888,12 @@ mod tests {
                     title: "People".into(),
                     anchor: "People".into(),
                     level: 2,
-                    blocks: vec!["<ul><li>A</li></ul>".into()],
+                    blocks: vec![text("<ul><li>A</li></ul>")],
                     sections: vec![OutlineSection {
                         title: "Famous".into(),
                         anchor: "Famous".into(),
                         level: 3,
-                        blocks: vec!["<p>Later.</p>".into()],
+                        blocks: vec![text("<p>Later.</p>")],
                         sections: vec![],
                     }],
                 },

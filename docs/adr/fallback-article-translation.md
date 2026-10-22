@@ -217,6 +217,13 @@ Each step is one commit.
 - A translation per subsection, not only per section.
 - The same for a page whose article exists but is short (a stub).
 - Where a saved translation goes (Content Translation, a draft).
+- The editor dialog shows only the text of a section: no images and no
+  references. The rows are the text blocks only, so a figure of the
+  section (`article-images.md`) has no row; and `translate.js` removes
+  the note marks (`sup.ref`) before the machine translation, so the
+  source and the translation have no references. A translation for
+  publication needs both: the images with translated captions, and the
+  references in their places.
 
 ## 8. Notes of the first iteration
 

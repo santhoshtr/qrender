@@ -121,11 +121,56 @@ pub struct OutlineSection {
     pub anchor: String,
     /// 2 for a section, 3 for its subsection, and so on.
     pub level: u8,
-    /// The blocks before the first subsection (`p`, `ul`, `ol`, `dl`,
-    /// `blockquote`), as HTML: the marks of notes, and no attributes but
-    /// `href` and `alt`.
-    pub blocks: Vec<String>,
+    /// The blocks before the first subsection, in order.
+    pub blocks: Vec<OutlineBlock>,
     pub sections: Vec<OutlineSection>,
+}
+
+/// A block of a section: a text, or a figure.
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[serde(untagged)]
+pub enum OutlineBlock {
+    /// `p`, `ul`, `ol`, `dl` or `blockquote`, as HTML: the marks of
+    /// notes, and no attributes but `href` and `alt`.
+    Text(String),
+    Figure(ArticleFigure),
+}
+
+/// The images of a thumbnail, a multiple-image template or a gallery:
+/// the files on Commons only.
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+pub struct ArticleFigure {
+    pub images: Vec<ArticleImage>,
+    /// The caption of the whole figure, as HTML (as a text block).
+    #[serde(default, skip_serializing_if = "String::is_empty")]
+    pub caption: String,
+}
+
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+pub struct ArticleImage {
+    /// The name of the file on Commons, without "File:".
+    pub file: String,
+    pub width: u32,
+    pub height: u32,
+    /// The caption of this image in a group, as HTML.
+    #[serde(default, skip_serializing_if = "String::is_empty")]
+    pub caption: String,
+}
+
+impl OutlineBlock {
+    /// The HTML texts of the block: the text, or the captions.
+    pub fn texts(&self) -> Vec<&str> {
+        match self {
+            Self::Text(html) => vec![html],
+            Self::Figure(f) => f
+                .images
+                .iter()
+                .map(|i| i.caption.as_str())
+                .chain([f.caption.as_str()])
+                .filter(|c| !c.is_empty())
+                .collect(),
+        }
+    }
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
