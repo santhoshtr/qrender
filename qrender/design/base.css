@@ -365,6 +365,19 @@ dialog.lightbox {
 		position: relative;
 		flex: 0 1 420px;
 		min-inline-size: 0;
+
+		/* The search icon, in the field at its start. A click on it is a
+		   click on the field. */
+		& > svg {
+			position: absolute;
+			inset-block-start: 50%;
+			inset-inline-start: var( --spacing-75 );
+			translate: 0 -50%;
+			inline-size: 20px;
+			block-size: 20px;
+			color: var( --color-subtle );
+			pointer-events: none;
+		}
 	}
 
 	& input {
@@ -372,6 +385,7 @@ dialog.lightbox {
 		inline-size: 100%;
 		font: inherit;
 		padding: var( --spacing-35 ) var( --spacing-75 );
+		padding-inline-start: calc( var( --spacing-75 ) + 20px + var( --spacing-50 ) );
 		border: 1px solid var( --border-color-base );
 		border-radius: var( --border-radius-base );
 	}

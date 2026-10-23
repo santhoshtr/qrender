@@ -39,6 +39,7 @@
                   data-base="{{ base }}/{{ view.lang }}/">
                 <input type="hidden" name="title" value="Special:Search">
                 <input type="hidden" name="uselang" value="{{ view.lang }}">
+                {{- ui.search_icon()|safe }}
                 <input type="search"
                        name="search"
                        role="combobox"

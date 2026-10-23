@@ -880,6 +880,11 @@ impl<'v> Ui<'v> {
         &super::design::LANGUAGE_ICON
     }
 
+    /// The icon of the search field.
+    pub fn search_icon(&self) -> &'static str {
+        &super::design::SEARCH_ICON
+    }
+
     /// The languages of the language menu: the code, the name in itself.
     pub fn languages(&self) -> &'static [(&'static str, &'static str)] {
         &LANGUAGES

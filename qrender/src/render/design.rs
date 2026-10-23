@@ -38,6 +38,10 @@ pub static LANGUAGE_ICON: LazyLock<String> =
 pub static EDIT_ICON: LazyLock<String> =
     LazyLock::new(|| inline_icon(include_str!("../../assets/icons/edit.svg")));
 
+/// The icon of the search field of the page header (a Codex icon).
+pub static SEARCH_ICON: LazyLock<String> =
+    LazyLock::new(|| inline_icon(include_str!("../../assets/icons/search.svg")));
+
 /// The icon of a source without a site icon (a Codex icon).
 pub static REFERENCE_ICON: LazyLock<String> =
     LazyLock::new(|| inline_icon(include_str!("../../assets/icons/reference.svg")));
