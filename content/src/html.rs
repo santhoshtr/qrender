@@ -1,6 +1,79 @@
 //! Small HTML text helpers: the fetcher and the localize step both need
 //! them.
 
+/// The MathML elements of a formula that a page shows: MathML Core, and
+/// `menclose`, which Wikipedia uses. `annotation` is not here: the TeX is
+/// in the `alttext` of `math`.
+pub const MATH_ELEMENTS: [&str; 30] = [
+    "math",
+    "semantics",
+    "mrow",
+    "mi",
+    "mn",
+    "mo",
+    "ms",
+    "mtext",
+    "mspace",
+    "mstyle",
+    "mpadded",
+    "mphantom",
+    "merror",
+    "mfrac",
+    "msqrt",
+    "mroot",
+    "msub",
+    "msup",
+    "msubsup",
+    "munder",
+    "mover",
+    "munderover",
+    "mmultiscripts",
+    "mprescripts",
+    "none",
+    "mtable",
+    "mtr",
+    "mtd",
+    "maction",
+    "menclose",
+];
+
+/// The attributes of a MathML element that change how it is drawn, and
+/// the TeX of a formula (`alttext`). Not `href`, `class`, `style` or an
+/// event attribute.
+pub const MATH_ATTRIBUTES: [&str; 31] = [
+    "alttext",
+    "display",
+    "mathvariant",
+    "displaystyle",
+    "scriptlevel",
+    "mathsize",
+    "stretchy",
+    "symmetric",
+    "fence",
+    "separator",
+    "largeop",
+    "movablelimits",
+    "lspace",
+    "rspace",
+    "minsize",
+    "maxsize",
+    "accent",
+    "accentunder",
+    "linethickness",
+    "columnalign",
+    "rowalign",
+    "columnspacing",
+    "rowspacing",
+    "columnlines",
+    "rowlines",
+    "frame",
+    "width",
+    "height",
+    "depth",
+    "voffset",
+    "notation",
+];
+
 /// Text for HTML: in an element or in a quoted attribute.
 pub fn escape(text: &str) -> String {
     let mut out = String::with_capacity(text.len());

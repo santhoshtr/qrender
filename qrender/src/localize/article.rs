@@ -9,13 +9,16 @@
 //! - `sup` with the number of a note on the page: `<sup data-note="3">`;
 //! - the blocks of a section, without attributes: `p`, `ul`, `ol`, `li`,
 //!   `dl`, `dt`, `dd`, `blockquote`;
-//! - `ruby`, `rt` and `span`, which this module adds for a gloss.
+//! - `ruby`, `rt` and `span`, which this module adds for a gloss;
+//! - a formula: the MathML elements of `content::html::MATH_ELEMENTS`,
+//!   with the attributes of `MATH_ATTRIBUTES` only.
 //!
 //! Every other element is removed with its content (scripts, styles,
 //! tables, references) or unwrapped (its text stays).
 
 use std::cell::RefCell;
 
+use content::html::{MATH_ATTRIBUTES, MATH_ELEMENTS};
 use content::{EntityId, Note, Qid, Term};
 use indexmap::IndexMap;
 use lol_html::html_content::{ContentType, Element};
@@ -142,6 +145,9 @@ fn clean(el: &mut Element, links: &Links) {
         "b" | "i" | "p" | "ul" | "ol" | "li" | "dl" | "dt" | "dd" | "blockquote" => {
             strip_attributes(el)
         }
+        name if MATH_ELEMENTS.contains(&name) => keep_attributes(el, &MATH_ATTRIBUTES),
+        // The TeX of a formula, which its `alttext` has.
+        "annotation" | "annotation-xml" => el.remove(),
         _ => el.remove_and_keep_content(),
     }
 }
@@ -202,7 +208,16 @@ fn set_href(el: &mut Element, href: &str) {
 }
 
 fn strip_attributes(el: &mut Element) {
-    let names: Vec<String> = el.attributes().iter().map(|a| a.name()).collect();
+    keep_attributes(el, &[]);
+}
+
+fn keep_attributes(el: &mut Element, keep: &[&str]) {
+    let names: Vec<String> = el
+        .attributes()
+        .iter()
+        .map(|a| a.name())
+        .filter(|n| !keep.contains(&n.as_str()))
+        .collect();
     for name in names {
         el.remove_attribute(&name);
     }
@@ -309,6 +324,26 @@ mod tests {
         ] {
             assert!(!out.contains(bad), "{bad} in {out}");
         }
+    }
+
+    #[test]
+    fn a_formula_keeps_its_mathml_only() {
+        let (items, labels) = (IndexMap::new(), IndexMap::new());
+        let l = links(&items, &labels, "en", "en");
+        let html = concat!(
+            r#"<math alttext="x" display="block" href="javascript:alert(1)" onclick="alert(1)">"#,
+            r#"<semantics><mi mathvariant="normal" style="color:red">x</mi>"#,
+            r#"<mo><a href="javascript:alert(1)">+</a></mo><mi><img src="x" onerror="alert(1)" alt="y"></mi>"#,
+            r#"<mtext><script>alert(1)</script>z</mtext>"#,
+            r#"<annotation encoding="application/x-tex">x</annotation></semantics></math>"#
+        );
+        assert_eq!(
+            rewrite(html, &l),
+            concat!(
+                r#"<math alttext="x" display="block"><semantics><mi mathvariant="normal">x</mi>"#,
+                r#"<mo>+</mo><mi>y</mi><mtext>z</mtext></semantics></math>"#
+            )
+        );
     }
 
     #[test]

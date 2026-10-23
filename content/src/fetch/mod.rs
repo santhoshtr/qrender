@@ -63,7 +63,7 @@ pub enum FetchError {
 /// The version of the fetcher. Raise it when a change of the fetcher
 /// changes what it fetches (a new field, a new request): it is part of
 /// every cache key, so the parts that an older fetcher stored are not read.
-pub const FETCH_VERSION: u32 = 18;
+pub const FETCH_VERSION: u32 = 19;
 
 /// Seconds a cached part lives: content and text change with edits;
 /// a peer set changes slowly and many items share it.

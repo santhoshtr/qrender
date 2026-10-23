@@ -444,11 +444,12 @@ pub fn provenance_words(p: Provenance) -> &'static str {
 }
 
 /// The text of cleaned article HTML: tags removed, a ruby gloss in
-/// parentheses, the mark of a note as its footnote mark (`[^3]`),
-/// entities decoded.
+/// parentheses, the mark of a note as its footnote mark (`[^3]`), a
+/// formula as its TeX (`$…$`), entities decoded.
 pub fn plain(html: &str) -> String {
     let html = html.replace("<rt>", " (").replace("</rt>", ")");
     let html = note_marks(&html);
+    let html = formulas(&html);
     let mut out = String::with_capacity(html.len());
     let mut in_tag = false;
     for c in html.chars() {
@@ -477,6 +478,42 @@ fn note_marks(html: &str) -> String {
         };
         out.push_str(&format!("[^{}]", &after[..end]));
         rest = &after[end + END.len()..];
+    }
+    out.push_str(rest);
+    out
+}
+
+/// Each formula (`<math alttext="…">…</math>`) as its TeX, `$…$`,
+/// without the `{\displaystyle …}` that Wikipedia puts around it. A
+/// formula without TeX stays: its text is the text of its MathML.
+fn formulas(html: &str) -> String {
+    const START: &str = "<math";
+    const END: &str = "</math>";
+    let mut out = String::with_capacity(html.len());
+    let mut rest = html;
+    while let Some(start) = rest.find(START) {
+        out.push_str(&rest[..start]);
+        let math = &rest[start..];
+        let Some(end) = math.find(END).map(|e| e + END.len()) else {
+            break;
+        };
+        let tag = &math[..math.find('>').unwrap_or_default()];
+        let tex = tag
+            .split_once("alttext=\"")
+            .and_then(|(_, value)| value.split_once('"'))
+            .map(|(value, _)| value)
+            .filter(|tex| !tex.is_empty());
+        match tex {
+            Some(tex) => {
+                let tex = ["{\\displaystyle ", "{\\textstyle "]
+                    .iter()
+                    .find_map(|p| tex.strip_prefix(p)?.strip_suffix('}'))
+                    .unwrap_or(tex);
+                out.push_str(&format!("${tex}$"));
+            }
+            None => out.push_str(&math[..end]),
+        }
+        rest = &math[end..];
     }
     out.push_str(rest);
     out
@@ -511,6 +548,21 @@ mod tests {
         assert_eq!(
             plain(r#"A city.<sup data-note="1"></sup><sup data-note="12"></sup> B"#),
             "A city.[^1][^12] B"
+        );
+    }
+
+    #[test]
+    fn formulas_are_their_tex() {
+        let math =
+            |tex: &str| format!("<math alttext=\"{tex}\"><semantics><mi>w</mi></semantics></math>");
+        assert_eq!(
+            plain(&format!(
+                "If {} and {}, or {}.",
+                math("{\\displaystyle w_{i}=v_{i}}"),
+                math("a&lt;b"),
+                "<math><mi>x</mi></math>"
+            )),
+            "If $w_{i}=v_{i}$ and $a<b$, or x."
         );
     }
 }

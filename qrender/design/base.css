@@ -889,6 +889,10 @@ qr-section { display: block; }
 	}
 }
 
+/* A formula of the article (MathML): some space above and below, so the
+   limits of a sum do not touch the formula on the next line. */
+math { padding-block: 0.2em; }
+
 /* An image of the article, in a section or in the lead: a block at the
    full width of the text, with its aspect ratio. A tall image is at most
    80% of the window high, so it is narrower. Not a thumbnail: the reader

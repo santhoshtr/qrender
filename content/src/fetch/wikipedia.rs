@@ -18,7 +18,9 @@ use super::notes;
 use scraper::{ElementRef, Html};
 
 use crate::citation::Cited;
-use crate::html::{decode_entities, escape, strip_tags, wiki_target};
+use crate::html::{
+    MATH_ATTRIBUTES, MATH_ELEMENTS, decode_entities, escape, strip_tags, wiki_target,
+};
 use crate::id::{Lang, Qid};
 use crate::settings::CitationStyle;
 use crate::text::{
@@ -475,6 +477,17 @@ pub(super) fn write_element(el: ElementRef, out: &mut String) {
         }
         return;
     }
+    // A formula: its MathML only, not the picture of the formula.
+    if name == "span" && class_has(el, "mwe-math-element") {
+        let math = el
+            .descendants()
+            .filter_map(ElementRef::wrap)
+            .find(|e| e.value().name() == "math");
+        if let Some(math) = math {
+            write_math(math, out);
+        }
+        return;
+    }
     // What the CSS of the wiki hides: the other forms of a coordinate,
     // and the messages of citation templates for editors (a short
     // footnote without its work, a maintenance note).
@@ -507,6 +520,39 @@ pub(super) fn write_element(el: ElementRef, out: &mut String) {
         return;
     }
     write_children(el, out);
+    out.push_str("</");
+    out.push_str(name);
+    out.push('>');
+}
+
+/// A MathML element with the elements and the attributes of the lists
+/// only: not the TeX annotation, which `alttext` has. The whitespace
+/// between elements goes; MathML does not show it.
+fn write_math(el: ElementRef, out: &mut String) {
+    let e = el.value();
+    let name = e.name();
+    if !MATH_ELEMENTS.contains(&name) {
+        return;
+    }
+    out.push('<');
+    out.push_str(name);
+    // In the order of the list: the order of the attributes of a parsed
+    // element is not fixed.
+    for attribute in MATH_ATTRIBUTES {
+        if let Some(value) = e.attr(attribute) {
+            out.push_str(&format!(" {attribute}=\"{}\"", escape(value)));
+        }
+    }
+    out.push('>');
+    for child in el.children() {
+        if let Some(child) = ElementRef::wrap(child) {
+            write_math(child, out);
+        } else if let Some(text) = child.value().as_text()
+            && !text.trim_ascii().is_empty()
+        {
+            out.push_str(&escape(text));
+        }
+    }
     out.push_str("</");
     out.push_str(name);
     out.push('>');
@@ -738,6 +784,29 @@ mod tests {
 
     fn text(html: &str) -> OutlineBlock {
         OutlineBlock::Text(html.to_string())
+    }
+
+    #[test]
+    fn a_formula_is_its_mathml() {
+        let html = concat!(
+            "<p>Then <span class=\"mwe-math-element mwe-math-element-inline\" data-mw='{}'>",
+            "<span class=\"mwe-math-mathml-a11y\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" ",
+            "class=\"mathjax_ignore\" alttext=\"{\\displaystyle w_{i}&lt;v}\" href=\"https://x.example/\">\n",
+            "  <semantics>\n    <mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\" onclick=\"x()\">",
+            "<msub><mi>w</mi><mi>i</mi></msub><mo>&lt;</mo><mtext>\u{a0}</mtext><mi mathvariant=\"normal\">v</mi>",
+            "</mstyle></mrow>\n    <annotation encoding=\"application/x-tex\">{\\displaystyle w_{i}&lt;v}</annotation>",
+            "\n  </semantics>\n</math></span><img src=\"https://wikimedia.org/api/rest_v1/media/math/render/svg/5d\" ",
+            "class=\"mwe-math-fallback-image-inline\" alt=\"{\\displaystyle w_{i}&lt;v}\"/></span>.</p>"
+        );
+        assert_eq!(
+            lead_of(html),
+            [text(concat!(
+                "<p>Then <math alttext=\"{\\displaystyle w_{i}&lt;v}\"><semantics><mrow>",
+                "<mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi>w</mi><mi>i</mi></msub>",
+                "<mo>&lt;</mo><mtext>\u{a0}</mtext><mi mathvariant=\"normal\">v</mi></mstyle></mrow>",
+                "</semantics></math>.</p>"
+            ))]
+        );
     }
 
     #[test]

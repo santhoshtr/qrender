@@ -14,28 +14,7 @@ It derives its name from the problem faced by someone who is constrained by a fi
 
 The knapsack problem has been studied for more than a century, with early works dating back to 1897.[^1]
 
-The subset sum problem is a special case of the decision and 0-1 problems where for each kind of item, the weight equals the value: 
-  
-    
-      
-        
-          w
-          
-            i
-          
-        
-        =
-        
-          v
-          
-            i
-          
-        
-      
-    
-    {\displaystyle w_{i}=v_{i}}
-  
-{\displaystyle w_{i}=v_{i}}. In the field of cryptography, the term knapsack problem is often used to refer specifically to the subset sum problem. The subset sum problem is one of Karp's 21 NP-complete problems.[^2]
+The subset sum problem is a special case of the decision and 0-1 problems where for each kind of item, the weight equals the value: $w_{i}=v_{i}$. In the field of cryptography, the term knapsack problem is often used to refer specifically to the subset sum problem. The subset sum problem is one of Karp's 21 NP-complete problems.[^2]
 
 Source: [en.wikipedia.org](https://en.wikipedia.org/wiki/Knapsack_problem); 31 Wikipedias have an article.
 
