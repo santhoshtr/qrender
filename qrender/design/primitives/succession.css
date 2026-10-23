@@ -1,13 +1,29 @@
 /* succession */
 
-/* An office: the holder now, and the holders before, each a row with its
-   picture (as in the dialog). */
+/* An office: one box (a group). The holder now is a card with the picture
+   on top, at its own shape, in the top corner of the box; the words are
+   under it. Under the card, the holders before. */
 .succession {
-	& > .m { max-inline-size: 320px; }
+	& .holder { margin: 0; }
 
-	& .before {
-		font-size: var( --font-size-small );
+	& .row:has( > .photo ) {
+		grid-template:
+			'photo photo' auto
+			'label tools' auto
+			'value value' auto / minmax( 0, 1fr ) auto;
+	}
 
-		& > .more { margin-block-start: var( --spacing-75 ); }
+	& .photo {
+		grid-area: photo;
+		display: block;
+		aspect-ratio: var( --a );
+		inline-size: auto;
+		max-inline-size: calc( 100% + var( --pad-inline ) );
+		block-size: 24rem;
+		margin-block: calc( -1 * var( --pad-block ) ) var( --pad-block );
+		margin-inline-start: calc( -1 * var( --pad-inline ) );
+		object-fit: cover;
+		/* A tall picture keeps its top, where a face usually is. */
+		object-position: 50% 20%;
 	}
 }

@@ -3431,7 +3431,10 @@ expression: html
      alt=""
      loading="lazy">
         </li>
-</ul><button class="more" type="button" command="show-modal" commandfor="d116">+5</button><dialog id="d116" closedby="any">
+        <li class="all">
+            <button type="button" command="show-modal" commandfor="d116">View all</button>
+        </li>
+</ul><dialog id="d116" closedby="any">
         <header>
             <h2>shares border with</h2>
             <button type="button"
@@ -3781,7 +3784,10 @@ expression: html
      alt=""
      loading="lazy">
         </li>
-</ul><button class="more" type="button" command="show-modal" commandfor="d121">+8</button><dialog id="d121" closedby="any">
+        <li class="all">
+            <button type="button" command="show-modal" commandfor="d121">View all</button>
+        </li>
+</ul><dialog id="d121" closedby="any">
         <header>
             <h2>located in time zone</h2>
             <button type="button"
@@ -4223,20 +4229,28 @@ expression: html
              data-dimension="people"><h2><span class="title">government</span></h2><div data-slot="hero">
         <div class="block succession">
     <h3><a href="https://www.wikidata.org/wiki/Q11696">President of the United States</a></h3>
-<figure class="m k-photo"
-        style="--a:0.75">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Official%20Presidential%20Portrait%20of%20President%20Donald%20J.%20Trump%20%282025%29%20%283x4%29.jpg?width=960"
-         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Official%20Presidential%20Portrait%20of%20President%20Donald%20J.%20Trump%20%282025%29%20%283x4%29.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Official%20Presidential%20Portrait%20of%20President%20Donald%20J.%20Trump%20%282025%29%20%283x4%29.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Official%20Presidential%20Portrait%20of%20President%20Donald%20J.%20Trump%20%282025%29%20%283x4%29.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Official%20Presidential%20Portrait%20of%20President%20Donald%20J.%20Trump%20%282025%29%20%283x4%29.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Official%20Presidential%20Portrait%20of%20President%20Donald%20J.%20Trump%20%282025%29%20%283x4%29.jpg?width=1920 1920w"
-         sizes="(max-width: 760px) 50vw,
-                20vw"
-         alt=""
-         loading="lazy">
-    <figcaption><span>head of government · head of state</span><b><a href="https://www.wikidata.org/wiki/Q22686">Donald Trump</a></b><span>2025 – · <a href="https://www.wikidata.org/wiki/Q71536244">currently valid value</a></span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
+<div class="group">
+    <dl class="holder">
+        <div class="row">
+                <img class="photo"
+                     style="--a:0.75"
+                     src="https://commons.wikimedia.org/wiki/Special:FilePath/Official%20Presidential%20Portrait%20of%20President%20Donald%20J.%20Trump%20%282025%29%20%283x4%29.jpg?width=960"
+                     srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Official%20Presidential%20Portrait%20of%20President%20Donald%20J.%20Trump%20%282025%29%20%283x4%29.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Official%20Presidential%20Portrait%20of%20President%20Donald%20J.%20Trump%20%282025%29%20%283x4%29.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Official%20Presidential%20Portrait%20of%20President%20Donald%20J.%20Trump%20%282025%29%20%283x4%29.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Official%20Presidential%20Portrait%20of%20President%20Donald%20J.%20Trump%20%282025%29%20%283x4%29.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Official%20Presidential%20Portrait%20of%20President%20Donald%20J.%20Trump%20%282025%29%20%283x4%29.jpg?width=1920 1920w"
+                     sizes="(max-width: 760px) 100vw, 30vw"
+                     alt=""
+                     loading="lazy">
+            <dt>head of government · head of state</dt>
+            <dd><a href="https://www.wikidata.org/wiki/Q22686">Donald Trump</a> <span class="note quals">2025 – · <a href="https://www.wikidata.org/wiki/Q71536244">currently valid value</a></span></dd>
+            <span class="tools"><span class="prov-none" title="—"></span><button class="info"
             type="button"
             popovertarget="p135"
-            aria-label="Credit">i</button><span id="p135" popover class="pop">Daniel Torok · Public domain</span><a class="edit"
+            aria-label="Credit">i</button><span id="p135" popover class="pop">Daniel Torok · Public domain</span>
+                    <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P6"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></figure><div class="before"><ul class="pic-rows">
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                </span>
+        </div>
+    </dl><ul class="pic-rows">
         <li>
             <span class="text">
                 <b><a href="https://www.wikidata.org/wiki/Q6279">Joe Biden</a></b><span class="prov-none" title="—"></span>
@@ -4297,7 +4311,10 @@ expression: html
      alt=""
      loading="lazy">
         </li>
-</ul><button class="more" type="button" command="show-modal" commandfor="d136">+41</button><dialog id="d136" closedby="any">
+        <li class="all">
+            <button type="button" command="show-modal" commandfor="d136">View all</button>
+        </li>
+</ul><dialog id="d136" closedby="any">
         <header>
             <h2>President of the United States</h2>
             <button type="button"
@@ -4871,7 +4888,8 @@ expression: html
      loading="lazy">
         </li>
 </ul></div>
-    </dialog></div></div>
+    </dialog></div>
+</div>
     </div><div data-slot="stack">
         <div class="block set strip">
     <h3>contains the administrative territorial entity <span class="note">56</span><button class="src"
@@ -8850,7 +8868,10 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
      alt=""
      loading="lazy">
         </li>
-</ul><button class="more" type="button" command="show-modal" commandfor="d199">+174</button><dialog id="d199" closedby="any">
+        <li class="all">
+            <button type="button" command="show-modal" commandfor="d199">View all</button>
+        </li>
+</ul><dialog id="d199" closedby="any">
         <header>
             <h2>diplomatic relation</h2>
             <button type="button"
@@ -11214,7 +11235,10 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
      alt=""
      loading="lazy">
         </li>
-</ul><button class="more" type="button" command="show-modal" commandfor="d201">+23</button><dialog id="d201" closedby="any">
+        <li class="all">
+            <button type="button" command="show-modal" commandfor="d201">View all</button>
+        </li>
+</ul><dialog id="d201" closedby="any">
         <header>
             <h2>participant in</h2>
             <button type="button"
@@ -11964,7 +11988,10 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
      alt=""
      loading="lazy">
         </li>
-</ul><button class="more" type="button" command="show-modal" commandfor="d217">+48</button><dialog id="d217" closedby="any">
+        <li class="all">
+            <button type="button" command="show-modal" commandfor="d217">View all</button>
+        </li>
+</ul><dialog id="d217" closedby="any">
         <header>
             <h2>member of</h2>
             <button type="button"
@@ -13175,7 +13202,10 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
      alt=""
      loading="lazy">
         </li>
-</ul><button class="more" type="button" command="show-modal" commandfor="d246">+11</button><dialog id="d246" closedby="any">
+        <li class="all">
+            <button type="button" command="show-modal" commandfor="d246">View all</button>
+        </li>
+</ul><dialog id="d246" closedby="any">
         <header>
             <h2>owner of</h2>
             <button type="button"

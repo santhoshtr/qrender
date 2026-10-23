@@ -1,10 +1,43 @@
-{#- An office: the holder now, and the holders before, newest first, each
-    a row with its picture. The dialog has every holder, the holder now
-    first. -#}
+{%- import "macros.html" as m -%}
+{#- An office: one box. The holder now first, a card with the picture on
+    top and the words under it (not over it: easy to read on any picture).
+    Under it, the holders before, newest first, each a row with its
+    picture. The dialog has every holder, the holder now first. -#}
+{%- let s = ui.value(&b.holder) -%}
 <div class="block succession">
     <h3>
         {%- match b.office -%}{%- when Some with (office) -%}{{ ui.part(ui.value_part(&office.value))|safe }}{%- when None -%}{{ ui.text(ui.property(b.pids[0]), true)|safe }}{%- endmatch -%}
 </h3>
-{{ ui.figure_with(ui.value(&b.holder), ui.roles(b.pids.as_slice()))|safe }}
-{%- if !b.before.is_empty() %}<div class="before">{{ ui.rows_with(b.before.as_slice(), ui.holders(b).as_slice(), ui.succession_title(b))|safe }}</div>{% endif -%}
+<div class="group">
+    <dl class="holder">
+        <div class="row">
+            {%- if let Some(image) = s.image %}
+                <img class="photo"
+                     style="--a:{{ ui.aspect(image.picture.facts.aspect) }}"
+                     src="{{ ui.src(&image.picture.file, 960) }}"
+                     srcset="{{ ui.srcset(&image.picture.file) }}"
+                     sizes="(max-width: 760px) 100vw, 30vw"
+                     alt=""
+                     loading="lazy">
+            {%- endif %}
+            <dt>{{ ui.text(ui.roles(b.pids.as_slice()), true)|safe }}</dt>
+            <dd>
+                {{- ui.part(s.part)|safe -}}
+                {%- if !s.note.is_empty() %} <span class="note quals">{{ ui.note(s.note.as_slice())|safe }}</span>{% endif -%}
+            </dd>
+            <span class="tools">
+                {%- call m::prov(ui, s.provenance, s.citations) %}{% endcall -%}
+                {%- if let Some(image) = s.image -%}
+                    {%- if let Some(from) = image.from %}<span class="from" title="{{ from }}">W</span>{% endif -%}
+                    {{ ui.credit(&image.picture.facts.credit)|safe }}
+                {%- endif -%}
+                {%- if let Some(e) = s.edit %}
+                    {% call m::edit(ui, e) %}
+                    {% endcall %}
+                {% endif -%}
+            </span>
+        </div>
+    </dl>
+    {%- if !b.before.is_empty() %}{{ ui.rows_with(b.before.as_slice(), ui.holders(b).as_slice(), ui.succession_title(b))|safe }}{% endif -%}
+</div>
 </div>

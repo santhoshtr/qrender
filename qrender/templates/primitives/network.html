@@ -2,7 +2,8 @@
 {#- The values of one property, all of them, with their qualifiers, in its
     dialog. On the page, the first ones: a strip of pictures, cut at its
     end, with "View all" as its last card; or, when the qualifiers matter
-    (an embassy, a border), rows as in the dialog, then "+N". -#}
+    (an embassy, a border), rows as in the dialog, with "View all" as
+    their last cell. -#}
 {%- let shared = ui.shared_citations(b.values.as_slice()) -%}
 {%- let values = ui.values_beside(b.values.as_slice(), shared) -%}
 {%- let title = ui.property(b.pid) -%}
@@ -12,10 +13,11 @@
         {%- if let Some(c) = shared %}{{ ui.sources(c.as_slice())|safe }}{% endif %}</h3>
     {%- if b.form.name() == "rows" -%}
         {%- let shown = ui.values_beside(b.shown(), shared) -%}
-        {{ ui.rows(shown.as_slice())|safe }}
         {%- if values.len() > shown.len() -%}
-            {% call m::more(n, values.len() - shown.len()) %}{% endcall %}
+            {{ ui.rows_view_all(shown.as_slice(), n)|safe }}
             {%- call m::dialog(ui, n, title.text) %}{{ ui.rows(values.as_slice())|safe }}{% endcall -%}
+        {%- else -%}
+            {{ ui.rows(shown.as_slice())|safe }}
         {%- endif -%}
     {%- else -%}
         {%- let all = ui.view_all(values.len()) -%}

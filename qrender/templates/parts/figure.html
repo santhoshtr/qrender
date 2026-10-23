@@ -1,13 +1,10 @@
 {%- import "macros.html" as m -%}
 {#- The picture of an item value: its own, or a page image (marked W), or
-    an empty slot that asks for one. `head`: the property, in a gallery of
-    different properties. -#}
+    an empty slot that asks for one. -#}
 {%- match s.image -%}
 {%- when None -%}
 <figure class="m k-empty" style="--a:1.333">
-    <figcaption>
-        {%- if let Some(h) = head %}<span>{{ ui.text(h, true)|safe }}</span>{% endif -%}
-        <b>{{ ui.part(s.part)|safe }}</b>
+    <figcaption><b>{{ ui.part(s.part)|safe }}</b>
         {%- if let Some(d) = s.description %}<span class="desc">
             {% call m::description(d) %}
             {% endcall %}
@@ -33,9 +30,7 @@
                 20vw"
          alt=""
          loading="lazy">
-    <figcaption>
-        {%- if let Some(h) = head %}<span>{{ ui.text(h, true)|safe }}</span>{% endif -%}
-        <b>{{ ui.part(s.part)|safe }}</b>
+    <figcaption><b>{{ ui.part(s.part)|safe }}</b>
         {%- if let Some(d) = s.description %}<span class="desc">
             {% call m::description(d) %}
             {% endcall %}

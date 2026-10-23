@@ -144,6 +144,8 @@ struct LinesHtml<'a> {
 struct RowsHtml<'a> {
     ui: &'a Ui<'a>,
     values: &'a [Shown<'a>],
+    /// The dialog of all the values: the last cell opens it.
+    all: Option<u32>,
 }
 
 #[derive(Template)]
@@ -151,7 +153,6 @@ struct RowsHtml<'a> {
 struct FigureHtml<'a> {
     ui: &'a Ui<'a>,
     s: &'a Shown<'a>,
-    head: Option<&'a Label>,
 }
 
 #[derive(Template)]
@@ -474,24 +475,24 @@ impl<'v> Ui<'v> {
 
     /// All the values of a pictured list, as rows: its dialog.
     pub fn rows(&self, values: &[Shown]) -> String {
-        render(RowsHtml { ui: self, values })
+        render(RowsHtml {
+            ui: self,
+            values,
+            all: None,
+        })
+    }
+
+    /// Rows, then a last cell that opens the dialog `n` of all the values.
+    pub fn rows_view_all(&self, values: &[Shown], n: impl Arg<u32>) -> String {
+        render(RowsHtml {
+            ui: self,
+            values,
+            all: Some(n.get()),
+        })
     }
 
     pub fn figure<'a>(&self, s: impl Ref<Shown<'a>>) -> String {
-        render(FigureHtml {
-            ui: self,
-            s: s.r(),
-            head: None,
-        })
-    }
-
-    /// A figure with the name of its property above the value.
-    pub fn figure_with<'a>(&self, s: impl Ref<Shown<'a>>, head: impl Ref<Label>) -> String {
-        render(FigureHtml {
-            ui: self,
-            s: s.r(),
-            head: Some(head.r()),
-        })
+        render(FigureHtml { ui: self, s: s.r() })
     }
 
     /// The picture beside the text of a value.

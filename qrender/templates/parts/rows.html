@@ -1,7 +1,8 @@
 {%- import "macros.html" as m -%}
 {#- All the values of a list, in its dialog: a row for each, with its
     title, its description, its qualifiers, and its picture at the end.
-    The pictures load when the dialog opens. -#}
+    The pictures load when the dialog opens. On the page, the first values,
+    and a last cell that opens the dialog of all of them. -#}
 <ul class="pic-rows">
     {%- for s in values.iter() %}
         <li>
@@ -24,4 +25,9 @@
             {%- if let Some(image) = s.image %}{{ ui.pic(image)|safe }}{% endif %}
         </li>
     {%- endfor %}
+    {%- if let Some(n) = all %}
+        <li class="all">
+            <button type="button" command="show-modal" commandfor="d{{ n }}">{{ ui.msg("qrender-view-all") }}</button>
+        </li>
+    {%- endif %}
 </ul>

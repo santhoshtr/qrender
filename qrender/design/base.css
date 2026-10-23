@@ -1138,14 +1138,54 @@ dialog:is( .translator, .label-editor ) .actions {
 	figcaption & { color: inherit; opacity: 0.85; flex-basis: 100%; }
 }
 
-/* A card (a factoid), and a group of cards (the rows of a list): the
-   colours of the dimension of the spread. The edge is the border of a
-   card and the line between the cards of a group. */
-:is( .row, .pic-rows ) {
+/* A card (a factoid), and a group of cards (the rows of a list, an
+   office): the colours of the dimension of the spread. The edge is the
+   border of a card and the line between the cards of a group. Composed
+   items have this box; the text of the article has none. */
+:is( .row, .pic-rows, .group ) {
 	--pad-block: var( --spacing-50 );
 	--pad-inline: var( --spacing-75 );
 	--edge: color-mix( in srgb, var( --ink ) 25%, var( --soft ) );
 }
+
+/* A group of different parts (an office: its holder now, the holders
+   before): one border around the parts, a line between them. The parts
+   have no border of their own. */
+.group {
+	border: 1px solid var( --edge );
+	border-radius: var( --radius );
+	overflow: hidden;
+	background-color: var( --soft );
+
+	& .row {
+		margin: 0;
+		border: 0;
+		border-radius: 0;
+	}
+
+	& > .pic-rows {
+		border: 0;
+		border-block-start: 1px solid var( --edge );
+		border-radius: 0;
+	}
+}
+
+/* The icon of a composed item, at the start of its label: a mask in the
+   colour of the dimension. An item can name its own icon (--icon). */
+:is( .row > dt, .set.rows > h3, .succession > h3 )::before {
+	content: '';
+	display: inline-block;
+	flex: none;
+	inline-size: 1em;
+	block-size: 1em;
+	margin-inline-end: var( --spacing-25 );
+	vertical-align: -0.125em;
+	background-color: var( --ink );
+	mask: var( --icon, var( --icon-puzzle ) ) center / contain no-repeat;
+}
+
+/* A part of a group has the icon of the group. */
+.group .row > dt::before { content: none; }
 
 /* The picture of a card goes out of the padding, to the border: the full
    height of the card, at least three lines. */
@@ -1409,7 +1449,7 @@ dialog:is( .translator, .label-editor ) .actions {
 .pic-rows {
 	column-span: all;
 	display: grid;
-	grid-template-columns: repeat( auto-fill, minmax( 280px, 1fr ) );
+	grid-template-columns: repeat( auto-fill, minmax( 360px, 1fr ) );
 	gap: 1px;
 	margin: 0;
 	padding: 0;
@@ -1426,6 +1466,26 @@ dialog:is( .translator, .label-editor ) .actions {
 		align-items: start;
 		padding: var( --pad-block ) var( --pad-inline );
 		box-shadow: 0 0 0 1px var( --edge );
+	}
+
+	/* The last cell opens the dialog of all the values. */
+	& li.all {
+		display: block;
+		padding: 0;
+
+		& > button {
+			inline-size: 100%;
+			block-size: 100%;
+			min-block-size: 3lh;
+			border: 0;
+			background: none;
+			color: var( --color-progressive );
+			font: inherit;
+			font-weight: var( --font-weight-semi-bold );
+			cursor: pointer;
+
+			&:hover { background-color: color-mix( in srgb, var( --ink ) 10%, var( --soft ) ); }
+		}
 	}
 
 	/* Inline: a long title wraps with its marks. The edit action is in
