@@ -25,13 +25,14 @@
 		align-items: start;
 		padding-block: var( --spacing-75 );
 
-		/* The line, between the date and the text. */
+		/* The line, between the date and the text: in the colour of the
+		   lines of a group (the box has the colour of --soft). */
 		&::before {
 			content: '';
 			position: absolute;
 			inset-block: 0;
 			inset-inline-start: calc( var( --when ) + var( --spacing-75 ) - 1px );
-			border-inline-start: 2px solid var( --soft );
+			border-inline-start: 2px solid var( --edge );
 		}
 	}
 
