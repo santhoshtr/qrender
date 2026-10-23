@@ -1,9 +1,12 @@
 /* timeline: events that are items of their own, the oldest first. Each
-   event is a row: its date, its text, its picture. A line in the colour
-   of the dimension runs through the dates, with a dot at each event. */
+   event is a row: its date and its text, on the two sides of a line in
+   the colour of the dimension, with a dot at each event. The picture is
+   under the date, against the line: a timeline row has no frame at its
+   end, so the line holds the picture to its event. The text starts at
+   the same place with or without a picture. */
 
 .timeline {
-	--when: 7rem;
+	--when: 9rem;
 
 	& ol {
 		margin: 0;
@@ -14,8 +17,9 @@
 	& li {
 		position: relative;
 		display: grid;
-		/* The text has a limit, so the picture stays near it. */
-		grid-template-columns: var( --when ) minmax( 0, 36rem ) auto;
+		grid-template:
+			'when what' auto
+			'pic what' 1fr / var( --when ) minmax( 0, 1fr );
 		gap: var( --spacing-150 );
 		align-items: start;
 		padding-block: var( --spacing-75 );
@@ -31,6 +35,7 @@
 	}
 
 	& .when {
+		grid-area: when;
 		position: relative;
 		text-align: end;
 		font-weight: var( --font-weight-semi-bold );
@@ -50,7 +55,17 @@
 		}
 	}
 
-	& .what { font-weight: var( --font-weight-semi-bold ); }
+	& .what {
+		grid-area: what;
+		font-weight: var( --font-weight-semi-bold );
+	}
+
+	/* On a narrow page, a wide picture is cut to the width of the date. */
+	& li > .pic {
+		grid-area: pic;
+		justify-self: end;
+		max-inline-size: 100%;
+	}
 
 	@media ( max-width: 600px ) { --when: 4.5rem; }
 }
