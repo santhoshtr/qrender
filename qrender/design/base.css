@@ -1138,6 +1138,32 @@ dialog:is( .translator, .label-editor ) .actions {
 	figcaption & { color: inherit; opacity: 0.85; flex-basis: 100%; }
 }
 
+/* A card (a factoid), and a group of cards (the rows of a list): the
+   colours of the dimension of the spread. The edge is the border of a
+   card and the line between the cards of a group. */
+:is( .row, .pic-rows ) {
+	--pad-block: var( --spacing-50 );
+	--pad-inline: var( --spacing-75 );
+	--edge: color-mix( in srgb, var( --ink ) 25%, var( --soft ) );
+}
+
+/* The picture of a card goes out of the padding, to the border: the full
+   height of the card, at least three lines. */
+:is( .row, .pic-rows > li ) > .pic {
+	align-self: stretch;
+	block-size: auto;
+	min-block-size: var( --h );
+	margin-block: calc( -1 * var( --pad-block ) );
+	margin-inline-end: calc( -1 * var( --pad-inline ) );
+	border-radius: 0;
+
+	/* A drawing on white: one line between it and the text. */
+	&.k-drawing {
+		border: 0;
+		border-inline-start: 1px solid var( --edge );
+	}
+}
+
 /* The qualifiers of a value: a line under the value. */
 .quals { display: block; }
 
@@ -1374,22 +1400,32 @@ dialog:is( .translator, .label-editor ) .actions {
 	&:hover { --veil: color-mix( in srgb, var( --background-color-interactive ) 85%, transparent ); }
 }
 
-/* All the values of a pictured list, in its dialog: a row for each, with
-   its title, its description, its qualifiers and its picture. */
+/* All the values of a list, on the page or in its dialog: a group of
+   cards, a card for each value, with its title, its description, its
+   qualifiers and its picture. One border around the group; a line between
+   the cards. The line is the shadow of each card in the gap of 1px, so it
+   is correct for any number of columns, and an empty cell at the end has
+   no line. */
 .pic-rows {
 	column-span: all;
 	display: grid;
 	grid-template-columns: repeat( auto-fill, minmax( 280px, 1fr ) );
-	gap: var( --spacing-75 ) var( --spacing-200 );
+	gap: 1px;
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	border: 1px solid var( --edge );
+	border-radius: var( --radius );
+	overflow: hidden;
+	background-color: var( --soft );
 
 	& li {
 		display: grid;
 		grid-template-columns: minmax( 0, 1fr ) auto;
 		gap: var( --spacing-75 );
 		align-items: start;
+		padding: var( --pad-block ) var( --pad-inline );
+		box-shadow: 0 0 0 1px var( --edge );
 	}
 
 	/* Inline: a long title wraps with its marks. The edit action is in

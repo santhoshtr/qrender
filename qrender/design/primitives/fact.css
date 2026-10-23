@@ -9,9 +9,10 @@
 	font-size: var( --font-size-small );
 }
 
-/* The label above the value: the value has the full width. The tools are
-   at the end of the label line. A picture, if there is one, is at the end
-   of the row, beside the text; the text does not change. */
+/* A card: the label above the value, so the value has the full width.
+   The tools are at the end of the label line. A picture, if there is
+   one, fills the end of the card and shares its border; the text does
+   not change. The colours are the dimension of the spread. */
 .row {
 	break-inside: avoid;
 	display: grid;
@@ -20,8 +21,11 @@
 		'value value' auto / minmax( 0, 1fr ) auto;
 	gap: 0 var( --spacing-75 );
 	align-items: start;
-	padding-block: var( --spacing-50 );
-	border-block-end: 1px solid var( --border-color-muted );
+	margin-block-end: var( --spacing-50 );
+	padding: var( --pad-block ) var( --pad-inline );
+	border: 1px solid var( --edge );
+	border-radius: var( --radius );
+	background-color: var( --soft );
 
 	&:has( > .pic ) {
 		grid-template:
@@ -31,7 +35,7 @@
 
 	& dt {
 		grid-area: label;
-		color: var( --color-subtle );
+		color: var( --ink );
 	}
 
 	& > .tools { grid-area: tools; }
@@ -46,7 +50,12 @@
 		& .note { font-weight: var( --font-weight-normal ); }
 	}
 
-	& > .pic { grid-area: pic; }
+	/* Its outer corners are the corners of the card. */
+	& > .pic {
+		grid-area: pic;
+		border-start-end-radius: calc( var( --radius ) - 1px );
+		border-end-end-radius: calc( var( --radius ) - 1px );
+	}
 
 	/* A value that has ended: shown, but quieter than the current ones. */
 	&.former {
