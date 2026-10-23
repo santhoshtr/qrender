@@ -4,13 +4,9 @@
    addresses of a row in one line that wraps, each with the icon of its
    site. Inline, so that an icon stays with its address. */
 .links {
-	& .row { grid-template-columns: minmax( 0, 14rem ) minmax( 0, 1fr ) auto; }
-
-	/* On a narrow page the label is above its addresses. */
-	@container page ( width < 760px ) {
-		& .row { grid-template-columns: minmax( 0, 1fr ) auto; }
-		& dt { grid-column: 1 / -1; }
-	}
+	/* Two columns, also in a stack: the label is above the addresses, so
+	   a row needs less width. */
+	&.sheet { columns: 2 360px; }
 
 	& .link { margin-inline-end: var( --spacing-75 ); }
 

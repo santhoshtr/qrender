@@ -1,3 +1,39 @@
-{#- The small values of different properties of a spread, one picture
-    each, with the name of the property. -#}
-{%- for v in b.values -%}{{ ui.figure_with(ui.value(&v.statement), ui.property(v.statement.pid))|safe }}{%- endfor -%}
+{%- import "macros.html" as m -%}
+{#- The small values of different properties of a spread: a row each, as
+    in the fact sheet. The picture of the value, if it has one, is at the
+    end of the row; it does not change the text. -#}
+<dl class="sheet">
+    {%- for v in b.values -%}
+        {%- let s = ui.value(&v.statement) -%}
+        <div class="row">
+            <dt>{{ ui.text(ui.property(v.statement.pid), true)|safe }}</dt>
+            <dd>
+                {{- ui.part(s.part)|safe -}}
+                {%- if !s.note.is_empty() %} <span class="note">{{ ui.note(s.note.as_slice())|safe }}</span>{% endif -%}
+                {%- if let Some(d) = s.description %}<span class="desc">
+                    {% call m::description(d) %}
+                    {% endcall %}
+                    </span>
+                {% endif -%}
+            </dd>
+            <span class="tools">
+                {%- call m::prov(ui, s.provenance, s.citations) %}{% endcall -%}
+                {%- if let Some(image) = s.image -%}
+                    {%- if let Some(from) = image.from %}<span class="from" title="{{ from }}">W</span>{% endif -%}
+                    {{ ui.credit(&image.picture.facts.credit)|safe }}
+                {%- endif -%}
+                {%- if let Some(e) = s.edit %}
+                    {% call m::edit(ui, e) %}
+                    {% endcall %}
+                {% endif -%}
+            </span>
+            {%- if let Some(image) = s.image %}
+                <img class="pic k-{{ image.picture.facts.kind.name() }}"
+                     style="--a:{{ ui.aspect(image.picture.facts.aspect) }}"
+                     src="{{ ui.src(&image.picture.file, 330) }}"
+                     alt=""
+                     loading="lazy">
+            {%- endif %}
+        </div>
+    {%- endfor -%}
+</dl>

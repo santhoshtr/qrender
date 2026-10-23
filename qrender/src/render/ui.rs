@@ -22,7 +22,7 @@ use crate::primitives::succession::Succession;
 use crate::primitives::timeline::When;
 use crate::primitives::works::{Work, Works};
 use crate::schema::{
-    Credit, Picture, Provenance, QualifierPart, QualifierShown, StatementRef, ValueShown,
+    Block, Credit, Picture, Provenance, QualifierPart, QualifierShown, StatementRef, ValueShown,
 };
 use crate::vocab::Slot;
 use crate::wikidata::POINT_IN_TIME;
@@ -537,6 +537,12 @@ impl<'v> Ui<'v> {
     /// The slots that are a definition list of rows.
     pub fn is_sheet(&self, slot: impl Arg<Slot>) -> bool {
         matches!(slot.get(), Slot::Sheet | Slot::Absent | Slot::Web)
+    }
+
+    /// The blocks of the gallery slot: the pictures of the item (a
+    /// justified run), and the gallery of single values (rows).
+    pub fn gallery_parts<'b>(&self, blocks: &'b [Block]) -> (Vec<&'b Block>, Vec<&'b Block>) {
+        blocks.iter().partition(|b| !matches!(b, Block::Gallery(_)))
     }
 
     /// The slots whose content has a wrapper of the slot's name.

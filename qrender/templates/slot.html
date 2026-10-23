@@ -1,9 +1,16 @@
-{#- One slot of a spread. Single pictures of different properties are one
-    justified run (the gallery); rows are a sheet; the composer groups
-    consecutive pictures of another slot (the pictures block). -#}
+{#- One slot of a spread. In the gallery, the pictures of the item are one
+    justified run, and the single values of different properties are rows;
+    rows are a sheet; the composer groups consecutive pictures of another
+    slot (the pictures block). -#}
 {%- let name = slot.name() -%}
 {%- if name == "gallery" -%}
-    <div data-slot="gallery"><div class="block set"><div class="run">{%- for b in blocks -%}{{ ui.block(b)|safe }}{%- endfor -%}</div></div></div>
+    {%- let parts = ui.gallery_parts(blocks) -%}
+    <div data-slot="gallery">
+        {%- if !parts.0.is_empty() -%}
+            <div class="block set"><div class="run">{%- for b in parts.0 -%}{{ ui.block(b)|safe }}{%- endfor -%}</div></div>
+        {%- endif -%}
+        {%- for b in parts.1 -%}{{ ui.block(b)|safe }}{%- endfor -%}
+    </div>
 {%- else if ui.is_sheet(slot) -%}
     <dl class="sheet" data-slot="{{ name }}">{%- for b in blocks -%}{{ ui.sheet_block(b)|safe }}{%- endfor -%}</dl>
 {%- else -%}
