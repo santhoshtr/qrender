@@ -63,10 +63,12 @@
 			inline-size: 100%;
 			block-size: 100%;
 			object-fit: cover;
+			/* A tall picture keeps its top, where a face usually is. */
+			object-position: 50% 20%;
 		}
 
 		/* Maps and drawings are shown whole. */
-		& img.k-drawing { object-fit: contain; }
+		& img.k-drawing { object-fit: contain; object-position: center; }
 	}
 
 	& .what { font-weight: var( --font-weight-semi-bold ); }

@@ -540,6 +540,8 @@ dialog.lightbox {
 		inline-size: 96px;
 		block-size: 96px;
 		object-fit: cover;
+		/* A tall picture keeps its top, where a face usually is. */
+		object-position: 50% 20%;
 		border-radius: var( --border-radius-base );
 	}
 
@@ -1342,6 +1344,8 @@ dialog:is( .translator, .label-editor ) .actions {
 			inline-size: 100%;
 			block-size: 100%;
 			object-fit: cover;
+			/* A tall picture keeps its top, where a face usually is. */
+			object-position: 50% 20%;
 		}
 	}
 
