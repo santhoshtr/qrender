@@ -9,6 +9,7 @@ use percent_encoding::{AsciiSet, NON_ALPHANUMERIC, utf8_percent_encode};
 
 use super::map::{Frame, frame, live, point_frame};
 use crate::localize::format::{Part, coordinate, edit_url, number_part, percent};
+use crate::localize::locale::LANGUAGES;
 use crate::localize::{Description, Label, Link, SpreadView, View};
 use crate::primitives::credits::{Credits, Person};
 use crate::primitives::identifiers::{Identifier, Identifiers};
@@ -877,6 +878,29 @@ impl<'v> Ui<'v> {
     /// The icon of the translation action.
     pub fn language_icon(&self) -> &'static str {
         &super::design::LANGUAGE_ICON
+    }
+
+    /// The languages of the language menu: the code, the name in itself.
+    pub fn languages(&self) -> &'static [(&'static str, &'static str)] {
+        &LANGUAGES
+    }
+
+    /// "Language: മലയാളം": the name of the language button.
+    pub fn language_label(&self) -> String {
+        crate::localize::messages::format(
+            self.msg("qrender-page-language"),
+            &[self.language_name()],
+        )
+    }
+
+    /// The page language in itself, or its code when the menu does not
+    /// have it.
+    pub fn language_name(&self) -> &str {
+        let code = self.view.lang.as_str();
+        LANGUAGES
+            .iter()
+            .find(|(c, _)| *c == code)
+            .map_or(code, |(_, name)| name)
     }
 
     /// "Translate to ગુજરાતી": the page language named by `intl.js`.

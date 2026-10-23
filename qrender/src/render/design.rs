@@ -80,8 +80,9 @@ const BASE: [&str; 6] = [
 /// pictures and other blocks show the files of the item, and a coordinate
 /// pin (a map) can be in any block. The translation of the article's
 /// sections is in spreads and at the end of the page. A label to add in
-/// the page language (the label editor) can be in any block.
-pub const PAGE_SCRIPTS: [&str; 8] = [
+/// the page language (the label editor) can be in any block. The search
+/// is in the page header.
+pub const PAGE_SCRIPTS: [&str; 9] = [
     include_str!("../../assets/invokers.js"),
     include_str!("../../assets/intl.js"),
     include_str!("../../assets/play.js"),
@@ -90,6 +91,7 @@ pub const PAGE_SCRIPTS: [&str; 8] = [
     include_str!("../../assets/map.js"),
     include_str!("../../assets/translate.js"),
     include_str!("../../assets/label.js"),
+    include_str!("../../assets/search.js"),
 ];
 
 /// The CSS and the JavaScript of a primitive, from its module.

@@ -24,6 +24,40 @@ const RTL: [&str; 15] = [
     "ar", "arz", "azb", "ckb", "dv", "fa", "he", "ks", "mzn", "pnb", "ps", "sd", "ug", "ur", "yi",
 ];
 
+/// The languages of the language menu of the page header: the code and
+/// the name of the language in itself.
+pub const LANGUAGES: [(&str, &str); 29] = [
+    ("ar", "العربية"),
+    ("bn", "বাংলা"),
+    ("de", "Deutsch"),
+    ("en", "English"),
+    ("es", "Español"),
+    ("fa", "فارسی"),
+    ("fr", "Français"),
+    ("gu", "ગુજરાતી"),
+    ("he", "עברית"),
+    ("hi", "हिन्दी"),
+    ("id", "Bahasa Indonesia"),
+    ("it", "Italiano"),
+    ("ja", "日本語"),
+    ("kn", "ಕನ್ನಡ"),
+    ("ko", "한국어"),
+    ("ml", "മലയാളം"),
+    ("mr", "मराठी"),
+    ("nl", "Nederlands"),
+    ("pl", "Polski"),
+    ("pt", "Português"),
+    ("ru", "Русский"),
+    ("sw", "Kiswahili"),
+    ("ta", "தமிழ்"),
+    ("te", "తెలుగు"),
+    ("tr", "Türkçe"),
+    ("uk", "Українська"),
+    ("ur", "اردو"),
+    ("vi", "Tiếng Việt"),
+    ("zh", "中文"),
+];
+
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, JsonSchema)]
 #[serde(rename_all = "lowercase")]
 pub enum Dir {

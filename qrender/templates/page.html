@@ -28,9 +28,44 @@
 <body>
     <header class="chrome">
         <div>
-            <span class="wordmark">Wikipedia</span><input type="search"
-       placeholder="{{ ui.msg("qrender-search") }}"
-       aria-label="{{ ui.msg("qrender-search") }}">
+            <span class="wordmark">Wikipedia</span>
+            {%- if let Some(base) = service %}
+            {#- search.js shows the items under the field; without it, the
+                form opens the search of Wikidata. #}
+            <form id="search"
+                  class="search"
+                  role="search"
+                  action="https://www.wikidata.org/w/index.php"
+                  data-base="{{ base }}/{{ view.lang }}/">
+                <input type="hidden" name="title" value="Special:Search">
+                <input type="hidden" name="uselang" value="{{ view.lang }}">
+                <input type="search"
+                       name="search"
+                       role="combobox"
+                       placeholder="{{ ui.msg("qrender-search") }}"
+                       aria-label="{{ ui.msg("qrender-search") }}"
+                       aria-autocomplete="list"
+                       aria-expanded="false"
+                       aria-controls="search-results"
+                       autocomplete="off">
+                <ul id="search-results"
+                    role="listbox"
+                    aria-label="{{ ui.msg("qrender-search") }}"
+                    hidden></ul>
+            </form>
+            <button class="language"
+                    type="button"
+                    popovertarget="languages"
+                    aria-label="{{ ui.language_label() }}">
+                {{- ui.language_icon()|safe }}<span>{{ ui.language_name() }}</span>
+            </button>
+            <ul id="languages" popover class="pop languages">
+                {%- for (code, name) in ui.languages() %}
+                <li><a href="{{ base }}/{{ code }}/{{ view.qid }}" lang="{{ code }}" hreflang="{{ code }}" dir="auto"
+                    {%- if *code == view.lang.as_str() %} aria-current="page"{% endif %}>{{ name }}</a></li>
+                {%- endfor %}
+            </ul>
+            {%- endif %}
         </div>
     </header>
     <main class="page">

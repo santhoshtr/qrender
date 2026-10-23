@@ -361,13 +361,95 @@ dialog.lightbox {
 		color: var( --color-base );
 	}
 
-	& input {
+	& .search {
+		position: relative;
 		flex: 0 1 420px;
 		min-inline-size: 0;
+	}
+
+	& input {
+		box-sizing: border-box;
+		inline-size: 100%;
 		font: inherit;
 		padding: var( --spacing-35 ) var( --spacing-75 );
 		border: 1px solid var( --border-color-base );
 		border-radius: var( --border-radius-base );
+	}
+
+	/* The items that match the text (search.js), under the field. */
+	& [role="listbox"] {
+		position: absolute;
+		inset-block-start: 100%;
+		inset-inline: 0;
+		z-index: var( --z-index-popover );
+		margin: var( --spacing-25 ) 0 0;
+		padding: var( --spacing-25 ) 0;
+		list-style: none;
+		border: 1px solid var( --border-color-base );
+		border-radius: var( --border-radius-base );
+		background-color: var( --background-color-base );
+		box-shadow: 0 2px 8px var( --box-shadow-color-alpha-base );
+
+		& a {
+			display: flex;
+			flex-direction: column;
+			padding: var( --spacing-35 ) var( --spacing-75 );
+			color: var( --color-base );
+			text-decoration: none;
+		}
+
+		& :is( [aria-selected="true"], :hover ) > a {
+			background-color: var( --background-color-interactive-subtle );
+		}
+
+		& .description {
+			color: var( --color-subtle );
+			font-size: var( --font-size-small );
+		}
+	}
+
+	& .language {
+		margin-inline-start: auto;
+		display: inline-flex;
+		align-items: center;
+		gap: var( --spacing-35 );
+		padding: var( --spacing-35 ) var( --spacing-50 );
+		border: 0;
+		border-radius: var( --border-radius-base );
+		background: none;
+		color: var( --color-base );
+		font: inherit;
+		cursor: pointer;
+
+		&:hover { background-color: var( --background-color-button-quiet--hover ); }
+
+		& > svg {
+			inline-size: 20px;
+			block-size: 20px;
+		}
+	}
+}
+
+/* The languages of the page, from the language button. */
+.pop.languages {
+	max-block-size: 60vh;
+	overflow-y: auto;
+	padding: var( --spacing-50 );
+	columns: 2;
+	list-style: none;
+	font-size: var( --font-size-small );
+
+	/* Inline: a name from right to left is at the start of its line, as
+	   the others, not at the end. */
+	& a {
+		display: inline-block;
+		padding: var( --spacing-25 ) var( --spacing-50 );
+		color: var( --color-progressive );
+	}
+
+	& [aria-current] {
+		color: var( --color-base );
+		font-weight: var( --font-weight-bold );
 	}
 }
 
