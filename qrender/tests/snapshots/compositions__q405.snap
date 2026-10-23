@@ -1599,164 +1599,6 @@ expression: composition
       "concept": "Q930933",
       "template": "columns",
       "slots": {
-        "stack": [
-          {
-            "primitive": "network",
-            "pid": "P398",
-            "form": "strip",
-            "values": [
-              {
-                "statement": "Q405-2593f1c6-4b28-2e5a-3d13-2676f6c7e4a3",
-                "pid": "P398",
-                "item": "Q85160256",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 2022
-                  }
-                ],
-                "image": {
-                  "file": "CAPSTONE facing the Sun (ACD22-0003-004) (cropped).jpg",
-                  "kind": "photo",
-                  "aspect": 1.5017,
-                  "megapixels": 4.68,
-                  "credit": {
-                    "artist": "Daniel J. Rutter",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q405-d5736a87-427c-ee2b-789e-4de50557d046",
-                "pid": "P398",
-                "item": "Q331778",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 2009
-                  }
-                ],
-                "image": {
-                  "file": "LRO 2006.jpg",
-                  "kind": "photo",
-                  "aspect": 1.429,
-                  "megapixels": 0.77,
-                  "credit": {
-                    "artist": "",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q405-298bd733-e3d9-4669-92bb-6e170e8c05e7",
-                "pid": "P398",
-                "item": "Q29098442",
-                "rank": "normal",
-                "provenance": "imported",
-                "image": {
-                  "file": "Gateway-Set-1-IAC7-4k-BG 10.png",
-                  "kind": "photo",
-                  "aspect": 1.3375,
-                  "megapixels": 6.24,
-                  "credit": {
-                    "artist": "NASA Johnson Space Center",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q405-79236f26-8df4-49cd-af9d-2cc623339be7",
-                "pid": "P398",
-                "item": "Q325065",
-                "rank": "normal",
-                "provenance": "imported",
-                "image": {
-                  "file": "GSLV Mk III M1, Chandrayaan-2 - Vikram lander mounted on top of orbiter.jpg",
-                  "kind": "photo",
-                  "aspect": 0.6674,
-                  "megapixels": 36.15,
-                  "credit": {
-                    "artist": "Indian Space Research Organisation",
-                    "license": "GODL-India"
-                  }
-                },
-                "shown": true
-              }
-            ],
-            "priority": 0.082,
-            "rule": "set"
-          },
-          {
-            "primitive": "network",
-            "pid": "P527",
-            "form": "strip",
-            "values": [
-              {
-                "statement": "Q405-8496777C-275A-4647-A2B7-2D6DD6D7146B",
-                "pid": "P527",
-                "item": "Q500909",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "Mare Nectaris.jpg",
-                  "kind": "photo",
-                  "aspect": 0.9162,
-                  "megapixels": 0.13,
-                  "credit": {
-                    "artist": "NASA",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q405-ee1ab14d-4dd9-5a83-c832-df9da1cb609b",
-                "pid": "P527",
-                "item": "Q115507",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "20120927 surveyor7-levitating-dust.jpg",
-                  "kind": "photo",
-                  "aspect": 2.4983,
-                  "megapixels": 2.03,
-                  "credit": {
-                    "artist": "NASA",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q405-41fb7253-4205-fc45-0bf8-8bb8f1d1725b",
-                "pid": "P527",
-                "item": "Q12046612",
-                "rank": "normal",
-                "provenance": "none",
-                "class": true,
-                "shown": true
-              },
-              {
-                "statement": "Q405-eb67b214-42e8-1b29-1882-4289e9290741",
-                "pid": "P527",
-                "item": "Q1037499",
-                "rank": "normal",
-                "provenance": "none",
-                "class": true,
-                "shown": true
-              }
-            ],
-            "priority": 0.286,
-            "rule": "set"
-          }
-        ],
         "gallery": [
           {
             "primitive": "network",
@@ -1916,6 +1758,164 @@ expression: composition
             ],
             "priority": 0.041,
             "rule": "few-pictures"
+          }
+        ],
+        "strips": [
+          {
+            "primitive": "network",
+            "pid": "P398",
+            "form": "strip",
+            "values": [
+              {
+                "statement": "Q405-2593f1c6-4b28-2e5a-3d13-2676f6c7e4a3",
+                "pid": "P398",
+                "item": "Q85160256",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 2022
+                  }
+                ],
+                "image": {
+                  "file": "CAPSTONE facing the Sun (ACD22-0003-004) (cropped).jpg",
+                  "kind": "photo",
+                  "aspect": 1.5017,
+                  "megapixels": 4.68,
+                  "credit": {
+                    "artist": "Daniel J. Rutter",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q405-d5736a87-427c-ee2b-789e-4de50557d046",
+                "pid": "P398",
+                "item": "Q331778",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 2009
+                  }
+                ],
+                "image": {
+                  "file": "LRO 2006.jpg",
+                  "kind": "photo",
+                  "aspect": 1.429,
+                  "megapixels": 0.77,
+                  "credit": {
+                    "artist": "",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q405-298bd733-e3d9-4669-92bb-6e170e8c05e7",
+                "pid": "P398",
+                "item": "Q29098442",
+                "rank": "normal",
+                "provenance": "imported",
+                "image": {
+                  "file": "Gateway-Set-1-IAC7-4k-BG 10.png",
+                  "kind": "photo",
+                  "aspect": 1.3375,
+                  "megapixels": 6.24,
+                  "credit": {
+                    "artist": "NASA Johnson Space Center",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q405-79236f26-8df4-49cd-af9d-2cc623339be7",
+                "pid": "P398",
+                "item": "Q325065",
+                "rank": "normal",
+                "provenance": "imported",
+                "image": {
+                  "file": "GSLV Mk III M1, Chandrayaan-2 - Vikram lander mounted on top of orbiter.jpg",
+                  "kind": "photo",
+                  "aspect": 0.6674,
+                  "megapixels": 36.15,
+                  "credit": {
+                    "artist": "Indian Space Research Organisation",
+                    "license": "GODL-India"
+                  }
+                },
+                "shown": true
+              }
+            ],
+            "priority": 0.082,
+            "rule": "set"
+          },
+          {
+            "primitive": "network",
+            "pid": "P527",
+            "form": "strip",
+            "values": [
+              {
+                "statement": "Q405-8496777C-275A-4647-A2B7-2D6DD6D7146B",
+                "pid": "P527",
+                "item": "Q500909",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Mare Nectaris.jpg",
+                  "kind": "photo",
+                  "aspect": 0.9162,
+                  "megapixels": 0.13,
+                  "credit": {
+                    "artist": "NASA",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q405-ee1ab14d-4dd9-5a83-c832-df9da1cb609b",
+                "pid": "P527",
+                "item": "Q115507",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "20120927 surveyor7-levitating-dust.jpg",
+                  "kind": "photo",
+                  "aspect": 2.4983,
+                  "megapixels": 2.03,
+                  "credit": {
+                    "artist": "NASA",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q405-41fb7253-4205-fc45-0bf8-8bb8f1d1725b",
+                "pid": "P527",
+                "item": "Q12046612",
+                "rank": "normal",
+                "provenance": "none",
+                "class": true,
+                "shown": true
+              },
+              {
+                "statement": "Q405-eb67b214-42e8-1b29-1882-4289e9290741",
+                "pid": "P527",
+                "item": "Q1037499",
+                "rank": "normal",
+                "provenance": "none",
+                "class": true,
+                "shown": true
+              }
+            ],
+            "priority": 0.286,
+            "rule": "set"
           }
         ]
       }

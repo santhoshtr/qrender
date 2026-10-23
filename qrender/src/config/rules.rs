@@ -246,6 +246,8 @@ pub struct PlacementWhen {
     pub primitive: Option<Primitive>,
     /// The block is an audio file.
     pub audio: Option<bool>,
+    /// The block is a strip of pictures: one row of its values.
+    pub strip: Option<bool>,
 }
 
 /// The template of a facts spread, from its lead.

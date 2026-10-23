@@ -6698,103 +6698,6 @@ expression: composition
           },
           {
             "primitive": "network",
-            "pid": "P206",
-            "form": "strip",
-            "values": [
-              {
-                "statement": "Q30-a9e96d3c-4ff3-b7a2-3ef0-951a8bba780b",
-                "pid": "P206",
-                "item": "Q97",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P654",
-                    "item": "Q684"
-                  },
-                  {
-                    "pid": "P1012",
-                    "item": "Q12630"
-                  }
-                ],
-                "image": {
-                  "file": "Atlantic Ocean.png",
-                  "kind": "photo",
-                  "aspect": 1.0,
-                  "megapixels": 0.11,
-                  "credit": {
-                    "artist": "CIA",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q30-03ca35ae-442b-900c-d962-c3c852a196be",
-                "pid": "P206",
-                "item": "Q98",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P654",
-                    "item": "Q679"
-                  },
-                  {
-                    "pid": "P1012",
-                    "item": "Q44725"
-                  },
-                  {
-                    "pid": "P1012",
-                    "item": "Q2097617"
-                  }
-                ],
-                "image": {
-                  "file": "Pacific Ocean.png",
-                  "kind": "photo",
-                  "aspect": 1.0,
-                  "megapixels": 0.11,
-                  "credit": {
-                    "artist": "CIA World Factbook",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q30-047f5bac-4fd0-3590-f7da-72a55803269c",
-                "pid": "P206",
-                "item": "Q788",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q797"
-                  },
-                  {
-                    "pid": "P654",
-                    "item": "Q659"
-                  }
-                ],
-                "image": {
-                  "file": "Arctic Ocean.png",
-                  "kind": "photo",
-                  "aspect": 1.0,
-                  "megapixels": 0.11,
-                  "credit": {
-                    "artist": "CIA",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": true
-              }
-            ],
-            "priority": 0.022,
-            "rule": "set"
-          },
-          {
-            "primitive": "network",
             "pid": "P421",
             "form": "rows",
             "values": [
@@ -7801,6 +7704,105 @@ expression: composition
             "priority": 0.0,
             "measured": true,
             "rule": "row"
+          }
+        ],
+        "strips": [
+          {
+            "primitive": "network",
+            "pid": "P206",
+            "form": "strip",
+            "values": [
+              {
+                "statement": "Q30-a9e96d3c-4ff3-b7a2-3ef0-951a8bba780b",
+                "pid": "P206",
+                "item": "Q97",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P654",
+                    "item": "Q684"
+                  },
+                  {
+                    "pid": "P1012",
+                    "item": "Q12630"
+                  }
+                ],
+                "image": {
+                  "file": "Atlantic Ocean.png",
+                  "kind": "photo",
+                  "aspect": 1.0,
+                  "megapixels": 0.11,
+                  "credit": {
+                    "artist": "CIA",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q30-03ca35ae-442b-900c-d962-c3c852a196be",
+                "pid": "P206",
+                "item": "Q98",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P654",
+                    "item": "Q679"
+                  },
+                  {
+                    "pid": "P1012",
+                    "item": "Q44725"
+                  },
+                  {
+                    "pid": "P1012",
+                    "item": "Q2097617"
+                  }
+                ],
+                "image": {
+                  "file": "Pacific Ocean.png",
+                  "kind": "photo",
+                  "aspect": 1.0,
+                  "megapixels": 0.11,
+                  "credit": {
+                    "artist": "CIA World Factbook",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q30-047f5bac-4fd0-3590-f7da-72a55803269c",
+                "pid": "P206",
+                "item": "Q788",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q797"
+                  },
+                  {
+                    "pid": "P654",
+                    "item": "Q659"
+                  }
+                ],
+                "image": {
+                  "file": "Arctic Ocean.png",
+                  "kind": "photo",
+                  "aspect": 1.0,
+                  "megapixels": 0.11,
+                  "credit": {
+                    "artist": "CIA",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": true
+              }
+            ],
+            "priority": 0.022,
+            "rule": "set"
           }
         ]
       },
@@ -9187,7 +9189,628 @@ expression: composition
             "rule": "office"
           }
         ],
-        "stack": [
+        "gallery": [
+          {
+            "primitive": "network",
+            "role": "gallery",
+            "values": [
+              {
+                "statement": "q30-E0257E2F-A11D-40D9-8C58-6B5A8D3AF952",
+                "pid": "P36",
+                "item": "Q61",
+                "rank": "preferred",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1800
+                  },
+                  {
+                    "pid": "P7452",
+                    "item": "Q71536244"
+                  }
+                ],
+                "image": {
+                  "file": "Aerial view of White House and downtown, Washington, D.C LCCN2010630891.jpg",
+                  "kind": "photo",
+                  "aspect": 1.8925,
+                  "megapixels": 19.97,
+                  "credit": {
+                    "artist": "Carol M. Highsmith",
+                    "license": "Public domain"
+                  }
+                },
+                "priority": 1.6
+              },
+              {
+                "statement": "q30-D1924E04-C5E5-458D-A1AC-48032F6E3769",
+                "pid": "P194",
+                "item": "Q11268",
+                "rank": "preferred",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1789
+                  }
+                ],
+                "image": {
+                  "file": "US Capitol west side.JPG",
+                  "kind": "photo",
+                  "aspect": 1.9325,
+                  "megapixels": 7.73,
+                  "assessed": [
+                    "Featured pictures on Wikimedia Commons",
+                    "Quality images",
+                    "Valued images"
+                  ],
+                  "credit": {
+                    "artist": "Martin Falbisoner",
+                    "license": "CC BY-SA 3.0"
+                  }
+                },
+                "priority": 0.222
+              },
+              {
+                "statement": "Q30-6452D0B8-EF4A-4C33-8FB0-0F8197DCC1E0",
+                "pid": "P208",
+                "item": "Q48525",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "White House north side.JPG",
+                  "kind": "photo",
+                  "aspect": 1.9894,
+                  "megapixels": 7.84,
+                  "assessed": [
+                    "Quality images"
+                  ],
+                  "credit": {
+                    "artist": "Martin Falbisoner",
+                    "license": "CC BY-SA 3.0"
+                  }
+                },
+                "priority": 0.067
+              },
+              {
+                "statement": "Q30-f81f497e-44d5-011e-97ae-f5732f2a18ab",
+                "pid": "P457",
+                "item": "Q127912",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "United States Declaration of Independence.jpg",
+                  "kind": "photo",
+                  "aspect": 0.8426,
+                  "megapixels": 18.27,
+                  "credit": {
+                    "artist": "original: w:Second Continental Congress; reproduction: William Stone",
+                    "license": "Public domain"
+                  }
+                },
+                "priority": 0.022
+              },
+              {
+                "statement": "q30-81415EC8-8C35-434F-8675-21CCA7C35E27",
+                "pid": "P209",
+                "item": "Q11201",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "USSupremeCourtWestFacade.JPG",
+                  "kind": "photo",
+                  "aspect": 1.4057,
+                  "megapixels": 2.49,
+                  "credit": {
+                    "artist": "UpstateNYer",
+                    "license": "CC BY-SA 3.0"
+                  }
+                },
+                "priority": 0.0
+              },
+              {
+                "statement": "Q30-afcf1c5e-47e7-4a16-f562-c802dfaaf15e",
+                "pid": "P92",
+                "item": "Q11698",
+                "rank": "preferred",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1789
+                  },
+                  {
+                    "pid": "P7452",
+                    "item": "Q71536244"
+                  }
+                ],
+                "image": {
+                  "file": "Constitution of the United States - DPLA - 9ca804144bd5965e992ae3528bc3c6a3 (page 1).jpg",
+                  "kind": "photo",
+                  "aspect": 0.8262,
+                  "megapixels": 63.76,
+                  "assessed": [
+                    "Featured pictures on Wikimedia Commons"
+                  ],
+                  "credit": {
+                    "artist": "Constitutional Convention",
+                    "license": "Public domain"
+                  }
+                },
+                "priority": 0.0
+              }
+            ],
+            "priority": 1.6,
+            "rule": "single"
+          }
+        ],
+        "sheet": [
+          {
+            "primitive": "fact",
+            "pid": "P122",
+            "form": "list",
+            "statements": [
+              {
+                "statement": "Q30-3162412F-F90A-471C-8A4E-C089C35433D4",
+                "pid": "P122",
+                "item": "Q1520223",
+                "rank": "preferred",
+                "provenance": "sourced",
+                "citations": [
+                  "056a2d059117bd224833283026f6a9820af59e4b"
+                ],
+                "class": true,
+                "shown": true
+              },
+              {
+                "statement": "Q30-3E96373F-18F0-4086-BAE9-64FD12B0B17B",
+                "pid": "P122",
+                "item": "Q5255892",
+                "rank": "preferred",
+                "provenance": "sourced",
+                "citations": [
+                  "056a2d059117bd224833283026f6a9820af59e4b"
+                ],
+                "class": true,
+                "shown": true
+              },
+              {
+                "statement": "q30-c3ace26b-42f7-60f9-75f5-6304e6a64497",
+                "pid": "P122",
+                "item": "Q49892",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1788
+                  }
+                ],
+                "class": true,
+                "shown": true
+              },
+              {
+                "statement": "Q30-4c675023-4b69-b278-c28e-1195c7b7bd97",
+                "pid": "P122",
+                "item": "Q7270",
+                "rank": "normal",
+                "provenance": "imported",
+                "class": true,
+                "shown": true
+              },
+              {
+                "statement": "q30-db9be3b7-48aa-244e-7964-a40332401c41",
+                "pid": "P122",
+                "item": "Q512187",
+                "rank": "normal",
+                "provenance": "sourced",
+                "citations": [
+                  "87357188596c759db8d1f1989449a0e57bc9936e"
+                ],
+                "class": true,
+                "shown": true
+              }
+            ],
+            "priority": 3.333,
+            "rule": "few-pictures"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P194",
+            "form": "list",
+            "statements": [
+              {
+                "statement": "Q30-05e5a66a-413c-acee-42ea-ea3cbf55eabb",
+                "pid": "P194",
+                "item": "Q1195929",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1781
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1789
+                  }
+                ],
+                "image": {
+                  "file": "Articles page1.jpg",
+                  "kind": "photo",
+                  "aspect": 0.6199,
+                  "megapixels": 30.81,
+                  "credit": {
+                    "artist": "The U.S. Government.",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": true
+              }
+            ],
+            "priority": 0.222,
+            "former": true,
+            "rule": "former"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P36",
+            "form": "list",
+            "statements": [
+              {
+                "statement": "Q30-e3cba869-48c1-dcd7-0f4d-47b7ee8b82d1",
+                "pid": "P36",
+                "item": "Q1345",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1790
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1800
+                  }
+                ],
+                "image": {
+                  "file": "Philadelphia skyline 20240528 (cropped).jpg",
+                  "kind": "photo",
+                  "aspect": 1.6002,
+                  "megapixels": 11.29,
+                  "credit": {
+                    "artist": "颐园居",
+                    "license": "CC BY-SA 4.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q30-6f15b1c2-48be-91e1-5b2c-5d0acf61bb46",
+                "pid": "P36",
+                "item": "Q60",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1785
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1790
+                  }
+                ],
+                "image": {
+                  "file": "NYC Downtown Manhattan Skyline seen from Paulus Hook 2019-12-20 IMG 7347 FRD (cropped).jpg",
+                  "kind": "photo",
+                  "aspect": 2.4945,
+                  "megapixels": 6.0,
+                  "credit": {
+                    "artist": "Fred Hsu on en.wikipedia",
+                    "license": "CC BY-SA 4.0"
+                  }
+                },
+                "shown": true
+              }
+            ],
+            "priority": 1.6,
+            "former": true,
+            "rule": "former"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P150",
+            "form": "list",
+            "statements": [
+              {
+                "statement": "Q30-66fc75a5-48c8-12eb-7151-a5618c36ca6e",
+                "pid": "P150",
+                "item": "Q146328",
+                "rank": "normal",
+                "provenance": "sourced",
+                "citations": [
+                  "c7dc16111d31b0492ab52b41796efbb7b7ae37ef",
+                  "12655a7379625a89c667d4963763cd51baf17f43",
+                  "78435b771c016b84224a8a3f9d6c91e37ae4d01d"
+                ],
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1935
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1946
+                  }
+                ],
+                "shown": true
+              },
+              {
+                "statement": "q30-c491758b-401d-aa74-c58d-a0a91ce73782",
+                "pid": "P150",
+                "item": "Q1811372",
+                "rank": "normal",
+                "provenance": "sourced",
+                "citations": [
+                  "c7dc16111d31b0492ab52b41796efbb7b7ae37ef"
+                ],
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1912
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1959
+                  }
+                ],
+                "shown": true
+              },
+              {
+                "statement": "Q30-b29be9d5-4d38-f7cc-ca6a-5d0c23708f32",
+                "pid": "P150",
+                "item": "Q6042084",
+                "rank": "normal",
+                "provenance": "sourced",
+                "citations": [
+                  "c7dc16111d31b0492ab52b41796efbb7b7ae37ef"
+                ],
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1901
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1935
+                  }
+                ],
+                "shown": true
+              },
+              {
+                "statement": "q30-78b384b6-47ca-c501-2b74-aa862f34cbd0",
+                "pid": "P150",
+                "item": "Q547795",
+                "rank": "normal",
+                "provenance": "sourced",
+                "citations": [
+                  "c7dc16111d31b0492ab52b41796efbb7b7ae37ef"
+                ],
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1898
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1959
+                  }
+                ],
+                "shown": true
+              },
+              {
+                "statement": "Q30-605e5b97-4bf6-f498-ddf7-2d6c4979b47d",
+                "pid": "P150",
+                "item": "Q1360064",
+                "rank": "normal",
+                "provenance": "sourced",
+                "citations": [
+                  "c7dc16111d31b0492ab52b41796efbb7b7ae37ef"
+                ],
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1805
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1837
+                  }
+                ],
+                "shown": true
+              },
+              {
+                "statement": "Q30-8bcd39b8-4438-b775-e4d9-ddb64729069d",
+                "pid": "P150",
+                "item": "Q1500063",
+                "rank": "normal",
+                "provenance": "sourced",
+                "citations": [
+                  "c7dc16111d31b0492ab52b41796efbb7b7ae37ef"
+                ],
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1805
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1812
+                  }
+                ],
+                "shown": true
+              },
+              {
+                "statement": "Q30-dad15d27-4ecf-e8e6-3804-69cb06a38925",
+                "pid": "P150",
+                "item": "Q1518439",
+                "rank": "normal",
+                "provenance": "sourced",
+                "citations": [
+                  "c7dc16111d31b0492ab52b41796efbb7b7ae37ef"
+                ],
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1804
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1812
+                  }
+                ],
+                "shown": false
+              },
+              {
+                "statement": "Q30-e65ab82d-4b0b-9e71-2b2b-7a11252eaf59",
+                "pid": "P150",
+                "item": "Q777763",
+                "rank": "normal",
+                "provenance": "sourced",
+                "citations": [
+                  "c7dc16111d31b0492ab52b41796efbb7b7ae37ef"
+                ],
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1800
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1816
+                  }
+                ],
+                "shown": false
+              },
+              {
+                "statement": "Q30-e70e21f6-41b4-9efe-cca4-f235c912945e",
+                "pid": "P150",
+                "item": "Q660384",
+                "rank": "normal",
+                "provenance": "sourced",
+                "citations": [
+                  "c7dc16111d31b0492ab52b41796efbb7b7ae37ef"
+                ],
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1798
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1817
+                  }
+                ],
+                "shown": false
+              },
+              {
+                "statement": "Q30-8f69736a-4bb0-79c0-03f2-ff7b69ef24fb",
+                "pid": "P150",
+                "item": "Q1548588",
+                "rank": "normal",
+                "provenance": "sourced",
+                "citations": [
+                  "c7dc16111d31b0492ab52b41796efbb7b7ae37ef"
+                ],
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1790
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1796
+                  }
+                ],
+                "shown": false
+              },
+              {
+                "statement": "Q30-e4753d85-40c0-38ed-4723-32b3ce7caf3a",
+                "pid": "P150",
+                "item": "Q669315",
+                "rank": "normal",
+                "provenance": "sourced",
+                "citations": [
+                  "c7dc16111d31b0492ab52b41796efbb7b7ae37ef"
+                ],
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1787
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1803
+                  }
+                ],
+                "image": {
+                  "file": "Northwest Territory locator map (1787).svg",
+                  "kind": "drawing",
+                  "aspect": 1.0139,
+                  "megapixels": 0.26,
+                  "credit": {
+                    "artist": "Isochrone",
+                    "license": "CC BY-SA 4.0"
+                  }
+                },
+                "shown": false
+              }
+            ],
+            "priority": 3.674,
+            "former": true,
+            "rule": "former"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P92",
+            "form": "list",
+            "statements": [
+              {
+                "statement": "Q30-72a7f245-4360-76b1-6ff0-c131e8479cdf",
+                "pid": "P92",
+                "item": "Q493620",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1781
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1789
+                  }
+                ],
+                "image": {
+                  "file": "Articles page1.jpg",
+                  "kind": "photo",
+                  "aspect": 0.6199,
+                  "megapixels": 30.81,
+                  "credit": {
+                    "artist": "The U.S. Government.",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": true
+              }
+            ],
+            "priority": 0.0,
+            "former": true,
+            "rule": "former"
+          }
+        ],
+        "strips": [
           {
             "primitive": "network",
             "pid": "P150",
@@ -10779,627 +11402,6 @@ expression: composition
             ],
             "priority": 5.922,
             "rule": "set"
-          }
-        ],
-        "gallery": [
-          {
-            "primitive": "network",
-            "role": "gallery",
-            "values": [
-              {
-                "statement": "q30-E0257E2F-A11D-40D9-8C58-6B5A8D3AF952",
-                "pid": "P36",
-                "item": "Q61",
-                "rank": "preferred",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1800
-                  },
-                  {
-                    "pid": "P7452",
-                    "item": "Q71536244"
-                  }
-                ],
-                "image": {
-                  "file": "Aerial view of White House and downtown, Washington, D.C LCCN2010630891.jpg",
-                  "kind": "photo",
-                  "aspect": 1.8925,
-                  "megapixels": 19.97,
-                  "credit": {
-                    "artist": "Carol M. Highsmith",
-                    "license": "Public domain"
-                  }
-                },
-                "priority": 1.6
-              },
-              {
-                "statement": "q30-D1924E04-C5E5-458D-A1AC-48032F6E3769",
-                "pid": "P194",
-                "item": "Q11268",
-                "rank": "preferred",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1789
-                  }
-                ],
-                "image": {
-                  "file": "US Capitol west side.JPG",
-                  "kind": "photo",
-                  "aspect": 1.9325,
-                  "megapixels": 7.73,
-                  "assessed": [
-                    "Featured pictures on Wikimedia Commons",
-                    "Quality images",
-                    "Valued images"
-                  ],
-                  "credit": {
-                    "artist": "Martin Falbisoner",
-                    "license": "CC BY-SA 3.0"
-                  }
-                },
-                "priority": 0.222
-              },
-              {
-                "statement": "Q30-6452D0B8-EF4A-4C33-8FB0-0F8197DCC1E0",
-                "pid": "P208",
-                "item": "Q48525",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "White House north side.JPG",
-                  "kind": "photo",
-                  "aspect": 1.9894,
-                  "megapixels": 7.84,
-                  "assessed": [
-                    "Quality images"
-                  ],
-                  "credit": {
-                    "artist": "Martin Falbisoner",
-                    "license": "CC BY-SA 3.0"
-                  }
-                },
-                "priority": 0.067
-              },
-              {
-                "statement": "Q30-f81f497e-44d5-011e-97ae-f5732f2a18ab",
-                "pid": "P457",
-                "item": "Q127912",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "United States Declaration of Independence.jpg",
-                  "kind": "photo",
-                  "aspect": 0.8426,
-                  "megapixels": 18.27,
-                  "credit": {
-                    "artist": "original: w:Second Continental Congress; reproduction: William Stone",
-                    "license": "Public domain"
-                  }
-                },
-                "priority": 0.022
-              },
-              {
-                "statement": "q30-81415EC8-8C35-434F-8675-21CCA7C35E27",
-                "pid": "P209",
-                "item": "Q11201",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "USSupremeCourtWestFacade.JPG",
-                  "kind": "photo",
-                  "aspect": 1.4057,
-                  "megapixels": 2.49,
-                  "credit": {
-                    "artist": "UpstateNYer",
-                    "license": "CC BY-SA 3.0"
-                  }
-                },
-                "priority": 0.0
-              },
-              {
-                "statement": "Q30-afcf1c5e-47e7-4a16-f562-c802dfaaf15e",
-                "pid": "P92",
-                "item": "Q11698",
-                "rank": "preferred",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1789
-                  },
-                  {
-                    "pid": "P7452",
-                    "item": "Q71536244"
-                  }
-                ],
-                "image": {
-                  "file": "Constitution of the United States - DPLA - 9ca804144bd5965e992ae3528bc3c6a3 (page 1).jpg",
-                  "kind": "photo",
-                  "aspect": 0.8262,
-                  "megapixels": 63.76,
-                  "assessed": [
-                    "Featured pictures on Wikimedia Commons"
-                  ],
-                  "credit": {
-                    "artist": "Constitutional Convention",
-                    "license": "Public domain"
-                  }
-                },
-                "priority": 0.0
-              }
-            ],
-            "priority": 1.6,
-            "rule": "single"
-          }
-        ],
-        "sheet": [
-          {
-            "primitive": "fact",
-            "pid": "P122",
-            "form": "list",
-            "statements": [
-              {
-                "statement": "Q30-3162412F-F90A-471C-8A4E-C089C35433D4",
-                "pid": "P122",
-                "item": "Q1520223",
-                "rank": "preferred",
-                "provenance": "sourced",
-                "citations": [
-                  "056a2d059117bd224833283026f6a9820af59e4b"
-                ],
-                "class": true,
-                "shown": true
-              },
-              {
-                "statement": "Q30-3E96373F-18F0-4086-BAE9-64FD12B0B17B",
-                "pid": "P122",
-                "item": "Q5255892",
-                "rank": "preferred",
-                "provenance": "sourced",
-                "citations": [
-                  "056a2d059117bd224833283026f6a9820af59e4b"
-                ],
-                "class": true,
-                "shown": true
-              },
-              {
-                "statement": "q30-c3ace26b-42f7-60f9-75f5-6304e6a64497",
-                "pid": "P122",
-                "item": "Q49892",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1788
-                  }
-                ],
-                "class": true,
-                "shown": true
-              },
-              {
-                "statement": "Q30-4c675023-4b69-b278-c28e-1195c7b7bd97",
-                "pid": "P122",
-                "item": "Q7270",
-                "rank": "normal",
-                "provenance": "imported",
-                "class": true,
-                "shown": true
-              },
-              {
-                "statement": "q30-db9be3b7-48aa-244e-7964-a40332401c41",
-                "pid": "P122",
-                "item": "Q512187",
-                "rank": "normal",
-                "provenance": "sourced",
-                "citations": [
-                  "87357188596c759db8d1f1989449a0e57bc9936e"
-                ],
-                "class": true,
-                "shown": true
-              }
-            ],
-            "priority": 3.333,
-            "rule": "few-pictures"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P194",
-            "form": "list",
-            "statements": [
-              {
-                "statement": "Q30-05e5a66a-413c-acee-42ea-ea3cbf55eabb",
-                "pid": "P194",
-                "item": "Q1195929",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1781
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 1789
-                  }
-                ],
-                "image": {
-                  "file": "Articles page1.jpg",
-                  "kind": "photo",
-                  "aspect": 0.6199,
-                  "megapixels": 30.81,
-                  "credit": {
-                    "artist": "The U.S. Government.",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": true
-              }
-            ],
-            "priority": 0.222,
-            "former": true,
-            "rule": "former"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P36",
-            "form": "list",
-            "statements": [
-              {
-                "statement": "Q30-e3cba869-48c1-dcd7-0f4d-47b7ee8b82d1",
-                "pid": "P36",
-                "item": "Q1345",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1790
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 1800
-                  }
-                ],
-                "image": {
-                  "file": "Philadelphia skyline 20240528 (cropped).jpg",
-                  "kind": "photo",
-                  "aspect": 1.6002,
-                  "megapixels": 11.29,
-                  "credit": {
-                    "artist": "颐园居",
-                    "license": "CC BY-SA 4.0"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q30-6f15b1c2-48be-91e1-5b2c-5d0acf61bb46",
-                "pid": "P36",
-                "item": "Q60",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1785
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 1790
-                  }
-                ],
-                "image": {
-                  "file": "NYC Downtown Manhattan Skyline seen from Paulus Hook 2019-12-20 IMG 7347 FRD (cropped).jpg",
-                  "kind": "photo",
-                  "aspect": 2.4945,
-                  "megapixels": 6.0,
-                  "credit": {
-                    "artist": "Fred Hsu on en.wikipedia",
-                    "license": "CC BY-SA 4.0"
-                  }
-                },
-                "shown": true
-              }
-            ],
-            "priority": 1.6,
-            "former": true,
-            "rule": "former"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P150",
-            "form": "list",
-            "statements": [
-              {
-                "statement": "Q30-66fc75a5-48c8-12eb-7151-a5618c36ca6e",
-                "pid": "P150",
-                "item": "Q146328",
-                "rank": "normal",
-                "provenance": "sourced",
-                "citations": [
-                  "c7dc16111d31b0492ab52b41796efbb7b7ae37ef",
-                  "12655a7379625a89c667d4963763cd51baf17f43",
-                  "78435b771c016b84224a8a3f9d6c91e37ae4d01d"
-                ],
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1935
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 1946
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "q30-c491758b-401d-aa74-c58d-a0a91ce73782",
-                "pid": "P150",
-                "item": "Q1811372",
-                "rank": "normal",
-                "provenance": "sourced",
-                "citations": [
-                  "c7dc16111d31b0492ab52b41796efbb7b7ae37ef"
-                ],
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1912
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 1959
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q30-b29be9d5-4d38-f7cc-ca6a-5d0c23708f32",
-                "pid": "P150",
-                "item": "Q6042084",
-                "rank": "normal",
-                "provenance": "sourced",
-                "citations": [
-                  "c7dc16111d31b0492ab52b41796efbb7b7ae37ef"
-                ],
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1901
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 1935
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "q30-78b384b6-47ca-c501-2b74-aa862f34cbd0",
-                "pid": "P150",
-                "item": "Q547795",
-                "rank": "normal",
-                "provenance": "sourced",
-                "citations": [
-                  "c7dc16111d31b0492ab52b41796efbb7b7ae37ef"
-                ],
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1898
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 1959
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q30-605e5b97-4bf6-f498-ddf7-2d6c4979b47d",
-                "pid": "P150",
-                "item": "Q1360064",
-                "rank": "normal",
-                "provenance": "sourced",
-                "citations": [
-                  "c7dc16111d31b0492ab52b41796efbb7b7ae37ef"
-                ],
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1805
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 1837
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q30-8bcd39b8-4438-b775-e4d9-ddb64729069d",
-                "pid": "P150",
-                "item": "Q1500063",
-                "rank": "normal",
-                "provenance": "sourced",
-                "citations": [
-                  "c7dc16111d31b0492ab52b41796efbb7b7ae37ef"
-                ],
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1805
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 1812
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q30-dad15d27-4ecf-e8e6-3804-69cb06a38925",
-                "pid": "P150",
-                "item": "Q1518439",
-                "rank": "normal",
-                "provenance": "sourced",
-                "citations": [
-                  "c7dc16111d31b0492ab52b41796efbb7b7ae37ef"
-                ],
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1804
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 1812
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q30-e65ab82d-4b0b-9e71-2b2b-7a11252eaf59",
-                "pid": "P150",
-                "item": "Q777763",
-                "rank": "normal",
-                "provenance": "sourced",
-                "citations": [
-                  "c7dc16111d31b0492ab52b41796efbb7b7ae37ef"
-                ],
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1800
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 1816
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q30-e70e21f6-41b4-9efe-cca4-f235c912945e",
-                "pid": "P150",
-                "item": "Q660384",
-                "rank": "normal",
-                "provenance": "sourced",
-                "citations": [
-                  "c7dc16111d31b0492ab52b41796efbb7b7ae37ef"
-                ],
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1798
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 1817
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q30-8f69736a-4bb0-79c0-03f2-ff7b69ef24fb",
-                "pid": "P150",
-                "item": "Q1548588",
-                "rank": "normal",
-                "provenance": "sourced",
-                "citations": [
-                  "c7dc16111d31b0492ab52b41796efbb7b7ae37ef"
-                ],
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1790
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 1796
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "Q30-e4753d85-40c0-38ed-4723-32b3ce7caf3a",
-                "pid": "P150",
-                "item": "Q669315",
-                "rank": "normal",
-                "provenance": "sourced",
-                "citations": [
-                  "c7dc16111d31b0492ab52b41796efbb7b7ae37ef"
-                ],
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1787
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 1803
-                  }
-                ],
-                "image": {
-                  "file": "Northwest Territory locator map (1787).svg",
-                  "kind": "drawing",
-                  "aspect": 1.0139,
-                  "megapixels": 0.26,
-                  "credit": {
-                    "artist": "Isochrone",
-                    "license": "CC BY-SA 4.0"
-                  }
-                },
-                "shown": false
-              }
-            ],
-            "priority": 3.674,
-            "former": true,
-            "rule": "former"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P92",
-            "form": "list",
-            "statements": [
-              {
-                "statement": "Q30-72a7f245-4360-76b1-6ff0-c131e8479cdf",
-                "pid": "P92",
-                "item": "Q493620",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1781
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 1789
-                  }
-                ],
-                "image": {
-                  "file": "Articles page1.jpg",
-                  "kind": "photo",
-                  "aspect": 0.6199,
-                  "megapixels": 30.81,
-                  "credit": {
-                    "artist": "The U.S. Government.",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": true
-              }
-            ],
-            "priority": 0.0,
-            "former": true,
-            "rule": "former"
           }
         ]
       },

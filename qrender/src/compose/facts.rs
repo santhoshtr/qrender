@@ -278,6 +278,8 @@ pub struct PlacementFacts {
     pub primitive: Option<Primitive>,
     /// The block is an audio file.
     pub audio: bool,
+    /// The block is a strip of pictures.
+    pub strip: bool,
 }
 
 impl When<PlacementFacts> for PlacementWhen {
@@ -285,6 +287,7 @@ impl When<PlacementFacts> for PlacementWhen {
         self.make.is_none_or(|m| f.make == Some(m))
             && self.primitive.is_none_or(|p| f.primitive == Some(p))
             && self.audio.is_none_or(|b| f.audio == b)
+            && self.strip.is_none_or(|b| f.strip == b)
     }
 }
 
@@ -550,6 +553,7 @@ mod tests {
                 make,
                 primitive: Some(primitive),
                 audio,
+                strip: false,
             },
         );
         (rule.id(), rule.slot)
@@ -575,6 +579,16 @@ mod tests {
             ("block", Slot::Stack)
         );
         assert_eq!(slot(None, Succession, false), ("block", Slot::Stack));
+        let strip = first(
+            &rules().placement,
+            &PlacementFacts {
+                make: None,
+                primitive: Some(Network),
+                audio: false,
+                strip: true,
+            },
+        );
+        assert_eq!((strip.id(), strip.slot), ("strip", Slot::Strips));
     }
 
     #[test]

@@ -464,7 +464,313 @@ expression: composition
             "rule": "coordinate"
           }
         ],
-        "stack": [
+        "gallery": [
+          {
+            "primitive": "media",
+            "role": "stack",
+            "statement": "q90-C1EF40A9-AADB-40B8-8FB6-E3D95FB3CC60",
+            "pid": "P242",
+            "file": "Paris-Position.svg",
+            "rank": "normal",
+            "provenance": "none",
+            "kind": "drawing",
+            "aspect": 0.9168,
+            "megapixels": 0.28,
+            "credit": {
+              "artist": "Marmelad",
+              "license": "CC BY-SA 2.5"
+            },
+            "rule": "media"
+          },
+          {
+            "primitive": "network",
+            "role": "gallery",
+            "values": [
+              {
+                "statement": "Q90-43ee1e91-43eb-bd4b-f5af-c588ba34a3e7",
+                "pid": "P131",
+                "item": "Q16665915",
+                "rank": "preferred",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 2016
+                  }
+                ],
+                "image": {
+                  "file": "Paris and vicinities, LandSat-5 false color satellite image, 2006-07-16.jpg",
+                  "kind": "photo",
+                  "aspect": 0.9486,
+                  "megapixels": 12.28,
+                  "credit": {
+                    "artist": "NASA",
+                    "license": "Public domain"
+                  }
+                },
+                "priority": 2.0
+              },
+              {
+                "statement": "Q90-31c14517-4cf7-e3ff-c14a-a12ffbd59794",
+                "pid": "P361",
+                "item": "Q13917",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Eiffel Tower from the Tour Montparnasse 3, Paris May 2014.jpg",
+                  "kind": "photo",
+                  "aspect": 1.4114,
+                  "megapixels": 11.28,
+                  "credit": {
+                    "artist": "David McSpadden from Daly City, United States",
+                    "license": "CC BY 2.0"
+                  }
+                },
+                "priority": 0.8
+              },
+              {
+                "statement": "Q90-ac4484de-45f9-a97c-4fcd-024313c23088",
+                "pid": "P610",
+                "item": "Q1440664",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Repère point culminant de Paris à Menilmontant.JPG",
+                  "kind": "photo",
+                  "aspect": 1.3333,
+                  "megapixels": 7.08,
+                  "credit": {
+                    "artist": "LPLT",
+                    "license": "CC BY-SA 3.0"
+                  }
+                },
+                "priority": 0.8
+              },
+              {
+                "statement": "Q90-9ca9dd9a-4c4d-9b6e-4bda-4a735563bfc4",
+                "pid": "P30",
+                "item": "Q46",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Europe satellite orthographic.jpg",
+                  "kind": "photo",
+                  "aspect": 1.2739,
+                  "megapixels": 1.05,
+                  "credit": {
+                    "artist": "",
+                    "license": "Public domain"
+                  }
+                },
+                "priority": 0.4
+              },
+              {
+                "statement": "Q90-01EDE662-71D4-44A6-A7D7-7E4C196E4686",
+                "pid": "P8138",
+                "item": "Q1082222",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Nasa photo satellite de Paris.jpg",
+                  "kind": "photo",
+                  "aspect": 1.1558,
+                  "megapixels": 2.02,
+                  "credit": {
+                    "artist": "NASA/GSFC/METI/ERSDAC/JAROS, and U.S./Japan ASTER Science Team.",
+                    "license": "Public domain"
+                  }
+                },
+                "priority": 0.4
+              },
+              {
+                "statement": "Q90-45280CB1-F6EB-4219-BFA6-55CEC1CA3778",
+                "pid": "P8138",
+                "item": "Q108921672",
+                "rank": "normal",
+                "provenance": "none",
+                "priority": 0.4
+              }
+            ],
+            "priority": 2.0,
+            "rule": "single"
+          }
+        ],
+        "sheet": [
+          {
+            "primitive": "fact",
+            "pid": "P131",
+            "form": "list",
+            "statements": [
+              {
+                "statement": "Q90-021a1f6d-4f77-56b9-d970-7ef20fb7b2a5",
+                "pid": "P131",
+                "item": "Q124881945",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1968
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 2018
+                  }
+                ],
+                "shown": true
+              },
+              {
+                "statement": "Q90-6dac5f8a-4bf3-54ec-71e3-05d6c0fe54df",
+                "pid": "P131",
+                "item": "Q13917",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1960
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 2015
+                  }
+                ],
+                "image": {
+                  "file": "Eiffel Tower from the Tour Montparnasse 3, Paris May 2014.jpg",
+                  "kind": "photo",
+                  "aspect": 1.4114,
+                  "megapixels": 11.28,
+                  "credit": {
+                    "artist": "David McSpadden from Daly City, United States",
+                    "license": "CC BY 2.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q90-7CFF4649-B221-4803-9DBE-08CD3436DF05",
+                "pid": "P131",
+                "item": "Q2863958",
+                "rank": "normal",
+                "provenance": "imported",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1800
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1960
+                  }
+                ],
+                "shown": true
+              },
+              {
+                "statement": "Q90-32cbf37c-47d3-0c91-13aa-c5a1d3651c8b",
+                "pid": "P131",
+                "item": "Q1142326",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1790
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1967
+                  }
+                ],
+                "shown": true
+              },
+              {
+                "statement": "Q90-aab66cc7-4592-d978-5620-7d0e01603e05",
+                "pid": "P131",
+                "item": "Q70972",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P582",
+                    "year": 1790
+                  }
+                ],
+                "image": {
+                  "file": "Chateau de Versailles 1668 Pierre Patel.jpg",
+                  "kind": "photo",
+                  "aspect": 1.3772,
+                  "megapixels": 5.96,
+                  "credit": {
+                    "artist": "Pierre Patel",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": true
+              }
+            ],
+            "priority": 3.585,
+            "former": true,
+            "rule": "former"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P2044",
+            "form": "variants",
+            "statements": [
+              {
+                "statement": "Q90-2f662803-4f5e-73e9-c277-aa4122a27dd2",
+                "pid": "P2044",
+                "amount": 48.0,
+                "unit": "Q11573",
+                "rank": "preferred",
+                "provenance": "sourced",
+                "shown": true
+              },
+              {
+                "statement": "Q90-a2e1c0a8-4648-5394-978a-e4ea225e6618",
+                "pid": "P2044",
+                "amount": 28.0,
+                "unit": "Q11573",
+                "rank": "normal",
+                "provenance": "imported",
+                "shown": true
+              },
+              {
+                "statement": "Q90-617444CC-1471-4DCF-93C3-1A5C321CB6A9",
+                "pid": "P2044",
+                "amount": 127.0,
+                "unit": "Q11573",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P3831",
+                    "item": "Q3393392"
+                  }
+                ],
+                "shown": true
+              },
+              {
+                "statement": "Q90-1A9F1447-2F2F-4D38-B2D8-CD7DAAE1E16C",
+                "pid": "P2044",
+                "amount": 27.0,
+                "unit": "Q11573",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P3831",
+                    "item": "Q30278109"
+                  }
+                ],
+                "shown": true
+              }
+            ],
+            "priority": 2.4,
+            "rule": "row"
+          }
+        ],
+        "strips": [
           {
             "primitive": "network",
             "pid": "P47",
@@ -1691,312 +1997,6 @@ expression: composition
             ],
             "priority": 1.6,
             "rule": "set"
-          }
-        ],
-        "gallery": [
-          {
-            "primitive": "media",
-            "role": "stack",
-            "statement": "q90-C1EF40A9-AADB-40B8-8FB6-E3D95FB3CC60",
-            "pid": "P242",
-            "file": "Paris-Position.svg",
-            "rank": "normal",
-            "provenance": "none",
-            "kind": "drawing",
-            "aspect": 0.9168,
-            "megapixels": 0.28,
-            "credit": {
-              "artist": "Marmelad",
-              "license": "CC BY-SA 2.5"
-            },
-            "rule": "media"
-          },
-          {
-            "primitive": "network",
-            "role": "gallery",
-            "values": [
-              {
-                "statement": "Q90-43ee1e91-43eb-bd4b-f5af-c588ba34a3e7",
-                "pid": "P131",
-                "item": "Q16665915",
-                "rank": "preferred",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 2016
-                  }
-                ],
-                "image": {
-                  "file": "Paris and vicinities, LandSat-5 false color satellite image, 2006-07-16.jpg",
-                  "kind": "photo",
-                  "aspect": 0.9486,
-                  "megapixels": 12.28,
-                  "credit": {
-                    "artist": "NASA",
-                    "license": "Public domain"
-                  }
-                },
-                "priority": 2.0
-              },
-              {
-                "statement": "Q90-31c14517-4cf7-e3ff-c14a-a12ffbd59794",
-                "pid": "P361",
-                "item": "Q13917",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "Eiffel Tower from the Tour Montparnasse 3, Paris May 2014.jpg",
-                  "kind": "photo",
-                  "aspect": 1.4114,
-                  "megapixels": 11.28,
-                  "credit": {
-                    "artist": "David McSpadden from Daly City, United States",
-                    "license": "CC BY 2.0"
-                  }
-                },
-                "priority": 0.8
-              },
-              {
-                "statement": "Q90-ac4484de-45f9-a97c-4fcd-024313c23088",
-                "pid": "P610",
-                "item": "Q1440664",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "Repère point culminant de Paris à Menilmontant.JPG",
-                  "kind": "photo",
-                  "aspect": 1.3333,
-                  "megapixels": 7.08,
-                  "credit": {
-                    "artist": "LPLT",
-                    "license": "CC BY-SA 3.0"
-                  }
-                },
-                "priority": 0.8
-              },
-              {
-                "statement": "Q90-9ca9dd9a-4c4d-9b6e-4bda-4a735563bfc4",
-                "pid": "P30",
-                "item": "Q46",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "Europe satellite orthographic.jpg",
-                  "kind": "photo",
-                  "aspect": 1.2739,
-                  "megapixels": 1.05,
-                  "credit": {
-                    "artist": "",
-                    "license": "Public domain"
-                  }
-                },
-                "priority": 0.4
-              },
-              {
-                "statement": "Q90-01EDE662-71D4-44A6-A7D7-7E4C196E4686",
-                "pid": "P8138",
-                "item": "Q1082222",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "Nasa photo satellite de Paris.jpg",
-                  "kind": "photo",
-                  "aspect": 1.1558,
-                  "megapixels": 2.02,
-                  "credit": {
-                    "artist": "NASA/GSFC/METI/ERSDAC/JAROS, and U.S./Japan ASTER Science Team.",
-                    "license": "Public domain"
-                  }
-                },
-                "priority": 0.4
-              },
-              {
-                "statement": "Q90-45280CB1-F6EB-4219-BFA6-55CEC1CA3778",
-                "pid": "P8138",
-                "item": "Q108921672",
-                "rank": "normal",
-                "provenance": "none",
-                "priority": 0.4
-              }
-            ],
-            "priority": 2.0,
-            "rule": "single"
-          }
-        ],
-        "sheet": [
-          {
-            "primitive": "fact",
-            "pid": "P131",
-            "form": "list",
-            "statements": [
-              {
-                "statement": "Q90-021a1f6d-4f77-56b9-d970-7ef20fb7b2a5",
-                "pid": "P131",
-                "item": "Q124881945",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1968
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 2018
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q90-6dac5f8a-4bf3-54ec-71e3-05d6c0fe54df",
-                "pid": "P131",
-                "item": "Q13917",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1960
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 2015
-                  }
-                ],
-                "image": {
-                  "file": "Eiffel Tower from the Tour Montparnasse 3, Paris May 2014.jpg",
-                  "kind": "photo",
-                  "aspect": 1.4114,
-                  "megapixels": 11.28,
-                  "credit": {
-                    "artist": "David McSpadden from Daly City, United States",
-                    "license": "CC BY 2.0"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q90-7CFF4649-B221-4803-9DBE-08CD3436DF05",
-                "pid": "P131",
-                "item": "Q2863958",
-                "rank": "normal",
-                "provenance": "imported",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1800
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 1960
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q90-32cbf37c-47d3-0c91-13aa-c5a1d3651c8b",
-                "pid": "P131",
-                "item": "Q1142326",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1790
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 1967
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q90-aab66cc7-4592-d978-5620-7d0e01603e05",
-                "pid": "P131",
-                "item": "Q70972",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P582",
-                    "year": 1790
-                  }
-                ],
-                "image": {
-                  "file": "Chateau de Versailles 1668 Pierre Patel.jpg",
-                  "kind": "photo",
-                  "aspect": 1.3772,
-                  "megapixels": 5.96,
-                  "credit": {
-                    "artist": "Pierre Patel",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": true
-              }
-            ],
-            "priority": 3.585,
-            "former": true,
-            "rule": "former"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P2044",
-            "form": "variants",
-            "statements": [
-              {
-                "statement": "Q90-2f662803-4f5e-73e9-c277-aa4122a27dd2",
-                "pid": "P2044",
-                "amount": 48.0,
-                "unit": "Q11573",
-                "rank": "preferred",
-                "provenance": "sourced",
-                "shown": true
-              },
-              {
-                "statement": "Q90-a2e1c0a8-4648-5394-978a-e4ea225e6618",
-                "pid": "P2044",
-                "amount": 28.0,
-                "unit": "Q11573",
-                "rank": "normal",
-                "provenance": "imported",
-                "shown": true
-              },
-              {
-                "statement": "Q90-617444CC-1471-4DCF-93C3-1A5C321CB6A9",
-                "pid": "P2044",
-                "amount": 127.0,
-                "unit": "Q11573",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P3831",
-                    "item": "Q3393392"
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q90-1A9F1447-2F2F-4D38-B2D8-CD7DAAE1E16C",
-                "pid": "P2044",
-                "amount": 27.0,
-                "unit": "Q11573",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P3831",
-                    "item": "Q30278109"
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 2.4,
-            "rule": "row"
           }
         ]
       },
@@ -3934,7 +3934,194 @@ expression: composition
             "rule": "office"
           }
         ],
-        "stack": [
+        "gallery": [
+          {
+            "primitive": "network",
+            "role": "gallery",
+            "values": [
+              {
+                "statement": "q90-9B04A953-4A15-4F1E-975C-EAF7F67D1ED8",
+                "pid": "P194",
+                "item": "Q775994",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Conseil de Paris.JPG",
+                  "kind": "photo",
+                  "aspect": 1.5,
+                  "megapixels": 13.9,
+                  "credit": {
+                    "artist": "Zigsfy",
+                    "license": "CC BY-SA 3.0"
+                  }
+                },
+                "priority": 0.8
+              },
+              {
+                "statement": "Q90-2efd5670-47f9-1135-f870-fca47f660836",
+                "pid": "P797",
+                "item": "Q3278478",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Pont d'Arcole and Hôtel de Ville, Paris 15 April 2014.jpg",
+                  "kind": "photo",
+                  "aspect": 1.6546,
+                  "megapixels": 12.68,
+                  "credit": {
+                    "artist": "Juan Enrique Gilardi from Mar del Plata, Argentina",
+                    "license": "CC BY-SA 2.0"
+                  }
+                },
+                "priority": 0.4
+              },
+              {
+                "statement": "Q90-b295f5b6-47af-9f87-af06-5ee0dd3421a9",
+                "pid": "P708",
+                "item": "Q1242250",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "NotreDameDeParis.jpg",
+                  "kind": "photo",
+                  "aspect": 0.7528,
+                  "megapixels": 10.9,
+                  "assessed": [
+                    "Featured pictures on Wikimedia Commons",
+                    "Quality images"
+                  ],
+                  "credit": {
+                    "artist": "Sanchezn",
+                    "license": "CC BY-SA 3.0"
+                  }
+                },
+                "priority": 0.4
+              }
+            ],
+            "priority": 0.8,
+            "rule": "single"
+          }
+        ],
+        "sheet": [
+          {
+            "primitive": "fact",
+            "pid": "P1454",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q90-c0304b9f-42c7-9a53-1909-a55615faac5c",
+                "pid": "P1454",
+                "item": "Q22927616",
+                "rank": "normal",
+                "provenance": "none",
+                "class": true,
+                "shown": true
+              }
+            ],
+            "priority": 1.6,
+            "rule": "few-pictures"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P2769",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q90-741345ee-4b20-70f4-d123-1db498793738",
+                "pid": "P2769",
+                "amount": 7561800000.0,
+                "unit": "Q4916",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P585",
+                    "year": 2026
+                  }
+                ],
+                "shown": true
+              }
+            ],
+            "priority": 1.4,
+            "measured": true,
+            "rule": "row"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P1376",
+            "form": "list",
+            "statements": [
+              {
+                "statement": "Q90-b725eadc-4cd1-8f80-ecf9-f23a2ae1aa19",
+                "pid": "P1376",
+                "item": "Q124881945",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1968
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 2018
+                  }
+                ],
+                "shown": true
+              },
+              {
+                "statement": "Q90-bd7c5fe2-4ff8-262d-2467-0c718356e35d",
+                "pid": "P1376",
+                "item": "Q71084",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1804
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1815
+                  }
+                ],
+                "image": {
+                  "file": "Jean-Louis-Ernest Meissonier-Campagne de France.jpg",
+                  "kind": "photo",
+                  "aspect": 1.538,
+                  "megapixels": 3.0,
+                  "credit": {
+                    "artist": "Jean-Louis-Ernest Meissonier",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q90-37269166-2B12-4189-8B99-AFFA9F47EF53",
+                "pid": "P1376",
+                "item": "Q1142326",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1790
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1967
+                  }
+                ],
+                "shown": true
+              }
+            ],
+            "priority": 1.985,
+            "former": true,
+            "rule": "former"
+          }
+        ],
+        "strips": [
           {
             "primitive": "network",
             "pid": "P1376",
@@ -4170,193 +4357,6 @@ expression: composition
             ],
             "priority": 0.4,
             "rule": "set"
-          }
-        ],
-        "gallery": [
-          {
-            "primitive": "network",
-            "role": "gallery",
-            "values": [
-              {
-                "statement": "q90-9B04A953-4A15-4F1E-975C-EAF7F67D1ED8",
-                "pid": "P194",
-                "item": "Q775994",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "Conseil de Paris.JPG",
-                  "kind": "photo",
-                  "aspect": 1.5,
-                  "megapixels": 13.9,
-                  "credit": {
-                    "artist": "Zigsfy",
-                    "license": "CC BY-SA 3.0"
-                  }
-                },
-                "priority": 0.8
-              },
-              {
-                "statement": "Q90-2efd5670-47f9-1135-f870-fca47f660836",
-                "pid": "P797",
-                "item": "Q3278478",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "Pont d'Arcole and Hôtel de Ville, Paris 15 April 2014.jpg",
-                  "kind": "photo",
-                  "aspect": 1.6546,
-                  "megapixels": 12.68,
-                  "credit": {
-                    "artist": "Juan Enrique Gilardi from Mar del Plata, Argentina",
-                    "license": "CC BY-SA 2.0"
-                  }
-                },
-                "priority": 0.4
-              },
-              {
-                "statement": "Q90-b295f5b6-47af-9f87-af06-5ee0dd3421a9",
-                "pid": "P708",
-                "item": "Q1242250",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "NotreDameDeParis.jpg",
-                  "kind": "photo",
-                  "aspect": 0.7528,
-                  "megapixels": 10.9,
-                  "assessed": [
-                    "Featured pictures on Wikimedia Commons",
-                    "Quality images"
-                  ],
-                  "credit": {
-                    "artist": "Sanchezn",
-                    "license": "CC BY-SA 3.0"
-                  }
-                },
-                "priority": 0.4
-              }
-            ],
-            "priority": 0.8,
-            "rule": "single"
-          }
-        ],
-        "sheet": [
-          {
-            "primitive": "fact",
-            "pid": "P1454",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q90-c0304b9f-42c7-9a53-1909-a55615faac5c",
-                "pid": "P1454",
-                "item": "Q22927616",
-                "rank": "normal",
-                "provenance": "none",
-                "class": true,
-                "shown": true
-              }
-            ],
-            "priority": 1.6,
-            "rule": "few-pictures"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P2769",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q90-741345ee-4b20-70f4-d123-1db498793738",
-                "pid": "P2769",
-                "amount": 7561800000.0,
-                "unit": "Q4916",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 2026
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 1.4,
-            "measured": true,
-            "rule": "row"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P1376",
-            "form": "list",
-            "statements": [
-              {
-                "statement": "Q90-b725eadc-4cd1-8f80-ecf9-f23a2ae1aa19",
-                "pid": "P1376",
-                "item": "Q124881945",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1968
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 2018
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q90-bd7c5fe2-4ff8-262d-2467-0c718356e35d",
-                "pid": "P1376",
-                "item": "Q71084",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1804
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 1815
-                  }
-                ],
-                "image": {
-                  "file": "Jean-Louis-Ernest Meissonier-Campagne de France.jpg",
-                  "kind": "photo",
-                  "aspect": 1.538,
-                  "megapixels": 3.0,
-                  "credit": {
-                    "artist": "Jean-Louis-Ernest Meissonier",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q90-37269166-2B12-4189-8B99-AFFA9F47EF53",
-                "pid": "P1376",
-                "item": "Q1142326",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1790
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 1967
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 1.985,
-            "former": true,
-            "rule": "former"
           }
         ]
       },
@@ -5222,6 +5222,160 @@ expression: composition
         "stack": [
           {
             "primitive": "network",
+            "pid": "P463",
+            "form": "rows",
+            "values": [
+              {
+                "statement": "Q90-363DAE9E-2A68-4845-BE5E-391D00B322D3",
+                "pid": "P463",
+                "item": "Q48268",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 2022
+                  }
+                ],
+                "image": {
+                  "file": "IUCN-Headquarters.jpg",
+                  "kind": "photo",
+                  "aspect": 1.3572,
+                  "megapixels": 3.09,
+                  "credit": {
+                    "artist": "Erich Iseli",
+                    "license": "CC BY-SA 3.0"
+                  }
+                },
+                "described": true,
+                "shown": true
+              },
+              {
+                "statement": "Q90-117e5db9-4774-0d65-6464-7d50d866df86",
+                "pid": "P463",
+                "item": "Q485087",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "C40 Logo RGB 72dpi.png",
+                  "kind": "drawing",
+                  "aspect": 1.0,
+                  "megapixels": 1.17,
+                  "credit": {
+                    "artist": "Dsamuels100",
+                    "license": "CC0"
+                  }
+                },
+                "described": true,
+                "shown": true
+              },
+              {
+                "statement": "Q90-583e754b-4d5a-a55a-420f-b5d604233cfc",
+                "pid": "P463",
+                "item": "Q67652870",
+                "rank": "normal",
+                "provenance": "sourced",
+                "described": true,
+                "shown": true
+              },
+              {
+                "statement": "Q90-1b838e84-4fd0-7d9e-15fb-888564020e77",
+                "pid": "P463",
+                "item": "Q9383972",
+                "rank": "normal",
+                "provenance": "sourced",
+                "described": true,
+                "shown": true
+              }
+            ],
+            "priority": 2.8,
+            "rule": "described-set"
+          }
+        ],
+        "gallery": [
+          {
+            "primitive": "network",
+            "role": "gallery",
+            "values": [
+              {
+                "statement": "Q90-8AB545EE-F769-4DA0-8D7E-E7608BEB424E",
+                "pid": "P1299",
+                "item": "Q3725832",
+                "rank": "normal",
+                "provenance": "sourced",
+                "image": {
+                  "file": "Ivryrubens.jpg",
+                  "kind": "photo",
+                  "aspect": 1.8376,
+                  "megapixels": 0.4,
+                  "credit": {
+                    "artist": "Peter Paul Rubens",
+                    "license": "Public domain"
+                  }
+                },
+                "priority": 1.4
+              }
+            ],
+            "priority": 1.4,
+            "rule": "single"
+          }
+        ],
+        "sheet": [
+          {
+            "primitive": "fact",
+            "pid": "P166",
+            "form": "list",
+            "statements": [
+              {
+                "statement": "Q90-98c0d07b-4dd2-97d2-c4fc-08018c1c3b49",
+                "pid": "P166",
+                "item": "Q2990283",
+                "rank": "normal",
+                "provenance": "none",
+                "class": true,
+                "shown": true
+              },
+              {
+                "statement": "q90-9C6AF2AF-9791-4813-B3D8-29EC1B75D40D",
+                "pid": "P166",
+                "item": "Q2727598",
+                "rank": "normal",
+                "provenance": "sourced",
+                "image": {
+                  "file": "Croix de Guerre 1914 1918.jpg",
+                  "kind": "photo",
+                  "aspect": 0.3773,
+                  "megapixels": 0.14,
+                  "credit": {
+                    "artist": "Fdutil",
+                    "license": "CC BY-SA 3.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q90-9edec7d2-47f1-7fd1-dfb4-022cc8ea8610",
+                "pid": "P166",
+                "item": "Q10855271",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P585",
+                    "year": 1900
+                  }
+                ],
+                "class": true,
+                "shown": true
+              }
+            ],
+            "priority": 1.985,
+            "rule": "few-pictures"
+          }
+        ],
+        "strips": [
+          {
+            "primitive": "network",
             "pid": "P190",
             "form": "strip",
             "values": [
@@ -5646,158 +5800,6 @@ expression: composition
             ],
             "priority": 3.57,
             "rule": "set"
-          },
-          {
-            "primitive": "network",
-            "pid": "P463",
-            "form": "rows",
-            "values": [
-              {
-                "statement": "Q90-363DAE9E-2A68-4845-BE5E-391D00B322D3",
-                "pid": "P463",
-                "item": "Q48268",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 2022
-                  }
-                ],
-                "image": {
-                  "file": "IUCN-Headquarters.jpg",
-                  "kind": "photo",
-                  "aspect": 1.3572,
-                  "megapixels": 3.09,
-                  "credit": {
-                    "artist": "Erich Iseli",
-                    "license": "CC BY-SA 3.0"
-                  }
-                },
-                "described": true,
-                "shown": true
-              },
-              {
-                "statement": "Q90-117e5db9-4774-0d65-6464-7d50d866df86",
-                "pid": "P463",
-                "item": "Q485087",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "C40 Logo RGB 72dpi.png",
-                  "kind": "drawing",
-                  "aspect": 1.0,
-                  "megapixels": 1.17,
-                  "credit": {
-                    "artist": "Dsamuels100",
-                    "license": "CC0"
-                  }
-                },
-                "described": true,
-                "shown": true
-              },
-              {
-                "statement": "Q90-583e754b-4d5a-a55a-420f-b5d604233cfc",
-                "pid": "P463",
-                "item": "Q67652870",
-                "rank": "normal",
-                "provenance": "sourced",
-                "described": true,
-                "shown": true
-              },
-              {
-                "statement": "Q90-1b838e84-4fd0-7d9e-15fb-888564020e77",
-                "pid": "P463",
-                "item": "Q9383972",
-                "rank": "normal",
-                "provenance": "sourced",
-                "described": true,
-                "shown": true
-              }
-            ],
-            "priority": 2.8,
-            "rule": "described-set"
-          }
-        ],
-        "gallery": [
-          {
-            "primitive": "network",
-            "role": "gallery",
-            "values": [
-              {
-                "statement": "Q90-8AB545EE-F769-4DA0-8D7E-E7608BEB424E",
-                "pid": "P1299",
-                "item": "Q3725832",
-                "rank": "normal",
-                "provenance": "sourced",
-                "image": {
-                  "file": "Ivryrubens.jpg",
-                  "kind": "photo",
-                  "aspect": 1.8376,
-                  "megapixels": 0.4,
-                  "credit": {
-                    "artist": "Peter Paul Rubens",
-                    "license": "Public domain"
-                  }
-                },
-                "priority": 1.4
-              }
-            ],
-            "priority": 1.4,
-            "rule": "single"
-          }
-        ],
-        "sheet": [
-          {
-            "primitive": "fact",
-            "pid": "P166",
-            "form": "list",
-            "statements": [
-              {
-                "statement": "Q90-98c0d07b-4dd2-97d2-c4fc-08018c1c3b49",
-                "pid": "P166",
-                "item": "Q2990283",
-                "rank": "normal",
-                "provenance": "none",
-                "class": true,
-                "shown": true
-              },
-              {
-                "statement": "q90-9C6AF2AF-9791-4813-B3D8-29EC1B75D40D",
-                "pid": "P166",
-                "item": "Q2727598",
-                "rank": "normal",
-                "provenance": "sourced",
-                "image": {
-                  "file": "Croix de Guerre 1914 1918.jpg",
-                  "kind": "photo",
-                  "aspect": 0.3773,
-                  "megapixels": 0.14,
-                  "credit": {
-                    "artist": "Fdutil",
-                    "license": "CC BY-SA 3.0"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q90-9edec7d2-47f1-7fd1-dfb4-022cc8ea8610",
-                "pid": "P166",
-                "item": "Q10855271",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 1900
-                  }
-                ],
-                "class": true,
-                "shown": true
-              }
-            ],
-            "priority": 1.985,
-            "rule": "few-pictures"
           }
         ]
       },

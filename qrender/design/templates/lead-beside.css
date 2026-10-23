@@ -23,17 +23,19 @@
    so the sheet goes under the stack; in hero-plus-stack the hero (a map or
    a wide picture) is the shorter one, so the sheet goes under the hero.
    The last row is flexible: the extra height of the tall column goes to
-   it, not to the short one. The text of the article comes after the
+   it, not to the short one. The strips of pictures are under the
+   columns, the full width. The text of the article comes after the
    facts, then the articles of the topics. */
 .t-lead-beside,
 .t-hero-plus-stack {
-	grid-template-rows: [title] auto [top] auto [bottom] 1fr [gallery] auto [prose] auto [topics] auto;
+	grid-template-rows: [title] auto [top] auto [bottom] 1fr [gallery] auto [strips] auto [prose] auto [topics] auto;
 
 	& > h2 { grid-row: title; }
 	& > [data-slot='hero'] { grid-row: top / span 2; }
 	& > [data-slot='stack'] { grid-row: top; }
 	& > [data-slot='sheet'] { grid-row: bottom; }
 	& > [data-slot='gallery'] { grid-row: gallery; }
+	& > [data-slot='strips'] { grid-row: strips; }
 	& > :is( .prose-slot, .article-slot ) { grid-row: prose; }
 	& > .topic-articles { grid-row: topics; }
 	& > .prose-links { grid-row: -1; }

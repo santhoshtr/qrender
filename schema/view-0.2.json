@@ -5830,6 +5830,12 @@
               },
               "type": "array"
             },
+            "strips": {
+              "items": {
+                "$ref": "#/$defs/Block"
+              },
+              "type": "array"
+            },
             "summary": {
               "items": {
                 "$ref": "#/$defs/Block"

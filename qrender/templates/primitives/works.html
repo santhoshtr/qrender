@@ -1,5 +1,5 @@
 {%- import "macros.html" as m -%}
-{#- Works by the item: a row of pictures with "View all", or a list when
+{#- Works by the item: a strip of cards with "View all", or a list when
     most have no picture. -#}
 {%- let values = ui.works(b) -%}
 {%- let heading = ui.heading(b.pids.as_slice()) -%}
@@ -18,7 +18,7 @@
         {%- let all = ui.view_all(values.len()) -%}
         {%- let n = ui.id() -%}
         {%- call m::scroller(heading) -%}
-        {%- for s in values.iter() -%}{%- if s.shown -%}{{ ui.figure(s)|safe }}{%- endif -%}{%- endfor -%}
+        {{ ui.rows(ui.first_shown(values.as_slice()))|safe }}
         {%- if all %}{% call m::view_all(ui, n) %}{% endcall %}{% endif -%}
         {%- endcall -%}
         {%- if all %}{% call m::dialog(ui, n, heading) %}{{ ui.rows(values.as_slice())|safe }}{% endcall %}{% endif -%}

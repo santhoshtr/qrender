@@ -364,54 +364,139 @@ expression: html
 </div></dl></section>
             <section class="spread t-columns" id="location"
              data-spread="location"
-             data-dimension="place"><h2><span class="title">geography</span></h2><div data-slot="stack">
+             data-dimension="place"><h2><span class="title">geography</span></h2><div data-slot="gallery"><dl class="sheet"><div class="row">
+            <dt>lowest point</dt>
+            <dd><a href="https://www.wikidata.org/wiki/Q459173">Challenger Deep</a> <span class="note quals">elevation above sea level: <data value="-10994" data-f="number">-10994</data></span></dd>
+            <span class="tools"><button class="info"
+            type="button"
+            popovertarget="p6"
+            aria-label="Credit">i</button><span id="p6" popover class="pop">Vlvescovo · CC BY-SA 4.0</span>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P1589"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                </span><img class="pic k-photo"
+     style="--a:0.75"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/Challenger%20Deep%20Dive%20071222%20by%20V%20Vescovo%20in%20DSV%20Limiting%20Factor%20-%20Southern%20Wall%20of%20Western%20Pool.jpg?width=330"
+     alt=""
+     loading="lazy">
+        </div><div class="row">
+            <dt>lowest point</dt>
+            <dd><a href="https://www.wikidata.org/wiki/Q2586548">Vityas Deep 1</a> <span class="note quals">1957 – · elevation above sea level: <data value="-10950" data-f="number">-10950</data></span></dd>
+            <span class="tools"><span class="prov-imported" title="imported from Wikimedia project">W</span>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P1589"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                </span>
+        </div></dl></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>coordinates of northernmost point</dt>
+<dd><button class="pin-link"
+            type="button"
+            command="show-modal"
+            commandfor="d7"
+            aria-label="Show on a map">📍</button>90, 0<dialog id="d7"
+        class="lightbox k-map"
+        closedby="any"
+        aria-labelledby="d7-h">
+    <header>
+        <h2 id="d7-h">90, 0</h2>
+        <button type="button"
+                command="close"
+                commandfor="d7"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <qr-map data-map="{&#34;pin&#34;:[90.0,0.0],&#34;bounds&#34;:[[84.9915,-1.0986],[85.11,1.0986]],&#34;markers&#34;:[],&#34;outlines&#34;:[]}"
+                data-attribution="© OpenStreetMap contributors">
+            <figure class="map"><img src="https://maps.wikimedia.org/img/osm-intl,9,90,0,800x500@2x.png" alt="" loading="lazy"><span class="pin"
+          style="left:50.00%;
+                 top:50.00%"></span></figure>
+        </qr-map>
+    </div></dialog> <span class="note quals"><a href="https://www.wikidata.org/wiki/Q934">North Pole</a></span></dd>
+<span class="tools">
+        <span class="prov-none" title="—"></span>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P1332"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
+</div><div class="row r-value"><dt>coordinates of southernmost point</dt>
+<dd><button class="pin-link"
+            type="button"
+            command="show-modal"
+            commandfor="d8"
+            aria-label="Show on a map">📍</button>-90, 0<dialog id="d8"
+        class="lightbox k-map"
+        closedby="any"
+        aria-labelledby="d8-h">
+    <header>
+        <h2 id="d8-h">-90, 0</h2>
+        <button type="button"
+                command="close"
+                commandfor="d8"
+                aria-label="Close">×</button>
+    </header>
+    <div class="stage">
+        <qr-map data-map="{&#34;pin&#34;:[-90.0,0.0],&#34;bounds&#34;:[[-85.11,-1.0986],[-84.9915,1.0986]],&#34;markers&#34;:[],&#34;outlines&#34;:[]}"
+                data-attribution="© OpenStreetMap contributors">
+            <figure class="map"><img src="https://maps.wikimedia.org/img/osm-intl,9,-90,0,800x500@2x.png" alt="" loading="lazy"><span class="pin"
+          style="left:50.00%;
+                 top:50.00%"></span></figure>
+        </qr-map>
+    </div></dialog> <span class="note quals"><a href="https://www.wikidata.org/wiki/Q933">South Pole</a></span></dd>
+<span class="tools">
+        <span class="prov-none" title="—"></span>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P1333"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
+</div><div class="row r-list former"><dt>lowest point <span class="mark">former</span></dt>
+<dd><span class="v"><a href="https://www.wikidata.org/wiki/Q1491734">Galathea Depth</a> <span class="note quals">– 1952 · elevation above sea level: <data value="-10540" data-f="number">-10540</data></span>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P1589"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+    </span></dd>
+<span class="tools"></span>
+</div></dl><div data-slot="strips">
         <div class="block set strip">
-    <h3>highest point <span class="note">3</span></h3><div class="run scroll" tabindex="0" role="group" aria-label="highest point"><figure class="m k-photo"
-        style="--a:1.8396">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Everest%20as%20seen%20from%20Drukair2%20PLW%20edit.jpg?width=960"
-         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Everest%20as%20seen%20from%20Drukair2%20PLW%20edit.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Everest%20as%20seen%20from%20Drukair2%20PLW%20edit.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Everest%20as%20seen%20from%20Drukair2%20PLW%20edit.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Everest%20as%20seen%20from%20Drukair2%20PLW%20edit.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Everest%20as%20seen%20from%20Drukair2%20PLW%20edit.jpg?width=1920 1920w"
-         sizes="(max-width: 760px) 50vw,
-                20vw"
-         alt=""
-         loading="lazy">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q513">Mount Everest</a></b><span><a href="https://www.wikidata.org/wiki/Q125465">sea level</a> · elevation above sea level: <data value="8848" data-f="number">8848</data></span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p7"
-            aria-label="Credit">i</button><span id="p7" popover class="pop">Mount_Everest_as_seen_from_Drukair2.jpg: shrimpo1967
-derivative work: Papa Lima Whiskey 2 (talk) · CC BY-SA 2.0</span><a class="edit"
+    <h3>highest point <span class="note">3</span></h3><div class="run scroll" tabindex="0" role="group" aria-label="highest point"><ul class="pic-rows">
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q513">Mount Everest</a></b><span class="prov-none" title="—"></span>
+                    <a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P610"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></figure><figure class="m k-photo"
-        style="--a:1.3289">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mauna%20Kea10.jpg?width=960"
-         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Mauna%20Kea10.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Mauna%20Kea10.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Mauna%20Kea10.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Mauna%20Kea10.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Mauna%20Kea10.jpg?width=1920 1920w"
-         sizes="(max-width: 760px) 50vw,
-                20vw"
-         alt=""
-         loading="lazy">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q131230">Mauna Kea</a></b><span><a href="https://www.wikidata.org/wiki/Q468469">seabed</a> · elevation above sea level: <data value="4205" data-f="number">4205</data></span></figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p8"
-            aria-label="Credit">i</button><span id="p8" popover class="pop">CC BY-SA 3.0</span><a class="edit"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                <span class="note quals"><a href="https://www.wikidata.org/wiki/Q125465">sea level</a> · elevation above sea level: <data value="8848" data-f="number">8848</data></span></span><img class="pic k-photo"
+     style="--a:1.8396"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Everest%20as%20seen%20from%20Drukair2%20PLW%20edit.jpg?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q131230">Mauna Kea</a></b>
+                    <a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P610"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></figure><figure class="m k-photo"
-        style="--a:1.712">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Volc%C3%A1n%20Chimborazo%20desde%20Riobamba.jpg?width=960"
-         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Volc%C3%A1n%20Chimborazo%20desde%20Riobamba.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Volc%C3%A1n%20Chimborazo%20desde%20Riobamba.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Volc%C3%A1n%20Chimborazo%20desde%20Riobamba.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Volc%C3%A1n%20Chimborazo%20desde%20Riobamba.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Volc%C3%A1n%20Chimborazo%20desde%20Riobamba.jpg?width=1920 1920w"
-         sizes="(max-width: 760px) 50vw,
-                20vw"
-         alt=""
-         loading="lazy">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q14081">Chimborazo</a></b><span><a href="https://www.wikidata.org/wiki/Q511093">centroid</a> · elevation above sea level: <data value="6263.47" data-f="number">6263.47</data></span></figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p9"
-            aria-label="Credit">i</button><span id="p9" popover class="pop">Eduardo Navas · CC BY-SA 2.0</span><a class="edit"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                <span class="note quals"><a href="https://www.wikidata.org/wiki/Q468469">seabed</a> · elevation above sea level: <data value="4205" data-f="number">4205</data></span></span><img class="pic k-photo"
+     style="--a:1.3289"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/Mauna%20Kea10.jpg?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q14081">Chimborazo</a></b>
+                    <a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P610"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d6">View all</button></div><dialog id="d6" closedby="any">
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                <span class="note quals"><a href="https://www.wikidata.org/wiki/Q511093">centroid</a> · elevation above sea level: <data value="6263.47" data-f="number">6263.47</data></span></span><img class="pic k-photo"
+     style="--a:1.712"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/Volc%C3%A1n%20Chimborazo%20desde%20Riobamba.jpg?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+</ul><button class="view-all" type="button" command="show-modal" commandfor="d9">View all</button></div><dialog id="d9" closedby="any">
         <header>
             <h2>highest point</h2>
             <button type="button"
                     command="close"
-                    commandfor="d6"
+                    commandfor="d9"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -453,59 +538,52 @@ derivative work: Papa Lima Whiskey 2 (talk) · CC BY-SA 2.0</span><a class="edit
         </li>
 </ul></div>
     </dialog></div><div class="block set strip">
-    <h3>location <span class="note">4</span></h3><div class="run scroll" tabindex="0" role="group" aria-label="location"><figure class="m k-photo"
-        style="--a:1">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Artist%E2%80%99s%20impression%20of%20the%20Milky%20Way.jpg?width=960"
-         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Artist%E2%80%99s%20impression%20of%20the%20Milky%20Way.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Artist%E2%80%99s%20impression%20of%20the%20Milky%20Way.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Artist%E2%80%99s%20impression%20of%20the%20Milky%20Way.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Artist%E2%80%99s%20impression%20of%20the%20Milky%20Way.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Artist%E2%80%99s%20impression%20of%20the%20Milky%20Way.jpg?width=1920 1920w"
-         sizes="(max-width: 760px) 50vw,
-                20vw"
-         alt=""
-         loading="lazy">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q321">Milky Way</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p11"
-            aria-label="Credit">i</button><span id="p11" popover class="pop">NASA/JPL-Caltech/ESO/R. Hurt · Public domain</span><a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P276"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></figure><figure class="m k-photo"
-        style="--a:1.3331">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Local%20Group%20rus.png?width=960"
-         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Local%20Group%20rus.png?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Local%20Group%20rus.png?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Local%20Group%20rus.png?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Local%20Group%20rus.png?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Local%20Group%20rus.png?width=1920 1920w"
-         sizes="(max-width: 760px) 50vw,
-                20vw"
-         alt=""
-         loading="lazy">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q3944">Local Group</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p12"
-            aria-label="Credit">i</button><span id="p12" popover class="pop">Local_Group.svg: Richard Powell
-Local_Group_rus.svg: *Local_Group.svg: Richard Powell
-derivative work: antropia (talk)
-derivative work: antropia (talk) · CC BY-SA 3.0</span><a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P276"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></figure><figure class="m k-empty" style="--a:1.333">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q215913">circumstellar habitable zone</a></b><span class="prov-none" title="—"></span>
-    </figcaption>
-    <span class="tools">
-        
-            <a class="edit"
+    <h3>location <span class="note">4</span></h3><div class="run scroll" tabindex="0" role="group" aria-label="location"><ul class="pic-rows">
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q321">Milky Way</a></b><span class="prov-none" title="—"></span>
+                    <a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P276"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-        
-    </span>
-</figure><figure class="m k-photo"
-        style="--a:1.7778">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Solar%20System%20True%20Color%20EN.png?width=960"
-         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Solar%20System%20True%20Color%20EN.png?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Solar%20System%20True%20Color%20EN.png?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Solar%20System%20True%20Color%20EN.png?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Solar%20System%20True%20Color%20EN.png?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Solar%20System%20True%20Color%20EN.png?width=1920 1920w"
-         sizes="(max-width: 760px) 50vw,
-                20vw"
-         alt=""
-         loading="lazy">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q7879772">inner Solar System</a></b><span class="from" title="en.wikipedia.org">W</span><span><a href="https://www.wikidata.org/wiki/Q437877">location of Earth</a></span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p13"
-            aria-label="Credit">i</button><span id="p13" popover class="pop">Omarius257 · CC BY-SA 4.0</span><a class="edit"
+                </span><img class="pic k-photo"
+     style="--a:1"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/Artist%E2%80%99s%20impression%20of%20the%20Milky%20Way.jpg?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q3944">Local Group</a></b><span class="prov-none" title="—"></span>
+                    <a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P276"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d10">View all</button></div><dialog id="d10" closedby="any">
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                </span><img class="pic k-photo"
+     style="--a:1.3331"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/Local%20Group%20rus.png?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q215913">circumstellar habitable zone</a></b><span class="prov-none" title="—"></span>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P276"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                </span>
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q7879772">inner Solar System</a></b><span class="from" title="en.wikipedia.org">W</span><span class="prov-none" title="—"></span>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P276"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                <span class="note quals"><a href="https://www.wikidata.org/wiki/Q437877">location of Earth</a></span></span><img class="pic k-photo"
+     style="--a:1.7778"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/Solar%20System%20True%20Color%20EN.png?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+</ul><button class="view-all" type="button" command="show-modal" commandfor="d10">View all</button></div><dialog id="d10" closedby="any">
         <header>
             <h2>location</h2>
             <button type="button"
@@ -560,95 +638,7 @@ derivative work: antropia (talk) · CC BY-SA 3.0</span><a class="edit"
         </li>
 </ul></div>
     </dialog></div>
-    </div><div data-slot="gallery"><dl class="sheet"><div class="row">
-            <dt>lowest point</dt>
-            <dd><a href="https://www.wikidata.org/wiki/Q459173">Challenger Deep</a> <span class="note quals">elevation above sea level: <data value="-10994" data-f="number">-10994</data></span></dd>
-            <span class="tools"><button class="info"
-            type="button"
-            popovertarget="p14"
-            aria-label="Credit">i</button><span id="p14" popover class="pop">Vlvescovo · CC BY-SA 4.0</span>
-                    <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P1589"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-                </span><img class="pic k-photo"
-     style="--a:0.75"
-     src="https://commons.wikimedia.org/wiki/Special:FilePath/Challenger%20Deep%20Dive%20071222%20by%20V%20Vescovo%20in%20DSV%20Limiting%20Factor%20-%20Southern%20Wall%20of%20Western%20Pool.jpg?width=330"
-     alt=""
-     loading="lazy">
-        </div><div class="row">
-            <dt>lowest point</dt>
-            <dd><a href="https://www.wikidata.org/wiki/Q2586548">Vityas Deep 1</a> <span class="note quals">1957 – · elevation above sea level: <data value="-10950" data-f="number">-10950</data></span></dd>
-            <span class="tools"><span class="prov-imported" title="imported from Wikimedia project">W</span>
-                    <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P1589"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-                </span>
-        </div></dl></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>coordinates of northernmost point</dt>
-<dd><button class="pin-link"
-            type="button"
-            command="show-modal"
-            commandfor="d15"
-            aria-label="Show on a map">📍</button>90, 0<dialog id="d15"
-        class="lightbox k-map"
-        closedby="any"
-        aria-labelledby="d15-h">
-    <header>
-        <h2 id="d15-h">90, 0</h2>
-        <button type="button"
-                command="close"
-                commandfor="d15"
-                aria-label="Close">×</button>
-    </header>
-    <div class="stage">
-        <qr-map data-map="{&#34;pin&#34;:[90.0,0.0],&#34;bounds&#34;:[[84.9915,-1.0986],[85.11,1.0986]],&#34;markers&#34;:[],&#34;outlines&#34;:[]}"
-                data-attribution="© OpenStreetMap contributors">
-            <figure class="map"><img src="https://maps.wikimedia.org/img/osm-intl,9,90,0,800x500@2x.png" alt="" loading="lazy"><span class="pin"
-          style="left:50.00%;
-                 top:50.00%"></span></figure>
-        </qr-map>
-    </div></dialog> <span class="note quals"><a href="https://www.wikidata.org/wiki/Q934">North Pole</a></span></dd>
-<span class="tools">
-        <span class="prov-none" title="—"></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P1332"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>coordinates of southernmost point</dt>
-<dd><button class="pin-link"
-            type="button"
-            command="show-modal"
-            commandfor="d16"
-            aria-label="Show on a map">📍</button>-90, 0<dialog id="d16"
-        class="lightbox k-map"
-        closedby="any"
-        aria-labelledby="d16-h">
-    <header>
-        <h2 id="d16-h">-90, 0</h2>
-        <button type="button"
-                command="close"
-                commandfor="d16"
-                aria-label="Close">×</button>
-    </header>
-    <div class="stage">
-        <qr-map data-map="{&#34;pin&#34;:[-90.0,0.0],&#34;bounds&#34;:[[-85.11,-1.0986],[-84.9915,1.0986]],&#34;markers&#34;:[],&#34;outlines&#34;:[]}"
-                data-attribution="© OpenStreetMap contributors">
-            <figure class="map"><img src="https://maps.wikimedia.org/img/osm-intl,9,-90,0,800x500@2x.png" alt="" loading="lazy"><span class="pin"
-          style="left:50.00%;
-                 top:50.00%"></span></figure>
-        </qr-map>
-    </div></dialog> <span class="note quals"><a href="https://www.wikidata.org/wiki/Q933">South Pole</a></span></dd>
-<span class="tools">
-        <span class="prov-none" title="—"></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P1333"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-list former"><dt>lowest point <span class="mark">former</span></dt>
-<dd><span class="v"><a href="https://www.wikidata.org/wiki/Q1491734">Galathea Depth</a> <span class="note quals">– 1952 · elevation above sea level: <data value="-10540" data-f="number">-10540</data></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P1589"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-    </span></dd>
-<span class="tools"></span>
-</div></dl><div class="topic-articles"><div class="topic-article">
+    </div><div class="topic-articles"><div class="topic-article">
     <div class="body">
         <p class="source"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Wikipedia-logo-v2.svg?width=60" alt="" width="18"> en.wikipedia.org</p>
         <a class="title" href="https://en.wikipedia.org/wiki/Geography_of_the_earth" lang="en">Geography of the earth</a><p class="desc">geography of the entire Earth</p></div><img class="pic k-photo"
@@ -657,16 +647,16 @@ derivative work: antropia (talk) · CC BY-SA 3.0</span><a class="edit"
      alt=""
      loading="lazy"><span class="tools"><button class="info"
             type="button"
-            popovertarget="p17"
-            aria-label="Credit">i</button><span id="p17" popover class="pop">Unknown author Unknown author · Public domain</span></span></div></div></section>
+            popovertarget="p11"
+            aria-label="Credit">i</button><span id="p11" popover class="pop">Unknown author Unknown author · Public domain</span></span></div></div></section>
             <section class="spread t-columns" id="demography"
              data-spread="demography"
              data-dimension="measures"><h2><span class="title">demography</span></h2><div data-slot="stack">
         <qr-chart class="block series"><h3>population
     <button class="info"
             type="button"
-            popovertarget="p18"
-            aria-label="Description">i</button><span id="p18" popover class="pop">number of people inhabiting the place; number of people of subject</span>
+            popovertarget="p12"
+            aria-label="Description">i</button><span id="p12" popover class="pop">number of people inhabiting the place; number of people of subject</span>
     <a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P1082"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
@@ -688,8 +678,8 @@ derivative work: antropia (talk) · CC BY-SA 3.0</span><a class="edit"
 </div></qr-chart><qr-chart class="block series"><h3>number of out-of-school children
     <button class="info"
             type="button"
-            popovertarget="p19"
-            aria-label="Description">i</button><span id="p19" popover class="pop">number of out-of-school children reported for a place</span>
+            popovertarget="p13"
+            aria-label="Description">i</button><span id="p13" popover class="pop">number of out-of-school children reported for a place</span>
     <a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P2573"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
@@ -1180,12 +1170,12 @@ derivative work: antropia (talk) · CC BY-SA 3.0</span><a class="edit"
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P487"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-    </span><button class="more" type="button" command="show-modal" commandfor="d20">+3</button><dialog id="d20" closedby="any">
+    </span><button class="more" type="button" command="show-modal" commandfor="d14">+3</button><dialog id="d14" closedby="any">
         <header>
             <h2>Unicode character</h2>
             <button type="button"
                     command="close"
-                    commandfor="d20"
+                    commandfor="d14"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -1274,164 +1264,400 @@ derivative work: antropia (talk) · CC BY-SA 3.0</span><a class="edit"
 </div></dl><div class="prose-slot" lang="en"><p>The <a href="https://en.wikipedia.org/wiki/Modern_English">Modern English</a> word  <i>Earth</i> developed, via <a href="https://en.wikipedia.org/wiki/Middle_English">Middle English</a>, from an <a href="https://en.wikipedia.org/wiki/Old_English">Old English</a> noun most often spelled <i>eorðe</i>. It has cognates in every <a href="https://en.wikipedia.org/wiki/Germanic_language">Germanic language</a>, from which &#42;<i>erþō</i> has been reconstructed. In its earliest attestation, the word <i><i>eorðe</i></i> was used to translate the many senses of Latin <i>terra</i> and Greek <i>gē</i>: the ground, its soil, dry land, the human world, the surface of the world (including the sea), and the globe itself. As with <a href="https://en.wikipedia.org/wiki/Roman_Empire">Roman</a> <a href="https://en.wikipedia.org/wiki/Terra_(goddess)">Terra</a> (or Tellus) and <a href="https://en.wikipedia.org/wiki/Greeks">Greek</a> <a href="https://en.wikipedia.org/wiki/Gaia">Gaia</a>, Earth may have been a <a href="https://en.wikipedia.org/wiki/Earth_goddess">personified goddess</a> in <a href="https://en.wikipedia.org/wiki/Germanic_paganism">Germanic paganism</a>: late <a href="https://en.wikipedia.org/wiki/Norse_mythology">Norse mythology</a> included <a href="https://en.wikipedia.org/wiki/J%C3%B6r%C3%B0">Jörð</a> ('Earth'), a giantess often given as the mother of <a href="https://en.wikipedia.org/wiki/Thor">Thor</a>.</p><a class="read" href="https://en.wikipedia.org/wiki/Earth#Etymology">Etymology ↗</a></div></section>
             <section class="spread t-columns" id="relations"
              data-spread="relations"
-             data-dimension="place"><h2><span class="title">relation</span></h2><div data-slot="stack">
+             data-dimension="place"><h2><span class="title">relation</span></h2><div data-slot="gallery"><dl class="sheet"><div class="row">
+            <dt>‎most populous urban area</dt>
+            <dd><a href="https://www.wikidata.org/wiki/Q3630">Jakarta</a></dd>
+            <span class="tools"><button class="info"
+            type="button"
+            popovertarget="p15"
+            aria-label="Credit">i</button><span id="p15" popover class="pop">Copyrighted free use</span>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P13574"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                </span><img class="pic k-photo"
+     style="--a:1.3333"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/Jakarta.jpg?width=330"
+     alt=""
+     loading="lazy">
+        </div><div class="row">
+            <dt>part of</dt>
+            <dd><a href="https://www.wikidata.org/wiki/Q18589965">Earth–Moon system</a></dd>
+            <span class="tools"><span class="prov-none" title="—"></span><button class="info"
+            type="button"
+            popovertarget="p16"
+            aria-label="Credit">i</button><span id="p16" popover class="pop">No machine-readable author provided. Vulpecula assumed (based on copyright claims). · Public domain</span>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P361"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                </span><img class="pic k-photo"
+     style="--a:1.1671"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/Lagrange%20points%20Earth%20vs%20Moon.jpg?width=330"
+     alt=""
+     loading="lazy">
+        </div><div class="row">
+            <dt>part of</dt>
+            <dd><a href="https://www.wikidata.org/wiki/Q544">Solar System</a></dd>
+            <span class="tools"><span class="prov-none" title="—"></span><button class="info"
+            type="button"
+            popovertarget="p17"
+            aria-label="Credit">i</button><span id="p17" popover class="pop">CactiStaccingCrane · CC BY-SA 4.0</span>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P361"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                </span><img class="pic k-photo"
+     style="--a:1.7778"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/Solar%20System%20true%20color.jpg?width=330"
+     alt=""
+     loading="lazy">
+        </div><div class="row">
+            <dt>located in/on physical feature</dt>
+            <dd><a href="https://www.wikidata.org/wiki/Q1">universe</a></dd>
+            <span class="tools"><span class="prov-none" title="—"></span><button class="info"
+            type="button"
+            popovertarget="p18"
+            aria-label="Credit">i</button><span id="p18" popover class="pop">NASA, ESA, H. Teplitz and M. Rafelski (IPAC/Caltech), A. Koekemoer (STScI), R. Windhorst (Arizona State University), and Z. Levay (STScI) · Public domain</span>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P706"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                </span><img class="pic k-photo"
+     style="--a:1.0952"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/NASA-HS201427a-HubbleUltraDeepField2014-20140603.jpg?width=330"
+     alt=""
+     loading="lazy">
+        </div></dl></div><dl class="sheet" data-slot="sheet"><div class="row r-list"><dt>studied by</dt>
+<dd><span class="v"><a href="https://www.wikidata.org/wiki/Q46255">geophysics</a>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P2579"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+    </span><span class="v"><a href="https://www.wikidata.org/wiki/Q8008">Earth science</a>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P2579"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+    </span><span class="v"><a href="https://www.wikidata.org/wiki/Q104499">planetary science</a>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P2579"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+    </span><span class="v"><a href="https://www.wikidata.org/wiki/Q1069">geology</a>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P2579"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+    </span></dd>
+<span class="tools"></span>
+</div><div class="row r-list"><dt>has characteristic</dt>
+<dd><span class="v"><a href="https://www.wikidata.org/wiki/Q25935139">mass of the Earth</a>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P1552"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+    </span><span class="v"><a href="https://www.wikidata.org/wiki/Q6500960">Earth&#39;s magnetic field</a>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P1552"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+    </span><span class="v"><a href="https://www.wikidata.org/wiki/Q108156638">geologic activity</a>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P1552"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+    </span><span class="v"><a href="https://www.wikidata.org/wiki/Q105115142">narrative location</a> <span class="note quals"><a href="https://www.wikidata.org/wiki/Q5327160">Earth in fiction</a></span>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P1552"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+    </span><span class="v"><a href="https://www.wikidata.org/wiki/Q846030">planetary habitability</a>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P1552"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+    </span></dd>
+<span class="tools"></span>
+</div><div class="row r-value"><dt>opposite of</dt>
+<dd><span class="v"><a href="https://www.wikidata.org/wiki/Q527">sky</a> <span class="note quals"><a href="https://www.wikidata.org/wiki/Q2">Earth</a></span>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P461"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+    </span><span class="v"><a href="https://www.wikidata.org/wiki/Q4169">outer space</a> <span class="note quals"><a href="https://www.wikidata.org/wiki/Q1">universe</a></span>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P461"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+    </span></dd>
+<span class="tools"></span>
+</div><div class="row r-value"><dt>manifestation of</dt>
+<dd><a href="https://www.wikidata.org/wiki/Q898312">open system</a></dd>
+<span class="tools">
+        <span class="prov-none" title="—"></span>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P1557"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
+</div><div class="row r-list former"><dt>child astronomical body <span class="mark">former</span></dt>
+<dd><span class="v"><a href="https://www.wikidata.org/wiki/Q130301991">2024 PT5</a> <span class="note quals">2024 – 2024</span>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P398"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+    </span><span class="v"><a href="https://www.wikidata.org/wiki/Q113380363">2022 NX1</a> <span class="note quals">2022 – 2022</span>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P398"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+    </span><span class="v"><a href="https://www.wikidata.org/wiki/Q86388198">2020 CD3</a> <span class="note quals">2016 – 2020</span>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P398"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+    </span><span class="v"><a href="https://www.wikidata.org/wiki/Q211498">2006 RH120</a> <span class="note quals">2006 – 2007</span>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P398"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+    </span><span class="v"><a href="https://www.wikidata.org/wiki/Q48604">Mir</a> <span class="note quals">1986 – 2001</span>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P398"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+    </span><span class="v"><a href="https://www.wikidata.org/wiki/Q190776">Skylab</a> <span class="note quals">1973 – 1979</span>
+        <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P398"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+    </span><button class="more" type="button" command="show-modal" commandfor="d19">+2</button><dialog id="d19" closedby="any">
+        <header>
+            <h2>child astronomical body</h2>
+            <button type="button"
+                    command="close"
+                    commandfor="d19"
+                    aria-label="Close">×</button>
+        </header>
+        <div class="dialog-body"><ul class="pic-rows">
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q130301991">2024 PT5</a></b><span class="prov-none" title="—"></span>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P398"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                <span class="note quals">2024 – 2024</span></span><img class="pic k-photo"
+     style="--a:1.3333"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/Animation%20of%202024%20PT5%20around%20Earth%20-%20Close%20approach.gif?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q113380363">2022 NX1</a></b><span class="prov-none" title="—"></span>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P398"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                <span class="note quals">2022 – 2022</span></span>
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q86388198">2020 CD3</a></b><span class="prov-none" title="—"></span>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P398"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                <span class="note quals">2016 – 2020</span></span><img class="pic k-photo"
+     style="--a:1"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/2020%20CD3%20Gemini%20Color.jpg?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q211498">2006 RH120</a></b><span class="prov-none" title="—"></span>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P398"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                <span class="note quals">2006 – 2007</span></span><img class="pic k-photo"
+     style="--a:1.4476"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/2006-RH120-orbit.jpg?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q48604">Mir</a></b>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P398"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                <span class="note quals">1986 – 2001</span></span><img class="pic k-photo"
+     style="--a:1.0448"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/Mir%20on%2012%20June%201998edit1.jpg?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q190776">Skylab</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P398"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                <span class="note quals">1973 – 1979</span></span><img class="pic k-photo"
+     style="--a:1.2284"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/Skylab%20%28SL-4%29.jpg?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q211761">Salyut 1</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P398"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                <span class="note quals">1971 – 1971</span></span><img class="pic k-photo"
+     style="--a:1.4027"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/1972%20CPA%204112.jpg?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q40610">Tyazhely Sputnik</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P398"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                <span class="note quals">1961 – 1961</span></span><img class="pic k-photo"
+     style="--a:0.6667"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/Venera%201%20%28a%29%20%28Memorial%20Museum%20of%20Astronautics%29.JPG?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+</ul></div>
+    </dialog></dd>
+<span class="tools"></span>
+</div></dl><div data-slot="strips">
         <div class="block set strip">
-    <h3>has part(s) <span class="note">21</span></h3><div class="run scroll" tabindex="0" role="group" aria-label="has part(s)"><figure class="m k-photo"
-        style="--a:1.2739">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Europe%20satellite%20orthographic.jpg?width=960"
-         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Europe%20satellite%20orthographic.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Europe%20satellite%20orthographic.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Europe%20satellite%20orthographic.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Europe%20satellite%20orthographic.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Europe%20satellite%20orthographic.jpg?width=1920 1920w"
-         sizes="(max-width: 760px) 50vw,
-                20vw"
-         alt=""
-         loading="lazy">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q46">Europe</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p22"
-            aria-label="Credit">i</button><span id="p22" popover class="pop">Public domain</span><a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P527"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></figure><figure class="m k-photo"
-        style="--a:0.8904">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Africa%20satellite%20orthographic.jpg?width=960"
-         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Africa%20satellite%20orthographic.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Africa%20satellite%20orthographic.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Africa%20satellite%20orthographic.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Africa%20satellite%20orthographic.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Africa%20satellite%20orthographic.jpg?width=1920 1920w"
-         sizes="(max-width: 760px) 50vw,
-                20vw"
-         alt=""
-         loading="lazy">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q15">Africa</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p23"
-            aria-label="Credit">i</button><span id="p23" popover class="pop">NASA · Public domain</span><a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P527"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></figure><figure class="m k-photo"
-        style="--a:0.9618">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Asia%20satellite%20orthographic.jpg?width=960"
-         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Asia%20satellite%20orthographic.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Asia%20satellite%20orthographic.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Asia%20satellite%20orthographic.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Asia%20satellite%20orthographic.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Asia%20satellite%20orthographic.jpg?width=1920 1920w"
-         sizes="(max-width: 760px) 50vw,
-                20vw"
-         alt=""
-         loading="lazy">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q48">Asia</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p24"
-            aria-label="Credit">i</button><span id="p24" popover class="pop">Public domain</span><a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P527"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></figure><figure class="m k-photo"
-        style="--a:1">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Antarctica%206400px%20from%20Blue%20Marble.jpg?width=960"
-         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Antarctica%206400px%20from%20Blue%20Marble.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Antarctica%206400px%20from%20Blue%20Marble.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Antarctica%206400px%20from%20Blue%20Marble.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Antarctica%206400px%20from%20Blue%20Marble.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Antarctica%206400px%20from%20Blue%20Marble.jpg?width=1920 1920w"
-         sizes="(max-width: 760px) 50vw,
-                20vw"
-         alt=""
-         loading="lazy">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q51">Antarctica</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p25"
-            aria-label="Credit">i</button><span id="p25" popover class="pop">Dave Pape · Public domain</span><a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P527"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></figure><figure class="m k-photo"
-        style="--a:1">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Atlantic%20Ocean.png?width=960"
-         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Atlantic%20Ocean.png?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Atlantic%20Ocean.png?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Atlantic%20Ocean.png?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Atlantic%20Ocean.png?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Atlantic%20Ocean.png?width=1920 1920w"
-         sizes="(max-width: 760px) 50vw,
-                20vw"
-         alt=""
-         loading="lazy">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q97">Atlantic Ocean</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p26"
-            aria-label="Credit">i</button><span id="p26" popover class="pop">CIA · Public domain</span><a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P527"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></figure><figure class="m k-photo"
-        style="--a:0.7873">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/America%20sattelite.jpg?width=960"
-         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/America%20sattelite.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/America%20sattelite.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/America%20sattelite.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/America%20sattelite.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/America%20sattelite.jpg?width=1920 1920w"
-         sizes="(max-width: 760px) 50vw,
-                20vw"
-         alt=""
-         loading="lazy">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q828">Americas</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p27"
-            aria-label="Credit">i</button><span id="p27" popover class="pop">Koyos · Public domain</span><a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P527"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></figure><figure class="m k-photo"
-        style="--a:1">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pacific%20Ocean.png?width=960"
-         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Pacific%20Ocean.png?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Pacific%20Ocean.png?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Pacific%20Ocean.png?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Pacific%20Ocean.png?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Pacific%20Ocean.png?width=1920 1920w"
-         sizes="(max-width: 760px) 50vw,
-                20vw"
-         alt=""
-         loading="lazy">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q98">Pacific Ocean</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p28"
-            aria-label="Credit">i</button><span id="p28" popover class="pop">CIA World Factbook · Public domain</span><a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P527"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></figure><figure class="m k-empty" style="--a:1.333">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q5107">continent</a></b><span class="prov-none" title="—"></span>
-    </figcaption>
-    <span class="tools">
-        
-            <a class="edit"
+    <h3>has part(s) <span class="note">21</span></h3><div class="run scroll" tabindex="0" role="group" aria-label="has part(s)"><ul class="pic-rows">
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q46">Europe</a></b><span class="prov-none" title="—"></span>
+                    <a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P527"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-        
-    </span>
-</figure><figure class="m k-photo"
-        style="--a:1">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Indian%20Ocean-CIA%20WFB%20Map.png?width=960"
-         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Indian%20Ocean-CIA%20WFB%20Map.png?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Indian%20Ocean-CIA%20WFB%20Map.png?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Indian%20Ocean-CIA%20WFB%20Map.png?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Indian%20Ocean-CIA%20WFB%20Map.png?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Indian%20Ocean-CIA%20WFB%20Map.png?width=1920 1920w"
-         sizes="(max-width: 760px) 50vw,
-                20vw"
-         alt=""
-         loading="lazy">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q1239">Indian Ocean</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p29"
-            aria-label="Credit">i</button><span id="p29" popover class="pop">United States Central Intelligence Agency · Public domain</span><a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P527"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></figure><figure class="m k-empty" style="--a:1.333">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q5401">Eurasia</a></b><span class="prov-none" title="—"></span>
-    </figcaption>
-    <span class="tools">
-        
-            <a class="edit"
+                </span><img class="pic k-photo"
+     style="--a:1.2739"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/Europe%20satellite%20orthographic.jpg?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q15">Africa</a></b><span class="prov-none" title="—"></span>
+                    <a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P527"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-        
-    </span>
-</figure><figure class="m k-photo"
-        style="--a:1.5024">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/ISS043-E-184471%20-%20View%20of%20Earth.jpg?width=960"
-         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/ISS043-E-184471%20-%20View%20of%20Earth.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/ISS043-E-184471%20-%20View%20of%20Earth.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/ISS043-E-184471%20-%20View%20of%20Earth.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/ISS043-E-184471%20-%20View%20of%20Earth.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/ISS043-E-184471%20-%20View%20of%20Earth.jpg?width=1920 1920w"
-         sizes="(max-width: 760px) 50vw,
-                20vw"
-         alt=""
-         loading="lazy">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q3230">atmosphere of Earth</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p30"
-            aria-label="Credit">i</button><span id="p30" popover class="pop">Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center · Public domain</span><a class="edit"
+                </span><img class="pic k-photo"
+     style="--a:0.8904"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/Africa%20satellite%20orthographic.jpg?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q48">Asia</a></b><span class="prov-none" title="—"></span>
+                    <a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P527"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></figure><figure class="m k-photo"
-        style="--a:1.2704">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Australia%20satellite%20orthographic.jpg?width=960"
-         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Australia%20satellite%20orthographic.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Australia%20satellite%20orthographic.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Australia%20satellite%20orthographic.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Australia%20satellite%20orthographic.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Australia%20satellite%20orthographic.jpg?width=1920 1920w"
-         sizes="(max-width: 760px) 50vw,
-                20vw"
-         alt=""
-         loading="lazy">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q3960">Australian continent</a></b><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p31"
-            aria-label="Credit">i</button><span id="p31" popover class="pop">Public domain</span><a class="edit"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                </span><img class="pic k-photo"
+     style="--a:0.9618"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/Asia%20satellite%20orthographic.jpg?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q51">Antarctica</a></b><span class="prov-none" title="—"></span>
+                    <a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P527"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d21">View all</button></div><dialog id="d21" closedby="any">
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                </span><img class="pic k-photo"
+     style="--a:1"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/Antarctica%206400px%20from%20Blue%20Marble.jpg?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q97">Atlantic Ocean</a></b><span class="prov-none" title="—"></span>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P527"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                </span><img class="pic k-photo"
+     style="--a:1"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/Atlantic%20Ocean.png?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q828">Americas</a></b><span class="prov-none" title="—"></span>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P527"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                </span><img class="pic k-photo"
+     style="--a:0.7873"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/America%20sattelite.jpg?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q98">Pacific Ocean</a></b><span class="prov-none" title="—"></span>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P527"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                </span><img class="pic k-photo"
+     style="--a:1"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/Pacific%20Ocean.png?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q5107">continent</a></b><span class="prov-none" title="—"></span>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P527"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                </span>
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q1239">Indian Ocean</a></b><span class="prov-none" title="—"></span>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P527"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                </span><img class="pic k-photo"
+     style="--a:1"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/Indian%20Ocean-CIA%20WFB%20Map.png?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q5401">Eurasia</a></b><span class="prov-none" title="—"></span>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P527"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                </span>
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q3230">atmosphere of Earth</a></b><span class="prov-none" title="—"></span>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P527"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                </span><img class="pic k-photo"
+     style="--a:1.5024"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/ISS043-E-184471%20-%20View%20of%20Earth.jpg?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q3960">Australian continent</a></b><span class="prov-none" title="—"></span>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P527"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                </span><img class="pic k-photo"
+     style="--a:1.2704"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/Australia%20satellite%20orthographic.jpg?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+</ul><button class="view-all" type="button" command="show-modal" commandfor="d20">View all</button></div><dialog id="d20" closedby="any">
         <header>
             <h2>has part(s)</h2>
             <button type="button"
                     command="close"
-                    commandfor="d21"
+                    commandfor="d20"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -1657,156 +1883,141 @@ derivative work: antropia (talk) · CC BY-SA 3.0</span><a class="edit"
         </li>
 </ul></div>
     </dialog></div><div class="block set strip">
-    <h3>child astronomical body <span class="note">80</span></h3><div class="run scroll" tabindex="0" role="group" aria-label="child astronomical body"><figure class="m k-photo"
-        style="--a:1.0522">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/FullMoon2010.jpg?width=960"
-         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/FullMoon2010.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/FullMoon2010.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/FullMoon2010.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/FullMoon2010.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/FullMoon2010.jpg?width=1920 1920w"
-         sizes="(max-width: 760px) 50vw,
-                20vw"
-         alt=""
-         loading="lazy">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q405">Moon</a></b><span>4527000000 BCE – · <a href="https://www.wikidata.org/wiki/Q5727902">circa</a></span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p33"
-            aria-label="Credit">i</button><span id="p33" popover class="pop">Gregory H. Revera · CC BY-SA 3.0</span><a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P398"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></figure><figure class="m k-photo"
-        style="--a:1.7364">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/The%20station%20pictured%20from%20the%20SpaceX%20Crew%20Dragon%205%20%28cropped%29.jpg?width=960"
-         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/The%20station%20pictured%20from%20the%20SpaceX%20Crew%20Dragon%205%20%28cropped%29.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/The%20station%20pictured%20from%20the%20SpaceX%20Crew%20Dragon%205%20%28cropped%29.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/The%20station%20pictured%20from%20the%20SpaceX%20Crew%20Dragon%205%20%28cropped%29.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/The%20station%20pictured%20from%20the%20SpaceX%20Crew%20Dragon%205%20%28cropped%29.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/The%20station%20pictured%20from%20the%20SpaceX%20Crew%20Dragon%205%20%28cropped%29.jpg?width=1920 1920w"
-         sizes="(max-width: 760px) 50vw,
-                20vw"
-         alt=""
-         loading="lazy">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q25271">International Space Station</a></b><span>1998 –</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p34"
-            aria-label="Credit">i</button><span id="p34" popover class="pop">NASA · Public domain</span><a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P398"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></figure><figure class="m k-photo"
-        style="--a:1.5061">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Hubble%202009%20close-up.jpg?width=960"
-         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Hubble%202009%20close-up.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Hubble%202009%20close-up.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Hubble%202009%20close-up.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Hubble%202009%20close-up.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Hubble%202009%20close-up.jpg?width=1920 1920w"
-         sizes="(max-width: 760px) 50vw,
-                20vw"
-         alt=""
-         loading="lazy">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q2513">Hubble Space Telescope</a></b><span>1990 –</span><span class="prov-imported" title="imported from Wikimedia project">W</span></figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p35"
-            aria-label="Credit">i</button><span id="p35" popover class="pop">NASA · Public domain</span><a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P398"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></figure><figure class="m k-empty" style="--a:1.333">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q192316">geostationary orbit</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span>
-    </figcaption>
-    <span class="tools">
-        
-            <a class="edit"
+    <h3>child astronomical body <span class="note">80</span></h3><div class="run scroll" tabindex="0" role="group" aria-label="child astronomical body"><ul class="pic-rows">
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q405">Moon</a></b><span class="prov-none" title="—"></span>
+                    <a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P398"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-        
-    </span>
-</figure><figure class="m k-photo"
-        style="--a:1.4118">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Transiting%20Exoplanet%20Survey%20Satellite%20artist%20concept%20%28transparent%20background%29.png?width=960"
-         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Transiting%20Exoplanet%20Survey%20Satellite%20artist%20concept%20%28transparent%20background%29.png?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Transiting%20Exoplanet%20Survey%20Satellite%20artist%20concept%20%28transparent%20background%29.png?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Transiting%20Exoplanet%20Survey%20Satellite%20artist%20concept%20%28transparent%20background%29.png?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Transiting%20Exoplanet%20Survey%20Satellite%20artist%20concept%20%28transparent%20background%29.png?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Transiting%20Exoplanet%20Survey%20Satellite%20artist%20concept%20%28transparent%20background%29.png?width=1920 1920w"
-         sizes="(max-width: 760px) 50vw,
-                20vw"
-         alt=""
-         loading="lazy">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q1323537">Transiting Exoplanet Survey Satellite</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span></figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p36"
-            aria-label="Credit">i</button><span id="p36" popover class="pop">NASA · Public domain</span><a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P398"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></figure><figure class="m k-empty" style="--a:1.333">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q1579577">geocentric orbit</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span>
-    </figcaption>
-    <span class="tools">
-        
-            <a class="edit"
+                <span class="note quals">4527000000 BCE – · <a href="https://www.wikidata.org/wiki/Q5727902">circa</a></span></span><img class="pic k-photo"
+     style="--a:1.0522"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/FullMoon2010.jpg?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q25271">International Space Station</a></b><span class="prov-none" title="—"></span>
+                    <a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P398"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-        
-    </span>
-</figure><figure class="m k-photo"
-        style="--a:1.7305">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Model%20of%20the%20Chinese%20Tiangong%20Shenzhou.jpg?width=960"
-         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Model%20of%20the%20Chinese%20Tiangong%20Shenzhou.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Model%20of%20the%20Chinese%20Tiangong%20Shenzhou.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Model%20of%20the%20Chinese%20Tiangong%20Shenzhou.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Model%20of%20the%20Chinese%20Tiangong%20Shenzhou.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Model%20of%20the%20Chinese%20Tiangong%20Shenzhou.jpg?width=1920 1920w"
-         sizes="(max-width: 760px) 50vw,
-                20vw"
-         alt=""
-         loading="lazy">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q3122598">Tiangong-2</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span></figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p37"
-            aria-label="Credit">i</button><span id="p37" popover class="pop">Leebrandoncremer · CC BY-SA 4.0</span><a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P398"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></figure><figure class="m k-empty" style="--a:1.333">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q1430362">Kordylewski cloud</a></b><span class="prov-none" title="—"></span>
-    </figcaption>
-    <span class="tools">
-        
-            <a class="edit"
+                <span class="note quals">1998 –</span></span><img class="pic k-photo"
+     style="--a:1.7364"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/The%20station%20pictured%20from%20the%20SpaceX%20Crew%20Dragon%205%20%28cropped%29.jpg?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q2513">Hubble Space Telescope</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span>
+                    <a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P398"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-        
-    </span>
-</figure><figure class="m k-photo"
-        style="--a:1.5238">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise%20over%20Spacelab.jpg?width=960"
-         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise%20over%20Spacelab.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise%20over%20Spacelab.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise%20over%20Spacelab.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise%20over%20Spacelab.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise%20over%20Spacelab.jpg?width=1920 1920w"
-         sizes="(max-width: 760px) 50vw,
-                20vw"
-         alt=""
-         loading="lazy">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q262787">STS-90</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span></figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p38"
-            aria-label="Credit">i</button><span id="p38" popover class="pop">NASA · Public domain</span><a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P398"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></figure><figure class="m k-empty" style="--a:1.333">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q1412630">geosynchronous satellite</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span>
-    </figcaption>
-    <span class="tools">
-        
-            <a class="edit"
+                <span class="note quals">1990 –</span></span><img class="pic k-photo"
+     style="--a:1.5061"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/Hubble%202009%20close-up.jpg?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q192316">geostationary orbit</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span>
+                    <a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P398"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-        
-    </span>
-</figure><figure class="m k-drawing"
-        style="--a:1.2491">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Salyut%204%20and%20Soyuz%20drawing.svg?width=960"
-         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Salyut%204%20and%20Soyuz%20drawing.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Salyut%204%20and%20Soyuz%20drawing.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Salyut%204%20and%20Soyuz%20drawing.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Salyut%204%20and%20Soyuz%20drawing.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Salyut%204%20and%20Soyuz%20drawing.svg?width=1920 1920w"
-         sizes="(max-width: 760px) 50vw,
-                20vw"
-         alt=""
-         loading="lazy">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q1420942">Kosmos 557</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span></figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p39"
-            aria-label="Credit">i</button><span id="p39" popover class="pop">Original: NASA/David Portree, Corrections, additional colouring Fred the Oyster · Public domain</span><a class="edit"
+                </span>
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q1323537">Transiting Exoplanet Survey Satellite</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span>
+                    <a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P398"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></figure><figure class="m k-photo"
-        style="--a:1.9375">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Aqua%20spacecraft%20model.png?width=960"
-         srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Aqua%20spacecraft%20model.png?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Aqua%20spacecraft%20model.png?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Aqua%20spacecraft%20model.png?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Aqua%20spacecraft%20model.png?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Aqua%20spacecraft%20model.png?width=1920 1920w"
-         sizes="(max-width: 760px) 50vw,
-                20vw"
-         alt=""
-         loading="lazy">
-    <figcaption><b><a href="https://www.wikidata.org/wiki/Q17397">Aqua</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span></figcaption><span class="tools"><button class="info"
-            type="button"
-            popovertarget="p40"
-            aria-label="Credit">i</button><span id="p40" popover class="pop">National Aeronautics and Space Administration (NASA) · Public domain</span><a class="edit"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                </span><img class="pic k-photo"
+     style="--a:1.4118"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/Transiting%20Exoplanet%20Survey%20Satellite%20artist%20concept%20%28transparent%20background%29.png?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q1579577">geocentric orbit</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span>
+                    <a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P398"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></figure><button class="view-all" type="button" command="show-modal" commandfor="d32">View all</button></div><dialog id="d32" closedby="any">
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                </span>
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q3122598">Tiangong-2</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P398"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                </span><img class="pic k-photo"
+     style="--a:1.7305"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/Model%20of%20the%20Chinese%20Tiangong%20Shenzhou.jpg?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q1430362">Kordylewski cloud</a></b><span class="prov-none" title="—"></span>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P398"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                </span>
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q262787">STS-90</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P398"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                </span><img class="pic k-photo"
+     style="--a:1.5238"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise%20over%20Spacelab.jpg?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q1412630">geosynchronous satellite</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P398"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                </span>
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q1420942">Kosmos 557</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P398"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                </span><img class="pic k-drawing"
+     style="--a:1.2491"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/Salyut%204%20and%20Soyuz%20drawing.svg?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+        <li>
+            <span class="text">
+                <b><a href="https://www.wikidata.org/wiki/Q17397">Aqua</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span>
+                    <a class="edit"
+       href="https://www.wikidata.org/wiki/Q2#P398"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+                </span><img class="pic k-photo"
+     style="--a:1.9375"
+     src="https://commons.wikimedia.org/wiki/Special:FilePath/Aqua%20spacecraft%20model.png?width=330"
+     alt=""
+     loading="lazy">
+        </li>
+</ul><button class="view-all" type="button" command="show-modal" commandfor="d21">View all</button></div><dialog id="d21" closedby="any">
         <header>
             <h2>child astronomical body</h2>
             <button type="button"
                     command="close"
-                    commandfor="d32"
+                    commandfor="d21"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -2664,256 +2875,7 @@ derivative work: antropia (talk) · CC BY-SA 3.0</span><a class="edit"
         </li>
 </ul></div>
     </dialog></div>
-    </div><div data-slot="gallery"><dl class="sheet"><div class="row">
-            <dt>‎most populous urban area</dt>
-            <dd><a href="https://www.wikidata.org/wiki/Q3630">Jakarta</a></dd>
-            <span class="tools"><button class="info"
-            type="button"
-            popovertarget="p41"
-            aria-label="Credit">i</button><span id="p41" popover class="pop">Copyrighted free use</span>
-                    <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P13574"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-                </span><img class="pic k-photo"
-     style="--a:1.3333"
-     src="https://commons.wikimedia.org/wiki/Special:FilePath/Jakarta.jpg?width=330"
-     alt=""
-     loading="lazy">
-        </div><div class="row">
-            <dt>part of</dt>
-            <dd><a href="https://www.wikidata.org/wiki/Q18589965">Earth–Moon system</a></dd>
-            <span class="tools"><span class="prov-none" title="—"></span><button class="info"
-            type="button"
-            popovertarget="p42"
-            aria-label="Credit">i</button><span id="p42" popover class="pop">No machine-readable author provided. Vulpecula assumed (based on copyright claims). · Public domain</span>
-                    <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P361"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-                </span><img class="pic k-photo"
-     style="--a:1.1671"
-     src="https://commons.wikimedia.org/wiki/Special:FilePath/Lagrange%20points%20Earth%20vs%20Moon.jpg?width=330"
-     alt=""
-     loading="lazy">
-        </div><div class="row">
-            <dt>part of</dt>
-            <dd><a href="https://www.wikidata.org/wiki/Q544">Solar System</a></dd>
-            <span class="tools"><span class="prov-none" title="—"></span><button class="info"
-            type="button"
-            popovertarget="p43"
-            aria-label="Credit">i</button><span id="p43" popover class="pop">CactiStaccingCrane · CC BY-SA 4.0</span>
-                    <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P361"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-                </span><img class="pic k-photo"
-     style="--a:1.7778"
-     src="https://commons.wikimedia.org/wiki/Special:FilePath/Solar%20System%20true%20color.jpg?width=330"
-     alt=""
-     loading="lazy">
-        </div><div class="row">
-            <dt>located in/on physical feature</dt>
-            <dd><a href="https://www.wikidata.org/wiki/Q1">universe</a></dd>
-            <span class="tools"><span class="prov-none" title="—"></span><button class="info"
-            type="button"
-            popovertarget="p44"
-            aria-label="Credit">i</button><span id="p44" popover class="pop">NASA, ESA, H. Teplitz and M. Rafelski (IPAC/Caltech), A. Koekemoer (STScI), R. Windhorst (Arizona State University), and Z. Levay (STScI) · Public domain</span>
-                    <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P706"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-                </span><img class="pic k-photo"
-     style="--a:1.0952"
-     src="https://commons.wikimedia.org/wiki/Special:FilePath/NASA-HS201427a-HubbleUltraDeepField2014-20140603.jpg?width=330"
-     alt=""
-     loading="lazy">
-        </div></dl></div><dl class="sheet" data-slot="sheet"><div class="row r-list"><dt>studied by</dt>
-<dd><span class="v"><a href="https://www.wikidata.org/wiki/Q46255">geophysics</a>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P2579"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-    </span><span class="v"><a href="https://www.wikidata.org/wiki/Q8008">Earth science</a>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P2579"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-    </span><span class="v"><a href="https://www.wikidata.org/wiki/Q104499">planetary science</a>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P2579"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-    </span><span class="v"><a href="https://www.wikidata.org/wiki/Q1069">geology</a>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P2579"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-    </span></dd>
-<span class="tools"></span>
-</div><div class="row r-list"><dt>has characteristic</dt>
-<dd><span class="v"><a href="https://www.wikidata.org/wiki/Q25935139">mass of the Earth</a>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P1552"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-    </span><span class="v"><a href="https://www.wikidata.org/wiki/Q6500960">Earth&#39;s magnetic field</a>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P1552"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-    </span><span class="v"><a href="https://www.wikidata.org/wiki/Q108156638">geologic activity</a>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P1552"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-    </span><span class="v"><a href="https://www.wikidata.org/wiki/Q105115142">narrative location</a> <span class="note quals"><a href="https://www.wikidata.org/wiki/Q5327160">Earth in fiction</a></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P1552"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-    </span><span class="v"><a href="https://www.wikidata.org/wiki/Q846030">planetary habitability</a>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P1552"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-    </span></dd>
-<span class="tools"></span>
-</div><div class="row r-value"><dt>opposite of</dt>
-<dd><span class="v"><a href="https://www.wikidata.org/wiki/Q527">sky</a> <span class="note quals"><a href="https://www.wikidata.org/wiki/Q2">Earth</a></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P461"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-    </span><span class="v"><a href="https://www.wikidata.org/wiki/Q4169">outer space</a> <span class="note quals"><a href="https://www.wikidata.org/wiki/Q1">universe</a></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P461"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-    </span></dd>
-<span class="tools"></span>
-</div><div class="row r-value"><dt>manifestation of</dt>
-<dd><a href="https://www.wikidata.org/wiki/Q898312">open system</a></dd>
-<span class="tools">
-        <span class="prov-none" title="—"></span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P1557"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-list former"><dt>child astronomical body <span class="mark">former</span></dt>
-<dd><span class="v"><a href="https://www.wikidata.org/wiki/Q130301991">2024 PT5</a> <span class="note quals">2024 – 2024</span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P398"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-    </span><span class="v"><a href="https://www.wikidata.org/wiki/Q113380363">2022 NX1</a> <span class="note quals">2022 – 2022</span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P398"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-    </span><span class="v"><a href="https://www.wikidata.org/wiki/Q86388198">2020 CD3</a> <span class="note quals">2016 – 2020</span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P398"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-    </span><span class="v"><a href="https://www.wikidata.org/wiki/Q211498">2006 RH120</a> <span class="note quals">2006 – 2007</span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P398"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-    </span><span class="v"><a href="https://www.wikidata.org/wiki/Q48604">Mir</a> <span class="note quals">1986 – 2001</span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P398"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-    </span><span class="v"><a href="https://www.wikidata.org/wiki/Q190776">Skylab</a> <span class="note quals">1973 – 1979</span>
-        <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P398"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-    </span><button class="more" type="button" command="show-modal" commandfor="d45">+2</button><dialog id="d45" closedby="any">
-        <header>
-            <h2>child astronomical body</h2>
-            <button type="button"
-                    command="close"
-                    commandfor="d45"
-                    aria-label="Close">×</button>
-        </header>
-        <div class="dialog-body"><ul class="pic-rows">
-        <li>
-            <span class="text">
-                <b><a href="https://www.wikidata.org/wiki/Q130301991">2024 PT5</a></b><span class="prov-none" title="—"></span>
-                    <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P398"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-                <span class="note quals">2024 – 2024</span></span><img class="pic k-photo"
-     style="--a:1.3333"
-     src="https://commons.wikimedia.org/wiki/Special:FilePath/Animation%20of%202024%20PT5%20around%20Earth%20-%20Close%20approach.gif?width=330"
-     alt=""
-     loading="lazy">
-        </li>
-        <li>
-            <span class="text">
-                <b><a href="https://www.wikidata.org/wiki/Q113380363">2022 NX1</a></b><span class="prov-none" title="—"></span>
-                    <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P398"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-                <span class="note quals">2022 – 2022</span></span>
-        </li>
-        <li>
-            <span class="text">
-                <b><a href="https://www.wikidata.org/wiki/Q86388198">2020 CD3</a></b><span class="prov-none" title="—"></span>
-                    <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P398"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-                <span class="note quals">2016 – 2020</span></span><img class="pic k-photo"
-     style="--a:1"
-     src="https://commons.wikimedia.org/wiki/Special:FilePath/2020%20CD3%20Gemini%20Color.jpg?width=330"
-     alt=""
-     loading="lazy">
-        </li>
-        <li>
-            <span class="text">
-                <b><a href="https://www.wikidata.org/wiki/Q211498">2006 RH120</a></b><span class="prov-none" title="—"></span>
-                    <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P398"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-                <span class="note quals">2006 – 2007</span></span><img class="pic k-photo"
-     style="--a:1.4476"
-     src="https://commons.wikimedia.org/wiki/Special:FilePath/2006-RH120-orbit.jpg?width=330"
-     alt=""
-     loading="lazy">
-        </li>
-        <li>
-            <span class="text">
-                <b><a href="https://www.wikidata.org/wiki/Q48604">Mir</a></b>
-                    <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P398"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-                <span class="note quals">1986 – 2001</span></span><img class="pic k-photo"
-     style="--a:1.0448"
-     src="https://commons.wikimedia.org/wiki/Special:FilePath/Mir%20on%2012%20June%201998edit1.jpg?width=330"
-     alt=""
-     loading="lazy">
-        </li>
-        <li>
-            <span class="text">
-                <b><a href="https://www.wikidata.org/wiki/Q190776">Skylab</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span>
-                    <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P398"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-                <span class="note quals">1973 – 1979</span></span><img class="pic k-photo"
-     style="--a:1.2284"
-     src="https://commons.wikimedia.org/wiki/Special:FilePath/Skylab%20%28SL-4%29.jpg?width=330"
-     alt=""
-     loading="lazy">
-        </li>
-        <li>
-            <span class="text">
-                <b><a href="https://www.wikidata.org/wiki/Q211761">Salyut 1</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span>
-                    <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P398"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-                <span class="note quals">1971 – 1971</span></span><img class="pic k-photo"
-     style="--a:1.4027"
-     src="https://commons.wikimedia.org/wiki/Special:FilePath/1972%20CPA%204112.jpg?width=330"
-     alt=""
-     loading="lazy">
-        </li>
-        <li>
-            <span class="text">
-                <b><a href="https://www.wikidata.org/wiki/Q40610">Tyazhely Sputnik</a></b><span class="prov-imported" title="imported from Wikimedia project">W</span>
-                    <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P398"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-                <span class="note quals">1961 – 1961</span></span><img class="pic k-photo"
-     style="--a:0.6667"
-     src="https://commons.wikimedia.org/wiki/Special:FilePath/Venera%201%20%28a%29%20%28Memorial%20Museum%20of%20Astronautics%29.JPG?width=330"
-     alt=""
-     loading="lazy">
-        </li>
-</ul></div>
-    </dialog></dd>
-<span class="tools"></span>
-</div></dl></section>
+    </div></section>
             <section class="spread t-columns" id="history"
              data-spread="history"
              data-dimension="time"><h2><span class="title">history</span></h2><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>inception</dt>
@@ -2949,8 +2911,8 @@ derivative work: antropia (talk) · CC BY-SA 3.0</span><a class="edit"
      alt=""
      loading="lazy"><span class="tools"><button class="info"
             type="button"
-            popovertarget="p46"
-            aria-label="Credit">i</button><span id="p46" popover class="pop">Woudloper
+            popovertarget="p22"
+            aria-label="Credit">i</button><span id="p22" popover class="pop">Woudloper
 
 Derivative work: Hardwigg
 Derivative work: Lourdes Sada · CC0</span></span></div><div class="topic-article">
@@ -2962,8 +2924,8 @@ Derivative work: Lourdes Sada · CC0</span></span></div><div class="topic-articl
      alt=""
      loading="lazy"><span class="tools"><button class="info"
             type="button"
-            popovertarget="p47"
-            aria-label="Credit">i</button><span id="p47" popover class="pop">Ivtorov, Elektro-L 3 camera · CC BY 4.0</span></span></div></div></section>
+            popovertarget="p23"
+            aria-label="Credit">i</button><span id="p23" popover class="pop">Ivtorov, Elektro-L 3 camera · CC BY 4.0</span></span></div></div></section>
             <section class="spread t-feature-run" id="media"
              data-spread="media"
              data-dimension="media"><h2><span class="title">multimedia</span></h2><div data-slot="feature">
@@ -2971,7 +2933,7 @@ Derivative work: Lourdes Sada · CC0</span></span></div><div class="topic-articl
         <button class="zoom"
                 type="button"
                 command="show-modal"
-                commandfor="d48"
+                commandfor="d24"
                 aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Earth%27s%20City%20Lights%20by%20DMSP%2C%201994-1995%20%28large%29.jpg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Earth%27s%20City%20Lights%20by%20DMSP%2C%201994-1995%20%28large%29.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Earth%27s%20City%20Lights%20by%20DMSP%2C%201994-1995%20%28large%29.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Earth%27s%20City%20Lights%20by%20DMSP%2C%201994-1995%20%28large%29.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Earth%27s%20City%20Lights%20by%20DMSP%2C%201994-1995%20%28large%29.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Earth%27s%20City%20Lights%20by%20DMSP%2C%201994-1995%20%28large%29.jpg?width=1920 1920w" sizes="100vw"
@@ -2980,21 +2942,21 @@ Derivative work: Lourdes Sada · CC0</span></span></div><div class="topic-articl
                     <span class="assessed" title="Featured pictures on Wikimedia Commons">★</span>
                 <span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p49"
-            aria-label="Credit">i</button><span id="p49" popover class="pop">Data: Marc Imhoff/NASA GSFC, Christopher Elvidge/NOAA NGDC; Image: Craig Mayhew and Robert Simmon/NASA GSFC · Public domain</span><a class="edit"
+            popovertarget="p25"
+            aria-label="Credit">i</button><span id="p25" popover class="pop">Data: Marc Imhoff/NASA GSFC, Christopher Elvidge/NOAA NGDC; Image: Craig Mayhew and Robert Simmon/NASA GSFC · Public domain</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P3451"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
     </figure>
-    <dialog id="d48"
+    <dialog id="d24"
         class="lightbox k-photo"
         closedby="any"
-        aria-labelledby="d48-h"
+        aria-labelledby="d24-h"
         style="--a:2">
     <header>
-        <h2 id="d48-h">nighttime view</h2>
+        <h2 id="d24-h">nighttime view</h2>
         <button type="button"
                 command="close"
-                commandfor="d48"
+                commandfor="d24"
                 aria-label="Close">×</button>
     </header>
     <div class="stage"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Earth%27s%20City%20Lights%20by%20DMSP%2C%201994-1995%20%28large%29.jpg?width=1280"
@@ -3019,28 +2981,28 @@ Derivative work: Lourdes Sada · CC0</span></span></div><div class="topic-articl
         <button class="zoom"
                 type="button"
                 command="show-modal"
-                commandfor="d50"
+                commandfor="d26"
                 aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/AYool%20topography%2015min.png?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/AYool%20topography%2015min.png?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/AYool%20topography%2015min.png?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/AYool%20topography%2015min.png?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/AYool%20topography%2015min.png?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/AYool%20topography%2015min.png?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
         </button><figcaption><span>bathymetry image</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p51"
-            aria-label="Credit">i</button><span id="p51" popover class="pop">Plumbago · CC BY 2.5</span><a class="edit"
+            popovertarget="p27"
+            aria-label="Credit">i</button><span id="p27" popover class="pop">Plumbago · CC BY 2.5</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P207"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
     </figure>
-    <dialog id="d50"
+    <dialog id="d26"
         class="lightbox k-photo"
         closedby="any"
-        aria-labelledby="d50-h"
+        aria-labelledby="d26-h"
         style="--a:1.4272">
     <header>
-        <h2 id="d50-h">bathymetry image</h2>
+        <h2 id="d26-h">bathymetry image</h2>
         <button type="button"
                 command="close"
-                commandfor="d50"
+                commandfor="d26"
                 aria-label="Close">×</button>
     </header>
     <div class="stage"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/AYool%20topography%2015min.png?width=1280"
@@ -3061,28 +3023,28 @@ Derivative work: Lourdes Sada · CC0</span></span></div><div class="topic-articl
         <button class="zoom"
                 type="button"
                 command="show-modal"
-                commandfor="d52"
+                commandfor="d28"
                 aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/The%20Blue%20Marble%20%285052124705%29.jpg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/The%20Blue%20Marble%20%285052124705%29.jpg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/The%20Blue%20Marble%20%285052124705%29.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/The%20Blue%20Marble%20%285052124705%29.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/The%20Blue%20Marble%20%285052124705%29.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/The%20Blue%20Marble%20%285052124705%29.jpg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
         </button><figcaption><span>image</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p53"
-            aria-label="Credit">i</button><span id="p53" popover class="pop">NASA on The Commons · No restrictions</span><a class="edit"
+            popovertarget="p29"
+            aria-label="Credit">i</button><span id="p29" popover class="pop">NASA on The Commons · No restrictions</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P18"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
     </figure>
-    <dialog id="d52"
+    <dialog id="d28"
         class="lightbox k-photo"
         closedby="any"
-        aria-labelledby="d52-h"
+        aria-labelledby="d28-h"
         style="--a:1.3333">
     <header>
-        <h2 id="d52-h">image</h2>
+        <h2 id="d28-h">image</h2>
         <button type="button"
                 command="close"
-                commandfor="d52"
+                commandfor="d28"
                 aria-label="Close">×</button>
     </header>
     <div class="stage"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/The%20Blue%20Marble%20%285052124705%29.jpg?width=1280"
@@ -3105,7 +3067,7 @@ Derivative work: Lourdes Sada · CC0</span></span></div><div class="topic-articl
         <button class="zoom"
                 type="button"
                 command="show-modal"
-                commandfor="d54"
+                commandfor="d30"
                 aria-label="Play">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lurraren%20ilargiak.webm?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Lurraren%20ilargiak.webm?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Lurraren%20ilargiak.webm?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Lurraren%20ilargiak.webm?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Lurraren%20ilargiak.webm?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Lurraren%20ilargiak.webm?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
@@ -3114,21 +3076,21 @@ Derivative work: Lourdes Sada · CC0</span></span></div><div class="topic-articl
                     <span class="size">53 MB</span>
                 </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p55"
-            aria-label="Credit">i</button><span id="p55" popover class="pop">Elhuyar Fundazioa and EiTB - Ester Arrieta (graphics), Guillermo Roa (texts) and Alaitz Ochoa de Eribe (voice) · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p31"
+            aria-label="Credit">i</button><span id="p31" popover class="pop">Elhuyar Fundazioa and EiTB - Ester Arrieta (graphics), Guillermo Roa (texts) and Alaitz Ochoa de Eribe (voice) · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P10"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
     </figure>
-    <dialog id="d54"
+    <dialog id="d30"
         class="lightbox k-video"
         closedby="any"
-        aria-labelledby="d54-h"
+        aria-labelledby="d30-h"
         style="--a:1.7778">
     <header>
-        <h2 id="d54-h">video</h2>
+        <h2 id="d30-h">video</h2>
         <button type="button"
                 command="close"
-                commandfor="d54"
+                commandfor="d30"
                 aria-label="Close">×</button>
     </header>
     <div class="stage"><video controls
@@ -3151,7 +3113,7 @@ Derivative work: Lourdes Sada · CC0</span></span></div><div class="topic-articl
         <button class="zoom"
                 type="button"
                 command="show-modal"
-                commandfor="d56"
+                commandfor="d32"
                 aria-label="Play">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Armenian%20Sign%20Language%20%28ArSL%29%20-%20%D4%B5%D6%80%D5%AF%D5%AB%D6%80%20%28%D5%B4%D5%B8%D5%AC%D5%B8%D6%80%D5%A1%D5%AF%29%20-%20Earth.webm?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Armenian%20Sign%20Language%20%28ArSL%29%20-%20%D4%B5%D6%80%D5%AF%D5%AB%D6%80%20%28%D5%B4%D5%B8%D5%AC%D5%B8%D6%80%D5%A1%D5%AF%29%20-%20Earth.webm?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Armenian%20Sign%20Language%20%28ArSL%29%20-%20%D4%B5%D6%80%D5%AF%D5%AB%D6%80%20%28%D5%B4%D5%B8%D5%AC%D5%B8%D6%80%D5%A1%D5%AF%29%20-%20Earth.webm?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Armenian%20Sign%20Language%20%28ArSL%29%20-%20%D4%B5%D6%80%D5%AF%D5%AB%D6%80%20%28%D5%B4%D5%B8%D5%AC%D5%B8%D6%80%D5%A1%D5%AF%29%20-%20Earth.webm?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Armenian%20Sign%20Language%20%28ArSL%29%20-%20%D4%B5%D6%80%D5%AF%D5%AB%D6%80%20%28%D5%B4%D5%B8%D5%AC%D5%B8%D6%80%D5%A1%D5%AF%29%20-%20Earth.webm?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Armenian%20Sign%20Language%20%28ArSL%29%20-%20%D4%B5%D6%80%D5%AF%D5%AB%D6%80%20%28%D5%B4%D5%B8%D5%AC%D5%B8%D6%80%D5%A1%D5%AF%29%20-%20Earth.webm?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
@@ -3160,21 +3122,21 @@ Derivative work: Lourdes Sada · CC0</span></span></div><div class="topic-articl
                     <span class="size">1 MB</span>
                 </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p57"
-            aria-label="Credit">i</button><span id="p57" popover class="pop">Operator : Lusine Bekaryan, Video Editor : Armine Bekaryan, Sign Language Interpreter : Gohar Melikyan for Wikimedia Armenia · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p33"
+            aria-label="Credit">i</button><span id="p33" popover class="pop">Operator : Lusine Bekaryan, Video Editor : Armine Bekaryan, Sign Language Interpreter : Gohar Melikyan for Wikimedia Armenia · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P2919"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
     </figure>
-    <dialog id="d56"
+    <dialog id="d32"
         class="lightbox k-video"
         closedby="any"
-        aria-labelledby="d56-h"
+        aria-labelledby="d32-h"
         style="--a:1.7778">
     <header>
-        <h2 id="d56-h">label in sign language</h2>
+        <h2 id="d32-h">label in sign language</h2>
         <button type="button"
                 command="close"
-                commandfor="d56"
+                commandfor="d32"
                 aria-label="Close">×</button>
     </header>
     <div class="stage"><video controls
@@ -3197,7 +3159,7 @@ Derivative work: Lourdes Sada · CC0</span></span></div><div class="topic-articl
         <button class="zoom"
                 type="button"
                 command="show-modal"
-                commandfor="d58"
+                commandfor="d34"
                 aria-label="View in 3D">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Earth%20dry%20elevation.stl?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Earth%20dry%20elevation.stl?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Earth%20dry%20elevation.stl?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Earth%20dry%20elevation.stl?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Earth%20dry%20elevation.stl?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Earth%20dry%20elevation.stl?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
@@ -3206,21 +3168,21 @@ Derivative work: Lourdes Sada · CC0</span></span></div><div class="topic-articl
                     <span class="size">29 MB</span>
                 </figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p59"
-            aria-label="Credit">i</button><span id="p59" popover class="pop">Cmglee · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p35"
+            aria-label="Credit">i</button><span id="p35" popover class="pop">Cmglee · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P4896"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
     </figure>
-    <dialog id="d58"
+    <dialog id="d34"
         class="lightbox k-model3d"
         closedby="any"
-        aria-labelledby="d58-h"
+        aria-labelledby="d34-h"
         style="--a:1.7778">
     <header>
-        <h2 id="d58-h">3D model</h2>
+        <h2 id="d34-h">3D model</h2>
         <button type="button"
                 command="close"
-                commandfor="d58"
+                commandfor="d34"
                 aria-label="Close">×</button>
     </header>
     <div class="stage"><qr-model src="https://upload.wikimedia.org/wikipedia/commons/1/14/Earth_dry_elevation.stl"
@@ -3247,28 +3209,28 @@ Derivative work: Lourdes Sada · CC0</span></span></div><div class="topic-articl
         <button class="zoom"
                 type="button"
                 command="show-modal"
-                commandfor="d60"
+                commandfor="d36"
                 aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jordens%20inre.svg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Jordens%20inre.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Jordens%20inre.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Jordens%20inre.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Jordens%20inre.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Jordens%20inre.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
         </button><figcaption><span>schematic</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p61"
-            aria-label="Credit">i</button><span id="p61" popover class="pop">Original:  Mats Halldin Vector:  Chabacano · CC BY-SA 3.0</span><a class="edit"
+            popovertarget="p37"
+            aria-label="Credit">i</button><span id="p37" popover class="pop">Original:  Mats Halldin Vector:  Chabacano · CC BY-SA 3.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P5555"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
     </figure>
-    <dialog id="d60"
+    <dialog id="d36"
         class="lightbox k-drawing"
         closedby="any"
-        aria-labelledby="d60-h"
+        aria-labelledby="d36-h"
         style="--a:0.9604">
     <header>
-        <h2 id="d60-h">schematic</h2>
+        <h2 id="d36-h">schematic</h2>
         <button type="button"
                 command="close"
-                commandfor="d60"
+                commandfor="d36"
                 aria-label="Close">×</button>
     </header>
     <div class="stage"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jordens%20inre.svg?width=1280"
@@ -3289,28 +3251,28 @@ Derivative work: Lourdes Sada · CC0</span></span></div><div class="topic-articl
         <button class="zoom"
                 type="button"
                 command="show-modal"
-                commandfor="d62"
+                commandfor="d38"
                 aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Earth%20symbol%20%28fixed%20width%29.svg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Earth%20symbol%20%28fixed%20width%29.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Earth%20symbol%20%28fixed%20width%29.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Earth%20symbol%20%28fixed%20width%29.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Earth%20symbol%20%28fixed%20width%29.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Earth%20symbol%20%28fixed%20width%29.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
         </button><figcaption><span>astronomic symbol image</span><span class="prov-imported" title="imported from Wikimedia project">W</span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p63"
-            aria-label="Credit">i</button><span id="p63" popover class="pop">Denis Moskowitz · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p39"
+            aria-label="Credit">i</button><span id="p39" popover class="pop">Denis Moskowitz · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P367"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
     </figure>
-    <dialog id="d62"
+    <dialog id="d38"
         class="lightbox k-drawing"
         closedby="any"
-        aria-labelledby="d62-h"
+        aria-labelledby="d38-h"
         style="--a:1">
     <header>
-        <h2 id="d62-h">astronomic symbol image</h2>
+        <h2 id="d38-h">astronomic symbol image</h2>
         <button type="button"
                 command="close"
-                commandfor="d62"
+                commandfor="d38"
                 aria-label="Close">×</button>
     </header>
     <div class="stage"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Earth%20symbol%20%28fixed%20width%29.svg?width=1280"
@@ -3331,28 +3293,28 @@ Derivative work: Lourdes Sada · CC0</span></span></div><div class="topic-articl
         <button class="zoom"
                 type="button"
                 command="show-modal"
-                commandfor="d64"
+                commandfor="d40"
                 aria-label="View larger">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Globus%20cruciger%20%28fixed%20width%29.svg?width=960"
                  srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Globus%20cruciger%20%28fixed%20width%29.svg?width=330 330w, https://commons.wikimedia.org/wiki/Special:FilePath/Globus%20cruciger%20%28fixed%20width%29.svg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Globus%20cruciger%20%28fixed%20width%29.svg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Globus%20cruciger%20%28fixed%20width%29.svg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Globus%20cruciger%20%28fixed%20width%29.svg?width=1920 1920w" sizes="(max-width: 760px) 100vw, 40vw"
                  alt="" loading="lazy">
         </button><figcaption><span>astronomic symbol image</span><span class="prov-none" title="—"></span></figcaption><span class="tools"><button class="info"
             type="button"
-            popovertarget="p65"
-            aria-label="Credit">i</button><span id="p65" popover class="pop">from an img by Denis Moskowitz · CC BY-SA 4.0</span><a class="edit"
+            popovertarget="p41"
+            aria-label="Credit">i</button><span id="p41" popover class="pop">from an img by Denis Moskowitz · CC BY-SA 4.0</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P367"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
     </figure>
-    <dialog id="d64"
+    <dialog id="d40"
         class="lightbox k-drawing"
         closedby="any"
-        aria-labelledby="d64-h"
+        aria-labelledby="d40-h"
         style="--a:1">
     <header>
-        <h2 id="d64-h">astronomic symbol image</h2>
+        <h2 id="d40-h">astronomic symbol image</h2>
         <button type="button"
                 command="close"
-                commandfor="d64"
+                commandfor="d40"
                 aria-label="Close">×</button>
     </header>
     <div class="stage"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Globus%20cruciger%20%28fixed%20width%29.svg?width=1280"
@@ -3542,12 +3504,12 @@ Derivative work: Lourdes Sada · CC0</span></span></div><div class="topic-articl
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P1343"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-    </span><button class="more" type="button" command="show-modal" commandfor="d66">+10</button><dialog id="d66" closedby="any">
+    </span><button class="more" type="button" command="show-modal" commandfor="d42">+10</button><dialog id="d42" closedby="any">
         <header>
             <h2>described by source</h2>
             <button type="button"
                     command="close"
-                    commandfor="d66"
+                    commandfor="d42"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -3774,12 +3736,12 @@ Derivative work: Lourdes Sada · CC0</span></span></div><div class="topic-articl
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P1889"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-    </span><button class="more" type="button" command="show-modal" commandfor="d67">+1</button><dialog id="d67" closedby="any">
+    </span><button class="more" type="button" command="show-modal" commandfor="d43">+1</button><dialog id="d43" closedby="any">
         <header>
             <h2>different from</h2>
             <button type="button"
                     command="close"
-                    commandfor="d67"
+                    commandfor="d43"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -3909,12 +3871,12 @@ Derivative work: Lourdes Sada · CC0</span></span></div><div class="topic-articl
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q2#P6104"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-    </span><button class="more" type="button" command="show-modal" commandfor="d68">+2</button><dialog id="d68" closedby="any">
+    </span><button class="more" type="button" command="show-modal" commandfor="d44">+2</button><dialog id="d44" closedby="any">
         <header>
             <h2>maintained by WikiProject</h2>
             <button type="button"
                     command="close"
-                    commandfor="d68"
+                    commandfor="d44"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><ul class="pic-rows">
@@ -4027,12 +3989,12 @@ Derivative work: Lourdes Sada · CC0</span></span></div><div class="topic-articl
     <div><span class="chip"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M11.14 4H14a.69.69 0 0 1 0 .65c-1 .16-1.36.91-1.81 1.83l-1.4 2.75 2.35 5.21h.07l3.52-8.1c.44-1.07.4-1.59-.79-1.7a.68.68 0 0 1 0-.65h3.45a.68.68 0 0 1 0 .65c-1.21.16-1.42.91-1.81 1.83l-4.37 10.08c-.13.3-.24.45-.44.45s-.33-.16-.42-.45l-2.48-5.73-2.72 5.73c-.11.3-.24.45-.44.45s-.31-.16-.42-.45l-4-10.09c-.57-1.4-.6-1.7-1.65-1.8A.68.68 0 0 1 .62 4h3.91a.68.68 0 0 1 0 .65c-1.16.13-1.21.45-.74 1.58l3.41 8.19h.05L9.3 10 7.78 6.45C7.17 5.05 7 4.77 6.24 4.66a.69.69 0 0 1 0-.65h3.32a.68.68 0 0 1 0 .65c-.74.12-.7.45-.19 1.58l.87 2 .08.09 1-2c.57-1.14.64-1.58-.15-1.7a.69.69 0 0 1-.03-.63"/></svg>Wikipedia <b>320</b> ✓</span><span class="chip"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M9.133 4.643a6.52 6.52 0 0 1 2.79 5.354 6.52 6.52 0 0 1-2.672 5.269l-.12.086-.923-1.322a4.91 4.91 0 0 0 2.103-4.033c0-1.578-.748-3.03-1.988-3.95l-.114-.082zM13.874 0a13.08 13.08 0 0 1 4.627 9.997c0 3.86-1.678 7.448-4.538 9.92l-.096.083-1.15-1.357a11.3 11.3 0 0 0 4.006-8.646c0-3.33-1.444-6.424-3.908-8.562l-.091-.079L13.873 0Z"/><path d="M11.453 2.386a9.71 9.71 0 0 1 3.668 7.611 9.71 9.71 0 0 1-3.576 7.537l-.09.073-1.074-1.347A7.99 7.99 0 0 0 13.4 9.997a7.99 7.99 0 0 0-2.932-6.194l-.087-.07 1.073-1.347Z"/><circle cx="5.35" cy="9.93" r="3.35"/></svg>Wikiquote <b>31</b> ✓</span><span class="chip"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M14.222.03c-1.812 1.753-3.604 3.49-3.604 3.49l.644 1.31c.873-.864 1.75-1.625 2.587-2.472 1.762 3.869 2.963 6.987 4.44 11.109.483 1.339.384 1.399-.771 2.122-1.857.923-2.445 1.53-4.658 3.884h1.515c1.85-1.673 2.536-2.263 4.853-3.484.82-.473.932-1.07.596-2C18.74 10.977 16.39 4.484 14.222.03"/><path d="M9.498.071C8.172.966 7.149 2.254 5.996 3.358l.473 1.508c.903-.71 1.688-1.569 2.5-2.38l4.376 10.977c.252.743-.145 1.405-.944 2.125-.956.769-2.925 2.56-3.818 3.926h1.358c1.426-1.464 1.683-1.663 3.306-3.068 1.09-1.112 2.074-1.681 1.56-3.106z"/><path d="M5.023 0C4.67.12 4.376.347 4.1.588a880 880 0 0 0-3.889 3.75c-.196.182-.213.45-.21.718L.017 6.57S1.743 4.892 4.32 2.41c1.39 3.615 2.837 7.21 4.263 10.813.195.544-.272.99-.864 1.585-.818.798-2.53 2.44-4.281 4.635h1.756l4.22-4.629c.402-.552.9-1.091.69-1.591L5.024 0Z"/></svg>Wikibooks <b>8</b> ✓</span><span class="chip"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M16 10a6 6 0 0 1-6 6 6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6M7.55 8.94a10 10 0 0 1 1.33-3.81 5 5 0 0 0-3.86 4.45H7.5c0-.22.03-.43.05-.64m1 .12a8 8 0 0 0-.05.52h3.06a8 8 0 0 0-.05-.52 9.1 9.1 0 0 0-1.48-3.89 9.1 9.1 0 0 0-1.48 3.9Zm4.01.52h2.42a5 5 0 0 0-3.79-4.44 10 10 0 0 1 1.37 4.44m-7.53 1a5 5 0 0 0 3.87 4.3 9.4 9.4 0 0 1-1.4-4.3zm5 4.21c1-1.47 1.43-2.9 1.52-4.21H8.52a8.53 8.53 0 0 0 1.52 4.21zm1.14.07a5 5 0 0 0 3.8-4.28h-2.41a9.35 9.35 0 0 1-1.39 4.28M3.07 6a7.97 7.97 0 0 0 0 8h1.18A6.96 6.96 0 0 1 3 10c0-1.49.46-2.87 1.25-4Zm12.68 0h1.18a7.97 7.97 0 0 1 0 8h-1.18A6.96 6.96 0 0 0 17 10c0-1.49-.46-2.87-1.25-4m2.74 7h1.05a9.9 9.9 0 0 0 0-6h-1.05a9.04 9.04 0 0 1 0 6M.46 13h1.05a9.04 9.04 0 0 1 0-6H.46a9.9 9.9 0 0 0 0 6"/></svg>Wikinews <b>5</b> ✓</span><span class="chip"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M9.982 3c-.2.04-.44.196-.641.47-.2.234-.361.585-.521.976h2.284c-.16-.43-.32-.742-.52-.977-.161-.273-.402-.43-.602-.469m.722.079c.08.078.12.117.16.195q.36.468.601 1.172h1.604c-.642-.703-1.443-1.211-2.365-1.367m-1.444 0a4.37 4.37 0 0 0-2.365 1.406H8.5c.16-.469.36-.899.601-1.172a.6.6 0 0 1 .16-.234Zm-1.162.039a6.35 6.35 0 0 0-2.285 1.328h.682a5.2 5.2 0 0 1 1.603-1.328m3.848.039c.601.312 1.123.742 1.604 1.328h.681a6.1 6.1 0 0 0-2.285-1.328m-6.494 1.64A6.1 6.1 0 0 0 4.29 6.596h1.042a7.5 7.5 0 0 1 .882-1.797h-.762Zm1.163 0a7 7 0 0 0-.962 1.798h2.365c.08-.586.2-1.211.4-1.797zm2.124 0c-.2.587-.32 1.173-.4 1.798h3.327a9.7 9.7 0 0 0-.401-1.797zm2.887 0c.16.587.32 1.173.4 1.798h2.325a5.6 5.6 0 0 0-.962-1.797zm2.164 0c.401.548.682 1.134.882 1.798h1.042c-.28-.664-.681-1.25-1.162-1.797zm-9.62 2.11a6.1 6.1 0 0 0-.361 2.072H4.97c0-.704.08-1.407.28-2.071zm1.403 0a7.2 7.2 0 0 0-.281 2.072h2.566c0-.704.04-1.368.12-2.071zm2.725 0c-.08.704-.12 1.368-.12 2.072h3.648c0-.704-.04-1.368-.12-2.071zm3.728 0c.08.704.12 1.368.12 2.072h2.566a7.2 7.2 0 0 0-.28-2.071zm2.726 0c.2.665.28 1.368.28 2.072h1.163a6.1 6.1 0 0 0-.36-2.071zM20 9.332H0v.646h20zm-16.645 1H.685v6.707h2.67zm5.321 0H6.005v6.707h2.67zm5.32 0h-2.67v6.707h2.67zm5.321 0h-2.671v6.707h2.67zM20 17.355H0V18h20z"/></svg>Wikiversity <b>3</b> ✓</span><span class="chip"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M9.94 0a10 10 0 0 0-8.08 4.2h4.21c.06-.35.16-.72.49-1.04.2-.23.67-.2 1-.26.33-.07.87-.92 1.4-1.17.64.33 1.34.83 1.7 1.08.62-.49 1.16-1.33 1.4-.65.2-.33.53-.54.9-.63.17-.04.4-.03.52-.05.14-.06.42-.27.66-.34-.38.58-.43 2.25-.44 3.06v.35c.55.12 1.25.03 1.49-.35h2.95A9.99 9.99 0 0 0 10 0zm-.36 2.5c.17.47.31.94.26 1.4-.06.3.07.28.31.16s.36-.26.72-.37c.27-.07.08-.26-.05-.4-.4-.34-.82-.56-1.24-.8zm-8.3 2.6A9.95 9.95 0 0 0 0 10a10 10 0 0 0 20 0 9.94 9.94 0 0 0-1.28-4.9H2.8c.52 1.1.81 1.7 2.6 1.46.62-.1 1-.16 1 .48.08.39.38.52 1.15.38.3-.11.57-.28.79-.14h.02v.01a.04.04 0 0 1 .01.02c0 .1-.19.31.04.57.57.55 1.12 1.04 1.7 1.6.13.64.7.55 1.15.42.68-.2.38.1.63.41.14.22.46.81.84.6.01 1.08.28 1.85.84 2.27-.17.63-.33 1.5-.03 2.02-.5-.16-.3.81-.45 1.22-.26.68-.48.65-.72.71.22.24.5.49.92.64v.01l.02.01c0 .23.04.43.18.57-.26-.06-.57-.42-1.08-.19-.56.25-.68.08-.48-.29.26-.57-.3-.78-.88-.92v-.23c.12-.04.26-.08.42-.1.25-.05.42-.14.4-.5-.01-.5-.03-1 0-1.48a6 6 0 0 1 .18-1.21c.07-.2.44-.38.13-.64A42 42 0 0 0 8.3 9.3l-.06-.02 1.65 2.93c.2.49.58 1-.1 1.13v.01c-.03.47.06 1.28-.26 1.44-.36.25-.39.48-.42.86-.06.4-.06.86.06 1.18.12.05.24.08.37.1l.32.04c-.43.56-.96.39-1.27-.13l-1.67-2.58c.08-2.51.13-4.2-.05-6.3-.92.08-1.85.01-2.83-.56-.22-.4-.47-.36-.89-.26.05-.37-.1-.73-.32-1.1l-.1-.93H1.29zm14.51 1.03c1.6-.04 1.14 2.78 1.14 4.15h.01l-.13.7-.2 1.21c.07.6-.09.68-.2 1.02 0 1.32-.18 1.7-1.29 2.7a2.16 2.16 0 0 1-1.17-2.25c.04-.24.2-.51-.01-.9a7.4 7.4 0 0 1 .14-3.35.6.6 0 0 1 .2-.02.63.63 0 0 0 .57-.74 3.3 3.3 0 0 0 .6-.2c-.81-.76-.52-2.3.34-2.32"/></svg>Wikisource <b>1</b></span><span class="chip"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M15.874 8.19 20 0l-8.254 4.095c.99.263 1.892.78 2.617 1.498a5.8 5.8 0 0 1 1.51 2.596Zm-6.349 4.043L14.678 20l.56-9.291a5.9 5.9 0 0 1-2.65 1.523 5.95 5.95 0 0 1-3.063 0Zm-.159-7.508L.001 5.28l7.829 5.113a5.8 5.8 0 0 1 0-3.038c.27-.995.8-1.902 1.536-2.63"/></svg>Wikivoyage <b>1</b></span></div>
 </div>
     </div><div data-slot="identifiers">
-        <button class="more" type="button" command="show-modal" commandfor="d69"># 181</button><dialog id="d69" closedby="any">
+        <button class="more" type="button" command="show-modal" commandfor="d45"># 181</button><dialog id="d45" closedby="any">
         <header>
             <h2>181</h2>
             <button type="button"
                     command="close"
-                    commandfor="d69"
+                    commandfor="d45"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><div class="idlist"><div><span>AGROVOC ID</span><span>c_2437</span></div><div><span>All the Tropes article ID</span><span>Earth</span></div><div><span>Arab Encyclopedia concept ID</span><span>1136</span></div><div><span>archINFORM location ID</span><span>3070</span></div><div><span>Archive of Our Own tag</span><span>Earth</span></div><div><span>article ID in the Lithuanian Universal Encyclopedia Online</span><span>zeme-2</span></div><div><span>Australian Educational Vocabulary ID</span><span>scot/1917</span></div><div><span>BabelNet ID</span><span>00029424n</span></div><div><span>bashenc.online ID</span><span>85704</span></div><div><span>Basisklassifikation</span><span>74.13</span></div><div><span>BBC News topic ID</span><span>c34p8n88rl6t</span></div><div><span>BBC Things ID</span><span>dd8bc764-62f3-4f5f-837d-09aa2580f7b9</span></div><div><span>bgm.tv character ID</span><span>12929</span></div><div><span>Bibliothèque nationale de France ID</span><span>11975911n</span></div><div><span>Bing entity ID</span><span>6ddb3372-4801-5567-321e-e8a53bd774a4</span></div><div><span>BNCF Thesaurus ID</span><span>5175</span></div><div><span>booru tag</span><span>earth_(planet)</span></div><div><span>Brockhaus Enzyklopädie online ID</span><span>erde</span></div><div><span>Comic Vine ID</span><span>4020-57183</span></div><div><span>Cultureel Woordenboek ID</span><span>aarde-weer-en-klimaat/aarde</span></div><div><span>Curlie ID</span><span>World/Deutsch/Wissenschaft/Naturwissenschaften/Astronomie/Sonnensystem/Planeten/Erde/</span></div><div><span>Curlie ID</span><span>World/Español/Ciencia_y_tecnología/Astronomía/Sistema_Solar/Planetas/Tierra/</span></div><div><span>Curlie ID</span><span>Science/Astronomy/Solar_System/Planets/Earth/</span></div><div><span>Cyprus Bibliography ID</span><span>11978</span></div><div><span>Danbooru tag</span><span>earth_(planet)</span></div><div><span>Data Commons ID</span><span>Earth</span></div><div><span>De Agostini ID</span><span>Tèrra+(astronomia)</span></div><div><span>Der Spiegel topic ID</span><span>erde</span></div><div><span>Dewey Decimal Classification</span><span>910.02</span></div><div><span>Dewey Decimal Classification</span><span>525</span></div><div><span>Dewey Decimal Classification</span><span>550</span></div><div><span>Enciclopedia Galega Universal ID</span><span>191749</span></div><div><span>Encyclopedia of China (Second Edition) ID</span><span>198855</span></div><div><span>Encyclopedia of China (Third Edition) ID (2026)</span><span>1JSiLe</span></div><div><span>Encyclopedia of China (Third Edition) ID (2026)</span><span>3ixNlQ</span></div><div><span>Encyclopedia of China (Third Edition) ID (2026)</span><span>F1vJn</span></div><div><span>Encyclopedia of China (Third Edition) old ID (2021)</span><span>514491</span></div><div><span>Encyclopedia of China (Third Edition) old ID (2021)</span><span>580878</span></div><div><span>Encyclopedia of China (Third Edition) old ID (2021)</span><span>385678</span></div><div><span>Encyclopedia of Korean Culture ID</span><span>E0054086</span></div><div><span>Encyclopedia of Modern Ukraine ID</span><span>15977</span></div><div><span>Encyclopedia of Science Fiction ID</span><span>terra</span></div><div><span>Encyclopædia Britannica Online ID</span><span>place/Earth</span></div><div><span>Encyclopædia Universalis ID</span><span>terre-la-planete-terre</span></div><div><span>Encyclopædia Universalis ID</span><span>terre-vue-d-ensemble</span></div><div><span>Estonian Subject Thesaurus ID</span><span>1913</span></div><div><span>EU Knowledge Graph item ID</span><span>Q481</span></div><div><span>FactGrid item ID</span><span>Q176134</span></div><div><span>Fallout Wiki ID</span><span>Earth</span></div><div><span>Famous Birthdays ID</span><span>planets/earth</span></div><div><span>Fandom article ID</span><span>paleontology:Earth</span></div><div><span>Fandom article ID</span><span>oursolarsystem:Earth</span></div><div><span>Fandom article ID</span><span>earth:Earth</span></div><div><span>Fandom article ID</span><span>ru.weather:Земля</span></div><div><span>Fandom article ID</span><span>astronomical:Earth</span></div><div><span>Fandom article ID</span><span>planets:Earth</span></div><div><span>Fandom article ID</span><span>planet:Earth</span></div><div><span>Fandom article ID</span><span>solar-system:Earth</span></div><div><span>Fandom article ID</span><span>spaceearthandweather:Earth</span></div><div><span>Fandom article ID</span><span>solarsystem:Earth</span></div><div><span>Fandom article ID</span><span>nasa:Earth</span></div><div><span>Fandom article ID</span><span>thestarsabove:Earth</span></div><div><span>Fandom article ID</span><span>cryptids12-everything:Earth</span></div><div><span>Fandom article ID</span><span>space:Earth</span></div><div><span>Fandom article ID</span><span>thesolarsystem:Earth</span></div><div><span>Fandom article ID</span><span>neoencyclopedia:Earth</span></div><div><span>Fandom article ID</span><span>starwars:Earth_(droid)</span></div><div><span>Fandom article ID</span><span>starwars:Thaere_system</span></div><div><span>FAST ID</span><span>1860481</span></div><div><span>France 24 topic ID (French)</span><span>terre</span></div><div><span>Freebase ID</span><span>/m/02j71</span></div><div><span>GACS ID</span><span>24817</span></div><div><span>Gaming Wiki Network article ID</span><span>raywiki:Earth</span></div><div><span>Gaming Wiki Network article ID</span><span>fallout:Earth</span></div><div><span>Gaming Wiki Network article ID</span><span>medievil:Earth</span></div><div><span>GeoNames ID</span><span>6295630</span></div><div><span>Georgian Encyclopedia ID</span><span>3980</span></div><div><span>Getty Thesaurus of Geographic Names ID</span><span>7030638</span></div><div><span>Giant Bomb ID (former scheme)</span><span>3035-65</span></div><div><span>GND ID</span><span>1135962553</span></div><div><span>Golden ID (archived)</span><span>Earth-ZBEG</span></div><div><span>Golden ID (archived)</span><span>Earth</span></div><div><span>Google News topics ID</span><span>CAAqIQgKIhtDQkFTRGdvSUwyMHZNREpxTnpFU0FtVnVLQUFQAQ</span></div><div><span>Gran Enciclopèdia Catalana ID</span><span>terra-14</span></div><div><span>Gran Enciclopèdia Catalana ID (former scheme)</span><span>0145903</span></div><div><span>Great Norwegian Encyclopedia ID</span><span>Jorden</span></div><div><span>Great Russian Encyclopedia Online ID (2017)</span><span>5310930</span></div><div><span>Harper&#39;s tag</span><span>earth</span></div><div><span>Iconclass notation</span><span>25</span></div><div><span>iDAI.gazetteer ID</span><span>2042600</span></div><div><span>IFLA value vocabularies ID</span><span>planet#ea</span></div><div><span>IMDb keyword</span><span>world</span></div><div><span>IMDb keyword</span><span>planet-earth</span></div><div><span>IMDb keyword</span><span>earth</span></div><div><span>iNaturalist place ID</span><span>93997</span></div><div><span>Interlingual Index ID</span><span>i85350</span></div><div><span>J9U entity ID</span><span>987007445644605171</span></div><div><span>JSTOR topic ID (archived)</span><span>earth</span></div><div><span>KBpedia ID</span><span>PlanetEarth</span></div><div><span>Klexikon article ID</span><span>Erde</span></div><div><span>Krugosvet article (archived)</span><span>nauka_i_tehnika/astronomiya/ZEMLYA.html</span></div><div><span>Larousse ID</span><span>images/La_Terre/1008518</span></div><div><span>Larousse ID</span><span>divers/Terre/96671</span></div><div><span>LC and MARC vocabularies ID</span><span>geographicAreas/x</span></div><div><span>Lex ID</span><span>Jorden</span></div><div><span>lib.reviews ID</span><span>earth</span></div><div><span>Library of Congress Authorities ID</span><span>sh85040427</span></div><div><span>Library of Congress Classification</span><span>QB630-QB638.8</span></div><div><span>Lille norske leksikon ID</span><span>Jorda</span></div><div><span>MeSH concept ID</span><span>M0027785</span></div><div><span>MeSH descriptor ID</span><span>D018534</span></div><div><span>MeSH term ID</span><span>T000950539</span></div><div><span>MeSH tree code</span><span>G01.060.075.730.700.200</span></div><div><span>museum-digital tag ID</span><span>4552</span></div><div><span>museum-digital tag ID</span><span>18235</span></div><div><span>NAIF ID</span><span>399</span></div><div><span>Namuwiki ID</span><span>지구</span></div><div><span>National Library of Iceland ID</span><span>000051235</span></div><div><span>National Library of Ireland ID</span><span>vtls000220975</span></div><div><span>National Library of Israel ID (old)</span><span>003982849</span></div><div><span>National Library of Korea ID</span><span>KSH1998010647</span></div><div><span>National Library of Latvia ID</span><span>000055925</span></div><div><span>National Library of Spain SpMaBN ID</span><span>XX453913</span></div><div><span>NDL Authority ID</span><span>00573040</span></div><div><span>NE.se ID</span><span>jorden</span></div><div><span>New York Post topic ID</span><span>earth</span></div><div><span>New York Times topic ID</span><span>subject/earth</span></div><div><span>NicoNicoPedia word article ID</span><span>地球</span></div><div><span>NL CR AUT ID</span><span>ph117167</span></div><div><span>OmegaWiki Defined Meaning</span><span>7401</span></div><div><span>Online PWN Encyclopedia ID</span><span>4001456</span></div><div><span>Open Library subject ID</span><span>place:earth_(planet)</span></div><div><span>Open Library subject ID</span><span>earth_(planet)</span></div><div><span>Open Library subject ID</span><span>earth</span></div><div><span>Open Library subject ID</span><span>place:earth</span></div><div><span>OpenAlex ID</span><span>C3019945712</span></div><div><span>PACTOLS thesaurus ID</span><span>pcrtYJe0Kp7hmm</span></div><div><span>Peakbagger area ID</span><span>0</span></div><div><span>Personality Database profile ID</span><span>51788</span></div><div><span>Pixiv Encyclopedia ID</span><span>地球</span></div><div><span>ProofWiki ID</span><span>Definition:Earth</span></div><div><span>PSH ID</span><span>499</span></div><div><span>PSH ID</span><span>3769</span></div><div><span>RKD thesaurus ID</span><span>35597</span></div><div><span>Römpp online ID</span><span>RD-05-01501</span></div><div><span>ScienceDirect topic ID</span><span>engineering/planet-earth</span></div><div><span>ScienceDirect topic ID</span><span>earth-and-planetary-sciences/earth</span></div><div><span>SNK ID</span><span>179366</span></div><div><span>SVKKL authority ID</span><span>0321592-Zeme</span></div><div><span>TDV Encyclopedia of Islam ID</span><span>yer</span></div><div><span>The Independent topic ID</span><span>earth</span></div><div><span>The New Yorker topic ID</span><span>earth</span></div><div><span>ToposText person ID</span><span>17814</span></div><div><span>TV Tropes ID</span><span>UsefulNotes/Earth</span></div><div><span>U.S. National Archives Identifier</span><span>10046628</span></div><div><span>U.S. National Archives Identifier</span><span>10637787</span></div><div><span>UMLS CUI</span><span>C0242744</span></div><div><span>UNESCO Thesaurus ID</span><span>concept4083</span></div><div><span>Unified Astronomy Thesaurus ID</span><span>439</span></div><div><span>VIAF cluster ID</span><span>6270149919445006650001</span></div><div><span>VIAF cluster ID</span><span>251346083</span></div><div><span>Vikidia article ID</span><span>ca:Terra</span></div><div><span>Vikidia article ID</span><span>eu:Lur</span></div><div><span>Vikidia article ID</span><span>en:Earth</span></div><div><span>Vikidia article ID</span><span>es:Tierra</span></div><div><span>Vikidia article ID</span><span>ru:Земля</span></div><div><span>Vikidia article ID</span><span>fr:Terre</span></div><div><span>Vikidia article ID</span><span>it:Terra</span></div><div><span>Visual Novel Database ID</span><span>g52</span></div><div><span>Who&#39;s on First ID</span><span>0</span></div><div><span>WikiKids ID</span><span>Aarde_(planeet)</span></div><div><span>Wikisimpsons article ID</span><span>188974</span></div><div><span>WOEID</span><span>1</span></div><div><span>Wolfram Language entity code</span><span>Entity[&#34;Planet&#34;, &#34;Earth&#34;]</span></div><div><span>WordNet 3.1 Synset ID</span><span>09293800-n</span></div><div><span>WorldCat Entities ID</span><span>E39PBJB8v443pPTqgvXgPkBtrq</span></div><div><span>YSA ID</span><span>Y103338</span></div><div><span>YSO ID</span><span>11861</span></div><div><span>Zhihu topic ID</span><span>19560080</span></div><div><span>‎Giant Bomb Wiki ID</span><span>Locations/Earth</span></div><div><span>‎Yale LUX ID</span><span>concept/7949f7e1-f5e3-4712-a5dd-9c032d227495</span></div></div></div>

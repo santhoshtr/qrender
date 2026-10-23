@@ -149,13 +149,6 @@ struct RowsHtml<'a> {
 }
 
 #[derive(Template)]
-#[template(path = "parts/figure.html")]
-struct FigureHtml<'a> {
-    ui: &'a Ui<'a>,
-    s: &'a Shown<'a>,
-}
-
-#[derive(Template)]
 #[template(path = "parts/about.html")]
 struct AboutHtml<'a> {
     ui: &'a Ui<'a>,
@@ -489,10 +482,6 @@ impl<'v> Ui<'v> {
             values,
             all: Some(n.get()),
         })
-    }
-
-    pub fn figure<'a>(&self, s: impl Ref<Shown<'a>>) -> String {
-        render(FigureHtml { ui: self, s: s.r() })
     }
 
     /// The picture beside the text of a value.

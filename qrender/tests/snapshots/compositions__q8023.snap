@@ -455,7 +455,66 @@ expression: composition
       "concept": "Q8436",
       "template": "columns",
       "slots": {
-        "stack": [
+        "sheet": [
+          {
+            "primitive": "fact",
+            "pid": "P22",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q8023-ac1bdee6-40bc-eb76-91b2-6f4246fdeaeb",
+                "pid": "P22",
+                "item": "Q1814626",
+                "rank": "normal",
+                "provenance": "sourced",
+                "shown": true
+              }
+            ],
+            "priority": 1.0,
+            "rule": "few-pictures"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P25",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q8023-675d22c7-4366-6dc7-aaef-0dd4b12ce384",
+                "pid": "P25",
+                "item": "Q16103879",
+                "rank": "normal",
+                "provenance": "sourced",
+                "shown": true
+              }
+            ],
+            "priority": 1.0,
+            "rule": "few-pictures"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P1038",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q8023-cfb0e396-4c69-716d-a706-624f56d8f9b6",
+                "pid": "P1038",
+                "item": "Q42336756",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P1039",
+                    "item": "Q19756330"
+                  }
+                ],
+                "shown": true
+              }
+            ],
+            "priority": 0.0,
+            "rule": "few-pictures"
+          }
+        ],
+        "strips": [
           {
             "primitive": "network",
             "pid": "P26",
@@ -640,65 +699,6 @@ expression: composition
             "priority": 2.585,
             "rule": "set"
           }
-        ],
-        "sheet": [
-          {
-            "primitive": "fact",
-            "pid": "P22",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q8023-ac1bdee6-40bc-eb76-91b2-6f4246fdeaeb",
-                "pid": "P22",
-                "item": "Q1814626",
-                "rank": "normal",
-                "provenance": "sourced",
-                "shown": true
-              }
-            ],
-            "priority": 1.0,
-            "rule": "few-pictures"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P25",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q8023-675d22c7-4366-6dc7-aaef-0dd4b12ce384",
-                "pid": "P25",
-                "item": "Q16103879",
-                "rank": "normal",
-                "provenance": "sourced",
-                "shown": true
-              }
-            ],
-            "priority": 1.0,
-            "rule": "few-pictures"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P1038",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q8023-cfb0e396-4c69-716d-a706-624f56d8f9b6",
-                "pid": "P1038",
-                "item": "Q42336756",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P1039",
-                    "item": "Q19756330"
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 0.0,
-            "rule": "few-pictures"
-          }
         ]
       },
       "prose": {
@@ -714,7 +714,41 @@ expression: composition
       "concept": "Q8434",
       "template": "columns",
       "slots": {
-        "stack": [
+        "sheet": [
+          {
+            "primitive": "fact",
+            "pid": "P512",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q8023-3E2E5DDC-AE1B-4EE3-ACD3-15204841CB99",
+                "pid": "P512",
+                "item": "Q959320",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P585",
+                    "year": 1996
+                  },
+                  {
+                    "pid": "P1027",
+                    "item": "Q865528"
+                  },
+                  {
+                    "pid": "P1552",
+                    "item": "Q209896"
+                  }
+                ],
+                "class": true,
+                "shown": true
+              }
+            ],
+            "priority": 1.0,
+            "rule": "few-pictures"
+          }
+        ],
+        "strips": [
           {
             "primitive": "network",
             "pid": "P69",
@@ -801,40 +835,6 @@ expression: composition
             ],
             "priority": 0.0,
             "rule": "set"
-          }
-        ],
-        "sheet": [
-          {
-            "primitive": "fact",
-            "pid": "P512",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q8023-3E2E5DDC-AE1B-4EE3-ACD3-15204841CB99",
-                "pid": "P512",
-                "item": "Q959320",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P585",
-                    "year": 1996
-                  },
-                  {
-                    "pid": "P1027",
-                    "item": "Q865528"
-                  },
-                  {
-                    "pid": "P1552",
-                    "item": "Q209896"
-                  }
-                ],
-                "class": true,
-                "shown": true
-              }
-            ],
-            "priority": 1.0,
-            "rule": "few-pictures"
           }
         ]
       },

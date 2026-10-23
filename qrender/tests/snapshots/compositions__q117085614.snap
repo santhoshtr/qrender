@@ -276,7 +276,7 @@ expression: composition
       "concept": "Q15267437",
       "template": "columns",
       "slots": {
-        "stack": [
+        "strips": [
           {
             "primitive": "network",
             "pid": "P161",
@@ -687,7 +687,7 @@ expression: composition
       "concept": "Q506702",
       "template": "columns",
       "slots": {
-        "stack": [
+        "strips": [
           {
             "primitive": "credits",
             "pids": [
@@ -835,7 +835,206 @@ expression: composition
       "concept": "Q932586",
       "template": "columns",
       "slots": {
-        "stack": [
+        "gallery": [
+          {
+            "primitive": "network",
+            "role": "gallery",
+            "values": [
+              {
+                "statement": "Q117085614-18146dcf-4436-0c83-51d6-2d597c475003",
+                "pid": "P272",
+                "item": "Q8016302",
+                "rank": "normal",
+                "provenance": "sourced",
+                "image": {
+                  "file": "Gate 4 Warner Bros. Studios.jpg",
+                  "kind": "photo",
+                  "aspect": 1.5,
+                  "megapixels": 17.92,
+                  "credit": {
+                    "artist": "Coolcaesar",
+                    "license": "CC BY-SA 4.0"
+                  }
+                },
+                "priority": 1.0
+              },
+              {
+                "statement": "Q117085614-e9052731-430f-f4ce-288c-53985a5c15a1",
+                "pid": "P495",
+                "item": "Q30",
+                "rank": "normal",
+                "provenance": "sourced",
+                "image": {
+                  "file": "United States - Location Map (2013) - USA - UNOCHA.svg",
+                  "kind": "drawing",
+                  "aspect": 1.0,
+                  "megapixels": 0.06,
+                  "credit": {
+                    "artist": "UN Office for the Coordination of Humanitarian Affairs (OCHA)",
+                    "license": "CC BY 3.0"
+                  }
+                },
+                "priority": 1.0
+              }
+            ],
+            "priority": 1.0,
+            "rule": "single"
+          }
+        ],
+        "sheet": [
+          {
+            "primitive": "fact",
+            "pid": "P364",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q117085614-ac92123a-46bb-9af3-2f7c-b3d6e9307a3a",
+                "pid": "P364",
+                "item": "Q1860",
+                "rank": "normal",
+                "provenance": "sourced",
+                "class": true,
+                "shown": true
+              }
+            ],
+            "priority": 1.0,
+            "rule": "few-pictures"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P2130",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q117085614-a2a2b482-4ea2-7cc0-7905-1a42680fba0a",
+                "pid": "P2130",
+                "amount": 140000000.0,
+                "unit": "Q4917",
+                "rank": "normal",
+                "provenance": "sourced",
+                "shown": true
+              }
+            ],
+            "priority": 1.0,
+            "rule": "row"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P2047",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q117085614-48d64c1a-4140-1261-d1dc-2ab5fdf09143",
+                "pid": "P2047",
+                "amount": 9691.0,
+                "unit": "Q11574",
+                "rank": "preferred",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P7452",
+                    "item": "Q71536040"
+                  }
+                ],
+                "shown": true
+              }
+            ],
+            "priority": 1.0,
+            "rule": "row"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P2043",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q117085614-9e1c11a0-4f44-3197-139c-7f2949744212",
+                "pid": "P2043",
+                "amount": 4426.0,
+                "unit": "Q11573",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q105759907"
+                  }
+                ],
+                "shown": true
+              }
+            ],
+            "priority": 1.0,
+            "rule": "row"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P462",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q117085614-F10F4B40-9796-4B2B-A114-4B0989C20208",
+                "pid": "P462",
+                "item": "Q22006653",
+                "rank": "normal",
+                "provenance": "sourced",
+                "class": true,
+                "shown": true
+              }
+            ],
+            "priority": 1.0,
+            "rule": "few-pictures"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P4082",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q117085614-da6c341f-428e-ba54-833d-26f782857312",
+                "pid": "P4082",
+                "item": "Q138479019",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P127",
+                    "item": "Q224081"
+                  }
+                ],
+                "shown": true
+              }
+            ],
+            "priority": 1.0,
+            "rule": "few-pictures"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P3803",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q117085614-4e81a71f-4afc-4510-8f1b-fd5965974fcd",
+                "pid": "P3803",
+                "item": "Q1788758",
+                "rank": "normal",
+                "provenance": "sourced",
+                "class": true,
+                "shown": true
+              },
+              {
+                "statement": "Q117085614-21c137f1-4e09-daf8-784c-6384b4768de1",
+                "pid": "P3803",
+                "item": "Q2518956",
+                "rank": "normal",
+                "provenance": "sourced",
+                "shown": true
+              }
+            ],
+            "priority": 1.585,
+            "rule": "few-pictures"
+          }
+        ],
+        "strips": [
           {
             "primitive": "network",
             "pid": "P915",
@@ -1071,205 +1270,6 @@ expression: composition
             ],
             "priority": 2.585,
             "rule": "set"
-          }
-        ],
-        "gallery": [
-          {
-            "primitive": "network",
-            "role": "gallery",
-            "values": [
-              {
-                "statement": "Q117085614-18146dcf-4436-0c83-51d6-2d597c475003",
-                "pid": "P272",
-                "item": "Q8016302",
-                "rank": "normal",
-                "provenance": "sourced",
-                "image": {
-                  "file": "Gate 4 Warner Bros. Studios.jpg",
-                  "kind": "photo",
-                  "aspect": 1.5,
-                  "megapixels": 17.92,
-                  "credit": {
-                    "artist": "Coolcaesar",
-                    "license": "CC BY-SA 4.0"
-                  }
-                },
-                "priority": 1.0
-              },
-              {
-                "statement": "Q117085614-e9052731-430f-f4ce-288c-53985a5c15a1",
-                "pid": "P495",
-                "item": "Q30",
-                "rank": "normal",
-                "provenance": "sourced",
-                "image": {
-                  "file": "United States - Location Map (2013) - USA - UNOCHA.svg",
-                  "kind": "drawing",
-                  "aspect": 1.0,
-                  "megapixels": 0.06,
-                  "credit": {
-                    "artist": "UN Office for the Coordination of Humanitarian Affairs (OCHA)",
-                    "license": "CC BY 3.0"
-                  }
-                },
-                "priority": 1.0
-              }
-            ],
-            "priority": 1.0,
-            "rule": "single"
-          }
-        ],
-        "sheet": [
-          {
-            "primitive": "fact",
-            "pid": "P364",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q117085614-ac92123a-46bb-9af3-2f7c-b3d6e9307a3a",
-                "pid": "P364",
-                "item": "Q1860",
-                "rank": "normal",
-                "provenance": "sourced",
-                "class": true,
-                "shown": true
-              }
-            ],
-            "priority": 1.0,
-            "rule": "few-pictures"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P2130",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q117085614-a2a2b482-4ea2-7cc0-7905-1a42680fba0a",
-                "pid": "P2130",
-                "amount": 140000000.0,
-                "unit": "Q4917",
-                "rank": "normal",
-                "provenance": "sourced",
-                "shown": true
-              }
-            ],
-            "priority": 1.0,
-            "rule": "row"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P2047",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q117085614-48d64c1a-4140-1261-d1dc-2ab5fdf09143",
-                "pid": "P2047",
-                "amount": 9691.0,
-                "unit": "Q11574",
-                "rank": "preferred",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P7452",
-                    "item": "Q71536040"
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 1.0,
-            "rule": "row"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P2043",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q117085614-9e1c11a0-4f44-3197-139c-7f2949744212",
-                "pid": "P2043",
-                "amount": 4426.0,
-                "unit": "Q11573",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q105759907"
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 1.0,
-            "rule": "row"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P462",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q117085614-F10F4B40-9796-4B2B-A114-4B0989C20208",
-                "pid": "P462",
-                "item": "Q22006653",
-                "rank": "normal",
-                "provenance": "sourced",
-                "class": true,
-                "shown": true
-              }
-            ],
-            "priority": 1.0,
-            "rule": "few-pictures"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P4082",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q117085614-da6c341f-428e-ba54-833d-26f782857312",
-                "pid": "P4082",
-                "item": "Q138479019",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P127",
-                    "item": "Q224081"
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 1.0,
-            "rule": "few-pictures"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P3803",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q117085614-4e81a71f-4afc-4510-8f1b-fd5965974fcd",
-                "pid": "P3803",
-                "item": "Q1788758",
-                "rank": "normal",
-                "provenance": "sourced",
-                "class": true,
-                "shown": true
-              },
-              {
-                "statement": "Q117085614-21c137f1-4e09-daf8-784c-6384b4768de1",
-                "pid": "P3803",
-                "item": "Q2518956",
-                "rank": "normal",
-                "provenance": "sourced",
-                "shown": true
-              }
-            ],
-            "priority": 1.585,
-            "rule": "few-pictures"
           }
         ]
       },

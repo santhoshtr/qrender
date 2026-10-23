@@ -1,6 +1,6 @@
 {%- import "macros.html" as m -%}
-{#- The people who made a work, each once, with all of their roles: one row
-    of pictures with "View all" as its last card; all of them in its
+{#- The people who made a work, each once, with all of their roles: a
+    strip of cards with "View all" over its end; all of them in its
     dialog. -#}
 {%- let values = ui.persons(b) -%}
 {%- let heading = ui.heading(b.pids.as_slice()) -%}
@@ -8,7 +8,7 @@
 {%- let n = ui.id() -%}
 <div class="block set">
     {%- call m::scroller(heading) -%}
-    {%- for s in values.iter() -%}{%- if s.shown -%}{{ ui.figure(s)|safe }}{%- endif -%}{%- endfor -%}
+    {{ ui.rows(ui.first_shown(values.as_slice()))|safe }}
     {%- if all %}{% call m::view_all(ui, n) %}{% endcall %}{% endif -%}
     {%- endcall -%}
     {%- if all %}{% call m::dialog(ui, n, heading) %}{{ ui.rows(values.as_slice())|safe }}{% endcall %}{% endif -%}

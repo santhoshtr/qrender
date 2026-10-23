@@ -514,7 +514,8 @@ dialog.lightbox {
 		min-inline-size: 0;
 	}
 
-	& > [data-slot='stack'] {
+	& > [data-slot='stack'],
+	& > [data-slot='strips'] {
 		display: flex;
 		flex-direction: column;
 		gap: var( --gap );
@@ -1138,11 +1139,11 @@ dialog:is( .translator, .label-editor ) .actions {
 	figcaption & { color: inherit; opacity: 0.85; flex-basis: 100%; }
 }
 
-/* A card (a factoid), and a group of cards (the rows of a list, an
-   office): the colours of the dimension of the spread. The edge is the
+/* A card (a factoid, a chart), and a group of cards (the rows of a list,
+   an office): the colours of the dimension of the spread. The edge is the
    border of a card and the line between the cards of a group. Composed
    items have this box; the text of the article has none. */
-:is( .row, .pic-rows, .group ) {
+:is( .row, .pic-rows, .group, .series ) {
 	--pad-block: var( --spacing-50 );
 	--pad-inline: var( --spacing-75 );
 	--edge: color-mix( in srgb, var( --ink ) 25%, var( --soft ) );
@@ -1172,7 +1173,7 @@ dialog:is( .translator, .label-editor ) .actions {
 
 /* The icon of a composed item, at the start of its label: a mask in the
    colour of the dimension. An item can name its own icon (--icon). */
-:is( .row > dt, .set.rows > h3, .succession > h3 )::before {
+:is( .row > dt, .set > h3, .succession > h3, .series > h3 )::before {
 	content: '';
 	display: inline-block;
 	flex: none;
@@ -1203,6 +1204,10 @@ dialog:is( .translator, .label-editor ) .actions {
 		border-inline-start: 1px solid var( --edge );
 	}
 }
+
+/* In a group, every picture has the same width, cut to it: the cards
+   line up. A single card keeps the shape of its picture. */
+.pic-rows > li > .pic { inline-size: calc( 4 / 3 * var( --h ) ); }
 
 /* The qualifiers of a value: a line under the value. */
 .quals { display: block; }
@@ -1331,14 +1336,6 @@ dialog:is( .translator, .label-editor ) .actions {
 		font-size: var( --font-size-medium );
 		font-weight: var( --font-weight-bold );
 	}
-
-	&.k-empty {
-		background-color: var( --background-color-base );
-		border: 1px dashed var( --border-color-base );
-
-		& figcaption { background: none; color: var( --color-base ); }
-		& figcaption a { color: var( --color-progressive ); }
-	}
 }
 
 .from {
@@ -1403,6 +1400,27 @@ dialog:is( .translator, .label-editor ) .actions {
 	& > .m.k-drawing { inline-size: calc( var( --box ) * var( --h ) ); }
 
 	&::after { content: none; }
+
+	/* A strip of cards: a card for each value, with a gap between them,
+	   not one border around them. */
+	& > .pic-rows {
+		display: flex;
+		gap: var( --spacing-75 );
+		border: 0;
+		border-radius: 0;
+		overflow: visible;
+		background: none;
+
+		& > li {
+			flex: none;
+			inline-size: 360px;
+			border: 1px solid var( --edge );
+			border-radius: var( --radius );
+			overflow: hidden;
+			background-color: var( --soft );
+			box-shadow: none;
+		}
+	}
 }
 
 /* "View all": a small card at the end of the row, over the picture that the

@@ -121,6 +121,16 @@ pub enum Block {
 }
 
 impl Block {
+    /// A strip of pictures: one row of the values, cut at its end.
+    pub fn is_strip(&self) -> bool {
+        match self {
+            Self::Network(n) => matches!(n.form, network::NetworkForm::Strip),
+            Self::Works(w) => matches!(w.form, works::WorksForm::Run),
+            Self::Credits(_) => true,
+            _ => false,
+        }
+    }
+
     pub fn primitive(&self) -> Primitive {
         match self {
             Self::Title(_) => Primitive::Title,

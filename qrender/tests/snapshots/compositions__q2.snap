@@ -1037,7 +1037,139 @@ expression: composition
       "concept": "Q1071",
       "template": "columns",
       "slots": {
-        "stack": [
+        "gallery": [
+          {
+            "primitive": "network",
+            "role": "gallery",
+            "values": [
+              {
+                "statement": "Q2-9bbb058a-48ab-0a81-e88e-82bba6b2abe5",
+                "pid": "P1589",
+                "item": "Q459173",
+                "rank": "preferred",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P2044",
+                    "amount": -10994.0
+                  }
+                ],
+                "image": {
+                  "file": "Challenger Deep Dive 071222 by V Vescovo in DSV Limiting Factor - Southern Wall of Western Pool.jpg",
+                  "kind": "photo",
+                  "aspect": 0.75,
+                  "megapixels": 12.19,
+                  "credit": {
+                    "artist": "Vlvescovo",
+                    "license": "CC BY-SA 4.0"
+                  }
+                },
+                "priority": 1.0
+              },
+              {
+                "statement": "Q2-122b289d-488d-f938-8f13-7710929be58e",
+                "pid": "P1589",
+                "item": "Q2586548",
+                "rank": "normal",
+                "provenance": "imported",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1957
+                  },
+                  {
+                    "pid": "P2044",
+                    "amount": -10950.0
+                  }
+                ],
+                "priority": 1.0
+              }
+            ],
+            "priority": 1.0,
+            "rule": "single"
+          }
+        ],
+        "sheet": [
+          {
+            "primitive": "fact",
+            "pid": "P1332",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q2-a874feee-4482-bb7b-74f5-204f52992e38",
+                "pid": "P1332",
+                "lat": 90.0,
+                "lon": 0.0,
+                "globe": "Q2",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P805",
+                    "item": "Q934"
+                  }
+                ],
+                "shown": true
+              }
+            ],
+            "priority": 0.0,
+            "rule": "extreme-point-row"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P1333",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q2-4d5ab1b1-4f48-43ab-2ebe-0a4b9a476b88",
+                "pid": "P1333",
+                "lat": -90.0,
+                "lon": 0.0,
+                "globe": "Q2",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P805",
+                    "item": "Q933"
+                  }
+                ],
+                "shown": true
+              }
+            ],
+            "priority": 0.0,
+            "rule": "extreme-point-row"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P1589",
+            "form": "list",
+            "statements": [
+              {
+                "statement": "Q2-6d825fc6-4c0b-257b-e3b0-856106955faf",
+                "pid": "P1589",
+                "item": "Q1491734",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P582",
+                    "year": 1952
+                  },
+                  {
+                    "pid": "P2044",
+                    "amount": -10540.0
+                  }
+                ],
+                "shown": true
+              }
+            ],
+            "priority": 1.0,
+            "former": true,
+            "rule": "former"
+          }
+        ],
+        "strips": [
           {
             "primitive": "network",
             "pid": "P610",
@@ -1198,138 +1330,6 @@ expression: composition
             ],
             "priority": 0.0,
             "rule": "set"
-          }
-        ],
-        "gallery": [
-          {
-            "primitive": "network",
-            "role": "gallery",
-            "values": [
-              {
-                "statement": "Q2-9bbb058a-48ab-0a81-e88e-82bba6b2abe5",
-                "pid": "P1589",
-                "item": "Q459173",
-                "rank": "preferred",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P2044",
-                    "amount": -10994.0
-                  }
-                ],
-                "image": {
-                  "file": "Challenger Deep Dive 071222 by V Vescovo in DSV Limiting Factor - Southern Wall of Western Pool.jpg",
-                  "kind": "photo",
-                  "aspect": 0.75,
-                  "megapixels": 12.19,
-                  "credit": {
-                    "artist": "Vlvescovo",
-                    "license": "CC BY-SA 4.0"
-                  }
-                },
-                "priority": 1.0
-              },
-              {
-                "statement": "Q2-122b289d-488d-f938-8f13-7710929be58e",
-                "pid": "P1589",
-                "item": "Q2586548",
-                "rank": "normal",
-                "provenance": "imported",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1957
-                  },
-                  {
-                    "pid": "P2044",
-                    "amount": -10950.0
-                  }
-                ],
-                "priority": 1.0
-              }
-            ],
-            "priority": 1.0,
-            "rule": "single"
-          }
-        ],
-        "sheet": [
-          {
-            "primitive": "fact",
-            "pid": "P1332",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q2-a874feee-4482-bb7b-74f5-204f52992e38",
-                "pid": "P1332",
-                "lat": 90.0,
-                "lon": 0.0,
-                "globe": "Q2",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P805",
-                    "item": "Q934"
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 0.0,
-            "rule": "extreme-point-row"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P1333",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q2-4d5ab1b1-4f48-43ab-2ebe-0a4b9a476b88",
-                "pid": "P1333",
-                "lat": -90.0,
-                "lon": 0.0,
-                "globe": "Q2",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P805",
-                    "item": "Q933"
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 0.0,
-            "rule": "extreme-point-row"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P1589",
-            "form": "list",
-            "statements": [
-              {
-                "statement": "Q2-6d825fc6-4c0b-257b-e3b0-856106955faf",
-                "pid": "P1589",
-                "item": "Q1491734",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P582",
-                    "year": 1952
-                  },
-                  {
-                    "pid": "P2044",
-                    "amount": -10540.0
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 1.0,
-            "former": true,
-            "rule": "former"
           }
         ]
       },
@@ -3014,7 +3014,476 @@ expression: composition
       "concept": "Q930933",
       "template": "columns",
       "slots": {
-        "stack": [
+        "gallery": [
+          {
+            "primitive": "network",
+            "role": "gallery",
+            "values": [
+              {
+                "statement": "Q2-3469f38b-41ff-8f9c-8ac6-5eb6e76ab69f",
+                "pid": "P13574",
+                "item": "Q3630",
+                "rank": "normal",
+                "provenance": "sourced",
+                "image": {
+                  "file": "Jakarta.jpg",
+                  "kind": "photo",
+                  "aspect": 1.3333,
+                  "megapixels": 0.75,
+                  "credit": {
+                    "artist": "",
+                    "license": "Copyrighted free use"
+                  }
+                },
+                "priority": 1.0
+              },
+              {
+                "statement": "Q2-25d66576-4029-906c-3bbf-79861a684d74",
+                "pid": "P361",
+                "item": "Q18589965",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Lagrange points Earth vs Moon.jpg",
+                  "kind": "photo",
+                  "aspect": 1.1671,
+                  "megapixels": 0.2,
+                  "credit": {
+                    "artist": "No machine-readable author provided. Vulpecula assumed (based on copyright claims).",
+                    "license": "Public domain"
+                  }
+                },
+                "priority": 0.0
+              },
+              {
+                "statement": "Q2-9c86f971-43d9-3b65-e634-15ebfbe63c7d",
+                "pid": "P361",
+                "item": "Q544",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Solar System true color.jpg",
+                  "kind": "photo",
+                  "aspect": 1.7778,
+                  "megapixels": 8.29,
+                  "credit": {
+                    "artist": "CactiStaccingCrane",
+                    "license": "CC BY-SA 4.0"
+                  }
+                },
+                "priority": 0.0
+              },
+              {
+                "statement": "Q2-ABFC9AC4-30C6-4593-ADBB-9105934CFE60",
+                "pid": "P706",
+                "item": "Q1",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "NASA-HS201427a-HubbleUltraDeepField2014-20140603.jpg",
+                  "kind": "photo",
+                  "aspect": 1.0952,
+                  "megapixels": 4.83,
+                  "credit": {
+                    "artist": "NASA, ESA, H. Teplitz and M. Rafelski (IPAC/Caltech), A. Koekemoer (STScI), R. Windhorst (Arizona State University), and Z. Levay (STScI)",
+                    "license": "Public domain"
+                  }
+                },
+                "priority": 0.0
+              }
+            ],
+            "priority": 1.0,
+            "rule": "single"
+          }
+        ],
+        "sheet": [
+          {
+            "primitive": "fact",
+            "pid": "P2579",
+            "form": "list",
+            "statements": [
+              {
+                "statement": "Q2-3AE1FD1A-5EE3-465D-8D9A-A109958A9660",
+                "pid": "P2579",
+                "item": "Q46255",
+                "rank": "normal",
+                "provenance": "none",
+                "class": true,
+                "shown": true
+              },
+              {
+                "statement": "Q2-84e95448-46e0-22f2-0f8d-84f91105b534",
+                "pid": "P2579",
+                "item": "Q8008",
+                "rank": "normal",
+                "provenance": "none",
+                "class": true,
+                "shown": true
+              },
+              {
+                "statement": "Q2-8a2f570f-454b-b9fb-1271-637c2de70471",
+                "pid": "P2579",
+                "item": "Q104499",
+                "rank": "normal",
+                "provenance": "none",
+                "class": true,
+                "shown": true
+              },
+              {
+                "statement": "Q2-B17DDC6B-2CE0-4518-ACD4-A4C1AFF5CE54",
+                "pid": "P2579",
+                "item": "Q1069",
+                "rank": "normal",
+                "provenance": "none",
+                "class": true,
+                "shown": true
+              }
+            ],
+            "priority": 0.0,
+            "rule": "few-pictures"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P1552",
+            "form": "list",
+            "statements": [
+              {
+                "statement": "Q2-39e4ab07-4216-133a-cebe-0c42a9c40d11",
+                "pid": "P1552",
+                "item": "Q25935139",
+                "rank": "normal",
+                "provenance": "none",
+                "shown": true
+              },
+              {
+                "statement": "Q2-3d117720-4442-5c47-6d7e-32af176d5d58",
+                "pid": "P1552",
+                "item": "Q6500960",
+                "rank": "normal",
+                "provenance": "none",
+                "class": true,
+                "shown": true
+              },
+              {
+                "statement": "Q2-83c9644f-4ff2-284a-4e4f-dd03852f43aa",
+                "pid": "P1552",
+                "item": "Q108156638",
+                "rank": "normal",
+                "provenance": "none",
+                "class": true,
+                "shown": true
+              },
+              {
+                "statement": "Q2-E2B67B28-A70D-499C-9DD9-96ADF2E288AC",
+                "pid": "P1552",
+                "item": "Q105115142",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P805",
+                    "item": "Q5327160"
+                  }
+                ],
+                "class": true,
+                "shown": true
+              },
+              {
+                "statement": "Q2-f433bdb1-4e5c-a58b-d97e-feda14052a3c",
+                "pid": "P1552",
+                "item": "Q846030",
+                "rank": "normal",
+                "provenance": "none",
+                "class": true,
+                "shown": true
+              }
+            ],
+            "priority": 0.0,
+            "rule": "few-pictures"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P461",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q2-9ea9e6e0-4e38-b712-9137-7cdf6128dfbb",
+                "pid": "P461",
+                "item": "Q527",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q2"
+                  }
+                ],
+                "class": true,
+                "shown": true
+              },
+              {
+                "statement": "Q2-c50f2b6d-4b1f-ade9-8f2e-a2ff0d24cc28",
+                "pid": "P461",
+                "item": "Q4169",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q1"
+                  }
+                ],
+                "class": true,
+                "shown": true
+              }
+            ],
+            "priority": 0.0,
+            "rule": "few-pictures"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P1557",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q2-e2828e9c-40ac-0437-83b0-2615fb8ef507",
+                "pid": "P1557",
+                "item": "Q898312",
+                "rank": "normal",
+                "provenance": "none",
+                "class": true,
+                "shown": true
+              }
+            ],
+            "priority": 0.0,
+            "rule": "few-pictures"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P398",
+            "form": "list",
+            "statements": [
+              {
+                "statement": "Q2-0b28d156-460f-32b9-ddcf-604833b4cbee",
+                "pid": "P398",
+                "item": "Q130301991",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 2024
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 2024
+                  }
+                ],
+                "image": {
+                  "file": "Animation of 2024 PT5 around Earth - Close approach.gif",
+                  "kind": "photo",
+                  "aspect": 1.3333,
+                  "megapixels": 0.24,
+                  "credit": {
+                    "artist": "Phoenix7777",
+                    "license": "CC BY-SA 4.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q2-3bbc5bee-48d7-5133-aa2e-14a1573e2500",
+                "pid": "P398",
+                "item": "Q113380363",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 2022
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 2022
+                  }
+                ],
+                "shown": true
+              },
+              {
+                "statement": "Q2-9f191a2f-4d7b-22ce-8349-aeadbe9879b2",
+                "pid": "P398",
+                "item": "Q86388198",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 2016
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 2020
+                  }
+                ],
+                "image": {
+                  "file": "2020 CD3 Gemini Color.jpg",
+                  "kind": "photo",
+                  "aspect": 1.0,
+                  "megapixels": 2.56,
+                  "credit": {
+                    "artist": "The international Gemini Observatory/NSF’s National Optical-Infrared Astronomy Research Laboratory/AURA/G. Fedorets",
+                    "license": "CC BY-SA 4.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q2-edc43785-4afb-4d46-941e-0ad5b50f36ed",
+                "pid": "P398",
+                "item": "Q211498",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 2006
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 2007
+                  }
+                ],
+                "image": {
+                  "file": "2006-RH120-orbit.jpg",
+                  "kind": "photo",
+                  "aspect": 1.4476,
+                  "megapixels": 1.54,
+                  "credit": {
+                    "artist": "Ohms law",
+                    "license": "CC BY-SA 3.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q2-db006893-4528-e1d2-5da6-5c9a9f9cbb2f",
+                "pid": "P398",
+                "item": "Q48604",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1986
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 2001
+                  }
+                ],
+                "image": {
+                  "file": "Mir on 12 June 1998edit1.jpg",
+                  "kind": "photo",
+                  "aspect": 1.0448,
+                  "megapixels": 4.22,
+                  "credit": {
+                    "artist": "Original image: NASA/Crew of STS-91Retouched image: Thegreenj",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q2-08d05eb8-1f1c-46f3-afcb-940da66d7488",
+                "pid": "P398",
+                "item": "Q190776",
+                "rank": "normal",
+                "provenance": "imported",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1973
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1979
+                  }
+                ],
+                "image": {
+                  "file": "Skylab (SL-4).jpg",
+                  "kind": "photo",
+                  "aspect": 1.2284,
+                  "megapixels": 3.05,
+                  "credit": {
+                    "artist": "NASA (Crew of Skylab 4)",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q2-2a881511-513d-4867-ae58-c3d03c35c608",
+                "pid": "P398",
+                "item": "Q211761",
+                "rank": "normal",
+                "provenance": "imported",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1971
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1971
+                  }
+                ],
+                "image": {
+                  "file": "1972 CPA 4112.jpg",
+                  "kind": "photo",
+                  "aspect": 1.4027,
+                  "megapixels": 1.11,
+                  "credit": {
+                    "artist": "USSR Post",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": false
+              },
+              {
+                "statement": "Q2-d7e246a3-7696-4122-a29d-08d640ed9850",
+                "pid": "P398",
+                "item": "Q40610",
+                "rank": "normal",
+                "provenance": "imported",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1961
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1961
+                  }
+                ],
+                "image": {
+                  "file": "Venera 1 (a) (Memorial Museum of Astronautics).JPG",
+                  "kind": "photo",
+                  "aspect": 0.6667,
+                  "megapixels": 6.29,
+                  "credit": {
+                    "artist": "Armael",
+                    "license": "CC0"
+                  }
+                },
+                "shown": false
+              }
+            ],
+            "priority": 1.0,
+            "former": true,
+            "rule": "former"
+          }
+        ],
+        "strips": [
           {
             "primitive": "network",
             "pid": "P527",
@@ -4513,475 +4982,6 @@ expression: composition
             ],
             "priority": 1.0,
             "rule": "set"
-          }
-        ],
-        "gallery": [
-          {
-            "primitive": "network",
-            "role": "gallery",
-            "values": [
-              {
-                "statement": "Q2-3469f38b-41ff-8f9c-8ac6-5eb6e76ab69f",
-                "pid": "P13574",
-                "item": "Q3630",
-                "rank": "normal",
-                "provenance": "sourced",
-                "image": {
-                  "file": "Jakarta.jpg",
-                  "kind": "photo",
-                  "aspect": 1.3333,
-                  "megapixels": 0.75,
-                  "credit": {
-                    "artist": "",
-                    "license": "Copyrighted free use"
-                  }
-                },
-                "priority": 1.0
-              },
-              {
-                "statement": "Q2-25d66576-4029-906c-3bbf-79861a684d74",
-                "pid": "P361",
-                "item": "Q18589965",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "Lagrange points Earth vs Moon.jpg",
-                  "kind": "photo",
-                  "aspect": 1.1671,
-                  "megapixels": 0.2,
-                  "credit": {
-                    "artist": "No machine-readable author provided. Vulpecula assumed (based on copyright claims).",
-                    "license": "Public domain"
-                  }
-                },
-                "priority": 0.0
-              },
-              {
-                "statement": "Q2-9c86f971-43d9-3b65-e634-15ebfbe63c7d",
-                "pid": "P361",
-                "item": "Q544",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "Solar System true color.jpg",
-                  "kind": "photo",
-                  "aspect": 1.7778,
-                  "megapixels": 8.29,
-                  "credit": {
-                    "artist": "CactiStaccingCrane",
-                    "license": "CC BY-SA 4.0"
-                  }
-                },
-                "priority": 0.0
-              },
-              {
-                "statement": "Q2-ABFC9AC4-30C6-4593-ADBB-9105934CFE60",
-                "pid": "P706",
-                "item": "Q1",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "NASA-HS201427a-HubbleUltraDeepField2014-20140603.jpg",
-                  "kind": "photo",
-                  "aspect": 1.0952,
-                  "megapixels": 4.83,
-                  "credit": {
-                    "artist": "NASA, ESA, H. Teplitz and M. Rafelski (IPAC/Caltech), A. Koekemoer (STScI), R. Windhorst (Arizona State University), and Z. Levay (STScI)",
-                    "license": "Public domain"
-                  }
-                },
-                "priority": 0.0
-              }
-            ],
-            "priority": 1.0,
-            "rule": "single"
-          }
-        ],
-        "sheet": [
-          {
-            "primitive": "fact",
-            "pid": "P2579",
-            "form": "list",
-            "statements": [
-              {
-                "statement": "Q2-3AE1FD1A-5EE3-465D-8D9A-A109958A9660",
-                "pid": "P2579",
-                "item": "Q46255",
-                "rank": "normal",
-                "provenance": "none",
-                "class": true,
-                "shown": true
-              },
-              {
-                "statement": "Q2-84e95448-46e0-22f2-0f8d-84f91105b534",
-                "pid": "P2579",
-                "item": "Q8008",
-                "rank": "normal",
-                "provenance": "none",
-                "class": true,
-                "shown": true
-              },
-              {
-                "statement": "Q2-8a2f570f-454b-b9fb-1271-637c2de70471",
-                "pid": "P2579",
-                "item": "Q104499",
-                "rank": "normal",
-                "provenance": "none",
-                "class": true,
-                "shown": true
-              },
-              {
-                "statement": "Q2-B17DDC6B-2CE0-4518-ACD4-A4C1AFF5CE54",
-                "pid": "P2579",
-                "item": "Q1069",
-                "rank": "normal",
-                "provenance": "none",
-                "class": true,
-                "shown": true
-              }
-            ],
-            "priority": 0.0,
-            "rule": "few-pictures"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P1552",
-            "form": "list",
-            "statements": [
-              {
-                "statement": "Q2-39e4ab07-4216-133a-cebe-0c42a9c40d11",
-                "pid": "P1552",
-                "item": "Q25935139",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              },
-              {
-                "statement": "Q2-3d117720-4442-5c47-6d7e-32af176d5d58",
-                "pid": "P1552",
-                "item": "Q6500960",
-                "rank": "normal",
-                "provenance": "none",
-                "class": true,
-                "shown": true
-              },
-              {
-                "statement": "Q2-83c9644f-4ff2-284a-4e4f-dd03852f43aa",
-                "pid": "P1552",
-                "item": "Q108156638",
-                "rank": "normal",
-                "provenance": "none",
-                "class": true,
-                "shown": true
-              },
-              {
-                "statement": "Q2-E2B67B28-A70D-499C-9DD9-96ADF2E288AC",
-                "pid": "P1552",
-                "item": "Q105115142",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P805",
-                    "item": "Q5327160"
-                  }
-                ],
-                "class": true,
-                "shown": true
-              },
-              {
-                "statement": "Q2-f433bdb1-4e5c-a58b-d97e-feda14052a3c",
-                "pid": "P1552",
-                "item": "Q846030",
-                "rank": "normal",
-                "provenance": "none",
-                "class": true,
-                "shown": true
-              }
-            ],
-            "priority": 0.0,
-            "rule": "few-pictures"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P461",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q2-9ea9e6e0-4e38-b712-9137-7cdf6128dfbb",
-                "pid": "P461",
-                "item": "Q527",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q2"
-                  }
-                ],
-                "class": true,
-                "shown": true
-              },
-              {
-                "statement": "Q2-c50f2b6d-4b1f-ade9-8f2e-a2ff0d24cc28",
-                "pid": "P461",
-                "item": "Q4169",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P518",
-                    "item": "Q1"
-                  }
-                ],
-                "class": true,
-                "shown": true
-              }
-            ],
-            "priority": 0.0,
-            "rule": "few-pictures"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P1557",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q2-e2828e9c-40ac-0437-83b0-2615fb8ef507",
-                "pid": "P1557",
-                "item": "Q898312",
-                "rank": "normal",
-                "provenance": "none",
-                "class": true,
-                "shown": true
-              }
-            ],
-            "priority": 0.0,
-            "rule": "few-pictures"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P398",
-            "form": "list",
-            "statements": [
-              {
-                "statement": "Q2-0b28d156-460f-32b9-ddcf-604833b4cbee",
-                "pid": "P398",
-                "item": "Q130301991",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 2024
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 2024
-                  }
-                ],
-                "image": {
-                  "file": "Animation of 2024 PT5 around Earth - Close approach.gif",
-                  "kind": "photo",
-                  "aspect": 1.3333,
-                  "megapixels": 0.24,
-                  "credit": {
-                    "artist": "Phoenix7777",
-                    "license": "CC BY-SA 4.0"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q2-3bbc5bee-48d7-5133-aa2e-14a1573e2500",
-                "pid": "P398",
-                "item": "Q113380363",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 2022
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 2022
-                  }
-                ],
-                "shown": true
-              },
-              {
-                "statement": "Q2-9f191a2f-4d7b-22ce-8349-aeadbe9879b2",
-                "pid": "P398",
-                "item": "Q86388198",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 2016
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 2020
-                  }
-                ],
-                "image": {
-                  "file": "2020 CD3 Gemini Color.jpg",
-                  "kind": "photo",
-                  "aspect": 1.0,
-                  "megapixels": 2.56,
-                  "credit": {
-                    "artist": "The international Gemini Observatory/NSF’s National Optical-Infrared Astronomy Research Laboratory/AURA/G. Fedorets",
-                    "license": "CC BY-SA 4.0"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q2-edc43785-4afb-4d46-941e-0ad5b50f36ed",
-                "pid": "P398",
-                "item": "Q211498",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 2006
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 2007
-                  }
-                ],
-                "image": {
-                  "file": "2006-RH120-orbit.jpg",
-                  "kind": "photo",
-                  "aspect": 1.4476,
-                  "megapixels": 1.54,
-                  "credit": {
-                    "artist": "Ohms law",
-                    "license": "CC BY-SA 3.0"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q2-db006893-4528-e1d2-5da6-5c9a9f9cbb2f",
-                "pid": "P398",
-                "item": "Q48604",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1986
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 2001
-                  }
-                ],
-                "image": {
-                  "file": "Mir on 12 June 1998edit1.jpg",
-                  "kind": "photo",
-                  "aspect": 1.0448,
-                  "megapixels": 4.22,
-                  "credit": {
-                    "artist": "Original image: NASA/Crew of STS-91Retouched image: Thegreenj",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q2-08d05eb8-1f1c-46f3-afcb-940da66d7488",
-                "pid": "P398",
-                "item": "Q190776",
-                "rank": "normal",
-                "provenance": "imported",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1973
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 1979
-                  }
-                ],
-                "image": {
-                  "file": "Skylab (SL-4).jpg",
-                  "kind": "photo",
-                  "aspect": 1.2284,
-                  "megapixels": 3.05,
-                  "credit": {
-                    "artist": "NASA (Crew of Skylab 4)",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q2-2a881511-513d-4867-ae58-c3d03c35c608",
-                "pid": "P398",
-                "item": "Q211761",
-                "rank": "normal",
-                "provenance": "imported",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1971
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 1971
-                  }
-                ],
-                "image": {
-                  "file": "1972 CPA 4112.jpg",
-                  "kind": "photo",
-                  "aspect": 1.4027,
-                  "megapixels": 1.11,
-                  "credit": {
-                    "artist": "USSR Post",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": false
-              },
-              {
-                "statement": "Q2-d7e246a3-7696-4122-a29d-08d640ed9850",
-                "pid": "P398",
-                "item": "Q40610",
-                "rank": "normal",
-                "provenance": "imported",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1961
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 1961
-                  }
-                ],
-                "image": {
-                  "file": "Venera 1 (a) (Memorial Museum of Astronautics).JPG",
-                  "kind": "photo",
-                  "aspect": 0.6667,
-                  "megapixels": 6.29,
-                  "credit": {
-                    "artist": "Armael",
-                    "license": "CC0"
-                  }
-                },
-                "shown": false
-              }
-            ],
-            "priority": 1.0,
-            "former": true,
-            "rule": "former"
           }
         ]
       }

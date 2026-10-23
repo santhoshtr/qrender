@@ -6606,7 +6606,257 @@ expression: composition
             "rule": "coordinate"
           }
         ],
-        "stack": [
+        "gallery": [
+          {
+            "primitive": "network",
+            "role": "gallery",
+            "values": [
+              {
+                "statement": "q668-EFFE083D-8F92-4223-8E36-28CB7E71DA16",
+                "pid": "P30",
+                "item": "Q48",
+                "rank": "normal",
+                "provenance": "sourced",
+                "image": {
+                  "file": "Asia satellite orthographic.jpg",
+                  "kind": "photo",
+                  "aspect": 0.9618,
+                  "megapixels": 3.7,
+                  "credit": {
+                    "artist": "",
+                    "license": "Public domain"
+                  }
+                },
+                "priority": 3.0
+              },
+              {
+                "statement": "Q668-19e572c7-4b59-0a3f-8d83-f67e7f3254ac",
+                "pid": "P610",
+                "item": "Q82019",
+                "rank": "preferred",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P1310",
+                    "item": "Q2767140"
+                  }
+                ],
+                "image": {
+                  "file": "Kangchenjunga, India.jpg",
+                  "kind": "photo",
+                  "aspect": 1.4993,
+                  "megapixels": 0.7,
+                  "credit": {
+                    "artist": "My Discovery",
+                    "license": "CC BY 2.0"
+                  }
+                },
+                "priority": 0.0
+              },
+              {
+                "statement": "Q668-bd8f2e93-415a-1f27-d512-cdda8e4cb6e4",
+                "pid": "P610",
+                "item": "Q43512",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P805",
+                    "item": "Q1413732"
+                  },
+                  {
+                    "pid": "P1310",
+                    "item": "Q3250182"
+                  },
+                  {
+                    "pid": "P3680",
+                    "item": "Q2767140"
+                  }
+                ],
+                "image": {
+                  "file": "Chogori.jpg",
+                  "kind": "photo",
+                  "aspect": 1.3333,
+                  "megapixels": 12.0,
+                  "credit": {
+                    "artist": "Zacharie Grossen",
+                    "license": "CC BY-SA 4.0"
+                  }
+                },
+                "priority": 0.0
+              },
+              {
+                "statement": "Q668-9a5d19cf-452e-f505-4225-9d88188dfa54",
+                "pid": "P1589",
+                "item": "Q1435109",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P2044",
+                    "amount": -2.0
+                  }
+                ],
+                "image": {
+                  "file": "Kerala Kuttanad1.jpg",
+                  "kind": "photo",
+                  "aspect": 1.5496,
+                  "megapixels": 4.23,
+                  "credit": {
+                    "artist": "Sourav Niyogi",
+                    "license": "CC BY-SA 3.0"
+                  }
+                },
+                "priority": 0.0
+              }
+            ],
+            "priority": 3.0,
+            "rule": "single"
+          }
+        ],
+        "sheet": [
+          {
+            "primitive": "fact",
+            "pid": "P2046",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q668-a9fed68d-4ffe-0fa8-8635-8317013c62a9",
+                "pid": "P2046",
+                "amount": 3287263.0,
+                "unit": "Q712226",
+                "rank": "normal",
+                "provenance": "none",
+                "shown": true
+              }
+            ],
+            "priority": 0.571,
+            "rule": "row"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P2927",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q668-886a0348-4ebf-a99e-b83d-2252e3f19db1",
+                "pid": "P2927",
+                "amount": 9.5,
+                "unit": "Q11229",
+                "rank": "normal",
+                "provenance": "none",
+                "shown": true
+              }
+            ],
+            "priority": 0.0,
+            "gauge": {
+              "kind": "proportion",
+              "min": 0.0,
+              "max": 100.0,
+              "at": 0.095
+            },
+            "rule": "row"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P706",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q668-895ED392-ACD0-47BF-BD10-6E4C6C99FFAB",
+                "pid": "P706",
+                "item": "Q771405",
+                "rank": "normal",
+                "provenance": "sourced",
+                "shown": true
+              }
+            ],
+            "priority": 1.0,
+            "rule": "few-pictures"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P421",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q668-433f712a-4661-adb7-1070-3aa2e392fb9a",
+                "pid": "P421",
+                "item": "Q4806291",
+                "rank": "preferred",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P7452",
+                    "item": "Q71536040"
+                  }
+                ],
+                "shown": true
+              }
+            ],
+            "priority": 0.0,
+            "rule": "few-pictures"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P6591",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q668-14e3755e-476b-dea8-6001-bcc350fb568d",
+                "pid": "P6591",
+                "amount": 51.0,
+                "unit": "Q25267",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P276",
+                    "item": "Q2718721"
+                  },
+                  {
+                    "pid": "P585",
+                    "year": 2016
+                  }
+                ],
+                "shown": true
+              }
+            ],
+            "priority": 0.0,
+            "measured": true,
+            "rule": "row"
+          },
+          {
+            "primitive": "fact",
+            "pid": "P7422",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q668-00903130-43a9-01d9-47a7-0c071725bd7f",
+                "pid": "P7422",
+                "amount": -33.9,
+                "unit": "Q25267",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P276",
+                    "item": "Q4167739"
+                  },
+                  {
+                    "pid": "P585",
+                    "year": 1911
+                  }
+                ],
+                "shown": true
+              }
+            ],
+            "priority": 0.0,
+            "measured": true,
+            "rule": "row"
+          }
+        ],
+        "strips": [
           {
             "primitive": "network",
             "pid": "P47",
@@ -6890,256 +7140,6 @@ expression: composition
             ],
             "priority": 0.0,
             "rule": "set"
-          }
-        ],
-        "gallery": [
-          {
-            "primitive": "network",
-            "role": "gallery",
-            "values": [
-              {
-                "statement": "q668-EFFE083D-8F92-4223-8E36-28CB7E71DA16",
-                "pid": "P30",
-                "item": "Q48",
-                "rank": "normal",
-                "provenance": "sourced",
-                "image": {
-                  "file": "Asia satellite orthographic.jpg",
-                  "kind": "photo",
-                  "aspect": 0.9618,
-                  "megapixels": 3.7,
-                  "credit": {
-                    "artist": "",
-                    "license": "Public domain"
-                  }
-                },
-                "priority": 3.0
-              },
-              {
-                "statement": "Q668-19e572c7-4b59-0a3f-8d83-f67e7f3254ac",
-                "pid": "P610",
-                "item": "Q82019",
-                "rank": "preferred",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P1310",
-                    "item": "Q2767140"
-                  }
-                ],
-                "image": {
-                  "file": "Kangchenjunga, India.jpg",
-                  "kind": "photo",
-                  "aspect": 1.4993,
-                  "megapixels": 0.7,
-                  "credit": {
-                    "artist": "My Discovery",
-                    "license": "CC BY 2.0"
-                  }
-                },
-                "priority": 0.0
-              },
-              {
-                "statement": "Q668-bd8f2e93-415a-1f27-d512-cdda8e4cb6e4",
-                "pid": "P610",
-                "item": "Q43512",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P805",
-                    "item": "Q1413732"
-                  },
-                  {
-                    "pid": "P1310",
-                    "item": "Q3250182"
-                  },
-                  {
-                    "pid": "P3680",
-                    "item": "Q2767140"
-                  }
-                ],
-                "image": {
-                  "file": "Chogori.jpg",
-                  "kind": "photo",
-                  "aspect": 1.3333,
-                  "megapixels": 12.0,
-                  "credit": {
-                    "artist": "Zacharie Grossen",
-                    "license": "CC BY-SA 4.0"
-                  }
-                },
-                "priority": 0.0
-              },
-              {
-                "statement": "Q668-9a5d19cf-452e-f505-4225-9d88188dfa54",
-                "pid": "P1589",
-                "item": "Q1435109",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P2044",
-                    "amount": -2.0
-                  }
-                ],
-                "image": {
-                  "file": "Kerala Kuttanad1.jpg",
-                  "kind": "photo",
-                  "aspect": 1.5496,
-                  "megapixels": 4.23,
-                  "credit": {
-                    "artist": "Sourav Niyogi",
-                    "license": "CC BY-SA 3.0"
-                  }
-                },
-                "priority": 0.0
-              }
-            ],
-            "priority": 3.0,
-            "rule": "single"
-          }
-        ],
-        "sheet": [
-          {
-            "primitive": "fact",
-            "pid": "P2046",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-a9fed68d-4ffe-0fa8-8635-8317013c62a9",
-                "pid": "P2046",
-                "amount": 3287263.0,
-                "unit": "Q712226",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.571,
-            "rule": "row"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P2927",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-886a0348-4ebf-a99e-b83d-2252e3f19db1",
-                "pid": "P2927",
-                "amount": 9.5,
-                "unit": "Q11229",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.0,
-            "gauge": {
-              "kind": "proportion",
-              "min": 0.0,
-              "max": 100.0,
-              "at": 0.095
-            },
-            "rule": "row"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P706",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-895ED392-ACD0-47BF-BD10-6E4C6C99FFAB",
-                "pid": "P706",
-                "item": "Q771405",
-                "rank": "normal",
-                "provenance": "sourced",
-                "shown": true
-              }
-            ],
-            "priority": 1.0,
-            "rule": "few-pictures"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P421",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-433f712a-4661-adb7-1070-3aa2e392fb9a",
-                "pid": "P421",
-                "item": "Q4806291",
-                "rank": "preferred",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P7452",
-                    "item": "Q71536040"
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 0.0,
-            "rule": "few-pictures"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P6591",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-14e3755e-476b-dea8-6001-bcc350fb568d",
-                "pid": "P6591",
-                "amount": 51.0,
-                "unit": "Q25267",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P276",
-                    "item": "Q2718721"
-                  },
-                  {
-                    "pid": "P585",
-                    "year": 2016
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 0.0,
-            "measured": true,
-            "rule": "row"
-          },
-          {
-            "primitive": "fact",
-            "pid": "P7422",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-00903130-43a9-01d9-47a7-0c071725bd7f",
-                "pid": "P7422",
-                "amount": -33.9,
-                "unit": "Q25267",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P276",
-                    "item": "Q4167739"
-                  },
-                  {
-                    "pid": "P585",
-                    "year": 1911
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 0.0,
-            "measured": true,
-            "rule": "row"
           }
         ]
       },
@@ -7706,784 +7706,6 @@ expression: composition
             ],
             "priority": 0.286,
             "rule": "office"
-          },
-          {
-            "primitive": "network",
-            "pid": "P150",
-            "form": "strip",
-            "values": [
-              {
-                "statement": "Q668-6775fe82-4327-ab24-9c77-ca39ac831465",
-                "pid": "P150",
-                "item": "Q77997266",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 2020
-                  }
-                ],
-                "image": {
-                  "file": "Portugese Fort3.jpg",
-                  "kind": "photo",
-                  "aspect": 1.5,
-                  "megapixels": 24.0,
-                  "credit": {
-                    "artist": "Vipulvaibhav5",
-                    "license": "CC BY-SA 4.0"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q668-30b48553-4172-563e-2c05-4b76387c933c",
-                "pid": "P150",
-                "item": "Q66278313",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 2019
-                  }
-                ],
-                "image": {
-                  "file": "Kashmir-sat-nasa.jpg",
-                  "kind": "photo",
-                  "aspect": 1.0,
-                  "megapixels": 0.41,
-                  "credit": {
-                    "artist": "NASA",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q668-e49d9225-4eb0-3044-2568-a63fd3891e68",
-                "pid": "P150",
-                "item": "Q200667",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 2019
-                  }
-                ],
-                "image": {
-                  "file": "Rangdum village grazing fields.jpg",
-                  "kind": "photo",
-                  "aspect": 1.5169,
-                  "megapixels": 0.58,
-                  "credit": {
-                    "artist": "Narender9",
-                    "license": "CC BY-SA 3.0"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "q668-3cde988e-474d-788d-081b-b47a51c7f449",
-                "pid": "P150",
-                "item": "Q1499",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 2000
-                  }
-                ],
-                "image": {
-                  "file": "ISS020-E-6676 - View of India.jpg",
-                  "kind": "photo",
-                  "aspect": 1.5028,
-                  "megapixels": 12.05,
-                  "credit": {
-                    "artist": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "q668-7016b2a3-4ce3-bf8f-1299-9acef4249722",
-                "pid": "P150",
-                "item": "Q1168",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 2000
-                  }
-                ],
-                "image": {
-                  "file": "Flora of Chaiturgarh forest hills Korba , Chhattisgarh.jpg",
-                  "kind": "photo",
-                  "aspect": 1.3333,
-                  "megapixels": 12.19,
-                  "credit": {
-                    "artist": "Mettle30",
-                    "license": "CC BY-SA 4.0"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "q668-e0daa8c7-4b48-58e8-497a-ba86a1fea8ca",
-                "pid": "P150",
-                "item": "Q1184",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 2000
-                  }
-                ],
-                "image": {
-                  "file": "ISS012-E-10332 - View of India.jpg",
-                  "kind": "photo",
-                  "aspect": 1.5079,
-                  "megapixels": 1.53,
-                  "credit": {
-                    "artist": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "q668-3bca8bdd-4259-29f1-84be-56cc7de2dd19",
-                "pid": "P150",
-                "item": "Q1502",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1987
-                  }
-                ],
-                "image": {
-                  "file": "Champhai, Mizoram, from south, with Zotlang in the foreground.jpg",
-                  "kind": "photo",
-                  "aspect": 1.4939,
-                  "megapixels": 1.71,
-                  "credit": {
-                    "artist": "Bogman",
-                    "license": "CC BY-SA 3.0"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "q668-7cf2158f-4ede-274d-2761-3b453b150b2d",
-                "pid": "P150",
-                "item": "Q1171",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1987
-                  }
-                ],
-                "image": {
-                  "file": "The Terekhol River and Querim Beach, panoramic view, Goa, India.jpg",
-                  "kind": "photo",
-                  "aspect": 1.5,
-                  "megapixels": 10.84,
-                  "assessed": [
-                    "Quality images"
-                  ],
-                  "credit": {
-                    "artist": "Vyacheslav Argenberg",
-                    "license": "CC BY 4.0"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "q668-ea6fa987-482a-eeb2-6a38-27e1cb38d736",
-                "pid": "P150",
-                "item": "Q1505",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1975
-                  }
-                ],
-                "image": {
-                  "file": "Statue of Guru Padmasambhava (Guru Rinpoche), the patron saint of Sikkim.jpg",
-                  "kind": "photo",
-                  "aspect": 1.542,
-                  "megapixels": 40.11,
-                  "assessed": [
-                    "Quality images"
-                  ],
-                  "credit": {
-                    "artist": "Subhrajyoti07",
-                    "license": "CC BY-SA 4.0"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "q668-3e9801ac-472b-d3e2-766f-2e509a79a470",
-                "pid": "P150",
-                "item": "Q1193",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1972
-                  }
-                ],
-                "image": {
-                  "file": "Breathtaking beauty of Dzukou Valley in Manipur-Nagaland border (edit).jpg",
-                  "kind": "photo",
-                  "aspect": 1.7783,
-                  "megapixels": 11.38,
-                  "assessed": [
-                    "Featured pictures on Wikimedia Commons",
-                    "Quality images"
-                  ],
-                  "credit": {
-                    "artist": "Original:  Samudra Bikash Hazarika\n\nDerivative work:  UnpetitproleX",
-                    "license": "CC BY-SA 4.0"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "q668-0b81d481-4a56-30b3-6d95-34b7a919530e",
-                "pid": "P150",
-                "item": "Q1363",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1972
-                  }
-                ],
-                "image": {
-                  "file": "Ujjayanta palace Tripura State Museum Agartala India.jpg",
-                  "kind": "photo",
-                  "aspect": 1.4164,
-                  "megapixels": 22.16,
-                  "credit": {
-                    "artist": "Sharada Prasad CS",
-                    "license": "CC BY 2.0"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "q668-77efdec6-45e6-8eeb-5e53-4e2a855dde8d",
-                "pid": "P150",
-                "item": "Q1195",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1972
-                  }
-                ],
-                "image": {
-                  "file": "Cherrapunji waterfalls (India, 2013).jpg",
-                  "kind": "photo",
-                  "aspect": 1.3333,
-                  "megapixels": 1.92,
-                  "credit": {
-                    "artist": "Indrani911basu",
-                    "license": "CC BY-SA 4.0"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "q668-470b4525-44ca-6e15-ffaa-4947a05301b0",
-                "pid": "P150",
-                "item": "Q1177",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1971
-                  }
-                ],
-                "image": {
-                  "file": "A Village near Trilokinath temple, Lahaul.jpg",
-                  "kind": "photo",
-                  "aspect": 1.6926,
-                  "megapixels": 0.62,
-                  "credit": {
-                    "artist": "Himalayan Trails",
-                    "license": "CC BY 2.0"
-                  }
-                },
-                "shown": false
-              },
-              {
-                "statement": "q668-1fbf12a9-4cb0-7ce9-59fd-4d2ef65a0e37",
-                "pid": "P150",
-                "item": "Q1445",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1969
-                  }
-                ],
-                "image": {
-                  "file": "Tea Fields Nilgiris Ranges Mynala Dec25 A7CR 09866.jpg",
-                  "kind": "photo",
-                  "aspect": 1.6,
-                  "megapixels": 49.55,
-                  "assessed": [
-                    "Featured pictures on Wikimedia Commons",
-                    "Quality images"
-                  ],
-                  "credit": {
-                    "artist": "This Photo was taken by Timothy A. Gonsalves.  Feel free to use my photos, but please mention me as the author.  I would much appreciate if you send me an email tagooty@yahoo.com or write on my talk page, for my information.  Please contact me before commercial use.\n\n\n\nPlease do not upload an edited image here without consulting me.  I would like to make corrections only at my own source to ensure that the changes improve the image and are preserved.Otherwise you may upload an edited image with a new name. Please use one of the templates derivative or extract.",
-                    "license": "CC BY-SA 4.0"
-                  }
-                },
-                "shown": false
-              },
-              {
-                "statement": "q668-61bc7e1a-4ac1-c9a4-539d-a7579caab03f",
-                "pid": "P150",
-                "item": "Q1174",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1966
-                  }
-                ],
-                "image": {
-                  "file": "ISS009-E-11292 - View of India.jpg",
-                  "kind": "photo",
-                  "aspect": 1.469,
-                  "megapixels": 6.26,
-                  "credit": {
-                    "artist": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": false
-              },
-              {
-                "statement": "q668-35cd4a62-4c7a-5a15-4f80-fa19a68ec72c",
-                "pid": "P150",
-                "item": "Q1061",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1960
-                  }
-                ],
-                "image": {
-                  "file": "Gujarat Satellite Imagery 2012.jpg",
-                  "kind": "photo",
-                  "aspect": 1.0,
-                  "megapixels": 25.0,
-                  "credit": {
-                    "artist": "NASA, MODIS",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": false
-              },
-              {
-                "statement": "q668-884bae4b-4cbe-89f3-7241-c70c62dcfe66",
-                "pid": "P150",
-                "item": "Q1191",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1960
-                  }
-                ],
-                "image": {
-                  "file": "Ghat satellite view.jpg",
-                  "kind": "photo",
-                  "aspect": 1.0,
-                  "megapixels": 0.41,
-                  "credit": {
-                    "artist": "mage Science and Analysis Laboratory, NASA-Johnson Space Center. \"The Gateway to Astronaut Photography of Earth.\"",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": false
-              },
-              {
-                "statement": "q668-556c19ad-4772-f06d-9ba4-50198ec2a3e2",
-                "pid": "P150",
-                "item": "Q1185",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1956
-                  }
-                ],
-                "image": {
-                  "file": "ISS006-E-16702 - View of India.jpg",
-                  "kind": "photo",
-                  "aspect": 1.469,
-                  "megapixels": 6.26,
-                  "credit": {
-                    "artist": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": false
-              },
-              {
-                "statement": "Q668-ba5033f0-4246-7c66-61d6-b02d1c40d3f8",
-                "pid": "P150",
-                "item": "Q1159",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1956
-                  }
-                ],
-                "image": {
-                  "file": "Godavari satellite view.jpg",
-                  "kind": "photo",
-                  "aspect": 1.0,
-                  "megapixels": 27.54,
-                  "credit": {
-                    "artist": "Earth Sciences and Image Analysis, NASA-Johnson Space Center. 16 Sep. 2004. \"Earth from Space\"",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": false
-              },
-              {
-                "statement": "q668-ee767f10-4f2e-d392-3bd0-2be11077a659",
-                "pid": "P150",
-                "item": "Q1186",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1956
-                  }
-                ],
-                "image": {
-                  "file": "Kerala oli 201837 lrg February 6 2018.jpg",
-                  "kind": "photo",
-                  "aspect": 0.7894,
-                  "megapixels": 17.34,
-                  "credit": {
-                    "artist": "NASA Earth Observatory images by Lauren Dauphin, using modified Copernicus Sentinel data (2018) processed by the European Space Agency and Landsat data from the U.S. Geological Survey",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": false
-              },
-              {
-                "statement": "q668-2fa16b16-47ae-9727-856e-aac838de8507",
-                "pid": "P150",
-                "item": "Q22424",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1950
-                  }
-                ],
-                "image": {
-                  "file": "ISS030-E-16834 - View of India.jpg",
-                  "kind": "photo",
-                  "aspect": 1.5056,
-                  "megapixels": 12.21,
-                  "credit": {
-                    "artist": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": false
-              },
-              {
-                "statement": "q668-1f73f48b-4999-638c-eb2f-e0ed137a2db8",
-                "pid": "P150",
-                "item": "Q1437",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1950
-                  }
-                ],
-                "image": {
-                  "file": "IN-RJ.svg",
-                  "kind": "drawing",
-                  "aspect": 0.8782,
-                  "megapixels": 0.3,
-                  "credit": {
-                    "artist": "फ़िलप्रो (Filpro)",
-                    "license": "CC BY-SA 4.0"
-                  }
-                },
-                "shown": false
-              },
-              {
-                "statement": "q668-54af5efb-41f7-59d8-02af-6c529b624b5a",
-                "pid": "P150",
-                "item": "Q1165",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "ISS012-E-21740 - View of India.jpg",
-                  "kind": "photo",
-                  "aspect": 1.5079,
-                  "megapixels": 1.53,
-                  "credit": {
-                    "artist": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": false
-              },
-              {
-                "statement": "q668-5a91d677-40f9-229e-c8ad-208a23b87db3",
-                "pid": "P150",
-                "item": "Q40888",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "Havelock Island, Mangrove tree on the beach, Andaman Islands.jpg",
-                  "kind": "photo",
-                  "aspect": 1.5,
-                  "megapixels": 10.84,
-                  "assessed": [
-                    "Featured pictures on Wikimedia Commons",
-                    "Quality images"
-                  ],
-                  "credit": {
-                    "artist": "Vyacheslav Argenberg",
-                    "license": "CC BY 4.0"
-                  }
-                },
-                "shown": false
-              },
-              {
-                "statement": "q668-6d19307a-4459-62b0-8bd1-324b740b01c9",
-                "pid": "P150",
-                "item": "Q1164",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "ISS052-E-609 - View of India.jpg",
-                  "kind": "photo",
-                  "aspect": 1.5024,
-                  "megapixels": 16.16,
-                  "credit": {
-                    "artist": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center",
-                    "license": "Public domain"
-                  }
-                },
-                "shown": false
-              },
-              {
-                "statement": "q668-808b6c6e-4be4-82b7-a43d-c6d20a8d20c9",
-                "pid": "P150",
-                "item": "Q1188",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "Stupa 1 - West Side - Sanchi Hill 2013-02-21 4311.JPG",
-                  "kind": "photo",
-                  "aspect": 1.5056,
-                  "megapixels": 12.21,
-                  "credit": {
-                    "artist": "Biswarup Ganguly",
-                    "license": "CC BY 3.0"
-                  }
-                },
-                "shown": false
-              },
-              {
-                "statement": "q668-b421d896-4630-2bd9-d552-6dad912f9313",
-                "pid": "P150",
-                "item": "Q26927",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "Bangaram Island, Lakshadweep 20160325- DSC1780.jpg",
-                  "kind": "photo",
-                  "aspect": 1.618,
-                  "megapixels": 18.4,
-                  "credit": {
-                    "artist": "The.chhayachitrakar",
-                    "license": "CC BY-SA 4.0"
-                  }
-                },
-                "shown": false
-              },
-              {
-                "statement": "q668-b765c1ad-48e2-c984-6f05-db27b7623a01",
-                "pid": "P150",
-                "item": "Q1353",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "Red Fort in Delhi 03-2016 img3.jpg",
-                  "kind": "photo",
-                  "aspect": 1.7779,
-                  "megapixels": 16.32,
-                  "assessed": [
-                    "Quality images"
-                  ],
-                  "credit": {
-                    "artist": "A.Savin",
-                    "license": "FAL"
-                  }
-                },
-                "shown": false
-              },
-              {
-                "statement": "q668-bcd8c82e-4680-f685-f2d0-b87f60d6bc16",
-                "pid": "P150",
-                "item": "Q22048",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "Odisha blank districts map.svg",
-                  "kind": "drawing",
-                  "aspect": 1.0891,
-                  "megapixels": 0.39,
-                  "credit": {
-                    "artist": "Orissa_locator_map.svg: PlaneMad *derivative work: Abhijitsathe (talk) *derivative work: Psubhashish (talk)",
-                    "license": "CC BY-SA 3.0"
-                  }
-                },
-                "shown": false
-              },
-              {
-                "statement": "q668-c61f2b33-4cd6-92f7-36d0-ac2d1e3ca4b6",
-                "pid": "P150",
-                "item": "Q1356",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "West Bengal outline map.svg",
-                  "kind": "drawing",
-                  "aspect": 0.6788,
-                  "megapixels": 2.81,
-                  "credit": {
-                    "artist": "w:user:Planemad",
-                    "license": "CC BY-SA 3.0"
-                  }
-                },
-                "shown": false
-              },
-              {
-                "statement": "q668-19f8698a-4045-d234-95ad-577b5328c6ae",
-                "pid": "P150",
-                "item": "Q66743",
-                "rank": "normal",
-                "provenance": "none",
-                "image": {
-                  "file": "Pondicherry-Rock beach aerial view.jpg",
-                  "kind": "photo",
-                  "aspect": 1.5,
-                  "megapixels": 17.92,
-                  "credit": {
-                    "artist": "Karthik Easvur",
-                    "license": "CC BY-SA 3.0"
-                  }
-                },
-                "shown": false
-              },
-              {
-                "statement": "Q668-2174ee95-4c2c-884d-367c-2efd080efc68",
-                "pid": "P150",
-                "item": "Q677037",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 2014
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "q668-9f14f9e0-47bf-2e71-b1df-31ef9e88a233",
-                "pid": "P150",
-                "item": "Q1162",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1987
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "q668-411bed60-481f-2d86-b5b1-959db114aa6c",
-                "pid": "P150",
-                "item": "Q1599",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1963
-                  }
-                ],
-                "shown": false
-              },
-              {
-                "statement": "q668-62d07814-436a-771e-8cb1-31399bc9db9f",
-                "pid": "P150",
-                "item": "Q1498",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              },
-              {
-                "statement": "q668-f40a8d56-458b-1e32-5ba9-e99bab9fb4e7",
-                "pid": "P150",
-                "item": "Q120971341",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": false
-              }
-            ],
-            "priority": 0.0,
-            "rule": "set"
           }
         ],
         "stack": [
@@ -9347,6 +8569,786 @@ expression: composition
             "priority": 0.0,
             "former": true,
             "rule": "former"
+          }
+        ],
+        "strips": [
+          {
+            "primitive": "network",
+            "pid": "P150",
+            "form": "strip",
+            "values": [
+              {
+                "statement": "Q668-6775fe82-4327-ab24-9c77-ca39ac831465",
+                "pid": "P150",
+                "item": "Q77997266",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 2020
+                  }
+                ],
+                "image": {
+                  "file": "Portugese Fort3.jpg",
+                  "kind": "photo",
+                  "aspect": 1.5,
+                  "megapixels": 24.0,
+                  "credit": {
+                    "artist": "Vipulvaibhav5",
+                    "license": "CC BY-SA 4.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q668-30b48553-4172-563e-2c05-4b76387c933c",
+                "pid": "P150",
+                "item": "Q66278313",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 2019
+                  }
+                ],
+                "image": {
+                  "file": "Kashmir-sat-nasa.jpg",
+                  "kind": "photo",
+                  "aspect": 1.0,
+                  "megapixels": 0.41,
+                  "credit": {
+                    "artist": "NASA",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q668-e49d9225-4eb0-3044-2568-a63fd3891e68",
+                "pid": "P150",
+                "item": "Q200667",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 2019
+                  }
+                ],
+                "image": {
+                  "file": "Rangdum village grazing fields.jpg",
+                  "kind": "photo",
+                  "aspect": 1.5169,
+                  "megapixels": 0.58,
+                  "credit": {
+                    "artist": "Narender9",
+                    "license": "CC BY-SA 3.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "q668-3cde988e-474d-788d-081b-b47a51c7f449",
+                "pid": "P150",
+                "item": "Q1499",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 2000
+                  }
+                ],
+                "image": {
+                  "file": "ISS020-E-6676 - View of India.jpg",
+                  "kind": "photo",
+                  "aspect": 1.5028,
+                  "megapixels": 12.05,
+                  "credit": {
+                    "artist": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "q668-7016b2a3-4ce3-bf8f-1299-9acef4249722",
+                "pid": "P150",
+                "item": "Q1168",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 2000
+                  }
+                ],
+                "image": {
+                  "file": "Flora of Chaiturgarh forest hills Korba , Chhattisgarh.jpg",
+                  "kind": "photo",
+                  "aspect": 1.3333,
+                  "megapixels": 12.19,
+                  "credit": {
+                    "artist": "Mettle30",
+                    "license": "CC BY-SA 4.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "q668-e0daa8c7-4b48-58e8-497a-ba86a1fea8ca",
+                "pid": "P150",
+                "item": "Q1184",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 2000
+                  }
+                ],
+                "image": {
+                  "file": "ISS012-E-10332 - View of India.jpg",
+                  "kind": "photo",
+                  "aspect": 1.5079,
+                  "megapixels": 1.53,
+                  "credit": {
+                    "artist": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "q668-3bca8bdd-4259-29f1-84be-56cc7de2dd19",
+                "pid": "P150",
+                "item": "Q1502",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1987
+                  }
+                ],
+                "image": {
+                  "file": "Champhai, Mizoram, from south, with Zotlang in the foreground.jpg",
+                  "kind": "photo",
+                  "aspect": 1.4939,
+                  "megapixels": 1.71,
+                  "credit": {
+                    "artist": "Bogman",
+                    "license": "CC BY-SA 3.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "q668-7cf2158f-4ede-274d-2761-3b453b150b2d",
+                "pid": "P150",
+                "item": "Q1171",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1987
+                  }
+                ],
+                "image": {
+                  "file": "The Terekhol River and Querim Beach, panoramic view, Goa, India.jpg",
+                  "kind": "photo",
+                  "aspect": 1.5,
+                  "megapixels": 10.84,
+                  "assessed": [
+                    "Quality images"
+                  ],
+                  "credit": {
+                    "artist": "Vyacheslav Argenberg",
+                    "license": "CC BY 4.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "q668-ea6fa987-482a-eeb2-6a38-27e1cb38d736",
+                "pid": "P150",
+                "item": "Q1505",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1975
+                  }
+                ],
+                "image": {
+                  "file": "Statue of Guru Padmasambhava (Guru Rinpoche), the patron saint of Sikkim.jpg",
+                  "kind": "photo",
+                  "aspect": 1.542,
+                  "megapixels": 40.11,
+                  "assessed": [
+                    "Quality images"
+                  ],
+                  "credit": {
+                    "artist": "Subhrajyoti07",
+                    "license": "CC BY-SA 4.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "q668-3e9801ac-472b-d3e2-766f-2e509a79a470",
+                "pid": "P150",
+                "item": "Q1193",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1972
+                  }
+                ],
+                "image": {
+                  "file": "Breathtaking beauty of Dzukou Valley in Manipur-Nagaland border (edit).jpg",
+                  "kind": "photo",
+                  "aspect": 1.7783,
+                  "megapixels": 11.38,
+                  "assessed": [
+                    "Featured pictures on Wikimedia Commons",
+                    "Quality images"
+                  ],
+                  "credit": {
+                    "artist": "Original:  Samudra Bikash Hazarika\n\nDerivative work:  UnpetitproleX",
+                    "license": "CC BY-SA 4.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "q668-0b81d481-4a56-30b3-6d95-34b7a919530e",
+                "pid": "P150",
+                "item": "Q1363",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1972
+                  }
+                ],
+                "image": {
+                  "file": "Ujjayanta palace Tripura State Museum Agartala India.jpg",
+                  "kind": "photo",
+                  "aspect": 1.4164,
+                  "megapixels": 22.16,
+                  "credit": {
+                    "artist": "Sharada Prasad CS",
+                    "license": "CC BY 2.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "q668-77efdec6-45e6-8eeb-5e53-4e2a855dde8d",
+                "pid": "P150",
+                "item": "Q1195",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1972
+                  }
+                ],
+                "image": {
+                  "file": "Cherrapunji waterfalls (India, 2013).jpg",
+                  "kind": "photo",
+                  "aspect": 1.3333,
+                  "megapixels": 1.92,
+                  "credit": {
+                    "artist": "Indrani911basu",
+                    "license": "CC BY-SA 4.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "q668-470b4525-44ca-6e15-ffaa-4947a05301b0",
+                "pid": "P150",
+                "item": "Q1177",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1971
+                  }
+                ],
+                "image": {
+                  "file": "A Village near Trilokinath temple, Lahaul.jpg",
+                  "kind": "photo",
+                  "aspect": 1.6926,
+                  "megapixels": 0.62,
+                  "credit": {
+                    "artist": "Himalayan Trails",
+                    "license": "CC BY 2.0"
+                  }
+                },
+                "shown": false
+              },
+              {
+                "statement": "q668-1fbf12a9-4cb0-7ce9-59fd-4d2ef65a0e37",
+                "pid": "P150",
+                "item": "Q1445",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1969
+                  }
+                ],
+                "image": {
+                  "file": "Tea Fields Nilgiris Ranges Mynala Dec25 A7CR 09866.jpg",
+                  "kind": "photo",
+                  "aspect": 1.6,
+                  "megapixels": 49.55,
+                  "assessed": [
+                    "Featured pictures on Wikimedia Commons",
+                    "Quality images"
+                  ],
+                  "credit": {
+                    "artist": "This Photo was taken by Timothy A. Gonsalves.  Feel free to use my photos, but please mention me as the author.  I would much appreciate if you send me an email tagooty@yahoo.com or write on my talk page, for my information.  Please contact me before commercial use.\n\n\n\nPlease do not upload an edited image here without consulting me.  I would like to make corrections only at my own source to ensure that the changes improve the image and are preserved.Otherwise you may upload an edited image with a new name. Please use one of the templates derivative or extract.",
+                    "license": "CC BY-SA 4.0"
+                  }
+                },
+                "shown": false
+              },
+              {
+                "statement": "q668-61bc7e1a-4ac1-c9a4-539d-a7579caab03f",
+                "pid": "P150",
+                "item": "Q1174",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1966
+                  }
+                ],
+                "image": {
+                  "file": "ISS009-E-11292 - View of India.jpg",
+                  "kind": "photo",
+                  "aspect": 1.469,
+                  "megapixels": 6.26,
+                  "credit": {
+                    "artist": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": false
+              },
+              {
+                "statement": "q668-35cd4a62-4c7a-5a15-4f80-fa19a68ec72c",
+                "pid": "P150",
+                "item": "Q1061",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1960
+                  }
+                ],
+                "image": {
+                  "file": "Gujarat Satellite Imagery 2012.jpg",
+                  "kind": "photo",
+                  "aspect": 1.0,
+                  "megapixels": 25.0,
+                  "credit": {
+                    "artist": "NASA, MODIS",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": false
+              },
+              {
+                "statement": "q668-884bae4b-4cbe-89f3-7241-c70c62dcfe66",
+                "pid": "P150",
+                "item": "Q1191",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1960
+                  }
+                ],
+                "image": {
+                  "file": "Ghat satellite view.jpg",
+                  "kind": "photo",
+                  "aspect": 1.0,
+                  "megapixels": 0.41,
+                  "credit": {
+                    "artist": "mage Science and Analysis Laboratory, NASA-Johnson Space Center. \"The Gateway to Astronaut Photography of Earth.\"",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": false
+              },
+              {
+                "statement": "q668-556c19ad-4772-f06d-9ba4-50198ec2a3e2",
+                "pid": "P150",
+                "item": "Q1185",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1956
+                  }
+                ],
+                "image": {
+                  "file": "ISS006-E-16702 - View of India.jpg",
+                  "kind": "photo",
+                  "aspect": 1.469,
+                  "megapixels": 6.26,
+                  "credit": {
+                    "artist": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": false
+              },
+              {
+                "statement": "Q668-ba5033f0-4246-7c66-61d6-b02d1c40d3f8",
+                "pid": "P150",
+                "item": "Q1159",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1956
+                  }
+                ],
+                "image": {
+                  "file": "Godavari satellite view.jpg",
+                  "kind": "photo",
+                  "aspect": 1.0,
+                  "megapixels": 27.54,
+                  "credit": {
+                    "artist": "Earth Sciences and Image Analysis, NASA-Johnson Space Center. 16 Sep. 2004. \"Earth from Space\"",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": false
+              },
+              {
+                "statement": "q668-ee767f10-4f2e-d392-3bd0-2be11077a659",
+                "pid": "P150",
+                "item": "Q1186",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1956
+                  }
+                ],
+                "image": {
+                  "file": "Kerala oli 201837 lrg February 6 2018.jpg",
+                  "kind": "photo",
+                  "aspect": 0.7894,
+                  "megapixels": 17.34,
+                  "credit": {
+                    "artist": "NASA Earth Observatory images by Lauren Dauphin, using modified Copernicus Sentinel data (2018) processed by the European Space Agency and Landsat data from the U.S. Geological Survey",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": false
+              },
+              {
+                "statement": "q668-2fa16b16-47ae-9727-856e-aac838de8507",
+                "pid": "P150",
+                "item": "Q22424",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1950
+                  }
+                ],
+                "image": {
+                  "file": "ISS030-E-16834 - View of India.jpg",
+                  "kind": "photo",
+                  "aspect": 1.5056,
+                  "megapixels": 12.21,
+                  "credit": {
+                    "artist": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": false
+              },
+              {
+                "statement": "q668-1f73f48b-4999-638c-eb2f-e0ed137a2db8",
+                "pid": "P150",
+                "item": "Q1437",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1950
+                  }
+                ],
+                "image": {
+                  "file": "IN-RJ.svg",
+                  "kind": "drawing",
+                  "aspect": 0.8782,
+                  "megapixels": 0.3,
+                  "credit": {
+                    "artist": "फ़िलप्रो (Filpro)",
+                    "license": "CC BY-SA 4.0"
+                  }
+                },
+                "shown": false
+              },
+              {
+                "statement": "q668-54af5efb-41f7-59d8-02af-6c529b624b5a",
+                "pid": "P150",
+                "item": "Q1165",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "ISS012-E-21740 - View of India.jpg",
+                  "kind": "photo",
+                  "aspect": 1.5079,
+                  "megapixels": 1.53,
+                  "credit": {
+                    "artist": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": false
+              },
+              {
+                "statement": "q668-5a91d677-40f9-229e-c8ad-208a23b87db3",
+                "pid": "P150",
+                "item": "Q40888",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Havelock Island, Mangrove tree on the beach, Andaman Islands.jpg",
+                  "kind": "photo",
+                  "aspect": 1.5,
+                  "megapixels": 10.84,
+                  "assessed": [
+                    "Featured pictures on Wikimedia Commons",
+                    "Quality images"
+                  ],
+                  "credit": {
+                    "artist": "Vyacheslav Argenberg",
+                    "license": "CC BY 4.0"
+                  }
+                },
+                "shown": false
+              },
+              {
+                "statement": "q668-6d19307a-4459-62b0-8bd1-324b740b01c9",
+                "pid": "P150",
+                "item": "Q1164",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "ISS052-E-609 - View of India.jpg",
+                  "kind": "photo",
+                  "aspect": 1.5024,
+                  "megapixels": 16.16,
+                  "credit": {
+                    "artist": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center",
+                    "license": "Public domain"
+                  }
+                },
+                "shown": false
+              },
+              {
+                "statement": "q668-808b6c6e-4be4-82b7-a43d-c6d20a8d20c9",
+                "pid": "P150",
+                "item": "Q1188",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Stupa 1 - West Side - Sanchi Hill 2013-02-21 4311.JPG",
+                  "kind": "photo",
+                  "aspect": 1.5056,
+                  "megapixels": 12.21,
+                  "credit": {
+                    "artist": "Biswarup Ganguly",
+                    "license": "CC BY 3.0"
+                  }
+                },
+                "shown": false
+              },
+              {
+                "statement": "q668-b421d896-4630-2bd9-d552-6dad912f9313",
+                "pid": "P150",
+                "item": "Q26927",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Bangaram Island, Lakshadweep 20160325- DSC1780.jpg",
+                  "kind": "photo",
+                  "aspect": 1.618,
+                  "megapixels": 18.4,
+                  "credit": {
+                    "artist": "The.chhayachitrakar",
+                    "license": "CC BY-SA 4.0"
+                  }
+                },
+                "shown": false
+              },
+              {
+                "statement": "q668-b765c1ad-48e2-c984-6f05-db27b7623a01",
+                "pid": "P150",
+                "item": "Q1353",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Red Fort in Delhi 03-2016 img3.jpg",
+                  "kind": "photo",
+                  "aspect": 1.7779,
+                  "megapixels": 16.32,
+                  "assessed": [
+                    "Quality images"
+                  ],
+                  "credit": {
+                    "artist": "A.Savin",
+                    "license": "FAL"
+                  }
+                },
+                "shown": false
+              },
+              {
+                "statement": "q668-bcd8c82e-4680-f685-f2d0-b87f60d6bc16",
+                "pid": "P150",
+                "item": "Q22048",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Odisha blank districts map.svg",
+                  "kind": "drawing",
+                  "aspect": 1.0891,
+                  "megapixels": 0.39,
+                  "credit": {
+                    "artist": "Orissa_locator_map.svg: PlaneMad *derivative work: Abhijitsathe (talk) *derivative work: Psubhashish (talk)",
+                    "license": "CC BY-SA 3.0"
+                  }
+                },
+                "shown": false
+              },
+              {
+                "statement": "q668-c61f2b33-4cd6-92f7-36d0-ac2d1e3ca4b6",
+                "pid": "P150",
+                "item": "Q1356",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "West Bengal outline map.svg",
+                  "kind": "drawing",
+                  "aspect": 0.6788,
+                  "megapixels": 2.81,
+                  "credit": {
+                    "artist": "w:user:Planemad",
+                    "license": "CC BY-SA 3.0"
+                  }
+                },
+                "shown": false
+              },
+              {
+                "statement": "q668-19f8698a-4045-d234-95ad-577b5328c6ae",
+                "pid": "P150",
+                "item": "Q66743",
+                "rank": "normal",
+                "provenance": "none",
+                "image": {
+                  "file": "Pondicherry-Rock beach aerial view.jpg",
+                  "kind": "photo",
+                  "aspect": 1.5,
+                  "megapixels": 17.92,
+                  "credit": {
+                    "artist": "Karthik Easvur",
+                    "license": "CC BY-SA 3.0"
+                  }
+                },
+                "shown": false
+              },
+              {
+                "statement": "Q668-2174ee95-4c2c-884d-367c-2efd080efc68",
+                "pid": "P150",
+                "item": "Q677037",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 2014
+                  }
+                ],
+                "shown": false
+              },
+              {
+                "statement": "q668-9f14f9e0-47bf-2e71-b1df-31ef9e88a233",
+                "pid": "P150",
+                "item": "Q1162",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1987
+                  }
+                ],
+                "shown": false
+              },
+              {
+                "statement": "q668-411bed60-481f-2d86-b5b1-959db114aa6c",
+                "pid": "P150",
+                "item": "Q1599",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1963
+                  }
+                ],
+                "shown": false
+              },
+              {
+                "statement": "q668-62d07814-436a-771e-8cb1-31399bc9db9f",
+                "pid": "P150",
+                "item": "Q1498",
+                "rank": "normal",
+                "provenance": "none",
+                "shown": false
+              },
+              {
+                "statement": "q668-f40a8d56-458b-1e32-5ba9-e99bab9fb4e7",
+                "pid": "P150",
+                "item": "Q120971341",
+                "rank": "normal",
+                "provenance": "none",
+                "shown": false
+              }
+            ],
+            "priority": 0.0,
+            "rule": "set"
           }
         ]
       },
@@ -10887,143 +10889,6 @@ expression: composition
               }
             ],
             "rule": "series"
-          },
-          {
-            "primitive": "network",
-            "pid": "P140",
-            "form": "strip",
-            "values": [
-              {
-                "statement": "Q668-645283bc-454a-c1d3-763d-c6b0452bb2c9",
-                "pid": "P140",
-                "item": "Q9316",
-                "rank": "normal",
-                "provenance": "sourced",
-                "image": {
-                  "file": "Sikh pilgrim at the Golden Temple (Harmandir Sahib) in Amritsar, India.jpg",
-                  "kind": "photo",
-                  "aspect": 1.504,
-                  "megapixels": 6.02,
-                  "assessed": [
-                    "Featured pictures on Wikimedia Commons",
-                    "Quality images"
-                  ],
-                  "credit": {
-                    "artist": "Paulrudd",
-                    "license": "CC BY-SA 4.0"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q668-7a2f3e9a-4b68-2186-2ee9-11033ca3794d",
-                "pid": "P140",
-                "item": "Q9232",
-                "rank": "normal",
-                "provenance": "sourced",
-                "image": {
-                  "file": "Shravanbelgola Gomateshvara feet prayer1.jpg",
-                  "kind": "photo",
-                  "aspect": 1.3333,
-                  "megapixels": 3.15,
-                  "credit": {
-                    "artist": "Matthew Logelin",
-                    "license": "CC BY 2.0"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q668-7FA8B8A0-0A1B-4835-973C-9386B61BD339",
-                "pid": "P140",
-                "item": "Q9089",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P1107",
-                    "amount": 0.805
-                  }
-                ],
-                "image": {
-                  "file": "A Hindu wedding ritual in progress b.jpg",
-                  "kind": "photo",
-                  "aspect": 1.3333,
-                  "megapixels": 7.99,
-                  "credit": {
-                    "artist": "Alicia Nijdam",
-                    "license": "CC BY 2.0"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q668-972155f8-44cf-c51e-ef8b-9f1361f8c626",
-                "pid": "P140",
-                "item": "Q5043",
-                "rank": "normal",
-                "provenance": "sourced",
-                "image": {
-                  "file": "Jerusalem Holy-Sepulchre Jesus-Detail-01.png",
-                  "kind": "photo",
-                  "aspect": 1.0113,
-                  "megapixels": 2.03,
-                  "credit": {
-                    "artist": "Berthold Werner",
-                    "license": "CC BY-SA 3.0"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q668-c804854a-414e-e2f1-f53c-074b66e31e50",
-                "pid": "P140",
-                "item": "Q748",
-                "rank": "normal",
-                "provenance": "sourced",
-                "image": {
-                  "file": "Large Gautama Buddha statue in Buddha Park of Ravangla, Sikkim.jpg",
-                  "kind": "photo",
-                  "aspect": 0.6649,
-                  "megapixels": 21.65,
-                  "assessed": [
-                    "Featured pictures on Wikimedia Commons",
-                    "Quality images"
-                  ],
-                  "credit": {
-                    "artist": "Subhrajyoti07",
-                    "license": "CC BY-SA 4.0"
-                  }
-                },
-                "shown": true
-              },
-              {
-                "statement": "Q668-f00b4628-4f8d-4494-fb2e-44b526553f5d",
-                "pid": "P140",
-                "item": "Q432",
-                "rank": "normal",
-                "provenance": "sourced",
-                "qualifiers": [
-                  {
-                    "pid": "P1107",
-                    "amount": 0.134
-                  }
-                ],
-                "image": {
-                  "file": "Mosque.jpg",
-                  "kind": "photo",
-                  "aspect": 1.3333,
-                  "megapixels": 0.31,
-                  "credit": {
-                    "artist": "Antonio Melina/Agência Brasil",
-                    "license": "CC BY 3.0 br"
-                  }
-                },
-                "shown": true
-              }
-            ],
-            "priority": 3.95,
-            "rule": "set"
           }
         ],
         "sheet": [
@@ -11217,6 +11082,145 @@ expression: composition
             "priority": 1.0,
             "measured": true,
             "rule": "row"
+          }
+        ],
+        "strips": [
+          {
+            "primitive": "network",
+            "pid": "P140",
+            "form": "strip",
+            "values": [
+              {
+                "statement": "Q668-645283bc-454a-c1d3-763d-c6b0452bb2c9",
+                "pid": "P140",
+                "item": "Q9316",
+                "rank": "normal",
+                "provenance": "sourced",
+                "image": {
+                  "file": "Sikh pilgrim at the Golden Temple (Harmandir Sahib) in Amritsar, India.jpg",
+                  "kind": "photo",
+                  "aspect": 1.504,
+                  "megapixels": 6.02,
+                  "assessed": [
+                    "Featured pictures on Wikimedia Commons",
+                    "Quality images"
+                  ],
+                  "credit": {
+                    "artist": "Paulrudd",
+                    "license": "CC BY-SA 4.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q668-7a2f3e9a-4b68-2186-2ee9-11033ca3794d",
+                "pid": "P140",
+                "item": "Q9232",
+                "rank": "normal",
+                "provenance": "sourced",
+                "image": {
+                  "file": "Shravanbelgola Gomateshvara feet prayer1.jpg",
+                  "kind": "photo",
+                  "aspect": 1.3333,
+                  "megapixels": 3.15,
+                  "credit": {
+                    "artist": "Matthew Logelin",
+                    "license": "CC BY 2.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q668-7FA8B8A0-0A1B-4835-973C-9386B61BD339",
+                "pid": "P140",
+                "item": "Q9089",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P1107",
+                    "amount": 0.805
+                  }
+                ],
+                "image": {
+                  "file": "A Hindu wedding ritual in progress b.jpg",
+                  "kind": "photo",
+                  "aspect": 1.3333,
+                  "megapixels": 7.99,
+                  "credit": {
+                    "artist": "Alicia Nijdam",
+                    "license": "CC BY 2.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q668-972155f8-44cf-c51e-ef8b-9f1361f8c626",
+                "pid": "P140",
+                "item": "Q5043",
+                "rank": "normal",
+                "provenance": "sourced",
+                "image": {
+                  "file": "Jerusalem Holy-Sepulchre Jesus-Detail-01.png",
+                  "kind": "photo",
+                  "aspect": 1.0113,
+                  "megapixels": 2.03,
+                  "credit": {
+                    "artist": "Berthold Werner",
+                    "license": "CC BY-SA 3.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q668-c804854a-414e-e2f1-f53c-074b66e31e50",
+                "pid": "P140",
+                "item": "Q748",
+                "rank": "normal",
+                "provenance": "sourced",
+                "image": {
+                  "file": "Large Gautama Buddha statue in Buddha Park of Ravangla, Sikkim.jpg",
+                  "kind": "photo",
+                  "aspect": 0.6649,
+                  "megapixels": 21.65,
+                  "assessed": [
+                    "Featured pictures on Wikimedia Commons",
+                    "Quality images"
+                  ],
+                  "credit": {
+                    "artist": "Subhrajyoti07",
+                    "license": "CC BY-SA 4.0"
+                  }
+                },
+                "shown": true
+              },
+              {
+                "statement": "Q668-f00b4628-4f8d-4494-fb2e-44b526553f5d",
+                "pid": "P140",
+                "item": "Q432",
+                "rank": "normal",
+                "provenance": "sourced",
+                "qualifiers": [
+                  {
+                    "pid": "P1107",
+                    "amount": 0.134
+                  }
+                ],
+                "image": {
+                  "file": "Mosque.jpg",
+                  "kind": "photo",
+                  "aspect": 1.3333,
+                  "megapixels": 0.31,
+                  "credit": {
+                    "artist": "Antonio Melina/Agência Brasil",
+                    "license": "CC BY 3.0 br"
+                  }
+                },
+                "shown": true
+              }
+            ],
+            "priority": 3.95,
+            "rule": "set"
           }
         ]
       }

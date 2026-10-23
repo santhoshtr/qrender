@@ -191,6 +191,11 @@ when = { primitive = "media", audio = false }
 slot = "gallery"
 
 [[placement]]
+id = "strip"
+when = { strip = true }         # a strip of pictures: the full width
+slot = "strips"
+
+[[placement]]
 id = "block"
 slot = "stack"
 

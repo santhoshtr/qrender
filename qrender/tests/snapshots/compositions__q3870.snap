@@ -500,7 +500,37 @@ expression: composition
             "rule": "office"
           }
         ],
-        "stack": [
+        "sheet": [
+          {
+            "primitive": "fact",
+            "pid": "P1376",
+            "form": "list",
+            "statements": [
+              {
+                "statement": "Q3870-CE13795B-5331-4076-97B8-27FA28F1A8E4",
+                "pid": "P1376",
+                "item": "Q2538511",
+                "rank": "normal",
+                "provenance": "none",
+                "qualifiers": [
+                  {
+                    "pid": "P580",
+                    "year": 1920
+                  },
+                  {
+                    "pid": "P582",
+                    "year": 1963
+                  }
+                ],
+                "shown": true
+              }
+            ],
+            "priority": 2.0,
+            "former": true,
+            "rule": "former"
+          }
+        ],
+        "strips": [
           {
             "primitive": "network",
             "pid": "P1376",
@@ -559,36 +589,6 @@ expression: composition
             ],
             "priority": 2.0,
             "rule": "set"
-          }
-        ],
-        "sheet": [
-          {
-            "primitive": "fact",
-            "pid": "P1376",
-            "form": "list",
-            "statements": [
-              {
-                "statement": "Q3870-CE13795B-5331-4076-97B8-27FA28F1A8E4",
-                "pid": "P1376",
-                "item": "Q2538511",
-                "rank": "normal",
-                "provenance": "none",
-                "qualifiers": [
-                  {
-                    "pid": "P580",
-                    "year": 1920
-                  },
-                  {
-                    "pid": "P582",
-                    "year": 1963
-                  }
-                ],
-                "shown": true
-              }
-            ],
-            "priority": 2.0,
-            "former": true,
-            "rule": "former"
           }
         ]
       },
@@ -877,7 +877,7 @@ expression: composition
       "concept": "Q930933",
       "template": "columns",
       "slots": {
-        "stack": [
+        "strips": [
           {
             "primitive": "network",
             "pid": "P190",

@@ -16,7 +16,7 @@ impl Composer<'_> {
     /// slot). The others go to the slot of their placement rule. A stack
     /// with a block as tall as the lead (a second office) keeps only such
     /// blocks; the others go under the lead. Slot order is reading order:
-    /// hero, stack, gallery, sheet.
+    /// hero, stack, gallery, sheet, strips.
     pub fn place(&self, made: Vec<Made>) -> (IndexMap<Slot, Vec<Block>>, Template) {
         let rules = &self.config.rules;
         let mut placed: IndexMap<Slot, Vec<Block>> = IndexMap::new();
@@ -33,6 +33,7 @@ impl Composer<'_> {
                         make,
                         primitive: Some(block.primitive()),
                         audio: matches!(&block, Block::Media(m) if m.picture.kind == MediaKind::Audio),
+                        strip: block.is_strip(),
                     };
                     placed
                         .entry(first(&rules.placement, &facts).slot)
@@ -82,8 +83,13 @@ impl Composer<'_> {
         if !gallery.is_empty() {
             slots.insert(Slot::Gallery, gallery);
         }
-        // The sheet, then any other slot a placement rule named.
+        // The sheet, then any other slot a placement rule named. The strips
+        // last: each takes the full width, under the columns.
+        let strips = placed.shift_remove(&Slot::Strips);
         slots.extend(placed);
+        if let Some(strips) = strips {
+            slots.insert(Slot::Strips, strips);
+        }
         (slots, template)
     }
 }

@@ -475,6 +475,12 @@ impl<'v> Ui<'v> {
             .collect()
     }
 
+    /// The values that the composer marked as shown: always the first ones.
+    pub fn first_shown<'a, 'b>(&self, values: &'b [Shown<'a>]) -> &'b [Shown<'a>] {
+        let n = values.iter().take_while(|s| s.shown).count();
+        &values[..n]
+    }
+
     pub fn persons<'a>(&'a self, credits: &'a Credits) -> Vec<Shown<'a>> {
         credits.values.iter().map(|p| self.person(p)).collect()
     }

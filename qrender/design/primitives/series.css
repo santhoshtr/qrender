@@ -1,8 +1,14 @@
-/* series: measurements over time (the qr-chart element). A box of one
-   block size holds the table of the points; when the script draws the
-   chart, the chart takes the same box, so the page does not move. */
+/* series: measurements over time (the qr-chart element). A card, as a
+   factoid: its title and its chart in one box. A box of one block size
+   holds the table of the points; when the script draws the chart, the
+   chart takes the same box, so the page does not move. */
 
 qr-chart {
+	padding: var( --pad-block ) var( --pad-inline );
+	border: 1px solid var( --edge );
+	border-radius: var( --radius );
+	background-color: var( --soft );
+
 	& .desc { margin: 0; }
 
 	& .chart {
@@ -28,7 +34,7 @@ qr-chart {
 		& thead th {
 			position: sticky;
 			inset-block-start: 0;
-			background-color: var( --background-color-base );
+			background-color: var( --soft );
 			color: var( --color-subtle );
 		}
 

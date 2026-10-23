@@ -216,6 +216,8 @@ pub enum Slot {
     Stack,
     Gallery,
     Sheet,
+    // Strips of pictures: each takes the full width of the spread.
+    Strips,
     Feature,
     Run,
     Audio,
@@ -253,6 +255,7 @@ impl Slot {
             Self::Stack => "stack",
             Self::Gallery => "gallery",
             Self::Sheet => "sheet",
+            Self::Strips => "strips",
             Self::Feature => "feature",
             Self::Run => "run",
             Self::Audio => "audio",
