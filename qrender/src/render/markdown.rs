@@ -99,20 +99,6 @@ impl Markdown<'_> {
         {
             self.heading(2, &title.text);
         }
-        if let Some(p) = &s.prose_text {
-            self.paragraph(&format!("{} ([{}]({}))", plain(&p.html), p.title, p.href));
-        } else if let Some((section, block)) =
-            s.sections.iter().find_map(|a| Some((a, first_block(a)?)))
-        {
-            // The sections with their content (a fallback article): their
-            // first paragraph, as for a section without it.
-            self.paragraph(&format!(
-                "{} ([{}]({}))",
-                plain(block),
-                section.title,
-                section.href
-            ));
-        }
         // The order of the slots, but the stack right after the lead: a
         // second office beside the lead (the `beside` rule) stays with it,
         // before the blocks under the lead.
@@ -129,6 +115,21 @@ impl Markdown<'_> {
                 Slot::Stack if slots.contains_key(&Slot::Hero) => {}
                 _ => blocks.iter().for_each(|b| self.block(b)),
             }
+        }
+        // The facts first, then the text of the article.
+        if let Some(p) = &s.prose_text {
+            self.paragraph(&format!("{} ([{}]({}))", plain(&p.html), p.title, p.href));
+        } else if let Some((section, block)) =
+            s.sections.iter().find_map(|a| Some((a, first_block(a)?)))
+        {
+            // The sections with their content (a fallback article): their
+            // first paragraph, as for a section without it.
+            self.paragraph(&format!(
+                "{} ([{}]({}))",
+                plain(block),
+                section.title,
+                section.href
+            ));
         }
         let topics: Vec<String> = s.spread.topics.iter().map(|t| self.topic(t)).collect();
         if !topics.is_empty() {

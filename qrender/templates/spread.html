@@ -13,12 +13,13 @@
              data-spread="{{ s.spread.id }}"
              data-dimension="{{ s.spread.dimension.name() }}">
         {%- if s.spread.id != "identity" -%}{%- if let Some(t) = s.title %}<h2><span class="title">{{ ui.text(t, false)|safe }}</span></h2>{% endif -%}{%- endif -%}
-        {%- if !s.sections.is_empty() %}<div class="article-slot">{% for a in s.sections %}{{ ui.article_section(a, false)|safe }}{% endfor %}</div>{% endif -%}
-        {%- if let Some(p) = s.prose_text %}<div class="prose-slot" lang="{{ p.lang }}"><p>{{ ui.prose(p.html)|safe }}</p><a class="read" href="{{ p.href }}">{{ p.title }} ↗</a></div>{% endif -%}
         {%- for (slot, blocks) in s.spread.slots -%}
             {{ ui.slot(slot, blocks.as_slice())|safe }}
             {%- if ui.toc_after(s, slot) %}{{ ui.toc()|safe }}{% endif -%}
         {%- endfor -%}
+        {#- The facts first, for a quick look; then the text of the article. #}
+        {%- if !s.sections.is_empty() %}<div class="article-slot">{% for a in s.sections %}{{ ui.article_section(a, false)|safe }}{% endfor %}</div>{% endif -%}
+        {%- if let Some(p) = s.prose_text %}<div class="prose-slot" lang="{{ p.lang }}"><p>{{ ui.prose(p.html)|safe }}</p><a class="read" href="{{ p.href }}">{{ p.title }} ↗</a></div>{% endif -%}
         {%- let articles = ui.topic_articles(s) -%}
         {%- if !articles.is_empty() %}<div class="topic-articles">{% for t in articles %}{{ ui.topic_article(t)|safe }}{% endfor %}</div>{% endif -%}
         {%- let links = ui.prose_links(s) -%}
