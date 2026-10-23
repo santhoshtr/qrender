@@ -98,6 +98,25 @@ fn now<'a>(c: &Composer<'a>, pid: Pid) -> Option<&'a Statement> {
 
 /// Markdown: the file, as a link to its page on Commons.
 pub fn markdown(b: &Media, md: &mut crate::render::markdown::Markdown) {
+    // The picture of the lead of the article takes the place of the head
+    // picture, as on the HTML page.
+    let lead = md.view.lead.as_ref();
+    if b.role == MediaRole::Identity
+        && let Some((a, f)) = lead.and_then(|a| Some((a, a.picture.as_ref()?)))
+        && let Some(i) = f.images.first()
+    {
+        let page = format!(
+            "https://commons.wikimedia.org/wiki/File:{}",
+            i.file.replace(' ', "_")
+        );
+        let caption = match crate::render::markdown::plain(&f.caption) {
+            c if c.is_empty() => c,
+            c => format!(" — {c}"),
+        };
+        let value = format!("[{}](<{page}>){caption} (from {})", i.file, a.host);
+        md.item(&md.property(b.statement.pid), &value);
+        return;
+    }
     let crate::schema::ValueShown::File { file } = &b.statement.value else {
         return;
     };

@@ -57,15 +57,21 @@ async fn nairobi_from_recorded_responses() {
             .or(text.fallback_article.as_ref())
             .unwrap();
         // The parser error message of the lead is left out.
-        assert!(article.paragraphs.iter().all(|p| !p.contains("Cite error")));
+        assert!(
+            article
+                .lead
+                .iter()
+                .flat_map(|b| b.texts())
+                .all(|t| !t.contains("Cite error"))
+        );
         assert!(!article.concept_sections.is_empty());
         // Every mark in the stored text has its note, and every note kept
         // is marked.
         let mut texts: Vec<&str> = article
-            .paragraphs
+            .lead
             .iter()
-            .chain(article.section_text.values())
-            .map(String::as_str)
+            .flat_map(|b| b.texts())
+            .chain(article.section_text.values().map(String::as_str))
             .collect();
         let mut sections: Vec<&content::OutlineSection> = article.outline.iter().collect();
         while let Some(s) = sections.pop() {

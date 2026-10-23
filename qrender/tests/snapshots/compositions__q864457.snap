@@ -1,0 +1,397 @@
+---
+source: qrender/tests/compositions.rs
+expression: composition
+---
+{
+  "schema": "composition/0.3",
+  "design": "design/0.2",
+  "qid": "Q864457",
+  "class_layout": "generic",
+  "spreads": [
+    {
+      "id": "identity",
+      "kind": "identity",
+      "dimension": "neutral",
+      "template": "identity",
+      "slots": {
+        "head": [
+          {
+            "primitive": "title",
+            "item": "Q864457"
+          }
+        ],
+        "lead": [
+          {
+            "primitive": "prose",
+            "source": "lead",
+            "languages": 31
+          }
+        ],
+        "hero": [
+          {
+            "primitive": "media",
+            "role": "identity",
+            "statement": "Q864457-277f09fc-4f0d-918e-2152-036bede7e515",
+            "pid": "P18",
+            "file": "Knapsack.svg",
+            "rank": "normal",
+            "provenance": "none",
+            "kind": "drawing",
+            "aspect": 1.1544,
+            "megapixels": 0.2,
+            "credit": {
+              "artist": "",
+              "license": "CC BY-SA 2.5"
+            }
+          }
+        ],
+        "kind": [
+          {
+            "primitive": "kind",
+            "chain": [
+              {
+                "pid": "P31",
+                "values": [
+                  {
+                    "statement": "Q864457-8322BED2-0063-4540-BB41-030D7401972A",
+                    "pid": "P31",
+                    "item": "Q984063",
+                    "rank": "normal",
+                    "provenance": "none",
+                    "class": true,
+                    "shown": true
+                  }
+                ]
+              },
+              {
+                "pid": "P361",
+                "values": [
+                  {
+                    "statement": "Q864457-d459599d-4d88-d583-b749-f58c682e0045",
+                    "pid": "P361",
+                    "item": "Q1734364",
+                    "rank": "normal",
+                    "provenance": "none"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "history",
+      "kind": "history",
+      "dimension": "time",
+      "concept": "Q309",
+      "template": "columns",
+      "slots": {},
+      "prose": {
+        "concepts": [
+          "Q309"
+        ]
+      }
+    },
+    {
+      "id": "web",
+      "kind": "web",
+      "dimension": "neutral",
+      "concept": "Q22909728",
+      "template": "columns",
+      "slots": {
+        "stack": [
+          {
+            "primitive": "links",
+            "cards": [
+              {
+                "statement": {
+                  "statement": "Q864457-85195ED5-3BD2-4A3F-83A8-45385AA98710",
+                  "pid": "P3417",
+                  "string": "Knapsack-Problem",
+                  "rank": "normal",
+                  "provenance": "sourced",
+                  "citations": [
+                    "3b0a5bb3c1f955edce73740124f7d935698092ad"
+                  ]
+                },
+                "href": "https://www.quora.com/topic/Knapsack-Problem",
+                "platform": "Q51711",
+                "logo": {
+                  "file": "Quora logo 2015.svg",
+                  "kind": "drawing",
+                  "aspect": 3.5804,
+                  "megapixels": 0.07,
+                  "credit": {
+                    "artist": "Commercial Type (by Paul Barnes and Christian Schwartz) for Quora",
+                    "license": "Public domain"
+                  }
+                }
+              },
+              {
+                "statement": {
+                  "statement": "Q864457-0211EAC0-9066-49EE-8298-3E0AA3E5FB7B",
+                  "pid": "P1482",
+                  "url": "https://stackoverflow.com/tags/knapsack-problem",
+                  "rank": "normal",
+                  "provenance": "none"
+                },
+                "href": "https://stackoverflow.com/tags/knapsack-problem",
+                "platform": "Q3495447",
+                "logo": {
+                  "file": "Stack Exchange logo and wordmark.svg",
+                  "kind": "drawing",
+                  "aspect": 4.3465,
+                  "megapixels": 0.07,
+                  "credit": {
+                    "artist": "Stack Exchange",
+                    "license": "Public domain"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "more",
+      "kind": "more",
+      "dimension": "neutral",
+      "template": "collapsed",
+      "slots": {
+        "sheet": [
+          {
+            "primitive": "fact",
+            "pid": "P10374",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q864457-39FE3694-1007-4CD6-A884-74B5EC44CD0E",
+                "pid": "P10374",
+                "item": "Q215206",
+                "rank": "normal",
+                "provenance": "sourced",
+                "citations": [
+                  "cc49b27a88b22c92d208feeb84e97ab184e48741"
+                ],
+                "qualifiers": [
+                  {
+                    "pid": "P518",
+                    "item": "Q3262192"
+                  }
+                ],
+                "class": true,
+                "shown": true
+              },
+              {
+                "statement": "Q864457-F40002C8-75E4-4C02-810A-65085AAA4B91",
+                "pid": "P10374",
+                "item": "Q1137554",
+                "rank": "normal",
+                "provenance": "none",
+                "class": true,
+                "shown": true
+              }
+            ],
+            "priority": 1.5
+          },
+          {
+            "primitive": "fact",
+            "pid": "P138",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q864457-fa28effe-47ec-e585-9e14-4d17fde76377",
+                "pid": "P138",
+                "item": "Q5843",
+                "rank": "normal",
+                "provenance": "none",
+                "class": true,
+                "shown": true
+              }
+            ],
+            "priority": 0.167
+          }
+        ]
+      }
+    },
+    {
+      "id": "evidence",
+      "kind": "evidence",
+      "dimension": "neutral",
+      "concept": "Q121769",
+      "template": "sheet",
+      "slots": {
+        "summary": [
+          {
+            "primitive": "provenance",
+            "sourced": 1,
+            "imported": 1,
+            "none": 7
+          }
+        ],
+        "sheet": [
+          {
+            "primitive": "fact",
+            "pid": "P1889",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q864457-FD61FC19-EB50-4940-9FDD-6C40E6FEFC65",
+                "pid": "P1889",
+                "item": "Q3851477",
+                "rank": "normal",
+                "provenance": "imported",
+                "class": true,
+                "shown": true
+              }
+            ],
+            "priority": 0.083
+          },
+          {
+            "primitive": "fact",
+            "pid": "P6104",
+            "form": "value",
+            "statements": [
+              {
+                "statement": "Q864457-9CA988EA-96AB-4BC8-AE48-49513C7F6CA6",
+                "pid": "P6104",
+                "item": "Q8487137",
+                "rank": "normal",
+                "provenance": "none",
+                "shown": true
+              }
+            ],
+            "priority": 0.25
+          }
+        ],
+        "projects": [
+          {
+            "primitive": "sitelinks",
+            "families": {
+              "wikipedia": [
+                "ar",
+                "bg",
+                "ca",
+                "cs",
+                "da",
+                "de",
+                "en",
+                "es",
+                "eu",
+                "fa",
+                "fr",
+                "he",
+                "hy",
+                "it",
+                "ja",
+                "ka",
+                "ko",
+                "lv",
+                "nl",
+                "pl",
+                "pt",
+                "ro",
+                "ru",
+                "sl",
+                "sr",
+                "sv",
+                "th",
+                "tr",
+                "uk",
+                "vi",
+                "zh"
+              ]
+            }
+          }
+        ],
+        "identifiers": [
+          {
+            "primitive": "identifiers",
+            "values": [
+              {
+                "pid": "P646",
+                "string": "/m/04bb0",
+                "statement": "Q864457-DBB14852-721F-4F22-AF3E-95AACC2A3D89"
+              },
+              {
+                "pid": "P2812",
+                "string": "KnapsackProblem",
+                "statement": "Q864457-10074150-442f-70fc-1934-d1b47e50d625"
+              },
+              {
+                "pid": "P5047",
+                "string": "Knapsack_problem",
+                "statement": "Q864457-26a38e16-4515-e19f-6903-088c7bcaf153"
+              },
+              {
+                "pid": "P5106",
+                "string": "knapsackProblem",
+                "statement": "Q864457-C2AEDE6E-341A-4EEE-A566-C2A1C38A8ACF"
+              },
+              {
+                "pid": "P6366",
+                "string": "113138325",
+                "statement": "Q864457-DA2EA775-CB89-4475-AEC4-E9DC83162914"
+              },
+              {
+                "pid": "P6564",
+                "string": "backpack-problem",
+                "statement": "Q864457-e746b70e-43d9-c1da-1e07-e58aa00c6551"
+              },
+              {
+                "pid": "P10283",
+                "string": "C113138325",
+                "statement": "Q864457-8202FB1A-8B71-4541-AAB0-B975AFE6CEE4"
+              },
+              {
+                "pid": "P13397",
+                "string": "knapsack+problem",
+                "statement": "Q864457-04694133-036C-4AAA-B3FD-B477498F5E9A"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "dropped": [
+    {
+      "id": "location"
+    },
+    {
+      "id": "relations"
+    },
+    {
+      "id": "media"
+    }
+  ],
+  "citations": {
+    "cc49b27a88b22c92d208feeb84e97ab184e48741": {
+      "citation": {
+        "kind": "record",
+        "stated_in": "Q110971675",
+        "published": {
+          "time": "1972-01-01T00:00:00Z",
+          "precision": 9
+        }
+      },
+      "origin": {
+        "from": "wikidata",
+        "hash": "cc49b27a88b22c92d208feeb84e97ab184e48741"
+      }
+    },
+    "3b0a5bb3c1f955edce73740124f7d935698092ad": {
+      "citation": {
+        "kind": "record",
+        "stated_in": "Q51711"
+      },
+      "origin": {
+        "from": "wikidata",
+        "hash": "3b0a5bb3c1f955edce73740124f7d935698092ad"
+      }
+    }
+  },
+  "unshown": []
+}

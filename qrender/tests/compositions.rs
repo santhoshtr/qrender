@@ -7,7 +7,7 @@ use std::path::Path;
 use content::Content;
 use qrender::config::Config;
 
-const ITEMS: [&str; 9] = [
+const ITEMS: [&str; 10] = [
     "q3870",
     "q90",
     "q8023",
@@ -17,6 +17,7 @@ const ITEMS: [&str; 9] = [
     "q668",
     "q2",
     "q30",
+    "q864457",
 ];
 
 #[test]

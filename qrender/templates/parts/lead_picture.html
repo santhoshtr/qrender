@@ -1,0 +1,15 @@
+{#- The first figure of the lead of the article, in the place of the head
+    picture: the image links to its file page on Commons (its author and
+    licence), and the caption of the article is under it, with the mark of
+    a picture from an article. -#}
+<figure class="lead-picture" style="--a:{{ ui.css_number(i.aspect) }}">
+    <a class="m k-{{ kind }}" href="{{ ui.commons_page(i.file) }}" aria-label="{{ i.file }}"><img src="{{ ui.src(i.file, 960) }}"
+         srcset="{{ ui.srcset(i.file) }}"
+         sizes="(max-width: 760px) 100vw, 40vw"
+         alt=""
+         fetchpriority="high"></a>
+    <figcaption lang="{{ a.lang }}">
+        {%- if !f.caption.is_empty() %}{{ ui.prose(f.caption)|safe }} {% endif -%}
+        <span class="from" title="{{ a.host }}">W</span>
+    </figcaption>
+</figure>

@@ -24,6 +24,7 @@ pub use view::{
 
 use crate::compose::picture::media_kind;
 use crate::config::Config;
+use crate::primitives::media::MediaRole;
 use crate::schema::{
     Block, COMPOSITION_SCHEMA, Composition, Credit, MediaKind, Picture, PictureFacts, Spread,
     round_to,
@@ -420,20 +421,32 @@ impl<'a> Localizer<'a> {
 
     fn lead(&self) -> Option<Article> {
         let (article, source) = self.article()?;
-        let mut paragraphs: Vec<String> = article
-            .paragraphs
+        let mut blocks = self.prose_blocks(&article.lead, article, source);
+        // The article chose its picture for its text, and the caption
+        // explains it: it takes the place of the head picture.
+        let picture = blocks
             .iter()
-            .map(|p| self.rewrite(p, article, source))
-            .collect();
-        let more = paragraphs.split_off(paragraphs.len().min(1));
+            .position(|b| matches!(b, ProseBlock::Figure(_)))
+            .filter(|i| matches!(&blocks[*i], ProseBlock::Figure(f) if f.images.len() == 1))
+            .filter(|_| self.has_head_picture())
+            .and_then(|i| match blocks.remove(i) {
+                ProseBlock::Figure(f) => Some(f),
+                ProseBlock::Text(_) => None,
+            });
         Some(Article {
             lang: source.parse().expect("a language code"),
             local: source == self.lang.as_str(),
             host: format!("{source}.wikipedia.org"),
             url: article_url(source, &article.title),
-            paragraphs,
-            more,
+            blocks,
+            picture,
         })
+    }
+
+    /// The page has a picture of the item in its head.
+    fn has_head_picture(&self) -> bool {
+        self.blocks()
+            .any(|b| matches!(b, Block::Media(m) if m.role == MediaRole::Identity))
     }
 
     fn spread(&self, spread: &Spread) -> SpreadView {
@@ -486,37 +499,47 @@ impl<'a> Localizer<'a> {
             lang: source.parse().expect("a language code"),
             local: source == self.lang.as_str(),
             level: s.level,
-            blocks: s
-                .blocks
-                .iter()
-                .filter_map(|b| match b {
-                    OutlineBlock::Text(html) => Some(self.rewrite(html, article, source))
-                        .filter(|t| !t.is_empty())
-                        .map(ProseBlock::Text),
-                    OutlineBlock::Figure(f) => Some(ProseBlock::Figure(ProseFigure {
-                        images: f
-                            .images
-                            .iter()
-                            .map(|i| ProseImage {
-                                file: i.file.clone(),
-                                aspect: if i.height > 0 {
-                                    round_to(f64::from(i.width) / f64::from(i.height), 4)
-                                } else {
-                                    1.0
-                                },
-                                caption: self.rewrite(&i.caption, article, source),
-                            })
-                            .collect(),
-                        caption: self.rewrite(&f.caption, article, source),
-                    })),
-                })
-                .collect(),
+            blocks: self.prose_blocks(&s.blocks, article, source),
             sections: s
                 .sections
                 .iter()
                 .map(|c| self.prose_section(c, article, source))
                 .collect(),
         }
+    }
+
+    /// The blocks of a section or of the lead: the texts cleaned, the
+    /// captions too.
+    fn prose_blocks(
+        &self,
+        blocks: &[OutlineBlock],
+        article: &content::Article,
+        source: &str,
+    ) -> Vec<ProseBlock> {
+        blocks
+            .iter()
+            .filter_map(|b| match b {
+                OutlineBlock::Text(html) => Some(self.rewrite(html, article, source))
+                    .filter(|t| !t.is_empty())
+                    .map(ProseBlock::Text),
+                OutlineBlock::Figure(f) => Some(ProseBlock::Figure(ProseFigure {
+                    images: f
+                        .images
+                        .iter()
+                        .map(|i| ProseImage {
+                            file: i.file.clone(),
+                            aspect: if i.height > 0 {
+                                round_to(f64::from(i.width) / f64::from(i.height), 4)
+                            } else {
+                                1.0
+                            },
+                            caption: self.rewrite(&i.caption, article, source),
+                        })
+                        .collect(),
+                    caption: self.rewrite(&f.caption, article, source),
+                })),
+            })
+            .collect()
     }
 
     /// The first paragraph of the first matched section of the concepts.

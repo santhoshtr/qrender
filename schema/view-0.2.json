@@ -77,6 +77,13 @@
     },
     "Article": {
       "properties": {
+        "blocks": {
+          "description": "The blocks of the lead, as the blocks of a section.",
+          "items": {
+            "$ref": "#/$defs/ProseBlock"
+          },
+          "type": "array"
+        },
         "host": {
           "type": "string"
         },
@@ -87,19 +94,16 @@
           "description": "The article is in the page language.",
           "type": "boolean"
         },
-        "more": {
-          "description": "The other paragraphs of the lead.",
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
-        },
-        "paragraphs": {
-          "description": "The first paragraph, cleaned (HTML: `a`, `b`, `i`, ruby glosses).",
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
+        "picture": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProseFigure"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The first figure of the lead, when it has one image and the page\nhas a head picture: it takes the place of that picture."
         },
         "url": {
           "type": "string"
@@ -110,8 +114,7 @@
         "local",
         "host",
         "url",
-        "paragraphs",
-        "more"
+        "blocks"
       ],
       "type": "object"
     },

@@ -20,7 +20,7 @@
 	const BLOCKS = 'p, ul, ol, dl, blockquote';
 	// What a translation may hold: the tags of the text, links to the web.
 	const ALLOWED = new Set( [ 'P', 'UL', 'OL', 'LI', 'DL', 'DT', 'DD', 'BLOCKQUOTE',
-		'H3', 'H4', 'H5', 'H6', 'A', 'B', 'I', 'SPAN' ] );
+		'H2', 'H3', 'H4', 'H5', 'H6', 'A', 'B', 'I', 'SPAN' ] );
 	const rows = dialog.querySelector( '.rows' );
 	const status = dialog.querySelector( '.status' );
 	// The section in the dialog, and the requests of its translation.
@@ -28,16 +28,13 @@
 	let controller = null;
 
 	// The blocks of a text, in order: a subsection gives its title, then
-	// its blocks; a collapsed part without a title (the rest of the lead)
-	// gives its blocks.
+	// its blocks.
 	const units = ( container ) => [ ...container.children ].flatMap( ( el ) => {
 		if ( el.matches( BLOCKS ) ) {
 			return [ el ];
 		}
 		if ( el.matches( 'details' ) ) {
-			const title = el.querySelector( ':scope > summary > :is( h3, h4, h5, h6 )' );
-			const rest = units( el );
-			return title ? [ title, ...rest ] : rest;
+			return [ el.querySelector( ':scope > summary > :is( h3, h4, h5, h6 )' ), ...units( el ) ];
 		}
 		return [];
 	} );
@@ -129,17 +126,13 @@
 		connectedCallback() {
 			// The section's own button and text, not those of a section in it.
 			this.button = this.querySelector( '.translate' );
-			this.heading = this.querySelector( ':scope > .head > :is( h3, h4, h5, h6 ), :scope > details > .head > :is( h3, h4, h5, h6 )' );
-			this.body = this.querySelector( ':scope > .body, :scope > details > .body' );
+			this.heading = this.querySelector( ':scope > .head > :is( h2, h3, h4, h5, h6 )' );
+			this.body = this.querySelector( ':scope > .body' );
 			if ( !this.button || !this.body ) {
 				return;
 			}
 			this.button.hidden = false;
-			this.button.addEventListener( 'click', ( event ) => {
-				// In a summary, the click would also close the section.
-				event.preventDefault();
-				this.open();
-			} );
+			this.button.addEventListener( 'click', () => this.open() );
 		}
 
 		// The blocks on the page: the title first, then the text.

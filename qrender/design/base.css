@@ -844,6 +844,22 @@ qr-section { display: block; }
 		}
 	}
 
+	/* A section that is a spread of its own: its title is the title of a
+	   spread, across the page. */
+	.t-article & > .head {
+		max-inline-size: none;
+		padding-block-end: var( --spacing-50 );
+		border-block-end: 2px solid var( --ink );
+
+		& > h2 {
+			margin: 0;
+			font-family: var( --font-family-serif );
+			font-size: var( --font-size-xx-large );
+			font-weight: var( --font-weight-normal );
+			line-height: var( --line-height-xx-large );
+		}
+	}
+
 	& .body {
 		max-inline-size: 720px;
 		line-height: 1.7;
@@ -861,23 +877,6 @@ qr-section { display: block; }
 		& > :is( h3, h4, h5, h6 ) { display: inline; }
 	}
 
-	/* A section collapsed to its head: the head is a flex row (the title,
-	   then its action), which has no marker of its own. */
-	& > details > summary.head {
-		list-style: none;
-
-		&::-webkit-details-marker { display: none; }
-
-		& > :is( h3, h4, h5, h6 )::before {
-			content: '▸';
-			display: inline-block;
-			inline-size: 1.2em;
-			color: var( --color-subtle );
-		}
-	}
-
-	& > details[ open ] > summary.head > :is( h3, h4, h5, h6 )::before { content: '▾'; }
-
 	& .subsection {
 		margin-block: var( --spacing-50 );
 
@@ -888,35 +887,36 @@ qr-section { display: block; }
 
 		& > :not( summary ) { margin-inline-start: var( --spacing-150 ); }
 	}
+}
 
-	/* An image of the article: a block at the full width of the text, with
-	   its aspect ratio. A tall image is at most 80% of the window high, so
-	   it is narrower. Not a thumbnail: the reader sees it without a click. */
-	& .article-figure {
-		margin: var( --spacing-100 ) 0;
+/* An image of the article, in a section or in the lead: a block at the
+   full width of the text, with its aspect ratio. A tall image is at most
+   80% of the window high, so it is narrower. Not a thumbnail: the reader
+   sees it without a click. */
+.article-figure {
+	margin: var( --spacing-100 ) 0;
 
-		& .image {
-			display: block;
-			inline-size: min( 100%, calc( 80vh * var( --a ) ) );
-			margin-inline: auto;
-		}
+	& .image {
+		display: block;
+		inline-size: min( 100%, calc( 80vh * var( --a ) ) );
+		margin-inline: auto;
+	}
 
-		& img {
-			display: block;
-			inline-size: 100%;
-			block-size: auto;
-			aspect-ratio: var( --a );
-			border-radius: var( --border-radius-base );
-			background-color: var( --background-color-interactive-subtle );
-		}
+	& img {
+		display: block;
+		inline-size: 100%;
+		block-size: auto;
+		aspect-ratio: var( --a );
+		border-radius: var( --border-radius-base );
+		background-color: var( --background-color-interactive-subtle );
+	}
 
-		& :is( .caption, figcaption ) {
-			margin: var( --spacing-25 ) 0 var( --spacing-75 );
-			font-family: var( --font-family-system-sans );
-			font-size: var( --font-size-small );
-			line-height: var( --line-height-small );
-			color: var( --color-subtle );
-		}
+	& :is( .caption, figcaption ) {
+		margin: var( --spacing-25 ) 0 var( --spacing-75 );
+		font-family: var( --font-family-system-sans );
+		font-size: var( --font-size-small );
+		line-height: var( --line-height-small );
+		color: var( --color-subtle );
 	}
 }
 
@@ -952,8 +952,7 @@ qr-section { display: block; }
 
 /* A section whose translation the reader saved (on the page only): a mark
    at its side, and its note. */
-qr-section.translated > .body,
-qr-section.translated > details > .body {
+qr-section.translated > .body {
 	border-inline-start: 3px solid var( --border-color-success );
 	padding-inline-start: var( --spacing-100 );
 }

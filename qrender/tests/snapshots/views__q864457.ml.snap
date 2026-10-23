@@ -1,0 +1,2658 @@
+---
+source: qrender/tests/views.rs
+expression: json
+---
+{
+  "citations": {
+    "3b0a5bb3c1f955edce73740124f7d935698092ad": {
+      "citation": {
+        "kind": "record",
+        "stated_in": "Q51711"
+      },
+      "origin": {
+        "from": "wikidata",
+        "hash": "3b0a5bb3c1f955edce73740124f7d935698092ad"
+      }
+    },
+    "cc49b27a88b22c92d208feeb84e97ab184e48741": {
+      "citation": {
+        "kind": "record",
+        "published": {
+          "precision": 9,
+          "time": "1972-01-01T00:00:00Z"
+        },
+        "stated_in": "Q110971675"
+      },
+      "origin": {
+        "from": "wikidata",
+        "hash": "cc49b27a88b22c92d208feeb84e97ab184e48741"
+      }
+    }
+  },
+  "composition": "composition/0.3",
+  "coverage": {
+    "have": 6,
+    "total": 15
+  },
+  "design": "design/0.2",
+  "dir": "ltr",
+  "labels": {
+    "P10283": {
+      "href": "https://www.wikidata.org/wiki/Property:P10283",
+      "lang": "mul",
+      "text": "OpenAlex ID"
+    },
+    "P10374": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/P10374/ml",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P10374",
+      "lang": "en",
+      "text": "computational complexity"
+    },
+    "P13397": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/P13397/ml",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P13397",
+      "lang": "en",
+      "text": "GitLab.com topic ID"
+    },
+    "P138": {
+      "href": "https://www.wikidata.org/wiki/Property:P138",
+      "lang": "ml",
+      "text": "പേര് വന്ന വഴി"
+    },
+    "P143": {
+      "href": "https://www.wikidata.org/wiki/Property:P143",
+      "lang": "ml",
+      "text": "ഇറക്കുമതി സ്രോതസ്"
+    },
+    "P1482": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/P1482/ml",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P1482",
+      "lang": "en",
+      "text": "Stack Exchange tag"
+    },
+    "P18": {
+      "href": "https://www.wikidata.org/wiki/Property:P18",
+      "lang": "ml",
+      "text": "ചിത്രം"
+    },
+    "P1889": {
+      "href": "https://www.wikidata.org/wiki/Property:P1889",
+      "lang": "ml",
+      "text": "ഇതിൽ നിന്നും വ്യത്യസ്തം"
+    },
+    "P248": {
+      "href": "https://www.wikidata.org/wiki/Property:P248",
+      "lang": "ml",
+      "text": "ഇവിടെ പറയുന്നു"
+    },
+    "P2812": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/P2812/ml",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P2812",
+      "lang": "en",
+      "text": "MathWorld ID"
+    },
+    "P31": {
+      "href": "https://www.wikidata.org/wiki/Property:P31",
+      "lang": "ml",
+      "text": "തരം"
+    },
+    "P3417": {
+      "href": "https://www.wikidata.org/wiki/Property:P3417",
+      "lang": "ml",
+      "text": "ക്വാറ ടോപിക് ഐ.ഡി."
+    },
+    "P361": {
+      "href": "https://www.wikidata.org/wiki/Property:P361",
+      "lang": "ml",
+      "text": "ഇതിന്റെ ഭാഗം"
+    },
+    "P3629": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/P3629/ml",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P3629",
+      "lang": "en",
+      "text": "age of subject at event"
+    },
+    "P5047": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/P5047/ml",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P5047",
+      "lang": "en",
+      "text": "Rosetta Code page ID"
+    },
+    "P5106": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/P5106/ml",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P5106",
+      "lang": "en",
+      "text": "Dictionary of Algorithms and Data Structures ID"
+    },
+    "P518": {
+      "href": "https://www.wikidata.org/wiki/Property:P518",
+      "lang": "ml",
+      "text": "ബാധകമാകുന്ന ഭാഗം"
+    },
+    "P585": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/P585/ml",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P585",
+      "lang": null,
+      "text": "P585"
+    },
+    "P6104": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/P6104/ml",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P6104",
+      "lang": "en",
+      "text": "maintained by WikiProject"
+    },
+    "P6366": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/P6366/ml",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P6366",
+      "lang": "en",
+      "text": "Microsoft Academic ID (discontinued)"
+    },
+    "P646": {
+      "href": "https://www.wikidata.org/wiki/Property:P646",
+      "lang": "ml",
+      "text": "ഫ്രീബേസ് ഐ.ഡി."
+    },
+    "P6564": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/P6564/ml",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Property:P6564",
+      "lang": "en",
+      "text": "Brilliant Wiki ID"
+    },
+    "P854": {
+      "href": "https://www.wikidata.org/wiki/Property:P854",
+      "lang": "ml",
+      "text": "അവലംബ യൂ.ആർ.എൽ."
+    },
+    "Q110971675": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/Q110971675/ml",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q110971675",
+      "lang": "en",
+      "text": "Reducibility among combinatorial problems"
+    },
+    "Q1137554": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/Q1137554/ml",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1137554",
+      "lang": "en",
+      "text": "NP-hard"
+    },
+    "Q1734364": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/Q1734364/ml",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q1734364",
+      "lang": "en",
+      "text": "Karp's 21 NP-complete problems"
+    },
+    "Q215206": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/Q215206/ml",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q215206",
+      "lang": "en",
+      "text": "NP-complete"
+    },
+    "Q3262192": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/Q3262192/ml",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q3262192",
+      "lang": "en",
+      "text": "decision problem"
+    },
+    "Q3851477": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/Q3851477/ml",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q3851477",
+      "lang": "en",
+      "text": "packing problem"
+    },
+    "Q51711": {
+      "href": "https://www.wikidata.org/wiki/Q51711",
+      "lang": "ml",
+      "text": "ക്വോറാ"
+    },
+    "Q5843": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/Q5843/ml",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q5843",
+      "lang": "en",
+      "text": "backpack"
+    },
+    "Q8487137": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/Q8487137/ml",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q8487137",
+      "lang": "en",
+      "text": "WikiProject Mathematics"
+    },
+    "Q864457": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/Q864457/ml",
+      "description": {
+        "fallback": true,
+        "lang": "en",
+        "text": "problem in combinatorial optimization"
+      },
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q864457",
+      "lang": "en",
+      "text": "knapsack problem"
+    },
+    "Q984063": {
+      "add": "https://www.wikidata.org/wiki/Special:SetLabel/Q984063/ml",
+      "fallback": true,
+      "href": "https://www.wikidata.org/wiki/Q984063",
+      "lang": "en",
+      "text": "optimization problem"
+    }
+  },
+  "lang": "ml",
+  "lead": {
+    "blocks": [
+      "<p>The <b>knapsack problem</b> is the following problem in <a href=\"https://www.wikidata.org/wiki/Q1333872\">combinatorial optimization</a>:</p>",
+      "<dl><dd><i>Given a set of items, each with a weight and a value, determine which items to include in the collection so that the total weight is less than or equal to a given limit and the total value is as large as possible.</i></dd></dl>",
+      "<p>It derives its name from the problem faced by someone who is constrained by a fixed-size <a href=\"https://www.wikidata.org/wiki/Q5843\">knapsack</a> and must fill it with the most valuable items. The problem often arises in <a href=\"https://www.wikidata.org/wiki/Q287260\">resource allocation</a> where the decision-makers have to choose from a set of non-divisible projects or tasks under a fixed budget or time constraint, respectively.</p>",
+      "<p>The knapsack problem has been studied for more than a century, with early works dating back to 1897.<sup data-note=\"1\"></sup></p>",
+      "<p>The <a href=\"https://www.wikidata.org/wiki/Q1154420\">subset sum problem</a> is a special case of the decision and 0-1 problems where for each kind of item, the weight equals the value: \n  \n    \n      \n        \n          w\n          \n            i\n          \n        \n        =\n        \n          v\n          \n            i\n          \n        \n      \n    \n    {\\displaystyle w_{i}=v_{i}}\n  \n{\\displaystyle w_{i}=v_{i}}. In the field of <a href=\"https://www.wikidata.org/wiki/Q8789\">cryptography</a>, the term <i>knapsack problem</i> is often used to refer specifically to the subset sum problem. The subset sum problem is one of <a href=\"https://www.wikidata.org/wiki/Q1734364\">Karp's 21 NP-complete problems</a>.<sup data-note=\"2\"></sup></p>"
+    ],
+    "host": "en.wikipedia.org",
+    "lang": "en",
+    "local": false,
+    "picture": {
+      "caption": "Example of a one-dimensional (constraint) knapsack problem: which books should be chosen to maximize the books' value while still keeping the overall weight under or equal to 15 kg? A <a href=\"https://www.wikidata.org/wiki/Q4433780\">multiple constrained problem</a> could consider both the weight and volume of the books. (Solution: if any number of each book is available, then three yellow books and three grey books; if only the shown books are available, then all except for the green book.)",
+      "images": [
+        {
+          "aspect": 1.1544,
+          "file": "Knapsack Problem Illustration.svg"
+        }
+      ]
+    },
+    "url": "https://en.wikipedia.org/wiki/Knapsack_problem"
+  },
+  "locale": "ml",
+  "messages": {
+    "qrender-add-label": "Add a label in your language",
+    "qrender-add-value": "Add it in this language",
+    "qrender-age": "aged $1",
+    "qrender-alternate-json": "JSON data",
+    "qrender-alternate-markdown": "Markdown version",
+    "qrender-bce": "$1 BCE",
+    "qrender-cite-archived": "Archived",
+    "qrender-cite-at": "Cited at",
+    "qrender-cite-authors": "Authors",
+    "qrender-cite-encyclopedia": "Encyclopedia",
+    "qrender-cite-identifier": "Identifier",
+    "qrender-cite-identifiers": "Identifiers",
+    "qrender-cite-issue": "Issue",
+    "qrender-cite-issue-in": "no. $1",
+    "qrender-cite-journal": "Journal",
+    "qrender-cite-magazine": "Magazine",
+    "qrender-cite-newspaper": "Newspaper",
+    "qrender-cite-original-dead": "the original is offline",
+    "qrender-cite-original-unfit": "the original address has other content now",
+    "qrender-cite-page-in": "p. $1",
+    "qrender-cite-pages": "Pages",
+    "qrender-cite-pages-in": "pp. $1",
+    "qrender-cite-place": "Place",
+    "qrender-cite-published": "Published",
+    "qrender-cite-publisher": "Publisher",
+    "qrender-cite-retrieved": "Retrieved",
+    "qrender-cite-title": "Title",
+    "qrender-cite-volume": "Volume",
+    "qrender-cite-volume-in": "vol. $1",
+    "qrender-cite-website": "Website",
+    "qrender-close": "Close",
+    "qrender-contents": "Contents",
+    "qrender-credit": "Credit",
+    "qrender-description": "Description",
+    "qrender-discard": "Discard",
+    "qrender-earlier": "earlier",
+    "qrender-edit": "Edit",
+    "qrender-explore-map": "Explore the map",
+    "qrender-footer": "Composed by rule from Wikidata item $1 ($2). The lead paragraph, the section paragraphs and the section links come from Wikipedia. Pictures come from Wikimedia Commons; a W on a picture marks one from an article, not from Wikidata; a W on a value marks a statement whose only reference is a Wikipedia.",
+    "qrender-former": "former",
+    "qrender-label-failed": "No machine translation: write the label.",
+    "qrender-label-title": "Add the label in $1",
+    "qrender-language": "Language",
+    "qrender-map-attribution": "© OpenStreetMap contributors",
+    "qrender-model-loading": "Loading the 3D model… $1",
+    "qrender-model-unsupported": "This 3D model cannot be shown here.",
+    "qrender-note": "Note $1",
+    "qrender-other-value": "other value",
+    "qrender-page-language": "Language: $1",
+    "qrender-play": "Play",
+    "qrender-save": "Save",
+    "qrender-saved": "Saved on this page only. This is a prototype: nothing is published.",
+    "qrender-search": "Search Wikipedia",
+    "qrender-show-map": "Show on a map",
+    "qrender-some-value": "unknown value",
+    "qrender-sources": "Sources",
+    "qrender-translate": "Translate to $1",
+    "qrender-translate-failed": "Not translated: the source text is kept.",
+    "qrender-translating": "Translating…",
+    "qrender-translation-note": "machine translation: correct it",
+    "qrender-view-all": "View all",
+    "qrender-view-larger": "View larger",
+    "qrender-view-model": "View in 3D"
+  },
+  "more_sections": [
+    {
+      "anchor": "Applications",
+      "blocks": [
+        "<p>Knapsack problems appear in real-world decision-making processes in a wide variety of fields, such as finding the least wasteful way to cut raw materials,<sup data-note=\"3\"></sup> selection of <a href=\"https://www.wikidata.org/wiki/Q5456372\">investments</a> and <a href=\"https://www.wikidata.org/wiki/Q5340806\">portfolios</a>,<sup data-note=\"4\"></sup> selection of assets for <a href=\"https://www.wikidata.org/wiki/Q852175\">asset-backed securitization</a>,<sup data-note=\"5\"></sup> and generating keys for the <a href=\"https://www.wikidata.org/wiki/Q1760368\">Merkle–Hellman</a><sup data-note=\"6\"></sup> and other <a href=\"https://www.wikidata.org/wiki/Q18343476\">knapsack cryptosystems</a>.</p>",
+        "<p>One early application of knapsack algorithms was in the construction and scoring of tests in which the test-takers have a choice as to which questions they answer. For small examples, it is a fairly simple process to provide the test-takers with such a choice. For example, if an exam contains 12 questions each worth 10 points, the test-taker need only answer 10 questions to achieve a maximum possible score of 100 points. However, on tests with a heterogeneous distribution of point values, it is more difficult to provide choices. Feuerman and Weiss proposed a system in which students are given a heterogeneous test with a total of 125 possible points. The students are asked to answer all of the questions to the best of their abilities. Of the possible subsets of problems whose total point values add up to 100, a knapsack algorithm would determine which subset gives each student the highest possible score.<sup data-note=\"7\"></sup></p>",
+        "<p>A 1999 study of the Stony Brook University Algorithm Repository showed that, out of 75 algorithmic problems related to the field of combinatorial algorithms and <a href=\"https://www.wikidata.org/wiki/Q4724358\">algorithm engineering</a>, the knapsack problem was the 19th most popular and the third most needed after <a href=\"https://www.wikidata.org/wiki/Q1426863\">suffix trees</a> and the <a href=\"https://www.wikidata.org/wiki/Q814581\">bin packing problem</a>.<sup data-note=\"8\"></sup></p>"
+      ],
+      "href": "https://en.wikipedia.org/wiki/Knapsack_problem#Applications",
+      "lang": "en",
+      "level": 2,
+      "local": false,
+      "sections": [],
+      "title": "Applications"
+    },
+    {
+      "anchor": "Definition",
+      "blocks": [
+        "<p>The most common problem being solved is the <b>0-1 knapsack problem</b>, which restricts the number <i>\n  \n    \n      \n        \n          x\n          \n            i\n          \n        \n      \n    \n    {\\displaystyle x_{i}}\n  \n{\\displaystyle x_{i}}</i> of copies of each kind of item to zero or one. Given a set of <i>\n  \n    \n      \n        n\n      \n    \n    {\\displaystyle n}\n  \n{\\displaystyle n}</i> items numbered from 1 up to <i>\n  \n    \n      \n        n\n      \n    \n    {\\displaystyle n}\n  \n{\\displaystyle n}</i>, each with a weight <i>\n  \n    \n      \n        \n          w\n          \n            i\n          \n        \n      \n    \n    {\\displaystyle w_{i}}\n  \n{\\displaystyle w_{i}}</i> and a value <i>\n  \n    \n      \n        \n          v\n          \n            i\n          \n        \n      \n    \n    {\\displaystyle v_{i}}\n  \n{\\displaystyle v_{i}}</i>, along with a maximum weight capacity <i>\n  \n    \n      \n        W\n      \n    \n    {\\displaystyle W}\n  \n{\\displaystyle W}</i>,</p>",
+        "<dl><dd>maximize \n  \n    \n      \n        \n          ∑\n          \n            i\n            =\n            1\n          \n          \n            n\n          \n        \n        \n          v\n          \n            i\n          \n        \n        \n          x\n          \n            i\n          \n        \n      \n    \n    {\\displaystyle \\sum _{i=1}^{n}v_{i}x_{i}}\n  \n{\\displaystyle \\sum _{i=1}^{n}v_{i}x_{i}}</dd>\n<dd>subject to \n  \n    \n      \n        \n          ∑\n          \n            i\n            =\n            1\n          \n          \n            n\n          \n        \n        \n          w\n          \n            i\n          \n        \n        \n          x\n          \n            i\n          \n        \n        ≤\n        W\n      \n    \n    {\\displaystyle \\sum _{i=1}^{n}w_{i}x_{i}\\leq W}\n  \n{\\displaystyle \\sum _{i=1}^{n}w_{i}x_{i}\\leq W} and \n  \n    \n      \n        \n          x\n          \n            i\n          \n        \n        ∈\n        {\n        0\n        ,\n        1\n        }\n      \n    \n    {\\displaystyle x_{i}\\in \\{0,1\\}}\n  \n{\\displaystyle x_{i}\\in \\{0,1\\}}.</dd></dl>",
+        "<p>Here <i>\n  \n    \n      \n        \n          x\n          \n            i\n          \n        \n      \n    \n    {\\displaystyle x_{i}}\n  \n{\\displaystyle x_{i}}</i> represents the number of instances of item <i>\n  \n    \n      \n        i\n      \n    \n    {\\displaystyle i}\n  \n{\\displaystyle i}</i> to include in the knapsack. Informally, the problem is to maximize the sum of the values of the items in the knapsack so that the sum of the weights is less than or equal to the knapsack's capacity.</p>",
+        "<p>The <b>bounded knapsack problem</b> (<b>BKP</b>) removes the restriction that there is only one of each item, but restricts the number \n  \n    \n      \n        \n          x\n          \n            i\n          \n        \n      \n    \n    {\\displaystyle x_{i}}\n  \n{\\displaystyle x_{i}} of copies of each kind of item to a maximum non-negative integer value \n  \n    \n      \n        c\n      \n    \n    {\\displaystyle c}\n  \n{\\displaystyle c}:</p>",
+        "<dl><dd>maximize \n  \n    \n      \n        \n          ∑\n          \n            i\n            =\n            1\n          \n          \n            n\n          \n        \n        \n          v\n          \n            i\n          \n        \n        \n          x\n          \n            i\n          \n        \n      \n    \n    {\\displaystyle \\sum _{i=1}^{n}v_{i}x_{i}}\n  \n{\\displaystyle \\sum _{i=1}^{n}v_{i}x_{i}}</dd>\n<dd>subject to \n  \n    \n      \n        \n          ∑\n          \n            i\n            =\n            1\n          \n          \n            n\n          \n        \n        \n          w\n          \n            i\n          \n        \n        \n          x\n          \n            i\n          \n        \n        ≤\n        W\n      \n    \n    {\\displaystyle \\sum _{i=1}^{n}w_{i}x_{i}\\leq W}\n  \n{\\displaystyle \\sum _{i=1}^{n}w_{i}x_{i}\\leq W} and \n  \n    \n      \n        \n          x\n          \n            i\n          \n        \n        ∈\n        {\n        0\n        ,\n        1\n        ,\n        2\n        ,\n        …\n        ,\n        c\n        }\n        .\n      \n    \n    {\\displaystyle x_{i}\\in \\{0,1,2,\\dots ,c\\}.}\n  \n{\\displaystyle x_{i}\\in \\{0,1,2,\\dots ,c\\}.}</dd></dl>",
+        "<p>The <b>unbounded knapsack problem</b> (<b>UKP</b>) places no upper bound on the number of copies of each kind of item and can be formulated as above except that the only restriction on \n  \n    \n      \n        \n          x\n          \n            i\n          \n        \n      \n    \n    {\\displaystyle x_{i}}\n  \n{\\displaystyle x_{i}} is that it is a non-negative integer.</p>",
+        "<dl><dd>maximize \n  \n    \n      \n        \n          ∑\n          \n            i\n            =\n            1\n          \n          \n            n\n          \n        \n        \n          v\n          \n            i\n          \n        \n        \n          x\n          \n            i\n          \n        \n      \n    \n    {\\displaystyle \\sum _{i=1}^{n}v_{i}x_{i}}\n  \n{\\displaystyle \\sum _{i=1}^{n}v_{i}x_{i}}</dd>\n<dd>subject to \n  \n    \n      \n        \n          ∑\n          \n            i\n            =\n            1\n          \n          \n            n\n          \n        \n        \n          w\n          \n            i\n          \n        \n        \n          x\n          \n            i\n          \n        \n        ≤\n        W\n      \n    \n    {\\displaystyle \\sum _{i=1}^{n}w_{i}x_{i}\\leq W}\n  \n{\\displaystyle \\sum _{i=1}^{n}w_{i}x_{i}\\leq W} and \n  \n    \n      \n        \n          x\n          \n            i\n          \n        \n        ∈\n        \n          N\n        \n        .\n      \n    \n    {\\displaystyle x_{i}\\in \\mathbb {N} .}\n  \n{\\displaystyle x_{i}\\in \\mathbb {N} .}</dd></dl>",
+        "<p>One example of the unbounded knapsack problem is given using the figure shown at the beginning of this article and the text &quot;if any number of each book is available&quot; in the caption of that figure.</p>"
+      ],
+      "href": "https://en.wikipedia.org/wiki/Knapsack_problem#Definition",
+      "lang": "en",
+      "level": 2,
+      "local": false,
+      "sections": [],
+      "title": "Definition"
+    },
+    {
+      "anchor": "Computational_complexity",
+      "blocks": [
+        "<p>The knapsack problem is interesting from the perspective of computer science for many reasons:</p>",
+        "<ul><li>The <a href=\"https://www.wikidata.org/wiki/Q3262192\">decision problem</a> form of the knapsack problem (<i>Can a value of at least </i>V<i> be achieved without exceeding the weight </i>W<i>?</i>) is <a href=\"https://www.wikidata.org/wiki/Q215206\">NP-complete</a>, thus there is no known algorithm that is both correct and fast (polynomial-time) in all cases.</li>\n<li>There is no known polynomial algorithm which can tell, given a solution, whether it is optimal (which would mean that there is no solution with a larger <i>V</i>). This problem is <a href=\"https://www.wikidata.org/wiki/Q1142354\">co-NP-complete</a>.</li>\n<li>There is a <a href=\"https://www.wikidata.org/wiki/Q155291\">pseudo-polynomial time</a> algorithm using <a href=\"https://www.wikidata.org/wiki/Q380679\">dynamic programming</a>.</li>\n<li>There is a <a href=\"https://www.wikidata.org/wiki/Q843550\">fully polynomial-time approximation scheme</a>, which uses the pseudo-polynomial time algorithm as a subroutine, described below.</li>\n<li>Many cases that arise in practice, and &quot;random instances&quot; from some distributions, can nonetheless be solved exactly.</li></ul>",
+        "<p>There is a link between the &quot;decision&quot; and &quot;optimization&quot; problems in that if there exists a polynomial algorithm that solves the  &quot;decision&quot; problem, then one can find the maximum value for the optimization problem in polynomial time by applying this algorithm iteratively while increasing the value of k. On the other hand, if an algorithm finds the optimal value of the optimization problem in polynomial time, then the decision problem can be solved in polynomial time by comparing the value of the solution output by this algorithm with the value of k. Thus, both versions of the problem are of similar difficulty.</p>",
+        "<p>One theme in research literature is to identify what the &quot;hard&quot; instances of the knapsack problem look like,<sup data-note=\"9\"></sup><sup data-note=\"10\"></sup> or viewed another way, to identify what properties of instances in practice might make them more amenable than their worst-case NP-complete behaviour suggests.<sup data-note=\"11\"></sup> The goal in finding these &quot;hard&quot; instances is for their use in <a href=\"https://www.wikidata.org/wiki/Q201339\">public-key cryptography</a> systems, such as the <a href=\"https://www.wikidata.org/wiki/Q1760368\">Merkle–Hellman knapsack cryptosystem</a>. More generally, better understanding of the structure of the space of instances of an optimization problem helps to advance the study of the particular problem and can improve algorithm selection.</p>",
+        "<p>Furthermore, notable is the fact that the hardness of the knapsack problem depends on the form of the input. If the weights and profits are given as integers, it is <a href=\"https://www.wikidata.org/wiki/Q7977975\">weakly NP-complete</a>, while it is <a href=\"https://www.wikidata.org/wiki/Q7624684\">strongly NP-complete</a> if the weights and profits are given as rational numbers.<sup data-note=\"12\"></sup> However, in the case of rational weights and profits it still admits a <a href=\"https://www.wikidata.org/wiki/Q843550\">fully polynomial-time approximation scheme</a>.</p>"
+      ],
+      "href": "https://en.wikipedia.org/wiki/Knapsack_problem#Computational_complexity",
+      "lang": "en",
+      "level": 2,
+      "local": false,
+      "sections": [
+        {
+          "anchor": "Unit-cost_models",
+          "blocks": [
+            "<p>The NP-hardness of the Knapsack problem relates to computational models in which the size of integers matters (such as the <a href=\"https://www.wikidata.org/wiki/Q163310\">Turing machine</a>). In contrast, <a href=\"https://www.wikidata.org/wiki/Q5249246\">decision trees</a> count each decision as a single step. Dobkin and Lipton<sup data-note=\"13\"></sup> show an \n  \n    \n      \n        \n          \n            1\n            2\n          \n        \n        \n          n\n          \n            2\n          \n        \n      \n    \n    {\\displaystyle {1 \\over 2}n^{2}}\n  \n{\\displaystyle {1 \\over 2}n^{2}} lower bound on linear decision trees for the knapsack problem, that is, trees where decision nodes test the sign of <a href=\"https://www.wikidata.org/wiki/Q382497\">affine functions</a>.<sup data-note=\"14\"></sup> This was generalized to algebraic decision trees by Steele and Yao.<sup data-note=\"15\"></sup>\nIf the elements in the problem are <a href=\"https://www.wikidata.org/wiki/Q12916\">real numbers</a> or <a href=\"https://www.wikidata.org/wiki/Q1244890\">rationals</a>, the decision-tree lower bound extends to the <a href=\"https://www.wikidata.org/wiki/Q7301028\">real random-access machine</a> model with an instruction set that includes addition, subtraction and multiplication of real numbers, as well as comparison and either division or remaindering (&quot;floor&quot;).<sup data-note=\"16\"></sup> This model covers more algorithms than the algebraic decision-tree model, as it encompasses algorithms that use indexing into tables. However, in this model all program steps are counted, not just decisions.\nAn <i>upper bound</i> for a decision-tree model was given by Meyer auf der Heide<sup data-note=\"17\"></sup> who showed that for every <i>n</i> there exists an <i>O</i>(<i>n</i>4)-deep linear decision tree that solves the subset-sum problem with <i>n</i> items. Note that this does not imply any upper bound for an algorithm that should solve the problem for <i>any given n</i>.</p>"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Knapsack_problem#Unit-cost_models",
+          "lang": "en",
+          "level": 3,
+          "local": false,
+          "sections": [],
+          "title": "Unit-cost models"
+        }
+      ],
+      "title": "Computational complexity"
+    },
+    {
+      "anchor": "Solving",
+      "blocks": [
+        "<p>Several algorithms are available to solve knapsack problems, based on the dynamic programming approach,<sup data-note=\"18\"></sup> the <a href=\"https://www.wikidata.org/wiki/Q897659\">branch and bound</a> approach<sup data-note=\"19\"></sup> or <a href=\"https://www.wikidata.org/wiki/Q17092099\">hybridizations</a> of both approaches.<sup data-note=\"11\"></sup><sup data-note=\"20\"></sup><sup data-note=\"21\"></sup><sup data-note=\"22\"></sup></p>"
+      ],
+      "href": "https://en.wikipedia.org/wiki/Knapsack_problem#Solving",
+      "lang": "en",
+      "level": 2,
+      "local": false,
+      "sections": [
+        {
+          "anchor": "Dynamic_programming_in-advance_algorithm",
+          "blocks": [
+            "<p>The <b>unbounded knapsack problem</b> (<b>UKP</b>) places no restriction on the number of copies of each kind of item. Besides, here we assume that \n  \n    \n      \n        \n          x\n          \n            i\n          \n        \n        &gt;\n        0\n      \n    \n    {\\displaystyle x_{i}&gt;0}\n  \n{\\displaystyle x_{i}&gt;0}</p>",
+            "<dl><dd>\n  \n    \n      \n        m\n        [\n        \n          w\n          ′\n        \n        ]\n        =\n        max\n        \n          (\n          \n            \n              ∑\n              \n                i\n                =\n                1\n              \n              \n                n\n              \n            \n            \n              v\n              \n                i\n              \n            \n            \n              x\n              \n                i\n              \n            \n          \n          )\n        \n      \n    \n    {\\displaystyle m[w']=\\max \\left(\\sum _{i=1}^{n}v_{i}x_{i}\\right)}\n  \n{\\displaystyle m[w']=\\max \\left(\\sum _{i=1}^{n}v_{i}x_{i}\\right)}</dd>\n<dd>subject to \n  \n    \n      \n        \n          ∑\n          \n            i\n            =\n            1\n          \n          \n            n\n          \n        \n        \n          w\n          \n            i\n          \n        \n        \n          x\n          \n            i\n          \n        \n        ≤\n        \n          w\n          ′\n        \n      \n    \n    {\\displaystyle \\sum _{i=1}^{n}w_{i}x_{i}\\leq w'}\n  \n{\\displaystyle \\sum _{i=1}^{n}w_{i}x_{i}\\leq w'} and \n  \n    \n      \n        \n          x\n          \n            i\n          \n        \n        &gt;\n        0\n      \n    \n    {\\displaystyle x_{i}&gt;0}\n  \n{\\displaystyle x_{i}&gt;0}</dd></dl>",
+            "<p>Observe that \n  \n    \n      \n        m\n        [\n        w\n        ]\n      \n    \n    {\\displaystyle m[w]}\n  \n{\\displaystyle m[w]} has the following properties:</p>",
+            "<p>1. \n  \n    \n      \n        m\n        [\n        0\n        ]\n        =\n        0\n        \n        \n      \n    \n    {\\displaystyle m[0]=0\\,\\!}\n  \n{\\displaystyle m[0]=0\\,\\!} (the sum of zero items, i.e., the summation of the <a href=\"https://www.wikidata.org/wiki/Q226183\">empty set</a>).</p>",
+            "<p>2. \n  \n    \n      \n        m\n        [\n        w\n        ]\n        =\n        max\n        (\n        \n          v\n          \n            1\n          \n        \n        +\n        m\n        [\n        w\n        −\n        \n          w\n          \n            1\n          \n        \n        ]\n        ,\n        \n          v\n          \n            2\n          \n        \n        +\n        m\n        [\n        w\n        −\n        \n          w\n          \n            2\n          \n        \n        ]\n        ,\n        .\n        .\n        .\n        ,\n        \n          v\n          \n            n\n          \n        \n        +\n        m\n        [\n        w\n        −\n        \n          w\n          \n            n\n          \n        \n        ]\n        )\n      \n    \n    {\\displaystyle m[w]=\\max(v_{1}+m[w-w_{1}],v_{2}+m[w-w_{2}],...,v_{n}+m[w-w_{n}])}\n  \n{\\displaystyle m[w]=\\max(v_{1}+m[w-w_{1}],v_{2}+m[w-w_{2}],...,v_{n}+m[w-w_{n}])}\n, \n  \n    \n      \n        \n          w\n          \n            i\n          \n        \n        ≤\n        w\n      \n    \n    {\\displaystyle w_{i}\\leq w}\n  \n{\\displaystyle w_{i}\\leq w}, where \n  \n    \n      \n        \n          v\n          \n            i\n          \n        \n      \n    \n    {\\displaystyle v_{i}}\n  \n{\\displaystyle v_{i}} is the value of the \n  \n    \n      \n        i\n      \n    \n    {\\displaystyle i}\n  \n{\\displaystyle i}-th kind of item.</p>",
+            "<p>The second property needs to be explained in detail. During the process of the running of this method, how do we get the weight \n  \n    \n      \n        w\n      \n    \n    {\\displaystyle w}\n  \n{\\displaystyle w}? There are only \n  \n    \n      \n        i\n      \n    \n    {\\displaystyle i}\n  \n{\\displaystyle i} ways and the previous weights are \n  \n    \n      \n        w\n        −\n        \n          w\n          \n            1\n          \n        \n        ,\n        w\n        −\n        \n          w\n          \n            2\n          \n        \n        ,\n        .\n        .\n        .\n        ,\n        w\n        −\n        \n          w\n          \n            i\n          \n        \n      \n    \n    {\\displaystyle w-w_{1},w-w_{2},...,w-w_{i}}\n  \n{\\displaystyle w-w_{1},w-w_{2},...,w-w_{i}} where there are total \n  \n    \n      \n        i\n      \n    \n    {\\displaystyle i}\n  \n{\\displaystyle i} kinds of different item (by saying different, we mean that the weight and the value are not completely the same). If we know each value of these \n  \n    \n      \n        i\n      \n    \n    {\\displaystyle i}\n  \n{\\displaystyle i} items and the related maximum value previously, we just compare them to each other and get the maximum value ultimately and we are done.</p>",
+            "<p>Here the maximum of the empty set is taken to be zero. Tabulating the results from \n  \n    \n      \n        m\n        [\n        0\n        ]\n      \n    \n    {\\displaystyle m[0]}\n  \n{\\displaystyle m[0]} up through \n  \n    \n      \n        m\n        [\n        W\n        ]\n      \n    \n    {\\displaystyle m[W]}\n  \n{\\displaystyle m[W]} gives the solution. Since the calculation of each \n  \n    \n      \n        m\n        [\n        w\n        ]\n      \n    \n    {\\displaystyle m[w]}\n  \n{\\displaystyle m[w]} involves examining at most \n  \n    \n      \n        n\n      \n    \n    {\\displaystyle n}\n  \n{\\displaystyle n} items, and there are at most \n  \n    \n      \n        W\n      \n    \n    {\\displaystyle W}\n  \n{\\displaystyle W} values of \n  \n    \n      \n        m\n        [\n        w\n        ]\n      \n    \n    {\\displaystyle m[w]}\n  \n{\\displaystyle m[w]} to calculate, the running time of the dynamic programming solution is <a href=\"https://www.wikidata.org/wiki/Q269878\">\n  \n    \n      \n        O\n        (\n        n\n        W\n        )\n      \n    \n    {\\displaystyle O(nW)}\n  \n{\\displaystyle O(nW)}</a>. Dividing \n  \n    \n      \n        \n          w\n          \n            1\n          \n        \n        ,\n        \n        \n          w\n          \n            2\n          \n        \n        ,\n        \n        …\n        ,\n        \n        \n          w\n          \n            n\n          \n        \n        ,\n        \n        W\n      \n    \n    {\\displaystyle w_{1},\\,w_{2},\\,\\ldots ,\\,w_{n},\\,W}\n  \n{\\displaystyle w_{1},\\,w_{2},\\,\\ldots ,\\,w_{n},\\,W} by their <a href=\"https://www.wikidata.org/wiki/Q131752\">greatest common divisor</a> is a way to improve the running time.</p>",
+            "<p>Even if <a href=\"https://www.wikidata.org/wiki/Q746242\">P≠NP</a>, the \n  \n    \n      \n        O\n        (\n        n\n        W\n        )\n      \n    \n    {\\displaystyle O(nW)}\n  \n{\\displaystyle O(nW)} complexity does not contradict the fact that the knapsack problem is <a href=\"https://www.wikidata.org/wiki/Q215206\">NP-complete</a>, since \n  \n    \n      \n        W\n      \n    \n    {\\displaystyle W}\n  \n{\\displaystyle W}, unlike \n  \n    \n      \n        n\n      \n    \n    {\\displaystyle n}\n  \n{\\displaystyle n}, is not polynomial in the length of the input to the problem. The length of the \n  \n    \n      \n        W\n      \n    \n    {\\displaystyle W}\n  \n{\\displaystyle W} input to the problem is proportional to the number of bits in \n  \n    \n      \n        W\n      \n    \n    {\\displaystyle W}\n  \n{\\displaystyle W}, \n  \n    \n      \n        log\n        ⁡\n        W\n      \n    \n    {\\displaystyle \\log W}\n  \n{\\displaystyle \\log W}, not to \n  \n    \n      \n        W\n      \n    \n    {\\displaystyle W}\n  \n{\\displaystyle W} itself. However, since this runtime is <a href=\"https://www.wikidata.org/wiki/Q155291\">pseudopolynomial</a>, this makes the (decision version of the) knapsack problem a <a href=\"https://www.wikidata.org/wiki/Q7977975\">weakly NP-complete problem</a>.</p>"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Knapsack_problem#Dynamic_programming_in-advance_algorithm",
+          "lang": "en",
+          "level": 3,
+          "local": false,
+          "sections": [
+            {
+              "anchor": "0-1_knapsack_problem",
+              "blocks": [
+                {
+                  "caption": "A demonstration of the dynamic programming approach.",
+                  "images": [
+                    {
+                      "aspect": 2.2263,
+                      "file": "Knapsack problem dynamic programming.gif"
+                    }
+                  ]
+                },
+                "<p>A similar dynamic programming solution for the 0-1 knapsack problem also runs in pseudo-polynomial time. Assume \n  \n    \n      \n        \n          w\n          \n            1\n          \n        \n        ,\n        \n        \n          w\n          \n            2\n          \n        \n        ,\n        \n        …\n        ,\n        \n        \n          w\n          \n            n\n          \n        \n        ,\n        \n        W\n      \n    \n    {\\displaystyle w_{1},\\,w_{2},\\,\\ldots ,\\,w_{n},\\,W}\n  \n{\\displaystyle w_{1},\\,w_{2},\\,\\ldots ,\\,w_{n},\\,W} are strictly positive integers. Define \n  \n    \n      \n        m\n        [\n        i\n        ,\n        w\n        ]\n      \n    \n    {\\displaystyle m[i,w]}\n  \n{\\displaystyle m[i,w]} to be the maximum value that can be attained with weight less than or equal to \n  \n    \n      \n        w\n      \n    \n    {\\displaystyle w}\n  \n{\\displaystyle w} using items up to \n  \n    \n      \n        i\n      \n    \n    {\\displaystyle i}\n  \n{\\displaystyle i} (first \n  \n    \n      \n        i\n      \n    \n    {\\displaystyle i}\n  \n{\\displaystyle i} items).</p>",
+                "<p>We can define \n  \n    \n      \n        m\n        [\n        i\n        ,\n        w\n        ]\n      \n    \n    {\\displaystyle m[i,w]}\n  \n{\\displaystyle m[i,w]} recursively as follows: <b>(Definition A)</b></p>",
+                "<ul><li>\n  \n    \n      \n        m\n        [\n        0\n        ,\n        \n        w\n        ]\n        =\n        0\n      \n    \n    {\\displaystyle m[0,\\,w]=0}\n  \n{\\displaystyle m[0,\\,w]=0}</li>\n<li>\n  \n    \n      \n        m\n        [\n        i\n        ,\n        \n        w\n        ]\n        =\n        m\n        [\n        i\n        −\n        1\n        ,\n        \n        w\n        ]\n      \n    \n    {\\displaystyle m[i,\\,w]=m[i-1,\\,w]}\n  \n{\\displaystyle m[i,\\,w]=m[i-1,\\,w]} if \n  \n    \n      \n        \n          w\n          \n            i\n          \n        \n        &gt;\n        w\n        \n        \n      \n    \n    {\\displaystyle w_{i}&gt;w\\,\\!}\n  \n{\\displaystyle w_{i}&gt;w\\,\\!} (the new item is more than the current weight limit)</li>\n<li>\n  \n    \n      \n        m\n        [\n        i\n        ,\n        \n        w\n        ]\n        =\n        max\n        (\n        m\n        [\n        i\n        −\n        1\n        ,\n        \n        w\n        ]\n        ,\n        \n        m\n        [\n        i\n        −\n        1\n        ,\n        w\n        −\n        \n          w\n          \n            i\n          \n        \n        ]\n        +\n        \n          v\n          \n            i\n          \n        \n        )\n      \n    \n    {\\displaystyle m[i,\\,w]=\\max(m[i-1,\\,w],\\,m[i-1,w-w_{i}]+v_{i})}\n  \n{\\displaystyle m[i,\\,w]=\\max(m[i-1,\\,w],\\,m[i-1,w-w_{i}]+v_{i})} if \n  \n    \n      \n        \n          w\n          \n            i\n          \n        \n        ⩽\n        w\n      \n    \n    {\\displaystyle w_{i}\\leqslant w}\n  \n{\\displaystyle w_{i}\\leqslant w}.</li></ul>",
+                "<p>The solution can then be found by calculating \n  \n    \n      \n        m\n        [\n        n\n        ,\n        W\n        ]\n      \n    \n    {\\displaystyle m[n,W]}\n  \n{\\displaystyle m[n,W]}. To do this efficiently, we can use a table to store previous computations.</p>",
+                "<p>The following is <a href=\"https://www.wikidata.org/wiki/Q189224\">pseudocode</a> for the dynamic program:</p>",
+                "<p>This solution will therefore run in \n  \n    \n      \n        O\n        (\n        n\n        W\n        )\n      \n    \n    {\\displaystyle O(nW)}\n  \n{\\displaystyle O(nW)} time and \n  \n    \n      \n        O\n        (\n        n\n        W\n        )\n      \n    \n    {\\displaystyle O(nW)}\n  \n{\\displaystyle O(nW)} space. \n(If we only need the value m[n,W], we can modify the code so that the amount of memory required is O(W) which stores the recent two lines of the array &quot;m&quot;.)</p>",
+                "<p>However, if we take it a step or two further, we should know that the method will run in the time between \n  \n    \n      \n        O\n        (\n        n\n        W\n        )\n      \n    \n    {\\displaystyle O(nW)}\n  \n{\\displaystyle O(nW)} and \n  \n    \n      \n        O\n        (\n        \n          2\n          \n            n\n          \n        \n        )\n      \n    \n    {\\displaystyle O(2^{n})}\n  \n{\\displaystyle O(2^{n})}. From <b>Definition A</b>, we know that there is no need to compute all the weights when the number of items and the items themselves that we chose are fixed. That is to say, the program above computes more than necessary because the weight changes from 0 to W often. From this perspective, we can program this method so that it runs recursively.</p>",
+                "<p>For example, there are 10 different items and the weight limit is 67. So,\n\n  \n    \n      \n        \n          \n            \n              \n              \n                w\n                [\n                1\n                ]\n                =\n                23\n                ,\n                w\n                [\n                2\n                ]\n                =\n                26\n                ,\n                w\n                [\n                3\n                ]\n                =\n                20\n                ,\n                w\n                [\n                4\n                ]\n                =\n                18\n                ,\n                w\n                [\n                5\n                ]\n                =\n                32\n                ,\n                w\n                [\n                6\n                ]\n                =\n                27\n                ,\n                w\n                [\n                7\n                ]\n                =\n                29\n                ,\n                w\n                [\n                8\n                ]\n                =\n                26\n                ,\n                w\n                [\n                9\n                ]\n                =\n                30\n                ,\n                w\n                [\n                10\n                ]\n                =\n                27\n              \n            \n            \n              \n              \n                v\n                [\n                1\n                ]\n                =\n                505\n                ,\n                v\n                [\n                2\n                ]\n                =\n                352\n                ,\n                v\n                [\n                3\n                ]\n                =\n                458\n                ,\n                v\n                [\n                4\n                ]\n                =\n                220\n                ,\n                v\n                [\n                5\n                ]\n                =\n                354\n                ,\n                v\n                [\n                6\n                ]\n                =\n                414\n                ,\n                v\n                [\n                7\n                ]\n                =\n                498\n                ,\n                v\n                [\n                8\n                ]\n                =\n                545\n                ,\n                v\n                [\n                9\n                ]\n                =\n                473\n                ,\n                v\n                [\n                10\n                ]\n                =\n                543\n              \n            \n          \n        \n      \n    \n    {\\displaystyle {\\begin{aligned}&amp;w[1]=23,w[2]=26,w[3]=20,w[4]=18,w[5]=32,w[6]=27,w[7]=29,w[8]=26,w[9]=30,w[10]=27\\\\&amp;v[1]=505,v[2]=352,v[3]=458,v[4]=220,v[5]=354,v[6]=414,v[7]=498,v[8]=545,v[9]=473,v[10]=543\\\\\\end{aligned}}}\n  \n{\\displaystyle {\\begin{aligned}&amp;w[1]=23,w[2]=26,w[3]=20,w[4]=18,w[5]=32,w[6]=27,w[7]=29,w[8]=26,w[9]=30,w[10]=27\\\\&amp;v[1]=505,v[2]=352,v[3]=458,v[4]=220,v[5]=354,v[6]=414,v[7]=498,v[8]=545,v[9]=473,v[10]=543\\\\\\end{aligned}}}\nIf you use above method to compute for \n  \n    \n      \n        m\n        (\n        10\n        ,\n        67\n        )\n      \n    \n    {\\displaystyle m(10,67)}\n  \n{\\displaystyle m(10,67)}, you will get this, excluding calls that produce \n  \n    \n      \n        m\n        (\n        i\n        ,\n        j\n        )\n        =\n        0\n      \n    \n    {\\displaystyle m(i,j)=0}\n  \n{\\displaystyle m(i,j)=0}:\n\n  \n    \n      \n        \n          \n            \n              \n              \n                m\n                (\n                10\n                ,\n                67\n                )\n                =\n                1270\n              \n            \n            \n              \n              \n                m\n                (\n                9\n                ,\n                67\n                )\n                =\n                1270\n                ,\n                m\n                (\n                9\n                ,\n                40\n                )\n                =\n                678\n              \n            \n            \n              \n              \n                m\n                (\n                8\n                ,\n                67\n                )\n                =\n                1270\n                ,\n                m\n                (\n                8\n                ,\n                40\n                )\n                =\n                678\n                ,\n                m\n                (\n                8\n                ,\n                37\n                )\n                =\n                545\n              \n            \n            \n              \n              \n                m\n                (\n                7\n                ,\n                67\n                )\n                =\n                1183\n                ,\n                m\n                (\n                7\n                ,\n                41\n                )\n                =\n                725\n                ,\n                m\n                (\n                7\n                ,\n                40\n                )\n                =\n                678\n                ,\n                m\n                (\n                7\n                ,\n                37\n                )\n                =\n                505\n              \n            \n            \n              \n              \n                m\n                (\n                6\n                ,\n                67\n                )\n                =\n                1183\n                ,\n                m\n                (\n                6\n                ,\n                41\n                )\n                =\n                725\n                ,\n                m\n                (\n                6\n                ,\n                40\n                )\n                =\n                678\n                ,\n                m\n                (\n                6\n                ,\n                38\n                )\n                =\n                678\n                ,\n                m\n                (\n                6\n                ,\n                37\n                )\n                =\n                505\n              \n            \n            \n              \n              \n                m\n                (\n                5\n                ,\n                67\n                )\n                =\n                1183\n                ,\n                m\n                (\n                5\n                ,\n                41\n                )\n                =\n                725\n                ,\n                m\n                (\n                5\n                ,\n                40\n                )\n                =\n                678\n                ,\n                m\n                (\n                5\n                ,\n                38\n                )\n                =\n                678\n                ,\n                m\n                (\n                5\n                ,\n                37\n                )\n                =\n                505\n              \n            \n            \n              \n              \n                m\n                (\n                4\n                ,\n                67\n                )\n                =\n                1183\n                ,\n                m\n                (\n                4\n                ,\n                41\n                )\n                =\n                725\n                ,\n                m\n                (\n                4\n                ,\n                40\n                )\n                =\n                678\n                ,\n                m\n                (\n                4\n                ,\n                38\n                )\n                =\n                678\n                ,\n                m\n                (\n                4\n                ,\n                37\n                )\n                =\n                505\n                ,\n                m\n                (\n                4\n                ,\n                35\n                )\n                =\n                505\n              \n            \n            \n              \n              \n                m\n                (\n                3\n                ,\n                67\n                )\n                =\n                963\n                ,\n                m\n                (\n                3\n                ,\n                49\n                )\n                =\n                963\n                ,\n                m\n                (\n                3\n                ,\n                41\n                )\n                =\n                505\n                ,\n                m\n                (\n                3\n                ,\n                40\n                )\n                =\n                505\n                ,\n                m\n                (\n                3\n                ,\n                38\n                )\n                =\n                505\n                ,\n                m\n                (\n                3\n                ,\n                37\n                )\n                =\n                505\n                ,\n                m\n                (\n                3\n                ,\n                35\n                )\n                =\n                505\n                ,\n                m\n                (\n                3\n                ,\n                23\n                )\n                =\n                505\n                ,\n                m\n                (\n                3\n                ,\n                22\n                )\n                =\n                458\n                ,\n                m\n                (\n                3\n                ,\n                20\n                )\n                =\n                458\n              \n            \n            \n              \n              \n                m\n                (\n                2\n                ,\n                67\n                )\n                =\n                857\n                ,\n                m\n                (\n                2\n                ,\n                49\n                )\n                =\n                857\n                ,\n                m\n                (\n                2\n                ,\n                47\n                )\n                =\n                505\n                ,\n                m\n                (\n                2\n                ,\n                41\n                )\n                =\n                505\n                ,\n                m\n                (\n                2\n                ,\n                40\n                )\n                =\n                505\n                ,\n                m\n                (\n                2\n                ,\n                38\n                )\n                =\n                505\n                ,\n                m\n                (\n                2\n                ,\n                37\n                )\n                =\n                505\n                ,\n                m\n                (\n                2\n                ,\n                35\n                )\n                =\n                505\n                ,\n                m\n                (\n                2\n                ,\n                29\n                )\n                =\n                505\n                ,\n                m\n                (\n                2\n                ,\n                23\n                )\n                =\n                505\n              \n            \n            \n              \n              \n                m\n                (\n                1\n                ,\n                67\n                )\n                =\n                505\n                ,\n                m\n                (\n                1\n                ,\n                49\n                )\n                =\n                505\n                ,\n                m\n                (\n                1\n                ,\n                47\n                )\n                =\n                505\n                ,\n                m\n                (\n                1\n                ,\n                41\n                )\n                =\n                505\n                ,\n                m\n                (\n                1\n                ,\n                40\n                )\n                =\n                505\n                ,\n                m\n                (\n                1\n                ,\n                38\n                )\n                =\n                505\n                ,\n                m\n                (\n                1\n                ,\n                37\n                )\n                =\n                505\n                ,\n                m\n                (\n                1\n                ,\n                35\n                )\n                =\n                505\n                ,\n                m\n                (\n                1\n                ,\n                29\n                )\n                =\n                505\n                ,\n                m\n                (\n                1\n                ,\n                23\n                )\n                =\n                505\n              \n            \n          \n        \n      \n    \n    {\\displaystyle {\\begin{aligned}&amp;m(10,67)=1270\\\\&amp;m(9,67)=1270,m(9,40)=678\\\\&amp;m(8,67)=1270,m(8,40)=678,m(8,37)=545\\\\&amp;m(7,67)=1183,m(7,41)=725,m(7,40)=678,m(7,37)=505\\\\&amp;m(6,67)=1183,m(6,41)=725,m(6,40)=678,m(6,38)=678,m(6,37)=505\\\\&amp;m(5,67)=1183,m(5,41)=725,m(5,40)=678,m(5,38)=678,m(5,37)=505\\\\&amp;m(4,67)=1183,m(4,41)=725,m(4,40)=678,m(4,38)=678,m(4,37)=505,m(4,35)=505\\\\&amp;m(3,67)=963,m(3,49)=963,m(3,41)=505,m(3,40)=505,m(3,38)=505,m(3,37)=505,m(3,35)=505,m(3,23)=505,m(3,22)=458,m(3,20)=458\\\\&amp;m(2,67)=857,m(2,49)=857,m(2,47)=505,m(2,41)=505,m(2,40)=505,m(2,38)=505,m(2,37)=505,m(2,35)=505,m(2,29)=505,m(2,23)=505\\\\&amp;m(1,67)=505,m(1,49)=505,m(1,47)=505,m(1,41)=505,m(1,40)=505,m(1,38)=505,m(1,37)=505,m(1,35)=505,m(1,29)=505,m(1,23)=505\\\\\\end{aligned}}}\n  \n{\\displaystyle {\\begin{aligned}&amp;m(10,67)=1270\\\\&amp;m(9,67)=1270,m(9,40)=678\\\\&amp;m(8,67)=1270,m(8,40)=678,m(8,37)=545\\\\&amp;m(7,67)=1183,m(7,41)=725,m(7,40)=678,m(7,37)=505\\\\&amp;m(6,67)=1183,m(6,41)=725,m(6,40)=678,m(6,38)=678,m(6,37)=505\\\\&amp;m(5,67)=1183,m(5,41)=725,m(5,40)=678,m(5,38)=678,m(5,37)=505\\\\&amp;m(4,67)=1183,m(4,41)=725,m(4,40)=678,m(4,38)=678,m(4,37)=505,m(4,35)=505\\\\&amp;m(3,67)=963,m(3,49)=963,m(3,41)=505,m(3,40)=505,m(3,38)=505,m(3,37)=505,m(3,35)=505,m(3,23)=505,m(3,22)=458,m(3,20)=458\\\\&amp;m(2,67)=857,m(2,49)=857,m(2,47)=505,m(2,41)=505,m(2,40)=505,m(2,38)=505,m(2,37)=505,m(2,35)=505,m(2,29)=505,m(2,23)=505\\\\&amp;m(1,67)=505,m(1,49)=505,m(1,47)=505,m(1,41)=505,m(1,40)=505,m(1,38)=505,m(1,37)=505,m(1,35)=505,m(1,29)=505,m(1,23)=505\\\\\\end{aligned}}}</p>",
+                "<p>Besides, we can break the recursion and convert it into a tree. Then we can cut some leaves and use <a href=\"https://www.wikidata.org/wiki/Q232661\">parallel computing</a> to expedite the running of this method.</p>",
+                "<p>\n\nTo find the actual subset of items, rather than just their total value, we can run this after running the function above:</p>"
+              ],
+              "href": "https://en.wikipedia.org/wiki/Knapsack_problem#0-1_knapsack_problem",
+              "lang": "en",
+              "level": 4,
+              "local": false,
+              "sections": [],
+              "title": "0-1 knapsack problem"
+            }
+          ],
+          "title": "Dynamic programming in-advance algorithm"
+        },
+        {
+          "anchor": "Meet-in-the-middle",
+          "blocks": [
+            "<p>Another algorithm for 0-1 knapsack, discovered in 1974<sup data-note=\"23\"></sup> and sometimes called &quot;meet-in-the-middle&quot; due to parallels to <a href=\"https://www.wikidata.org/wiki/Q938066\">a similarly named algorithm in cryptography</a>, is exponential in the number of different items but may be preferable to the DP algorithm when \n  \n    \n      \n        W\n      \n    \n    {\\displaystyle W}\n  \n{\\displaystyle W} is large compared to <i>n</i>. In particular, if the \n  \n    \n      \n        \n          w\n          \n            i\n          \n        \n      \n    \n    {\\displaystyle w_{i}}\n  \n{\\displaystyle w_{i}} are nonnegative but not integers, we could still use the dynamic programming algorithm by scaling and rounding (i.e. using <a href=\"https://www.wikidata.org/wiki/Q649900\">fixed-point arithmetic</a>), but if the problem requires \n  \n    \n      \n        d\n      \n    \n    {\\displaystyle d}\n  \n{\\displaystyle d} fractional digits of precision to arrive at the correct answer, \n  \n    \n      \n        W\n      \n    \n    {\\displaystyle W}\n  \n{\\displaystyle W} will need to be scaled by \n  \n    \n      \n        \n          10\n          \n            d\n          \n        \n      \n    \n    {\\displaystyle 10^{d}}\n  \n{\\displaystyle 10^{d}}, and the DP algorithm will require \n  \n    \n      \n        O\n        (\n        W\n        \n          10\n          \n            d\n          \n        \n        )\n      \n    \n    {\\displaystyle O(W10^{d})}\n  \n{\\displaystyle O(W10^{d})} space and \n  \n    \n      \n        O\n        (\n        n\n        W\n        \n          10\n          \n            d\n          \n        \n        )\n      \n    \n    {\\displaystyle O(nW10^{d})}\n  \n{\\displaystyle O(nW10^{d})} time.</p>",
+            "<p>The algorithm takes \n  \n    \n      \n        O\n        (\n        \n          2\n          \n            n\n            \n              /\n            \n            2\n          \n        \n        )\n      \n    \n    {\\displaystyle O(2^{n/2})}\n  \n{\\displaystyle O(2^{n/2})} space, and efficient implementations of step 3 (for instance, sorting the subsets of B by weight, discarding subsets of B which weigh more than other subsets of B of greater or equal value, and using <a href=\"https://www.wikidata.org/wiki/Q243754\">binary search</a> to find the best match) result in a runtime of \n  \n    \n      \n        O\n        (\n        n\n        \n          2\n          \n            n\n            \n              /\n            \n            2\n          \n        \n        )\n      \n    \n    {\\displaystyle O(n2^{n/2})}\n  \n{\\displaystyle O(n2^{n/2})}. As with the <a href=\"https://www.wikidata.org/wiki/Q938066\">meet in the middle attack</a> in cryptography, this improves on the \n  \n    \n      \n        O\n        (\n        n\n        \n          2\n          \n            n\n          \n        \n        )\n      \n    \n    {\\displaystyle O(n2^{n})}\n  \n{\\displaystyle O(n2^{n})} runtime of a naive brute force approach (examining all subsets of \n  \n    \n      \n        {\n        1...\n        n\n        }\n      \n    \n    {\\displaystyle \\{1...n\\}}\n  \n{\\displaystyle \\{1...n\\}}), at the cost of using exponential rather than constant space (see also <a href=\"https://www.wikidata.org/wiki/Q797983\">baby-step giant-step</a>). The current state of the art improvement to the meet-in-the-middle algorithm, using insights from Schroeppel and Shamir's Algorithm for Subset Sum, provides as a corollary a <a href=\"https://www.wikidata.org/wiki/Q583461\">randomized algorithm</a> for Knapsack which preserves the \n  \n    \n      \n        \n          O\n          \n            ∗\n          \n        \n        (\n        \n          2\n          \n            n\n            \n              /\n            \n            2\n          \n        \n        )\n      \n    \n    {\\displaystyle O^{*}(2^{n/2})}\n  \n{\\displaystyle O^{*}(2^{n/2})} (up to polynomial factors) running time and reduces the space requirements to \n  \n    \n      \n        \n          O\n          \n            ∗\n          \n        \n        (\n        \n          2\n          \n            0.249999\n            n\n          \n        \n        )\n      \n    \n    {\\displaystyle O^{*}(2^{0.249999n})}\n  \n{\\displaystyle O^{*}(2^{0.249999n})} (see <sup data-note=\"24\"></sup> Corollary 1.4). In contrast, the best known <a href=\"https://www.wikidata.org/wiki/Q1064349\">deterministic algorithm</a> runs in \n  \n    \n      \n        \n          O\n          \n            ∗\n          \n        \n        (\n        \n          2\n          \n            n\n            \n              /\n            \n            2\n          \n        \n        )\n      \n    \n    {\\displaystyle O^{*}(2^{n/2})}\n  \n{\\displaystyle O^{*}(2^{n/2})} time with a slightly worse <a href=\"https://www.wikidata.org/wiki/Q2098905\">space complexity</a> of \n  \n    \n      \n        \n          O\n          \n            ∗\n          \n        \n        (\n        \n          2\n          \n            n\n            \n              /\n            \n            4\n          \n        \n        )\n      \n    \n    {\\displaystyle O^{*}(2^{n/4})}\n  \n{\\displaystyle O^{*}(2^{n/4})}.<sup data-note=\"25\"></sup></p>"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Knapsack_problem#Meet-in-the-middle",
+          "lang": "en",
+          "level": 3,
+          "local": false,
+          "sections": [],
+          "title": "Meet-in-the-middle"
+        },
+        {
+          "anchor": "Approximation_Algorithms",
+          "blocks": [
+            "<p>As for most NP-complete problems, it may be enough to find workable solutions even if they are not optimal. Preferably, however, the approximation comes with a guarantee of the difference between the value of the solution found and the value of the optimal solution.</p>",
+            "<p>As with many useful but computationally complex algorithms, there has been substantial research on creating and analyzing algorithms that approximate a solution. The knapsack problem, though NP-Hard, is one of a collection of algorithms that can still be approximated to any specified degree. This means that the problem has a polynomial time approximation scheme. To be exact, the knapsack problem has a <a href=\"https://www.wikidata.org/wiki/Q110130630\">fully polynomial time approximation scheme</a> (FPTAS).<sup data-note=\"26\"></sup></p>"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Knapsack_problem#Approximation_Algorithms",
+          "lang": "en",
+          "level": 3,
+          "local": false,
+          "sections": [
+            {
+              "anchor": "Greedy_approximation_algorithm",
+              "blocks": [
+                "<p><a href=\"https://www.wikidata.org/wiki/Q337040\">George Dantzig</a> proposed a <a href=\"https://www.wikidata.org/wiki/Q504353\">greedy</a> <a href=\"https://www.wikidata.org/wiki/Q621751\">approximation algorithm</a> to solve the unbounded knapsack problem.<sup data-note=\"27\"></sup> His version sorts the items in decreasing order of value per unit of weight, \n  \n    \n      \n        \n          v\n          \n            1\n          \n        \n        \n          /\n        \n        \n          w\n          \n            1\n          \n        \n        ≥\n        ⋯\n        ≥\n        \n          v\n          \n            n\n          \n        \n        \n          /\n        \n        \n          w\n          \n            n\n          \n        \n      \n    \n    {\\displaystyle v_{1}/w_{1}\\geq \\cdots \\geq v_{n}/w_{n}}\n  \n{\\displaystyle v_{1}/w_{1}\\geq \\cdots \\geq v_{n}/w_{n}}. It then proceeds to insert them into the sack, starting with as many copies as possible of the first kind of item until there is no longer space in the sack for more. Provided that there is an unlimited supply of each kind of item, if \n  \n    \n      \n        m\n      \n    \n    {\\displaystyle m}\n  \n{\\displaystyle m} is the maximum value of items that fit into the sack, then the greedy algorithm is guaranteed to achieve at least a value of \n  \n    \n      \n        m\n        \n          /\n        \n        2\n      \n    \n    {\\displaystyle m/2}\n  \n{\\displaystyle m/2}.</p>",
+                "<p>For the bounded problem, where the supply of each kind of item is limited, the above algorithm may be far from optimal. Nevertheless, a simple modification allows us to solve this case: Assume for simplicity that all items individually fit in the sack (\n  \n    \n      \n        \n          w\n          \n            i\n          \n        \n        ≤\n        W\n      \n    \n    {\\displaystyle w_{i}\\leq W}\n  \n{\\displaystyle w_{i}\\leq W} for all \n  \n    \n      \n        i\n      \n    \n    {\\displaystyle i}\n  \n{\\displaystyle i}). Construct a solution \n  \n    \n      \n        \n          S\n          \n            1\n          \n        \n      \n    \n    {\\displaystyle S_{1}}\n  \n{\\displaystyle S_{1}} by packing items greedily as long as possible, i.e. \n  \n    \n      \n        \n          S\n          \n            1\n          \n        \n        =\n        \n          {\n          \n            1\n            ,\n            …\n            ,\n            k\n          \n          }\n        \n      \n    \n    {\\displaystyle S_{1}=\\left\\{1,\\ldots ,k\\right\\}}\n  \n{\\displaystyle S_{1}=\\left\\{1,\\ldots ,k\\right\\}} where \n  \n    \n      \n        k\n        =\n        \n          \n            max\n            \n              1\n              ≤\n              \n                k\n                ′\n              \n              ≤\n              n\n            \n          \n          \n            \n              ∑\n              \n                i\n                =\n                1\n              \n              \n                \n                  k\n                  ′\n                \n              \n            \n            \n              w\n              \n                i\n              \n            \n            ≤\n            W\n          \n        \n      \n    \n    {\\displaystyle k=\\textstyle \\max _{1\\leq k'\\leq n}\\textstyle \\sum _{i=1}^{k'}w_{i}\\leq W}\n  \n{\\displaystyle k=\\textstyle \\max _{1\\leq k'\\leq n}\\textstyle \\sum _{i=1}^{k'}w_{i}\\leq W}. Furthermore, construct a second solution \n  \n    \n      \n        \n          S\n          \n            2\n          \n        \n        =\n        \n          {\n          \n            k\n            +\n            1\n          \n          }\n        \n      \n    \n    {\\displaystyle S_{2}=\\left\\{k+1\\right\\}}\n  \n{\\displaystyle S_{2}=\\left\\{k+1\\right\\}} containing the first item that did not fit. Since \n  \n    \n      \n        \n          S\n          \n            1\n          \n        \n        ∪\n        \n          S\n          \n            2\n          \n        \n      \n    \n    {\\displaystyle S_{1}\\cup S_{2}}\n  \n{\\displaystyle S_{1}\\cup S_{2}} provides an upper bound for the <a href=\"https://www.wikidata.org/wiki/Q1512771\">LP relaxation</a> of the problem, one of the sets must have value at least \n  \n    \n      \n        m\n        \n          /\n        \n        2\n      \n    \n    {\\displaystyle m/2}\n  \n{\\displaystyle m/2}; we thus return whichever of \n  \n    \n      \n        \n          S\n          \n            1\n          \n        \n      \n    \n    {\\displaystyle S_{1}}\n  \n{\\displaystyle S_{1}} and \n  \n    \n      \n        \n          S\n          \n            2\n          \n        \n      \n    \n    {\\displaystyle S_{2}}\n  \n{\\displaystyle S_{2}} has better value to obtain a \n  \n    \n      \n        1\n        \n          /\n        \n        2\n      \n    \n    {\\displaystyle 1/2}\n  \n{\\displaystyle 1/2}-approximation.</p>",
+                "<p>It can be shown that the average performance converges to the optimal solution in distribution at the error rate \n  \n    \n      \n        \n          n\n          \n            −\n            1\n            \n              /\n            \n            2\n          \n        \n      \n    \n    {\\displaystyle n^{-1/2}}\n  \n{\\displaystyle n^{-1/2}}<sup data-note=\"28\"></sup></p>"
+              ],
+              "href": "https://en.wikipedia.org/wiki/Knapsack_problem#Greedy_approximation_algorithm",
+              "lang": "en",
+              "level": 4,
+              "local": false,
+              "sections": [],
+              "title": "Greedy approximation algorithm"
+            },
+            {
+              "anchor": "Fully_polynomial_time_approximation_scheme",
+              "blocks": [
+                "<p>The <a href=\"https://www.wikidata.org/wiki/Q110130630\">fully polynomial time approximation scheme</a> (FPTAS) for the knapsack problem takes advantage of the fact that the reason the problem has no known polynomial time solutions is because the profits associated with the items are not restricted. If one rounds off some of the least significant digits of the profit values then they will be bounded by a polynomial and 1/ε where ε is a bound on the correctness of the solution. This restriction then means that an algorithm can find a solution in polynomial time that is correct within a factor of (1-ε) of the optimal solution.<sup data-note=\"26\"></sup></p>",
+                "<p><b>Theorem:</b> The set \n  \n    \n      \n        \n          S\n          ′\n        \n      \n    \n    {\\displaystyle S'}\n  \n{\\displaystyle S'} computed by the algorithm above satisfies \n  \n    \n      \n        \n          p\n          r\n          o\n          f\n          i\n          t\n        \n        (\n        \n          S\n          ′\n        \n        )\n        ≥\n        (\n        1\n        −\n        ε\n        )\n        ⋅\n        \n          p\n          r\n          o\n          f\n          i\n          t\n        \n        (\n        \n          S\n          \n            ∗\n          \n        \n        )\n      \n    \n    {\\displaystyle \\mathrm {profit} (S')\\geq (1-\\varepsilon )\\cdot \\mathrm {profit} (S^{*})}\n  \n{\\displaystyle \\mathrm {profit} (S')\\geq (1-\\varepsilon )\\cdot \\mathrm {profit} (S^{*})}, where \n  \n    \n      \n        \n          S\n          \n            ∗\n          \n        \n      \n    \n    {\\displaystyle S^{*}}\n  \n{\\displaystyle S^{*}} is an optimal solution.</p>"
+              ],
+              "href": "https://en.wikipedia.org/wiki/Knapsack_problem#Fully_polynomial_time_approximation_scheme",
+              "lang": "en",
+              "level": 4,
+              "local": false,
+              "sections": [],
+              "title": "Fully polynomial time approximation scheme"
+            },
+            {
+              "anchor": "Quantum_approximate_optimization",
+              "blocks": [
+                "<p><a href=\"https://www.wikidata.org/wiki/Q30589286\">Quantum approximate optimization algorithm</a> (QAOA) can be employed to solve Knapsack problem using <a href=\"https://www.wikidata.org/wiki/Q17995793\">quantum computation</a> by minimizing the <a href=\"https://www.wikidata.org/wiki/Q660488\">Hamiltonian</a> of the problem. The Knapsack Hamiltonian is constructed via embedding the constraint condition to the cost function of the problem with a penalty term.<sup data-note=\"29\"></sup>\n  \n    \n      \n        \n          H\n        \n        =\n        −\n        \n          ∑\n          \n            i\n            =\n            1\n          \n          \n            n\n          \n        \n        \n          v\n          \n            i\n          \n        \n        \n          x\n          \n            i\n          \n        \n        +\n        P\n        \n          \n            (\n            \n              \n                ∑\n                \n                  i\n                  =\n                  1\n                \n                \n                  n\n                \n              \n              \n                w\n                \n                  i\n                \n              \n              \n                x\n                \n                  i\n                \n              \n              −\n              W\n            \n            )\n          \n          \n            2\n          \n        \n        ,\n      \n    \n    {\\displaystyle {H}=-\\sum _{i=1}^{n}v_{i}x_{i}+P\\left(\\sum _{i=1}^{n}w_{i}x_{i}-W\\right)^{2},}\n  \n{\\displaystyle {H}=-\\sum _{i=1}^{n}v_{i}x_{i}+P\\left(\\sum _{i=1}^{n}w_{i}x_{i}-W\\right)^{2},}where \n  \n    \n      \n        P\n      \n    \n    {\\displaystyle P}\n  \n{\\displaystyle P} is the penalty constant which is determined by case-specific fine-tuning.</p>"
+              ],
+              "href": "https://en.wikipedia.org/wiki/Knapsack_problem#Quantum_approximate_optimization",
+              "lang": "en",
+              "level": 4,
+              "local": false,
+              "sections": [],
+              "title": "Quantum approximate optimization"
+            }
+          ],
+          "title": "Approximation Algorithms"
+        },
+        {
+          "anchor": "Dominance_relations",
+          "blocks": [
+            "<p>Solving the unbounded knapsack problem can be made easier by throwing away items which will never be needed.  For a given item \n  \n    \n      \n        i\n      \n    \n    {\\displaystyle i}\n  \n{\\displaystyle i}, suppose we could find a set of items \n  \n    \n      \n        J\n      \n    \n    {\\displaystyle J}\n  \n{\\displaystyle J} such that their total weight is less than the weight of \n  \n    \n      \n        i\n      \n    \n    {\\displaystyle i}\n  \n{\\displaystyle i}, and their total value is greater than the value of \n  \n    \n      \n        i\n      \n    \n    {\\displaystyle i}\n  \n{\\displaystyle i}.  Then \n  \n    \n      \n        i\n      \n    \n    {\\displaystyle i}\n  \n{\\displaystyle i} cannot appear in the optimal solution, because we could always improve any potential solution containing \n  \n    \n      \n        i\n      \n    \n    {\\displaystyle i}\n  \n{\\displaystyle i} by replacing \n  \n    \n      \n        i\n      \n    \n    {\\displaystyle i}\n  \n{\\displaystyle i} with the set \n  \n    \n      \n        J\n      \n    \n    {\\displaystyle J}\n  \n{\\displaystyle J}.  Therefore, we can disregard the \n  \n    \n      \n        i\n      \n    \n    {\\displaystyle i}\n  \n{\\displaystyle i}-th item altogether.  In such cases, \n  \n    \n      \n        J\n      \n    \n    {\\displaystyle J}\n  \n{\\displaystyle J} is said to <b>dominate</b> \n  \n    \n      \n        i\n      \n    \n    {\\displaystyle i}\n  \n{\\displaystyle i}.  (Note that this does not apply to bounded knapsack problems, since we may have already used up the items in \n  \n    \n      \n        J\n      \n    \n    {\\displaystyle J}\n  \n{\\displaystyle J}.)</p>",
+            "<p>Finding dominance relations allows us to significantly reduce the size of the search space.  There are several different types of dominance relations,<sup data-note=\"11\"></sup> which all satisfy an inequality of the form:</p>",
+            "<p>\n  \n    \n      \n        \n        \n          ∑\n          \n            j\n            ∈\n            J\n          \n        \n        \n          w\n          \n            j\n          \n        \n        \n        \n          x\n          \n            j\n          \n        \n         \n        ≤\n        α\n        \n        \n          w\n          \n            i\n          \n        \n      \n    \n    {\\displaystyle \\qquad \\sum _{j\\in J}w_{j}\\,x_{j}\\ \\leq \\alpha \\,w_{i}}\n  \n{\\displaystyle \\qquad \\sum _{j\\in J}w_{j}\\,x_{j}\\ \\leq \\alpha \\,w_{i}}, and \n  \n    \n      \n        \n          ∑\n          \n            j\n            ∈\n            J\n          \n        \n        \n          v\n          \n            j\n          \n        \n        \n        \n          x\n          \n            j\n          \n        \n         \n        ≥\n        α\n        \n        \n          v\n          \n            i\n          \n        \n        \n      \n    \n    {\\displaystyle \\sum _{j\\in J}v_{j}\\,x_{j}\\ \\geq \\alpha \\,v_{i}\\,}\n  \n{\\displaystyle \\sum _{j\\in J}v_{j}\\,x_{j}\\ \\geq \\alpha \\,v_{i}\\,} for some \n  \n    \n      \n        x\n        ∈\n        \n          Z\n          \n            +\n          \n          \n            n\n          \n        \n      \n    \n    {\\displaystyle x\\in Z_{+}^{n}}\n  \n{\\displaystyle x\\in Z_{+}^{n}}</p>",
+            "<p>where\n\n  \n    \n      \n        α\n        ∈\n        \n          Z\n          \n            +\n          \n        \n        \n        ,\n        J\n        ⊊\n        N\n      \n    \n    {\\displaystyle \\alpha \\in Z_{+}\\,,J\\subsetneq N}\n  \n{\\displaystyle \\alpha \\in Z_{+}\\,,J\\subsetneq N} and \n  \n    \n      \n        i\n        ∉\n        J\n      \n    \n    {\\displaystyle i\\not \\in J}\n  \n{\\displaystyle i\\not \\in J}.  The vector \n  \n    \n      \n        x\n      \n    \n    {\\displaystyle x}\n  \n{\\displaystyle x} denotes the number of copies of each member of \n  \n    \n      \n        J\n      \n    \n    {\\displaystyle J}\n  \n{\\displaystyle J}.</p>",
+            "<dl><dt>Collective dominance</dt><dd>The \n  \n    \n      \n        i\n      \n    \n    {\\displaystyle i}\n  \n{\\displaystyle i}-th item is  <b>collectively dominated</b> by \n  \n    \n      \n        J\n      \n    \n    {\\displaystyle J}\n  \n{\\displaystyle J}, written as \n  \n    \n      \n        i\n        ≪\n        J\n      \n    \n    {\\displaystyle i\\ll J}\n  \n{\\displaystyle i\\ll J}, if the total weight of some combination of items in \n  \n    \n      \n        J\n      \n    \n    {\\displaystyle J}\n  \n{\\displaystyle J} is less than <i>wi</i> and their total value is greater than <i>vi</i>.  Formally, \n  \n    \n      \n        \n          ∑\n          \n            j\n            ∈\n            J\n          \n        \n        \n          w\n          \n            j\n          \n        \n        \n        \n          x\n          \n            j\n          \n        \n         \n        ≤\n        \n          w\n          \n            i\n          \n        \n      \n    \n    {\\displaystyle \\sum _{j\\in J}w_{j}\\,x_{j}\\ \\leq w_{i}}\n  \n{\\displaystyle \\sum _{j\\in J}w_{j}\\,x_{j}\\ \\leq w_{i}} and \n  \n    \n      \n        \n          ∑\n          \n            j\n            ∈\n            J\n          \n        \n        \n          v\n          \n            j\n          \n        \n        \n        \n          x\n          \n            j\n          \n        \n         \n        ≥\n        \n          v\n          \n            i\n          \n        \n      \n    \n    {\\displaystyle \\sum _{j\\in J}v_{j}\\,x_{j}\\ \\geq v_{i}}\n  \n{\\displaystyle \\sum _{j\\in J}v_{j}\\,x_{j}\\ \\geq v_{i}} for some \n  \n    \n      \n        x\n        ∈\n        \n          Z\n          \n            +\n          \n          \n            n\n          \n        \n      \n    \n    {\\displaystyle x\\in Z_{+}^{n}}\n  \n{\\displaystyle x\\in Z_{+}^{n}}, i.e. \n  \n    \n      \n        α\n        =\n        1\n      \n    \n    {\\displaystyle \\alpha =1}\n  \n{\\displaystyle \\alpha =1}.  Verifying this dominance is computationally hard, so it can only be used with a dynamic programming approach.  In fact, this is equivalent to solving a smaller knapsack decision problem where \n  \n    \n      \n        V\n        =\n        \n          v\n          \n            i\n          \n        \n      \n    \n    {\\displaystyle V=v_{i}}\n  \n{\\displaystyle V=v_{i}}, \n  \n    \n      \n        W\n        =\n        \n          w\n          \n            i\n          \n        \n      \n    \n    {\\displaystyle W=w_{i}}\n  \n{\\displaystyle W=w_{i}}, and the items are restricted to \n  \n    \n      \n        J\n      \n    \n    {\\displaystyle J}\n  \n{\\displaystyle J}.</dd>\n<dt>Threshold dominance</dt><dd>The \n  \n    \n      \n        i\n      \n    \n    {\\displaystyle i}\n  \n{\\displaystyle i}-th item is <b>threshold dominated</b>  by \n  \n    \n      \n        J\n      \n    \n    {\\displaystyle J}\n  \n{\\displaystyle J}, written as \n  \n    \n      \n        i\n        ≺≺\n        J\n      \n    \n    {\\displaystyle i\\prec \\prec J}\n  \n{\\displaystyle i\\prec \\prec J}, if some number of copies of \n  \n    \n      \n        i\n      \n    \n    {\\displaystyle i}\n  \n{\\displaystyle i} are dominated by \n  \n    \n      \n        J\n      \n    \n    {\\displaystyle J}\n  \n{\\displaystyle J}.  Formally, \n  \n    \n      \n        \n          ∑\n          \n            j\n            ∈\n            J\n          \n        \n        \n          w\n          \n            j\n          \n        \n        \n        \n          x\n          \n            j\n          \n        \n         \n        ≤\n        α\n        \n        \n          w\n          \n            i\n          \n        \n      \n    \n    {\\displaystyle \\sum _{j\\in J}w_{j}\\,x_{j}\\ \\leq \\alpha \\,w_{i}}\n  \n{\\displaystyle \\sum _{j\\in J}w_{j}\\,x_{j}\\ \\leq \\alpha \\,w_{i}}, and \n  \n    \n      \n        \n          ∑\n          \n            j\n            ∈\n            J\n          \n        \n        \n          v\n          \n            j\n          \n        \n        \n        \n          x\n          \n            j\n          \n        \n         \n        ≥\n        α\n        \n        \n          v\n          \n            i\n          \n        \n        \n      \n    \n    {\\displaystyle \\sum _{j\\in J}v_{j}\\,x_{j}\\ \\geq \\alpha \\,v_{i}\\,}\n  \n{\\displaystyle \\sum _{j\\in J}v_{j}\\,x_{j}\\ \\geq \\alpha \\,v_{i}\\,} for some \n  \n    \n      \n        x\n        ∈\n        \n          Z\n          \n            +\n          \n          \n            n\n          \n        \n      \n    \n    {\\displaystyle x\\in Z_{+}^{n}}\n  \n{\\displaystyle x\\in Z_{+}^{n}} and \n  \n    \n      \n        α\n        ≥\n        1\n      \n    \n    {\\displaystyle \\alpha \\geq 1}\n  \n{\\displaystyle \\alpha \\geq 1}.  This is a generalization of collective dominance, first introduced in<sup data-note=\"18\"></sup> and used in the EDUK algorithm.  The smallest such \n  \n    \n      \n        α\n      \n    \n    {\\displaystyle \\alpha }\n  \n{\\displaystyle \\alpha } defines the <b>threshold</b> of the item \n  \n    \n      \n        i\n      \n    \n    {\\displaystyle i}\n  \n{\\displaystyle i}, written  \n  \n    \n      \n        \n          t\n          \n            i\n          \n        \n        =\n        (\n        α\n        −\n        1\n        )\n        \n          w\n          \n            i\n          \n        \n      \n    \n    {\\displaystyle t_{i}=(\\alpha -1)w_{i}}\n  \n{\\displaystyle t_{i}=(\\alpha -1)w_{i}}.  In this case, the optimal solution could contain at most \n  \n    \n      \n        α\n        −\n        1\n      \n    \n    {\\displaystyle \\alpha -1}\n  \n{\\displaystyle \\alpha -1} copies of \n  \n    \n      \n        i\n      \n    \n    {\\displaystyle i}\n  \n{\\displaystyle i}.</dd>\n<dt>Multiple dominance</dt><dd>The \n  \n    \n      \n        i\n      \n    \n    {\\displaystyle i}\n  \n{\\displaystyle i}-th item is  <b>multiply dominated</b> by a single item \n  \n    \n      \n        j\n      \n    \n    {\\displaystyle j}\n  \n{\\displaystyle j}, written as \n  \n    \n      \n        i\n        \n          ≪\n          \n            m\n          \n        \n        j\n      \n    \n    {\\displaystyle i\\ll _{m}j}\n  \n{\\displaystyle i\\ll _{m}j}, if \n  \n    \n      \n        i\n      \n    \n    {\\displaystyle i}\n  \n{\\displaystyle i} is dominated by some number of copies of \n  \n    \n      \n        j\n      \n    \n    {\\displaystyle j}\n  \n{\\displaystyle j}.  Formally, \n  \n    \n      \n        \n          w\n          \n            j\n          \n        \n        \n        \n          x\n          \n            j\n          \n        \n         \n        ≤\n        \n          w\n          \n            i\n          \n        \n      \n    \n    {\\displaystyle w_{j}\\,x_{j}\\ \\leq w_{i}}\n  \n{\\displaystyle w_{j}\\,x_{j}\\ \\leq w_{i}}, and \n  \n    \n      \n        \n          v\n          \n            j\n          \n        \n        \n        \n          x\n          \n            j\n          \n        \n         \n        ≥\n        \n          v\n          \n            i\n          \n        \n      \n    \n    {\\displaystyle v_{j}\\,x_{j}\\ \\geq v_{i}}\n  \n{\\displaystyle v_{j}\\,x_{j}\\ \\geq v_{i}} for some \n  \n    \n      \n        \n          x\n          \n            j\n          \n        \n        ∈\n        \n          Z\n          \n            +\n          \n        \n      \n    \n    {\\displaystyle x_{j}\\in Z_{+}}\n  \n{\\displaystyle x_{j}\\in Z_{+}} i.e. \n  \n    \n      \n        J\n        =\n        {\n        j\n        }\n        ,\n        α\n        =\n        1\n        ,\n        \n          x\n          \n            j\n          \n        \n        =\n        ⌊\n        \n          \n            \n              w\n              \n                i\n              \n            \n            \n              w\n              \n                j\n              \n            \n          \n        \n        ⌋\n      \n    \n    {\\displaystyle J=\\{j\\},\\alpha =1,x_{j}=\\lfloor {\\frac {w_{i}}{w_{j}}}\\rfloor }\n  \n{\\displaystyle J=\\{j\\},\\alpha =1,x_{j}=\\lfloor {\\frac {w_{i}}{w_{j}}}\\rfloor }. This dominance could be efficiently used during preprocessing because it can be detected relatively easily.</dd>\n<dt>Modular dominance</dt><dd>Let \n  \n    \n      \n        b\n      \n    \n    {\\displaystyle b}\n  \n{\\displaystyle b} be the <i>best item</i>, i.e. \n  \n    \n      \n        \n          \n            \n              v\n              \n                b\n              \n            \n            \n              w\n              \n                b\n              \n            \n          \n        \n        ≥\n        \n          \n            \n              v\n              \n                i\n              \n            \n            \n              w\n              \n                i\n              \n            \n          \n        \n        \n      \n    \n    {\\displaystyle {\\frac {v_{b}}{w_{b}}}\\geq {\\frac {v_{i}}{w_{i}}}\\,}\n  \n{\\displaystyle {\\frac {v_{b}}{w_{b}}}\\geq {\\frac {v_{i}}{w_{i}}}\\,} for all \n  \n    \n      \n        i\n      \n    \n    {\\displaystyle i}\n  \n{\\displaystyle i}.  This is the item with the greatest density of value. The \n  \n    \n      \n        i\n      \n    \n    {\\displaystyle i}\n  \n{\\displaystyle i}-th item is <b>modularly dominated</b> by a single item \n  \n    \n      \n        j\n      \n    \n    {\\displaystyle j}\n  \n{\\displaystyle j}, written as \n  \n    \n      \n        i\n        \n          ≪\n          \n            ≡\n          \n        \n        j\n      \n    \n    {\\displaystyle i\\ll _{\\equiv }j}\n  \n{\\displaystyle i\\ll _{\\equiv }j}, if \n  \n    \n      \n        i\n      \n    \n    {\\displaystyle i}\n  \n{\\displaystyle i} is dominated by \n  \n    \n      \n        j\n      \n    \n    {\\displaystyle j}\n  \n{\\displaystyle j} plus several copies of \n  \n    \n      \n        b\n      \n    \n    {\\displaystyle b}\n  \n{\\displaystyle b}.  Formally, \n  \n    \n      \n        \n          w\n          \n            j\n          \n        \n        +\n        t\n        \n          w\n          \n            b\n          \n        \n        ≤\n        \n          w\n          \n            i\n          \n        \n      \n    \n    {\\displaystyle w_{j}+tw_{b}\\leq w_{i}}\n  \n{\\displaystyle w_{j}+tw_{b}\\leq w_{i}}, and  \n  \n    \n      \n        \n          v\n          \n            j\n          \n        \n        +\n        t\n        \n          v\n          \n            b\n          \n        \n        ≥\n        \n          v\n          \n            i\n          \n        \n      \n    \n    {\\displaystyle v_{j}+tv_{b}\\geq v_{i}}\n  \n{\\displaystyle v_{j}+tv_{b}\\geq v_{i}} i.e. \n  \n    \n      \n        J\n        =\n        {\n        b\n        ,\n        j\n        }\n        ,\n        α\n        =\n        1\n        ,\n        \n          x\n          \n            b\n          \n        \n        =\n        t\n        ,\n        \n          x\n          \n            j\n          \n        \n        =\n        1\n      \n    \n    {\\displaystyle J=\\{b,j\\},\\alpha =1,x_{b}=t,x_{j}=1}\n  \n{\\displaystyle J=\\{b,j\\},\\alpha =1,x_{b}=t,x_{j}=1}.</dd></dl>"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Knapsack_problem#Dominance_relations",
+          "lang": "en",
+          "level": 3,
+          "local": false,
+          "sections": [],
+          "title": "Dominance relations"
+        }
+      ],
+      "title": "Solving"
+    },
+    {
+      "anchor": "Variations",
+      "blocks": [
+        "<p>There are many variations of the knapsack problem that have arisen from the vast number of applications of the basic problem. The main variations occur by changing the number of some problem parameter such as the number of items, number of objectives, or even the number of knapsacks.</p>"
+      ],
+      "href": "https://en.wikipedia.org/wiki/Knapsack_problem#Variations",
+      "lang": "en",
+      "level": 2,
+      "local": false,
+      "sections": [
+        {
+          "anchor": "Multi-dimensional_objective",
+          "blocks": [
+            "<p>Here, instead of a single objective (e.g. maximizing the monetary profit from the items in the knapsack), there can be several objectives. For example, there could be environmental or social concerns as well as economic goals. Problems frequently addressed include portfolio and transportation logistics optimizations.<sup data-note=\"30\"></sup><sup data-note=\"31\"></sup></p>",
+            "<p>As an example, suppose you run a cruise ship. You have to decide how many famous comedians to hire. This boat can handle no more than one ton of passengers and the entertainers must weigh less than 1000 lbs. Each comedian has a weight, brings in business based on their popularity and asks for a specific salary. In this example, you have multiple objectives. You want, of course, to maximize the popularity of your entertainers while minimizing their salaries. Also, you want to have as many entertainers as possible.</p>"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Knapsack_problem#Multi-dimensional_objective",
+          "lang": "en",
+          "level": 3,
+          "local": false,
+          "sections": [],
+          "title": "Multi-dimensional objective"
+        },
+        {
+          "anchor": "Multi-dimensional_weight",
+          "blocks": [
+            "<p>Here, the weight of knapsack item \n  \n    \n      \n        i\n      \n    \n    {\\displaystyle i}\n  \n{\\displaystyle i} is given by a D-dimensional vector \n  \n    \n      \n        \n          \n            \n              w\n              \n                i\n              \n            \n            ¯\n          \n        \n        =\n        (\n        \n          w\n          \n            i\n            1\n          \n        \n        ,\n        …\n        ,\n        \n          w\n          \n            i\n            D\n          \n        \n        )\n      \n    \n    {\\displaystyle {\\overline {w_{i}}}=(w_{i1},\\ldots ,w_{iD})}\n  \n{\\displaystyle {\\overline {w_{i}}}=(w_{i1},\\ldots ,w_{iD})} and the knapsack has a D-dimensional capacity vector \n  \n    \n      \n        (\n        \n          W\n          \n            1\n          \n        \n        ,\n        …\n        ,\n        \n          W\n          \n            D\n          \n        \n        )\n      \n    \n    {\\displaystyle (W_{1},\\ldots ,W_{D})}\n  \n{\\displaystyle (W_{1},\\ldots ,W_{D})}. The target is to maximize the sum of the values of the items in the knapsack so that the sum of weights in each dimension \n  \n    \n      \n        d\n      \n    \n    {\\displaystyle d}\n  \n{\\displaystyle d} does not exceed \n  \n    \n      \n        \n          W\n          \n            d\n          \n        \n      \n    \n    {\\displaystyle W_{d}}\n  \n{\\displaystyle W_{d}}.</p>",
+            "<p>Multi-dimensional knapsack is computationally harder than knapsack; even for \n  \n    \n      \n        D\n        =\n        2\n      \n    \n    {\\displaystyle D=2}\n  \n{\\displaystyle D=2}, the problem does not have <a href=\"https://www.wikidata.org/wiki/Q843550\">EPTAS</a> unless P\n  \n    \n      \n        =\n      \n    \n    {\\displaystyle =}\n  \n{\\displaystyle =}NP.<sup data-note=\"32\"></sup> However, the algorithm in<sup data-note=\"33\"></sup> is shown to solve sparse instances efficiently. An instance of multi-dimensional knapsack is sparse if there is a set \n  \n    \n      \n        J\n        =\n        {\n        1\n        ,\n        2\n        ,\n        …\n        ,\n        m\n        }\n      \n    \n    {\\displaystyle J=\\{1,2,\\ldots ,m\\}}\n  \n{\\displaystyle J=\\{1,2,\\ldots ,m\\}} for \n  \n    \n      \n        m\n        &lt;\n        D\n      \n    \n    {\\displaystyle m&lt;D}\n  \n{\\displaystyle m&lt;D} such that for every knapsack item \n  \n    \n      \n        i\n      \n    \n    {\\displaystyle i}\n  \n{\\displaystyle i}, \n  \n    \n      \n        ∃\n        z\n        &gt;\n        m\n      \n    \n    {\\displaystyle \\exists z&gt;m}\n  \n{\\displaystyle \\exists z&gt;m} such that \n  \n    \n      \n        ∀\n        j\n        ∈\n        J\n        ∪\n        {\n        z\n        }\n        ,\n         \n        \n          w\n          \n            i\n            j\n          \n        \n        ≥\n        0\n      \n    \n    {\\displaystyle \\forall j\\in J\\cup \\{z\\},\\ w_{ij}\\geq 0}\n  \n{\\displaystyle \\forall j\\in J\\cup \\{z\\},\\ w_{ij}\\geq 0} and \n  \n    \n      \n        ∀\n        y\n        ∉\n        J\n        ∪\n        {\n        z\n        }\n        ,\n        \n          w\n          \n            i\n            y\n          \n        \n        =\n        0\n      \n    \n    {\\displaystyle \\forall y\\notin J\\cup \\{z\\},w_{iy}=0}\n  \n{\\displaystyle \\forall y\\notin J\\cup \\{z\\},w_{iy}=0}. Such instances occur, for example, when scheduling packets in a wireless network with relay nodes.<sup data-note=\"33\"></sup> The algorithm from<sup data-note=\"33\"></sup> also solves sparse instances of the multiple choice variant, multiple-choice multi-dimensional knapsack.</p>",
+            "<p>The IHS (Increasing Height Shelf) algorithm is optimal for 2D knapsack (packing squares into a two-dimensional unit size square): when there are at most five squares in an optimal packing.<sup data-note=\"34\"></sup></p>"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Knapsack_problem#Multi-dimensional_weight",
+          "lang": "en",
+          "level": 3,
+          "local": false,
+          "sections": [],
+          "title": "Multi-dimensional weight"
+        },
+        {
+          "anchor": "Multiple_knapsacks",
+          "blocks": [
+            "<p>Here, there are multiple knapsacks. This may seem like a trivial change, but it is not equivalent to adding to the capacity of the initial knapsack, as each knapsack has its own capacity constraint. This variation is used in many loading and scheduling problems in Operations Research and has a <a href=\"https://www.wikidata.org/wiki/Q843550\">Polynomial-time approximation scheme</a>.<sup data-note=\"35\"></sup>   This variation is similar to the <a href=\"https://www.wikidata.org/wiki/Q814581\">Bin Packing Problem</a>. It differs from the Bin Packing Problem in that a subset of items can be selected, whereas, in the Bin Packing Problem, all items have to be packed to certain bins. </p>"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Knapsack_problem#Multiple_knapsacks",
+          "lang": "en",
+          "level": 3,
+          "local": false,
+          "sections": [],
+          "title": "Multiple knapsacks"
+        },
+        {
+          "anchor": "Quadratic",
+          "blocks": [
+            "<p>The <b>quadratic knapsack problem</b> maximizes a quadratic objective function subject to binary and linear capacity constraints.<sup data-note=\"36\"></sup> The problem was introduced by Gallo, Hammer, and Simeone  in 1980,<sup data-note=\"37\"></sup> however the first treatment of the problem dates back to Witzgall in 1975.<sup data-note=\"38\"></sup></p>"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Knapsack_problem#Quadratic",
+          "lang": "en",
+          "level": 3,
+          "local": false,
+          "sections": [],
+          "title": "Quadratic"
+        },
+        {
+          "anchor": "Geometric",
+          "blocks": [
+            "<p>In the <b>geometric knapsack problem</b>, there is a set of rectangles with different values, and a rectangular knapsack. The goal is to pack the largest possible value into the knapsack.<sup data-note=\"39\"></sup></p>"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Knapsack_problem#Geometric",
+          "lang": "en",
+          "level": 3,
+          "local": false,
+          "sections": [],
+          "title": "Geometric"
+        },
+        {
+          "anchor": "Online",
+          "blocks": [
+            "<p>In the <b>online knapsack problem</b>, the items come one by one. Whenever an item arrives, we must decide immediately whether to put it in the knapsack or discard it. There are two variants: (a) non-removable - an inserted item remains in the knapsack forever; (b) removable - an inserted item may be removed later, to make room for a new item.</p>",
+            "<p>Han, Kawase and Makino<sup data-note=\"40\"></sup> present a randomized algorithm for the unweighted non-removable setting. It is 2-competitive, which is the best possible. For the weighted removable setting, they give a 2-competitive algorithm, prove a lower bound of ~1.368 for randomized algorithms, and prove that no deterministic algorithm can have a constant competitive ratio. For the unweighted removable setting, they give an 10/7-competitive-ratio algorithm, and prove a lower  bound of 1.25. </p>",
+            "<p>There are several other papers on the online knapsack problem.<sup data-note=\"41\"></sup><sup data-note=\"42\"></sup><sup data-note=\"43\"></sup></p>"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Knapsack_problem#Online",
+          "lang": "en",
+          "level": 3,
+          "local": false,
+          "sections": [],
+          "title": "Online"
+        }
+      ],
+      "title": "Variations"
+    }
+  ],
+  "notes": [
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "name": "Mathews, G. B."
+              }
+            ],
+            "date": {
+              "precision": 11,
+              "time": "1897-06-25T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "10.1112/plms/s1-28.1.486",
+                "type": "doi"
+              }
+            ],
+            "journal": "Proceedings of the London Mathematical Society",
+            "kind": "journal",
+            "pages": "486&ndash;490",
+            "title": "On the partition of numbers",
+            "url": "http://plms.oxfordjournals.org/content/s1-28/1/486.full.pdf",
+            "volume": "28"
+          },
+          "origin": {
+            "from": "template",
+            "name": "cite journal",
+            "params": {
+              "author": "Mathews, G. B.",
+              "date": "25 June 1897",
+              "doi": "10.1112/plms/s1-28.1.486",
+              "journal": "Proceedings of the London Mathematical Society",
+              "pages": "486&ndash;490",
+              "title": "On the partition of numbers",
+              "url": "http://plms.oxfordjournals.org/content/s1-28/1/486.full.pdf",
+              "volume": "28"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 1
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "html": "Richard M. Karp (1972). &quot;<a href=\"https://web.archive.org/web/20190608032217/https://pdfs.semanticscholar.org/a3c3/7657822859549cd6b12b0d1f76f8ee3680a0.pdf\">Reducibility Among Combinatorial Problems</a>&quot;. In R. E. Miller and J. W. Thatcher (editors). Complexity of Computer Computations. New York: Plenum. pp. 85–103",
+            "kind": "text"
+          },
+          "origin": {
+            "from": "html"
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 2
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "accessed": {
+              "precision": 11,
+              "time": "2022-05-05T00:00:00Z"
+            },
+            "authors": [
+              {
+                "family": "Kellerer",
+                "given": "Hans"
+              },
+              {
+                "family": "Pferschy",
+                "given": "Ulrich"
+              },
+              {
+                "family": "Pisinger",
+                "given": "David"
+              }
+            ],
+            "date": {
+              "precision": 9,
+              "time": "2004-01-01T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "978-3-540-40286-2",
+                "type": "isbn"
+              }
+            ],
+            "kind": "book",
+            "pages": "449",
+            "place": "Berlin",
+            "publisher": "Springer",
+            "title": "Knapsack problems",
+            "url": "https://books.google.com/books?id=u5DB7gck08YC"
+          },
+          "origin": {
+            "from": "template",
+            "name": "cite book",
+            "params": {
+              "access-date": "5 May 2022",
+              "date": "2004",
+              "first1": "Hans",
+              "first2": "Ulrich",
+              "first3": "David",
+              "isbn": "978-3-540-40286-2",
+              "last1": "Kellerer",
+              "last2": "Pferschy",
+              "last3": "Pisinger",
+              "location": "Berlin",
+              "page": "449",
+              "publisher": "Springer",
+              "title": "Knapsack problems",
+              "url": "https://books.google.com/books?id=u5DB7gck08YC"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 3
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "accessed": {
+              "precision": 11,
+              "time": "2022-05-05T00:00:00Z"
+            },
+            "authors": [
+              {
+                "family": "Kellerer",
+                "given": "Hans"
+              },
+              {
+                "family": "Pferschy",
+                "given": "Ulrich"
+              },
+              {
+                "family": "Pisinger",
+                "given": "David"
+              }
+            ],
+            "date": {
+              "precision": 9,
+              "time": "2004-01-01T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "978-3-540-40286-2",
+                "type": "isbn"
+              }
+            ],
+            "kind": "book",
+            "pages": "461",
+            "place": "Berlin",
+            "publisher": "Springer",
+            "title": "Knapsack problems",
+            "url": "https://books.google.com/books?id=u5DB7gck08YC"
+          },
+          "origin": {
+            "from": "template",
+            "name": "cite book",
+            "params": {
+              "access-date": "5 May 2022",
+              "date": "2004",
+              "first1": "Hans",
+              "first2": "Ulrich",
+              "first3": "David",
+              "isbn": "978-3-540-40286-2",
+              "last1": "Kellerer",
+              "last2": "Pferschy",
+              "last3": "Pisinger",
+              "location": "Berlin",
+              "page": "461",
+              "publisher": "Springer",
+              "title": "Knapsack problems",
+              "url": "https://books.google.com/books?id=u5DB7gck08YC"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 4
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "accessed": {
+              "precision": 11,
+              "time": "2022-05-05T00:00:00Z"
+            },
+            "authors": [
+              {
+                "family": "Kellerer",
+                "given": "Hans"
+              },
+              {
+                "family": "Pferschy",
+                "given": "Ulrich"
+              },
+              {
+                "family": "Pisinger",
+                "given": "David"
+              }
+            ],
+            "date": {
+              "precision": 9,
+              "time": "2004-01-01T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "978-3-540-40286-2",
+                "type": "isbn"
+              }
+            ],
+            "kind": "book",
+            "pages": "465",
+            "place": "Berlin",
+            "publisher": "Springer",
+            "title": "Knapsack problems",
+            "url": "https://books.google.com/books?id=u5DB7gck08YC"
+          },
+          "origin": {
+            "from": "template",
+            "name": "cite book",
+            "params": {
+              "access-date": "5 May 2022",
+              "date": "2004",
+              "first1": "Hans",
+              "first2": "Ulrich",
+              "first3": "David",
+              "isbn": "978-3-540-40286-2",
+              "last1": "Kellerer",
+              "last2": "Pferschy",
+              "last3": "Pisinger",
+              "location": "Berlin",
+              "page": "465",
+              "publisher": "Springer",
+              "title": "Knapsack problems",
+              "url": "https://books.google.com/books?id=u5DB7gck08YC"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 5
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "accessed": {
+              "precision": 11,
+              "time": "2022-05-05T00:00:00Z"
+            },
+            "authors": [
+              {
+                "family": "Kellerer",
+                "given": "Hans"
+              },
+              {
+                "family": "Pferschy",
+                "given": "Ulrich"
+              },
+              {
+                "family": "Pisinger",
+                "given": "David"
+              }
+            ],
+            "date": {
+              "precision": 9,
+              "time": "2004-01-01T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "978-3-540-40286-2",
+                "type": "isbn"
+              }
+            ],
+            "kind": "book",
+            "pages": "472",
+            "place": "Berlin",
+            "publisher": "Springer",
+            "title": "Knapsack problems",
+            "url": "https://books.google.com/books?id=u5DB7gck08YC"
+          },
+          "origin": {
+            "from": "template",
+            "name": "cite book",
+            "params": {
+              "access-date": "5 May 2022",
+              "date": "2004",
+              "first1": "Hans",
+              "first2": "Ulrich",
+              "first3": "David",
+              "isbn": "978-3-540-40286-2",
+              "last1": "Kellerer",
+              "last2": "Pferschy",
+              "last3": "Pisinger",
+              "location": "Berlin",
+              "page": "472",
+              "publisher": "Springer",
+              "title": "Knapsack problems",
+              "url": "https://books.google.com/books?id=u5DB7gck08YC"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 6
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "name": "Feuerman, Martin"
+              },
+              {
+                "name": "Weiss, Harvey"
+              }
+            ],
+            "date": {
+              "precision": 10,
+              "time": "1973-04-01T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "10.1287/mnsc.19.8.961",
+                "type": "doi"
+              },
+              {
+                "id": "2629127",
+                "type": "jstor"
+              }
+            ],
+            "issue": "8",
+            "journal": "Management Science",
+            "kind": "journal",
+            "pages": "961–966",
+            "title": "A Mathematical Programming Model for Test Construction and Scoring",
+            "volume": "19"
+          },
+          "origin": {
+            "from": "template",
+            "name": "cite journal",
+            "params": {
+              "author1": "Feuerman, Martin",
+              "author2": "Weiss, Harvey",
+              "date": "April 1973",
+              "doi": "10.1287/mnsc.19.8.961",
+              "issue": "8",
+              "journal": "Management Science",
+              "jstor": "2629127",
+              "pages": "961–966",
+              "title": "A Mathematical Programming Model for Test Construction and Scoring",
+              "volume": "19"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 7
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "name": "Skiena, S. S."
+              }
+            ],
+            "date": {
+              "precision": 10,
+              "time": "1999-09-01T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "10.1145/333623.333627",
+                "type": "doi"
+              },
+              {
+                "id": "0163-5700",
+                "type": "issn"
+              },
+              {
+                "id": "15619060",
+                "type": "s2cid"
+              }
+            ],
+            "issue": "3",
+            "journal": "ACM SIGACT News",
+            "kind": "journal",
+            "pages": "65&ndash;74",
+            "title": "Who is Interested in Algorithms and Why? Lessons from the Stony Brook Algorithm Repository",
+            "volume": "30"
+          },
+          "origin": {
+            "from": "template",
+            "name": "cite journal",
+            "params": {
+              "author": "Skiena, S. S.",
+              "citeseerx": "10.1.1.41.8357",
+              "date": "September 1999",
+              "doi": "10.1145/333623.333627",
+              "issn": "0163-5700",
+              "issue": "3",
+              "journal": "ACM SIGACT News",
+              "pages": "65&ndash;74",
+              "s2cid": "15619060",
+              "title": "Who is Interested in Algorithms and Why? Lessons from the Stony Brook Algorithm Repository",
+              "volume": "30"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 8
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "html": "Pisinger, D. 2003. <a href=\"http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.87.7431&amp;rep=rep1&amp;type=pdf\">Where are the hard knapsack problems?</a> Technical Report 2003/08, Department of Computer Science, University of Copenhagen, Copenhagen, Denmark.",
+            "kind": "text"
+          },
+          "origin": {
+            "from": "html"
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 9
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "family": "Caccetta",
+                "given": "L."
+              },
+              {
+                "family": "Kulanoot",
+                "given": "A."
+              }
+            ],
+            "date": {
+              "precision": 9,
+              "time": "2001-01-01T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "10.1016/s0362-546x(01)00658-7",
+                "type": "doi"
+              }
+            ],
+            "issue": "8",
+            "journal": "Nonlinear Analysis",
+            "kind": "journal",
+            "pages": "5547–5558",
+            "title": "Computational Aspects of Hard Knapsack Problems",
+            "volume": "47"
+          },
+          "origin": {
+            "from": "template",
+            "name": "cite journal",
+            "params": {
+              "doi": "10.1016/s0362-546x(01)00658-7",
+              "first1": "L.",
+              "first2": "A.",
+              "issue": "8",
+              "journal": "Nonlinear Analysis",
+              "last1": "Caccetta",
+              "last2": "Kulanoot",
+              "pages": "5547–5558",
+              "title": "Computational Aspects of Hard Knapsack Problems",
+              "volume": "47",
+              "year": "2001"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 10
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "family": "Poirriez",
+                "given": "Vincent"
+              },
+              {
+                "family": "Yanev",
+                "given": "Nicola"
+              },
+              {
+                "family": "Andonov",
+                "given": "Rumen"
+              }
+            ],
+            "date": {
+              "precision": 9,
+              "time": "2009-01-01T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "10.1016/j.disopt.2008.09.004",
+                "type": "doi"
+              },
+              {
+                "id": "1572-5286",
+                "type": "issn"
+              },
+              {
+                "id": "8820628",
+                "type": "s2cid"
+              }
+            ],
+            "issue": "1",
+            "journal": "Discrete Optimization",
+            "kind": "journal",
+            "pages": "110–124",
+            "title": "A hybrid algorithm for the unbounded knapsack problem",
+            "volume": "6"
+          },
+          "origin": {
+            "from": "template",
+            "name": "cite journal",
+            "params": {
+              "doi": "10.1016/j.disopt.2008.09.004",
+              "doi-access": "free",
+              "first1": "Vincent",
+              "first2": "Nicola",
+              "first3": "Rumen",
+              "issn": "1572-5286",
+              "issue": "1",
+              "journal": "Discrete Optimization",
+              "last1": "Poirriez",
+              "last2": "Yanev",
+              "last3": "Andonov",
+              "pages": "110–124",
+              "s2cid": "8820628",
+              "title": "A hybrid algorithm for the unbounded knapsack problem",
+              "volume": "6",
+              "year": "2009"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 11
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "family": "Wojtczak",
+                "given": "Dominik"
+              }
+            ],
+            "date": {
+              "precision": 9,
+              "time": "2018-01-01T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "10.1007/978-3-319-90530-3_26",
+                "type": "doi"
+              },
+              {
+                "id": "978-3-319-90529-7",
+                "type": "isbn"
+              },
+              {
+                "id": "3637366",
+                "type": "s2cid"
+              }
+            ],
+            "kind": "book",
+            "pages": "308–320",
+            "title": "Computer Science – Theory and Applications"
+          },
+          "origin": {
+            "from": "template",
+            "name": "cite book",
+            "params": {
+              "arxiv": "1802.09465",
+              "chapter": "On Strong NP-Completeness of Rational Problems",
+              "doi": "10.1007/978-3-319-90530-3_26",
+              "first1": "Dominik",
+              "isbn": "978-3-319-90529-7",
+              "last1": "Wojtczak",
+              "pages": "308–320",
+              "s2cid": "3637366",
+              "series": "Lecture Notes in Computer Science",
+              "title": "Computer Science – Theory and Applications",
+              "volume": "10846",
+              "year": "2018"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 12
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "family": "Dobkin",
+                "given": "David"
+              },
+              {
+                "family": "Lipton",
+                "given": "Richard J."
+              }
+            ],
+            "date": {
+              "precision": 9,
+              "time": "1978-01-01T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "10.1016/0022-0000(78)90026-0",
+                "type": "doi"
+              }
+            ],
+            "issue": "3",
+            "journal": "Journal of Computer and System Sciences",
+            "kind": "journal",
+            "pages": "413–417",
+            "title": "A lower bound of ½n2 on linear search programs for the Knapsack problem",
+            "url": "https://dx.doi.org/10.1016/0022-0000%2878%2990026-0",
+            "volume": "16"
+          },
+          "origin": {
+            "from": "template",
+            "name": "Cite journal",
+            "params": {
+              "doi": "10.1016/0022-0000(78)90026-0",
+              "first1": "David",
+              "first2": "Richard J.",
+              "issue": "3",
+              "journal": "Journal of Computer and System Sciences",
+              "last1": "Dobkin",
+              "last2": "Lipton",
+              "pages": "413–417",
+              "title": "A lower bound of ½''n''<sup>2</sup> on linear search programs for the Knapsack problem",
+              "url": "https://dx.doi.org/10.1016/0022-0000%2878%2990026-0",
+              "url-access": "subscription",
+              "volume": "16",
+              "year": "1978"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 13
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "html": "In fact, the lower bound applies to the subset sum problem, which is a special case of Knapsack.",
+            "kind": "text"
+          },
+          "origin": {
+            "from": "html"
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 14
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "family": "Michael Steele",
+                "given": "J"
+              },
+              {
+                "family": "Yao",
+                "given": "Andrew C"
+              }
+            ],
+            "date": {
+              "precision": 11,
+              "time": "1982-03-01T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "10.1016/0196-6774(82)90002-5",
+                "type": "doi"
+              },
+              {
+                "id": "0196-6774",
+                "type": "issn"
+              }
+            ],
+            "issue": "1",
+            "journal": "Journal of Algorithms",
+            "kind": "journal",
+            "language": "en",
+            "pages": "1–8",
+            "title": "Lower bounds for algebraic decision trees",
+            "url": "https://dx.doi.org/10.1016%2F0196-6774%2882%2990002-5",
+            "volume": "3"
+          },
+          "origin": {
+            "from": "template",
+            "name": "Cite journal",
+            "params": {
+              "date": "1982-03-01",
+              "doi": "10.1016/0196-6774(82)90002-5",
+              "first1": "J",
+              "first2": "Andrew C",
+              "issn": "0196-6774",
+              "issue": "1",
+              "journal": "Journal of Algorithms",
+              "language": "en",
+              "last1": "Michael Steele",
+              "last2": "Yao",
+              "pages": "1–8",
+              "title": "Lower bounds for algebraic decision trees",
+              "url": "https://dx.doi.org/10.1016%2F0196-6774%2882%2990002-5",
+              "url-access": "subscription",
+              "volume": "3"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 15
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "family": "Ben-Amram",
+                "given": "Amir M."
+              },
+              {
+                "name": "Galil, Zvi"
+              }
+            ],
+            "date": {
+              "precision": 9,
+              "time": "2001-01-01T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "10.1137/S0097539797329397",
+                "type": "doi"
+              }
+            ],
+            "issue": "3",
+            "journal": "SIAM Journal on Computing",
+            "kind": "journal",
+            "pages": "722-761",
+            "title": "Topological Lower Bounds on Algebraic Random Access Machines",
+            "volume": "31"
+          },
+          "origin": {
+            "from": "coins"
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 16
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "family": "auf der Heide",
+                "given": "Meyer"
+              }
+            ],
+            "date": {
+              "precision": 9,
+              "time": "1984-01-01T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "10.1145/828.322450",
+                "type": "doi"
+              }
+            ],
+            "issue": "3",
+            "journal": "Journal of the ACM",
+            "kind": "journal",
+            "pages": "668-676",
+            "title": "A Polynomial Linear Search Algorithm for the n-Dimensional Knapsack Problem",
+            "volume": "31"
+          },
+          "origin": {
+            "from": "coins"
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 17
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "family": "Andonov",
+                "given": "Rumen"
+              },
+              {
+                "family": "Poirriez",
+                "given": "Vincent"
+              },
+              {
+                "family": "Rajopadhye",
+                "given": "Sanjay"
+              }
+            ],
+            "date": {
+              "precision": 9,
+              "time": "2000-01-01T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "10.1016/S0377-2217(99)00265-9",
+                "type": "doi"
+              }
+            ],
+            "issue": "2",
+            "journal": "European Journal of Operational Research",
+            "kind": "journal",
+            "pages": "168–181",
+            "title": "Unbounded Knapsack Problem : dynamic programming revisited",
+            "volume": "123"
+          },
+          "origin": {
+            "from": "template",
+            "name": "cite journal",
+            "params": {
+              "citeseerx": "10.1.1.41.2135",
+              "doi": "10.1016/S0377-2217(99)00265-9",
+              "first1": "Rumen",
+              "first2": "Vincent",
+              "first3": "Sanjay",
+              "issue": "2",
+              "journal": "European Journal of Operational Research",
+              "last1": "Andonov",
+              "last2": "Poirriez",
+              "last3": "Rajopadhye",
+              "pages": "168–181",
+              "title": "Unbounded Knapsack Problem : dynamic programming revisited",
+              "volume": "123",
+              "year": "2000"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 18
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "html": "S. Martello, P. Toth, Knapsack Problems: Algorithms and Computer Implementations,\nJohn Wiley and Sons, 1990",
+            "kind": "text"
+          },
+          "origin": {
+            "from": "html"
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 19
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "html": "S. Martello, D. Pisinger, P. Toth, <a href=\"https://www.jstor.org/stable/pdf/2634886.pdf\">Dynamic programming and strong bounds for the 0-1 knapsack problem</a>, <i>Manag. Sci.</i>, 45:414–424, 1999.",
+            "kind": "text"
+          },
+          "origin": {
+            "from": "html"
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 20
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "family": "Plateau",
+                "given": "G."
+              },
+              {
+                "family": "Elkihel",
+                "given": "M."
+              }
+            ],
+            "date": {
+              "precision": 9,
+              "time": "1985-01-01T00:00:00Z"
+            },
+            "journal": "Methods of Oper. Res.",
+            "kind": "journal",
+            "pages": "277–293",
+            "title": "A hybrid algorithm for the 0-1 knapsack problem",
+            "volume": "49"
+          },
+          "origin": {
+            "from": "template",
+            "name": "cite journal",
+            "params": {
+              "first1": "G.",
+              "first2": "M.",
+              "journal": "Methods of Oper. Res.",
+              "last1": "Plateau",
+              "last2": "Elkihel",
+              "pages": "277–293",
+              "title": "A hybrid algorithm for the 0-1 knapsack problem",
+              "volume": "49",
+              "year": "1985"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 21
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "family": "Martello",
+                "given": "S."
+              },
+              {
+                "family": "Toth",
+                "given": "P."
+              }
+            ],
+            "date": {
+              "precision": 9,
+              "time": "1984-01-01T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "10.1287/mnsc.30.6.765",
+                "type": "doi"
+              }
+            ],
+            "issue": "6",
+            "journal": "Manag. Sci.",
+            "kind": "journal",
+            "pages": "765–771",
+            "title": "A mixture of dynamic programming and branch-and-bound for the subset-sum problem",
+            "volume": "30"
+          },
+          "origin": {
+            "from": "template",
+            "name": "cite journal",
+            "params": {
+              "doi": "10.1287/mnsc.30.6.765",
+              "first1": "S.",
+              "first2": "P.",
+              "issue": "6",
+              "journal": "Manag. Sci.",
+              "last1": "Martello",
+              "last2": "Toth",
+              "pages": "765–771",
+              "title": "A mixture of dynamic programming and branch-and-bound for the subset-sum problem",
+              "volume": "30",
+              "year": "1984"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 22
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "family": "Horowitz",
+                "given": "Ellis"
+              },
+              {
+                "name": "Sahni, Sartaj"
+              }
+            ],
+            "date": {
+              "precision": 9,
+              "time": "1974-01-01T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "1813/5989",
+                "type": "hdl"
+              },
+              {
+                "id": "10.1145/321812.321823",
+                "type": "doi"
+              }
+            ],
+            "issue": "2",
+            "journal": "Journal of the Association for Computing Machinery",
+            "kind": "journal",
+            "pages": "277-292",
+            "title": "Computing partitions with applications to the knapsack problem",
+            "url": "https://mathscinet.ams.org/mathscinet-getitem?mr=0354006#id-name=MR",
+            "volume": "21"
+          },
+          "origin": {
+            "from": "coins"
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 23
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "family": "Nederlof",
+                "given": "Jesper"
+              },
+              {
+                "name": "Węgrzycki, Karol"
+              }
+            ],
+            "date": {
+              "precision": 11,
+              "time": "2021-04-12T00:00:00Z"
+            },
+            "kind": "web",
+            "title": "Improving Schroeppel and Shamir's Algorithm for Subset Sum via Orthogonal Vectors",
+            "website": "arXiv"
+          },
+          "origin": {
+            "from": "coins"
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 24
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "family": "Schroeppel",
+                "given": "Richard"
+              },
+              {
+                "family": "Shamir",
+                "given": "Adi"
+              }
+            ],
+            "date": {
+              "precision": 10,
+              "time": "1981-08-01T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "10.1137/0210033",
+                "type": "doi"
+              },
+              {
+                "id": "0097-5397",
+                "type": "issn"
+              }
+            ],
+            "issue": "3",
+            "journal": "SIAM Journal on Computing",
+            "kind": "journal",
+            "language": "en",
+            "pages": "456–464",
+            "title": "A $T = O(2^{n/2} )$, $S = O(2^{n/4} )$ Algorithm for Certain NP-Complete Problems",
+            "url": "http://epubs.siam.org/doi/10.1137/0210033",
+            "volume": "10"
+          },
+          "origin": {
+            "from": "template",
+            "name": "Cite journal",
+            "params": {
+              "date": "August 1981",
+              "doi": "10.1137/0210033",
+              "first1": "Richard",
+              "first2": "Adi",
+              "issn": "0097-5397",
+              "issue": "3",
+              "journal": "SIAM Journal on Computing",
+              "language": "en",
+              "last1": "Schroeppel",
+              "last2": "Shamir",
+              "pages": "456–464",
+              "title": "A $T = O(2^{n/2} )$, $S = O(2^{n/4} )$ Algorithm for Certain NP-Complete Problems",
+              "url": "http://epubs.siam.org/doi/10.1137/0210033",
+              "url-access": "subscription",
+              "volume": "10"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 25
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "html": "Vazirani, Vijay. Approximation Algorithms. Springer-Verlag Berlin Heidelberg, 2003.",
+            "kind": "text"
+          },
+          "origin": {
+            "from": "html"
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 26
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "family": "Dantzig",
+                "given": "George B."
+              }
+            ],
+            "date": {
+              "precision": 9,
+              "time": "1957-01-01T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "10.1287/opre.5.2.266",
+                "type": "doi"
+              }
+            ],
+            "issue": "2",
+            "journal": "Operations Research",
+            "kind": "journal",
+            "pages": "266–288",
+            "title": "Discrete-Variable Extremum Problems",
+            "volume": "5"
+          },
+          "origin": {
+            "from": "template",
+            "name": "cite journal",
+            "params": {
+              "author-link": "George Dantzig",
+              "doi": "10.1287/opre.5.2.266",
+              "first1": "George B.",
+              "issue": "2",
+              "journal": "Operations Research",
+              "last1": "Dantzig",
+              "pages": "266–288",
+              "title": "Discrete-Variable Extremum Problems",
+              "volume": "5",
+              "year": "1957"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 27
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "family": "Calvin",
+                "given": "James M."
+              },
+              {
+                "family": "Leung",
+                "given": "Joseph Y. -T."
+              }
+            ],
+            "date": {
+              "precision": 11,
+              "time": "2003-05-01T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "10.1016/S0167-6377(02)00222-5",
+                "type": "doi"
+              }
+            ],
+            "issue": "3",
+            "journal": "Operations Research Letters",
+            "kind": "journal",
+            "pages": "202–210",
+            "title": "Average-case analysis of a greedy algorithm for the 0/1 knapsack problem",
+            "volume": "31"
+          },
+          "origin": {
+            "from": "template",
+            "name": "cite journal",
+            "params": {
+              "date": "1 May 2003",
+              "doi": "10.1016/S0167-6377(02)00222-5",
+              "first1": "James M.",
+              "first2": "Joseph Y. -T.",
+              "issue": "3",
+              "journal": "Operations Research Letters",
+              "last1": "Calvin",
+              "last2": "Leung",
+              "pages": "202–210",
+              "title": "Average-case analysis of a greedy algorithm for the 0/1 knapsack problem",
+              "volume": "31"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 28
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "family": "Lucas",
+                "given": "Andrew"
+              }
+            ],
+            "date": {
+              "precision": 9,
+              "time": "2014-01-01T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "10.3389/fphy.2014.00005",
+                "type": "doi"
+              },
+              {
+                "id": "2296-424X",
+                "type": "issn"
+              },
+              {
+                "id": "2014FrP.....2....5L",
+                "type": "bibcode"
+              }
+            ],
+            "journal": "Frontiers in Physics",
+            "kind": "journal",
+            "pages": "5",
+            "title": "Ising formulations of many NP problems",
+            "volume": "2"
+          },
+          "origin": {
+            "from": "template",
+            "name": "Cite journal",
+            "params": {
+              "arxiv": "1302.5843",
+              "bibcode": "2014FrP.....2....5L",
+              "date": "2014",
+              "doi": "10.3389/fphy.2014.00005",
+              "doi-access": "free",
+              "first": "Andrew",
+              "issn": "2296-424X",
+              "journal": "Frontiers in Physics",
+              "last": "Lucas",
+              "page": "5",
+              "title": "Ising formulations of many NP problems",
+              "volume": "2"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 29
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "html": "Chang, T. J., et al. <a href=\"http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.109.6698&amp;rep=rep1&amp;type=pdf\">Heuristics for Cardinality Constrained Portfolio Optimization</a>.\nTechnical Report, London SW7 2AZ, England: The Management School, Imperial\nCollege, May 1998",
+            "kind": "text"
+          },
+          "origin": {
+            "from": "html"
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 30
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "html": "Chang, C. S., et al. &quot;<a href=\"https://scholarbank.nus.edu.sg/handle/10635/72660\">Genetic Algorithm Based Bicriterion Optimization for Traction Substations in DC Railway System</a>.&quot; In Fogel [102], 11-16.",
+            "kind": "text"
+          },
+          "origin": {
+            "from": "html"
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 31
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "family": "Kulik",
+                "given": "A."
+              },
+              {
+                "family": "Shachnai",
+                "given": "H."
+              }
+            ],
+            "date": {
+              "precision": 9,
+              "time": "2010-01-01T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "10.1016/j.ipl.2010.05.031",
+                "type": "doi"
+              }
+            ],
+            "issue": "16",
+            "journal": "Inf. Process. Lett.",
+            "kind": "journal",
+            "pages": "707–712",
+            "title": "There is no EPTAS for two dimensional knapsack",
+            "url": "https://www.cs.technion.ac.il/~hadas/PUB/multi_knap.pdf",
+            "volume": "110"
+          },
+          "origin": {
+            "from": "template",
+            "name": "cite journal",
+            "params": {
+              "author2-link": "Hadas Shachnai",
+              "citeseerx": "10.1.1.161.5838",
+              "doi": "10.1016/j.ipl.2010.05.031",
+              "first1": "A.",
+              "first2": "H.",
+              "issue": "16",
+              "journal": "Inf. Process. Lett.",
+              "last1": "Kulik",
+              "last2": "Shachnai",
+              "pages": "707–712",
+              "title": "There is no EPTAS for two dimensional knapsack",
+              "url": "https://www.cs.technion.ac.il/~hadas/PUB/multi_knap.pdf",
+              "volume": "110",
+              "year": "2010"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 32
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "html": "Cohen, R. and Grebla, G. 2014. <a href=\"http://wimnet.ee.columbia.edu/wp-content/uploads/2013/03/paper_short.pdf\">&quot;Multi-Dimensional OFDMA Scheduling in a Wireless Network with Relay Nodes&quot;</a>. in <i>Proc. IEEE INFOCOM'14</i>, 2427–2435.",
+            "kind": "text"
+          },
+          "origin": {
+            "from": "html"
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 33
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "html": "Yan Lan, György Dósa, Xin Han, Chenyang Zhou, Attila Benkő <a href=\"https://scholar.google.com/citations?user=txyI5aAAAAAJ\"></a>: <i>2D knapsack: Packing squares</i>, Theoretical Computer Science Vol. 508, pp. 35–40.",
+            "kind": "text"
+          },
+          "origin": {
+            "from": "html"
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 34
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "name": "Chandra Chekuri and Sanjeev Khanna"
+              }
+            ],
+            "date": {
+              "precision": 9,
+              "time": "2005-01-01T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "10.1137/s0097539700382820",
+                "type": "doi"
+              }
+            ],
+            "issue": "3",
+            "journal": "SIAM Journal on Computing",
+            "kind": "journal",
+            "pages": "713–728",
+            "title": "A PTAS for the multiple knapsack problem",
+            "volume": "35"
+          },
+          "origin": {
+            "from": "template",
+            "name": "Cite journal",
+            "params": {
+              "citeseerx": "10.1.1.226.3387",
+              "date": "2005",
+              "doi": "10.1137/s0097539700382820",
+              "issue": "3",
+              "journal": "SIAM Journal on Computing",
+              "last": "Chandra Chekuri and Sanjeev Khanna",
+              "pages": "713–728",
+              "title": "A PTAS for the multiple knapsack problem",
+              "volume": "35"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 35
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "name": "Wu, Z. Y."
+              },
+              {
+                "name": "Yang, Y. J."
+              },
+              {
+                "name": "Bai, F. S."
+              },
+              {
+                "name": "Mammadov, M."
+              }
+            ],
+            "date": {
+              "precision": 9,
+              "time": "2011-01-01T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "10.1007/s10957-011-9885-4",
+                "type": "doi"
+              },
+              {
+                "id": "31208118",
+                "type": "s2cid"
+              }
+            ],
+            "issue": "2",
+            "journal": "J Optim Theory Appl",
+            "kind": "journal",
+            "pages": "241&ndash;259",
+            "title": "Global Optimality Conditions and Optimization Methods for Quadratic Knapsack Problems",
+            "volume": "151"
+          },
+          "origin": {
+            "from": "template",
+            "name": "cite journal",
+            "params": {
+              "author1": "Wu, Z. Y.",
+              "author2": "Yang, Y. J.",
+              "author3": "Bai, F. S.",
+              "author4": "Mammadov, M.",
+              "doi": "10.1007/s10957-011-9885-4",
+              "issue": "2",
+              "journal": "J Optim Theory Appl",
+              "pages": "241&ndash;259",
+              "s2cid": "31208118",
+              "title": "Global Optimality Conditions and Optimization Methods for Quadratic Knapsack Problems",
+              "volume": "151",
+              "year": "2011"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 36
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "name": "Gallo, G."
+              },
+              {
+                "name": "Hammer, P. L."
+              },
+              {
+                "name": "Simeone, B."
+              }
+            ],
+            "date": {
+              "precision": 9,
+              "time": "1980-01-01T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "10.1007/BFb0120892",
+                "type": "doi"
+              },
+              {
+                "id": "978-3-642-00801-6",
+                "type": "isbn"
+              }
+            ],
+            "kind": "book",
+            "pages": "132&ndash;149",
+            "title": "Combinatorial Optimization"
+          },
+          "origin": {
+            "from": "template",
+            "name": "cite book",
+            "params": {
+              "author1": "Gallo, G.",
+              "author2": "Hammer, P. L.",
+              "author3": "Simeone, B.",
+              "chapter": "Quadratic knapsack problems",
+              "doi": "10.1007/BFb0120892",
+              "isbn": "978-3-642-00801-6",
+              "pages": "132&ndash;149",
+              "series": "Mathematical Programming Studies",
+              "title": "Combinatorial Optimization",
+              "volume": "12",
+              "year": "1980"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 37
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "name": "Witzgall, C."
+              }
+            ],
+            "date": {
+              "precision": 9,
+              "time": "1975-01-01T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "1975STIN...7618321W",
+                "type": "bibcode"
+              }
+            ],
+            "journal": "NASA Sti/Recon Technical Report N",
+            "kind": "journal",
+            "pages": "18321",
+            "title": "Mathematical methods of site selection for Electronic Message Systems (EMS)",
+            "volume": "76"
+          },
+          "origin": {
+            "from": "template",
+            "name": "cite journal",
+            "params": {
+              "author": "Witzgall, C.",
+              "bibcode": "1975STIN...7618321W",
+              "journal": "NASA Sti/Recon Technical Report N",
+              "page": "18321",
+              "publisher": "NBS Internal report",
+              "title": "Mathematical methods of site selection for Electronic Message Systems (EMS)",
+              "volume": "76",
+              "year": "1975"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 38
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "family": "Galvez",
+                "given": "Waldo"
+              },
+              {
+                "family": "Grandoni",
+                "given": "Fabrizio"
+              },
+              {
+                "family": "Ingala",
+                "given": "Salvatore"
+              },
+              {
+                "family": "Heydrich",
+                "given": "Sandy"
+              },
+              {
+                "family": "Khan",
+                "given": "Arindam"
+              },
+              {
+                "family": "Wiese",
+                "given": "Andreas"
+              }
+            ],
+            "date": {
+              "precision": 9,
+              "time": "2021-01-01T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "10.1145/3473713",
+                "type": "doi"
+              }
+            ],
+            "issue": "4",
+            "journal": "ACM Trans. Algorithms",
+            "kind": "journal",
+            "pages": "33:1–33:67",
+            "title": "Approximating Geometric Knapsack via L-packings",
+            "url": "https://doi.org/10.1145/3473713",
+            "volume": "17"
+          },
+          "origin": {
+            "from": "template",
+            "name": "Cite journal",
+            "params": {
+              "arxiv": "1711.07710",
+              "date": "2021",
+              "doi": "10.1145/3473713",
+              "first1": "Waldo",
+              "first2": "Fabrizio",
+              "first3": "Salvatore",
+              "first4": "Sandy",
+              "first5": "Arindam",
+              "first6": "Andreas",
+              "issue": "4",
+              "journal": "ACM Trans. Algorithms",
+              "last1": "Galvez",
+              "last2": "Grandoni",
+              "last3": "Ingala",
+              "last4": "Heydrich",
+              "last5": "Khan",
+              "last6": "Wiese",
+              "pages": "33:1–33:67",
+              "title": "Approximating Geometric Knapsack via L-packings",
+              "url": "https://doi.org/10.1145/3473713",
+              "volume": "17"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 39
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "family": "Han",
+                "given": "Xin"
+              },
+              {
+                "family": "Kawase",
+                "given": "Yasushi"
+              },
+              {
+                "family": "Makino",
+                "given": "Kazuhisa"
+              }
+            ],
+            "date": {
+              "precision": 11,
+              "time": "2015-01-11T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "10.1016/j.tcs.2014.10.017",
+                "type": "doi"
+              },
+              {
+                "id": "0304-3975",
+                "type": "issn"
+              }
+            ],
+            "journal": "Theoretical Computer Science",
+            "kind": "journal",
+            "pages": "395–405",
+            "title": "Randomized algorithms for online knapsack problems",
+            "url": "https://www.sciencedirect.com/science/article/pii/S0304397514007798",
+            "volume": "562"
+          },
+          "origin": {
+            "from": "template",
+            "name": "Cite journal",
+            "params": {
+              "date": "2015-01-11",
+              "doi": "10.1016/j.tcs.2014.10.017",
+              "first1": "Xin",
+              "first2": "Yasushi",
+              "first3": "Kazuhisa",
+              "issn": "0304-3975",
+              "journal": "Theoretical Computer Science",
+              "last1": "Han",
+              "last2": "Kawase",
+              "last3": "Makino",
+              "pages": "395–405",
+              "title": "Randomized algorithms for online knapsack problems",
+              "url": "https://www.sciencedirect.com/science/article/pii/S0304397514007798",
+              "url-access": "subscription",
+              "volume": "562"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 40
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "family": "Han",
+                "given": "Xin"
+              },
+              {
+                "family": "Kawase",
+                "given": "Yasushi"
+              },
+              {
+                "family": "Makino",
+                "given": "Kazuhisa"
+              }
+            ],
+            "date": {
+              "precision": 11,
+              "time": "2014-09-01T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "10.1007/s00453-013-9822-z",
+                "type": "doi"
+              },
+              {
+                "id": "1432-0541",
+                "type": "issn"
+              }
+            ],
+            "issue": "1",
+            "journal": "Algorithmica",
+            "kind": "journal",
+            "language": "en",
+            "pages": "76–91",
+            "title": "Online Unweighted Knapsack Problem with Removal Cost",
+            "url": "https://link.springer.com/article/10.1007/s00453-013-9822-z",
+            "volume": "70"
+          },
+          "origin": {
+            "from": "template",
+            "name": "Cite journal",
+            "params": {
+              "date": "2014-09-01",
+              "doi": "10.1007/s00453-013-9822-z",
+              "first1": "Xin",
+              "first2": "Yasushi",
+              "first3": "Kazuhisa",
+              "issn": "1432-0541",
+              "issue": "1",
+              "journal": "Algorithmica",
+              "language": "en",
+              "last1": "Han",
+              "last2": "Kawase",
+              "last3": "Makino",
+              "pages": "76–91",
+              "title": "Online Unweighted Knapsack Problem with Removal Cost",
+              "url": "https://link.springer.com/article/10.1007/s00453-013-9822-z",
+              "url-access": "subscription",
+              "volume": "70"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 41
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "family": "Han",
+                "given": "Xin"
+              },
+              {
+                "family": "Kawase",
+                "given": "Yasushi"
+              },
+              {
+                "family": "Makino",
+                "given": "Kazuhisa"
+              },
+              {
+                "family": "Guo",
+                "given": "He"
+              }
+            ],
+            "date": {
+              "precision": 11,
+              "time": "2014-06-26T00:00:00Z"
+            },
+            "ids": [
+              {
+                "id": "10.1016/j.tcs.2013.09.013",
+                "type": "doi"
+              },
+              {
+                "id": "0304-3975",
+                "type": "issn"
+              }
+            ],
+            "journal": "Theoretical Computer Science",
+            "kind": "journal",
+            "pages": "62–69",
+            "title": "Online removable knapsack problem under convex function",
+            "volume": "540-541"
+          },
+          "origin": {
+            "from": "template",
+            "name": "Cite journal",
+            "params": {
+              "date": "2014-06-26",
+              "doi": "10.1016/j.tcs.2013.09.013",
+              "doi-access": "free",
+              "first1": "Xin",
+              "first2": "Yasushi",
+              "first3": "Kazuhisa",
+              "first4": "He",
+              "issn": "0304-3975",
+              "journal": "Theoretical Computer Science",
+              "last1": "Han",
+              "last2": "Kawase",
+              "last3": "Makino",
+              "last4": "Guo",
+              "pages": "62–69",
+              "series": "Combinatorial Optimization: Theory of algorithms and Complexity",
+              "title": "Online removable knapsack problem under convex function",
+              "volume": "540-541"
+            }
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 42
+    },
+    {
+      "citations": [
+        {
+          "citation": {
+            "authors": [
+              {
+                "family": "Han",
+                "given": "Xin"
+              },
+              {
+                "name": "Kawase, Yasushi"
+              },
+              {
+                "name": "Makino, Kazuhisa"
+              },
+              {
+                "name": "Yokomaku, Haruki"
+              }
+            ],
+            "date": {
+              "precision": 11,
+              "time": "2019-09-22T00:00:00Z"
+            },
+            "kind": "book",
+            "title": "Online Knapsack Problems with a Resource Buffer"
+          },
+          "origin": {
+            "from": "coins"
+          }
+        }
+      ],
+      "lang": "en",
+      "number": 43
+    }
+  ],
+  "page_images": {},
+  "page_title": "knapsack problem",
+  "projects": [
+    {
+      "count": 31,
+      "local": false,
+      "name": "wikipedia"
+    }
+  ],
+  "qid": "Q864457",
+  "schema": "view/0.2",
+  "spreads": [
+    {
+      "id": "identity",
+      "prose_links": [],
+      "prose_text": null,
+      "title": null
+    },
+    {
+      "id": "web",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "fallback": true,
+        "href": "https://www.wikidata.org/wiki/Q22909728",
+        "lang": "en",
+        "text": "web presence"
+      }
+    },
+    {
+      "id": "more",
+      "prose_links": [],
+      "prose_text": null,
+      "title": null
+    },
+    {
+      "id": "evidence",
+      "prose_links": [],
+      "prose_text": null,
+      "title": {
+        "href": "https://www.wikidata.org/wiki/Q121769",
+        "lang": "ml",
+        "text": "അവലംബം"
+      }
+    }
+  ],
+  "unmatched_sections": []
+}

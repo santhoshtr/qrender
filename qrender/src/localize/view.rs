@@ -123,10 +123,12 @@ pub struct Article {
     pub local: bool,
     pub host: String,
     pub url: String,
-    /// The first paragraph, cleaned (HTML: `a`, `b`, `i`, ruby glosses).
-    pub paragraphs: Vec<String>,
-    /// The other paragraphs of the lead.
-    pub more: Vec<String>,
+    /// The blocks of the lead, as the blocks of a section.
+    pub blocks: Vec<ProseBlock>,
+    /// The first figure of the lead, when it has one image and the page
+    /// has a head picture: it takes the place of that picture.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub picture: Option<ProseFigure>,
 }
 
 #[derive(Debug, Clone, Serialize, JsonSchema)]

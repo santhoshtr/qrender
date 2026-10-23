@@ -12,7 +12,7 @@ use qrender::render::markdown;
 use qrender::render::ui::FAVICONS;
 use scraper::{CaseSensitivity, Html, Selector};
 
-const PAGES: [&str; 15] = [
+const PAGES: [&str; 16] = [
     "q3870.en",
     "q3870.gu",
     "q90.en",
@@ -28,6 +28,7 @@ const PAGES: [&str; 15] = [
     "q2.en",
     "q2.ml",
     "q30.en",
+    "q864457.ml",
 ];
 
 /// Hosts a page may load from: Commons (its pages and its media server)
@@ -152,4 +153,42 @@ fn markdown_pages() {
     for page in PAGES {
         insta::assert_snapshot!(format!("{page}.md"), markdown::page(&view(page)));
     }
+}
+
+/// An item with few facts (the knapsack problem): the whole lead of the
+/// fallback article, its picture in the place of the head picture, and
+/// each section that no spread shows as a spread of its own.
+#[test]
+fn the_lead_and_the_sections_of_an_item_with_few_facts() {
+    let html = html::page(&view("q864457.ml"), Styles::Inline, None);
+    let doc = Html::parse_document(&html);
+    let count = |s: &str| doc.select(&select(s)).count();
+
+    // The definition after the colon of the first paragraph, and no fold.
+    assert_eq!(count(".lead dl"), 1);
+    assert_eq!(count(".lead details"), 0);
+    // The picture of the article, with its caption; not the P18 file.
+    let hero = doc
+        .select(&select("[data-slot='hero'] .lead-picture"))
+        .next()
+        .expect("the picture of the lead");
+    assert!(hero.html().contains("Knapsack_Problem_Illustration.svg"));
+    assert!(hero.select(&select("figcaption")).next().is_some());
+    assert_eq!(count("[data-slot='hero'] figure.m"), 0);
+    assert_eq!(count(".lead figure"), 0);
+    // A spread for each section, its title an h2.
+    let titles: Vec<String> = doc
+        .select(&select(".t-article .article-section > .head > h2"))
+        .map(|h| h.text().collect())
+        .collect();
+    assert_eq!(
+        titles,
+        [
+            "Applications",
+            "Definition",
+            "Computational complexity",
+            "Solving",
+            "Variations"
+        ]
+    );
 }

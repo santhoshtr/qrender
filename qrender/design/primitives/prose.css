@@ -1,17 +1,11 @@
-/* prose: the lead of the article. */
+/* prose: the lead of the article, all its blocks. */
 
 .lead {
-	& p {
+	& :is( p, ul, ol, dl, blockquote ) {
 		margin: 0 0 var( --spacing-75 );
 		line-height: 1.7;
 		max-inline-size: 70ch;
 		text-wrap: pretty;
-	}
-
-	& summary {
-		cursor: pointer;
-		color: var( --color-progressive );
-		font-size: var( --font-size-small );
 	}
 
 	& .source { font-size: var( --font-size-small ); color: var( --color-subtle ); }

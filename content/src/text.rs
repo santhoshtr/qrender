@@ -59,10 +59,9 @@ pub struct Concept {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Article {
     pub title: String,
-    /// The lead: the content of each paragraph, as HTML with the marks of
-    /// notes, and no attribute but `href` and `alt`.
-    pub paragraphs: Vec<String>,
-    /// The item of each article that a paragraph links to, by page title.
+    /// The lead: the blocks of section 0, as the blocks of a section.
+    pub lead: Vec<OutlineBlock>,
+    /// The item of each article that a text links to, by page title.
     pub links: IndexMap<String, Qid>,
     pub sections: Vec<Section>,
     /// The anchors of the sections that each concept matches.

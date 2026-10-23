@@ -6,6 +6,8 @@ use indexmap::IndexMap;
 use schemars::JsonSchema;
 use serde::Serialize;
 
+use crate::localize::ProseBlock;
+
 #[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct Prose {
     pub source: ProseSource,
@@ -48,16 +50,18 @@ pub fn lead(sitelinks: &IndexMap<String, String>) -> Prose {
     }
 }
 
-/// Markdown: the lead of the article, with its source.
+/// Markdown: the texts of the lead of the article, with its source.
 pub fn markdown(b: &Prose, md: &mut crate::render::markdown::Markdown) {
     let Some(article) = &md.view.lead else {
         return;
     };
     let text: Vec<String> = article
-        .paragraphs
+        .blocks
         .iter()
-        .chain(&article.more)
-        .map(|p| crate::render::markdown::plain(p))
+        .filter_map(|b| match b {
+            ProseBlock::Text(html) => Some(crate::render::markdown::plain(html)),
+            ProseBlock::Figure(_) => None,
+        })
         .collect();
     let source = format!(
         "Source: [{}]({}); {} Wikipedias have an article.",

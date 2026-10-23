@@ -1,0 +1,121 @@
+---
+source: qrender/tests/pages.rs
+expression: "markdown::page(&view(page))"
+---
+# knapsack problem [en]
+
+problem in combinatorial optimization
+
+The knapsack problem is the following problem in combinatorial optimization:
+
+Given a set of items, each with a weight and a value, determine which items to include in the collection so that the total weight is less than or equal to a given limit and the total value is as large as possible.
+
+It derives its name from the problem faced by someone who is constrained by a fixed-size knapsack and must fill it with the most valuable items. The problem often arises in resource allocation where the decision-makers have to choose from a set of non-divisible projects or tasks under a fixed budget or time constraint, respectively.
+
+The knapsack problem has been studied for more than a century, with early works dating back to 1897.[^1]
+
+The subset sum problem is a special case of the decision and 0-1 problems where for each kind of item, the weight equals the value: 
+  
+    
+      
+        
+          w
+          
+            i
+          
+        
+        =
+        
+          v
+          
+            i
+          
+        
+      
+    
+    {\displaystyle w_{i}=v_{i}}
+  
+{\displaystyle w_{i}=v_{i}}. In the field of cryptography, the term knapsack problem is often used to refer specifically to the subset sum problem. The subset sum problem is one of Karp's 21 NP-complete problems.[^2]
+
+Source: [en.wikipedia.org](https://en.wikipedia.org/wiki/Knapsack_problem); 31 Wikipedias have an article.
+
+- **ചിത്രം**: [Knapsack Problem Illustration.svg](<https://commons.wikimedia.org/wiki/File:Knapsack_Problem_Illustration.svg>) — Example of a one-dimensional (constraint) knapsack problem: which books should be chosen to maximize the books' value while still keeping the overall weight under or equal to 15 kg? A multiple constrained problem could consider both the weight and volume of the books. (Solution: if any number of each book is available, then three yellow books and three grey books; if only the shown books are available, then all except for the green book.) (from en.wikipedia.org)
+- **തരം**: optimization problem [en] [no reference]
+- **ഇതിന്റെ ഭാഗം**: Karp's 21 NP-complete problems [en] [no reference]
+
+## web presence
+
+- **ക്വാറ ടോപിക് ഐ.ഡി.**: [Knapsack-Problem](https://www.quora.com/topic/Knapsack-Problem)
+- **Stack Exchange tag [en]**: [stackoverflow.com/tags/knapsack-problem](https://stackoverflow.com/tags/knapsack-problem) [no reference]
+- **computational complexity [en]**:
+  - NP-complete [en] (decision problem [en])[^s1]
+  - NP-hard [en] [no reference]
+- **പേര് വന്ന വഴി**: backpack [en] [no reference]
+## അവലംബം
+
+Statements: 1 sourced, 1 imported from Wikipedia, 7 without a reference. Labels in ml: 6 of 15.
+
+- **ഇതിൽ നിന്നും വ്യത്യസ്തം**: packing problem [en] [imported from Wikipedia]
+- **maintained by WikiProject [en]**: WikiProject Mathematics [en] [no reference]
+Projects: wikipedia 31
+
+- **ഫ്രീബേസ് ഐ.ഡി.**: /m/04bb0
+- **MathWorld ID [en]**: KnapsackProblem
+- **Rosetta Code page ID [en]**: Knapsack_problem
+- **Dictionary of Algorithms and Data Structures ID [en]**: knapsackProblem
+- **Microsoft Academic ID (discontinued) [en]**: 113138325
+- **Brilliant Wiki ID [en]**: backpack-problem
+- **OpenAlex ID**: C113138325
+- **GitLab.com topic ID [en]**: knapsack+problem
+
+Article sections: [Applications](https://en.wikipedia.org/wiki/Knapsack_problem#Applications) · [Definition](https://en.wikipedia.org/wiki/Knapsack_problem#Definition) · [Computational complexity](https://en.wikipedia.org/wiki/Knapsack_problem#Computational_complexity) · [Solving](https://en.wikipedia.org/wiki/Knapsack_problem#Solving) · [Variations](https://en.wikipedia.org/wiki/Knapsack_problem#Variations)
+
+[^1]: [On the partition of numbers](http://plms.oxfordjournals.org/content/s1-28/1/486.full.pdf) (plms.oxfordjournals.org). Authors: Mathews, G. B.. Journal: Proceedings of the London Mathematical Society · vol. 28 · p. 486&ndash;490. Published: 1897-06-25. Identifiers: [DOI 10.1112/plms/s1-28.1.486](https://doi.org/10.1112/plms/s1-28.1.486)
+[^2]: Richard M. Karp (1972). "Reducibility Among Combinatorial Problems". In R. E. Miller and J. W. Thatcher (editors). Complexity of Computer Computations. New York: Plenum. pp. 85–103
+[^3]: [Knapsack problems](https://books.google.com/books?id=u5DB7gck08YC) (books.google.com). Authors: Kellerer, Hans; Pferschy, Ulrich; Pisinger, David. Publisher: Springer · Berlin. Pages: 449. Published: 2004. Identifiers: [ISBN 978-3-540-40286-2](https://www.wikidata.org/wiki/Special:BookSources/978-3-540-40286-2). Retrieved: 2022-05-05
+[^4]: [Knapsack problems](https://books.google.com/books?id=u5DB7gck08YC) (books.google.com). Authors: Kellerer, Hans; Pferschy, Ulrich; Pisinger, David. Publisher: Springer · Berlin. Pages: 461. Published: 2004. Identifiers: [ISBN 978-3-540-40286-2](https://www.wikidata.org/wiki/Special:BookSources/978-3-540-40286-2). Retrieved: 2022-05-05
+[^5]: [Knapsack problems](https://books.google.com/books?id=u5DB7gck08YC) (books.google.com). Authors: Kellerer, Hans; Pferschy, Ulrich; Pisinger, David. Publisher: Springer · Berlin. Pages: 465. Published: 2004. Identifiers: [ISBN 978-3-540-40286-2](https://www.wikidata.org/wiki/Special:BookSources/978-3-540-40286-2). Retrieved: 2022-05-05
+[^6]: [Knapsack problems](https://books.google.com/books?id=u5DB7gck08YC) (books.google.com). Authors: Kellerer, Hans; Pferschy, Ulrich; Pisinger, David. Publisher: Springer · Berlin. Pages: 472. Published: 2004. Identifiers: [ISBN 978-3-540-40286-2](https://www.wikidata.org/wiki/Special:BookSources/978-3-540-40286-2). Retrieved: 2022-05-05
+[^7]: A Mathematical Programming Model for Test Construction and Scoring. Authors: Feuerman, Martin; Weiss, Harvey. Journal: Management Science · vol. 19 · no. 8 · pp. 961–966. Published: 1973-04. Identifiers: [DOI 10.1287/mnsc.19.8.961](https://doi.org/10.1287/mnsc.19.8.961) · [JSTOR 2629127](https://www.jstor.org/stable/2629127)
+[^8]: Who is Interested in Algorithms and Why? Lessons from the Stony Brook Algorithm Repository. Authors: Skiena, S. S.. Journal: ACM SIGACT News · vol. 30 · no. 3 · p. 65&ndash;74. Published: 1999-09. Identifiers: [DOI 10.1145/333623.333627](https://doi.org/10.1145/333623.333627) · [ISSN 0163-5700](https://portal.issn.org/resource/ISSN/0163-5700) · [S2CID 15619060](https://api.semanticscholar.org/CorpusID:15619060)
+[^9]: Pisinger, D. 2003. Where are the hard knapsack problems? Technical Report 2003/08, Department of Computer Science, University of Copenhagen, Copenhagen, Denmark.
+[^10]: Computational Aspects of Hard Knapsack Problems. Authors: Caccetta, L.; Kulanoot, A.. Journal: Nonlinear Analysis · vol. 47 · no. 8 · pp. 5547–5558. Published: 2001. Identifiers: [DOI 10.1016/s0362-546x(01)00658-7](https://doi.org/10.1016/s0362-546x(01)00658-7)
+[^11]: A hybrid algorithm for the unbounded knapsack problem. Authors: Poirriez, Vincent; Yanev, Nicola; Andonov, Rumen. Journal: Discrete Optimization · vol. 6 · no. 1 · pp. 110–124. Published: 2009. Identifiers: [DOI 10.1016/j.disopt.2008.09.004](https://doi.org/10.1016/j.disopt.2008.09.004) · [ISSN 1572-5286](https://portal.issn.org/resource/ISSN/1572-5286) · [S2CID 8820628](https://api.semanticscholar.org/CorpusID:8820628)
+[^12]: Computer Science – Theory and Applications. Authors: Wojtczak, Dominik. Pages: 308–320. Published: 2018. Identifiers: [DOI 10.1007/978-3-319-90530-3_26](https://doi.org/10.1007/978-3-319-90530-3_26) · [ISBN 978-3-319-90529-7](https://www.wikidata.org/wiki/Special:BookSources/978-3-319-90529-7) · [S2CID 3637366](https://api.semanticscholar.org/CorpusID:3637366)
+[^13]: [A lower bound of ½n2 on linear search programs for the Knapsack problem](https://dx.doi.org/10.1016/0022-0000%2878%2990026-0) (dx.doi.org). Authors: Dobkin, David; Lipton, Richard J.. Journal: Journal of Computer and System Sciences · vol. 16 · no. 3 · pp. 413–417. Published: 1978. Identifiers: [DOI 10.1016/0022-0000(78)90026-0](https://doi.org/10.1016/0022-0000(78)90026-0)
+[^14]: In fact, the lower bound applies to the subset sum problem, which is a special case of Knapsack.
+[^15]: [Lower bounds for algebraic decision trees](https://dx.doi.org/10.1016%2F0196-6774%2882%2990002-5) (dx.doi.org). Authors: Michael Steele, J; Yao, Andrew C. Journal: Journal of Algorithms · vol. 3 · no. 1 · pp. 1–8. Published: 1982-03-01. Identifiers: [DOI 10.1016/0196-6774(82)90002-5](https://doi.org/10.1016/0196-6774(82)90002-5) · [ISSN 0196-6774](https://portal.issn.org/resource/ISSN/0196-6774). Language: en
+[^16]: Topological Lower Bounds on Algebraic Random Access Machines. Authors: Ben-Amram, Amir M.; Galil, Zvi. Journal: SIAM Journal on Computing · vol. 31 · no. 3 · pp. 722-761. Published: 2001. Identifiers: [DOI 10.1137/S0097539797329397](https://doi.org/10.1137/S0097539797329397)
+[^17]: A Polynomial Linear Search Algorithm for the n-Dimensional Knapsack Problem. Authors: auf der Heide, Meyer. Journal: Journal of the ACM · vol. 31 · no. 3 · pp. 668-676. Published: 1984. Identifiers: [DOI 10.1145/828.322450](https://doi.org/10.1145/828.322450)
+[^18]: Unbounded Knapsack Problem : dynamic programming revisited. Authors: Andonov, Rumen; Poirriez, Vincent; Rajopadhye, Sanjay. Journal: European Journal of Operational Research · vol. 123 · no. 2 · pp. 168–181. Published: 2000. Identifiers: [DOI 10.1016/S0377-2217(99)00265-9](https://doi.org/10.1016/S0377-2217(99)00265-9)
+[^19]: S. Martello, P. Toth, Knapsack Problems: Algorithms and Computer Implementations,
+John Wiley and Sons, 1990
+[^20]: S. Martello, D. Pisinger, P. Toth, Dynamic programming and strong bounds for the 0-1 knapsack problem, Manag. Sci., 45:414–424, 1999.
+[^21]: A hybrid algorithm for the 0-1 knapsack problem. Authors: Plateau, G.; Elkihel, M.. Journal: Methods of Oper. Res. · vol. 49 · pp. 277–293. Published: 1985
+[^22]: A mixture of dynamic programming and branch-and-bound for the subset-sum problem. Authors: Martello, S.; Toth, P.. Journal: Manag. Sci. · vol. 30 · no. 6 · pp. 765–771. Published: 1984. Identifiers: [DOI 10.1287/mnsc.30.6.765](https://doi.org/10.1287/mnsc.30.6.765)
+[^23]: [Computing partitions with applications to the knapsack problem](https://mathscinet.ams.org/mathscinet-getitem?mr=0354006#id-name=MR) (mathscinet.ams.org). Authors: Horowitz, Ellis; Sahni, Sartaj. Journal: Journal of the Association for Computing Machinery · vol. 21 · no. 2 · pp. 277-292. Published: 1974. Identifiers: [hdl 1813/5989](https://hdl.handle.net/1813/5989) · [DOI 10.1145/321812.321823](https://doi.org/10.1145/321812.321823)
+[^24]: Improving Schroeppel and Shamir's Algorithm for Subset Sum via Orthogonal Vectors. Authors: Nederlof, Jesper; Węgrzycki, Karol. Website: arXiv. Published: 2021-04-12
+[^25]: [A $T = O(2^{n/2} )$, $S = O(2^{n/4} )$ Algorithm for Certain NP-Complete Problems](http://epubs.siam.org/doi/10.1137/0210033) (epubs.siam.org). Authors: Schroeppel, Richard; Shamir, Adi. Journal: SIAM Journal on Computing · vol. 10 · no. 3 · pp. 456–464. Published: 1981-08. Identifiers: [DOI 10.1137/0210033](https://doi.org/10.1137/0210033) · [ISSN 0097-5397](https://portal.issn.org/resource/ISSN/0097-5397). Language: en
+[^26]: Vazirani, Vijay. Approximation Algorithms. Springer-Verlag Berlin Heidelberg, 2003.
+[^27]: Discrete-Variable Extremum Problems. Authors: Dantzig, George B.. Journal: Operations Research · vol. 5 · no. 2 · pp. 266–288. Published: 1957. Identifiers: [DOI 10.1287/opre.5.2.266](https://doi.org/10.1287/opre.5.2.266)
+[^28]: Average-case analysis of a greedy algorithm for the 0/1 knapsack problem. Authors: Calvin, James M.; Leung, Joseph Y. -T.. Journal: Operations Research Letters · vol. 31 · no. 3 · pp. 202–210. Published: 2003-05-01. Identifiers: [DOI 10.1016/S0167-6377(02)00222-5](https://doi.org/10.1016/S0167-6377(02)00222-5)
+[^29]: Ising formulations of many NP problems. Authors: Lucas, Andrew. Journal: Frontiers in Physics · vol. 2 · p. 5. Published: 2014. Identifiers: [DOI 10.3389/fphy.2014.00005](https://doi.org/10.3389/fphy.2014.00005) · [ISSN 2296-424X](https://portal.issn.org/resource/ISSN/2296-424X) · [Bibcode 2014FrP.....2....5L](https://ui.adsabs.harvard.edu/abs/2014FrP.....2....5L)
+[^30]: Chang, T. J., et al. Heuristics for Cardinality Constrained Portfolio Optimization.
+Technical Report, London SW7 2AZ, England: The Management School, Imperial
+College, May 1998
+[^31]: Chang, C. S., et al. "Genetic Algorithm Based Bicriterion Optimization for Traction Substations in DC Railway System." In Fogel [102], 11-16.
+[^32]: [There is no EPTAS for two dimensional knapsack](https://www.cs.technion.ac.il/~hadas/PUB/multi_knap.pdf) (cs.technion.ac.il). Authors: Kulik, A.; Shachnai, H.. Journal: Inf. Process. Lett. · vol. 110 · no. 16 · pp. 707–712. Published: 2010. Identifiers: [DOI 10.1016/j.ipl.2010.05.031](https://doi.org/10.1016/j.ipl.2010.05.031)
+[^33]: Cohen, R. and Grebla, G. 2014. "Multi-Dimensional OFDMA Scheduling in a Wireless Network with Relay Nodes". in Proc. IEEE INFOCOM'14, 2427–2435.
+[^34]: Yan Lan, György Dósa, Xin Han, Chenyang Zhou, Attila Benkő : 2D knapsack: Packing squares, Theoretical Computer Science Vol. 508, pp. 35–40.
+[^35]: A PTAS for the multiple knapsack problem. Authors: Chandra Chekuri and Sanjeev Khanna. Journal: SIAM Journal on Computing · vol. 35 · no. 3 · pp. 713–728. Published: 2005. Identifiers: [DOI 10.1137/s0097539700382820](https://doi.org/10.1137/s0097539700382820)
+[^36]: Global Optimality Conditions and Optimization Methods for Quadratic Knapsack Problems. Authors: Wu, Z. Y.; Yang, Y. J.; Bai, F. S.; Mammadov, M.. Journal: J Optim Theory Appl · vol. 151 · no. 2 · p. 241&ndash;259. Published: 2011. Identifiers: [DOI 10.1007/s10957-011-9885-4](https://doi.org/10.1007/s10957-011-9885-4) · [S2CID 31208118](https://api.semanticscholar.org/CorpusID:31208118)
+[^37]: Combinatorial Optimization. Authors: Gallo, G.; Hammer, P. L.; Simeone, B.. Pages: 132&ndash;149. Published: 1980. Identifiers: [DOI 10.1007/BFb0120892](https://doi.org/10.1007/BFb0120892) · [ISBN 978-3-642-00801-6](https://www.wikidata.org/wiki/Special:BookSources/978-3-642-00801-6)
+[^38]: Mathematical methods of site selection for Electronic Message Systems (EMS). Authors: Witzgall, C.. Journal: NASA Sti/Recon Technical Report N · vol. 76 · p. 18321. Published: 1975. Identifiers: [Bibcode 1975STIN...7618321W](https://ui.adsabs.harvard.edu/abs/1975STIN...7618321W)
+[^39]: [Approximating Geometric Knapsack via L-packings](https://doi.org/10.1145/3473713) (doi.org). Authors: Galvez, Waldo; Grandoni, Fabrizio; Ingala, Salvatore; Heydrich, Sandy; Khan, Arindam; Wiese, Andreas. Journal: ACM Trans. Algorithms · vol. 17 · no. 4 · pp. 33:1–33:67. Published: 2021. Identifiers: [DOI 10.1145/3473713](https://doi.org/10.1145/3473713)
+[^40]: [Randomized algorithms for online knapsack problems](https://www.sciencedirect.com/science/article/pii/S0304397514007798) (sciencedirect.com). Authors: Han, Xin; Kawase, Yasushi; Makino, Kazuhisa. Journal: Theoretical Computer Science · vol. 562 · pp. 395–405. Published: 2015-01-11. Identifiers: [DOI 10.1016/j.tcs.2014.10.017](https://doi.org/10.1016/j.tcs.2014.10.017) · [ISSN 0304-3975](https://portal.issn.org/resource/ISSN/0304-3975)
+[^41]: [Online Unweighted Knapsack Problem with Removal Cost](https://link.springer.com/article/10.1007/s00453-013-9822-z) (link.springer.com). Authors: Han, Xin; Kawase, Yasushi; Makino, Kazuhisa. Journal: Algorithmica · vol. 70 · no. 1 · pp. 76–91. Published: 2014-09-01. Identifiers: [DOI 10.1007/s00453-013-9822-z](https://doi.org/10.1007/s00453-013-9822-z) · [ISSN 1432-0541](https://portal.issn.org/resource/ISSN/1432-0541). Language: en
+[^42]: Online removable knapsack problem under convex function. Authors: Han, Xin; Kawase, Yasushi; Makino, Kazuhisa; Guo, He. Journal: Theoretical Computer Science · vol. 540-541 · pp. 62–69. Published: 2014-06-26. Identifiers: [DOI 10.1016/j.tcs.2013.09.013](https://doi.org/10.1016/j.tcs.2013.09.013) · [ISSN 0304-3975](https://portal.issn.org/resource/ISSN/0304-3975)
+[^43]: Online Knapsack Problems with a Resource Buffer. Authors: Han, Xin; Kawase, Yasushi; Makino, Kazuhisa; Yokomaku, Haruki. Published: 2019-09-22
+[^s1]: [Reducibility among combinatorial problems](https://www.wikidata.org/wiki/Q110971675). Published: 1972
+
+Composed by rule from Wikidata item Q864457 (composition/0.3, view/0.2, design/0.2).

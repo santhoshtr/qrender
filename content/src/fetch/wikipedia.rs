@@ -93,8 +93,9 @@ pub async fn article(
     let mut texts: Vec<String> = parsed
         .lead
         .iter()
-        .chain(section_text.values())
-        .cloned()
+        .flat_map(|b| b.texts())
+        .map(str::to_string)
+        .chain(section_text.values().cloned())
         .collect();
     collect_blocks(&outline, &mut texts);
     let marked = marked(&texts, &parsed.notes);
@@ -104,7 +105,7 @@ pub async fn article(
     Ok(Article {
         title: title.to_string(),
         links: links(http, host, &texts).await?,
-        paragraphs: parsed.lead,
+        lead: parsed.lead,
         sections,
         concept_sections,
         section_text,
@@ -167,8 +168,8 @@ fn collect_blocks(sections: &[OutlineSection], out: &mut Vec<String>) {
 
 /// What a page reads from the Parsoid HTML of an article.
 struct Parsed {
-    /// The lead: the paragraphs of section 0.
-    lead: Vec<String>,
+    /// The lead: the blocks of section 0.
+    lead: Vec<OutlineBlock>,
     /// The sections with a heading, and their content.
     outline: Vec<OutlineSection>,
     /// The first paragraph of each section, by its anchor.
@@ -181,7 +182,6 @@ struct Parsed {
 
 fn read(html: &str, styles: &[CitationStyle]) -> Parsed {
     let doc = Html::parse_fragment(html);
-    let mut lead = Vec::new();
     let mut first = IndexMap::new();
     let sections = doc
         .root_element()
@@ -189,9 +189,7 @@ fn read(html: &str, styles: &[CitationStyle]) -> Parsed {
         .filter_map(ElementRef::wrap)
         .filter(|e| e.value().name() == "section");
     for el in sections {
-        if el.value().attr("data-mw-section-id") == Some("0") {
-            lead = paragraphs(el).collect();
-        } else if let Some(heading) = el.child_elements().find_map(heading)
+        if let Some(heading) = el.child_elements().find_map(heading)
             && let Some(anchor) = heading.value().attr("id")
             && let Some(paragraph) = paragraphs(el).next()
         {
@@ -200,9 +198,10 @@ fn read(html: &str, styles: &[CitationStyle]) -> Parsed {
     }
     let notes = notes::notes(&doc, styles);
     let works = notes::works(&doc, styles, &notes::cited_works(notes.values()));
+    let (lead, outline) = outline_of(&doc);
     Parsed {
         lead,
-        outline: outline_of(&doc),
+        outline,
         first,
         notes,
         works,
@@ -251,17 +250,19 @@ fn has_error(p: ElementRef) -> bool {
         .any(|e| !within(e, p, reference))
 }
 
-/// The sections of Parsoid HTML. Parsoid wraps each section in
-/// `<section>`, nested by level, with its heading first (in a
-/// `div.mw-heading`, or bare). Section 0, the lead, has no heading. The
-/// parse API puts them all in a `div.mw-parser-output`.
-fn outline_of(doc: &Html) -> Vec<OutlineSection> {
+/// The lead and the sections of Parsoid HTML. Parsoid wraps each section
+/// in `<section>`, nested by level, with its heading first (in a
+/// `div.mw-heading`, or bare). Section 0, the lead, has no heading: its
+/// blocks are the lead. The parse API puts them all in a
+/// `div.mw-parser-output`.
+fn outline_of(doc: &Html) -> (Vec<OutlineBlock>, Vec<OutlineSection>) {
     let wrapper = |e: &ElementRef| {
         e.value().name() == "div"
             && e.value()
                 .attr("class")
                 .is_some_and(|c| c.contains("mw-parser-output"))
     };
+    let mut lead = Vec::new();
     let mut out = Vec::new();
     for el in doc.root_element().child_elements() {
         let top: Vec<ElementRef> = if wrapper(&el) {
@@ -270,10 +271,10 @@ fn outline_of(doc: &Html) -> Vec<OutlineSection> {
             vec![el]
         };
         for el in top.into_iter().filter(|e| e.value().name() == "section") {
-            section(el, &mut out, &mut Vec::new());
+            section(el, &mut out, &mut lead);
         }
     }
-    out
+    (lead, out)
 }
 
 /// One `<section>`: a section with a heading goes in `out`; without one
@@ -320,13 +321,14 @@ fn heading(el: ElementRef) -> Option<ElementRef> {
 /// A block that a reader reads: a paragraph with text, a list, a
 /// quotation; the lists of a multi-column list; the images of a
 /// thumbnail, a multiple-image template or a gallery. Not a heading, a
-/// hatnote ("Main article: …"), a table or a navigation box.
+/// hatnote ("Main article: …"), a table, a navigation box, or a paragraph
+/// with a message of the wiki parser.
 fn block(el: ElementRef, out: &mut Vec<OutlineBlock>) {
     let class = el.value().attr("class").unwrap_or_default();
     match el.value().name() {
-        "p" if !class.contains("mw-empty-elt") => {
+        "p" if !class.contains("mw-empty-elt") && !has_error(el) => {
             let html = clean(el);
-            if !strip_tags(&html).trim().is_empty() && !class.contains("error") {
+            if !strip_tags(&html).trim().is_empty() {
                 out.push(OutlineBlock::Text(html));
             }
         }
@@ -652,10 +654,10 @@ pub async fn page_images(http: &Http, qids: &[Qid], lang: &Lang) -> IndexMap<Qid
 mod tests {
     use super::*;
 
-    /// A lead, as Parsoid gives it, around some paragraphs.
-    fn lead_of(paragraphs: &str) -> Vec<String> {
+    /// A lead, as Parsoid gives it, around some blocks.
+    fn lead_of(blocks: &str) -> Vec<OutlineBlock> {
         read(&format!(
-            "<div class=\"mw-parser-output\"><section data-mw-section-id=\"0\">{paragraphs}</section></div>"
+            "<div class=\"mw-parser-output\"><section data-mw-section-id=\"0\">{blocks}</section></div>"
         ), &[])
         .lead
     }
@@ -718,7 +720,7 @@ mod tests {
         );
         assert_eq!(
             lead_of(html),
-            ["Nairobi is a city.", "Second.", "In a box."]
+            [text("<p>Nairobi is a city.</p>"), text("<p>Second.</p>")]
         );
     }
 
@@ -730,12 +732,43 @@ mod tests {
         );
         assert_eq!(
             lead_of(html),
-            ["Text<sup data-note=\"cite_note-1\"></sup>."]
+            [text("<p>Text<sup data-note=\"cite_note-1\"></sup>.</p>")]
         );
     }
 
     fn text(html: &str) -> OutlineBlock {
         OutlineBlock::Text(html.to_string())
+    }
+
+    #[test]
+    fn the_lead_in_order() {
+        // The knapsack problem: a figure first, then a paragraph that a
+        // definition list ends.
+        let html = concat!(
+            "<div class=\"shortdescription\">Problem in optimization</div>",
+            "<figure class=\"mw-default-size\"><a href=\"./File:K.svg\">",
+            "<img class=\"mw-file-element\" src=\"//thumb.wikimedia.org/wikipedia/commons/",
+            "thumb/6/68/K.svg/330px-K.svg.png\" data-file-width=\"486\" data-file-height=\"421\"/>",
+            "</a><figcaption>Which books?</figcaption></figure>",
+            "<p>The <b>knapsack problem</b> is:</p>",
+            "<dl><dd><i>Given a set of items</i></dd></dl>",
+        );
+        assert_eq!(
+            lead_of(html),
+            [
+                OutlineBlock::Figure(ArticleFigure {
+                    images: vec![ArticleImage {
+                        file: "K.svg".into(),
+                        width: 486,
+                        height: 421,
+                        caption: String::new(),
+                    }],
+                    caption: "Which books?".into(),
+                }),
+                text("<p>The <b>knapsack problem</b> is:</p>"),
+                text("<dl><dd><i>Given a set of items</i></dd></dl>"),
+            ]
+        );
     }
 
     #[test]
@@ -850,7 +883,7 @@ mod tests {
             sections: vec![],
         };
         let parsed = read(html, &[]);
-        assert_eq!(parsed.lead, ["The lead."]);
+        assert_eq!(parsed.lead, [text("<p>The lead.</p>")]);
         // A section without a paragraph of its own: the first one of its
         // subsections.
         assert_eq!(
@@ -914,10 +947,10 @@ mod tests {
         );
         assert_eq!(
             lead_of(html),
-            [concat!(
-                "<b>Kenya</b>,<sup data-note=\"cite_note-12\"></sup> is a ",
-                "<a href=\"https://en.wikipedia.org/wiki/Country\">country</a>."
-            )]
+            [text(concat!(
+                "<p><b>Kenya</b>,<sup data-note=\"cite_note-12\"></sup> is a ",
+                "<a href=\"https://en.wikipedia.org/wiki/Country\">country</a>.</p>"
+            ))]
         );
     }
 }

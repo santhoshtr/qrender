@@ -21,7 +21,7 @@ fn fixtures(kind: &str) -> Vec<PathBuf> {
 #[test]
 fn content_fixtures() {
     let files = fixtures("content");
-    assert_eq!(files.len(), 9);
+    assert_eq!(files.len(), 10);
     for path in files {
         let c: Content = serde_json::from_str(&fs::read_to_string(&path).unwrap())
             .unwrap_or_else(|e| panic!("{}: {e}", path.display()));
@@ -51,7 +51,7 @@ fn content_fixtures() {
 #[test]
 fn text_fixtures() {
     let files = fixtures("text");
-    assert_eq!(files.len(), 15);
+    assert_eq!(files.len(), 16);
     for path in files {
         let t: Text = serde_json::from_str(&fs::read_to_string(&path).unwrap())
             .unwrap_or_else(|e| panic!("{}: {e}", path.display()));

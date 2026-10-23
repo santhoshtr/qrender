@@ -1,9 +1,8 @@
 {#- A section of the article: its title, its blocks, and its subsections,
-    each collapsed to its title. At the end of the page (`collapsed`), the
-    whole section is collapsed to its title. A section in another language
-    (the fallback article) is a qr-section: the reader translates it into
-    the page language in the dialog of the page (translate.js). -#}
-{%- let h = ui.section_tag(s.level) -%}
+    each collapsed to its title. A section that is a spread of its own has
+    an h2 title. A section in another language (the fallback article) is a
+    qr-section: the reader translates it into the page language in the
+    dialog of the page (translate.js). -#}
 {%- if s.local -%}
 <div class="article-section" lang="{{ s.lang }}">
 {%- else -%}
@@ -13,9 +12,7 @@
             data-to="{{ ui.view.lang }}"
             data-dir="{{ ui.view.dir.name() }}">
 {%- endif %}
-    {%- if collapsed %}<details><summary class="head">{% else %}<div class="head">{% endif -%}
-    <{{ h }}>{{ s.title }}</{{ h }}>{% if !s.local %}{{ ui.translate_button()|safe }}{% endif %}
-    {%- if collapsed %}</summary>{% else %}</div>{% endif %}
+    <div class="head"><{{ h }}>{{ s.title }}</{{ h }}>{% if !s.local %}{{ ui.translate_button()|safe }}{% endif %}</div>
     <div class="body">
         {{- ui.article_blocks(s.blocks)|safe -}}
         {%- for c in s.sections %}{{ ui.article_subsection(c)|safe }}{% endfor -%}
@@ -23,7 +20,6 @@
     {%- if !s.local %}
     <p class="saved-note" lang="{{ ui.view.lang }}" hidden>{{ ui.msg("qrender-saved") }}</p>
     {%- endif %}
-    {%- if collapsed %}</details>{% endif %}
 {%- if s.local %}
 </div>
 {%- else %}

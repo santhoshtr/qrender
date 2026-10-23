@@ -34,11 +34,26 @@
 		& > [data-slot='kind'] { grid-column: 1; contain: none; }
 	}
 
-	& > [data-slot='hero'] > .m {
+	& > [data-slot='hero'] > :is( .m, .lead-picture ) {
 		inline-size: calc( var( --head-height ) * var( --a ) );
 		/* Not a percentage: in an auto column it is cyclic, and the browser
 		   ignores it when it sizes the column. */
 		max-inline-size: 40cqi;
+	}
+}
+
+/* The picture of the lead of the article, in the place of the head
+   picture: the caption of the article under it. */
+.lead-picture {
+	margin: 0;
+
+	& > .m { display: block; }
+
+	& figcaption {
+		margin-block-start: var( --spacing-50 );
+		font-size: var( --font-size-small );
+		line-height: var( --line-height-small );
+		color: var( --color-subtle );
 	}
 }
 
@@ -81,7 +96,7 @@
 	.t-identity {
 		grid-template-columns: minmax( 0, 1fr );
 
-		& > [data-slot='hero'] > .m { max-inline-size: 100%; }
+		& > [data-slot='hero'] > :is( .m, .lead-picture ) { max-inline-size: 100%; }
 		& > [data-slot='kind'] { contain: none; }
 	}
 }

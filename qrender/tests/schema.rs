@@ -14,7 +14,7 @@ use qrender::schema::{COMPOSITION_SCHEMA, Composition};
 use schemars::JsonSchema;
 use serde_json::Value;
 
-const PAGES: [&str; 15] = [
+const PAGES: [&str; 16] = [
     "q3870.en",
     "q3870.gu",
     "q90.en",
@@ -30,6 +30,7 @@ const PAGES: [&str; 15] = [
     "q2.en",
     "q2.ml",
     "q30.en",
+    "q864457.ml",
 ];
 
 /// The schema of what serde writes: a field that is skipped when it is

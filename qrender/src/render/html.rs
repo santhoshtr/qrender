@@ -13,12 +13,15 @@ use super::cite::{self, Card, Value as CiteValue};
 use super::design::{REFERENCE_ICON, STYLESHEET, scripts};
 use super::map::Frame;
 use super::ui::{Arg, Ref, Shown, TopicArticle, Ui};
+use crate::compose::picture::media_kind;
 use crate::localize::format::Part;
 use crate::localize::messages::format;
-use crate::localize::{Label, Note, ProseBlock, ProseFigure, ProseSection, SpreadView, View};
+use crate::localize::{
+    Article, Label, Note, ProseBlock, ProseFigure, ProseImage, ProseSection, SpreadView, View,
+};
 use crate::primitives::fact::Fact;
 use crate::primitives::map::{Map, MapShape};
-use crate::primitives::media::Media;
+use crate::primitives::media::{Media, MediaRole};
 use crate::primitives::{
     absent, credits, earlier, fact, identifiers, kind, links, map, media, names, network, peers,
     pictures, prose, provenance, scale, score, series, sitelinks, sounds, split, succession,
@@ -205,8 +208,8 @@ struct MapDialogHtml<'a> {
 struct ArticleSectionHtml<'a> {
     ui: &'a Ui<'a>,
     s: &'a ProseSection,
-    /// At the end of the page: the whole section collapsed to its title.
-    collapsed: bool,
+    /// The tag of the title.
+    h: &'static str,
 }
 
 #[derive(Template)]
@@ -255,6 +258,18 @@ struct ArticleBlocksHtml<'a> {
 struct ArticleFigureHtml<'a> {
     ui: &'a Ui<'a>,
     f: &'a ProseFigure,
+}
+
+#[derive(Template)]
+#[template(path = "parts/lead_picture.html")]
+struct LeadPictureHtml<'a> {
+    ui: &'a Ui<'a>,
+    a: &'a Article,
+    f: &'a ProseFigure,
+    /// The one image of the figure.
+    i: &'a ProseImage,
+    /// The kind of the file: "drawing" or "photo".
+    kind: &'static str,
 }
 
 #[derive(Template)]
@@ -462,12 +477,17 @@ impl<'v> Ui<'v> {
         render(TopicArticleHtml { ui: self, t })
     }
 
-    /// A section of the article; `collapsed` at the end of the page.
-    pub fn article_section(&self, s: &ProseSection, collapsed: bool) -> String {
+    /// A section of the article; with `spread`, a spread of its own, with
+    /// the title of a spread.
+    pub fn article_section(&self, s: &ProseSection, spread: bool) -> String {
         render(ArticleSectionHtml {
             ui: self,
             s,
-            collapsed,
+            h: if spread {
+                "h2"
+            } else {
+                self.section_tag(s.level)
+            },
         })
     }
 
@@ -612,7 +632,22 @@ impl<'v> Ui<'v> {
         })
     }
 
+    /// A file of the item. The head picture gives its place to the picture
+    /// of the lead of the article, when the lead has one.
     pub fn media(&self, b: &Media) -> String {
+        let lead = self.view.lead.as_ref();
+        if b.role == MediaRole::Identity
+            && let Some((a, f)) = lead.and_then(|a| Some((a, a.picture.as_ref()?)))
+            && let Some(i) = f.images.first()
+        {
+            return render(LeadPictureHtml {
+                ui: self,
+                a,
+                f,
+                i,
+                kind: media_kind(&i.file).name(),
+            });
+        }
         render(media::Html { ui: self, b })
     }
 

@@ -90,13 +90,12 @@ expression: json
   },
   "lang": "en",
   "lead": {
+    "blocks": [
+      "<p><b>Kokkachal</b> (കൊക്കച്ചാൽ, <a href=\"https://en.wikipedia.org/wiki/Help:IPA/Malayalam\">&#91;ko̞kːɐt͡ʃːaːl&#93;</a>; also spelled <b>Kokkechal</b>) is a small locality and settlement situated in the <a href=\"https://en.wikipedia.org/wiki/Kasaragod_district\">Kasaragod district</a> in the Indian state of <a href=\"https://en.wikipedia.org/wiki/Kerala\">Kerala</a>. It falls under the administration of the <a href=\"https://en.wikipedia.org/wiki/Manjeshwaram_taluk\">Manjeshwaram taluk</a> near the northern border of the state.</p>"
+    ],
     "host": "en.wikipedia.org",
     "lang": "en",
     "local": true,
-    "more": [],
-    "paragraphs": [
-      "<b>Kokkachal</b> (കൊക്കച്ചാൽ, <a href=\"https://en.wikipedia.org/wiki/Help:IPA/Malayalam\">&#91;ko̞kːɐt͡ʃːaːl&#93;</a>; also spelled <b>Kokkechal</b>) is a small locality and settlement situated in the <a href=\"https://en.wikipedia.org/wiki/Kasaragod_district\">Kasaragod district</a> in the Indian state of <a href=\"https://en.wikipedia.org/wiki/Kerala\">Kerala</a>. It falls under the administration of the <a href=\"https://en.wikipedia.org/wiki/Manjeshwaram_taluk\">Manjeshwaram taluk</a> near the northern border of the state."
-    ],
     "url": "https://en.wikipedia.org/wiki/Kokkachal"
   },
   "locale": "en",
@@ -106,7 +105,6 @@ expression: json
     "qrender-age": "aged $1",
     "qrender-alternate-json": "JSON data",
     "qrender-alternate-markdown": "Markdown version",
-    "qrender-article-more": "More of the article",
     "qrender-bce": "$1 BCE",
     "qrender-cite-archived": "Archived",
     "qrender-cite-at": "Cited at",

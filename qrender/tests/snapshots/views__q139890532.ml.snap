@@ -92,13 +92,12 @@ expression: json
   },
   "lang": "ml",
   "lead": {
+    "blocks": [
+      "<p>ഇന്ത്യൻ സംസ്ഥാനമായ കേരളത്തിലെ <a href=\"https://ml.wikipedia.org/wiki/%E0%B4%95%E0%B4%BE%E0%B4%B8%E0%B5%BC%E0%B4%97%E0%B5%8B%E0%B4%A1%E0%B5%8D_%E0%B4%9C%E0%B4%BF%E0%B4%B2%E0%B5%8D%E0%B4%B2\">കാസർഗോഡ് ജില്ലയിൽ</a> സ്ഥിതിചെയ്യുന്ന ഒരു ചെറിയ പ്രദേശവും വാസസ്ഥലവുമാണ് <b>കൊക്കച്ചാൽ</b>. സംസ്ഥാനത്തിന്റെ വടക്കൻ അതിർത്തിക്കടുത്തുള്ള മഞ്ചേശ്വരം താലൂക്കിന്റെ ഭരണത്തിൻ കീഴിലാണ് ഇത് സ്ഥിതിചെയ്യുന്നത്.</p>"
+    ],
     "host": "ml.wikipedia.org",
     "lang": "ml",
     "local": true,
-    "more": [],
-    "paragraphs": [
-      "ഇന്ത്യൻ സംസ്ഥാനമായ കേരളത്തിലെ <a href=\"https://ml.wikipedia.org/wiki/%E0%B4%95%E0%B4%BE%E0%B4%B8%E0%B5%BC%E0%B4%97%E0%B5%8B%E0%B4%A1%E0%B5%8D_%E0%B4%9C%E0%B4%BF%E0%B4%B2%E0%B5%8D%E0%B4%B2\">കാസർഗോഡ് ജില്ലയിൽ</a> സ്ഥിതിചെയ്യുന്ന ഒരു ചെറിയ പ്രദേശവും വാസസ്ഥലവുമാണ് <b>കൊക്കച്ചാൽ</b>. സംസ്ഥാനത്തിന്റെ വടക്കൻ അതിർത്തിക്കടുത്തുള്ള മഞ്ചേശ്വരം താലൂക്കിന്റെ ഭരണത്തിൻ കീഴിലാണ് ഇത് സ്ഥിതിചെയ്യുന്നത്."
-    ],
     "url": "https://ml.wikipedia.org/wiki/%E0%B4%95%E0%B5%8A%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%BE%E0%B5%BD"
   },
   "locale": "ml",
@@ -108,7 +107,6 @@ expression: json
     "qrender-age": "aged $1",
     "qrender-alternate-json": "JSON data",
     "qrender-alternate-markdown": "Markdown version",
-    "qrender-article-more": "More of the article",
     "qrender-bce": "$1 BCE",
     "qrender-cite-archived": "Archived",
     "qrender-cite-at": "Cited at",
