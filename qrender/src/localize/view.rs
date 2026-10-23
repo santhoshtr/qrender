@@ -62,6 +62,16 @@ pub struct View {
     pub works: BTreeMap<String, Cited>,
 }
 
+impl View {
+    /// The spreads in page order: before the sections of the article, or
+    /// after them (`end`: the apparatus).
+    pub fn spreads_at(&self, end: bool) -> impl Iterator<Item = &SpreadView> {
+        self.spreads
+            .iter()
+            .filter(move |s| s.spread.kind.is_apparatus() == end)
+    }
+}
+
 /// A note of the article: a reference, or an explanatory note.
 #[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct Note {

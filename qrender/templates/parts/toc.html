@@ -1,9 +1,16 @@
 {#- The contents of the page: a link to each spread with a title, in the
-    order of the page, underlined in the colour of its dimension. -#}
+    order of the page, underlined in the colour of its dimension. The
+    apparatus is at the end of the line, as it is at the end of the
+    page. -#}
 <nav class="toc" aria-label="{{ ui.msg("qrender-contents") }}">
     <ul>
-        {%- for (id, title, dimension) in entries -%}
-            <li data-dimension="{{ dimension }}"><a href="#{{ id }}">{{ ui.text(title, false)|safe }}</a></li>
+        {%- for e in entries -%}
+            <li data-dimension="{{ e.dimension }}"{% if e.end %} class="end"{% endif %}><a href="#{{ e.id }}">
+                {%- match e.title -%}
+                {%- when TocTitle::Spread with (l) -%}{{ ui.text(l, false)|safe }}
+                {%- when TocTitle::Section with (s) -%}<span lang="{{ s.lang }}">{{ s.title }}</span>
+                {%- endmatch -%}
+            </a></li>
         {%- endfor -%}
     </ul>
 </nav>

@@ -29,6 +29,16 @@ pub enum SpreadKind {
     Evidence,
 }
 
+impl SpreadKind {
+    /// The apparatus of the page: at its end, after the sections of the
+    /// article, as the external links and references of an article. The
+    /// properties that no spread claimed are there too, before the
+    /// evidence.
+    pub fn is_apparatus(self) -> bool {
+        matches!(self, Self::Web | Self::More | Self::Evidence)
+    }
+}
+
 /// The dimension of the data of a spread. The design system gives each
 /// one its colour; colour means nothing else.
 #[derive(Debug, Clone, Copy, Default, PartialEq, Eq, Hash, Serialize, Deserialize, JsonSchema)]

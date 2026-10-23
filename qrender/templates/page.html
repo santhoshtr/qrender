@@ -70,12 +70,13 @@
         </div>
     </header>
     <main class="page">
-        {%- for s in view.spreads %}
+        {%- for s in view.spreads_at(false) %}
             {{ ui.spread(s)|safe }}
         {%- endfor %}
         {#- The sections of the article that no spread shows: a spread each. #}
         {%- for a in view.more_sections %}
             <section class="spread t-article"
+                     id="{{ ui.section_id(a) }}"
                      data-spread="article"
                      data-dimension="neutral">
                 <div class="article-slot">{{ ui.article_section(a, true)|safe }}</div>
@@ -90,6 +91,11 @@
                 </p>
             </section>
         {%- endif %}
+        {#- The apparatus: web presence, the properties that no spread
+            claimed, the evidence. #}
+        {%- for s in view.spreads_at(true) %}
+            {{ ui.spread(s)|safe }}
+        {%- endfor %}
         {{- ui.notes()|safe }}
         <p class="provenance-note">{{ ui.footer()|safe }}</p>
         {%- if let Some(from) = ui.translation_source() %}{{ ui.translator(from)|safe }}{% endif %}

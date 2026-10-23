@@ -29,22 +29,8 @@ pub fn page(view: &View) -> String {
         out: String::new(),
         sources: RefCell::default(),
     };
-    for spread in &view.spreads {
+    for spread in view.spreads_at(false) {
         md.spread(spread);
-    }
-    if !view.set_aside.is_empty() {
-        md.heading(2, "Set aside (not of the best rank)");
-        let mut pids: Vec<_> = view.set_aside.iter().map(|s| s.pid).collect();
-        pids.dedup();
-        for pid in pids {
-            let values: Vec<String> = view
-                .set_aside
-                .iter()
-                .filter(|s| s.pid == pid)
-                .map(|s| md.value(s))
-                .collect();
-            md.items(&md.property(pid), &values);
-        }
     }
     // The titles of the sections that no spread shows; with their content
     // (a fallback article), the titles only too.
@@ -60,6 +46,23 @@ pub fn page(view: &View) -> String {
         .collect();
     if !links.is_empty() {
         md.paragraph(&format!("Article sections: {}", links.join(" · ")));
+    }
+    for spread in view.spreads_at(true) {
+        md.spread(spread);
+    }
+    if !view.set_aside.is_empty() {
+        md.heading(2, "Set aside (not of the best rank)");
+        let mut pids: Vec<_> = view.set_aside.iter().map(|s| s.pid).collect();
+        pids.dedup();
+        for pid in pids {
+            let values: Vec<String> = view
+                .set_aside
+                .iter()
+                .filter(|s| s.pid == pid)
+                .map(|s| md.value(s))
+                .collect();
+            md.items(&md.property(pid), &values);
+        }
     }
     md.footnotes();
     md.paragraph(&format!(

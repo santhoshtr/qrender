@@ -84,6 +84,15 @@ fn html_pages() {
                 "{page}: no single target #{id}"
             );
         }
+        // Every link of the contents has its target.
+        for link in doc.select(&select("nav.toc a")) {
+            let id = link.attr("href").unwrap().trim_start_matches('#');
+            assert!(
+                doc.select(&select("[id]"))
+                    .any(|e| e.attr("id") == Some(id)),
+                "{page}: no target for the contents link #{id}"
+            );
+        }
         // A picture of the item opens its own dialog.
         for button in doc.select(&select("button.zoom")) {
             let id = button.attr("commandfor").unwrap_or_default();
@@ -190,5 +199,29 @@ fn the_lead_and_the_sections_of_an_item_with_few_facts() {
             "Solving",
             "Variations"
         ]
+    );
+    // The contents in the order of the page: the sections, then the
+    // apparatus at the end of the line.
+    let toc: Vec<(String, bool)> = doc
+        .select(&select("nav.toc li"))
+        .map(|li| (li.text().collect(), li.attr("class") == Some("end")))
+        .collect();
+    let (_, end) = toc
+        .iter()
+        .position(|(_, end)| *end)
+        .map(|i| toc.split_at(i))
+        .unwrap();
+    assert_eq!(toc[0].0, "Applications");
+    assert_eq!(end.len(), 2, "web presence and the evidence: {toc:?}");
+    // The apparatus spreads come after the sections on the page, then the
+    // notes of the article.
+    let spreads: Vec<&str> = doc
+        .select(&select("main > section.spread"))
+        .filter_map(|s| s.attr("data-spread"))
+        .collect();
+    assert_eq!(
+        spreads[spreads.len() - 5..],
+        ["article", "web", "more", "evidence", "sources"],
+        "{spreads:?}"
     );
 }

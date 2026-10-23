@@ -10,7 +10,7 @@ use percent_encoding::{AsciiSet, NON_ALPHANUMERIC, utf8_percent_encode};
 use super::map::{Frame, frame, live, point_frame};
 use crate::localize::format::{Part, coordinate, edit_url, number_part, percent};
 use crate::localize::locale::LANGUAGES;
-use crate::localize::{Description, Label, Link, SpreadView, View};
+use crate::localize::{Description, Label, Link, ProseSection, SpreadView, View};
 use crate::primitives::credits::{Credits, Person};
 use crate::primitives::identifiers::{Identifier, Identifiers};
 use crate::primitives::links::{Card, Links};
@@ -831,6 +831,11 @@ impl<'v> Ui<'v> {
 
     pub fn wikipedia_logo(&self) -> &'static str {
         WIKIPEDIA_LOGO
+    }
+
+    /// The id of a section of the article that is a spread of its own.
+    pub fn section_id(&self, s: &ProseSection) -> String {
+        format!("section-{}", s.anchor)
     }
 
     /// The heading of an article section of a level: the spread title is

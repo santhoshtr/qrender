@@ -165,7 +165,23 @@ struct AboutHtml<'a> {
 #[template(path = "parts/toc.html")]
 struct TocHtml<'a> {
     ui: &'a Ui<'a>,
-    entries: Vec<(&'a str, &'a Label, &'static str)>,
+    entries: Vec<TocEntry<'a>>,
+}
+
+/// A link of the contents.
+struct TocEntry<'a> {
+    id: String,
+    title: TocTitle<'a>,
+    dimension: &'static str,
+    /// The first spread of the apparatus: at the end of the line, as it is
+    /// at the end of the page.
+    end: bool,
+}
+
+enum TocTitle<'a> {
+    Spread(&'a Label),
+    /// A section of the article that is a spread of its own.
+    Section(&'a ProseSection),
 }
 
 #[derive(Template)]
@@ -327,22 +343,35 @@ impl<'v> Ui<'v> {
         render(SpreadHtml { ui: self, s })
     }
 
-    /// The contents of the page: the spreads that have a title. Empty
-    /// when none has.
+    /// The contents of the page, in the order of the page: the spreads
+    /// that have a title, the sections of the article that are spreads,
+    /// then the apparatus. Empty when there is nothing to list.
     pub fn toc(&self) -> String {
-        let entries: Vec<_> = self
-            .view
-            .spreads
-            .iter()
-            .filter(|s| !matches!(s.spread.template, vocab::Template::Identity))
-            .filter_map(|s| {
-                Some((
-                    s.spread.id.as_str(),
-                    s.title.as_ref()?,
-                    s.spread.dimension.name(),
-                ))
+        let spread = |s: &'v SpreadView| {
+            Some(TocEntry {
+                id: s.spread.id.clone(),
+                title: TocTitle::Spread(s.title.as_ref()?),
+                dimension: s.spread.dimension.name(),
+                end: false,
             })
+        };
+        let mut entries: Vec<_> = self
+            .view
+            .spreads_at(false)
+            .filter(|s| !matches!(s.spread.template, vocab::Template::Identity))
+            .filter_map(spread)
             .collect();
+        entries.extend(self.view.more_sections.iter().map(|a| TocEntry {
+            id: self.section_id(a),
+            title: TocTitle::Section(a),
+            dimension: vocab::Dimension::Neutral.name(),
+            end: false,
+        }));
+        let apparatus = entries.len();
+        entries.extend(self.view.spreads_at(true).filter_map(spread));
+        if let Some(first) = entries.get_mut(apparatus) {
+            first.end = true;
+        }
         if entries.is_empty() {
             return String::new();
         }

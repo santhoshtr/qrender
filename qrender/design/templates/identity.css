@@ -75,6 +75,9 @@
 	/* A flex item is a block, so it has a first letter. */
 	& li::first-letter { text-transform: uppercase; }
 
+	/* The apparatus: at the end of the line, as at the end of the page. */
+	& .end { margin-inline-start: auto; }
+
 	& a {
 		color: var( --color-base );
 		text-decoration: none;
