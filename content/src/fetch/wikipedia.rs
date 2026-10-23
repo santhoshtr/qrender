@@ -321,8 +321,8 @@ fn heading(el: ElementRef) -> Option<ElementRef> {
 }
 
 /// A block that a reader reads: a paragraph with text, a list, a
-/// quotation; the lists of a multi-column list; the images of a
-/// thumbnail, a multiple-image template or a gallery. Not a heading, a
+/// quotation, preformatted text, code; the lists of a multi-column list;
+/// the images of a thumbnail, a multiple-image template or a gallery. Not a heading, a
 /// hatnote ("Main article: …"), a table, a navigation box, or a paragraph
 /// with a message of the wiki parser.
 fn block(el: ElementRef, out: &mut Vec<OutlineBlock>) {
@@ -335,7 +335,17 @@ fn block(el: ElementRef, out: &mut Vec<OutlineBlock>) {
             }
         }
         "ul" if class_has(el, "gallery") => figure(gallery(el), out),
-        "ul" | "ol" | "dl" | "blockquote" => out.push(OutlineBlock::Text(clean(el))),
+        "ul" | "ol" | "dl" | "blockquote" | "pre" => out.push(OutlineBlock::Text(clean(el))),
+        // Code (SyntaxHighlight): its text, without the highlighting and
+        // the line numbers, which the CSS of the wiki gives.
+        "div" if class_has(el, "mw-highlight") => {
+            if let Some(pre) = el.child_elements().find(|c| c.value().name() == "pre") {
+                let mut html = String::from("<pre><code>");
+                write_children(pre, &mut html);
+                html.push_str("</code></pre>");
+                out.push(OutlineBlock::Text(html));
+            }
+        }
         "figure" => {
             let caption = el
                 .child_elements()
@@ -787,6 +797,29 @@ mod tests {
     }
 
     #[test]
+    fn code_and_preformatted_text() {
+        let html = concat!(
+            "<div class=\"mw-highlight mw-highlight-lang-c mw-content-ltr mw-highlight-lines\" dir=\"ltr\">",
+            "<pre id=\"mwAS4\"><span id=\"mwAS8\"></span><span class=\"linenos\" data-line=\"1\"></span>",
+            "<span class=\"c1\">// Input:</span>\n<span class=\"linenos\" data-line=\"2\"></span>",
+            "<span class=\"n\">m</span><span class=\"p\">[</span><span class=\"mi\">0</span>",
+            "<span class=\"p\">]</span> <span class=\"o\">&lt;</span> 1\n</pre></div>",
+            "<pre id=\"mwA50\"><b id=\"mwA54\">algorithm</b> Meet-in-the-middle\n    sets <i>A</i></pre>",
+        );
+        assert_eq!(
+            lead_of(html),
+            [
+                text(concat!(
+                    "<pre><code><span></span><span></span><span>// Input:</span>\n<span></span>",
+                    "<span>m</span><span>[</span><span>0</span><span>]</span> <span>&lt;</span> 1\n",
+                    "</code></pre>"
+                )),
+                text("<pre><b>algorithm</b> Meet-in-the-middle\n    sets <i>A</i></pre>"),
+            ]
+        );
+    }
+
+    #[test]
     fn a_formula_is_its_mathml() {
         let html = concat!(
             "<p>Then <span class=\"mwe-math-element mwe-math-element-inline\" data-mw='{}'>",
@@ -1011,8 +1044,7 @@ mod tests {
             "<p id=\"mwTQ\"><b id=\"mwTg\">Kenya</b>,<sup about=\"#mwt91\" ",
             "class=\"mw-ref reference\" id=\"cite_ref-12\"><a href=\"#cite_note-12\">",
             "<span class=\"mw-reflink-text\">[a]</span></a></sup> is a ",
-            "<a rel=\"mw:WikiLink\" href=\"https://en.wikipedia.org/wiki/Country\">country</a>.</p>",
-            "<pre>not a paragraph</pre>"
+            "<a rel=\"mw:WikiLink\" href=\"https://en.wikipedia.org/wiki/Country\">country</a>.</p>"
         );
         assert_eq!(
             lead_of(html),

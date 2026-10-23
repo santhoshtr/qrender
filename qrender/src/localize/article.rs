@@ -8,7 +8,7 @@
 //! - `b` and `i`, without attributes;
 //! - `sup` with the number of a note on the page: `<sup data-note="3">`;
 //! - the blocks of a section, without attributes: `p`, `ul`, `ol`, `li`,
-//!   `dl`, `dt`, `dd`, `blockquote`;
+//!   `dl`, `dt`, `dd`, `blockquote`, `pre`, and `code`;
 //! - `ruby`, `rt` and `span`, which this module adds for a gloss;
 //! - a formula: the MathML elements of `content::html::MATH_ELEMENTS`,
 //!   with the attributes of `MATH_ATTRIBUTES` only.
@@ -142,9 +142,8 @@ fn clean(el: &mut Element, links: &Links) {
             el.replace(&alt, ContentType::Text);
         }
         "a" => link(el, links),
-        "b" | "i" | "p" | "ul" | "ol" | "li" | "dl" | "dt" | "dd" | "blockquote" => {
-            strip_attributes(el)
-        }
+        "b" | "i" | "p" | "ul" | "ol" | "li" | "dl" | "dt" | "dd" | "blockquote" | "pre"
+        | "code" => strip_attributes(el),
         name if MATH_ELEMENTS.contains(&name) => keep_attributes(el, &MATH_ATTRIBUTES),
         // The TeX of a formula, which its `alttext` has.
         "annotation" | "annotation-xml" => el.remove(),
@@ -324,6 +323,20 @@ mod tests {
         ] {
             assert!(!out.contains(bad), "{bad} in {out}");
         }
+    }
+
+    #[test]
+    fn code_is_plain_text() {
+        let (items, labels) = (IndexMap::new(), IndexMap::new());
+        let l = links(&items, &labels, "en", "en");
+        let html = concat!(
+            r#"<pre class="x" onclick="alert(1)"><code style="color:red"><span></span>"#,
+            "<span>// Input:</span>\n<span>m</span>[0] &lt; 1\n</code></pre>"
+        );
+        assert_eq!(
+            rewrite(html, &l),
+            "<pre><code>// Input:\nm[0] &lt; 1\n</code></pre>"
+        );
     }
 
     #[test]

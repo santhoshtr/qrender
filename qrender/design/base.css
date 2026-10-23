@@ -889,6 +889,24 @@ qr-section { display: block; }
 	}
 }
 
+/* Preformatted text and code of the article: monospace, on a light
+   background, a scroll bar for a long line. Code is left to right, also
+   on a right-to-left page. No highlighting. */
+pre {
+	overflow-x: auto;
+	margin-block: var( --spacing-50 ) var( --spacing-75 );
+	padding: var( --spacing-75 ) var( --spacing-100 );
+	border: 1px solid var( --border-color-muted );
+	border-radius: var( --border-radius-base );
+	background-color: var( --background-color-neutral-subtle );
+	font-family: var( --font-family-monospace );
+	font-size: var( --font-size-small );
+	line-height: var( --line-height-small );
+
+	&:has( > code ) { direction: ltr; text-align: left; }
+	& code { font-family: inherit; }
+}
+
 /* A formula of the article (MathML): some space above and below, so the
    limits of a sum do not touch the formula on the next line. */
 math { padding-block: 0.2em; }
