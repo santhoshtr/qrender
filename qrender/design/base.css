@@ -701,7 +701,7 @@ dialog.lightbox {
 	& p {
 		margin: 0;
 		line-height: 1.7;
-		max-inline-size: 70ch;
+		max-inline-size: 720px;
 		text-wrap: pretty;
 		display: -webkit-box;
 		-webkit-box-orient: vertical;
@@ -737,7 +737,7 @@ qr-section { display: block; }
 		align-items: baseline;
 		justify-content: space-between;
 		gap: var( --spacing-50 ) var( --spacing-150 );
-		max-inline-size: 70ch;
+		max-inline-size: 720px;
 
 		& > :is( h3, h4, h5, h6 ) {
 			margin: 0;
@@ -747,7 +747,7 @@ qr-section { display: block; }
 	}
 
 	& .body {
-		max-inline-size: 70ch;
+		max-inline-size: 720px;
 		line-height: 1.7;
 
 		& :is( p, ul, ol, dl, blockquote ) {
