@@ -4,20 +4,21 @@
     this frame (render/map.rs). The map opens its dialog, where the reader
     moves it and zooms it. Under a map with shapes: a line for each shape,
     with its qualifiers (whose view it is: a disputed border has two) and
-    its credit. -#}
+    its credit. A card: the map at its top, the words under it (not over
+    it: easy to read on any map). -#}
 {%- if let Some(f) = ui.map(b) -%}
     {%- let n = ui.id() -%}
-    {%- if !b.shapes.is_empty() %}<div class="map-shapes">{% endif -%}
-    <figure class="map">
-        <button class="zoom"
-                type="button"
-                command="show-modal"
-                commandfor="d{{ n }}"
-                aria-label="{{ ui.msg("qrender-explore-map") }}">{{ ui.map_frame(f, false)|safe }}</button>
-        <figcaption>{{ ui.text(ui.property(b.statement.pid), true)|safe }} {{ ui.coordinate(f.lat, f.lon) }} {% call m::prov(ui, b.statement.provenance, b.statement.citations) %}{% endcall %}</figcaption><span class="tools">{% call m::edit(ui, ui.edit(b.statement.pid)) %}{% endcall %}</span></figure>
+    <div class="box map-card">
+        <figure class="map">
+            <button class="zoom"
+                    type="button"
+                    command="show-modal"
+                    commandfor="d{{ n }}"
+                    aria-label="{{ ui.msg("qrender-explore-map") }}">{{ ui.map_frame(f, false)|safe }}</button>
+            <span class="tools">{% call m::edit(ui, ui.edit(b.statement.pid)) %}{% endcall %}</span>
+        </figure>
+        <p class="caption"><span class="label">{{ ui.text(ui.property(b.statement.pid), true)|safe }}</span> {{ ui.coordinate(f.lat, f.lon) }} {% call m::prov(ui, b.statement.provenance, b.statement.citations) %}{% endcall %}</p>
+        {%- if !b.shapes.is_empty() %}<div class="map-shapes">{{ ui.map_shapes(b.shapes.as_slice())|safe }}</div>{% endif -%}
+    </div>
     {{ ui.map_dialog(n, ui.property(b.statement.pid).text, f, ui.live_map(f, b), Some(b))|safe }}
-    {%- if !b.shapes.is_empty() %}
-        {{ ui.map_shapes(b.shapes.as_slice())|safe }}
-        </div>
-    {%- endif -%}
 {%- endif -%}

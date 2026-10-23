@@ -147,7 +147,7 @@ expression: html
     </div>
 </dialog>
     </div><div data-slot="kind">
-        <div class="kind"><div>
+        <div class="kind box"><div>
             <span class="k">തരം</span><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q3504248"><span class="fb" lang="en">inner planet of the Solar System</span></a><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/Q3504248/ml"
            aria-label="Add a label in your language"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>, <a href="https://www.wikidata.org/wiki/Q82794">ഭൗമപ്രദേശം</a>, <a href="https://www.wikidata.org/wiki/Q2221906">ഭൂസ്ഥാനം</a></div><div>
@@ -159,7 +159,7 @@ expression: html
             <section class="spread t-columns" id="physical"
              data-spread="physical"
              data-dimension="measures"><h2><span class="title">ഭൗതികഗുണങ്ങൾ</span></h2><div data-slot="hero">
-        <div class="block scale">
+        <div class="block scale box">
     <h3><span class="fb-group"><span class="fb"
       lang="en">parent astronomical body</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/P397/ml"
@@ -661,53 +661,7 @@ expression: html
      alt=""
      loading="lazy">
         </li>
-</ul><button class="view-all" type="button" command="show-modal" commandfor="d9">View all</button></div><dialog id="d9" closedby="any">
-        <header>
-            <h2>ഏറ്റവും ഉയരം കൂടിയ സ്ഥാനം</h2>
-            <button type="button"
-                    command="close"
-                    commandfor="d9"
-                    aria-label="Close">×</button>
-        </header>
-        <div class="dialog-body"><ul class="pic-rows">
-        <li>
-            <span class="text">
-                <b><a href="https://www.wikidata.org/wiki/Q513">എവറസ്റ്റ് കൊടുമുടി</a></b><span class="prov-none" title="—"></span>
-                    <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P610"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-                <span class="note quals"><a href="https://www.wikidata.org/wiki/Q125465">സമുദ്രനിരപ്പ്</a> · സമുദ്രനിരപ്പിൽ നിന്നുമുള്ള ഉയരം: <data value="8848" data-f="number">8848</data></span></span><img class="pic k-photo"
-     style="--a:1.8396"
-     src="https://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Everest%20as%20seen%20from%20Drukair2%20PLW%20edit.jpg?width=330"
-     alt=""
-     loading="lazy">
-        </li>
-        <li>
-            <span class="text">
-                <b><a href="https://www.wikidata.org/wiki/Q131230">മൗനാ കീ</a></b>
-                    <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P610"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-                <span class="note quals"><a href="https://www.wikidata.org/wiki/Q468469">കടൽ അടിത്തട്ട്</a> · സമുദ്രനിരപ്പിൽ നിന്നുമുള്ള ഉയരം: <data value="4205" data-f="number">4205</data></span></span><img class="pic k-photo"
-     style="--a:1.3289"
-     src="https://commons.wikimedia.org/wiki/Special:FilePath/Mauna%20Kea10.jpg?width=330"
-     alt=""
-     loading="lazy">
-        </li>
-        <li>
-            <span class="text">
-                <b><a href="https://www.wikidata.org/wiki/Q14081">ചിംബോറാസോ അഗ്നിപർവതം</a></b>
-                    <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P610"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-                <span class="note quals"><a href="https://www.wikidata.org/wiki/Q511093">കേന്ദ്രകം</a> · സമുദ്രനിരപ്പിൽ നിന്നുമുള്ള ഉയരം: <data value="6263.47" data-f="number">6263.47</data></span></span><img class="pic k-photo"
-     style="--a:1.712"
-     src="https://commons.wikimedia.org/wiki/Special:FilePath/Volc%C3%A1n%20Chimborazo%20desde%20Riobamba.jpg?width=330"
-     alt=""
-     loading="lazy">
-        </li>
-</ul></div>
-    </dialog></div><div class="block set strip">
+</ul></div></div><div class="block set strip">
     <h3>സ്ഥാനം <span class="note">4</span></h3><div class="run scroll" tabindex="0" role="group" aria-label="സ്ഥാനം"><ul class="pic-rows">
         <li>
             <span class="text">
@@ -757,65 +711,7 @@ expression: html
      alt=""
      loading="lazy">
         </li>
-</ul><button class="view-all" type="button" command="show-modal" commandfor="d10">View all</button></div><dialog id="d10" closedby="any">
-        <header>
-            <h2>സ്ഥാനം</h2>
-            <button type="button"
-                    command="close"
-                    commandfor="d10"
-                    aria-label="Close">×</button>
-        </header>
-        <div class="dialog-body"><ul class="pic-rows">
-        <li>
-            <span class="text">
-                <b><a href="https://www.wikidata.org/wiki/Q321">ആകാശഗംഗ</a></b><span class="prov-none" title="—"></span>
-                    <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P276"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-                </span><img class="pic k-photo"
-     style="--a:1"
-     src="https://commons.wikimedia.org/wiki/Special:FilePath/Artist%E2%80%99s%20impression%20of%20the%20Milky%20Way.jpg?width=330"
-     alt=""
-     loading="lazy">
-        </li>
-        <li>
-            <span class="text">
-                <b><a href="https://www.wikidata.org/wiki/Q3944">ലോക്കൽ ഗ്രൂപ്പ്</a></b><span class="prov-none" title="—"></span>
-                    <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P276"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-                </span><img class="pic k-photo"
-     style="--a:1.3331"
-     src="https://commons.wikimedia.org/wiki/Special:FilePath/Local%20Group%20rus.png?width=330"
-     alt=""
-     loading="lazy">
-        </li>
-        <li>
-            <span class="text">
-                <b><a href="https://www.wikidata.org/wiki/Q215913">ഗോൾഡിലോക്ക് സോൺ</a></b><span class="prov-none" title="—"></span>
-                    <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P276"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-                </span>
-        </li>
-        <li>
-            <span class="text">
-                <b><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q7879772"><span class="fb" lang="en">inner Solar System</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/Q7879772/ml"
-           aria-label="Add a label in your language"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></b><span class="from" title="en.wikipedia.org">W</span><span class="prov-none" title="—"></span>
-                    <a class="edit"
-       href="https://www.wikidata.org/wiki/Q2#P276"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-                <span class="note quals"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q437877"><span class="fb" lang="en">location of Earth</span></a><a class="add-label"
-           href="https://www.wikidata.org/wiki/Special:SetLabel/Q437877/ml"
-           aria-label="Add a label in your language"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></span></span><img class="pic k-photo"
-     style="--a:1.7778"
-     src="https://commons.wikimedia.org/wiki/Special:FilePath/Solar%20System%20True%20Color%20EN.png?width=330"
-     alt=""
-     loading="lazy">
-        </li>
-</ul></div>
-    </dialog></div>
+</ul></div></div>
     </div><div class="topic-articles"><div class="topic-article">
     <div class="body">
         <p class="source"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Wikipedia-logo-v2.svg?width=60" alt="" width="18"> en.wikipedia.org</p>
@@ -830,7 +726,7 @@ expression: html
             <section class="spread t-columns" id="demography"
              data-spread="demography"
              data-dimension="measures"><h2><span class="title">ജനസംഖ്യാപഠനം</span></h2><div data-slot="stack">
-        <qr-chart class="block series"><h3>ജനസംഖ്യ
+        <qr-chart class="block series box"><h3>ജനസംഖ്യ
     <button class="info"
             type="button"
             popovertarget="p12"
@@ -859,7 +755,7 @@ expression: html
            aria-label="Add a label in your language"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></span></span></td></tr><tr data-year="2023"><th scope="row">2023</th><td data-amount="8028504258"><data value="8028504258" data-f="scientific">8.03 × 10⁹</data></td></tr><tr data-year="2025"><th scope="row">2025</th><td data-amount="8117059282"><data value="8117059282" data-f="scientific">8.12 × 10⁹</data></td></tr></tbody>
         </table>
     </div>
-</div></qr-chart><qr-chart class="block series"><h3><span class="fb-group"><span class="fb"
+</div></qr-chart><qr-chart class="block series box"><h3><span class="fb-group"><span class="fb"
       lang="en">number of out-of-school children</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/P2573/ml"
            aria-label="Add a label in your language"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
@@ -895,7 +791,7 @@ expression: html
 <div class="groups">
         <section class="name-group" data-lang="ml">
             <h4 data-lang-name="ml">ml</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>നിവാസി</dt>
                         <dd><span lang="en" class="fb">Earthperson</span><span class="prov-none" title="—"></span><br><span lang="en" class="fb">Earthwoman</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q1775415">സ്ത്രീലിംഗം</a> · <a href="https://www.wikidata.org/wiki/Q110786">ഏകവചനം</a></span><span class="prov-none" title="—"></span><br><span lang="en" class="fb">Earthman</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q499327">പുല്ലിംഗം</a> · <a href="https://www.wikidata.org/wiki/Q110786">ഏകവചനം</a></span><span class="prov-none" title="—"></span><br><span lang="en" class="fb">Earthling</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q1860">ഇംഗ്ലീഷ്</a> · <a href="https://www.wikidata.org/wiki/Q110786">ഏകവചനം</a></span><span class="prov-none" title="—"></span><br><span lang="en" class="fb">Terran</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q1860">ഇംഗ്ലീഷ്</a></span><span class="prov-none" title="—"></span>
@@ -905,7 +801,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="en">
             <h4 data-lang-name="en">en</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="en">Earthperson</span><span class="prov-none" title="—"></span><br><span lang="en">Earthwoman</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q1775415">സ്ത്രീലിംഗം</a> · <a href="https://www.wikidata.org/wiki/Q110786">ഏകവചനം</a></span><span class="prov-none" title="—"></span><br><span lang="en">Earthman</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q499327">പുല്ലിംഗം</a> · <a href="https://www.wikidata.org/wiki/Q110786">ഏകവചനം</a></span><span class="prov-none" title="—"></span><br><span lang="en">Earthling</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q1860">ഇംഗ്ലീഷ്</a> · <a href="https://www.wikidata.org/wiki/Q110786">ഏകവചനം</a></span><span class="prov-none" title="—"></span><br><span lang="en">Terran</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q1860">ഇംഗ്ലീഷ്</a></span><span class="prov-none" title="—"></span></dd>
@@ -914,7 +810,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="ar">
             <h4 data-lang-name="ar">ar</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="ar">أرضي</span> <span class="note"><span lang="ar">أَرْضِيّ</span> <span class="note" data-lang-name="ar">ar</span></span><span class="prov-none" title="—"></span></dd>
@@ -923,7 +819,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="ast">
             <h4 data-lang-name="ast">ast</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="ast">terrícola</span><span class="prov-none" title="—"></span></dd>
@@ -932,7 +828,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="bn">
             <h4 data-lang-name="bn">bn</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="bn">পৃথিবীবাসি</span><span class="prov-none" title="—"></span></dd>
@@ -941,7 +837,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="ca">
             <h4 data-lang-name="ca">ca</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="ca">terrícola</span><span class="prov-none" title="—"></span><br><span lang="ca">terrestre</span><span class="prov-none" title="—"></span></dd>
@@ -950,7 +846,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="cs">
             <h4 data-lang-name="cs">cs</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="cs">pozemšťan</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q499327">പുല്ലിംഗം</a></span><span class="prov-none" title="—"></span><br><span lang="cs">pozemšťanka</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q1775415">സ്ത്രീലിംഗം</a></span><span class="prov-none" title="—"></span></dd>
@@ -959,7 +855,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="de">
             <h4 data-lang-name="de">de</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="de">Erdling</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q188">ജർമ്മൻ ഭാഷ</a></span><span class="prov-none" title="—"></span></dd>
@@ -968,7 +864,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="eo">
             <h4 data-lang-name="eo">eo</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="eo">Terano</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q143">എസ്പെരാന്തോ</a></span><span class="prov-none" title="—"></span></dd>
@@ -977,7 +873,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="es">
             <h4 data-lang-name="es">es</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="es">terrícola</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q1321">സ്പാനിഷ്‌ ഭാഷ</a></span><span class="prov-none" title="—"></span></dd>
@@ -986,7 +882,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="fa">
             <h4 data-lang-name="fa">fa</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="fa">زمین</span><span class="prov-none" title="—"></span></dd>
@@ -995,7 +891,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="fr">
             <h4 data-lang-name="fr">fr</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="fr">Terrien</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q150">ഫ്രഞ്ച് ഭാഷ</a></span><span class="prov-none" title="—"></span></dd>
@@ -1004,7 +900,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="gl">
             <h4 data-lang-name="gl">gl</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="gl">terrícola</span><span class="prov-none" title="—"></span></dd>
@@ -1013,7 +909,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="grc">
             <h4 data-lang-name="grc">grc</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="grc">Gaia</span><span class="prov-none" title="—"></span></dd>
@@ -1022,7 +918,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="hi">
             <h4 data-lang-name="hi">hi</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="hi">पृथ्वीवासी</span><span class="prov-none" title="—"></span></dd>
@@ -1031,7 +927,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="hr">
             <h4 data-lang-name="hr">hr</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="hr">zemljanin</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q499327">പുല്ലിംഗം</a></span><span class="prov-none" title="—"></span></dd>
@@ -1040,7 +936,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="hu">
             <h4 data-lang-name="hu">hu</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="hu">földlakó</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q9067">ഹംഗേറിയൻ ഭാഷ</a></span><span class="prov-none" title="—"></span></dd>
@@ -1049,7 +945,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="it">
             <h4 data-lang-name="it">it</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="it">Terrestre</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q652">ഇറ്റാലിയൻ ഭാഷ</a></span><span class="prov-none" title="—"></span></dd>
@@ -1058,7 +954,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="ja">
             <h4 data-lang-name="ja">ja</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="ja">地球人</span> <span class="note">ちきゅうじん · chikyūjin</span><span class="prov-none" title="—"></span></dd>
@@ -1067,7 +963,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="ko">
             <h4 data-lang-name="ko">ko</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="ko">지구인</span> <span class="note">jigu-in</span><span class="prov-none" title="—"></span></dd>
@@ -1076,7 +972,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="ms">
             <h4 data-lang-name="ms">ms</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="ms">anak bumi</span><span class="prov-none" title="—"></span></dd>
@@ -1085,7 +981,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="ms-arab">
             <h4 data-lang-name="ms-arab">ms-arab</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="ms-arab">انق بومي</span><span class="prov-none" title="—"></span></dd>
@@ -1094,7 +990,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="nl">
             <h4 data-lang-name="nl">nl</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="nl">Aardbewoner</span><span class="prov-none" title="—"></span></dd>
@@ -1103,7 +999,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="no">
             <h4 data-lang-name="no">no</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="no">jordboer</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q499327">പുല്ലിംഗം</a> · <a href="https://www.wikidata.org/wiki/Q110786">ഏകവചനം</a></span><span class="prov-none" title="—"></span></dd>
@@ -1112,7 +1008,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="pl">
             <h4 data-lang-name="pl">pl</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="pl">Ziemianka</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q1775415">സ്ത്രീലിംഗം</a> · <a href="https://www.wikidata.org/wiki/Q110786">ഏകവചനം</a></span><span class="prov-none" title="—"></span><br><span lang="pl">Ziemianin</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q809">പോളിഷ് ഭാഷ</a></span><span class="prov-none" title="—"></span><br><span lang="pl">Ziemianie</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q146786">ബഹുവചനം</a></span><span class="prov-none" title="—"></span></dd>
@@ -1121,7 +1017,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="ps">
             <h4 data-lang-name="ps">ps</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="ps">نړیوال</span><span class="prov-none" title="—"></span></dd>
@@ -1130,7 +1026,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="pt">
             <h4 data-lang-name="pt">pt</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="pt">terrestre</span><span class="prov-none" title="—"></span><br><span lang="pt">terráqueo</span><span class="prov-none" title="—"></span></dd>
@@ -1139,7 +1035,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="pt-br">
             <h4 data-lang-name="pt-br">pt-br</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="pt-br">terráqueo</span><span class="prov-none" title="—"></span><br><span lang="pt-br">terrestre</span><span class="prov-none" title="—"></span></dd>
@@ -1148,7 +1044,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="ru">
             <h4 data-lang-name="ru">ru</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="ru">землянин</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q7737">റഷ്യൻ ഭാഷ</a> · <a href="https://www.wikidata.org/wiki/Q499327">പുല്ലിംഗം</a> · <a href="https://www.wikidata.org/wiki/Q110786">ഏകവചനം</a></span><span class="prov-none" title="—"></span><br><span lang="ru">земляне</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q146786">ബഹുവചനം</a></span><span class="prov-none" title="—"></span><br><span lang="ru">землянка</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q7737">റഷ്യൻ ഭാഷ</a> · <a href="https://www.wikidata.org/wiki/Q1775415">സ്ത്രീലിംഗം</a> · <a href="https://www.wikidata.org/wiki/Q110786">ഏകവചനം</a></span><span class="prov-none" title="—"></span></dd>
@@ -1157,7 +1053,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="sa">
             <h4 data-lang-name="sa">sa</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="sa">Bhumi</span><span class="prov-none" title="—"></span></dd>
@@ -1166,7 +1062,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="sl">
             <h4 data-lang-name="sl">sl</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="sl">Zemljanka</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q1775415">സ്ത്രീലിംഗം</a> · <a href="https://www.wikidata.org/wiki/Q110786">ഏകവചനം</a></span><span class="prov-none" title="—"></span><br><span lang="sl">Zemljan</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q499327">പുല്ലിംഗം</a> · <a href="https://www.wikidata.org/wiki/Q110786">ഏകവചനം</a></span><span class="prov-none" title="—"></span></dd>
@@ -1175,7 +1071,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="sv">
             <h4 data-lang-name="sv">sv</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="sv">jordbo</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q9027">സ്വീഡിഷ് ഭാഷ</a> · <a href="https://www.wikidata.org/wiki/Q110786">ഏകവചനം</a></span><span class="prov-none" title="—"></span><br><span lang="sv">jordbor</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q9027">സ്വീഡിഷ് ഭാഷ</a> · <a href="https://www.wikidata.org/wiki/Q146786">ബഹുവചനം</a></span><span class="prov-none" title="—"></span></dd>
@@ -1184,7 +1080,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="tg">
             <h4 data-lang-name="tg">tg</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="tg">заминиҳо</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q146786">ബഹുവചനം</a></span><span class="prov-none" title="—"></span></dd>
@@ -1193,7 +1089,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="th">
             <h4 data-lang-name="th">th</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="th">ชาวโลก</span><span class="prov-none" title="—"></span></dd>
@@ -1202,7 +1098,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="tr">
             <h4 data-lang-name="tr">tr</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="tr">Dünyalı</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q256">തുർക്കിഷ് ഭാഷ</a></span><span class="prov-none" title="—"></span></dd>
@@ -1211,7 +1107,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="zh">
             <h4 data-lang-name="zh">zh</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="zh">地球人</span><span class="prov-none" title="—"></span></dd>
@@ -1220,7 +1116,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="zh-hans">
             <h4 data-lang-name="zh-hans">zh-hans</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="zh-hans">地球人</span><span class="prov-none" title="—"></span></dd>
@@ -1229,7 +1125,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="zh-hant">
             <h4 data-lang-name="zh-hant">zh-hant</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>നിവാസി</dt>
                         <dd><span lang="zh-hant">地球人</span><span class="prov-none" title="—"></span></dd>
@@ -1237,7 +1133,7 @@ expression: html
             </dl>
         </section>
 </div>
-</qr-names><qr-sounds class="block sounds">
+</qr-names><qr-sounds class="block sounds box">
 <h3>ഉച്ചാരണ ശബ്ദം <span class="note">6</span></h3>
 <select class="sound-choice"
         hidden
@@ -3782,7 +3678,7 @@ Derivative work: Lourdes Sada · CC0</span></span></div><div class="topic-articl
     </div>
 </dialog> </div>
     </div><div data-slot="audio">
-        <qr-sounds class="block sounds">
+        <qr-sounds class="block sounds box">
 <h3><span class="fb-group"><span class="fb"
       lang="en">spoken text audio</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/P989/ml"
@@ -3917,7 +3813,7 @@ Derivative work: Lourdes Sada · CC0</span></span></div><div class="topic-articl
             <section class="spread t-sheet" id="evidence"
              data-spread="evidence"
              data-dimension="neutral"><h2><span class="title">അവലംബം</span></h2><div data-slot="summary">
-        <div class="block">
+        <div class="block box">
     <div class="stack-bar"><span class="p-sourced" style="--n:72"></span>
 <span class="p-imported" style="--n:87"></span>
 <span class="p-none" style="--n:234"></span>
@@ -4561,7 +4457,7 @@ Derivative work: Lourdes Sada · CC0</span></span></div><div class="topic-articl
        href="https://www.wikidata.org/wiki/Q2#P6363"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
 </div></dl><div data-slot="projects">
-        <div class="block">
+        <div class="block box">
     <div><span class="chip"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M11.14 4H14a.69.69 0 0 1 0 .65c-1 .16-1.36.91-1.81 1.83l-1.4 2.75 2.35 5.21h.07l3.52-8.1c.44-1.07.4-1.59-.79-1.7a.68.68 0 0 1 0-.65h3.45a.68.68 0 0 1 0 .65c-1.21.16-1.42.91-1.81 1.83l-4.37 10.08c-.13.3-.24.45-.44.45s-.33-.16-.42-.45l-2.48-5.73-2.72 5.73c-.11.3-.24.45-.44.45s-.31-.16-.42-.45l-4-10.09c-.57-1.4-.6-1.7-1.65-1.8A.68.68 0 0 1 .62 4h3.91a.68.68 0 0 1 0 .65c-1.16.13-1.21.45-.74 1.58l3.41 8.19h.05L9.3 10 7.78 6.45C7.17 5.05 7 4.77 6.24 4.66a.69.69 0 0 1 0-.65h3.32a.68.68 0 0 1 0 .65c-.74.12-.7.45-.19 1.58l.87 2 .08.09 1-2c.57-1.14.64-1.58-.15-1.7a.69.69 0 0 1-.03-.63"/></svg>Wikipedia <b>320</b> ✓</span><span class="chip"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M9.133 4.643a6.52 6.52 0 0 1 2.79 5.354 6.52 6.52 0 0 1-2.672 5.269l-.12.086-.923-1.322a4.91 4.91 0 0 0 2.103-4.033c0-1.578-.748-3.03-1.988-3.95l-.114-.082zM13.874 0a13.08 13.08 0 0 1 4.627 9.997c0 3.86-1.678 7.448-4.538 9.92l-.096.083-1.15-1.357a11.3 11.3 0 0 0 4.006-8.646c0-3.33-1.444-6.424-3.908-8.562l-.091-.079L13.873 0Z"/><path d="M11.453 2.386a9.71 9.71 0 0 1 3.668 7.611 9.71 9.71 0 0 1-3.576 7.537l-.09.073-1.074-1.347A7.99 7.99 0 0 0 13.4 9.997a7.99 7.99 0 0 0-2.932-6.194l-.087-.07 1.073-1.347Z"/><circle cx="5.35" cy="9.93" r="3.35"/></svg>Wikiquote <b>31</b></span><span class="chip"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M14.222.03c-1.812 1.753-3.604 3.49-3.604 3.49l.644 1.31c.873-.864 1.75-1.625 2.587-2.472 1.762 3.869 2.963 6.987 4.44 11.109.483 1.339.384 1.399-.771 2.122-1.857.923-2.445 1.53-4.658 3.884h1.515c1.85-1.673 2.536-2.263 4.853-3.484.82-.473.932-1.07.596-2C18.74 10.977 16.39 4.484 14.222.03"/><path d="M9.498.071C8.172.966 7.149 2.254 5.996 3.358l.473 1.508c.903-.71 1.688-1.569 2.5-2.38l4.376 10.977c.252.743-.145 1.405-.944 2.125-.956.769-2.925 2.56-3.818 3.926h1.358c1.426-1.464 1.683-1.663 3.306-3.068 1.09-1.112 2.074-1.681 1.56-3.106z"/><path d="M5.023 0C4.67.12 4.376.347 4.1.588a880 880 0 0 0-3.889 3.75c-.196.182-.213.45-.21.718L.017 6.57S1.743 4.892 4.32 2.41c1.39 3.615 2.837 7.21 4.263 10.813.195.544-.272.99-.864 1.585-.818.798-2.53 2.44-4.281 4.635h1.756l4.22-4.629c.402-.552.9-1.091.69-1.591L5.024 0Z"/></svg>Wikibooks <b>8</b></span><span class="chip"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M16 10a6 6 0 0 1-6 6 6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6M7.55 8.94a10 10 0 0 1 1.33-3.81 5 5 0 0 0-3.86 4.45H7.5c0-.22.03-.43.05-.64m1 .12a8 8 0 0 0-.05.52h3.06a8 8 0 0 0-.05-.52 9.1 9.1 0 0 0-1.48-3.89 9.1 9.1 0 0 0-1.48 3.9Zm4.01.52h2.42a5 5 0 0 0-3.79-4.44 10 10 0 0 1 1.37 4.44m-7.53 1a5 5 0 0 0 3.87 4.3 9.4 9.4 0 0 1-1.4-4.3zm5 4.21c1-1.47 1.43-2.9 1.52-4.21H8.52a8.53 8.53 0 0 0 1.52 4.21zm1.14.07a5 5 0 0 0 3.8-4.28h-2.41a9.35 9.35 0 0 1-1.39 4.28M3.07 6a7.97 7.97 0 0 0 0 8h1.18A6.96 6.96 0 0 1 3 10c0-1.49.46-2.87 1.25-4Zm12.68 0h1.18a7.97 7.97 0 0 1 0 8h-1.18A6.96 6.96 0 0 0 17 10c0-1.49-.46-2.87-1.25-4m2.74 7h1.05a9.9 9.9 0 0 0 0-6h-1.05a9.04 9.04 0 0 1 0 6M.46 13h1.05a9.04 9.04 0 0 1 0-6H.46a9.9 9.9 0 0 0 0 6"/></svg>Wikinews <b>5</b></span><span class="chip"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M9.982 3c-.2.04-.44.196-.641.47-.2.234-.361.585-.521.976h2.284c-.16-.43-.32-.742-.52-.977-.161-.273-.402-.43-.602-.469m.722.079c.08.078.12.117.16.195q.36.468.601 1.172h1.604c-.642-.703-1.443-1.211-2.365-1.367m-1.444 0a4.37 4.37 0 0 0-2.365 1.406H8.5c.16-.469.36-.899.601-1.172a.6.6 0 0 1 .16-.234Zm-1.162.039a6.35 6.35 0 0 0-2.285 1.328h.682a5.2 5.2 0 0 1 1.603-1.328m3.848.039c.601.312 1.123.742 1.604 1.328h.681a6.1 6.1 0 0 0-2.285-1.328m-6.494 1.64A6.1 6.1 0 0 0 4.29 6.596h1.042a7.5 7.5 0 0 1 .882-1.797h-.762Zm1.163 0a7 7 0 0 0-.962 1.798h2.365c.08-.586.2-1.211.4-1.797zm2.124 0c-.2.587-.32 1.173-.4 1.798h3.327a9.7 9.7 0 0 0-.401-1.797zm2.887 0c.16.587.32 1.173.4 1.798h2.325a5.6 5.6 0 0 0-.962-1.797zm2.164 0c.401.548.682 1.134.882 1.798h1.042c-.28-.664-.681-1.25-1.162-1.797zm-9.62 2.11a6.1 6.1 0 0 0-.361 2.072H4.97c0-.704.08-1.407.28-2.071zm1.403 0a7.2 7.2 0 0 0-.281 2.072h2.566c0-.704.04-1.368.12-2.071zm2.725 0c-.08.704-.12 1.368-.12 2.072h3.648c0-.704-.04-1.368-.12-2.071zm3.728 0c.08.704.12 1.368.12 2.072h2.566a7.2 7.2 0 0 0-.28-2.071zm2.726 0c.2.665.28 1.368.28 2.072h1.163a6.1 6.1 0 0 0-.36-2.071zM20 9.332H0v.646h20zm-16.645 1H.685v6.707h2.67zm5.321 0H6.005v6.707h2.67zm5.32 0h-2.67v6.707h2.67zm5.321 0h-2.671v6.707h2.67zM20 17.355H0V18h20z"/></svg>Wikiversity <b>3</b></span><span class="chip"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M9.94 0a10 10 0 0 0-8.08 4.2h4.21c.06-.35.16-.72.49-1.04.2-.23.67-.2 1-.26.33-.07.87-.92 1.4-1.17.64.33 1.34.83 1.7 1.08.62-.49 1.16-1.33 1.4-.65.2-.33.53-.54.9-.63.17-.04.4-.03.52-.05.14-.06.42-.27.66-.34-.38.58-.43 2.25-.44 3.06v.35c.55.12 1.25.03 1.49-.35h2.95A9.99 9.99 0 0 0 10 0zm-.36 2.5c.17.47.31.94.26 1.4-.06.3.07.28.31.16s.36-.26.72-.37c.27-.07.08-.26-.05-.4-.4-.34-.82-.56-1.24-.8zm-8.3 2.6A9.95 9.95 0 0 0 0 10a10 10 0 0 0 20 0 9.94 9.94 0 0 0-1.28-4.9H2.8c.52 1.1.81 1.7 2.6 1.46.62-.1 1-.16 1 .48.08.39.38.52 1.15.38.3-.11.57-.28.79-.14h.02v.01a.04.04 0 0 1 .01.02c0 .1-.19.31.04.57.57.55 1.12 1.04 1.7 1.6.13.64.7.55 1.15.42.68-.2.38.1.63.41.14.22.46.81.84.6.01 1.08.28 1.85.84 2.27-.17.63-.33 1.5-.03 2.02-.5-.16-.3.81-.45 1.22-.26.68-.48.65-.72.71.22.24.5.49.92.64v.01l.02.01c0 .23.04.43.18.57-.26-.06-.57-.42-1.08-.19-.56.25-.68.08-.48-.29.26-.57-.3-.78-.88-.92v-.23c.12-.04.26-.08.42-.1.25-.05.42-.14.4-.5-.01-.5-.03-1 0-1.48a6 6 0 0 1 .18-1.21c.07-.2.44-.38.13-.64A42 42 0 0 0 8.3 9.3l-.06-.02 1.65 2.93c.2.49.58 1-.1 1.13v.01c-.03.47.06 1.28-.26 1.44-.36.25-.39.48-.42.86-.06.4-.06.86.06 1.18.12.05.24.08.37.1l.32.04c-.43.56-.96.39-1.27-.13l-1.67-2.58c.08-2.51.13-4.2-.05-6.3-.92.08-1.85.01-2.83-.56-.22-.4-.47-.36-.89-.26.05-.37-.1-.73-.32-1.1l-.1-.93H1.29zm14.51 1.03c1.6-.04 1.14 2.78 1.14 4.15h.01l-.13.7-.2 1.21c.07.6-.09.68-.2 1.02 0 1.32-.18 1.7-1.29 2.7a2.16 2.16 0 0 1-1.17-2.25c.04-.24.2-.51-.01-.9a7.4 7.4 0 0 1 .14-3.35.6.6 0 0 1 .2-.02.63.63 0 0 0 .57-.74 3.3 3.3 0 0 0 .6-.2c-.81-.76-.52-2.3.34-2.32"/></svg>Wikisource <b>1</b></span><span class="chip"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M15.874 8.19 20 0l-8.254 4.095c.99.263 1.892.78 2.617 1.498a5.8 5.8 0 0 1 1.51 2.596Zm-6.349 4.043L14.678 20l.56-9.291a5.9 5.9 0 0 1-2.65 1.523 5.95 5.95 0 0 1-3.063 0Zm-.159-7.508L.001 5.28l7.829 5.113a5.8 5.8 0 0 1 0-3.038c.27-.995.8-1.902 1.536-2.63"/></svg>Wikivoyage <b>1</b></span></div>
 </div>
     </div><div data-slot="identifiers">

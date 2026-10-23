@@ -191,7 +191,7 @@ expression: html
     </div>
 </dialog>
     </div><div data-slot="kind">
-        <div class="kind"><div>
+        <div class="kind box"><div>
             <span class="k">instance of</span><a href="https://www.wikidata.org/wiki/Q6256">country</a>, <a href="https://www.wikidata.org/wiki/Q3624078">sovereign state</a>, <a href="https://www.wikidata.org/wiki/Q1489259">superpower</a>, <a href="https://www.wikidata.org/wiki/Q1520223">constitutional republic</a>, <a href="https://www.wikidata.org/wiki/Q5035794">capitalist state</a> <span class="note">+1</span></div></div>
     </div></section>
             <section class="spread t-columns" id="names"
@@ -204,7 +204,7 @@ expression: html
 <div class="groups">
         <section class="name-group" data-lang="en">
             <h4 data-lang-name="en">en</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>official name</dt>
                         <dd><span lang="en">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -242,7 +242,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="es">
             <h4 data-lang-name="es">es</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>official name</dt>
                         <dd><span lang="es">Estados Unidos de América</span><span class="prov-none" title="—"></span></dd>
@@ -263,7 +263,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="de">
             <h4 data-lang-name="de">de</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>official name</dt>
                         <dd><span lang="de">Vereinigte Staaten von Amerika</span><button class="src"
@@ -290,7 +290,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="fr">
             <h4 data-lang-name="fr">fr</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>official name</dt>
                         <dd><span lang="fr">États-Unis d’Amérique</span><button class="src"
@@ -332,7 +332,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="he">
             <h4 data-lang-name="he">he</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>official name</dt>
                         <dd><span lang="he">ארצות הברית</span><span class="prov-none" title="—"></span></dd>
@@ -354,7 +354,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="nl">
             <h4 data-lang-name="nl">nl</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>official name</dt>
                         <dd><span lang="nl">Verenigde Staten van Amerika</span><span class="prov-none" title="—"></span></dd>
@@ -376,7 +376,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="ro">
             <h4 data-lang-name="ro">ro</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>official name</dt>
                         <dd><span lang="ro">Statele Unite ale Americii</span><span class="prov-none" title="—"></span></dd>
@@ -398,7 +398,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="sr">
             <h4 data-lang-name="sr">sr</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>official name</dt>
                         <dd><span lang="sr">Сједињене Америчке Државе</span><span class="prov-none" title="—"></span></dd>
@@ -420,7 +420,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="tr">
             <h4 data-lang-name="tr">tr</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>official name</dt>
                         <dd><span lang="tr">Amerika Birleşik Devletleri</span><span class="prov-none" title="—"></span></dd>
@@ -442,7 +442,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="uk">
             <h4 data-lang-name="uk">uk</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>official name</dt>
                         <dd><span lang="uk">Сполучені Штати Америки</span><span class="prov-none" title="—"></span></dd>
@@ -464,7 +464,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="vi">
             <h4 data-lang-name="vi">vi</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>official name</dt>
                         <dd><span lang="vi">Hợp chủng quốc Hoa Kỳ</span> <span class="note">– 2007</span><button class="src"
@@ -496,7 +496,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="bg">
             <h4 data-lang-name="bg">bg</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>official name</dt>
                         <dd><span lang="bg">Съединени американски щати</span><span class="prov-imported" title="imported from Wikimedia project">W</span></dd>
@@ -519,7 +519,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="ca">
             <h4 data-lang-name="ca">ca</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -550,7 +550,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="cs">
             <h4 data-lang-name="cs">cs</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -581,7 +581,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="cy">
             <h4 data-lang-name="cy">cy</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -612,7 +612,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="eo">
             <h4 data-lang-name="eo">eo</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>official name</dt>
                         <dd><span lang="eo">Unuiĝintaj Ŝtatoj de Ameriko</span><span class="prov-none" title="—"></span></dd>
@@ -635,7 +635,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="gl">
             <h4 data-lang-name="gl">gl</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -666,7 +666,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="haw">
             <h4 data-lang-name="haw">haw</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -697,7 +697,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="hu">
             <h4 data-lang-name="hu">hu</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -728,7 +728,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="hy">
             <h4 data-lang-name="hy">hy</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -759,7 +759,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="it">
             <h4 data-lang-name="it">it</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>official name</dt>
                         <dd><span lang="it">Stati Uniti d&#39;America</span><span class="prov-none" title="—"></span></dd>
@@ -782,7 +782,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="ja">
             <h4 data-lang-name="ja">ja</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -813,7 +813,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="ka">
             <h4 data-lang-name="ka">ka</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -844,7 +844,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="pt">
             <h4 data-lang-name="pt">pt</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -875,7 +875,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="ru">
             <h4 data-lang-name="ru">ru</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -906,7 +906,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="sl">
             <h4 data-lang-name="sl">sl</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -937,7 +937,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="xmf">
             <h4 data-lang-name="xmf">xmf</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>official name</dt>
                         <dd><span lang="xmf">ამერიკაშ აკოართაფილი შტატეფი</span><span class="prov-none" title="—"></span></dd>
@@ -969,7 +969,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="zh-hans">
             <h4 data-lang-name="zh-hans">zh-hans</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -1000,7 +1000,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="zh-tw">
             <h4 data-lang-name="zh-tw">zh-tw</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>official name</dt>
                         <dd><span lang="zh-tw">美利堅合眾國</span><span class="prov-none" title="—"></span></dd>
@@ -1032,7 +1032,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="ar">
             <h4 data-lang-name="ar">ar</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -1064,7 +1064,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="arq">
             <h4 data-lang-name="arq">arq</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -1096,7 +1096,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="ary">
             <h4 data-lang-name="ary">ary</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -1128,7 +1128,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="ast">
             <h4 data-lang-name="ast">ast</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -1160,7 +1160,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="az">
             <h4 data-lang-name="az">az</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -1201,7 +1201,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="be">
             <h4 data-lang-name="be">be</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -1242,7 +1242,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="be-tarask">
             <h4 data-lang-name="be-tarask">be-tarask</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -1283,7 +1283,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="bn">
             <h4 data-lang-name="bn">bn</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -1315,7 +1315,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="ceb">
             <h4 data-lang-name="ceb">ceb</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -1347,7 +1347,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="ch">
             <h4 data-lang-name="ch">ch</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -1388,7 +1388,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="chr">
             <h4 data-lang-name="chr">chr</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -1429,7 +1429,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="da">
             <h4 data-lang-name="da">da</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -1461,7 +1461,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="de-at">
             <h4 data-lang-name="de-at">de-at</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -1502,7 +1502,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="de-ch">
             <h4 data-lang-name="de-ch">de-ch</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -1543,7 +1543,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="el">
             <h4 data-lang-name="el">el</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -1575,7 +1575,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="eu">
             <h4 data-lang-name="eu">eu</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -1607,7 +1607,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="fa">
             <h4 data-lang-name="fa">fa</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -1639,7 +1639,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="fi">
             <h4 data-lang-name="fi">fi</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -1671,7 +1671,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="ga">
             <h4 data-lang-name="ga">ga</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -1708,7 +1708,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="id">
             <h4 data-lang-name="id">id</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -1749,7 +1749,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="ik">
             <h4 data-lang-name="ik">ik</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -1790,7 +1790,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="io">
             <h4 data-lang-name="io">io</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -1822,7 +1822,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="is">
             <h4 data-lang-name="is">is</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -1863,7 +1863,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="isv-cyrl">
             <h4 data-lang-name="isv-cyrl">isv-cyrl</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -1904,7 +1904,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="isv-latn">
             <h4 data-lang-name="isv-latn">isv-latn</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -1945,7 +1945,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="la">
             <h4 data-lang-name="la">la</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -1986,7 +1986,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="lb">
             <h4 data-lang-name="lb">lb</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -2027,7 +2027,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="lfn">
             <h4 data-lang-name="lfn">lfn</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -2059,7 +2059,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="lou">
             <h4 data-lang-name="lou">lou</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -2100,7 +2100,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="mk">
             <h4 data-lang-name="mk">mk</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -2132,7 +2132,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="ms">
             <h4 data-lang-name="ms">ms</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -2173,7 +2173,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="nv">
             <h4 data-lang-name="nv">nv</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -2214,7 +2214,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="pt-br">
             <h4 data-lang-name="pt-br">pt-br</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -2246,7 +2246,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="sm">
             <h4 data-lang-name="sm">sm</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -2287,7 +2287,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="sv">
             <h4 data-lang-name="sv">sv</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -2319,7 +2319,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="tl">
             <h4 data-lang-name="tl">tl</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -2351,7 +2351,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="tly">
             <h4 data-lang-name="tly">tly</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -2392,7 +2392,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="tly-cyrl">
             <h4 data-lang-name="tly-cyrl">tly-cyrl</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -2433,7 +2433,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="udm">
             <h4 data-lang-name="udm">udm</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -2474,7 +2474,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="ug-arab">
             <h4 data-lang-name="ug-arab">ug-arab</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -2506,7 +2506,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="uz-latn">
             <h4 data-lang-name="uz-latn">uz-latn</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -2538,7 +2538,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="vec">
             <h4 data-lang-name="vec">vec</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -2570,7 +2570,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="vo">
             <h4 data-lang-name="vo">vo</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -2602,7 +2602,7 @@ expression: html
         </section>
         <section class="name-group" data-lang="yi">
             <h4 data-lang-name="yi">yi</h4>
-            <dl>
+            <dl class="group">
                     <div class="row fallback">
                         <dt>official name</dt>
                         <dd><span lang="en" class="fb">the United States of America</span> <span class="note"><a href="https://www.wikidata.org/wiki/Q23467020">naming of the Americas</a></span><button class="src"
@@ -2633,7 +2633,7 @@ expression: html
             </dl>
         </section>
 </div>
-</qr-names><qr-sounds class="block sounds">
+</qr-names><qr-sounds class="block sounds box">
 <h3>pronunciation audio <span class="note">7</span></h3>
 <select class="sound-choice"
         hidden
@@ -2753,7 +2753,7 @@ expression: html
             <section class="spread t-columns" id="symbols"
              data-spread="symbols"
              data-dimension="names"><h2><span class="title">national symbol</span></h2><div data-slot="stack">
-        <div class="block earlier">
+        <div class="block earlier box">
     <h3>flag image <span class="note">earlier · 1777 – 1960</span></h3><button class="more" type="button" command="show-modal" commandfor="d99">+25</button>
     <dialog id="d99" closedby="any">
         <header>
@@ -2925,7 +2925,7 @@ expression: html
 <div class="groups">
         <section class="name-group" data-lang="en">
             <h4 data-lang-name="en">en</h4>
-            <dl>
+            <dl class="group">
                     <div class="row">
                         <dt>motto text</dt>
                         <dd><span lang="en">All within your reach</span> <span class="note">2016 – · <a href="https://www.wikidata.org/wiki/Q96036107">tourism slogan</a></span><button class="src"
@@ -3225,12 +3225,13 @@ expression: html
             <section class="spread t-hero-plus-stack" id="location"
              data-spread="location"
              data-dimension="place"><h2><span class="title">geography</span></h2><div data-slot="hero">
-        <div class="map-shapes"><figure class="map">
-        <button class="zoom"
-                type="button"
-                command="show-modal"
-                commandfor="d115"
-                aria-label="Explore the map"><img src="https://maps.wikimedia.org/img/osm-intl,2,52.24392,-127.20792,800x500@2x.png" alt="">
+        <div class="box map-card">
+        <figure class="map">
+            <button class="zoom"
+                    type="button"
+                    command="show-modal"
+                    commandfor="d115"
+                    aria-label="Explore the map"><img src="https://maps.wikimedia.org/img/osm-intl,2,52.24392,-127.20792,800x500@2x.png" alt="">
     <svg class="outlines"
          viewBox="0 0 100 100"
          preserveAspectRatio="none"
@@ -3252,9 +3253,18 @@ expression: html
           style="left:60.18%;
                  top:60.23%"
           title="coordinates of geographic center"></span></button>
-        <figcaption>coordinate location 39.8282, -98.5795 <span class="prov-imported" title="imported from Wikimedia project">W</span></figcaption><span class="tools"><a class="edit"
+            <span class="tools"><a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P625"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></figure>
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
+        </figure>
+        <p class="caption"><span class="label">coordinate location</span> 39.8282, -98.5795 <span class="prov-imported" title="imported from Wikimedia project">W</span></p><div class="map-shapes"><ul>
+        <li>
+            <span class="line main"></span><a href="https://commons.wikimedia.org/wiki/Data%3AUnited_States.map">Data:United States.map</a> · CC0-1.0<span class="prov-none" title="—"></span>
+            <a class="edit"
+       href="https://www.wikidata.org/wiki/Q30#P3896"
+       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
+        </li>
+</ul></div></div>
     <dialog id="d115"
         class="lightbox k-map"
         closedby="any"
@@ -3323,15 +3333,6 @@ expression: html
         </li>
 </ul></div>
             </div></dialog>
-        <ul>
-        <li>
-            <span class="line main"></span><a href="https://commons.wikimedia.org/wiki/Data%3AUnited_States.map">Data:United States.map</a> · CC0-1.0<span class="prov-none" title="—"></span>
-            <a class="edit"
-       href="https://www.wikidata.org/wiki/Q30#P3896"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-        </li>
-</ul>
-        </div>
     </div><div data-slot="stack">
         <div class="block set rows">
     <h3>shares border with <span class="note">13</span></h3><ul class="pic-rows">
@@ -4158,53 +4159,7 @@ expression: html
      alt=""
      loading="lazy">
         </li>
-</ul><button class="view-all" type="button" command="show-modal" commandfor="d130">View all</button></div><dialog id="d130" closedby="any">
-        <header>
-            <h2>located in or next to body of water</h2>
-            <button type="button"
-                    command="close"
-                    commandfor="d130"
-                    aria-label="Close">×</button>
-        </header>
-        <div class="dialog-body"><ul class="pic-rows">
-        <li>
-            <span class="text">
-                <b><a href="https://www.wikidata.org/wiki/Q97">Atlantic Ocean</a></b><span class="prov-none" title="—"></span>
-                    <a class="edit"
-       href="https://www.wikidata.org/wiki/Q30#P206"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-                <span class="note quals"><a href="https://www.wikidata.org/wiki/Q684">east</a> · <a href="https://www.wikidata.org/wiki/Q12630">Gulf of Mexico</a></span></span><img class="pic k-photo"
-     style="--a:1"
-     src="https://commons.wikimedia.org/wiki/Special:FilePath/Atlantic%20Ocean.png?width=330"
-     alt=""
-     loading="lazy">
-        </li>
-        <li>
-            <span class="text">
-                <b><a href="https://www.wikidata.org/wiki/Q98">Pacific Ocean</a></b><span class="prov-none" title="—"></span>
-                    <a class="edit"
-       href="https://www.wikidata.org/wiki/Q30#P206"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-                <span class="note quals"><a href="https://www.wikidata.org/wiki/Q679">west</a> · <a href="https://www.wikidata.org/wiki/Q44725">Bering Sea</a> · <a href="https://www.wikidata.org/wiki/Q2097617">Salish Sea</a></span></span><img class="pic k-photo"
-     style="--a:1"
-     src="https://commons.wikimedia.org/wiki/Special:FilePath/Pacific%20Ocean.png?width=330"
-     alt=""
-     loading="lazy">
-        </li>
-        <li>
-            <span class="text">
-                <b><a href="https://www.wikidata.org/wiki/Q788">Arctic Ocean</a></b><span class="prov-none" title="—"></span>
-                    <a class="edit"
-       href="https://www.wikidata.org/wiki/Q30#P206"
-       aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
-                <span class="note quals"><a href="https://www.wikidata.org/wiki/Q797">Alaska</a> · <a href="https://www.wikidata.org/wiki/Q659">north</a></span></span><img class="pic k-photo"
-     style="--a:1"
-     src="https://commons.wikimedia.org/wiki/Special:FilePath/Arctic%20Ocean.png?width=330"
-     alt=""
-     loading="lazy">
-        </li>
-</ul></div>
-    </dialog></div>
+</ul></div></div>
     </div><div class="prose-slot" lang="en"><p>The United States is the <a href="https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_area">third or fourth largest country</a> by total area,<sup class="ref"><button type="button"
         popovertarget="note-7"
         aria-label="Note 7">7</button></sup><sup class="ref"><button type="button"
@@ -6076,7 +6031,7 @@ expression: html
             <section class="spread t-columns" id="demography"
              data-spread="demography"
              data-dimension="measures"><h2><span class="title">demography</span></h2><div data-slot="stack">
-        <qr-chart class="block series"><h3>population
+        <qr-chart class="block series box"><h3>population
     <button class="info"
             type="button"
             popovertarget="p148"
@@ -6097,7 +6052,7 @@ expression: html
             <tbody><tr data-year="1790"><th scope="row">1790</th><td data-amount="3929214"><data value="3929214" data-f="number">3929214</data></td></tr><tr data-year="1800"><th scope="row">1800</th><td data-amount="5308483"><data value="5308483" data-f="number">5308483</data></td></tr><tr data-year="1810"><th scope="row">1810</th><td data-amount="7239881"><data value="7239881" data-f="number">7239881</data></td></tr><tr data-year="1820"><th scope="row">1820</th><td data-amount="9633822"><data value="9633822" data-f="number">9633822</data> <span data-other="9638453"><data value="9638453" data-f="number">9638453</data> <span class="note">other value</span></span></td></tr><tr data-year="1830"><th scope="row">1830</th><td data-amount="12866020"><data value="12866020" data-f="number">12866020</data></td></tr><tr data-year="1840"><th scope="row">1840</th><td data-amount="17069458"><data value="17069458" data-f="number">17069458</data> <span data-other="17069453"><data value="17069453" data-f="number">17069453</data> <span class="note">other value</span></span></td></tr><tr data-year="1850"><th scope="row">1850</th><td data-amount="23191876"><data value="23191876" data-f="number">23191876</data></td></tr><tr data-year="1860"><th scope="row">1860</th><td data-amount="31443321"><data value="31443321" data-f="number">31443321</data></td></tr><tr data-year="1870"><th scope="row">1870</th><td data-amount="38558371"><data value="38558371" data-f="number">38558371</data> <span data-other="39818449"><data value="39818449" data-f="number">39818449</data> <span class="note">other value</span></span></td></tr><tr data-year="1880"><th scope="row">1880</th><td data-amount="50155783"><data value="50155783" data-f="number">50155783</data> <span data-other="50189209"><data value="50189209" data-f="number">50189209</data> <span class="note">other value</span></span></td></tr><tr data-year="1890"><th scope="row">1890</th><td data-amount="62979766"><data value="62979766" data-f="number">62979766</data></td></tr><tr data-year="1900"><th scope="row">1900</th><td data-amount="76303387"><data value="76303387" data-f="number">76303387</data> <span data-other="76212168"><data value="76212168" data-f="number">76212168</data> <span class="note">other value</span></span> <span data-other="76094000"><data value="76094000" data-f="number">76094000</data> <span class="note">other value</span></span></td></tr><tr data-year="1901"><th scope="row">1901</th><td data-amount="77584000"><data value="77584000" data-f="number">77584000</data></td></tr><tr data-year="1902"><th scope="row">1902</th><td data-amount="79163000"><data value="79163000" data-f="number">79163000</data></td></tr><tr data-year="1903"><th scope="row">1903</th><td data-amount="80632000"><data value="80632000" data-f="number">80632000</data></td></tr><tr data-year="1904"><th scope="row">1904</th><td data-amount="82166000"><data value="82166000" data-f="number">82166000</data></td></tr><tr data-year="1905"><th scope="row">1905</th><td data-amount="83822000"><data value="83822000" data-f="number">83822000</data></td></tr><tr data-year="1906"><th scope="row">1906</th><td data-amount="85450000"><data value="85450000" data-f="number">85450000</data></td></tr><tr data-year="1907"><th scope="row">1907</th><td data-amount="87008000"><data value="87008000" data-f="number">87008000</data></td></tr><tr data-year="1908"><th scope="row">1908</th><td data-amount="88710000"><data value="88710000" data-f="number">88710000</data></td></tr><tr data-year="1909"><th scope="row">1909</th><td data-amount="90490000"><data value="90490000" data-f="number">90490000</data></td></tr><tr data-year="1910"><th scope="row">1910</th><td data-amount="92407000"><data value="92407000" data-f="number">92407000</data> <span data-other="91972266"><data value="91972266" data-f="number">91972266</data> <span class="note">other value</span></span></td></tr><tr data-year="1911"><th scope="row">1911</th><td data-amount="93863000"><data value="93863000" data-f="number">93863000</data></td></tr><tr data-year="1912"><th scope="row">1912</th><td data-amount="95335000"><data value="95335000" data-f="number">95335000</data></td></tr><tr data-year="1913"><th scope="row">1913</th><td data-amount="97225000"><data value="97225000" data-f="number">97225000</data></td></tr><tr data-year="1914"><th scope="row">1914</th><td data-amount="99111000"><data value="99111000" data-f="number">99111000</data></td></tr><tr data-year="1915"><th scope="row">1915</th><td data-amount="100546000"><data value="100546000" data-f="number">100546000</data></td></tr><tr data-year="1916"><th scope="row">1916</th><td data-amount="101961000"><data value="101961000" data-f="number">101961000</data></td></tr><tr data-year="1917"><th scope="row">1917</th><td data-amount="103268000"><data value="103268000" data-f="number">103268000</data></td></tr><tr data-year="1918"><th scope="row">1918</th><td data-amount="103208000"><data value="103208000" data-f="number">103208000</data></td></tr><tr data-year="1919"><th scope="row">1919</th><td data-amount="104514000"><data value="104514000" data-f="number">104514000</data></td></tr><tr data-year="1920"><th scope="row">1920</th><td data-amount="105710620"><data value="105710620" data-f="number">105710620</data></td></tr><tr data-year="1930"><th scope="row">1930</th><td data-amount="122775046"><data value="122775046" data-f="number">122775046</data></td></tr><tr data-year="1940"><th scope="row">1940</th><td data-amount="132164569"><data value="132164569" data-f="number">132164569</data></td></tr><tr data-year="1950"><th scope="row">1950</th><td data-amount="150697361"><data value="150697361" data-f="number">150697361</data></td></tr><tr data-year="1960"><th scope="row">1960</th><td data-amount="179323175"><data value="179323175" data-f="number">179323175</data></td></tr><tr data-year="1970"><th scope="row">1970</th><td data-amount="203302031"><data value="203302031" data-f="number">203302031</data></td></tr><tr data-year="1980"><th scope="row">1980</th><td data-amount="226545805"><data value="226545805" data-f="number">226545805</data></td></tr><tr data-year="1990"><th scope="row">1990</th><td data-amount="248709873"><data value="248709873" data-f="number">248709873</data></td></tr><tr data-year="2000"><th scope="row">2000</th><td data-amount="281421906"><data value="281421906" data-f="number">281421906</data></td></tr><tr data-year="2010"><th scope="row">2010</th><td data-amount="308745538"><data value="308745538" data-f="number">308745538</data></td></tr><tr data-year="2011"><th scope="row">2011</th><td data-amount="311582600"><data value="311582600" data-f="number">311582600</data></td></tr><tr data-year="2013"><th scope="row">2013</th><td data-amount="316128839"><data value="316128839" data-f="number">316128839</data></td></tr><tr data-year="2016"><th scope="row">2016</th><td data-amount="323952889"><data value="323952889" data-f="number">323952889</data></td></tr><tr data-year="2017"><th scope="row">2017</th><td data-amount="325145963"><data value="325145963" data-f="number">325145963</data></td></tr><tr data-year="2019"><th scope="row">2019</th><td data-amount="328239523"><data value="328239523" data-f="number">328239523</data></td></tr><tr data-year="2020"><th scope="row">2020</th><td data-amount="331449281"><data value="331449281" data-f="number">331449281</data></td></tr><tr data-year="2021"><th scope="row">2021</th><td data-amount="332278200"><data value="332278200" data-f="number">332278200</data></td></tr><tr data-year="2024"><th scope="row">2024</th><td data-amount="340110988"><data value="340110988" data-f="number">340110988</data></td></tr></tbody>
         </table>
     </div>
-</div></qr-chart><qr-chart class="block series"><h3>sex</h3><p class="desc line">
+</div></qr-chart><qr-chart class="block series box"><h3>sex</h3><p class="desc line">
             <span class="key" style="--c: var( --part-1 )"></span>female population
     <button class="info"
             type="button"
@@ -6129,7 +6084,7 @@ expression: html
             <tbody><tr data-year="2019"><th scope="row">2019</th><td data-amount="165599805"><data value="165599805" data-f="number">165599805</data></td><td data-amount="162730147"><data value="162730147" data-f="number">162730147</data></td></tr><tr data-year="2020"><th scope="row">2020</th><td data-amount="167210787"><data value="167210787" data-f="number">167210787</data></td><td data-amount="164316147"><data value="164316147" data-f="number">164316147</data></td></tr><tr data-year="2021"><th scope="row">2021</th><td data-amount="167558793"><data value="167558793" data-f="number">167558793</data></td><td data-amount="164490184"><data value="164490184" data-f="number">164490184</data></td></tr><tr data-year="2022"><th scope="row">2022</th><td data-amount="168258067"><data value="168258067" data-f="number">168258067</data></td><td data-amount="165013345"><data value="165013345" data-f="number">165013345</data></td></tr></tbody>
         </table>
     </div>
-</div></qr-chart><qr-chart class="block series"><h3>urbanization</h3><p class="desc line">
+</div></qr-chart><qr-chart class="block series box"><h3>urbanization</h3><p class="desc line">
             <span class="key" style="--c: var( --part-1 )"></span>urban population
     <button class="info"
             type="button"
@@ -6161,7 +6116,7 @@ expression: html
             <tbody><tr data-year="2019"><th scope="row">2019</th><td data-amount="270737596"><data value="270737596" data-f="number">270737596</data></td><td data-amount="57592357"><data value="57592357" data-f="number">57592357</data></td></tr><tr data-year="2020"><th scope="row">2020</th><td data-amount="274053424"><data value="274053424" data-f="number">274053424</data></td><td data-amount="57473509"><data value="57473509" data-f="number">57473509</data></td></tr><tr data-year="2021"><th scope="row">2021</th><td data-amount="275178949"><data value="275178949" data-f="number">275178949</data></td><td data-amount="56870028"><data value="56870028" data-f="number">56870028</data></td></tr><tr data-year="2022"><th scope="row">2022</th><td data-amount="276895219"><data value="276895219" data-f="number">276895219</data></td><td data-amount="56376192"><data value="56376192" data-f="number">56376192</data></td></tr></tbody>
         </table>
     </div>
-</div></qr-chart><qr-chart class="block series"><h3>birth rate
+</div></qr-chart><qr-chart class="block series box"><h3>birth rate
     <button class="info"
             type="button"
             popovertarget="p153"
@@ -6182,7 +6137,7 @@ expression: html
             <tbody><tr data-year="2019"><th scope="row">2019</th><td data-amount="11.4"><data value="11.4" data-f="number">11.4</data></td></tr><tr data-year="2020"><th scope="row">2020</th><td data-amount="10.9"><data value="10.9" data-f="number">10.9</data></td></tr><tr data-year="2021"><th scope="row">2021</th><td data-amount="11"><data value="11" data-f="number">11</data></td></tr><tr data-year="2022"><th scope="row">2022</th><td data-amount="11"><data value="11" data-f="number">11</data></td></tr></tbody>
         </table>
     </div>
-</div></qr-chart><qr-chart class="block series"><h3>death rate
+</div></qr-chart><qr-chart class="block series box"><h3>death rate
     <button class="info"
             type="button"
             popovertarget="p154"
@@ -6203,7 +6158,7 @@ expression: html
             <tbody><tr data-year="2019"><th scope="row">2019</th><td data-amount="8.697"><data value="8.697" data-f="number">8.697</data></td></tr><tr data-year="2020"><th scope="row">2020</th><td data-amount="10.27"><data value="10.27" data-f="number">10.27</data></td></tr><tr data-year="2021"><th scope="row">2021</th><td data-amount="10.4"><data value="10.4" data-f="number">10.4</data></td></tr><tr data-year="2022"><th scope="row">2022</th><td data-amount="9.8"><data value="9.8" data-f="number">9.8</data></td></tr></tbody>
         </table>
     </div>
-</div></qr-chart><qr-chart class="block series"><h3>total fertility rate
+</div></qr-chart><qr-chart class="block series box"><h3>total fertility rate
     <button class="info"
             type="button"
             popovertarget="p155"
@@ -6224,7 +6179,7 @@ expression: html
             <tbody><tr data-year="1999"><th scope="row">1999</th><td data-amount="2.0075"><data value="2.0075" data-f="number">2.0075</data></td></tr><tr data-year="2000"><th scope="row">2000</th><td data-amount="2.056"><data value="2.056" data-f="number">2.056</data></td></tr><tr data-year="2001"><th scope="row">2001</th><td data-amount="2.0305"><data value="2.0305" data-f="number">2.0305</data></td></tr><tr data-year="2002"><th scope="row">2002</th><td data-amount="2.0205"><data value="2.0205" data-f="number">2.0205</data></td></tr><tr data-year="2003"><th scope="row">2003</th><td data-amount="2.0475"><data value="2.0475" data-f="number">2.0475</data></td></tr><tr data-year="2004"><th scope="row">2004</th><td data-amount="2.0515"><data value="2.0515" data-f="number">2.0515</data></td></tr><tr data-year="2005"><th scope="row">2005</th><td data-amount="2.057"><data value="2.057" data-f="number">2.057</data></td></tr><tr data-year="2006"><th scope="row">2006</th><td data-amount="2.108"><data value="2.108" data-f="number">2.108</data></td></tr><tr data-year="2007"><th scope="row">2007</th><td data-amount="2.12"><data value="2.12" data-f="number">2.12</data></td></tr><tr data-year="2008"><th scope="row">2008</th><td data-amount="2.072"><data value="2.072" data-f="number">2.072</data></td></tr><tr data-year="2009"><th scope="row">2009</th><td data-amount="2.002"><data value="2.002" data-f="number">2.002</data></td></tr><tr data-year="2010"><th scope="row">2010</th><td data-amount="1.931"><data value="1.931" data-f="number">1.931</data></td></tr><tr data-year="2011"><th scope="row">2011</th><td data-amount="1.8945"><data value="1.8945" data-f="number">1.8945</data></td></tr><tr data-year="2012"><th scope="row">2012</th><td data-amount="1.8805"><data value="1.8805" data-f="number">1.8805</data></td></tr><tr data-year="2013"><th scope="row">2013</th><td data-amount="1.8575"><data value="1.8575" data-f="number">1.8575</data></td></tr><tr data-year="2014"><th scope="row">2014</th><td data-amount="1.8615"><data value="1.8615" data-f="number">1.8615</data></td></tr><tr data-year="2019"><th scope="row">2019</th><td data-amount="1.706"><data value="1.706" data-f="number">1.706</data></td></tr><tr data-year="2020"><th scope="row">2020</th><td data-amount="1.6415"><data value="1.6415" data-f="number">1.6415</data></td></tr><tr data-year="2021"><th scope="row">2021</th><td data-amount="1.664"><data value="1.664" data-f="number">1.664</data></td></tr><tr data-year="2022"><th scope="row">2022</th><td data-amount="1.665"><data value="1.665" data-f="number">1.665</data></td></tr></tbody>
         </table>
     </div>
-</div></qr-chart><qr-chart class="block series"><h3>life expectancy
+</div></qr-chart><qr-chart class="block series box"><h3>life expectancy
     <button class="info"
             type="button"
             popovertarget="p156"
@@ -6302,7 +6257,7 @@ expression: html
             <section class="spread t-columns" id="economy"
              data-spread="economy"
              data-dimension="measures"><h2><span class="title">economy</span></h2><div data-slot="stack">
-        <qr-chart class="block series"><h3>nominal GDP
+        <qr-chart class="block series box"><h3>nominal GDP
     <button class="info"
             type="button"
             popovertarget="p160"
@@ -6430,7 +6385,7 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
             <section class="spread t-columns" id="development"
              data-spread="development"
              data-dimension="measures"><h2><span class="title">socioeconomic development</span></h2><div data-slot="stack">
-        <qr-chart class="block series"><h3>Human Development Index
+        <qr-chart class="block series box"><h3>Human Development Index
     <button class="info"
             type="button"
             popovertarget="p166"
@@ -6451,7 +6406,7 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
             <tbody><tr data-year="1990"><th scope="row">1990</th><td data-amount="0.872"><data value="0.872" data-f="number">0.872</data></td></tr><tr data-year="1991"><th scope="row">1991</th><td data-amount="0.873"><data value="0.873" data-f="number">0.873</data></td></tr><tr data-year="1992"><th scope="row">1992</th><td data-amount="0.878"><data value="0.878" data-f="number">0.878</data></td></tr><tr data-year="1993"><th scope="row">1993</th><td data-amount="0.88"><data value="0.88" data-f="number">0.88</data></td></tr><tr data-year="1994"><th scope="row">1994</th><td data-amount="0.884"><data value="0.884" data-f="number">0.884</data></td></tr><tr data-year="1995"><th scope="row">1995</th><td data-amount="0.885"><data value="0.885" data-f="number">0.885</data></td></tr><tr data-year="1996"><th scope="row">1996</th><td data-amount="0.887"><data value="0.887" data-f="number">0.887</data></td></tr><tr data-year="1997"><th scope="row">1997</th><td data-amount="0.89"><data value="0.89" data-f="number">0.89</data></td></tr><tr data-year="1998"><th scope="row">1998</th><td data-amount="0.893"><data value="0.893" data-f="number">0.893</data></td></tr><tr data-year="1999"><th scope="row">1999</th><td data-amount="0.889"><data value="0.889" data-f="number">0.889</data></td></tr><tr data-year="2000"><th scope="row">2000</th><td data-amount="0.891"><data value="0.891" data-f="number">0.891</data></td></tr><tr data-year="2001"><th scope="row">2001</th><td data-amount="0.892"><data value="0.892" data-f="number">0.892</data></td></tr><tr data-year="2002"><th scope="row">2002</th><td data-amount="0.893"><data value="0.893" data-f="number">0.893</data></td></tr><tr data-year="2003"><th scope="row">2003</th><td data-amount="0.895"><data value="0.895" data-f="number">0.895</data></td></tr><tr data-year="2004"><th scope="row">2004</th><td data-amount="0.898"><data value="0.898" data-f="number">0.898</data></td></tr><tr data-year="2005"><th scope="row">2005</th><td data-amount="0.9"><data value="0.9" data-f="number">0.9</data></td></tr><tr data-year="2006"><th scope="row">2006</th><td data-amount="0.904"><data value="0.904" data-f="number">0.904</data></td></tr><tr data-year="2007"><th scope="row">2007</th><td data-amount="0.906"><data value="0.906" data-f="number">0.906</data></td></tr><tr data-year="2008"><th scope="row">2008</th><td data-amount="0.906"><data value="0.906" data-f="number">0.906</data></td></tr><tr data-year="2009"><th scope="row">2009</th><td data-amount="0.908"><data value="0.908" data-f="number">0.908</data></td></tr><tr data-year="2010"><th scope="row">2010</th><td data-amount="0.911"><data value="0.911" data-f="number">0.911</data></td></tr><tr data-year="2011"><th scope="row">2011</th><td data-amount="0.913"><data value="0.913" data-f="number">0.913</data></td></tr><tr data-year="2012"><th scope="row">2012</th><td data-amount="0.916"><data value="0.916" data-f="number">0.916</data></td></tr><tr data-year="2013"><th scope="row">2013</th><td data-amount="0.917"><data value="0.917" data-f="number">0.917</data></td></tr><tr data-year="2014"><th scope="row">2014</th><td data-amount="0.919"><data value="0.919" data-f="number">0.919</data></td></tr><tr data-year="2015"><th scope="row">2015</th><td data-amount="0.92"><data value="0.92" data-f="number">0.92</data></td></tr><tr data-year="2016"><th scope="row">2016</th><td data-amount="0.922"><data value="0.922" data-f="number">0.922</data></td></tr><tr data-year="2017"><th scope="row">2017</th><td data-amount="0.924"><data value="0.924" data-f="number">0.924</data></td></tr><tr data-year="2018"><th scope="row">2018</th><td data-amount="0.927"><data value="0.927" data-f="number">0.927</data></td></tr><tr data-year="2019"><th scope="row">2019</th><td data-amount="0.93"><data value="0.93" data-f="number">0.93</data></td></tr><tr data-year="2020"><th scope="row">2020</th><td data-amount="0.92"><data value="0.92" data-f="number">0.92</data></td></tr><tr data-year="2021"><th scope="row">2021</th><td data-amount="0.921"><data value="0.921" data-f="number">0.921</data></td></tr></tbody>
         </table>
     </div>
-</div></qr-chart><qr-chart class="block series"><h3>Inequality-adjusted Human Development Index
+</div></qr-chart><qr-chart class="block series box"><h3>Inequality-adjusted Human Development Index
     <button class="info"
             type="button"
             popovertarget="p167"
@@ -6472,7 +6427,7 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
             <tbody><tr data-year="2010"><th scope="row">2010</th><td data-amount="0.805"><data value="0.805" data-f="number">0.805</data></td></tr><tr data-year="2011"><th scope="row">2011</th><td data-amount="0.806"><data value="0.806" data-f="number">0.806</data></td></tr><tr data-year="2012"><th scope="row">2012</th><td data-amount="0.808"><data value="0.808" data-f="number">0.808</data></td></tr><tr data-year="2013"><th scope="row">2013</th><td data-amount="0.81"><data value="0.81" data-f="number">0.81</data></td></tr><tr data-year="2014"><th scope="row">2014</th><td data-amount="0.805"><data value="0.805" data-f="number">0.805</data></td></tr><tr data-year="2015"><th scope="row">2015</th><td data-amount="0.808"><data value="0.808" data-f="number">0.808</data></td></tr><tr data-year="2016"><th scope="row">2016</th><td data-amount="0.81"><data value="0.81" data-f="number">0.81</data></td></tr><tr data-year="2017"><th scope="row">2017</th><td data-amount="0.81"><data value="0.81" data-f="number">0.81</data></td></tr><tr data-year="2018"><th scope="row">2018</th><td data-amount="0.815"><data value="0.815" data-f="number">0.815</data></td></tr><tr data-year="2019"><th scope="row">2019</th><td data-amount="0.817"><data value="0.817" data-f="number">0.817</data></td></tr><tr data-year="2020"><th scope="row">2020</th><td data-amount="0.818"><data value="0.818" data-f="number">0.818</data></td></tr><tr data-year="2021"><th scope="row">2021</th><td data-amount="0.819"><data value="0.819" data-f="number">0.819</data></td></tr></tbody>
         </table>
     </div>
-</div></qr-chart><qr-chart class="block series"><h3>Gini coefficient
+</div></qr-chart><qr-chart class="block series box"><h3>Gini coefficient
     <button class="info"
             type="button"
             popovertarget="p168"
@@ -6493,7 +6448,7 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
             <tbody><tr data-year="1979"><th scope="row">1979</th><td data-amount="34.6"><data value="34.6" data-f="number">34.6</data></td></tr><tr data-year="2011"><th scope="row">2011</th><td data-amount="47.7"><data value="47.7" data-f="number">47.7</data></td></tr></tbody>
         </table>
     </div>
-</div></qr-chart><qr-chart class="block series"><h3>Democracy Index
+</div></qr-chart><qr-chart class="block series box"><h3>Democracy Index
     <button class="info"
             type="button"
             popovertarget="p169"
@@ -6514,7 +6469,7 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
             <tbody><tr data-year="2006"><th scope="row">2006</th><td data-amount="8.22"><data value="8.22" data-f="number">8.22</data></td></tr><tr data-year="2008"><th scope="row">2008</th><td data-amount="8.22"><data value="8.22" data-f="number">8.22</data></td></tr><tr data-year="2010"><th scope="row">2010</th><td data-amount="8.18"><data value="8.18" data-f="number">8.18</data></td></tr><tr data-year="2011"><th scope="row">2011</th><td data-amount="8.11"><data value="8.11" data-f="number">8.11</data></td></tr><tr data-year="2012"><th scope="row">2012</th><td data-amount="8.11"><data value="8.11" data-f="number">8.11</data></td></tr><tr data-year="2013"><th scope="row">2013</th><td data-amount="8.11"><data value="8.11" data-f="number">8.11</data></td></tr><tr data-year="2014"><th scope="row">2014</th><td data-amount="8.11"><data value="8.11" data-f="number">8.11</data></td></tr><tr data-year="2015"><th scope="row">2015</th><td data-amount="8.05"><data value="8.05" data-f="number">8.05</data></td></tr><tr data-year="2016"><th scope="row">2016</th><td data-amount="7.98"><data value="7.98" data-f="number">7.98</data></td></tr><tr data-year="2017"><th scope="row">2017</th><td data-amount="7.98"><data value="7.98" data-f="number">7.98</data></td></tr><tr data-year="2018"><th scope="row">2018</th><td data-amount="7.96"><data value="7.96" data-f="number">7.96</data></td></tr><tr data-year="2019"><th scope="row">2019</th><td data-amount="7.96"><data value="7.96" data-f="number">7.96</data></td></tr><tr data-year="2020"><th scope="row">2020</th><td data-amount="7.92"><data value="7.92" data-f="number">7.92</data></td></tr></tbody>
         </table>
     </div>
-</div></qr-chart><qr-chart class="block series"><h3>number of out-of-school children
+</div></qr-chart><qr-chart class="block series box"><h3>number of out-of-school children
     <button class="info"
             type="button"
             popovertarget="p170"
@@ -6758,7 +6713,7 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
              data-dimension="people"><h2><span class="title">culture</span></h2><div data-slot="stack">
         <div class="block timeline">
     <h3>public holiday <span class="note">9</span></h3>
-    <ol>
+    <ol class="group">
             <li>
                 <span class="when">January 1</span>
                 <div class="what">
@@ -13519,7 +13474,7 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
              data-dimension="time"><h2><span class="title">history</span></h2><div data-slot="stack">
         <div class="block timeline">
     <h3>significant event <span class="note">41</span></h3>
-    <ol>
+    <ol class="group">
             <li>
                 <span class="when">1776</span>
                 <div class="what">
@@ -14570,7 +14525,7 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
     </div>
 </dialog> </div>
     </div><div data-slot="audio">
-        <div class="block">
+        <div class="block box">
         <h3>spoken text audio<span class="prov-imported" title="imported from Wikimedia project">W</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P989"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></h3>
@@ -15009,7 +14964,7 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
             <section class="spread t-sheet" id="evidence"
              data-spread="evidence"
              data-dimension="neutral"><h2><span class="title">reference</span></h2><div data-slot="summary">
-        <div class="block">
+        <div class="block box">
     <div class="stack-bar"><span class="p-sourced" style="--n:737"></span>
 <span class="p-imported" style="--n:65"></span>
 <span class="p-none" style="--n:531"></span>
@@ -15405,7 +15360,7 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
        href="https://www.wikidata.org/wiki/Q30#P6363"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
 </div></dl><div data-slot="projects">
-        <div class="block">
+        <div class="block box">
     <div><span class="chip"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M11.14 4H14a.69.69 0 0 1 0 .65c-1 .16-1.36.91-1.81 1.83l-1.4 2.75 2.35 5.21h.07l3.52-8.1c.44-1.07.4-1.59-.79-1.7a.68.68 0 0 1 0-.65h3.45a.68.68 0 0 1 0 .65c-1.21.16-1.42.91-1.81 1.83l-4.37 10.08c-.13.3-.24.45-.44.45s-.33-.16-.42-.45l-2.48-5.73-2.72 5.73c-.11.3-.24.45-.44.45s-.31-.16-.42-.45l-4-10.09c-.57-1.4-.6-1.7-1.65-1.8A.68.68 0 0 1 .62 4h3.91a.68.68 0 0 1 0 .65c-1.16.13-1.21.45-.74 1.58l3.41 8.19h.05L9.3 10 7.78 6.45C7.17 5.05 7 4.77 6.24 4.66a.69.69 0 0 1 0-.65h3.32a.68.68 0 0 1 0 .65c-.74.12-.7.45-.19 1.58l.87 2 .08.09 1-2c.57-1.14.64-1.58-.15-1.7a.69.69 0 0 1-.03-.63"/></svg>Wikipedia <b>334</b> ✓</span><span class="chip"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M9.133 4.643a6.52 6.52 0 0 1 2.79 5.354 6.52 6.52 0 0 1-2.672 5.269l-.12.086-.923-1.322a4.91 4.91 0 0 0 2.103-4.033c0-1.578-.748-3.03-1.988-3.95l-.114-.082zM13.874 0a13.08 13.08 0 0 1 4.627 9.997c0 3.86-1.678 7.448-4.538 9.92l-.096.083-1.15-1.357a11.3 11.3 0 0 0 4.006-8.646c0-3.33-1.444-6.424-3.908-8.562l-.091-.079L13.873 0Z"/><path d="M11.453 2.386a9.71 9.71 0 0 1 3.668 7.611 9.71 9.71 0 0 1-3.576 7.537l-.09.073-1.074-1.347A7.99 7.99 0 0 0 13.4 9.997a7.99 7.99 0 0 0-2.932-6.194l-.087-.07 1.073-1.347Z"/><circle cx="5.35" cy="9.93" r="3.35"/></svg>Wikiquote <b>33</b> ✓</span><span class="chip"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M16 10a6 6 0 0 1-6 6 6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6M7.55 8.94a10 10 0 0 1 1.33-3.81 5 5 0 0 0-3.86 4.45H7.5c0-.22.03-.43.05-.64m1 .12a8 8 0 0 0-.05.52h3.06a8 8 0 0 0-.05-.52 9.1 9.1 0 0 0-1.48-3.89 9.1 9.1 0 0 0-1.48 3.9Zm4.01.52h2.42a5 5 0 0 0-3.79-4.44 10 10 0 0 1 1.37 4.44m-7.53 1a5 5 0 0 0 3.87 4.3 9.4 9.4 0 0 1-1.4-4.3zm5 4.21c1-1.47 1.43-2.9 1.52-4.21H8.52a8.53 8.53 0 0 0 1.52 4.21zm1.14.07a5 5 0 0 0 3.8-4.28h-2.41a9.35 9.35 0 0 1-1.39 4.28M3.07 6a7.97 7.97 0 0 0 0 8h1.18A6.96 6.96 0 0 1 3 10c0-1.49.46-2.87 1.25-4Zm12.68 0h1.18a7.97 7.97 0 0 1 0 8h-1.18A6.96 6.96 0 0 0 17 10c0-1.49-.46-2.87-1.25-4m2.74 7h1.05a9.9 9.9 0 0 0 0-6h-1.05a9.04 9.04 0 0 1 0 6M.46 13h1.05a9.04 9.04 0 0 1 0-6H.46a9.9 9.9 0 0 0 0 6"/></svg>Wikinews <b>28</b> ✓</span><span class="chip"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M15.874 8.19 20 0l-8.254 4.095c.99.263 1.892.78 2.617 1.498a5.8 5.8 0 0 1 1.51 2.596Zm-6.349 4.043L14.678 20l.56-9.291a5.9 5.9 0 0 1-2.65 1.523 5.95 5.95 0 0 1-3.063 0Zm-.159-7.508L.001 5.28l7.829 5.113a5.8 5.8 0 0 1 0-3.038c.27-.995.8-1.902 1.536-2.63"/></svg>Wikivoyage <b>25</b> ✓</span><span class="chip"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M14.222.03c-1.812 1.753-3.604 3.49-3.604 3.49l.644 1.31c.873-.864 1.75-1.625 2.587-2.472 1.762 3.869 2.963 6.987 4.44 11.109.483 1.339.384 1.399-.771 2.122-1.857.923-2.445 1.53-4.658 3.884h1.515c1.85-1.673 2.536-2.263 4.853-3.484.82-.473.932-1.07.596-2C18.74 10.977 16.39 4.484 14.222.03"/><path d="M9.498.071C8.172.966 7.149 2.254 5.996 3.358l.473 1.508c.903-.71 1.688-1.569 2.5-2.38l4.376 10.977c.252.743-.145 1.405-.944 2.125-.956.769-2.925 2.56-3.818 3.926h1.358c1.426-1.464 1.683-1.663 3.306-3.068 1.09-1.112 2.074-1.681 1.56-3.106z"/><path d="M5.023 0C4.67.12 4.376.347 4.1.588a880 880 0 0 0-3.889 3.75c-.196.182-.213.45-.21.718L.017 6.57S1.743 4.892 4.32 2.41c1.39 3.615 2.837 7.21 4.263 10.813.195.544-.272.99-.864 1.585-.818.798-2.53 2.44-4.281 4.635h1.756l4.22-4.629c.402-.552.9-1.091.69-1.591L5.024 0Z"/></svg>Wikibooks <b>3</b></span><span class="chip"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M9.982 3c-.2.04-.44.196-.641.47-.2.234-.361.585-.521.976h2.284c-.16-.43-.32-.742-.52-.977-.161-.273-.402-.43-.602-.469m.722.079c.08.078.12.117.16.195q.36.468.601 1.172h1.604c-.642-.703-1.443-1.211-2.365-1.367m-1.444 0a4.37 4.37 0 0 0-2.365 1.406H8.5c.16-.469.36-.899.601-1.172a.6.6 0 0 1 .16-.234Zm-1.162.039a6.35 6.35 0 0 0-2.285 1.328h.682a5.2 5.2 0 0 1 1.603-1.328m3.848.039c.601.312 1.123.742 1.604 1.328h.681a6.1 6.1 0 0 0-2.285-1.328m-6.494 1.64A6.1 6.1 0 0 0 4.29 6.596h1.042a7.5 7.5 0 0 1 .882-1.797h-.762Zm1.163 0a7 7 0 0 0-.962 1.798h2.365c.08-.586.2-1.211.4-1.797zm2.124 0c-.2.587-.32 1.173-.4 1.798h3.327a9.7 9.7 0 0 0-.401-1.797zm2.887 0c.16.587.32 1.173.4 1.798h2.325a5.6 5.6 0 0 0-.962-1.797zm2.164 0c.401.548.682 1.134.882 1.798h1.042c-.28-.664-.681-1.25-1.162-1.797zm-9.62 2.11a6.1 6.1 0 0 0-.361 2.072H4.97c0-.704.08-1.407.28-2.071zm1.403 0a7.2 7.2 0 0 0-.281 2.072h2.566c0-.704.04-1.368.12-2.071zm2.725 0c-.08.704-.12 1.368-.12 2.072h3.648c0-.704-.04-1.368-.12-2.071zm3.728 0c.08.704.12 1.368.12 2.072h2.566a7.2 7.2 0 0 0-.28-2.071zm2.726 0c.2.665.28 1.368.28 2.072h1.163a6.1 6.1 0 0 0-.36-2.071zM20 9.332H0v.646h20zm-16.645 1H.685v6.707h2.67zm5.321 0H6.005v6.707h2.67zm5.32 0h-2.67v6.707h2.67zm5.321 0h-2.671v6.707h2.67zM20 17.355H0V18h20z"/></svg>Wikiversity <b>2</b> ✓</span><span class="chip"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M9.94 0a10 10 0 0 0-8.08 4.2h4.21c.06-.35.16-.72.49-1.04.2-.23.67-.2 1-.26.33-.07.87-.92 1.4-1.17.64.33 1.34.83 1.7 1.08.62-.49 1.16-1.33 1.4-.65.2-.33.53-.54.9-.63.17-.04.4-.03.52-.05.14-.06.42-.27.66-.34-.38.58-.43 2.25-.44 3.06v.35c.55.12 1.25.03 1.49-.35h2.95A9.99 9.99 0 0 0 10 0zm-.36 2.5c.17.47.31.94.26 1.4-.06.3.07.28.31.16s.36-.26.72-.37c.27-.07.08-.26-.05-.4-.4-.34-.82-.56-1.24-.8zm-8.3 2.6A9.95 9.95 0 0 0 0 10a10 10 0 0 0 20 0 9.94 9.94 0 0 0-1.28-4.9H2.8c.52 1.1.81 1.7 2.6 1.46.62-.1 1-.16 1 .48.08.39.38.52 1.15.38.3-.11.57-.28.79-.14h.02v.01a.04.04 0 0 1 .01.02c0 .1-.19.31.04.57.57.55 1.12 1.04 1.7 1.6.13.64.7.55 1.15.42.68-.2.38.1.63.41.14.22.46.81.84.6.01 1.08.28 1.85.84 2.27-.17.63-.33 1.5-.03 2.02-.5-.16-.3.81-.45 1.22-.26.68-.48.65-.72.71.22.24.5.49.92.64v.01l.02.01c0 .23.04.43.18.57-.26-.06-.57-.42-1.08-.19-.56.25-.68.08-.48-.29.26-.57-.3-.78-.88-.92v-.23c.12-.04.26-.08.42-.1.25-.05.42-.14.4-.5-.01-.5-.03-1 0-1.48a6 6 0 0 1 .18-1.21c.07-.2.44-.38.13-.64A42 42 0 0 0 8.3 9.3l-.06-.02 1.65 2.93c.2.49.58 1-.1 1.13v.01c-.03.47.06 1.28-.26 1.44-.36.25-.39.48-.42.86-.06.4-.06.86.06 1.18.12.05.24.08.37.1l.32.04c-.43.56-.96.39-1.27-.13l-1.67-2.58c.08-2.51.13-4.2-.05-6.3-.92.08-1.85.01-2.83-.56-.22-.4-.47-.36-.89-.26.05-.37-.1-.73-.32-1.1l-.1-.93H1.29zm14.51 1.03c1.6-.04 1.14 2.78 1.14 4.15h.01l-.13.7-.2 1.21c.07.6-.09.68-.2 1.02 0 1.32-.18 1.7-1.29 2.7a2.16 2.16 0 0 1-1.17-2.25c.04-.24.2-.51-.01-.9a7.4 7.4 0 0 1 .14-3.35.6.6 0 0 1 .2-.02.63.63 0 0 0 .57-.74 3.3 3.3 0 0 0 .6-.2c-.81-.76-.52-2.3.34-2.32"/></svg>Wikisource <b>1</b></span></div>
 </div>
     </div><div data-slot="identifiers">

@@ -23,15 +23,28 @@
 
 		& path { vector-effect: non-scaling-stroke; }
 	}
+}
 
-	& figcaption {
-		position: absolute;
-		inset-inline-start: var( --spacing-50 );
-		inset-block-end: var( --spacing-50 );
-		background-color: rgba( 255, 255, 255, 0.9 );
-		padding: 2px var( --spacing-50 );
-		border-radius: 4px;
-		font-size: var( --font-size-x-small );
+/* The map of a spread: a card. The map goes to the border at the top, with
+   the corners of the card; the words are under it, the property first. */
+.map-card {
+	display: grid;
+	gap: var( --spacing-50 );
+
+	& > .map {
+		margin: calc( -1 * var( --pad-block ) ) calc( -1 * var( --pad-inline ) ) 0;
+		border-radius: calc( var( --radius ) - 1px ) calc( var( --radius ) - 1px ) 0 0;
+	}
+
+	& > .caption {
+		margin: 0;
+		font-size: var( --font-size-small );
+		font-variant-numeric: tabular-nums;
+	}
+
+	& .label {
+		display: block;
+		color: var( --ink );
 	}
 }
 

@@ -8,9 +8,10 @@
 .timeline {
 	--when: 9rem;
 
+	/* A group: one box around the events. */
 	& ol {
 		margin: 0;
-		padding: 0;
+		padding: var( --pad-block ) var( --pad-inline );
 		list-style: none;
 	}
 

@@ -15,7 +15,7 @@
             {%- if rest > 0 -%}{%- let n = ui.id() -%}{% call m::more(n, rest) %}{% endcall %}{% call m::dialog(ui, n, heading) %}{%- for s in values.iter() -%}{{ ui.line(s)|safe }}{%- endfor -%}{% endcall %}{%- endif -%}
         </div>
     {%- else -%}
-        {%- let all = ui.view_all(values.len()) -%}
+        {%- let all = ui.hidden(values.as_slice()) > 0 -%}
         {%- let n = ui.id() -%}
         {%- call m::scroller(heading) -%}
         {{ ui.rows(ui.first_shown(values.as_slice()))|safe }}

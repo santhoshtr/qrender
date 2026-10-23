@@ -1139,14 +1139,23 @@ dialog:is( .translator, .label-editor ) .actions {
 	figcaption & { color: inherit; opacity: 0.85; flex-basis: 100%; }
 }
 
-/* A card (a factoid, a chart), and a group of cards (the rows of a list,
-   an office): the colours of the dimension of the spread. The edge is the
-   border of a card and the line between the cards of a group. Composed
-   items have this box; the text of the article has none. */
-:is( .row, .pic-rows, .group, .series ) {
+/* A card (a factoid, a chart: `.box`), and a group of cards (the rows of
+   a list, an office, a timeline): the colours of the dimension of the
+   spread. The edge is the border of a card and the line between the cards
+   of a group. Composed items have this box; the text of the article has
+   none. */
+:is( .row, .pic-rows, .group, .box ) {
 	--pad-block: var( --spacing-50 );
 	--pad-inline: var( --spacing-75 );
 	--edge: color-mix( in srgb, var( --ink ) 25%, var( --soft ) );
+}
+
+/* A card: one composed item, its title in the box. */
+.box {
+	padding: var( --pad-block ) var( --pad-inline );
+	border: 1px solid var( --edge );
+	border-radius: var( --radius );
+	background-color: var( --soft );
 }
 
 /* A group of different parts (an office: its holder now, the holders
@@ -1169,11 +1178,13 @@ dialog:is( .translator, .label-editor ) .actions {
 		border-block-start: 1px solid var( --edge );
 		border-radius: 0;
 	}
+
+	& > .row + .row { border-block-start: 1px solid var( --edge ); }
 }
 
 /* The icon of a composed item, at the start of its label: a mask in the
    colour of the dimension. An item can name its own icon (--icon). */
-:is( .row > dt, .set > h3, .succession > h3, .series > h3 )::before {
+:is( .row > dt, .box > h3, .map-card .label, .set > h3, .succession > h3, .timeline > h3 )::before {
 	content: '';
 	display: inline-block;
 	flex: none;

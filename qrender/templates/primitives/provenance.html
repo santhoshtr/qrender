@@ -2,7 +2,7 @@
 {#- How many statements are sourced, imported, or without a reference; and
     the label coverage of the page language. -#}
 {%- let rows = ui.legend(b) -%}
-<div class="block">
+<div class="block box">
     <div class="stack-bar">
     {%- for r in rows.iter() -%}{%- if r.count > 0 %}<span class="p-{{ r.kind }}" style="--n:{{ r.count }}"></span>
 {% endif -%}

@@ -31,9 +31,6 @@ use crate::wikidata::POINT_IN_TIME;
 /// a row of the provenance legend).
 pub static NO_CITATIONS: Vec<String> = Vec::new();
 
-/// The values of a strip of pictures from which it has "View all".
-const VIEW_ALL_MIN: usize = 3;
-
 pub const FILEPATH: &str = "https://commons.wikimedia.org/wiki/Special:FilePath/";
 pub const WIKIPEDIA_LOGO: &str =
     "https://commons.wikimedia.org/wiki/Special:FilePath/Wikipedia-logo-v2.svg?width=60";
@@ -263,12 +260,6 @@ impl<'v> Ui<'v> {
             .cloned()
             .collect();
         self.qualifiers(&qualifiers)
-    }
-
-    /// A strip of this many pictures has the "View all" card: its dialog
-    /// shows every value with its qualifiers, more than the strip.
-    pub fn view_all(&self, count: impl Arg<usize>) -> bool {
-        count.get() >= VIEW_ALL_MIN
     }
 
     /// The file of a media statement.

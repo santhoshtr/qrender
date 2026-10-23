@@ -4,11 +4,6 @@
    chart takes the same box, so the page does not move. */
 
 qr-chart {
-	padding: var( --pad-block ) var( --pad-inline );
-	border: 1px solid var( --edge );
-	border-radius: var( --radius );
-	background-color: var( --soft );
-
 	& .desc { margin: 0; }
 
 	& .chart {

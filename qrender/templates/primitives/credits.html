@@ -1,10 +1,10 @@
 {%- import "macros.html" as m -%}
 {#- The people who made a work, each once, with all of their roles: a
-    strip of cards with "View all" over its end; all of them in its
-    dialog. -#}
+    strip of cards. When some are not shown, "View all" over its end opens
+    the dialog of all of them. -#}
 {%- let values = ui.persons(b) -%}
 {%- let heading = ui.heading(b.pids.as_slice()) -%}
-{%- let all = ui.view_all(values.len()) -%}
+{%- let all = ui.hidden(values.as_slice()) > 0 -%}
 {%- let n = ui.id() -%}
 <div class="block set">
     {%- call m::scroller(heading) -%}

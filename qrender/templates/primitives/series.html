@@ -5,7 +5,7 @@
     split: the title is the concept, and a key names each line. A value
     apart (a year by sex among years without) is in the table only. -#}
 {%- let rows = b.rows() -%}
-<qr-chart class="block series">
+<qr-chart class="block series box">
 {%- if let Some(concept) = b.concept -%}
     <h3>{{ ui.text(ui.item(concept), true)|safe }}</h3>
     {%- for line in b.lines.iter() -%}

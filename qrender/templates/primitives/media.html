@@ -8,7 +8,7 @@
 {%- let role = b.role.name() -%}
 {%- let edit = ui.edit(b.statement.pid) -%}
 {%- if kind == "audio" -%}
-    <div class="block">
+    <div class="block box">
         <h3>{{ ui.text(ui.property(b.statement.pid), true)|safe }}{% call m::prov(ui, b.statement.provenance, b.statement.citations) %}{% endcall %}{% call m::edit(ui, edit) %}{% endcall %}</h3>
         <audio controls preload="none" src="{{ ui.file(file) }}">
         </audio>

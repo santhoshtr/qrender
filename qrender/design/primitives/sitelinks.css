@@ -1,12 +1,13 @@
 /* sitelinks */
 
 /* A count for a project family, in the evidence spread. Not a value. The
-   logo of the project before its name, at the size of the text. */
+   logo of the project before its name, at the size of the text. On the
+   card of the block, so not in the colour of the card. */
 .chip {
 	display: inline-flex;
 	align-items: center;
 	gap: var( --spacing-25 );
-	background-color: var( --soft );
+	background-color: var( --background-color-base );
 	border-radius: var( --border-radius-pill );
 	padding: 0 var( --spacing-75 );
 	margin: 1px 2px 1px 0;

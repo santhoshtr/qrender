@@ -1,5 +1,5 @@
 {#- The item as a share of its container. -#}
-<div class="block scale">
+<div class="block scale box">
     <h3>{{ ui.text(ui.property(b.container.pid), true)|safe }}: {{ ui.part(ui.entity(b.container.item))|safe }}</h3>
     <div class="bars">
         {%- for m in b.measures -%}

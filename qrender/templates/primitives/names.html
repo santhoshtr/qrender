@@ -18,7 +18,7 @@
     {%- for g in groups.iter() %}
         <section class="name-group" data-lang="{{ g.lang }}">
             <h4 data-lang-name="{{ g.lang }}">{{ g.lang }}</h4>
-            <dl>
+            <dl class="group">
                 {%- for r in g.rows.iter() %}
                     <div class="row{% if r.fallback.is_some() %} fallback{% endif %}">
                         <dt>{{ ui.text(ui.property(r.pid), true)|safe }}</dt>

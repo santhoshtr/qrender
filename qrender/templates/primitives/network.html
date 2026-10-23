@@ -1,9 +1,9 @@
 {%- import "macros.html" as m -%}
 {#- The values of one property, all of them, with their qualifiers, in its
     dialog. On the page, the first ones: a strip of cards, cut at its end,
-    with "View all" over its end; or, when the qualifiers matter
-    (an embassy, a border), rows as in the dialog, with "View all" as
-    their last cell. -#}
+    with "View all" over its end when some are not shown; or, when the
+    qualifiers matter (an embassy, a border), rows as in the dialog, with
+    "View all" as their last cell. -#}
 {%- let shared = ui.shared_citations(b.values.as_slice()) -%}
 {%- let values = ui.values_beside(b.values.as_slice(), shared) -%}
 {%- let title = ui.property(b.pid) -%}
@@ -20,7 +20,7 @@
             {{ ui.rows(shown.as_slice())|safe }}
         {%- endif -%}
     {%- else -%}
-        {%- let all = ui.view_all(values.len()) -%}
+        {%- let all = ui.hidden(values.as_slice()) > 0 -%}
         {%- call m::scroller(title.text) -%}
         {{ ui.rows(ui.first_shown(values.as_slice()))|safe }}
         {%- if all %}{% call m::view_all(ui, n) %}{% endcall %}{% endif -%}

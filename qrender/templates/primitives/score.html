@@ -2,7 +2,7 @@
 {#- Review scores, one card each, with the logo of the source. -#}
 <div class="block scores">
     {%- for v in b.values -%}
-        <div class="card">
+        <div class="card box">
             {%- if let Some(source) = v.source -%}
                 {%- match source.image -%}
                 {%- when Some with (logo) -%}

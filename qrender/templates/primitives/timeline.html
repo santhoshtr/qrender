@@ -4,7 +4,7 @@
     the colour of the dimension joins the dates. -#}
 <div class="block timeline">
     <h3>{{ ui.text(ui.property(b.pid), true)|safe }} <span class="note">{{ b.events.len() }}</span></h3>
-    <ol>
+    <ol class="group">
         {%- for e in b.events.iter() %}
             {%- let s = ui.value(&e.statement) %}
             <li>
