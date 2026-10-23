@@ -532,7 +532,7 @@ dialog.lightbox {
 }
 
 /* The topics of a spread that are Wikipedia articles: a card each, the
-   picture at the start, the wiki, the title and the description. */
+   wiki, the title and the description, the picture at the end. */
 .topic-articles {
 	grid-column: 1 / -1;
 	display: grid;
@@ -541,25 +541,24 @@ dialog.lightbox {
 }
 
 .topic-article {
-	position: relative;
-	display: flex;
-	gap: var( --spacing-100 );
+	display: grid;
+	gap: var( --spacing-25 ) var( --spacing-100 );
 	padding: var( --spacing-75 );
 	border: 1px solid var( --border-color-muted );
 	border-radius: var( --border-radius-base );
 	background-color: var( --background-color-base );
 
-	& > img {
-		flex: none;
-		inline-size: 96px;
-		block-size: 96px;
-		object-fit: cover;
-		/* A tall picture keeps its top, where a face usually is. */
-		object-position: 50% 20%;
-		border-radius: var( --border-radius-base );
+	/* The picture at the end, its credit under it. */
+	&:has( > .pic ) {
+		grid-template:
+			'body pic' auto
+			'body tools' 1fr / minmax( 0, 1fr ) auto;
 	}
 
+	& > .pic { grid-area: pic; }
+
 	& .body {
+		grid-area: body;
 		display: flex;
 		flex-direction: column;
 		gap: var( --spacing-25 );
@@ -587,9 +586,9 @@ dialog.lightbox {
 	}
 
 	& > .tools {
-		position: absolute;
-		inset-block-end: var( --spacing-50 );
-		inset-inline-end: var( --spacing-50 );
+		grid-area: tools;
+		align-self: end;
+		justify-self: end;
 	}
 }
 
@@ -1139,6 +1138,34 @@ dialog:is( .translator, .label-editor ) .actions {
 	figcaption & { color: inherit; opacity: 0.85; flex-basis: 100%; }
 }
 
+/* The qualifiers of a value: a line under the value. */
+.quals { display: block; }
+
+/* The picture beside the text of a value (a row of the sheet, of a
+   dialog, of a timeline; a topic card): at the end of the text. It has
+   the height of three lines of the text and the width of its shape, in
+   a limited range. A drawing (a flag, a logo) is shown whole. Without a
+   picture, there is no empty box: the text does not change. */
+.pic {
+	--h: 3lh;
+
+	display: block;
+	inline-size: calc( clamp( 0.75, var( --a ), 1.78 ) * var( --h ) );
+	block-size: var( --h );
+	border-radius: var( --radius );
+	object-fit: cover;
+	/* A tall picture keeps its top, where a face usually is. */
+	object-position: 50% 20%;
+	background-color: var( --background-color-neutral-subtle );
+
+	&.k-drawing {
+		object-fit: contain;
+		object-position: center;
+		background-color: var( --background-color-base );
+		border: 1px solid var( --border-color-muted );
+	}
+}
+
 /* ---------- media: every picture keeps its own shape ---------- */
 
 .m {
@@ -1347,9 +1374,8 @@ dialog:is( .translator, .label-editor ) .actions {
 	&:hover { --veil: color-mix( in srgb, var( --background-color-interactive ) 85%, transparent ); }
 }
 
-/* All the values of a pictured list, in its dialog: a row for each, with a
-   picture of one size (the rows line up), its title, its description and
-   its qualifiers. */
+/* All the values of a pictured list, in its dialog: a row for each, with
+   its title, its description, its qualifiers and its picture. */
 .pic-rows {
 	column-span: all;
 	display: grid;
@@ -1360,35 +1386,16 @@ dialog:is( .translator, .label-editor ) .actions {
 	list-style: none;
 
 	& li {
-		position: relative;
 		display: grid;
-		grid-template-columns: 64px minmax( 0, 1fr );
+		grid-template-columns: minmax( 0, 1fr ) auto;
 		gap: var( --spacing-75 );
 		align-items: start;
 	}
 
-	& .thumb {
-		inline-size: 64px;
-		block-size: 48px;
-		border-radius: 4px;
-		overflow: hidden;
-		background-color: var( --background-color-neutral-subtle );
-
-		& img {
-			display: block;
-			inline-size: 100%;
-			block-size: 100%;
-			object-fit: cover;
-			/* A tall picture keeps its top, where a face usually is. */
-			object-position: 50% 20%;
-		}
-	}
-
 	/* Inline: a long title wraps with its marks. The edit action is in
-	   the corner of the row, out of the text, so it takes no line. */
+	   the corner of the text, out of the flow, so it takes no line. */
 	& .text {
-		& > .desc,
-		& > .note { display: block; }
+		position: relative;
 
 		& > .edit {
 			position: absolute;
@@ -1396,9 +1403,6 @@ dialog:is( .translator, .label-editor ) .actions {
 			inset-inline-end: 0;
 		}
 	}
-
-	/* No value has a picture: no picture column. */
-	&.text-rows li { grid-template-columns: minmax( 0, 1fr ); }
 }
 
 /* The picture of the item itself needs no property name. */

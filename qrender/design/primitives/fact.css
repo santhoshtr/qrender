@@ -46,25 +46,7 @@
 		& .note { font-weight: var( --font-weight-normal ); }
 	}
 
-	/* The picture has a fixed height and the width of its shape, in a
-	   limited range. A drawing (a flag, a logo) is shown whole. */
-	& > .pic {
-		--h: 4rem;
-
-		grid-area: pic;
-		display: block;
-		inline-size: calc( clamp( 0.75, var( --a ), 1.78 ) * var( --h ) );
-		block-size: var( --h );
-		border-radius: var( --radius );
-		object-fit: cover;
-		background-color: var( --background-color-neutral-subtle );
-
-		&.k-drawing {
-			object-fit: contain;
-			background-color: var( --background-color-base );
-			border: 1px solid var( --border-color-muted );
-		}
-	}
+	& > .pic { grid-area: pic; }
 
 	/* A value that has ended: shown, but quieter than the current ones. */
 	&.former {

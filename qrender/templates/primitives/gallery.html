@@ -9,7 +9,7 @@
             <dt>{{ ui.text(ui.property(v.statement.pid), true)|safe }}</dt>
             <dd>
                 {{- ui.part(s.part)|safe -}}
-                {%- if !s.note.is_empty() %} <span class="note">{{ ui.note(s.note.as_slice())|safe }}</span>{% endif -%}
+                {%- if !s.note.is_empty() %} <span class="note quals">{{ ui.note(s.note.as_slice())|safe }}</span>{% endif -%}
                 {%- if let Some(d) = s.description %}<span class="desc">
                     {% call m::description(d) %}
                     {% endcall %}
@@ -27,13 +27,7 @@
                     {% endcall %}
                 {% endif -%}
             </span>
-            {%- if let Some(image) = s.image %}
-                <img class="pic k-{{ image.picture.facts.kind.name() }}"
-                     style="--a:{{ ui.aspect(image.picture.facts.aspect) }}"
-                     src="{{ ui.src(&image.picture.file, 330) }}"
-                     alt=""
-                     loading="lazy">
-            {%- endif %}
+            {%- if let Some(image) = s.image %}{{ ui.pic(image)|safe }}{% endif %}
         </div>
     {%- endfor -%}
 </dl>

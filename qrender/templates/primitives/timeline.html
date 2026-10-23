@@ -1,6 +1,6 @@
 {%- import "macros.html" as m -%}
 {#- Events that are items of their own, the oldest first: a row for each,
-    with its date, its picture, its label and its description. A line in
+    with its date, its label, its description and its picture. A line in
     the colour of the dimension joins the dates. -#}
 <div class="block timeline">
     <h3>{{ ui.text(ui.property(b.pid), true)|safe }} <span class="note">{{ b.events.len() }}</span></h3>
@@ -12,22 +12,14 @@
                     {%- if let Some(day) = e.day %}{{ ui.text(ui.item(day), false)|safe }}
                     {%- else if let Some(w) = e.when %}{{ ui.when(w) }}{% endif -%}
                 </span>
-                <span class="pic">
-                    {%- if let Some(i) = s.image %}
-                        <img class="k-{{ i.picture.facts.kind.name() }}"
-                             src="{{ ui.src(&i.picture.file, 240) }}"
-                             alt=""
-                             loading="lazy">
-                    {%- endif -%}
-                </span>
                 <div class="what">
                     {{ ui.part(s.part)|safe }}
-                    {%- if !s.note.is_empty() %} <span class="note">{{ ui.note(s.note.as_slice())|safe }}</span>{% endif -%}
                     {%- call m::prov(ui, s.provenance, s.citations) %}{% endcall -%}
                     {%- if let Some(edit) = s.edit %}
                         {% call m::edit(ui, edit) %}
                         {% endcall %}
                     {% endif -%}
+                    {%- if !s.note.is_empty() %}<span class="note quals">{{ ui.note(s.note.as_slice())|safe }}</span>{% endif -%}
                     {%- if let Some(d) = s.description %}
                         <span class="desc">
                             {% call m::description(d) %}
@@ -35,6 +27,7 @@
                         </span>
                     {% endif -%}
                 </div>
+                {%- if let Some(i) = s.image %}{{ ui.pic(i)|safe }}{% endif %}
             </li>
         {%- endfor %}
     </ol>

@@ -14,14 +14,14 @@
     {%- if form == "range" -%}
         {{ ui.part(ui.number(ui.amount(first)))|safe }} – {{ ui.part(ui.part_at(values.as_slice(), 1))|safe }}
     {%- else if form == "variants" -%}
-        {%- for s in values.iter() -%}{%- if !loop.first %}<br>{% endif -%}{{ ui.part(s.part)|safe }} <span class="note">{{ ui.note(s.note.as_slice())|safe }}</span>{%- endfor -%}
+        {%- for s in values.iter() -%}<span class="v">{{ ui.part(s.part)|safe }} <span class="note quals">{{ ui.note(s.note.as_slice())|safe }}</span></span>{%- endfor -%}
     {%- else if values.len() > 1 || form == "list" -%}
         {{ ui.lines(values.as_slice(), ui.property(b.pid).text)|safe }}
     {%- else -%}
         {%- for s in values.iter() -%}
             {{ ui.part(s.part)|safe }}
-            {%- if !s.note.is_empty() %} <span class="note">{{ ui.note(s.note.as_slice())|safe }}</span>{% endif -%}
-            {%- if let Some(age) = b.age %} <span class="note">{{ ui.age(age.years) }}</span>{% endif -%}
+            {%- if !s.note.is_empty() %} <span class="note quals">{{ ui.note(s.note.as_slice())|safe }}</span>{% endif -%}
+            {%- if let Some(age) = b.age %} <span class="note quals">{{ ui.age(age.years) }}</span>{% endif -%}
             {%- if let Some(g) = b.gauge %}
                 {%- let index = g.kind.name() == "index" %}
                 <span class="gauge g-{{ g.kind.name() }}" style="--at: {{ ui.css_number(g.at) }}">

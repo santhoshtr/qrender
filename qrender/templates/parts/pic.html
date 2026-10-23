@@ -1,0 +1,7 @@
+{#- The picture beside the text of a value: at the end of the text, with
+    the width of its shape. -#}
+<img class="pic k-{{ image.picture.facts.kind.name() }}"
+     style="--a:{{ ui.aspect(image.picture.facts.aspect) }}"
+     src="{{ ui.src(&image.picture.file, 330) }}"
+     alt=""
+     loading="lazy">

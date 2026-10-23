@@ -1,10 +1,9 @@
 /* timeline: events that are items of their own, the oldest first. Each
-   event is a row: its date, its picture, its text. A line in the colour
+   event is a row: its date, its text, its picture. A line in the colour
    of the dimension runs through the dates, with a dot at each event. */
 
 .timeline {
 	--when: 7rem;
-	--pic: 96px;
 
 	& ol {
 		margin: 0;
@@ -15,12 +14,13 @@
 	& li {
 		position: relative;
 		display: grid;
-		grid-template-columns: var( --when ) var( --pic ) minmax( 0, 1fr );
+		/* The text has a limit, so the picture stays near it. */
+		grid-template-columns: var( --when ) minmax( 0, 36rem ) auto;
 		gap: var( --spacing-150 );
 		align-items: start;
 		padding-block: var( --spacing-75 );
 
-		/* The line, between the date and the picture. */
+		/* The line, between the date and the text. */
 		&::before {
 			content: '';
 			position: absolute;
@@ -50,33 +50,7 @@
 		}
 	}
 
-	/* The same box with or without a picture: the rows line up. */
-	& .pic {
-		inline-size: var( --pic );
-		block-size: 64px;
-		border-radius: 4px;
-		overflow: hidden;
-		background-color: var( --soft );
-
-		& img {
-			display: block;
-			inline-size: 100%;
-			block-size: 100%;
-			object-fit: cover;
-			/* A tall picture keeps its top, where a face usually is. */
-			object-position: 50% 20%;
-		}
-
-		/* Maps and drawings are shown whole. */
-		& img.k-drawing { object-fit: contain; object-position: center; }
-	}
-
 	& .what { font-weight: var( --font-weight-semi-bold ); }
 
-	@media ( max-width: 600px ) {
-		--when: 4.5rem;
-		--pic: 64px;
-
-		& .pic { block-size: 48px; }
-	}
+	@media ( max-width: 600px ) { --when: 4.5rem; }
 }

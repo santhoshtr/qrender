@@ -126,6 +126,12 @@ impl<'a> Ref<Shown<'a>> for Shown<'a> {
     }
 }
 
+impl<'a> Ref<Image<'a>> for Image<'a> {
+    fn r(&self) -> &Image<'a> {
+        self
+    }
+}
+
 impl Ref<str> for String {
     fn r(&self) -> &str {
         self
@@ -459,11 +465,6 @@ impl<'v> Ui<'v> {
 
     pub fn values<'a>(&'a self, statements: &'a [StatementRef]) -> Vec<Shown<'a>> {
         statements.iter().map(|s| self.value(s)).collect()
-    }
-
-    /// Some value of the list has a picture.
-    pub fn any_image(&self, values: &[Shown]) -> bool {
-        values.iter().any(|s| s.image.is_some())
     }
 
     /// Every holder of an office: the holder now, then the holders before.

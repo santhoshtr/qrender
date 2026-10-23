@@ -12,7 +12,7 @@ use askama::Template;
 use super::cite::{self, Card, Value as CiteValue};
 use super::design::{REFERENCE_ICON, STYLESHEET, scripts};
 use super::map::Frame;
-use super::ui::{Arg, Ref, Shown, TopicArticle, Ui};
+use super::ui::{Arg, Image, Ref, Shown, TopicArticle, Ui};
 use crate::compose::picture::media_kind;
 use crate::localize::format::Part;
 use crate::localize::messages::format;
@@ -182,6 +182,13 @@ enum TocTitle<'a> {
     Spread(&'a Label),
     /// A section of the article that is a spread of its own.
     Section(&'a ProseSection),
+}
+
+#[derive(Template)]
+#[template(path = "parts/pic.html")]
+struct PicHtml<'a> {
+    ui: &'a Ui<'a>,
+    image: &'a Image<'a>,
 }
 
 #[derive(Template)]
@@ -484,6 +491,14 @@ impl<'v> Ui<'v> {
             ui: self,
             s: s.r(),
             head: Some(head.r()),
+        })
+    }
+
+    /// The picture beside the text of a value.
+    pub fn pic<'a>(&self, image: impl Ref<Image<'a>>) -> String {
+        render(PicHtml {
+            ui: self,
+            image: image.r(),
         })
     }
 

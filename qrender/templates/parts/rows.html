@@ -1,21 +1,10 @@
 {%- import "macros.html" as m -%}
 {#- All the values of a list, in its dialog: a row for each, with its
-    picture (or an empty box: the rows line up), its title, its description
-    and its qualifiers. A list without any picture has no picture column.
+    title, its description, its qualifiers, and its picture at the end.
     The pictures load when the dialog opens. -#}
-{%- let pictured = ui.any_image(values) -%}
-<ul class="pic-rows{% if !pictured %} text-rows{% endif %}">
+<ul class="pic-rows">
     {%- for s in values.iter() %}
         <li>
-            {%- if pictured %}
-                <span class="thumb">
-                    {%- if let Some(image) = s.image -%}
-                        <img src="{{ ui.src(&image.picture.file, 160) }}"
-                             alt=""
-                             loading="lazy">
-                    {%- endif -%}
-                </span>
-            {%- endif %}
             <span class="text">
                 <b>{{ ui.part(s.part)|safe }}</b>
                 {%- if let Some(image) = s.image -%}{%- if let Some(from) = image.from %}<span class="from" title="{{ from }}">W</span>{% endif -%}{%- endif -%}
@@ -30,8 +19,9 @@
                         {% endcall %}
                     </span>
                 {% endif -%}
-                {%- if !s.note.is_empty() %}<span class="note">{{ ui.note(s.note.as_slice())|safe }}</span>{% endif -%}
+                {%- if !s.note.is_empty() %}<span class="note quals">{{ ui.note(s.note.as_slice())|safe }}</span>{% endif -%}
             </span>
+            {%- if let Some(image) = s.image %}{{ ui.pic(image)|safe }}{% endif %}
         </li>
     {%- endfor %}
 </ul>

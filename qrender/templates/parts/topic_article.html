@@ -1,14 +1,13 @@
 {%- import "macros.html" as m -%}
-{#- A topic of a spread that is a Wikipedia article: its picture, the
-    wiki, the article title (the link), and the description of the item.
-    The credit of the picture is a button, so the card is not a link. -#}
+{#- A topic of a spread that is a Wikipedia article: the wiki, the article
+    title (the link), the description of the item, and its picture. The
+    credit of the picture is a button, so the card is not a link. -#}
 {%- let a = t.article -%}
 <div class="topic-article">
-    {%- if let Some(image) = t.s.image %}<img src="{{ ui.src(&image.picture.file, 330) }}" alt="" loading="lazy">{% endif -%}
     <div class="body">
         <p class="source"><img src="{{ ui.wikipedia_logo() }}" alt="" width="18"> {{ a.lang }}.wikipedia.org</p>
         <a class="title" href="{{ a.href }}" lang="{{ a.lang }}">{{ a.text }}</a>
         {%- if let Some(d) = t.s.description %}<p class="desc">{% call m::description(d) %}{% endcall %}</p>{% endif -%}
     </div>
-    {%- if let Some(image) = t.s.image %}<span class="tools">{{ ui.credit(&image.picture.facts.credit)|safe }}</span>{% endif -%}
+    {%- if let Some(image) = t.s.image %}{{ ui.pic(image)|safe }}<span class="tools">{{ ui.credit(&image.picture.facts.credit)|safe }}</span>{% endif -%}
 </div>
