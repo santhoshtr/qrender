@@ -74,13 +74,12 @@ pub(crate) fn inline_icon(svg: &str) -> String {
 }
 
 /// The CSS of the page grid and of the templates (the design system's own).
-const BASE: [&str; 6] = [
+const BASE: [&str; 5] = [
     include_str!("../../design/base.css"),
     include_str!("../../design/templates/identity.css"),
     include_str!("../../design/templates/lead-beside.css"),
     include_str!("../../design/templates/columns.css"),
     include_str!("../../design/templates/feature-run.css"),
-    include_str!("../../design/templates/collapsed.css"),
 ];
 
 /// The scripts of every page: progressive enhancement only. The lightbox,

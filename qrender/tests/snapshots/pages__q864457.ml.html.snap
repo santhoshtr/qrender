@@ -98,8 +98,8 @@ expression: html
 </nav>
     <main class="page">
             <section class="spread t-identity" id="identity"
-             data-spread="identity"
-             data-dimension="neutral"><div data-slot="head">
+         data-spread="identity"
+         data-dimension="neutral"><div data-slot="head">
         <div class="title"><h1>knapsack problem <span class="note">en</span></h1>
         <p>
             <span class="fb" lang="en">problem in combinatorial optimization</span>
@@ -439,8 +439,8 @@ knapsack(n, W)
 </qr-section></div>
             </section>
             <section class="spread t-columns" id="web"
-             data-spread="web"
-             data-dimension="neutral"><h2><span class="title"><span class="fb" lang="en">web presence</span></span></h2><div data-slot="stack">
+         data-spread="web"
+         data-dimension="neutral"><h2><span class="title"><span class="fb" lang="en">web presence</span></span></h2><div data-slot="stack">
         <dl class="sheet links"><div class="row">
             <dt class="i-puzzle">ക്വാറ ടോപിക് ഐ.ഡി.</dt>
             <dd><img class="favicon" src="https://favicons.toolforge.org/favicon?url=www.quora.com" alt="" width="16" height="16" loading="lazy"><span class="link"><a href="https://www.quora.com/topic/Knapsack-Problem">Knapsack-Problem</a><button class="src"
@@ -466,11 +466,9 @@ knapsack(n, W)
             </span>
         </div></dl>
     </div></section>
-            <section class="spread t-collapsed" id="more"
-             data-spread="more"
-             data-dimension="neutral">
-        <details>
-            <summary>+2</summary><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt class="i-puzzle"><span class="fb-group"><span class="fb"
+            <section class="spread t-columns" id="more"
+         data-spread="more"
+         data-dimension="neutral"><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt class="i-puzzle"><span class="fb-group"><span class="fb"
       lang="en">computational complexity</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/P10374/ml"
            aria-label="Add a label in your language"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></dt>
@@ -499,11 +497,10 @@ knapsack(n, W)
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q864457#P138"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div></dl></details>
-    </section>
+</div></dl></section>
             <section class="spread t-sheet" id="evidence"
-             data-spread="evidence"
-             data-dimension="neutral"><h2><span class="title">അവലംബം</span></h2><div data-slot="summary">
+         data-spread="evidence"
+         data-dimension="neutral"><h2><span class="title">അവലംബം</span></h2><div data-slot="summary">
         <div class="block box">
     <div class="stack-bar"><span class="p-sourced" style="--n:1"></span>
 <span class="p-imported" style="--n:1"></span>

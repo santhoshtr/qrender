@@ -98,8 +98,8 @@ expression: html
 </nav>
     <main class="page">
             <section class="spread t-identity" id="identity"
-             data-spread="identity"
-             data-dimension="neutral"><div data-slot="head">
+         data-spread="identity"
+         data-dimension="neutral"><div data-slot="head">
         <div class="title"><h1>United States <span class="glyph">🇺🇸</span></h1>
         <p>
             country located primarily in North America
@@ -210,8 +210,8 @@ expression: html
             <span class="k">instance of</span><a href="https://www.wikidata.org/wiki/Q6256">country</a>, <a href="https://www.wikidata.org/wiki/Q3624078">sovereign state</a>, <a href="https://www.wikidata.org/wiki/Q1489259">superpower</a>, <a href="https://www.wikidata.org/wiki/Q1520223">constitutional republic</a>, <a href="https://www.wikidata.org/wiki/Q5035794">capitalist state</a> <span class="note">+1</span></div></div>
     </div></section>
             <section class="spread t-columns" id="names"
-             data-spread="names"
-             data-dimension="names"><h2><span class="title">name</span></h2><div data-slot="stack">
+         data-spread="names"
+         data-dimension="names"><h2><span class="title">name</span></h2><div data-slot="stack">
         <qr-names class="block names">
 <select class="name-choice"
         hidden
@@ -2766,8 +2766,8 @@ expression: html
         popovertarget="note-6"
         aria-label="Note 6">6</button></sup></p><a class="read" href="https://en.wikipedia.org/wiki/United_States#Etymology">Etymology ↗</a></div></section>
             <section class="spread t-columns" id="symbols"
-             data-spread="symbols"
-             data-dimension="names"><h2><span class="title">national symbol</span></h2><div data-slot="stack">
+         data-spread="symbols"
+         data-dimension="names"><h2><span class="title">national symbol</span></h2><div data-slot="stack">
         <div class="block earlier box">
     <h3 class="i-puzzle">flag image <span class="note">earlier · 1777 – 1960</span></h3><button class="more" type="button" command="show-modal" commandfor="d99">+25</button>
     <dialog id="d99" closedby="any">
@@ -3238,8 +3238,8 @@ expression: html
      loading="lazy">
         </div></dl></div></section>
             <section class="spread t-hero-plus-stack" id="location"
-             data-spread="location"
-             data-dimension="place"><h2><span class="title">geography</span></h2><div data-slot="hero">
+         data-spread="location"
+         data-dimension="place"><h2><span class="title">geography</span></h2><div data-slot="hero">
         <div class="box map-card">
         <figure class="map">
             <button class="zoom"
@@ -4195,8 +4195,8 @@ expression: html
             popovertarget="p131"
             aria-label="Credit">i</button><span id="p131" popover class="pop">Wapcaplet · CC BY-SA 3.0</span></span></div></div></section>
             <section class="spread t-lead-beside" id="government"
-             data-spread="government"
-             data-dimension="people"><h2><span class="title">government</span></h2><div data-slot="hero">
+         data-spread="government"
+         data-dimension="people"><h2><span class="title">government</span></h2><div data-slot="hero">
         <div class="block succession">
     <h3 class="i-userAvatar"><a href="https://www.wikidata.org/wiki/Q11696">President of the United States</a></h3>
 <div class="group">
@@ -6044,8 +6044,8 @@ expression: html
     </dialog></div>
     </div></section>
             <section class="spread t-columns" id="demography"
-             data-spread="demography"
-             data-dimension="measures"><h2><span class="title">demography</span></h2><div data-slot="stack">
+         data-spread="demography"
+         data-dimension="measures"><h2><span class="title">demography</span></h2><div data-slot="stack">
         <qr-chart class="block series box"><h3 class="i-userGroup">population
     <button class="info"
             type="button"
@@ -6272,8 +6272,8 @@ expression: html
             popovertarget="p159"
             aria-label="Credit">i</button><span id="p159" popover class="pop">Mishomp · CC0</span></span></div></div></section>
             <section class="spread t-columns" id="economy"
-             data-spread="economy"
-             data-dimension="measures"><h2><span class="title">economy</span></h2><div data-slot="stack">
+         data-spread="economy"
+         data-dimension="measures"><h2><span class="title">economy</span></h2><div data-slot="stack">
         <qr-chart class="block series box"><h3 class="i-puzzle">nominal GDP
     <button class="info"
             type="button"
@@ -6402,8 +6402,8 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
             popovertarget="p165"
             aria-label="Credit">i</button><span id="p165" popover class="pop">Francisco Diez from New York City, USA · CC BY 2.0</span></span></div></div></section>
             <section class="spread t-columns" id="development"
-             data-spread="development"
-             data-dimension="measures"><h2><span class="title">socioeconomic development</span></h2><div data-slot="stack">
+         data-spread="development"
+         data-dimension="measures"><h2><span class="title">socioeconomic development</span></h2><div data-slot="stack">
         <qr-chart class="block series box"><h3 class="i-puzzle">Human Development Index
     <button class="info"
             type="button"
@@ -6545,8 +6545,8 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
 </div></dl></section>
             <section class="spread t-columns" id="infrastructure"
-             data-spread="infrastructure"
-             data-dimension="place"><h2><span class="title">infrastructure</span></h2><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt class="i-bolt">mains voltage</dt>
+         data-spread="infrastructure"
+         data-dimension="place"><h2><span class="title">infrastructure</span></h2><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt class="i-bolt">mains voltage</dt>
 <dd><data value="120" data-f="number">120</data> <span class="note">volt</span> <span class="note quals">frequency: <data value="60" data-f="number">60</data></span></dd>
 <span class="tools">
         <span class="prov-imported" title="imported from Wikimedia project">W</span>
@@ -6730,8 +6730,8 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
 </div></dl></section>
             <section class="spread t-columns" id="culture"
-             data-spread="culture"
-             data-dimension="people"><h2><span class="title">culture</span></h2><div data-slot="stack">
+         data-spread="culture"
+         data-dimension="people"><h2><span class="title">culture</span></h2><div data-slot="stack">
         <div class="block timeline">
     <h3 class="i-puzzle">public holiday <span class="note">9</span></h3>
     <ol class="group">
@@ -8726,8 +8726,8 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
         popovertarget="note-40"
         aria-label="Note 40">40</button></sup></p><a class="read" href="https://en.wikipedia.org/wiki/United_States#Culture_and_society">Culture and society ↗</a></div></section>
             <section class="spread t-columns" id="relations"
-             data-spread="relations"
-             data-dimension="people"><h2><span class="title">international relations</span></h2><div data-slot="stack">
+         data-spread="relations"
+         data-dimension="people"><h2><span class="title">international relations</span></h2><div data-slot="stack">
         <div class="block set rows">
     <h3 class="i-puzzle">diplomatic relation <span class="note">182</span><button class="src"
         type="button"
@@ -13491,8 +13491,8 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
      loading="lazy">
         </div></dl></div></section>
             <section class="spread t-columns" id="history"
-             data-spread="history"
-             data-dimension="time"><h2><span class="title">history</span></h2><div data-slot="stack">
+         data-spread="history"
+         data-dimension="time"><h2><span class="title">history</span></h2><div data-slot="stack">
         <div class="block timeline">
     <h3 class="i-puzzle">significant event <span class="note">41</span></h3>
     <ol class="group">
@@ -14233,8 +14233,8 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
             aria-label="Credit">i</button><span id="p236" popover class="pop">Original:  United States Geological Survey (USGS)
 Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></section>
             <section class="spread t-columns" id="maps"
-             data-spread="maps"
-             data-dimension="place"><h2><span class="title">map</span></h2><div data-slot="gallery"><div class="block set"><div class="run"><figure class="m k-drawing" style="--a:1.6156">
+         data-spread="maps"
+         data-dimension="place"><h2><span class="title">map</span></h2><div data-slot="gallery"><div class="block set"><div class="run"><figure class="m k-drawing" style="--a:1.6156">
         <button class="zoom"
                 type="button"
                 command="show-modal"
@@ -14452,8 +14452,8 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
     </div>
 </dialog></div></div></div></section>
             <section class="spread t-feature-run" id="media"
-             data-spread="media"
-             data-dimension="media"><h2><span class="title">multimedia</span></h2><div data-slot="feature">
+         data-spread="media"
+         data-dimension="media"><h2><span class="title">multimedia</span></h2><div data-slot="feature">
         <div class="feature"> <figure class="m k-photo" style="--a:1.5002">
         <button class="zoom"
                 type="button"
@@ -14575,8 +14575,8 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
                 <p class="prose-links"><a href="https://en.wikipedia.org/wiki/United_States#Government_and_politics">Government and politics</a></p>
             </section>
             <section class="spread t-columns" id="web"
-             data-spread="web"
-             data-dimension="neutral"><h2><span class="title">web presence</span></h2><div data-slot="stack">
+         data-spread="web"
+         data-dimension="neutral"><h2><span class="title">web presence</span></h2><div data-slot="stack">
         <dl class="sheet links"><div class="row">
             <dt class="i-globe">top-level Internet domain</dt>
             <dd><span class="link"><a href="https://www.wikidata.org/wiki/Q31635">.mil</a><span class="prov-imported" title="imported from Wikimedia project">W</span>
@@ -14727,11 +14727,9 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
 <dd><span class="v"><data value="17500" data-f="number">17500</data> <span class="note quals">2024 · UCcS5Ar_-1AWByLfBmJOG8Xg</span></span><span class="v"><data value="349767" data-f="number">349767</data> <span class="note quals">2021 · 14074515</span></span></dd>
 <span class="tools"></span>
 </div></dl></section>
-            <section class="spread t-collapsed" id="more"
-             data-spread="more"
-             data-dimension="neutral">
-        <details>
-            <summary>+20</summary><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt class="i-puzzle">country</dt>
+            <section class="spread t-columns" id="more"
+         data-spread="more"
+         data-dimension="neutral"><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt class="i-puzzle">country</dt>
 <dd><a href="https://www.wikidata.org/wiki/Q30">United States</a></dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
@@ -14973,11 +14971,10 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P11054"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div></dl></details>
-    </section>
+</div></dl></section>
             <section class="spread t-sheet" id="evidence"
-             data-spread="evidence"
-             data-dimension="neutral"><h2><span class="title">reference</span></h2><div data-slot="summary">
+         data-spread="evidence"
+         data-dimension="neutral"><h2><span class="title">reference</span></h2><div data-slot="summary">
         <div class="block box">
     <div class="stack-bar"><span class="p-sourced" style="--n:737"></span>
 <span class="p-imported" style="--n:65"></span>

@@ -5,8 +5,8 @@
 # Two kinds of judgment:
 # - class layouts: which spreads a kind of item has, in which order, and the
 #   properties each spread shows. The first spread that lists a statement's
-#   property shows it; a statement no spread lists goes to "more", collapsed
-#   at the end, so no data is lost.
+#   property shows it; a statement no spread lists goes to "more", at the
+#   end, so no data is lost.
 # - property roles: what a property is for, when its datatype does not say.
 
 # ============================================================ class layouts
@@ -19,7 +19,7 @@
 #   scale     share of the container, peers, series of the properties listed
 #   history   the timeline of the significant events (property role)
 #   media     the Commons files no spread took
-#   more      everything left, collapsed
+#   more      everything left: rows, and the series as charts
 #   evidence  web presence, curation, sources, identifiers, provenance
 
 [class_layouts.settlement]

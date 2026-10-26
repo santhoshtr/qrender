@@ -23,7 +23,7 @@ pub enum SpreadKind {
     Media,
     /// The item's sites and accounts (the web role), as cards.
     Web,
-    /// Everything left, collapsed.
+    /// Everything left: rows, and the series as charts.
     More,
     /// Curation, sources, identifiers, provenance.
     Evidence,
@@ -204,7 +204,6 @@ pub enum Template {
     Columns,
     FeatureRun,
     Sheet,
-    Collapsed,
 }
 
 /// A named place in a template.
@@ -241,7 +240,6 @@ impl Template {
             Self::Columns => "columns",
             Self::FeatureRun => "feature-run",
             Self::Sheet => "sheet",
-            Self::Collapsed => "collapsed",
         }
     }
 }

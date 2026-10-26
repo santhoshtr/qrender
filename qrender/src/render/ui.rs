@@ -565,11 +565,6 @@ impl<'v> Ui<'v> {
         matches!(slot.get(), Slot::Run | Slot::Feature | Slot::Band)
     }
 
-    /// The number of blocks of a collapsed spread.
-    pub fn block_count(&self, s: &SpreadView) -> usize {
-        s.spread.slots.values().map(Vec::len).sum()
-    }
-
     /// The links under a spread: its article sections (but those the
     /// spread shows: a paragraph or the content), then its topics.
     pub fn prose_links(&self, s: &SpreadView) -> Vec<Part> {

@@ -98,8 +98,8 @@ expression: html
 </nav>
     <main class="page">
             <section class="spread t-identity" id="identity"
-             data-spread="identity"
-             data-dimension="neutral"><div data-slot="head">
+         data-spread="identity"
+         data-dimension="neutral"><div data-slot="head">
         <div class="title"><h1>ഭൂമി</h1>
         <p>
             സൗരയൂഥത്തിൽ സുര്യനിൽ നിന്ന് മൂന്നാമത്തെ ഗ്രഹം
@@ -172,8 +172,8 @@ expression: html
            aria-label="Add a label in your language"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></span><a href="https://www.wikidata.org/wiki/Q525">സൂര്യൻ</a></div></div>
     </div></section>
             <section class="spread t-columns" id="physical"
-             data-spread="physical"
-             data-dimension="measures"><h2><span class="title">ഭൗതികഗുണങ്ങൾ</span></h2><div data-slot="hero">
+         data-spread="physical"
+         data-dimension="measures"><h2><span class="title">ഭൗതികഗുണങ്ങൾ</span></h2><div data-slot="hero">
         <div class="block scale box">
     <h3 class="i-puzzle"><span class="fb-group"><span class="fb"
       lang="en">parent astronomical body</span><a class="add-label"
@@ -385,8 +385,8 @@ expression: html
 <span class="tools"></span>
 </div></dl></section>
             <section class="spread t-columns" id="orbit"
-             data-spread="orbit"
-             data-dimension="measures"><h2><span class="title">ഭ്രമണപഥം</span></h2><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt class="i-puzzle"><span class="fb-group"><span class="fb"
+         data-spread="orbit"
+         data-dimension="measures"><h2><span class="title">ഭ്രമണപഥം</span></h2><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt class="i-puzzle"><span class="fb-group"><span class="fb"
       lang="en">type of orbit</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/P522/ml"
            aria-label="Add a label in your language"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></dt>
@@ -529,8 +529,8 @@ expression: html
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
 </div></dl></section>
             <section class="spread t-columns" id="location"
-             data-spread="location"
-             data-dimension="place"><h2><span class="title">ഭൂമിശാസ്ത്രം</span></h2><div data-slot="gallery"><dl class="sheet"><div class="row">
+         data-spread="location"
+         data-dimension="place"><h2><span class="title">ഭൂമിശാസ്ത്രം</span></h2><div data-slot="gallery"><dl class="sheet"><div class="row">
             <dt class="i-puzzle"><span class="fb-group"><span class="fb"
       lang="en">lowest point</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/P1589/ml"
@@ -739,8 +739,8 @@ expression: html
             popovertarget="p11"
             aria-label="Credit">i</button><span id="p11" popover class="pop">Unknown author Unknown author · Public domain</span></span></div></div></section>
             <section class="spread t-columns" id="demography"
-             data-spread="demography"
-             data-dimension="measures"><h2><span class="title">ജനസംഖ്യാപഠനം</span></h2><div data-slot="stack">
+         data-spread="demography"
+         data-dimension="measures"><h2><span class="title">ജനസംഖ്യാപഠനം</span></h2><div data-slot="stack">
         <qr-chart class="block series box"><h3 class="i-userGroup">ജനസംഖ്യ
     <button class="info"
             type="button"
@@ -797,8 +797,8 @@ expression: html
 </div></qr-chart>
     </div></section>
             <section class="spread t-columns" id="names"
-             data-spread="names"
-             data-dimension="names"><h2><span class="title"><span class="fb" lang="en">name</span></span></h2><div data-slot="stack">
+         data-spread="names"
+         data-dimension="names"><h2><span class="title"><span class="fb" lang="en">name</span></span></h2><div data-slot="stack">
         <qr-names class="block names">
 <select class="name-choice"
         hidden
@@ -1387,8 +1387,8 @@ expression: html
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
 </div></dl></section>
             <section class="spread t-columns" id="relations"
-             data-spread="relations"
-             data-dimension="place"><h2><span class="title"><span class="fb" lang="en">relation</span></span></h2><div data-slot="gallery"><dl class="sheet"><div class="row">
+         data-spread="relations"
+         data-dimension="place"><h2><span class="title"><span class="fb" lang="en">relation</span></span></h2><div data-slot="gallery"><dl class="sheet"><div class="row">
             <dt class="i-puzzle"><span class="fb-group"><span class="fb"
       lang="en">‎most populous urban area</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/P13574/ml"
@@ -3203,8 +3203,8 @@ expression: html
     </dialog></div>
     </div></section>
             <section class="spread t-columns" id="history"
-             data-spread="history"
-             data-dimension="time"><h2><span class="title">ചരിത്രം</span></h2><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt class="i-calendar">ഉത്പത്തി</dt>
+         data-spread="history"
+         data-dimension="time"><h2><span class="title">ചരിത്രം</span></h2><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt class="i-calendar">ഉത്പത്തി</dt>
 <dd>4540000000 BCE <span class="note quals"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q6508336"><span class="fb" lang="en">lead-lead dating</span></a><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/Q6508336/ml"
            aria-label="Add a label in your language"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span> · <span class="fb-group"><a href="https://www.wikidata.org/wiki/Q935310"><span class="fb" lang="en">age of the Earth</span></a><a class="add-label"
@@ -3263,8 +3263,8 @@ Derivative work: Lourdes Sada · CC0</span></span></div><div class="topic-articl
             popovertarget="p23"
             aria-label="Credit">i</button><span id="p23" popover class="pop">Ivtorov, Elektro-L 3 camera · CC BY 4.0</span></span></div></div></section>
             <section class="spread t-feature-run" id="media"
-             data-spread="media"
-             data-dimension="media"><h2><span class="title">മൾട്ടിമീഡിയ</span></h2><div data-slot="feature">
+         data-spread="media"
+         data-dimension="media"><h2><span class="title">മൾട്ടിമീഡിയ</span></h2><div data-slot="feature">
         <div class="feature"> <figure class="m k-photo" style="--a:2">
         <button class="zoom"
                 type="button"
@@ -3772,8 +3772,8 @@ Derivative work: Lourdes Sada · CC0</span></span></div><div class="topic-articl
                 <p class="prose-links"><a href="https://ml.wikipedia.org/wiki/%E0%B4%AD%E0%B5%82%E0%B4%AE%E0%B4%BF#ഭൗമഘടന">ഭൗമഘടന</a> · <a href="https://ml.wikipedia.org/wiki/%E0%B4%AD%E0%B5%82%E0%B4%AE%E0%B4%BF#ഭ്രമണവും_പരിക്രമണവും">ഭ്രമണവും പരിക്രമണവും</a> · <a href="https://ml.wikipedia.org/wiki/%E0%B4%AD%E0%B5%82%E0%B4%AE%E0%B4%BF#കാലരേഖ">കാലരേഖ</a> · <a href="https://ml.wikipedia.org/wiki/%E0%B4%AD%E0%B5%82%E0%B4%AE%E0%B4%BF#ഭൂമിശാസ്ത്രചരിത്രം">ഭൂമിശാസ്ത്രചരിത്രം</a> · <a href="https://ml.wikipedia.org/wiki/%E0%B4%AD%E0%B5%82%E0%B4%AE%E0%B4%BF#ഭൂമിയുടെ_പിണ്ഡം">ഭൂമിയുടെ പിണ്ഡം</a> · <a href="https://ml.wikipedia.org/wiki/%E0%B4%AD%E0%B5%82%E0%B4%AE%E0%B4%BF#ആകൃതി">ആകൃതി</a></p>
             </section>
             <section class="spread t-columns" id="web"
-             data-spread="web"
-             data-dimension="neutral"><h2><span class="title"><span class="fb" lang="en">web presence</span></span></h2><div data-slot="stack">
+         data-spread="web"
+         data-dimension="neutral"><h2><span class="title"><span class="fb" lang="en">web presence</span></span></h2><div data-slot="stack">
         <dl class="sheet links"><div class="row">
             <dt class="i-puzzle">subreddit</dt>
             <dd><img class="favicon" src="https://favicons.toolforge.org/favicon?url=www.reddit.com" alt="" width="16" height="16" loading="lazy"><span class="link"><a href="https://www.reddit.com/r/Earth/">Earth</a> <span class="note"><a href="https://www.wikidata.org/wiki/Q1860">ഇംഗ്ലീഷ്</a></span><span class="prov-none" title="—"></span>
@@ -3826,8 +3826,8 @@ Derivative work: Lourdes Sada · CC0</span></span></div><div class="topic-articl
         </div></dl>
     </div></section>
             <section class="spread t-sheet" id="evidence"
-             data-spread="evidence"
-             data-dimension="neutral"><h2><span class="title">അവലംബം</span></h2><div data-slot="summary">
+         data-spread="evidence"
+         data-dimension="neutral"><h2><span class="title">അവലംബം</span></h2><div data-slot="summary">
         <div class="block box">
     <div class="stack-bar"><span class="p-sourced" style="--n:72"></span>
 <span class="p-imported" style="--n:87"></span>

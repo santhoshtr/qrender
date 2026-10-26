@@ -98,8 +98,8 @@ expression: html
 </nav>
     <main class="page">
             <section class="spread t-identity" id="identity"
-             data-spread="identity"
-             data-dimension="neutral"><div data-slot="head">
+         data-spread="identity"
+         data-dimension="neutral"><div data-slot="head">
         <div class="title"><h1>ചന്ദ്രൻ</h1>
         <p>
             ഭൂമിയുടെ ഒരേയൊരു പ്രകൃതിദത്ത ഉപഗ്രഹമാണ് ചന്ദ്രൻ
@@ -219,8 +219,8 @@ expression: html
            aria-label="Add a label in your language"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></span><a href="https://www.wikidata.org/wiki/Q2">ഭൂമി</a></div></div>
     </div></section>
             <section class="spread t-columns" id="physical"
-             data-spread="physical"
-             data-dimension="measures"><h2><span class="title">ഭൗതികഗുണങ്ങൾ</span></h2><div data-slot="hero">
+         data-spread="physical"
+         data-dimension="measures"><h2><span class="title">ഭൗതികഗുണങ്ങൾ</span></h2><div data-slot="hero">
         <div class="block scale box">
     <h3 class="i-puzzle"><span class="fb-group"><span class="fb"
       lang="en">parent astronomical body</span><a class="add-label"
@@ -366,8 +366,8 @@ expression: html
 <span class="tools"></span>
 </div></dl></section>
             <section class="spread t-columns" id="orbit"
-             data-spread="orbit"
-             data-dimension="measures"><h2><span class="title">ഭ്രമണപഥം</span></h2><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt class="i-puzzle"><span class="fb-group"><span class="fb"
+         data-spread="orbit"
+         data-dimension="measures"><h2><span class="title">ഭ്രമണപഥം</span></h2><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt class="i-puzzle"><span class="fb-group"><span class="fb"
       lang="en">type of orbit</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/P522/ml"
            aria-label="Add a label in your language"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></dt>
@@ -465,8 +465,8 @@ expression: html
 <span class="tools"></span>
 </div></dl></section>
             <section class="spread t-columns" id="location"
-             data-spread="location"
-             data-dimension="place"><h2><span class="title">ഭൂമിശാസ്ത്രം</span></h2><div data-slot="gallery"><dl class="sheet"><div class="row">
+         data-spread="location"
+         data-dimension="place"><h2><span class="title">ഭൂമിശാസ്ത്രം</span></h2><div data-slot="gallery"><dl class="sheet"><div class="row">
             <dt class="i-mountain_flag">ഏറ്റവും ഉയരം കൂടിയ സ്ഥാനം</dt>
             <dd><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q18356771"><span class="fb" lang="en">Selenean summit</span></a><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/Q18356771/ml"
@@ -521,8 +521,8 @@ expression: html
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
 </div></dl></section>
             <section class="spread t-columns" id="names"
-             data-spread="names"
-             data-dimension="names"><h2><span class="title"><span class="fb" lang="en">name</span></span></h2><div data-slot="stack">
+         data-spread="names"
+         data-dimension="names"><h2><span class="title"><span class="fb" lang="en">name</span></span></h2><div data-slot="stack">
         <qr-sounds class="block sounds box">
 <h3 class="i-volumeUp">ഉച്ചാരണ ശബ്ദം <span class="note">3</span></h3>
 <select class="sound-choice"
@@ -576,8 +576,8 @@ expression: html
 <span class="tools"></span>
 </div></dl></section>
             <section class="spread t-columns" id="relations"
-             data-spread="relations"
-             data-dimension="place"><h2><span class="title"><span class="fb" lang="en">relation</span></span></h2><div data-slot="gallery"><dl class="sheet"><div class="row">
+         data-spread="relations"
+         data-dimension="place"><h2><span class="title"><span class="fb" lang="en">relation</span></span></h2><div data-slot="gallery"><dl class="sheet"><div class="row">
             <dt class="i-puzzle">രൂപത</dt>
             <dd><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q426778"><span class="fb" lang="en">Diocese of Orlando</span></a><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/Q426778/ml"
@@ -784,8 +784,8 @@ expression: html
 </ul></div></div>
     </div></section>
             <section class="spread t-columns" id="history"
-             data-spread="history"
-             data-dimension="time"><h2><span class="title">ചരിത്രം</span></h2><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt class="i-calendar">ഉത്പത്തി</dt>
+         data-spread="history"
+         data-dimension="time"><h2><span class="title">ചരിത്രം</span></h2><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt class="i-calendar">ഉത്പത്തി</dt>
 <dd>4527000000 BCE <span class="note quals"><a href="https://www.wikidata.org/wiki/Q5727902">സിർക</a></span></dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
@@ -804,8 +804,8 @@ expression: html
             popovertarget="p13"
             aria-label="Credit">i</button><span id="p13" popover class="pop">NASA, Apollo 16 · Public domain</span></span></div></div></section>
             <section class="spread t-feature-run" id="media"
-             data-spread="media"
-             data-dimension="media"><h2><span class="title">മൾട്ടിമീഡിയ</span></h2><div data-slot="feature">
+         data-spread="media"
+         data-dimension="media"><h2><span class="title">മൾട്ടിമീഡിയ</span></h2><div data-slot="feature">
         <div class="feature"> <figure class="m k-photo" style="--a:1.5">
         <button class="zoom"
                 type="button"
@@ -1117,8 +1117,8 @@ expression: html
                 <p class="prose-links"><a href="https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB#ചരിത്രം_(history)">ചരിത്രം (history)</a> · <a href="https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB#ചന്ദ്രോപരിതലം">ചന്ദ്രോപരിതലം</a> · <a href="https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB#ഭ്രമണപഥവും_ഭൂമിയുമായുള്ള_ബന്ധവും">ഭ്രമണപഥവും ഭൂമിയുമായുള്ള ബന്ധവും</a> · <a href="https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB#ഉത്പത്തിയും_ഭൂഗർഭശാസ്ത്രപരമായ_പരിണാമവും">ഉത്പത്തിയും ഭൂഗർഭശാസ്ത്രപരമായ പരിണാമവും</a> · <a href="https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB#ഭൗതിക_സ്വഭാവവിശേഷങ്ങൾ">ഭൗതിക  സ്വഭാവവിശേഷങ്ങൾ</a> · <a href="https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB#ഗ്രഹണം">ഗ്രഹണം</a> · <a href="https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB#നിരീക്ഷണം">നിരീക്ഷണം</a> · <a href="https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB#ചാന്ദ്രപര്യവേഷണങ്ങൾ">ചാന്ദ്രപര്യവേഷണങ്ങൾ</a></p>
             </section>
             <section class="spread t-columns" id="web"
-             data-spread="web"
-             data-dimension="neutral"><h2><span class="title"><span class="fb" lang="en">web presence</span></span></h2><div data-slot="stack">
+         data-spread="web"
+         data-dimension="neutral"><h2><span class="title"><span class="fb" lang="en">web presence</span></span></h2><div data-slot="stack">
         <dl class="sheet links"><div class="row">
             <dt class="i-puzzle">subreddit</dt>
             <dd><span class="link">moon <span class="note">2008 – · <a href="https://www.wikidata.org/wiki/Q1860">ഇംഗ്ലീഷ്</a></span><span class="prov-none" title="—"></span>
@@ -1140,11 +1140,9 @@ expression: html
             </span>
         </div></dl>
     </div></section>
-            <section class="spread t-collapsed" id="more"
-             data-spread="more"
-             data-dimension="neutral">
-        <details>
-            <summary>+2</summary><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt class="i-puzzle"><span class="fb-group"><span class="fb"
+            <section class="spread t-columns" id="more"
+         data-spread="more"
+         data-dimension="neutral"><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt class="i-puzzle"><span class="fb-group"><span class="fb"
       lang="en">patronage</span><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/P3872/ml"
            aria-label="Add a label in your language"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></dt>
@@ -1166,11 +1164,10 @@ expression: html
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q405#P376"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div></dl></details>
-    </section>
+</div></dl></section>
             <section class="spread t-sheet" id="evidence"
-             data-spread="evidence"
-             data-dimension="neutral"><h2><span class="title">അവലംബം</span></h2><div data-slot="summary">
+         data-spread="evidence"
+         data-dimension="neutral"><h2><span class="title">അവലംബം</span></h2><div data-slot="summary">
         <div class="block box">
     <div class="stack-bar"><span class="p-sourced" style="--n:18"></span>
 <span class="p-imported" style="--n:11"></span>
