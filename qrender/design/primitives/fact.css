@@ -27,7 +27,7 @@
 	border-radius: var( --radius );
 	background-color: var( --soft );
 
-	&:has( > .pic ) {
+	&:has( > :is( .pic, .gauge ) ) {
 		grid-template:
 			'label tools pic' auto
 			'value value pic' 1fr / minmax( 0, 1fr ) auto auto;
@@ -73,44 +73,44 @@
 
 /* ---------- a value on a scale ---------- */
 
-/* Under the value of a row. A proportion fills the track from the start;
-   an index has a marker at its place, with the ends of the scale. The
-   colour is the dimension of the spread. */
+/* A half ring at the end of the card, as a picture is. A proportion fills
+   the ring from the start; an index has a mark at its place, with the
+   ends of the scale under the ring. The colour is the dimension of the
+   spread. */
 .gauge {
-	display: flex;
-	align-items: center;
-	gap: var( --spacing-50 );
-	max-inline-size: 240px;
-	margin-block-start: var( --spacing-25 );
+	--ring: 10px;
+
+	grid-area: pic;
+	align-self: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	inline-size: 80px;
 	font-size: var( --font-size-x-small );
-	font-weight: var( --font-weight-normal );
 	color: var( --color-subtle );
 
-	& .track {
-		position: relative;
-		flex: 1;
-		block-size: 6px;
-		border-radius: 3px;
-		/* Not --soft: the card has that colour. */
-		background-color: var( --edge );
+	/* A conic gradient from the middle of the bottom edge, cut to a ring
+	   by a radial mask. Not --soft: the card has that colour. */
+	& .arc {
+		grid-column: 1 / -1;
+		aspect-ratio: 2;
+		background: conic-gradient( from -90deg at 50% 100%, var( --fill ) );
+		mask: radial-gradient( farthest-side at 50% 100%,
+			transparent calc( 100% - var( --ring ) ),
+			#000 calc( 100% - var( --ring ) + 0.5px ) calc( 100% - 0.5px ),
+			transparent 100% );
 
-		& > span {
-			position: absolute;
-			background-color: var( --ink );
-		}
+		&:dir( rtl ) { scale: -1 1; }
 	}
 
-	&.g-proportion .track > span {
-		inset-block: 0;
-		inset-inline-start: 0;
-		inline-size: calc( var( --at ) * 100% );
-		border-radius: 3px;
+	&.g-proportion .arc {
+		--fill: var( --ink ) calc( var( --at ) * 180deg ), var( --edge ) 0 180deg, transparent 0;
 	}
 
-	&.g-index .track > span {
-		inset-block: -4px;
-		inset-inline-start: calc( var( --at ) * 100% - 2px );
-		inline-size: 4px;
-		border-radius: 2px;
+	&.g-index .arc {
+		--fill: var( --edge ) calc( var( --at ) * 180deg - 3deg ),
+			var( --ink ) 0 calc( var( --at ) * 180deg + 3deg ),
+			var( --edge ) 0 180deg, transparent 0;
 	}
+
+	& .end + .end { justify-self: end; }
 }

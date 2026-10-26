@@ -6221,8 +6221,10 @@ expression: html
             type="button"
             popovertarget="p157"
             aria-label="Description">i</button><span id="p157" popover class="pop">percentage of the population that is not illiterate</span></dt>
-<dd><data value="99.4" data-f="number">99.4</data> <span class="note">percent</span> <span class="note quals">1979</span>
-                <span class="gauge g-proportion" style="--at: 0.994"><span class="track" aria-hidden="true"><span></span></span></span></dd>
+<dd><data value="99.4" data-f="number">99.4</data> <span class="note">percent</span> <span class="note quals">1979</span></dd>
+<span class="gauge g-proportion" style="--at: 0.994">
+    <span class="arc" aria-hidden="true"></span>
+</span>
 <span class="tools">
         <button class="src"
         type="button"
@@ -6363,8 +6365,10 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
             type="button"
             popovertarget="p164"
             aria-label="Description">i</button><span id="p164" popover class="pop">portion of a workforce population that is not employed</span></dt>
-<dd><data value="6.7" data-f="number">6.7</data> <span class="note">percent</span> <span class="note quals">2013</span>
-                <span class="gauge g-proportion" style="--at: 0.067"><span class="track" aria-hidden="true"><span></span></span></span></dd>
+<dd><data value="6.7" data-f="number">6.7</data> <span class="note">percent</span> <span class="note quals">2013</span></dd>
+<span class="gauge g-proportion" style="--at: 0.067">
+    <span class="arc" aria-hidden="true"></span>
+</span>
 <span class="tools">
         <span class="prov-none" title="—"></span>
         <a class="edit"
@@ -6511,8 +6515,10 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
             type="button"
             popovertarget="p171"
             aria-label="Description">i</button><span id="p171" popover class="pop">The Happy Planet Index (HPI) is an index of human well-being and environmental impact that was introduced by the New Economics Foundation in 2006</span></dt>
-<dd><data value="37.4" data-f="number">37.4</data> <span class="note quals">2019</span>
-                <span class="gauge g-index" style="--at: 0.374"><span class="end"><data value="0" data-f="number">0</data></span><span class="track" aria-hidden="true"><span></span></span><span class="end"><data value="100" data-f="number">100</data></span></span></dd>
+<dd><data value="37.4" data-f="number">37.4</data> <span class="note quals">2019</span></dd>
+<span class="gauge g-index" style="--at: 0.374">
+    <span class="arc" aria-hidden="true"></span><span class="end"><data value="0" data-f="number">0</data></span><span class="end"><data value="100" data-f="number">100</data></span>
+</span>
 <span class="tools">
         <button class="src"
         type="button"

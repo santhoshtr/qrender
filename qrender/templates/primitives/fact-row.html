@@ -22,14 +22,6 @@
             {{ ui.part(s.part)|safe }}
             {%- if !s.note.is_empty() %} <span class="note quals">{{ ui.note(s.note.as_slice())|safe }}</span>{% endif -%}
             {%- if let Some(age) = b.age %} <span class="note quals">{{ ui.age(age.years) }}</span>{% endif -%}
-            {%- if let Some(g) = b.gauge %}
-                {%- let index = g.kind.name() == "index" %}
-                <span class="gauge g-{{ g.kind.name() }}" style="--at: {{ ui.css_number(g.at) }}">
-                    {%- if index %}<span class="end">{{ ui.part(ui.number(g.min))|safe }}</span>{% endif -%}
-                    <span class="track" aria-hidden="true"><span></span></span>
-                    {%- if index %}<span class="end">{{ ui.part(ui.number(g.max))|safe }}</span>{% endif -%}
-                </span>
-            {%- endif -%}
             {%- if let Some(d) = s.description %}<span class="desc">
                 {% call m::description(d) %}
                 {% endcall %}
@@ -38,6 +30,12 @@
         {%- endfor -%}
     {%- endif -%}
 </dd>
+{%- if let Some(g) = b.gauge %}
+<span class="gauge g-{{ g.kind.name() }}" style="--at: {{ ui.css_number(g.at) }}">
+    <span class="arc" aria-hidden="true"></span>
+    {%- if g.kind.name() == "index" %}<span class="end">{{ ui.part(ui.number(g.min))|safe }}</span><span class="end">{{ ui.part(ui.number(g.max))|safe }}</span>{% endif %}
+</span>
+{%- endif %}
 <span class="tools">
     {%- if single %}
         {% call m::prov(ui, first.provenance, first.citations) %}
