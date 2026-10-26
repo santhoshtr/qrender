@@ -5773,6 +5773,17 @@
     },
     "Title": {
       "properties": {
+        "glyph": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/StatementRef"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "A character that stands for the item (the glyph role), shown after\nthe label."
+        },
         "item": {
           "$ref": "#/$defs/Qid"
         }

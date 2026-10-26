@@ -10,7 +10,7 @@ use crate::primitives::media::MediaRole;
 use crate::primitives::title::Title;
 use crate::primitives::{kind, media, prose};
 use crate::schema::{Block, Spread};
-use crate::vocab::{Slot, Template};
+use crate::vocab::{Role, Slot, Template};
 use crate::wikidata::{IMAGE, PAGE_BANNER};
 
 pub fn build(c: &mut Composer, spec: &SpreadSpec) -> Spread {
@@ -20,11 +20,36 @@ pub fn build(c: &mut Composer, spec: &SpreadSpec) -> Spread {
         .find(|s| s.rank == Rank::Preferred)
         .or(images.first())
         .copied();
+    // The character after the title: the only value, or the only
+    // preferred one. Else no choice is made: the values stay a fact.
+    let glyph = c
+        .config
+        .layouts
+        .roles
+        .list(Role::Glyph)
+        .iter()
+        .find_map(|pid| {
+            let glyphs = c.free(*pid);
+            let preferred: Vec<_> = glyphs
+                .iter()
+                .filter(|s| s.rank == Rank::Preferred)
+                .copied()
+                .collect();
+            match (glyphs.as_slice(), preferred.as_slice()) {
+                ([only], _) | (_, [only]) => Some(*only),
+                _ => None,
+            }
+        });
+    let glyph = glyph.map(|s| {
+        c.take([s]);
+        c.statement(s)
+    });
     let mut slots = IndexMap::new();
     slots.insert(
         Slot::Head,
         vec![Block::Title(Title {
             item: c.content.qid,
+            glyph,
         })],
     );
     // The first banner; the others go to the media spread.

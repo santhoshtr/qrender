@@ -104,6 +104,9 @@ pub enum Role {
     /// Values that are often near duplicates: the page shows the values
     /// of the best rank, the others are set aside.
     BestRank,
+    /// A character that stands for the item (☾ for the Moon, 🇮🇳 for
+    /// India): one is shown after the title.
+    Glyph,
 }
 
 /// The roles of one property.

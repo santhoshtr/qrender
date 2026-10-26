@@ -1004,6 +1004,12 @@ calendar = [
 symbol = [
   "P140",   # religion or worldview
 ]
+# A character that stands for the item (☾ for the Moon, 🇮🇳 for India):
+# shown after the title when it is the only value, or the only preferred
+# one. Else the values stay a fact.
+glyph = [
+  "P487",   # Unicode character
+]
 # The people who made a work. A spread shows them as one block, each person
 # once, with every role they had (a director who also wrote and produced).
 crew = [

@@ -17,7 +17,14 @@ expression: composition
         "head": [
           {
             "primitive": "title",
-            "item": "Q30"
+            "item": "Q30",
+            "glyph": {
+              "statement": "Q30-0cc80e7c-4482-4ad1-76ab-7d72b40494a1",
+              "pid": "P487",
+              "string": "🇺🇸",
+              "rank": "normal",
+              "provenance": "none"
+            }
           }
         ],
         "band": [
@@ -25901,22 +25908,6 @@ expression: composition
               }
             ],
             "priority": 0.622
-          },
-          {
-            "primitive": "fact",
-            "pid": "P487",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q30-0cc80e7c-4482-4ad1-76ab-7d72b40494a1",
-                "pid": "P487",
-                "string": "🇺🇸",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.022
           },
           {
             "primitive": "fact",

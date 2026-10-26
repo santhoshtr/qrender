@@ -17,7 +17,14 @@ expression: composition
         "head": [
           {
             "primitive": "title",
-            "item": "Q668"
+            "item": "Q668",
+            "glyph": {
+              "statement": "Q668-45998c98-4750-2df0-34db-0d071ddcedef",
+              "pid": "P487",
+              "string": "🇮🇳",
+              "rank": "normal",
+              "provenance": "none"
+            }
           }
         ],
         "band": [
@@ -21878,22 +21885,6 @@ expression: composition
               }
             ],
             "priority": 0.857
-          },
-          {
-            "primitive": "fact",
-            "pid": "P487",
-            "form": "value",
-            "statements": [
-              {
-                "statement": "Q668-45998c98-4750-2df0-34db-0d071ddcedef",
-                "pid": "P487",
-                "string": "🇮🇳",
-                "rank": "normal",
-                "provenance": "none",
-                "shown": true
-              }
-            ],
-            "priority": 0.0
           },
           {
             "primitive": "fact",
