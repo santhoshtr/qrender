@@ -19,7 +19,12 @@ expression: html
 <body>
     <header class="chrome">
         <div>
-            <span class="wordmark">Wikipedia</span>
+            <button class="toc-button"
+                    type="button"
+                    popovertarget="toc"
+                    aria-label="Contents"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M1 3h2v2H1zm0 6h2v2H1zm0 6h2v2H1zM5 3h14v2H5zm0 6h14v2H5zm0 6h14v2H5z"/></svg></button>
+            <span class="site-logo" role="img" aria-label="Wikipedia"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M11.14 4H14a.69.69 0 0 1 0 .65c-1 .16-1.36.91-1.81 1.83l-1.4 2.75 2.35 5.21h.07l3.52-8.1c.44-1.07.4-1.59-.79-1.7a.68.68 0 0 1 0-.65h3.45a.68.68 0 0 1 0 .65c-1.21.16-1.42.91-1.81 1.83l-4.37 10.08c-.13.3-.24.45-.44.45s-.33-.16-.42-.45l-2.48-5.73-2.72 5.73c-.11.3-.24.45-.44.45s-.31-.16-.42-.45l-4-10.09c-.57-1.4-.6-1.7-1.65-1.8A.68.68 0 0 1 .62 4h3.91a.68.68 0 0 1 0 .65c-1.16.13-1.21.45-.74 1.58l3.41 8.19h.05L9.3 10 7.78 6.45C7.17 5.05 7 4.77 6.24 4.66a.69.69 0 0 1 0-.65h3.32a.68.68 0 0 1 0 .65c-.74.12-.7.45-.19 1.58l.87 2 .08.09 1-2c.57-1.14.64-1.58-.15-1.7a.69.69 0 0 1-.03-.63"/></svg></span>
+            <span class="page-title">ഇന്ത്യ</span>
             <form id="search"
                   class="search"
                   role="search"
@@ -79,6 +84,17 @@ expression: html
             </ul>
         </div>
     </header>
+    <div class="frame"><nav id="toc" class="toc" popover aria-labelledby="toc-title">
+    <div class="toc-head">
+        <span id="toc-title">Contents</span>
+        <button class="toc-close"
+                type="button"
+                popovertarget="toc"
+                popovertargetaction="hide"
+                aria-label="Close">×</button>
+    </div>
+    <ul><li data-dimension="names"><a href="#names"><span class="fb" lang="en">name</span></a></li><li data-dimension="names"><a href="#symbols">ദേശീയപ്രതീകം</a></li><li data-dimension="place"><a href="#location">ഭൂമിശാസ്ത്രം</a></li><li data-dimension="people"><a href="#government">സർക്കാർ</a></li><li data-dimension="measures"><a href="#demography">ജനസംഖ്യാപഠനം</a></li><li data-dimension="measures"><a href="#economy">സമ്പദ്ഘടന</a></li><li data-dimension="measures"><a href="#development"><span class="fb" lang="en">socioeconomic development</span></a></li><li data-dimension="place"><a href="#infrastructure"><span class="fb" lang="en">infrastructure</span></a></li><li data-dimension="people"><a href="#culture">സംസ്കാരം</a></li><li data-dimension="people"><a href="#relations">അന്താരാഷ്ട്ര ബന്ധങ്ങൾ</a></li><li data-dimension="time"><a href="#history">ചരിത്രം</a></li><li data-dimension="place"><a href="#maps">ഭൂപടം</a></li><li data-dimension="media"><a href="#media">മൾട്ടിമീഡിയ</a></li><li data-dimension="neutral" class="end"><a href="#web"><span class="fb" lang="en">web presence</span></a></li><li data-dimension="neutral"><a href="#evidence">അവലംബം</a></li></ul>
+</nav>
     <main class="page">
             <section class="spread t-identity" id="identity"
              data-spread="identity"
@@ -134,9 +150,7 @@ derivative work: ויקיג&#39;אנקי · CC BY 2.5 in</p>
         </p>
     </div>
 </dialog> </div>
-    </div><nav class="toc" aria-label="Contents">
-    <ul><li data-dimension="names"><a href="#names"><span class="fb" lang="en">name</span></a></li><li data-dimension="names"><a href="#symbols">ദേശീയപ്രതീകം</a></li><li data-dimension="place"><a href="#location">ഭൂമിശാസ്ത്രം</a></li><li data-dimension="people"><a href="#government">സർക്കാർ</a></li><li data-dimension="measures"><a href="#demography">ജനസംഖ്യാപഠനം</a></li><li data-dimension="measures"><a href="#economy">സമ്പദ്ഘടന</a></li><li data-dimension="measures"><a href="#development"><span class="fb" lang="en">socioeconomic development</span></a></li><li data-dimension="place"><a href="#infrastructure"><span class="fb" lang="en">infrastructure</span></a></li><li data-dimension="people"><a href="#culture">സംസ്കാരം</a></li><li data-dimension="people"><a href="#relations">അന്താരാഷ്ട്ര ബന്ധങ്ങൾ</a></li><li data-dimension="time"><a href="#history">ചരിത്രം</a></li><li data-dimension="place"><a href="#maps">ഭൂപടം</a></li><li data-dimension="media"><a href="#media">മൾട്ടിമീഡിയ</a></li><li data-dimension="neutral" class="end"><a href="#web"><span class="fb" lang="en">web presence</span></a></li><li data-dimension="neutral"><a href="#evidence">അവലംബം</a></li></ul>
-</nav><div data-slot="lead">
+    </div><div data-slot="lead">
         <div class="lead" lang="ml"><p><a href="https://ml.wikipedia.org/wiki/%E0%B4%A6%E0%B4%95%E0%B5%8D%E0%B4%B7%E0%B4%BF%E0%B4%A3%E0%B5%87%E0%B4%B7%E0%B5%8D%E0%B4%AF">ദക്ഷിണേഷ്യയിലെ</a> ഒരു <a href="https://ml.wikipedia.org/wiki/%E0%B4%B0%E0%B4%BE%E0%B4%9C%E0%B5%8D%E0%B4%AF%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B4%B3%E0%B5%81%E0%B4%9F%E0%B5%86_%E0%B4%AA%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B4%BF%E0%B4%95">രാജ്യമാണ്</a> <b>ഇന്ത്യ</b> അഥവാ <b>ഭാരതം</b> . <a href="https://ml.wikipedia.org/wiki/%E0%B4%A8%E0%B5%8D%E0%B4%AF%E0%B5%82%E0%B4%A1%E0%B5%BD%E0%B4%B9%E0%B4%BF">ന്യൂഡൽഹിയാണ്‌</a> തലസ്ഥാനം . ലോകത്തിലെ ഏഴാമത്തെ വലിയ  രാജ്യമായ ഇന്ത്യയുടെ വിസ്തീർണം 3.28 ദശലക്ഷം കിലോമീറ്ററാണ് . ലോകത്തിന്റെ ആകെ വിസ്തൃതിയുടെ 2.4 ശതമാനമാണ് ഇന്ത്യയ്ക്കുള്ളത് . ജനസംഖ്യയിൽ ഒന്നാംസ്ഥാനവും ഇന്ത്യയ്ക്കാണ് . കൂടാതെ ലോകത്തിലെ ഏറ്റവും വലിയ  ജനാധിപത്യ രാഷ്ട്രം കൂടിയാണ് ഇന്ത്യ . <a href="https://ml.wikipedia.org/wiki/%E0%B4%87%E0%B4%A8%E0%B5%8D%E0%B4%A4%E0%B5%8D%E0%B4%AF%E0%B5%BB_%E0%B4%AE%E0%B4%B9%E0%B4%BE%E0%B4%B8%E0%B4%AE%E0%B5%81%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B4%82">ഇന്ത്യൻ മഹാസമുദ്രം</a> ഇന്ത്യയുടെ തെക്കൻ അതിരായി നിലകൊള്ളുന്നു. ഇതിന്റെ രണ്ടു ശാഖകളാണ് പടിഞ്ഞാറുള്ള <a href="https://ml.wikipedia.org/wiki/%E0%B4%85%E0%B4%B1%E0%B4%AC%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%9F%E0%B5%BD">അറബിക്കടലും</a> കിഴക്കുള്ള <a href="https://ml.wikipedia.org/wiki/%E0%B4%AC%E0%B4%82%E0%B4%97%E0%B4%BE%E0%B5%BE_%E0%B4%89%E0%B5%BE%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%9F%E0%B5%BD">ബംഗാൾ ഉൾക്കടലും</a> . ഇന്ത്യയുടെ തീരദൈർഘ്യം 7,517&#160;കിലോമീറ്ററുകൾ (4,671&#160;മൈ.) ആണ് .ഇന്ത്യ <a href="https://ml.wikipedia.org/wiki/%E0%B4%AA%E0%B4%BE%E0%B4%95%E0%B4%BF%E0%B4%B8%E0%B5%8D%E0%B4%A4%E0%B4%BE%E0%B5%BB">പാകിസ്താൻ</a>,<a href="https://ml.wikipedia.org/wiki/%E0%B4%85%E0%B4%AB%E0%B5%8D%E0%B4%97%E0%B4%BE%E0%B4%A8%E0%B4%BF%E0%B4%B8%E0%B5%8D%E0%B4%A5%E0%B4%BE%E0%B5%BB">അഫ്ഗാനിസ്ഥാൻ</a>, <a href="https://ml.wikipedia.org/wiki/%E0%B4%AC%E0%B4%82%E0%B4%97%E0%B5%8D%E0%B4%B3%E0%B4%BE%E0%B4%A6%E0%B5%87%E0%B4%B6%E0%B5%8D%E2%80%8C">ബംഗ്ളാദേശ്‌</a>, <a href="https://ml.wikipedia.org/wiki/%E0%B4%AE%E0%B5%8D%E0%B4%AF%E0%B4%BE%E0%B4%A8%E0%B5%8D%E0%B4%AE%E0%B5%BC">മ്യാന്മർ</a>, <a href="https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B5%88%E0%B4%A8">ചൈന</a>, <a href="https://ml.wikipedia.org/wiki/%E0%B4%A8%E0%B5%87%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B4%BE%E0%B5%BE">നേപ്പാൾ</a>, <a href="https://ml.wikipedia.org/wiki/%E0%B4%AD%E0%B5%82%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B4%BE%E0%B5%BB">ഭൂട്ടാൻ</a> എന്നീ ഏഴു രാജ്യങ്ങളുമായി കരാതിർത്തി പങ്കിടുന്നു . ഇന്ത്യൻ മഹാസമുദ്രത്തിൽ നിലകൊള്ളുന്ന ഇന്ത്യയുടെ അയൽരാജ്യങ്ങളായ ദ്വീപുകളാണ് <a href="https://ml.wikipedia.org/wiki/%E0%B4%B6%E0%B5%8D%E0%B4%B0%E0%B5%80%E0%B4%B2%E0%B4%99%E0%B5%8D%E0%B4%95">ശ്രീലങ്ക</a> , <a href="https://ml.wikipedia.org/wiki/%E0%B4%AE%E0%B4%BE%E0%B4%B2%E0%B4%A6%E0%B5%8D%E0%B4%B5%E0%B5%80%E0%B4%AA%E0%B5%8D">മാലദ്വീപ്</a> എന്നിവ.</p><p><a href="https://ml.wikipedia.org/wiki/%E0%B4%B8%E0%B4%BF%E0%B4%A8%E0%B5%8D%E0%B4%A7%E0%B5%81_%E0%B4%A8%E0%B4%A6%E0%B5%80%E0%B4%A4%E0%B4%9F%E0%B4%B8%E0%B4%82%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%B0%E0%B4%82">സിന്ധു നദീതടസംസ്കാരഭൂമിയായ</a> ഇവിടം പല വിശാല സാമ്രാജ്യങ്ങൾക്കും സാക്ഷ്യം വഹിച്ചിരുന്നു. ചരിത്രപരമായി പ്രാധാന്യമർഹിക്കുന്ന പല വാണിജ്യപാതകളും ഇതുവഴിയുണ്ടായിരുന്നു. <a href="https://ml.wikipedia.org/wiki/%E0%B4%87%E0%B4%A8%E0%B5%8D%E0%B4%A4%E0%B5%8D%E0%B4%AF%E0%B5%BB_%E0%B4%89%E0%B4%AA%E0%B4%AD%E0%B5%82%E0%B4%96%E0%B4%A3%E0%B5%8D%E0%B4%A1%E0%B4%82">ഇന്ത്യൻ ഉപഭൂഖണ്ഡം</a> അതിന്റെ ചരിത്രത്തിലുടനീളം അതിന്റെ വാണിജ്യ സാംസ്കാരിക സമ്പത്തിനു പ്രശസ്തമാണ്‌. ലോകത്തെ പ്രധാനപ്പെട്ട നാലു മതങ്ങൾ – <a href="https://ml.wikipedia.org/wiki/%E0%B4%B9%E0%B4%BF%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%81%E0%B4%AE%E0%B4%A4%E0%B4%82">ഹിന്ദുമതം ( സനാതന ധർമ്മം)</a>, <a href="https://ml.wikipedia.org/wiki/%E0%B4%AC%E0%B5%81%E0%B4%A6%E0%B5%8D%E0%B4%A7%E0%B4%AE%E0%B4%A4%E0%B4%82">ബുദ്ധമതം</a>, <a href="https://ml.wikipedia.org/wiki/%E0%B4%9C%E0%B5%88%E0%B4%A8%E0%B4%AE%E0%B4%A4%E0%B4%82">ജൈനമതം</a>, <a href="https://ml.wikipedia.org/wiki/%E0%B4%B8%E0%B4%BF%E0%B4%96%E0%B5%8D_%E0%B4%AE%E0%B4%A4%E0%B4%82">സിഖ്മതം</a> എന്നിവ – ഇവിടെയാണ്‌ ജന്മമെടുത്തത്. കൂടാതെ ഒന്നാം സഹസ്രാബ്ദത്തിൽ ഇവിടെയെത്തിയ <a href="https://ml.wikipedia.org/wiki/%E0%B4%87%E0%B4%B8%E0%B5%8D%E2%80%8C%E0%B4%B2%E0%B4%BE%E0%B4%82">ഇസ്‌ലാം മതം,</a> <a href="https://ml.wikipedia.org/wiki/%E0%B4%AF%E0%B4%B9%E0%B5%82%E0%B4%A6%E0%B4%AE%E0%B4%A4%E0%B4%82">ജൂതമതം</a>, <a href="https://ml.wikipedia.org/wiki/%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B4%BF%E0%B4%B8%E0%B5%8D%E0%B4%A4%E0%B5%81%E0%B4%AE%E0%B4%A4%E0%B4%82">ക്രിസ്തുമതം</a> എന്നീ മതങ്ങൾ രാജ്യത്തിന്റെ സാംസ്കാരികവൈവിധ്യത്തിന്‌ ആഴമേകി. പതിനെട്ടാം നൂറ്റാണ്ടിന്റെ തുടക്കം മുതൽ ക്രമേണ <a href="https://ml.wikipedia.org/wiki/%E0%B4%AC%E0%B5%8D%E0%B4%B0%E0%B4%BF%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%80%E0%B4%B7%E0%B5%8D_%E0%B4%88%E0%B4%B8%E0%B5%8D%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B5%8D_%E0%B4%87%E0%B4%A8%E0%B5%8D%E0%B4%A4%E0%B5%8D%E0%B4%AF%E0%B4%BE_%E0%B4%95%E0%B4%AE%E0%B5%8D%E0%B4%AA%E0%B4%A8%E0%B4%BF">ബ്രിട്ടീഷ് ഈസ്റ്റ് ഇന്ത്യാ കമ്പനി</a> ഇന്ത്യയെ ഒരു ബ്രിട്ടീഷ് കോളനിയായി കയ്യടക്കി. തുടർന്ന് സ്വാതന്ത്ര്യ സമരങ്ങളുടെ ഫലമായി <a href="https://ml.wikipedia.org/wiki/1947">1947</a> <a href="https://ml.wikipedia.org/wiki/%E0%B4%93%E0%B4%97%E0%B4%B8%E0%B5%8D%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B5%8D_15">ഓഗസ്റ്റ് 15നു</a> ബ്രിട്ടീഷ്‌ കൊളോണിയൽ ഭരണത്തിൽ നിന്ന്‌ ഇന്ത്യ സ്വാതന്ത്ര്യം നേടി.</p><p>ഇന്ത്യയിൽ നാട്ടുഭാഷകൾ ഒന്നും തന്നെ ഇല്ല.&#160;22 ഭാഷകളെ ഔദ്യോഗിക ഭാഷയായി അംഗീകരിച്ചിട്ടുള്ള ഇന്ത്യയിലെ കേന്ദ്രസർക്കാരിന്റെ ഔദ്യോഗികഭാഷ <a href="https://ml.wikipedia.org/wiki/%E0%B4%B9%E0%B4%BF%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B4%BF">ഹിന്ദിയും</a> <a href="https://ml.wikipedia.org/wiki/%E0%B4%87%E0%B4%82%E0%B4%97%E0%B5%8D%E0%B4%B2%E0%B5%80%E0%B4%B7%E0%B5%8D">ഇംഗ്ലീഷുമാണ്</a>. <a href="https://ml.wikipedia.org/wiki/2001-%E0%B4%B2%E0%B5%86_%E0%B4%95%E0%B4%BE%E0%B4%A8%E0%B5%87%E0%B4%B7%E0%B5%81%E0%B4%AE%E0%B4%BE%E0%B4%B0%E0%B4%BF_(%E0%B4%95%E0%B5%87%E0%B4%B0%E0%B4%B3%E0%B4%82)">2011-ലെ സ്ഥിതി വിവരക്കണക്കുകൾ</a> പ്രകാരം, 138 കോടിയിലധികമാണ്‌ ജനസംഖ്യ. 42 ശതമാനം ജനങ്ങളും <a href="https://ml.wikipedia.org/wiki/%E0%B4%95%E0%B5%83%E0%B4%B7%E0%B4%BF">കൃഷിയെ</a> ആശ്രയിച്ചാണ്‌ ഉപജീവനം നടത്തുന്നത്‌.2024 ൽ ലോകത്തെ അഞ്ചാമത്  സാമ്പത്തിക ശക്തിയാണ്  ഇന്ത്യ.</p><p class="source">
         <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Wikipedia-logo-v2.svg?width=60" alt="" width="18">
         <a href="https://ml.wikipedia.org/wiki/%E0%B4%87%E0%B4%A8%E0%B5%8D%E0%B4%A4%E0%B5%8D%E0%B4%AF">ml.wikipedia.org</a> · 313
@@ -16455,6 +16469,7 @@ translator: Manlleus (ca) · CC BY-SA 4.0</p>
     </footer>
 </dialog>
     </main>
+    </div>
     <script>// Progressive enhancement only: opens and closes dialogs in browsers
 // without the invoker commands API. The content does not need it.
 if ( !( 'commandForElement' in HTMLButtonElement.prototype ) ) {
@@ -17425,6 +17440,18 @@ document.addEventListener( 'close', ( event ) => {
 	// A click on an option keeps the focus in the field: the list stays
 	// until the link opens.
 	list.addEventListener( 'mousedown', ( event ) => event.preventDefault() );
+} )();
+// Progressive enhancement only: a link in the contents drawer (a narrow
+// page) closes the drawer, so the reader sees the spread it goes to. A
+// popover does not close when a link in it is clicked. Without this
+// script, a tap outside the drawer or Escape closes it.
+( () => {
+	document.getElementById( 'toc' )?.addEventListener( 'click', ( event ) => {
+		const toc = event.currentTarget;
+		if ( event.target.closest( 'a' ) && toc.matches( ':popover-open' ) ) {
+			toc.hidePopover();
+		}
+	} );
 } )();
 // The qr-sounds element: the recordings of one property (the
 // pronunciations of the name) as one player with a choice of language.

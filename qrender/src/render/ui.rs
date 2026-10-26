@@ -911,6 +911,11 @@ impl<'v> Ui<'v> {
         &super::design::SEARCH_ICON
     }
 
+    /// The icon of the contents button.
+    pub fn toc_icon(&self) -> &'static str {
+        &super::design::TOC_ICON
+    }
+
     /// The languages of the language menu: the code, the name in itself.
     pub fn languages(&self) -> &'static [(&'static str, &'static str)] {
         &LANGUAGES

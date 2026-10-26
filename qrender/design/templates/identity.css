@@ -13,12 +13,11 @@
 .t-identity {
 	--head-height: 440px;
 	grid-template-columns: minmax( 0, 1fr ) auto;
-	grid-template-rows: [head] auto [band] auto [toc] auto [top] auto [bottom] 1fr;
+	grid-template-rows: [head] auto [band] auto [top] auto [bottom] 1fr;
 	column-gap: var( --spacing-200 );
 
 	& > [data-slot='head'] { grid-row: head; }
 	& > [data-slot='band'] { grid-row: band; }
-	& > .toc { grid-row: toc; grid-column: 1 / -1; }
 	& > [data-slot='lead'] { grid-column: 1; grid-row: top / span 2; }
 	& > [data-slot='hero'] { grid-column: 2; grid-row: top; }
 
@@ -61,41 +60,7 @@
 	inline-size: 100%;
 }
 
-/* The contents: a line of links to the spreads, under the banner. Each
-   link is underlined in the colour of its spread. */
-.toc ul {
-	display: flex;
-	flex-wrap: wrap;
-	gap: var( --spacing-25 ) var( --spacing-100 );
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	font-size: var( --font-size-small );
-
-	/* A flex item is a block, so it has a first letter. */
-	& li::first-letter { text-transform: uppercase; }
-
-	/* The apparatus: at the end of the line, as at the end of the page. */
-	& .end { margin-inline-start: auto; }
-
-	& a {
-		color: var( --color-base );
-		text-decoration: none;
-		border-block-end: 2px solid var( --ink );
-
-		&:hover { color: var( --color-progressive ); }
-	}
-}
-
 @container page ( width < 760px ) {
-	/* One line that scrolls, not many lines. */
-	.toc ul {
-		flex-wrap: nowrap;
-		overflow-x: auto;
-		white-space: nowrap;
-		padding-block-end: var( --spacing-25 );
-	}
-
 	.t-identity {
 		grid-template-columns: minmax( 0, 1fr );
 

@@ -379,18 +379,6 @@ impl<'v> Ui<'v> {
         render(TocHtml { ui: self, entries })
     }
 
-    /// The contents go after this slot of the head: after the banner, or
-    /// after the title when there is no banner.
-    pub fn toc_after(&self, s: &SpreadView, slot: impl Arg<Slot>) -> bool {
-        let slots = &s.spread.slots;
-        matches!(s.spread.template, vocab::Template::Identity)
-            && match slot.get() {
-                Slot::Band => true,
-                Slot::Head => !slots.contains_key(&Slot::Band),
-                _ => false,
-            }
-    }
-
     pub fn slot(&self, slot: impl Arg<Slot>, blocks: &[Block]) -> String {
         render(SlotHtml {
             ui: self,

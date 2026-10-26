@@ -1,8 +1,17 @@
 {#- The contents of the page: a link to each spread with a title, in the
-    order of the page, underlined in the colour of its dimension. The
-    apparatus is at the end of the line, as it is at the end of the
-    page. -#}
-<nav class="toc" aria-label="{{ ui.msg("qrender-contents") }}">
+    order of the page, marked in the colour of its dimension. The
+    apparatus is at the end, after a line, as it is at the end of the
+    page. On a wide page a column at its start; on a narrow page a drawer
+    that the header button opens (a popover), with a close button. -#}
+<nav id="toc" class="toc" popover aria-labelledby="toc-title">
+    <div class="toc-head">
+        <span id="toc-title">{{ ui.msg("qrender-contents") }}</span>
+        <button class="toc-close"
+                type="button"
+                popovertarget="toc"
+                popovertargetaction="hide"
+                aria-label="{{ ui.msg("qrender-close") }}">×</button>
+    </div>
     <ul>
         {%- for e in entries -%}
             <li data-dimension="{{ e.dimension }}"{% if e.end %} class="end"{% endif %}><a href="#{{ e.id }}">

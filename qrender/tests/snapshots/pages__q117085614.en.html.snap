@@ -19,7 +19,12 @@ expression: html
 <body>
     <header class="chrome">
         <div>
-            <span class="wordmark">Wikipedia</span>
+            <button class="toc-button"
+                    type="button"
+                    popovertarget="toc"
+                    aria-label="Contents"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M1 3h2v2H1zm0 6h2v2H1zm0 6h2v2H1zM5 3h14v2H5zm0 6h14v2H5zm0 6h14v2H5z"/></svg></button>
+            <span class="site-logo" role="img" aria-label="Wikipedia"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M11.14 4H14a.69.69 0 0 1 0 .65c-1 .16-1.36.91-1.81 1.83l-1.4 2.75 2.35 5.21h.07l3.52-8.1c.44-1.07.4-1.59-.79-1.7a.68.68 0 0 1 0-.65h3.45a.68.68 0 0 1 0 .65c-1.21.16-1.42.91-1.81 1.83l-4.37 10.08c-.13.3-.24.45-.44.45s-.33-.16-.42-.45l-2.48-5.73-2.72 5.73c-.11.3-.24.45-.44.45s-.31-.16-.42-.45l-4-10.09c-.57-1.4-.6-1.7-1.65-1.8A.68.68 0 0 1 .62 4h3.91a.68.68 0 0 1 0 .65c-1.16.13-1.21.45-.74 1.58l3.41 8.19h.05L9.3 10 7.78 6.45C7.17 5.05 7 4.77 6.24 4.66a.69.69 0 0 1 0-.65h3.32a.68.68 0 0 1 0 .65c-.74.12-.7.45-.19 1.58l.87 2 .08.09 1-2c.57-1.14.64-1.58-.15-1.7a.69.69 0 0 1-.03-.63"/></svg></span>
+            <span class="page-title">One Battle After Another</span>
             <form id="search"
                   class="search"
                   role="search"
@@ -79,6 +84,17 @@ expression: html
             </ul>
         </div>
     </header>
+    <div class="frame"><nav id="toc" class="toc" popover aria-labelledby="toc-title">
+    <div class="toc-head">
+        <span id="toc-title">Contents</span>
+        <button class="toc-close"
+                type="button"
+                popovertarget="toc"
+                popovertargetaction="hide"
+                aria-label="Close">×</button>
+    </div>
+    <ul><li data-dimension="time"><a href="#story">plot</a></li><li data-dimension="people"><a href="#cast">cast</a></li><li data-dimension="people"><a href="#credits">film crew</a></li><li data-dimension="place"><a href="#production">film production</a></li><li data-dimension="time"><a href="#release">film release</a></li><li data-dimension="recognition"><a href="#reception">film criticism</a></li><li data-dimension="recognition"><a href="#ratings">motion picture rating system</a></li><li data-dimension="media"><a href="#media">multimedia</a></li><li data-dimension="neutral" class="end"><a href="#web">web presence</a></li><li data-dimension="neutral"><a href="#evidence">reference</a></li></ul>
+</nav>
     <main class="page">
             <section class="spread t-identity" id="identity"
              data-spread="identity"
@@ -88,9 +104,7 @@ expression: html
             2025 film directed by Paul Thomas Anderson
         </p>
     </div>
-    </div><nav class="toc" aria-label="Contents">
-    <ul><li data-dimension="time"><a href="#story">plot</a></li><li data-dimension="people"><a href="#cast">cast</a></li><li data-dimension="people"><a href="#credits">film crew</a></li><li data-dimension="place"><a href="#production">film production</a></li><li data-dimension="time"><a href="#release">film release</a></li><li data-dimension="recognition"><a href="#reception">film criticism</a></li><li data-dimension="recognition"><a href="#ratings">motion picture rating system</a></li><li data-dimension="media"><a href="#media">multimedia</a></li><li data-dimension="neutral" class="end"><a href="#web">web presence</a></li><li data-dimension="neutral"><a href="#evidence">reference</a></li></ul>
-</nav><div data-slot="lead">
+    </div><div data-slot="lead">
         <div class="lead" lang="en"><p><i><b>One Battle After Another</b></i> is a 2025 American <a href="https://en.wikipedia.org/wiki/Action_comedy">action-comedy</a> <a href="https://en.wikipedia.org/wiki/Thriller_film">thriller film</a> written, directed, and produced by <a href="https://en.wikipedia.org/wiki/Paul_Thomas_Anderson">Paul Thomas Anderson</a>. Inspired by the 1990 novel <i><a href="https://en.wikipedia.org/wiki/Vineland">Vineland</a></i> by <a href="https://en.wikipedia.org/wiki/Thomas_Pynchon">Thomas Pynchon</a>, the film's <a href="https://en.wikipedia.org/wiki/Ensemble_cast">ensemble cast</a> includes <a href="https://en.wikipedia.org/wiki/Leonardo_DiCaprio">Leonardo DiCaprio</a>, <a href="https://en.wikipedia.org/wiki/Sean_Penn">Sean Penn</a>, <a href="https://en.wikipedia.org/wiki/Benicio_del_Toro">Benicio del Toro</a>, <a href="https://en.wikipedia.org/wiki/Regina_Hall">Regina Hall</a>, <a href="https://en.wikipedia.org/wiki/Teyana_Taylor">Teyana Taylor</a>, and <a href="https://en.wikipedia.org/wiki/Chase_Infiniti">Chase Infiniti</a>, in her film debut. The film follows a drug using washed-up former <a href="https://en.wikipedia.org/wiki/Revolutionary">revolutionary</a> who is thrust back into the conflict when an amoral tenacious <a href="https://en.wikipedia.org/wiki/Counterterrorist">counterterrorist</a> agent resurfaces after sixteen years to bring them to justice to cover his past sins.</p><p>Anderson had wanted to adapt <i>Vineland</i> since the early 2000s, and eventually incorporated his own stories into the narrative while writing the screenplay. <a href="https://en.wikipedia.org/wiki/Principal_photography">Principal photography</a> took place in <a href="https://en.wikipedia.org/wiki/California">California</a> from January to June 2024 using <a href="https://en.wikipedia.org/wiki/VistaVision">VistaVision</a>, becoming one of the first films to use the format since the 1960s. Following its premiere on September 8, 2025, <i>One Battle After Another</i> was released in the United States by <a href="https://en.wikipedia.org/wiki/Warner_Bros._Pictures">Warner Bros. Pictures</a> on September 26. With a budget of $130–175&#160;million, it is the most expensive film of Anderson's career and the highest-grossing at over $213&#160;million worldwide.</p><p><i>One Battle After Another</i> received acclaim and <a href="https://en.wikipedia.org/wiki/List_of_accolades_received_by_One_Battle_After_Another">numerous accolades</a>. At the <a href="https://en.wikipedia.org/wiki/98th_Academy_Awards">98th Academy Awards</a>, it was nominated for 13 awards and won <a href="https://en.wikipedia.org/wiki/Academy_Award_for_Best_Picture">Best Picture</a>, <a href="https://en.wikipedia.org/wiki/Academy_Award_for_Best_Director">Best Director</a>, <a href="https://en.wikipedia.org/wiki/Academy_Award_for_Best_Supporting_Actor">Best Supporting Actor</a> (Penn), <a href="https://en.wikipedia.org/wiki/Academy_Award_for_Best_Adapted_Screenplay">Best Adapted Screenplay</a>, <a href="https://en.wikipedia.org/wiki/Academy_Award_for_Best_Film_Editing">Best Film Editing</a>, and the inaugural <a href="https://en.wikipedia.org/wiki/Academy_Award_for_Achievement_in_Casting">Best Casting</a> award. It also received one win from a record seven nominations at the <a href="https://en.wikipedia.org/wiki/32nd_Actor_Awards">32nd Actor Awards</a>; three wins at the <a href="https://en.wikipedia.org/wiki/31st_Critics%27_Choice_Awards">31st Critics' Choice Awards</a>, including <a href="https://en.wikipedia.org/wiki/Critics%27_Choice_Movie_Award_for_Best_Picture">Best Picture</a>; four wins at the <a href="https://en.wikipedia.org/wiki/83rd_Golden_Globes">83rd Golden Globes</a>, including <a href="https://en.wikipedia.org/wiki/Golden_Globe_Award_for_Best_Motion_Picture_%E2%80%93_Musical_or_Comedy">Best Motion Picture – Musical or Comedy</a>; and six wins at the <a href="https://en.wikipedia.org/wiki/79th_British_Academy_Film_Awards">79th British Academy Film Awards</a>, including <a href="https://en.wikipedia.org/wiki/BAFTA_Award_for_Best_Film">Best Film</a>. The film was listed by the <a href="https://en.wikipedia.org/wiki/American_Film_Institute">American Film Institute</a> as one of the top ten films of 2025 and won five awards from the <a href="https://en.wikipedia.org/wiki/National_Board_of_Review">National Board of Review</a>, including <a href="https://en.wikipedia.org/wiki/National_Board_of_Review_Award_for_Best_Film">Best Film</a>.</p><p>Cite error: There are <code>&lt;ref&#160;group&#61;lower-alpha&gt;</code> tags&#160;or <code>&#123;&#123;efn&#125;&#125;</code> templates on this page, but the references will not show without a <code>&#123;&#123;reflist&#124;group&#61;lower-alpha&#125;&#125;</code> template&#160;or <code>&#123;&#123;notelist&#125;&#125;</code> template (see the <a href="https://en.wikipedia.org/wiki/Help:Cite_errors/Cite_error_group_refs_without_references">help page</a>).</p><p class="source">
         <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Wikipedia-logo-v2.svg?width=60" alt="" width="18">
         <a href="https://en.wikipedia.org/wiki/One_Battle_After_Another">en.wikipedia.org</a> · 51
@@ -1849,6 +1863,7 @@ Derivative work:  Logovectorizer · Public domain</p>
     </footer>
 </dialog>
     </main>
+    </div>
     <script>// Progressive enhancement only: opens and closes dialogs in browsers
 // without the invoker commands API. The content does not need it.
 if ( !( 'commandForElement' in HTMLButtonElement.prototype ) ) {
@@ -2819,6 +2834,18 @@ document.addEventListener( 'close', ( event ) => {
 	// A click on an option keeps the focus in the field: the list stays
 	// until the link opens.
 	list.addEventListener( 'mousedown', ( event ) => event.preventDefault() );
+} )();
+// Progressive enhancement only: a link in the contents drawer (a narrow
+// page) closes the drawer, so the reader sees the spread it goes to. A
+// popover does not close when a link in it is clicked. Without this
+// script, a tap outside the drawer or Escape closes it.
+( () => {
+	document.getElementById( 'toc' )?.addEventListener( 'click', ( event ) => {
+		const toc = event.currentTarget;
+		if ( event.target.closest( 'a' ) && toc.matches( ':popover-open' ) ) {
+			toc.hidePopover();
+		}
+	} );
 } )();
 </script>
 </body>

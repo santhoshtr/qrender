@@ -19,7 +19,12 @@ expression: html
 <body>
     <header class="chrome">
         <div>
-            <span class="wordmark">Wikipedia</span>
+            <button class="toc-button"
+                    type="button"
+                    popovertarget="toc"
+                    aria-label="Contents"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M1 3h2v2H1zm0 6h2v2H1zm0 6h2v2H1zM5 3h14v2H5zm0 6h14v2H5zm0 6h14v2H5z"/></svg></button>
+            <span class="site-logo" role="img" aria-label="Wikipedia"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M11.14 4H14a.69.69 0 0 1 0 .65c-1 .16-1.36.91-1.81 1.83l-1.4 2.75 2.35 5.21h.07l3.52-8.1c.44-1.07.4-1.59-.79-1.7a.68.68 0 0 1 0-.65h3.45a.68.68 0 0 1 0 .65c-1.21.16-1.42.91-1.81 1.83l-4.37 10.08c-.13.3-.24.45-.44.45s-.33-.16-.42-.45l-2.48-5.73-2.72 5.73c-.11.3-.24.45-.44.45s-.31-.16-.42-.45l-4-10.09c-.57-1.4-.6-1.7-1.65-1.8A.68.68 0 0 1 .62 4h3.91a.68.68 0 0 1 0 .65c-1.16.13-1.21.45-.74 1.58l3.41 8.19h.05L9.3 10 7.78 6.45C7.17 5.05 7 4.77 6.24 4.66a.69.69 0 0 1 0-.65h3.32a.68.68 0 0 1 0 .65c-.74.12-.7.45-.19 1.58l.87 2 .08.09 1-2c.57-1.14.64-1.58-.15-1.7a.69.69 0 0 1-.03-.63"/></svg></span>
+            <span class="page-title">Kokkachal</span>
             <form id="search"
                   class="search"
                   role="search"
@@ -79,6 +84,17 @@ expression: html
             </ul>
         </div>
     </header>
+    <div class="frame"><nav id="toc" class="toc" popover aria-labelledby="toc-title">
+    <div class="toc-head">
+        <span id="toc-title">Contents</span>
+        <button class="toc-close"
+                type="button"
+                popovertarget="toc"
+                popovertargetaction="hide"
+                aria-label="Close">×</button>
+    </div>
+    <ul><li data-dimension="place"><a href="#location">geography</a></li><li data-dimension="names"><a href="#names">name</a></li><li data-dimension="neutral" class="end"><a href="#evidence">reference</a></li></ul>
+</nav>
     <main class="page">
             <section class="spread t-identity" id="identity"
              data-spread="identity"
@@ -88,9 +104,7 @@ expression: html
             Hamlet in Kasaragod district, Kerala, India
         </p>
     </div>
-    </div><nav class="toc" aria-label="Contents">
-    <ul><li data-dimension="place"><a href="#location">geography</a></li><li data-dimension="names"><a href="#names">name</a></li><li data-dimension="neutral" class="end"><a href="#evidence">reference</a></li></ul>
-</nav><div data-slot="lead">
+    </div><div data-slot="lead">
         <div class="lead" lang="en"><p><b>Kokkachal</b> (കൊക്കച്ചാൽ, <a href="https://en.wikipedia.org/wiki/Help:IPA/Malayalam">&#91;ko̞kːɐt͡ʃːaːl&#93;</a>; also spelled <b>Kokkechal</b>) is a small locality and settlement situated in the <a href="https://en.wikipedia.org/wiki/Kasaragod_district">Kasaragod district</a> in the Indian state of <a href="https://en.wikipedia.org/wiki/Kerala">Kerala</a>. It falls under the administration of the <a href="https://en.wikipedia.org/wiki/Manjeshwaram_taluk">Manjeshwaram taluk</a> near the northern border of the state.</p><p class="source">
         <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Wikipedia-logo-v2.svg?width=60" alt="" width="18">
         <a href="https://en.wikipedia.org/wiki/Kokkachal">en.wikipedia.org</a> · 3
@@ -213,6 +227,7 @@ expression: html
     </footer>
 </dialog>
     </main>
+    </div>
     <script>// Progressive enhancement only: opens and closes dialogs in browsers
 // without the invoker commands API. The content does not need it.
 if ( !( 'commandForElement' in HTMLButtonElement.prototype ) ) {
@@ -1183,6 +1198,18 @@ document.addEventListener( 'close', ( event ) => {
 	// A click on an option keeps the focus in the field: the list stays
 	// until the link opens.
 	list.addEventListener( 'mousedown', ( event ) => event.preventDefault() );
+} )();
+// Progressive enhancement only: a link in the contents drawer (a narrow
+// page) closes the drawer, so the reader sees the spread it goes to. A
+// popover does not close when a link in it is clicked. Without this
+// script, a tap outside the drawer or Escape closes it.
+( () => {
+	document.getElementById( 'toc' )?.addEventListener( 'click', ( event ) => {
+		const toc = event.currentTarget;
+		if ( event.target.closest( 'a' ) && toc.matches( ':popover-open' ) ) {
+			toc.hidePopover();
+		}
+	} );
 } )();
 </script>
 </body>

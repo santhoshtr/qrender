@@ -42,6 +42,10 @@ pub static EDIT_ICON: LazyLock<String> =
 pub static SEARCH_ICON: LazyLock<String> =
     LazyLock::new(|| inline_icon(include_str!("../../assets/icons/search.svg")));
 
+/// The icon of the contents button of the page header (a Codex icon).
+pub static TOC_ICON: LazyLock<String> =
+    LazyLock::new(|| inline_icon(include_str!("../../assets/icons/listBullet.svg")));
+
 /// The icon of a source without a site icon (a Codex icon).
 pub static REFERENCE_ICON: LazyLock<String> =
     LazyLock::new(|| inline_icon(include_str!("../../assets/icons/reference.svg")));
@@ -85,8 +89,8 @@ const BASE: [&str; 6] = [
 /// pin (a map) can be in any block. The translation of the article's
 /// sections is in spreads and at the end of the page. A label to add in
 /// the page language (the label editor) can be in any block. The search
-/// is in the page header.
-pub const PAGE_SCRIPTS: [&str; 9] = [
+/// is in the page header, and so is the button of the contents drawer.
+pub const PAGE_SCRIPTS: [&str; 10] = [
     include_str!("../../assets/invokers.js"),
     include_str!("../../assets/intl.js"),
     include_str!("../../assets/play.js"),
@@ -96,6 +100,7 @@ pub const PAGE_SCRIPTS: [&str; 9] = [
     include_str!("../../assets/translate.js"),
     include_str!("../../assets/label.js"),
     include_str!("../../assets/search.js"),
+    include_str!("../../assets/toc.js"),
 ];
 
 /// The CSS and the JavaScript of a primitive, from its module.

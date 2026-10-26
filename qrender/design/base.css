@@ -18,6 +18,10 @@
 
 :root {
 	--page-max: 1280px;
+	/* The sticky page header, and the column of the contents on a wide
+	   viewport (width >= 1120px). */
+	--chrome-height: 56px;
+	--toc-width: 240px;
 	--gutter: 16px;
 	--gap: 16px;
 	--radius: 8px;
@@ -44,6 +48,11 @@
 *::before,
 *::after {
 	box-sizing: border-box;
+}
+
+/* A link to a spread does not put its title under the sticky header. */
+html {
+	scroll-padding-block-start: var( --chrome-height );
 }
 
 body {
@@ -343,22 +352,69 @@ dialog.lightbox {
 
 /* ---------- chrome ---------- */
 
+/* The page header stays at the top of the viewport. It is a scroll-state
+   container: the title of the item shows in it when it is stuck (the
+   page title is out of view). */
 .chrome {
+	position: sticky;
+	inset-block-start: 0;
+	z-index: var( --z-index-sticky );
+	container: chrome / scroll-state;
 	border-block-end: 1px solid var( --border-color-muted );
+	background-color: var( --background-color-base );
 
 	& > div {
-		max-inline-size: var( --page-max );
+		/* As wide as the contents and the page together, when the
+		   contents are a column. */
+		max-inline-size: var( --frame-max, var( --page-max ) );
+		block-size: var( --chrome-height );
 		margin-inline: auto;
-		padding: var( --spacing-75 ) var( --gutter );
+		padding: 0 var( --gutter );
 		display: flex;
 		align-items: center;
 		gap: var( --spacing-100 );
 	}
 
-	& .wordmark {
-		font-family: var( --font-family-serif );
-		font-size: var( --font-size-x-large );
+	& .site-logo {
+		flex: none;
+		display: inline-flex;
 		color: var( --color-base );
+
+		& > svg {
+			inline-size: 32px;
+			block-size: 32px;
+		}
+	}
+
+	& .page-title {
+		flex: 0 1 auto;
+		min-inline-size: 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		font-family: var( --font-family-serif );
+		font-size: var( --font-size-large );
+
+		&::first-letter { text-transform: uppercase; }
+	}
+
+	/* The button of the contents drawer: on a narrow viewport only. */
+	& .toc-button {
+		flex: none;
+		display: inline-flex;
+		padding: var( --spacing-35 );
+		border: 0;
+		border-radius: var( --border-radius-base );
+		background: none;
+		color: var( --color-base );
+		cursor: pointer;
+
+		&:hover { background-color: var( --background-color-button-quiet--hover ); }
+
+		& > svg {
+			inline-size: 20px;
+			block-size: 20px;
+		}
 	}
 
 	& .search {
@@ -464,6 +520,185 @@ dialog.lightbox {
 	& [aria-current] {
 		color: var( --color-base );
 		font-weight: var( --font-weight-bold );
+	}
+}
+
+/* Without scroll-state queries (Firefox, Safari), the title shows
+   always. */
+@supports ( container-type: scroll-state ) {
+	.chrome .page-title {
+		visibility: hidden;
+		opacity: 0;
+		transition: opacity 0.2s, visibility 0.2s;
+	}
+
+	/* A narrow viewport: no empty space for the title before it shows. */
+	@media ( width < 720px ) {
+		.chrome .page-title { display: none; }
+	}
+
+	@container chrome scroll-state( stuck: block-start ) {
+		.chrome .page-title {
+			display: block;
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+}
+
+/* A narrow viewport: the title of the item shares the width with the
+   search field. The language button is its icon (it has its label). */
+@media ( width < 720px ) {
+	.chrome {
+		& .language > span { display: none; }
+		& .search { flex: 1 1 7em; min-inline-size: 7em; }
+	}
+}
+
+/* ---------- the contents ---------- */
+
+/* The contents are one nav, a popover. On a wide viewport they are a
+   column at the start of the page, sticky under the header: these rules
+   override the popover styles of the browser. On a narrow viewport the
+   header button opens them as a drawer from the start side. A media
+   query, not a container query: the column changes the width of the
+   page container. */
+.toc {
+	scrollbar-width: thin;
+
+	& .toc-head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-block: var( --spacing-50 );
+		padding-inline-start: var( --spacing-75 );
+		color: var( --color-subtle );
+		font-size: var( --font-size-small );
+		font-weight: var( --font-weight-bold );
+	}
+
+	& .toc-close {
+		padding: var( --spacing-25 ) var( --spacing-75 );
+		border: 0;
+		border-radius: var( --border-radius-base );
+		background: none;
+		color: var( --color-base );
+		font-size: var( --font-size-x-large );
+		line-height: 1;
+		cursor: pointer;
+
+		&:hover { background-color: var( --background-color-button-quiet--hover ); }
+	}
+
+	& ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-size: var( --font-size-small );
+	}
+
+	& li + li { margin-block-start: 2px; }
+
+	/* The apparatus: after a line, as at the end of the page. */
+	& .end {
+		margin-block-start: var( --spacing-75 );
+		padding-block-start: var( --spacing-75 );
+		border-block-start: 1px solid var( --border-color-muted );
+	}
+
+	/* Each link has a line at its start in the colour of its spread. */
+	& a {
+		display: block;
+		padding: var( --spacing-25 ) var( --spacing-75 );
+		border-inline-start: 3px solid var( --ink );
+		color: var( --color-base );
+		text-decoration: none;
+
+		&::first-letter { text-transform: uppercase; }
+
+		&:hover {
+			color: var( --color-progressive );
+			background-color: var( --background-color-interactive-subtle );
+		}
+	}
+}
+
+@media ( width >= 1120px ) {
+	/* A page without contents has no column for them. */
+	:root:has( #toc ) { --frame-max: calc( var( --page-max ) + var( --toc-width ) ); }
+
+	.frame:has( > .toc ) {
+		display: grid;
+		grid-template-columns: var( --toc-width ) minmax( 0, 1fr );
+		max-inline-size: var( --frame-max );
+		margin-inline: auto;
+
+		/* An auto margin would make the page as narrow as its content. */
+		& > .page { margin-inline: 0; }
+	}
+
+	.toc {
+		display: block;
+		position: sticky;
+		inset: auto;
+		inset-block-start: var( --chrome-height );
+		align-self: start;
+		inline-size: auto;
+		block-size: auto;
+		max-block-size: calc( 100dvh - var( --chrome-height ) );
+		margin: 0;
+		padding: var( --spacing-150 ) 0 var( --spacing-150 ) var( --gutter );
+		overflow-y: auto;
+		overscroll-behavior: contain;
+		border: 0;
+		background: none;
+		color: inherit;
+	}
+
+	:is( .chrome .toc-button, .toc .toc-close ) { display: none; }
+}
+
+@media ( width < 1120px ) {
+	.toc {
+		/* Out of the viewport, at its start side. */
+		--off: -100%;
+
+		position: fixed;
+		inset-block: 0;
+		inset-inline: 0 auto;
+		inline-size: min( 20em, 85vw );
+		block-size: auto;
+		margin: 0;
+		padding: 0 var( --spacing-100 ) var( --spacing-150 );
+		overflow-y: auto;
+		overscroll-behavior: contain;
+		border: 0;
+		border-inline-end: 1px solid var( --border-color-base );
+		background-color: var( --background-color-base );
+		color: var( --color-base );
+		box-shadow: 0 2px 8px var( --box-shadow-color-alpha-base );
+		translate: var( --off );
+		transition: translate 0.2s, display 0.2s allow-discrete, overlay 0.2s allow-discrete;
+
+		&:dir( rtl ) { --off: 100%; }
+
+		&:popover-open {
+			translate: 0;
+
+			@starting-style { translate: var( --off ); }
+		}
+
+		&::backdrop { background-color: rgba( 0, 0, 0, 0.35 ); }
+
+		& .toc-head {
+			position: sticky;
+			inset-block-start: 0;
+			background-color: var( --background-color-base );
+		}
+	}
+
+	@media ( prefers-reduced-motion: reduce ) {
+		.toc { transition: none; }
 	}
 }
 

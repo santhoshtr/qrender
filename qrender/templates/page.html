@@ -26,9 +26,22 @@
     {%- endif %}
 </head>
 <body>
+    {%- let toc = ui.toc() %}
+    {#- The header stays at the top: the title of the item shows in it when
+        the page title is out of view. On a narrow page its button opens
+        the contents. #}
     <header class="chrome">
         <div>
-            <span class="wordmark">Wikipedia</span>
+            {%- if !toc.is_empty() %}
+            <button class="toc-button"
+                    type="button"
+                    popovertarget="toc"
+                    aria-label="{{ ui.msg("qrender-contents") }}">
+                {{- ui.toc_icon()|safe -}}
+            </button>
+            {%- endif %}
+            <span class="site-logo" role="img" aria-label="Wikipedia">{{ ui.project_logo("wikipedia")|safe }}</span>
+            <span class="page-title">{{ ui.text(ui.item(view.qid), false)|safe }}</span>
             {%- if let Some(base) = service %}
             {#- search.js shows the items under the field; without it, the
                 form opens the search of Wikidata. #}
@@ -69,6 +82,8 @@
             {%- endif %}
         </div>
     </header>
+    <div class="frame">
+    {{- toc|safe }}
     <main class="page">
         {%- for s in view.spreads_at(false) %}
             {{ ui.spread(s)|safe }}
@@ -101,6 +116,7 @@
         {%- if let Some(from) = ui.translation_source() %}{{ ui.translator(from)|safe }}{% endif %}
         {%- if ui.has_label_actions() %}{{ ui.label_editor()|safe }}{% endif %}
     </main>
+    </div>
     <script>{{ scripts|safe }}</script>
 </body>
 </html>
