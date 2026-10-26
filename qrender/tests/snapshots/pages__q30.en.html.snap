@@ -10,6 +10,7 @@ expression: html
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
     <title>United States</title>
     <meta name="description" content="country located primarily in North America">
     <link rel="stylesheet" href="design/0.2/page.css">
@@ -17410,6 +17411,9 @@ if ( 'customElements' in window && 'IntersectionObserver' in window ) {
 				grid: { left: 8, right: 16, top: 24, bottom: 8, containLabel: true },
 				tooltip: {
 					trigger: 'axis',
+					backgroundColor: token( '--background-color-base' ),
+					borderColor: token( '--border-color-base' ),
+					textStyle: { color: token( '--color-base' ) },
 					// Each series gives its nearest point: only the values of
 					// the year of a line's point. Series 2i is line i, 2i + 1
 					// its other values.

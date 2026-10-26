@@ -102,6 +102,9 @@ if ( 'customElements' in window && 'IntersectionObserver' in window ) {
 				grid: { left: 8, right: 16, top: 24, bottom: 8, containLabel: true },
 				tooltip: {
 					trigger: 'axis',
+					backgroundColor: token( '--background-color-base' ),
+					borderColor: token( '--border-color-base' ),
+					textStyle: { color: token( '--color-base' ) },
 					// Each series gives its nearest point: only the values of
 					// the year of a line's point. Series 2i is line i, 2i + 1
 					// its other values.

@@ -339,7 +339,7 @@ dialog.lightbox {
 		}
 	}
 
-	&.k-drawing .stage { background-color: var( --background-color-base ); }
+	&.k-drawing .stage { background-color: var( --background-color-base-fixed ); }
 
 	& .about {
 		padding: var( --spacing-75 ) var( --spacing-100 );
@@ -1180,7 +1180,9 @@ math { padding-block: 0.2em; }
 		block-size: auto;
 		aspect-ratio: var( --a );
 		border-radius: var( --border-radius-base );
-		background-color: var( --background-color-interactive-subtle );
+		/* On white also in dark mode: a transparent image (a map, a
+		   diagram) is made for white. */
+		background-color: var( --background-color-base-fixed );
 	}
 
 	& :is( .caption, figcaption ) {
@@ -1494,7 +1496,7 @@ dialog:is( .translator, .label-editor ) .actions {
 	&.k-drawing {
 		object-fit: contain;
 		object-position: center;
-		background-color: var( --background-color-base );
+		background-color: var( --background-color-base-fixed );
 		border: 1px solid var( --border-color-muted );
 	}
 }
@@ -1555,7 +1557,13 @@ dialog:is( .translator, .label-editor ) .actions {
 		background-color: var( --background-color-base );
 		border: 1px solid var( --border-color-muted );
 
-		& img { object-fit: contain; padding: var( --spacing-75 ) var( --spacing-75 ) var( --spacing-25 ); }
+		/* The drawing is on white also in dark mode: a transparent
+		   drawing is made for white. The caption has the page colours. */
+		& img {
+			object-fit: contain;
+			padding: var( --spacing-75 ) var( --spacing-75 ) var( --spacing-25 );
+			background-color: var( --background-color-base-fixed );
+		}
 
 		& figcaption {
 			position: static;
