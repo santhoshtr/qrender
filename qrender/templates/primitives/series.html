@@ -7,7 +7,7 @@
 {%- let rows = b.rows() -%}
 <qr-chart class="block series box">
 {%- if let Some(concept) = b.concept -%}
-    <h3>{{ ui.text(ui.item(concept), true)|safe }}</h3>
+    <h3 class="{{ ui.item_icon(concept) }}">{{ ui.text(ui.item(concept), true)|safe }}</h3>
     {%- for line in b.lines.iter() -%}
         {%- let property = ui.property(line.pid) -%}
         <p class="desc line">
@@ -19,7 +19,7 @@
     {%- endfor -%}
 {%- else -%}
     {%- let property = ui.property(b.lines[0].pid) -%}
-    <h3>{{ ui.text(&property, true)|safe }}{{ ui.about(&property)|safe }}{% call m::prov(ui, b.provenance, b.citations) %}{% endcall %}
+    <h3 class="{{ ui.property_icon(b.lines[0].pid) }}">{{ ui.text(&property, true)|safe }}{{ ui.about(&property)|safe }}{% call m::prov(ui, b.provenance, b.citations) %}{% endcall %}
     {% call m::edit(ui, ui.edit(b.lines[0].pid)) %}
     {% endcall %}
     </h3>

@@ -6,7 +6,7 @@
 {%- let first = ui.first(b.statements.as_slice()) -%}
 {%- let form = b.form.name() -%}
 {%- let single = b.statements.len() == 1 && form != "list" -%}
-<div class="row r-{{ form }}{% if b.former %} former{% endif %}"><dt>{{ ui.text(ui.property(b.pid), true)|safe }}
+<div class="row r-{{ form }}{% if b.former %} former{% endif %}"><dt class="{{ ui.icon(first) }}">{{ ui.text(ui.property(b.pid), true)|safe }}
     {%- if b.former %} <span class="mark">{{ ui.msg("qrender-former") }}</span>{% endif -%}
     {%- if b.measured %}{{ ui.about(ui.property(b.pid))|safe }}{% endif -%}
 </dt>

@@ -7,6 +7,7 @@ use std::cell::Cell;
 use content::{EntityId, Pid, Qid};
 use percent_encoding::{AsciiSet, NON_ALPHANUMERIC, utf8_percent_encode};
 
+use super::icons::Icons;
 use super::map::{Frame, frame, live, point_frame};
 use crate::localize::format::{Part, coordinate, edit_url, number_part, percent};
 use crate::localize::locale::LANGUAGES;
@@ -213,6 +214,22 @@ impl<'v> Ui<'v> {
 
     pub fn item(&self, qid: impl Arg<Qid>) -> Label {
         self.label(&EntityId::Item(qid.get()))
+    }
+
+    /// The class of the icon of a statement's label: the icon of its
+    /// property, else of the datatype of its value.
+    pub fn icon(&self, s: &StatementRef) -> &'static str {
+        Icons::embedded().property(s.pid, Some(&s.value)).class()
+    }
+
+    /// The class of the icon of a property's label.
+    pub fn property_icon(&self, pid: impl Arg<Pid>) -> &'static str {
+        Icons::embedded().property(pid.get(), None).class()
+    }
+
+    /// The class of the icon of a label that is a concept item.
+    pub fn item_icon(&self, qid: impl Arg<Qid>) -> &'static str {
+        Icons::embedded().concept(qid.get()).class()
     }
 
     /// A statement value as a part.

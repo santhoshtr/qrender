@@ -4,7 +4,7 @@
     with its share and its amount. The key is the content; the bar only
     shows it (aria-hidden). -#}
 <div class="block split box">
-    <h3>{{ ui.text(ui.item(b.concept), true)|safe }}</h3>
+    <h3 class="{{ ui.item_icon(b.concept) }}">{{ ui.text(ui.item(b.concept), true)|safe }}</h3>
     {%- for bar in b.bars.iter() %}
         <div class="year">
             <p class="note">{{ ui.year(bar.year) }}</p>

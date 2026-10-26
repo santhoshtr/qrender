@@ -1,5 +1,5 @@
 <div class="row absent">
-    <dt>{{ ui.text(ui.property(b.pid), true)|safe }}</dt>
+    <dt class="{{ ui.property_icon(b.pid) }}">{{ ui.text(ui.property(b.pid), true)|safe }}</dt>
     <dd>
         — {{ b.peers_with_it }} / {{ b.peers }} {{ ui.text(ui.item(b.class), true)|safe }}
     </dd>

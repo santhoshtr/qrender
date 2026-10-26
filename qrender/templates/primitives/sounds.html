@@ -5,7 +5,7 @@
     script (assets/sounds.js) shows the choice of language and keeps one
     player. The choice starts at the recording in the page language. -#}
 <qr-sounds class="block sounds box">
-<h3>{{ ui.text(ui.property(b.pid), true)|safe }} <span class="note">{{ b.sounds.len() }}</span></h3>
+<h3 class="{{ ui.property_icon(b.pid) }}">{{ ui.text(ui.property(b.pid), true)|safe }} <span class="note">{{ b.sounds.len() }}</span></h3>
 <select class="sound-choice"
         hidden
         aria-label="{{ ui.property(b.pid).text }}">

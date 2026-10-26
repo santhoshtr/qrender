@@ -6,7 +6,7 @@
     {%- for v in b.values -%}
         {%- let s = ui.value(&v.statement) -%}
         <div class="row">
-            <dt>{{ ui.text(ui.property(v.statement.pid), true)|safe }}</dt>
+            <dt class="{{ ui.icon(&v.statement) }}">{{ ui.text(ui.property(v.statement.pid), true)|safe }}</dt>
             <dd>
                 {{- ui.part(s.part)|safe -}}
                 {%- if !s.note.is_empty() %} <span class="note quals">{{ ui.note(s.note.as_slice())|safe }}</span>{% endif -%}

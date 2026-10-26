@@ -3,6 +3,7 @@
 pub mod cite;
 pub mod design;
 pub mod html;
+pub mod icons;
 pub mod map;
 pub mod markdown;
 pub mod ui;

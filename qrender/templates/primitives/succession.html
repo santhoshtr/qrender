@@ -5,7 +5,7 @@
     picture. The dialog has every holder, the holder now first. -#}
 {%- let s = ui.value(&b.holder) -%}
 <div class="block succession">
-    <h3>
+    <h3 class="{{ ui.property_icon(b.pids[0]) }}">
         {%- match b.office -%}{%- when Some with (office) -%}{{ ui.part(ui.value_part(&office.value))|safe }}{%- when None -%}{{ ui.text(ui.property(b.pids[0]), true)|safe }}{%- endmatch -%}
 </h3>
 <div class="group">

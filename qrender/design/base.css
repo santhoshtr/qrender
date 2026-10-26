@@ -1183,7 +1183,8 @@ dialog:is( .translator, .label-editor ) .actions {
 }
 
 /* The icon of a composed item, at the start of its label: a mask in the
-   colour of the dimension. An item can name its own icon (--icon). */
+   colour of the dimension. The label has the class of its icon (i-...),
+   which sets --icon (design/icons.toml). */
 :is( .row > dt, .box > h3, .map-card .label, .set > h3, .succession > h3, .timeline > h3 )::before {
 	content: '';
 	display: inline-block;
@@ -1193,7 +1194,7 @@ dialog:is( .translator, .label-editor ) .actions {
 	margin-inline-end: var( --spacing-25 );
 	vertical-align: -0.125em;
 	background-color: var( --ink );
-	mask: var( --icon, var( --icon-puzzle ) ) center / contain no-repeat;
+	mask: var( --icon ) center / contain no-repeat;
 }
 
 /* A part of a group has the icon of the group. */

@@ -1,0 +1,78 @@
+# The icon at the start of the label of a composed item (a fact row, a
+# box, a map card, ...). The icon of the property that the label names;
+# else the icon of the datatype of its value; else the fallback.
+#
+# The names are in qrender/src/render/icons.rs: Codex icons first
+# (camelCase), Material Symbols where Codex has none (snake_case).
+
+# Every composed item has an icon: this one when no other applies.
+fallback = "puzzle"
+
+# By the datatype of the value: only where the icon is correct for every
+# property of the datatype.
+[datatypes]
+Time = "calendar"
+GlobeCoordinate = "mapPin"
+Url = "link"
+
+# By the property that the label names.
+[properties]
+P6 = "userAvatar"                 # head of government
+P35 = "userAvatar"                # head of state
+P51 = "volumeUp"                  # audio
+P443 = "volumeUp"                 # pronunciation audio
+P989 = "volumeUp"                 # spoken text audio
+P1853 = "bloodtype"               # blood type
+P1340 = "eye"                     # eye color
+P552 = "hand"                     # handedness
+P2572 = "tag"                     # hashtag
+P2046 = "aspect_ratio"            # area
+P2044 = "altitude"                # elevation above sea level
+P7422 = "thermostat_arrow_down"   # minimum temperature record
+P6591 = "thermostat_arrow_up"     # maximum temperature record
+P9601 = "map"                     # official map URL
+P7101 = "policy"                  # privacy policy URL
+P2043 = "straighten"              # length
+P2049 = "fit_width"               # width
+P4511 = "height"                  # vertical depth
+P2048 = "height"                  # height
+P3020 = "pace"                    # residence time of water
+P4290 = "open_in_phone"           # official app
+P11810 = "userGroup"              # Mastodon instance URL
+P8687 = "userGroup"               # social media followers
+P485 = "archive"                  # archives at
+P8402 = "database"                # open data portal
+P9611 = "heat"                    # district heating grid
+P2067 = "weight"                  # mass
+P1622 = "directions_car"          # driving side
+P5658 = "train"                   # railway traffic side
+P2884 = "bolt"                    # mains voltage
+P2852 = "call"                    # emergency phone number
+P78 = "globe"                     # top-level Internet domain
+P610 = "mountain_flag"            # highest point
+P856 = "browser"                  # official website
+P935 = "logo-Wikimedia-Commons"   # Commons gallery
+P4896 = "threeDimensional"        # 3D model
+P2147 = "rotate"                  # rotation period
+P2583 = "distance"                # distance from Earth
+P6259 = "line_start_circle"       # epoch
+P2076 = "thermometer"             # temperature
+P7015 = "arrow_cool_down"         # surface gravity
+P2060 = "bright"                  # luminosity
+P460 = "equal"                    # said to be the same as
+P1889 = "compare_arrows"          # different from
+P3063 = "calendar"                # gestation period
+P7862 = "calendar"                # period of lactation
+P1050 = "stethoscope"             # medical condition
+P9493 = "local_library"           # artist files at
+P166 = "trophy"                   # award received
+P2579 = "school"                  # studied by
+P1082 = "userGroup"               # population
+P1539 = "woman"                   # female population
+P1540 = "man"                     # male population
+
+# By the concept item that titles a block (a split, a series of a split).
+[concepts]
+Q290 = "wc"                       # sex
+Q161078 = "location_city"         # urbanization
+Q8236 = "menu_book"               # literacy

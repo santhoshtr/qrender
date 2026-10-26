@@ -9,7 +9,7 @@
 {%- let title = ui.property(b.pid) -%}
 {%- let n = ui.id() -%}
 <div class="block set {{ b.form.name() }}">
-    <h3>{{ ui.text(&title, true)|safe }} <span class="note">{{ values.len() }}</span>
+    <h3 class="{{ ui.property_icon(b.pid) }}">{{ ui.text(&title, true)|safe }} <span class="note">{{ values.len() }}</span>
         {%- if let Some(c) = shared %}{{ ui.sources(c.as_slice())|safe }}{% endif %}</h3>
     {%- if b.form.name() == "rows" -%}
         {%- let shown = ui.values_beside(b.shown(), shared) -%}

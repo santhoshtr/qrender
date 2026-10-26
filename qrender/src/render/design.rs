@@ -11,8 +11,6 @@
 
 use std::sync::LazyLock;
 
-use percent_encoding::{NON_ALPHANUMERIC, utf8_percent_encode};
-
 pub use crate::schema::DESIGN;
 
 use crate::primitives::{
@@ -152,22 +150,12 @@ pub fn assets(primitive: Primitive) -> Assets {
     }
 }
 
-/// The stylesheet: the tokens, the design system's CSS, then each
-/// primitive's.
-/// The icons that the stylesheet draws, as custom properties of data URLs:
-/// a mask, in the colour of the text. A composed item has an icon at the
-/// start of its label (`--icon`).
-static ICONS: LazyLock<String> = LazyLock::new(|| {
-    let url = |svg| utf8_percent_encode(&inline_icon(svg), NON_ALPHANUMERIC).to_string();
-    format!(
-        ":root {{ --icon-puzzle: url(\"data:image/svg+xml,{}\"); }}\n",
-        url(include_str!("../../assets/icons/puzzle.svg"))
-    )
-});
-
+/// The stylesheet: the tokens, the icons of the composed items, the
+/// design system's CSS, then each primitive's.
 pub static STYLESHEET: LazyLock<String> = LazyLock::new(|| {
+    let icons = super::icons::Icons::embedded().css();
     std::iter::once(TOKENS)
-        .chain(std::iter::once(ICONS.as_str()))
+        .chain(std::iter::once(icons.as_str()))
         .chain(BASE)
         .chain(Primitive::ALL.into_iter().filter_map(|p| assets(p).css))
         .collect()

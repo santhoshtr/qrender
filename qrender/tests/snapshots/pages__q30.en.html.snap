@@ -2634,7 +2634,7 @@ expression: html
         </section>
 </div>
 </qr-names><qr-sounds class="block sounds box">
-<h3>pronunciation audio <span class="note">7</span></h3>
+<h3 class="i-volumeUp">pronunciation audio <span class="note">7</span></h3>
 <select class="sound-choice"
         hidden
         aria-label="pronunciation audio"><option value="0">Luxembourgish</option><option value="1" selected>English</option><option value="2">Hungarian</option><option value="3">Odia</option><option value="4">Romanian</option><option value="5">Italian</option><option value="6">Kinyarwanda</option></select><div class="sound">
@@ -2706,7 +2706,7 @@ expression: html
         </span>
     </div></qr-sounds>
     </div><div data-slot="gallery"><dl class="sheet"><div class="row">
-            <dt>named after</dt>
+            <dt class="i-puzzle">named after</dt>
             <dd><a href="https://www.wikidata.org/wiki/Q828">Americas</a> <span class="note quals"><span lang="en">United States of America</span> <span class="note" data-lang-name="en">en</span></span></dd>
             <span class="tools"><button class="src"
         type="button"
@@ -2728,7 +2728,7 @@ expression: html
      src="https://commons.wikimedia.org/wiki/Special:FilePath/America%20sattelite.jpg?width=330"
      alt=""
      loading="lazy">
-        </div></dl></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>IPA transcription</dt>
+        </div></dl></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt class="i-puzzle">IPA transcription</dt>
 <dd><span class="v">ˈmeɪɹ.ɹɪkə <span class="note quals"><a href="https://www.wikidata.org/wiki/Q1860">English</a> · <a href="https://www.wikidata.org/wiki/Q7976">American English</a> · <a href="https://www.wikidata.org/wiki/Q120768597">comedic pronunciation</a></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P898"
@@ -2754,7 +2754,7 @@ expression: html
              data-spread="symbols"
              data-dimension="names"><h2><span class="title">national symbol</span></h2><div data-slot="stack">
         <div class="block earlier box">
-    <h3>flag image <span class="note">earlier · 1777 – 1960</span></h3><button class="more" type="button" command="show-modal" commandfor="d99">+25</button>
+    <h3 class="i-puzzle">flag image <span class="note">earlier · 1777 – 1960</span></h3><button class="more" type="button" command="show-modal" commandfor="d99">+25</button>
     <dialog id="d99" closedby="any">
         <header>
             <h2>flag image</h2>
@@ -3160,7 +3160,7 @@ expression: html
         </p>
     </div>
 </dialog></div></div><dl class="sheet"><div class="row">
-            <dt>anthem</dt>
+            <dt class="i-puzzle">anthem</dt>
             <dd><a href="https://www.wikidata.org/wiki/Q44696">The Star-Spangled Banner</a> <span class="note quals">1931 – · <a class="play"
    href="https://commons.wikimedia.org/wiki/Special:FilePath/Star%20Spangled%20Banner%20instrumental.ogg"
    aria-label="audio">▶</a></span></dd>
@@ -3177,7 +3177,7 @@ expression: html
      alt=""
      loading="lazy">
         </div><div class="row">
-            <dt>motto</dt>
+            <dt class="i-puzzle">motto</dt>
             <dd><a href="https://www.wikidata.org/wiki/Q270871">In God We Trust</a> <span class="note quals">1956 – · <span lang="sr-cyrl">У Бога ми верујемо</span> <span class="note" data-lang-name="sr-cyrl">sr-cyrl</span> · <a href="https://www.wikidata.org/wiki/Q29654714">national motto</a> · <a href="https://www.wikidata.org/wiki/Q71536244">currently valid value</a></span></dd>
             <span class="tools"><span class="prov-none" title="—"></span><button class="info"
             type="button"
@@ -3192,7 +3192,7 @@ expression: html
      alt=""
      loading="lazy">
         </div><div class="row">
-            <dt>official symbol</dt>
+            <dt class="i-puzzle">official symbol</dt>
             <dd><a href="https://www.wikidata.org/wiki/Q127216">bald eagle</a> <span class="note quals"><a href="https://www.wikidata.org/wiki/Q21264969">national bird</a></span></dd>
             <span class="tools"><span class="prov-none" title="—"></span><button class="info"
             type="button"
@@ -3207,7 +3207,7 @@ expression: html
      alt=""
      loading="lazy">
         </div><div class="row">
-            <dt>motto</dt>
+            <dt class="i-puzzle">motto</dt>
             <dd><a href="https://www.wikidata.org/wiki/Q191587">E pluribus unum</a> <span class="note quals">1776 – 1956 · <a href="https://www.wikidata.org/wiki/Q712144">de facto</a> · <span lang="en">Out of many, one</span> <span class="note" data-lang-name="en">en</span> · <a href="https://www.wikidata.org/wiki/Q29509080">unofficial</a></span></dd>
             <span class="tools"><span class="prov-imported" title="imported from Wikimedia project">W</span><span class="from" title="en.wikipedia.org">W</span><button class="info"
             type="button"
@@ -3257,7 +3257,7 @@ expression: html
        href="https://www.wikidata.org/wiki/Q30#P625"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
         </figure>
-        <p class="caption"><span class="label">coordinate location</span> 39.8282, -98.5795 <span class="prov-imported" title="imported from Wikimedia project">W</span></p><div class="map-shapes"><ul>
+        <p class="caption"><span class="label i-mapPin">coordinate location</span> 39.8282, -98.5795 <span class="prov-imported" title="imported from Wikimedia project">W</span></p><div class="map-shapes"><ul>
         <li>
             <span class="line main"></span><a href="https://commons.wikimedia.org/wiki/Data%3AUnited_States.map">Data:United States.map</a> · CC0-1.0<span class="prov-none" title="—"></span>
             <a class="edit"
@@ -3335,7 +3335,7 @@ expression: html
             </div></dialog>
     </div><div data-slot="stack">
         <div class="block set rows">
-    <h3>shares border with <span class="note">13</span></h3><ul class="pic-rows">
+    <h3 class="i-puzzle">shares border with <span class="note">13</span></h3><ul class="pic-rows">
         <li>
             <span class="text">
                 <b><a href="https://www.wikidata.org/wiki/Q159">Russia</a></b><span class="prov-none" title="—"></span>
@@ -3602,7 +3602,7 @@ expression: html
         </li>
 </ul></div>
     </dialog></div><div class="block set rows">
-    <h3>located in time zone <span class="note">16</span></h3><ul class="pic-rows">
+    <h3 class="i-puzzle">located in time zone <span class="note">16</span></h3><ul class="pic-rows">
         <li>
             <span class="text">
                 <b><a href="https://www.wikidata.org/wiki/Q2204">UTC−08:00</a></b><span class="prov-none" title="—"></span>
@@ -3948,7 +3948,7 @@ expression: html
         </p>
     </div>
 </dialog></div></div><dl class="sheet"><div class="row">
-            <dt>continent</dt>
+            <dt class="i-puzzle">continent</dt>
             <dd><a href="https://www.wikidata.org/wiki/Q49">North America</a> <span class="note quals"><a href="https://www.wikidata.org/wiki/Q797">Alaska</a> · <a href="https://www.wikidata.org/wiki/Q1183">Puerto Rico</a> · <a href="https://www.wikidata.org/wiki/Q11703">United States Virgin Islands</a> · <a href="https://www.wikidata.org/wiki/Q578170">contiguous United States</a> · <a href="https://www.wikidata.org/wiki/Q71538638">most frequent value</a></span></dd>
             <span class="tools"><button class="src"
         type="button"
@@ -3970,7 +3970,7 @@ expression: html
      alt=""
      loading="lazy">
         </div><div class="row">
-            <dt>continent</dt>
+            <dt class="i-puzzle">continent</dt>
             <dd><a href="https://www.wikidata.org/wiki/Q538">Insular Oceania</a> <span class="note quals">1898 – · <a href="https://www.wikidata.org/wiki/Q782">Hawaii</a> · <a href="https://www.wikidata.org/wiki/Q16635">Guam</a> · <a href="https://www.wikidata.org/wiki/Q16641">American Samoa</a> · <a href="https://www.wikidata.org/wiki/Q16644">Northern Mariana Islands</a></span></dd>
             <span class="tools"><span class="prov-none" title="—"></span><button class="info"
             type="button"
@@ -3985,7 +3985,7 @@ expression: html
      alt=""
      loading="lazy">
         </div><div class="row">
-            <dt>highest point</dt>
+            <dt class="i-mountain_flag">highest point</dt>
             <dd><a href="https://www.wikidata.org/wiki/Q130018">Denali</a> <span class="note quals">1867 – · elevation above sea level: <data value="6190" data-f="number">6190</data> · <a href="https://www.wikidata.org/wiki/Q71536244">currently valid value</a></span></dd>
             <span class="tools"><span class="prov-none" title="—"></span><button class="info"
             type="button"
@@ -4000,7 +4000,7 @@ expression: html
      alt=""
      loading="lazy">
         </div><div class="row">
-            <dt>lowest point</dt>
+            <dt class="i-puzzle">lowest point</dt>
             <dd><a href="https://www.wikidata.org/wiki/Q799720">Badwater Basin</a> <span class="note quals"><button class="pin-link"
             type="button"
             command="show-modal"
@@ -4036,7 +4036,7 @@ expression: html
      src="https://commons.wikimedia.org/wiki/Special:FilePath/Boardwalk%20at%20Badwater%20Basin%2C%20Death%20Valley%20National%20Park%2C%20California.jpg?width=330"
      alt=""
      loading="lazy">
-        </div></dl></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>area</dt>
+        </div></dl></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt class="i-aspect_ratio">area</dt>
 <dd><data value="9826675" data-f="number">9826675</data> <span class="note">square kilometre</span></dd>
 <span class="tools">
         <button class="src"
@@ -4048,7 +4048,7 @@ expression: html
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P2046"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>coastline
+</div><div class="row r-value"><dt class="i-puzzle">coastline
     <button class="info"
             type="button"
             popovertarget="p127"
@@ -4076,14 +4076,14 @@ expression: html
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P5141"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-list former"><dt>continent <span class="mark">former</span></dt>
+</div><div class="row r-list former"><dt class="i-puzzle">continent <span class="mark">former</span></dt>
 <dd><span class="v"><a href="https://www.wikidata.org/wiki/Q48">Asia</a> <span class="note quals">– 1946 · <a href="https://www.wikidata.org/wiki/Q146328">Commonwealth of the Philippines</a></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P30"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
     </span></dd>
 <span class="tools"></span>
-</div><div class="row r-list former"><dt>shares border with <span class="mark">former</span></dt>
+</div><div class="row r-list former"><dt class="i-puzzle">shares border with <span class="mark">former</span></dt>
 <dd><span class="v"><a href="https://www.wikidata.org/wiki/Q804">Panama</a> <span class="note quals">1904 – 1999</span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P47"
@@ -4102,14 +4102,14 @@ expression: html
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
     </span></dd>
 <span class="tools"></span>
-</div><div class="row r-list former"><dt>highest point <span class="mark">former</span></dt>
+</div><div class="row r-list former"><dt class="i-mountain_flag">highest point <span class="mark">former</span></dt>
 <dd><span class="v"><a href="https://www.wikidata.org/wiki/Q235539">Mount Whitney</a> <span class="note quals">– 1867</span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P610"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
     </span></dd>
 <span class="tools"></span>
-</div><div class="row r-value"><dt>maximum temperature record
+</div><div class="row r-value"><dt class="i-thermostat_arrow_up">maximum temperature record
     <button class="info"
             type="button"
             popovertarget="p129"
@@ -4122,7 +4122,7 @@ expression: html
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
 </div></dl><div data-slot="strips">
         <div class="block set strip">
-    <h3>located in or next to body of water <span class="note">3</span></h3><div class="run scroll" tabindex="0" role="group" aria-label="located in or next to body of water"><ul class="pic-rows">
+    <h3 class="i-puzzle">located in or next to body of water <span class="note">3</span></h3><div class="run scroll" tabindex="0" role="group" aria-label="located in or next to body of water"><ul class="pic-rows">
         <li>
             <span class="text">
                 <b><a href="https://www.wikidata.org/wiki/Q97">Atlantic Ocean</a></b><span class="prov-none" title="—"></span>
@@ -4183,7 +4183,7 @@ expression: html
              data-spread="government"
              data-dimension="people"><h2><span class="title">government</span></h2><div data-slot="hero">
         <div class="block succession">
-    <h3><a href="https://www.wikidata.org/wiki/Q11696">President of the United States</a></h3>
+    <h3 class="i-userAvatar"><a href="https://www.wikidata.org/wiki/Q11696">President of the United States</a></h3>
 <div class="group">
     <dl class="holder">
         <div class="row">
@@ -4846,7 +4846,7 @@ expression: html
     </dialog></div>
 </div>
     </div><div data-slot="gallery"><dl class="sheet"><div class="row">
-            <dt>capital</dt>
+            <dt class="i-puzzle">capital</dt>
             <dd><a href="https://www.wikidata.org/wiki/Q61">Washington, D.C.</a> <span class="note quals">1800 – · <a href="https://www.wikidata.org/wiki/Q71536244">currently valid value</a></span></dd>
             <span class="tools"><span class="prov-none" title="—"></span><button class="info"
             type="button"
@@ -4861,7 +4861,7 @@ expression: html
      alt=""
      loading="lazy">
         </div><div class="row">
-            <dt>legislative body</dt>
+            <dt class="i-puzzle">legislative body</dt>
             <dd><a href="https://www.wikidata.org/wiki/Q11268">United States Congress</a> <span class="note quals">1789 –</span></dd>
             <span class="tools"><span class="prov-none" title="—"></span><button class="info"
             type="button"
@@ -4876,7 +4876,7 @@ expression: html
      alt=""
      loading="lazy">
         </div><div class="row">
-            <dt>executive body</dt>
+            <dt class="i-puzzle">executive body</dt>
             <dd><a href="https://www.wikidata.org/wiki/Q48525">Federal Government of the United States</a></dd>
             <span class="tools"><span class="prov-none" title="—"></span><button class="info"
             type="button"
@@ -4891,7 +4891,7 @@ expression: html
      alt=""
      loading="lazy">
         </div><div class="row">
-            <dt>foundational text</dt>
+            <dt class="i-puzzle">foundational text</dt>
             <dd><a href="https://www.wikidata.org/wiki/Q127912">United States Declaration of Independence</a></dd>
             <span class="tools"><span class="prov-none" title="—"></span><button class="info"
             type="button"
@@ -4906,7 +4906,7 @@ expression: html
      alt=""
      loading="lazy">
         </div><div class="row">
-            <dt>highest judicial authority</dt>
+            <dt class="i-puzzle">highest judicial authority</dt>
             <dd><a href="https://www.wikidata.org/wiki/Q11201">Supreme Court of the United States</a></dd>
             <span class="tools"><span class="prov-none" title="—"></span><button class="info"
             type="button"
@@ -4921,7 +4921,7 @@ expression: html
      alt=""
      loading="lazy">
         </div><div class="row">
-            <dt>main regulatory text</dt>
+            <dt class="i-puzzle">main regulatory text</dt>
             <dd><a href="https://www.wikidata.org/wiki/Q11698">United States Constitution</a> <span class="note quals">1789 – · <a href="https://www.wikidata.org/wiki/Q71536244">currently valid value</a></span></dd>
             <span class="tools"><span class="prov-none" title="—"></span><button class="info"
             type="button"
@@ -4935,7 +4935,7 @@ expression: html
      src="https://commons.wikimedia.org/wiki/Special:FilePath/Constitution%20of%20the%20United%20States%20-%20DPLA%20-%209ca804144bd5965e992ae3528bc3c6a3%20%28page%201%29.jpg?width=330"
      alt=""
      loading="lazy">
-        </div></dl></div><dl class="sheet" data-slot="sheet"><div class="row r-list"><dt>basic form of government</dt>
+        </div></dl></div><dl class="sheet" data-slot="sheet"><div class="row r-list"><dt class="i-puzzle">basic form of government</dt>
 <dd><span class="v"><a href="https://www.wikidata.org/wiki/Q1520223">constitutional republic</a>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P122"
@@ -4958,14 +4958,14 @@ expression: html
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
     </span></dd>
 <span class="tools"></span>
-</div><div class="row r-list former"><dt>legislative body <span class="mark">former</span></dt>
+</div><div class="row r-list former"><dt class="i-puzzle">legislative body <span class="mark">former</span></dt>
 <dd><span class="v"><a href="https://www.wikidata.org/wiki/Q1195929">Congress of the Confederation</a> <span class="note quals">1781 – 1789</span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P194"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
     </span></dd>
 <span class="tools"></span>
-</div><div class="row r-list former"><dt>capital <span class="mark">former</span></dt>
+</div><div class="row r-list former"><dt class="i-puzzle">capital <span class="mark">former</span></dt>
 <dd><span class="v"><a href="https://www.wikidata.org/wiki/Q1345">Philadelphia</a> <span class="note quals">1790 – 1800</span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P36"
@@ -4976,7 +4976,7 @@ expression: html
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
     </span></dd>
 <span class="tools"></span>
-</div><div class="row r-list former"><dt>contains the administrative territorial entity <span class="mark">former</span></dt>
+</div><div class="row r-list former"><dt class="i-puzzle">contains the administrative territorial entity <span class="mark">former</span></dt>
 <dd><span class="v"><a href="https://www.wikidata.org/wiki/Q146328">Commonwealth of the Philippines</a> <span class="note quals">1935 – 1946</span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P150"
@@ -5159,7 +5159,7 @@ expression: html
         aria-label="Sources"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15 10-2.78-2.78L9.44 10V1H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2z"/></svg></button><span id="p142" popover class="pop cites"><span class="cite" data-kind="web">
     <span class="head"><img class="favicon" src="https://favicons.toolforge.org/favicon?url=capitalizemytitle.com" alt="" width="32" height="32" loading="lazy"><span class="title"><a href="https://capitalizemytitle.com/50-us-states-in-alphabetical-order/">capitalizemytitle.com/50-us-states-in-alphabetical-order/</a></span><span class="host">capitalizemytitle.com</span></span>
 </span></span></span>
-</div><div class="row r-list former"><dt>main regulatory text <span class="mark">former</span></dt>
+</div><div class="row r-list former"><dt class="i-puzzle">main regulatory text <span class="mark">former</span></dt>
 <dd><span class="v"><a href="https://www.wikidata.org/wiki/Q493620">Articles of Confederation</a> <span class="note quals">1781 – 1789</span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P92"
@@ -5168,7 +5168,7 @@ expression: html
 <span class="tools"></span>
 </div></dl><div data-slot="strips">
         <div class="block set strip">
-    <h3>contains the administrative territorial entity <span class="note">56</span><button class="src"
+    <h3 class="i-puzzle">contains the administrative territorial entity <span class="note">56</span><button class="src"
         type="button"
         popovertarget="p144"
         aria-label="Sources"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15 10-2.78-2.78L9.44 10V1H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2z"/></svg></button><span id="p144" popover class="pop cites"><span class="cite" data-kind="web">
@@ -6031,7 +6031,7 @@ expression: html
             <section class="spread t-columns" id="demography"
              data-spread="demography"
              data-dimension="measures"><h2><span class="title">demography</span></h2><div data-slot="stack">
-        <qr-chart class="block series box"><h3>population
+        <qr-chart class="block series box"><h3 class="i-userGroup">population
     <button class="info"
             type="button"
             popovertarget="p148"
@@ -6052,7 +6052,7 @@ expression: html
             <tbody><tr data-year="1790"><th scope="row">1790</th><td data-amount="3929214"><data value="3929214" data-f="number">3929214</data></td></tr><tr data-year="1800"><th scope="row">1800</th><td data-amount="5308483"><data value="5308483" data-f="number">5308483</data></td></tr><tr data-year="1810"><th scope="row">1810</th><td data-amount="7239881"><data value="7239881" data-f="number">7239881</data></td></tr><tr data-year="1820"><th scope="row">1820</th><td data-amount="9633822"><data value="9633822" data-f="number">9633822</data> <span data-other="9638453"><data value="9638453" data-f="number">9638453</data> <span class="note">other value</span></span></td></tr><tr data-year="1830"><th scope="row">1830</th><td data-amount="12866020"><data value="12866020" data-f="number">12866020</data></td></tr><tr data-year="1840"><th scope="row">1840</th><td data-amount="17069458"><data value="17069458" data-f="number">17069458</data> <span data-other="17069453"><data value="17069453" data-f="number">17069453</data> <span class="note">other value</span></span></td></tr><tr data-year="1850"><th scope="row">1850</th><td data-amount="23191876"><data value="23191876" data-f="number">23191876</data></td></tr><tr data-year="1860"><th scope="row">1860</th><td data-amount="31443321"><data value="31443321" data-f="number">31443321</data></td></tr><tr data-year="1870"><th scope="row">1870</th><td data-amount="38558371"><data value="38558371" data-f="number">38558371</data> <span data-other="39818449"><data value="39818449" data-f="number">39818449</data> <span class="note">other value</span></span></td></tr><tr data-year="1880"><th scope="row">1880</th><td data-amount="50155783"><data value="50155783" data-f="number">50155783</data> <span data-other="50189209"><data value="50189209" data-f="number">50189209</data> <span class="note">other value</span></span></td></tr><tr data-year="1890"><th scope="row">1890</th><td data-amount="62979766"><data value="62979766" data-f="number">62979766</data></td></tr><tr data-year="1900"><th scope="row">1900</th><td data-amount="76303387"><data value="76303387" data-f="number">76303387</data> <span data-other="76212168"><data value="76212168" data-f="number">76212168</data> <span class="note">other value</span></span> <span data-other="76094000"><data value="76094000" data-f="number">76094000</data> <span class="note">other value</span></span></td></tr><tr data-year="1901"><th scope="row">1901</th><td data-amount="77584000"><data value="77584000" data-f="number">77584000</data></td></tr><tr data-year="1902"><th scope="row">1902</th><td data-amount="79163000"><data value="79163000" data-f="number">79163000</data></td></tr><tr data-year="1903"><th scope="row">1903</th><td data-amount="80632000"><data value="80632000" data-f="number">80632000</data></td></tr><tr data-year="1904"><th scope="row">1904</th><td data-amount="82166000"><data value="82166000" data-f="number">82166000</data></td></tr><tr data-year="1905"><th scope="row">1905</th><td data-amount="83822000"><data value="83822000" data-f="number">83822000</data></td></tr><tr data-year="1906"><th scope="row">1906</th><td data-amount="85450000"><data value="85450000" data-f="number">85450000</data></td></tr><tr data-year="1907"><th scope="row">1907</th><td data-amount="87008000"><data value="87008000" data-f="number">87008000</data></td></tr><tr data-year="1908"><th scope="row">1908</th><td data-amount="88710000"><data value="88710000" data-f="number">88710000</data></td></tr><tr data-year="1909"><th scope="row">1909</th><td data-amount="90490000"><data value="90490000" data-f="number">90490000</data></td></tr><tr data-year="1910"><th scope="row">1910</th><td data-amount="92407000"><data value="92407000" data-f="number">92407000</data> <span data-other="91972266"><data value="91972266" data-f="number">91972266</data> <span class="note">other value</span></span></td></tr><tr data-year="1911"><th scope="row">1911</th><td data-amount="93863000"><data value="93863000" data-f="number">93863000</data></td></tr><tr data-year="1912"><th scope="row">1912</th><td data-amount="95335000"><data value="95335000" data-f="number">95335000</data></td></tr><tr data-year="1913"><th scope="row">1913</th><td data-amount="97225000"><data value="97225000" data-f="number">97225000</data></td></tr><tr data-year="1914"><th scope="row">1914</th><td data-amount="99111000"><data value="99111000" data-f="number">99111000</data></td></tr><tr data-year="1915"><th scope="row">1915</th><td data-amount="100546000"><data value="100546000" data-f="number">100546000</data></td></tr><tr data-year="1916"><th scope="row">1916</th><td data-amount="101961000"><data value="101961000" data-f="number">101961000</data></td></tr><tr data-year="1917"><th scope="row">1917</th><td data-amount="103268000"><data value="103268000" data-f="number">103268000</data></td></tr><tr data-year="1918"><th scope="row">1918</th><td data-amount="103208000"><data value="103208000" data-f="number">103208000</data></td></tr><tr data-year="1919"><th scope="row">1919</th><td data-amount="104514000"><data value="104514000" data-f="number">104514000</data></td></tr><tr data-year="1920"><th scope="row">1920</th><td data-amount="105710620"><data value="105710620" data-f="number">105710620</data></td></tr><tr data-year="1930"><th scope="row">1930</th><td data-amount="122775046"><data value="122775046" data-f="number">122775046</data></td></tr><tr data-year="1940"><th scope="row">1940</th><td data-amount="132164569"><data value="132164569" data-f="number">132164569</data></td></tr><tr data-year="1950"><th scope="row">1950</th><td data-amount="150697361"><data value="150697361" data-f="number">150697361</data></td></tr><tr data-year="1960"><th scope="row">1960</th><td data-amount="179323175"><data value="179323175" data-f="number">179323175</data></td></tr><tr data-year="1970"><th scope="row">1970</th><td data-amount="203302031"><data value="203302031" data-f="number">203302031</data></td></tr><tr data-year="1980"><th scope="row">1980</th><td data-amount="226545805"><data value="226545805" data-f="number">226545805</data></td></tr><tr data-year="1990"><th scope="row">1990</th><td data-amount="248709873"><data value="248709873" data-f="number">248709873</data></td></tr><tr data-year="2000"><th scope="row">2000</th><td data-amount="281421906"><data value="281421906" data-f="number">281421906</data></td></tr><tr data-year="2010"><th scope="row">2010</th><td data-amount="308745538"><data value="308745538" data-f="number">308745538</data></td></tr><tr data-year="2011"><th scope="row">2011</th><td data-amount="311582600"><data value="311582600" data-f="number">311582600</data></td></tr><tr data-year="2013"><th scope="row">2013</th><td data-amount="316128839"><data value="316128839" data-f="number">316128839</data></td></tr><tr data-year="2016"><th scope="row">2016</th><td data-amount="323952889"><data value="323952889" data-f="number">323952889</data></td></tr><tr data-year="2017"><th scope="row">2017</th><td data-amount="325145963"><data value="325145963" data-f="number">325145963</data></td></tr><tr data-year="2019"><th scope="row">2019</th><td data-amount="328239523"><data value="328239523" data-f="number">328239523</data></td></tr><tr data-year="2020"><th scope="row">2020</th><td data-amount="331449281"><data value="331449281" data-f="number">331449281</data></td></tr><tr data-year="2021"><th scope="row">2021</th><td data-amount="332278200"><data value="332278200" data-f="number">332278200</data></td></tr><tr data-year="2024"><th scope="row">2024</th><td data-amount="340110988"><data value="340110988" data-f="number">340110988</data></td></tr></tbody>
         </table>
     </div>
-</div></qr-chart><qr-chart class="block series box"><h3>sex</h3><p class="desc line">
+</div></qr-chart><qr-chart class="block series box"><h3 class="i-wc">sex</h3><p class="desc line">
             <span class="key" style="--c: var( --part-1 )"></span>female population
     <button class="info"
             type="button"
@@ -6084,7 +6084,7 @@ expression: html
             <tbody><tr data-year="2019"><th scope="row">2019</th><td data-amount="165599805"><data value="165599805" data-f="number">165599805</data></td><td data-amount="162730147"><data value="162730147" data-f="number">162730147</data></td></tr><tr data-year="2020"><th scope="row">2020</th><td data-amount="167210787"><data value="167210787" data-f="number">167210787</data></td><td data-amount="164316147"><data value="164316147" data-f="number">164316147</data></td></tr><tr data-year="2021"><th scope="row">2021</th><td data-amount="167558793"><data value="167558793" data-f="number">167558793</data></td><td data-amount="164490184"><data value="164490184" data-f="number">164490184</data></td></tr><tr data-year="2022"><th scope="row">2022</th><td data-amount="168258067"><data value="168258067" data-f="number">168258067</data></td><td data-amount="165013345"><data value="165013345" data-f="number">165013345</data></td></tr></tbody>
         </table>
     </div>
-</div></qr-chart><qr-chart class="block series box"><h3>urbanization</h3><p class="desc line">
+</div></qr-chart><qr-chart class="block series box"><h3 class="i-location_city">urbanization</h3><p class="desc line">
             <span class="key" style="--c: var( --part-1 )"></span>urban population
     <button class="info"
             type="button"
@@ -6116,7 +6116,7 @@ expression: html
             <tbody><tr data-year="2019"><th scope="row">2019</th><td data-amount="270737596"><data value="270737596" data-f="number">270737596</data></td><td data-amount="57592357"><data value="57592357" data-f="number">57592357</data></td></tr><tr data-year="2020"><th scope="row">2020</th><td data-amount="274053424"><data value="274053424" data-f="number">274053424</data></td><td data-amount="57473509"><data value="57473509" data-f="number">57473509</data></td></tr><tr data-year="2021"><th scope="row">2021</th><td data-amount="275178949"><data value="275178949" data-f="number">275178949</data></td><td data-amount="56870028"><data value="56870028" data-f="number">56870028</data></td></tr><tr data-year="2022"><th scope="row">2022</th><td data-amount="276895219"><data value="276895219" data-f="number">276895219</data></td><td data-amount="56376192"><data value="56376192" data-f="number">56376192</data></td></tr></tbody>
         </table>
     </div>
-</div></qr-chart><qr-chart class="block series box"><h3>birth rate
+</div></qr-chart><qr-chart class="block series box"><h3 class="i-puzzle">birth rate
     <button class="info"
             type="button"
             popovertarget="p153"
@@ -6137,7 +6137,7 @@ expression: html
             <tbody><tr data-year="2019"><th scope="row">2019</th><td data-amount="11.4"><data value="11.4" data-f="number">11.4</data></td></tr><tr data-year="2020"><th scope="row">2020</th><td data-amount="10.9"><data value="10.9" data-f="number">10.9</data></td></tr><tr data-year="2021"><th scope="row">2021</th><td data-amount="11"><data value="11" data-f="number">11</data></td></tr><tr data-year="2022"><th scope="row">2022</th><td data-amount="11"><data value="11" data-f="number">11</data></td></tr></tbody>
         </table>
     </div>
-</div></qr-chart><qr-chart class="block series box"><h3>death rate
+</div></qr-chart><qr-chart class="block series box"><h3 class="i-puzzle">death rate
     <button class="info"
             type="button"
             popovertarget="p154"
@@ -6158,7 +6158,7 @@ expression: html
             <tbody><tr data-year="2019"><th scope="row">2019</th><td data-amount="8.697"><data value="8.697" data-f="number">8.697</data></td></tr><tr data-year="2020"><th scope="row">2020</th><td data-amount="10.27"><data value="10.27" data-f="number">10.27</data></td></tr><tr data-year="2021"><th scope="row">2021</th><td data-amount="10.4"><data value="10.4" data-f="number">10.4</data></td></tr><tr data-year="2022"><th scope="row">2022</th><td data-amount="9.8"><data value="9.8" data-f="number">9.8</data></td></tr></tbody>
         </table>
     </div>
-</div></qr-chart><qr-chart class="block series box"><h3>total fertility rate
+</div></qr-chart><qr-chart class="block series box"><h3 class="i-puzzle">total fertility rate
     <button class="info"
             type="button"
             popovertarget="p155"
@@ -6179,7 +6179,7 @@ expression: html
             <tbody><tr data-year="1999"><th scope="row">1999</th><td data-amount="2.0075"><data value="2.0075" data-f="number">2.0075</data></td></tr><tr data-year="2000"><th scope="row">2000</th><td data-amount="2.056"><data value="2.056" data-f="number">2.056</data></td></tr><tr data-year="2001"><th scope="row">2001</th><td data-amount="2.0305"><data value="2.0305" data-f="number">2.0305</data></td></tr><tr data-year="2002"><th scope="row">2002</th><td data-amount="2.0205"><data value="2.0205" data-f="number">2.0205</data></td></tr><tr data-year="2003"><th scope="row">2003</th><td data-amount="2.0475"><data value="2.0475" data-f="number">2.0475</data></td></tr><tr data-year="2004"><th scope="row">2004</th><td data-amount="2.0515"><data value="2.0515" data-f="number">2.0515</data></td></tr><tr data-year="2005"><th scope="row">2005</th><td data-amount="2.057"><data value="2.057" data-f="number">2.057</data></td></tr><tr data-year="2006"><th scope="row">2006</th><td data-amount="2.108"><data value="2.108" data-f="number">2.108</data></td></tr><tr data-year="2007"><th scope="row">2007</th><td data-amount="2.12"><data value="2.12" data-f="number">2.12</data></td></tr><tr data-year="2008"><th scope="row">2008</th><td data-amount="2.072"><data value="2.072" data-f="number">2.072</data></td></tr><tr data-year="2009"><th scope="row">2009</th><td data-amount="2.002"><data value="2.002" data-f="number">2.002</data></td></tr><tr data-year="2010"><th scope="row">2010</th><td data-amount="1.931"><data value="1.931" data-f="number">1.931</data></td></tr><tr data-year="2011"><th scope="row">2011</th><td data-amount="1.8945"><data value="1.8945" data-f="number">1.8945</data></td></tr><tr data-year="2012"><th scope="row">2012</th><td data-amount="1.8805"><data value="1.8805" data-f="number">1.8805</data></td></tr><tr data-year="2013"><th scope="row">2013</th><td data-amount="1.8575"><data value="1.8575" data-f="number">1.8575</data></td></tr><tr data-year="2014"><th scope="row">2014</th><td data-amount="1.8615"><data value="1.8615" data-f="number">1.8615</data></td></tr><tr data-year="2019"><th scope="row">2019</th><td data-amount="1.706"><data value="1.706" data-f="number">1.706</data></td></tr><tr data-year="2020"><th scope="row">2020</th><td data-amount="1.6415"><data value="1.6415" data-f="number">1.6415</data></td></tr><tr data-year="2021"><th scope="row">2021</th><td data-amount="1.664"><data value="1.664" data-f="number">1.664</data></td></tr><tr data-year="2022"><th scope="row">2022</th><td data-amount="1.665"><data value="1.665" data-f="number">1.665</data></td></tr></tbody>
         </table>
     </div>
-</div></qr-chart><qr-chart class="block series box"><h3>life expectancy
+</div></qr-chart><qr-chart class="block series box"><h3 class="i-puzzle">life expectancy
     <button class="info"
             type="button"
             popovertarget="p156"
@@ -6201,7 +6201,7 @@ expression: html
         </table>
     </div>
 </div></qr-chart>
-    </div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>literacy rate
+    </div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt class="i-puzzle">literacy rate
     <button class="info"
             type="button"
             popovertarget="p157"
@@ -6220,7 +6220,7 @@ expression: html
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P6897"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>retirement age</dt>
+</div><div class="row r-value"><dt class="i-puzzle">retirement age</dt>
 <dd><data value="66" data-f="number">66</data> <span class="note">years old</span></dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
@@ -6257,7 +6257,7 @@ expression: html
             <section class="spread t-columns" id="economy"
              data-spread="economy"
              data-dimension="measures"><h2><span class="title">economy</span></h2><div data-slot="stack">
-        <qr-chart class="block series box"><h3>nominal GDP
+        <qr-chart class="block series box"><h3 class="i-puzzle">nominal GDP
     <button class="info"
             type="button"
             popovertarget="p160"
@@ -6280,7 +6280,7 @@ expression: html
     </div>
 </div></qr-chart>
     </div><div data-slot="gallery"><dl class="sheet"><div class="row">
-            <dt>‎most populous urban area</dt>
+            <dt class="i-puzzle">‎most populous urban area</dt>
             <dd><a href="https://www.wikidata.org/wiki/Q60">New York City</a></dd>
             <span class="tools"><button class="src"
         type="button"
@@ -6303,7 +6303,7 @@ expression: html
      alt=""
      loading="lazy">
         </div><div class="row">
-            <dt>currency</dt>
+            <dt class="i-puzzle">currency</dt>
             <dd><a href="https://www.wikidata.org/wiki/Q4917">United States dollar</a></dd>
             <span class="tools"><span class="prov-none" title="—"></span><button class="info"
             type="button"
@@ -6318,14 +6318,14 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
      src="https://commons.wikimedia.org/wiki/Special:FilePath/USDnotes.png?width=330"
      alt=""
      loading="lazy">
-        </div></dl></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>central bank</dt>
+        </div></dl></div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt class="i-puzzle">central bank</dt>
 <dd><a href="https://www.wikidata.org/wiki/Q53536">Federal Reserve System</a> <span class="note quals">1913 – · <a href="https://www.wikidata.org/wiki/Q71536244">currently valid value</a></span></dd>
 <span class="tools">
         <span class="prov-imported" title="imported from Wikimedia project">W</span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P1304"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-list former"><dt>central bank <span class="mark">former</span></dt>
+</div><div class="row r-list former"><dt class="i-puzzle">central bank <span class="mark">former</span></dt>
 <dd><span class="v"><a href="https://www.wikidata.org/wiki/Q2263849">Second Bank of the United States</a> <span class="note quals">1816 – 1833</span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P1304"
@@ -6336,14 +6336,14 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
     </span></dd>
 <span class="tools"></span>
-</div><div class="row r-value"><dt>median income</dt>
+</div><div class="row r-value"><dt class="i-puzzle">median income</dt>
 <dd><data value="43585" data-f="number">43585</data> <span class="note">United States dollar</span></dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P3529"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>unemployment rate
+</div><div class="row r-value"><dt class="i-puzzle">unemployment rate
     <button class="info"
             type="button"
             popovertarget="p164"
@@ -6385,7 +6385,7 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
             <section class="spread t-columns" id="development"
              data-spread="development"
              data-dimension="measures"><h2><span class="title">socioeconomic development</span></h2><div data-slot="stack">
-        <qr-chart class="block series box"><h3>Human Development Index
+        <qr-chart class="block series box"><h3 class="i-puzzle">Human Development Index
     <button class="info"
             type="button"
             popovertarget="p166"
@@ -6406,7 +6406,7 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
             <tbody><tr data-year="1990"><th scope="row">1990</th><td data-amount="0.872"><data value="0.872" data-f="number">0.872</data></td></tr><tr data-year="1991"><th scope="row">1991</th><td data-amount="0.873"><data value="0.873" data-f="number">0.873</data></td></tr><tr data-year="1992"><th scope="row">1992</th><td data-amount="0.878"><data value="0.878" data-f="number">0.878</data></td></tr><tr data-year="1993"><th scope="row">1993</th><td data-amount="0.88"><data value="0.88" data-f="number">0.88</data></td></tr><tr data-year="1994"><th scope="row">1994</th><td data-amount="0.884"><data value="0.884" data-f="number">0.884</data></td></tr><tr data-year="1995"><th scope="row">1995</th><td data-amount="0.885"><data value="0.885" data-f="number">0.885</data></td></tr><tr data-year="1996"><th scope="row">1996</th><td data-amount="0.887"><data value="0.887" data-f="number">0.887</data></td></tr><tr data-year="1997"><th scope="row">1997</th><td data-amount="0.89"><data value="0.89" data-f="number">0.89</data></td></tr><tr data-year="1998"><th scope="row">1998</th><td data-amount="0.893"><data value="0.893" data-f="number">0.893</data></td></tr><tr data-year="1999"><th scope="row">1999</th><td data-amount="0.889"><data value="0.889" data-f="number">0.889</data></td></tr><tr data-year="2000"><th scope="row">2000</th><td data-amount="0.891"><data value="0.891" data-f="number">0.891</data></td></tr><tr data-year="2001"><th scope="row">2001</th><td data-amount="0.892"><data value="0.892" data-f="number">0.892</data></td></tr><tr data-year="2002"><th scope="row">2002</th><td data-amount="0.893"><data value="0.893" data-f="number">0.893</data></td></tr><tr data-year="2003"><th scope="row">2003</th><td data-amount="0.895"><data value="0.895" data-f="number">0.895</data></td></tr><tr data-year="2004"><th scope="row">2004</th><td data-amount="0.898"><data value="0.898" data-f="number">0.898</data></td></tr><tr data-year="2005"><th scope="row">2005</th><td data-amount="0.9"><data value="0.9" data-f="number">0.9</data></td></tr><tr data-year="2006"><th scope="row">2006</th><td data-amount="0.904"><data value="0.904" data-f="number">0.904</data></td></tr><tr data-year="2007"><th scope="row">2007</th><td data-amount="0.906"><data value="0.906" data-f="number">0.906</data></td></tr><tr data-year="2008"><th scope="row">2008</th><td data-amount="0.906"><data value="0.906" data-f="number">0.906</data></td></tr><tr data-year="2009"><th scope="row">2009</th><td data-amount="0.908"><data value="0.908" data-f="number">0.908</data></td></tr><tr data-year="2010"><th scope="row">2010</th><td data-amount="0.911"><data value="0.911" data-f="number">0.911</data></td></tr><tr data-year="2011"><th scope="row">2011</th><td data-amount="0.913"><data value="0.913" data-f="number">0.913</data></td></tr><tr data-year="2012"><th scope="row">2012</th><td data-amount="0.916"><data value="0.916" data-f="number">0.916</data></td></tr><tr data-year="2013"><th scope="row">2013</th><td data-amount="0.917"><data value="0.917" data-f="number">0.917</data></td></tr><tr data-year="2014"><th scope="row">2014</th><td data-amount="0.919"><data value="0.919" data-f="number">0.919</data></td></tr><tr data-year="2015"><th scope="row">2015</th><td data-amount="0.92"><data value="0.92" data-f="number">0.92</data></td></tr><tr data-year="2016"><th scope="row">2016</th><td data-amount="0.922"><data value="0.922" data-f="number">0.922</data></td></tr><tr data-year="2017"><th scope="row">2017</th><td data-amount="0.924"><data value="0.924" data-f="number">0.924</data></td></tr><tr data-year="2018"><th scope="row">2018</th><td data-amount="0.927"><data value="0.927" data-f="number">0.927</data></td></tr><tr data-year="2019"><th scope="row">2019</th><td data-amount="0.93"><data value="0.93" data-f="number">0.93</data></td></tr><tr data-year="2020"><th scope="row">2020</th><td data-amount="0.92"><data value="0.92" data-f="number">0.92</data></td></tr><tr data-year="2021"><th scope="row">2021</th><td data-amount="0.921"><data value="0.921" data-f="number">0.921</data></td></tr></tbody>
         </table>
     </div>
-</div></qr-chart><qr-chart class="block series box"><h3>Inequality-adjusted Human Development Index
+</div></qr-chart><qr-chart class="block series box"><h3 class="i-puzzle">Inequality-adjusted Human Development Index
     <button class="info"
             type="button"
             popovertarget="p167"
@@ -6427,7 +6427,7 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
             <tbody><tr data-year="2010"><th scope="row">2010</th><td data-amount="0.805"><data value="0.805" data-f="number">0.805</data></td></tr><tr data-year="2011"><th scope="row">2011</th><td data-amount="0.806"><data value="0.806" data-f="number">0.806</data></td></tr><tr data-year="2012"><th scope="row">2012</th><td data-amount="0.808"><data value="0.808" data-f="number">0.808</data></td></tr><tr data-year="2013"><th scope="row">2013</th><td data-amount="0.81"><data value="0.81" data-f="number">0.81</data></td></tr><tr data-year="2014"><th scope="row">2014</th><td data-amount="0.805"><data value="0.805" data-f="number">0.805</data></td></tr><tr data-year="2015"><th scope="row">2015</th><td data-amount="0.808"><data value="0.808" data-f="number">0.808</data></td></tr><tr data-year="2016"><th scope="row">2016</th><td data-amount="0.81"><data value="0.81" data-f="number">0.81</data></td></tr><tr data-year="2017"><th scope="row">2017</th><td data-amount="0.81"><data value="0.81" data-f="number">0.81</data></td></tr><tr data-year="2018"><th scope="row">2018</th><td data-amount="0.815"><data value="0.815" data-f="number">0.815</data></td></tr><tr data-year="2019"><th scope="row">2019</th><td data-amount="0.817"><data value="0.817" data-f="number">0.817</data></td></tr><tr data-year="2020"><th scope="row">2020</th><td data-amount="0.818"><data value="0.818" data-f="number">0.818</data></td></tr><tr data-year="2021"><th scope="row">2021</th><td data-amount="0.819"><data value="0.819" data-f="number">0.819</data></td></tr></tbody>
         </table>
     </div>
-</div></qr-chart><qr-chart class="block series box"><h3>Gini coefficient
+</div></qr-chart><qr-chart class="block series box"><h3 class="i-puzzle">Gini coefficient
     <button class="info"
             type="button"
             popovertarget="p168"
@@ -6448,7 +6448,7 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
             <tbody><tr data-year="1979"><th scope="row">1979</th><td data-amount="34.6"><data value="34.6" data-f="number">34.6</data></td></tr><tr data-year="2011"><th scope="row">2011</th><td data-amount="47.7"><data value="47.7" data-f="number">47.7</data></td></tr></tbody>
         </table>
     </div>
-</div></qr-chart><qr-chart class="block series box"><h3>Democracy Index
+</div></qr-chart><qr-chart class="block series box"><h3 class="i-puzzle">Democracy Index
     <button class="info"
             type="button"
             popovertarget="p169"
@@ -6469,7 +6469,7 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
             <tbody><tr data-year="2006"><th scope="row">2006</th><td data-amount="8.22"><data value="8.22" data-f="number">8.22</data></td></tr><tr data-year="2008"><th scope="row">2008</th><td data-amount="8.22"><data value="8.22" data-f="number">8.22</data></td></tr><tr data-year="2010"><th scope="row">2010</th><td data-amount="8.18"><data value="8.18" data-f="number">8.18</data></td></tr><tr data-year="2011"><th scope="row">2011</th><td data-amount="8.11"><data value="8.11" data-f="number">8.11</data></td></tr><tr data-year="2012"><th scope="row">2012</th><td data-amount="8.11"><data value="8.11" data-f="number">8.11</data></td></tr><tr data-year="2013"><th scope="row">2013</th><td data-amount="8.11"><data value="8.11" data-f="number">8.11</data></td></tr><tr data-year="2014"><th scope="row">2014</th><td data-amount="8.11"><data value="8.11" data-f="number">8.11</data></td></tr><tr data-year="2015"><th scope="row">2015</th><td data-amount="8.05"><data value="8.05" data-f="number">8.05</data></td></tr><tr data-year="2016"><th scope="row">2016</th><td data-amount="7.98"><data value="7.98" data-f="number">7.98</data></td></tr><tr data-year="2017"><th scope="row">2017</th><td data-amount="7.98"><data value="7.98" data-f="number">7.98</data></td></tr><tr data-year="2018"><th scope="row">2018</th><td data-amount="7.96"><data value="7.96" data-f="number">7.96</data></td></tr><tr data-year="2019"><th scope="row">2019</th><td data-amount="7.96"><data value="7.96" data-f="number">7.96</data></td></tr><tr data-year="2020"><th scope="row">2020</th><td data-amount="7.92"><data value="7.92" data-f="number">7.92</data></td></tr></tbody>
         </table>
     </div>
-</div></qr-chart><qr-chart class="block series box"><h3>number of out-of-school children
+</div></qr-chart><qr-chart class="block series box"><h3 class="i-puzzle">number of out-of-school children
     <button class="info"
             type="button"
             popovertarget="p170"
@@ -6491,7 +6491,7 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
         </table>
     </div>
 </div></qr-chart>
-    </div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>Happy Planet Index score
+    </div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt class="i-puzzle">Happy Planet Index score
     <button class="info"
             type="button"
             popovertarget="p171"
@@ -6508,14 +6508,14 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P11547"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-variants"><dt>suicide rate
+</div><div class="row r-variants"><dt class="i-puzzle">suicide rate
     <button class="info"
             type="button"
             popovertarget="p173"
             aria-label="Description">i</button><span id="p173" popover class="pop">amount of suicides per 100,000 people and year in the place or group</span></dt>
 <dd><span class="v"><data value="14.5" data-f="number">14.5</data> <span class="note quals">2019</span></span><span class="v"><data value="12.1" data-f="number">12.1</data> <span class="note quals"><a href="https://www.wikidata.org/wiki/Q4691855">age adjustment</a></span></span></dd>
 <span class="tools"></span>
-</div><div class="row r-value"><dt>age of majority</dt>
+</div><div class="row r-value"><dt class="i-puzzle">age of majority</dt>
 <dd>unknown value <span class="note quals"><a href="https://www.wikidata.org/wiki/Q27145860">varies by state/province</a></span></dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
@@ -6525,14 +6525,14 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
 </div></dl></section>
             <section class="spread t-columns" id="infrastructure"
              data-spread="infrastructure"
-             data-dimension="place"><h2><span class="title">infrastructure</span></h2><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>mains voltage</dt>
+             data-dimension="place"><h2><span class="title">infrastructure</span></h2><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt class="i-bolt">mains voltage</dt>
 <dd><data value="120" data-f="number">120</data> <span class="note">volt</span> <span class="note quals">frequency: <data value="60" data-f="number">60</data></span></dd>
 <span class="tools">
         <span class="prov-imported" title="imported from Wikimedia project">W</span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P2884"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>electrical plug type</dt>
+</div><div class="row r-value"><dt class="i-puzzle">electrical plug type</dt>
 <dd><span class="v"><a href="https://www.wikidata.org/wiki/Q24288456">NEMA 5-15</a>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P2853"
@@ -6551,14 +6551,14 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
     <span class="field"><span class="field-name">Retrieved</span> <span class="field-value"><time datetime="2016-06-10"
       data-p="11">2016-06-10</time></span></span>
 </span></span></span>
-</div><div class="row r-value"><dt>telephone country code</dt>
+</div><div class="row r-value"><dt class="i-puzzle">telephone country code</dt>
 <dd>+1</dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P474"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-list"><dt>mobile country code</dt>
+</div><div class="row r-list"><dt class="i-puzzle">mobile country code</dt>
 <dd><span class="v">311
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P2258"
@@ -6659,7 +6659,7 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
 </ul></div>
     </dialog></dd>
 <span class="tools"></span>
-</div><div class="row r-value"><dt>emergency phone number</dt>
+</div><div class="row r-value"><dt class="i-call">emergency phone number</dt>
 <dd><a href="https://www.wikidata.org/wiki/Q533806">911</a></dd>
 <span class="tools">
         <button class="src"
@@ -6674,7 +6674,7 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P2852"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>driving side</dt>
+</div><div class="row r-value"><dt class="i-directions_car">driving side</dt>
 <dd><a href="https://www.wikidata.org/wiki/Q14565199">right</a></dd>
 <span class="tools">
         <button class="src"
@@ -6688,7 +6688,7 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P1622"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>railway traffic side</dt>
+</div><div class="row r-value"><dt class="i-train">railway traffic side</dt>
 <dd><a href="https://www.wikidata.org/wiki/Q14565199">right</a> <span class="note quals"><a href="https://www.wikidata.org/wiki/Q1072021">Chicago and North Western Transportation Company</a></span></dd>
 <span class="tools">
         <button class="src"
@@ -6700,7 +6700,7 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P5658"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>vehicle registration plate code</dt>
+</div><div class="row r-value"><dt class="i-puzzle">vehicle registration plate code</dt>
 <dd>USA <span class="note quals">1952 –</span></dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
@@ -6712,7 +6712,7 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
              data-spread="culture"
              data-dimension="people"><h2><span class="title">culture</span></h2><div data-slot="stack">
         <div class="block timeline">
-    <h3>public holiday <span class="note">9</span></h3>
+    <h3 class="i-puzzle">public holiday <span class="note">9</span></h3>
     <ol class="group">
             <li>
                 <span class="when">January 1</span>
@@ -6861,7 +6861,7 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
             </li>
     </ol>
 </div>
-    </div><dl class="sheet" data-slot="sheet"><div class="row r-list"><dt>official language</dt>
+    </div><dl class="sheet" data-slot="sheet"><div class="row r-list"><dt class="i-puzzle">official language</dt>
 <dd><span class="v"><a href="https://www.wikidata.org/wiki/Q1321">Spanish</a> <span class="note quals"><a href="https://www.wikidata.org/wiki/Q1183">Puerto Rico</a></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P37"
@@ -6884,7 +6884,7 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
     </span></dd>
 <span class="tools"></span>
-</div><div class="row r-list"><dt>language used</dt>
+</div><div class="row r-list"><dt class="i-puzzle">language used</dt>
 <dd><span class="v"><a href="https://www.wikidata.org/wiki/Q1860">English</a> <span class="note quals">number of speakers, writers, or signers: <data value="215424000" data-f="number">215424000</data> · <a href="https://www.wikidata.org/wiki/Q36870">first language</a></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P2936"
@@ -8638,7 +8638,7 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
     <span class="field"><span class="field-name">Authors</span> <span class="field-value">Nikhil Sonnad</span></span>
     <span class="field"><span class="field-name">Language</span> <span class="field-value"><span data-lang-name="en">en</span></span></span>
 </span></span></span>
-</div><div class="row r-list"><dt>ethnic group</dt>
+</div><div class="row r-list"><dt class="i-puzzle">ethnic group</dt>
 <dd><span class="v"><a href="https://www.wikidata.org/wiki/Q49297">Indigenous peoples of the United States in North America</a> <span class="note quals">2010 · proportion: <data value="0.011" data-f="number">0.011</data></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P172"
@@ -8664,7 +8664,7 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
     <span class="field"><span class="field-name">Retrieved</span> <span class="field-value"><time datetime="2017-09-18"
       data-p="11">2017-09-18</time></span></span>
 </span></span></span>
-</div><div class="row r-value"><dt>culture</dt>
+</div><div class="row r-value"><dt class="i-puzzle">culture</dt>
 <dd><a href="https://www.wikidata.org/wiki/Q1044835">culture of the United States</a></dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
@@ -8708,7 +8708,7 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
              data-spread="relations"
              data-dimension="people"><h2><span class="title">international relations</span></h2><div data-slot="stack">
         <div class="block set rows">
-    <h3>diplomatic relation <span class="note">182</span><button class="src"
+    <h3 class="i-puzzle">diplomatic relation <span class="note">182</span><button class="src"
         type="button"
         popovertarget="p185"
         aria-label="Sources"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15 10-2.78-2.78L9.44 10V1H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2z"/></svg></button><span id="p185" popover class="pop cites"><span class="cite" data-kind="web">
@@ -11008,7 +11008,7 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
         </li>
 </ul></div>
     </dialog></div><div class="block set rows">
-    <h3>participant in <span class="note">31</span></h3><ul class="pic-rows">
+    <h3 class="i-puzzle">participant in <span class="note">31</span></h3><ul class="pic-rows">
         <li>
             <span class="text">
                 <b><a href="https://www.wikidata.org/wiki/Q8740">Vietnam War</a></b><button class="src"
@@ -11755,7 +11755,7 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
         </li>
 </ul></div>
     </dialog></div><div class="block set rows">
-    <h3>member of <span class="note">56</span></h3><ul class="pic-rows">
+    <h3 class="i-puzzle">member of <span class="note">56</span></h3><ul class="pic-rows">
         <li>
             <span class="text">
                 <b><a href="https://www.wikidata.org/wiki/Q1065">United Nations</a></b><span class="prov-none" title="—"></span>
@@ -13014,7 +13014,7 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
         </li>
 </ul></div>
     </dialog></div><div class="block set rows">
-    <h3>owner of <span class="note">19</span></h3><ul class="pic-rows">
+    <h3 class="i-puzzle">owner of <span class="note">19</span></h3><ul class="pic-rows">
         <li>
             <span class="text">
                 <b><a href="https://www.wikidata.org/wiki/Q35525">White House</a></b><button class="src"
@@ -13444,7 +13444,7 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
 </ul></div>
     </dialog></div>
     </div><div data-slot="gallery"><dl class="sheet"><div class="row">
-            <dt>part of</dt>
+            <dt class="i-puzzle">part of</dt>
             <dd><a href="https://www.wikidata.org/wiki/Q49">North America</a> <span class="note quals"><a href="https://www.wikidata.org/wiki/Q782">Hawaii</a></span></dd>
             <span class="tools"><button class="src"
         type="button"
@@ -13473,7 +13473,7 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
              data-spread="history"
              data-dimension="time"><h2><span class="title">history</span></h2><div data-slot="stack">
         <div class="block timeline">
-    <h3>significant event <span class="note">41</span></h3>
+    <h3 class="i-puzzle">significant event <span class="note">41</span></h3>
     <ol class="group">
             <li>
                 <span class="when">1776</span>
@@ -14162,7 +14162,7 @@ USDnotes.jpg: The original uploader was Andyhi18 at English Wikipedia. · Public
             </li>
     </ol>
 </div>
-    </div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>inception</dt>
+    </div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt class="i-calendar">inception</dt>
 <dd><span class="v"><time datetime="1784-05-12"
       data-p="11">1784-05-12</time> <span class="note quals"><a href="https://www.wikidata.org/wiki/Q217450">Treaty of Paris (1783)</a> · <a href="https://www.wikidata.org/wiki/Q60021702">independence recognized by country from which it separated</a></span>
         <a class="edit"
@@ -14526,21 +14526,21 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
 </dialog> </div>
     </div><div data-slot="audio">
         <div class="block box">
-        <h3>spoken text audio<span class="prov-imported" title="imported from Wikimedia project">W</span><a class="edit"
+        <h3 class="i-volumeUp">spoken text audio<span class="prov-imported" title="imported from Wikimedia project">W</span><a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P989"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></h3>
         <audio controls preload="none" src="https://commons.wikimedia.org/wiki/Special:FilePath/Nl-Verenigde%20Staten%20van%20Amerika-article.oga">
         </audio>
             <span class="note"><a href="https://www.wikidata.org/wiki/Q7411">Dutch</a> · 2005</span>
         </div>
-    </div><dl class="sheet" data-slot="web"><div class="row r-value"><dt>Commons category</dt>
+    </div><dl class="sheet" data-slot="web"><div class="row r-value"><dt class="i-puzzle">Commons category</dt>
 <dd><a href="https://commons.wikimedia.org/wiki/Category:United_States">United States</a></dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P373"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>Commons gallery</dt>
+</div><div class="row r-value"><dt class="i-logo-Wikimedia-Commons">Commons gallery</dt>
 <dd><a href="https://commons.wikimedia.org/wiki/United_States">United States</a></dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
@@ -14557,7 +14557,7 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
              data-spread="web"
              data-dimension="neutral"><h2><span class="title">web presence</span></h2><div data-slot="stack">
         <dl class="sheet links"><div class="row">
-            <dt>top-level Internet domain</dt>
+            <dt class="i-globe">top-level Internet domain</dt>
             <dd><span class="link"><a href="https://www.wikidata.org/wiki/Q31635">.mil</a><span class="prov-imported" title="imported from Wikimedia project">W</span>
                     </span><span class="link"><img class="favicon" src="https://commons.wikimedia.org/wiki/Special:FilePath/Dotgov.png?width=60" alt="" width="16" height="16" loading="lazy"><a href="https://www.wikidata.org/wiki/Q31643">.gov</a><span class="prov-imported" title="imported from Wikimedia project">W</span>
                     </span><span class="link"><a href="https://www.wikidata.org/wiki/Q37861">.us</a><span class="prov-none" title="—"></span>
@@ -14568,7 +14568,7 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
             </span>
         </div><div class="row">
-            <dt>X (Twitter) username</dt>
+            <dt class="i-puzzle">X (Twitter) username</dt>
             <dd><img class="favicon" src="https://favicons.toolforge.org/favicon?url=x.com" alt="" width="16" height="16" loading="lazy"><span class="link"><a href="https://x.com/usagovespanol">usagovespanol</a> <span class="note">2008 – · <a href="https://www.wikidata.org/wiki/Q1321">Spanish</a> · 2022 · <a href="https://www.wikidata.org/wiki/Q28378282">verified account or profile</a> · <a href="https://www.wikidata.org/wiki/Q111678803">state-affiliated X account</a></span><span class="prov-none" title="—"></span>
                     </span><span class="link"><a href="https://x.com/usagov">usagov</a>
                             <span class="followers" title="social media followers"><data value="350082" data-f="number">350082</data> 2022</span> <span class="note">2008 – · <a href="https://www.wikidata.org/wiki/Q1860">English</a> · 2020 · <a href="https://www.wikidata.org/wiki/Q28378282">verified account or profile</a> · <a href="https://www.wikidata.org/wiki/Q111678803">state-affiliated X account</a></span><span class="prov-none" title="—"></span>
@@ -14579,7 +14579,7 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
             </span>
         </div><div class="row">
-            <dt>Facebook username</dt>
+            <dt class="i-puzzle">Facebook username</dt>
             <dd><img class="favicon" src="https://favicons.toolforge.org/favicon?url=www.facebook.com" alt="" width="16" height="16" loading="lazy"><span class="link"><a href="https://www.facebook.com/USAGov">USAGov</a><span class="prov-none" title="—"></span>
                     </span></dd>
             <span class="tools">
@@ -14588,7 +14588,7 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
             </span>
         </div><div class="row">
-            <dt>YouTube channel ID</dt>
+            <dt class="i-puzzle">YouTube channel ID</dt>
             <dd><img class="favicon" src="https://favicons.toolforge.org/favicon?url=www.youtube.com" alt="" width="16" height="16" loading="lazy"><span class="link"><a href="https://www.youtube.com/channel/UCcS5Ar_-1AWByLfBmJOG8Xg">UCcS5Ar_-1AWByLfBmJOG8Xg</a>
                             <span class="followers" title="social media followers"><data value="19900" data-f="number">19900</data> 2025</span> <span class="note">2009 – · 2024</span><span class="prov-none" title="—"></span>
                     </span></dd>
@@ -14598,7 +14598,7 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
             </span>
         </div><div class="row">
-            <dt>YouTube handle</dt>
+            <dt class="i-puzzle">YouTube handle</dt>
             <dd><img class="favicon" src="https://favicons.toolforge.org/favicon?url=www.youtube.com" alt="" width="16" height="16" loading="lazy"><span class="link"><a href="https://www.youtube.com/@USAgov1">USAgov1</a><span class="prov-none" title="—"></span>
                     </span></dd>
             <span class="tools">
@@ -14607,7 +14607,7 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
             </span>
         </div><div class="row">
-            <dt>subreddit</dt>
+            <dt class="i-puzzle">subreddit</dt>
             <dd><img class="favicon" src="https://favicons.toolforge.org/favicon?url=www.reddit.com" alt="" width="16" height="16" loading="lazy"><span class="link"><a href="https://www.reddit.com/r/usa/">usa</a>
                             <span class="followers" title="social media followers"><data value="46276" data-f="number">46276</data> 2023</span> <span class="note">2008 – · <a href="https://www.wikidata.org/wiki/Q1860">English</a> · 2023</span><span class="prov-none" title="—"></span>
                     </span><span class="link"><a href="https://www.reddit.com/r/USA_de/">USA_de</a> <span class="note"><a href="https://www.wikidata.org/wiki/Q188">German</a></span><span class="prov-none" title="—"></span>
@@ -14618,7 +14618,7 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
             </span>
         </div><div class="row">
-            <dt>Quora topic ID</dt>
+            <dt class="i-puzzle">Quora topic ID</dt>
             <dd><img class="favicon" src="https://favicons.toolforge.org/favicon?url=www.quora.com" alt="" width="16" height="16" loading="lazy"><span class="link"><a href="https://www.quora.com/topic/The-United-States-of-America">The-United-States-of-America</a><span class="prov-none" title="—"></span>
                     </span><span class="link"><a href="https://www.quora.com/topic/Amurika">Amurika</a><span class="prov-none" title="—"></span>
                     </span></dd>
@@ -14628,7 +14628,7 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
             </span>
         </div><div class="row">
-            <dt>hashtag</dt>
+            <dt class="i-tag">hashtag</dt>
             <dd><img class="favicon" src="https://favicons.toolforge.org/favicon?url=hashtags-hub.toolforge.org" alt="" width="16" height="16" loading="lazy"><span class="link"><a href="https://hashtags-hub.toolforge.org/usa">usa</a><span class="prov-none" title="—"></span>
                     </span><span class="link"><a href="https://hashtags-hub.toolforge.org/USA">USA</a><button class="src"
         type="button"
@@ -14660,7 +14660,7 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
             </span>
         </div><div class="row">
-            <dt>Stack Exchange tag</dt>
+            <dt class="i-link">Stack Exchange tag</dt>
             <dd><span class="link"><img class="favicon" src="https://favicons.toolforge.org/favicon?url=travel.stackexchange.com" alt="" width="16" height="16" loading="lazy"><a href="https://travel.stackexchange.com/tags/usa">travel.stackexchange.com/tags/usa</a><span class="prov-none" title="—"></span>
                     </span><span class="link"><img class="favicon" src="https://favicons.toolforge.org/favicon?url=matheducators.stackexchange.com" alt="" width="16" height="16" loading="lazy"><a href="https://matheducators.stackexchange.com/tags/usa">matheducators.stackexchange.com/tags/usa</a><span class="prov-none" title="—"></span>
                     </span></dd>
@@ -14670,7 +14670,7 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
             </span>
         </div><div class="row">
-            <dt>open data portal</dt>
+            <dt class="i-database">open data portal</dt>
             <dd><span class="link"><img class="favicon" src="https://commons.wikimedia.org/wiki/Special:FilePath/Data.gov%20logo.png?width=60" alt="" width="16" height="16" loading="lazy"><a href="https://www.wikidata.org/wiki/Q5227102">data.gov</a><span class="prov-none" title="—"></span>
                     </span></dd>
             <span class="tools">
@@ -14679,7 +14679,7 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
             </span>
         </div><div class="row">
-            <dt>described at URL</dt>
+            <dt class="i-link">described at URL</dt>
             <dd><span class="link"><img class="favicon" src="https://favicons.toolforge.org/favicon?url=www.newworldencyclopedia.org" alt="" width="16" height="16" loading="lazy"><a href="https://www.newworldencyclopedia.org/entry/United_States">newworldencyclopedia.org/entry/United_States</a> <span class="note"><a href="https://www.wikidata.org/wiki/Q1860">English</a> · <a href="https://www.wikidata.org/wiki/Q116780519">New World Encyclopedia</a></span><span class="prov-none" title="—"></span>
                     </span><span class="link"><img class="favicon" src="https://favicons.toolforge.org/favicon?url=baike.sogou.com" alt="" width="16" height="16" loading="lazy"><a href="https://baike.sogou.com/v48184.htm">baike.sogou.com/v48184.htm</a> <span class="note"><a href="https://www.wikidata.org/wiki/Q13414913">Simplified Chinese</a></span><span class="prov-none" title="—"></span>
                     </span></dd>
@@ -14689,7 +14689,7 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
             </span>
         </div><div class="row">
-            <dt>official blog URL</dt>
+            <dt class="i-link">official blog URL</dt>
             <dd><img class="favicon" src="https://favicons.toolforge.org/favicon?url=blog.usa.gov" alt="" width="16" height="16" loading="lazy"><span class="link"><a href="https://blog.usa.gov/">blog.usa.gov</a> <span class="note"><a href="https://www.wikidata.org/wiki/Q1860">English</a></span><span class="prov-none" title="—"></span>
                     </span></dd>
             <span class="tools">
@@ -14698,7 +14698,7 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
             </span>
         </div></dl>
-    </div><dl class="sheet" data-slot="sheet"><div class="row r-variants"><dt>social media followers
+    </div><dl class="sheet" data-slot="sheet"><div class="row r-variants"><dt class="i-userGroup">social media followers
     <button class="info"
             type="button"
             popovertarget="p253"
@@ -14710,14 +14710,14 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
              data-spread="more"
              data-dimension="neutral">
         <details>
-            <summary>+21</summary><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>country</dt>
+            <summary>+21</summary><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt class="i-puzzle">country</dt>
 <dd><a href="https://www.wikidata.org/wiki/Q30">United States</a></dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P17"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>per capita income
+</div><div class="row r-value"><dt class="i-puzzle">per capita income
     <button class="info"
             type="button"
             popovertarget="p254"
@@ -14735,7 +14735,7 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P10622"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>present in work</dt>
+</div><div class="row r-value"><dt class="i-puzzle">present in work</dt>
 <dd><a href="https://www.wikidata.org/wiki/Q622282">The City on the Edge of Forever</a></dd>
 <span class="tools">
         <button class="src"
@@ -14750,7 +14750,7 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P1441"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>has characteristic</dt>
+</div><div class="row r-value"><dt class="i-puzzle">has characteristic</dt>
 <dd><a href="https://www.wikidata.org/wiki/Q3174312">free country</a> <span class="note quals"><a href="https://www.wikidata.org/wiki/Q1417780">Freedom in the World</a></span></dd>
 <span class="tools">
         <button class="src"
@@ -14762,7 +14762,7 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P1552"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>NCI Thesaurus ID</dt>
+</div><div class="row r-value"><dt class="i-puzzle">NCI Thesaurus ID</dt>
 <dd>C17234</dd>
 <span class="tools">
         <button class="src"
@@ -14776,7 +14776,7 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P1748"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>vehicles per thousand people
+</div><div class="row r-value"><dt class="i-puzzle">vehicles per thousand people
     <button class="info"
             type="button"
             popovertarget="p259"
@@ -14792,7 +14792,7 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P5167"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>number of households
+</div><div class="row r-value"><dt class="i-puzzle">number of households
     <button class="info"
             type="button"
             popovertarget="p261"
@@ -14810,7 +14810,7 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P1538"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>mean age
+</div><div class="row r-value"><dt class="i-puzzle">mean age
     <button class="info"
             type="button"
             popovertarget="p263"
@@ -14828,7 +14828,7 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P4442"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>replaces</dt>
+</div><div class="row r-value"><dt class="i-puzzle">replaces</dt>
 <dd><span class="v"><a href="https://www.wikidata.org/wiki/Q7887623">United Colonies</a> <span class="note quals">1776</span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P1365"
@@ -14839,14 +14839,14 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
     </span></dd>
 <span class="tools"></span>
-</div><div class="row r-value"><dt>Unicode character</dt>
+</div><div class="row r-value"><dt class="i-puzzle">Unicode character</dt>
 <dd>🇺🇸</dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P487"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>Gregorian calendar start date</dt>
+</div><div class="row r-value"><dt class="i-calendar">Gregorian calendar start date</dt>
 <dd><span class="v"><time datetime="1867-10-18"
       data-p="11">1867-10-18</time> <span class="note quals"><a href="https://www.wikidata.org/wiki/Q797">Alaska</a> · <a href="https://www.wikidata.org/wiki/Q11184">Julian calendar</a></span>
         <a class="edit"
@@ -14869,7 +14869,7 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
     </span></dd>
 <span class="tools"></span>
-</div><div class="row r-value"><dt>has part(s) of the class</dt>
+</div><div class="row r-value"><dt class="i-puzzle">has part(s) of the class</dt>
 <dd><span class="v"><a href="https://www.wikidata.org/wiki/Q35657">U.S. state</a>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P2670"
@@ -14880,7 +14880,7 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
     </span></dd>
 <span class="tools"></span>
-</div><div class="row r-value"><dt>maritime identification digits</dt>
+</div><div class="row r-value"><dt class="i-puzzle">maritime identification digits</dt>
 <dd><span class="v">366
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P2979"
@@ -14903,56 +14903,56 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
     </span></dd>
 <span class="tools"></span>
-</div><div class="row r-value"><dt>contains the statistical territorial entity</dt>
+</div><div class="row r-value"><dt class="i-puzzle">contains the statistical territorial entity</dt>
 <dd><a href="https://www.wikidata.org/wiki/Q16645">United States Minor Outlying Islands</a></dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P10888"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>has cabinet</dt>
+</div><div class="row r-value"><dt class="i-puzzle">has cabinet</dt>
 <dd><a href="https://www.wikidata.org/wiki/Q639738">United States Cabinet</a></dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P12443"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>external data available at URL</dt>
+</div><div class="row r-value"><dt class="i-link">external data available at URL</dt>
 <dd><a href="https://www.data.gov/">https://www.data.gov/</a> <span class="note quals"><a href="https://www.wikidata.org/wiki/Q6938433">Creative Commons CC0 License</a></span></dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P1325"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>Toki Pona headnoun</dt>
+</div><div class="row r-value"><dt class="i-puzzle">Toki Pona headnoun</dt>
 <dd>http://www.wikidata.org/entity/L220703</dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P13326"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>studied by</dt>
+</div><div class="row r-value"><dt class="i-school">studied by</dt>
 <dd><a href="https://www.wikidata.org/wiki/Q470125">American studies</a></dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P2579"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>privacy policy URL</dt>
+</div><div class="row r-value"><dt class="i-policy">privacy policy URL</dt>
 <dd><a href="https://www.usa.gov/privacy-security">https://www.usa.gov/privacy-security</a> <span class="note quals"><a href="https://www.wikidata.org/wiki/Q1860">English</a></span></dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P7101"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>GS1 country code</dt>
+</div><div class="row r-value"><dt class="i-puzzle">GS1 country code</dt>
 <dd>000-139</dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P3067"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>grammatical number</dt>
+</div><div class="row r-value"><dt class="i-puzzle">grammatical number</dt>
 <dd><a href="https://www.wikidata.org/wiki/Q146786">plural</a></dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
@@ -14972,7 +14972,7 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
 <ul class="legend"><li> stated in / reference URL <b>737</b></li><li><span class="prov-imported" title="imported from Wikimedia project">W</span> imported from Wikimedia project <b>65</b></li><li><span class="prov-none" title="—"></span> — <b>531</b></li></ul>
 <p class="note">en: 1208 / 1208</p>
 </div>
-    </div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt>category for honorary citizens of entity</dt>
+    </div><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt class="i-puzzle">category for honorary citizens of entity</dt>
 <dd><span class="v"><a href="https://www.wikidata.org/wiki/Q8942423">Category:Honorary citizens of the United States</a>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P10280"
@@ -14983,14 +14983,14 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
     </span></dd>
 <span class="tools"></span>
-</div><div class="row r-value"><dt>topic&#39;s main Wikimedia portal</dt>
+</div><div class="row r-value"><dt class="i-puzzle">topic&#39;s main Wikimedia portal</dt>
 <dd><a href="https://www.wikidata.org/wiki/Q5365167">Portal:United States</a></dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P1151"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-list"><dt>described by source</dt>
+</div><div class="row r-list"><dt class="i-puzzle">described by source</dt>
 <dd><span class="v"><a href="https://www.wikidata.org/wiki/Q16082057">The New Student&#39;s Reference Work</a> <span class="note quals"><a href="https://www.wikidata.org/wiki/Q124019103">The New Student&#39;s Reference Work/United States of America, The</a></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P1343"
@@ -15203,7 +15203,7 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
 </ul></div>
     </dialog></dd>
 <span class="tools"></span>
-</div><div class="row r-value"><dt>topic has template</dt>
+</div><div class="row r-value"><dt class="i-puzzle">topic has template</dt>
 <dd><span class="v"><a href="https://www.wikidata.org/wiki/Q8171085">Template:United States topics</a>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P1424"
@@ -15214,42 +15214,42 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
     </span></dd>
 <span class="tools"></span>
-</div><div class="row r-value"><dt>category for people born here</dt>
+</div><div class="row r-value"><dt class="i-puzzle">category for people born here</dt>
 <dd><a href="https://www.wikidata.org/wiki/Q7463286">Category:Births in the United States</a></dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P1464"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>category for people who died here</dt>
+</div><div class="row r-value"><dt class="i-puzzle">category for people who died here</dt>
 <dd><a href="https://www.wikidata.org/wiki/Q6334989">Category:Deaths in the United States</a></dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P1465"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>category for films shot at this location</dt>
+</div><div class="row r-value"><dt class="i-puzzle">category for films shot at this location</dt>
 <dd><a href="https://www.wikidata.org/wiki/Q6839466">Category:Films shot in the United States</a></dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P1740"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>category for people buried here</dt>
+</div><div class="row r-value"><dt class="i-puzzle">category for people buried here</dt>
 <dd><a href="https://www.wikidata.org/wiki/Q7977902">Category:Burials in the United States</a></dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P1791"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>category of associated people</dt>
+</div><div class="row r-value"><dt class="i-puzzle">category of associated people</dt>
 <dd><a href="https://www.wikidata.org/wiki/Q3919762">Category:American people</a></dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P1792"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>different from</dt>
+</div><div class="row r-value"><dt class="i-compare_arrows">different from</dt>
 <dd><span class="v"><a href="https://www.wikidata.org/wiki/Q89022170">Amèrica</a>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P1889"
@@ -15264,7 +15264,7 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
     </span></dd>
 <span class="tools"></span>
-</div><div class="row r-value"><dt>permanent duplicated item</dt>
+</div><div class="row r-value"><dt class="i-puzzle">permanent duplicated item</dt>
 <dd><span class="v"><span class="fb-group"><a href="https://www.wikidata.org/wiki/Q29045456">Q29045456</a><a class="add-label"
            href="https://www.wikidata.org/wiki/Special:SetLabel/Q29045456/en"
            aria-label="Add a label in your language"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
@@ -15277,14 +15277,14 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
     </span></dd>
 <span class="tools"></span>
-</div><div class="row r-value"><dt>said to be the same as</dt>
+</div><div class="row r-value"><dt class="i-equal">said to be the same as</dt>
 <dd><a href="https://www.wikidata.org/wiki/Q214102">Union</a> <span class="note quals">1861 – 1865</span></dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P460"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>on focus list of Wikimedia project</dt>
+</div><div class="row r-value"><dt class="i-puzzle">on focus list of Wikimedia project</dt>
 <dd><span class="v"><a href="https://www.wikidata.org/wiki/Q128903909">Genadendal Music Archive</a>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P5008"
@@ -15307,14 +15307,14 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
     </span></dd>
 <span class="tools"></span>
-</div><div class="row r-value"><dt>Wikimedia outline</dt>
+</div><div class="row r-value"><dt class="i-puzzle">Wikimedia outline</dt>
 <dd><a href="https://www.wikidata.org/wiki/Q7112786">outline of the United States</a></dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P5125"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>maintained by WikiProject</dt>
+</div><div class="row r-value"><dt class="i-puzzle">maintained by WikiProject</dt>
 <dd><span class="v"><a href="https://www.wikidata.org/wiki/Q10816993">WikiProject United States</a>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P6104"
@@ -15333,21 +15333,21 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a>
     </span></dd>
 <span class="tools"></span>
-</div><div class="row r-value"><dt>category for maps or plans</dt>
+</div><div class="row r-value"><dt class="i-puzzle">category for maps or plans</dt>
 <dd><a href="https://www.wikidata.org/wiki/Q8607619">Category:Maps of the United States</a></dd>
 <span class="tools">
         <span class="prov-none" title="—"></span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P7867"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>topic&#39;s main category</dt>
+</div><div class="row r-value"><dt class="i-puzzle">topic&#39;s main category</dt>
 <dd><a href="https://www.wikidata.org/wiki/Q1410960">Category:United States</a></dd>
 <span class="tools">
         <span class="prov-imported" title="imported from Wikimedia project">W</span>
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q30#P910"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div><div class="row r-value"><dt>WordLift URL</dt>
+</div><div class="row r-value"><dt class="i-link">WordLift URL</dt>
 <dd><a href="http://data.thenextweb.com/tnw/entity/united_states_of_america">http://data.thenextweb.com/tnw/entity/united_states_of_america</a></dd>
 <span class="tools">
         <button class="src"
@@ -15375,7 +15375,7 @@ Derivative work:  Roke~commonswiki · Public domain</span></span></div></div></s
         <div class="dialog-body"><div class="idlist"><div><span>ABC News topic ID</span><span>united-states</span></div><div><span>AGROVOC ID</span><span>c_8114</span></div><div><span>AIATSIS Place Thesaurus ID</span><span>49</span></div><div><span>aircraft registration prefix</span><span>N</span></div><div><span>Al-Jazeera topic ID</span><span>where/united-states</span></div><div><span>All the Tropes article ID</span><span>The_United_States</span></div><div><span>AllTrails trail ID</span><span>us</span></div><div><span>Analysis &#38; Policy Observatory term ID</span><span>37862</span></div><div><span>Anarâš aavis topic ID</span><span>ovtastum-staatah</span></div><div><span>AniDB tag ID</span><span>1368</span></div><div><span>Apple Maps &#34;auid&#34; identifier</span><span>1446152553721944981</span></div><div><span>Arachne entity ID</span><span>1203926</span></div><div><span>archINFORM location ID</span><span>3058</span></div><div><span>Archive of Our Own tag</span><span>United States</span></div><div><span>ASC Leiden Thesaurus ID</span><span>294942807</span></div><div><span>Babelio subject ID</span><span>36</span></div><div><span>BabelNet ID</span><span>00003341n</span></div><div><span>Baidu Tieba name</span><span>美国</span></div><div><span>Basisklassifikation</span><span>15.87</span></div><div><span>BBC News topic ID</span><span>cx1m7zg01xyt</span></div><div><span>BBC Things ID</span><span>82857f8e-8134-462a-bb32-b7b14f4eab75</span></div><div><span>BDCYL authority ID</span><span>2265</span></div><div><span>bgm.tv character ID</span><span>15420</span></div><div><span>BHCL UUID</span><span>c14926bc-96b3-4a7c-a343-9e1640b0f9a9</span></div><div><span>BHCL UUID</span><span>92a0dd46-b7c9-467f-8a68-30c4af7d529a</span></div><div><span>BHCL UUID</span><span>8c6682e8-a4f8-4139-849d-ef80dc6c6f83</span></div><div><span>BHL creator ID</span><span>13991</span></div><div><span>Biblioteca Nacional de México ID</span><span>000010766</span></div><div><span>Bibliothèque nationale de France ID</span><span>118636082</span></div><div><span>Bibliothèque nationale de France ID</span><span>119313712</span></div><div><span>Biblissima authority ID</span><span>Q27013</span></div><div><span>BIBSYS ID</span><span>90178739</span></div><div><span>Bing entity ID</span><span>5232ed96-85b1-2edb-12c6-63e6c597a1de</span></div><div><span>BNMM authority ID</span><span>000046282</span></div><div><span>booru tag</span><span>united_states</span></div><div><span>Britannica Kids kids level article ID</span><span>345812</span></div><div><span>Britannica Kids scholars level article ID</span><span>111233</span></div><div><span>Britannica Kids students level article ID</span><span>277512</span></div><div><span>British Museum place ID</span><span>x17715</span></div><div><span>Brockhaus Enzyklopädie online ID</span><span>vereinigte-staaten-von-amerika</span></div><div><span>BVPB authority ID</span><span>25188</span></div><div><span>C-SPAN organization ID</span><span>1240</span></div><div><span>CAB ID</span><span>284767</span></div><div><span>CANTIC ID</span><span>981058514371006706</span></div><div><span>Catholic Encyclopedia ID</span><span>15156a</span></div><div><span>CiNii Research ID</span><span>1140282266744049280</span></div><div><span>CIVICUS Monitor country entry</span><span>united-states-america</span></div><div><span>CNA topic ID</span><span>united-states</span></div><div><span>CoBiS author ID</span><span>95a5yja38danynam9xb5yc1g68ukjc8</span></div><div><span>Colon Classification</span><span>SG--73</span></div><div><span>Curlie ID</span><span>World/Esperanto/Regionoj/Ameriko/Usono/</span></div><div><span>Curlie ID</span><span>World/Türkçe/Bölgesel/Amerika/Amerika_Birleşik_Devletleri/</span></div><div><span>Curlie ID</span><span>World/Français/Régional/Amérique/Etats-Unis/</span></div><div><span>Curlie ID</span><span>World/Deutsch/Regional/Amerika/Vereinigte_Staaten/</span></div><div><span>Curlie ID</span><span>World/Dansk/Regional/Nordamerika/USA/</span></div><div><span>Curlie ID</span><span>World/Español/Regional/América/Estados_Unidos/</span></div><div><span>Curlie ID</span><span>World/Italiano/Regionale/America_del_Nord/Stati_Uniti/</span></div><div><span>Curlie ID</span><span>World/Cymraeg/Rhanbarthol/Unol_Daleithiau_America/</span></div><div><span>Curlie ID</span><span>World/Russian/Страны_и_регионы/Северная_Америка/Соединенные_Штаты_Америки/</span></div><div><span>Curlie ID</span><span>World/Português/Regional/América_do_Norte/Estados_Unidos/</span></div><div><span>Curlie ID</span><span>World/Greek/Κατά_Περιοχή/Βόρεια_Αμερική/Ηνωμένες_Πολιτείες_Αμερικής/</span></div><div><span>Curlie ID</span><span>World/Arabic/إقليمـي/أمريكا/الولايات_المتحدة/</span></div><div><span>Curlie ID</span><span>Regional/North_America/United_States/</span></div><div><span>Curlie ID</span><span>World/Korean/지역,국가/북아메리카/미국/</span></div><div><span>Curlie ID</span><span>World/Latviski/Valstis_un_reģioni/Ziemeļamerika/Amerikas_Savienotās_Valstis/</span></div><div><span>Curlie ID</span><span>World/Nederlands/Regionaal/Noord-Amerika/Verenigde_Staten/</span></div><div><span>Curlie ID</span><span>World/Slovensky/Regionálne/Severná_Amerika/Spojené_štáty_americké/</span></div><div><span>Curlie ID</span><span>World/Gaeilge/Réigiúnach/Stáit_Aontaithe_Mheirceá/</span></div><div><span>Curlie ID</span><span>World/Hindi/क्षेत्रीय/उत्तर_अम्रीका/संयुक्त_राज्य/</span></div><div><span>Curlie ID</span><span>World/Hebrew/אזורי/צפון_אמריקה/ארצות_הברית/</span></div><div><span>Curlie ID</span><span>World/Ukrainian/Країни_та_реґіони/Північна_Америка/Сполучені_Штати_Америки/</span></div><div><span>Curlie ID</span><span>World/Kazakh/Региондық/Солтүстік_Америка/Америка_Құрама_Штаттары/</span></div><div><span>Curlie ID</span><span>World/Japanese/地域/北アメリカ/アメリカ合衆国/</span></div><div><span>Curlie ID</span><span>World/Polski/Regionalne/Ameryka_Północna/Stany_Zjednoczone/</span></div><div><span>Curlie ID</span><span>World/Tiếng_Việt/Địa_phương/Bắc_Mỹ/Hoa_Kỳ/</span></div><div><span>Curlie ID</span><span>World/Eesti/Regioonid/Põhja_Ameerika/Ameerika_Ühendriigid/</span></div><div><span>Curlie ID</span><span>World/Català/Regional/Amèrica/Estats_Units/</span></div><div><span>Curlie ID</span><span>World/Česky/Státy_a_regiony/Severní_Amerika/Spojené_státy_americké/</span></div><div><span>Curlie ID</span><span>World/Română/Regional/America_de_Nord/Statele_Unite_ale_Americii/</span></div><div><span>Curlie ID</span><span>World/Bulgarian/Региони/Северна_Америка/Съединени_Американски_Щати/</span></div><div><span>Curlie ID</span><span>World/Lietuvių/Regionai/Šiaurės_Amerika/Jungtinės_Amerikos_Valstijos/</span></div><div><span>Curlie ID</span><span>World/Svenska/Regionalt/Nordamerika/USA/</span></div><div><span>Curlie ID</span><span>World/Bosanski/Regionalno/Sjeverna_Amerika/Sjedinjene_Američke_Države/</span></div><div><span>Dagens Nyheter topic ID</span><span>usa</span></div><div><span>Dagens Næringsliv topic ID</span><span>USA</span></div><div><span>Danbooru tag</span><span>united_states</span></div><div><span>Data Commons ID</span><span>country/USA</span></div><div><span>De Agostini ID</span><span>Stati+Uniti+d&#39;America</span></div><div><span>DeCS ID</span><span>14880</span></div><div><span>Der Spiegel topic ID</span><span>usa</span></div><div><span>Der Spiegel topic ID</span><span>united_states_en</span></div><div><span>Dewey Decimal Classification</span><span>2--73</span></div><div><span>Dharma Drum Institute of Liberal Arts place ID</span><span>PL000000056125</span></div><div><span>DPLA subject term</span><span>United States</span></div><div><span>DR topic ID</span><span>usa</span></div><div><span>edition humboldt digital ID</span><span>H0009136</span></div><div><span>eHLFL ID</span><span>Vereinigte_Staaten_von_Amerika</span></div><div><span>El Moudjahid topic ID</span><span>usa</span></div><div><span>El Watan topic ID</span><span>usa</span></div><div><span>Enciclopedia Galega Universal ID</span><span>122759</span></div><div><span>Encyclopedia of China (Second Edition) ID</span><span>220652</span></div><div><span>Encyclopedia of China (Third Edition) ID (2026)</span><span>33BgwA</span></div><div><span>Encyclopedia of China (Third Edition) old ID (2021)</span><span>560595</span></div><div><span>Encyclopedia of Korean Culture ID</span><span>E0019890</span></div><div><span>Encyclopedia of the History of Ukraine ID</span><span>Spolucheni_S</span></div><div><span>Encyclopædia Britannica Online ID</span><span>place/United-States</span></div><div><span>Encyclopædia Universalis ID</span><span>etats-unis-d-amerique-vue-d-ensemble</span></div><div><span>Enslaved.org place ID</span><span>Q486566</span></div><div><span>eska.pl topic ID</span><span>tg-cTB7-2gwx-BDwG</span></div><div><span>Estonian Subject Thesaurus ID</span><span>131674</span></div><div><span>EU Knowledge Graph item ID</span><span>Q373</span></div><div><span>Euronews topic ID</span><span>usa</span></div><div><span>Euronews topic ID</span><span>united-states</span></div><div><span>EuroVoc ID</span><span>888</span></div><div><span>FactGrid item ID</span><span>Q165089</span></div><div><span>Fallout Wiki ID</span><span>United_States</span></div><div><span>Famous Birthdays ID</span><span>birthplace/unitedstates</span></div><div><span>Fandom article ID</span><span>naturerules1:United_States</span></div><div><span>Fandom article ID</span><span>nato:United_States_of_America</span></div><div><span>Fandom article ID</span><span>countries:United_States</span></div><div><span>Fandom article ID</span><span>you:United_States_of_America</span></div><div><span>Fandom article ID</span><span>united-states-of-america:United_States_of_America</span></div><div><span>Fandom article ID</span><span>maxpayne:United_States_of_America</span></div><div><span>Fandom article ID</span><span>es.hitlerparody:Estados_Unidos</span></div><div><span>Fandom article ID</span><span>cities:U.S.A.</span></div><div><span>Fandom article ID</span><span>encarta:United_States_of_America</span></div><div><span>Fandom article ID</span><span>neoencyclopedia:United_States_of_America</span></div><div><span>Fandom article ID</span><span>cryptids12-everything:United_States_of_America</span></div><div><span>Fandom article ID</span><span>redneck:United_States</span></div><div><span>Fandom article ID</span><span>apple:United_States</span></div><div><span>Fandom article ID</span><span>prowrestling:United_States</span></div><div><span>Fandom wiki ID</span><span>united-states-of-america</span></div><div><span>FAST ID</span><span>1204155</span></div><div><span>FIPS 10-4 (countries and regions)</span><span>US</span></div><div><span>Foursquare City Guide venue ID</span><span>4e51480cfa7626401ec3632b</span></div><div><span>France 24 topic ID (Arabic)</span><span>الولايات-المتحدة</span></div><div><span>France 24 topic ID (English)</span><span>usa</span></div><div><span>France 24 topic ID (French)</span><span>états-unis</span></div><div><span>France 24 topic ID (French)</span><span>etats-unis</span></div><div><span>France 24 topic ID (Spanish)</span><span>estados-unidos</span></div><div><span>FranceArchives agent ID</span><span>30340282</span></div><div><span>Freebase ID</span><span>/m/09c7w0</span></div><div><span>GACS ID</span><span>322</span></div><div><span>GADM ID</span><span>USA</span></div><div><span>GCMD keyword ID</span><span>753f915c-70d4-49e1-9bd5-83e75f461e30</span></div><div><span>GeoNames ID</span><span>6252001</span></div><div><span>GeoNLP ID (obsolete)</span><span>wkcbUd</span></div><div><span>Getty Thesaurus of Geographic Names ID</span><span>7012149</span></div><div><span>Giant Bomb ID (former scheme)</span><span>3035-396</span></div><div><span>GitLab.com topic ID</span><span>united_states</span></div><div><span>Global Anabaptist Mennonite Encyclopedia Online ID</span><span>United States of America</span></div><div><span>GND ID</span><span>4078704-7</span></div><div><span>Golden ID (archived)</span><span>United_States-NARPDV</span></div><div><span>Google Arts &#38; Culture entity ID</span><span>m09c7w0</span></div><div><span>Google Maps Customer ID</span><span>2034423694542944066</span></div><div><span>Google News topics ID</span><span>CAAqIggKIhxDQkFTRHdvSkwyMHZNRGxqTjNjd0VnSmxiaWdBUAE</span></div><div><span>Gran Enciclopèdia Catalana ID</span><span>estats-units-damerica</span></div><div><span>Gran Enciclopèdia Catalana ID (former scheme)</span><span>0025184</span></div><div><span>Great Encyclopedia of Cyril and Methodius entry ID</span><span>Соединенные Штаты Америки</span></div><div><span>Great Norwegian Encyclopedia ID</span><span>USA</span></div><div><span>Great Russian Encyclopedia portal ID</span><span>soedinionnye-shtaty-ameriki-640c9b</span></div><div><span>Grove Art Online ID</span><span>T087095</span></div><div><span>Gyldendals Teaterleksikon ID</span><span>Amerika</span></div><div><span>Harper&#39;s tag</span><span>united-states-of-america</span></div><div><span>Harper&#39;s tag</span><span>united-states</span></div><div><span>Harper&#39;s tag</span><span>u-s-a</span></div><div><span>Harper&#39;s tag</span><span>america</span></div><div><span>Harper&#39;s tag</span><span>usa</span></div><div><span>Harper&#39;s tag</span><span>u-s</span></div><div><span>HDS ID</span><span>003380</span></div><div><span>Historical Gazetteer (GOV) ID</span><span>object_276534</span></div><div><span>House Divided ID</span><span>9093</span></div><div><span>Hrvatska enciklopedija ID</span><span>56303</span></div><div><span>IAB code</span><span>1455</span></div><div><span>IATE entry ID</span><span>791462</span></div><div><span>ICANNWiki page ID</span><span>United_States_of_America</span></div><div><span>ICPSR Geographic Names Thesaurus ID</span><span>31015</span></div><div><span>iDAI.gazetteer ID</span><span>2086335</span></div><div><span>IdRef ID</span><span>026376598</span></div><div><span>IdRef ID</span><span>027225488</span></div><div><span>IGI Global Dictionary ID</span><span>73945</span></div><div><span>ILO Thesaurus ID</span><span>84323</span></div><div><span>IMDb keyword</span><span>united-states-of-america</span></div><div><span>iNaturalist place ID</span><span>1</span></div><div><span>INSEE countries and foreign territories code</span><span>99404</span></div><div><span>Interlingual Index ID</span><span>i84182</span></div><div><span>IOC country code</span><span>USA</span></div><div><span>ISNI</span><span>0000000123315230</span></div><div><span>ISO 3166-1 alpha-2 code</span><span>US</span></div><div><span>ISO 3166-1 alpha-3 code</span><span>USA</span></div><div><span>ISO 3166-1 numeric code</span><span>840</span></div><div><span>ITU letter code</span><span>USA</span></div><div><span>ITU/ISO/IEC object ID</span><span>2.16.840</span></div><div><span>ITV News topic ID</span><span>usa</span></div><div><span>ITV News topic ID</span><span>united-states</span></div><div><span>Izvestia topic ID</span><span>ssha</span></div><div><span>J-GLOBAL ID</span><span>200906017620512652</span></div><div><span>J9U entity ID</span><span>987007552545705171</span></div><div><span>Jewish Encyclopedia ID</span><span>14589</span></div><div><span>Jewish Encyclopedia ID (Russian)</span><span>13881</span></div><div><span>Joconde location ID</span><span>T84-190</span></div><div><span>KANTO ID</span><span>000010440</span></div><div><span>KBpedia ID</span><span>UnitedStatesOfAmerica</span></div><div><span>Klexikon article ID</span><span>Vereinigte_Staaten_von_Amerika</span></div><div><span>Know Your Meme slug</span><span>united-states-of-america</span></div><div><span>Krugosvet article (archived)</span><span>strany_mira/SOEDINENNIE_SHTATI_AMERIKI.html</span></div><div><span>KSW place ID</span><span>79568</span></div><div><span>Kulturenvanteri taxonomy ID</span><span>5204</span></div><div><span>KulturNav-ID</span><span>acc64e80-fc14-4253-a96c-75e91a291b55</span></div><div><span>Kyiv Independent topic ID</span><span>united-states</span></div><div><span>L&#39;Humanité topic ID</span><span>etats-unis</span></div><div><span>Larousse ID</span><span>pays/États-Unis/118570</span></div><div><span>LC and MARC vocabularies ID</span><span>geographicAreas/n-us</span></div><div><span>LC and MARC vocabularies ID</span><span>countries/xxu</span></div><div><span>Le Monde diplomatique subject ID</span><span>pays/etatsunis</span></div><div><span>Lex ID</span><span>USA</span></div><div><span>Libraries Australia ID</span><span>35562417</span></div><div><span>Library of Congress Authorities ID</span><span>n78095330</span></div><div><span>Libris-URI</span><span>xv8b9vvg52nbbxp</span></div><div><span>Libération topic ID</span><span>etats-unis</span></div><div><span>Lille norske leksikon ID</span><span>USA</span></div><div><span>M49 code</span><span>840</span></div><div><span>Mapcarta ID</span><span>United_States_of_America</span></div><div><span>Mapy.com ID</span><span>osm&#38;id=840</span></div><div><span>Marine Regions Geographic ID</span><span>2204</span></div><div><span>McClintock and Strong Biblical Cyclopedia ID</span><span>U/united-states-of-america</span></div><div><span>MeSH concept ID</span><span>M0022272</span></div><div><span>MeSH descriptor ID</span><span>D014481</span></div><div><span>MeSH term ID</span><span>T042366</span></div><div><span>MeSH tree code</span><span>Z01.107.567.875</span></div><div><span>Mindat locality ID</span><span>3366</span></div><div><span>museum-digital place ID</span><span>2312</span></div><div><span>MusicBrainz area ID</span><span>489ce91b-6658-3307-9877-795b68554c98</span></div><div><span>Münzkabinett ID</span><span>country/83</span></div><div><span>NACSIS-CAT author ID</span><span>DA00701402</span></div><div><span>NALT ID</span><span>7522</span></div><div><span>Namuwiki ID</span><span>미국</span></div><div><span>National Historical Museums of Sweden ID</span><span>geo/3EED62B5-48F8-4428-A852-9055CEAB288E</span></div><div><span>National Library of Brazil ID</span><span>000056903</span></div><div><span>National Library of Greece ID</span><span>5715</span></div><div><span>National Library of Iceland ID</span><span>000048423</span></div><div><span>National Library of Ireland ID</span><span>vtls000087027</span></div><div><span>National Library of Israel ID (old)</span><span>000134032</span></div><div><span>National Library of Korea ID</span><span>KAB202010677</span></div><div><span>National Library of Lithuania ID</span><span>LNB:Ytd;=CB</span></div><div><span>National Library of Poland MMS ID</span><span>9810557150505606</span></div><div><span>National Library of Portugal ID</span><span>102017</span></div><div><span>National Library of Spain SpMaBN ID</span><span>XX4575366</span></div><div><span>National Library of Wales Authority ID</span><span>united-states-20</span></div><div><span>National Library of Wales Authority ID</span><span>united-states-of-america-19</span></div><div><span>National Library of Wales Authority ID</span><span>usa-4</span></div><div><span>National Library of Wales Authority ID</span><span>united-states</span></div><div><span>Natural Atlas ID</span><span>2758535</span></div><div><span>NDL Authority ID</span><span>00871907</span></div><div><span>NE.se ID</span><span>usa</span></div><div><span>NE.se ID</span><span>united-states</span></div><div><span>New York Post topic ID</span><span>usa</span></div><div><span>New York Post topic ID</span><span>united-states</span></div><div><span>New York Times topic ID</span><span>destination/united-states</span></div><div><span>Newsweek topic ID</span><span>united-states</span></div><div><span>NHK ONE  News topic ID</span><span>E0000000419</span></div><div><span>NicoNicoPedia word article ID</span><span>アメリカ合衆国</span></div><div><span>NL CR AUT ID</span><span>ge128584</span></div><div><span>NLA Trove people ID</span><span>1000028</span></div><div><span>NLA Trove people ID</span><span>1000031</span></div><div><span>NLA Trove people ID</span><span>896984</span></div><div><span>NLA Trove people ID</span><span>996710</span></div><div><span>NRK topic ID</span><span>1.6404479</span></div><div><span>NRK topic ID</span><span>1.12873918</span></div><div><span>Numista ruling authority ID</span><span>4720</span></div><div><span>OBO Gazetteer ID</span><span>00002459</span></div><div><span>OHDSI ID</span><span>4330442</span></div><div><span>OmegaWiki Defined Meaning</span><span>6578</span></div><div><span>Omni topic ID</span><span>9050eaf972828656c88d8704360f0b8e65bee3f0</span></div><div><span>Online Books Page author ID</span><span>United States</span></div><div><span>Online PWN Encyclopedia ID</span><span>4169149</span></div><div><span>Open Civic Data Division ID</span><span>ocd-division/country:us</span></div><div><span>Open Library ID</span><span>OL18485A</span></div><div><span>Open Library subject ID</span><span>place:états-unis</span></div><div><span>Open Library subject ID</span><span>place:united_states</span></div><div><span>Open Library subject ID</span><span>place:usa</span></div><div><span>Open Library subject ID</span><span>place:estados_unidos</span></div><div><span>OpenHistoricalMap relation ID</span><span>2691405</span></div><div><span>openMLOL author ID</span><span>36199</span></div><div><span>OpenStreetMap node ID</span><span>424317935</span></div><div><span>OpenStreetMap relation ID</span><span>148838</span></div><div><span>Orthodox Encyclopedia ID</span><span>2875505</span></div><div><span>OSM Name Suggestion Index ID</span><span>unitedstatesofamerica-167f6a</span></div><div><span>Our Campaigns container ID</span><span>1</span></div><div><span>PACTOLS thesaurus ID</span><span>pcrt2u8Qljdpk4</span></div><div><span>PeakVisor area ID</span><span>usa</span></div><div><span>Personality Database profile ID</span><span>50641</span></div><div><span>Pinakes country ID</span><span>4</span></div><div><span>Pinterest username</span><span>USAGovArchived</span></div><div><span>Pixiv Encyclopedia ID</span><span>アメリカ合衆国</span></div><div><span>PM20 geo code</span><span>E15</span></div><div><span>Politika topic ID</span><span>385</span></div><div><span>Politiklexikon ID</span><span>18396</span></div><div><span>Postimees topic ID</span><span>2669</span></div><div><span>PRELIB organization ID</span><span>252</span></div><div><span>Project Gutenberg author ID</span><span>1</span></div><div><span>ProofWiki ID</span><span>Mathematician:Mathematicians/Sorted_By_Nation/United_States</span></div><div><span>Provenio UUID</span><span>fb886b35-3a27-482d-af25-ee5d2653dff0</span></div><div><span>Radio Algeria topic ID (Arabic)</span><span>أمريكا</span></div><div><span>Radio Algeria topic ID (French)</span><span>usa</span></div><div><span>RationalWiki ID</span><span>United_States</span></div><div><span>Reddit topic ID (obsolete)</span><span>united_states_of_america</span></div><div><span>RERO ID (legacy)</span><span>A000167018</span></div><div><span>RFI topic ID</span><span>fr/tag/états-unis</span></div><div><span>RFI topic ID</span><span>en/tag/united-states</span></div><div><span>RFI topic ID</span><span>es/tag/estados-unidos</span></div><div><span>RFI topic ID</span><span>pt/tag/estados-unidos</span></div><div><span>RFI topic ID</span><span>br/tag/estados-unidos</span></div><div><span>RFI topic ID</span><span>ha/tag/amurka</span></div><div><span>RFI topic ID</span><span>sw/lebo/marekani</span></div><div><span>RFI topic ID</span><span>ma/tag/usa</span></div><div><span>RFI topic ID</span><span>ff/kelme-kaɓɓodiiɗi-e/usa</span></div><div><span>RFI topic ID</span><span>ro/tag/statele-unite-ale-americii</span></div><div><span>RFI topic ID</span><span>ru/тег/сша</span></div><div><span>RFI topic ID</span><span>uk/тег/сша</span></div><div><span>RFI topic ID</span><span>vi/từ-khóa/mỹ</span></div><div><span>RFI topic ID</span><span>cn/关键词/美国</span></div><div><span>RFI topic ID</span><span>tw/關鍵詞/美國</span></div><div><span>RFI topic ID</span><span>fa/گروه-واژه/ایالات-متحدۀ-آمریکا</span></div><div><span>RFI topic ID</span><span>km/ពាក្យគន្លឹះ/សហរដ្ឋអាមេរិក</span></div><div><span>RKD thesaurus ID</span><span>1634</span></div><div><span>SBN author ID</span><span>BVEV001855</span></div><div><span>SBN place ID</span><span>MUSL003483</span></div><div><span>Schoenberg Database of Manuscripts place ID</span><span>3992</span></div><div><span>ScienceDirect topic ID</span><span>engineering/united-states-of-america</span></div><div><span>ScienceDirect topic ID</span><span>earth-and-planetary-sciences/united-states-of-america</span></div><div><span>SELIBR ID</span><span>146174</span></div><div><span>Sky News topic ID</span><span>4398</span></div><div><span>Slovak National Library (VIAF) ID</span><span>vtls001186871</span></div><div><span>SNARC ID</span><span>Q1283</span></div><div><span>SNK ID</span><span>87649</span></div><div><span>SNOMED CT ID</span><span>223688001</span></div><div><span>Spanish Cultural Heritage thesauri ID</span><span>geografico/1114850</span></div><div><span>SPAP ID</span><span>p/24fee191-fccc-40ac-b5b9-5ce73b29907f</span></div><div><span>Statoids ID</span><span>uus</span></div><div><span>STW Thesaurus for Economics ID</span><span>17829-1</span></div><div><span>SVKKL authority ID</span><span>g0001645-Spojene-staty-americke</span></div><div><span>Süddeutsche Zeitung topic ID</span><span>USA</span></div><div><span>TASS Encyclopedia country ID</span><span>С/ssha</span></div><div><span>TasteAtlas ID</span><span>USA</span></div><div><span>TDV Encyclopedia of Islam ID</span><span>amerika-birlesik-devletleri</span></div><div><span>TED topic ID</span><span>United+States</span></div><div><span>TermCymru ID</span><span>169500769</span></div><div><span>The Guardian topic ID</span><span>us-news</span></div><div><span>The Independent topic ID</span><span>us</span></div><div><span>The Independent topic ID</span><span>usa</span></div><div><span>The New Yorker topic ID</span><span>usa</span></div><div><span>The New Yorker topic ID</span><span>united-states</span></div><div><span>The Oxford Encyclopedia of Islam and Women ID</span><span>0380</span></div><div><span>The Top Tens ID (archived)</span><span>9</span></div><div><span>The U.S. Sun topic ID</span><span>where/united-states</span></div><div><span>The World Factbook country ID (archived)</span><span>united-states</span></div><div><span>Thesaurus Linguae Aegyptiae ID</span><span>M4BPIWR72JDLPKZN5QWVSTOUQ4</span></div><div><span>Thesaurus Sozialwissenschaften ID</span><span>10041244</span></div><div><span>Treccani ID</span><span>stati-uniti-d-america</span></div><div><span>Treccani&#39;s Dizionario di Storia ID</span><span>stati-uniti-d-america</span></div><div><span>Tripadvisor ID</span><span>191</span></div><div><span>TV Tropes ID</span><span>UsefulNotes/UnitedStates</span></div><div><span>U.S. National Archives Identifier</span><span>10045728</span></div><div><span>UK Parliament ID</span><span>ntRMqGx6</span></div><div><span>UK Parliament thesaurus ID</span><span>13557</span></div><div><span>UMLS CUI</span><span>C0041703</span></div><div><span>UN Thesaurus ID</span><span>1006789</span></div><div><span>UNDP country code</span><span>USA</span></div><div><span>UNESCO Thesaurus ID</span><span>concept806</span></div><div><span>University of Barcelona authority ID</span><span>981058514371006706</span></div><div><span>Urban Electric Transit country ID</span><span>8</span></div><div><span>Vatican Library ID (former scheme)</span><span>ADV12370362</span></div><div><span>Vatican Library VcBA ID</span><span>494/17090</span></div><div><span>VIAF cluster ID</span><span>130168302</span></div><div><span>Video Game History Foundation Library subject ID</span><span>23</span></div><div><span>Vikidia article ID</span><span>eu:Ameriketako_Estatu_Batuak</span></div><div><span>Vikidia article ID</span><span>en:United_States</span></div><div><span>Vikidia article ID</span><span>it:Stati_Uniti_d&#39;America</span></div><div><span>Vikidia article ID</span><span>es:Estados_Unidos</span></div><div><span>Vikidia article ID</span><span>fr:États-Unis</span></div><div><span>Vikidia article ID</span><span>ru:Соединённые_Штаты_Америки</span></div><div><span>Wall Street Journal topic ID</span><span>subject/U/united-states/5590</span></div><div><span>Wellcome Collection concept ID</span><span>qxs9ppqa</span></div><div><span>Who&#39;s on First ID</span><span>85633793</span></div><div><span>WikiKids ID</span><span>Verenigde_Staten</span></div><div><span>Wikisimpsons article ID</span><span>16224</span></div><div><span>WIPO ST.3</span><span>US</span></div><div><span>WOEID</span><span>23424977</span></div><div><span>Wolfram Language entity code</span><span>Entity[&#34;Country&#34;, &#34;UnitedStates&#34;]</span></div><div><span>Wolfram Language entity code</span><span>Entity[&#34;HistoricalCountry&#34;, &#34;UnitedStates&#34;]</span></div><div><span>WordNet 3.1 Synset ID</span><span>09067337-n</span></div><div><span>World Encyclopedia of Puppetry Arts ID</span><span>united-states-of-america</span></div><div><span>World Historical Gazetteer place ID</span><span>12346794</span></div><div><span>WorldCat Entities ID</span><span>E39PBJtxgQXMWqmjMjjwXRHgrq</span></div><div><span>X place ID</span><span>96683cc9126741d1</span></div><div><span>YIVO Encyclopedia of Jews in Eastern Europe ID</span><span>America</span></div><div><span>Yle topic ID</span><span>18-193507</span></div><div><span>YSA ID</span><span>Y105078</span></div><div><span>YSO ID</span><span>105078</span></div><div><span>Zhihu topic ID</span><span>19551627</span></div><div><span>Ávvir topic ID</span><span>usa</span></div><div><span>‎Climate Policy Radar Topics</span><span>Q2274</span></div><div><span>‎DBNL country ID</span><span>veren02</span></div><div><span>‎Deaf Movie Database country ID</span><span>usa</span></div><div><span>‎GamesIndustry.biz tag ID</span><span>topics/united-states</span></div><div><span>‎GENC 3-character code</span><span>USA</span></div><div><span>‎Giant Bomb Wiki ID</span><span>Locations/The_United_States_of_America</span></div><div><span>‎Yale LUX ID</span><span>concept/0efbd4b2-03b2-4fd0-a84e-09b0057cd037</span></div></div></div>
     </dialog>
     </div><dl class="sheet" data-slot="absent"><div class="row absent">
-    <dt>dissolved, abolished or demolished</dt>
+    <dt class="i-puzzle">dissolved, abolished or demolished</dt>
     <dd>
         — 86 / 90 historical unrecognized state
     </dd>

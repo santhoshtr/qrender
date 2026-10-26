@@ -7,7 +7,7 @@
 <dl class="sheet links">
     {%- for row in ui.link_rows(b) -%}
         <div class="row">
-            <dt>{{ ui.text(ui.property(row.pid), false)|safe }}</dt>
+            <dt class="{{ ui.icon(&row.cards[0].0.statement) }}">{{ ui.text(ui.property(row.pid), false)|safe }}</dt>
             <dd>
                 {%- if let Some(icon) = row.icon -%}
                     <img class="favicon" src="{{ icon }}" alt="" width="16" height="16" loading="lazy">

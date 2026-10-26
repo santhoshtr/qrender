@@ -143,6 +143,26 @@ fn html_pages() {
         ids.dedup();
         assert_eq!(ids.len(), count, "{page}: duplicate ids");
 
+        // Every label that base.css gives an icon has the class of its
+        // icon: without it, the mask is a square. A row in a group has
+        // the icon of the group.
+        let in_group: Vec<_> = doc
+            .select(&select(".group .row > dt"))
+            .map(|e| e.id())
+            .collect();
+        for label in doc.select(&select(
+            ".row > dt, .box > h3, .map-card .label, .set > h3, .succession > h3, .timeline > h3",
+        )) {
+            if in_group.contains(&label.id()) {
+                continue;
+            }
+            assert!(
+                label.value().classes().any(|c| c.starts_with("i-")),
+                "{page}: a label without an icon: {}",
+                label.html()
+            );
+        }
+
         // A primitive's script is on the page when its element is.
         for name in ["qr-sounds", "qr-chart"] {
             let element = doc.select(&select(name)).count() > 0;

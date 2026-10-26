@@ -3,7 +3,7 @@
     the years they cover, and all of them in a dialog, the oldest first. -#}
 {%- let title = ui.property(b.pid) -%}
 <div class="block earlier box">
-    <h3>{{ ui.text(&title, true)|safe }} <span class="note">{{ ui.msg("qrender-earlier") }} · {{ ui.when(b.span()) }}</span></h3>
+    <h3 class="{{ ui.property_icon(b.pid) }}">{{ ui.text(&title, true)|safe }} <span class="note">{{ ui.msg("qrender-earlier") }} · {{ ui.when(b.span()) }}</span></h3>
     {%- let n = ui.id() -%}
     {% call m::more(n, b.values.len()) %}{% endcall %}
     {% call m::dialog(ui, n, title.text) %}

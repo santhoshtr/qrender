@@ -17,7 +17,7 @@
                     aria-label="{{ ui.msg("qrender-explore-map") }}">{{ ui.map_frame(f, false)|safe }}</button>
             <span class="tools">{% call m::edit(ui, ui.edit(b.statement.pid)) %}{% endcall %}</span>
         </figure>
-        <p class="caption"><span class="label">{{ ui.text(ui.property(b.statement.pid), true)|safe }}</span> {{ ui.coordinate(f.lat, f.lon) }} {% call m::prov(ui, b.statement.provenance, b.statement.citations) %}{% endcall %}</p>
+        <p class="caption"><span class="label {{ ui.icon(&b.statement) }}">{{ ui.text(ui.property(b.statement.pid), true)|safe }}</span> {{ ui.coordinate(f.lat, f.lon) }} {% call m::prov(ui, b.statement.provenance, b.statement.citations) %}{% endcall %}</p>
         {%- if !b.shapes.is_empty() %}<div class="map-shapes">{{ ui.map_shapes(b.shapes.as_slice())|safe }}</div>{% endif -%}
     </div>
     {{ ui.map_dialog(n, ui.property(b.statement.pid).text, f, ui.live_map(f, b), Some(b))|safe }}
