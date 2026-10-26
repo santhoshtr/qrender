@@ -626,6 +626,35 @@ impl<'v> Ui<'v> {
         render(ArticleFigureHtml { ui: self, f })
     }
 
+    /// The rows of a figure, as the multiple-image template has them; else
+    /// a row for each image.
+    pub fn figure_rows<'f>(&self, f: &'f ProseFigure) -> Vec<&'f [ProseImage]> {
+        if f.rows.is_empty() {
+            return f.images.chunks(1).collect();
+        }
+        let mut rest = f.images.as_slice();
+        f.rows
+            .iter()
+            .map(|n| {
+                let (row, tail) = rest.split_at((*n).min(rest.len()));
+                rest = tail;
+                row
+            })
+            .collect()
+    }
+
+    /// The `sizes` of an image in a row: its share of the width of the
+    /// text, which is the share of its aspect ratio in the row (the images
+    /// of a row have one height).
+    pub fn figure_sizes(&self, row: &[ProseImage], i: &ProseImage) -> String {
+        let share = i.aspect / row.iter().map(|r| r.aspect).sum::<f64>();
+        format!(
+            "(max-width: 760px) {:.0}vw, {:.0}px",
+            share * 100.0,
+            share * 720.0
+        )
+    }
+
     /// The static map of a frame; `lazy` in a dialog.
     pub fn map_frame(&self, f: &Frame, lazy: bool) -> String {
         render(MapFrameHtml { ui: self, f, lazy })

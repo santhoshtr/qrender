@@ -4472,6 +4472,15 @@
             "$ref": "#/$defs/ProseImage"
           },
           "type": "array"
+        },
+        "rows": {
+          "description": "The number of images in each row, in order: the rows of a\nmultiple-image template. Empty: a row for each image.",
+          "items": {
+            "format": "uint",
+            "minimum": 0,
+            "type": "integer"
+          },
+          "type": "array"
         }
       },
       "required": [

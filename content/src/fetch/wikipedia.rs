@@ -353,7 +353,14 @@ fn block(el: ElementRef, out: &mut Vec<OutlineBlock>) {
                 .map(inner)
                 .unwrap_or_default();
             let images = image(el, String::new()).into_iter().collect();
-            figure(ArticleFigure { images, caption }, out);
+            figure(
+                ArticleFigure {
+                    images,
+                    rows: Vec::new(),
+                    caption,
+                },
+                out,
+            );
         }
         "div" if class_has(el, "tmulti") => figure(multiple(el), out),
         "div" if class.contains("div-col") => {
@@ -372,32 +379,48 @@ fn figure(f: ArticleFigure, out: &mut Vec<OutlineBlock>) {
     }
 }
 
-/// The images of a multiple-image template (`div.tmulti`): each in a
-/// `div.tsingle` with its caption; the caption of the whole is a
-/// `div.thumbcaption` outside them.
+/// The images of a multiple-image template (`div.tmulti`), in its rows
+/// (`div.trow`): each image in a `div.tsingle` with its caption; the
+/// caption of the whole is a `div.thumbcaption` outside them. Markup
+/// without rows is one row.
 fn multiple(el: ElementRef) -> ArticleFigure {
     let single = |e: ElementRef| class_has(e, "tsingle");
-    let images = el
+    let images_in = |row: ElementRef| -> Vec<ArticleImage> {
+        row.descendants()
+            .filter_map(ElementRef::wrap)
+            .filter(|e| single(*e))
+            .filter_map(|s| {
+                let caption: Vec<String> = s
+                    .child_elements()
+                    .filter(|c| file_element(*c).is_none())
+                    .map(inner)
+                    .filter(|c| !c.is_empty())
+                    .collect();
+                image(s, caption.join(" "))
+            })
+            .collect()
+    };
+    let mut rows: Vec<Vec<ArticleImage>> = el
         .descendants()
         .filter_map(ElementRef::wrap)
-        .filter(|e| single(*e))
-        .filter_map(|s| {
-            let caption: Vec<String> = s
-                .child_elements()
-                .filter(|c| file_element(*c).is_none())
-                .map(inner)
-                .filter(|c| !c.is_empty())
-                .collect();
-            image(s, caption.join(" "))
-        })
+        .filter(|e| class_has(*e, "trow"))
+        .map(images_in)
+        .filter(|r| !r.is_empty())
         .collect();
+    if rows.is_empty() {
+        rows.push(images_in(el));
+    }
     let caption = el
         .descendants()
         .filter_map(ElementRef::wrap)
         .find(|e| class_has(*e, "thumbcaption") && !within(*e, el, single))
         .map(inner)
         .unwrap_or_default();
-    ArticleFigure { images, caption }
+    ArticleFigure {
+        rows: rows.iter().map(Vec::len).collect(),
+        images: rows.concat(),
+        caption,
+    }
 }
 
 /// The images of a gallery (`ul.gallery`): each in a `li.gallerybox`
@@ -422,7 +445,11 @@ fn gallery(el: ElementRef) -> ArticleFigure {
         .find(|li| class_has(*li, "gallerycaption"))
         .map(inner)
         .unwrap_or_default();
-    ArticleFigure { images, caption }
+    ArticleFigure {
+        images,
+        rows: Vec::new(),
+        caption,
+    }
 }
 
 /// The image of the file in `el`, when the file is on Commons.
@@ -865,6 +892,7 @@ mod tests {
                         height: 421,
                         caption: String::new(),
                     }],
+                    rows: Vec::new(),
                     caption: "Which books?".into(),
                 }),
                 text("<p>The <b>knapsack problem</b> is:</p>"),
@@ -928,9 +956,10 @@ mod tests {
             height,
             caption: caption.into(),
         };
-        let figure = |images, caption: &str| {
+        let figure = |images, rows, caption: &str| {
             OutlineBlock::Figure(ArticleFigure {
                 images,
+                rows,
                 caption: caption.into(),
             })
         };
@@ -939,6 +968,7 @@ mod tests {
             [
                 figure(
                     vec![image("Nairobi 18 99.jpg", 522, 384, "")],
+                    vec![],
                     "The <a href=\"./Old\">old</a> city"
                 ),
                 text("<p>Text.</p>"),
@@ -947,9 +977,15 @@ mod tests {
                         image("Sky, day.jpg", 300, 200, "Day"),
                         image("Sky night.svg", 30, 20, "Night")
                     ],
+                    // The second row has the caption only: not a row.
+                    vec![2],
                     "The skyline"
                 ),
-                figure(vec![image("Uhuru.jpg", 400, 300, "Uhuru Park")], "Parks"),
+                figure(
+                    vec![image("Uhuru.jpg", 400, 300, "Uhuru Park")],
+                    vec![],
+                    "Parks"
+                ),
             ]
         );
     }

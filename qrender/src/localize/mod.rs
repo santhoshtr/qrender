@@ -536,6 +536,7 @@ impl<'a> Localizer<'a> {
                             caption: self.rewrite(&i.caption, article, source),
                         })
                         .collect(),
+                    rows: f.rows.clone(),
                     caption: self.rewrite(&f.caption, article, source),
                 })),
             })

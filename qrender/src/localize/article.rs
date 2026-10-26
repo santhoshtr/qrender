@@ -143,7 +143,7 @@ fn clean(el: &mut Element, links: &Links) {
         }
         "a" => link(el, links),
         "b" | "i" | "p" | "ul" | "ol" | "li" | "dl" | "dt" | "dd" | "blockquote" | "pre"
-        | "code" => strip_attributes(el),
+        | "code" | "br" => strip_attributes(el),
         name if MATH_ELEMENTS.contains(&name) => keep_attributes(el, &MATH_ATTRIBUTES),
         // The TeX of a formula, which its `alttext` has.
         "annotation" | "annotation-xml" => el.remove(),
@@ -310,7 +310,7 @@ mod tests {
             r#" <i onclick="alert(1)">it</i><br><table><tr><td>t</td></tr></table>"#
         );
         let out = rewrite(html, &l);
-        assert_eq!(out, "Text flag &amp; more js out <i>it</i>");
+        assert_eq!(out, "Text flag &amp; more js out <i>it</i><br>");
         for bad in [
             "script",
             "onerror",

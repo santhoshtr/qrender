@@ -140,6 +140,10 @@ pub enum OutlineBlock {
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 pub struct ArticleFigure {
     pub images: Vec<ArticleImage>,
+    /// The number of images in each row, in order: the rows of a
+    /// multiple-image template. Empty: a row for each image.
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub rows: Vec<usize>,
     /// The caption of the whole figure, as HTML (as a text block).
     #[serde(default, skip_serializing_if = "String::is_empty")]
     pub caption: String,

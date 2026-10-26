@@ -1,15 +1,23 @@
-{#- The images of a figure of the article: each at the full width of the
-    text, with its aspect ratio, and its caption under it; then the
-    caption of the whole. An image links to its file page on Commons,
-    with its author and licence; the file name is the name of the link. -#}
+{#- The images of a figure of the article, in rows at the full width of
+    the text: one image in a row, or the images of a row of a
+    multiple-image template side by side, at one height. Each image keeps
+    its aspect ratio and has its caption under it; then the caption of the
+    whole. An image links to its file page on Commons, with its author and
+    licence; the file name is the name of the link. -#}
 <figure class="article-figure">
-    {%- for i in f.images %}
-    <a class="image" href="{{ ui.commons_page(i.file) }}" aria-label="{{ i.file }}" style="--a:{{ ui.css_number(i.aspect) }}"><img src="{{ ui.src(i.file, 960) }}"
-         srcset="{{ ui.srcset(i.file) }}"
-         sizes="(max-width: 760px) 100vw, 720px"
-         alt=""
-         loading="lazy"></a>
-    {%- if !i.caption.is_empty() %}<div class="caption">{{ ui.prose(i.caption)|safe }}</div>{% endif %}
+    {%- for row in ui.figure_rows(f) %}
+    <div class="images">
+        {%- for i in row.iter() %}
+        <div class="cell" style="--a:{{ ui.css_number(i.aspect) }}">
+            <a class="image" href="{{ ui.commons_page(i.file) }}" aria-label="{{ i.file }}"><img src="{{ ui.src(i.file, 960) }}"
+                 srcset="{{ ui.srcset(i.file) }}"
+                 sizes="{{ ui.figure_sizes(row, i) }}"
+                 alt=""
+                 loading="lazy"></a>
+            {%- if !i.caption.is_empty() %}<div class="caption">{{ ui.prose(i.caption)|safe }}</div>{% endif %}
+        </div>
+        {%- endfor %}
+    </div>
     {%- endfor %}
     {%- if !f.caption.is_empty() %}<figcaption>{{ ui.prose(f.caption)|safe }}</figcaption>{% endif %}
 </figure>

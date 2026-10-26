@@ -201,6 +201,10 @@ pub enum ProseBlock {
 #[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct ProseFigure {
     pub images: Vec<ProseImage>,
+    /// The number of images in each row, in order: the rows of a
+    /// multiple-image template. Empty: a row for each image.
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub rows: Vec<usize>,
     /// The caption of the whole figure: cleaned HTML, as the lead.
     #[serde(skip_serializing_if = "String::is_empty")]
     pub caption: String,

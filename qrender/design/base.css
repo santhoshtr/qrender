@@ -1149,9 +1149,24 @@ math { padding-block: 0.2em; }
 /* An image of the article, in a section or in the lead: a block at the
    full width of the text, with its aspect ratio. A tall image is at most
    80% of the window high, so it is narrower. Not a thumbnail: the reader
-   sees it without a click. */
+   sees it without a click. The images of a row of a multiple-image
+   template are side by side, at one height: the width of each is its
+   share of the aspect ratios of the row (flex-grow from a basis of 0). */
 .article-figure {
 	margin: var( --spacing-100 ) 0;
+
+	& .images {
+		display: flex;
+		align-items: start;
+		gap: var( --spacing-50 );
+	}
+
+	& .images + .images { margin-block-start: var( --spacing-50 ); }
+
+	& .cell {
+		flex: var( --a ) 1 0;
+		min-inline-size: 0;
+	}
 
 	& .image {
 		display: block;
