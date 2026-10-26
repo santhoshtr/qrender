@@ -44,11 +44,6 @@ static PROJECTS: LazyLock<IndexMap<&str, (&str, String)>> = LazyLock::new(|| {
             include_str!("../../assets/icons/logo-Wikivoyage.svg"),
         ),
         (
-            "wikinews",
-            "Wikinews",
-            include_str!("../../assets/icons/logo-Wikinews.svg"),
-        ),
-        (
             "wikisource",
             "Wikisource",
             include_str!("../../assets/icons/logo-Wikisource.svg"),
@@ -82,11 +77,10 @@ pub fn project(family: &str) -> Option<(&'static str, &'static str)> {
 }
 
 /// Site id suffixes of the language projects. "wiki" is Wikipedia.
-const FAMILIES: [&str; 8] = [
+const FAMILIES: [&str; 7] = [
     "wiki",
     "wikiquote",
     "wikivoyage",
-    "wikinews",
     "wikisource",
     "wikibooks",
     "wikiversity",
@@ -163,6 +157,8 @@ mod tests {
             "commonswiki",
             "be_x_oldwiki",
             "afwiki",
+            // Wikinews is closed (4 May 2026): not a family.
+            "enwikinews",
         ]
         .iter()
         .map(|s| (s.to_string(), String::new()))
