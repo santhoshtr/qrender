@@ -11,5 +11,5 @@ services:
     ports:
       - "4243:4243"
   redis:
-    image: redis:7-alpine
+    image: redis:8-alpine
     restart: unless-stopped
