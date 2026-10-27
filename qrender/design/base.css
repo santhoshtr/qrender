@@ -524,24 +524,21 @@ dialog.lightbox {
 }
 
 /* Without scroll-state queries (Firefox, Safari), the title shows
-   always. */
+   always. With them, the title takes no space before it shows: the
+   search field stays at its place. */
 @supports ( container-type: scroll-state ) {
 	.chrome .page-title {
-		visibility: hidden;
+		display: none;
 		opacity: 0;
-		transition: opacity 0.2s, visibility 0.2s;
-	}
-
-	/* A narrow viewport: no empty space for the title before it shows. */
-	@media ( width < 720px ) {
-		.chrome .page-title { display: none; }
+		transition: opacity 0.2s, display 0.2s allow-discrete;
 	}
 
 	@container chrome scroll-state( stuck: block-start ) {
 		.chrome .page-title {
 			display: block;
-			visibility: visible;
 			opacity: 1;
+
+			@starting-style { opacity: 0; }
 		}
 	}
 }
@@ -626,6 +623,13 @@ dialog.lightbox {
 @media ( width >= 1120px ) {
 	/* A page without contents has no column for them. */
 	:root:has( #toc ) { --frame-max: calc( var( --page-max ) + var( --toc-width ) ); }
+
+	/* The logo and the gap after it are as wide as the column of the
+	   contents: the search field starts where the content starts (the
+	   header and the page have the same gutter). */
+	:root:has( #toc ) .chrome .site-logo {
+		inline-size: calc( var( --toc-width ) - var( --spacing-100 ) );
+	}
 
 	.frame:has( > .toc ) {
 		display: grid;
