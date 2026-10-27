@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="{{ base }}/page.css">
 {%- endmatch %}
     {%- if let Some(base) = service %}
+    <link rel="icon" type="image/svg+xml" href="{{ base }}/favicon.svg" sizes="any">
     <link rel="alternate" type="text/markdown" href="{{ base }}/{{ view.lang }}/{{ view.qid }}.md" title="{{ ui.msg("qrender-alternate-markdown") }}">
     <link rel="alternate" type="application/json" href="{{ base }}/api/view/{{ view.lang }}/{{ view.qid }}" title="{{ ui.msg("qrender-alternate-json") }}">
     {%- endif %}

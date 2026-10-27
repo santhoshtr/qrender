@@ -8,6 +8,7 @@
 //!   leaflet.js and leaflet.css, which the page scripts load. The version
 //!   has a hash of the files, so a changed file has a new address.
 //! - GET /healthz
+//! - GET /favicon.svg                the icon of the page
 //! - GET /robots.txt                 no crawling: an item page links to the
 //!   pages of other items, and each new page is fetched live
 //!
@@ -25,13 +26,15 @@ use axum::response::{Html, IntoResponse, Response};
 use axum::routing::get;
 use content::fetch::{FetchError, Mode};
 use content::{Lang, Qid};
-use qrender::render::design::{DESIGN, ECHARTS, LEAFLET_CSS, LEAFLET_JS, STYLESHEET};
+use qrender::render::design::{DESIGN, ECHARTS, FAVICON, LEAFLET_CSS, LEAFLET_JS, STYLESHEET};
 use qrender::render::html::{self, Styles};
 use qrender::render::markdown;
 use tower_http::compression::CompressionLayer;
 
 const PAGE_CACHE: &str = "public, max-age=3600";
 const ASSET_CACHE: &str = "public, max-age=604800, immutable";
+/// The icon has no version in its address: a day.
+const ICON_CACHE: &str = "public, max-age=86400";
 
 #[derive(Clone)]
 struct AppState {
@@ -54,10 +57,11 @@ async fn main() {
     let app = Router::new()
         .route("/", get(usage))
         .route("/healthz", get(async || "ok"))
+        .route("/favicon.svg", get(favicon))
+        .route("/robots.txt", get(async || "User-agent: *\nDisallow: /\n"))
         .route("/design/{version}/{file}", get(design))
         .route("/api/content/{qid}", get(content_json))
         .route("/api/composition/{qid}", get(composition_json))
-        .route("/robots.txt", get(async || "User-agent: *\nDisallow: /\n"))
         .route("/api/view/{lang}/{qid}", get(view_json))
         .route("/{lang}/{qid}", get(page))
         .layer(CompressionLayer::new())
@@ -93,6 +97,17 @@ fn design_version() -> &'static str {
         format!("{}-{:08x}", design_system(), hash as u32)
     });
     &VERSION
+}
+
+async fn favicon() -> Response {
+    (
+        [
+            (header::CONTENT_TYPE, "image/svg+xml"),
+            (header::CACHE_CONTROL, ICON_CACHE),
+        ],
+        FAVICON,
+    )
+        .into_response()
 }
 
 /// The files of the design system. A page that a browser cached with the

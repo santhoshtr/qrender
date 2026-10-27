@@ -30,6 +30,10 @@ pub const ECHARTS: &str = include_str!("../../assets/vendor/echarts/echarts.comm
 pub const LEAFLET_JS: &str = include_str!("../../assets/vendor/leaflet/leaflet.js");
 pub const LEAFLET_CSS: &str = include_str!("../../assets/vendor/leaflet/leaflet.css");
 
+/// The icon of the page: the Wikipedia logo, dark on a light browser
+/// theme and light on a dark one. The server serves it at /favicon.svg.
+pub const FAVICON: &str = include_str!("../../assets/favicon.svg");
+
 /// The icon of the translation action (a Codex icon).
 pub static LANGUAGE_ICON: LazyLock<String> =
     LazyLock::new(|| inline_icon(include_str!("../../assets/icons/language.svg")));
