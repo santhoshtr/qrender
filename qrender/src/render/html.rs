@@ -14,7 +14,7 @@ use super::design::{REFERENCE_ICON, STYLESHEET, scripts};
 use super::map::Frame;
 use super::ui::{Arg, Image, Ref, Shown, TopicArticle, Ui};
 use crate::compose::picture::media_kind;
-use crate::localize::format::Part;
+use crate::localize::format::{Part, WIKIDATA};
 use crate::localize::messages::format;
 use crate::localize::{
     Article, Label, Note, ProseBlock, ProseFigure, ProseImage, ProseSection, SpreadView, View,
@@ -39,9 +39,10 @@ pub enum Styles<'a> {
 }
 
 /// `service`: the base path of the server that serves the page. The page
-/// links its Markdown and JSON versions there.
+/// links its Markdown and JSON versions there, and an item links to its
+/// page there.
 pub fn page(view: &View, styles: Styles, service: Option<&str>) -> String {
-    let ui = Ui::new(view);
+    let ui = Ui::new(view, service);
     let shown: Vec<_> = view
         .spreads
         .iter()
@@ -531,7 +532,9 @@ impl<'v> Ui<'v> {
     }
 
     /// Article HTML with the mark of each note (`<sup data-note="3"></sup>`,
-    /// as the localize step writes it) as a button that opens the note.
+    /// as the localize step writes it) as a button that opens the note. A
+    /// link to an item on Wikidata (the localize step writes them for the
+    /// links of a fallback article) goes to the page of the item.
     pub fn prose(&self, html: impl Ref<str>) -> String {
         const MARK: &str = "<sup data-note=\"";
         const END: &str = "\"></sup>";
@@ -550,7 +553,10 @@ impl<'v> Ui<'v> {
             rest = &after[end + END.len()..];
         }
         out.push_str(rest);
-        out
+        match self.item_base() {
+            Some(base) => out.replace(&format!("href=\"{WIKIDATA}Q"), &format!("href=\"{base}Q")),
+            None => out,
+        }
     }
 
     /// "Note 3": the name of a note mark for a screen reader.
@@ -564,7 +570,7 @@ impl<'v> Ui<'v> {
         let cards: Vec<Card> = citations
             .iter()
             .filter_map(|hash| self.view.citations.get(hash))
-            .map(|c| cite::card(c, self.view))
+            .map(|c| cite::card(c, self.view, &|q| self.item_href(q)))
             .collect();
         if cards.is_empty() {
             return String::new();
@@ -590,7 +596,7 @@ impl<'v> Ui<'v> {
                 let cards = note
                     .citations
                     .iter()
-                    .map(|c| cite::card(c, self.view))
+                    .map(|c| cite::card(c, self.view, &|q| self.item_href(q)))
                     .collect();
                 (
                     note,

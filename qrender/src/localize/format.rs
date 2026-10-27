@@ -14,7 +14,7 @@ use crate::compose::picture::media_kind;
 use crate::schema::{MediaKind, QualifierPart, QualifierShown, StatementRef, ValueShown};
 use crate::wikidata::{END_TIME, START_TIME};
 
-const WIKIDATA: &str = "https://www.wikidata.org/wiki/";
+pub(crate) const WIKIDATA: &str = "https://www.wikidata.org/wiki/";
 
 /// One value, ready for a renderer.
 #[derive(Debug, Clone, PartialEq)]

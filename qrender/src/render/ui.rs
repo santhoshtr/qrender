@@ -144,6 +144,9 @@ impl<T: ?Sized, U: Ref<T> + ?Sized> Ref<T> for &U {
 
 pub struct Ui<'v> {
     pub view: &'v View,
+    /// The base path of the server that serves the page: an item links to
+    /// its page there. None: an item links to Wikidata.
+    service: Option<&'v str>,
     /// Ids for popovers and dialogs, unique in one page.
     ids: Cell<u32>,
 }
@@ -178,9 +181,10 @@ pub struct Image<'a> {
 }
 
 impl<'v> Ui<'v> {
-    pub fn new(view: &'v View) -> Self {
+    pub fn new(view: &'v View, service: Option<&'v str>) -> Self {
         Self {
             view,
+            service,
             ids: Cell::new(0),
         }
     }
@@ -196,16 +200,37 @@ impl<'v> Ui<'v> {
     }
 
     /// The label of an entity. Localize labels every entity of the
-    /// composition; an entity without one shows its id.
+    /// composition; an entity without one shows its id. An item links to
+    /// its page (`item_href`).
     pub fn label(&self, id: &EntityId) -> Label {
-        self.view.labels.get(id).cloned().unwrap_or_else(|| Label {
+        let mut label = self.view.labels.get(id).cloned().unwrap_or_else(|| Label {
             text: id.to_string(),
             lang: None,
             fallback: true,
             add: None,
             href: crate::localize::format::entity_url(*id),
             description: None,
-        })
+        });
+        if let EntityId::Item(qid) = id {
+            label.href = self.item_href(*qid);
+        }
+        label
+    }
+
+    /// The page of an item: on the server of this page, in the page
+    /// language; without a server, on Wikidata.
+    pub fn item_href(&self, qid: Qid) -> String {
+        match self.item_base() {
+            Some(base) => format!("{base}{qid}"),
+            None => crate::localize::format::entity_url(EntityId::Item(qid)),
+        }
+    }
+
+    /// The start of the address of an item page on the server of this
+    /// page: "{base}/{lang}/".
+    pub fn item_base(&self) -> Option<String> {
+        self.service
+            .map(|base| format!("{base}/{}/", self.view.lang))
     }
 
     pub fn property(&self, pid: impl Arg<Pid>) -> Label {

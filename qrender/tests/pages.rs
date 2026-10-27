@@ -184,6 +184,36 @@ fn markdown_pages() {
     }
 }
 
+/// On a served page, an item links to its page on the server, in the page
+/// language: a value, and a link of the fallback article. Only the item
+/// itself (the footer, the edit links) and the forms of Wikidata (add a
+/// label) link to Wikidata.
+#[test]
+fn an_item_links_to_its_page_on_the_server() {
+    const WIKIDATA: &str = "https://www.wikidata.org/wiki/";
+    let html = html::page(&view("q3870.gu"), Styles::Inline, Some("/qrender"));
+    let doc = Html::parse_document(&html);
+    let hrefs: Vec<&str> = doc
+        .select(&select("a[href]"))
+        .filter_map(|a| a.attr("href"))
+        .collect();
+    let count = |s: &str| doc.select(&select(s)).count();
+
+    assert!(count("[data-slot] a[href^='/qrender/gu/Q']") > 0);
+    assert!(count("qr-section .body a[href^='/qrender/gu/Q']") > 0);
+    for href in hrefs.iter().filter_map(|h| h.strip_prefix(WIKIDATA)) {
+        assert!(
+            !href.starts_with('Q') || href == "Q3870" || href.starts_with("Q3870#"),
+            "a link to an item on Wikidata: {href}"
+        );
+    }
+    assert!(
+        hrefs
+            .iter()
+            .any(|h| h.starts_with(&format!("{WIKIDATA}Special:SetLabel/")))
+    );
+}
+
 /// An item with few facts (the knapsack problem): the whole lead of the
 /// fallback article after its note, its picture in the place of the head
 /// picture, and the sections that no spread shows in one spread.

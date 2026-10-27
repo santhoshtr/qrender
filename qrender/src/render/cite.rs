@@ -2,7 +2,7 @@
 //! the HTML page and the footnote of the Markdown both read it. Data only;
 //! the markup is in `templates/parts/cite.html`.
 
-use content::{Archive, Citation, Cited, Date, EntityId, Identifier, Original, Person, Work};
+use content::{Archive, Citation, Cited, Date, EntityId, Identifier, Original, Person, Qid, Work};
 use percent_encoding::{AsciiSet, CONTROLS, percent_decode_str, utf8_percent_encode};
 
 use super::ui::favicon;
@@ -80,7 +80,9 @@ pub fn shared(statements: &[StatementRef]) -> Option<&Vec<String>> {
     (n >= 2 && 2 * n > statements.len()).then_some(set)
 }
 
-pub fn card<'a>(cited: &'a Cited, view: &'a View) -> Card<'a> {
+/// `item`: the address of the page of an item (a database without the
+/// address of its record links to its item).
+pub fn card<'a>(cited: &'a Cited, view: &'a View, item: &dyn Fn(Qid) -> String) -> Card<'a> {
     match &cited.citation {
         // The card of its work, with the place; without the work, its
         // words.
@@ -90,7 +92,7 @@ pub fn card<'a>(cited: &'a Cited, view: &'a View) -> Card<'a> {
                     .map(|at| parts("qrender-cite-at", vec![text(at)]));
             match view.works.get(&s.work) {
                 Some(work) => {
-                    let mut card = card(work, view);
+                    let mut card = card(work, view, item);
                     card.rows.extend(at);
                     card
                 }
@@ -206,8 +208,8 @@ pub fn card<'a>(cited: &'a Cited, view: &'a View) -> Card<'a> {
             Card {
                 title: label.map_or_else(|| r.stated_in.to_string(), |l| l.text.clone()),
                 title_lang: label.and_then(|l| l.lang.as_ref()).map(ToString::to_string),
-                // The record; else the database on Wikidata.
-                href: url.or_else(|| label.map(|l| l.href.clone())),
+                // The record; else the database.
+                href: url.or_else(|| label.map(|_| item(r.stated_in))),
                 favicon: host.as_deref().map(favicon),
                 host: host.map(|h| short_host(&h)),
                 kind: "record",

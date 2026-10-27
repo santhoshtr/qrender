@@ -10,10 +10,10 @@
 
 use std::cell::RefCell;
 
-use content::{EntityId, Pid};
+use content::{EntityId, Pid, Qid};
 
 use super::cite::{self, Card, Value as CiteValue};
-use crate::localize::format::Part;
+use crate::localize::format::{Part, entity_url};
 use crate::localize::{Label, ProseBlock, ProseSection, SpreadView, View};
 use crate::primitives::{
     absent, credits, earlier, fact, identifiers, kind, links, map, media, names, network, peers,
@@ -229,7 +229,7 @@ impl Markdown<'_> {
                 .chain(
                     note.citations
                         .iter()
-                        .map(|c| self.card(&cite::card(c, self.view))),
+                        .map(|c| self.card(&cite::card(c, self.view, &wikidata_item))),
                 )
                 .collect();
             lines.push(format!("[^{}]: {}", note.number, parts.join(" ")));
@@ -239,7 +239,7 @@ impl Markdown<'_> {
                 lines.push(format!(
                     "[^s{}]: {}",
                     i + 1,
-                    self.card(&cite::card(c, self.view))
+                    self.card(&cite::card(c, self.view, &wikidata_item))
                 ));
             }
         }
@@ -442,6 +442,11 @@ pub fn provenance_words(p: Provenance) -> &'static str {
         Provenance::Imported => " [imported from Wikipedia]",
         Provenance::None => " [no reference]",
     }
+}
+
+/// The page of an item: the Markdown has no server pages, so on Wikidata.
+fn wikidata_item(qid: Qid) -> String {
+    entity_url(EntityId::Item(qid))
 }
 
 /// The text of cleaned article HTML: tags removed, the mark of a note as

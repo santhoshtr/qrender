@@ -8,6 +8,8 @@
 //!   leaflet.js and leaflet.css, which the page scripts load. The version
 //!   has a hash of the files, so a changed file has a new address.
 //! - GET /healthz
+//! - GET /robots.txt                 no crawling: an item page links to the
+//!   pages of other items, and each new page is fetched live
 //!
 //! Environment (or a .env file): PORT (default 4243), TOOL_REDIS_URI
 //! (optional cache), REDIS_PREFIX (for every cache key), BASE_PATH (when
@@ -55,6 +57,7 @@ async fn main() {
         .route("/design/{version}/{file}", get(design))
         .route("/api/content/{qid}", get(content_json))
         .route("/api/composition/{qid}", get(composition_json))
+        .route("/robots.txt", get(async || "User-agent: *\nDisallow: /\n"))
         .route("/api/view/{lang}/{qid}", get(view_json))
         .route("/{lang}/{qid}", get(page))
         .layer(CompressionLayer::new())
