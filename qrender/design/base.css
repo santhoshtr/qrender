@@ -772,16 +772,20 @@ dialog.lightbox {
 }
 
 /* The topics of a spread that are Wikipedia articles: a card each, the
-   wiki, the title and the description, the picture at the end. */
+   full width, one under the other: the wiki, the title and the
+   description, the picture at the end. */
 .topic-articles {
 	grid-column: 1 / -1;
 	display: grid;
-	grid-template-columns: repeat( auto-fill, minmax( 280px, 1fr ) );
+	grid-template-columns: minmax( 0, 1fr );
 	gap: var( --spacing-100 );
 }
 
 .topic-article {
 	display: grid;
+	/* Without a picture, the body only: an area that is not in the
+	   template makes empty tracks before it. */
+	grid-template-areas: 'body';
 	gap: var( --spacing-25 ) var( --spacing-100 );
 	padding: var( --spacing-75 );
 	border: 1px solid var( --border-color-muted );
