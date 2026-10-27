@@ -7,6 +7,7 @@ use serde::Serialize;
 
 use crate::compose::Composer;
 use crate::schema::{Block, PictureFacts, StatementRef};
+use crate::wikidata::LOGO;
 
 #[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct Media {
@@ -69,7 +70,7 @@ pub fn build(c: &Composer, statement: &Statement, role: MediaRole, rule: Option<
     Media {
         role,
         statement: c.statement(statement),
-        picture: c.picture(file, false).facts,
+        picture: c.picture(file, statement.pid == *LOGO).facts,
         subject: None,
         rule: rule.map(str::to_string),
     }

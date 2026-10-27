@@ -11,10 +11,14 @@ use crate::primitives::title::Title;
 use crate::primitives::{kind, media, prose};
 use crate::schema::{Block, Spread};
 use crate::vocab::{Role, Slot, Template};
-use crate::wikidata::{IMAGE, PAGE_BANNER};
+use crate::wikidata::{IMAGE, LOGO, PAGE_BANNER};
 
 pub fn build(c: &mut Composer, spec: &SpreadSpec) -> Spread {
-    let images = c.free(*IMAGE);
+    // The image of the item; without one, its logo.
+    let mut images = c.free(*IMAGE);
+    if images.is_empty() {
+        images = c.free(*LOGO);
+    }
     let hero = images
         .iter()
         .find(|s| s.rank == Rank::Preferred)

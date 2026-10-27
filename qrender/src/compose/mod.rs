@@ -553,6 +553,7 @@ pub(crate) mod test_content {
 mod tests {
     use super::test_content::{content, item};
     use super::*;
+    use crate::schema::MediaKind;
     use serde_json::json;
 
     fn config() -> &'static Config {
@@ -719,5 +720,24 @@ mod tests {
                 "texts": ["Q1-0000-0001"],
             })
         );
+    }
+
+    #[test]
+    fn the_head_picture_is_the_image_else_the_logo() {
+        let file =
+            |pid: &str, f: &str| json!({"pid": pid, "value": {"type": "CommonsMedia", "file": f}});
+        let hero = |statements| {
+            let c = content(statements, json!({}));
+            let composition = Composer::new(&c, config()).compose();
+            let Some(Block::Media(m)) = composition.spreads[0].slots[&Slot::Hero].first() else {
+                panic!("a head picture");
+            };
+            (m.statement.pid, m.picture.kind)
+        };
+        let (logo, kind) = hero(json!([file("P154", "Logo.png")]));
+        assert_eq!(logo, pid("P154"));
+        assert_eq!(kind, MediaKind::Drawing, "a logo is shown whole");
+        let (image, _) = hero(json!([file("P154", "Logo.png"), file("P18", "View.jpg")]));
+        assert_eq!(image, pid("P18"));
     }
 }

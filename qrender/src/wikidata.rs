@@ -18,6 +18,7 @@ macro_rules! properties {
 properties! {
     INSTANCE_OF = "P31", "instance of";
     IMAGE = "P18", "image";
+    LOGO = "P154", "logo image";
     PAGE_BANNER = "P948", "page banner";
     START_TIME = "P580", "start time";
     END_TIME = "P582", "end time";
