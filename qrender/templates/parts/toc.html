@@ -18,6 +18,7 @@
                 {%- match e.title -%}
                 {%- when TocTitle::Spread with (l) -%}{{ ui.text(l, false)|safe }}
                 {%- when TocTitle::Section with (s) -%}<span lang="{{ s.lang }}">{{ s.title }}</span>
+                {%- when TocTitle::Fallback with (lang) -%}{{ ui.from_wikipedia(lang)|safe }}
                 {%- endmatch -%}
             </a></li>
         {%- endfor -%}

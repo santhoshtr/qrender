@@ -1,5 +1,0 @@
-{#- The action to translate a text of the article into the page language,
-    and to edit its translation after a save: an icon; its words are for
-    screen readers. Hidden: the script shows it (a page without the script
-    has no editor). -#}
-<button class="translate" type="button" lang="{{ ui.view.lang }}" hidden>{{ ui.language_icon()|safe }}<span class="visually-hidden">{{ ui.translate_label()|safe }}</span></button>

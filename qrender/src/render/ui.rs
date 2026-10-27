@@ -11,7 +11,7 @@ use super::icons::Icons;
 use super::map::{Frame, frame, live, point_frame};
 use crate::localize::format::{Part, coordinate, edit_url, number_part, percent};
 use crate::localize::locale::LANGUAGES;
-use crate::localize::{Description, Label, Link, ProseSection, SpreadView, View};
+use crate::localize::{Article, Description, Label, Link, ProseSection, SpreadView, View};
 use crate::primitives::credits::{Credits, Person};
 use crate::primitives::identifiers::{Identifier, Identifiers};
 use crate::primitives::links::{Card, Links};
@@ -849,6 +849,17 @@ impl<'v> Ui<'v> {
         WIKIPEDIA_LOGO
     }
 
+    /// The language of the sections that no spread shows, when they are
+    /// of a fallback article: they are one spread. None for an article in
+    /// the page language, or none.
+    pub fn fallback_sections(&self) -> Option<&'v str> {
+        self.view
+            .more_sections
+            .first()
+            .filter(|s| !s.local)
+            .map(|s| s.lang.as_str())
+    }
+
     /// The id of a section of the article that is a spread of its own.
     pub fn section_id(&self, s: &ProseSection) -> String {
         format!("section-{}", s.anchor)
@@ -944,11 +955,52 @@ impl<'v> Ui<'v> {
         self.with_page_language("qrender-label-title")
     }
 
+    /// "Edit the translation": the translate button after a save.
+    pub fn translate_edit_label(&self) -> String {
+        escape(self.msg("qrender-translate-edit"))
+    }
+
+    /// "Read more in English": the language of a fallback text.
+    pub fn read_more_label(&self, lang: &str) -> String {
+        self.with_language("qrender-read-more", lang, &[])
+    }
+
+    pub fn show_less_label(&self) -> String {
+        escape(self.msg("qrender-show-less"))
+    }
+
+    /// "No article in ગુજરાતી Wikipedia yet."
+    pub fn fallback_missing(&self) -> String {
+        self.with_page_language("qrender-fallback-missing")
+    }
+
+    /// "The text below is from English Wikipedia (en.wikipedia.org).",
+    /// with a link to the article.
+    pub fn fallback_source(&self, a: &Article) -> String {
+        let link = format!(r#"<a href="{}">{}</a>"#, escape(&a.url), escape(&a.host));
+        self.with_language("qrender-fallback-source", a.lang.as_str(), &[&link])
+    }
+
+    /// "From English Wikipedia": the spread of the sections of a fallback
+    /// article.
+    pub fn from_wikipedia(&self, lang: &str) -> String {
+        self.with_language("qrender-from-wikipedia", lang, &[])
+    }
+
     /// A message whose `$1` is the page language, named by `intl.js`.
     fn with_page_language(&self, key: &str) -> String {
-        let lang = escape(self.view.lang.as_str());
+        self.with_language(key, self.view.lang.as_str(), &[])
+    }
+
+    /// A message whose `$1` is a language, named by `intl.js`, and whose
+    /// other parameters are HTML.
+    fn with_language(&self, key: &str, lang: &str, more: &[&str]) -> String {
+        let lang = escape(lang);
         let name = format!(r#"<span data-lang-name="{lang}">{lang}</span>"#);
-        crate::localize::messages::format(&escape(self.msg(key)), &[&name])
+        let params: Vec<&str> = std::iter::once(name.as_str())
+            .chain(more.iter().copied())
+            .collect();
+        crate::localize::messages::format(&escape(self.msg(key)), &params)
     }
 
     /// The page has a label that the reader can add in the page language:

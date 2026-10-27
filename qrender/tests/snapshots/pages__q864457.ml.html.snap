@@ -94,7 +94,7 @@ expression: html
                 popovertargetaction="hide"
                 aria-label="Close">×</button>
     </div>
-    <ul><li data-dimension="neutral"><a href="#section-Applications"><span lang="en">Applications</span></a></li><li data-dimension="neutral"><a href="#section-Definition"><span lang="en">Definition</span></a></li><li data-dimension="neutral"><a href="#section-Computational_complexity"><span lang="en">Computational complexity</span></a></li><li data-dimension="neutral"><a href="#section-Solving"><span lang="en">Solving</span></a></li><li data-dimension="neutral"><a href="#section-Variations"><span lang="en">Variations</span></a></li><li data-dimension="neutral" class="end"><a href="#web"><span class="fb" lang="en">web presence</span></a></li><li data-dimension="neutral"><a href="#evidence">അവലംബം</a></li></ul>
+    <ul><li data-dimension="neutral"><a href="#article">From <span data-lang-name="en">en</span> Wikipedia</a></li><li data-dimension="neutral" class="end"><a href="#web"><span class="fb" lang="en">web presence</span></a></li><li data-dimension="neutral"><a href="#evidence">അവലംബം</a></li></ul>
 </nav>
     <main class="page">
             <section class="spread t-identity" id="identity"
@@ -112,19 +112,24 @@ expression: html
            href="https://www.wikidata.org/wiki/Special:SetLabel/Q1734364/ml"
            aria-label="Add a label in your language"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span></p>
     </div><div data-slot="lead">
-        <qr-section class="lead"
+        <p class="fallback-note" role="note"><b>No article in <span data-lang-name="ml">ml</span> Wikipedia yet.</b> The text below is from <span data-lang-name="en">en</span> Wikipedia (<a href="https://en.wikipedia.org/wiki/Knapsack_problem">en.wikipedia.org</a>).</p>
+<qr-section class="lead"
             lang="en"
             data-from="en"
             data-to="ml"
             data-dir="ltr">
-    <div class="body"><p>The <b>knapsack problem</b> is the following problem in <a href="https://www.wikidata.org/wiki/Q1333872">combinatorial optimization</a>:</p><dl><dd><i>Given a set of items, each with a weight and a value, determine which items to include in the collection so that the total weight is less than or equal to a given limit and the total value is as large as possible.</i></dd></dl><p>It derives its name from the problem faced by someone who is constrained by a fixed-size <a href="https://www.wikidata.org/wiki/Q5843">knapsack</a> and must fill it with the most valuable items. The problem often arises in <a href="https://www.wikidata.org/wiki/Q287260">resource allocation</a> where the decision-makers have to choose from a set of non-divisible projects or tasks under a fixed budget or time constraint, respectively.</p><p>The knapsack problem has been studied for more than a century, with early works dating back to 1897.<sup class="ref"><button type="button"
+    <div class="body" id="t1"><p>The <b>knapsack problem</b> is the following problem in <a href="https://www.wikidata.org/wiki/Q1333872">combinatorial optimization</a>:</p><dl><dd><i>Given a set of items, each with a weight and a value, determine which items to include in the collection so that the total weight is less than or equal to a given limit and the total value is as large as possible.</i></dd></dl><p>It derives its name from the problem faced by someone who is constrained by a fixed-size <a href="https://www.wikidata.org/wiki/Q5843">knapsack</a> and must fill it with the most valuable items. The problem often arises in <a href="https://www.wikidata.org/wiki/Q287260">resource allocation</a> where the decision-makers have to choose from a set of non-divisible projects or tasks under a fixed budget or time constraint, respectively.</p><p>The knapsack problem has been studied for more than a century, with early works dating back to 1897.<sup class="ref"><button type="button"
         popovertarget="note-1"
         aria-label="Note 1">1</button></sup></p><p>The <a href="https://www.wikidata.org/wiki/Q1154420">subset sum problem</a> is a special case of the decision and 0-1 problems where for each kind of item, the weight equals the value: <math alttext="{\displaystyle w_{i}=v_{i}}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>w</mi><mrow><mi>i</mi></mrow></msub><mo>=</mo><msub><mi>v</mi><mrow><mi>i</mi></mrow></msub></mstyle></mrow></semantics></math>. In the field of <a href="https://www.wikidata.org/wiki/Q8789">cryptography</a>, the term <i>knapsack problem</i> is often used to refer specifically to the subset sum problem. The subset sum problem is one of <a href="https://www.wikidata.org/wiki/Q1734364">Karp's 21 NP-complete problems</a>.<sup class="ref"><button type="button"
         popovertarget="note-2"
         aria-label="Note 2">2</button></sup></p></div>
+    <div class="actions" lang="ml">
+    <button class="more" type="button" aria-expanded="false" aria-controls="t1" hidden><span class="closed">Read more in <span data-lang-name="en">en</span></span><span class="opened">Show less</span></button>
+    <button class="translate" type="button" hidden><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m17.835 19-1.248-3h-4.174l-1.248 3.001H9l4.577-11.005h1.846L20 19zm-4.59-5h2.51L14.5 10.982zM7.618 3H12v2H9.991a8.5 8.5 0 0 1-1.423 4.02q-.24.358-.528.707.634.367 1.379.711l.908.42-.839 1.816-.907-.42a18 18 0 0 1-2.026-1.09c-1.255.979-2.912 1.8-5.076 2.31l-.973.228-.458-1.946.973-.23c1.631-.383 2.885-.954 3.85-1.608C3.29 8.527 2.317 6.884 2.065 5H0V3h5.382l-.724-1.447 1.79-.895L7.617 3ZM4.094 5c.243 1.282.974 2.489 2.29 3.586A6.54 6.54 0 0 0 7.98 5z"/></svg><span class="new">Translate to <span data-lang-name="ml">ml</span></span><span class="edit">Edit the translation</span></button>
+</div>
     <p class="source">
         <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Wikipedia-logo-v2.svg?width=60" alt="" width="18">
-        <a href="https://en.wikipedia.org/wiki/Knapsack_problem">en.wikipedia.org</a> · 31 <button class="translate" type="button" lang="ml" hidden><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m17.835 19-1.248-3h-4.174l-1.248 3.001H9l4.577-11.005h1.846L20 19zm-4.59-5h2.51L14.5 10.982zM7.618 3H12v2H9.991a8.5 8.5 0 0 1-1.423 4.02q-.24.358-.528.707.634.367 1.379.711l.908.42-.839 1.816-.907-.42a18 18 0 0 1-2.026-1.09c-1.255.979-2.912 1.8-5.076 2.31l-.973.228-.458-1.946.973-.23c1.631-.383 2.885-.954 3.85-1.608C3.29 8.527 2.317 6.884 2.065 5H0V3h5.382l-.724-1.447 1.79-.895L7.617 3ZM4.094 5c.243 1.282.974 2.489 2.29 3.586A6.54 6.54 0 0 0 7.98 5z"/></svg><span class="visually-hidden">Translate to <span data-lang-name="ml">ml</span></span></button>
+        <a href="https://en.wikipedia.org/wiki/Knapsack_problem">en.wikipedia.org</a> · 31
     </p>
     <p class="saved-note" lang="ml" hidden>Saved on this page only. This is a prototype: nothing is published.</p>
 </qr-section>
@@ -139,17 +144,15 @@ expression: html
     </figcaption>
 </figure>
     </div></section>
-            <section class="spread t-article"
-                     id="section-Applications"
-                     data-spread="article"
-                     data-dimension="neutral">
+            <section class="spread" id="article" data-spread="article" data-dimension="neutral">
+                <h2><span class="title">From <span data-lang-name="en">en</span> Wikipedia</span></h2>
                 <div class="article-slot"><qr-section class="article-section"
             lang="en"
             data-from="en"
             data-to="ml"
             data-dir="ltr">
-    <div class="head"><h2>Applications</h2><button class="translate" type="button" lang="ml" hidden><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m17.835 19-1.248-3h-4.174l-1.248 3.001H9l4.577-11.005h1.846L20 19zm-4.59-5h2.51L14.5 10.982zM7.618 3H12v2H9.991a8.5 8.5 0 0 1-1.423 4.02q-.24.358-.528.707.634.367 1.379.711l.908.42-.839 1.816-.907-.42a18 18 0 0 1-2.026-1.09c-1.255.979-2.912 1.8-5.076 2.31l-.973.228-.458-1.946.973-.23c1.631-.383 2.885-.954 3.85-1.608C3.29 8.527 2.317 6.884 2.065 5H0V3h5.382l-.724-1.447 1.79-.895L7.617 3ZM4.094 5c.243 1.282.974 2.489 2.29 3.586A6.54 6.54 0 0 0 7.98 5z"/></svg><span class="visually-hidden">Translate to <span data-lang-name="ml">ml</span></span></button></div>
-    <div class="body"><p>Knapsack problems appear in real-world decision-making processes in a wide variety of fields, such as finding the least wasteful way to cut raw materials,<sup class="ref"><button type="button"
+    <div class="head"><h3>Applications</h3></div>
+    <div class="body" id="t2"><p>Knapsack problems appear in real-world decision-making processes in a wide variety of fields, such as finding the least wasteful way to cut raw materials,<sup class="ref"><button type="button"
         popovertarget="note-3"
         aria-label="Note 3">3</button></sup> selection of <a href="https://www.wikidata.org/wiki/Q5456372">investments</a> and <a href="https://www.wikidata.org/wiki/Q5340806">portfolios</a>,<sup class="ref"><button type="button"
         popovertarget="note-4"
@@ -162,37 +165,33 @@ expression: html
         aria-label="Note 7">7</button></sup></p><p>A 1999 study of the Stony Brook University Algorithm Repository showed that, out of 75 algorithmic problems related to the field of combinatorial algorithms and <a href="https://www.wikidata.org/wiki/Q4724358">algorithm engineering</a>, the knapsack problem was the 19th most popular and the third most needed after <a href="https://www.wikidata.org/wiki/Q1426863">suffix trees</a> and the <a href="https://www.wikidata.org/wiki/Q814581">bin packing problem</a>.<sup class="ref"><button type="button"
         popovertarget="note-8"
         aria-label="Note 8">8</button></sup></p></div>
+    <div class="actions" lang="ml">
+    <button class="more" type="button" aria-expanded="false" aria-controls="t2" hidden><span class="closed">Read more in <span data-lang-name="en">en</span></span><span class="opened">Show less</span></button>
+    <button class="translate" type="button" hidden><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m17.835 19-1.248-3h-4.174l-1.248 3.001H9l4.577-11.005h1.846L20 19zm-4.59-5h2.51L14.5 10.982zM7.618 3H12v2H9.991a8.5 8.5 0 0 1-1.423 4.02q-.24.358-.528.707.634.367 1.379.711l.908.42-.839 1.816-.907-.42a18 18 0 0 1-2.026-1.09c-1.255.979-2.912 1.8-5.076 2.31l-.973.228-.458-1.946.973-.23c1.631-.383 2.885-.954 3.85-1.608C3.29 8.527 2.317 6.884 2.065 5H0V3h5.382l-.724-1.447 1.79-.895L7.617 3ZM4.094 5c.243 1.282.974 2.489 2.29 3.586A6.54 6.54 0 0 0 7.98 5z"/></svg><span class="new">Translate to <span data-lang-name="ml">ml</span></span><span class="edit">Edit the translation</span></button>
+</div>
     <p class="saved-note" lang="ml" hidden>Saved on this page only. This is a prototype: nothing is published.</p>
-</qr-section></div>
-            </section>
-            <section class="spread t-article"
-                     id="section-Definition"
-                     data-spread="article"
-                     data-dimension="neutral">
-                <div class="article-slot"><qr-section class="article-section"
+</qr-section><qr-section class="article-section"
             lang="en"
             data-from="en"
             data-to="ml"
             data-dir="ltr">
-    <div class="head"><h2>Definition</h2><button class="translate" type="button" lang="ml" hidden><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m17.835 19-1.248-3h-4.174l-1.248 3.001H9l4.577-11.005h1.846L20 19zm-4.59-5h2.51L14.5 10.982zM7.618 3H12v2H9.991a8.5 8.5 0 0 1-1.423 4.02q-.24.358-.528.707.634.367 1.379.711l.908.42-.839 1.816-.907-.42a18 18 0 0 1-2.026-1.09c-1.255.979-2.912 1.8-5.076 2.31l-.973.228-.458-1.946.973-.23c1.631-.383 2.885-.954 3.85-1.608C3.29 8.527 2.317 6.884 2.065 5H0V3h5.382l-.724-1.447 1.79-.895L7.617 3ZM4.094 5c.243 1.282.974 2.489 2.29 3.586A6.54 6.54 0 0 0 7.98 5z"/></svg><span class="visually-hidden">Translate to <span data-lang-name="ml">ml</span></span></button></div>
-    <div class="body"><p>The most common problem being solved is the <b>0-1 knapsack problem</b>, which restricts the number <i><math alttext="{\displaystyle x_{i}}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>x</mi><mrow><mi>i</mi></mrow></msub></mstyle></mrow></semantics></math></i> of copies of each kind of item to zero or one. Given a set of <i><math alttext="{\displaystyle n}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>n</mi></mstyle></mrow></semantics></math></i> items numbered from 1 up to <i><math alttext="{\displaystyle n}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>n</mi></mstyle></mrow></semantics></math></i>, each with a weight <i><math alttext="{\displaystyle w_{i}}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>w</mi><mrow><mi>i</mi></mrow></msub></mstyle></mrow></semantics></math></i> and a value <i><math alttext="{\displaystyle v_{i}}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>v</mi><mrow><mi>i</mi></mrow></msub></mstyle></mrow></semantics></math></i>, along with a maximum weight capacity <i><math alttext="{\displaystyle W}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>W</mi></mstyle></mrow></semantics></math></i>,</p><dl><dd>maximize <math alttext="{\displaystyle \sum _{i=1}^{n}v_{i}x_{i}}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></munderover><msub><mi>v</mi><mrow><mi>i</mi></mrow></msub><msub><mi>x</mi><mrow><mi>i</mi></mrow></msub></mstyle></mrow></semantics></math></dd>
+    <div class="head"><h3>Definition</h3></div>
+    <div class="body" id="t3"><p>The most common problem being solved is the <b>0-1 knapsack problem</b>, which restricts the number <i><math alttext="{\displaystyle x_{i}}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>x</mi><mrow><mi>i</mi></mrow></msub></mstyle></mrow></semantics></math></i> of copies of each kind of item to zero or one. Given a set of <i><math alttext="{\displaystyle n}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>n</mi></mstyle></mrow></semantics></math></i> items numbered from 1 up to <i><math alttext="{\displaystyle n}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>n</mi></mstyle></mrow></semantics></math></i>, each with a weight <i><math alttext="{\displaystyle w_{i}}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>w</mi><mrow><mi>i</mi></mrow></msub></mstyle></mrow></semantics></math></i> and a value <i><math alttext="{\displaystyle v_{i}}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>v</mi><mrow><mi>i</mi></mrow></msub></mstyle></mrow></semantics></math></i>, along with a maximum weight capacity <i><math alttext="{\displaystyle W}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>W</mi></mstyle></mrow></semantics></math></i>,</p><dl><dd>maximize <math alttext="{\displaystyle \sum _{i=1}^{n}v_{i}x_{i}}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></munderover><msub><mi>v</mi><mrow><mi>i</mi></mrow></msub><msub><mi>x</mi><mrow><mi>i</mi></mrow></msub></mstyle></mrow></semantics></math></dd>
 <dd>subject to <math alttext="{\displaystyle \sum _{i=1}^{n}w_{i}x_{i}\leq W}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></munderover><msub><mi>w</mi><mrow><mi>i</mi></mrow></msub><msub><mi>x</mi><mrow><mi>i</mi></mrow></msub><mo>≤</mo><mi>W</mi></mstyle></mrow></semantics></math> and <math alttext="{\displaystyle x_{i}\in \{0,1\}}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>x</mi><mrow><mi>i</mi></mrow></msub><mo>∈</mo><mo stretchy="false" fence="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false" fence="false">}</mo></mstyle></mrow></semantics></math>.</dd></dl><p>Here <i><math alttext="{\displaystyle x_{i}}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>x</mi><mrow><mi>i</mi></mrow></msub></mstyle></mrow></semantics></math></i> represents the number of instances of item <i><math alttext="{\displaystyle i}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>i</mi></mstyle></mrow></semantics></math></i> to include in the knapsack. Informally, the problem is to maximize the sum of the values of the items in the knapsack so that the sum of the weights is less than or equal to the knapsack's capacity.</p><p>The <b>bounded knapsack problem</b> (<b>BKP</b>) removes the restriction that there is only one of each item, but restricts the number <math alttext="{\displaystyle x_{i}}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>x</mi><mrow><mi>i</mi></mrow></msub></mstyle></mrow></semantics></math> of copies of each kind of item to a maximum non-negative integer value <math alttext="{\displaystyle c}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>c</mi></mstyle></mrow></semantics></math>:</p><dl><dd>maximize <math alttext="{\displaystyle \sum _{i=1}^{n}v_{i}x_{i}}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></munderover><msub><mi>v</mi><mrow><mi>i</mi></mrow></msub><msub><mi>x</mi><mrow><mi>i</mi></mrow></msub></mstyle></mrow></semantics></math></dd>
 <dd>subject to <math alttext="{\displaystyle \sum _{i=1}^{n}w_{i}x_{i}\leq W}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></munderover><msub><mi>w</mi><mrow><mi>i</mi></mrow></msub><msub><mi>x</mi><mrow><mi>i</mi></mrow></msub><mo>≤</mo><mi>W</mi></mstyle></mrow></semantics></math> and <math alttext="{\displaystyle x_{i}\in \{0,1,2,\dots ,c\}.}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>x</mi><mrow><mi>i</mi></mrow></msub><mo>∈</mo><mo stretchy="false" fence="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mo>…</mo><mo>,</mo><mi>c</mi><mo stretchy="false" fence="false">}</mo><mo>.</mo></mstyle></mrow></semantics></math></dd></dl><p>The <b>unbounded knapsack problem</b> (<b>UKP</b>) places no upper bound on the number of copies of each kind of item and can be formulated as above except that the only restriction on <math alttext="{\displaystyle x_{i}}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>x</mi><mrow><mi>i</mi></mrow></msub></mstyle></mrow></semantics></math> is that it is a non-negative integer.</p><dl><dd>maximize <math alttext="{\displaystyle \sum _{i=1}^{n}v_{i}x_{i}}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></munderover><msub><mi>v</mi><mrow><mi>i</mi></mrow></msub><msub><mi>x</mi><mrow><mi>i</mi></mrow></msub></mstyle></mrow></semantics></math></dd>
 <dd>subject to <math alttext="{\displaystyle \sum _{i=1}^{n}w_{i}x_{i}\leq W}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></munderover><msub><mi>w</mi><mrow><mi>i</mi></mrow></msub><msub><mi>x</mi><mrow><mi>i</mi></mrow></msub><mo>≤</mo><mi>W</mi></mstyle></mrow></semantics></math> and <math alttext="{\displaystyle x_{i}\in \mathbb {N} .}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>x</mi><mrow><mi>i</mi></mrow></msub><mo>∈</mo><mrow><mi mathvariant="double-struck">N</mi></mrow><mo>.</mo></mstyle></mrow></semantics></math></dd></dl><p>One example of the unbounded knapsack problem is given using the figure shown at the beginning of this article and the text &quot;if any number of each book is available&quot; in the caption of that figure.</p></div>
+    <div class="actions" lang="ml">
+    <button class="more" type="button" aria-expanded="false" aria-controls="t3" hidden><span class="closed">Read more in <span data-lang-name="en">en</span></span><span class="opened">Show less</span></button>
+    <button class="translate" type="button" hidden><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m17.835 19-1.248-3h-4.174l-1.248 3.001H9l4.577-11.005h1.846L20 19zm-4.59-5h2.51L14.5 10.982zM7.618 3H12v2H9.991a8.5 8.5 0 0 1-1.423 4.02q-.24.358-.528.707.634.367 1.379.711l.908.42-.839 1.816-.907-.42a18 18 0 0 1-2.026-1.09c-1.255.979-2.912 1.8-5.076 2.31l-.973.228-.458-1.946.973-.23c1.631-.383 2.885-.954 3.85-1.608C3.29 8.527 2.317 6.884 2.065 5H0V3h5.382l-.724-1.447 1.79-.895L7.617 3ZM4.094 5c.243 1.282.974 2.489 2.29 3.586A6.54 6.54 0 0 0 7.98 5z"/></svg><span class="new">Translate to <span data-lang-name="ml">ml</span></span><span class="edit">Edit the translation</span></button>
+</div>
     <p class="saved-note" lang="ml" hidden>Saved on this page only. This is a prototype: nothing is published.</p>
-</qr-section></div>
-            </section>
-            <section class="spread t-article"
-                     id="section-Computational_complexity"
-                     data-spread="article"
-                     data-dimension="neutral">
-                <div class="article-slot"><qr-section class="article-section"
+</qr-section><qr-section class="article-section"
             lang="en"
             data-from="en"
             data-to="ml"
             data-dir="ltr">
-    <div class="head"><h2>Computational complexity</h2><button class="translate" type="button" lang="ml" hidden><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m17.835 19-1.248-3h-4.174l-1.248 3.001H9l4.577-11.005h1.846L20 19zm-4.59-5h2.51L14.5 10.982zM7.618 3H12v2H9.991a8.5 8.5 0 0 1-1.423 4.02q-.24.358-.528.707.634.367 1.379.711l.908.42-.839 1.816-.907-.42a18 18 0 0 1-2.026-1.09c-1.255.979-2.912 1.8-5.076 2.31l-.973.228-.458-1.946.973-.23c1.631-.383 2.885-.954 3.85-1.608C3.29 8.527 2.317 6.884 2.065 5H0V3h5.382l-.724-1.447 1.79-.895L7.617 3ZM4.094 5c.243 1.282.974 2.489 2.29 3.586A6.54 6.54 0 0 0 7.98 5z"/></svg><span class="visually-hidden">Translate to <span data-lang-name="ml">ml</span></span></button></div>
-    <div class="body"><p>The knapsack problem is interesting from the perspective of computer science for many reasons:</p><ul><li>The <a href="https://www.wikidata.org/wiki/Q3262192">decision problem</a> form of the knapsack problem (<i>Can a value of at least </i>V<i> be achieved without exceeding the weight </i>W<i>?</i>) is <a href="https://www.wikidata.org/wiki/Q215206">NP-complete</a>, thus there is no known algorithm that is both correct and fast (polynomial-time) in all cases.</li>
+    <div class="head"><h3>Computational complexity</h3></div>
+    <div class="body" id="t4"><p>The knapsack problem is interesting from the perspective of computer science for many reasons:</p><ul><li>The <a href="https://www.wikidata.org/wiki/Q3262192">decision problem</a> form of the knapsack problem (<i>Can a value of at least </i>V<i> be achieved without exceeding the weight </i>W<i>?</i>) is <a href="https://www.wikidata.org/wiki/Q215206">NP-complete</a>, thus there is no known algorithm that is both correct and fast (polynomial-time) in all cases.</li>
 <li>There is no known polynomial algorithm which can tell, given a solution, whether it is optimal (which would mean that there is no solution with a larger <i>V</i>). This problem is <a href="https://www.wikidata.org/wiki/Q1142354">co-NP-complete</a>.</li>
 <li>There is a <a href="https://www.wikidata.org/wiki/Q155291">pseudo-polynomial time</a> algorithm using <a href="https://www.wikidata.org/wiki/Q380679">dynamic programming</a>.</li>
 <li>There is a <a href="https://www.wikidata.org/wiki/Q843550">fully polynomial-time approximation scheme</a>, which uses the pseudo-polynomial time algorithm as a subroutine, described below.</li>
@@ -218,20 +217,18 @@ If the elements in the problem are <a href="https://www.wikidata.org/wiki/Q12916
 An <i>upper bound</i> for a decision-tree model was given by Meyer auf der Heide<sup class="ref"><button type="button"
         popovertarget="note-17"
         aria-label="Note 17">17</button></sup> who showed that for every <i>n</i> there exists an <i>O</i>(<i>n</i>4)-deep linear decision tree that solves the subset-sum problem with <i>n</i> items. Note that this does not imply any upper bound for an algorithm that should solve the problem for <i>any given n</i>.</p></details></div>
+    <div class="actions" lang="ml">
+    <button class="more" type="button" aria-expanded="false" aria-controls="t4" hidden><span class="closed">Read more in <span data-lang-name="en">en</span></span><span class="opened">Show less</span></button>
+    <button class="translate" type="button" hidden><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m17.835 19-1.248-3h-4.174l-1.248 3.001H9l4.577-11.005h1.846L20 19zm-4.59-5h2.51L14.5 10.982zM7.618 3H12v2H9.991a8.5 8.5 0 0 1-1.423 4.02q-.24.358-.528.707.634.367 1.379.711l.908.42-.839 1.816-.907-.42a18 18 0 0 1-2.026-1.09c-1.255.979-2.912 1.8-5.076 2.31l-.973.228-.458-1.946.973-.23c1.631-.383 2.885-.954 3.85-1.608C3.29 8.527 2.317 6.884 2.065 5H0V3h5.382l-.724-1.447 1.79-.895L7.617 3ZM4.094 5c.243 1.282.974 2.489 2.29 3.586A6.54 6.54 0 0 0 7.98 5z"/></svg><span class="new">Translate to <span data-lang-name="ml">ml</span></span><span class="edit">Edit the translation</span></button>
+</div>
     <p class="saved-note" lang="ml" hidden>Saved on this page only. This is a prototype: nothing is published.</p>
-</qr-section></div>
-            </section>
-            <section class="spread t-article"
-                     id="section-Solving"
-                     data-spread="article"
-                     data-dimension="neutral">
-                <div class="article-slot"><qr-section class="article-section"
+</qr-section><qr-section class="article-section"
             lang="en"
             data-from="en"
             data-to="ml"
             data-dir="ltr">
-    <div class="head"><h2>Solving</h2><button class="translate" type="button" lang="ml" hidden><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m17.835 19-1.248-3h-4.174l-1.248 3.001H9l4.577-11.005h1.846L20 19zm-4.59-5h2.51L14.5 10.982zM7.618 3H12v2H9.991a8.5 8.5 0 0 1-1.423 4.02q-.24.358-.528.707.634.367 1.379.711l.908.42-.839 1.816-.907-.42a18 18 0 0 1-2.026-1.09c-1.255.979-2.912 1.8-5.076 2.31l-.973.228-.458-1.946.973-.23c1.631-.383 2.885-.954 3.85-1.608C3.29 8.527 2.317 6.884 2.065 5H0V3h5.382l-.724-1.447 1.79-.895L7.617 3ZM4.094 5c.243 1.282.974 2.489 2.29 3.586A6.54 6.54 0 0 0 7.98 5z"/></svg><span class="visually-hidden">Translate to <span data-lang-name="ml">ml</span></span></button></div>
-    <div class="body"><p>Several algorithms are available to solve knapsack problems, based on the dynamic programming approach,<sup class="ref"><button type="button"
+    <div class="head"><h3>Solving</h3></div>
+    <div class="body" id="t5"><p>Several algorithms are available to solve knapsack problems, based on the dynamic programming approach,<sup class="ref"><button type="button"
         popovertarget="note-18"
         aria-label="Note 18">18</button></sup> the <a href="https://www.wikidata.org/wiki/Q897659">branch and bound</a> approach<sup class="ref"><button type="button"
         popovertarget="note-19"
@@ -381,20 +378,18 @@ knapsack(n, W)
         aria-label="Note 18">18</button></sup> and used in the EDUK algorithm.  The smallest such <math alttext="{\displaystyle \alpha }"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>α</mi></mstyle></mrow></semantics></math> defines the <b>threshold</b> of the item <math alttext="{\displaystyle i}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>i</mi></mstyle></mrow></semantics></math>, written  <math alttext="{\displaystyle t_{i}=(\alpha -1)w_{i}}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>t</mi><mrow><mi>i</mi></mrow></msub><mo>=</mo><mo stretchy="false">(</mo><mi>α</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><msub><mi>w</mi><mrow><mi>i</mi></mrow></msub></mstyle></mrow></semantics></math>.  In this case, the optimal solution could contain at most <math alttext="{\displaystyle \alpha -1}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>α</mi><mo>−</mo><mn>1</mn></mstyle></mrow></semantics></math> copies of <math alttext="{\displaystyle i}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>i</mi></mstyle></mrow></semantics></math>.</dd>
 <dt>Multiple dominance</dt><dd>The <math alttext="{\displaystyle i}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>i</mi></mstyle></mrow></semantics></math>-th item is  <b>multiply dominated</b> by a single item <math alttext="{\displaystyle j}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>j</mi></mstyle></mrow></semantics></math>, written as <math alttext="{\displaystyle i\ll _{m}j}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>i</mi><msub><mo>≪</mo><mrow><mi>m</mi></mrow></msub><mi>j</mi></mstyle></mrow></semantics></math>, if <math alttext="{\displaystyle i}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>i</mi></mstyle></mrow></semantics></math> is dominated by some number of copies of <math alttext="{\displaystyle j}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>j</mi></mstyle></mrow></semantics></math>.  Formally, <math alttext="{\displaystyle w_{j}\,x_{j}\ \leq w_{i}}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>w</mi><mrow><mi>j</mi></mrow></msub><mspace width="thinmathspace"></mspace><msub><mi>x</mi><mrow><mi>j</mi></mrow></msub><mtext> </mtext><mo>≤</mo><msub><mi>w</mi><mrow><mi>i</mi></mrow></msub></mstyle></mrow></semantics></math>, and <math alttext="{\displaystyle v_{j}\,x_{j}\ \geq v_{i}}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>v</mi><mrow><mi>j</mi></mrow></msub><mspace width="thinmathspace"></mspace><msub><mi>x</mi><mrow><mi>j</mi></mrow></msub><mtext> </mtext><mo>≥</mo><msub><mi>v</mi><mrow><mi>i</mi></mrow></msub></mstyle></mrow></semantics></math> for some <math alttext="{\displaystyle x_{j}\in Z_{+}}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>x</mi><mrow><mi>j</mi></mrow></msub><mo>∈</mo><msub><mi>Z</mi><mrow><mo>+</mo></mrow></msub></mstyle></mrow></semantics></math> i.e. <math alttext="{\displaystyle J=\{j\},\alpha =1,x_{j}=\lfloor {\frac {w_{i}}{w_{j}}}\rfloor }"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>J</mi><mo>=</mo><mo stretchy="false" fence="false">{</mo><mi>j</mi><mo stretchy="false" fence="false">}</mo><mo>,</mo><mi>α</mi><mo>=</mo><mn>1</mn><mo>,</mo><msub><mi>x</mi><mrow><mi>j</mi></mrow></msub><mo>=</mo><mo stretchy="false" fence="false">⌊</mo><mrow><mfrac><msub><mi>w</mi><mrow><mi>i</mi></mrow></msub><msub><mi>w</mi><mrow><mi>j</mi></mrow></msub></mfrac></mrow><mo stretchy="false" fence="false">⌋</mo></mstyle></mrow></semantics></math>. This dominance could be efficiently used during preprocessing because it can be detected relatively easily.</dd>
 <dt>Modular dominance</dt><dd>Let <math alttext="{\displaystyle b}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>b</mi></mstyle></mrow></semantics></math> be the <i>best item</i>, i.e. <math alttext="{\displaystyle {\frac {v_{b}}{w_{b}}}\geq {\frac {v_{i}}{w_{i}}}\,}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><mrow><mfrac><msub><mi>v</mi><mrow><mi>b</mi></mrow></msub><msub><mi>w</mi><mrow><mi>b</mi></mrow></msub></mfrac></mrow><mo>≥</mo><mrow><mfrac><msub><mi>v</mi><mrow><mi>i</mi></mrow></msub><msub><mi>w</mi><mrow><mi>i</mi></mrow></msub></mfrac></mrow><mspace width="thinmathspace"></mspace></mstyle></mrow></semantics></math> for all <math alttext="{\displaystyle i}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>i</mi></mstyle></mrow></semantics></math>.  This is the item with the greatest density of value. The <math alttext="{\displaystyle i}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>i</mi></mstyle></mrow></semantics></math>-th item is <b>modularly dominated</b> by a single item <math alttext="{\displaystyle j}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>j</mi></mstyle></mrow></semantics></math>, written as <math alttext="{\displaystyle i\ll _{\equiv }j}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>i</mi><msub><mo>≪</mo><mrow><mo>≡</mo></mrow></msub><mi>j</mi></mstyle></mrow></semantics></math>, if <math alttext="{\displaystyle i}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>i</mi></mstyle></mrow></semantics></math> is dominated by <math alttext="{\displaystyle j}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>j</mi></mstyle></mrow></semantics></math> plus several copies of <math alttext="{\displaystyle b}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>b</mi></mstyle></mrow></semantics></math>.  Formally, <math alttext="{\displaystyle w_{j}+tw_{b}\leq w_{i}}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>w</mi><mrow><mi>j</mi></mrow></msub><mo>+</mo><mi>t</mi><msub><mi>w</mi><mrow><mi>b</mi></mrow></msub><mo>≤</mo><msub><mi>w</mi><mrow><mi>i</mi></mrow></msub></mstyle></mrow></semantics></math>, and  <math alttext="{\displaystyle v_{j}+tv_{b}\geq v_{i}}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>v</mi><mrow><mi>j</mi></mrow></msub><mo>+</mo><mi>t</mi><msub><mi>v</mi><mrow><mi>b</mi></mrow></msub><mo>≥</mo><msub><mi>v</mi><mrow><mi>i</mi></mrow></msub></mstyle></mrow></semantics></math> i.e. <math alttext="{\displaystyle J=\{b,j\},\alpha =1,x_{b}=t,x_{j}=1}"><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>J</mi><mo>=</mo><mo stretchy="false" fence="false">{</mo><mi>b</mi><mo>,</mo><mi>j</mi><mo stretchy="false" fence="false">}</mo><mo>,</mo><mi>α</mi><mo>=</mo><mn>1</mn><mo>,</mo><msub><mi>x</mi><mrow><mi>b</mi></mrow></msub><mo>=</mo><mi>t</mi><mo>,</mo><msub><mi>x</mi><mrow><mi>j</mi></mrow></msub><mo>=</mo><mn>1</mn></mstyle></mrow></semantics></math>.</dd></dl></details></div>
+    <div class="actions" lang="ml">
+    <button class="more" type="button" aria-expanded="false" aria-controls="t5" hidden><span class="closed">Read more in <span data-lang-name="en">en</span></span><span class="opened">Show less</span></button>
+    <button class="translate" type="button" hidden><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m17.835 19-1.248-3h-4.174l-1.248 3.001H9l4.577-11.005h1.846L20 19zm-4.59-5h2.51L14.5 10.982zM7.618 3H12v2H9.991a8.5 8.5 0 0 1-1.423 4.02q-.24.358-.528.707.634.367 1.379.711l.908.42-.839 1.816-.907-.42a18 18 0 0 1-2.026-1.09c-1.255.979-2.912 1.8-5.076 2.31l-.973.228-.458-1.946.973-.23c1.631-.383 2.885-.954 3.85-1.608C3.29 8.527 2.317 6.884 2.065 5H0V3h5.382l-.724-1.447 1.79-.895L7.617 3ZM4.094 5c.243 1.282.974 2.489 2.29 3.586A6.54 6.54 0 0 0 7.98 5z"/></svg><span class="new">Translate to <span data-lang-name="ml">ml</span></span><span class="edit">Edit the translation</span></button>
+</div>
     <p class="saved-note" lang="ml" hidden>Saved on this page only. This is a prototype: nothing is published.</p>
-</qr-section></div>
-            </section>
-            <section class="spread t-article"
-                     id="section-Variations"
-                     data-spread="article"
-                     data-dimension="neutral">
-                <div class="article-slot"><qr-section class="article-section"
+</qr-section><qr-section class="article-section"
             lang="en"
             data-from="en"
             data-to="ml"
             data-dir="ltr">
-    <div class="head"><h2>Variations</h2><button class="translate" type="button" lang="ml" hidden><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m17.835 19-1.248-3h-4.174l-1.248 3.001H9l4.577-11.005h1.846L20 19zm-4.59-5h2.51L14.5 10.982zM7.618 3H12v2H9.991a8.5 8.5 0 0 1-1.423 4.02q-.24.358-.528.707.634.367 1.379.711l.908.42-.839 1.816-.907-.42a18 18 0 0 1-2.026-1.09c-1.255.979-2.912 1.8-5.076 2.31l-.973.228-.458-1.946.973-.23c1.631-.383 2.885-.954 3.85-1.608C3.29 8.527 2.317 6.884 2.065 5H0V3h5.382l-.724-1.447 1.79-.895L7.617 3ZM4.094 5c.243 1.282.974 2.489 2.29 3.586A6.54 6.54 0 0 0 7.98 5z"/></svg><span class="visually-hidden">Translate to <span data-lang-name="ml">ml</span></span></button></div>
-    <div class="body"><p>There are many variations of the knapsack problem that have arisen from the vast number of applications of the basic problem. The main variations occur by changing the number of some problem parameter such as the number of items, number of objectives, or even the number of knapsacks.</p><details class="subsection">
+    <div class="head"><h3>Variations</h3></div>
+    <div class="body" id="t6"><p>There are many variations of the knapsack problem that have arisen from the vast number of applications of the basic problem. The main variations occur by changing the number of some problem parameter such as the number of items, number of objectives, or even the number of knapsacks.</p><details class="subsection">
     <summary><h4>Multi-dimensional objective</h4></summary><p>Here, instead of a single objective (e.g. maximizing the monetary profit from the items in the knapsack), there can be several objectives. For example, there could be environmental or social concerns as well as economic goals. Problems frequently addressed include portfolio and transportation logistics optimizations.<sup class="ref"><button type="button"
         popovertarget="note-30"
         aria-label="Note 30">30</button></sup><sup class="ref"><button type="button"
@@ -433,6 +428,10 @@ knapsack(n, W)
         aria-label="Note 42">42</button></sup><sup class="ref"><button type="button"
         popovertarget="note-43"
         aria-label="Note 43">43</button></sup></p></details></div>
+    <div class="actions" lang="ml">
+    <button class="more" type="button" aria-expanded="false" aria-controls="t6" hidden><span class="closed">Read more in <span data-lang-name="en">en</span></span><span class="opened">Show less</span></button>
+    <button class="translate" type="button" hidden><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m17.835 19-1.248-3h-4.174l-1.248 3.001H9l4.577-11.005h1.846L20 19zm-4.59-5h2.51L14.5 10.982zM7.618 3H12v2H9.991a8.5 8.5 0 0 1-1.423 4.02q-.24.358-.528.707.634.367 1.379.711l.908.42-.839 1.816-.907-.42a18 18 0 0 1-2.026-1.09c-1.255.979-2.912 1.8-5.076 2.31l-.973.228-.458-1.946.973-.23c1.631-.383 2.885-.954 3.85-1.608C3.29 8.527 2.317 6.884 2.065 5H0V3h5.382l-.724-1.447 1.79-.895L7.617 3ZM4.094 5c.243 1.282.974 2.489 2.29 3.586A6.54 6.54 0 0 0 7.98 5z"/></svg><span class="new">Translate to <span data-lang-name="ml">ml</span></span><span class="edit">Edit the translation</span></button>
+</div>
     <p class="saved-note" lang="ml" hidden>Saved on this page only. This is a prototype: nothing is published.</p>
 </qr-section></div>
             </section>
@@ -443,8 +442,8 @@ knapsack(n, W)
             <dt class="i-puzzle">ക്വാറ ടോപിക് ഐ.ഡി.</dt>
             <dd><img class="favicon" src="https://favicons.toolforge.org/favicon?url=www.quora.com" alt="" width="16" height="16" loading="lazy"><span class="link"><a href="https://www.quora.com/topic/Knapsack-Problem">Knapsack-Problem</a><button class="src"
         type="button"
-        popovertarget="p1"
-        aria-label="Sources"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15 10-2.78-2.78L9.44 10V1H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2z"/></svg></button><span id="p1" popover class="pop cites"><span class="cite" data-kind="record">
+        popovertarget="p7"
+        aria-label="Sources"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15 10-2.78-2.78L9.44 10V1H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2z"/></svg></button><span id="p7" popover class="pop cites"><span class="cite" data-kind="record">
     <span class="head"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15 10-2.78-2.78L9.44 10V1H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2z"/></svg><span class="title"><a href="https://www.wikidata.org/wiki/Q51711" lang="ml">ക്വോറാ</a></span></span>
 </span></span>
                     </span></dd>
@@ -533,12 +532,12 @@ knapsack(n, W)
     <div><span class="chip"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M11.14 4H14a.69.69 0 0 1 0 .65c-1 .16-1.36.91-1.81 1.83l-1.4 2.75 2.35 5.21h.07l3.52-8.1c.44-1.07.4-1.59-.79-1.7a.68.68 0 0 1 0-.65h3.45a.68.68 0 0 1 0 .65c-1.21.16-1.42.91-1.81 1.83l-4.37 10.08c-.13.3-.24.45-.44.45s-.33-.16-.42-.45l-2.48-5.73-2.72 5.73c-.11.3-.24.45-.44.45s-.31-.16-.42-.45l-4-10.09c-.57-1.4-.6-1.7-1.65-1.8A.68.68 0 0 1 .62 4h3.91a.68.68 0 0 1 0 .65c-1.16.13-1.21.45-.74 1.58l3.41 8.19h.05L9.3 10 7.78 6.45C7.17 5.05 7 4.77 6.24 4.66a.69.69 0 0 1 0-.65h3.32a.68.68 0 0 1 0 .65c-.74.12-.7.45-.19 1.58l.87 2 .08.09 1-2c.57-1.14.64-1.58-.15-1.7a.69.69 0 0 1-.03-.63"/></svg>Wikipedia <b>31</b></span></div>
 </div>
     </div><div data-slot="identifiers">
-        <button class="more" type="button" command="show-modal" commandfor="d2"># 8</button><dialog id="d2" closedby="any">
+        <button class="more" type="button" command="show-modal" commandfor="d8"># 8</button><dialog id="d8" closedby="any">
         <header>
             <h2>8</h2>
             <button type="button"
                     command="close"
-                    commandfor="d2"
+                    commandfor="d8"
                     aria-label="Close">×</button>
         </header>
         <div class="dialog-body"><div class="idlist"><div><span><span class="fb-group"><span class="fb"
@@ -1642,6 +1641,63 @@ document.addEventListener( 'close', ( event ) => {
 		}
 	} );
 } )();
+// Progressive enhancement only: a long text of the fallback article (the
+// lead and each top-level section, a qr-section) shows its start, and
+// "Read more in English" under it shows the whole text. The whole text is
+// in the page: the script adds the class that clamps it (CSS), and the
+// words of both states are in the button. Without this script, the page
+// shows the whole text. A text that is at most 1.5 × the clamp is not
+// clamped: its button stays hidden.
+( () => {
+	const LIMIT = 1.5;
+	const texts = [ ...document.querySelectorAll( 'qr-section' ) ].flatMap( ( section ) => {
+		const body = section.querySelector( ':scope > .body' );
+		const more = section.querySelector( ':scope > .actions > .more' );
+		return body && more ? [ { section, body, more } ] : [];
+	} );
+
+	// Clamp the text when it is long enough; else show it whole. An open
+	// text stays open.
+	const measure = ( { section, body, more } ) => {
+		if ( section.classList.contains( 'open' ) ) {
+			return;
+		}
+		section.classList.add( 'clamped' );
+		const long = body.scrollHeight > LIMIT * body.clientHeight;
+		section.classList.toggle( 'clamped', long );
+		more.hidden = !long;
+	};
+
+	const toggle = ( { section, more }, open ) => {
+		section.classList.toggle( 'open', open );
+		more.setAttribute( 'aria-expanded', String( open ) );
+	};
+
+	for ( const text of texts ) {
+		measure( text );
+		text.more.addEventListener( 'click', () => {
+			const open = !text.section.classList.contains( 'open' );
+			toggle( text, open );
+			// Closed while the reader is past its start: go to its start.
+			if ( !open && text.section.getBoundingClientRect().top < 0 ) {
+				text.section.scrollIntoView();
+			}
+		} );
+		// A link in the hidden part, by Tab: show the whole text.
+		text.body.addEventListener( 'focusin', () => {
+			if ( text.section.classList.contains( 'clamped' ) ) {
+				toggle( text, true );
+			}
+		} );
+	}
+
+	// The width changes the height of a text: measure again.
+	let frame = 0;
+	window.addEventListener( 'resize', () => {
+		cancelAnimationFrame( frame );
+		frame = requestAnimationFrame( () => texts.forEach( measure ) );
+	} );
+} )();
 // The qr-section element: a text of the article in another language (the
 // page language has no article), which the reader translates into the page
 // language. Progressive enhancement only: the server renders the text, and
@@ -1769,7 +1825,7 @@ document.addEventListener( 'close', ( event ) => {
 	customElements.define( 'qr-section', class extends HTMLElement {
 		connectedCallback() {
 			// The section's own button and text, not those of a section in it.
-			this.button = this.querySelector( '.translate' );
+			this.button = this.querySelector( ':scope > .actions > .translate' );
 			this.heading = this.querySelector( ':scope > .head > :is( h2, h3, h4, h5, h6 )' );
 			this.body = this.querySelector( ':scope > .body' );
 			if ( !this.button || !this.body ) {

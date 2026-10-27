@@ -1,0 +1,10 @@
+{#- The actions under a text of the article in another language (the
+    fallback): "Read more in English" shows the whole text (clamp.js);
+    "Translate to ગુજરાતી" opens the editor of its translation
+    (translate.js). Each button has its words for both states; CSS shows
+    one. Hidden: a script shows its button (a page without the scripts
+    shows the whole text and has no editor). -#}
+<div class="actions" lang="{{ ui.view.lang }}">
+    <button class="more" type="button" aria-expanded="false" aria-controls="t{{ n }}" hidden><span class="closed">{{ ui.read_more_label(lang)|safe }}</span><span class="opened">{{ ui.show_less_label() }}</span></button>
+    <button class="translate" type="button" hidden>{{ ui.language_icon()|safe }}<span class="new">{{ ui.translate_label()|safe }}</span><span class="edit">{{ ui.translate_edit_label() }}</span></button>
+</div>

@@ -125,7 +125,7 @@
 	customElements.define( 'qr-section', class extends HTMLElement {
 		connectedCallback() {
 			// The section's own button and text, not those of a section in it.
-			this.button = this.querySelector( '.translate' );
+			this.button = this.querySelector( ':scope > .actions > .translate' );
 			this.heading = this.querySelector( ':scope > .head > :is( h2, h3, h4, h5, h6 )' );
 			this.body = this.querySelector( ':scope > .body' );
 			if ( !this.button || !this.body ) {

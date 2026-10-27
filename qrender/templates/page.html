@@ -89,7 +89,15 @@
         {%- for s in view.spreads_at(false) %}
             {{ ui.spread(s)|safe }}
         {%- endfor %}
-        {#- The sections of the article that no spread shows: a spread each. #}
+        {#- The sections of the article that no spread shows: a spread each;
+            from a fallback article, one spread for all, so the English
+            titles do not fill the contents. #}
+        {%- if let Some(lang) = ui.fallback_sections() %}
+            <section class="spread" id="article" data-spread="article" data-dimension="neutral">
+                <h2><span class="title">{{ ui.from_wikipedia(lang)|safe }}</span></h2>
+                <div class="article-slot">{% for a in view.more_sections %}{{ ui.article_section(a, false)|safe }}{% endfor %}</div>
+            </section>
+        {%- else %}
         {%- for a in view.more_sections %}
             <section class="spread t-article"
                      id="{{ ui.section_id(a) }}"
@@ -98,6 +106,7 @@
                 <div class="article-slot">{{ ui.article_section(a, true)|safe }}</div>
             </section>
         {%- endfor %}
+        {%- endif %}
         {%- if !view.unmatched_sections.is_empty() %}
             <section class="spread t-sheet"
                      data-spread="evidence"

@@ -176,6 +176,8 @@ enum TocTitle<'a> {
     Spread(&'a Label),
     /// A section of the article that is a spread of its own.
     Section(&'a ProseSection),
+    /// The spread of the sections of a fallback article: its language.
+    Fallback(&'a str),
 }
 
 #[derive(Template)]
@@ -227,6 +229,8 @@ struct ArticleSectionHtml<'a> {
     s: &'a ProseSection,
     /// The tag of the title.
     h: &'static str,
+    /// The id of the body of a fallback section (`t{n}`), for its actions.
+    n: Option<u32>,
 }
 
 #[derive(Template)]
@@ -237,9 +241,13 @@ struct TopicArticleHtml<'a> {
 }
 
 #[derive(Template)]
-#[template(path = "parts/translate_button.html")]
-struct TranslateButtonHtml<'a> {
+#[template(path = "parts/text_actions.html")]
+struct TextActionsHtml<'a> {
     ui: &'a Ui<'a>,
+    /// The language of the text.
+    lang: &'a str,
+    /// The id of the body of the text (`t{n}`), which "Read more" shows.
+    n: u32,
 }
 
 #[derive(Template)]
@@ -362,12 +370,20 @@ impl<'v> Ui<'v> {
             .filter(|s| !matches!(s.spread.template, vocab::Template::Identity))
             .filter_map(spread)
             .collect();
-        entries.extend(self.view.more_sections.iter().map(|a| TocEntry {
-            id: self.section_id(a),
-            title: TocTitle::Section(a),
-            dimension: vocab::Dimension::Neutral.name(),
-            end: false,
-        }));
+        match self.fallback_sections() {
+            Some(lang) => entries.push(TocEntry {
+                id: "article".to_string(),
+                title: TocTitle::Fallback(lang),
+                dimension: vocab::Dimension::Neutral.name(),
+                end: false,
+            }),
+            None => entries.extend(self.view.more_sections.iter().map(|a| TocEntry {
+                id: self.section_id(a),
+                title: TocTitle::Section(a),
+                dimension: vocab::Dimension::Neutral.name(),
+                end: false,
+            })),
+        }
         let apparatus = entries.len();
         entries.extend(self.view.spreads_at(true).filter_map(spread));
         if let Some(first) = entries.get_mut(apparatus) {
@@ -510,6 +526,7 @@ impl<'v> Ui<'v> {
             } else {
                 self.section_tag(s.level)
             },
+            n: (!s.local).then(|| self.id()),
         })
     }
 
@@ -597,9 +614,14 @@ impl<'v> Ui<'v> {
         &REFERENCE_ICON
     }
 
-    /// The action to translate a text of the article (translate.js).
-    pub fn translate_button(&self) -> String {
-        render(TranslateButtonHtml { ui: self })
+    /// The actions under a text of the fallback article: read more
+    /// (clamp.js) and translate (translate.js).
+    pub fn text_actions(&self, lang: impl Ref<str>, n: impl Arg<u32>) -> String {
+        render(TextActionsHtml {
+            ui: self,
+            lang: lang.r(),
+            n: n.get(),
+        })
     }
 
     /// The dialog of the page that edits a label in the page language.

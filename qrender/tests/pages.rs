@@ -185,8 +185,8 @@ fn markdown_pages() {
 }
 
 /// An item with few facts (the knapsack problem): the whole lead of the
-/// fallback article, its picture in the place of the head picture, and
-/// each section that no spread shows as a spread of its own.
+/// fallback article after its note, its picture in the place of the head
+/// picture, and the sections that no spread shows in one spread.
 #[test]
 fn the_lead_and_the_sections_of_an_item_with_few_facts() {
     let html = html::page(&view("q864457.ml"), Styles::Inline, None);
@@ -205,9 +205,20 @@ fn the_lead_and_the_sections_of_an_item_with_few_facts() {
     assert!(hero.select(&select("figcaption")).next().is_some());
     assert_eq!(count("[data-slot='hero'] figure.m"), 0);
     assert_eq!(count(".lead figure"), 0);
-    // A spread for each section, its title an h2.
+    // The note before the lead, and the actions under it.
+    assert_eq!(
+        count("[data-slot='lead'] > .fallback-note + qr-section.lead"),
+        1
+    );
+    assert_eq!(
+        count("qr-section.lead > .actions > .more[aria-controls]"),
+        1
+    );
+    // One spread for the sections, each title an h3, with its actions.
+    assert_eq!(count(".t-article"), 0);
+    assert_eq!(count("#article > .article-slot > qr-section > .actions"), 5);
     let titles: Vec<String> = doc
-        .select(&select(".t-article .article-section > .head > h2"))
+        .select(&select("#article .article-section > .head > h3"))
         .map(|h| h.text().collect())
         .collect();
     assert_eq!(
@@ -231,7 +242,8 @@ fn the_lead_and_the_sections_of_an_item_with_few_facts() {
         .position(|(_, end)| *end)
         .map(|i| toc.split_at(i))
         .unwrap();
-    assert_eq!(toc[0].0, "Applications");
+    assert_eq!(toc.len(), 3, "{toc:?}");
+    assert!(toc[0].0.contains("Wikipedia"), "{toc:?}");
     assert_eq!(end.len(), 2, "web presence and the evidence: {toc:?}");
     // The apparatus spreads come after the sections on the page, then the
     // notes of the article.

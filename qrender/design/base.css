@@ -1060,6 +1060,42 @@ dialog.lightbox {
 
 qr-section { display: block; }
 
+/* A long text of the fallback article shows its start (clamp.js adds
+   `clamped`; without the script, the whole text): a fixed height, the
+   end faded. "Read more" opens it. The mask uses only the alpha. */
+qr-section.clamped:not( .open ) > .body {
+	max-block-size: var( --clamp, 10lh );
+	overflow: hidden;
+	mask-image: linear-gradient( to bottom, #000 calc( 100% - 3lh ), transparent );
+}
+
+/* The actions under a text of the fallback article: read more,
+   translate. A row with no visible button takes no space. */
+.actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var( --spacing-50 ) var( --spacing-100 );
+	margin-block: var( --spacing-50 ) 0;
+	font-family: var( --font-family-system-sans );
+
+	&:not( :has( > :not( [hidden] ) ) ) { display: none; }
+
+	& .more {
+		padding: var( --spacing-25 ) 0;
+		border: 0;
+		background: none;
+		color: var( --color-progressive );
+		font: inherit;
+		font-size: var( --font-size-small );
+		font-weight: var( --font-weight-semi-bold );
+		cursor: pointer;
+
+		&:hover { text-decoration: underline; }
+		&[aria-expanded='true'] > .closed,
+		&[aria-expanded='false'] > .opened { display: none; }
+	}
+}
+
 .article-section {
 	font-family: var( --font-family-serif );
 	font-size: var( --font-size-medium );
@@ -1205,12 +1241,13 @@ math { padding-block: 0.2em; }
 }
 
 /* The action to translate a text of the article into the page language:
-   an icon. In the head of a section it keeps its size. */
+   the icon and its words; after a save, "Edit the translation". */
 .translate {
 	flex: none;
-	display: inline-grid;
-	place-items: center;
-	padding: var( --spacing-25 );
+	display: inline-flex;
+	align-items: center;
+	gap: var( --spacing-25 );
+	padding: var( --spacing-25 ) var( --spacing-75 );
 	border: 1px solid var( --border-color-progressive );
 	border-radius: var( --border-radius-base );
 	background-color: var( --background-color-base );
@@ -1222,6 +1259,13 @@ math { padding-block: 0.2em; }
 
 	&:hover { background-color: var( --background-color-progressive-subtle ); }
 	&:disabled { opacity: 0.5; cursor: default; }
+
+	& > .edit { display: none; }
+
+	.translated > .actions > & {
+		& > .new { display: none; }
+		& > .edit { display: inline; }
+	}
 }
 
 /* A section whose translation the reader saved (on the page only): a mark

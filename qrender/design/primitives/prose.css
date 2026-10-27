@@ -10,3 +10,24 @@
 
 	& .source { font-size: var( --font-size-small ); color: var( --color-subtle ); }
 }
+
+/* The lead of the fallback article: a shorter start than a section. */
+qr-section.lead {
+	--clamp: 6lh;
+
+	& > .body { line-height: 1.7; }
+}
+
+/* The note before the lead of the fallback article: the page language
+   has no article; the text is from another one. */
+.fallback-note {
+	margin: 0 0 var( --spacing-100 );
+	padding: var( --spacing-50 ) var( --spacing-75 );
+	border: 1px solid var( --border-color-notice );
+	border-radius: var( --border-radius-base );
+	background-color: var( --background-color-notice-subtle );
+	color: var( --color-notice );
+	font-size: var( --font-size-small );
+	line-height: var( --line-height-small );
+	max-inline-size: 70ch;
+}

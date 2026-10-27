@@ -11,19 +11,23 @@
     </p>
 </div>
 {%- else -%}
-{#- The lead of the article in another language: the reader translates
-    it into the page language (qr-section, translate.js). -#}
+{#- The lead of the article in another language, after a note that says
+    so: it shows the start of its text (clamp.js), and the reader
+    translates it into the page language (qr-section, translate.js). -#}
+{%- let n = ui.id() -%}
+<p class="fallback-note" role="note"><b>{{ ui.fallback_missing()|safe }}</b> {{ ui.fallback_source(a)|safe }}</p>
 <qr-section class="lead"
             lang="{{ a.lang }}"
             data-from="{{ a.lang }}"
             data-to="{{ ui.view.lang }}"
             data-dir="{{ ui.view.dir.name() }}">
-    <div class="body">
+    <div class="body" id="t{{ n }}">
         {{- ui.article_blocks(a.blocks)|safe -}}
     </div>
+    {{ ui.text_actions(a.lang.as_str(), n)|safe }}
     <p class="source">
         <img src="{{ ui.wikipedia_logo() }}" alt="" width="18">
-        <a href="{{ a.url }}">{{ a.host }}</a> · {{ b.languages }} {{ ui.translate_button()|safe }}
+        <a href="{{ a.url }}">{{ a.host }}</a> · {{ b.languages }}
     </p>
     <p class="saved-note" lang="{{ ui.view.lang }}" hidden>{{ ui.msg("qrender-saved") }}</p>
 </qr-section>
