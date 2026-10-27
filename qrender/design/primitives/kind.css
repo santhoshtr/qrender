@@ -1,10 +1,5 @@
 /* kind */
 
 .kind {
-	display: flex;
-	flex-wrap: wrap;
-	gap: var( --spacing-50 ) var( --spacing-150 );
-	font-size: var( --font-size-small );
-
-	& .k { display: block; color: var( --color-subtle ); font-size: var( --font-size-x-small ); }
+	margin: var( --spacing-50 ) 0 0;
 }

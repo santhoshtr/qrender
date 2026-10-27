@@ -20,49 +20,6 @@ expression: composition
             "item": "Q3870"
           }
         ],
-        "band": [
-          {
-            "primitive": "media",
-            "role": "banner",
-            "statement": "Q3870-A0C31207-3629-4146-A40C-F782B53A3B8E",
-            "pid": "P948",
-            "file": "Nairobi banner.jpg",
-            "rank": "normal",
-            "provenance": "none",
-            "kind": "photo",
-            "aspect": 7.0,
-            "megapixels": 0.63,
-            "credit": {
-              "artist": "Nairobi_Skyline2.jpg: Nite Owl\nderivative work: Jjtkk",
-              "license": "CC BY 3.0"
-            }
-          }
-        ],
-        "lead": [
-          {
-            "primitive": "prose",
-            "source": "lead",
-            "languages": 210
-          }
-        ],
-        "hero": [
-          {
-            "primitive": "media",
-            "role": "identity",
-            "statement": "Q3870-CDB8853E-E3FF-4FFB-A1C4-D361D1941C09",
-            "pid": "P18",
-            "file": "Nairobi, view from KICC.JPG",
-            "rank": "normal",
-            "provenance": "imported",
-            "kind": "photo",
-            "aspect": 1.3333,
-            "megapixels": 5.88,
-            "credit": {
-              "artist": "Daryona",
-              "license": "CC BY-SA 3.0"
-            }
-          }
-        ],
         "kind": [
           {
             "primitive": "kind",
@@ -116,6 +73,49 @@ expression: composition
                 ]
               }
             ]
+          }
+        ],
+        "band": [
+          {
+            "primitive": "media",
+            "role": "banner",
+            "statement": "Q3870-A0C31207-3629-4146-A40C-F782B53A3B8E",
+            "pid": "P948",
+            "file": "Nairobi banner.jpg",
+            "rank": "normal",
+            "provenance": "none",
+            "kind": "photo",
+            "aspect": 7.0,
+            "megapixels": 0.63,
+            "credit": {
+              "artist": "Nairobi_Skyline2.jpg: Nite Owl\nderivative work: Jjtkk",
+              "license": "CC BY 3.0"
+            }
+          }
+        ],
+        "lead": [
+          {
+            "primitive": "prose",
+            "source": "lead",
+            "languages": 210
+          }
+        ],
+        "hero": [
+          {
+            "primitive": "media",
+            "role": "identity",
+            "statement": "Q3870-CDB8853E-E3FF-4FFB-A1C4-D361D1941C09",
+            "pid": "P18",
+            "file": "Nairobi, view from KICC.JPG",
+            "rank": "normal",
+            "provenance": "imported",
+            "kind": "photo",
+            "aspect": 1.3333,
+            "megapixels": 5.88,
+            "credit": {
+              "artist": "Daryona",
+              "license": "CC BY-SA 3.0"
+            }
           }
         ]
       }

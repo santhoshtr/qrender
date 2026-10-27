@@ -20,6 +20,27 @@ expression: composition
             "item": "Q8023"
           }
         ],
+        "kind": [
+          {
+            "primitive": "kind",
+            "chain": [
+              {
+                "pid": "P31",
+                "values": [
+                  {
+                    "statement": "Q8023-85D027D1-FA30-4A21-BD1B-811178123945",
+                    "pid": "P31",
+                    "item": "Q5",
+                    "rank": "normal",
+                    "provenance": "sourced",
+                    "class": true,
+                    "shown": true
+                  }
+                ]
+              }
+            ]
+          }
+        ],
         "lead": [
           {
             "primitive": "prose",
@@ -49,27 +70,6 @@ expression: composition
               "artist": "Kingkongphoto & www.celebrity-photos.com from Laurel",
               "license": "CC BY-SA 2.0"
             }
-          }
-        ],
-        "kind": [
-          {
-            "primitive": "kind",
-            "chain": [
-              {
-                "pid": "P31",
-                "values": [
-                  {
-                    "statement": "Q8023-85D027D1-FA30-4A21-BD1B-811178123945",
-                    "pid": "P31",
-                    "item": "Q5",
-                    "rank": "normal",
-                    "provenance": "sourced",
-                    "class": true,
-                    "shown": true
-                  }
-                ]
-              }
-            ]
           }
         ]
       }

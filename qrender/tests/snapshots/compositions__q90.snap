@@ -20,67 +20,6 @@ expression: composition
             "item": "Q90"
           }
         ],
-        "band": [
-          {
-            "primitive": "media",
-            "role": "banner",
-            "statement": "Q90-18a2da18-45bb-4ae6-2b60-11b8da45220e",
-            "pid": "P948",
-            "file": "Paris banner.jpg",
-            "rank": "normal",
-            "provenance": "none",
-            "kind": "photo",
-            "aspect": 7.0,
-            "megapixels": 0.63,
-            "credit": {
-              "artist": "Paris Night.jpg: Benh LIEU SONG\nderivative work: ויקיג'אנקי",
-              "license": "CC BY-SA 4.0"
-            }
-          }
-        ],
-        "lead": [
-          {
-            "primitive": "prose",
-            "source": "lead",
-            "languages": 290
-          }
-        ],
-        "hero": [
-          {
-            "primitive": "media",
-            "role": "identity",
-            "statement": "q90-B681A1D1-2BEE-4BA2-8B9A-F776A30E0100",
-            "pid": "P18",
-            "file": "La Tour Eiffel vue de la Tour Saint-Jacques, Paris août 2014 (2).jpg",
-            "rank": "normal",
-            "provenance": "imported",
-            "qualifiers": [
-              {
-                "pid": "P180",
-                "item": "Q243"
-              },
-              {
-                "pid": "P180",
-                "item": "Q1471"
-              },
-              {
-                "pid": "P585",
-                "year": 2014
-              },
-              {
-                "pid": "P7108",
-                "item": "Q1431547"
-              }
-            ],
-            "kind": "photo",
-            "aspect": 1.6,
-            "megapixels": 13.18,
-            "credit": {
-              "artist": "Yann Caradec from Paris, France",
-              "license": "CC BY-SA 2.0"
-            }
-          }
-        ],
         "kind": [
           {
             "primitive": "kind",
@@ -320,6 +259,67 @@ expression: composition
                 ]
               }
             ]
+          }
+        ],
+        "band": [
+          {
+            "primitive": "media",
+            "role": "banner",
+            "statement": "Q90-18a2da18-45bb-4ae6-2b60-11b8da45220e",
+            "pid": "P948",
+            "file": "Paris banner.jpg",
+            "rank": "normal",
+            "provenance": "none",
+            "kind": "photo",
+            "aspect": 7.0,
+            "megapixels": 0.63,
+            "credit": {
+              "artist": "Paris Night.jpg: Benh LIEU SONG\nderivative work: ויקיג'אנקי",
+              "license": "CC BY-SA 4.0"
+            }
+          }
+        ],
+        "lead": [
+          {
+            "primitive": "prose",
+            "source": "lead",
+            "languages": 290
+          }
+        ],
+        "hero": [
+          {
+            "primitive": "media",
+            "role": "identity",
+            "statement": "q90-B681A1D1-2BEE-4BA2-8B9A-F776A30E0100",
+            "pid": "P18",
+            "file": "La Tour Eiffel vue de la Tour Saint-Jacques, Paris août 2014 (2).jpg",
+            "rank": "normal",
+            "provenance": "imported",
+            "qualifiers": [
+              {
+                "pid": "P180",
+                "item": "Q243"
+              },
+              {
+                "pid": "P180",
+                "item": "Q1471"
+              },
+              {
+                "pid": "P585",
+                "year": 2014
+              },
+              {
+                "pid": "P7108",
+                "item": "Q1431547"
+              }
+            ],
+            "kind": "photo",
+            "aspect": 1.6,
+            "megapixels": 13.18,
+            "credit": {
+              "artist": "Yann Caradec from Paris, France",
+              "license": "CC BY-SA 2.0"
+            }
           }
         ]
       }

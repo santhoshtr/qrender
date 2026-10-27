@@ -1,9 +1,11 @@
-<div class="kind box">
+{#- The classes and the container of the item, one line under the
+    description, without the labels of the properties. -#}
+{%- if !b.chain.is_empty() -%}
+<p class="kind">
     {%- for link in b.chain -%}
-        <div>
-            <span class="k">{{ ui.text(ui.property(link.pid), true)|safe }}</span>
-            {%- for v in link.values -%}{%- if v.shown != Some(false) -%}{%- if !loop.first %}, {% endif -%}{{ ui.part(ui.value_part(&v.value))|safe }}{%- endif -%}{%- endfor -%}
-            {%- let rest = ui.hidden_refs(link.values.as_slice()) -%}{%- if rest > 0 %} <span class="note">+{{ rest }}</span>{% endif -%}
-        </div>
+        {%- if !loop.first %} · {% endif -%}
+        {%- for v in link.values -%}{%- if v.shown != Some(false) -%}{%- if !loop.first %}, {% endif -%}{{ ui.part(ui.value_part(&v.value))|safe }}{%- endif -%}{%- endfor -%}
+        {%- let rest = ui.hidden_refs(link.values.as_slice()) -%}{%- if rest > 0 %} <span class="note">+{{ rest }}</span>{% endif -%}
     {%- endfor -%}
-</div>
+</p>
+{%- endif -%}

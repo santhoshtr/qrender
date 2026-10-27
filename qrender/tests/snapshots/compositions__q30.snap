@@ -27,49 +27,6 @@ expression: composition
             }
           }
         ],
-        "band": [
-          {
-            "primitive": "media",
-            "role": "banner",
-            "statement": "Q30-E7369C46-4565-45D2-9CFE-F1B65BE63BAB",
-            "pid": "P948",
-            "file": "Statue of Liberty light banner.jpg",
-            "rank": "normal",
-            "provenance": "none",
-            "kind": "photo",
-            "aspect": 7.0,
-            "megapixels": 6.13,
-            "credit": {
-              "artist": "https://www.flickr.com/photos/buggolo/ Stefano Brivio",
-              "license": "CC BY 2.0"
-            }
-          }
-        ],
-        "lead": [
-          {
-            "primitive": "prose",
-            "source": "lead",
-            "languages": 334
-          }
-        ],
-        "hero": [
-          {
-            "primitive": "media",
-            "role": "identity",
-            "statement": "Q30-a4d30a14-4911-3f36-e26e-ed7ef982ad3f",
-            "pid": "P18",
-            "file": "United States - Location Map (2013) - USA - UNOCHA.svg",
-            "rank": "normal",
-            "provenance": "none",
-            "kind": "drawing",
-            "aspect": 1.0,
-            "megapixels": 0.06,
-            "credit": {
-              "artist": "UN Office for the Coordination of Humanitarian Affairs (OCHA)",
-              "license": "CC BY 3.0"
-            }
-          }
-        ],
         "kind": [
           {
             "primitive": "kind",
@@ -160,6 +117,49 @@ expression: composition
                 ]
               }
             ]
+          }
+        ],
+        "band": [
+          {
+            "primitive": "media",
+            "role": "banner",
+            "statement": "Q30-E7369C46-4565-45D2-9CFE-F1B65BE63BAB",
+            "pid": "P948",
+            "file": "Statue of Liberty light banner.jpg",
+            "rank": "normal",
+            "provenance": "none",
+            "kind": "photo",
+            "aspect": 7.0,
+            "megapixels": 6.13,
+            "credit": {
+              "artist": "https://www.flickr.com/photos/buggolo/ Stefano Brivio",
+              "license": "CC BY 2.0"
+            }
+          }
+        ],
+        "lead": [
+          {
+            "primitive": "prose",
+            "source": "lead",
+            "languages": 334
+          }
+        ],
+        "hero": [
+          {
+            "primitive": "media",
+            "role": "identity",
+            "statement": "Q30-a4d30a14-4911-3f36-e26e-ed7ef982ad3f",
+            "pid": "P18",
+            "file": "United States - Location Map (2013) - USA - UNOCHA.svg",
+            "rank": "normal",
+            "provenance": "none",
+            "kind": "drawing",
+            "aspect": 1.0,
+            "megapixels": 0.06,
+            "credit": {
+              "artist": "UN Office for the Coordination of Humanitarian Affairs (OCHA)",
+              "license": "CC BY 3.0"
+            }
           }
         ]
       }

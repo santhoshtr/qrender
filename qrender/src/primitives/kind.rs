@@ -1,5 +1,6 @@
 //! Kind: what the item is (its classes) and where it is (its current
-//! container), under the head picture.
+//! container), one line under the description. The labels of the
+//! properties are not shown: "instance of" is not natural in any language.
 
 use content::Pid;
 use schemars::JsonSchema;
@@ -65,13 +66,19 @@ pub fn build(c: &mut Composer) -> Kind {
     Kind { chain }
 }
 
-/// Markdown: every class and the container (no "+N" in text).
+/// Markdown: every class and the container, one line (no "+N" in text).
 pub fn markdown(b: &Kind, md: &mut crate::render::markdown::Markdown) {
-    for link in &b.chain {
-        let values: Vec<String> = link.values.iter().map(|v| md.value(v)).collect();
-        md.item(&md.property(link.pid), &values.join(", "));
+    let links: Vec<String> = b
+        .chain
+        .iter()
+        .map(|link| {
+            let values: Vec<String> = link.values.iter().map(|v| md.value(v)).collect();
+            values.join(", ")
+        })
+        .collect();
+    if !links.is_empty() {
+        md.paragraph(&links.join(" · "));
     }
-    md.end();
 }
 
 #[cfg(test)]

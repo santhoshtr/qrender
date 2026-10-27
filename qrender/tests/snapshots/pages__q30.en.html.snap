@@ -105,6 +105,8 @@ expression: html
             country located primarily in North America
         </p>
     </div>
+    </div><div data-slot="kind">
+        <p class="kind"><a href="https://www.wikidata.org/wiki/Q6256">country</a>, <a href="https://www.wikidata.org/wiki/Q3624078">sovereign state</a>, <a href="https://www.wikidata.org/wiki/Q1489259">superpower</a>, <a href="https://www.wikidata.org/wiki/Q1520223">constitutional republic</a>, <a href="https://www.wikidata.org/wiki/Q5035794">capitalist state</a> <span class="note">+1</span></p>
     </div><div data-slot="band">
         <div class="band"> <figure class="m k-photo" style="--a:7">
         <button class="zoom"
@@ -205,9 +207,6 @@ expression: html
         </p>
     </div>
 </dialog>
-    </div><div data-slot="kind">
-        <div class="kind box"><div>
-            <span class="k">instance of</span><a href="https://www.wikidata.org/wiki/Q6256">country</a>, <a href="https://www.wikidata.org/wiki/Q3624078">sovereign state</a>, <a href="https://www.wikidata.org/wiki/Q1489259">superpower</a>, <a href="https://www.wikidata.org/wiki/Q1520223">constitutional republic</a>, <a href="https://www.wikidata.org/wiki/Q5035794">capitalist state</a> <span class="note">+1</span></div></div>
     </div></section>
             <section class="spread t-columns" id="names"
          data-spread="names"

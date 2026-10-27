@@ -20,49 +20,6 @@ expression: composition
             "item": "Q2"
           }
         ],
-        "lead": [
-          {
-            "primitive": "prose",
-            "source": "lead",
-            "languages": 320
-          }
-        ],
-        "hero": [
-          {
-            "primitive": "media",
-            "role": "identity",
-            "statement": "Q2-89ba631a-4945-b81c-6c49-a8021f51f8e5",
-            "pid": "P18",
-            "file": "Meteosat-12-fci-march-equinox-2025-noon.jpg",
-            "rank": "preferred",
-            "provenance": "none",
-            "qualifiers": [
-              {
-                "pid": "P585",
-                "year": 2025
-              },
-              {
-                "pid": "P2096",
-                "text": "ݢمبر بومي دأمبيل اوليه ساتليت ميتيوسات-12",
-                "lang": "ms-arab"
-              },
-              {
-                "pid": "P7452",
-                "item": "Q71533355"
-              }
-            ],
-            "kind": "photo",
-            "aspect": 1.0,
-            "megapixels": 150.33,
-            "assessed": [
-              "Featured pictures on Wikimedia Commons"
-            ],
-            "credit": {
-              "artist": "EUMETSAT",
-              "license": "Attribution"
-            }
-          }
-        ],
         "kind": [
           {
             "primitive": "kind",
@@ -132,6 +89,49 @@ expression: composition
                 ]
               }
             ]
+          }
+        ],
+        "lead": [
+          {
+            "primitive": "prose",
+            "source": "lead",
+            "languages": 320
+          }
+        ],
+        "hero": [
+          {
+            "primitive": "media",
+            "role": "identity",
+            "statement": "Q2-89ba631a-4945-b81c-6c49-a8021f51f8e5",
+            "pid": "P18",
+            "file": "Meteosat-12-fci-march-equinox-2025-noon.jpg",
+            "rank": "preferred",
+            "provenance": "none",
+            "qualifiers": [
+              {
+                "pid": "P585",
+                "year": 2025
+              },
+              {
+                "pid": "P2096",
+                "text": "ݢمبر بومي دأمبيل اوليه ساتليت ميتيوسات-12",
+                "lang": "ms-arab"
+              },
+              {
+                "pid": "P7452",
+                "item": "Q71533355"
+              }
+            ],
+            "kind": "photo",
+            "aspect": 1.0,
+            "megapixels": 150.33,
+            "assessed": [
+              "Featured pictures on Wikimedia Commons"
+            ],
+            "credit": {
+              "artist": "EUMETSAT",
+              "license": "Attribution"
+            }
           }
         ]
       }

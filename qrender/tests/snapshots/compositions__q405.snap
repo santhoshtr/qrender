@@ -20,69 +20,6 @@ expression: composition
             "item": "Q405"
           }
         ],
-        "band": [
-          {
-            "primitive": "media",
-            "role": "banner",
-            "statement": "Q405-c32ef324-4803-1768-232f-3665cfe151b5",
-            "pid": "P948",
-            "file": "Apollo 17 Moon Panorama banner.jpg",
-            "rank": "normal",
-            "provenance": "none",
-            "kind": "photo",
-            "aspect": 6.9982,
-            "megapixels": 20.42,
-            "credit": {
-              "artist": "NASA",
-              "license": "Public domain"
-            }
-          }
-        ],
-        "lead": [
-          {
-            "primitive": "prose",
-            "source": "lead",
-            "languages": 295
-          }
-        ],
-        "hero": [
-          {
-            "primitive": "media",
-            "role": "identity",
-            "statement": "q405-5E7C06D1-2BE9-4393-AA51-A4BFFFCB91D3",
-            "pid": "P18",
-            "file": "FullMoon2010.jpg",
-            "rank": "preferred",
-            "provenance": "none",
-            "qualifiers": [
-              {
-                "pid": "P2096",
-                "text": "Full moon as seen from North America in Earth's Northern Hemisphere",
-                "lang": "en"
-              },
-              {
-                "pid": "P2096",
-                "text": "Pleine Lune vue depuis l'Amérique du Nord, dans l'hémisphère nord de la Terre",
-                "lang": "fr"
-              },
-              {
-                "pid": "P2096",
-                "text": "Pełnia Księżyca widoczna z Ameryki Północnej, na półkuli północnej Ziemi",
-                "lang": "pl"
-              }
-            ],
-            "kind": "photo",
-            "aspect": 1.0522,
-            "megapixels": 6.33,
-            "assessed": [
-              "Featured pictures on Wikimedia Commons"
-            ],
-            "credit": {
-              "artist": "Gregory H. Revera",
-              "license": "CC BY-SA 3.0"
-            }
-          }
-        ],
         "kind": [
           {
             "primitive": "kind",
@@ -145,6 +82,69 @@ expression: composition
                 ]
               }
             ]
+          }
+        ],
+        "band": [
+          {
+            "primitive": "media",
+            "role": "banner",
+            "statement": "Q405-c32ef324-4803-1768-232f-3665cfe151b5",
+            "pid": "P948",
+            "file": "Apollo 17 Moon Panorama banner.jpg",
+            "rank": "normal",
+            "provenance": "none",
+            "kind": "photo",
+            "aspect": 6.9982,
+            "megapixels": 20.42,
+            "credit": {
+              "artist": "NASA",
+              "license": "Public domain"
+            }
+          }
+        ],
+        "lead": [
+          {
+            "primitive": "prose",
+            "source": "lead",
+            "languages": 295
+          }
+        ],
+        "hero": [
+          {
+            "primitive": "media",
+            "role": "identity",
+            "statement": "q405-5E7C06D1-2BE9-4393-AA51-A4BFFFCB91D3",
+            "pid": "P18",
+            "file": "FullMoon2010.jpg",
+            "rank": "preferred",
+            "provenance": "none",
+            "qualifiers": [
+              {
+                "pid": "P2096",
+                "text": "Full moon as seen from North America in Earth's Northern Hemisphere",
+                "lang": "en"
+              },
+              {
+                "pid": "P2096",
+                "text": "Pleine Lune vue depuis l'Amérique du Nord, dans l'hémisphère nord de la Terre",
+                "lang": "fr"
+              },
+              {
+                "pid": "P2096",
+                "text": "Pełnia Księżyca widoczna z Ameryki Północnej, na półkuli północnej Ziemi",
+                "lang": "pl"
+              }
+            ],
+            "kind": "photo",
+            "aspect": 1.0522,
+            "megapixels": 6.33,
+            "assessed": [
+              "Featured pictures on Wikimedia Commons"
+            ],
+            "credit": {
+              "artist": "Gregory H. Revera",
+              "license": "CC BY-SA 3.0"
+            }
           }
         ]
       }

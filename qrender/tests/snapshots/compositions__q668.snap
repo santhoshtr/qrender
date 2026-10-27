@@ -27,49 +27,6 @@ expression: composition
             }
           }
         ],
-        "band": [
-          {
-            "primitive": "media",
-            "role": "banner",
-            "statement": "Q668-0FB4108E-697C-412B-A6B6-652A6FE36382",
-            "pid": "P948",
-            "file": "TajMahal Banner.jpg",
-            "rank": "normal",
-            "provenance": "none",
-            "kind": "photo",
-            "aspect": 6.9825,
-            "megapixels": 11.0,
-            "credit": {
-              "artist": "Panoramic View of TajMahal.jpg: Kumaravels\nderivative work: ויקיג'אנקי",
-              "license": "CC BY 2.5 in"
-            }
-          }
-        ],
-        "lead": [
-          {
-            "primitive": "prose",
-            "source": "lead",
-            "languages": 313
-          }
-        ],
-        "hero": [
-          {
-            "primitive": "media",
-            "role": "identity",
-            "statement": "Q668-412281F5-0803-49EA-A934-EB72FF067186",
-            "pid": "P18",
-            "file": "India-locator-map-blank.svg",
-            "rank": "normal",
-            "provenance": "none",
-            "kind": "drawing",
-            "aspect": 0.857,
-            "megapixels": 2.58,
-            "credit": {
-              "artist": "",
-              "license": "CC BY-SA 3.0"
-            }
-          }
-        ],
         "kind": [
           {
             "primitive": "kind",
@@ -123,6 +80,49 @@ expression: composition
                 ]
               }
             ]
+          }
+        ],
+        "band": [
+          {
+            "primitive": "media",
+            "role": "banner",
+            "statement": "Q668-0FB4108E-697C-412B-A6B6-652A6FE36382",
+            "pid": "P948",
+            "file": "TajMahal Banner.jpg",
+            "rank": "normal",
+            "provenance": "none",
+            "kind": "photo",
+            "aspect": 6.9825,
+            "megapixels": 11.0,
+            "credit": {
+              "artist": "Panoramic View of TajMahal.jpg: Kumaravels\nderivative work: ויקיג'אנקי",
+              "license": "CC BY 2.5 in"
+            }
+          }
+        ],
+        "lead": [
+          {
+            "primitive": "prose",
+            "source": "lead",
+            "languages": 313
+          }
+        ],
+        "hero": [
+          {
+            "primitive": "media",
+            "role": "identity",
+            "statement": "Q668-412281F5-0803-49EA-A934-EB72FF067186",
+            "pid": "P18",
+            "file": "India-locator-map-blank.svg",
+            "rank": "normal",
+            "provenance": "none",
+            "kind": "drawing",
+            "aspect": 0.857,
+            "megapixels": 2.58,
+            "credit": {
+              "artist": "",
+              "license": "CC BY-SA 3.0"
+            }
           }
         ]
       }

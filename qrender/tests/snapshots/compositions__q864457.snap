@@ -20,31 +20,6 @@ expression: composition
             "item": "Q864457"
           }
         ],
-        "lead": [
-          {
-            "primitive": "prose",
-            "source": "lead",
-            "languages": 31
-          }
-        ],
-        "hero": [
-          {
-            "primitive": "media",
-            "role": "identity",
-            "statement": "Q864457-277f09fc-4f0d-918e-2152-036bede7e515",
-            "pid": "P18",
-            "file": "Knapsack.svg",
-            "rank": "normal",
-            "provenance": "none",
-            "kind": "drawing",
-            "aspect": 1.1544,
-            "megapixels": 0.2,
-            "credit": {
-              "artist": "",
-              "license": "CC BY-SA 2.5"
-            }
-          }
-        ],
         "kind": [
           {
             "primitive": "kind",
@@ -76,6 +51,31 @@ expression: composition
                 ]
               }
             ]
+          }
+        ],
+        "lead": [
+          {
+            "primitive": "prose",
+            "source": "lead",
+            "languages": 31
+          }
+        ],
+        "hero": [
+          {
+            "primitive": "media",
+            "role": "identity",
+            "statement": "Q864457-277f09fc-4f0d-918e-2152-036bede7e515",
+            "pid": "P18",
+            "file": "Knapsack.svg",
+            "rank": "normal",
+            "provenance": "none",
+            "kind": "drawing",
+            "aspect": 1.1544,
+            "megapixels": 0.2,
+            "credit": {
+              "artist": "",
+              "license": "CC BY-SA 2.5"
+            }
           }
         ]
       }

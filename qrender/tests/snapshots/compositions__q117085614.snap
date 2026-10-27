@@ -20,6 +20,27 @@ expression: composition
             "item": "Q117085614"
           }
         ],
+        "kind": [
+          {
+            "primitive": "kind",
+            "chain": [
+              {
+                "pid": "P31",
+                "values": [
+                  {
+                    "statement": "Q117085614-698BB8CA-5FD3-4488-A2FF-A5D3C9CF6EC2",
+                    "pid": "P31",
+                    "item": "Q11424",
+                    "rank": "normal",
+                    "provenance": "sourced",
+                    "class": true,
+                    "shown": true
+                  }
+                ]
+              }
+            ]
+          }
+        ],
         "lead": [
           {
             "primitive": "prose",
@@ -49,27 +70,6 @@ expression: composition
               "artist": "Sevgonlernassau",
               "license": "CC BY 4.0"
             }
-          }
-        ],
-        "kind": [
-          {
-            "primitive": "kind",
-            "chain": [
-              {
-                "pid": "P31",
-                "values": [
-                  {
-                    "statement": "Q117085614-698BB8CA-5FD3-4488-A2FF-A5D3C9CF6EC2",
-                    "pid": "P31",
-                    "item": "Q11424",
-                    "rank": "normal",
-                    "provenance": "sourced",
-                    "class": true,
-                    "shown": true
-                  }
-                ]
-              }
-            ]
           }
         ]
       }
