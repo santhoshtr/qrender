@@ -444,12 +444,11 @@ pub fn provenance_words(p: Provenance) -> &'static str {
     }
 }
 
-/// The text of cleaned article HTML: tags removed, a ruby gloss in
-/// parentheses, the mark of a note as its footnote mark (`[^3]`), a
-/// formula as its TeX (`$…$`), entities decoded.
+/// The text of cleaned article HTML: tags removed, the mark of a note as
+/// its footnote mark (`[^3]`), a formula as its TeX (`$…$`), entities
+/// decoded.
 pub fn plain(html: &str) -> String {
-    let html = html.replace("<rt>", " (").replace("</rt>", ")");
-    let html = note_marks(&html);
+    let html = note_marks(html);
     let html = formulas(&html);
     let mut out = String::with_capacity(html.len());
     let mut in_tag = false;
@@ -537,10 +536,8 @@ mod tests {
     #[test]
     fn plain_text_of_article_html() {
         assert_eq!(
-            plain(
-                r#"capital of <ruby><a href="x">Kenya</a><rt><span>കെനിയ</span></rt></ruby> &amp; more"#
-            ),
-            "capital of Kenya (കെനിയ) & more"
+            plain(r#"capital of <a href="x">Kenya</a> &amp; more"#),
+            "capital of Kenya & more"
         );
     }
 

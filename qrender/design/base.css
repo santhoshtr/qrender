@@ -1836,17 +1836,6 @@ dialog:is( .translator, .label-editor ) .actions {
 /* The picture of the item itself needs no property name. */
 [data-spread='identity'] .m figcaption > span:first-child { display: none; }
 
-ruby rt {
-	font-size: 0.6em;
-	color: var( --color-option-green );
-	/* Chromium spreads ruby text over the width of the base word, even with
-	   ruby-align: center, and that splits the clusters of Indic scripts
-	   ("કેન્યા" became "ક ેન્યા"). One inline block cannot be split. */
-	ruby-align: center;
-
-	& > span { display: inline-block; }
-}
-
 .bars {
 	display: flex;
 	flex-direction: column;

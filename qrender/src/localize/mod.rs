@@ -357,7 +357,6 @@ impl<'a> Localizer<'a> {
             items: &article.links,
             source,
             page: self.lang.as_str(),
-            labels: &self.text.labels,
             notes: self.numbering.as_ref(),
             external,
         };

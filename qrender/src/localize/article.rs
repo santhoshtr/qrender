@@ -1,4 +1,4 @@
-//! Article prose from Wikipedia: cleaned, its links rewritten, glossed.
+//! Article prose from Wikipedia: cleaned, its links rewritten.
 //!
 //! One pass of an HTML rewriter does all of it, and it is also the
 //! sanitizer: the renderer prints the result as HTML, so only these can
@@ -9,7 +9,6 @@
 //! - `sup` with the number of a note on the page: `<sup data-note="3">`;
 //! - the blocks of a section, without attributes: `p`, `ul`, `ol`, `li`,
 //!   `dl`, `dt`, `dd`, `blockquote`, `pre`, and `code`;
-//! - `ruby`, `rt` and `span`, which this module adds for a gloss;
 //! - a formula: the MathML elements of `content::html::MATH_ELEMENTS`,
 //!   with the attributes of `MATH_ATTRIBUTES` only.
 //!
@@ -19,7 +18,7 @@
 use std::cell::RefCell;
 
 use content::html::{MATH_ATTRIBUTES, MATH_ELEMENTS};
-use content::{EntityId, Note, Qid, Term};
+use content::{EntityId, Note, Qid};
 use indexmap::IndexMap;
 use lol_html::html_content::{ContentType, Element};
 use lol_html::{RewriteStrSettings, doc_comments, element, rewrite_str};
@@ -43,7 +42,6 @@ pub struct Links<'a> {
     pub source: &'a str,
     /// The language of the page.
     pub page: &'a str,
-    pub labels: &'a IndexMap<EntityId, Term>,
     /// The numbers of the notes. None: marks are removed.
     pub notes: Option<&'a Numbering<'a>>,
     /// Links to other sites stay (the text of a citation).
@@ -93,7 +91,7 @@ pub fn article_url(lang: &str, title: &str) -> String {
 /// A paragraph of article HTML, cleaned and with its links rewritten:
 /// - in the page language, a link goes to the article in that language;
 /// - in another language (the fallback article), a link goes to the item
-///   on Wikidata, with the item's label in the page language as a gloss.
+///   on Wikidata.
 pub fn rewrite(paragraph: &str, links: &Links) -> String {
     let settings = RewriteStrSettings::new()
         .append_element_content_handler(element!("*", |el| {
@@ -189,17 +187,6 @@ fn link(el: &mut Element, links: &Links) {
         return;
     };
     set_href(el, &entity_url(EntityId::Item(*item)));
-    let gloss = links
-        .labels
-        .get(&EntityId::Item(*item))
-        .and_then(|t| t.label.as_ref())
-        .filter(|l| l.lang.as_str() == links.page);
-    if let Some(gloss) = gloss {
-        el.before("<ruby>", ContentType::Html);
-        el.after("</span></rt></ruby>", ContentType::Html);
-        el.after(&gloss.text, ContentType::Text);
-        el.after("<rt><span>", ContentType::Html);
-    }
 }
 
 fn set_href(el: &mut Element, href: &str) {
@@ -225,19 +212,12 @@ fn keep_attributes(el: &mut Element, keep: &[&str]) {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use content::LangText;
 
-    fn links<'a>(
-        items: &'a IndexMap<String, Qid>,
-        labels: &'a IndexMap<EntityId, Term>,
-        source: &'a str,
-        page: &'a str,
-    ) -> Links<'a> {
+    fn links<'a>(items: &'a IndexMap<String, Qid>, source: &'a str, page: &'a str) -> Links<'a> {
         Links {
             items,
             source,
             page,
-            labels,
             notes: None,
             external: false,
         }
@@ -245,8 +225,8 @@ mod tests {
 
     #[test]
     fn local_article_links_stay_in_the_wiki() {
-        let (items, labels) = (IndexMap::new(), IndexMap::new());
-        let l = links(&items, &labels, "en", "en");
+        let items = IndexMap::new();
+        let l = links(&items, "en", "en");
         let html = r#"<a href="/wiki/Nairobi_River" title="Nairobi River" class="mw-redirect">river</a> and <b class="x">bold</b>"#;
         assert_eq!(
             rewrite(html, &l),
@@ -256,8 +236,8 @@ mod tests {
 
     #[test]
     fn parsoid_links() {
-        let (items, labels) = (IndexMap::new(), IndexMap::new());
-        let l = links(&items, &labels, "en", "en");
+        let items = IndexMap::new();
+        let l = links(&items, "en", "en");
         let html = concat!(
             r#"<a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/East_Africa" id="mwX">East Africa</a>, "#,
             r#"<a rel="mw:WikiLink/Interwiki" href="https://fr.wikipedia.org/wiki/Kenya">fr</a>, "#,
@@ -270,29 +250,17 @@ mod tests {
     }
 
     #[test]
-    fn fallback_article_links_go_to_items_with_a_gloss() {
-        let q114: Qid = "Q114".parse().unwrap();
+    fn fallback_article_links_go_to_items() {
         let items = IndexMap::from([
-            ("Kenya".to_string(), q114),
+            ("Kenya".to_string(), "Q114".parse().unwrap()),
             ("Africa".to_string(), "Q15".parse().unwrap()),
         ]);
-        let labels = IndexMap::from([(
-            EntityId::Item(q114),
-            Term {
-                label: Some(LangText {
-                    text: "കെനിയ".into(),
-                    lang: "ml".parse().unwrap(),
-                }),
-                description: None,
-            },
-        )]);
-        let l = links(&items, &labels, "en", "ml");
+        let l = links(&items, "en", "ml");
         let html = r#"capital of <a href="/wiki/Kenya">Kenya</a>, in <a href="/wiki/Africa">Africa</a>, <a href="/wiki/Unknown">here</a>"#;
         assert_eq!(
             rewrite(html, &l),
             concat!(
-                r#"capital of <ruby><a href="https://www.wikidata.org/wiki/Q114">Kenya</a>"#,
-                r#"<rt><span>കെനിയ</span></rt></ruby>, in "#,
+                r#"capital of <a href="https://www.wikidata.org/wiki/Q114">Kenya</a>, in "#,
                 r#"<a href="https://www.wikidata.org/wiki/Q15">Africa</a>, here"#
             )
         );
@@ -300,8 +268,8 @@ mod tests {
 
     #[test]
     fn everything_else_is_removed() {
-        let (items, labels) = (IndexMap::new(), IndexMap::new());
-        let l = links(&items, &labels, "en", "en");
+        let items = IndexMap::new();
+        let l = links(&items, "en", "en");
         let html = concat!(
             r##"<span class="nowrap">Text</span><sup class="reference"><a href="#cite">[1]</a></sup>"##,
             r#"<script>alert(1)</script><style>p{}</style><!-- note -->"#,
@@ -327,8 +295,8 @@ mod tests {
 
     #[test]
     fn code_is_plain_text() {
-        let (items, labels) = (IndexMap::new(), IndexMap::new());
-        let l = links(&items, &labels, "en", "en");
+        let items = IndexMap::new();
+        let l = links(&items, "en", "en");
         let html = concat!(
             r#"<pre class="x" onclick="alert(1)"><code style="color:red"><span></span>"#,
             "<span>// Input:</span>\n<span>m</span>[0] &lt; 1\n</code></pre>"
@@ -341,8 +309,8 @@ mod tests {
 
     #[test]
     fn a_formula_keeps_its_mathml_only() {
-        let (items, labels) = (IndexMap::new(), IndexMap::new());
-        let l = links(&items, &labels, "en", "en");
+        let items = IndexMap::new();
+        let l = links(&items, "en", "en");
         let html = concat!(
             r#"<math alttext="x" display="block" href="javascript:alert(1)" onclick="alert(1)">"#,
             r#"<semantics><mi mathvariant="normal" style="color:red">x</mi>"#,
@@ -361,7 +329,7 @@ mod tests {
 
     #[test]
     fn marks_of_notes_get_numbers_in_order() {
-        let (items, labels) = (IndexMap::new(), IndexMap::new());
+        let items = IndexMap::new();
         let note = Note {
             group: None,
             citations: Vec::new(),
@@ -374,7 +342,7 @@ mod tests {
         let numbering = Numbering::new(&notes);
         let l = Links {
             notes: Some(&numbering),
-            ..links(&items, &labels, "en", "en")
+            ..links(&items, "en", "en")
         };
         let mark = |id: &str| format!("<sup data-note=\"{id}\"></sup>");
         // The second note first: it is 1. A note again keeps its number; a
@@ -397,20 +365,20 @@ mod tests {
         assert_eq!(numbering.note(2).map(|(id, _)| id), Some("cite_note-1"));
         assert!(numbering.note(3).is_none() && numbering.note(0).is_none());
         // Without numbers, a mark goes.
-        let plain = links(&items, &labels, "en", "en");
+        let plain = links(&items, "en", "en");
         assert_eq!(rewrite(&first, &plain), "A b.");
     }
 
     #[test]
     fn links_to_other_sites_stay_only_in_a_citation() {
-        let (items, labels) = (IndexMap::new(), IndexMap::new());
+        let items = IndexMap::new();
         let html = concat!(
             r#"<a href="https://www.knbs.or.ke/x?a=1&amp;b=2" class="external">KNBS</a> "#,
             r#"<a href="//example.org/a">rel</a> <a href="javascript:alert(1)">js</a>"#
         );
         let citation = Links {
             external: true,
-            ..links(&items, &labels, "en", "en")
+            ..links(&items, "en", "en")
         };
         assert_eq!(
             rewrite(html, &citation),
@@ -419,10 +387,7 @@ mod tests {
                 r#"<a href="https://example.org/a">rel</a> js"#
             )
         );
-        assert_eq!(
-            rewrite(html, &links(&items, &labels, "en", "en")),
-            "KNBS rel js"
-        );
+        assert_eq!(rewrite(html, &links(&items, "en", "en")), "KNBS rel js");
     }
 
     #[test]
@@ -432,8 +397,8 @@ mod tests {
             "a & b <c> éA &copy; & x"
         );
         // A picture whose text is markup: it stays text.
-        let (items, labels) = (IndexMap::new(), IndexMap::new());
-        let l = links(&items, &labels, "en", "en");
+        let items = IndexMap::new();
+        let l = links(&items, "en", "en");
         assert_eq!(
             rewrite(r#"<img alt="&lt;script&gt;x">"#, &l),
             "&lt;script&gt;x"
