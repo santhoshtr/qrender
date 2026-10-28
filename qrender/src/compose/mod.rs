@@ -19,8 +19,8 @@ use indexmap::IndexMap;
 
 use crate::config::{ClassLayout, Config, SpreadSpec};
 use crate::schema::{
-    Block, COMPOSITION_SCHEMA, Composition, DESIGN, Dropped, ProseConcepts, Provenance,
-    QualifierShown, Silence, Spread, StatementRef, ValueShown, round_to,
+    Block, COMPOSITION_SCHEMA, Composition, DESIGN, Dropped, Field, ProseConcepts, Provenance,
+    QualifierShown, Silence, Spread, StatementRef, ValueShown, Wanted, round_to,
 };
 use crate::vocab::{Role, Slot, SpreadKind, Template};
 use crate::wikidata::{END_TIME, POINT_IN_TIME, START_TIME};
@@ -178,6 +178,7 @@ impl<'a> Composer<'a> {
                     Some(Dropped {
                         id: s.id.clone(),
                         silent,
+                        wanted: self.wanted(s),
                     })
                 })
                 .collect(),
@@ -267,7 +268,20 @@ impl<'a> Composer<'a> {
             }),
             topics,
             silent,
+            wanted: self.wanted(spec),
         }
+    }
+
+    /// The first wanted property of a spread that the item has no
+    /// statement for, and that the page has a field for.
+    fn wanted(&self, spec: &SpreadSpec) -> Option<Wanted> {
+        spec.wanted.iter().find_map(|pid| {
+            if !self.statements_of(*pid).is_empty() {
+                return None;
+            }
+            let field = Field::of(self.content.wanted.get(pid)?)?;
+            Some(Wanted { pid: *pid, field })
+        })
     }
 
     // -------------------------------------------------------- derived facts
@@ -720,6 +734,30 @@ mod tests {
                 "texts": ["Q1-0000-0001"],
             })
         );
+    }
+
+    #[test]
+    fn a_spread_asks_for_its_first_missing_wanted_property() {
+        let wanted = |datatypes: serde_json::Value| {
+            let c = content(
+                json!([item("P31", "Q5"), item("P21", "Q6581097")]),
+                json!({"class_layout": "person", "wanted": datatypes}),
+            );
+            let composition = Composer::new(&c, config()).compose();
+            let life = composition.spreads.iter().find(|s| s.id == "life").unwrap();
+            life.wanted.as_ref().map(|w| (w.pid.to_string(), w.field))
+        };
+        // The item has P21 (sex or gender): P569 (date of birth) is next.
+        assert_eq!(
+            wanted(json!({"P569": "time", "P19": "wikibase-item"})),
+            Some(("P569".to_string(), Field::Date))
+        );
+        // A datatype with no field is not asked for: the next one is.
+        assert_eq!(
+            wanted(json!({"P569": "globe-coordinate", "P19": "wikibase-item"})),
+            Some(("P19".to_string(), Field::Item))
+        );
+        assert_eq!(wanted(json!({})), None);
     }
 
     #[test]

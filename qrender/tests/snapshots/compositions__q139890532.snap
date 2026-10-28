@@ -126,6 +126,10 @@ expression: composition
           "Q1071",
           "Q7937"
         ]
+      },
+      "wanted": {
+        "pid": "P2044",
+        "field": "quantity"
       }
     },
     {
@@ -154,6 +158,10 @@ expression: composition
             "rule": "row"
           }
         ]
+      },
+      "wanted": {
+        "pid": "P1705",
+        "field": "monolingual"
       }
     },
     {
@@ -167,6 +175,10 @@ expression: composition
         "concepts": [
           "Q309"
         ]
+      },
+      "wanted": {
+        "pid": "P571",
+        "field": "date"
       }
     },
     {
@@ -201,7 +213,11 @@ expression: composition
   ],
   "dropped": [
     {
-      "id": "government"
+      "id": "government",
+      "wanted": {
+        "pid": "P6",
+        "field": "item"
+      }
     },
     {
       "id": "demography",
@@ -210,7 +226,11 @@ expression: composition
           "primitive": "scale",
           "reason": "no_comparable_quantity"
         }
-      ]
+      ],
+      "wanted": {
+        "pid": "P1082",
+        "field": "quantity"
+      }
     },
     {
       "id": "economy"

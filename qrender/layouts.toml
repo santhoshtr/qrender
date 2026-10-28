@@ -21,6 +21,10 @@
 #   media     the Commons files no spread took
 #   more      everything left: rows, and the series as charts
 #   evidence  web presence, curation, sources, identifiers, provenance
+#
+# `wanted`: the properties of the spread that every item of the class must
+# have, in order. The page asks the reader for the first one that the item
+# lacks (a nudge): one for a spread, at most. Each one is also in `pids`.
 
 [class_layouts.settlement]
 match_p31 = [
@@ -60,6 +64,10 @@ pids = [
   "P150",   # contains the administrative territorial entity
   "P8138",  # located in the statistical territorial entity
 ]
+wanted = [
+  "P131",   # located in the administrative territorial entity
+  "P2044",  # elevation above sea level
+]
 
 [[class_layouts.settlement.spreads]]
 id = "names"
@@ -86,6 +94,11 @@ pids = [
   "P473",   # local dialing code
   "P395",   # licence plate code
 ]
+wanted = [
+  "P1705",  # native label
+  "P443",   # pronunciation audio
+  "P1549",  # demonym
+]
 
 [[class_layouts.settlement.spreads]]
 id = "government"
@@ -106,6 +119,9 @@ pids = [
   "P797",   # authority
   "P708",   # diocese
 ]
+wanted = [
+  "P6",     # head of government
+]
 
 [[class_layouts.settlement.spreads]]
 id = "demography"
@@ -122,6 +138,10 @@ pids = [
   "P5982",  # annual number of weddings
   "P2936",  # language used
   "P37",    # official language
+]
+wanted = [
+  "P1082",  # population
+  "P2046",  # area
 ]
 
 [[class_layouts.settlement.spreads]]
@@ -161,6 +181,9 @@ pids = [
   "P2184",  # history of topic
   "P571",   # inception
   "P576",   # dissolved, abolished or demolished
+]
+wanted = [
+  "P571",   # inception
 ]
 
 [[class_layouts.settlement.spreads]]
@@ -217,6 +240,13 @@ pids = [
   "P551",   # residence
   "P2632",  # place of detention
 ]
+wanted = [
+  "P21",    # sex or gender
+  "P569",   # date of birth
+  "P19",    # place of birth
+  "P27",    # country of citizenship
+  "P1412",  # languages spoken, written or signed
+]
 
 [[class_layouts.person.spreads]]
 id = "family"
@@ -251,6 +281,9 @@ pids = [
   "P802",   # student
   "P812",   # academic major
 ]
+wanted = [
+  "P69",    # educated at
+]
 
 [[class_layouts.person.spreads]]
 id = "work"
@@ -268,6 +301,9 @@ pids = [
   "P1344",  # participant in
   "P800",   # notable work
   "P737",   # influenced by
+]
+wanted = [
+  "P106",   # occupation
 ]
 # Works by the person are statements on the works. These properties, pointing
 # to the person, are fetched in reverse.
@@ -309,6 +345,12 @@ pids = [
   "P443",   # pronunciation audio
   "P898",   # IPA transcription
   "P109",   # signature
+]
+wanted = [
+  "P735",   # given name
+  "P734",   # family name
+  "P1559",  # name in native language
+  "P443",   # pronunciation audio
 ]
 
 [[class_layouts.person.spreads]]
@@ -355,6 +397,10 @@ pids = [
   "P1877",  # after a work by
   "P6166",  # quotes work
 ]
+wanted = [
+  "P136",   # genre
+  "P921",   # main subject
+]
 
 [[class_layouts.film.spreads]]
 id = "cast"
@@ -365,6 +411,9 @@ kind = "facts"
 pids = [
   "P161",   # cast member
   "P725",   # voice actor
+]
+wanted = [
+  "P161",   # cast member
 ]
 
 [[class_layouts.film.spreads]]
@@ -383,6 +432,11 @@ pids = [                 # role "crew": one block, by person
   "P1040",  # film editor
   "P2554",  # production designer
   "P3092",  # film crew member
+]
+wanted = [
+  "P57",    # director
+  "P58",    # screenwriter
+  "P86",    # composer
 ]
 
 [[class_layouts.film.spreads]]
@@ -404,6 +458,11 @@ pids = [
   "P4082",  # captured with
   "P3803",  # film format
 ]
+wanted = [
+  "P495",   # country of origin
+  "P364",   # original language of film or TV show
+  "P2047",  # duration
+]
 
 [[class_layouts.film.spreads]]
 id = "release"
@@ -419,6 +478,9 @@ pids = [
   "P406",   # soundtrack release
   "P1476",  # title
   "P1638",  # working title
+]
+wanted = [
+  "P577",   # publication date
 ]
 
 [[class_layouts.film.spreads]]
@@ -530,6 +592,10 @@ pids = [
   "P2069",  # magnetic moment
   "P1419",  # shape
 ]
+wanted = [
+  "P2067",  # mass
+  "P2120",  # radius
+]
 
 [[class_layouts.astronomical.spreads]]
 id = "orbit"
@@ -553,6 +619,9 @@ pids = [
   "P6259",  # epoch
   "P2052",  # speed
   "P2583",  # distance from Earth
+]
+wanted = [
+  "P2146",  # orbital period
 ]
 
 # The surface of the body. The id of the spread that "geography of topic"
@@ -614,6 +683,10 @@ pids = [
   "P163",   # flag
   "P41",    # flag image
 ]
+wanted = [
+  "P138",   # named after
+  "P443",   # pronunciation audio
+]
 
 # The concepts the body is linked to, and the item properties whose values
 # are mostly pictured (its moons, its parts).
@@ -643,6 +716,9 @@ pids = [
   "P571",   # inception
   "P575",   # time of discovery or invention
   "P576",   # dissolved, abolished or demolished
+]
+wanted = [
+  "P575",   # time of discovery or invention
 ]
 
 [[class_layouts.astronomical.spreads]]
@@ -694,6 +770,11 @@ pids = [
   "P443",   # pronunciation audio
   "P898",   # IPA transcription
 ]
+wanted = [
+  "P1549",  # demonym
+  "P1705",  # native label
+  "P443",   # pronunciation audio
+]
 
 # The marks of the nation: each item with the file that pictures it.
 [[class_layouts.country.spreads]]
@@ -716,6 +797,11 @@ pids = [
   "P2238",  # official symbol
   "P6364",  # official color
   "P154",   # logo image
+]
+wanted = [
+  "P163",   # flag
+  "P237",   # coat of arms
+  "P85",    # anthem
 ]
 
 # The id of the settlement's spread: "geography of topic" (P2633) links
@@ -750,6 +836,11 @@ pids = [
   "P7422",  # minimum temperature record
   "P5203",  # topographic map
 ]
+wanted = [
+  "P30",    # continent
+  "P610",   # highest point
+  "P421",   # located in time zone
+]
 
 [[class_layouts.country.spreads]]
 id = "government"
@@ -772,6 +863,12 @@ pids = [
   "P2769",  # budget
   "P457",   # foundational text
   "P92",    # main regulatory text
+]
+wanted = [
+  "P6",     # head of government
+  "P35",    # head of state
+  "P36",    # capital
+  "P122",   # basic form of government
 ]
 
 # Births and deaths are next to each other: their charts are siblings.
@@ -798,6 +895,10 @@ pids = [
   "P3270",  # compulsory education (minimum age)
   "P3001",  # retirement age
 ]
+wanted = [
+  "P1082",  # population
+  "P2250",  # life expectancy
+]
 
 [[class_layouts.country.spreads]]
 id = "economy"
@@ -818,6 +919,10 @@ pids = [
   "P6794",  # minimum wage
   "P8843",  # poverty incidence
   "P13574", # most populous urban area
+]
+wanted = [
+  "P38",    # currency
+  "P2131",  # nominal GDP
 ]
 
 [[class_layouts.country.spreads]]
@@ -840,6 +945,9 @@ pids = [
   "P2573",  # number of out-of-school children
   "P140",   # religion or worldview
 ]
+wanted = [
+  "P1081",  # Human Development Index
+]
 
 # The systems of the country that a resident or a visitor uses: power,
 # telephone, roads and railways.
@@ -860,6 +968,10 @@ pids = [
   "P5658",  # railway traffic side
   "P395",   # vehicle registration plate code
 ]
+wanted = [
+  "P474",   # telephone country code
+  "P1622",  # driving side
+]
 
 [[class_layouts.country.spreads]]
 id = "culture"
@@ -875,6 +987,10 @@ pids = [
   "P2596",  # culture
   "P417",   # patron saint
   "P485",   # archives at
+]
+wanted = [
+  "P37",    # official language
+  "P832",   # public holiday
 ]
 
 [[class_layouts.country.spreads]]
@@ -893,6 +1009,9 @@ kind = "history"
 pids = [
   "P571",   # inception
   "P576",   # dissolved, abolished or demolished
+]
+wanted = [
+  "P571",   # inception
 ]
 
 # The map files: before the media spread, which takes the Commons files no
@@ -1194,6 +1313,7 @@ chain_max = 5            # classes shown in the identity chain
 list_shown = 12          # works shown in a list before "+N"
 row_shown = 6            # values shown in a row of the fact sheet before "+N"
 succession_shown = 5     # predecessors shown before "+N"
+asks = 3                 # values asked for by the spreads with no data
 
 # ------------------------------------------------------------ comparisons
 [containers]

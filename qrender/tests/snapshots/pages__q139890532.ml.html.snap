@@ -166,7 +166,48 @@ expression: html
      src="https://commons.wikimedia.org/wiki/Special:FilePath/Kasaragod-map.svg?width=330"
      alt=""
      loading="lazy">
-        </div></dl></div><div class="prose-slot" lang="ml"><p>ബന്തിയോടിനെ <a href="https://ml.wikipedia.org/wiki/%E0%B4%A7%E0%B5%BC%E0%B4%AE%E0%B5%8D%E0%B4%AE%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%9F%E0%B5%8D%E0%B4%95">ധർമ്മത്തടുക്കയുമായി</a> ബന്ധിപ്പിക്കുന്ന ഗ്രാമീണ റൂട്ടുകളിലായാണ് കൊക്കച്ചാൽ സ്ഥിതി ചെയ്യുന്നത്.. ഭൂമിശാസ്ത്രപരമായി, ഇത് പുത്തിഗെ, മംഗൽപാടി തദ്ദേശ സ്വയംഭരണ അധികാരപരിധികളുടെ അതിർത്തിയോട് ചേർന്നാണ് സ്ഥിതി ചെയ്യുന്നത്. വടക്കൻ മലബാറിന്റെ സാധാരണ മധ്യപ്രദേശ ഭൂപ്രകൃതിയാണ് ഈ ഭൂപ്രകൃതിയുടെ സവിശേഷത, സീസണൽ അരുവികൾ വലിയ തീരദേശ നദീ സംവിധാനങ്ങളിലേക്ക് ഒഴുകുന്നു.</p><a class="read" href="https://ml.wikipedia.org/wiki/%E0%B4%95%E0%B5%8A%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%BE%E0%B5%BD#ഭൂമിശാസ്ത്രം">ഭൂമിശാസ്ത്രം ↗</a></div></section>
+        </div></dl></div><div class="prose-slot" lang="ml"><p>ബന്തിയോടിനെ <a href="https://ml.wikipedia.org/wiki/%E0%B4%A7%E0%B5%BC%E0%B4%AE%E0%B5%8D%E0%B4%AE%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%9F%E0%B5%8D%E0%B4%95">ധർമ്മത്തടുക്കയുമായി</a> ബന്ധിപ്പിക്കുന്ന ഗ്രാമീണ റൂട്ടുകളിലായാണ് കൊക്കച്ചാൽ സ്ഥിതി ചെയ്യുന്നത്.. ഭൂമിശാസ്ത്രപരമായി, ഇത് പുത്തിഗെ, മംഗൽപാടി തദ്ദേശ സ്വയംഭരണ അധികാരപരിധികളുടെ അതിർത്തിയോട് ചേർന്നാണ് സ്ഥിതി ചെയ്യുന്നത്. വടക്കൻ മലബാറിന്റെ സാധാരണ മധ്യപ്രദേശ ഭൂപ്രകൃതിയാണ് ഈ ഭൂപ്രകൃതിയുടെ സവിശേഷത, സീസണൽ അരുവികൾ വലിയ തീരദേശ നദീ സംവിധാനങ്ങളിലേക്ക് ഒഴുകുന്നു.</p><a class="read" href="https://ml.wikipedia.org/wiki/%E0%B4%95%E0%B5%8A%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%BE%E0%B5%BD#ഭൂമിശാസ്ത്രം">ഭൂമിശാസ്ത്രം ↗</a></div><aside class="nudge" aria-labelledby="nudge-location-ask" data-edit="Edit">
+    <p class="ask" id="nudge-location-ask">Help complete this page</p>
+    <p class="property">സമുദ്രനിരപ്പിൽ നിന്നുമുള്ള ഉയരം</p>
+    <p class="value" hidden></p>
+    <p class="saved" hidden>Saved on this page only. This is a prototype: nothing is published.</p>
+    <button class="add" type="button" command="show-modal" commandfor="nudge-location">Add</button>
+    <dialog id="nudge-location" class="nudge-editor" aria-labelledby="nudge-location-title" data-field="quantity" closedby="any">
+    <form method="dialog">
+        <header>
+            <h2 id="nudge-location-title">സമുദ്രനിരപ്പിൽ നിന്നുമുള്ള ഉയരം</h2>
+            <button type="button"
+                    command="close"
+                    commandfor="nudge-location"
+                    aria-label="Close">×</button>
+        </header>
+        <div class="fields">
+            <p class="desc"><span class="fb" lang="en">height of the item (geographical object) as measured relative to sea level</span></p>
+            <label for="nudge-location-value">Value</label>
+            <input id="nudge-location-value" type="number" step="any" required autofocus data-show>
+            <label for="nudge-location-item">Unit (optional)</label>
+    <div class="pick">
+        <input id="nudge-location-item"
+               type="search"
+               role="combobox"
+               aria-autocomplete="list"
+               aria-expanded="false"
+               aria-controls="nudge-location-item-options"
+               autocomplete="off"
+               data-search="item"
+               data-choose="Choose one from the list."
+               data-show>
+        <ul id="nudge-location-item-options" role="listbox" aria-label="Unit (optional)" hidden></ul>
+    </div>
+        </div>
+        <footer class="actions">
+            <a class="on-wikidata" href="https://www.wikidata.org/wiki/Q139890532#P2044">Add it on Wikidata ↗</a>
+            <button class="close" type="button" command="close" commandfor="nudge-location">Close</button>
+            <button class="save" value="save" hidden>Save</button>
+        </footer>
+    </form>
+</dialog>
+</aside></section>
             <section class="spread t-columns" id="names"
          data-spread="names"
          data-dimension="names"><h2><span class="title"><span class="fb" lang="en">name</span></span></h2><dl class="sheet" data-slot="sheet"><div class="row r-value"><dt class="i-puzzle">പോസ്റ്റൽ കോഡ്</dt>
@@ -176,7 +217,169 @@ expression: html
         <a class="edit"
        href="https://www.wikidata.org/wiki/Q139890532#P281"
        aria-label="Edit"><svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="m15.4.4 4.2 4.2-3.2 3.2-4.2-4.2zM10.8 5 15 9.2l-8.6 8.6-4.5 1.5-1.2-1.2 1.5-4.5z"/></svg></a></span>
-</div></dl></section>
+</div></dl><aside class="nudge" aria-labelledby="nudge-names-ask" data-edit="Edit">
+    <p class="ask" id="nudge-names-ask">Help complete this page</p>
+    <p class="property">തദ്ദേശനാമം</p>
+    <p class="value" hidden></p>
+    <p class="saved" hidden>Saved on this page only. This is a prototype: nothing is published.</p>
+    <button class="add" type="button" command="show-modal" commandfor="nudge-names">Add</button>
+    <dialog id="nudge-names" class="nudge-editor" aria-labelledby="nudge-names-title" data-field="monolingual" closedby="any">
+    <form method="dialog">
+        <header>
+            <h2 id="nudge-names-title">തദ്ദേശനാമം</h2>
+            <button type="button"
+                    command="close"
+                    commandfor="nudge-names"
+                    aria-label="Close">×</button>
+        </header>
+        <div class="fields">
+            <p class="desc">ഔദ്യോഗിക അഥവാ യഥാർത്ഥ ഭാഷയിലെ പേര്</p>
+            <label for="nudge-names-value">Value</label>
+            <input id="nudge-names-value"
+                   type="text"
+                   lang="ml"
+                   dir="ltr"
+                   required
+                   autofocus
+                   autocomplete="off"
+                   data-show>
+            <label for="nudge-names-lang">Language code</label>
+            <input id="nudge-names-lang"
+                   type="text"
+                   value="ml"
+                   size="8"
+                   pattern="[a-z]{2,3}(-[a-z0-9]+)*"
+                   required
+                   autocomplete="off">
+        </div>
+        <footer class="actions">
+            <a class="on-wikidata" href="https://www.wikidata.org/wiki/Q139890532#P1705">Add it on Wikidata ↗</a>
+            <button class="close" type="button" command="close" commandfor="nudge-names">Close</button>
+            <button class="save" value="save" hidden>Save</button>
+        </footer>
+    </form>
+</dialog>
+</aside></section><aside class="nudges" aria-labelledby="nudges-ask">
+    <p class="ask" id="nudges-ask">Help complete this page</p>
+    <p class="intro">The page has no data for these sections yet.</p>
+    <ul>
+        <li class="nudge" data-edit="Edit">
+            <span class="section">സർക്കാർ</span>
+            <span class="property">ഭരണാധികാരി</span>
+            <span class="value" hidden></span>
+            <button class="add" type="button" command="show-modal" commandfor="nudge-government">Add</button>
+            <span class="saved" hidden>Saved on this page only. This is a prototype: nothing is published.</span>
+            <dialog id="nudge-government" class="nudge-editor" aria-labelledby="nudge-government-title" data-field="item" closedby="any">
+    <form method="dialog">
+        <header>
+            <h2 id="nudge-government-title">ഭരണാധികാരി</h2>
+            <button type="button"
+                    command="close"
+                    commandfor="nudge-government"
+                    aria-label="Close">×</button>
+        </header>
+        <div class="fields">
+            <p class="desc"><span class="fb" lang="en">head of the executive power of this town, city, municipality, state, country, or other governmental body</span></p>
+            <label for="nudge-government-item">Search for an item</label>
+    <div class="pick">
+        <input id="nudge-government-item"
+               type="search"
+               role="combobox"
+               aria-autocomplete="list"
+               aria-expanded="false"
+               aria-controls="nudge-government-item-options"
+               autocomplete="off"
+               data-search="item"
+               data-choose="Choose one from the list."
+               data-show required autofocus>
+        <ul id="nudge-government-item-options" role="listbox" aria-label="Search for an item" hidden></ul>
+    </div>
+        </div>
+        <footer class="actions">
+            <a class="on-wikidata" href="https://www.wikidata.org/wiki/Q139890532#P6">Add it on Wikidata ↗</a>
+            <button class="close" type="button" command="close" commandfor="nudge-government">Close</button>
+            <button class="save" value="save" hidden>Save</button>
+        </footer>
+    </form>
+</dialog>
+        </li>
+        <li class="nudge" data-edit="Edit">
+            <span class="section">ജനസംഖ്യാപഠനം</span>
+            <span class="property">ജനസംഖ്യ</span>
+            <span class="value" hidden></span>
+            <button class="add" type="button" command="show-modal" commandfor="nudge-demography">Add</button>
+            <span class="saved" hidden>Saved on this page only. This is a prototype: nothing is published.</span>
+            <dialog id="nudge-demography" class="nudge-editor" aria-labelledby="nudge-demography-title" data-field="quantity" closedby="any">
+    <form method="dialog">
+        <header>
+            <h2 id="nudge-demography-title">ജനസംഖ്യ</h2>
+            <button type="button"
+                    command="close"
+                    commandfor="nudge-demography"
+                    aria-label="Close">×</button>
+        </header>
+        <div class="fields">
+            <p class="desc">താമസിക്കുന്ന ആൾക്കാരുടെ എണ്ണം</p>
+            <label for="nudge-demography-value">Value</label>
+            <input id="nudge-demography-value" type="number" step="any" required autofocus data-show>
+            <label for="nudge-demography-item">Unit (optional)</label>
+    <div class="pick">
+        <input id="nudge-demography-item"
+               type="search"
+               role="combobox"
+               aria-autocomplete="list"
+               aria-expanded="false"
+               aria-controls="nudge-demography-item-options"
+               autocomplete="off"
+               data-search="item"
+               data-choose="Choose one from the list."
+               data-show>
+        <ul id="nudge-demography-item-options" role="listbox" aria-label="Unit (optional)" hidden></ul>
+    </div>
+        </div>
+        <footer class="actions">
+            <a class="on-wikidata" href="https://www.wikidata.org/wiki/Q139890532#P1082">Add it on Wikidata ↗</a>
+            <button class="close" type="button" command="close" commandfor="nudge-demography">Close</button>
+            <button class="save" value="save" hidden>Save</button>
+        </footer>
+    </form>
+</dialog>
+        </li>
+        <li class="nudge" data-edit="Edit">
+            <span class="section">ചരിത്രം</span>
+            <span class="property">ഉത്പത്തി</span>
+            <span class="value" hidden></span>
+            <button class="add" type="button" command="show-modal" commandfor="nudge-history">Add</button>
+            <span class="saved" hidden>Saved on this page only. This is a prototype: nothing is published.</span>
+            <dialog id="nudge-history" class="nudge-editor" aria-labelledby="nudge-history-title" data-field="date" closedby="any">
+    <form method="dialog">
+        <header>
+            <h2 id="nudge-history-title">ഉത്പത്തി</h2>
+            <button type="button"
+                    command="close"
+                    commandfor="nudge-history"
+                    aria-label="Close">×</button>
+        </header>
+        <div class="fields">
+            <p class="desc">സംഘടനയും മറ്റും സ്ഥാപിച്ച തീയതി</p>
+            <label for="nudge-history-precision">Precision</label>
+            <select id="nudge-history-precision" data-precision>
+                <option value="day">Day</option>
+                <option value="year">Year</option>
+            </select>
+            <label for="nudge-history-value">Value</label>
+            <input id="nudge-history-value" type="date" required autofocus data-show>
+        </div>
+        <footer class="actions">
+            <a class="on-wikidata" href="https://www.wikidata.org/wiki/Q139890532#P571">Add it on Wikidata ↗</a>
+            <button class="close" type="button" command="close" commandfor="nudge-history">Close</button>
+            <button class="save" value="save" hidden>Save</button>
+        </footer>
+    </form>
+</dialog>
+        </li>
+    </ul>
+</aside>
             <section class="spread t-sheet"
                      data-spread="evidence"
                      data-dimension="neutral">
@@ -1102,6 +1305,250 @@ document.addEventListener( 'close', ( event ) => {
 			group.classList.add( 'shown' );
 		}
 	} );
+} )();
+// The nudges (.nudge): a value that the item lacks, asked for in a dialog
+// of its own. Progressive enhancement only: without this script, the
+// dialog opens (invoker commands) and its link adds the value on Wikidata.
+// A search field lists the items of Wikidata (wbsearchentities) or the
+// files of Commons under it. "Save" mimics a published edit: the nudge
+// shows the value, saved on this page only. Nothing is sent. Text only
+// from the answers: nothing of them is parsed as HTML.
+// One function scope: the page scripts share one script element.
+( () => {
+	const nudges = document.querySelectorAll( '.nudge' );
+	if ( !nudges.length ) {
+		return;
+	}
+	const WIKIDATA = 'https://www.wikidata.org/w/api.php';
+	const COMMONS = 'https://commons.wikimedia.org/w/api.php';
+	const LIMIT = 7;
+	// The wait after a key before the request, in milliseconds.
+	const DELAY = 200;
+	const root = document.documentElement;
+	const lang = root.lang;
+	const locale = root.dataset.locale || lang;
+
+	const get = async ( api, params, signal ) => {
+		const query = new URLSearchParams( { ...params, format: 'json', origin: '*' } );
+		const response = await fetch( `${ api }?${ query }`, { signal } );
+		return response.ok ? response.json() : {};
+	};
+
+	// The results of a text, by source: a value, its text, and a
+	// description or a thumbnail.
+	const sources = {
+		item: async ( text, signal ) => {
+			const { search = [] } = await get( WIKIDATA, {
+				action: 'wbsearchentities',
+				search: text,
+				language: lang,
+				uselang: lang,
+				type: 'item',
+				limit: LIMIT
+			}, signal );
+			return search.map( ( item ) => ( {
+				value: item.id,
+				text: item.label || item.id,
+				description: item.description || ''
+			} ) );
+		},
+		file: async ( text, signal ) => {
+			const { query: { pages = {} } = {} } = await get( COMMONS, {
+				action: 'query',
+				generator: 'search',
+				gsrsearch: text,
+				gsrnamespace: 6,
+				gsrlimit: LIMIT,
+				prop: 'imageinfo',
+				iiprop: 'url',
+				iiurlwidth: 80
+			}, signal );
+			return Object.values( pages )
+				.sort( ( a, b ) => a.index - b.index )
+				.map( ( page ) => {
+					const name = page.title.replace( /^[^:]+:/, '' );
+					return { value: name, text: name, thumb: page.imageinfo?.[ 0 ]?.thumburl };
+				} );
+		}
+	};
+
+	// A search field: a combobox with its list. A text that is not a
+	// result chosen from the list is not valid.
+	const combobox = ( input ) => {
+		const list = document.getElementById( input.getAttribute( 'aria-controls' ) );
+		const search = sources[ input.dataset.search ];
+		let controller = null;
+		let timer = 0;
+		// The option that the arrow keys chose; -1 for none.
+		let active = -1;
+
+		const options = () => [ ...list.children ];
+
+		const mark = ( index ) => {
+			const all = options();
+			active = index;
+			all.forEach( ( o, i ) => o.setAttribute( 'aria-selected', String( i === index ) ) );
+			if ( index < 0 ) {
+				input.removeAttribute( 'aria-activedescendant' );
+				return;
+			}
+			input.setAttribute( 'aria-activedescendant', all[ index ].id );
+			all[ index ].scrollIntoView( { block: 'nearest' } );
+		};
+
+		const show = ( shown ) => {
+			list.hidden = !shown;
+			input.setAttribute( 'aria-expanded', String( shown ) );
+			if ( !shown ) {
+				mark( -1 );
+			}
+		};
+
+		const option = ( result, index ) => {
+			const li = document.createElement( 'li' );
+			li.id = `${ list.id }-${ index }`;
+			li.setAttribute( 'role', 'option' );
+			li.setAttribute( 'aria-selected', 'false' );
+			li.dataset.value = result.value;
+			if ( result.thumb ) {
+				const img = document.createElement( 'img' );
+				img.src = result.thumb;
+				img.alt = '';
+				img.loading = 'lazy';
+				li.append( img );
+			}
+			const text = document.createElement( 'span' );
+			text.className = 'text';
+			text.textContent = result.text;
+			li.append( text );
+			if ( result.description ) {
+				const description = document.createElement( 'span' );
+				description.className = 'description';
+				description.textContent = result.description;
+				li.append( description );
+			}
+			return li;
+		};
+
+		const choose = ( li ) => {
+			input.value = li.querySelector( '.text' ).textContent;
+			input.dataset.value = li.dataset.value;
+			input.setCustomValidity( '' );
+			show( false );
+		};
+
+		input.addEventListener( 'input', () => {
+			clearTimeout( timer );
+			delete input.dataset.value;
+			const text = input.value.trim();
+			input.setCustomValidity( text ? input.dataset.choose : '' );
+			if ( !text ) {
+				controller?.abort();
+				list.replaceChildren();
+				show( false );
+				return;
+			}
+			timer = setTimeout( async () => {
+				controller?.abort();
+				controller = new AbortController();
+				try {
+					const results = await search( text, controller.signal );
+					list.replaceChildren( ...results.map( option ) );
+					show( results.length > 0 );
+				} catch ( e ) {
+					if ( e.name !== 'AbortError' ) {
+						list.replaceChildren();
+						show( false );
+					}
+				}
+			}, DELAY );
+		} );
+
+		input.addEventListener( 'keydown', ( event ) => {
+			const count = options().length;
+			if ( ( event.key === 'ArrowDown' || event.key === 'ArrowUp' ) && count ) {
+				event.preventDefault();
+				show( true );
+				// From the field to the first option, from the last option
+				// back to the field; and up the other way.
+				const step = event.key === 'ArrowDown' ? 1 : count;
+				mark( ( active + 1 + step ) % ( count + 1 ) - 1 );
+			} else if ( event.key === 'Enter' && !list.hidden && active >= 0 ) {
+				// Enter chooses the option; it does not save.
+				event.preventDefault();
+				choose( options()[ active ] );
+			} else if ( event.key === 'Escape' && !list.hidden ) {
+				// The first Escape closes the list; the next closes the dialog.
+				event.preventDefault();
+				show( false );
+			}
+		} );
+
+		input.addEventListener( 'blur', () => show( false ) );
+		// A click on an option keeps the focus in the field.
+		list.addEventListener( 'mousedown', ( event ) => event.preventDefault() );
+		list.addEventListener( 'click', ( event ) => {
+			const li = event.target.closest( '[role=option]' );
+			if ( li ) {
+				choose( li );
+			}
+		} );
+	};
+
+	// The field of a date: a day, or a year only.
+	const precision = ( select, input ) => {
+		select.addEventListener( 'change', () => {
+			input.value = '';
+			input.dataset.precision = select.value;
+			if ( select.value === 'year' ) {
+				input.type = 'number';
+				input.step = '1';
+			} else {
+				input.type = 'date';
+			}
+		} );
+	};
+
+	// The value as the nudge shows it: a number or a date formatted for
+	// the page locale, the other fields as they are.
+	const shown = ( input ) => {
+		const value = input.value.trim();
+		if ( input.type === 'number' && input.dataset.precision !== 'year' && value ) {
+			return new Intl.NumberFormat( locale ).format( Number( value ) );
+		}
+		if ( input.type === 'date' && value ) {
+			return new Intl.DateTimeFormat( locale, { dateStyle: 'long', timeZone: 'UTC' } )
+				.format( new Date( value ) );
+		}
+		return value;
+	};
+
+	for ( const nudge of nudges ) {
+		const dialog = nudge.querySelector( 'dialog' );
+		dialog.querySelector( '.save' ).hidden = false;
+		dialog.querySelectorAll( '[data-search]' ).forEach( combobox );
+		const select = dialog.querySelector( '[data-precision]' );
+		if ( select ) {
+			precision( select, dialog.querySelector( '[data-show]' ) );
+		}
+		// Save: the nudge shows the value. Close: the fields keep what the
+		// reader wrote, for the next time.
+		dialog.addEventListener( 'close', () => {
+			if ( dialog.returnValue !== 'save' ) {
+				return;
+			}
+			dialog.returnValue = '';
+			const value = nudge.querySelector( '.value' );
+			value.textContent = [ ...dialog.querySelectorAll( '[data-show]' ) ]
+				.map( shown )
+				.filter( Boolean )
+				.join( ' ' );
+			value.hidden = false;
+			nudge.querySelector( '.saved' ).hidden = false;
+			nudge.classList.add( 'is-saved' );
+			nudge.querySelector( '.add' ).textContent = nudge.dataset.edit;
+		} );
+	}
 } )();
 // The search of the page header (#search): the Wikidata items that match
 // the text, in the page language (wbsearchentities), as a list under the

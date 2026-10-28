@@ -24,6 +24,7 @@ use crate::primitives::timeline::When;
 use crate::primitives::works::{Work, Works};
 use crate::schema::{
     Block, Credit, Picture, Provenance, QualifierPart, QualifierShown, StatementRef, ValueShown,
+    Wanted,
 };
 use crate::vocab::Slot;
 use crate::wikidata::POINT_IN_TIME;
@@ -116,7 +117,7 @@ macro_rules! by_ref {
     )*};
 }
 
-by_ref!(Label, Part, Credit, str);
+by_ref!(Label, Part, Credit, str, Wanted);
 
 impl<'a> Ref<Shown<'a>> for Shown<'a> {
     fn r(&self) -> &Shown<'a> {

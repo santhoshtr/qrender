@@ -27,7 +27,7 @@ use crate::primitives::{
     pictures, prose, provenance, scale, score, series, sitelinks, sounds, split, succession,
     timeline, title, works,
 };
-use crate::schema::{Block, Credit, StatementRef};
+use crate::schema::{Block, Credit, StatementRef, Wanted};
 use crate::vocab::{self, Slot};
 
 /// How the page gets its stylesheet.
@@ -255,6 +255,42 @@ struct TextActionsHtml<'a> {
 #[template(path = "parts/label_editor.html")]
 struct LabelEditorHtml<'a> {
     ui: &'a Ui<'a>,
+}
+
+#[derive(Template)]
+#[template(path = "parts/nudge.html")]
+struct NudgeHtml<'a> {
+    ui: &'a Ui<'a>,
+    /// The id of the dialog; its fields have it first.
+    id: String,
+    w: &'a Wanted,
+    label: Label,
+}
+
+#[derive(Template)]
+#[template(path = "parts/nudge_dialog.html")]
+struct NudgeDialogHtml<'a> {
+    ui: &'a Ui<'a>,
+    id: &'a str,
+    w: &'a Wanted,
+    label: &'a Label,
+}
+
+/// One value that a spread with no data asks for.
+struct AskRow<'a> {
+    /// The id of the dialog.
+    id: String,
+    /// The title of the spread.
+    title: Option<&'a Label>,
+    label: Label,
+    w: &'a Wanted,
+}
+
+#[derive(Template)]
+#[template(path = "parts/asks.html")]
+struct AsksHtml<'a> {
+    ui: &'a Ui<'a>,
+    rows: Vec<AskRow<'a>>,
 }
 
 #[derive(Template)]
@@ -633,6 +669,55 @@ impl<'v> Ui<'v> {
     /// The dialog of the page that edits a label in the page language.
     pub fn label_editor(&self) -> String {
         render(LabelEditorHtml { ui: self })
+    }
+
+    /// The nudge of a spread that asks for a value: empty for a spread
+    /// that asks for none.
+    pub fn nudge(&self, s: &SpreadView) -> String {
+        let Some(w) = &s.spread.wanted else {
+            return String::new();
+        };
+        render(NudgeHtml {
+            ui: self,
+            id: format!("nudge-{}", s.spread.id),
+            w,
+            label: self.property(w.pid),
+        })
+    }
+
+    /// The dialog of a nudge: the field for the value of the property.
+    pub fn nudge_dialog(
+        &self,
+        id: impl Ref<str>,
+        w: impl Ref<Wanted>,
+        label: impl Ref<Label>,
+    ) -> String {
+        render(NudgeDialogHtml {
+            ui: self,
+            id: id.r(),
+            w: w.r(),
+            label: label.r(),
+        })
+    }
+
+    /// The values that the spreads with no data ask for, as one group:
+    /// empty when there are none.
+    pub fn asks(&self) -> String {
+        if self.view.asks.is_empty() {
+            return String::new();
+        }
+        let rows = self
+            .view
+            .asks
+            .iter()
+            .map(|a| AskRow {
+                id: format!("nudge-{}", a.spread),
+                title: a.title.as_ref(),
+                label: self.property(a.wanted.pid),
+                w: &a.wanted,
+            })
+            .collect();
+        render(AsksHtml { ui: self, rows })
     }
 
     /// The dialog of the page that edits a translation from `from`.

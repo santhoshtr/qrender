@@ -1,7 +1,7 @@
 //! The composition of one item (`composition/0.3`): its spreads, the slots
 //! of each spread, the blocks in each slot. No labels, no geometry.
 
-use content::{Cited, Qid, StatementId};
+use content::{Cited, Pid, Qid, StatementId};
 use indexmap::IndexMap;
 use schemars::JsonSchema;
 use serde::Serialize;
@@ -57,6 +57,66 @@ pub struct Spread {
     /// Primitives that had too little data, with the reason.
     #[serde(skip_serializing_if = "Vec::is_empty")]
     pub silent: Vec<Silence>,
+    /// The value that the page asks the reader for: the first wanted
+    /// property of the spread that the item lacks.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub wanted: Option<Wanted>,
+}
+
+/// A property that a spread asks for, and the field for its value.
+#[derive(Debug, Clone, Serialize, JsonSchema)]
+pub struct Wanted {
+    pub pid: Pid,
+    pub field: Field,
+}
+
+/// The field for a value, by the datatype of its property.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, JsonSchema)]
+#[serde(rename_all = "kebab-case")]
+pub enum Field {
+    /// A Wikidata item, from a search.
+    Item,
+    /// A string or an external identifier.
+    Text,
+    /// A text and its language.
+    Monolingual,
+    Url,
+    /// A date and its precision.
+    Date,
+    /// A number and its unit (an item).
+    Quantity,
+    /// A Commons file, from a search.
+    File,
+}
+
+impl Field {
+    /// The field for a datatype, as Wikibase names it. None: the page has
+    /// no field for it (a coordinate, a shape).
+    pub fn of(datatype: &str) -> Option<Self> {
+        Some(match datatype {
+            "wikibase-item" => Self::Item,
+            "string" | "external-id" => Self::Text,
+            "monolingualtext" => Self::Monolingual,
+            "url" => Self::Url,
+            "time" => Self::Date,
+            "quantity" => Self::Quantity,
+            "commonsMedia" => Self::File,
+            _ => return None,
+        })
+    }
+
+    /// The name the page uses (`data-field`).
+    pub fn name(self) -> &'static str {
+        match self {
+            Self::Item => "item",
+            Self::Text => "text",
+            Self::Monolingual => "monolingual",
+            Self::Url => "url",
+            Self::Date => "date",
+            Self::Quantity => "quantity",
+            Self::File => "file",
+        }
+    }
 }
 
 /// A spread with nothing to show. `silent`: the silences of its
@@ -66,6 +126,9 @@ pub struct Dropped {
     pub id: String,
     #[serde(skip_serializing_if = "Vec::is_empty")]
     pub silent: Vec<Silence>,
+    /// The value that the spread asks for, as a shown spread does.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub wanted: Option<Wanted>,
 }
 
 /// The concepts whose article sections give the spread its prose.

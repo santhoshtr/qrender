@@ -8,7 +8,7 @@ use schemars::JsonSchema;
 use serde::Serialize;
 
 use super::locale::Dir;
-use crate::schema::{Picture, Spread, StatementRef};
+use crate::schema::{Picture, Spread, StatementRef, Wanted};
 
 pub const VIEW_SCHEMA: &str = "view/0.2";
 
@@ -42,6 +42,10 @@ pub struct View {
     pub projects: Vec<Project>,
     /// The spreads that have something to show.
     pub spreads: Vec<SpreadView>,
+    /// The values that the spreads not on the page ask for: one group of
+    /// the page.
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub asks: Vec<Ask>,
     /// The article sections that no spread matched (their titles), when
     /// the page does not show their content.
     pub unmatched_sections: Vec<Link>,
@@ -70,6 +74,16 @@ impl View {
             .iter()
             .filter(move |s| s.spread.kind.is_apparatus() == end)
     }
+}
+
+/// The value that a spread asks for when the page does not show the
+/// spread: it has no data.
+#[derive(Debug, Clone, Serialize, JsonSchema)]
+pub struct Ask {
+    pub spread: String,
+    /// The label of the spread's concept.
+    pub title: Option<Label>,
+    pub wanted: Wanted,
 }
 
 /// A note of the article: a reference, or an explanatory note.

@@ -92,6 +92,11 @@ pub struct Content {
     /// statement -> that item.
     #[serde(default, skip_serializing_if = "IndexMap::is_empty")]
     pub text_items: IndexMap<StatementId, Qid>,
+    /// The wanted properties of the class layout that the item has no
+    /// statement for, with the datatype as Wikibase names it
+    /// ("wikibase-item"): the page asks the reader for them.
+    #[serde(default, skip_serializing_if = "IndexMap::is_empty")]
+    pub wanted: IndexMap<Pid, String>,
 }
 
 /// The outline of a geoshape, simplified for a map on a page, and what its

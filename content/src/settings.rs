@@ -139,6 +139,9 @@ pub struct LayoutMatch {
     pub match_p31: Vec<Qid>,
     /// Properties of other items that point to the item (works).
     pub reverse: Vec<Pid>,
+    /// Properties that the page asks for when the item lacks them: their
+    /// datatypes are fetched.
+    pub wanted: Vec<Pid>,
 }
 
 impl Settings {

@@ -60,6 +60,10 @@ pub struct SpreadSpec {
     pub prose: Vec<Qid>,
     #[serde(default)]
     pub pids: Vec<Pid>,
+    /// Properties of `pids` that every item of the class must have, in
+    /// order: the page asks for the first one that the item lacks.
+    #[serde(default)]
+    pub wanted: Vec<Pid>,
     /// Properties of other items that point to this one (works by a person).
     #[serde(default)]
     pub reverse: Vec<Pid>,
@@ -142,6 +146,9 @@ pub struct Thresholds {
     pub row_shown: usize,
     /// Predecessors shown before "+N".
     pub succession_shown: usize,
+    /// The values that the spreads with no data ask for, in one group of
+    /// the page: at most this many.
+    pub asks: usize,
 }
 
 #[derive(Debug, Deserialize)]

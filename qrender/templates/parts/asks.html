@@ -1,0 +1,20 @@
+{#- The values that the spreads with no data ask for: one group, after the
+    spreads. Each row is a nudge (nudge.js), with its dialog. -#}
+<aside class="nudges" aria-labelledby="nudges-ask">
+    <p class="ask" id="nudges-ask">{{ ui.msg("qrender-nudge-ask") }}</p>
+    <p class="intro">{{ ui.msg("qrender-nudges-intro") }}</p>
+    <ul>
+        {%- for r in rows %}
+        <li class="nudge" data-edit="{{ ui.msg("qrender-edit") }}">
+            {%- if let Some(t) = r.title %}
+            <span class="section">{{ ui.text(t, false)|safe }}</span>
+            {%- endif %}
+            <span class="property">{{ ui.text(r.label, false)|safe }}</span>
+            <span class="value" hidden></span>
+            <button class="add" type="button" command="show-modal" commandfor="{{ r.id }}">{{ ui.msg("qrender-nudge-add") }}</button>
+            <span class="saved" hidden>{{ ui.msg("qrender-saved") }}</span>
+            {{ ui.nudge_dialog(r.id.as_str(), r.w, r.label)|safe }}
+        </li>
+        {%- endfor %}
+    </ul>
+</aside>

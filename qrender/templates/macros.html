@@ -26,6 +26,26 @@
     {%- else if mark == "none" -%}<span class="prov-none" title="—"></span>{%- endif -%}
     {%- endif -%}
 {%- endmacro -%}
+{#- A search field of a nudge (nudge.js): the items of Wikidata or the
+    files of Commons, as a list under the field. `id` is of the nudge;
+    there is one search field of a source in a dialog. -#}
+{%- macro search(ui, id, source, label, required) -%}
+    <label for="{{ id }}-{{ source }}">{{ label }}</label>
+    <div class="pick">
+        <input id="{{ id }}-{{ source }}"
+               type="search"
+               role="combobox"
+               aria-autocomplete="list"
+               aria-expanded="false"
+               aria-controls="{{ id }}-{{ source }}-options"
+               autocomplete="off"
+               data-search="{{ source }}"
+               data-choose="{{ ui.msg("qrender-nudge-choose") }}"
+               data-show
+               {%- if required %} required autofocus{% endif %}>
+        <ul id="{{ id }}-{{ source }}-options" role="listbox" aria-label="{{ label }}" hidden></ul>
+    </div>
+{%- endmacro -%}
 {%- macro edit(ui, href) -%}
     <a class="edit"
        href="{{ href }}"

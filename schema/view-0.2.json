@@ -118,6 +118,34 @@
       ],
       "type": "object"
     },
+    "Ask": {
+      "description": "The value that a spread asks for when the page does not show the\nspread: it has no data.",
+      "properties": {
+        "spread": {
+          "type": "string"
+        },
+        "title": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Label"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The label of the spread's concept."
+        },
+        "wanted": {
+          "$ref": "#/$defs/Wanted"
+        }
+      },
+      "required": [
+        "spread",
+        "title",
+        "wanted"
+      ],
+      "type": "object"
+    },
     "Bar": {
       "properties": {
         "shares": {
@@ -1484,6 +1512,47 @@
         {
           "const": "list",
           "description": "Many values, one per line.",
+          "type": "string"
+        }
+      ]
+    },
+    "Field": {
+      "description": "The field for a value, by the datatype of its property.",
+      "oneOf": [
+        {
+          "enum": [
+            "url"
+          ],
+          "type": "string"
+        },
+        {
+          "const": "item",
+          "description": "A Wikidata item, from a search.",
+          "type": "string"
+        },
+        {
+          "const": "text",
+          "description": "A string or an external identifier.",
+          "type": "string"
+        },
+        {
+          "const": "monolingual",
+          "description": "A text and its language.",
+          "type": "string"
+        },
+        {
+          "const": "date",
+          "description": "A date and its precision.",
+          "type": "string"
+        },
+        {
+          "const": "quantity",
+          "description": "A number and its unit (an item).",
+          "type": "string"
+        },
+        {
+          "const": "file",
+          "description": "A Commons file, from a search.",
           "type": "string"
         }
       ]
@@ -5880,6 +5949,17 @@
             "$ref": "#/$defs/StatementRef"
           },
           "type": "array"
+        },
+        "wanted": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Wanted"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The value that the page asks the reader for: the first wanted\nproperty of the spread that the item lacks."
         }
       },
       "required": [
@@ -6236,6 +6316,22 @@
       ],
       "type": "object"
     },
+    "Wanted": {
+      "description": "A property that a spread asks for, and the field for its value.",
+      "properties": {
+        "field": {
+          "$ref": "#/$defs/Field"
+        },
+        "pid": {
+          "$ref": "#/$defs/Pid"
+        }
+      },
+      "required": [
+        "pid",
+        "field"
+      ],
+      "type": "object"
+    },
     "Web": {
       "description": "The fields that every work has.",
       "properties": {
@@ -6454,6 +6550,13 @@
         }
       },
       "type": "object"
+    },
+    "asks": {
+      "description": "The values that the spreads not on the page ask for: one group of\nthe page.",
+      "items": {
+        "$ref": "#/$defs/Ask"
+      },
+      "type": "array"
     },
     "citations": {
       "additionalProperties": {

@@ -1,0 +1,66 @@
+{%- import "macros.html" as m -%}
+{#- The dialog of a nudge: the field for the datatype of the property.
+    nudge.js searches items and files, and saves on this page only;
+    without it, the dialog has no Save, and its link adds the value on
+    Wikidata. `id` is of the dialog; its fields have it first. -#}
+{%- let field = w.field.name() -%}
+<dialog id="{{ id }}" class="nudge-editor" aria-labelledby="{{ id }}-title" data-field="{{ field }}" closedby="any">
+    <form method="dialog">
+        <header>
+            <h2 id="{{ id }}-title">{{ ui.text(label, false)|safe }}</h2>
+            <button type="button"
+                    command="close"
+                    commandfor="{{ id }}"
+                    aria-label="{{ ui.msg("qrender-close") }}">×</button>
+        </header>
+        <div class="fields">
+            {%- if let Some(d) = label.description %}
+            <p class="desc">{% call m::description(d) %}{% endcall %}</p>
+            {%- endif %}
+            {%- if field == "item" %}
+            {% call m::search(ui, id, "item", ui.msg("qrender-nudge-item"), true) %}{% endcall %}
+            {%- else if field == "file" %}
+            {% call m::search(ui, id, "file", ui.msg("qrender-nudge-file"), true) %}{% endcall %}
+            {%- else if field == "date" %}
+            <label for="{{ id }}-precision">{{ ui.msg("qrender-nudge-precision") }}</label>
+            <select id="{{ id }}-precision" data-precision>
+                <option value="day">{{ ui.msg("qrender-nudge-day") }}</option>
+                <option value="year">{{ ui.msg("qrender-nudge-year") }}</option>
+            </select>
+            <label for="{{ id }}-value">{{ ui.msg("qrender-nudge-value") }}</label>
+            <input id="{{ id }}-value" type="date" required autofocus data-show>
+            {%- else if field == "quantity" %}
+            <label for="{{ id }}-value">{{ ui.msg("qrender-nudge-value") }}</label>
+            <input id="{{ id }}-value" type="number" step="any" required autofocus data-show>
+            {% call m::search(ui, id, "item", ui.msg("qrender-nudge-unit"), false) %}{% endcall %}
+            {%- else %}
+            <label for="{{ id }}-value">{{ ui.msg("qrender-nudge-value") }}</label>
+            <input id="{{ id }}-value"
+                   type="{% if field == "url" %}url{% else %}text{% endif %}"
+                   {%- if field == "monolingual" %}
+                   lang="{{ ui.view.lang }}"
+                   dir="{{ ui.view.dir.name() }}"
+                   {%- endif %}
+                   required
+                   autofocus
+                   autocomplete="off"
+                   data-show>
+            {%- if field == "monolingual" %}
+            <label for="{{ id }}-lang">{{ ui.msg("qrender-nudge-language") }}</label>
+            <input id="{{ id }}-lang"
+                   type="text"
+                   value="{{ ui.view.lang }}"
+                   size="8"
+                   pattern="[a-z]{2,3}(-[a-z0-9]+)*"
+                   required
+                   autocomplete="off">
+            {%- endif %}
+            {%- endif %}
+        </div>
+        <footer class="actions">
+            <a class="on-wikidata" href="{{ ui.edit(w.pid) }}">{{ ui.msg("qrender-nudge-wikidata") }} ↗</a>
+            <button class="close" type="button" command="close" commandfor="{{ id }}">{{ ui.msg("qrender-close") }}</button>
+            <button class="save" value="save" hidden>{{ ui.msg("qrender-save") }}</button>
+        </footer>
+    </form>
+</dialog>

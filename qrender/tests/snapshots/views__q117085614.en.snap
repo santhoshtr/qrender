@@ -931,6 +931,15 @@ expression: json
       "lang": "en",
       "text": "Sinemalar title ID"
     },
+    "P921": {
+      "description": {
+        "lang": "en",
+        "text": "primary topic of a work or act of communication"
+      },
+      "href": "https://www.wikidata.org/wiki/Property:P921",
+      "lang": "en",
+      "text": "main subject"
+    },
     "P9586": {
       "href": "https://www.wikidata.org/wiki/Property:P9586",
       "lang": "en",
@@ -1925,6 +1934,19 @@ expression: json
     "qrender-model-loading": "Loading the 3D model… $1",
     "qrender-model-unsupported": "This 3D model cannot be shown here.",
     "qrender-note": "Note $1",
+    "qrender-nudge-add": "Add",
+    "qrender-nudge-ask": "Help complete this page",
+    "qrender-nudge-choose": "Choose one from the list.",
+    "qrender-nudge-day": "Day",
+    "qrender-nudge-file": "Search for a file on Wikimedia Commons",
+    "qrender-nudge-item": "Search for an item",
+    "qrender-nudge-language": "Language code",
+    "qrender-nudge-precision": "Precision",
+    "qrender-nudge-unit": "Unit (optional)",
+    "qrender-nudge-value": "Value",
+    "qrender-nudge-wikidata": "Add it on Wikidata",
+    "qrender-nudge-year": "Year",
+    "qrender-nudges-intro": "The page has no data for these sections yet.",
     "qrender-other-value": "other value",
     "qrender-page-language": "Language: $1",
     "qrender-play": "Play",

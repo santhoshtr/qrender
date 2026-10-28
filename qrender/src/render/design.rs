@@ -92,8 +92,9 @@ const BASE: [&str; 5] = [
 /// pin (a map) can be in any block. The clamp and the translation of the
 /// article's sections are in spreads and at the end of the page. A label to add in
 /// the page language (the label editor) can be in any block. The search
-/// is in the page header, and so is the button of the contents drawer.
-pub const PAGE_SCRIPTS: [&str; 11] = [
+/// is in the page header, and so is the button of the contents drawer. A
+/// nudge (a value to add) can be in any spread.
+pub const PAGE_SCRIPTS: [&str; 12] = [
     include_str!("../../assets/invokers.js"),
     include_str!("../../assets/intl.js"),
     include_str!("../../assets/play.js"),
@@ -103,6 +104,7 @@ pub const PAGE_SCRIPTS: [&str; 11] = [
     include_str!("../../assets/clamp.js"),
     include_str!("../../assets/translate.js"),
     include_str!("../../assets/label.js"),
+    include_str!("../../assets/nudge.js"),
     include_str!("../../assets/search.js"),
     include_str!("../../assets/toc.js"),
 ];

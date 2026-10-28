@@ -1,0 +1,10 @@
+{#- The nudge of a spread: a value that the item lacks, asked for, with
+    its dialog (parts/nudge_dialog.html). -#}
+<aside class="nudge" aria-labelledby="{{ id }}-ask" data-edit="{{ ui.msg("qrender-edit") }}">
+    <p class="ask" id="{{ id }}-ask">{{ ui.msg("qrender-nudge-ask") }}</p>
+    <p class="property">{{ ui.text(label, false)|safe }}</p>
+    <p class="value" hidden></p>
+    <p class="saved" hidden>{{ ui.msg("qrender-saved") }}</p>
+    <button class="add" type="button" command="show-modal" commandfor="{{ id }}">{{ ui.msg("qrender-nudge-add") }}</button>
+    {{ ui.nudge_dialog(id.as_str(), w, label)|safe }}
+</aside>

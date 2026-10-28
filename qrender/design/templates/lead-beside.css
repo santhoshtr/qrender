@@ -39,6 +39,17 @@
 	& > :is( .prose-slot, .article-slot ) { grid-row: prose; }
 	& > .topic-articles { grid-row: topics; }
 	& > .prose-links { grid-row: -1; }
+
+	/* A nudge in the flow is at the end, not in the first empty row. In
+	   the rail (base.css, width >= 1440px) it is out of the flow: a grid
+	   row would be its containing block. */
+	@media ( width < 1440px ) {
+		&:has( > .nudge ) {
+			grid-template-rows: [title] auto [top] auto [bottom] 1fr [gallery] auto [strips] auto [prose] auto [topics] auto [nudge] auto;
+		}
+
+		& > .nudge { grid-row: nudge; }
+	}
 }
 
 .t-lead-beside > [data-slot='sheet'] { grid-column: 6 / -1; }

@@ -90,6 +90,7 @@
         {%- for s in view.spreads_at(false) %}
             {{ ui.spread(s)|safe }}
         {%- endfor %}
+        {{- ui.asks()|safe }}
         {#- The sections of the article that no spread shows: a spread each;
             from a fallback article, one spread for all, so the English
             titles do not fill the contents. #}

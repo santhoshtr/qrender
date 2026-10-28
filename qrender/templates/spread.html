@@ -13,4 +13,5 @@
     {%- if !articles.is_empty() %}<div class="topic-articles">{% for t in articles %}{{ ui.topic_article(t)|safe }}{% endfor %}</div>{% endif -%}
     {%- let links = ui.prose_links(s) -%}
     {%- if !links.is_empty() %}<p class="prose-links">{{ ui.note(links.as_slice())|safe }}</p>{% endif -%}
+    {{- ui.nudge(s)|safe -}}
 </section>

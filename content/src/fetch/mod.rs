@@ -63,7 +63,7 @@ pub enum FetchError {
 /// The version of the fetcher. Raise it when a change of the fetcher
 /// changes what it fetches (a new field, a new request): it is part of
 /// every cache key, so the parts that an older fetcher stored are not read.
-pub const FETCH_VERSION: u32 = 21;
+pub const FETCH_VERSION: u32 = 22;
 
 /// Seconds a cached part lives: content and text change with edits;
 /// a peer set changes slowly and many items share it.
@@ -166,6 +166,10 @@ impl<S: Store> Fetcher<S> {
         );
         let layout = self.settings.layout(&classes);
         let reverse_pids = layout.map(|l| l.reverse.clone()).unwrap_or_default();
+        let have: BTreeSet<Pid> = statements.iter().map(|s| s.pid).collect();
+        let wanted_pids: Vec<Pid> = layout
+            .map(|l| unique(l.wanted.iter().copied().filter(|p| !have.contains(p))))
+            .unwrap_or_default();
         let value_items: Vec<Qid> = unique(statements.iter().filter_map(|s| s.value.item()));
         let web_pids: Vec<Pid> = unique(
             statements
@@ -278,6 +282,7 @@ impl<S: Store> Fetcher<S> {
             language_codes,
             formatters,
             item_names,
+            wanted,
         ) = futures::try_join!(
             sparql::references(http, qid),
             sparql::quantities(http, &targets, &quantity_pids),
@@ -299,6 +304,7 @@ impl<S: Store> Fetcher<S> {
             sparql::language_codes(http, &languages),
             sparql::formatters(http, &web_pids),
             sparql::names(http, &named_items, &name_langs),
+            wikidata::datatypes(http, &wanted_pids),
         )?;
         let text_items = text_items(&statements, &self.settings.texts, &item_names);
         let references = references::read(references);
@@ -354,6 +360,7 @@ impl<S: Store> Fetcher<S> {
             language_codes,
             formatters,
             text_items,
+            wanted,
         })
     }
 
@@ -577,6 +584,7 @@ fn identifiers(content: &Content) -> BTreeSet<EntityId> {
         ids.extend(peers.missing.keys().map(|p| EntityId::Property(*p)));
         ids.insert(peers.class.into());
     }
+    ids.extend(content.wanted.keys().map(|p| EntityId::Property(*p)));
     if let Some(q) = content.container.qid {
         ids.insert(q.into());
     }

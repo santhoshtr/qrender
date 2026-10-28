@@ -76,7 +76,7 @@ impl Config {
     }
 
     /// What the fetcher needs from the layouts: layout matching, reverse
-    /// properties, container properties, qualifier logos, concepts, web
+    /// and wanted properties, container properties, qualifier logos, concepts, web
     /// properties and their platforms; and the citation templates.
     pub fn fetch_settings(&self) -> content::Settings {
         let layouts = &self.layouts;
@@ -101,6 +101,11 @@ impl Config {
                         .spreads
                         .iter()
                         .flat_map(|s| s.reverse.iter().copied())
+                        .collect(),
+                    wanted: l
+                        .spreads
+                        .iter()
+                        .flat_map(|s| s.wanted.iter().copied())
                         .collect(),
                 })
                 .collect(),
@@ -275,6 +280,13 @@ fn class_layout(name: &str, layout: &ClassLayout, errors: &mut Vec<String>) {
                 spread.id
             ));
         }
+        // An added value must show in the spread that asks for it.
+        for pid in spread.wanted.iter().filter(|p| !spread.pids.contains(p)) {
+            errors.push(format!(
+                "class_layouts.{name}.{}: wanted {pid} is not in pids",
+                spread.id
+            ));
+        }
     }
     for kind in [SpreadKind::Identity, SpreadKind::More, SpreadKind::Evidence] {
         if layout.spreads.iter().filter(|s| s.kind == kind).count() > 1 {
@@ -397,6 +409,11 @@ mod tests {
         // An index range with one end.
         let layouts = LAYOUTS.replacen("{ min = 0, max = 100 }", "{ min = 0 }", 1);
         assert!(invalid(&layouts, RULES).contains("indexes.P11547: give min and max"));
+        // A wanted property that the spread does not show.
+        let layouts = LAYOUTS.replacen("wanted = [\n  \"P131\"", "wanted = [\n  \"P17\"", 1);
+        assert!(
+            invalid(&layouts, RULES).contains("settlement.location: wanted P17 is not in pids")
+        );
     }
 
     #[test]

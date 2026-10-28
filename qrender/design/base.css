@@ -22,6 +22,9 @@
 	   viewport (width >= 1120px). */
 	--chrome-height: 56px;
 	--toc-width: 240px;
+	/* The column of the nudges at the inline end, on a wide viewport
+	   (width >= 1440px). */
+	--rail-width: 220px;
 	--gutter: 16px;
 	--gap: 16px;
 	--radius: 8px;
@@ -1370,8 +1373,209 @@ dialog.label-editor {
 	}
 }
 
+/* ---------- nudges ---------- */
+
+/* A nudge: a value that the item lacks, and the button that opens its
+   dialog. After a save, the value and a note. */
+.nudge {
+	& p { margin: 0; }
+
+	& .property { font-weight: var( --font-weight-bold ); }
+
+	& .value { font-size: var( --font-size-medium ); }
+
+	& .saved { flex-basis: 100%; color: var( --color-success ); }
+
+	& .add {
+		padding: var( --spacing-25 ) var( --spacing-75 );
+		border: 1px solid var( --border-color-progressive );
+		border-radius: var( --border-radius-base );
+		background-color: var( --background-color-progressive );
+		color: var( --color-inverted );
+		font: inherit;
+		font-weight: var( --font-weight-bold );
+		cursor: pointer;
+	}
+
+	&.is-saved .add {
+		border-color: var( --border-color-base );
+		background-color: var( --background-color-interactive-subtle );
+		color: var( --color-base );
+	}
+}
+
+/* The card of a nudge, and of the group of the spreads with no data. */
+:is( .spread > .nudge, .nudges ) {
+	grid-column: 1 / -1;
+	justify-self: start;
+	padding: var( --spacing-75 ) var( --spacing-100 );
+	border: 1px solid var( --border-color-progressive--focus );
+	border-radius: var( --radius );
+	background-color: var( --background-color-progressive-subtle );
+	font-size: var( --font-size-small );
+
+	& p { margin: 0; }
+
+	& .ask { color: var( --color-subtle ); }
+}
+
+/* The nudge of a spread: at the end of the spread. On a wide viewport
+   the page has a rail at its inline end, and the nudge is in the rail,
+   level with the title of its spread. */
+.spread > .nudge {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: var( --spacing-25 ) var( --spacing-75 );
+
+	& .property::first-letter { text-transform: uppercase; }
+
+	&.is-saved {
+		border-color: var( --border-color-success );
+		background-color: var( --background-color-success-subtle );
+	}
+}
+
+/* The values that the spreads with no data ask for: one card after the
+   spreads, a row for each value: the spread, the property, the button. */
+.nudges {
+	& ul {
+		display: grid;
+		gap: var( --spacing-50 );
+		margin: var( --spacing-75 ) 0 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	& .nudge {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: var( --spacing-25 ) var( --spacing-75 );
+	}
+
+	/* Inline-block: a first letter is raised as in the title of a spread. */
+	& .section {
+		display: inline-block;
+		color: var( --color-subtle );
+
+		&::first-letter { text-transform: uppercase; }
+		&::after { content: ':'; }
+	}
+}
+
+@media ( width >= 1440px ) {
+	:root:has( .spread > .nudge ) { --frame-max: calc( var( --page-max ) + var( --rail-width ) ); }
+	:root:has( #toc ):has( .spread > .nudge ) {
+		--frame-max: calc( var( --page-max ) + var( --toc-width ) + var( --rail-width ) );
+	}
+
+	.page:has( .spread > .nudge ) {
+		max-inline-size: calc( var( --page-max ) + var( --rail-width ) );
+		padding-inline-end: calc( var( --gutter ) + var( --rail-width ) );
+	}
+
+	/* The rail is the padding of the page: the nudge goes out of its
+	   spread into it. A spread is as tall as its nudge at least, so that
+	   the nudges of two short spreads do not overlap. */
+	.spread:has( > .nudge ) {
+		position: relative;
+		min-block-size: 12em;
+	}
+
+	.spread > .nudge {
+		position: absolute;
+		inset-block-start: 0;
+		inset-inline-start: calc( 100% + var( --spacing-150 ) );
+		inline-size: calc( var( --rail-width ) - var( --spacing-150 ) );
+		flex-direction: column;
+		align-items: stretch;
+		gap: var( --spacing-50 );
+
+		& .add { align-self: start; }
+	}
+}
+
+/* The editor of a nudge: the description of the property, and the field
+   of its datatype. The results of a search are under its field. */
+dialog.nudge-editor {
+	inline-size: min( 560px, 100vw - 2 * var( --gutter ) );
+
+	& h2::first-letter { text-transform: uppercase; }
+
+	& .fields {
+		display: grid;
+		gap: var( --spacing-25 );
+		padding: var( --spacing-100 );
+
+		& label:not( :first-child ) { margin-block-start: var( --spacing-75 ); }
+	}
+
+	& .desc {
+		margin: 0 0 var( --spacing-50 );
+		color: var( --color-subtle );
+		font-size: var( --font-size-small );
+	}
+
+	& label { font-weight: var( --font-weight-bold ); }
+
+	& :is( input, select ) {
+		inline-size: 100%;
+		padding: var( --spacing-50 ) var( --spacing-75 );
+		border: 1px solid var( --border-color-base );
+		border-radius: var( --border-radius-base );
+		background-color: var( --background-color-base );
+		color: var( --color-base );
+		font: inherit;
+
+		&:focus { outline: 2px solid var( --outline-color-progressive--focus ); outline-offset: -1px; }
+		&:user-invalid { border-color: var( --border-color-error ); }
+	}
+
+	& [role="listbox"] {
+		margin: var( --spacing-25 ) 0 0;
+		padding: var( --spacing-25 ) 0;
+		list-style: none;
+		border: 1px solid var( --border-color-base );
+		border-radius: var( --border-radius-base );
+
+		& li {
+			display: grid;
+			grid-template-columns: auto minmax( 0, 1fr );
+			column-gap: var( --spacing-75 );
+			align-items: center;
+			padding: var( --spacing-35 ) var( --spacing-75 );
+			cursor: pointer;
+
+			&:is( [aria-selected="true"], :hover ) { background-color: var( --background-color-interactive-subtle ); }
+		}
+
+		/* A file: its thumbnail, on white (a drawing can be transparent). */
+		& img {
+			grid-row: span 2;
+			inline-size: 48px;
+			block-size: 48px;
+			object-fit: contain;
+			background-color: var( --background-color-base-fixed );
+		}
+
+		& .text { grid-column: 2; overflow-wrap: anywhere; }
+
+		& .description {
+			grid-column: 2;
+			color: var( --color-subtle );
+			font-size: var( --font-size-small );
+		}
+	}
+
+	& .on-wikidata { margin-inline-end: auto; font-size: var( --font-size-small ); }
+}
+
+dialog:modal { overscroll-behavior: contain; }
+dialog::backdrop { overflow: hidden; overscroll-behavior: contain; }
+
 /* The actions of an editor: in view at the end of the dialog. */
-dialog:is( .translator, .label-editor ) .actions {
+dialog:is( .translator, .label-editor, .nudge-editor ) .actions {
 	position: sticky;
 	inset-block-end: 0;
 	display: flex;

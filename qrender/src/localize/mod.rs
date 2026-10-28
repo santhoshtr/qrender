@@ -18,8 +18,8 @@ use content::{Citation, Cited, EntityId, Lang, OutlineBlock, Pid, Qid, Text};
 use serde_json::Value;
 
 pub use view::{
-    Article, Coverage, Description, Label, Link, Note, PageImage, Project, ProseBlock, ProseFigure,
-    ProseImage, ProseSection, SectionProse, SpreadView, VIEW_SCHEMA, View,
+    Article, Ask, Coverage, Description, Label, Link, Note, PageImage, Project, ProseBlock,
+    ProseFigure, ProseImage, ProseSection, SectionProse, SpreadView, VIEW_SCHEMA, View,
 };
 
 use crate::compose::picture::media_kind;
@@ -27,7 +27,7 @@ use crate::config::Config;
 use crate::primitives::media::MediaRole;
 use crate::schema::{
     Block, COMPOSITION_SCHEMA, Composition, Credit, MediaKind, Picture, PictureFacts, Spread,
-    round_to,
+    Wanted, round_to,
 };
 use crate::wikidata::{AGE, POINT_IN_TIME};
 use article::{Links, Numbering, article_url};
@@ -106,13 +106,23 @@ impl<'a> Localizer<'a> {
         let mut unpictured = BTreeSet::new();
         walk_values(&self.json, &mut described, &mut unpictured);
         let measured = self.measured();
+        // The properties that the page asks for: their dialog says what
+        // the value is.
+        let wanted: BTreeSet<Pid> = self
+            .composition
+            .spreads
+            .iter()
+            .map(|s| &s.wanted)
+            .chain(self.composition.dropped.iter().map(|d| &d.wanted))
+            .filter_map(|w| w.as_ref().map(|w| w.pid))
+            .collect();
         let mut labels: BTreeMap<_, _> = ids
             .iter()
             .map(|id| {
                 let mut label = self.label(*id);
                 let shown = match id {
                     EntityId::Item(q) => described.contains(q),
-                    EntityId::Property(p) => measured.contains(p),
+                    EntityId::Property(p) => measured.contains(p) || wanted.contains(p),
                 };
                 if shown {
                     label.description = self.description(*id);
@@ -139,7 +149,8 @@ impl<'a> Localizer<'a> {
                     || v.prose_text.is_some()
                     || !v.sections.is_empty()
             })
-            .collect();
+            .collect::<Vec<_>>();
+        let asks = self.asks(&spreads);
         let more_sections = self.more_sections();
         View {
             schema: VIEW_SCHEMA,
@@ -160,6 +171,7 @@ impl<'a> Localizer<'a> {
             coverage: self.coverage(),
             projects: self.projects(),
             spreads,
+            asks,
             unmatched_sections: self.unmatched_sections(),
             more_sections,
             set_aside: self.composition.set_aside.clone(),
@@ -446,6 +458,43 @@ impl<'a> Localizer<'a> {
     fn has_head_picture(&self) -> bool {
         self.blocks()
             .any(|b| matches!(b, Block::Media(m) if m.role == MediaRole::Identity))
+    }
+
+    /// The values that the spreads not on the page ask for, in the order
+    /// of the class layout: a dropped spread, or one with nothing to show
+    /// in this language. At most `asks` of them.
+    fn asks(&self, shown: &[SpreadView]) -> Vec<Ask> {
+        let Some(layout) = self
+            .config
+            .layouts
+            .class_layouts
+            .get(&self.composition.class_layout)
+        else {
+            return Vec::new();
+        };
+        let hidden = self
+            .composition
+            .spreads
+            .iter()
+            .filter(|s| !shown.iter().any(|v| v.spread.id == s.id))
+            .map(|s| (&s.id, &s.wanted));
+        let dropped = self.composition.dropped.iter().map(|d| (&d.id, &d.wanted));
+        let wanted: BTreeMap<&String, &Wanted> = hidden
+            .chain(dropped)
+            .filter_map(|(id, w)| Some((id, w.as_ref()?)))
+            .collect();
+        layout
+            .spreads
+            .iter()
+            .filter_map(|spec| {
+                Some(Ask {
+                    spread: spec.id.clone(),
+                    title: spec.concept.map(|q| self.concept(q)),
+                    wanted: (*wanted.get(&spec.id)?).clone(),
+                })
+            })
+            .take(self.config.layouts.thresholds.asks)
+            .collect()
     }
 
     fn spread(&self, spread: &Spread) -> SpreadView {
