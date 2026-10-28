@@ -607,7 +607,7 @@ dialog.lightbox {
 	& a {
 		display: block;
 		padding: var( --spacing-25 ) var( --spacing-75 );
-		border-inline-start: 3px solid var( --ink );
+		/* border-inline-start: 3px solid var( --ink ); */
 		color: var( --color-base );
 		text-decoration: none;
 
