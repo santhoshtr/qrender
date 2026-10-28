@@ -9,7 +9,6 @@
 
 use std::path::{Path, PathBuf};
 use std::process::ExitCode;
-use std::time::Instant;
 
 use app::Service;
 use clap::{Args, Parser, Subcommand};
@@ -166,23 +165,8 @@ async fn fetch(item: &Live) -> Result<(Content, Text)> {
         _ => Mode::Live,
     };
     let service = Service::from_env(mode)?;
-    let start = Instant::now();
     let content = service.content(item.qid).await?;
-    eprintln!(
-        "content {}: {} statements, {:.1} s",
-        item.qid,
-        content.statements.len(),
-        start.elapsed().as_secs_f64()
-    );
-    let start = Instant::now();
     let text = service.text(&content, &item.lang).await?;
-    eprintln!(
-        "text {}.{}: {} labels, {:.1} s",
-        item.qid,
-        item.lang,
-        text.labels.len(),
-        start.elapsed().as_secs_f64()
-    );
     Ok((content, text))
 }
 

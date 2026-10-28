@@ -3,6 +3,11 @@
 //!
 //! Only fetched parts are cached (content, text, peer sets). The
 //! composition and the view are derived from them in milliseconds.
+//!
+//! Each step writes one line to stderr: the item, the language, the time.
+//! A fetch of a few milliseconds came from the cache.
+
+use std::time::Instant;
 
 use content::cache::Cache;
 use content::fetch::{FetchError, Fetcher, Http, Mode};
@@ -35,24 +40,46 @@ impl Service {
     }
 
     pub async fn content(&self, qid: Qid) -> Result<Content, FetchError> {
-        self.fetcher.content(qid).await
+        let start = Instant::now();
+        let content = self.fetcher.content(qid).await?;
+        eprintln!(
+            "content {qid}: {} statements, {:.1?}",
+            content.statements.len(),
+            start.elapsed()
+        );
+        Ok(content)
     }
 
     pub async fn text(&self, content: &Content, lang: &Lang) -> Result<Text, FetchError> {
-        self.fetcher.text(content, lang).await
+        let start = Instant::now();
+        let text = self.fetcher.text(content, lang).await?;
+        eprintln!(
+            "text {}.{lang}: {} labels, {:.1?}",
+            content.qid,
+            text.labels.len(),
+            start.elapsed()
+        );
+        Ok(text)
     }
 
     pub async fn composition(&self, qid: Qid) -> Result<Composition, FetchError> {
-        Ok(qrender::compose(&self.content(qid).await?, self.config))
+        Ok(self.compose(&self.content(qid).await?))
     }
 
     pub async fn view(&self, qid: Qid, lang: &Lang) -> Result<View, FetchError> {
         let content = self.content(qid).await?;
         let text = self.text(&content, lang).await?;
-        Ok(qrender::localize(
-            &qrender::compose(&content, self.config),
-            &text,
-            self.config,
-        ))
+        let composition = self.compose(&content);
+        let start = Instant::now();
+        let view = qrender::localize(&composition, &text, self.config);
+        eprintln!("localize {qid}.{lang}: {:.1?}", start.elapsed());
+        Ok(view)
+    }
+
+    fn compose(&self, content: &Content) -> Composition {
+        let start = Instant::now();
+        let composition = qrender::compose(content, self.config);
+        eprintln!("compose {}: {:.1?}", content.qid, start.elapsed());
+        composition
     }
 }

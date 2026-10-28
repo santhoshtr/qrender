@@ -17,6 +17,7 @@
 //! served under a subpath, e.g. "/qrender"), USER_AGENT.
 
 use std::sync::{Arc, LazyLock};
+use std::time::Instant;
 
 use app::Service;
 use axum::Router;
@@ -149,26 +150,23 @@ async fn page(
         Ok(view) => view,
         Err(e) => return error(&e),
     };
+    let start = Instant::now();
     if markdown {
+        let page = markdown::page(&view);
+        eprintln!("render {qid}.{lang}.md: {:.1?}", start.elapsed());
         return (
             [
                 (header::CONTENT_TYPE, "text/markdown; charset=utf-8"),
                 (header::CACHE_CONTROL, PAGE_CACHE),
             ],
-            markdown::page(&view),
+            page,
         )
             .into_response();
     }
     let base = format!("{}/design/{}", state.base_path, design_version());
-    (
-        [(header::CACHE_CONTROL, PAGE_CACHE)],
-        Html(html::page(
-            &view,
-            Styles::Linked(&base),
-            Some(&state.base_path),
-        )),
-    )
-        .into_response()
+    let page = html::page(&view, Styles::Linked(&base), Some(&state.base_path));
+    eprintln!("render {qid}.{lang}: {:.1?}", start.elapsed());
+    ([(header::CACHE_CONTROL, PAGE_CACHE)], Html(page)).into_response()
 }
 
 async fn content_json(State(state): State<AppState>, Path(qid): Path<String>) -> Response {
