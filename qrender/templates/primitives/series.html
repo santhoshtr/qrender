@@ -2,8 +2,10 @@
 {#- Measurements over time. The table is the content, a column for each
     line; the qr-chart element (chart.js) draws a line chart from the data
     of its cells. One line: the title is its property. The lines of a
-    split: the title is the concept, and a key names each line. A value
-    apart (a year by sex among years without) is in the table only. -#}
+    split: the title is the concept, and a key names each line. The lines
+    of the measures of one property (all, female, male): the title is the
+    property, and a key names each measure. A value apart (a year by sex
+    among years without) is in the table only. -#}
 {%- let rows = b.rows() -%}
 <qr-chart class="block series box">
 {%- if let Some(concept) = b.concept -%}
@@ -23,6 +25,13 @@
     {% call m::edit(ui, ui.edit(b.lines[0].pid)) %}
     {% endcall %}
     </h3>
+    {%- if b.lines.len() > 1 -%}
+        {%- for line in b.lines.iter() -%}
+            <p class="desc line"><span class="key" style="--c: var( --part-{{ loop.index }} )"></span>
+                {%- if line.qualifiers.is_empty() %}{{ ui.text(ui.property(line.pid), false)|safe }}{% else %}{{ ui.note(ui.qualifiers(line.qualifiers.as_slice()).as_slice())|safe }}{% endif -%}
+            </p>
+        {%- endfor -%}
+    {%- endif -%}
 {%- endif %}
 <div class="chart">
     <div class="data">
@@ -31,7 +40,9 @@
                 <tr>
                     <th scope="col">{{ ui.text(ui.point_in_time(), false)|safe }}</th>
                     {%- for line in b.lines.iter() %}
-                        <th scope="col">{{ ui.text(ui.property(line.pid), false)|safe }}</th>
+                        <th scope="col">
+                            {%- if line.qualifiers.is_empty() %}{{ ui.text(ui.property(line.pid), false)|safe }}{% else %}{{ ui.note(ui.qualifiers(line.qualifiers.as_slice()).as_slice())|safe }}{% endif -%}
+                        </th>
                     {%- endfor %}
                 </tr>
             </thead>

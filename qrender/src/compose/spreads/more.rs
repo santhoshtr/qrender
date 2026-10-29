@@ -7,7 +7,7 @@ use indexmap::IndexMap;
 
 use crate::compose::Composer;
 use crate::compose::blocks::Made;
-use crate::compose::facts::series_points;
+use crate::compose::facts::series_lines;
 use crate::config::SpreadSpec;
 use crate::primitives::fact;
 use crate::schema::Block;
@@ -25,7 +25,7 @@ pub fn build(c: &mut Composer, spec: &SpreadSpec) -> super::Built {
         let statements = c.take(statements);
         // A series of quantities: a chart, by the block rules.
         if statements[0].value.datatype() == Datatype::Quantity
-            && series_points(c, &statements).is_some()
+            && series_lines(c, &statements).is_some()
         {
             charts.extend(c.blocks_for(pid, statements, &[]));
         } else {

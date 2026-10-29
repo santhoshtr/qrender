@@ -1,6 +1,7 @@
 //! Series: measurements over time, as a line chart. One line from
-//! statements dated by year, or from a Commons data file; or one line for
-//! each part of a split, when every part is a series. The page has the
+//! statements dated by year, or from a Commons data file; a line for each
+//! measure of the statements (all, female, male); or one line for each
+//! part of a split, when every part is a series. The page has the
 //! points as a table, a column for each line; `chart.js` draws the chart
 //! from it.
 
@@ -9,7 +10,7 @@ use schemars::JsonSchema;
 use serde::Serialize;
 
 use crate::compose::Composer;
-use crate::compose::facts::{other_qualifiers, series_points};
+use crate::compose::facts::{DatedPoint, other_qualifiers, series_lines, series_points};
 use crate::schema::{Provenance, QualifierShown};
 
 #[derive(Debug, Clone, Serialize, JsonSchema)]
@@ -36,6 +37,10 @@ pub struct Series {
 #[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct Line {
     pub pid: Pid,
+    /// The measure of the line (female), when the lines are the measures
+    /// of one property; empty for the line of all.
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub qualifiers: Vec<QualifierShown>,
     pub points: Vec<Point>,
 }
 
@@ -131,16 +136,28 @@ pub struct Point {
 }
 
 /// Dated quantity statements of one property, when they make a series
-/// (`series_points`).
+/// (`series_lines`).
 pub fn dated(
     c: &Composer,
     pid: Pid,
     statements: &[&Statement],
     rule: Option<&str>,
 ) -> Option<Series> {
+    let lines = series_lines(c, statements)?;
+    let measures = lines.len() > 1;
     Some(Series {
         concept: None,
-        lines: vec![line(c, pid, statements)?],
+        lines: lines
+            .into_iter()
+            .map(|points| {
+                let measure = if measures {
+                    shown(other_qualifiers(points[0].statement))
+                } else {
+                    Vec::new()
+                };
+                line(c, pid, points, measure)
+            })
+            .collect::<Option<_>>()?,
         statement: None,
         provenance: None,
         citations: Vec::new(),
@@ -156,7 +173,7 @@ pub fn lines(c: &Composer, concept: Qid, parts: &[(Pid, Vec<&Statement>)]) -> Op
         concept: Some(concept),
         lines: parts
             .iter()
-            .map(|(pid, statements)| line(c, *pid, statements))
+            .map(|(pid, statements)| line(c, *pid, series_points(c, statements)?, Vec::new()))
             .collect::<Option<_>>()?,
         statement: None,
         provenance: None,
@@ -166,8 +183,13 @@ pub fn lines(c: &Composer, concept: Qid, parts: &[(Pid, Vec<&Statement>)]) -> Op
     })
 }
 
-fn line(c: &Composer, pid: Pid, statements: &[&Statement]) -> Option<Line> {
-    let mut points: Vec<_> = series_points(c, statements)?
+fn line(
+    c: &Composer,
+    pid: Pid,
+    points: Vec<DatedPoint>,
+    qualifiers: Vec<QualifierShown>,
+) -> Option<Line> {
+    let mut points: Vec<_> = points
         .into_iter()
         .map(|p| match p.statement.value {
             Value::Quantity { amount, .. } => Some(Point {
@@ -176,10 +198,7 @@ fn line(c: &Composer, pid: Pid, statements: &[&Statement]) -> Option<Line> {
                 other: p.other,
                 apart: p.apart,
                 qualifiers: if p.apart {
-                    other_qualifiers(p.statement)
-                        .into_iter()
-                        .filter_map(|q| QualifierShown::new(q.pid, &q.value))
-                        .collect()
+                    shown(other_qualifiers(p.statement))
                 } else {
                     Vec::new()
                 },
@@ -191,7 +210,18 @@ fn line(c: &Composer, pid: Pid, statements: &[&Statement]) -> Option<Line> {
         })
         .collect::<Option<_>>()?;
     points.sort_by_key(|p| (p.year, p.apart, p.other));
-    Some(Line { pid, points })
+    Some(Line {
+        pid,
+        qualifiers,
+        points,
+    })
+}
+
+fn shown(qualifiers: Vec<&content::Qualifier>) -> Vec<QualifierShown> {
+    qualifiers
+        .into_iter()
+        .filter_map(|q| QualifierShown::new(q.pid, &q.value))
+        .collect()
 }
 
 /// A series from a Commons data file: the first column whose name has
@@ -228,6 +258,7 @@ pub fn tabular(c: &Composer, pid: Pid, statement: &Statement) -> Option<Series> 
         concept: None,
         lines: vec![Line {
             pid,
+            qualifiers: Vec::new(),
             points: points
                 .iter()
                 .map(|&(year, amount)| Point {
@@ -282,12 +313,31 @@ pub fn markdown(b: &Series, md: &mut crate::render::markdown::Markdown) {
         md.items(&md.label(content::EntityId::Item(concept)), &lines);
         return;
     }
+    if b.lines.len() > 1 {
+        let lines: Vec<String> = b
+            .lines
+            .iter()
+            .map(|l| format!("{}: {}", measure(l, md), points(l, md)))
+            .collect();
+        md.items(&md.described_property(b.lines[0].pid), &lines);
+        return;
+    }
     let line = &b.lines[0];
     let mut value = points(line, md);
     if let Some(source) = &b.source {
         value.push_str(&format!(" (source: {})", source.file));
     }
     md.item(&md.described_property(line.pid), &value);
+}
+
+/// The name of a line of a measure: its qualifiers; the property for the
+/// line of all.
+fn measure(line: &Line, md: &crate::render::markdown::Markdown) -> String {
+    if line.qualifiers.is_empty() {
+        md.property(line.pid)
+    } else {
+        md.note(&md.view.note(&line.qualifiers))
+    }
 }
 
 fn points(line: &Line, md: &crate::render::markdown::Markdown) -> String {

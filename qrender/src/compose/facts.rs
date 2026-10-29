@@ -136,9 +136,9 @@ impl<'c, 'a> GroupFacts<'c, 'a> {
             && linked as f64 >= thresholds.linked_share * self.statements.len() as f64
     }
 
-    /// The values make a series (`series_points`).
+    /// The values make a series (`series_lines`).
     pub fn series(&self) -> bool {
-        series_points(self.composer, self.statements).is_some()
+        series_lines(self.composer, self.statements).is_some()
     }
 
     /// The globe of a coordinate value; None for other values.
@@ -191,6 +191,40 @@ pub fn series_points<'s>(
     let points = dated_points(c, statements)?;
     let years: HashSet<i64> = points.iter().filter(|p| !p.apart).map(|p| p.year).collect();
     (years.len() >= 2).then_some(points)
+}
+
+/// The most lines of a series by measure: the part colours (`--part-1` to
+/// `--part-6` in base.css).
+const LINES_MAX: usize = 6;
+
+/// The lines of a series: one line (`series_points`); else a line for each
+/// measure (the other qualifiers: all, female, male), when each measure is
+/// a series. The measure without qualifiers is first, then the others in
+/// the order of the data. More measures than `LINES_MAX`: no series.
+pub fn series_lines<'s>(
+    c: &Composer,
+    statements: &[&'s Statement],
+) -> Option<Vec<Vec<DatedPoint<'s>>>> {
+    if let Some(points) = series_points(c, statements) {
+        return Some(vec![points]);
+    }
+    let mut measures: Vec<(Vec<&Qualifier>, Vec<&'s Statement>)> = Vec::new();
+    for s in statements {
+        let measure = other_qualifiers(s);
+        match measures.iter_mut().find(|(m, _)| *m == measure) {
+            Some((_, same)) => same.push(s),
+            None => measures.push((measure, vec![s])),
+        }
+    }
+    if !(2..=LINES_MAX).contains(&measures.len()) {
+        return None;
+    }
+    // The sort is stable.
+    measures.sort_by_key(|(m, _)| !m.is_empty());
+    measures
+        .iter()
+        .map(|(_, same)| series_points(c, same))
+        .collect()
 }
 
 /// The statements as points, in their order, when each has a year
@@ -742,6 +776,51 @@ mod tests {
                 (2019, false),
                 (2024, false)
             ])
+        );
+    }
+
+    #[test]
+    fn series_lines_by_measure() {
+        let part = |mut v: Value, q: &str| {
+            v["qualifiers"]
+                .as_array_mut()
+                .unwrap()
+                .push(json!({"pid": "P518", "value": {"type": "entity", "entity": q}}));
+            v
+        };
+        let lines = |values: Value| {
+            let c = content(values, json!({}));
+            let k = Composer::new(&c, Config::embedded());
+            let sts: Vec<_> = c.statements.iter().collect();
+            series_lines(&k, &sts).map(|ls| {
+                ls.iter()
+                    .map(|ps| ps.iter().map(|p| p.year).collect::<Vec<_>>())
+                    .collect::<Vec<_>>()
+            })
+        };
+        // Indonesia's life expectancy: all, female and male, and no measure
+        // of most values. A line for each measure; the line of all first.
+        assert_eq!(
+            lines(json!([
+                part(dated("P2250", 73.5, 2017), "Q6581072"),
+                part(dated("P2250", 69.2, 2017), "Q6581097"),
+                dated("P2250", 71.0, 2019),
+                part(dated("P2250", 73.3, 2016), "Q6581072"),
+                part(dated("P2250", 68.9, 2016), "Q6581097"),
+                dated("P2250", 69.0, 2020)
+            ])),
+            Some(vec![vec![2019, 2020], vec![2017, 2016], vec![2017, 2016]])
+        );
+        // A measure in one year only is not a line: no series.
+        assert_eq!(
+            lines(json!([
+                part(dated("P2250", 73.5, 2017), "Q6581072"),
+                part(dated("P2250", 69.2, 2017), "Q6581097"),
+                dated("P2250", 71.0, 2019),
+                part(dated("P2250", 68.9, 2016), "Q6581097"),
+                dated("P2250", 69.0, 2020)
+            ])),
+            None
         );
     }
 }
