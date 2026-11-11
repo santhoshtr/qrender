@@ -21,8 +21,9 @@ use std::time::Instant;
 
 use app::Service;
 use axum::Router;
-use axum::extract::{Path, State};
-use axum::http::{StatusCode, header};
+use axum::extract::{Path, Request, State};
+use axum::http::{HeaderName, StatusCode, header};
+use axum::middleware::{self, Next};
 use axum::response::{Html, IntoResponse, Response};
 use axum::routing::get;
 use content::fetch::{FetchError, Mode};
@@ -30,18 +31,28 @@ use content::{Lang, Qid};
 use qrender::render::design::{DESIGN, ECHARTS, FAVICON, LEAFLET_CSS, LEAFLET_JS, STYLESHEET};
 use qrender::render::html::{self, Styles};
 use qrender::render::markdown;
+use tokio::sync::Semaphore;
 use tower_http::compression::CompressionLayer;
 
 const PAGE_CACHE: &str = "public, max-age=3600";
 const ASSET_CACHE: &str = "public, max-age=604800, immutable";
 /// The icon has no version in its address: a day.
 const ICON_CACHE: &str = "public, max-age=86400";
+/// Item requests in progress at the same time. The fetcher queues its
+/// upstream queries (two at a time to the query service); beyond this,
+/// a request is refused at once instead of waiting in that queue.
+const ITEMS_PARALLEL: usize = 16;
+/// The wait a refused client is asked for, in seconds.
+const RETRY_AFTER: &str = "30";
+const SEC_FETCH_MODE: HeaderName = HeaderName::from_static("sec-fetch-mode");
 
 #[derive(Clone)]
 struct AppState {
     service: Arc<Service>,
     /// The mount point behind a reverse proxy, without a trailing slash.
     base_path: Arc<str>,
+    /// A slot for each item request in progress.
+    slots: Arc<Semaphore>,
 }
 
 #[tokio::main]
@@ -54,17 +65,23 @@ async fn main() {
             .unwrap_or_default()
             .trim_end_matches('/')
             .into(),
+        slots: Arc::new(Semaphore::new(ITEMS_PARALLEL)),
     };
+    // The routes that fetch: limited, and shed when busy.
+    let items = Router::new()
+        .route("/api/content/{qid}", get(content_json))
+        .route("/api/composition/{qid}", get(composition_json))
+        .route("/api/view/{lang}/{qid}", get(view_json))
+        .route("/{lang}/{qid}", get(page))
+        .route_layer(middleware::from_fn_with_state(state.clone(), shed));
     let app = Router::new()
         .route("/", get(usage))
         .route("/healthz", get(async || "ok"))
         .route("/favicon.svg", get(favicon))
         .route("/robots.txt", get(async || "User-agent: *\nDisallow: /\n"))
         .route("/design/{version}/{file}", get(design))
-        .route("/api/content/{qid}", get(content_json))
-        .route("/api/composition/{qid}", get(composition_json))
-        .route("/api/view/{lang}/{qid}", get(view_json))
-        .route("/{lang}/{qid}", get(page))
+        .merge(items)
+        .layer(middleware::from_fn(log_request))
         .layer(CompressionLayer::new())
         .with_state(state);
     let port: u16 = std::env::var("PORT")
@@ -98,6 +115,42 @@ fn design_version() -> &'static str {
         format!("{}-{:08x}", design_system(), hash as u32)
     });
     &VERSION
+}
+
+/// Each request as it arrives: who asks for what. Logged on arrival, so a
+/// request that never completes is still seen. Sec-Fetch-Mode: a browser
+/// sends it ("navigate" for a page); a client that only claims to be a
+/// browser often does not.
+async fn log_request(request: Request, next: Next) -> Response {
+    {
+        let field = |name| {
+            request
+                .headers()
+                .get(name)
+                .map_or("-", |value| value.to_str().unwrap_or("?"))
+        };
+        eprintln!(
+            "request {} {:?} {}",
+            request.uri(),
+            field(header::USER_AGENT),
+            field(SEC_FETCH_MODE)
+        );
+    }
+    next.run(request).await
+}
+
+/// An item request runs only in a free slot; without one, 503 at once.
+async fn shed(State(state): State<AppState>, request: Request, next: Next) -> Response {
+    let Ok(_slot) = state.slots.try_acquire() else {
+        eprintln!("shed {}", request.uri());
+        return (
+            StatusCode::SERVICE_UNAVAILABLE,
+            [(header::RETRY_AFTER, RETRY_AFTER)],
+            "busy, try again later",
+        )
+            .into_response();
+    };
+    next.run(request).await
 }
 
 async fn favicon() -> Response {
