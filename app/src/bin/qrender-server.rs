@@ -1,10 +1,11 @@
 //! The qrender web service.
 //!
 //! - GET /{lang}/{qid}               the page (HTML); "/{lang}/{qid}.md": Markdown.
-//!   The HTML page needs a cookie that a script sets (see `challenge`)
+//!   A page needs a cookie that a script sets (see `challenge`)
 //! - GET /api/content/{qid}          content JSON
 //! - GET /api/composition/{qid}      composition JSON (the same in every language)
 //! - GET /api/view/{lang}/{qid}      view JSON
+//!   The API routes are off for now, while scrapers crawl the service.
 //! - GET /design/{version}/page.css  the design system; also echarts.js,
 //!   leaflet.js and leaflet.css, which the page scripts load. The version
 //!   has a hash of the files, so a changed file has a new address.
@@ -74,9 +75,10 @@ async fn main() {
     };
     // The routes that fetch: limited, and shed when busy.
     let items = Router::new()
-        .route("/api/content/{qid}", get(content_json))
-        .route("/api/composition/{qid}", get(composition_json))
-        .route("/api/view/{lang}/{qid}", get(view_json))
+        // Off for now, while scrapers crawl the service.
+        // .route("/api/content/{qid}", get(content_json))
+        // .route("/api/composition/{qid}", get(composition_json))
+        // .route("/api/view/{lang}/{qid}", get(view_json))
         .route("/{lang}/{qid}", get(page))
         .route_layer(middleware::from_fn_with_state(state.clone(), shed))
         .route_layer(middleware::from_fn_with_state(state.clone(), challenge));
@@ -159,17 +161,16 @@ async fn shed(State(state): State<AppState>, request: Request, next: Next) -> Re
     next.run(request).await
 }
 
-/// An HTML page needs the pass cookie. Without it, a small page whose
-/// script sets the cookie and loads the page again: a browser passes in
-/// one round trip; a scraper that runs no script gets only this page.
-/// 200, not an error, so that the scraper does not retry. The Markdown
-/// page and the API are for tools, and stay open.
+/// A page (HTML or Markdown) needs the pass cookie. Without it, a small
+/// page whose script sets the cookie and loads the page again: a browser
+/// passes in one round trip; a scraper that runs no script gets only this
+/// page. 200, not an error, so that the scraper does not retry.
 async fn challenge(State(state): State<AppState>, request: Request, next: Next) -> Response {
     let is_page = request
         .extensions()
         .get::<MatchedPath>()
         .is_some_and(|path| path.as_str() == "/{lang}/{qid}");
-    if !is_page || request.uri().path().ends_with(".md") || has_pass(request.headers()) {
+    if !is_page || has_pass(request.headers()) {
         return next.run(request).await;
     }
     eprintln!("challenge {}", request.uri());
@@ -275,6 +276,7 @@ async fn page(
     ([(header::CACHE_CONTROL, PAGE_CACHE)], Html(page)).into_response()
 }
 
+#[expect(dead_code, reason = "the API routes are off")]
 async fn content_json(State(state): State<AppState>, Path(qid): Path<String>) -> Response {
     let Ok(qid) = parse_qid(&qid) else {
         return bad_request("not an item id");
@@ -282,6 +284,7 @@ async fn content_json(State(state): State<AppState>, Path(qid): Path<String>) ->
     json(state.service.content(qid).await)
 }
 
+#[expect(dead_code, reason = "the API routes are off")]
 async fn composition_json(State(state): State<AppState>, Path(qid): Path<String>) -> Response {
     let Ok(qid) = parse_qid(&qid) else {
         return bad_request("not an item id");
@@ -289,6 +292,7 @@ async fn composition_json(State(state): State<AppState>, Path(qid): Path<String>
     json(state.service.composition(qid).await)
 }
 
+#[expect(dead_code, reason = "the API routes are off")]
 async fn view_json(
     State(state): State<AppState>,
     Path((lang, qid)): Path<(String, String)>,
@@ -300,6 +304,7 @@ async fn view_json(
     json(state.service.view(qid, &lang).await)
 }
 
+#[expect(dead_code, reason = "the API routes are off")]
 fn json<T: serde::Serialize>(result: Result<T, FetchError>) -> Response {
     match result {
         Ok(value) => (
@@ -354,9 +359,6 @@ async fn usage(State(state): State<AppState>) -> Html<String> {
 <ul>
 <li><a href="{b}/en/Q3870">{b}/en/Q3870</a>: the page</li>
 <li><a href="{b}/en/Q3870.md">{b}/en/Q3870.md</a>: the page as Markdown</li>
-<li><a href="{b}/api/composition/Q3870">{b}/api/composition/Q3870</a>: the composition (JSON)</li>
-<li><a href="{b}/api/view/en/Q3870">{b}/api/view/en/Q3870</a>: the view (JSON)</li>
-<li><a href="{b}/api/content/Q3870">{b}/api/content/Q3870</a>: the content (JSON)</li>
 </ul>
 </body></html>"#
     ))
