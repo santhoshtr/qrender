@@ -1,6 +1,7 @@
 //! The qrender web service.
 //!
-//! - GET /{lang}/{qid}               the page (HTML); "/{lang}/{qid}.md": Markdown
+//! - GET /{lang}/{qid}               the page (HTML); "/{lang}/{qid}.md": Markdown.
+//!   The HTML page needs a cookie that a script sets (see `challenge`)
 //! - GET /api/content/{qid}          content JSON
 //! - GET /api/composition/{qid}      composition JSON (the same in every language)
 //! - GET /api/view/{lang}/{qid}      view JSON
@@ -21,8 +22,8 @@ use std::time::Instant;
 
 use app::Service;
 use axum::Router;
-use axum::extract::{Path, Request, State};
-use axum::http::{HeaderName, StatusCode, header};
+use axum::extract::{MatchedPath, Path, Request, State};
+use axum::http::{HeaderMap, HeaderName, StatusCode, header};
 use axum::middleware::{self, Next};
 use axum::response::{Html, IntoResponse, Response};
 use axum::routing::get;
@@ -45,6 +46,10 @@ const ITEMS_PARALLEL: usize = 16;
 /// The wait a refused client is asked for, in seconds.
 const RETRY_AFTER: &str = "30";
 const SEC_FETCH_MODE: HeaderName = HeaderName::from_static("sec-fetch-mode");
+/// The cookie a browser sets by running the script of the challenge.
+const PASS: &str = "qrender-pass=1";
+/// How long a browser keeps the pass: thirty days, in seconds.
+const PASS_AGE: u32 = 30 * 24 * 3600;
 
 #[derive(Clone)]
 struct AppState {
@@ -73,7 +78,8 @@ async fn main() {
         .route("/api/composition/{qid}", get(composition_json))
         .route("/api/view/{lang}/{qid}", get(view_json))
         .route("/{lang}/{qid}", get(page))
-        .route_layer(middleware::from_fn_with_state(state.clone(), shed));
+        .route_layer(middleware::from_fn_with_state(state.clone(), shed))
+        .route_layer(middleware::from_fn_with_state(state.clone(), challenge));
     let app = Router::new()
         .route("/", get(usage))
         .route("/healthz", get(async || "ok"))
@@ -151,6 +157,53 @@ async fn shed(State(state): State<AppState>, request: Request, next: Next) -> Re
             .into_response();
     };
     next.run(request).await
+}
+
+/// An HTML page needs the pass cookie. Without it, a small page whose
+/// script sets the cookie and loads the page again: a browser passes in
+/// one round trip; a scraper that runs no script gets only this page.
+/// 200, not an error, so that the scraper does not retry. The Markdown
+/// page and the API are for tools, and stay open.
+async fn challenge(State(state): State<AppState>, request: Request, next: Next) -> Response {
+    let is_page = request
+        .extensions()
+        .get::<MatchedPath>()
+        .is_some_and(|path| path.as_str() == "/{lang}/{qid}");
+    if !is_page || request.uri().path().ends_with(".md") || has_pass(request.headers()) {
+        return next.run(request).await;
+    }
+    eprintln!("challenge {}", request.uri());
+    let path = format!("{}/", state.base_path);
+    (
+        [(header::CACHE_CONTROL, "no-store")],
+        Html(format!(
+            r#"<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>QRender</title><meta name="color-scheme" content="dark light"></head>
+<body>
+<p id="message">Loading the page…</p>
+<noscript><p>This page needs JavaScript on the first visit.</p></noscript>
+<script>
+document.cookie = "{PASS}; Path={path}; Max-Age={PASS_AGE}; SameSite=Lax; Secure";
+if ( document.cookie.includes( "{PASS}" ) ) {{
+	location.reload();
+}} else {{
+	document.getElementById( "message" ).textContent = "This page needs cookies on the first visit.";
+}}
+</script>
+</body></html>"#
+        )),
+    )
+        .into_response()
+}
+
+/// Whether a Cookie header has the pass.
+fn has_pass(headers: &HeaderMap) -> bool {
+    headers
+        .get_all(header::COOKIE)
+        .iter()
+        .filter_map(|value| value.to_str().ok())
+        .flat_map(|value| value.split(';'))
+        .any(|cookie| cookie.trim() == PASS)
 }
 
 async fn favicon() -> Response {
@@ -328,6 +381,22 @@ mod tests {
             assert!(content_type.starts_with(kind), "{file}: {content_type}");
         }
         assert_eq!(get("other.js").await.status(), StatusCode::NOT_FOUND);
+    }
+
+    #[test]
+    fn the_pass_is_found_among_the_cookies() {
+        let with = |cookies: &[&str]| {
+            let mut headers = HeaderMap::new();
+            for cookie in cookies {
+                headers.append(header::COOKIE, cookie.parse().unwrap());
+            }
+            has_pass(&headers)
+        };
+        assert!(with(&[PASS]));
+        assert!(with(&["a=b; qrender-pass=1; c=d"]));
+        assert!(with(&["a=b", "qrender-pass=1"]));
+        assert!(!with(&[]));
+        assert!(!with(&["qrender-pass=0", "xqrender-pass=1"]));
     }
 
     #[tokio::test]
